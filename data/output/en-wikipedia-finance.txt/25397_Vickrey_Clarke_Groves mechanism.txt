@@ -1,0 +1,150 @@
+Vickrey–Clarke–Groves mechanism
+
+
+# Vickrey–Clarke–Groves mechanism
+
+
+
+In mechanism design, the **Vickrey–Clarke–Groves** (**VCG**) **mechanism** is a generic truthful mechanism for achieving a socially optimal solution whenever monetary transfers are available. It generalizes the Vickrey–Clarke–Groves auction into a general-purpose mechanism for social choice, which can be used to select any outcome from a set of possible outcomes.²¹⁶–²³³ However, the VCG mechanism also has several problems which keep it from fully solving the public goods problem, including its vulnerability to collusion and the issue of participants failing to pay their bids.
+
+
+## Notation
+
+There is a set {\displaystyle X} of possible outcomes.
+
+There are {\displaystyle n} agents, each of which has a set of outcome valuations. The valuation of agent {\displaystyle i} is represented as a function:
+
+which expresses the value it has for each alternative, in monetary terms.
+
+It is assumed that the agents have quasilinear utility functions; this means that, if the outcome is {\displaystyle x} and in addition the agent receives a payment {\displaystyle p\_{i}} (positive or negative), then the total utility of agent {\displaystyle i} is:
+
+Our goal is to select an outcome that maximizes the sum of values, i.e.:
+
+In other words, our social-choice function is utilitarian.
+
+
+## Solution family
+
+The VCG family is a family of mechanisms that implements the utilitarian welfare function. A typical mechanism in the VCG family works in the following way:
+
+1. It asks the agents to report their value function. I.e, each agent {\displaystyle i} should report {\displaystyle v\_{i}(x)} for each option {\displaystyle x}.
+
+2. Based on the agents' report-vector {\displaystyle v}, it calculates {\displaystyle x^{\*}=x^{opt}(v)} as above.
+
+3. It pays, to each agent {\displaystyle i}, a sum of money equal to the total values of the *other* agents:
+
+4. It pays, to each agent {\displaystyle i}, an additional sum, based on an arbitrary function of the values of the other agents:
+
+where {\displaystyle v\_{-i}=(v\_{1},\dots ,v\_{i-1},v\_{i+1},\dots ,v\_{n})}, that is, {\displaystyle h\_{i}} is a function that depends only on the valuations of the other agents.
+
+
+## Truthfulness
+
+Every mechanism in the VCG family is a truthful mechanism, that is, a mechanism where bidding the true valuation is a dominant strategy.
+
+The trick is in step 3. The agent is paid the total value of the other agents; hence, together with its own value, the total welfare of the agent is exactly equal to the total welfare of society. Hence, the incentives of the agent are aligned with those of the society and the agent is incentivized to be truthful in order to help the mechanism achieve its goal.
+
+The function {\displaystyle h\_{i}}, in step 4, does not affect the agent's incentives, since it depends only on the declarations of the other agents.
+
+
+## The Clarke pivot rule
+
+The function {\displaystyle h\_{i}} is a parameter of the mechanism. Every selection of {\displaystyle h\_{i}} yields a different mechanism in the VCG family.
+
+We could take, for example:
+
+but then we would have to actually pay the players to participate in the auction. We would rather prefer that players give money to the mechanism.
+
+An alternative function is:
+
+It is called the *Clarke pivot rule*. With the Clarke pivot rule, the total amount paid by the player is:
+
+This is exactly the externality of player {\displaystyle i}.
+
+When the valuations of all agents are weakly-positive, the Clarke pivot rule has two important properties:
+
+* Individual rationality: for every player *i*, {\displaystyle v\_{i}(x)+p\_{i}\geq 0}. It means that all the players are getting positive utility by participating in the auction. No one is forced to bid.
+* No positive transfers: for every player *i*, {\displaystyle p\_{i}\leq 0}. The mechanism does not need to pay anything to the bidders.
+
+This makes the VCG mechanism a win-win game: the players receive the outcomes they desire, and pay an amount which is less than their gain. So the players remain with a net positive gain, and the mechanism gains a net positive payment.
+
+
+## Weighted VCG mechanism
+
+Instead of maximizing the sum of values, we may want to maximize a weighted sum:
+
+where {\displaystyle w\_{i}} is a weight assigned to agent {\displaystyle i}.
+
+The VCG mechanism from above can easily be generalized by changing the price function in step 3 to:
+
+
+## Cost minimization
+
+The VCG mechanism can be adapted to situations in which the goal is to minimize the sum of costs (instead of maximizing the sum of gains). Costs can be represented as negative values, so that minimization of cost is equivalent to maximization of values.
+
+The payments in step 3 are negative: each agent has to pay the total cost incurred by all other agents. If agents are free to choose whether to participate or not, then we must make sure that their net payment is non-negative (this requirement is called individual rationality). The Clarke pivot rule can be used for this purpose: in step 4, each agent {\displaystyle i} is paid the total cost that would have been incurred by other agents, if the agent {\displaystyle i} would not participate. The net payment to agent {\displaystyle i} is its marginal contribution to reducing the total cost.
+
+
+## Applications
+
+
+### Auctions
+
+The Vickrey–Clarke–Groves auction is a specific application of the VCG mechanism to the problem of selling goods. Here, {\displaystyle X} is the set of all possible allocations of items to the agents. Each agent assigns a personal monetary value to each bundle of items, and the goal is to maximize the sum of values for all agents.
+
+A well-known special case is the Vickrey auction, or the sealed second-bid auction. Here, there is only a single item, and the set {\displaystyle X} contains {\displaystyle n+1} possible outcomes: either sell the item to one of the {\displaystyle n} agents, or not to sell it at all. In step 3, the winner agent is paid 0 (since the total value of the others is 0) and the losers receive a payment equal to the declared value of the winner. In step 4, the winner pays the second-highest bid (the total value of the others had he not participated) and the losers pay the declared value of the winner (the total value of the others had they not participated). All in all, the winner pays the second-highest bid and the losers pay 0.
+
+A VCG mechanism can also be used in a double auction. It is the most general form of incentive-compatible double-auction since it can handle a combinatorial auction with arbitrary value functions on bundles. Unfortunately, it is not budget-balanced: the total value paid by the buyers is smaller than the total value received by the sellers. Hence, in order to make it work, the auctioneer has to subsidize the trade.
+
+
+### Public project
+
+The government wants to decide whether to undertake a certain project. The cost of the project is *C*. Each citizen derives a different value from the project. The project should be undertaken if the sum of values of all citizens is more than the cost. Here, the VCG mechanism with the Clarke pivot rule means that a citizen pays a non-zero tax for that project if and only if they are pivotal, i.e., without their declaration the total value is less than *C* and with their declaration the total value is more than *C*. This taxing scheme is incentive-compatible, but again it is not budget-balanced – the total amount of tax collected is usually less than *C*.²²¹
+
+
+### Quickest paths
+
+The **quickest path** problem is a cost-minimization problem. The goal is to send a message between two points in a communication network, which is modeled as a graph. Each computer in the network is modeled as an edge in the graph. Different computers have different transmission speeds, so every edge in the network has a numeric cost equal to the number of milliseconds it takes to transmit the message. Our goal is to send the message as quickly as possible, so we want to find the path with the smallest total cost.
+
+If we know the transmission-time of each computer (-the cost of each edge), then we can use a standard algorithm for solving the shortest path problem. If we do not know the transmission times, then we have to ask each computer to tell us its transmission-time. But, the computers have their own selfish interests so they might not tell us the truth. For example, a computer might tell us that its transmission time is very large, so that we will not bother it with our messages.
+
+The VCG mechanism can be used to solve this problem. Here, {\displaystyle X} is the set of all possible paths; the goal is to select a path {\displaystyle x\in X} with minimal total cost.
+
+The value of an agent, {\displaystyle v\_{i}(x)}, is minus the time it spent on the message: it is negative if {\displaystyle i\in x} and it is zero if {\displaystyle i\notin x}. The payment in step 3 is negative: each agent should pay to us the total time that the other agents spent on the message (note that the value is measured in units of time. We assume that it is possible to pay computers in units of time, or that it there is a standard way to translate time to money). This means that, together with its own spent time, each agent actually loses the total time it took the message to arrive its destination, so the agent is incentivized to help the mechanism achieve the shortest transmission time.
+
+The Clarke pivot rule can be used to make the mechanism individually-rational: after paying us the cost, each agent receives from us a positive payment, which is equal to the time it would have taken the message to arrive at its destination if the agent would not have been present. Obviously, this time is weakly larger than the time required when the agent is present, so the net gain of every agent is weakly positive. Intuitively, each agent is paid according to its marginal contribution to the transmission.
+
+Other graph problems can be solved in a similar way, e.g. minimum spanning tree or maximum matching. A similar solution applies to the more general case where each agent holds some subset of the edges.
+
+For another example, where the VCG mechanism provides a sub-optimal approximation, see truthful job scheduling.
+
+
+## Uniqueness
+
+A VCG mechanism implements a utilitarian social-choice function - a function that maximizes a weighted sum of values (also called an **affine maximizer**). Roberts' theorem proves that, if:
+
+* The agents' valuation functions are unrestricted (each agent can have as value function any function from {\displaystyle X} to {\displaystyle \mathbb {R} }), and -
+* There are at least three different possible outcomes ({\displaystyle |X|\geq 3} and at least three different outcomes from {\displaystyle X} can happen),
+
+then *only* weighted utilitarian functions can be implemented.²²⁸,ᶜʰᵃᵖ.¹²
+So with unrestricted valuations, the social-choice functions implemented by VCG mechanisms are the *only* functions that can be implemented truthfully.
+
+Moreover, the price-functions of the VCG mechanisms are also unique in the following sense.²³⁰–²³¹ If:
+
+* The domains of the agents' valuations are connected sets (particularly, agents can have real-valued preferences and not only integral preferences);
+* There is a truthful mechanism that implements a certain {\displaystyle Outcome} function with certain payment functions {\displaystyle p\_{1},\dots ,p\_{n}};
+* There is another truthful mechanism that implements the same {\displaystyle Outcome} function with different payment functions {\displaystyle p'\_{1},\dots ,p'\_{n}};
+
+Then, there exist functions {\displaystyle h\_{1},\dots ,h\_{n}} such that, for all {\displaystyle i}:
+
+I.e, the price functions of the two mechanisms differ only by a function that does not depend on the agent's valuation {\displaystyle v\_{i}} (only on the valuations of the other agents).
+
+This means that VCG mechanisms are the only truthful mechanisms that maximize the utilitarian social-welfare.
+
+
+## Computational issues
+
+A VCG mechanism has to calculate the optimal outcome, based on the agents' reports (step 2 above). In some cases, this calculation is computationally difficult. For example, in combinatorial auctions, calculating the optimal assignment is NP-hard.²⁷⁰–²⁷³,ᶜʰᵃᵖ.¹¹
+
+Sometimes there are approximation algorithms to the optimization problem, but, using such an approximation might make the mechanism non-truthful.
+

@@ -1,0 +1,39 @@
+Online charging system
+
+
+# Online charging system
+
+
+
+**Online charging system** (**OCS**) is a system allowing a communications service provider to charge their customers, in real time, based on service usage.
+
+
+## Architecture
+
+
+### Event based charging
+
+An event-based charging function (EBCF) is used to charge events based on their occurrence rather than their duration or volume used in the event. Typical events are SMS, MMS, purchase of content (application, game, music, video on demand, etc.).
+
+Event-based charging function is used when the CC-Request-Type AVP = 4 i.e. for event request ex: diameter-sms or diameter-.....
+
+Let us consider one example of Event-based charging.
+1. Cost of one apple is Rupees 25/-
+You pay the amount, take the apple and go. Similarly, if you send a text message it may cost you Rupee 1/- and that's it. You subscribe to Caller Ring Back Tone (CRBT) which costs you Rs.30/- a month irrespective of the number of calls you receive in a month.
+So we can term event-based charging as a one-time cost or one-time occurrence cost.
+
+
+### Session based charging
+
+The session based charging function (SBCF) is responsible for online charging of network / user sessions, e.g. voice calls, IP CAN bearers, IP CAN session or IMS sessions.
+
+Let us consider an example for session-based charging.
+Utility services like electricity or water is charged based on overall usage, for a certain time duration.
+You consume 'x' units of power in a month and pay for units consumed in that month. The usage may vary month to month and hence the charges. Similarly for consuming water, etc.
+Hence, charging based on how much one consumes is termed as metered charging or session-based charging.
+
+
+#### Account and balance management
+
+The account balance management function (ABMF) is the location of the subscriber’s account balance within the OCS.
+

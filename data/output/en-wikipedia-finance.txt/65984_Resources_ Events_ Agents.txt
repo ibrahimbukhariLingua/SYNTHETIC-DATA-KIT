@@ -1,0 +1,38 @@
+Resources, Events, Agents
+
+
+# Resources, Events, Agents
+
+
+
+**Resources, events, agents** (**REA**) is a model of how an accounting system can be re-engineered for the computer age. REA was originally proposed in 1982 by William E. McCarthy as a generalized accounting model, and contained the concepts of resources, events and agents (McCarthy 1982).
+
+REA is a standard approach in teaching accounting information systems (AIS). In business practice, REA has influenced IBM Scalable Architecture for Financial Reporting, REATechnology, and ISO 15944-4. Fallon and Polovina (2013) have shown how REA can also add value when modelling current ERP business processes by providing a tool which increases the understanding of the implementation and underlying data model.
+
+
+## Description
+
+The REA model gets rid of many accounting objects that are not necessary in the computer age. Most visible of these are debits and credits—double-entry bookkeeping disappears in an REA system. Many general ledger accounts also disappear, at least as persistent objects; e.g., accounts receivable or accounts payable. The computer can generate these accounts in real time using source document records.
+
+REA treats the accounting system as a virtual representation of the actual business. In other words, it creates computer objects that directly represent real-world-business objects. In computer science terms, REA is an ontology. The real objects included in the REA model are:
+
+* goods, services or money, i.e., resources
+* business transactions or agreements that affect resources, i.e., events
+* people or other human agencies (other companies, etc.), i.e., agents
+
+These objects contrast with conventional accounting terms such as asset or liability, which are less directly tied to real-world objects. For example, a conventional accounting asset such as goodwill is not an REA resource.
+
+There is a separate REA model for each business process in the company. A business process roughly corresponds to a functional department, or a function in Michael Porter's value chain. Examples of business processes would be sales, purchases, conversion or manufacturing, human resources, and financing.
+
+At the heart of each REA model there is usually a pair of events, linked by an exchange relationship, typically referred to as the "duality" relation. One of these events usually represents a resource being given away or lost, while the other represents a resource being received or gained. For example, in the sales process, one event would be "sales"—where goods are given up—and the other would be "cash receipt", where cash is received. These two events are linked: a cash receipt occurs in exchange for a sale, and vice versa. The duality relationship can be more complex, e.g., in the manufacturing process, it would often involve more than two events (see Dunn et al. [2004] for examples).
+
+REA systems have usually been modeled as relational databases with entity-relationship diagrams, though this is not compulsory.
+
+The philosophy of REA draws on the idea of reusable Design Patterns, though REA patterns are used to describe databases rather than object-oriented programs, and are quite different from the 23 canonical patterns in the original designs pattern book by Gamma et al. Research in REA emphasizes patterns (e.g., Hruby et al. 2006). Here is an example of the basic REA pattern shown as an E-R diagram:
+
+The pattern is extended to encompass commitments (promises to engage in transactions, e.g., a sales order), policies, and other constructs. Dunn et al. (2004) provide a good overview at an undergraduate level (for accounting majors), while Hruby et al. (2006) is an advanced reference for computer scientists. Here is a diagram of an extended REA pattern (from Hruby et al. 2006)
+
+REA is a continuing influence on the electronic commerce standard ebXML, with W. McCarthy actively involved in the standards committee. The competing XBRL GL standard however is at odds with the REA concept, as it closely mimics double-entry book-keeping.
+
+REA is now recognised by The Open Group within the TOGAF standard (an industry standard enterprise framework), as one of the modelling tools which is useful for modelling business processes.
+

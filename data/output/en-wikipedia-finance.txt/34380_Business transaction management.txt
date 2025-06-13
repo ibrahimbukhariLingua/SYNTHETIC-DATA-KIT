@@ -1,0 +1,45 @@
+Business transaction management
+
+
+# Business transaction management
+
+
+
+**Business transaction management** (BTM), also known as **business transaction monitoring**, **application transaction profiling** or **user defined transaction profiling**, is the practice of managing information technology (IT) from a business transaction perspective. It provides a tool for tracking the flow of transactions across IT infrastructure, in addition to detection, alerting, and correction of unexpected changes in business or technical conditions. BTM provides visibility into the flow of transactions across infrastructure tiers.
+
+Using BTM, application support teams are able to search for transactions based on message context and content – for instance, time of arrival or message type – providing a way to isolate causes for common issues such as application exceptions, stalled transactions, and lower-level issues such as incorrect data values.
+
+The ultimate goal of BTM is to improve service quality for users conducting business transactions while improving the effectiveness of the IT applications and infrastructure across which those transactions execute. The main benefit of BTM is its capacity to identify precisely where transactions are delayed within the IT infrastructure. BTM also aims to provide proactive problem prevention and the generation of business service intelligence for optimization of resource provisioning and virtualization.
+
+A number of factors have led to the demand for the development of BTM software:
+
+* Modern applications have become more complex, modular, distributed, interdependent and sensitive to environmental conditions.
+* IT infrastructure has become a complex multi-tier (see multitier architecture) environment.
+* The rise of service-oriented architecture in systems development.
+* The proliferation of service level agreements.
+
+## Applications
+
+BTM solutions capture all of the transaction instances in the production environment and as such can be used for monitoring as well as for analysis and planning. Some applications include:
+
+* Outage avoidance and problem isolation: Identification and isolation of tier-specific performance and availability issues.
+* Service level management: Monitoring of SLAs and alerting of threshold breaches both at the end-user and infrastructure tier level.
+* Infrastructure optimization: Modification of the configuration of data center infrastructure to maximize utilization and improve performance.
+* Capacity planning: Analysis of usage and performance trends in order to estimate future capacity requirements.
+* Change management: Analysis of the impact of change on transaction execution.
+* Cloud management: Track the end-to-end transaction flow across both cloud (private, hybrid, public) and dedicated (on-premises, off-premises) infrastructure.
+
+## Transaction discovery methods
+
+BTM systems track each of the hops in the transaction path using a variety of data collection methods including OS-level sockets, network packet sniffing, log parsing, agent-based middleware protocol sniffing, and others.
+
+
+## Relationship to application performance management
+
+BTM is sometimes categorized as a form of application performance management (APM) or monitoring. It works alongside other IT monitoring systems including End-User Experience Monitoring, Synthetic Transaction Monitoring, Deep-Dive Monitoring and Business Activity Monitoring (BAM) solutions. According to Gartner, BTM and deep dive monitoring are "fundamentally distinct and their associated processes are typically carried out by different communities with different skill sets. The buyer should still implement multiple products, even if it means greater architectural complexity and apparent functional overlap." As the technologies mature APM is now being viewed as a complete solution set. Maximum productivity can be achieved more efficiently through event correlation, system automation and predictive analysis which is now all part of APM.
+
+
+## Relationship to virtualization and cloud computing
+
+BTM dynamically maps the execution of a user transaction as it traverses the data center. In both virtualized and cloud environments, the relationship between the application and infrastructure is to some degree dynamically allocated or defined. BTM discovers the infrastructure currently executing each transaction instance for purposes of problem identification, resolution, and infrastructure tuning. In public and hybrid cloud architectures, BTM has the ability to profile transactions from the datacenter, to the cloud provider, and back. BTM additionally has the ability to include the discovery and profiling of transaction issues centered at the simulated user-level. This is achieved through automation and AI techniques that also perform functional and non-functional testing - at both the systematic and micro levels.
+

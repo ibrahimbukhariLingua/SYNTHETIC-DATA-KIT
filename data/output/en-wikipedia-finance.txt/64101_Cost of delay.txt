@@ -1,0 +1,46 @@
+Cost of delay
+
+
+# Cost of delay
+
+
+
+**Cost of Delay** is "a way of communicating the impact of time on the outcomes we hope to achieve". More formally, it is the partial derivative of the *total expected value* with respect to *time*. Cost of Delay combines an understanding of value with how that value leaks away over time. It is a tactic that helps communicate and prioritize development decisions by calculating the impact of time on value creation & capture.
+
+More simply, it is the answer to the question: "What would it cost us if this was delayed by 1 month?". Or, alternatively, "what would it be worth to us if we could get this 1 month earlier?"
+
+Cost of Delay has the units of $/time. The Delay Cost incurred (as a result of a delay) is found by integrating Cost of Delay over a specific time period.
+
+
+## Cost of Delay in Product Development
+
+Cost of Delay is described by Don Reinertsen as being the "one thing" to quantify. "We need Cost of Delay to evaluate the cost of queues, the value of excess capacity, the benefit of smaller batch sizes and the value of variability reduction. Cost of Delay is the golden key that unlocks many doors. It has an astonishing power to totally transform the mind-set of a development organisation."
+
+Reinertsen reports that ~85% of product managers do not know the Cost of Delay. He also reports that intuition of Cost of Delay is poor, with the spread of intuitive estimates differing by 50 to 1. For this reason it is worth making the effort to *quantify* the Cost of Delay.
+
+Cost of Delay is also useful for making better decisions wherever there is an opportunity to sacrifice time for other key variables of the product. Another common usage is as the weighting in a Weighted Shortest Job First (WSJF) scheduling algorithm, for improved prioritisation. This is sometimes referred to as "CD3" – Cost of Delay Divided by Duration. The CD3 algorithm works by maximising the total value delivered in any given time period by a scarce development capacity.
+
+
+## Cost of Delay in Finance
+
+From a financial investment perspective, a delay in making an investment can lead to a loss. The accrued interest on the investment for the duration of the delay can have a significant effect on the net returns. The cost grows with the period of the investment; the longer the investment is delayed, the higher the cost is.
+
+
+### A simple delayed investment example
+
+Alberto is planning to invest $6,000 at an expected interest rate of 10%, compounded annually. He needs the money 5 years from now.
+
+If there is a delay in making this investment, Alberto incurs a Delay Cost, depending on how long the investment is delayed, as shown in the chart – up to $600 for an 8-month delay.
+
+**Investment**
+
+| Amount | Period | Interest rate | Compounding | Delay period |
+| --- | --- | --- | --- | --- |
+| 6000.00 USD | 5 Year | 10.00% | Annually | 8 Month |
+
+**Returns**
+
+| Interest Accrued | Maturity Amount |
+| --- | --- |
+| US$3,068.17 | US$9,068.17 |
+

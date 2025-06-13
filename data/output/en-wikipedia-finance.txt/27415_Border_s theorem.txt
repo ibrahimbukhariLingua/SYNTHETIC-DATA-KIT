@@ -1,0 +1,64 @@
+Border's theorem
+
+
+# Border's theorem
+
+
+
+In auction theory and mechanism design, **Border's theorem** gives a necessary and sufficient condition for interim allocation rules (or reduced form auctions) to be implementable via an auction.
+
+It was first proven by Kim Border in 1991, expanding on work from Steven Matthews, Eric Maskin and John Riley. A similar version with different hypotheses was proven by Border in 2007.
+
+
+## Preliminaries
+
+
+### Auctions
+
+Auctions are a mechanism designed to allocate an indivisible good among {\displaystyle N} bidders with private valuation for the good – that is, when the auctioneer has incomplete information on the bidders' true valuation and each bidder knows only their own valuation.
+
+Formally, this uncertainty is represented by a family of probability spaces {\displaystyle (T\_{i},{\mathcal {T}}\_{i},\lambda \_{i})} for each bidder {\displaystyle i=1,...,N}, in which each {\displaystyle t\_{i}\in T\_{i}} represents a possible type (valuation) for bidder {\displaystyle i} to have, {\displaystyle {\mathcal {T}}\_{i}} denotes a σ-algebra on {\displaystyle T\_{i}}, and {\displaystyle \lambda \_{i}} a prior and common knowledge probability distribution on {\displaystyle T\_{i}}, which assigns the probability {\displaystyle \lambda \_{i}(t\_{i})} that a bidder {\displaystyle i} is of type {\displaystyle t\_{i}}. Finally, we define {\displaystyle {\boldsymbol {T}}=\prod \_{i=1}^{N}T\_{i}} as the set of type profiles, and {\displaystyle {\boldsymbol {T}}\_{-i}=\prod \_{j\neq i}T\_{i}} the set of profiles {\displaystyle t\_{-i}=(t\_{1},...,t\_{i-1},t\_{i+1},...,t\_{N})}.
+
+Bidders simultaneously report their valuation of the good, and an auction assigns a probability that they will receive it. In this setting, an auction is thus a function {\displaystyle q:{\boldsymbol {T}}\rightarrow [0,1]^{N}} satisfying, for every type profile {\displaystyle t\in {\boldsymbol {T}}}
+
+where {\displaystyle q\_{i}} is the {\displaystyle i}-th component of {\displaystyle q=(q\_{1},q\_{2},...,q\_{N})}. Intuitively, this only means that the probability that some bidder will receive the good is no greater than 1.
+
+
+### Interim allocation rules (reduced form auctions)
+
+From the point of view of each bidder {\displaystyle i}, every auction {\displaystyle q} induces some expected probability that they will win the good given their type, which we can compute as
+
+where {\displaystyle \lambda \_{i}(t\_{-i}|t\_{i})} is conditional probability of other bidders having profile type {\displaystyle t\_{-i}} given that bidder {\displaystyle i} is of type {\displaystyle t\_{i}}. We refer to such probabilites {\displaystyle Q\_{i}} as *interim allocation rules*, as they give the probability of winning the auction in the *interim* period: after each player knowing their own type, but before the knowing the type of other bidders.
+
+The function {\displaystyle {\boldsymbol {Q}}:{\boldsymbol {T}}\rightarrow [0,1]^{N}} defined by {\displaystyle {\boldsymbol {Q}}(t)=(Q\_{1}(t\_{1}),...,Q\_{N}(t\_{N}))} is often referred to as a *reduced form auction*. Working with reduced form auctions is often much more analytically tractable for revenue maximization.
+
+
+### Implementability
+
+Taken on its own, an allocation rule {\displaystyle {\boldsymbol {Q}}:T\rightarrow [0,1]^{N}} is called *implementable* if there exists an auction {\displaystyle q:{\boldsymbol {T}}\rightarrow [0,1]^{N}} such that
+
+for every bidder {\displaystyle i} and type {\displaystyle t\_{i}\in T\_{i}}.
+
+
+## Statement
+
+Border proved two main versions of the theorem, with different restrictions on the auction environment.
+
+
+### i.i.d environment
+
+The auction environment is i.i.d if the probability spaces {\displaystyle (T\_{i},{\mathcal {T}}\_{i},\lambda \_{i})=(T,{\mathcal {T}},\lambda )} are the same for every bidder {\displaystyle i}, and types {\displaystyle t\_{i}} are independent. In this case, one only needs to consider symmetric auctions, and thus {\displaystyle Q\_{i}=Q} also becomes the same for every {\displaystyle i}. Border's theorem in this setting thus states:
+
+**Proposition:** An interim allocation rule {\displaystyle Q:T\rightarrow [0,1]} is implementable by a symmetric auction if and only if for each measurable set of types {\displaystyle A\in {\mathcal {T}}}, one has the inequality
+
+Intuitively, the right-hand side represents the probability that the winner of the auction is of some type {\displaystyle t\in A}, and the left-hand side represents the probability that *there exists* some bidder with type {\displaystyle t\in A}. The fact that the inequality is necessary for implementability is intuitive; it being sufficient means that this inequality fully characterizes implementable auctions, and represents the strength of the theorem.
+
+
+### Finite sets of types
+
+If all the sets {\displaystyle T\_{i}} are finite, the restriction to the i.i.d case can be dropped. In the more general environment developed above, Border thus proved:
+
+**Proposition:** An interim allocation rule {\displaystyle {\boldsymbol {Q}}:{\boldsymbol {T}}\rightarrow [0,1]^{N}} is implementable by an auction if and only if for each measurable sets of types {\displaystyle A\_{1}\in {\mathcal {T}}\_{1},A\_{2}\in {\mathcal {T}}\_{2},...,A\_{N}\in {\mathcal {T}}\_{N}}, one has the inequality
+
+The intuition of the i.i.d case remains: the right-hand side represents the probability that the winner of the auction is some bidder {\displaystyle i} with type {\displaystyle t\_{i}\in A\_{i}}, and the left-hand side represents the probability that *there exists* some bidder {\displaystyle i} with type {\displaystyle t\_{i}\in A\_{i}}. Once again, the strength of the result comes from it being sufficient to characterize implementable interim allocation rules.
+

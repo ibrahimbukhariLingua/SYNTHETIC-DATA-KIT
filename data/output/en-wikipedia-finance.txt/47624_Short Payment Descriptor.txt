@@ -1,0 +1,68 @@
+Short Payment Descriptor
+
+
+# Short Payment Descriptor
+
+
+
+**Short Payment Descriptor** (SPAYD, SPD) is a compact data format for an easy exchange of payment information using modern electronic channels, such as smart phones or NFC devices.
+
+
+## Usage
+
+Practically, the format is being deployed in the Czech Republic (where the format is an accepted unique standard for QR code payments) and the Slovak Republic, but the format can be technically used with any bank using IBAN account numbers. That includes currently the majority of European countries, some in the Middle East and a few others.
+
+
+## History
+
+Development of the format started in May 2012 during the development of the mobile banking app for Raiffeisenbank a.s. (Czech branch of Raiffeisen Bank International) in cooperation with a technology company Inmite s.r.o. Originally, the format was intended for use for P2P Payments via a QR Code. Later, it was generalized for many other usages, such as NFC payments or online payments.
+
+The format was created as an open effort from the very beginning and all specification, documentation, source codes, libraries and APIs were open sourced under the Apache 2.0 license. Therefore, Short Payment Descriptor can be implemented by any subject without any legal concerns or fees. Due to this approach, the format was quickly recognized and accepted by many Czech invoice software companies and adopted by Czech banks. Československá obchodní banka (together with Zentity s.r.o.) was very active during the format development and it proposed the brand name for the communication to the users.
+
+On 14 November 2012, the format was accepted by the Czech Banking Association and submitted to all Czech banks as the official local standard for QR code payments.
+
+
+## Format information
+
+Short Payment Descriptor uses the ideas from the vCard (by the structure) and SEPA payment (semantics). It is designed to be compact, human readable and therefore, easy to implement. The format is based on defined key-value pairs and it can be extended by proprietary attributes (using the "X-" prefix). The string may contain any ASCII printable characters, any other characters must be encoded using the percent encoding.
+
+
+### Example of SPAYD payload
+
+`SPD*1.0*ACC:CZ5855000000001265098001*AM:480.50*CC:CZK*MSG:Payment for the goods`
+
+
+### Default SPAYD keys
+
+The default keys that are used in the SPAYD format are:
+
+| Key | Compulsory | Length | Structure | Description | Example |
+| --- | --- | --- | --- | --- | --- |
+| ACC | Yes | Max. 46 characters (IBAN+BIC) | `$IBAN(\+$BIC)?` | Bank account - an identifier of the payment recipient. Either IBAN account number, or optionally "IBAN+BIC" format (with "+" as separator) | `ACC:CZ5855000000001265098001+RZBCCZPP*` ... or ... `ACC:CZ5855000000001265098001*` |
+| ALT-ACC | No | Max. 93 characters (2x ACC field + separator) | `($IBAN(\+$BIC)?){1,2}` | Alternative bank account list. In case recipient has more accounts, this field allows a banking application to pick the one in the same bank, allowing faster accounting and lower fees for the client. | `ALT-ACC:CZ5855000000001265098001+RZBCCZPP, CZ5855000000001265098001*` |
+| AM | No | Max. 10 characters - 7 + 1 (separator) + 2 (decimal places) ("9 999 999.99") | `[1-9][0-9]*(\.[0-9][0-9])?` | A payment amount. | `AM:480.55*` |
+| CC | No | Exactly 3 characters | Currency code in ISO 4217 | A payment currency. | `CC:CZK*` |
+| RF | No | Max. 16 characters | `[0-9]{0,16}` | A sender's reference. | `RF:1234567890123456*` |
+| RN | No | Max. 35 characters | `[^*]{0,35}` | Recipient's name | `RN:PETR DVORAK*` |
+| DT | No | Exactly 8 characters | Date in ISO 8601 format | Due date | `DT:20121231*` |
+| PT | No | Max. 3 characters | `[^*]{0,3}` | Payment type (to be used by analytics) | `PT:SPD*` |
+| MSG | No | Max. 60 characters | `[^*]{0,60}` | Message for payment recipient. | `MSG:Payment for internet*` |
+| CRC32 | No | Exactly 8 characters | `[A-F0-9]{8,8}` | CRC32 checksum (application level) computed from canonic representation. Canonic representation is obtained by removing CRC32 field from SPAYD representation, reconstructing SPAYD string while sorting key-pair attributes by key and values (alphabetically), applying CRC32 (IEEE 802.3) and converting to hexadecimal uppercase string. Example: * Original SPAYD string: `SPD*1.0*CC:CZK*ACC:CZ5855000000001265098001*AM:100.00*CRC32: AAD80227` * Canonic SPAYD string: `SPD*1.0*ACC:CZ5855000000001265098001*AM:100.00*CC:CZK` | `CRC32:81C0FFEE*` |
+
+
+### Integration with applications
+
+The file type extension is:
+
+`*.spayd`.
+
+MIME type of the format is:
+
+`application/x-shortpaymentdescriptor`.
+
+
+### Examples of format usage
+
+* QR Codes with payment information (to be printed on invoices or displayed on the web) that can be scanned using either the mobile phone or a special automated teller machine (ATM)
+* sending the payment information using the NFC technology
+* sharing the payment information via the web or e-mail (via a downloadable file or and e-mail attachment)

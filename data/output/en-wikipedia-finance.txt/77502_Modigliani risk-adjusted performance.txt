@@ -1,0 +1,63 @@
+Modigliani risk-adjusted performance
+
+
+# Modigliani risk-adjusted performance
+
+
+
+**Modigliani risk-adjusted performance** (also known as **M²**, **M2**, **Modigliani–Modigliani measure** or **RAP**) is a measure of the risk-adjusted returns of some investment portfolio. It measures the returns of the portfolio, adjusted for the risk of the portfolio relative to that of some benchmark (e.g., the market). We can interpret the measure as the difference between the scaled excess return of our portfolio P and that of the market, where the scaled portfolio has the same volatility as the market. It is derived from the widely used Sharpe ratio, but it has the significant advantage of being in units of percent return (as opposed to the Sharpe ratio – an abstract, dimensionless ratio of limited utility to most investors), which makes it dramatically more intuitive to interpret.
+
+
+## History
+
+In 1966, William F. Sharpe developed what is now known as the Sharpe ratio. Sharpe originally called it the "reward-to-variability" ratio before it began being called the Sharpe ratio by later academics and financial operators. Sharpe slightly refined the idea in 1994.
+
+In 1997, Nobel-prize winner Franco Modigliani and his granddaughter, Leah Modigliani, developed what is now called the Modigliani risk-adjusted performance measure. They originally called it "RAP" (risk-adjusted performance). They also defined a related statistic, "RAPA" (presumably, an abbreviation of "risk-adjusted performance alpha"), which was defined as RAP minus the risk-free rate (i.e., it only involved the risk-adjusted return above the risk-free rate). Thus, RAPA was effectively the risk-adjusted excess return.
+
+The RAP measure has since become more commonly known as "M²" (because it was developed by the two Modiglianis), but also as the "Modigliani–Modigliani measure" and "M2", for the same reason.
+
+
+## Definition
+
+Modigliani risk-adjusted return is defined as follows:
+
+Let {\displaystyle D\_{t}} be the excess return of the portfolio (i.e., above the risk-free rate) for some time period {\displaystyle t}:
+
+where {\displaystyle R\_{P\_{t}}} is the portfolio return for time period {\displaystyle t} and {\displaystyle R\_{F\_{t}}} is the risk-free rate for time period {\displaystyle t}.
+
+Then the Sharpe ratio {\displaystyle S} is
+
+where {\displaystyle {\overline {D}}} is the average of all excess returns over some period and {\displaystyle \sigma \_{D}} is the standard deviation of those excess returns.
+
+And finally:
+
+where {\displaystyle S} is the Sharpe ratio, {\displaystyle \sigma \_{B}} is the standard deviation of the excess returns for some benchmark portfolio against which you are comparing the portfolio in question (often, the benchmark portfolio is the market), and {\displaystyle {\overline {R\_{F}}}} is the average risk-free rate for the period in question.
+
+For clarity, one can substitute in for {\displaystyle S} and rearrange:
+
+The original paper also defined a statistic called "RAPA" (presumably, an abbreviation of "risk-adjusted performance alpha"). Consistent with the more common terminology of {\displaystyle M^{2}}, this would be
+
+or equivalently,
+
+Thus, the portfolio's excess return is adjusted based on the portfolio's relative riskiness with respect to that of the benchmark portfolio (i.e., {\displaystyle {\frac {\sigma \_{B}}{\sigma \_{D}}}}). So if the portfolio's excess return had twice as much risk as that of the benchmark, it would need to have twice as much excess return in order to have the same level of *risk-adjusted* return.
+
+The M² measure is used to characterize how well a portfolio's return rewards an investor for the amount of risk taken, relative to that of some benchmark portfolio and to the risk-free rate. Thus, an investment that took a great deal more risk than some benchmark portfolio, but only had a small performance advantage, might have lesser risk-adjusted performance than another portfolio that took dramatically less risk relative to the benchmark, but had similar returns.
+
+Because it is directly derived from the Sharpe ratio, any orderings of investments/portfolios using the M² measure are exactly the same as orderings using the Sharpe ratio.
+
+
+## Advantages over the Sharpe ratio and other dimensionless ratios
+
+The Sharpe ratio is awkward to interpret when it is negative. Further, it is difficult to directly compare the Sharpe ratios of several investments. For example, what does it mean if one investment has a Sharpe ratio of 0.50 and another has a Sharpe ratio of −0.50? How much worse was the second portfolio than the first? These downsides apply to all risk-adjusted return measures that are ratios (e.g., Sortino ratio, Treynor ratio, upside-potential ratio, etc.).
+
+M² has the enormous advantage that it is in units of percentage return, which is instantly interpretable by virtually all investors. Thus, for example, it is easy to recognize the magnitude of the difference between two investment portfolios which have M² values of 5.2% and of 5.8%. The difference is 0.6 percentage points of risk-adjusted return per year, with the riskiness adjusted to that of the benchmark portfolio (whatever that might be, but usually the market).
+
+
+## Extensions
+
+It is not necessary to use standard deviation of excess returns as the measure of risk. This approach is extensible to use of other measures of risk (e.g., beta), just by substituting the other risk measures for {\displaystyle \sigma \_{D}} and {\displaystyle \sigma \_{B}}:
+
+The main idea is that the riskiness of one portfolio's returns is being adjusted for comparison to another portfolio's returns.
+
+Virtually any benchmark return (e.g., an index or a particular portfolio) could be used for risk adjustment, though usually it is the market return. For example, if you were comparing performance of endowments, it might make sense to compare all such endowments to a benchmark portfolio of 60% stocks and 40% bonds.
+

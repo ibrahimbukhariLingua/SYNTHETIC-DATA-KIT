@@ -1,0 +1,37 @@
+Pin risk
+
+
+# Pin risk
+
+
+
+**Pin risk** occurs when the market price of the underlier of an option contract at the time of the contract's expiration is close to the option's strike price. In this situation, the underlier is said to have *pinned*. The risk to the writer (seller) of the option is that they cannot predict with certainty whether the option will be exercised or not. So the writer cannot hedge their position precisely and may end up with a loss or gain. There is a chance that the price of the underlier may move adversely, resulting in an unanticipated loss to the writer. In other words, an option position may result in a large, undesired risky position in the underlier immediately after expiration, regardless of the actions of the writer.
+
+
+## Background
+
+Sellers of option contracts often hedge them to create delta neutral portfolios. The objective is to minimize risk due to the movement of the underlier's price, while implementing whatever strategy led to the sale of the options in the first place. For instance, a seller of a call may hedge by buying just enough of the underlier to create a delta neutral portfolio. As time passes, the option seller adjusts his hedge position by buying or selling some quantity of the underlier to counteract changes in the price of the underlier.
+
+At expiration, usually either
+
+* the option is in the money, and the seller has bought or sold enough of the underlier to satisfy his obligation under the option contract, or
+* the option is out of the money, and the option will expire worthless, and the seller of the option would have no position in the underlier.
+
+However, the cost to the option buyer of exercising the option is not zero. For instance, the buyer's broker may charge transaction fees to exercise the option to buy or sell the underlier. If these costs are greater than the amount the option is *in the money*, the owner of the option may rationally choose **not** to exercise. Thus, the option seller may end up with an unexpected position in the underlier and thus risk losing value if the underlier's price then moves adversely before the option seller can eliminate this position, perhaps not until the next trading day. The costs of exercise differ from trader to trader, and therefore the option seller may not be able to predict whether the options will be exercised or not.
+
+
+## Example
+
+A trader has sold 75 put contracts on XYZ Corp. stock, struck at $50 and expiring on Saturday, October 20, 2012. On Friday, October 19—the last day these contracts are traded—XYZ stock closes at $49.97, which means the options are $0.03 *in-the-money*. Because each contract represents an obligation to buy 100 shares of XYZ stock at $50.00, the trader will have to buy anywhere from 0 shares to 7500 shares of XYZ stock as a result of the puts being exercised. In fact, only 49 of the contracts are exercised, meaning that the trader must buy 4900 shares of the underlier. If at the close on Friday, October 19, the trader's position in XYZ stock was short 7,500 shares, then on Monday, October 22, the trader would still be short 2600 shares, instead of flat as the trader had hoped. The trader must now buy back these 2600 shares in order to avoid being exposed to risk that XYZ will increase in price.
+
+
+## Management of pin risk
+
+On the day that an option expires—for U.S. exchange traded equity options this is the Saturday following the third Friday of the month—if an option's underlier is close to *pinning*, the trader must pay close attention. A small movement of the underlier's price *through* the strike (e.g. from below the strike price to above, or vice versa) can have a large impact on the trader's net position in the underlier on the trading day after expiration. For instance, if an option goes from being *in the money* to *out of the money*, the trader must rapidly trade enough of the underlier so that the position after expiration will be flat.
+
+For example, a trader is long 10 calls struck at $90.00 on IBM stock, and five minutes before the close of trading, IBM's stock price is $89.75. These calls are *out of the money* and therefore will expire worthless at this price. However, two minutes before the close of trading, IBM's price suddenly moves to $90.26. These options are now *in the money*, and the trader will now want to exercise them. However, to do so, the trader should first sell 1000 shares of IBM at $90.26. This is done so that the trader will be flat IBM stock after expiration. Thirty seconds before the close, IBM drops back to $89.95. The calls are now *out of the money*, and the trader must quickly buy back the stock. Option traders with a broad portfolio of options can be very busy on Expiration Friday.
+
+Pinning of a stock to a particular strike can be exploited by options traders. One way is to sell both a put and a call struck at the pinned value. As noted above, stocks can break their pin and move off the strike, so the trader must keep a careful eye on his positions.
+
+In this market, the last available price of the underlier, which is used to determine whether an option is automatically exercised, is the price of the regular-hours trade reported last to the Options Clearing Corporation at or before 4:01:30 pm ET on the Friday before expiration. This trade will have occurred during normal hours, i.e. before 4:00 pm. It can be any size and come from any participating exchange. The OCC reports this price tentatively at 4:15 pm, but, to allow time for exchanges to correct errors the OCC does not make the price official until 5:30 pm.
+

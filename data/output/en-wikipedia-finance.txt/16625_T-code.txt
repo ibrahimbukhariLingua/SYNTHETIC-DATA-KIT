@@ -1,0 +1,138 @@
+T-code
+
+
+# T-code
+
+
+
+A T-code is a transaction code used whenever executing particular task . Each function in SAP ERP has an SAP transaction code associated with it .
+
+
+## Use
+
+A transaction code is used to access functions or running programs (including executing ABAP code) in the SAP application more rapidly. By entering a t-code instead of using the menu, navigation and execution are combined into a single step, much like shortcuts in the Windows OS. SAP transaction codes can be entered into the Transaction code field to navigate the user directly to the screen or program task bypassing the SAP menu.
+
+
+## Example
+
+Users can create a new session and start a new transaction in one step by entering /o followed by the transaction code e.g. /oFB60.
+
+*Example Transaction codes*
+
+MM01 creation of Material Master
+
+XK01(BP) Creation of Vendor Master
+
+XD01(BP) creation of Customer Master
+
+FB60 Accounts Payable Invoice Entry
+
+FB65 Accounts Payable Credit Note Entry
+
+FK10N Display Accounts Payable Balances
+
+The transaction for MM module starts with M.
+
+IH09 - Display Material
+MM01 - Create Material
+MM02 - Change Material
+MM03 - Display Material
+MM50 - List Extendable Materials
+MMBE - Stock Overview
+MMI1 - Create Operating Supplies
+MMN1 - Create Non-Stock Material
+MMS1 - Create Service
+MMU1 - Create Non-Valuated Material
+
+ME51N - Create Purchase Requisition
+ME52N - Change Purchase Requisition
+ME53N - Display Purchase Requisition
+ME5A - Purchase Requisitions: List Display
+ME5J - Purchase Requisitions for Project
+ME5K - Requisitions by Account Assignment
+MELB - Purch. Transactions by Tracking No.
+
+ME56 - Assign Source to Purch. Requisition
+ME57 - Assign and Process Requisitions
+ME58 - Ordering: Assigned Requisitions
+ME59 - Automatic Generation of POs
+
+ME54 - Release Purchase Requisition
+ME55 - Collective Release of Purchase Reqs.
+ME5F - Release Reminder: Purch. Requisition
+
+MB21 - Create Reservation
+MB22 - Change Reservation
+MB23 - Display Reservation
+MB24 - Reservations by Material
+MB25 - Reservations by Account Assignment
+
+MB1C - Other Goods Receipts
+MB90 - Output Processing for Mat. Documents
+
+MB21 - Create Reservation
+MB22 - Change Reservation
+MB23 - Display Reservation
+MB24 - Reservations by Material
+MB25 - Reservations by Account Assignment
+
+MBRL - Return Delivery per Mat. Document
+
+MB1C - Other Goods Receipts
+MB90 - Output Processing for Mat. Documents
+
+MB1B - Transfer Posting
+
+MIBC - ABC Analysis for Cycle Counting
+
+MI01 - Create Physical Inventory Document
+MI02 - Change Physical Inventory Document
+MI03 - Display Physical Inventory Document
+MI31 - Batch Input: Create Phys. Inv. Doc.
+MI32 - Batch Input: Block Material
+MI33 - Batch Input: Freeze Book Inv.Balance
+MICN - Btch Inpt:Ph.Inv.Docs.for Cycle Ctng
+MIK1 - Batch Input: Ph.Inv.Doc.Vendor Cons.
+MIQ1 - Batch Input: PhInvDoc. Project Stock
+
+MI01 - Create Physical Inventory Document
+MI02 - Change Physical Inventory Document
+MI03 - Display Physical Inventory Document
+MI31 - Batch Input: Create Phys. Inv. Doc.
+MI32 - Batch Input: Block Material
+MI33 - Batch Input: Freeze Book Inv.Balance
+MICN - Btch Inpt:Ph.Inv.Docs.for Cycle Ctng
+MIK1 - Batch Input: Ph.Inv.Doc.Vendor Cons.
+MIQ1 - Batch Input: PhInvDoc. Project Stock
+
+MI01 - Create Physical Inventory Document
+MI02 - Change Physical Inventory Document
+MI03 - Display Physical Inventory Document
+MI31 - Batch Input: Create Phys. Inv. Doc.
+MI32 - Batch Input: Block Material
+MI33 - Batch Input: Freeze Book Inv.Balance
+MICN - Btch Inpt:Ph.Inv.Docs.for Cycle Ctng
+MIK1 - Batch Input: Ph.Inv.Doc.Vendor Cons.
+MIQ1 - Batch Input: PhInvDoc. Project Stock
+
+MI21 - Print physical inventory document
+
+MI04 - Enter Inventory Count with Document
+MI05 - Change Inventory Count
+MI06 - Display Inventory Count
+MI09 - Enter Inventory Count w/o Document
+MI34 - Batch Input: Enter Count
+MI35 - Batch Input: Post Zero Stock Balance
+MI38 - Batch Input: Count and Differences
+MI39 - Batch Input: Document and Count
+MI40 - Batch Input: Doc., Count and Diff.
+
+MI08 - Create List of Differences with Doc.
+MI10 - Create List of Differences w/o Doc.
+MI20 - Print List of Differences
+
+MI11 - Physical Inventory Document Recount
+
+MI07 - Process List of Differences
+MI37 - Batch Input: Post Differences
+

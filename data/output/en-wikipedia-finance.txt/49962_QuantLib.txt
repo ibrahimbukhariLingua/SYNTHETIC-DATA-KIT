@@ -1,0 +1,54 @@
+QuantLib
+
+
+# QuantLib
+
+
+
+**QuantLib** is an open-source software library which provides tools for software developers and practitioners interested in financial instrument valuation and related subjects. QuantLib is written in C++.
+
+
+## History
+
+The QuantLib project was started by a few quantitative analysts who worked at RiskMap (currently StatPro Italia). The first e-mail announcing QuantLib to the world was sent on December 11, 2000, and signed by Ferdinando Ametrano, Luigi Ballabio and Marco Marchioro. RiskMap was founded by Dario Cintioli, Ferdinando Ametrano, Luigi Ballabio, Adolfo Benin, and Marco Marchioro. The people at RiskMap faced the problem, not for the first time in their lives, to build a financial library from scratch. It was Ferdinando's idea to build an open source library that could be used by quants all over the world when starting to build a new quantitative library. Currently, the QuantLib project is headed by Luigi Ballabio and Ferdinando Ametrano.
+
+
+### Release History
+
+| Version | Release date | Notes |
+| --- | --- | --- |
+| 0.1.1 | November 21, 2000 |
+| 0.2.0 | September 18, 2001 |
+| 0.3.4 | November 21, 2003 |
+| 0.3.7 | July 23, 2004 | From this release onwards QuantLib requires Boost. |
+| 0.4.0 | February 20, 2007 |
+| 0.8.0 | May 30, 2007 | The jump in version history was to converge to 1.0 faster |
+| 0.9.0 | December 24, 2007 |
+| 0.9.9 | November 2009 |
+| 1.0.0 | February 24, 2010 |
+| 1.0.1 | April 20, 2010 |
+| 1.1 | May 23, 2011 |
+| 1.2 | March 6, 2012 |
+| 1.2.1 | September 10, 2012 |
+| 1.3 | July 24, 2013 |
+| 1.4 | February 27, 2014 |
+| 1.6 | June 23, 2015 |
+| 1.7 | November 23, 2015 |
+| 1.8 | May 18, 2016 |
+| 1.9 | November 8, 2016 |
+| 1.10 | May 16, 2017 |
+| 1.10.1 | August 31, 2017 |
+| 1.11 | October 2, 2017 |
+| 1.12 | February 1, 2018 |
+| 1.12.1 | April 16, 2018 |
+| 1.13 | May 24, 2018 |
+
+
+## Usage
+
+QuantLib is available as C++ source code which is compiled into a library. It is known to work on Windows, Mac OS X, Linux and other Unix-like operation systems.
+
+It can be linked with other languages via SWIG. The Python binding can be installed via pip; the "RQuantLib" package makes parts of QuantLib accessible from R.
+
+Much of QuantLib's functionality can be used in Excel via the add-in QuantlibXL.
+

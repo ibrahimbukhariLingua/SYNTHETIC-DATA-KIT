@@ -1,0 +1,28 @@
+Naked option
+
+
+# Naked option
+
+
+
+A **naked option** or **uncovered option** is an options strategy where the options contract writer (i.e., the seller) does not hold the underlying asset to cover the contract in case of assignment (like in a covered option). Nor does the seller hold any option of the same class on the same underlying asset that could protect against potential losses (like in an options spread). A naked option involving a "call" is called a "naked call" or "uncovered call", while one involving a "put" is a "naked put" or "uncovered put".
+
+The naked option is one of riskiest options strategies, and therefore most brokers restrict them to only those traders that have the highest options level approval and have a margin account. Naked options are attractive because the seller receives the premium cost of the option without buying a corresponding position to hedge against potential losses. In the case of a naked put, the seller hopes that the underlying equity or stock price stays the same or rises. In the case of a naked call, the seller hopes that the underlying equity or stock price stays the same or drops. And the seller's odds of retaining the premium at expiration increase the further the naked option is out of the money at the time it was written.
+
+Selling a naked option could also be used as an alternative to using a limit order or stop order to open an equity position. Instead of buying an underlying stock outright, one with sufficient cash could sell a put option, receive the premium, and then buy the stock if its price drops to or below the strike price at assignment or expiration. Likewise, one with sufficient equity to borrow on margin could sell a call option, receive the premium, and then short the stock if its price rises to or above the strike price at assignment or expiration.
+
+However, the naked option has the highest risk because sellers have agreed to cover the contract in case of assignment, no matter how far the price of the stock goes. The seller of a naked put would be obligated to purchase the underlying stock at the strike price even if its market price drops down to zero. Likewise, the seller of a naked call could be forced to short the underlying stock at the strike price even if its market price rises up to an unlimited amount. Because nothing is covered to protect against potential losses, a margin call would be triggered if the seller does not have enough equity or cash to cover the contract in case of assignment.
+
+
+## Examples
+
+
+### Naked call example
+
+Shares of XYZ is currently selling at $85 per share and Speculator A decides to sell a call option at a strike price of $100 per share on or before May 10 for $24. If the XYZ shares fail to rise above $100 before May 10, the call option expires worthless and Speculator A makes a profit of $24. However, if the XYZ shares rise above $100, Speculator A would be obligated to buy 100 shares of XYZ at market price and sell them back for $100 each. In this scenario, the Speculator A makes a loss of (100 \* XYZ market price) - (100 \* $100) - $24. As market price can rise an unlimited amount, Speculator A can experience unlimited losses in this 'worst case' scenario.
+
+
+### Naked put example
+
+Shares of XYZ is currently selling at $85 per share and Speculator A decides to sell a put option at a strike price of $75 per share on or before June 10 for $24. If the XYZ shares fail to drop below $75 before June 10, the put option expires worthless and Speculator A makes a profit of $24. However, if the XYZ shares drop at or below $75, Speculator A would be obligated to buy 100 shares of XYZ at a price of $75, even if the market price drops at or near $0.
+

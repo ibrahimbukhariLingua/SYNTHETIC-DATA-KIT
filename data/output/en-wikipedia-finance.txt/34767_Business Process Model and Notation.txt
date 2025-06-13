@@ -1,0 +1,174 @@
+Business Process Model and Notation
+
+
+# Business Process Model and Notation
+
+
+
+**Business Process Model and Notation** (**BPMN**) is a graphical representation for specifying business processes in a business process model.
+
+Originally developed by the Business Process Management Initiative (BPMI), BPMN has been maintained by the Object Management Group (OMG) since the two organizations merged in 2005. Version 2.0 of BPMN was released in January 2011, at which point the name was amended to **Business Process Model *and* Notation** to reflect the introduction of execution semantics, which were introduced alongside the existing notational and diagramming elements. Though it is an OMG specification, BPMN is also ratified as ISO 19510. The latest version is BPMN 2.0.2, published in January 2014.
+
+
+## Overview
+
+Business Process Model and Notation (BPMN) is a standard for business process modeling that provides a graphical notation for specifying business processes in a *Business Process Diagram* (BPD), based on a flowcharting technique very similar to activity diagrams from Unified Modeling Language (UML). The objective of BPMN is to support business process management, for both technical users and business users, by providing a notation that is intuitive to business users, yet able to represent complex process semantics. The BPMN specification also provides a mapping between the graphics of the notation and the underlying constructs of execution languages, particularly Business Process Execution Language (BPEL).
+
+BPMN has been designed to provide a standard notation readily understandable by all business stakeholders, typically including business analysts, technical developers and business managers. BPMN can therefore be used to support the generally desirable aim of all stakeholders on a project adopting a common language to describe processes, helping to avoid communication gaps that can arise between business process design and implementation.
+
+BPMN is one of a number of business process modeling language standards used by modeling tools and processes. While the current variety of languages may suit different modeling environments, there are those who advocate for the development or emergence of a single, comprehensive standard, combining the strengths of different existing languages. It is suggested that in time, this could help to unify the expression of basic business process concepts (e.g., public and private processes, choreographies), as well as advanced process concepts (e.g., exception handling, transaction compensation).
+
+Two new standards, using a similar approach to BPMN have been developed, addressing case management modeling (Case Management Model and Notation) and decision modeling (Decision Model and Notation).
+
+
+## Topics
+
+
+### Scope
+
+BPMN is constrained to support only the concepts of modeling applicable to business processes. Other types of modeling done by organizations for non-process purposes are out of scope for BPMN. Examples of modeling excluded from BPMN are:
+
+* Organizational structures
+* Functional breakdowns
+* Data models
+
+In addition, while BPMN shows the flow of data (messages), and the association of data artifacts to activities, it is not a data flow diagram.
+
+
+### Elements
+
+BPMN models are expressed by simple diagrams constructed from a limited set of graphical elements. For both business users and developers, they simplify understanding of business activities' flow and process.
+BPMN's four basic element categories are:
+
+These four categories enable creation of simple business process diagrams (BPDs). BPDs also permit making new types of flow object or artifact, to make the diagram more understandable.
+
+
+### Flow objects and connecting objects
+
+
+*Flow objects* are the main describing elements within BPMN, and consist of three core elements: events, activities, and gateways.
+
+
+#### Event
+
+
+#### Activity
+
+
+#### Gateway
+
+
+#### Connections
+
+*Flow objects* are connected to each other using **Connecting objects**, which are of three types: sequences, messages, and associations.
+
+
+### Pools, Lanes, and artifacts
+
+
+Swim lanes are a visual mechanism of organising and categorising activities, based on cross functional flowcharting, and in BPMN consist of two types:
+
+**Artifacts** allow developers to bring some more information into the model/diagram. In this way the model/diagram becomes more readable. There are three pre-defined Artifacts, and they are:
+
+* Data objects: Data objects show the reader which data is required or produced in an activity.
+* Group: A Group is represented with a rounded-corner rectangle and dashed lines. The group is used to group different activities but does not affect the flow in the diagram.
+* Annotation: An annotation is used to give the reader of the model/diagram an understandable impression.
+
+### Examples of business process diagrams
+
+* Click on small images for full-size version
+
+### BPMN 2.0.2
+
+The vision of BPMN 2.0.2 is to have one single specification for a new Business Process Model and Notation that defines the notation, metamodel and interchange format but with a modified name that still preserves the "BPMN" brand. The features include:
+
+* Formalizes the execution semantics for all BPMN elements.
+* Defines an extensibility mechanism for both Process model extensions and graphical extensions.
+* Refines Event composition and correlation.
+* Extends the definition of human interactions.
+* Defines a Choreography model.
+
+The current version of the specification was released in January 2014.
+
+
+## Comparison of BPMN versions
+
+| Attributes | BPMN 1.0 | BPMN 1.1 | BPMN 1.2 | BPMN 2.0 |
+| --- | --- | --- | --- | --- |
+| Consortium | BPMI & iGrafx | OMG | OMG | OMG |
+| Date of release | May 2004 | January 2008 | January 2009 | January 2011 |
+| Models | * Collaborative (public) B2B processes, * internal (private) business processes. | | | * collaborative (public) B2B processes, * internal (private) business processes, * a choreography – expected behavior between two or more business participants, * collaborations, which is a collection of participants and their interaction and * a conversation – the logical relation of message exchanges. |
+| event | * **start** (none, message, timer, rule, link, multiple) * **intermediate** (none, message, timer, error, cancel, compensation, rule, link, multiple) * **end** (none, message, error, cancel, compensation, link, terminate, multiple) | * **start** (none, message, timer, conditional, signal, multiple) * **intermediate** (none, message, timer, error, cancel, compensation, conditional, link, signal, multiple) * **end** (none, message, error, cancel, compensation, signal, terminate, multiple) | | * **start** + **top-level** (none, message, timer, conditional, signal, multiple, parallel multiple) + **event sub-process interrupting** (message, timer, escalation, conditional, error, compensation, signal, multiple, parallel multiple) + **event sub-process non-interrupting** (message, timer, escalation, conditional, signal, multiple, parallel multiple) * **intermediate** + **catching** (message, timer, conditional, link, signal, multiple, parallel multiple) + **boundary interrupting** (message, timer, escalation, conditional, error, cancel, compensation, signal, multiple, parallel multiple) + **boundary non-interrupting** (message, timer, escalation, conditional, signal, multiple, parallel multiple, terminate) + **throwing** (none, message, escalation, link, compensation, signal, multiple, parallel multiple) * **end** (none, message, escalation, error, cancel, compensation, signal, multiple, terminate) |
+| activity | * **task** (atomic) * **process/sub-process** (nonatomic) + collapsed sub-process + expanded sub-process | | | * **task** (atomic) * **choreography task** + collapsed choreography sub-process + expanded choreography sub-process * **process/sub-process** (nonatomic) + collapsed sub-process + expanded sub-process |
+| gateway | * **XOR** – exclusive decision and merging. both data-based and event-based. data-based can be shown with or without the "x" marker. * **OR** – inclusive decision and merging * **complex** – complex conditions and situations * **AND** – forking and joining | * **exclusive** decision and merging. both data-based and event-based. data-based can be shown with or without the "x" marker. * **inclusive** decision and merging. * **complex** – complex conditions and situations. * **parallel** forking and joining. | | * **exclusive** decision and merging. both data-based and event-based. exclusive can be shown with or without the "x" marker. * **inclusive** gateway decision and merging * **complex gateway** – complex conditions and situations * **parallel gateway** – forking and joining |
+| sequence flow | **normal flow** uncontrolled flow conditional flow default flow **exception flow** | | | |
+| message flow | message flow | | | |
+| association | association | | | |
+| pool | pool | | | |
+| lane | lane | | | |
+| data objects | data object | | | * data object + collection + data input + data output |
+| groups | group | | | |
+| annotations | annotations | | | |
+| message | — | — | — | **message** |
+| other elements | * looping + activity looping + sequence flow looping * multiple instances * process break * transactions * nested/embedded sub-process * off-page connector * compensation association | | | * looping + activity looping + sequence flow looping * multiple instances * process break * transactions * nested/embedded sub-process * off-page connector * compensation association * communication (subcommunication) * communication link |
+| Number of all elements | 48 | 55 | 55 | 116 |
+| Major changes | — | * The new specification introduces a categorization of event triggers into "catching" and "throwing" events. I.e. there are two kinds of intermediate message events now – one kind responsible for reception of messages ("catching") and one kind responsible for sending messages ("throwing"). * In addition to the old types, it introduces a new type, the **signal event**. * Start and end link events do not exist any longer in BPMN 1.1. * The old "rule events" were renamed to **conditional events**. The semantics and appearance have not changed. * The event-based gateway in BPMN 1.1 looks slightly different from what it looked like in 1.0. Instead of the hexagonal star it now has a pentagon in its center. The same shape is also used for the multiple events (start, intermediate, end). * There is an additional line separating your lane's description from its content. | The BPMN 1.2 minor revision changes consist of editorial corrections and implementation bug fixes. Consequently, these minor changes affect modeling tool vendors more than modelers (users). | * Choreographies + Choreographies-model + Conversation-model * Complete Metamodel * BPMN Core * BPMN Execution Semantics * BPMN – BPEL Mapping * XPDL (BPMN XML Serialization) * Diagram Interchange * Elements For Abstraction + Callable Element + Call Activity + Global Task * Gateways (Updated) + Exclusive/Parallel Event-based Gateway (they stand at the beginning of the process) * Tasks/SubProcesses (Updated) + Event-Subprocess (Used to handle events in the bounding subprocess) + BusinessRule task + Sequential Multi-Instance Activity + Service Task * Artifacts (Updated) + Data Objects (Collection, Data Input, Data Output) |
+
+
+## Types of BPMN sub-model
+
+Business process modeling is used to communicate a wide variety of information to a wide variety of audiences. BPMN is designed to cover this wide range of usage and allows modeling of end-to-end business processes to allow the viewer of the Diagram to be able to easily differentiate between sections of a BPMN Diagram. There are three basic types of sub-models within an end-to-end BPMN model: Private (internal) business processes, Abstract (public) processes, and Collaboration (global) processes:
+
+Within and between these three BPMN sub-models, many types of Diagrams can be created. The following are the types of business processes that can be modeled with BPMN (those with asterisks may not map to an executable language):
+
+* High-level private process activities (not functional breakdown)\*
+* Detailed private business process
+* As-is or old business process\*
+* To-be or new business process
+* Detailed private business process with interactions to one or more external entities (or “Black Box” processes)
+* Two or more detailed private business processes interacting
+* Detailed private business process relationship to Abstract Process
+* Detailed private business process relationship to Collaboration Process
+* Two or more Abstract Processes\*
+* Abstract Process relationship to Collaboration Process\*
+* Collaboration Process only (e.g., ebXML BPSS or RosettaNet)\*
+* Two or more detailed private business processes interacting through their Abstract Processes and/or a Collaboration Process
+
+BPMN is designed to allow all the above types of Diagrams. However, it should be cautioned that if too many types of sub-models are combined, such as three or more private processes with message flow between each of them, then the Diagram may become difficult to understand. Thus, the OMG recommends that the modeler pick a focused purpose for the BPD, such as a private or collaboration process.
+
+
+## Comparison with other process modeling notations
+
+Event-driven process chains (EPC) and BPMN are two notations with similar expressivity when process modeling is concerned. A BPMN model can be transformed into an EPC model. Conversely, an EPC model can be transformed into a BPMN model with only a slight loss of information. A study showed that for the same process, the BPMN model may need around 40% fewer elements than the corresponding EPC model, but with a slightly larger set of symbols. The BPMN model would therefore be easier to read. The conversion between the two notations can be automated.
+
+UML activity diagrams and BPMN are two notations that can be used to model the same processes: a subset of the activity diagram elements have a similar semantic than BPMN elements, despite the smaller and less expressive set of symbols. A study showed that both types of process models appear to have the same level of readability for inexperienced users, despite the higher formal constraints of an activity diagram.
+
+
+## BPM Certifications
+
+The Business Process Management (BPM) world acknowledges the critical importance of modeling standards for optimizing and standardizing business processes. The Business Process Model and Notation (BPMN) version 2 has brought significant improvements in event and subprocess modeling, significantly enriching the capabilities for documenting, analyzing, and optimizing business processes.
+
+Elemate positions itself as a guide in exploring the various BPM certifications and dedicated training paths, thereby facilitating the mastery of BPMN and continuous improvement of processes within companies.
+
+
+### OMG OCEB certification
+
+The Object Management Group (OMG), the international consortium behind the BPMN standard, offers the OCEB certification (OMG Certified Expert in BPM). This certification specifically targets business process modeling with particular emphasis on BPMN 2. The OCEB certification is structured into five levels: Fundamental, Business Intermediate (BUS INT), Technical Intermediate (TECH INT), Business Advanced (BUS ADV), and Technical Advanced (TECH ADV), thus providing a comprehensive pathway for BPM professionals.
+
+
+### Other BPM certifications
+
+Beyond the OCEB, there are other recognized certifications in the BPM field:
+
+* CBPA (Certified Business Process Associate): Offered by the ABPMP (Association of Business Process Management Professionals), this certification is aimed at professionals starting in BPM.
+* CBPP (Certified Business Process Professional): Also awarded by the ABPMP, the CBPP certification targets experienced professionals, offering validation of their global expertise in BPM.
+
+### The interest of a BPMN certification
+
+While BPMN 2 has established itself as an essential standard in business process modeling, a specific certification for BPMN could provide an additional guarantee regarding the quality and compliance of the models used. This becomes particularly relevant when companies employ external providers for the modeling of their business processes.
+
+
+### BPM certifying training with BPMN 2
+
+Although OMG does not offer a certification exclusively dedicated to BPMN 2, various organizations provide certifying training that encompasses this standard. These trainings cover not just BPMN but also the principles of management, automation, and digitization of business processes. They enable learners to master process mapping and modeling using BPMN 2, essential for optimizing business operations.
+

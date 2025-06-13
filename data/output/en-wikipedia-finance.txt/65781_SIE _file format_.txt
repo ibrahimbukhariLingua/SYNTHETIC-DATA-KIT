@@ -1,0 +1,51 @@
+SIE (file format)
+
+
+# SIE (file format)
+
+
+
+The **SIE format** is an open standard for transferring accounting data between different software produced by different software suppliers.
+
+SIE could be used to transfer data between software on the same computer, but also used for sending data between companies, for example between the company, the accountant and the audit. It can also be used for transferring from trade pre-systems like payables, receivables and salary systems to accounting as well as from accounting to tax administrative special applications.
+
+
+## File format
+
+SIE is a tagged text file format, not XML like XBRL GL and UN/CEFACT accounting. Elder not able to use new XML technology, but about 20 times compacter file format.
+
+The SIE files are in five sections:
+
+* General information
+* Used chart of accounts declaration
+* Used dimension/object (identifiers) of accounting declaration (making object related accounting analyse possible from SIE data)
+* Balances of accounts (of this, last and possibly more previous years, for the total and for each object)
+* Accounting entries (of this year)
+
+## History
+
+A non-profit organization (The SIE Group) was formed in 1992 by leading Swedish accounting software vendors and accounting specialist (accountants/auditors interest groups). The accounting data file interchange file format rapidly gained market support, and is now implemented in all accounting software on the Swedish market. It is also used by government bodies, such as the Swedish Tax Authority, Statistics Sweden and The Economic Crimes Authority.
+
+SIE is closely related to the Swedish standard charts of accounts organisation BAS (accounting) (the most advanced and fully covering standard account chart in the world), and SIE is one of the owning members of BAS. However the SIE file format works with any charts of accounts and is technically independent of BAS. Together the SIE file format and the standard chart of accounts make a strong concept for accounting information interchange that has proven simple and efficient.
+
+SIE has since 2012 a close cooperation with XBRL Sweden.
+
+SIE is not an official SIS (Swedish Standards Institute local ISO) national standard. The SIE Group provides the SIE File format as an open standard.
+
+
+## A large Swedish domestic market implementation rate
+
+Due to the fact that the SIE standard is so well spread in the software business in Sweden it has become a de facto standard for transferring accounting data in Sweden. The format is open to everyone, but only SIE members can get their software approved.
+
+
+## A vendor interest group, not a standards organisation
+
+As a vendor interest group SIE is not bound to the statements of neutrality against proprietary solutions of regular standards organisations. That makes the SIE specification also include implementation instruction layer that is not possible in official standards organisations work. The implementation instruction layer has helped a lot in limiting dialects and makes certain the information interchange work in practice. This is a key to the huge implementation rate in the Swedish domestic market.
+
+
+## International aspect
+
+The file format was originally developed for the Swedish market only, and the record tags in the file format was given Swedish names.
+
+To overcome that a revised and XML-based version of the file format (SIE 5) was released in 2018. The new file format has however not yet replaced the older file formats.
+

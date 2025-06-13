@@ -1,0 +1,26 @@
+Brazilian Swap
+
+
+# Brazilian Swap
+
+
+
+A **Brazilian Swap** is a type of swap where the floating rate is calculated using an average rate and has only one payment, which occurs at maturity.
+
+The average rate used for the Floating Leg is the Average One-Day Interbank Deposit (aka CDI rate, or overnight DI rate) which is an annual rate and is calculated daily by the Central of Custody and Financial Settlement of Securities (CETIP). It represents the average rate of all inter-bank overnight transactions in Brazil.
+
+
+## Valuation and pricing
+
+The Brazilian swap has only one payment which occurs at maturity and pricing is done using the CDI rate.
+
+The fixed leg notional accretes daily from the effective date as:
+
+where
+
+Similarly, the floating leg accumulates daily accruals from the effective date as:
+
+where
+
+The CDI rate is an annualized rate (R) paying:
+

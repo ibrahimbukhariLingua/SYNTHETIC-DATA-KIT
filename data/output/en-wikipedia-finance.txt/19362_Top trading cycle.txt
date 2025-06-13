@@ -1,0 +1,105 @@
+Top trading cycle
+
+
+# Top trading cycle
+
+
+
+**Top trading cycle (TTC)** is an algorithm for trading indivisible items without using money. It was developed by David Gale and published by Herbert Scarf and Lloyd Shapley.³⁰–³¹
+
+
+## Housing market
+
+The basic TTC algorithm is illustrated by the following house allocation problem. There are {\displaystyle n} students living in the student dormitories. Each student lives in a single house. Each student has a preference relation on the houses, and some students prefer the houses assigned to other students. This may lead to mutually-beneficial exchanges. For example, if student 1 prefers the house allocated to student 2 and vice versa, both of them will benefit by exchanging their houses. The goal is to find a core-stable allocation – a re-allocation of houses to students, such that all mutually-beneficial exchanges have been realized (i.e., no group of students can together improve their situation by exchanging their houses).
+
+The algorithm works as follows.
+
+1. Ask each agent to indicate his "top" (most preferred) house.
+2. Draw an arrow from each agent {\displaystyle i} to the agent, denoted {\displaystyle \operatorname {Top} (i)}, who holds the top house of {\displaystyle i}.
+3. Note that there must be at least one cycle in the graph (this might be a cycle of length 1, if some agent {\displaystyle i} currently holds his own top house). Implement the trade indicated by this cycle (i.e., reallocate each house to the agent pointing to it), and remove all the involved agents from the graph.
+4. If there are remaining agents, go back to step 1.
+
+The algorithm must terminate, since in each iteration we remove at least one agent. It can be proved that this algorithm leads to a core-stable allocation.
+
+For example,²²³–²²⁴ suppose the agents' preference ordering is as follows (where only the at most 4 top choices are relevant):
+
+| Agent: | 1 | 2 | 3 | 4 | 5 | 6 |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1st choice: | 3 | 3 | 3 | 2 | 1 | 2 |
+| 2nd choice: | 2 | 5 | 1 | 5 | 3 | 4 |
+| 3rd choice: | 4 | 6 | . . . | 6 | 2 | 5 |
+| 4th choice: | 1 | . . . | . . . | 4 | . . . | 6 |
+| . . . | . . . | . . . | . . . | . . . | . . . | . . . |
+
+In the first iteration, the only top-trading-cycle is {3} (it is a cycle of length 1), so agent 3 keeps his current house and leaves the market.
+
+In the second iteration, agent 1's top house is 2 (since house 3 is unavailable). Similarly, agent 2's top house is 5 and agent 5's top house is 1. Hence, {1,2,5} is a top-trading-cycle. It is implemented: agent 1 gets house 2, agent 2 gets house 5 and agent 5 gets house 1. These three agents leave the market.
+
+In the third iteration, the top-trading-cycle {4,6} is, so agents 4 and 6 exchange their houses. There are no more agents left, so the game is over. The final allocation is:
+
+| Agent: | 1 | 2 | 3 | 4 | 5 | 6 |
+| --- | --- | --- | --- | --- | --- | --- |
+| House: | 2 | 5 | 3 | 6 | 1 | 4 |
+
+This allocation is core-stable, since no coalition can improve its situation by mutual exchange.
+
+The same algorithm can be used in other situations, for example: suppose there are 7 doctors that are assigned to night-shifts; each doctor is assigned to a night-shift in one day of the week. Some doctors prefer the shifts given to other doctors. The TTC algorithm can be used here to attain a maximal mutually-beneficial exchange.
+
+
+## Properties
+
+TTC is a truthful mechanism. This was proved by Alvin Roth.
+
+When the preferences are strict (there are no indifferences), TTC always finds a strictly Pareto-efficient allocation. Moreover, it always finds a core-stable allocation. Moreover, with strict preferences, there is a unique core-stable allocation, and it is the one found by TTC.
+
+In the strict preferences domain, TTC is the only mechanism that satisfies Individual rationality, Pareto efficiency and Strategy-proofness.
+
+
+## Preferences with indifferences
+
+The original TTC algorithm assumed that the preferences are strict, so that each agent always has a single top house. In realistic settings, agents may be indifferent between houses, and an agent may have two or more top houses. Several different algorithms have been suggested for this setting. They were later generalized in several ways. The general scheme is as follows.
+
+1. Ask each agent to indicate *all* his top houses.
+2. Construct the *TTC-graph G*: a directed graph in which each agent points to *all* agents who hold his top houses.
+3. Repeat:
+ * Analyze the strongly connected components of *G*.
+ * Identify the *sinks* - the components with no outgoing edges (there is at least one).
+ * Identify the *terminal sinks* - the sinks in which each agent owns one of his top choices.
+ + If there are no terminal sinks - break and go to step 4.
+ + Otherwise, for each terminal sink *S*: permanently assign each agent in *S* to his current house, remove them from the market, update the TTC graph, and go back to step 3.
+4. Select a set of disjoint trading cycles, using a pre-determined selection rule. Implement the trade indicated by these cycles, and remove them from the market.
+5. If there are remaining agents, go back to step 1.
+
+The mechanisms differ in the selection rule used in Step 4. The selection rule should satisfy several conditions:
+
+* Uniqueness: the rule selects, for each agent, a unique house from among his top houses.
+* Termination: the algorithm using the rule is guaranteed to terminate.
+* Persistence: in the reduced graph obtained by the rule, each directed path ending at an unsatisfied agent *i* (an agent who does not hold a top house) is *persistent* - the path remains in the graph until agent *i* leaves the market or trades his house.
+* Independence of unsatisfied agents: if agent *i* is unsatisfied, and two TTC graphs only differ in the edges outgoing from *i*, then the reduced TTC graphs only differ in the edge outgoing from *i*.
+
+If the selection rule satisfies Uniqueness and Termination, the resulting mechanism yields an allocation that is Pareto-efficient and in the *weak core* (no subset of agents can get a strictly better house for all of them by trading among themselves). Weak core also implies that it is individually-rational. If, in addition, the selection rule satisfies Persistence, Independence of unsatisfied agents, and some other technical conditions, the resulting mechanism is strategyproof.
+
+A particular selection rule that satisfies these conditions is the Highest Priority Object (HPO) rule. It assumes a pre-determined priority-ordering on the houses. It works as follows.
+
+* (a) Every unsatisfied agent points to the owner of the highest-priority house among his top houses. All unsatisfied agents are labeled.
+* (b) From the unlabeled agents, consider the ones that have a top house owned by a labeled agent. Among them, pick the agent *i* who owns the highest-priority house. Make *i* point to a highest-priority house owned by a labeled agent. Label agent *i*.
+* (c) If there are unlabeled agents, go back to (b).
+
+When the rule terminates, each all agents are labeled, and every labeled agent has a unique outgoing edge. The rule guarantees that, at each iteration, all cycles contain at least one unsatisfied agent. Therefore, in each iteration, at least one new agent becomes satisfied. Therefore, the algorithm ends after at most *n* iterations. The run-time of each iteration is {\displaystyle O(n\log {n}+n\gamma )}, where {\displaystyle \gamma } is the maximum size of an indifference class. Therefore, the total run-time is {\displaystyle O(n^{2}\log {n}+n^{2}\gamma )}.
+
+
+## Other extensions
+
+The TTC algorithm has been extended in various ways.
+
+1. A setting in which, in addition to students already living in houses, there are also new students without a house, and vacant houses without a student.
+
+2. The *school choice* setting. The New Orleans Recovery School District adopted school choice version of TTC in 2012.
+
+3. The *kidney exchange* setting: **Top Trading Cycles and Chains** (TTCC).
+
+
+## Implementation in software packages
+
+* R: The Top-Trading-Cycles algorithm for the housing market problem is implemented as part of the `matchingMarkets` package.
+* API: The MatchingTools API provides a free application programming interface for the Top-Trading-Cycles algorithm.

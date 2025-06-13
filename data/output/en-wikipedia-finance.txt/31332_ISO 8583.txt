@@ -1,0 +1,699 @@
+ISO 8583
+
+
+# ISO 8583
+
+
+
+**ISO 8583** is an international standard for *financial transaction card originated* interchange messaging. It is the International Organization for Standardization standard for systems that exchange electronic transactions initiated by cardholders using payment cards.
+
+ISO 8583 defines a message format and a communication flow so that different systems can exchange these transaction requests and responses. The vast majority of transactions made when a customer uses a card to make a payment in a store (EFTPOS) use ISO 8583 at some point in the communication chain, as do transactions made at ATMs. In particular, the Mastercard, Visa and Verve networks base their authorization communications on the ISO 8583 standard, as do many other institutions and networks.
+
+Although ISO 8583 defines a common standard, it is not typically used directly by systems or networks. It defines many standard fields (data elements) which remain the same in all systems or networks, and leaves a few additional fields for passing network-specific details. These fields are used by each network to adapt the standard for its own use with custom fields and custom usages like Proximity Cards.
+
+
+## Introduction
+
+The ISO 8583 specification has three parts:
+
+* Part 1: Messages, data elements, and code values
+* Part 2: Application and registration procedures for Institution Identification Codes (IIC)
+* Part 3: Maintenance procedures for the aforementioned messages, data elements and code values
+
+## Message format
+
+A card-based transaction typically travels from a transaction-acquiring device, such as a point-of-sale terminal (POS) or an automated teller machine (ATM), through a series of networks, to a card issuing system for authorization against the card holder's account. The transaction data contains information derived from the card (e.g., the card number or card holder details), the terminal (e.g., the terminal number, the merchant number), the transaction (e.g., the amount), together with other data which may be generated dynamically or added by intervening systems. Based on this information, the card issuing system will either authorize or decline the transaction and generate a response message which must be delivered back to the terminal within a predefined time period.
+
+An ISO 8583 message is made of the following parts:
+
+* Message type indicator (MTI)
+* One or more bitmaps, indicating which data elements are present. It consists of primary bitmap and secondary bitmap. The first bit of the primary bitmap indicates whether the secondary bitmap is present or not.
+* Data elements, the actual information fields of the message
+
+The placements of fields in different versions of the standard varies; for example, the currency elements of the 1987 and 1993 versions of the standard are no longer used in the 2003 version, which holds currency as a sub-element of any financial amount element. As of June 2017, however ISO 8583:2003 has yet to achieve wide acceptance. ISO 8583 messaging has no routing information, so is sometimes used with a TPDU header.
+
+Cardholder-originated transactions include purchase, withdrawal, deposit, refund, reversal, balance inquiry, payments and inter-account transfers. ISO 8583 also defines system-to-system messages for secure key exchanges, reconciliation of totals, and other administrative purposes.
+
+
+### Message type indicator
+
+The message type indicator (MTI) is a four-digit numeric field which indicates the overall function of the message. A message type indicator includes the ISO 8583 version, the Message Class, the Message Function and the Message Origin, as described below.
+
+
+#### ISO 8583 version
+
+The first digit of the MTI indicates the ISO 8583 version in which the message is encoded.
+
+| Code | Meaning |
+| --- | --- |
+| **0**xxx | ISO 8583:1987 |
+| **1**xxx | ISO 8583:1993 |
+| **2**xxx | ISO 8583:2003 |
+| **3**xxx | Reserved by ISO |
+| **4**xxx |
+| **5**xxx |
+| **6**xxx |
+| **7**xxx |
+| **8**xxx | National use |
+| **9**xxx | Private use |
+
+
+#### Message class
+
+Position two of the MTI specifies the overall purpose of the message.
+
+| Code | Meaning | Usage |
+| --- | --- | --- |
+| x**0**xx | Reserved by ISO |
+| x**1**xx | Authorization message | Determine if funds are available, get an approval but do not post to account for reconciliation. Dual message system (DMS), awaits file exchange for posting to the account. |
+| x**2**xx | Financial messages | Determine if funds are available, get an approval and post directly to the account. Single message system (SMS), no file exchange after this. |
+| x**3**xx | File actions message | Used for hot-card, TMS and other exchanges |
+| x**4**xx | Reversal and charge-back messages | Reversal (x4x**0** or x4x**1**): Reverses the action of a previous authorization. Charge-back (x4x**2** or x4x**3**): Charges back a previously cleared financial message. |
+| x**5**xx | Reconciliation message | Transmits settlement information message. |
+| x**6**xx | Administrative message | Transmits administrative advice. Often used for failure messages (e.g., message reject or failure to apply). |
+| x**7**xx | Fee collection messages |
+| x**8**xx | Network management message | Used for secure key exchange, logon, echo test and other network functions. |
+| x**9**xx | Reserved by ISO |
+
+
+#### Message function
+
+Position three of the MTI specifies the messages function which defines how the message should flow within the system. Requests are end-to-end messages (e.g., from acquirer to issuer and back with time-outs and automatic reversals in place), while advices are point-to-point messages (e.g., from terminal to acquirer, from acquirer to network, from network to issuer, with transmission guaranteed over each link, but not necessarily immediately).
+
+| Code | Meaning | Notes |
+| --- | --- | --- |
+| xx**0**x | Request | Request from acquirer to issuer to carry out an action; issuer may accept or reject |
+| xx**1**x | Request response | Response to a request |
+| xx**2**x | Advice | Advice that an action has taken place; receiver can only accept, not reject |
+| xx**3**x | Advice response | Response to an advice |
+| xx**4**x | Notification | Notification that an event has taken place; receiver can only accept, not reject |
+| xx**5**x | Notification acknowledgement | Response to a notification |
+| xx**6**x | Instruction | ISO 8583:2003 |
+| xx**7**x | Instruction acknowledgement |
+| xx**8**x | Reserved for ISO use | Some implementations (such as MasterCard) use for positive acknowledgment. |
+| xx**9**x | Some implementations (such as MasterCard) use for negative acknowledgement. |
+
+
+#### Message origin
+
+Position four of the MTI defines the location of the message source within the payment chain.
+
+| Code | Meaning |
+| --- | --- |
+| xxx**0** | Acquirer |
+| xxx**1** | Acquirer repeat |
+| xxx**2** | Issuer |
+| xxx**3** | Issuer repeat |
+| xxx**4** | Other |
+| xxx**60** | Reserved by ISO |
+| xxx**6** |
+| xxx**41** |
+
+
+#### Examples
+
+Given an MTI value of 0110, the following example lists what each position indicates:
+
+* 0xxx → version of ISO 8583 (0 = 1987 version)
+* x1xx → class of the message (1 = authorization message)
+* xx1x → function of the message (1 = response)
+* xxx0 → who began the communication (0 = acquirer)
+
+Therefore, MTI 0110 is an authorization response message where actual transaction was originated by the acquirer.
+
+Bearing each of the above four positions in mind, an MTI will completely specify what a message should do, and how it is to be transmitted around the network. Unfortunately, not all ISO 8583 implementations interpret the meaning of an MTI in the same way. However, a few MTIs are relatively standard:
+
+| MTI | Meaning | Usage |
+| --- | --- | --- |
+| 0100 | Authorization Request | Request from a point-of-sale terminal for authorization for a cardholder purchase |
+| 0110 | Authorization Response | Request response to a point-of-sale terminal for authorization for a cardholder purchase |
+| 0120 | Authorization Advice | When the point-of-sale device breaks down and you have to sign a voucher |
+| 0121 | Authorization Advice Repeat | If the advice times out |
+| 0130 | Issuer Response to Authorization Advice | Confirmation of receipt of authorization advice |
+| 0200 | Acquirer Financial Request | Request for funds, typically from an ATM or pinned point-of-sale device |
+| 0210 | Issuer Response to Financial Request | Issuer response to request for funds |
+| 0220 | Acquirer Financial Advice | e.g. Checkout at a hotel. Used to complete transaction initiated with authorization request |
+| 0221 | Acquirer Financial Advice Repeat | If the advice times out |
+| 0230 | Issuer Response to Financial Advice | Confirmation of receipt of financial advice |
+| 0320 | Batch Upload | File update/transfer advice |
+| 0330 | Batch Upload Response | File update/transfer advice response |
+| 0400 | Acquirer Reversal Request | Reverses a transaction |
+| 0420 | Acquirer Reversal Advice |
+| 0430 | Acquirer Reversal Advice Response |
+| 0510 | Batch Settlement Response | Card acceptor reconciliation request response |
+| 0800 | Network Management Request | Hypercom terminals initialize request. Echo test, logon, logoff etc. |
+| 0810 | Network Management Response | Hypercom terminals initialize response. Echo test, logon, logoff etc. |
+| 0820 | Network Management Advice | Key change |
+
+
+### Bitmaps
+
+In ISO 8583, a bitmap is a field or subfield within a message, which indicates whether other data elements or data element subfields are present elsewhere in the message.
+
+A field is considered to be present only when the corresponding bit in the bitmap is set. For example, a hex with value 0x82 (decimal 130) is binary 1000 0010, which means fields 1 and 7 are present in the message and fields 2, 3, 4, 5, 6 and 8 are not.
+
+The bitmap may be represented as 8 bytes of binary data or as 16 hexadecimal characters (0–9, A–F) in the ASCII or EBCDIC character sets.
+A message will contain at least one bitmap, called the *primary bitmap*, which indicates data whether elements 1 to 64 are present. The presence of an optional secondary bitmap is also indicated by the first bit in the primary bitmap. If present, the secondary bitmap indicates whether data elements 65 to 128 are present. Similarly, a tertiary bitmap can be used to indicate the presence of fields 129 to 192, although these data elements are rarely used.
+
+
+#### Examples
+
+Given a bitmap value of 70 10 00 11 02 C0 48 04,
+
+| *n*ᵗʰ bit | 0 | 10 | 20 | 30 | 40 | 50 | 60 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 1234567890 | 1234567890 | 1234567890 | 1234567890 | 1234567890 | 1234567890 | 1234 |
+| Bitmap | 0111000000 | 0100000000 | 0000000100 | 0100000010 | 1100000001 | 0010000000 | 0100 |
+
+Therefore, the given bitmap defines the following fields present in the message::
+2, 3, 4, 12, 28, 32, 39, 41, 42, 50, 53, 62 .
+
+
+### Data elements
+
+Data elements are the individual fields carrying the transaction information. There are up to 128 data elements specified in the original ISO 8583:1987 standard, and up to 192 data elements in later releases. The 1993 revision added new definitions, deleted some, while leaving the message format itself unchanged.
+
+While each data element has a specified meaning and format, the standard also includes some general purpose data elements and system- or country-specific data elements which vary enormously in use and form from implementation to implementation.
+
+Each data element is described in a standard format which defines the permitted content of the field (numeric, binary, etc.) and the field length (variable or fixed), according to the following table:
+
+| Abbreviation | Meaning |
+| --- | --- |
+| a | Alpha, including blanks |
+| n | Numeric values only |
+| x+n | Numeric (amount) values, where the first byte is either 'C' to indicate a positive or Credit value, or 'D' to indicate a negative or Debit value, followed by the numeric value (using n digits) |
+| s | Special characters only |
+| an | Alphanumeric |
+| as | Alpha & special characters only |
+| ns | Numeric and special characters only |
+| ans | Alphabetic, numeric and special characters. |
+| anp | Alphabetic, numeric and pad characters. |
+| b | Binary data |
+| p | Pad character, space |
+| z | Tracks 2 and 3 code set as defined in ISO/IEC 7813 and ISO/IEC 4909 respectively |
+| . or .. or ... | variable field length indicator, each . indicating a digit. |
+| x or xx or xxx | fixed length of field, or maximum length in the case of variable length fields. |
+
+Additionally, each field may be either fixed or variable length. If variable, the length of the field will be preceded by a length indicator.
+
+| Type | Meaning |
+| --- | --- |
+| Fixed | no field length used |
+| LLVAR or (..xx) | Where 0 < LL < 100, means two leading digits LL specify the field length of field VAR |
+| LLLVAR or (...xxx) | Where 0 < LLL < 1000, means three leading digits LLL specify the field length of field VAR |
+| LL and LLL are hex or ASCII. A VAR field can be compressed or ASCII depending on the data element type. | LL can be one or two bytes. For example, if compressed as one hex byte, '27x means there are 27 VAR bytes to follow. If ASCII, the two bytes '32x, '37x mean there are 27 bytes to follow. Three-digit field length LLL uses two bytes with a leading '0' nibble if compressed, or three bytes if ASCII. The format of a VAR data element depends on the data element type. If numeric it will be compressed, e.g. 87456 will be represented by three hex bytes '087456x. If ASCII then one byte for each digit or character is used, e.g. '38x, '37x, '34x, '35x, '36x. |
+
+
+#### Examples
+
+| Field Definition | Meaning |
+| --- | --- |
+| n 6 | Fixed length field of six digits |
+| n.6 | LVAR numeric field of up to 6 digits in length |
+| a..11 | LLVAR alpha field of up to 11 characters in length |
+| b...999 | LLLVAR binary field of up to 999 bytes in length |
+
+
+#### ISO-defined data elements (ver 1987)
+
+| Data field | Type | Usage |
+| --- | --- | --- |
+| 1 | b 16 | Bitmap |
+| 2 | n..19 | Primary account number (PAN) |
+| 3 | n 6 | Processing Code |
+| 4 | n 12 | Amount Transaction |
+| 5 | n 12 | Amount, settlement |
+| 6 | n 12 | Amount, cardholder billing |
+| 7 | n 10 | Transmission date & time |
+| 8 | n 8 | Amount, cardholder billing fee |
+| 9 | n 8 | Conversion rate, settlement |
+| 10 | n 8 | Conversion rate, cardholder billing |
+| 11 | n 6 | System trace audit number (STAN) |
+| 12 | n 6 | Local transaction time (hhmmss) |
+| 13 | n 4 | Local transaction date (MMDD) |
+| 14 | n 4 | Expiration date (YYMM) |
+| 15 | n 4 | Settlement date |
+| 16 | n 4 | Currency conversion date |
+| 17 | n 4 | Capture date |
+| 18 | n 4 | Merchant type, or merchant category code |
+| 19 | n 3 | Acquiring institution (country code) |
+| 20 | n 3 | PAN extended (country code) |
+| 21 | n 3 | Forwarding institution (country code) |
+| 22 | n 3 | Point of service entry mode |
+| 23 | n 3 | Application PAN sequence number |
+| 24 | n 3 | Function code (ISO 8583:1993), or network international identifier (NII) |
+| 25 | n 2 | Point of service condition code |
+| 26 | n 2 | Point of service capture code |
+| 27 | n 1 | Authorizing identification response length |
+| 28 | x+n 8 | Amount, transaction fee |
+| 29 | x+n 8 | Amount, settlement fee |
+| 30 | x+n 8 | Amount, transaction processing fee |
+| 31 | x+n 8 | Amount, settlement processing fee |
+| 32 | n ..11 | Acquiring institution identification code |
+| 33 | n ..11 | Forwarding institution identification code |
+| 34 | ns ..28 | Primary account number, extended |
+| 35 | z ..37 | Track 2 data |
+| 36 | n ...104 | Track 3 data |
+| 37 | an 12 | Retrieval reference number |
+| 38 | an 6 | Authorization identification response |
+| 39 | an 2 | Response code |
+| 40 | an 3 | Service restriction code |
+| 41 | ans 8 | Card acceptor terminal identification |
+| 42 | ans 15 | Card acceptor identification code |
+| 43 | ans 40 | Card acceptor name/location (1–25 card acceptor name or automated teller machine (ATM) location, 26-38 city name, 39-40 country code) |
+| 44 | an ..25 | Additional response data |
+| 45 | an ..76 | Track 1 data |
+| 46 | an ...999 | Additional data (ISO) |
+| 47 | an ...999 | Additional data (national) |
+| 48 | an ...999 | Additional data (private) |
+| 49 | a or n 3 | Currency code, transaction |
+| 50 | a or n 3 | Currency code, settlement |
+| 51 | a or n 3 | Currency code, cardholder billing |
+| 52 | b 64 | Personal identification number data |
+| 53 | n 16 | Security related control information |
+| 54 | an ...120 | Additional amounts |
+| 55 | ans ...999 | ICC data – EMV having multiple tags |
+| 56 | ans ...999 | Reserved (ISO) |
+| 57 | ans ...999 | Reserved (national) |
+| 58 | ans ...999 |
+| 59 | ans ...999 |
+| 60 | ans ...999 | Reserved (national) (e.g. settlement request: batch number, advice transactions: original transaction amount, batch upload: original MTI plus original RRN plus original STAN, etc.) |
+| 61 | ans ...999 | Reserved (private) (e.g. CVV2/service code transactions) |
+| 62 | ans ...999 | Reserved (private) (e.g. transactions: invoice number, key exchange transactions: TPK key, etc.) |
+| 63 | ans ...999 | Reserved (private) |
+| 64 | b 64 | Message authentication code (MAC) |
+| 65 | b 1 | Extended bitmap indicator |
+| 66 | n 1 | Settlement code |
+| 67 | n 2 | Extended payment code |
+| 68 | n 3 | Receiving institution country code |
+| 69 | n 3 | Settlement institution country code |
+| 70 | n 3 | Network management information code |
+| 71 | n 4 | Message number |
+| 72 | n 4 | Last message's number |
+| 73 | n 6 | Action date (YYMMDD) |
+| 74 | n 10 | Number of credits |
+| 75 | n 10 | Credits, reversal number |
+| 76 | n 10 | Number of debits |
+| 77 | n 10 | Debits, reversal number |
+| 78 | n 10 | Transfer number |
+| 79 | n 10 | Transfer, reversal number |
+| 80 | n 10 | Number of inquiries |
+| 81 | n 10 | Number of authorizations |
+| 82 | n 12 | Credits, processing fee amount |
+| 83 | n 12 | Credits, transaction fee amount |
+| 84 | n 12 | Debits, processing fee amount |
+| 85 | n 12 | Debits, transaction fee amount |
+| 86 | n 16 | Total amount of credits |
+| 87 | n 16 | Credits, reversal amount |
+| 88 | n 16 | Total amount of debits |
+| 89 | n 16 | Debits, reversal amount |
+| 90 | n 42 | Original data elements |
+| 91 | an 1 | File update code |
+| 92 | an 2 | File security code |
+| 93 | an 5 | Response indicator |
+| 94 | an 7 | Service indicator |
+| 95 | an 42 | Replacement amounts |
+| 96 | b 64 | Message security code |
+| 97 | x+n 16 | Net settlement amount |
+| 98 | ans 25 | Payee |
+| 99 | n ..11 | Settlement institution identification code |
+| 100 | n ..11 | Receiving institution identification code |
+| 101 | ans ..17 | File name |
+| 102 | ans ..28 | Account identification 1 |
+| 103 | ans ..28 | Account identification 2 |
+| 104 | ans ...100 | Transaction description |
+| 105 | ans ...999 | Reserved for ISO use |
+| 106 | ans ...999 |
+| 107 | ans ...999 |
+| 108 | ans ...999 |
+| 109 | ans ...999 |
+| 110 | ans ...999 |
+| 111 | ans ...999 |
+| 112 | ans ...999 | Reserved for national use |
+| 113 | ans ...999 |
+| 114 | ans ...999 |
+| 115 | ans ...999 |
+| 116 | ans ...999 |
+| 117 | ans ...999 |
+| 118 | ans ...999 |
+| 119 | ans ...999 |
+| 120 | ans ...999 | Reserved for private use |
+| 121 | ans ...999 |
+| 122 | ans ...999 |
+| 123 | ans ...999 |
+| 124 | ans ...999 |
+| 125 | ans ...999 |
+| 126 | ans ...999 |
+| 127 | ans ...999 |
+| 128 | b 64 | Message authentication code |
+
+
+#### Processing code
+
+The following is a table specifying the type of messages and processing code for each transaction type.
+
+| Transaction | Message type | Processing code |
+| --- | --- | --- |
+| Authorization | 0100 | 00 a0 0x |
+| Balance inquiry | 31 a0 0x |
+| Sale | 0200 | 00 a0 0x |
+| Cash | 01 a0 0x |
+| Credit Voucher | 20 a0 0x |
+| Void | 02 a0 0x |
+| Mobile topup | 57 a0 0x |
+
+
+#### Response code
+
+
+##### Ver 1987
+
+The following table shows response codes and their meanings for ISO 8583-1987, later versions uses 3 and 4 digit response codes.
+
+| Code | Description |
+| --- | --- |
+| 00 | Approved or completed successfully |
+| 01 | Refer to card issuer |
+| 02 | Refer to card issuer's special conditions |
+| 03 | Invalid merchant |
+| 04 | Pick-up |
+| 05 | Do not honor |
+| 06 | Error |
+| 07 | Pick-up card, special condition |
+| 08 | Honour with identification |
+| 09 | Request in progress |
+| 10 | Approved for partial amount |
+| 11 | Approved (VIP) |
+| 12 | Invalid transaction |
+| 13 | Invalid amount |
+| 14 | Invalid card number (no such number) |
+| 15 | No such issuer |
+| 16 | Approved, update track 3 |
+| 17 | Customer cancellation |
+| 18 | Customer dispute |
+| 19 | Re-enter transaction |
+| 20 | Invalid response |
+| 21 | No action taken |
+| 22 | Suspected malfunction |
+| 23 | Unacceptable transaction fee |
+| 24 | File update not supported by receiver |
+| 25 | Unable to locate record on file |
+| 26 | Duplicate file update record, old record replaced |
+| 27 | File update field edit error |
+| 28 | File update file locked out |
+| 29 | File update not successful, contact acquirer |
+| 30 | Format error |
+| 31 | Bank not supported by switch |
+| 32 | Completed partially |
+| 33 | Expired card |
+| 34 | Suspected fraud |
+| 35 | Card acceptor contact acquirer |
+| 36 | Restricted card |
+| 37 | Card acceptor call acquirer security |
+| 38 | Allowable PIN tries exceeded |
+| 39 | No credit account |
+| 40 | Requested function not supported |
+| 41 | Lost card |
+| 42 | No universal account |
+| 43 | Stolen card, pick-up |
+| 44 | No investment account |
+| 45-50 | Reserved for ISO use |
+| 51 | Not sufficient funds |
+| 52 | No checking account |
+| 53 | No savings account |
+| 54 | Expired card |
+| 55 | Incorrect personal identification number |
+| 56 | No card record |
+| 57 | Transaction not permitted to cardholder |
+| 58 | Transaction not permitted to terminal |
+| 59 | Suspected fraud |
+| 60 | Card acceptor contact acquirer |
+| 61 | Exceeds withdrawal amount limit |
+| 62 | Restricted card |
+| 63 | Security violation |
+| 64 | Original amount incorrect |
+| 65 | Exceeds withdrawal frequency limit |
+| 66 | Card acceptor call acquirer's security department |
+| 67 | Hard capture (requires that card be picked up at ATM) |
+| 68 | Response received too late |
+| 69-74 | Reserved for ISO use |
+| 75 | Allowable number of PIN tries exceeded |
+| 78 | Card not activated |
+| 80 | Visa transactions: credit issuer unavailable |
+| 82 | Invalid card expiration date |
+| 82 | CVN Mismatch: Negative CAM, dCVV, iCVV, or CVV results |
+| 85 | Success: address verification |
+| 76-89 | Reserved for private use |
+| 76-89 | Reserved for private use |
+| 76-89 | Reserved for private use |
+| 76-89 | Reserved for private use |
+| 90 | Cutoff is in process (switch ending a day's business and starting the next. Transaction can be sent again in a few minutes) |
+| 91 | Issuer or switch is inoperative |
+| 92 | Financial institution or intermediate network facility cannot be found for routing |
+| 93 | Transaction cannot be completed. Violation of law |
+| 94 | Duplicate transmission |
+| 95 | Reconcile error |
+| 96 | System malfunction |
+| 97-99 | Reserved for national use |
+| Zero A-9Z | Reserved for ISO use |
+| A Zero-MZ | Reserved for national use |
+| N Zero-ZZ | Reserved for private use |
+
+
+##### Ver 1993
+
+| Code | Description |
+| --- | --- |
+|
+| 000‑099 | Used in 1110, 1120, 1121, 1140 and 1210, 1220, 1221 and 1240 messages to indicate that the transaction has been approved. |
+|
+| 000 | approved |
+| 001 | honour with identification |
+| 002 | approved for partial amount |
+| 003 | approved (VIP) |
+| 004 | approved, update track 3 |
+| 005 | approved, account type specified by card issuer |
+| 006 | approved for partial amount, account type specified by card issuer |
+| 007 | approved, update ICC |
+| 008‑059 | reserved for ISO use |
+| 060‑079 | reserved for national use |
+| 080‑099 | reserved for private use |
+|
+| 100‑199 | Used in 1110, 1120, 1121, 1140 and 1210, 1220, 1221 and 1240 messages to indicate that the transaction has been processed for authorization by or on behalf of the card issuer and has been denied (not requiring a card pick-up) |
+| 100 | do not honour |
+| 101 | expired card |
+| 102 | suspected fraud |
+| 103 | card acceptor contact acquirer |
+| 104 | restricted card |
+| 105 | card acceptor call acquirer's security department |
+| 106 | allowable PIN tries exceeded |
+| 107 | refer to card issuer |
+| 108 | refer to card issuer's special conditions |
+| 109 | invalid merchant |
+| 110 | invalid amount |
+| 111 | invalid card number |
+| 112 | PIN data required |
+| 113 | unacceptable fee |
+| 114 | no account of type requested |
+| 115 | requested function not supported |
+| 116 | not sufficient funds |
+| 117 | incorrect PIN |
+| 118 | no card record |
+| 119 | transaction not permitted to cardholder |
+| 120 | transaction not permitted to terminal |
+| 121 | exceeds withdrawal amount limit |
+| 122 | security violation |
+| 123 | exceeds withdrawal frequency limit |
+| 124 | violation of law |
+| 125 | card not effective |
+| 126 | invalid PIN block |
+| 127 | PIN length error |
+| 128 | PIN key sync error |
+| 129 | suspected counterfeit card |
+| 130‑159 | reserved for ISO use |
+| 160‑179 | reserved for national use |
+| 180‑199 | reserved for private use |
+|
+| 200‑299 | Used in 1110, 1120, 1121, 1140 and 1210, 1220, 1221 and 1240 messages to indicate that the transaction has been processed for authorization by or on behalf of the card issuer and has been denied requiring the card to be picked up. |
+| 200 | do not honour |
+| 201 | expired card |
+| 202 | suspected fraud |
+| 203 | card acceptor contact acquirer |
+| 204 | restricted card |
+| 205 | card acceptor call acquirer's security department |
+| 206 | allowable PIN tries exceeded |
+| 207 | special conditions |
+| 208 | lost card |
+| 209 | stolen card |
+| 210 | suspected counterfeit card |
+| 211‑259 | reserved for ISO use |
+| 260‑279 | reserved for national use |
+| 280‑299 | reserved for private use |
+|
+| 300‑399 | Used in 1314, 1324, 1325 and 1344 messages to indicate the result of the file action. |
+| 300 | successful |
+| 301 | not supported by receiver |
+| 302 | unable to locate record on file |
+| 303 | duplicate record, old record replaced |
+| 304 | field edit error |
+| 305 | file locked out |
+| 306 | not successful |
+| 307 | format error |
+| 308 | duplicate, new record rejected |
+| 309 | unknown file |
+| 310‑359 | reserved for ISO use |
+| 360‑379 | reserved for national use |
+| 380‑399 | reserved for private use |
+|
+| 400‑499 | Used in 1430, 1432, 1440 and 1442 messages to indicate the result of the reversal or chargeback. |
+| 400 | accepted |
+| 401‑459 | reserved for ISO use |
+| 460‑479 | reserved for national use |
+| 480‑499 | reserved for private use |
+|
+| 500‑599 | Used in 1510, 1512, 1530 and 1532 messages to indicate the result of a reconciliation. |
+| 500 | reconciled, in balance |
+| 501 | reconciled, out of balance |
+| 502 | amount not reconciled, totals provided |
+| 503 | totals not available |
+| 504 | not reconciled, totals provided |
+| 505‑559 | reserved for ISO use |
+| 560‑579 | reserved for national use |
+| 580‑599 | reserved for private use |
+|
+| 600‑699 | Used in 1614, 1624, 1625, and 1644 messages |
+| 600 | accepted |
+| 601 | not able to trace back original transaction |
+| 602 | invalid reference number |
+| 603 | reference number/PAN incompatible |
+| 604 | POS photograph is not available |
+| 605 | item supplied |
+| 606 | request cannot be fulfilled - required/requested documentation is not available |
+| 607‑659 | reserved for ISO use |
+| 660‑679 | reserved for national use |
+| 680‑699 | reserved for private use |
+|
+| 700‑799 | Used in 1720, 1721, 1740, 1722, 1723 and 1742 messages. |
+| 700 | accepted |
+| 701‑749 | reserved for ISO use |
+| 750‑769 | reserved for national use |
+| 770‑799 | reserved for private use |
+|
+| 800‑899 | Used in 1814, 1824, 1825 and 1844 messages. |
+| 800 | accepted |
+| 801‑859 | reserved for ISO use |
+| 860‑879 | reserved for national use |
+| 880‑899 | reserved for private use |
+|
+| 900 | Advice acknowledged, no financial liability accepted |
+| 901 | Advice acknowledged, financial liability accepted |
+|
+| 902‑949 | Used in request response and advice response messages to indicate transaction could not be processed. |
+| 902 | invalid transaction |
+| 903 | re-enter transaction |
+| 904 | format error |
+| 905 | acquirer not supported by switch |
+| 906 | cutover in process |
+| 907 | card issuer or switch inoperative |
+| 908 | transaction destination cannot be found for routing |
+| 909 | system malfunction |
+| 910 | card issuer signed off |
+| 911 | card issuer timed out |
+| 912 | card issuer unavailable |
+| 913 | duplicate transmission |
+| 914 | not able to trace back to original transaction |
+| 915 | reconciliation cutover or checkpoint error |
+| 916 | MAC incorrect |
+| 917 | MAC key sync error |
+| 918 | No communication keys available for use |
+| 919 | encryption key sync error |
+| 920 | security software/hardware error - try again |
+| 921 | security software/hardware error - no action |
+| 922 | message number out of sequence |
+| 923 | request in progress |
+| 924‑929 | reserved for ISO use |
+| 930‑939 | reserved for national use |
+| 940‑949 | reserved for private use |
+|
+| 950‑999 | Used in advice response messages (1x3x) to indicate the reason for rejection of the transfer of financial liability. |
+| 950 | violation of business arrangement |
+| 951‑983 | reserved for ISO use |
+| 984‑991 | reserved for national use |
+| 992‑999 | reserved for private use |
+
+
+#### Point of service entry modes (Field 22)
+
+The point of service (POS) mode field state what conditions the card has been read under, which type of authentication has been made, and depending on the version of the specification, what the capabilities of the terminal are.
+
+
+##### Ver 2003
+
+For the 2003 specification the POS code consists of 16 binary characters split into four parts:
+
+1. Card reading method used
+2. Cardholder verification method used
+3. POS environment
+4. Security characteristics
+
+##### Ver 1993
+
+For the 1993 version it is a 12-character field consisting of 5 parts:
+
+1. **The terminal input capabilities** (1st to 3rd character)
+ * Card Data Input Capability
+ * Cardholder Authentication Capability
+ * Card capture capability
+2. **The operating environment** (4th to 6th character)
+ * Operating Environment / Terminal placement
+ * Cardholder Present indicator
+ * Card Present indicator
+3. **Authentication and verification done** (7th to 9th character)
+ * Card Data Input Method
+ * Cardholder Verification Method
+ * Cardholder Authentication Entity
+4. **The terminal's output capabilities** (10th and 11th character)
+ * Card data output capability - can the terminal write to the magnetic stripe, or to the chip
+ * Terminal output capability - can the terminal display or print something to the cardholder.
+5. **PIN capture capability** (12th character) indicates if the terminal can capture a pin code, and if so, the maximum length it can capture.
+
+##### Ver 1987
+
+The point of service entry mode value consists of two parts:
+
+1. PAN entry mode, the first two digits
+2. PIN entry capability, the third digit
+
+The following table shows PAN entry modes and their meanings.
+
+| PAN Entry Mode | Meaning |
+| --- | --- |
+| 00 | Unknown |
+| 01 | Manual |
+| 02 | Magnetic stripe |
+| 03 | Bar code |
+| 04 | OCR |
+| 05 | Integrated circuit card (ICC). CVV can be checked. |
+| 07 | Auto entry via contactless EMV. |
+| 10 | Merchant has Cardholder Credentials on File. |
+| 80 | Fallback from integrated circuit card (ICC) to magnetic stripe |
+| 90 | Magnetic stripe as read from track 2. CVV can be checked. |
+| 91 | Auto entry via contactless magnetic stripe |
+| 95 | Integrated circuit card (ICC). CVV may not be checked. |
+| 99 | Same as original transaction. |
+
+The following table shows PIN entry capabilities and their meanings.
+
+| PIN Entry Capability | Meaning |
+| --- | --- |
+| 0 | Unknown |
+| 1 | Terminal can accept PINs |
+| 2 | Terminal cannot accept PINs |
+| 3 | mPOS software-based PIN-entry capability |
+| 8 | Terminal has PIN-entry capability but the PIN pad is not currently operative |
+
+
+## Related standards
+
+The Australian standard AS 2805 incorporates ISO 8583 and also covers a large number of other payments topics.
+

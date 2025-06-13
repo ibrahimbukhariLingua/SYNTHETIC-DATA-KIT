@@ -1,0 +1,58 @@
+Vertica
+
+
+# Vertica
+
+
+
+**Vertica** is an analytic database management software company. Vertica was founded in 2005 by the database researcher Michael Stonebraker with Andrew Palmer as the founding CEO. Ralph Breslauer and Christopher P. Lynch served as CEOs later on.
+
+Lynch joined as Chairman and CEO in 2010 and was responsible for Vertica's acquisition by Hewlett Packard in March 2011. The acquisition expanded the HP Software portfolio for enterprise companies and the public sector group. As part of the merger of Micro Focus and the Software division of Hewlett Packard Enterprise, Vertica joined Micro Focus in September 2017. As part of OpenText acquisition of Micro Focus, Vertica joined OpenText in January 2023.
+
+
+## Products
+
+The column-oriented Vertica Analytics Database was designed to manage large, fast-growing volumes of data and with fast query performance for data warehouses and other query-intensive applications. The product claims to greatly improve query performance over traditional relational database systems, and to provide high availability and exabyte scalability on commodity enterprise servers. Vertica runs on multiple cloud computing systems as well as on Hadoop nodes. Vertica's Eon Mode separates compute from storage, using S3 object storage and dynamic allocation of compute notes.
+
+Vertica's design features include:
+
+* Column-oriented storage organization, which increases performance of sequential record access at the expense of common transactional operations such as single record retrieval, updates, and deletes.
+* Massively parallel processing (MPP) architecture to distribute queries on independent nodes and scale performance linearly.
+* Standard SQL interface with many analytics capabilities built-in, such as time series gap filling/interpolation, event-based windowing and sessionization, pattern matching, event series joins, statistical computation (e.g., regression analysis), and geospatial analysis.
+* In-database machine learning including categorization, fitting and prediction without down-sampling and data movement. Vertica offers a variety of in-database algorithms, including linear regression, logistic regression, k-means clustering, Naive Bayes classification, random forest decision trees, XGBoost, and support vector machine regression and classification. It also allows deployment of ML models to multiple clusters.
+* High compression, possible because columns of homogeneous datatype are stored together and because updates to the main store are batched.
+* Automated workload management, data replication, server recovery, query optimization, and storage optimization.
+* Native integration with open source big data technologies like Apache Kafka and Apache Spark.
+* Support for standard programming interfaces, including ODBC, JDBC, ADO.NET, and OLEDB.
+* High-performance and parallel data transfer to statistical tools and built-in machine learning algorithms.
+
+Vertica's specialized approach aims to significantly increase query performance in data warehouses, while reducing hardware costs.
+
+Since 2011, Vertica has offered a limited-capacity community edition for free.
+
+In July, 2021, Vertica announced an SaaS offering, Vertica Accelerator, running on Amazon AWS.
+
+
+## Optimizations
+
+Vertica originated as the C-Store column-oriented database, an open source research project at MIT and other universities, published in 2005.
+
+Vertica runs on clusters of commodity servers or on commercial clouds. It integrates with Hadoop, using HDFS.
+
+In 2018, Vertica introduced Vertica in Eon Mode, a separation of compute and storage architecture. The Eon architecture allows for elastic increase and decrease in compute capability as needed for workload elasticity. It also allows instantiation of multiple isolated sub-clusters dedicated to different workloads while maintaining a single shared data repository. It operates on shared object storage in the cloud, and also runs on object storage compatible hardware on-premises for private cloud implementations.
+
+Version 10.1.1 of Vertica introduced Docker and Kubernetes support.
+
+Many BI, data visualization, and ETL tools work with Vertica Analytics Platform. Vertica supports Kafka for streaming data ingestion.
+
+In 2021, Vertica released a connector for Spark.
+
+Vertica also integrates with Grafana, Helm, Go, and Distributed R.
+
+
+## Company events
+
+In January 2008, Sybase filed a patent-infringement lawsuit against Vertica. In January 2010, Vertica prevailed in a preliminary hearing, and in June, 2010, Sybase and Vertica resolved the suit, with the court dismissing all infringement claims.
+
+Since 2013, Vertica has held an annual user conference, now called Vertica Unify.
+

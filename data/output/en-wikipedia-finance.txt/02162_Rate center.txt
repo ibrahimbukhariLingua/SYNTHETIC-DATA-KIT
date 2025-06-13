@@ -1,0 +1,47 @@
+Rate center
+
+
+# Rate center
+
+
+
+In the North American Numbering Plan, a **rate center** (**rate centre** in Canada) is a geographically-specified area used for determining mileage and/or usage dependent rates in the public switched telephone network.
+
+Unlike a wire center (which is the actual physical telephone exchange building), a rate center is a regulatory construct created primarily for billing purposes.
+
+Each rate center is associated with:
+
+* a geographical place name (city, province/state)
+* a nominal physical location (V and H co-ordinates) for distance calculations for billing purposes
+* one or more prefixes, in the form +1-NPA-NXX, which each identify a block of ten thousand directory numbers
+* a specified local calling area, identified as a list of other individual rate centers to which local or flat-rate landline calling is provided
+
+A rate center may contain one or multiple physical wire centers; conversely, it may merely be a legal fiction retained for billing purposes with its actual subscribers served from the same physical switch as an adjacent community.
+
+A telephone number prefix (1+6 digits) normally suffices to uniquely identify a rate center; if number pooling and local number portability were not in use, it would also uniquely identify a wire center.
+
+For instance, BUtterfield 8 (+1-212-288-xxxx) identifies a specific office (CLLI code NYCMNY79DS1, Verizon's building at 208 E 79th St, New York NY) as its default wire center but identifies "New York City, Zone 1" as a rate center. "New York City, Zone 1" includes multiple competing telephone companies operating various wire centers (for land line, voice over IP and mobile phone service) at multiple central offices across all of Manhattan's 212. These facilities are in multiple locations throughout the borough.
+
+
+## Implications
+
+Local number portability allows a number to be moved to a different carrier or a different wire center within the same rate center. A landline provider typically will not allow a cross-town move to a different rate center under the same number at standard rates; possible alternatives include expensive foreign exchange service or a nomadic class of service such as voice over IP or a mobile phone.
+
+The choice of rate center determines the inbound local calling area for a number, an important consideration in markets where local calls are flat-rated but toll calls are expensive. A number in area code 416 is in the Toronto rate center, so local to everything between Oakville and Ajax; the suburban rate centers are less valuable as one suburb to another on the other side of the same city (Markham to Malton, for example) is often a toll call.
+
+Mobile phones are usually assigned to a downtown rate center in order to obtain a better inbound local calling area. This will cause attempts to port from wireless to wireline service to fail if the wireline is outside the city center and therefore in a different rate center.
+
+The creation of large numbers of relatively geographically-small rate centers allows relatively short haul connections to be long distance, with the local calling area varying arbitrarily from one portion of the same town to another. (Mississauga has five rate centers, left over from individual villages pre-dating its 1974 incorporation, with a different local calling area for each. Some are local to Oakville, some are not.) Occasionally, an adjacent pair of locations will be a toll call just by being located on opposite sides of an arbitrary rate center boundary. In some cases, multiple rate centers within the same newly amalgamated municipality are long distance to each other, as was the case when Hull, Quebec and its suburbs Aylmer and Gatineau were amalgamated in 2002. The suburb of Gatineau remained long distance to Aylmer until August 16, 2007, five years post-annexation.
+
+Rate center boundaries do not necessarily align with county or municipal boundaries; this is an issue for some 9-1-1 deployments which assume the correct public-safety answering point (PSAP) can be chosen merely by inspecting the first few digits of the calling number. They also occasionally cross geographic area code boundaries, such as Ottawa-Hull in 613/819; carriers often maintain numbers in inventory in each area code in these rate centers, tying up more prefixes.
+
+Often, the rationale for a separate rate center is arbitrary or based on historical factors which no longer apply. Some tiny place used to be a separate village or used to have a small manual switchboard, but was swallowed by urban or suburban sprawl years ago — yet the rate center (and a restrictive local calling area) still exists.
+
+Incumbent local exchange carriers, such as the regional Bell operating companies, have typically resisted rate center consolidation because "intraLATA toll calls", relatively short-haul US domestic long-distance calls handled by the local carrier instead of an interexchange carrier, represent $2.7 billion per year for which they can bill subscribers. Often, incumbent carriers will threaten small communities with substantial increases in the monthly cost of an individual line if rate center consolidation expands local calling areas. The rare exceptions have been small groups of suburbs which each already have the same local calling area; one unified rate center would allow wire-line subscribers to keep existing numbers if they move from one of the communities to another.
+
+Nonetheless, a proliferation of multiple small rate centers increases the quantity of wasted numbers as multiple competitive local exchange carriers each obtain blocks of 10,000 numbers (1000 numbers if number pooling is in effect) in each area code in each of the multiple rate centers in which they plan to offer new service. A new entrant with just a handful of initial subscribers in each rate center will be left with many vacant numbers. This inefficient use of numbering resources leads to shortages of available prefixes, which then prematurely require introduction of split plan or overlay plan area codes.
+
+This has drawn the attention of state regulators in various US states including Colorado, Georgia, Minnesota, Missouri, Pennsylvania, and Washington state. Due to pushback from incumbent telcos, results have been limited; a steady trickle of three to six US rate center consolidations annually over the last decade and virtually no consolidations at all in Canada.
+
+A few rate center consolidations have been made in the interest of number conservation. Scarce 1-212 numbers are more efficiently allocated now that Manhattan, New York, is entirely "NYC Zone 1" instead of being split into Zones 1, 2, and 3; various area code 612 rate centers have been amalgamated into "Twin Cities, Minnesota". These rare efforts normally operate in parallel with other conservation measures, such as number pooling and aggressive reclamation of unused central office codes.
+

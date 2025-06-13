@@ -1,0 +1,60 @@
+Chaikin Analytics
+
+
+# Chaikin Analytics
+
+
+
+**Chaikin Analytics** (formerly Chaikin Stock Research) is a platform for stock trading ideas. Chaikin Analytics was established in September 2009 by Marc Chaikin. The centerpiece of Chaikin Analytics is the Chaikin Power Gauge stock rating. In 2016, it was named one of "Two Top Websites for Quantitative Analysis" by Barron's.
+
+
+## The Chaikin Power Gauge Rating
+
+The Chaikin Power Gauge Rating is a stock rating system developed by Marc Chaikin that assigns a bullish (green), neutral (yellow), or bearish (red) rating to a particular stock.
+
+The rating system accounts for over 20 metrics and organizes these into four categories:
+
+* Financial metrics
+* Earnings performance
+* Price-volume activity
+* Expert opinions
+
+The system has been back-tested on 10 years of data.
+
+In April 2014, Chaikin Analytics collaborated with Nasdaq to overlay the Chaikin Power Gauge stock rating on three popular Nasdaq stock indexes: Large Cap, Small Cap, and Dividend Achievers.
+
+In 2017, Chaikin Analytics in collaboration with Nasdaq and IndexIQ brought the Chaikin Power Gauge stock rating approach to the ETF marketplace for the first time.
+
+
+## Chaikin Indicators
+
+
+### Chaikin Oscillator
+
+The Chaikin Oscillator was developed in the 1970s. The indicator is based on the momentum of the Accumulation/Distribution (AD). AD calculates the position of a stock's daily closing price as a fraction of the daily price range of the stock. This fraction is multiplied by the daily volume to quantify the net accumulation or distribution of a stock. AD is expressed mathematically as:
+
+{\displaystyle AD=cum{\frac {(C-L)-(H-C)}{(H-L)}}\times V\!\,}
+or
+{\displaystyle AD=cum{\frac {2C-(H+L)}{(H-L)}}\times V\!\,}
+
+where "*AD*" represents the Accumulation/Distribution cumulative total running line, "*cum*" is an instructive abbreviation meaning "calculate a cumulative total running line", "*C*" is the daily closing price, "*H*" is the daily high price, "*L*" is the daily low price, and "*V*" is the daily total volume.
+
+The indicator is measured as the difference between the 3-day exponential moving average (EMA) of the AD to the 10-day EMA of the AD. It signals when crossing above or below the zero line or when bullish/bearish departures take place. These signals anticipate the change in the direction of the AD. Stock analysts observe a Chaikin Oscillator graph to look for the signal to buy or sell a stock.
+
+
+### Chaikin Money Flow
+
+Chaikin Money Flow (also referred to as CMF) is one of the metrics taken into account by the Chaikin Power Gauging System. CMF tracks cash flow volumes over a fixed period, usually around 20 days. The indicator oscillates above and below the zero line, indicating a bullish or bearish trend. The indicator also calculates Chaikin’s Accumulation/Distribution (AD).
+
+Chaikin Money Flow is derived from foundational trading principles; gauging buying support and/or selling pressure. Buying support is typically indicated by increased trade volume and repeated closes in the top half of the daily range while selling pressure is indicated by increased trade volume and recurrent closes in the lower half of the daily range. Rising prices often accompany buying support and decreasing prices usually characterize selling pressure. The result provides insight into cash flow into or out of a stock.
+
+To determine the CMF one must first determine the Close Location Value (CLV) as follows:
+
+{\displaystyle CLV={\frac {(close\_{1}-low\_{1})-(high\_{1}-close\_{1})}{(high\_{1}-low\_{1})}}\!\,}
+or
+{\displaystyle CLV={\frac {2close\_{1}-(high\_{1}+low\_{1})}{(high\_{1}-low\_{1})}}\!\,}
+
+The next step is to take the CLV and determine the CMF, as follows:
+
+{\displaystyle CMF={\frac {\sum \_{t=20}^{t}CLV\_{t}\times volume\_{t}}{\sum \_{t=20}^{t}(vol\_{t})}}\!\,}
+

@@ -1,0 +1,177 @@
+MIDAS technical analysis
+
+
+# MIDAS technical analysis
+
+
+
+In finance, **MIDAS** (an acronym for Market Interpretation/Data Analysis System) is an approach to technical analysis initiated in 1995 by the physicist and technical analyst Paul Levine, PhD, and subsequently developed by Andrew Coles, PhD, and David Hawkins in a series of articles and the book *MIDAS Technical Analysis: A VWAP Approach to Trading and Investing in Today's Markets.* Latterly, several important contributions to the project, including new MIDAS curves and indicators, have been made by Bob English, many of them published in the book.
+
+Paul Levine's initial MIDAS work and the new MIDAS approaches developed in the book and other publications by Coles, Hawkins, and English have been taught at university level and are currently the subject of independent study intended for academic publication. The same MIDAS techniques have also been widely implemented as part of private trader and hedge fund strategies. The MIDAS curves and indicators developed by Levine, Coles, Hawkins, and English have also been commercially developed by an independent trading software company for the Ninja Trader trading platform, while individual curves and indicators have been officially coded by developers of a large number of trading platforms, including Metastock, TradeStation, and eSignal.
+
+The new MIDAS curves and indicators are in line with the accomplished MIDAS goal of developing an independent approach to financial market analysis with unique standalone indicators available for every type of market environment while also offering information not available from other technical analysis systems.
+
+
+## The MIDAS Approach to Technical Market Forecasting
+
+The MIDAS approach to the technical forecasting of asset prices reduces to five key tenets concerning market price behaviour.
+
+
+### Tenet (1)
+
+Underlying all superficially random asset price behaviour is an order that cannot be identified by the majority of technical analysis approaches. This order - a complex fractal hierarchy of support and resistance levels - is the fundamental reality intrinsic to market price behaviour. Price movement occurs when price tests support or resistance and either breaks to new levels or fails in this process, in which case asset prices either reverse or continue to test until a break does occur, eventually moving prices to new levels.
+
+
+### Tenet (2)
+
+This fundamental order in the markets - the interplay between support and resistance - is a coaction between accumulation and distribution.
+
+
+### Tenet (3)
+
+The trading psychology behind accumulation and distribution can be analysed quantitatively from raw price and volume data and reveals a mathematical symmetry between price support (accumulation) and price resistance (distribution). In other words, the same mathematical formulae can be used to forecast future levels of support as resistance levels.
+
+
+### Tenet (4)
+
+For input to the mathematical formulae, it's essential to focus on price and volume data *subsequent* to a reversal in trend and thus to a major change in asset market sentiment. Price-derived analytics such as moving averages deemphasize these critical changes and so mix periods of differing underlying market psychology, thus contaminating new shifts in accumulation and distribution. Moving averages also neglect market volume. By contrast, MIDAS algorithms locate the real order underlying asset prices at the Volume-weighted average price (VWAP) taken over an interval subsequent to a reversal in trend.
+
+
+### Tenet (5)
+
+Asset price support (accumulation) and resistance (distribution) is fractal, meaning that an underlying order to asset market prices can be found at all degrees of trend in self-similar arrangements. Initially this insight was applied by Paul Levine to daily and weekly charts, but Andrew Coles also later applied it to intraday timeframes, thus extending the MIDAS system for day-trading applications.
+
+
+## Two Drawbacks with MIDAS Technical Analysis
+
+There are two drawbacks in the timing of asset price moves in MIDAS technical analysis centering on the problems of **price porosity** and **price suspension**. The former refers to a shallow penetration of a MIDAS curve by asset prices. The latter refers to a premature turning of asset prices prior to reaching a MIDAS curve. Levine fully recognised the former problem. The latter issue was first identified by Coles.
+
+Levine assumed that this asset price/curve "elasticity" problem was intractable due to the MIDAS approach being a "simple approximation to a more complex and less deterministic reality." However, with the development of Gen-2 curves, Hawkins' study of long-term volume trends, and Coles' formulation of four volume-based trading rules for MIDAS curves, the elasticity problem is now entirely understood to be a volume problem. Coles and Hawkins have each put forward various techniques to deal with it.
+
+
+## MIDAS and the VWAP (Volume-Weighted Average Price)
+
+The basic VWAP formula is very slightly amended in MIDAS approaches, with the volume in the denominator of the MIDAS formula at the start of an indicator's launch being continually subtracted from the cumulative volume of the current price bar. The basic formula is as follows:
+
+{\displaystyle {\text{MIDAS}}={[y\_{i}(x\_{i})-y\_{ij}(x\_{i}-d\_{ij})] \over d\_{ij}}}
+
+where:
+
+*x*ᵢ = cumulative volume of bar
+
+*x*ⱼ = cumulative price of bar
+
+*d*ᵢⱼ = cumulative volume difference between price bars i and *j* = *x*ᵢ - *x*ⱼ
+
+This same minor volume amendment underlies *all* MIDAS indicators when they are created from Gen-1 curves (see below).
+
+
+## Full Repertoire of MIDAS curves
+
+The MIDAS approach to technical analysis currently consists of five types (or generation) of MIDAS curve, none of which have a conceptual precedence over the other. Their application is relative to market conditions, user-adjusted preferences, and the type of financial dataset under consideration.
+
+
+### First Generation (Gen-1) curves
+
+Originally developed by Paul Levine, PhD, Gen-1 curves process market volume and are launched from market inflection points at all degree of trend. They reflect the MIDAS philosophy of market order and price movement. The first published studies of Gen-1 curves applied to intraday charts for day-trading were made by Coles.
+
+
+### Second Generation (Gen-2) Curves
+
+Developed by David Hawkins and Andrew Coles, PhD, Gen-2 curves process artificial market volume as input and thus mark a hugely significant development in opening-up MIDAS technical analysis to the volumeless foreign exchange market and also the futures markets in the processing of open interest (instead of volume) in the Commodity Futures Trading Commission's Commitment of Traders Report.
+
+Gen-2 curves also allow comparisons with Gen-1 curves and particularly the impact of genuine market volume over very long-term trends (when volume can sometimes become distorted) and also over short-term datasets (when there can sometimes be considerable volume volatility, as for example in periods of futures contract rollover).
+
+Gen-2 curves can also help avoid the two MIDAS drawbacks discussed in section 1.2 above. Gen-2 curves for long-term data sets susceptible to largescale volume fluctuations were developed by Hawkins. Coles developed Gen-2 curves for the volumeless forex markets and futures markets, where he has developed three highly contextualised curve subsets.
+
+
+### Third Generation (Gen-3) Curves
+
+Developed by David Hawkins, Gen-3 curves are methodologically distinct in regard to their unique launch points, Gen-3 curves calibrate distinctly to less obvious market trend inflection points and, in so doing, frequently create more accurate forecasts while also avoiding **porosity** problems.
+
+
+### Fourth Generation (Gen-4) Curves
+
+Developed by Andrew Coles, PhD, Gen-4 curves process alternative forms of financial data beyond asset prices and volume, thus further widening the technical scope of MIDAS analysis.
+
+Additional financial data sets include technical analysis momentum indicators such as the MACD, volume indicators such as On-Balance Volume, economic datasets such as the Baltic Dry Index, market volatility datasets such as the VIX, market sentiment gauges such as the Put/Call Ratio, yield curve analysis, market spread data such as the TED Spread, and intermarket Relative Strength analysis. There are currently nine highly contextualised Gen-4 curve subsets developed by Coles.
+
+
+### Fifth Generation (Gen-5) Curves
+
+Developed by Bob English, MIDAS Average curves and MIDAS Delta curves were developed to analyse steeper asset price trends and longer-term asset price trends respectively. The curves can also address **price porosity** and **price suspension** problems associated with rapidly changing volume conditions.
+
+
+## Full repertoire of MIDAS indicators
+
+MIDAS technical analysis currently consists of eight indicators developed independently by Levine, Coles, and English. Many of the indicators can be created from the various generations of MIDAS curve discussed in the previous section.
+
+
+### Topfinder/Bottomfinder
+
+Developed by Paul Levine, PhD, this indicator applies strictly to **accelerated price trends**, as this concept is defined within the MIDAS system. The purpose of this indicator is to estimate, from the behavior that the trend has already displayed, what the total cumulative volume of the trend will be. This helps to identify the likely end of the trend, without having to wait for subsequent price action to confirm trend exhaustion. The unusual parabolic component of the formula creates a terminal property to the indicator on price charts, making it quite unique among technical indicators. The indicator can also be created using Gen-2 curve methodologies, thus allowing its application to the forex and futures markets, as well as Gen-4 methodologies. The unusual parabolic component to the indicator is as follows:
+
+{\displaystyle Topfinder/Bottomfinder={[y(xi)-y(xi-eij)] \over eij},}
+
+{\displaystyle e=\operatorname {dij} \!\*(\operatorname {1-dij/} \!D)}
+
+where:
+
+*x*ᵢ = cumulative volume on bar
+
+*y*ᵢ = cumulative price on bar
+
+*d*ᵢⱼ = cumulative volume difference between bars i and j = xi - xj
+
+*D* = a user-submitted "fitted" volume = "duration" of accelerated trend
+
+
+### MIDAS/AC Displacement Channel (formerly called by Coles Anchored VWAP Channel)
+
+Developed by Andrew Coles, PhD, the Channel was originally called in the first publication on the indicator Anchored VWAP Channel, though Coles subsequently changed the name to MIDAS Displacement Channel.
+
+The indicator calculates, in a trend-fitting methodology, a user-adjusted percentage that anchors the indicator to key price trend reversal points above or below the standard MIDAS support/resistance curve, thus forecasting key highs and lows within an ongoing trend where price is expected to reverse.
+
+Coles developed the indicator to solve a major gap in MIDAS analysis involving sideways moving markets. However, he has since also noted that it works very efficiently in lightly trending markets. The indicator has been officially coded by the developers of an extensive range of trading platforms, including Metastock, Tradestation, eSignal, Ninja Trader, Wealth Lab, AmiBroker, Wave59, Updata.
+
+
+### MIDAS Standard Deviation Bands
+
+The first application of standard deviation to the VWAP emerged in a Tradestation forum, while the MIDAS technique of launching or anchoring the curves from changes in trend (see Tenet (4) above) first appeared in the trading platforms Ninja Trader and Investor R/T. In 2009 Bob English also anchored the bands in a TradeStation version of the indicator. Andrew Coles created the bands in Metastock in 2011 while also replacing the VWAP formula with the MIDAS formula.
+
+Coles has cautioned against excessive use of this indicator while suggesting that its application be restricted to technical patterns known as Broadening Formations or to sharp, angular prices moves springing out of low volatility conditions or as part of zigzag price formations. This restriction is argued to be based on the main drawback of the indicator to fan out from asset prices much too quickly and much too excessively.
+
+
+### MIDAS/AC Normal Deviation Bands
+
+Developed by Andrew Coles, PhD, the indicator is a significant improvement over the MIDAS Standard Deviation Bands in so far as it avoids the rapid and excessive fanning problem associated with the indicator. Consequently, it can be anchored correctly to trends while its improved fitting methodology also allows it to be fit to larger trend pullbacks. The indicator is designed to forecast the highs and lows in normal asset price trending conditions.
+
+
+### MIDAS/AC Quadrating Price Levels
+
+Developed by Andrew Coles, PhD, the indicator consists of five price levels (that is, areas of potential support and resistance) which automatically adapt to four variables:
+
+1. the higher chart timeframe (daily, weekly, monthly, etc.) to create the indicator's outer levels
+2. the intraday timeframe chosen to create the indicator's inner levels
+3. the direction of the intraday price trend
+4. the volume
+
+The addition of the indicator's inner levels are directed at day trading, otherwise the indicator can be applied to any trend duration (daily, weekly charts, etc.) while providing key support and resistance levels for the open, high, low, and close of each price bar.
+
+
+### MIDAS/AC Stoch-OBV and MACD-OBV
+
+Developed by Andrew Coles, PhD, both indicators independently create hybrid volume/momentum readings as a means of monitoring the strength of the price trend in relation to the support and resistance roles of the MIDAS curves. The OBV indicator itself was key to Paul Levine's work with MIDAS curves, although volume readings can be replaced with momentum readings in indicators such as the MACD.
+
+
+### MIDAS/BE Detrended Curves Oscillator
+
+Developed by Bob English, the indicator calculates the percentage asset price deviation from a given MIDAS curve. Like other technical analysis oscillators, trendlines as well as horizontal support and resistance lines can be applied to the indicator, resulting in additional inflection points that may not be obvious on the price chart alone. The indicator can be applied to any chart timeframe.
+
+
+### MIDAS/BE Reverse MIDAS
+
+Developed by Bob English, the indicator's underlying methodology runs parallel to the anchoring methodology of the MIDAS method (see Tenet (4) above), while being an extension of the concept of Active Boundaries (that is, the price detrended VWAP, or, more specifically, the Active Float) developed by Pascal Willain in the book *Value in Time: Better Trading Through Effective Volume*.
+
+The indicator iterates backwards from a given price bar while calculating the VWAP (using the MIDAS formula) until the VWAP is equal to a preceding price bar (this would be equivalent to the initial support/resistance (anchoring) point for the launching of a Gen-1 MIDAS curve). The methodology then continues to iterate backwards while isolating and recording other price bars satisfying this same criterion at the same time as recording extreme percentage price deviations from this VWAP. These extreme points are typically areas of trend-exhaustion and help establish the key volume amounts processed by the indicator. The fractal aspect of MIDAS is translated in the indicator into various key volume levels capable of being visually identified on a chart, which thereby alert to changes in trends of various sizes and thence aid in market timing decisions. Indeed, English has suggested that up to three instances of the indicator can be plotted on the same chart to monitor VWAP changes at various levels. In so far as the indicator identifies extremity points in the VWAP before a degree of mean-reversion can be expected it also has elements in common with Coles' MIDAS Displacement Channel.
+

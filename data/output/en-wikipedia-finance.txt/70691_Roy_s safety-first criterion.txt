@@ -1,0 +1,48 @@
+Roy's safety-first criterion
+
+
+# Roy's safety-first criterion
+
+
+
+**Roy's safety-first criterion** is a risk management technique, devised by A. D. Roy, that allows an investor to select one portfolio rather than another based on the criterion that the probability of the portfolio's return falling below a minimum desired threshold is minimized.
+
+For example, suppose there are two available investment strategies—portfolio A and portfolio B, and suppose the investor's threshold return level (the minimum return that the investor is willing to tolerate) is −1%. Then, the investor would choose the portfolio that would provide the maximum probability of the portfolio return being at least as high as −1%.
+
+Thus, the problem of an investor using Roy's safety criterion can be summarized symbolically as:
+
+{\displaystyle {\underset {i}{\min }}\Pr(R\_{i}<{\underline {R}})}
+
+where Pr(*Rᵢ* < *R*) is the probability of Rᵢ (the actual return of asset i) being less than *R* (the minimum acceptable return).
+
+
+## Normally distributed return and SFRatio
+
+If the portfolios under consideration have normally distributed returns, Roy's safety-first criterion can be reduced to the maximization of the safety-first ratio, defined by:
+
+{\displaystyle {\text{SFRatio}}\_{i}={\frac {{\text{E}}(R\_{i})-{\underline {R}}}{\sqrt {{\text{Var}}(R\_{i})}}}}
+
+where {\displaystyle {\text{E}}(R\_{i})} is the expected return (the mean return) of the portfolio, {\displaystyle {\sqrt {{\text{Var}}(R\_{i})}}} is the standard deviation of the portfolio's return and *R* is the minimum acceptable return.
+
+
+### Example
+
+If Portfolio A has an expected return of 10% and standard deviation of 15%, while portfolio B has a mean return of 8% and a standard deviation of 5%, and the investor is willing to invest in a portfolio that maximizes the probability of a return no lower than 0%:
+
+By Roy's safety-first criterion, the investor would choose portfolio B as the correct investment opportunity.
+
+
+## Similarity to Sharpe ratio
+
+Under normality,
+
+The Sharpe ratio is defined as excess return per unit of risk, or in other words:
+
+The SFRatio has a striking similarity to the Sharpe ratio. Thus for normally distributed returns, Roy's Safety-first criterion—with the minimum acceptable return equal to the risk-free rate—provides the same conclusions about which portfolio to invest in as if we were picking the one with the maximum Sharpe ratio.
+
+
+## Asset Pricing
+
+Roy’s work is the foundation of asset pricing under loss aversion. His work was followed by Lester G. Telser’s proposal of maximizing expected return subject to the constraint that the Pr(*Rᵢ* < *R*) be less than a certain safety level.
+See also Chance-constrained portfolio selection.
+

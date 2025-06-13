@@ -1,0 +1,55 @@
+Online transaction processing
+
+
+# Online transaction processing
+
+
+
+**Online transaction processing** (**OLTP**) is a type of database system used in transaction-oriented applications, such as many operational systems. "Online" refers to the fact that such systems are expected to respond to user requests and process them in real-time (process transactions). The term is contrasted with online analytical processing (OLAP) which instead focuses on data analysis (for example planning and management systems).
+
+
+## Meaning of the term transaction
+
+The term "transaction" can have two different meanings, both of which might apply: in the realm of computers or database transactions it denotes an atomic change of state, whereas in the realm of business or finance, the term typically denotes an exchange of economic entities (as used by, e.g., Transaction Processing Performance Council or commercial transactions.)⁵⁰ OLTP may use transactions of the first type to record transactions of the second.
+
+
+## Compared to OLAP
+
+OLTP is typically contrasted to online analytical processing (OLAP), which is generally characterized by much more complex queries, in a smaller volume, for the purpose of business intelligence or reporting rather than to process transactions. Whereas OLTP systems process all kinds of queries (read, insert, update and delete), OLAP is generally optimized for read only and might not even support other kinds of queries. OLTP also operates differently from batch processing and grid computing.¹⁵
+
+In addition, OLTP is often contrasted to online event processing (OLEP), which is based on distributed event logs to offer strong consistency in large-scale heterogeneous systems. Whereas OLTP is associated with short atomic transactions, OLEP allows for more flexible distribution patterns and higher scalability, but with increased latency and without guaranteed upper bound to the processing time.
+
+
+## Use
+
+OLTP has also been used to refer to processing in which the system responds immediately to user requests. An automated teller machine (ATM) for a bank is an example of a commercial transaction processing application. Online transaction processing applications have high throughput and are insert- or update-intensive in database management. These applications are used concurrently by hundreds of users. The key goals of OLTP applications are availability, speed, concurrency and recoverability (durability). Reduced paper trails and the faster, more accurate forecast for revenues and expenses are both examples of how OLTP makes things simpler for businesses. However, like many modern online information technology solutions, some systems require offline maintenance, which further affects the cost-benefit analysis of an online transaction processing system.
+
+
+## Overview
+
+An OLTP system is an accessible data processing system in today's enterprises. Some examples of OLTP systems include order entry, retail sales, and financial transaction systems. Online transaction processing systems increasingly require support for transactions that span a network and may include more than one company. For this reason, modern online transaction processing software uses client or server processing and brokering software that allows transactions to run on different computer platforms in a network.
+
+In large applications, efficient OLTP may depend on sophisticated transaction management software (such as IBM CICS) and/or database optimization tactics to facilitate the processing of large numbers of concurrent updates to an OLTP-oriented database.
+
+For even more demanding decentralized database systems, OLTP brokering programs can distribute transaction processing among multiple computers on a network. OLTP is often integrated into service-oriented architecture (SOA) and Web services.
+
+Online transaction processing (OLTP) involves gathering input information, processing the data and updating existing data to reflect the collected and processed information. As of today, most organizations use a database management system to support OLTP. OLTP is carried in a client-server system.
+
+Online transaction process concerns about concurrency and atomicity. Concurrency controls guarantee that two users accessing the same data in the database system will not be able to change that data or the user has to wait until the other user has finished processing, before changing that piece of data. Atomicity controls guarantee that all the steps in a transaction are completed successfully as a group. That is, if any steps between the transaction fail, all other steps must fail also.
+
+
+## Systems design
+
+To build an OLTP system, a designer must know that the large number of concurrent users does not interfere with the system's performance. To increase the performance of an OLTP system, a designer must avoid excessive use of indexes and clusters.
+
+The following elements are crucial for the performance of OLTP systems:
+
+* Rollback segments: Rollback segments are the portions of database that record the actions of transactions in the event that a transaction is rolled back. Rollback segments provide read consistency, rollback transactions, and recovery of the database.
+* Clusters: A cluster is a schema that contains one or more tables that have one or more columns in common. Clustering tables in a database improves the performance of join operations.
+* Discrete transactions: A discrete transaction defers all change to the data until the transaction is committed. It can improve the performance of short, non-distributed transactions.
+* Block size: The data block size should be a multiple of the operating system's block size within the maximum limit to avoid unnecessary I/O.
+* Buffer cache size: SQL statements should be tuned to use the database buffer cache to avoid unnecessary resource consumption.
+* Dynamic allocation of space to tables and rollback segments
+* Transaction processing monitors and the multi-threaded server: A transaction processing monitor is used for coordination of services. It is like an operating system and does the coordination at a high level of granularity and can span multiple computing devices.
+* Partition (database): Partition use increases performance for sites that have regular transactions while still maintaining availability and security.
+* Database tuning: With database tuning, an OLTP system can maximize its performance as efficiently and rapidly as possible.

@@ -1,0 +1,112 @@
+Software modernization
+
+
+# Software modernization
+
+
+
+Legacy modernization, also known as **software modernization** or platform modernization, refers to the conversion, rewriting or porting of a legacy system to modern computer programming languages, architectures (e.g. microservices), software libraries, protocols or hardware platforms. Legacy transformation aims to retain and extend the value of the legacy investment through migration to new platforms to benefit from the advantage of the new technologies.
+
+As a basis and first step of software modernization initiatives, the strategy, the risk management, the estimation of costs, and its implementation, lies the knowledge of the system being modernized. The knowledge of what all functionalities are made for, and the knowledge of how it has been developed. As the subject-matter experts (SMEs) who worked at the inception and during all evolutions of the application are no-longer available or have a partial knowledge, and the lack of proper and up-to-date documentation, modernization initiatives start with assessing and discovering the application using Software intelligence.
+
+
+## Strategies
+
+Making of software modernization decisions is a process within some organizational context. “Real world” decision making in business organizations often has to be made based on “bounded rationality”. Besides that, there exist multiple (and possibly conflicting) decision criteria; the certainty, completeness, and availability of useful information (as a basis for the decision) is often limited.
+
+Legacy system modernization is often a large, multi-year project. Because these legacy systems are often critical in the operations of most enterprises, deploying the modernized system all at once introduces an unacceptable level of operational risk. As a result, legacy systems are typically modernized incrementally. Initially, the system consists completely of legacy code. As each increment is completed, the percentage of legacy code decreases. Eventually, the system is completely modernized. A migration strategy must ensure that the system remains fully functional during the modernization effort.
+
+
+### Modernization strategies
+
+There are different drivers and strategies for software modernization:
+
+* Architecture Driven Modernization (ADM) is the initiative to standardize views of the existing systems in order to enable common modernization activities like code analysis and comprehension, and software transformation.
+* Business-Focus Approach: The modernization strategy is tied to the business value added by the modernization. It implies defining the intersection of the criticality to the business of an applications with its technical quality. This approach pushed by Gartner puts the Application Portfolio Analysis (APA) as a prerequisite of modernization decisions for an application portfolio to measures software health, risks, complexity and cost providing insight into application strengths and weaknesses.
+* Model Driven Engineering (MDE) is being investigated as an approach for reverse engineering and then forward engineering software code.
+* Renaissance Method for iteratively evaluating legacy systems, from technical, business, and organizational perspectives.
+* WMU (Warrants, Maintenance, Upgrade) is a model for choosing appropriate maintenance strategies based on aspired customer satisfaction level and their effects on it.
+
+### Modernization risk management
+
+Software modernization is a risky, difficult, long, and highly intellectual process involving multiple stakeholders. The software modernization tasks are supported by various tools related to Model-driven architecture from the Object Management Group and processes such as ISO/IEC 14764:2006 or Service-Oriented Migration and Reuse Technique (SMART). Software modernization implies various manual and automated tasks performed by specialized knowledge workers. Tools are supporting project participants' tasks and help organize the collaboration and sequencing of the work.
+
+A general software modernization management approach taking risks (both technological and business objectives) explicitly into account consists of:
+
+* Analysis the existing portfolio: measuring the technical quality and business value. Confronting the technical quality with business goals to define the right strategy: replace, no go, low priority, good candidate.
+* Identify stakeholders: all persons involved in the software modernization: developers, testers, customers, end-users, architects, …
+* Understand the requirements: requirements are divided in 4 categories: user, system, constraints and nonfunctional.
+* Create the Business Case: the business case supports the decision process in considering different approaches when decision makers need it.
+* Understand the system to be modernized: this is a critical step as software documentation is rarely up-to-date and projects are made by numerous teams, both internal or external and usually out of sight for long time. Extracting the content of the application and its architecture design help reason about the system.
+* Understand and evaluate target technology: this allows compare and contrast technologies and capabilities against requirements and existing system.
+* Define modernization strategy: the strategy defines the transformation process. This strategy must accommodate changes happening during the modernization process (technologies changes, additional knowledge, requirement evolution).
+* Reconcile strategy with stakeholder needs: implied stakeholders may have varying opinions on what is important and what is the best way to proceed. It is important to have a consensus between stakeholders.
+* Estimate resources: when previous steps are defined, costs can be evaluated. It enables the management determining whether the modernization strategy is feasible given the available resources and constraints.
+
+### Modernization costs
+
+* Softcalc (Sneed, 1995a) is a model and tool for estimating costs of incoming maintenance requests, developed based on COCOMO and FPA.
+* EMEE (Early Maintenance Effort Estimation) is a new approach for quick maintenance effort estimation before starting the actual maintenance.
+* RENAISSANCE is a method to support system evolution by first recovering a stable basis using reengineering, and subsequently continuously improving the system by a stream of incremental changes. The approach integrates successfully with different project management processes
+
+### Challenges in legacy modernization
+
+Primary issues with a legacy system include very old systems with lack of documentation, lack of SMEs/ knowledge on the legacy systems and dearth of technology skills in which the legacy systems have been implemented. Typical legacy systems have been in existence for more than two decades. Migrating is fraught with challenges:
+
+* Lack of visibility across large application portfolios – Large IT organizations have hundreds, if not thousands, of software systems. Technology and functional knowledge are by nature distributed, diluted, and opaque. No central point of visibility for senior management and Enterprise Architects is a top issue – it is challenging to make modernization decisions about software systems without having the necessary quantitative and qualitative data about these systems across the enterprise.
+* Organizational change management – Users must be re-trained and equipped to use and understand the new applications and platforms effectively.
+* Coexistence of legacy and new systems – Organizations with a large footprint of legacy systems cannot migrate at once. A phased modernization approach needs to be adopted. However, this brings its own set of challenges like providing complete business coverage with well understood and implemented overlapping functionality, data duplication; throw-away systems to bridge legacy and new systems needed during the interim phases.
+* Poor management of structural quality (see software quality), resulting in a modernized application that carries more security, reliability performance and maintainability issues than the original system.
+* Significant modernization costs and duration - Modernization of a complex mission-critical legacy system may need large investments and the duration of having a fully running modernized system could run into years, not to mention unforeseen uncertainties in the process.
+* Stakeholders commitment - Main organization stakeholders must be convinced of the investment being made for modernization, since the benefits, and an immediate ROI may not be visible as compared to the modernization costs being invested.
+* Software Composition – It is extremely rare that developers create 100% original code these days in anything built after 2010. They are often using 3rd party and open source frameworks and software components to gain efficiency, speed, and reusability. This introduces two risks: 1.) vulnerabilities within the 3rd party code, and 2.) open source licensing risk.
+
+Last but not least, there is no one-stop solution-fits all kind of option in modernization. With a multitude of commercial and bespoke options available for modernization, it’s critical for the customers, the sellers and the executors to understand the intricacies of various modernization techniques, their best applicable implementations, suitability in a particular context, and the best practices to follow before selecting the right modernization approach.
+
+
+### Modernization options
+
+Over the years, several different options have come into being for legacy modernization – each of them met with varying success and adoption. Even now, there is a range of possibilities, as explained below, and there is no “the option” for all legacy transformation initiatives.
+
+* Application Assessment: Baselining the existing application portfolio using Software intelligence to understand software health, quality, composition, complexity, and cloud readiness to start segmenting and prioritizing applications for various modernization options.
+* Application Discovery: Applications components are strongly interlaced implying requirement for understanding the complexity and resolving the interdependencies of software component.
+* Migration: Migration of languages (3GL or 4GL), databases (legacy to RDBMS, and one RDBMS to another), platform (from one OS to another OS), often using automated converters or Program transformation systems for high efficiency. This is a quick and cost-effective way of transforming legacy systems.
+* Cloud Migration: Migration of legacy applications to cloud platforms often using a methodology such as Gartner’s 5 Rs methodology to segment and prioritize apps into different models (Rehost, Refactor, Revise, Rebuild, Replace).
+* Re-engineering: A technique to rebuild legacy applications in new technology or platform, with same or enhanced functionality – usually by adopting Service Oriented Architecture (SOA). This is the most efficient and agile way of transforming legacy applications. This requires application-level Software intelligence with legacy systems that are not well known or documented.
+* Re-hosting: Running the legacy applications, with no major changes, on a different platform. Business logic is preserved as application and data are migrated into the open environment. This option only needs the replacement of middleware, hardware, operating system, and database. This is often used as an intermediate step to eliminate legacy and expensive hardware. Most common examples include mainframe applications being rehosted on UNIX or Wintel platform.
+* Package implementation: Replacement of legacy applications, in whole or part, with off-the-shelf software (COTS) such as ERP, CRM, SCM, Billing software etc.
+
+A legacy code is any application based on older technologies and hardware, such as mainframes, that continues to provide core services to an organization. Legacy applications are frequently large and difficult to modify, and scrapping or replacing them often means re-engineering an organization’s business processes as well. However, more and more applications that were written in so called modern languages like java are becoming legacy. Whereas 'legacy' languages such as COBOL are top on the list for what would be considered legacy, software written in newer languages can be just as monolithic, hard to modify, and thus, be candidates of modernization projects.
+
+Re-implementing applications on new platforms in this way can reduce operational costs, and the additional capabilities of new technologies can provide access to functions such as web services and integrated development environments. Once transformation is complete and functional equivalence has been reached the applications can be aligned more closely to current and future business needs through the addition of new functionality to the transformed application. The recent development of new technologies such as program transformation by software modernization enterprises have made the legacy transformation process a cost-effective and accurate way to preserve legacy investments and thereby avoid the costs and business impact of migration to entirely new software.
+
+The goal of legacy transformation is to retain the value of the legacy asset on the new platform. In practice this transformation can take several forms. For example, it might involve translation of the source code, or some level of re-use of existing code plus a Web-to-host capability to provide the customer access required by the business. If a rewrite is necessary, then the existing business rules can be extracted to form part of the statement of requirements for a rewrite.
+
+
+## Software migration
+
+Software migration is the process of moving from the use of one operating environment to another operating environment that is, in most cases, is thought to be a better one. For example, moving from Windows NT Server to Windows 2000 Server would usually be considered a migration because it involves making sure that new features are exploited, old settings do not require changing, and taking steps to ensure that current applications continue to work in the new environment. Migration could also mean moving from Windows NT to a UNIX-based operating system (or the reverse). Migration can involve moving to new hardware, new software, or both. Migration can be small-scale, such as migrating a single system, or large-scale, involving many systems, new applications, or a redesigned network.
+
+One can migrate data from one kind of database to another kind of database. This usually requires the data into some common format that can be output from the old database and input into the new database. Since the new database may be organized differently, it may be necessary to write a program that can process the migrating files.
+
+When a software migration reaches functional equivalence, the migrated application can be aligned more closely to current and future business needs through the addition of new functionality to the transformed application.
+
+The migration of installed software from an old PC to a new PC can be done with a software migration tool. Migration is also used to refer simply to the process of moving data from one storage device to another.
+
+
+## Articles, papers and books
+
+
+### Creating reusable software
+
+Due to the evolution of technology today some companies or groups of people don’t know the importance of legacy systems.
+Some of their functions are too important to be left unused, and too expensive to reproduce again. The software industry and researchers have recently paid more attention towards component-based software development to enhance productivity and accelerate time to market.
+
+
+### Risk-managed modernization
+
+In general, three classes of information system technology are of interest in legacy system modernization:
+Technologies used to construct the legacy systems, including the languages and database systems.
+Modern technologies, which often represent nirvana to those mired in decades-old technology and which hold (the often unfulfilled) promise of powerful, effective, easily maintained enterprise information systems.
+Technologies offered by the legacy system vendors – These technologies provide an upgrade path for those too timid or wise to jump head-first into the latest wave of IT offerings. Legacy system vendors offer these technologies for one simple reason: to provide an upgrade path for system modernization that does not necessitate leaving the comfort of the “mainframe womb.” Although these technologies can provide a smoother road toward a modern system, they often result in an acceptable solution that falls short of the ideal.
+

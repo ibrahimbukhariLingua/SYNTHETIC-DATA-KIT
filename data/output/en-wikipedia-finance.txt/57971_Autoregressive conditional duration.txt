@@ -1,0 +1,20 @@
+Autoregressive conditional duration
+
+
+# Autoregressive conditional duration
+
+
+
+In financial econometrics, an **autoregressive conditional duration** (**ACD**, Engle and Russell (1998)) model considers irregularly spaced and autocorrelated intertrade durations. ACD is analogous to GARCH. In a continuous double auction (a common trading mechanism in many financial markets) waiting times between two consecutive trades vary at random.
+
+
+## Definition
+
+Let {\displaystyle ~\tau \_{t}~} denote the duration (the waiting time between consecutive trades) and assume that {\displaystyle ~\tau \_{t}=\theta \_{t}z\_{t}~}, where
+{\displaystyle z\_{t}} are independent and identically distributed random variables, positive and with {\displaystyle \operatorname {E} (z\_{t})=1} and where the series {\displaystyle ~\theta \_{t}~} is given by:
+
+{\displaystyle \theta \_{t}=\alpha \_{0}+\alpha \_{1}\tau \_{t-1}+\cdots +\alpha \_{q}\tau \_{t-q}+\beta \_{1}\theta \_{t-1}+\cdots +\beta \_{p}\theta \_{t-p}=\alpha \_{0}+\sum \_{i=1}^{q}\alpha \_{i}\tau \_{t-i}+\sum \_{i=1}^{p}\beta \_{i}\theta \_{t-i}}
+
+and where {\displaystyle ~\alpha \_{0}>0~}, {\displaystyle \alpha \_{i}\geq 0},
+{\displaystyle \beta \_{i}\geq 0}, {\displaystyle ~i>0}.
+

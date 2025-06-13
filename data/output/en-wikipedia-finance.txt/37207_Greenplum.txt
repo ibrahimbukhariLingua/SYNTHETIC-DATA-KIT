@@ -1,0 +1,50 @@
+Greenplum
+
+
+# Greenplum
+
+
+
+**Greenplum** is a big data technology based on MPP architecture and the Postgres open source database technology. The technology was created by a company of the same name headquartered in San Mateo, California around 2005. Greenplum was acquired by EMC Corporation in July 2010.
+
+Starting in 2012, its database management system software became known as the **Pivotal Greenplum Database** sold through Pivotal Software. Pivotal open sourced the core engine and continued its development by the Greenplum Database open source community and Pivotal.
+
+Starting in 2020 Pivotal was acquired by VMware and VMware continued to sponsor the Greenplum Database open source community as well as commercialize the technology under the brand name **VMware Tanzu Greenplum**. In November 2023, VMware was acquired by Broadcom.
+
+In May 2024, Tanzu by Broadcom made the decision to close source the Greenplum Database project. All future releases of Greenplum Database will be closed source and released as part of the VMware Tanzu Data Suite.
+
+
+## Company
+
+Greenplum, the company, was founded in September 2003 by Scott Yara and Luke Lonergan. It was a merger of two smaller companies: Metapa (founded in August 2000 near Los Angeles) and Didera in Fairfax, Virginia.
+
+Investors included SoundView Ventures, Hudson Ventures and Royal Wulff Ventures. A total of US$20 million in funding was announced at the merger. Greenplum, based in San Mateo, California, released its database management system software based on PostgreSQL in April 2005 calling it Bizgres. Rounds of venture capital of about US$15 million each were invested in March 2006 and February 2007.
+
+In July 2006 a partnership with Sun Microsystems was announced. Sun, which had also acquired MySQL AB, participated in a round of US$27 million investment in January 2009, led by Meritech Capital Partners. The Bizgres project included a few other members, and was supported through about 2008, when the product was just called "Greenplum" as well. The Sun Fire X4500 was a reference architecture and used by the majority of customers until a transition was made to Linux around that time. Greenplum was acquired by EMC Corporation in July 2010, becoming the foundation of EMC's big data software division. Although EMC did not disclose the value, it was estimated at US$300 million. Greenplum's products at the time of acquisition were the Greenplum Database, Chorus (a management tool), and Data Science Labs. Greenplum had customers in vertical markets including eBay. It became part of Pivotal Software in 2012.
+
+A variant using Apache Hadoop to store data in the Hadoop file system called Hawq was announced in 2013. In 2015 the GreenplumDB and Hawq open source software projects were announced.
+
+
+## Technology
+
+Pivotal's Greenplum database product uses massively parallel processing (MPP) techniques. Each computer cluster consists of a master node, standby master node, and segment nodes. All of the data resides on the segment nodes and the catalog information is stored in the master nodes. Segment nodes run one or more segments, which are modified PostgreSQL database instances and are assigned a content identifier. For each table the data is divided among the segment nodes based on the distribution column keys specified by the user in the data definition language. For each segment content identifier there is both a primary segment and mirror segment which are not running on the same physical host. When a query enters the master node, it is parsed, planned and dispatched to all of the segments to execute the query plan and either return the requested data or insert the result of the query into a database table. The Structured Query Language, version SQL:2003, is used to present queries to the system. Transaction semantics comply with constraints known as ACID.
+
+Competitors include other MPP database management systems provided by major vendors such as Teradata, Amazon Redshift, Microsoft Azure, Alibaba AnalyticDB and, in the past, IBM Netezza. Additional competition comes from other smaller competitors, column-oriented databases such as HP Vertica, Exasol and data warehousing vendors with non MPP architecture, such as Oracle Exadata, IBM Db2 and SAP HANA.
+
+
+## Greenplum Version 7
+
+In September 2023, Greenplum Database Version 7 was released. Version 7 is based on PostgreSQL version 12.12.
+
+
+## Greenplum Version 6
+
+In September 2019, Greenplum Database Version 6 was released. Version 6 is based on PostgreSQL version 9.4 and features massive gains in
+OLTP performance. Greenplum 6 was reviewed in the media by several sources and mentioned for its Postgres open source alignment
+and for its OLTP performance
+
+
+## Greenplum Version 5
+
+In September 2017, Greenplum Database Version 5 was released. Version 5 includes the first iteration of the Greenplum project strategy of merging PostgreSQL later versions back into Greenplum and is based on PostgreSQL version 8.3 up from the previous version 8.2. Version 5 also introducing the General Availability of the GPORCA Optimizer for cost based optimization of SQL designed for big data.
+

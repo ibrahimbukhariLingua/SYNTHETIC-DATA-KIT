@@ -1,0 +1,116 @@
+Short-rate model
+
+
+# Short-rate model
+
+
+
+A **short-rate model**, in the context of interest rate derivatives, is a mathematical model that describes the future evolution of interest rates by describing the future evolution of the **short rate**, usually written {\displaystyle r\_{t}\,}.
+
+
+## The short rate
+
+Under a short rate model, the stochastic state variable is taken to be the instantaneous spot rate. The short rate, {\displaystyle r\_{t}\,}, then, is the (continuously compounded, annualized) interest rate at which an entity can borrow money for an infinitesimally short period of time from time {\displaystyle t}. Specifying the current short rate does not specify the entire yield curve. However, no-arbitrage arguments show that, under some fairly relaxed technical conditions, if we model the evolution of {\displaystyle r\_{t}\,} as a stochastic process under a risk-neutral measure {\displaystyle Q}, then the price at time {\displaystyle t} of a zero-coupon bond maturing at time {\displaystyle T} with a payoff of 1 is given by
+
+where {\displaystyle {\mathcal {F}}} is the natural filtration for the process. The interest rates implied by the zero coupon bonds form a yield curve, or more precisely, a zero curve. Thus, specifying a model for the short rate specifies future bond prices. This means that instantaneous forward rates are also specified by the usual formula
+
+Short rate models are often classified as endogenous and exogenous. Endogenous short rate models are short rate models where the term structure of interest rates, or of zero-coupon bond prices {\displaystyle T\mapsto P(0,T)}, is an output of the model, so it is "inside the model" (endogenous) and is determined by the model parameters. Exogenous short rate models are models where such term structure is an input, as the model involves some time dependent functions or shifts that allow for inputing a given market term structure, so that the term structure comes from outside (exogenous).
+
+
+## Particular short-rate models
+
+Throughout this section {\displaystyle W\_{t}\,} represents a standard Brownian motion under a risk-neutral probability measure and {\displaystyle dW\_{t}\,} its differential. Where the model is lognormal, a variable {\displaystyle X\_{t}} is assumed to follow an Ornstein–Uhlenbeck process and {\displaystyle r\_{t}\,} is assumed to follow {\displaystyle r\_{t}=\exp {X\_{t}}\,}.
+
+
+### One-factor short-rate models
+
+Following are the one-factor models, where a single stochastic factor – the short rate – determines the future evolution of all interest rates.
+Other than Rendleman–Bartter and Ho–Lee, which do not capture the mean reversion of interest rates, these models can be thought of as specific cases of Ornstein–Uhlenbeck processes.
+The Vasicek, Rendleman–Bartter and CIR models are endogenous models and have only a finite number of free parameters and so it is not possible to specify these parameter values in such a way that the model coincides with a few observed market prices ("calibration") of zero coupon bonds or linear products such as forward rate agreements or swaps, typically, or a best fit is done to these linear products to find the endogenous short rate models parameters that are closest to the market prices. This does not allow for fitting options like caps, floors and swaptions as the parameters have been used to fit linear instruments instead. This problem is overcome by allowing the parameters to vary deterministically with time, or by adding a deterministic shift to the endogenous model.
+In this way, exogenous models such as Ho-Lee and subsequent models, can be calibrated to market data, meaning that these can exactly return the price of bonds comprising the yield curve, and the remaining parameters can be used for options calibration. The implementation is usually via a (binomial) short rate tree or simulation; see Lattice model (finance) § Interest rate derivatives and Monte Carlo methods for option pricing, although some short rate models have closed form solutions for zero coupon bonds, and even caps or floors, easing the calibration task considerably.
+
+We list the following endogenous models first.
+
+1. Merton's model (1973) explains the short rate as {\displaystyle r\_{t}=r\_{0}+at+\sigma W\_{t}^{\*}}: where {\displaystyle W\_{t}^{\*}} is a one-dimensional Brownian motion under the spot martingale measure. In this approach, the short rate follows an arithmetic Brownian motion.
+2. The Vasicek model (1977) models the short rate as {\displaystyle dr\_{t}=(\theta -\alpha r\_{t})\,dt+\sigma \,dW\_{t}}; it is often written {\displaystyle dr\_{t}=a(b-r\_{t})\,dt+\sigma \,dW\_{t}}. The second form is the more common, and makes the parameters interpretation more direct, with the parameter {\displaystyle a} being the speed of mean reversion, the parameter {\displaystyle b} being the long term mean, and the parameter {\displaystyle \sigma } being the instantaneous volatility. In this short rate model an Ornstein–Uhlenbeck process is used for the short rate. This model allows for negative rates, because the probability distribution of the short rate is Gaussian. Also, this model allows for closed form solutions for the bond price and for bond options and caps/floors, and using Jamshidian's trick, one can also get a formula for swaptions.
+3. The Rendleman–Bartter model (1980) or Dothan model (1978) explains the short rate as {\displaystyle dr\_{t}=\theta r\_{t}\,dt+\sigma r\_{t}\,dW\_{t}}. In this model the short rate follows a geometric Brownian motion. This model does not have closed form formulas for options and it is not mean reverting. Moreover, it has the problem of an infinite expected bank account after a short time. The same problem will be present in all lognormal short rate models
+4. The Cox–Ingersoll–Ross model (1985) supposes {\displaystyle dr\_{t}=(\theta -\alpha r\_{t})\,dt+{\sqrt {r\_{t}}}\,\sigma \,dW\_{t}}, it is often written {\displaystyle dr\_{t}=a(b-r\_{t})\,dt+{\sqrt {r\_{t}}}\,\sigma \,dW\_{t}}. The {\displaystyle \sigma {\sqrt {r\_{t}}}} factor precludes (generally) the possibility of negative interest rates. The interpretation of the parameters, in the second formulation, is the same as in the Vasicek model. The Feller condition {\displaystyle 2ab>\sigma ^{2}} ensures strictly positive short rates. This model follows a Feller square root process and has non-negative rates, and it allows for closed form solutions for the bond price and for bond options and caps/floors, and using Jamshidian's trick, one can also obtain a formula for swaptions. Both this model and the Vasicek model are called affine models, because the formula for the continuously compounded spot rate for a finite maturity T at time t is an affine function of {\displaystyle r\_{t}}.
+
+We now list a number of exogenous short rate models.
+
+1. The Ho–Lee model (1986) models the short rate as {\displaystyle dr\_{t}=\theta \_{t}\,dt+\sigma \,dW\_{t}}. The parameter {\displaystyle \theta \_{t}} allows for the initial term structure of interest rates or bond prices to be an input of the model. This model follows again an arithmetic Brownian motion with time dependent deterministic drift parameter.
+2. The Hull–White model (1990)—also called the extended Vasicek model—posits {\displaystyle dr\_{t}=(\theta \_{t}-\alpha \_{t}r\_{t})\,dt+\sigma \_{t}\,dW\_{t}}. In many presentations one or more of the parameters {\displaystyle \theta ,\alpha } and {\displaystyle \sigma } are not time-dependent. The distribution of the short rate is normal, and the model allows for negative rates. The model with constant {\displaystyle \alpha } and {\displaystyle \sigma } is the most commonly used and it allows for closed form solutions for bond prices, bond options, caps and floors, and swaptions through Jamshidian's trick. This model allows for an exact calibration of the initial term structure of interest rates through the time dependent function {\displaystyle \theta \_{t}}. Lattice-based implementation for Bermudan swaptions and for products without analytical formulas is usually trinomial.
+3. The Black–Derman–Toy model (1990) has 
+ d
+ ln
+ ⁡
+ (
+ r
+ )
+ =
+ [
+ θ
+ t
+ 
+ 
+ +
+ σ
+ t
+ 
+ ′
+ 
+ σ
+ t
+ 
+ 
+ 
+ 
+ ln
+ ⁡
+ (
+ r
+ )
+ ]
+ d
+ t
+ +
+ σ
+ t
+ 
+ 
+ d
+ W
+ t
+ 
+ 
+ 
+ 
+ {\textstyle d\ln(r)=[\theta \_{t}+{\frac {\sigma '\_{t}}{\sigma \_{t}}}\ln(r)]dt+\sigma \_{t}\,dW\_{t}}
+ 
+ for time-dependent short rate volatility and {\displaystyle d\ln(r)=\theta \_{t}\,dt+\sigma \,dW\_{t}} otherwise; the model is lognormal. The model has no closed form formulas for options. Also, as all lognormal models, it suffers from the issue of explosion of the expected bank account in finite time.
+4. The Black–Karasinski model (1991), which is lognormal, has {\displaystyle d\ln(r)=[\theta \_{t}-\phi \_{t}\ln(r)]\,dt+\sigma \_{t}\,dW\_{t}}. The model may be seen as the lognormal application of Hull–White; its lattice-based implementation is similarly trinomial (binomial requiring varying time-steps). The model has no closed form solutions, and even basic calibration to the initial term structure has to be done with numerical methods to generate the zero coupon bond prices. This model too suffers of the issue of explosion of the expected bank account in finite time.
+5. The Kalotay–Williams–Fabozzi model (1993) has the short rate as {\displaystyle d\ln(r\_{t})=\theta \_{t}\,dt+\sigma \,dW\_{t}}, a lognormal analogue to the Ho–Lee model, and a special case of the Black–Derman–Toy model. This approach is effectively similar to "the original Salomon Brothers model" (1987), also a lognormal variant on Ho-Lee.
+6. The CIR++ model, introduced and studied in detail by Brigo and Mercurio in 2001, and formulated also earlier by Scott (1995) used the CIR model but instead of introducing time dependent parameters in the dynamics, it adds an external shift. The model is formulated as {\displaystyle dx\_{t}=a(b-x\_{t})\,dt+{\sqrt {x\_{t}}}\,\sigma \,dW\_{t},\ \ r\_{t}=x\_{t}+\phi (t)} where {\displaystyle \phi } is a deterministic shift. The shift can be used to absorb the market term structure and make the model fully consistent with this. This model preserves the analytical tractability of the basic CIR model, allowing for closed form solutions for bonds and all linear products, and options such as caps, floor and swaptions through Jamshidian's trick. The model allows for maintaining positive rates if the shift is constrained to be positive, or allows for negative rates if the shift is allowed to go negative. It has been applied often in credit risk too, for credit default swap and swaptions, in this original version or with jumps.
+
+The idea of a deterministic shift can be applied also to other models that have desirable properties in their endogenous form. For example, one could apply the shift {\displaystyle \phi } to the Vasicek model, but due to linearity of the Ornstein-Uhlenbeck process, this is equivalent to making {\displaystyle b} a time dependent function, and would thus coincide with the Hull-White model.
+
+
+### Multi-factor short-rate models
+
+Besides the above one-factor models, there are also multi-factor models of the short rate, among them the best known are the Longstaff and Schwartz two factor model and the Chen three factor model (also called "stochastic mean and stochastic volatility model"). Note that for the purposes of risk management, "to create realistic interest rate simulations", these multi-factor short-rate models are sometimes preferred over One-factor models, as they produce scenarios which are, in general, better "consistent with actual yield curve movements".
+
+* The Longstaff–Schwartz model (1992) supposes the short rate dynamics are given by
+
+* The Chen model (1996) which has a stochastic mean and volatility of the short rate, is given by
+
+* The two-factor Hull-White or G2++ models are models that have been used due to their tractability. These models are summarized and shown to be equivalent in Brigo and Mercurio (2006). This model is based on adding two possibly correlated Ornstein-Uhlenbeck (Vasicek) processes plus a shift to obtain the short rate. This model allows for exact calibration of the term structure, semi-closed form solutions for options, control of the volatility term structure for instantaneous forward rates through the correlation parameter, and especially for negative rates, which has become important as rates turned negative in financial markets.
+
+
+## Other interest rate models
+
+The other major framework for interest rate modelling is the Heath–Jarrow–Morton framework (HJM). Unlike the short rate models described above, this class of models is generally non-Markovian. This makes general HJM models computationally intractable for most purposes. The great advantage of HJM models is that they give an analytical description of the entire yield curve, rather than just the short rate. For some purposes (e.g., valuation of mortgage backed securities), this can be a big simplification. The Cox–Ingersoll–Ross and Hull–White models in one or more dimensions can both be straightforwardly expressed in the HJM framework. Other short rate models do not have any simple dual HJM representation.
+
+The HJM framework with multiple sources of randomness, including as it does the Brace–Gatarek–Musiela model and market models, is often preferred for models of higher dimension.
+
+Models based on Fischer Black's shadow rate are used when interest rates approach the zero lower bound.
+

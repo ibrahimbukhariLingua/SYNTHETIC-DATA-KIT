@@ -1,0 +1,31 @@
+CXML
+
+
+# CXML
+
+
+
+**cXML (commerce eXtensible Markup Language)** is a protocol, created by Ariba in 1999, intended for communication of business documents between procurement applications, e-commerce hubs and suppliers. cXML is based on XML and provides formal XML schemas for standard business transactions, allowing programs to modify and validate documents without prior knowledge of their form.
+
+The protocol does not include the full breadth of interactions some parties may wish to communicate. However, it can be expanded through the use of extrinsic elements and newly defined domains for various identifiers. This expansion is the limit of point-to-point configurations necessary for communication.
+
+The current protocol includes documents for setup (company details and transaction profiles), catalogue content, application integration (including the widely used PunchOut feature), original, change and delete purchase orders and responses to all of these requests, order confirmation and ship notice documents (cXML analogues of EDI 855 and 856 transactions) and new invoice documents.
+
+PunchOut is a protocol for interactive sessions managed across the Internet, a communication from one application to another, achieved through a dialog of real-time, synchronous cXML messages, which support user interaction at a remote site. This protocol is most commonly used today in the form of Procurement PunchOut, which specifically supports interactions between a procurement application and a supplier's eCommerce web site and possibly includes an intermediary for authentication and version matching. The buyer leaves or "punches out" of their company's system and goes to the supplier's web-based catalog to locate and add items to their shopping cart, while their application transparently maintains connection with the web site and gathers pertinent information. A vendor catalog, enhanced for this process, is known as a punchout catalog. PunchOut enables communication between the software and the web site so that relevant information about the transaction is delivered to the appropriate channels.
+
+Since SAP's acquisition of Ariba in 2012, this protocol is owned by SAP.
+
+
+## Benefits
+
+* Standardized method used for automated order receipt, fulfilment updates and catalogue transport
+* Many sell-side solutions come with the protocol out of the box
+* cXML supports remote shopping session (PunchOut) transactions
+* Extensible: If your buyer relationships require more information than cXML supports intrinsically, that data may still be sent end-to-end
+* Leverages XML, which is a robust open language for describing information
+* cXML leaves much of the syntax from EDI behind
+
+## Proprietary issues
+
+cXML is published based on the input of many companies, and is controlled by Ariba. cXML is a protocol that is published for free on the Internet along with its DTD. It is open to all for their use without restrictions apart from publications of modifications and naming that new protocol. Essentially, everyone is free to use cXML with any and all modifications as long as they don't publish their own standard and call it "cXML". Beginning in February 1999, the cXML standard has been available for all to use. The details of its license agreement are found at http://cxml.org/license.html.
+

@@ -1,0 +1,161 @@
+CPAY
+
+
+# CPAY
+
+
+
+**CPAY** is the codename of the contactless payment system operated by Transport for London in and around London. It does not have a public facing brand name and is simply known as **pay as you go by contactless** by the public.
+
+
+## History
+
+In 2014, Transport for London became the first public transport provider in the world to accept payment from contactless bank cards. TfL first started accepting contactless debit and credit cards on London Buses on 13 December 2012, expanding to the Underground, Tram and the Docklands Light Railway in September 2014. Since 2016, contactless payment can also take place using contactless-enabled mobile devices such as phones and smartwatches, using Apple Pay, Google Pay and Samsung Pay.
+
+TfL designed and coded the contactless payment system in-house, at a cost of £11m, after realising existing commercial solutions were inflexible or too focused on retail use. Since the launch of contactless payment in 2012, over 500 million journeys have been made, using over 12 million contactless bank cards. Consequently, TfL is now one of Europe's largest contactless merchants, with around 1 in 10 contactless transactions in the UK taking place on the TfL network.
+
+In 2016, TfL licensed their contactless payment system to Cubic, the original developers of the Oyster card, allowing the technology to be sold to other transport providers worldwide. In 2017, licensing deals were signed with New York City, New South Wales and Boston.
+
+The same requirement to touch in and out on underground services applies to contactless cards. The same price capping that applies to the use of Oyster cards applies to the use of contactless cards (provided the same card is used for the day's journeys). The fare paid every day is settled with the bank and appears on the debit or credit card statement. Detailed usage data is written to Transport for London's systems and is available for customers who register their contactless cards with Transport for London. Unlike an Oyster card, a contactless card does not store credit (beyond the holder's credit limit) and there is no need or facility to add credit to the card.
+
+Since August 2019, expansion to the pay as you go network around London has been done exclusively on contactless but not Oyster.
+
+
+## Features
+
+Although the use of a contactless payment card for travel is exactly the same as an Oyster card, as a contactless card cannot be written into, they work differently in the background.
+
+An Oyster card stores the balance in the card itself, and records all the touches made in the card. It can also store discounts and season tickets as well. None of the above is possible with a contactless payment card, therefore all the fare calculations are done in batch on the back end, after all the touches in a day are aggregated from the readers.
+
+
+### Daily and weekly capping
+
+Like an Oyster card, contactless cards offer daily capping. However, the capping on Oyster cards are done in real-time, with the zones used stored inside the card, which is not possible on contactless. As the fares are calculated in batch by the back end for contactless cards, cheaper non-zonal caps may be available on contactless cards for certain stations.
+
+In addition, due to how Oyster system works, if you start from Zone 6 for one journey into Zone 1, then stay within Zone 1 all day, the Oyster system will charge you up to the Zones 1-6 cap, but on contactless, if the Zones 1-2 cap plus the single extension from Zone 6 is cheaper, it will charge that instead since the back end looks for the whole day of the journey history and charges as a batch.
+
+Contactless cards also offer weekly capping as well, which was not available initially on Oyster due to the real-time nature and the information stored on the card.
+
+Since 27 September 2021, the back end processing used for contactless payments has also been applied on adult-rate Oyster cards, which enables weekly capping for these cards as well. Any overcharging compared to a contactless payment card, like the scenarios described above, will be refunded automatically to the Oyster card.
+
+
+### Unpaid fares
+
+As the amount to be charged isn't known after travelling, at first use of a card, a pre-authorisation of £0.10 is requested on the card to check if it is valid. If the actual fare requested after the day is declined, the card is temporarily blocked for use until the unpaid fare is paid.
+
+
+### Fare inspection
+
+As a contactless payment card cannot be written into, when a contactless payment card is presented for fare inspection, the device does not know in real time if it has been tapped in or not (however, some other contactless payment systems, such as OVpay, can do this), unlike an Oyster card.
+
+If during the conciliation process, a revenue inspection check cannot be matched to a touch-in, a failed revenue inspection will occur and a maximum fare will be charged as a result. If a card gets 3 failed revenue inspections, it will be blocked from travelling on the network.
+
+
+### Limitations
+
+Although a contactless payment card can be used as the same way as an Oyster card when making adult pay as you go journeys, it cannot fully replace an Oyster card yet as it does not support loading discounts or season Travelcards. In addition, as buses and trams in London no longer accept cash, an Oyster card, or a 1-day bus and tram pass (which is based on the technology of Oyster card), is the only way for people to pay the bus fare without a compatible contactless payment card.
+
+
+## Use
+
+The use of a contactless payment card by travellers is exactly the same as with an Oyster card. However, unlike an Oyster card, a contactless payment card can only be used for paying as you go at the adult rate. Season tickets and discounts cannot be associated with a contactless payment card.
+
+
+## Coverage
+
+CPAY (contactless pay as you go) is available everywhere an Oyster card is accepted. In addition, it is also available at the following National Rail stations, where Oyster card is not accepted:
+
+| Station | Local authority | Managed by | Valid from | Notes |
+| --- | --- | --- | --- | --- |
+| Apsley | Dacorum | London Northwestern Railway | February 2025 |
+| Ashford | Spelthorne | South Western Railway |
+| Basildon | Basildon | c2c |
+| Bat & Ball | Sevenoaks | Southeastern | Only served by Thameslink |
+| Beaconsfield | Buckinghamshire | Chiltern Railways | June 2024 |
+| Benfleet | Castle Point | c2c | February 2025 |
+| Berkhamsted | Dacorum | London Northwestern Railway |
+| Bletchley | Milton Keynes |
+| Bourne End | Buckinghamshire | Great Western Railway | May 2022 |
+| Bricket Wood | St Albans | London Northwestern Railway | February 2025 |
+| Brookmans Park | Welwyn Hatfield | Great Northern | August 2019 |
+| Burnham | Slough | Elizabeth line | January 2020 |
+| Chalkwell | Southend-on-Sea | c2c | February 2025 |
+| Cheddington | Buckinghamshire | London Northwestern Railway |
+| Cookham | Windsor & Maidenhead | Great Western Railway | May 2022 |
+| Datchet | Windsor & Maidenhead | South Western Railway | February 2025 |
+| Denham | Buckinghamshire | Chiltern Railways | June 2024 |
+| Denham Golf Club |
+| Dunton Green | Sevenoaks | Southeastern | February 2025 |
+| East Tilbury | Thurrock | c2c |
+| Egham | Runnymede | South Western Railway |
+| Eynsford | Sevenoaks | Southeastern | Only served by Thameslink |
+| Furze Platt | Windsor & Maidenhead | Great Western Railway | May 2022 |
+| Garston | Watford | London Northwestern Railway | February 2025 |
+| Gerrards Cross | Buckinghamshire | Chiltern Railways | June 2024 |
+| Harpenden | St Albans | Thameslink | October 2019 |
+| Hatfield | Welwyn Hatfield | Great Northern | November 2019 | also served by Thameslink |
+| Hemel Hempstead | Dacorum | London Northwestern Railway | February 2025 | Limited service also served by Southern |
+| Henley-on-Thames | South Oxfordshire | Great Western Railway | March 2022 |
+| High Wycombe | Buckinghamshire | Chiltern Railways | June 2024 |
+| How Wood | St Albans | London Northwestern Railway | February 2025 |
+| Iver | Buckinghamshire | Elizabeth line | January 2020 |
+| Kempton Park | Spelthorne | South Western Railway | February 2025 |
+| Kings Langley | Three Rivers | London Northwestern Railway |
+| Laindon | Basildon | c2c |
+| Langley | Slough | Elizabeth line | January 2020 |
+| Leigh-on-Sea | Southend-on-Sea | c2c | February 2025 |
+| Leighton Buzzard | Central Bedfordshire | London Northwestern Railway |
+| Luton Airport Parkway | Luton | Thameslink | October 2019 | also served by East Midlands Railway |
+| Maidenhead | Windsor & Maidenhead | Great Western Railway | January 2020 | also served by Elizabeth line |
+| Marlow | Buckinghamshire | May 2022 |
+| Otford | Sevenoaks | Southeastern | February 2025 | Also served by Thameslink |
+| Park Street | St Albans | London Northwestern Railway |
+| Pitsea | Basildon | c2c |
+| Reading | Reading | Network Rail | January 2020 | Pay-as-you-go only valid on Great Western Railway and Elizabeth line services |
+| Seer Green & Jordans | Buckinghamshire | Chiltern Railways | June 2024 |
+| Sevenoaks | Sevenoaks | Southeastern | February 2025 | Also served by Thameslink |
+| Shepperton | Spelthorne | South Western Railway |
+| Shiplake | South Oxfordshire | Great Western Railway | March 2022 |
+| Shoeburyness | Southend-on-Sea | c2c | February 2025 |
+| Shoreham | Sevenoaks | Southeastern | Only served by Thameslink |
+| Slough | Slough | Great Western Railway | January 2020 | also served by Elizabeth line |
+| Southend Central | Southend-on-Sea | c2c | February 2025 |
+| Southend East |
+| St Albans Abbey | St Albans | London Northwestern Railway |
+| St Albans City | Thameslink | October 2019 |
+| Staines | Spelthorne | South Western Railway | February 2025 |
+| Stanford-le-Hope | Thurrock | c2c |
+| Sunbury | Spelthorne | South Western Railway |
+| Sunnymeads | Windsor & Maidenhead |
+| Taplow | Buckinghamshire | Elizabeth line | January 2020 |
+| Thorpe Bay | Southend-on-Sea | c2c | February 2025 |
+| Tilbury Town | Thurrock |
+| Tring | Dacorum | London Northwestern Railway |
+| Twyford | Wokingham | Great Western Railway | January 2020 | also served by Elizabeth line |
+| Upper Halliford | Spelthorne | South Western Railway | February 2025 |
+| Virginia Water | Runnymede |
+| Wargrave | Wokingham | Great Western Railway | March 2022 |
+| Watford North | Watford | London Northwestern Railway | February 2025 |
+| Welham Green | Welwyn Hatfield | Great Northern | November 2019 |
+| Welwyn Garden City | Great Northern | also served by Thameslink |
+| West Horndon | Brentwood | c2c | February 2025 |
+| Westcliff | Southend-on-Sea |
+| Windsor & Eton Central | Windsor & Maidenhead | Great Western Railway | March 2022 |
+| Windsor & Eton Riverside | Windsor & Maidenhead | South Western Railway | February 2025 |
+| Wraysbury |
+
+
+As the Oyster card supports a maximum of 15 zones., the stations above are listed as Zone 16 in the fare data, indicating that they are outside the Oyster area. The contactless payment cap doesn't apply on a zonal basis, with caps applied on the basis of individual stations.
+
+The contactless payment used on Luton DART is also CPAY, as evidenced by DART journeys showing up in TfL contactless history, but its fare is separate and not integrated into the remainder of rail network.
+
+
+### Future expansion
+
+In the future, CPAY will be further expanded into a wider area of South East England. 47 new stations were added into the system on 2 February 2025, and a further 49 stations will be added into the system by the end of 2025.
+
+
+## Usage statistics
+
+Since the launch of contactless payment in 2012 on buses, and in 2014 on rail, the usage has been steadily increasing apart during the period of COVID-19 pandemic. By October 2022, contactless payment is now used for 71% of tube, rail and bus journeys in London. Further analysis between July and August 2022 showed that 35% of contactless journeys were made using mobile devices, up from 26% before the pandemic.
+

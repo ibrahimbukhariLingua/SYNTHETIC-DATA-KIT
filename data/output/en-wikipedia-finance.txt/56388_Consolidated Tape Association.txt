@@ -1,0 +1,60 @@
+Consolidated Tape Association
+
+
+# Consolidated Tape Association
+
+
+
+The **Consolidated Tape Association** (**CTA**) oversees the Securities Information Processor that disseminates real-time trade and quote information (market data) in New York Stock Exchange (NYSE) and American Stock Exchange (AMEX) listed securities (stocks and bonds). It is currently chaired by Emily Kasparov of the Chicago Stock Exchange, the first woman and the youngest chair elected to the position.
+
+CTA manages two Plans to govern the collection, processing and dissemination of trade and quote data: the Consolidated Tape Plan, which governs trades, and the Consolidated Quotation Plan, which governs quotes. The Plans were filed with and approved by the Securities and Exchange Commission (SEC) in accordance with Section 11A of the Securities Exchange Act of 1934.
+
+Since the late 1970s, all SEC-registered exchanges and market centers that trade NYSE or AMEX-listed securities send their trades and quotes to a central consolidator where the Consolidated Tape System (CTS) and Consolidated Quotation System (CQS) data streams are produced and distributed worldwide. The CTA is the operating authority for CQS and CTS.
+
+
+## Participant exchanges
+
+The current Participants include:
+
+* Cboe BZX Exchange (BZX)
+* Cboe BYX Exchange (BYX)
+* Cboe EDGX Exchange (EDGX)
+* Cboe EDGA Exchange (EDGA)
+* Financial Industry Regulatory Authority (FINRA)
+* Nasdaq ISE (ISE)
+* Nasdaq OMX BX (BSE)
+* Nasdaq OMX PHLX (PHLX)
+* Nasdaq Stock Market (NASDAQ)
+* New York Stock Exchange (NYSE)
+* NYSE Arca (ARCA)
+* NYSE American (AMEX)
+* NYSE Chicago (CHX)
+* NYSE National (NSX)
+* MIAX Pearl Equities
+* Investors Exchange
+* Long-Term Stock Exchange
+
+## Acquisition and distribution of market data
+
+The New York Stock Exchange is the Administrator of Network A, which includes NYSE-listed securities, and the American Stock Exchange is the Administrator of Network B, which includes AMEX-listed securities.
+
+CTS and CQS receive trade and quote information, respectively from NYSE, AMEX, and the other regional market centers using a standard message format. Each system validates its respective message format, verifies the information against its databases (e.g., valid symbol, etc.), consolidates the information with the other market centers' information, and disseminates the information to the data recipients in its respective common standard message format via the IP multicast network. Included in every trade and quote message is a timestamp which represents the time that the message is disseminated.
+
+Every trade and quote is stored in the system for both on-line and after hours processing. Each system maintains a master database by symbol. CTS maintains in its database, by symbol, a consolidated high, low, last price and volume; and for each market center that trades that symbol, the market’s last sale and volume information. This information is updated with each trade.
+
+Market centers are required, as authorizing self-regulatory organizations (SROs) per the CTA Plan, to report their trade activity within 90 seconds of execution time to CTS; otherwise the trade report must be designated as a late report. It is the responsibility of the SRO to determine when a trade is late. Late trades do not impact the national last sale price.
+
+CTS provides an automated correction processing capability in the event that a market center incorrectly reported its information. When a market center issues a correction message, CTS processes the correction and disseminates the revised trade report along with the updated consolidated and market center information that is maintained in the database. CTS also disseminates at End of Day, closing messages that provide summary information from its database for each listed stock.
+
+For every quote message received from a market center, CQS calculates a National Best Bid and Offer (NBBO) based on a price, size and time priority scheme. If the quote is a NASDAQ market maker quote, CQS also calculates a NASDAQ BBO. CQS disseminates the Market center's root quote with an appendage that includes the National and NASDAQ BBOs. In the event that a market center is experiencing technical difficulties in providing quote information, CQS also has a facility that, at the direction of the market center, disseminates zero quotes in its securities thus eliminating any stale quotes and taking that market center out of the BBO calculations.
+
+
+## Technology infrastructure
+
+Both the CTS and the CQS systems are operated on fault tolerant computer platforms at different physical computer sites; CTS is operated at CTA’s complex in Brooklyn; CQS is operated at CTA’s complex in lower Manhattan, thereby providing redundancy in the event of a site disaster. If a site disaster should occur at either location, all of the computer processing would be transferred to the surviving site at reduced capacity.
+
+CTS and CQS receive their data from the market centers over network-based TCP/IP connections. Each market center has redundant communication paths into the two operating environments and each uses diverse common telephone carriers to send its trade and quote data to the Securities Industry Automation Corporation (SIAC). SIAC simultaneously distributes, via IP multicast, trade and quote information to the CTS and CQS subscribers from both sites.
+
+Independent of where the system is physically located (i.e., in lower Manhattan or in Brooklyn), both streams of data are simultaneously distributed out of both sites using an SIAC-developed Multicast Packet Replicator (MPR) thus providing "live" redundant streams to data recipients. The use of IP multicast, introduced to the market data industry in 1997, was the first widespread implementation of such technology. SIAC's design and implementation of this technology has been recognized and accepted into the permanent archives of the Smithsonian Institution. This technology allows trade and quote data to be distributed in a broadcast mode over a network and eliminates any dependency where one data recipient having a problem might impact another data recipient.
+In situations where a data recipient has experienced data loss in receiving the information (e.g., due to a system problem at the receiving site) an automated retransmission facility is available to allow that data recipient to automatically request and receive message retransmissions.
+

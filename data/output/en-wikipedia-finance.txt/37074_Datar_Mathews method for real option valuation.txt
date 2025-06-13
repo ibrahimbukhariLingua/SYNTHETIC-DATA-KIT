@@ -1,0 +1,188 @@
+Datar–Mathews method for real option valuation
+
+
+# Datar–Mathews method for real option valuation
+
+
+
+The **Datar–Mathews Method** (**DM Method**) is a method for real options valuation. The method provides an easy way to determine the real option value of a project simply by using the average of positive outcomes for the project. The method can be understood as an extension of the net present value (NPV) multi-scenario Monte Carlo model with an adjustment for risk aversion and economic decision-making. The method uses information that arises naturally in a standard discounted cash flow (DCF), or NPV, project financial valuation. It was created in 2000 by Vinay Datar, professor at Seattle University; and Scott H. Mathews, Technical Fellow at The Boeing Company.
+
+
+## Method
+
+The mathematical equation for the DM Method is shown below. The method captures the real option value by discounting the distribution of operating profits at *R*, the market risk rate, and discounting the distribution of the discretionary investment at *r*, risk-free rate, *before* the expected payoff is calculated. The option value is then the expected value of the maximum of the difference between the two discounted distributions or zero. Fig. 1.
+
+* {\displaystyle {\tilde {S}}\_{T}} is a random variable representing the future benefits, or operating profits at time *T*. The present valuation of {\displaystyle {\tilde {S}}\_{T}} uses *R*, a discount rate consistent with the risk level of {\displaystyle {\tilde {S}}\_{T},} {\displaystyle {\tilde {S}}\_{0}={\tilde {S}}\_{T}e^{-RT}.} *R* is the required rate of return for participation in the target market, sometimes termed the hurdle rate.
+* {\displaystyle {\tilde {X}}\_{T}} is a random variable representing the strike price. The present valuation of {\displaystyle {\tilde {X}}\_{T}} uses *r*, the rate consistent with the risk of capital investment of {\displaystyle {\tilde {X}}\_{T},} {\displaystyle {\tilde {X}}\_{0}={\tilde {X}}\_{T}e^{-rT}.} In many generalized option applications, the risk-free discount rate is used. However other discount rates can be considered, such as the corporate bond rate, particularly when the application is an internal corporate product development project.
+* {\displaystyle C\_{0}} is the real option value for a single stage project. The option value can be understood as the expected value of the difference of two present value distributions with an economically rational threshold limiting losses on a risk-adjusted basis. This value may also be expressed as a stochastic distribution.
+
+The differential discount rate for *R* and *r* implicitly allows the DM Method to account for the underlying risk. If *R* > *r*, then the option will be risk-averse, typical for both financial and real options. If *R* < *r*, then the option will be risk-seeking. If *R* = *r*, then this is termed a risk-neutral option, and has parallels with NPV-type analyses with decision-making, such as decision trees. The DM Method gives the same results as the Black–Scholes and the binomial lattice option models, provided the same inputs and the discount methods are used. This non-traded real option value therefore is dependent on the risk perception of the evaluator toward a market asset relative to a privately held investment asset.
+
+The DM Method is advantageous for use in real option applications because unlike some other option models it does not require a value for *sigma* (a measure of uncertainty) or for *S₀* (the value of the project today), both of which are difficult to derive for new product development projects; see further under real options valuation. Finally, the DM Method uses real-world values of any distribution type, avoiding the requirement for conversion to risk-neutral values and the restriction of a lognormal distribution; see further under Monte Carlo methods for option pricing.
+
+Extensions of the method for other real option valuations have been developed such as contract guarantee (put option), Multi-stage, Early Launch (American option), and others.
+
+
+## Implementation
+
+The DM Method may be implemented using Monte-Carlo simulation, or in a simplified algebraic or other form (see the Range Option below).
+
+Using simulation, for each sample, the engine draws a random variable from both {\displaystyle {\tilde {S}}\_{T}{\text{ and }}{\tilde {X}}\_{T},} calculates their present values, and takes the difference. Fig. 2A. The difference value is compared to zero, the maximum of the two is determined, and the resulting value recorded by the simulation engine. Here, reflecting the optionality inherent in the project, a forecast of a net negative value outcome corresponds to an abandoned project, and has a zero value. Fig. 2B. The resulting values create a payoff distribution representing the economically rational set of plausible, discounted value forecasts of the project at time *T₀*.
+
+When sufficient payoff values have been recorded, typically a few hundred, then the mean, or expected value, of the payoff distribution is calculated. Fig. 2C. The option value is the expected value, the first moment of all positive NPVs and zeros, of the payoff distribution.
+
+A simple interpretation is:
+
+where *operating profit* and *launch costs* are the appropriately discounted range of cash flows to time *T₀*.
+
+The DM Option can also be interpreted as a logical function. Frequently the simulation is provided by a Monte Carlo function embedded in a spreadsheet, such as Microsoft Excel. The Excel logic function for a DM call option is:
+
+The Excel logic function for a DM put option is:
+
+It is interesting to note that for any option model with the same specific parameters can yield both a call option value as well as a put option value. Changing the call and put options to a range of strike prices results in a collar strategy.
+
+Without the averaging function, the option value can also be understood as a distribution ({\displaystyle {\tilde {C}}\_{0}}) reflecting the uncertainty of the underlying variables.
+
+
+## DM Option Variations
+
+
+### Algebraic lognormal form
+
+The DM real option can be considered a generalized form for option valuation. Its simulation produces a truncated present value distribution of which the mean value is interpreted to be the option value. With certain boundary conditions, the DM option can be reformulated algebraically as a conditional expectation of a lognormal distribution similar to the form and characteristics of a typical financial option, such as the European, single stage Black-Scholes financial option. This section illustrates the transformation of the DM real option to its algebraic lognormal form and its relationship to the Black-Scholes financial option formula. The process illuminates some of the more technical elements of the option formulation thereby providing further insight to the underlying concepts.
+
+The lognormal form of the DM Method remains a simple concept based on the same computation procedures as the simulation form. It is the conditional expectation of the discounted projected future value outcome distribution, {\displaystyle {\tilde {S}}\_{T}}, less a predetermined purchase cost (strike price or launch cost), {\displaystyle {\bar {X}}\_{T}}, (modeled in this example as a scalar value) multiplied by the probability of that truncated distribution greater than a threshold—nominally 0. A conditional expectation is the expected value of the truncated distribution (mean of the tail), *MT*, computed with respect to its conditional probability distribution (Fig. 3).
+
+The option calculation procedure values the project investment (option purchase), *C₀*, at *T₀*. For the DM option the time differentiated discounting (*R* and *r*) results in an apparent shift of the projected value outcome distribution, {\displaystyle {\tilde {S}}}, relative to the {\displaystyle {\tilde {X}}}, or the scalar mean {\displaystyle {\bar {X}}} in the example shown in Fig. 4. This relative shift sets up the conditional expectation of the truncated distribution at *T₀*.
+
+In a lognormal distribution for a project future value outcome, {\displaystyle {\tilde {S}}\_{T}}, both the mean, {\displaystyle {\bar {S}}\_{T}}, and standard deviation, {\displaystyle SD\_{T}}, must be specified. The standard deviation, {\displaystyle SD\_{T}}, of the distribution {\displaystyle {\tilde {S}}\_{T}} is proportionately discounted along with the distribution, {\displaystyle SD\_{0}=SD\_{T}e^{-RT}.}
+
+The parameters of {\displaystyle \sigma {\text{ and }}\mu }, of a lognormal at *T₀* can be derived from the values {\displaystyle SD\_{0}{\text{ and }}S\_{0}} respectively, as:
+
+The conditional expectation of the discounted value outcome is the mean of the tail *MT*:
+
+The probability of the project being in the money and launched (“exercised”) is {\displaystyle N\left({\tfrac {\mu -\ln X\_{0}}{\sigma }}\right).}
+
+The project investment (option) value is:
+
+The involved lognormal mathematics can be burdensome and opaque for some business practices within a corporation. However, several simplifications can ease that burden and provide clarity without sacrificing the soundness of the option calculation. One simplification is the employment of the standard normal distribution, also known as the Z-distribution, which has a mean of 0 and a standard deviation of 1. It is common practice to convert a normal distribution to a standard normal and then use the standard normal table to find the value of probabilities.
+
+Define as the standard normal variable: {\displaystyle Z={\tfrac {\left(\ln X\_{0}-\mu \right)}{\sigma }}.}
+
+The conditional expectation of the discounted value outcome is:
+
+Then probability of the project being in the money and launched (“exercised”) is: {\displaystyle N\left({\tfrac {\mu -\ln X\_{0}}{\sigma }}\right)=N\left(-Z\right).}
+
+The Datar-Mathews lognormal option value simplifies to:
+
+
+#### Transformation to the Black-Scholes Option
+
+The Black–Scholes option formula (as well as the binomial lattice) is a special case of the simulated DM real option. With subtle, but notable differences, the logarithmic form of the DM Option can be algebraically transformed into The Black-Scholes option formula. The real option valuation is based on an approximation of the future value outcome distribution, which may be lognormal, at time *TT* projected (discounted) to *T₀*. In contrast, the Black-Scholes is based on a lognormal distribution projected from historical asset returns to present time *T₀*. Analysis of these historical trends results in a calculation termed the volatility (finance) factor. For Black-Scholes (BS) the volatility factor is {\displaystyle \sigma \_{BS}{\sqrt {T}}}.
+
+The following lognormal distribution with a standard deviation {\displaystyle \sigma } is replaced by the volatility factor {\displaystyle \sigma \_{BS}{\sqrt {T}}}.
+
+The Black-Scholes option value simplifies to its familiar form:
+
+The terms *N*(*d₁*) and *N*(*d₂*) are applied in the calculation of the Black–Scholes formula, and are expressions related to operations on lognormal distributions; see section "Interpretation" under Black–Scholes. Referring to Fig. 5 and using the lognormal form of the DM Option, it is possible to derive certain insights to the internal operation of an option:
+
+*N*(*-Z*) or *N*(*d₂*) is a measure of the area of the tail of the distribution, *MT* (delineated by *X₀*), relative to that of the entire distribution, e.g. the probability of tail of the distribution, at time *T₀*. Fig. 5, Right. The true probability of expiring in-the-money in the real (“physical”) world is calculated at time *T₀*, the launch or strike date, measured by area of the tail of the distribution. *N*(*σ-Z*) or *N*(*d₁*) is the value of the option payoff relative to that of the asset. {\displaystyle N(d\_{1})=\left[MT\ x\ N(d\_{2})\right]/S\_{0},} where *MT* is the mean of the tail at time *T₀*.
+
+
+### Data patterns
+
+A simplified DM Method computation conforms to the same essential features—it is the discounted conditional expectation of the discounted projected future value outcome distribution, or {\displaystyle MT}, less a discounted cost, {\displaystyle X\_{0}}, multiplied by the probability of exercise, {\displaystyle N\left(-Z\right).} The value of the DM Method option can be understood as {\displaystyle C\_{0}=\left(MT-X\_{0}\right)\ x\ N\left(-Z\right).} This simplified formulation has strong parallels to an expected value calculation.
+
+Businesses that collect historical data may be able to leverage the similarity of assumptions across related projects facilitating the calculation of option values. One resulting simplification is the *Uncertainty Ratio*, {\displaystyle \textstyle UR=(SD/S)}, which can often be modeled as a constant for similar projects. *UR* is the degree of certainty by which the projected future cash flows can be estimated. *UR* is invariant of time {\displaystyle \textstyle \left({\tfrac {SD\_{T}}{S\_{T}}}={\tfrac {SD\_{0}}{S\_{0}}}\right)} with values typically between 0.35 and 1.0 for many multi-year business projects.
+
+Applying this observation as a constant, *K*, to the above formulas results in a simpler formulation:
+
+{\displaystyle Z} is normally distributed and the values can be accessed in a table of standard normal variables. The resulting real option value can be derived simply on a hand-held calculator once K is determined:
+
+
+### Triangular form (Range Option)
+
+Given the difficulty in estimating the lognormal distribution mean and standard deviation of future returns, other distributions instead are more often applied for real options used in business decision making. The sampled distributions may take any form, although the triangular distribution is often used, as is typical for low data situations, followed by a uniform distribution (continuous) or a beta distribution. This approach is useful for early-stage estimates of project option value when there has not been sufficient time or resources to gather the necessary quantitative information required for a complete cash flow simulation, or in a portfolio of projects when simulation of all the projects is too computationally demanding. Regardless of the distribution chosen, the procedure remains the same for a real option valuation.
+
+| **Innovation Project Quick Contingent Value Estimate** |
+| --- |
+| With most likely PV operating cash flow of $8.5M, but a 3-year capital cost of roughly $20M, the NPV of the important innovation project was deeply negative and the manager is considering abandoning it. Corporate sales analytics estimated with 95% certainty (double-sided 1-in-10 chance) the revenues could be as low as $4M or as high as $34M. (Fig. 7) Because of the large potential upside, the manager believes a small initial investment might resolve the project's downside uncertainties and reveal its potential value. Using the DM Range Option as a guide, the manager calculated the expected contingent value of the project upside to be about $25M [≈ (2\*$20M + $34M)/3]. Furthermore, there is a probability of one-in-four {25% ≈ ($34M - $20M)² /[ ($34M - $4M)($34M-$8.5M)]} that the project revenues will be greater than $20M. With these calculations, the manager estimates the innovation project option value is $1.25M [= ($25M-$20M) \* 25%]. Using this value, the manager justifies this initial investment (about 6% of the capital cost) into the project, sufficient to resolve some of the key uncertainties. The project can always be abandoned should the intermediate development results not measure up, but the investment losses will be minimized. (Later using corporate historical data patterns, an analyst converted the values from a three-point estimate to a DM Option calculation, and demonstrated that the result would differ by less than 10%.) |
+
+For a triangular distribution, sometimes referred to as three-point estimation, the mode value corresponds to the “most-likely” scenario, and the other two other scenarios, “pessimistic” and “optimistic”, represent plausible deviations from the most-likely scenario (often modeled as approximating a two-sided 1-out-of-10 likelihood or 95% confidence). This range of estimates results in the eponymous name for the option, the DM Range Option. The DM Range Option method is similar to the fuzzy method for real options. The following example (Fig. 6) uses a range of future estimated operating profits of *a* (pessimistic), *b* (optimistic) and *m* (mode or most-likely).
+
+For {\displaystyle T\_{0}} discount *a*, *b* and *m* by {\displaystyle e^{-RT}{\text{ and }}X\_{0}=X\_{T}e^{-rT}.}
+
+The classic DM Method presumes that the strike price is represented by a random variable (distribution {\displaystyle {\tilde {X}}\_{0}}) with the option solution derived by simulation. Alternatively, without the burden of performing a simulation, applying the average or mean scalar value of the launch cost distribution {\displaystyle {\bar {X}}\_{0}} (strike price) results in a conservative estimate of DM Range Option value. If the launch cost is predetermined as a scalar value, then the DM Range Option value calculation is exact.
+
+The expected value of the truncated triangular distribution (mean of the right tail), is {\displaystyle MT={\tfrac {\left(2X\_{0}+b\right)}{3}}.}
+
+The probability of the project being in the money and launched is the proportional area of the truncated distribution relative to the complete triangular distribution. (See Fig. 16) This partial expectation is computed by the cumulative distribution function (CDF) given the probability distribution will be found at a value greater than or equal to *X*:
+
+The DM Range Option value, or project investment, is:
+
+Use of a DM Range Option facilitates the application of real option valuation to future project investments. The DM Range Option provides an estimate of valuation that differs marginally with that of the DM Option algebraic lognormal distribution form. However, the projected future value outcome, *S*, of a project is rarely based on a lognormal distribution derived from historical asset returns, as is a financial option. Rather, the future value outcome, *S*, (as well as the strike price, *X*, and the standard deviation, *SD*), is more than likely a three-point estimation based on engineering and marketing parameters. Therefore, the ease of application of the DM Range Option is often justified by its expediency and is sufficient to estimate the conditional value of a future project.
+
+
+## Multi-stage (Compound) Option
+
+Timothy Luehrman in an HBR article states: “In financial terms, a business strategy is much more like a series of options than a series of static cash flows or even decision trees. Executing a strategy almost always involves making a sequence of risky decisions.” A multi-stage business strategy valuation can be modeled as a sequence of staged contingent investment decisions structured as a series of DM single-stage options.
+
+In valuing a complex strategic opportunity, a multi-stage, or compound option, is a more accurate, but more mathematically demanding, approach than simpler calculations using decision tree model, influence diagrams, or lattice/binomial model approaches. Each stage is contingent on the execution or abandonment (gain/success or loss/failure) of the subsequent stage accounting for the investment cost of the preceding stages.
+The literature references several approaches to modeling a multi-stage option. A three-stage option (1 Proof of concept, 2 Prototype Development, 3 Launch/ Production) can be modeled as:
+{\displaystyle {\begin{alignedat}{2}C\_{0}=E{\Bigl (}&if\langle \left({\tilde {S}}\_{1}e^{-Rt\_{0}}\geq {\tilde {X}}\_{1}e^{-rt\_{0}}\right),if\lbrace \left({\tilde {S}}\_{2}e^{-Rt\_{0}}\geq {\tilde {X}}\_{2}e^{-rt\_{0}}+{\tilde {X}}\_{1}e^{-rt\_{0}}\right),\\&\left[max\left({\tilde {S}}\_{3}e^{-Rt\_{0}}-{\tilde {X}}\_{3}e^{-rt\_{0}},0\right)-{\tilde {X}}\_{2}e^{-rt\_{0}}-{\tilde {X}}\_{1}e^{-rt\_{0}}\right],-{\tilde {X}}\_{1}e^{-rt\_{0}}\rbrace ,0\rangle {\Bigr )}.\end{alignedat}}}
+
+The valuation then occurs in reverse order conditioned on success or failure at each stage. The nominal value of this three-stage option is the mean of the multiple (typically several thousand k trials) simulated cash flows.
+
+While the valuation of a multi-stage option is of technical interest, the principal focus of a project manager is the maximization of the probability of success and overall project value. The astute selection of project stage milestones can simultaneously achieve these goals while also providing project management clarity. Milestone set points are determined by specifying the option payoff for the end stage *n* value distribution, and backcasting. Prospective milestones, or value thresholds, for each stage *i* are designated {\displaystyle P\_{i}^{\*}} (pronounced ‘P-star’). Multiple simulated cash flows, projected from {\displaystyle {\tilde {S}}\_{0}}, create a pattern of option value responses for each stage revealing prospective candidate milestones. The simulation evaluates the payoff option values {\displaystyle E\lbrace \left[max\left({\tilde {S}}\_{i}e^{-Rt\_{0}}-{\tilde {X}}\_{i}e^{-rt\_{0}},0\right)-{\tilde {X}}\_{i-1}e^{-rt\_{0}}\right]\geq P\_{i}^{\*}\rbrace .} A simulation of thousands of trials results in a valuation and ranking of a large sets of data pairs for each stage i: stage *i* option values mapped to candidate {\displaystyle P\_{i}^{\*}} values.
+
+A parabolic distribution of data point pairs graphs the sorted range of stage *i* option values against prospective {\displaystyle P\_{i}^{\*}} milestone values. If selected {\displaystyle P\_{i}^{\*}} threshold is set too low, there are excessive failures to exercise, {\displaystyle \left({\tilde {S}}\_{i}e^{-Rt\_{0}}<P\_{i}^{\*}\right)}, and numerically the expected option value is reduced. Alternatively, if selected {\displaystyle P\_{i}^{\*}} threshold is set too high, then there are insufficient instances of successful exercises, and numerically the expected option value is reduced again. The optimal milestone {\displaystyle P\_{i}^{\*\*}} (‘P-double star’) value that emerges during simulation maximizes the overall project option value by balancing gains and losses.
+
+A three-stage option optimized for management by milestone and value maximization can be modeled as:
+
+{\displaystyle {\begin{alignedat}{2}C\_{0}=E{\Bigl (}&if\langle \left({\tilde {S}}\_{1}e^{-Rt\_{0}}\geq P\_{1}^{\*\*}\right),if\lbrace \left({\tilde {S}}\_{2}e^{-Rt\_{0}}\geq P\_{2}^{\*\*}\right),\\&\left[max\left({\tilde {S}}\_{3}e^{-Rt\_{0}}-{\tilde {X}}\_{3}e^{-rt\_{0}},0\right)-{\tilde {X}}\_{2}e^{-rt\_{0}}-{\tilde {X}}\_{1}e^{-rt\_{0}}\right],-{\tilde {X}}\_{1}e^{-rt\_{0}}\rbrace ,0\rangle {\Bigr )}.\end{alignedat}}}
+
+Or, succinctly,
+
+{\displaystyle C\_{0}=E\left[max\left({\tilde {S}}\_{n}e^{-Rt\_{0}}-{\tilde {X}}\_{n}e^{-rt\_{0}},0\right)-{\tilde {X}}\_{n-i}e^{-rt\_{0}}\right]\times \mathbb {P} \left({\tilde {S}}\_{1}^{n-1}e^{-Rt\_{0}}\geq P\_{1}^{n-1\*\*}\right).}
+
+Note that typically {\displaystyle P\_{i}^{\*\*}\gg {\tilde {X}}\_{i}e^{-rt\_{0}}.} The insertion of these carefully determined conditional milestones increases the overall value of the nominal multi-stage option because each successive stage has been optimized to maximize the option value. By use of selected milestones, the project manager achieves the goals of increasing the probability of success and overall project value while also reducing the project managerial burden.
+
+
+## Demand Curve Integration
+
+Many early-stage projects find that the dominant unknown values are the first-order range estimates of the major components of operating profits: revenue and manufacturing cost of goods sold (COGS). In turn the uncertainty about revenue is driven by guesstimates of either market demand price or size. Market price and size can be estimated independently, though coupling them together in a market demand relationship is a better approach. COGS, the total of cost of product quantity to be sold, is the final component and trends according to an experience or learning curve cost relationship linked to market size. The interplay of these three market elements within a DM Real Options simulation, even with early-stage ranges, can reduce uncertainty for project planning by yielding reasonably narrowed target estimates for product pricing and production size that maximizes potential operating profits and improves option value.
+
+A market price demand curve graphs the relationship of price to size, or quantity demanded. The law of demand states there is an inverse relationship between price and quantity demanded, or simply as the price decreases product quantity demanded will increase. A second curve, the manufacturing cost graph, models the learning curve effect illustrating the relationship between the quantity of goods produced and the efficiency gains of that production. Fig. 12. Mathematically, the learning curve takes the form of a power function.
+
+A demand curve can be realistically modeled using an inverse lognormal distribution which convolves the market price distribution estimate with the market size range. A demand curve deftly models highly differentiated markets which through pricing distinguish selective product or service characteristics such as quality or grade, functional features, and availability, along with quantity sold. Examples are automobiles, shoes, smart phones, and computers. Airfare markets are highly differentiated where demand pricing and quantity sold are dependent on seasonality, day of week, time of day, routing, sale promotions, and seating or fare class. The airfare demand distribution pattern is well represented with an inverse lognormal distribution as shown in Fig. 13.
+
+Curves for all the above components, market price, size, and COGS, can be simulated with variability to yield an optimal operating profit input for the real option calculation (Fig. 14). For example, the simulation results represented in Fig. 15. indicate ranges for price and unit quantity that potentially will maximize profitability. Extracted from these first-order range estimates, a selection of the peak (frequency) values identifies a significantly narrowed spread of promising estimates. Knowing these optimal value spreads substantially reduces uncertainty and provides a better, more targeted set of parameters from which to confidently base innovation development plans and option value.
+
+
+## Comparison to other methods
+
+The fuzzy pay-off method for real option valuation, created in 2009, provides another accessible approach to real option valuation. Though each use differing mathematical methods (Fuzzy: fuzzy logic; DM: numerical simulation and geometry) the underlying principal is strikingly similar: the likelihood of a positive payoff. Separately examining the two factors (possibility/probability, and positive payoff) demonstrates this similarity.
+
+The possibility function for the fuzzy pay-off is {\displaystyle {\tfrac {A(Pos)}{A(Pos)+A(Neg)}}}. A simple interpretation is the proportionality ratio of the positive area of the fuzzy NPV over the total area of the fuzzy NPV. The probability of the project payoff for the DM Range Option is proportional to the area (CDF) of the positive distribution relative to the complete distribution. This is computed as {\displaystyle {\tfrac {\left(b-X\_{0}\right)^{2}}{\left[\left(b-a\right)\left(b-m\right)\right]}}.} In each the ratios of the areas compute to the same possibility/probability value. The positive payoff of fuzzy pay-off simply is the mean of the positive area of the fuzzy NPV, or {\displaystyle E[A^{+}]}. Likewise, the positive payoff for the DM Range Option is the mean of the right tail (*MT*), or {\displaystyle {\tfrac {\left(2X\_{0}+b\right)}{3}}} less the strike price {\displaystyle X\_{0}} This insight to the mechanics of the two methods illustrates not only their similarity but also their equivalency.
+
+In a 2016 article in the *Advances in Decision Sciences* journal, researchers from the Lappeenranta University of Technology School of Business and Management compared the DM Method to the fuzzy pay-off method for real option valuation and noted that while the valuation results were similar, the fuzzy pay-off one was more robust in some conditions. In some comparative cases, the Datar-Mathews Method has a significant advantage in that it is easier to operate and connects NPV valuation and scenario analysis with Monte Carlo simulation (or geometry) technique thus greatly improving intuition in the usage of real options methods in managerial decision and explanation to third parties. Through its simulation interface, the Datar-Mathews Method easily accommodates multiple and sometimes correlated cash flow scenarios, including dynamic programming, typical of complex projects, such as aerospace, that are difficult to model using fuzzy sets.
+
+
+## DM Method and Prospect Theory
+
+Real options are about objectively valuing innovation opportunities. Vexingly, these opportunities, evanescent and seemingly risky, are often comprehended subjectively. However, both the objective valuation mechanism and the subjective interpretation of results are often misunderstood leading to investment reluctance and potentially undervaluing opportunities.
+
+The DM real option employs the objective valuation formula {\displaystyle C\_{0}=E[\max(...,{\color {red}0)}],} where {\displaystyle \color {red}0} is the default threshold when it is economically rational to terminate (abandon) an opportunity event. If a simulation event (‘draw’) calculates a negative outcome (i.e., {\displaystyle [{\tilde {S}}\_{T}e^{-Rt}\leq {\tilde {X}}\_{T}e^{-rt}],} operating profits less than launch costs), then that event outcome should be rationally cut, or terminated, recording a {\displaystyle \color {red}0} residual. Only net positive economic outcomes {\displaystyle [{\tilde {S}}\_{T}e^{-Rt}>{\tilde {X}}\_{T}e^{-rt}]} are tallied. This operation leaves the misperception of ‘the odds being stacked’ favoring only positive outcomes seemingly resulting in an abnormally high valuation. However, the {\displaystyle E} of the formula {\displaystyle C\_{0}=E[\max(...,0)]} mathematically calculates the correct option value by adjusting these positive outcomes according to their likelihood, i.e., probability of a success (POS).
+
+The actual DM formula is {\displaystyle C\_{0}=E[\max(...,{\color {red}?})],} where the threshold {\displaystyle \color {red}?} (‘floor’) can assume any value (or alternative formula) including the default {\displaystyle \color {red}0}. Using a threshold other than {\displaystyle \color {red}0} transforms the formula into a hurdle-weighted option variation. The result is no longer equivalent to the value of a financial option.
+
+Much of the perceived *high* value of a real option valuation is disproportionately located in the far-right end of the tail of the simulation distribution, an area of low probability but high value outcomes. The option valuation reflects the potential opportunity value if the various outcome assumptions are validated. Targeted, incremental investments can validate these low probability assumptions. If not, replace the assumptions with proven ‘plausible’ elements, then recalculate the value based on new learnings.
+
+The subjective undervaluation of real options partially can be explained by behavioral sciences. An innovation investor may perceive the initial investments to be potentially at a loss, particularly if the POS is low. Kahneman and Tversky's Prospect theory proclaims that losses are perceived to have an impact more than twice that of gains for the same value. The result is the loss averse investor will subjectively undervalue the opportunity, and therefore the investment, despite the objective and financially accurate real option valuation. The pursuit of Prospect Theory has recently led to the related fields of behavioral economics and behavioral finance.
+
+Regret aversion, another behavioral science observation, occurs when an unfounded decision is made to avoid regretting a future outcome. For example, a regret-averse investor decides to invest in a relatively ‘sure bet’ but smaller payoff opportunity relative to an alternative with a significantly higher but presumably uncertain payoff. The regret aversion phenomenon is closely aligned with uncertainty aversion (certainty bias), where the unknown aspects of the innovation opportunity (i.e., newness, lack of control) are rationalized as a hurdle to further investments. The consequences of loss- and regret-averse decision-making are parsimonious investments and underfunding (‘undervaluing’) of promising early-stage innovation opportunities.
+
+A savvy investor can overcome the perceived mis-valuation of an option price. Loss aversion registers significantly high when the entire option value is interpreted as investment risk. This emotional response fails to consider that the initial early-stage investments are only a fraction of the entire option value, necessarily targeted to validate the most salient assumptions. Similarly regret aversion should not be misconceived as risk aversion because the exposure of small early-stage investments is usually not material. Instead, these initial investments carefully probe the opportunity's core value while providing a sense of control over an otherwise uncertain outcome. Regret is minimized by the realization that the opportunity development can be terminated if the assumption outcomes are not promising. The investment funds expended are prudently applied only to investigate a promising opportunity, and, in return, are enhanced by the acquired knowledge.
+
+Since individuals are prone to cognitive biases, various intervention strategies are designed to reduce them including expert review along with bias and naïve realism awareness. A phenomenon termed “bias blind spot” succinctly describes an individual's unconscious susceptibility to biases. This fundamental attribution error remains subconsciously hidden by an illusion of self-introspection, i.e., that we believe, falsely, we have access to our inner intentions or motivations. Biases may be post hoc rationalized away, but nonetheless impact decision-making. To counteract biases, it is insufficient simply be aware of their characteristics, but necessary also to become educated of one's own introspection illusion.
+

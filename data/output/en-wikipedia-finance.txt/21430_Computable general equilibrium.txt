@@ -1,0 +1,133 @@
+Computable general equilibrium
+
+
+# Computable general equilibrium
+
+
+
+**Computable general equilibrium** (**CGE**) models are a class of economic models that use actual economic data to estimate how an economy might react to changes in policy, technology or other external factors. CGE models are also referred to as **AGE** (applied general equilibrium) models. A CGE model consists of equations describing model variables and a database (usually very detailed) consistent with these model equations. The equations tend to be neoclassical in spirit, often assuming cost-minimizing behaviour by producers, average-cost pricing, and household demands based on optimizing behaviour.
+
+CGE models are useful whenever we wish to estimate the effect of changes in one part of the economy upon the rest. They have been used widely to analyse trade policy. More recently, CGE has been a popular way to estimate the economic effects of measures to reduce greenhouse gas emissions.
+
+
+## Main features
+
+A CGE model consists of equations describing model variables and a database (usually very detailed) consistent with these model equations. The equations tend to be neoclassical in spirit, often assuming cost-minimizing behaviour by producers, average-cost pricing, and household demands based on optimizing behaviour. However, most CGE models conform only loosely to the theoretical general equilibrium paradigm. For example, they may allow for:
+
+1. non-market clearing, especially for labour (unemployment) or for commodities (inventories)
+2. imperfect competition (e.g., monopoly pricing)
+3. demands not influenced by price (e.g., government demands)
+
+CGE models always contain more variables than equations—so some variables must be set outside the model. These variables are termed exogenous; the remainder, determined by the model, is called endogenous. The choice of which variables are to be exogenous is called the model closure, and may give rise to controversy. For example, some modelers hold employment and the trade balance fixed; others allow these to vary. Variables defining technology, consumer tastes, and government instruments (such as tax rates) are usually exogenous.
+
+A CGE model database consists of:
+
+1. tables of transaction values, showing, for example, the value of coal used by the iron industry. Usually the database is presented as an input-output table or as a social accounting matrix (SAM). In either case, it covers the whole economy of a country (or even the whole world), and distinguishes a number of sectors, commodities, primary factors and perhaps types of households. Sectoral coverage ranges from relatively simple representations of capital, labor and intermediates to highly detailed representations of specific sub-sectors (e.g., the electricity sector in GTAP-Power.)
+2. elasticities: dimensionless parameters that capture behavioural response. For example, export demand elasticities specify by how much export volumes might fall if export prices went up. Other elasticities may belong to the constant elasticity of substitution class. Amongst these are Armington elasticities, which show whether products of different countries are close substitutes, and elasticities measuring how easily inputs to production may be substituted for one another. Income elasticity of demand shows how household demands respond to income changes.
+
+## History
+
+CGE models are descended from the input–output models pioneered by Wassily Leontief, but assign a more important role to prices. Thus, where Leontief assumed that, say, a fixed amount of labour was required to produce a ton of iron, a CGE model would normally allow wage levels to (negatively) affect labour demands.
+
+CGE models derive too from the models for planning the economies of poorer countries constructed (usually by a foreign expert) from 1960 onwards. Compared to the Leontief model, development planning models focused more on constraints or shortages—of skilled labour, capital, or foreign exchange.
+
+CGE modelling of richer economies descends from Leif Johansen's 1960 MSG model of Norway, and the static model developed by the Cambridge Growth Project in the UK. Both models were pragmatic in flavour, and traced variables through time. The Australian MONASH model is a modern representative of this class. Perhaps the first CGE model similar to those of today was that of Taylor and Black (1974).
+
+
+## Areas of use
+
+CGE models are useful whenever we wish to estimate the effect of changes in one part of the economy upon the rest. For example, a tax on flour might affect bread prices, the CPI, and hence perhaps wages and employment. They have been used widely to analyse trade policy. More recently, CGE has been a popular way to estimate the economic effects of measures to reduce greenhouse gas emissions.
+
+
+### Trade policy
+
+CGE models have been used widely to analyse trade policy. Today there are many CGE models of different countries. One of the most well-known CGE models is global: the GTAP model of world trade.
+
+
+### Developing economies
+
+CGE models are useful to model the economies of countries for which time series data are scarce or not relevant (perhaps because of disturbances such as regime changes). Here, strong, reasonable, assumptions embedded in the model must replace historical evidence. Thus developing economies are often analysed using CGE models, such as those based on the IFPRI template model.
+
+
+### Climate policy
+
+CGE models can specify consumer and producer behaviour and ‘simulate’ effects of climate policy on various economic outcomes. They can show economic gains and losses across different groups (e.g., households that differ in income, or in different regions). The equations include assumptions about the behavioural response of different groups. By optimising the prices paid for various outputs the direct burdens are shifted from one taxpayer to another.
+
+
+## Comparative-static and dynamic CGE models
+
+Many CGE models are comparative static: they model the reactions of the economy at only one point in time. For policy analysis, results from such a model are often interpreted as showing the reaction of the economy in some future period to one or a few external shocks or policy changes. That is, the results show the difference (usually reported in percent change form) between two alternative future states (with and without the policy shock). The process of adjustment to the new equilibrium, in particular the reallocation of labor and capital across sectors, usually is not explicitly represented in such a model.
+
+In contrast, long-run models focus on adjustments to the underlying resource base when modeling policy changes. This can include dynamic adjustment to the labor supply, adjustments in installed and overall capital stocks, and even adjustment to overall productivity and market structure. There are two broad approaches followed in the policy literature to such long-run adjustment. One involves what is called "comparative steady state" analysis. Under such an approach, long-run or steady-state closure rules are used, under either forward-looking or recursive dynamic behavior, to solve for long-run adjustments.
+
+The alternative approach involves explicit modeling of dynamic adjustment paths. These models can seem more realistic, but are more challenging to construct and solve. They require for instance that future changes are predicted for all exogenous variables, not just those affected by a possible policy change. The dynamic elements may arise from partial adjustment processes or from stock/flow accumulation relations: between capital stocks and investment, and between foreign debt and trade deficits. However, there is a potential consistency problem because the variables that change from one equilibrium solution to the next are not necessarily consistent with each other during the period of change. The modeling of the path of adjustment may involve forward-looking expectations, where agents' expectations depend on the future state of the economy and it is necessary to solve for all periods simultaneously, leading to full multi-period dynamic CGE models. An alternative is recursive dynamics. Recursive-dynamic CGE models are those that can be solved sequentially (one period at a time). They assume that behaviour depends only on current and past states of the economy. Recursive dynamic models where a single period is solved for, comparative steady-state analysis, is a special case of recursive dynamic modeling over what can be multiple periods.
+
+
+## Express CGE Models in Matrix Form: the von Neumann General Equilibrium Model and the Structural Equilibrium Model
+
+CGE models typically involve numerous types of goods and economic agents; therefore, we usually express various economic variables and formulas in the form of vectors and matrices. This not only makes the formulas more concise and clear but also facilitates the use of analytical tools from linear algebra and matrix theory. The John von Neumann's general equilibrium model and the structural equilibrium model are examples of matrix-form CGE models, which can be viewed as generalizations of eigenequations.
+
+The eigenequations of a square matrix are as follows:
+
+{\displaystyle {\begin{matrix}\mathbf {p} ^{T}\mathbf {A} =\rho \mathbf {p} ^{T}\\\mathbf {A} \mathbf {z} =\rho {\mathbf {z} }\\\end{matrix}}}
+
+where {\displaystyle \mathbf {p} ^{T}} and {\displaystyle \mathbf {z} } are the left and right eigenvectors of the square matrix {\displaystyle \mathbf {A} }, respectively, and {\displaystyle \rho } is the eigenvalue.
+
+The above eigenequations for the square matrix can be extended to the von Neumann general equilibrium model:
+
+{\displaystyle {\begin{matrix}\mathbf {p} ^{T}\mathbf {A} \geq \rho \mathbf {p} ^{T}\mathbf {B} \\\mathbf {A} \mathbf {z} \leq \rho \mathbf {B} {\mathbf {z} }\\\end{matrix}}}
+
+where the economic meanings of {\displaystyle \mathbf {p} } and {\displaystyle \mathbf {z} } are the equilibrium prices of various goods and the equilibrium activity levels of various economic agents, respectively.
+
+We can further extend the von Neumann general equilibrium model to the following structural equilibrium model with {\displaystyle \mathbf {A} } and {\displaystyle \mathbf {B} } as matrix-valued functions:
+
+{\displaystyle {\begin{matrix}\mathbf {p} ^{T}\mathbf {A} (\mathbf {p} ,\mathbf {u} ,\mathbf {z} )\geq \rho \mathbf {p} ^{T}\mathbf {B} (\mathbf {p} ,\mathbf {u} ,\mathbf {z} )\\\mathbf {A} (\mathbf {p} ,\mathbf {u} ,\mathbf {z} )\mathbf {z} \leq \rho \mathbf {B} (\mathbf {p} ,\mathbf {u} ,\mathbf {z} ){\mathbf {z} }\\\end{matrix}}}
+
+where the economic meaning of {\displaystyle \mathbf {u} } is the utility levels of various consumers. These two formulas respectively reflect the income-expenditure balance condition and the supply-demand balance condition in the equilibrium state. The structural equilibrium model can be solved using the GE package in R.
+
+Below, we illustrate the above structural equilibrium model through a linear programming example, with the following assumptions:
+
+(1) There are 3 types of primary factors, with quantities given by {\displaystyle \mathbf {e} =(48,20,8)^{T}}. These 3 primary factors can be used to produce a type of product.
+
+(2) There are 3 firms in the economy, each using different technologies to produce the same product. The quantities of the 3 factors required by each of the 3 firms for one day of production are shown in the columns of the following input coefficient matrix:
+
+{\displaystyle \mathbf {A} (u)={\begin{bmatrix}8&6&1\\4&2&1.5\\2&1.5&0.5\end{bmatrix}}}
+
+(3) The output from each of the 3 firms for one day of production can be represented by the vector {\displaystyle \mathbf {b} =(60,30,20)^{T}}。
+
+We need to find the optimal numbers of production days for the three firms, which maximize total output. By solving the above linear programming problem, the optimal numbers of production days for the three firms are found to be 2, 0, and 8, respectively; and the corresponding total output is 280.
+
+Next, we transform this linear programming problem into a general equilibrium problem, with the following assumptions:
+
+(1) There are 4 types of goods in the economy (i.e., the product and 3 primary factors) and 4 economic agents (i.e., 3 firms and 1 consumer).
+
+(2) Firms use primary factors as inputs to produce the product. The input and output for one day of production are shown in the first 3 columns of the unit input matrix and the unit output matrix, respectively:
+
+{\displaystyle \mathbf {A} (u)={\begin{bmatrix}0&0&0&u\\8&6&1&0\\4&2&1.5&0\\2&1.5&0.5&0\\\end{bmatrix}}}
+
+{\displaystyle \mathbf {B} ={\begin{bmatrix}60&30&20&0\\0&0&0&48\\0&0&0&20\\0&0&0&8\\\end{bmatrix}}}
+
+(3) The consumer demands only the product, as shown in the 4th column of {\displaystyle \mathbf {A} (u)}, where {\displaystyle u} represents the utility level (i.e., the amount of the product consumed).
+
+(4) The consumer supplies the 3 primary factors, as shown in the 4th column of {\displaystyle \mathbf {B} }.
+
+We can express the CGE model using the following structural equilibrium model:
+
+{\displaystyle {\begin{matrix}\mathbf {p} ^{T}\mathbf {A} (u)\geq \mathbf {p} ^{T}\mathbf {B} \\\mathbf {A} (u)\mathbf {z} \leq \mathbf {B} {\mathbf {z} }\end{matrix}}}
+
+wherein {\displaystyle \mathbf {p} =(1,p\_{2},p\_{3},p\_{4})} is the price vector, with the product used as the numeraire; {\displaystyle \mathbf {z} =(z\_{1},z\_{2},z\_{3},1)} is the activity level vector, composed of the production levels (i.e., days of production here) of firms and the number of consumers.
+
+The results obtained by solving this structural equilibrium model are the same as those from the optimization approach:
+
+{\displaystyle \mathbf {p} ^{\*}=(1,0,10,10)^{T},\quad \mathbf {z} ^{\*}=(2,0,8,1)^{T},\quad u^{\*}=280}
+
+Substituting the above calculation results into the structural equilibrium model, we obtain
+
+{\displaystyle {\begin{matrix}\mathbf {p} ^{T}\mathbf {A} (u)=(60,35,20,280)\geq (60,30,20,280)=\mathbf {p} ^{T}\mathbf {B} \\\mathbf {A} (u)\mathbf {z} =(280,24,20,8)^{T}\leq (280,48,20,8)^{T}=\mathbf {B} {\mathbf {z} }\end{matrix}}}
+
+
+## Techniques
+
+Early CGE models were often solved by a program custom-written for that particular model. Models were expensive to construct and sometimes appeared as a 'black box' to outsiders. Now, most CGE models are formulated and solved using one of the GAMS or GEMPACK software systems.
+AMPL, Excel and MATLAB are also used. Use of such systems has lowered the cost of entry to CGE modelling; allowed model simulations to be independently replicated; and increased the transparency of the models.
+

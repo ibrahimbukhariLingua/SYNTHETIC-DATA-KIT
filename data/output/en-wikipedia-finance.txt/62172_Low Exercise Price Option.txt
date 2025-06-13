@@ -1,0 +1,55 @@
+Low Exercise Price Option
+
+
+# Low Exercise Price Option
+
+
+
+A **Low Exercise Price Option** (**LEPO**) is an Australian Stock Exchange traded option with a low exercise price that was specifically designed to be traded on margin. It is a European style call option with a low exercise price of $0.01 and a contract size of 100 shares to be delivered on exercise.
+
+The premium is close to the whole share price, and a trader only posts margin, not the full price. Both the buyer and the seller are margined, all positions are marked-to-market daily.
+
+
+## History
+
+The Australian Stock Exchange started listing LEPO exchange traded options in 1995 to allow traders to trade underlying shares on margin. In 2018, there are 100 ASX listed companies that offer LEPO contracts.
+
+
+## Differences from standard options
+
+Several important differences distinguish LEPOs from standard exchange-traded options, and these differences have important implications for the pricing of LEPO.
+
+* The buyer of a LEPO does not pay the full amount of the premium upfront.
+* Both buyer and seller of LEPOs involve ongoing margin payments.
+* The buyer of a LEPO does not receive dividends or obtain voting rights on the underlying shares until the shares are transferred after exercise.
+* LEPOs are only available as call options.
+* LEPOs have a very low exercise price and a high premium close to the initial value of the underlying shares.
+* LEPOs have only one exercise price per expiry month.
+
+LEPOs may be over either shares or an index.
+
+
+## Pricing of Low Exercise Price Options
+
+The current value of a contract is equal to the current price of the underlying share compounded by the risk-free interest rate, less the accumulated value of any dividends, less the exercise price of $0.01.
+
+where:
+
+* {\displaystyle L\_{0,1}} = price of LEPO contract entered into at time 0 for delivery at time 1;
+* {\displaystyle S\_{0}} = price of underlying share at time 0;
+* *r* = risk-free rate of return;
+* *n* = number of days until contract maturity;
+* *D* = value of share dividends;
+* *y* = number of days until dividend is paid.
+* *X* = exercise price (equals $0.01);
+
+To prove that above formula is correct, we'll calculate price using Black–Scholes formula. The Black–Scholes formula after modifications to recognize that the premium is paid at the expiry of the contract:
+
+where:
+
+*N*(*d*) is cumulative probability distribution function for a standard normal distribution.
+
+For a LEPO an underlying price {\displaystyle S\_{0}} is very big compare to exercise price *X*. Because of that {\displaystyle N(d\_{1})} is very close to 1, with insignificant difference. Thus LEPO price per Black–Scholes formula (without dividend) is
+
+and it matches our previous formula.
+

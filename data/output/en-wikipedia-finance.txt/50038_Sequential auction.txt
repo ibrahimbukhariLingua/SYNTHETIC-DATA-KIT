@@ -1,0 +1,90 @@
+Sequential auction
+
+
+# Sequential auction
+
+
+
+A **sequential auction** is an auction in which several items are sold, one after the other, to the same group of potential buyers. In a *sequential first-price auction* (SAFP), each individual item is sold using a first price auction, while in a *sequential second-price auction* (SASP), each individual item is sold using a second price auction.
+
+A sequential auction differs from a combinatorial auction, in which many items are auctioned simultaneously and the agents can bid on bundles of items. A sequential auction is much simpler to implement and more common in practice. However, the bidders in each auction know that there are going to be future auctions, and this may affect their strategic considerations. Here are some examples.
+
+**Example 1**. There are two items for sale and two potential buyers: Alice and Bob, with the following valuations:
+
+* Alice values each item as 5, and both items as 10 (i.e., her valuation is additive).
+* Bob values each item as 4, and both items as 4 (i.e., his valuation is unit demand).
+
+In a SASP, each item is put to a second-price-auction. Usually, such auction is a truthful mechanism, so if each item is sold in isolation, Alice wins both items and pays 4 for each item, her total payment is 4+4=8 and her net utility is 5 + 5 − 8 = 2. But, if Alice knows Bob's valuations, she has a better strategy: she can let Bob win the first item (e.g. by bidding 0). Then, Bob will not participate in the second auction at all, so Alice will win the second item and pay 0, and her net utility will be 5 − 0 = 5.
+
+A similar outcome happens in a SAFP. If each item is sold in isolation, there is a Nash equilibrium in which Alice bids slightly above 4 and wins, and her net utility is slightly below 2. But, if Alice knows Bob's valuations, she can deviate to a strategy that lets Bob win in the first round so that in the second round she can win for a price slightly above 0.
+
+**Example 2**. Multiple identical objects are auctioned, and the agents have budget constraints. It may be advantageous for a bidder to bid aggressively on one object with a view to raising the price paid by his rival and depleting his budget so that the second object may then be obtained at a lower price. In effect, a bidder may wish to “raise a rival’s costs” in one market in order to gain advantage in another. Such considerations seem to have played a significant role in the auctions for radio spectrum licenses conducted by the Federal Communications Commission. Assessment of rival bidders’ budget constraints was a primary component of the pre-bidding preparation of GTE’s bidding team.
+
+
+## Nash equilibrium
+
+A sequential auction is a special case of a sequential game. A natural question to ask for such a game is when there exists a subgame perfect equilibrium in pure strategies (SPEPS). When the players have full information (i.e., they know the sequence of auctions in advance), and a single item is sold in each round, a SAFP always has a SPEPS, regardless of the players' valuations. The proof is by backward induction:⁸⁷²–⁸⁷⁴
+
+* In the last round, we have a simple first price auction. It has a pure-strategy Nash equilibrium in which the highest-value agent wins by bidding slightly above the second-highest value.
+* In each previous round, the situation is a special case of a **first-price auction with externalities**. In such an auction, each agent may gain value, not only when he wins, but also when other agents win. In general, the valuation of agent {\displaystyle i} is represented by a vector {\displaystyle v\_{i}[1],\dots ,v\_{i}[n]}, where {\displaystyle v\_{i}[j]} is the value of agent {\displaystyle i} when agent {\displaystyle j} wins. In a sequential auction, the externalities are determined by the equilibrium outcomes in the future rounds. In the introductory example, there are two possible outcomes:
+ + If Alice wins the first round, then the equilibrium outcome in the second round is that Alice buys an item worth $5 for $4, so her net gain is $1. Therefore, her total value for winning the first round is {\displaystyle v\_{\text{Alice}}[{\text{Alice}}]=5+1=6}.
+ + If Bob wins the first round, then the equilibrium outcome in the second round is that Alice buys an item worth $5 for $0, so her net gain is $5. Therefore, her total value for letting Bob win is {\displaystyle v\_{\text{Alice}}[{\text{Bob}}]=0+5=5}.
+* Each first-price auction with externalities has a pure-strategy Nash equilibrium. In the above example, the equilibrium in the first round is that Bob wins and pays $1.
+* Therefore, by backward induction, each SAFP has a pure-strategy SPE.
+
+Notes:
+
+* The existence result also holds for SASP. In fact, any equilibrium-outcome of a first-price auction with externalities is also an equilibrium-outcome of a second-price auction with the same externalities.
+* The existence result holds regardless of the valuations of the bidders – they may have arbitrary utility functions on indivisible goods. In contrast, if all auctions are done *simultaneously*, a pure-strategy Nash equilibrium does not always exist, even if the bidders have subadditive utility functions.
+
+## Social welfare
+
+Once we know that a subgame perfect equilibrium exists, the next natural question is how *efficient* it is – does it obtain the maximum social welfare? This is quantified by the price of anarchy (PoA) – the ratio of the maximum attainable social welfare to the social welfare in the worst equilibrium. In the introductory Example 1, the maximum attainable social welfare is 10 (when Alice wins both items), but the welfare in equilibrium is 9 (Bob wins the first item and Alice wins the second), so the PoA is 10/9. In general, the PoA of sequential auctions depends on the utility functions of the bidders.
+
+The first five results apply to agents with complete information (all agents know the valuations of all other agents):
+
+**Case 1: Identical items**. There are several identical items. There are two bidders. At least one of them has a concave valuation function (diminishing returns). The PoA of SASP is at most {\displaystyle 1/(1-e)\approx 1.58}. Numerical results show that, when there are many bidders with concave valuation functions, the efficiency loss decreases as the number of users increases.
+
+**Case 2: Additive bidders**.⁸⁸⁵ The items are different, and all bidders regard all items as independent goods, so their valuations are additive set functions. The PoA of SASP is unbounded – the welfare in a SPEPS might be arbitrarily small.
+
+**Case 3: Unit-demand bidders**. All bidders regard all items as pure substitute goods, so their valuations are unit demand. The PoA of SAFP is at most 2 – the welfare in a SPEPS is at least half the maximum (if mixed strategies are allowed, the PoA is at most 4). In contrast, the PoA in SASP is again unbounded.
+
+These results are surprising and they emphasize the importance of the design decision of using a first-price auction (rather than a second-price auction) in each round.
+
+**Case 4: submodular bidders**. The bidders' valuations are arbitrary submodular set functions (note that additive and unit-demand are special cases of submodular). In this case, the PoA of both SAFP and SASP is unbounded, even when there are only four bidders. The intuition is that the high-value bidder might prefer to let a low-value bidder win, in order to decrease the competition that he might face in the future rounds.
+
+**Case 5: additive+UD**. Some bidders have additive valuations while others have unit-demand valuations. The PoA of SAFP might be at least {\displaystyle \min(n,m)}, where *m* is the number of items and *n* is the number of bidders. Moreover, the inefficient equilibria persist even under iterated elimination of weakly dominated strategies. This implies linear inefficiency for many natural settings, including:
+
+* Bidders with gross substitute valuations,
+* capacitated valuations,
+* budget-additive valuations,
+* additive valuations with hard budget constraints on the payments.
+
+**Case 6: unit-demand bidders with incomplete information**. The agents do not know the valuations of the other agents, but only the probability-distribution from which their valuations are drawn. The sequential auction is then a Bayesian game, and its PoA might be higher. When all bidders have unit demand valuations, the PoA of a Bayesian Nash equilibrium in a SAFP is at most 3.
+
+
+## Revenue maximization
+
+An important practical question for sellers selling several items is how to design an auction that maximizes their revenue. There are several questions:
+
+* 1. Is it better to use a sequential auction or a simultaneous auction? Sequential auctions with bids announced between sales seem preferable because the bids may convey information about the value of objects to be sold later. The auction literature shows that this information effect increases the seller's expected revenue since it reduces the winner's curse. However, there is also a deception effect which develops in the sequential sales. If a bidder knows that his current bid will reveal information about later objects then he has an incentive to underbid.
+* 2. If a sequential auction is used, in what order should the items be sold in order to maximize the seller's revenue?
+
+Suppose there are two items and there is a group of bidders who are subject to budget constraints. The objects have common values to all bidders but need not be identical, and may be either complement goods or substitute goods. In a game with complete information:
+
+* 1. A sequential auction yields more revenue than a simultaneous ascending auction if: (a) the difference between the items' values is large, or (b) there are significant complementarities.
+ A hybrid simultaneous-sequential form yields higher revenue than the sequential auction.
+* 2. If the objects are sold by means of a sequence of open ascending auctions, then it is always optimal to sell the more valuable object first (assuming the objects' values are common knowledge).
+
+Moreover, budget constraints may arise endogenously. I.e, a bidding company may tell its representative "you may spend at most X on this auction", although the company itself has much more money to spend. Limiting the budget in advance gives the bidders some strategic advantages.
+
+When multiple objects are sold, budget constraints can have some other unanticipated consequences. For example, a reserve price can raise the seller's revenue even though it is set at such a low level that it is never binding in equilibrium.
+
+
+## Composeable mechanisms
+
+Sequential-auctions and simultaneous-auctions are both special case of a more general setting, in which the same bidders participate in several different mechanisms. Syrgkanis and Tardos
+suggest a general framework for efficient mechanism design with guaranteed good properties even when players participate in multiple mechanisms simultaneously or sequentially. The class of *smooth mechanisms*
+– mechanisms that generate approximately market clearing prices
+– result in high-quality outcome both in equilibrium and in learning outcomes in the full information setting, as well as in Bayesian equilibrium with uncertainty about participants. Smooth mechanisms compose well: smoothness locally at each mechanism implies global efficiency. For mechanisms where good performance requires that bidders do not bid above their value, *weakly smooth mechanisms* can be used, such as the Vickrey auction. They are approximately efficient under the no-overbidding assumption, and the weak smoothness property is also maintained by composition. Some of the results are valid also when participants have budget constraints.
+

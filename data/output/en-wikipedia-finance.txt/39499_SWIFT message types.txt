@@ -1,0 +1,59 @@
+SWIFT message types
+
+
+# SWIFT message types
+
+
+
+**SWIFT message types** are the format or schema used to send messages to financial institutions on the SWIFT network. The original message types were developed by SWIFT and a subset was retrospectively made into an ISO standard, ISO 15022. In many instances, SWIFT message types between custodians follow the ISO standard. This was later supplemented by a XML based version under ISO 20022.
+
+
+## Composition of MT number
+
+SWIFT messages consist of five blocks of data including three headers, message content, and a trailer. Message types are crucial to identifying content.
+
+All SWIFT messages include the literal "MT" (message type/text). This is followed by a three-digit number that denotes the message *category*, *group* and *type*. Consider the following two examples.
+
+**Example 1**
+
+MT304
+
+* The first digit (3) represents the category. A category denotes messages that relate to particular financial instruments or services such as precious metals (6), treasury (3), or traveller's cheques (8). The category denoted by 3 is treasury markets
+* The second digit (0) represents a group of related parts in a transaction life cycle. The group indicated by 0 is a financial institution transfer.
+* The third digit (4) is the type that denotes the specific message. There are several hundred message types across the categories. The type represented by 4 is a notification.
+
+A MT304 message is considered an "Advice/Instruction of a Third Party Deal" and it used to advise of or instruct the settlement of a third party foreign exchange deal. For example, an asset manager who executed a FX transaction with a broker would send a MT304 instruction to the custodian bank of the client.
+
+**Example 2**
+
+MT103
+
+* The first digit (1) represents the category. The category denoted by 1 is customer payments and cheques.
+* The second digit (0) represents a group of related parts in a transaction life cycle. The group indicated by 0 is a financial institution transfer.
+* The third digit (3) is the type that denotes the specific message. There are several hundred message types across the categories. The type represented by 3 is a notification.
+
+A MT103 message is considered a "Single Customer Credit Transfer" and is used to instruct a funds transfer.
+
+
+## Overview of SWIFT MT categories
+
+The table below shows the different categories and the message type descriptions.
+
+| Category | Message type | Description | Number of message types |
+| --- | --- | --- | --- |
+| 0 | MT0.. | System messages | - |
+| 1 | MT1.. | Customer payments and cheques | 19 |
+| 2 | MT2.. | Financial institution transfers | 18 |
+| 3 | MT3.. | Treasury markets | 27 |
+| 4 | MT4.. | Collection and cash letters | 17 |
+| 5 | MT5.. | Securities Markets | 60 |
+| 6 | MT6.. | Treasury markets – metals and syndications | 22 |
+| 7 | MT7.. | Documentary credits and guarantees | 29 |
+| 8 | MT8.. | Traveller's cheques | 11 |
+| 9 | MT9.. | Cash management and customer status | 21 |
+
+
+## ISO 15022 MT
+
+Although ISO 15022 message types are different in their structure than the SWIFT MT, the naming convention remains the same.
+

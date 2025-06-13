@@ -1,0 +1,38 @@
+UNIDOC
+
+
+# UNIDOC
+
+
+
+**UNIDOC** is an XML-based standard to support electronic data interchange (EDI) in business transactions between trading companies. Unlike other XML-based EDI formats, such as UBL, ebXML, RosettaNet or openTRANS, UNIDOC relies one a single structure ("all in one"). The first idea of such a universal format was published in 2014, its first specification in 2016 in the journal of the Chamber of Commerce and Industry Swabia (Bavaria, Germany). The current specification can be found in the UNIDOC XML Schema Definition.
+
+
+## UNIDOC message types
+
+Electronic business documents are called message types within UNIDOC files. The respective message type ("document type")
+is specified in the header. The names of the message types are based on the six-digit "qualifier" known from the EDIFACT standard.
+
+In version 2.0 fifteen different message types are defined:
+
+* CORINV = correction invoice
+* DELFOR = delivery forecast
+* DESADV = despatch advice
+* IFCSUM = bordero/forwarding and consolidation summary
+* IFTMIN = transport order
+* INVOIC = invoice and credit note
+* INVRPT = inventory report
+* ORDCHG = order change
+* ORDERS = purchase order
+* ORDRSP = order response
+* OSTRPT = order state report
+* PRICAT = price list and catalogue
+* RECADV = receipt advice
+* REMADV = remittance advice
+* SLSRPT = sales report
+
+## History
+
+The UNIDOC standard was developed in 2016 on the initiative of EDICENTER, which is a member of the European EDI Network (EEDIN). This European EDI Network is establishing a pan-European EDI infrastructure based on "every-to-every-interconnect". The exchange format between the providers is UNIDOC.
+UNIDOC has already been implemented as a standard interface by several ERP system providers, e.g. Comporsys, Hirschmann or Line Software.
+

@@ -1,0 +1,89 @@
+Fisher market
+
+
+# Fisher market
+
+
+
+**Fisher market** is an economic model attributed to Irving Fisher. It has the following ingredients:
+
+* A set of {\displaystyle m} divisible products with pre-specified supplies (usually normalized such that the supply of each good is 1).
+* A set of {\displaystyle n} buyers.
+* For each buyer {\displaystyle i=1,\dots ,n}, there is a pre-specified monetary budget {\displaystyle B\_{i}}.
+
+Each product {\displaystyle j} has a price {\displaystyle p\_{j}}; the prices are determined by methods described below. The price of a *bundle* of products is the sum of the prices of the products in the bundle. A bundle is represented by a vector {\displaystyle x=x\_{1},\dots ,x\_{m}}, where {\displaystyle x\_{j}} is the quantity of product {\displaystyle j}. So the price of a bundle {\displaystyle x} is {\displaystyle p(x)=\sum \_{j=1}^{m}p\_{j}\cdot x\_{j}}.
+
+A bundle is *affordable* for a buyer if the price of that bundle is at most the buyer's budget. I.e, a bundle {\displaystyle x} is affordable for buyer {\displaystyle i} if {\displaystyle p(x)\leq B\_{i}}.
+
+Each buyer has a preference relation over bundles, which can be represented by a utility function. The utility function of buyer {\displaystyle i} is denoted by {\displaystyle u\_{i}}. The *demand set* of a buyer is the set of affordable bundles that maximize the buyer's utility among all affordable bundles, i.e.:
+
+A **competitive equilibrium** (CE) is a price-vector {\displaystyle p\_{1},\dots ,p\_{m}}in which it is possible to allocate, to each agent, a bundle from his demand-set, such that the total allocation exactly equals the supply of products. The corresponding prices are called *market-clearing prices*. The main challenge in analyzing Fisher markets is finding a CE.¹⁰³–¹⁰⁵
+
+
+## Related models
+
+* In the Fisher market model, the budget has no intrinsic value - it is useful only for buying products. This is in contrast to a **Walrasian market** with agents with quasilinear utilities, in which money is itself a product and it has value of its own.
+* The Arrow–Debreu market is a generalization of the Fisher model, in which each agent can be both a buyer and a seller. I.e, each agent comes with a bundle of products, instead of only with money.
+* **Eisenberg–Gale markets** are another generalization of the linear Fisher market.
+
+## Fisher market with divisible items
+
+
+### Existence of equilibrium
+
+When all items in the market are divisible, a CE always exists. This can be proved using the famous Sperner's lemma.⁶⁷
+
+Assume the quantities are normalized so that there is 1 unit per product, and the budgets are normalized so that their sum is 1. Also assume that all products are good, i.e., an agent always strictly prefers to have more of each product, if he can afford it.
+
+Consider the standard simplex with *m* vertices. Each point in this simplex corresponds to a price-vector, where the sum of all prices is 1; hence the price of all goods together is 1.
+
+In each price-vector *p*, we can find a demanded set of each agent, then calculate the sum of all demanded sets, then find the total price of this aggregate demand. Since the price of each demanded set is at most the agent's budget, and the sum of budgets is at most 1, the price of the aggregate demand is at most 1. Hence, for each *p*, there is at least one product for which the total demand is at most 1. Let's call such product an "expensive product" in *p.*
+
+Triangulate the *m*-vertex simplex, and label each triangulation-vertex *p* with an index of an arbitrary expensive-product in *p*. In each face of the simplex, some products cost 0. Since all products are good, the demand of each agent for a product that costs 0 is always 1; hence a product which costs 0 can never be considered expensive. Hence, the above labeling satisfies Sperner's boundary condition.
+
+By Sperner's lemma, there exists a baby-simplex whose vertices are labeled with *m* different labels. Since the demand function is continuous, by taking finer and finer triangulations we find a single price-vector *p*, in which all products are expensive, i.e., the aggregate demand for *every* product is at most 1.
+
+But, since the sum of all budgets is 1, the aggregate demand for every product in *p* must be exactly 1. Hence *p* is a vector of market-clearing prices.
+
+
+### Computation of equilibrium
+
+While Sperner's lemma can be used to find a CE, it is very inefficient computationally. There are more efficient methods (see also market equilibrium computation).
+
+Devanur, Papadimitriou, Saberi and Vazirani gave a polynomial-time algorithm for exactly computing an equilibrium for *Fisher* markets with *linear* utility functions. Their algorithm uses the primal–dual paradigm in the enhanced setting of KKT conditions and convex programs. Their algorithm is weakly-polynomial: it solves{\displaystyle O((n+m)^{5}\log(u\_{\max })+(n+m)^{4}\log {B\_{\max }})} maximum flow problems, and thus it runs in time {\displaystyle O((n+m)^{8}\log(u\_{\max })+(n+m)^{7}\log {B\_{\max }})}, where *u*ₘₐₓ and *B*ₘₐₓ are the maximum utility and budget, respectively.
+
+Orlin gave an improved algorithm for a Fisher market model with linear utilities, running in time {\displaystyle O((n+m)^{4}\log(u\_{\max })+(n+m)^{3}B\_{\max })}. He then improved his algorithm to run in strongly-polynomial time: {\displaystyle O((m+n)^{4}\log(m+n))}.
+
+Chen and Teng proved that, when the agents' utilities can be arbitrary SPLC (Separable piecewise-linear concave) functions, finding a CE is PPAD-hard.
+
+
+### Bads and mixed manna
+
+Bogomolnaia and Moulin and Sandomirskiy and Yanovskaia studied the existence and properties of CE in a Fisher market with bads (items with negative utilities) and with a mixture of goods and bads. In contrast to the setting with goods, when the resources are bads the CE does not solve any convex optimization problem even with linear utilities. CE allocations correspond to local minima, local maxima, and saddle points of the product of utilities on the Pareto frontier of the set of feasible utilities. The CE rule becomes multivalued. This work has led to several works on algorithms of finding CE in such markets:
+
+* Branzei and Sandomirskiy gave an algorithm for finding all the CE in a Fisher market with bads and linear utilities. Their algorithm runs in strongly-polynomial time if either *n* or *m* is fixed. Their approach combines three ideas: all consumption graphs of PO allocations can be listed in polynomial time; for a given consumption graph, a CE candidate can be constructed via explicit formula; and a given allocation can be checked for being a CE using a maximum flow computation.
+* Garg and McGlaughlin gave an algorithm for computing all the CE in a Fisher market with mixed manna and linear utilities. Their algorithm runs in polynomial time if either *n* or *m* is fixed.
+* Chaudhury, Garg, McGlaughlin and Mehta gave an algorithm for computing a single CE in a Fisher market with mixed manna and SPLC utilities. Their algorithm is simplex-like and based on Lemke's scheme. While its worst-case runtime is not polynomial (the problem is PPAD-hard even with goods), it runs fast on random instances. It also proves that the problem is in PPAD, the solutions are rational-valued, and the number of solutions is odd. Their algorithm runs in polynomial time in the special case in which all utilities are negative.
+
+If both *n* and *m* are variable, the problem becomes computationally hard:
+
+* Chaudhury, Garg, McGlaughlin and MehtaTʰᵐ.³ show that, in a Fisher market with bads and linear utilities, it is NP-hard to decide whether a CE exists. The same hardness holds even for finding an (11/12+δ)-CE for any δ>0, and even with equal incomes. They also prove a sufficient condition, based on graph connectivity, to the existence of a CE. With this condition, a CE always exists, but finding it is PPAD-hard.Tʰᵐ.⁵
+
+## Fisher markets with indivisible items
+
+When the items in the market are indivisible, a CE is not guaranteed to exist. Deciding whether a CE exist is a computationally hard problem.
+
+Deng et al studied a market to which each agent comes with an initial endowment (rather than an initial income) and all valuations are additive. They proved that deciding whether CE exists is NP-hard even with 3 agents. They presented an approximation algorithm which relaxes the CE conditions in two ways: (1) The bundle allocated to each agent is valued at least 1-epsilon of the optimum given the prices, and (2) the demand is at least 1-epsilon times the supply.
+
+Bouveret and Lemaitre studied CE-from-equal-incomes (CEEI) as a rule for fair allocation of items. They related it to four other fairness criteria assuming all agents have additive valuation functions. They asked what is the computational complexity of deciding whether CEEI exists.
+
+This question was answered soon afterwards by Aziz, who proved that the problem is weakly NP-hard when there are two agents and *m* items, and strongly NP-hard when there are *n* agents and 3*n* items. He also presented a stronger condition called CEEI-FRAC which is, interestingly, easier to verify — it can be verified in polynomial time. Miltersen, Hosseini and Branzei proved that even verifying whether a given allocation is CEEI is co-NP-hard. They studied CEEI also for single-minded agents. In this case, verifying whether a given allocation is CEEI is polynomial but checking if CEEI exists is co-NP-complete.
+
+Heinen et al extended the work of Bouveret and Lemaitre from additive to *k-additive utility functions,* in which each agent reports a value for bundles containing at most k items, and the values of larger bundles are determined by adding and subtracting the values of the basic bundles.
+
+Budish studied the most general setting in which agents can have arbitrary preference relations over bundles. He invented the mechanism of Approximate Competitive Equilibrium from Equal Incomes, which relaxes the CEEI conditions in two ways: (1) The agents' incomes are not exactly equal, and (2) a small number of items may remain unallocated. He proved that an approximate-CEEI always exists (although Othman et al recently proved that the computation of approximate-CEEI is PPAD complete).
+
+Barman and Krishnamurthy study Fisher markets in which all agents have additive utilities. They show that a fractional CE (where some goods are divided) can always be rounded to an integral CE (where goods remain indivisible), by changing the agents' budgets. The change in each budget can be as high as the largest price of a good in the fractional CE.
+
+Babaioff, Nisan and Talgam-Cohen studied whether CE exists when the incomes are *generic*, i.e., do not satisfy a finite set of equalities. In other words: whether there exists a CE for almost all income-vectors. They proved existence for three goods, and for four goods and two agents. They proved non-existence for five goods and two agents. Later, it has proved that with four goods and three agents, CE may not exist when the valuations are non-additive, but always exists when the valuations are additive.
+

@@ -1,0 +1,57 @@
+Stock duration
+
+
+# Stock duration
+
+
+
+The **duration of a stock** is the average of the times until its cash flows are received, weighted by their present values. The most popular model of duration uses dividends as the cash flows. In vernacular, the duration of a stock is how long we need to receive dividends to be repaid the purchase price of the stock. If a stock doesn't pay dividends, other methods using distributable cash flows, may be utilized.
+
+The duration of an equity is a noisy analogue of the Macaulay duration of a bond, due to the variability and unpredictability of dividend payments. The duration of a stock or the stock market is implied rather than deterministic.
+
+Duration of the U.S. stock market as a whole, and most individual stocks within it, is many years to a few decades. A nominal value, assumed in many analyses, would be 20-30 years, analogous to long term bonds. Higher price/earnings and other multiples imply longer duration.
+
+Duration is a measure of the price sensitivity of a stock to changes in the long term interest rate, i.e., the longer the duration, the more sensitive the stock is to interest rates.
+
+In U.S. stock markets, an SEC rule adoption in 1982 (rule 10b-18) that allowed discretionary stock buybacks has distorted the calculation of duration based on dividends since at least the early 1990s. The rule change had no ascertainable impact on duration, but duration now needs to account for all cash distributions including buybacks.
+
+
+## Duration in the discounted cash flow model
+
+In the Discounted Cash Flow Model (DCFM) of security analysis, the value of a security is the present value of all its future cash flows including interest or dividends and the implied cash flow of the residual value of the security itself, if any. A special case of the DCFM, based on a stock's dividend, is called the Dividend Discount Model. Under that model, the value of a stock depends on how long we expect to receive dividends, their cash amounts, spacing (usually monthly, quarterly or semiannually), and a hypothesized long term discount rate that incorporates inflation in the currency and risk on the firm's payouts. The duration of the stock is how long we need to receive dividends for the present value of the dividends plus the residual value of the stock to total to the price paid. Conceptually, it corresponds to the duration of a bond but the duration of a bond is deterministic and that of a stock is not. It is not necessary for the dividends to be reinvested – that's a separate risk, reinvestment risk, and does not affect the risks and therefore the value of the stock.
+
+If a stock does not pay a dividend or pays a very low dividend, alternatively, analysts may use a firm's free cash flow taking into account any necessary capital expenditures, to approximate what distributable cash could be available to shareholders.
+
+Low interest rates shorten duration because the present value of near term cash flows is relatively greater; high interest rates lengthen duration because we're more reliant on deeply discounted cash flows in the far future.
+
+The duration of the U.S. stock market represented by the S&P 500 for example (or other broad index) as well as most individual stocks, is many years to several decades. Generally, higher price/earnings and other equity multiples imply longer duration and greater risk that the implied cash flows may not arrive as expected.
+
+
+## Duration
+
+The first approximation, in years, to the duration of a stock is the ratio of the two terms, stock price divided by the annual dividend amount. Since the present value of future dividends gets a bit less with each passing year (or even quarter or month), the duration is a bit longer than that approximation. But the duration of a stock, unlike that of a bond, isn't deterministic. The stock price and dividend are taken directly from the market, and they're tangible. Everything else is hypothecated into the future: interest rates, growth, volatility, idiosyncratic risks, and dividend amounts. For European stocks, dividends aren't fixed, but paid as a proportion of profits, so even the base amounts are hypothecated.
+
+Historically, before the 1990s, the average dividend yield on U.S. stocks had been a little less than 4%, so the first approximation to duration has been a little more than 25 years. The hypothecated duration taking into account changes in the present value of future dividends, has been about 33% longer, which gives a duration in the low 30s (years), Traditionally, analysts have cited the duration of the U.S. market as 20-30 years. Since the last recession in 2008-09, multiples have become inflated and dividend yields have dropped, so the current implied duration of stocks according to the Dividend Discount Model (DDM) has risen to at least 80 years (Dec. 2021). However, the implied duration from other means isn't nearly that long.
+
+A one-stage mathematical model using current growth, etc, is usually not sustainable, i.e. those conditions aren't expected to obtain for possibly decades. Therefore, most analysts use a 2-stage or 3-stage model to assess present value and duration of stocks.
+
+It is improbable that stock duration can reasonably exceed a person's working and investing career of 45-50 years. Since duration and present value (or just value) of a stock are terms in the same equation, which can be solved for one by making assumptions about the other, an excessively long duration can provide a check on over enthusiastic stock valuations.
+
+
+### Example
+
+Suppose a stock costing $100 pays a 4% dividend, grows at a terminal rate of 6.5% and has a discount rate of 7.9%.
+
+The price/dividend first estimate of 25 years is easily calculated. If we assume an additional 33% duration to account for the discounted value of future dividend payments, that yields a duration of 33.3 years. Present value of the dividend payment in year one is $4, year two $4\*1.065\*.921=$3.92, year three $3.85, etc. There is an infinite series, such that each year's dividend payment has a present value of .9809 of the previous year's payment, starting with $4. The present value of the stock in perpetuity (i.e. the sum of present values of all dividend payments) is $209.04. To recover the price paid of $100 must take some time considerably less than till the end of time. That time is between 33 and 34 years: the present value of dividends paid through the 34th year (but not the 33rd) will exceed $100. That is very close to the rule of thumb estimate above. However, what may be gained in mathematical precision is lost by the compounding of uncertainties, particularly about growth, over the term of 34 years: they make any numbers we may calculate with conjectural. It may be more appropriate to derive an empirical estimate of duration, and encapsulate it in a rule of thumb that's reasonable most of the time.
+
+
+## Price sensitivity versus duration
+
+The price sensitivity of a stock versus duration, often called modified duration, is the percentage change in price in response to a 1% change in the long-term return that the stock is priced to deliver.
+The modified duration is duration divided by (1 + growth rate). There is some ambiguity in the literature when referring to duration; much of the time modified duration is referred to simply as "duration", and they have similar values, so much confusion results.
+
+
+### Convexity
+
+The modified duration formula assumes a linear relationship between percent change in return and percent change in price; but because returns compound, it overestimates the actual change in price. This difference is called "convexity".
+

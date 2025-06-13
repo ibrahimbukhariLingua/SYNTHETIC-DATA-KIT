@@ -1,0 +1,111 @@
+Merger simulation
+
+
+# Merger simulation
+
+
+
+**Merger simulation** is a commonly used technique when analyzing potential welfare costs and benefits of mergers between firms. Merger simulation models differ with respect to assumed form of competition that best describes the market (e.g. differentiated Bertrand competition, Cournot competition, auction models, etc.) as well as the structure of the chosen demand system (e.g. linear or log-linear demand, logit, almost ideal demand system (AIDS), etc.)
+
+
+## Simulation methods
+
+
+### Cournot oligopoly
+
+Farrell and Shapiro (1990) highlighted issues of the US Department of Justice's Merger Guidelines (1984), with its use of Herfindahl-Hirschman indices. The main issues they raised were the base assumptions that:
+
+1. Outputs remain unchanged in the merger process (both companies retained their initial outputs);
+2. There is a reliable and inverse relationship between market concentration) and market performance.
+
+They sought to instead to model mergers by Cournot oligopoly theory, establishing a series of propositions in both mergers effect on price and welfare. To establish their propositions a series of assumptions and conditions were made:
+
+1. Each firm's reaction curves slope downwards, such that an increase in a rivals’ output lowers the firm's marginal revenue. This assumption is made as if marginal revenues were unaffected by the others output, the equilibrium would not be a function of quantity. Which is necessary for application of Cournot theory.
+2. Each firm's residual demand curve intersects above its marginal cost curve. This assumption is made as if marginal cost decreased with quantity, as it can in some cases with economies of scale, then there may be no Cournot equilibrium solution.
+
+These conditions favour accuracy of the modelling in markets with limited demand and products that do not have economies of scale. Based on the assumptions, they established 7 propositions relating to price and welfare outcomes of mergers.
+
+
+#### Price-based propositions
+
+1. A merger raises its price if and only if the merged company markup is less than the sum of the pre-merger constituent markups, and the post-merger aggregate quantity is unchanged.
+2. If a merger generates no synergies, then in the long run it causes market price to rise.
+3. If a merger generates no synergies, then in the short run it will raise price if:
+ 1. Capital is immobile across facilities;
+ 2. All merging firms are equally efficient, and their long-run production has constant returns to scale.
+
+#### Welfare-based propositions
+
+1. If sub-sect of colluding firms within a Cournot oligopolistic market change their behaviour, then their net effect on the other firms and customer is a function of the equilibrium change (XI) of the colluder's output. A small reduction in XI has a net positive effect on outsiders and customers if the total outsider market share and response function are larger than the colluder's market share.
+2. If there is a merger between colluding firms such that it their initial market share is not greater than the outsiders, the price and marginal cost functions are non-negative in the 2nd and 3rd order for all the outsider firms, then if the merger is profitable and would raise the price, then it would also raise welfare.
+3. The sign of the net effect on welfare from a small outwards shift in an individual firm's reaction curves function is given by the difference between that firm's market share and the sum total of each of the other firms reaction functions multiplied by their individual market shares. In a market with large rival firms, a sufficiently small entrant will have a net negative effect on welfare, as the market share taken from other firms is at a higher marginal cost than the increase in customer welfare. Therefore, overall welfare decreases.
+4. Reducing imports by a quota will raise domestic welfare if and only if the share of imports are less than the reaction-weighted sum of domestic producers shares. This means for a sufficiently small import sector, excluding all imports will raise welfare. This is due to the lower marginal cost of domestic producers generating a larger welfare gain than the customer welfare loss due to domestic price increases.
+
+## Process
+
+The steps in the merger simulation process can be divided into two categories: "front-end" and "back-end" analysis.
+
+
+### Front-end analysis
+
+1. Estimation of demand before the merger.
+
+2. Specification of parameters in the demand function.
+
+
+### Back-end analysis
+
+3. Model of the supply side before the merger.
+
+4. Model of the new equilibrium after the merger using the demand and supply models pre-merger. This is done by using the previous functions to calculate the firms' equilibrium price after the merger has happened, and calculating the consequent welfare effects.
+
+
+### General model
+
+The following elements are used to simulate the effects of a merger.
+
+
+#### Demand estimation
+
+Modelling the estimated demand requires selecting the demand model that best suits consumer behaviour in the industry, and either functional form models (AIDS, PCAIDS) or discrete-form models (Logit, Nested Logit) can be used. Additionally, the demand elasticity of the product(s) and how consumers in the industry select which products they wish to consume will also need to be estimated.
+
+
+##### Cost function
+
+The firm's marginal costs are taken into account, as well as factors that may influence it, such as diseconomies of scale.
+
+
+##### Strategic variables
+
+The strategic variable(s) the firm would focus on and modify in order to compete with its rivals.
+
+
+###### Competition
+
+Depending on the state of their competition, firms' objectives may align. For example, firms may have a mutual understanding to not produce too much output as it may decrease their prices.
+
+
+### Key assumptions
+
+When carrying out merger simulation, there are three key assumptions to be held:
+
+* Constant marginal cost
+* The firms' oligopoly interactions. (*Bertrand competition is commonly assumed*)
+* Demand elasticities are not to be treated as a constant as they may significantly vary for various products after the merger occurs.
+
+## Vertical merger simulation
+
+When assessing the welfare effects of a vertical merger, both the upstream and downstream game effects must be considered. Therefore, it is an extension of the horizontal merger model consisting of five elements.
+
+1. Downstream demand
+
+2. Assumption with respect to the upstream game
+
+3. Assumption with respect to the downstream game
+
+4. Assumption of the timing of moves
+
+5. Marginal Costs
+
+The simulations can then be either econometric or Monte Carlo. Backward induction will be used to find the subgame perfect equilibrium of the simulation because the game will be modelled vertically.
+

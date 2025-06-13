@@ -1,0 +1,90 @@
+Intertemporal portfolio choice
+
+
+# Intertemporal portfolio choice
+
+
+
+**Intertemporal portfolio choice** is the process of allocating one's investable wealth to various assets, especially financial assets, repeatedly over time, in such a way as to optimize some criterion. The set of asset proportions at any time defines a portfolio. Since the returns on almost all assets are not fully predictable, the criterion has to take financial risk into account. Typically the criterion is the expected value of some concave function of the value of the portfolio after a certain number of time periods—that is, the expected utility of final wealth. Alternatively, it may be a function of the various levels of goods and services consumption that are attained by withdrawing some funds from the portfolio after each time period.
+
+
+## Discrete time
+
+
+### Time-independent decisions
+
+In a general context the optimal portfolio allocation in any time period after the first will depend on the amount of wealth that results from the previous period's portfolio, which depends on the asset returns that occurred in the previous period as well as that period's portfolio size and allocation, the latter having depended in turn on the amount of wealth resulting from the portfolio of the period before that, etc. However, under certain circumstances the optimal portfolio decisions can be arrived at in a way that is separated in time, so that the shares of wealth placed in particular assets depend only on the stochastic asset return distributions of that particular period.
+
+
+#### Log utility
+
+If the investor's utility function is the risk averse log utility function of final wealth {\displaystyle W\_{T},}
+
+then decisions are intertemporally separate. Let initial wealth (the amount that is investable in the initial period) be {\displaystyle W\_{0}} and let the stochastic portfolio return in any period (the imperfectly predictable amount that the average dollar in the portfolio grows or shrinks to in a given period *t*) be {\displaystyle R\_{t}.} {\displaystyle R\_{t}} depends on the portfolio allocation—the fractions {\displaystyle w\_{it}} of current wealth {\displaystyle W\_{t-1}} inherited from the previous period that are allocated at the start of period *t* to assets *i* (*i*=1, ..., *n*). So:
+
+where
+
+where {\displaystyle r\_{it}} refers to the stochastic return (the imperfectly predictable amount that the average dollar grows to) of asset *i* for period *t*, and where the shares {\displaystyle w\_{it}} (*i*=1, ..., *n*) are constrained to sum to 1. Taking the log of {\displaystyle W\_{T}} above to express outcome-contingent utility, substituting in for {\displaystyle R\_{t}} for each *t*, and taking the expected value of the log of {\displaystyle W\_{T}} gives the expected utility expression to be maximized:
+
+The terms containing the choice shares {\displaystyle w\_{it}} for differing *t* are additively separate, giving rise to the result of *intertemporal independence of optimal decisions*: optimizing for any particular decision period *t* involves taking the derivatives of one additively separate expression with respect to the various shares, and the first-order conditions for the optimal shares in a particular period do not contain the stochastic return information or the decision information for any other period.
+
+
+##### Kelly criterion
+
+The Kelly criterion for intertemporal portfolio choice states that, when asset return distributions are identical in all periods, a particular portfolio replicated each period will outperform all other portfolio sequences in the long run. Here the long run is an arbitrarily large number of time periods such that the distributions of observed outcomes for all assets match their ex ante probability distributions. The Kelly criterion gives rise to the same portfolio decisions as does the maximization of the expected value of the log utility function as described above.
+
+
+#### Power utility
+
+Like the log utility function, the power utility function for any value of the power parameter exhibits constant relative risk aversion, a property that tends to cause decisions to scale up proportionately without change as initial wealth increases. The power utility function is
+
+with positive or negative, but non-zero, parameter *a* < 1. With this utility function instead of the log one, the above analysis leads to the following expected utility expression to be maximized:
+
+where as before
+
+for each time period *t*.
+
+*If there is serial independence of the asset returns*—that is, if the realization of the return on any asset in any period is not related to the realization of the return on any asset in any other period—then this expected utility expression becomes
+
+maximization of this expected utility expression is equivalent to separate maximization (if *a*>0) or minimization (if *a*<0) of each of the terms {\displaystyle {\text{E}}R\_{t}^{a}.} Hence under this condition we again have intertemporal independence of portfolio decisions. Note that the log utility function, unlike the power utility function, did not require the assumption of intertemporal independence of returns to obtain intertemporal independence of portfolio decisions.
+
+
+#### HARA utility
+
+Hyperbolic absolute risk aversion (HARA) is a feature of a broad class of von Neumann-Morgenstern utility functions for choice under risk, including the log and power utility functions dealt with above. Mossin showed that under HARA utility, optimal portfolio choice involves partial time-independence of decisions if there is a risk-free asset and there is serial independence of asset returns: to find the optimal current-period portfolio, one needs to know no future distributional information about the asset returns except the future risk-free returns.
+
+
+### Time-dependent decisions
+
+As per the above, the expected utility of final wealth with a power utility function is
+
+If there is not serial independence of returns through time, then the expectations operator cannot be applied separately to the various multiplicative terms. Thus the optimal portfolio for any period will depend on the probability distribution of returns for the various assets contingent on their previous-period realizations, and so cannot be determined in advance.
+
+Moreover, the optimal actions in a particular period will have to be chosen based on knowledge of how decisions will be made in future periods, because the realizations in the present period for the asset returns affect not just the portfolio outcome for the present period, but also the conditional probability distributions for future asset returns and hence future decisions.
+
+These considerations apply to utility functions in general with the exceptions noted previously. In general the expected utility expression to be maximized is
+
+where *U* is the utility function.
+
+
+#### Dynamic programming
+
+The mathematical method of dealing with this need for current decision-making to take into account future decision-making is dynamic programming. In dynamic programming, the last period decision rule, contingent on available wealth and the realizations of all previous periods' asset returns, is devised in advance; then the next-to-last period's decision rule is devised, taking into account how the results of this period will influence the final period's decisions; and so forth backward in time. This procedure becomes complex very quickly if there are more than a few time periods or more than a few assets.
+
+
+#### Dollar cost averaging
+
+Dollar cost averaging is gradual entry into risky assets; it is frequently advocated by investment advisors. As indicated above, it is not confirmed by models with log utility. However, it can emerge from an intertemporal mean-variance model with negative serial correlation of returns.
+
+
+#### Age effects
+
+With HARA utility, asset returns that are independently and identically distributed through time, and a risk-free asset, risky asset proportions are independent of the investor's remaining lifetime.ᶜʰ.¹¹ Under certain assumptions including exponential utility and a single asset with returns following an ARMA(1,1) process, a necessary but not sufficient condition for increasing conservatism (decreasing holding of the risky asset) over time (which is often advocated by investment advisors) is negative first-order serial correlation, while non-negative first-order serial correlation gives the opposite result of increased risk-taking at later points in time.
+
+Intertemporal portfolio models in which portfolio choice is conducted jointly with intertemporal labor supply decisions can lead to the age effect of conservatism increasing with ageᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ as advocated by many investment advisors. This result follows from the fact that risky investments when the investor is young that turn out badly can be reacted to by supplying more labor than anticipated in subsequent time periods to at least partially offset the lost wealth; since an older person with fewer subsequent time periods is less able to offset bad investment returns in this way, it is optimal for an investor to take on less investment risk at an older age.
+
+
+## Continuous time
+
+Robert C. Merton showed that in continuous time with hyperbolic absolute risk aversion, with asset returns whose evolution is described by Brownian motion and which are independently and identically distributed through time, and with a risk-free asset, one can obtain an explicit solution for the demand for the unique optimal portfolio, and that demand is linear in initial wealth.
+

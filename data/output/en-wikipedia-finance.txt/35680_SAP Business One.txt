@@ -1,0 +1,96 @@
+SAP Business One
+
+
+# SAP Business One
+
+
+
+**SAP Business One** is an enterprise resource planning (ERP) application designed for small and medium-sized enterprises, and marketed by the German company SAP SE. As a company, **SAP Business One** focuses on automating key business functions in finance, operations, and human resources.
+
+
+## History
+
+SAP Business One was initially launched in Israel in 1996 under the name "Menahel" ("manager") or "TopManage", for other countries. The company was founded by Reuven Agassi (CEO). The product was designed by Shai Agassi and the development team was led by Hilla Mazinter. At a later stage the product was split out into a separate company that Reuven Agassi was running as CEO with Gadi Shamia was VP Sales
+
+In its first years, TopManage was sold in the Israeli market only and was the first Windows/Mac business management product to be offered in the Israeli market. In 2000, TopManage started its global expansion into markets in Europe and Latin America.
+
+In March 2002, SAP acquired the financial systems of "TopManage" and subsequently rebranded the system as SAP Business One. Reuven Agassi and Gadi Shamia, founders of TopManage, assumed executive positions at SAP as part of the acquisition. Notably, a year before this, SAP had also acquired "TopTier," a sister company of TopManage. Shai Agassi, the son of Reuven Agassi, was the founder of TopTier.
+
+The acquisition allowed SAP to reach out to the small market through its partners and also to gain additional business from the smaller subsidiaries of its enterprise customers.
+
+
+### Releases
+
+The history of SAP Business One:
+
+| Year | Version | Notable new features |
+| --- | --- | --- |
+| 2020 | SAP Business One 10.0 | Web Client enhancements (based on SAP Fiori), Enhancements in Document Printing, Reference Documents Enhancements, Enhancements in Approval Process, Interactive Gantt Chart (Project Management), Enhanced User Interface, Microsoft Office 365 Integration, New Skin Style (HANA Only), New UK (Brexit) Localization, Platform enhancements, Service Layer Configuration UI (HANA only), Support SLES 15 (HANA only) |
+| 2017 | SAP Business One 9.3 | Production enhancements, project management enhancements, RMA features, usability enhancements (CRM menu + user-preference unification) |
+| 2016 | SAP Business One 9.2 | Project management, browser access, MRP – intelligent forecasts (HANA only), item recommendation (HANA only), Customer 360 (HANA only), mobile sales app (HANA only) |
+| 2014 | SAP Business One 9.1 | Resources module, branches |
+| 2013 | SAP Business One 9.0 | Single sign-on, bin locations, 64-bit client |
+| 2012 | SAP Business One 8.82 | Usability enhancements, SAP HANA support |
+| 2011 | SAP Business One 8.81 | Multiple cost centers, Cockpit |
+| 2010 | SAP Business One 8.8 | Crystal Reports integration, unified codebase |
+| 2008 | SAP Business One 2007 | New reconciliation engine |
+| 2006 | SAP Business One 2005 | Enhanced usability and reporting, enhanced SDK |
+| 2004 | SAP Business One 2004 | Global release, SAP Business One SDK |
+| 2000 | TopManage |
+| 1995 | First Version |
+
+Before SAP Business One 2004, specific country versions called 6.x existed until the first global release in 2004.
+
+
+## Features (modules)
+
+SAP Business One is arranged into 15 functional modules, covering the typical functions in a business organization. The most widely used modules are financials, sales opportunities, sales – A/R, purchasing A/P, business partners, banking and inventory.
+
+* **Administration**, where the setup of the various core settings in the application are done
+* **CRM**, where common sales employee tasks link to the other modules (NB: The module is purely here for usability and offer no new features of its own) (only SAP 9.3 and higher)
+* **Financials**, where the definition of Chart of Account is set up and the core journal entries can be created
+* **Opportunities**, where Lead generation is used to keep track of potential sales and purchases
+* **Sales - A/R**, where the sales flow (Quotation > Order > Delivery > AR Invoice) are managed
+* **Purchasing - A/P**, where the purchase flow (Quotation > Order > GRPO > AP Invoice) is managed
+* **Business Partners**, where master data of Leads, Customer and Supplier are maintained/
+
+* **Banking**, where payment of Incoming (sales) and Outgoing (purchase) payments are created
+* **Inventory**, where master data of goods to be sold/purchased are maintained and their quantity/value in warehouses are tracked
+* **Resources**, where master data of resources (machines and people) to be used in production are defined (capacity and planning) (only SAP 9.1 and higher)
+* **Production**, where the Bill of Materials master data is maintained and Production orders are created
+* **Project Management**, where projects are defined (what you do when) (only SAP 9.2 and higher)
+* **Material Requirements Planning (MRP)**, where forecasts of needed items in sales/production are defined in order to make purchase order recommendations
+* **Service**, where management of service contracts are maintained and service calls are created
+* **Human Resources**, where employee master data (names, contact information, roles, etc.) are maintained
+
+* **Mobile and Web Access**, SAP Business One also supports mobile deployment and web access, facilitating real-time management of core business operations from anywhere.
+
+Each module handles specific business tasks on its own, but is linked with other modules where applicable. For instance, an invoice from the billing transaction in Sales & Distribution would pass through to accounting, where it will appear in accounts receivable and cost of goods sold.
+
+
+## Architecture
+
+SAP Business One is a typical Client–server model software product.
+
+* **Client software** is primarily the SAP Business One client that is a Microsoft Windows-based product that connects to a back-end server. SAP also offers clients for phones and tablets (iOS and Android) that contain a subset of the full features aimed at sales employees.
+* **Server software** is run on either a Microsoft SQL Server database (Windows) or SAP HANA database (Linux).
+
+## Partners and community
+
+SAP Business One is delivered through its global partner network (SAP PartnerEdge) consisting of the following partner types:
+
+* **Value-Added Resellers (VAR)** is an SAP partner that sells, implements and supports the product to end customers.
+* **Software Solution Partners (SSP)** is an SAP partner that creates horizontal or vertical standard solutions on top of the SAP Business One platform with the SAP Business One SDK and sells them via the VAR partners.
+* **Open Ecosystem** Once you join you will be able to sell, service, and market SAP-approved products available through its distributor channel. It's free and easy to join, with only a small amount of required training to complete before you begin.
+
+## Extensibility
+
+Custom development (called add-ons) are done using the SAP Business One SDK. It is COM-based development done in Microsoft Visual Studio with C# or VB.NET.
+
+SAP Business One SDK consists of:
+
+* **Data Interface API (DI-API)**, where you can create new business object around the normal SAP Business One client but still adhere to the core business rules
+* **User interface API (UI-API)**, where you can modify existing SAP Business One client screens, create new screens and change/block the normal event flow
+* **SAP Business One Integration Technology (B1i)**, where you can visually create Business flows using XML/XSLT
+* **Service Layer for SAP HANA**, where you can, using OData, create business objects
+* **Service Layer for Microsoft SQL Server,** where you can, using OData, create business objects

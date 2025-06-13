@@ -1,0 +1,200 @@
+Supply chain attack
+
+
+# Supply chain attack
+
+
+
+A **supply chain attack** is a cyber-attack that seeks to damage an organization by targeting less secure elements in the supply chain. A supply chain attack can occur in any industry, from the financial sector, oil industry, to a government sector. A supply chain attack can happen in software or hardware. Cybercriminals typically tamper with the manufacturing or distribution of a product by installing malware or hardware-based spying components. Symantec's 2019 Internet Security Threat Report states that supply chain attacks increased by 78 percent in 2018.
+
+A supply chain is a system of activities involved in handling, distributing, manufacturing, and processing goods in order to move resources from a vendor into the hands of the final consumer. A supply chain is a complex network of interconnected players governed by supply and demand.
+
+Although supply chain attack is a broad term without a universally agreed upon definition, in reference to cyber-security, a supply chain attack can involve physically tampering with electronics (computers, ATMs, power systems, factory data networks) in order to install undetectable malware for the purpose of bringing harm to a player further down the supply chain network. Alternatively, the term can be used to describe attacks exploiting the software supply chain, in which an apparently low-level or unimportant software component used by other software can be used to inject malicious code into the larger software that depends on the component.
+
+In a more general sense, a supply chain attack may not necessarily involve electronics. In 2010 when burglars gained access to the pharmaceutical giant Eli Lilly's supply warehouse, by drilling a hole in the roof and loading $80 million worth of prescription drugs into a truck, they could also have been said to carry out a supply chain attack. However, this article will discuss cyber attacks on physical supply networks that rely on technology; hence, a supply chain attack is a method used by cyber-criminals.
+
+
+## Attack framework
+
+Generally, supply chain attacks on information systems begin with an advanced persistent threat (APT) that determines a member of the supply network with the weakest cyber security in order to affect the target organization. Hackers don’t usually directly target a larger entity, such as the United States Government, but instead target the entity's software. The third-party software is often less protected, leading to an easier target. According to an investigation produced by Verizon Enterprise, 92% of the cyber security incidents analyzed in their survey occurred among small firms. Supply chain networks are considered to be particularly vulnerable due to their multiple interconnected components.
+
+APT's can often gain access to sensitive information by physically tampering with the production of the product. In October 2008, European law-enforcement officials "uncovered a highly sophisticated credit-card fraud ring" that stole customer's account details by using untraceable devices inserted into credit-card readers made in China to gain access to account information and make repeated bank withdrawals and Internet purchases, amounting to an estimated $100 million in losses.
+
+
+## Risks
+
+The threat of a supply chain attack poses a significant risk to modern day organizations and attacks are not solely limited to the information technology sector; supply chain attacks affect the oil industry, large retailers, the pharmaceutical sector and virtually any industry with a complex supply network.
+
+The Information Security Forum explains that the risk derived from supply chain attacks is due to information sharing with suppliers, it states that "sharing information with suppliers is essential for the supply chain to function, yet it also creates risk... information compromised in the supply chain can be just as damaging as that compromised from within the organization".
+
+While Muhammad Ali Nasir of the National University of Emerging Sciences, associates the above-mentioned risk with the wider trend of globalization stating "…due to globalization, decentralization, and outsourcing of supply chains, numbers of exposure points have also increased because of the greater number of entities involved and that too are scattered all around the globe… [a] cyber-attack on [a] supply chain is the most destructive way to damage many linked entities at once due to its ripple effect."
+
+Poorly managed supply chain management systems can become significant hazards for cyber attacks, which can lead to a loss of sensitive customer information, disruption of the manufacturing process, and could damage a company's reputation.
+
+
+## Examples
+
+
+### Compiler attacks
+
+Wired reported a connecting thread in recent software supply chain attacks, as of 3 May 2019.
+These have been surmised to have spread from infected, pirated, popular compilers posted on pirate websites. That is, corrupted versions of Apple's XCode and Microsoft Visual Studio.
+(In theory, alternating compilers might detect compiler attacks, when the compiler is the trusted root.)
+
+
+### Target
+
+At the end of 2013, Target, a US retailer, was hit by one of the largest data breaches in the history of the retail industry.
+
+Between 27 November and 15 December 2013, Target's American brick-and-mortar stores experienced a data hack. Around 40 million customers' credit and debit cards became susceptible to fraud after malware was introduced into the POS system in over 1,800 stores. The data breach of Target's customer information saw a direct impact on the company's profit, which fell 46 percent in the fourth quarter of 2013.
+
+Six months prior the company began installing a $1.6 million cyber security system. Target had a team of security specialists to monitor its computers constantly. Nonetheless, the supply chain attack circumvented these security measures.
+
+It is believed that cyber criminals infiltrated a third party supplier to gain access to Target's main data network. Although not officially confirmed, investigation officials suspect that the hackers first broke into Target's network on 15 November 2013 using passcode credentials stolen from Fazio Mechanical Services, a Pennsylvania-based provider of HVAC systems.
+
+Ninety lawsuits have been filed against Target by customers for carelessness and compensatory damages. Target spent around $61 million responding to the breach, according to its fourth-quarter report to investors.
+
+
+### Stuxnet
+
+Believed to be an American-Israeli cyber weapon, Stuxnet is a malicious computer worm. The worm specifically targets systems that automate electromechanical processes used to control machinery on factory assembly lines or equipment for separating nuclear material.
+
+The computer worm is said to have been specifically developed in order to damage potential uranium enrichment programs by the Government of Iran; Kevin Hogan, Senior Director of Security Response at Symantec, reported that the majority of infected systems by the Stuxnet worm were located in the Islamic Republic of Iran, which has led to speculation that it may have been deliberately targeting "high-value infrastructure" in the country including either the Bushehr Nuclear Power Plant or the Natanz nuclear power plant.
+
+Stuxnet is typically introduced into the supply network via an infected USB flash drive with persons with physical access to the system. The worm then travels across the cyber network, scanning software on computers controlling a programmable logic controller (PLC). Stuxnet introduces the infected rootkit onto the PLC modifying the codes and giving unexpected commands to the PLC while returning a loop of normal operation value feedback to the users.
+
+
+### ATM malware
+
+In recent years malware known as Suceful, Plotus, Tyupkin and GreenDispenser have affected automated teller machines globally, especially in Russia and Ukraine. GreenDispenser specifically gives attackers the ability to walk up to an infected ATM system and remove its cash vault. When installed, GreenDispenser may display an ‘out of service’ message on the ATM, but attackers with the right access credentials can drain the ATM's cash vault and remove the malware from the system using an untraceable delete process.
+
+The other types of malware usually behave in a similar fashion, capturing magnetic stripe data from the machine's memory storage and instructing the machines to withdraw cash. The attacks require a person with insider access, such as an ATM technician or anyone else with a key to the machine, to place the malware on the ATM.
+
+The Tyupkin malware active in March 2014 on more than 50 ATMs at banking institutions in Eastern Europe, is believed to have also spread at the time to the U.S., India, and China. The malware affects ATMs from major manufacturers running Microsoft Windows 32-bit operating systems. The malware displays information on how much money is available in every machine and allows an attacker to withdraw 40 notes from the selected cassette of each ATM.
+
+
+### NotPetya / M.E.Doc
+
+During the spring of 2017, the core code of the financial package "M.E.Doc" used in Ukraine was infected with the NotPetya virus and subsequently downloaded by subscribers. The hack was carried out on the provider's system: either hacking the code itself at the provider, or a hack re-routing download requests to another server. Press reports at the time make it clear this was a supply chain attack, but the attack vector used is not specified.
+
+NotPetya is classified as a ransomware attack because it encrypted the hard-drives of affected computers and then demanded bitcoin payments in order to retrieve stolen files. The attack affected numerous industries across Ukraine including banks, an airport, and Chernobyl radiation detection systems. The malware also affected over 2000 companies in multiple countries including Russia, India, and The United States.
+
+The spread of Notpetya was facilitated by using the same "exploit method" as the United States National Security Agency’s exploit called EternalBlue, which was the same method used in the WannaCry cyberattack in May of 2017. This method granted NotPetya the ability to proliferate through the Windows Server Message Block (SMB). The malware also exploited Microsoft’s PsExec tool as well as the Windows Management Instrumentation (WMI) tool. On account of these exploitations, if the malware affected one device on a network, it could then easily and rapidly spread to any other devices on the same network.
+
+Police said that M.E.Doc could ultimately be held criminally responsible due to their negligence in acknowledging repeated messages regarding the status of their cybersecurity infrastructure.
+
+
+### British Airways
+
+From August 21st until September 5th in 2018 British Airways was under attack. The British Airways website payment section contained a code that harvested customer payment data. The injected code was written specifically to route credit card information to a domain baways.com, which could erroneously be thought to belong to British Airways.
+
+Magecart is the entity believed to be behind the attack. Magecart is a name attributed to multiple hacker groups that use skimming practices in order to steal customer information through online payment processes. Approximately 380,000 customers had their personal and financial data compromised as a result of the attack. British Airways later reported in October, 2018 that an additional 185,000 customers may have had their personal information stolen as well.
+
+
+### SolarWinds
+
+The 2020 Global Supply Chain Cyberattack is believed to have resulted through a supply chain attack targeting the IT infrastructure company SolarWinds, which counts many federal institutions among its clients, including the business computers of the National Nuclear Security Administration (NNSA). Russian hackers targeted a piece software by SolarWinds called Orion, which several government agencies used to monitor their IT performance. A statement released by the Federal Bureau of Investigation (FBI), the Cybersecurity and Infrastructure Security Agency (CISA), the Office of the Director of National Intelligence (ODNI), and the National Security Agency (NSA), stated that the SolarWinds attack affected about ten government agencies.
+
+The Department of Homeland Security has issued Emergency Directive 21-01, "Mitigate SolarWinds Orion Code Compromise" which involves disconnecting any afflicted Windows host OS from its enterprise domain, and rebuilding those Windows hosts using trusted sources. The afflicted Windows operating system (OS) hosts were those monitored by the SolarWinds Orion monitoring software. DOE's NNSA has since disconnected the breached Windows hosts.
+
+In addition to the U.S. federal government, 18,000 out of SolarWinds' 33,000 customers who use the SolarWinds Orion software update platform are vulnerable. Orion was compromised in March and June 2020, before the cyber breach was detected by FireEye in December 2020. For example, Microsoft was itself a victim of the update software breach. Microsoft is now workingⁿᵉᵉᵈˢ ᵘᵖᵈᵃᵗᵉ? with FireEye to contain the ongoing cyber attack contained in supply chain software used by "government, consulting, technology, telecom and extractive entities in North America, Europe, Asia and the Middle East" —FireEye.
+
+Volexity, a cybersecurity firm, has reconstructed the attack sequence on an unnamed US think tank: first, the attacker exploited a remote code execution vulnerability in an on-premise Microsoft Exchange server; after that vulnerability was remedied, the attacker exploited security holes in the SolarWinds Orion platform, which were exposed in December 2020; third, the think tank's Duo two-factor authentication proxy server was exploited to gain access to breach the infrastructure of the think tank yet again. Based on Volexity's reconstruction, *Breaking Defense* has published a simplified kill chain explaining the Exchange Server attack on an estimated 30,000 customers worldwide.
+In July 2021 SolarWinds announced it was attacked yet again.
+
+
+### Microsoft Exchange Server
+
+In February 2021 Microsoft determined that the attackers had downloaded a few files "(subsets of service, security, identity)" apiece from
+
+* "a small subset of Azure components"
+* "a small subset of Intune components"
+* "a small subset of Exchange components"
+
+None of the Microsoft repositories contained production credentials. The repositories were secured in December, and those attacks ceased in January. However, in March 2021 more than 20,000 US organizations were compromised through a back door that was installed via flaws in Exchange Server. The affected organizations use self-hosted e-mail (on-site rather than cloud-based) such as credit unions, town governments, and small businesses. The flaws were patched on 2 March 2021, but by 5 March 2021 only 10% of the compromised organizations had implemented the patch; the back door remains open. The US officials are attempting to notify the affected organizations which are smaller than the organizations that were affected in December 2020.
+
+Microsoft has updated its Indicators of Compromise tool and has released emergency mitigation measures for its Exchange Server flaws. The attacks on SolarWinds and Microsoft software are currently thought to be independent, as of March 2021. The Indicators of Compromise tool allows customers to scan their Exchange Server log files for compromise. At least 10 attacking groups are using the Exchange Server flaws. Web shells can remain on a patched server; this still allows cyberattacks based on the affected servers. As of 12 March 2021 exploit attempts are doubling every few hours, according to Check Point Research, some in the name of security researchers themselves.
+
+By 14 April 2021 the FBI had completed a covert cyber operation to remove the web shells from afflicted servers and was informing the servers' owners of what had been done.
+
+In May 2021 Microsoft identified 3000 malicious emails to 150 organizations in 24 countries, that were launched by a group that Microsoft has denoted 'Nobelium'. Many of those emails were blocked before delivery. 'Nobelium' gained access to a Constant Contact "email marketing account used by the US Agency for International Development (USAID)". Security researchers assert that 'Nobelium' crafts spear-phishing email messages which get clicked on by unsuspecting users; the links then direct installation of malicious 'Nobelium' code to infect the users' systems, making them subject to ransom, espionage, disinformation, etc. The US government has identified 'Nobelium' as stemming from Russia's Federal Security Service. By July 2021 the US government is expected to name the initiator of the Exchange Server attacks: "China’s Ministry of State Security has been using criminal contract hackers".
+
+In September 2021 the Securities and Exchange Commission (SEC) enforcement staff have requested that any companies which have downloaded any compromised SolarWinds updates, voluntarily turn over data to the SEC if they have installed the compromised updates on their servers.
+
+In July 2022 SessionManager, a malicious module hosted by IIS (installed by default on Exchange Servers), was discovered to have infected Exchange Servers since March 2021; SessionManager searches memory for passwords, and downloads new modules, to hijack the server.
+
+
+### Golden SAML
+
+Mandiant, a security firm, has shown that nation-state-sponsored groups, once they have gained access to corporate clouds, can now exploit Security assertion markup language (SAML), to gain federated authentication to Active Directory and similar services, at will. Once the attackers gain access, they are able to infiltrate any information or assets belonging to the organization. This is because this technique allows attackers to pose as any member of the targeted organization. These attacks are progressively becoming more desirable to malicious actors as companies and agencies continue to move assets to cloud services.
+
+In 2020, SolarWinds was subject to what is described as the first documented Golden SAML attack, often referred to as "Solorigate". A malicious actor infected the source code of a software update with a backdoor code made to look legitimate. Customers began installing the faulty update to their systems, ultimately affecting over 18,000 individuals globally. The attack affected a number of United States government agencies and private sector agencies as well.
+
+
+### Ransomware attacks
+
+In May 2021 A ransomware attack on the Colonial pipeline exposed the vulnerability of the US's gasoline supply on the East coast.
+On 16 June 2021, President Biden warned President Putin that 16 types of infrastructure were to be off-limits to cyberattack, or else Russia would suffer in kind. A combination of supply-chain attack and ransomware attack surfaced on 2 July 2021 at thousands of companies in 17 countries. An REvil ransomware code is written to avoid hitting sites that use Russian. The REvil site is now offline according to *The New York Times*.
+
+
+### 3CX attack
+
+In March, 2023, the voice and video chat app 3CX Phone System was thought to have been subject to a supply chain attack due to detection of malicious activity on the software. The app is used in a wide variety of industries from food to automotive and an attack has the potential to impact hundreds of thousands of users worldwide. The malware infects the host device through the installation process, acting as a Trojan horse virus spread through both Mac OS and Microsoft installers. They employed an infostealer through a malicious payload that connected to a C2 server controlled by the threat actor.
+
+The attack utilized the Gopuram backdoor, originally discovered by the Russian cybersecurity company Kaspersky in 2020. The use of this backdoor suggested that the attack was executed by the North Korean cybercrime group known as Lazarus due to their use of this same backdoor in a 2020 attack against a South Asian cryptocurrency company. The Gopuram backdoor has been utilized in other past attacks against cryptocurrency agencies, which Lazarus has been known to target.
+
+
+### United States Department of State attack
+
+In July 2023, Chinese state-sponsored hackers targeted the United States Department of State, hacking several government employees' Microsoft email accounts, which gave them access to classified information. They stole information from about 60,000 emails from several Department of State employees. Department of State officials have stated that the information stolen includes “victims’ travel itineraries and diplomatic deliberations”. If used in a malicious manner, this information could be used to monitor important government officials and track United States communications that are meant to be confidential. The Department of State hack occurred due to vulnerabilities in Microsoft Exchange Server, classifying it as a supply-chain attack.
+
+
+### XZ Utils backdoor
+
+In March 2024, a backdoor in xz/liblzma in XZ Utils was suspected, with malicious code known to be in version 5.6.0 and 5.6.1. While the exploit remained dormant unless a specific third-party patch of the SSH server is used, under the right circumstances this interference could potentially enable a malicious actor to break sshd authentication and gain unauthorized access to the entire system remotely.
+
+The list of affected Linux distributions includes Debian unstable, Fedora Rawhide, Kali Linux, and OpenSUSE Tumbleweed. Most Linux distributions that followed a stable release update model were not affected, since they were carrying older versions of xz. Arch Linux issued an advisory for users to update immediately, although it also noted that Arch's OpenSSH package does not include the common third-party patch necessary for the backdoor. FreeBSD is not affected by this attack, as all supported FreeBSD releases include versions of xz that predate the affected releases and the attack targets Linux's glibc.
+
+
+## Prevention
+
+On 12 May 2021, Executive order 14028 (the EO), *Improving the nation's cybersecurity*, tasked NIST as well as other US government agencies with enhancing the cybersecurity of the United States. On 11 July 2021 (day 60 of the EO timeline) NIST, in consultation with the Cybersecurity and Infrastructure Security Agency (CISA) and the Office of Management and Budget (OMB), delivered '4i': guidance for users of critical software, as well as '4r': for minimum vendor testing of the security and integrity of the software supply chain.
+
+* Day 30: solicit input
+* Day 45: define 'critical software'
+* Day 60: EO task 4i, 4r: user guidance, and vendor testing
+* Day 180: EO task 4c: guidelines for enhancing supply chain software security
+* Day 270: EO task 4e, 4s, 4t, 4u: guidelines for enhancing supply chain software
+* Day 360: EO task 4d: guidelines for review and update procedures of supply chain software
+* Day 365: EO task 4w: summary support of the pilot
+
+### Government
+
+The Comprehensive National Cybersecurity Initiative and the Cyberspace Policy Review passed by the Bush and Obama administrations respectively, direct U.S. federal funding for development of multi-pronged approaches for global supply chain risk management. According to Adrian Davis of the Technology Innovation Management Review, securing organizations from supply chain attacks begins with building cyber-resilient systems. Supply chain resilience is, according to supply chain risk management expert Donal Walters, "the ability of the supply chain to cope with unexpected disturbances" and one of its characteristics is a company-wide recognition of where the supply chain is most susceptible to infiltration. Supply chain management plays a crucial role in creating effective supply chain resilience.
+
+In March 2015, under the Conservative and Liberal democratic government coalition, the UK Department for Business outlined new efforts to protect SMEs from cyber attacks, which included measures to improve supply chain resilience.
+
+The UK government has produced the Cyber Essentials Scheme, which trains firms for good practices to protect their supply chain and overall cyber security.
+
+
+### Financial institutions
+
+The Depository Trust and Clearing Group, an American post-trade company, in its operations has implemented governance for vulnerability management throughout its supply chain and looks at IT security along the entire development lifecycle; this includes where software was coded and hardware manufactured.
+
+In a 2014 PwC report, titled "Threat Smart: Building a Cyber Resilient Financial Institution", the financial services firm recommends the following approach to mitigating a cyber attack:
+
+> "To avoid potential damage to a financial institution’s bottom line, reputation, brand, and intellectual property, the executive team needs to take ownership of cyber risk. Specifically, they should collaborate up front to understand how the institution will defend against and respond to cyber risks, and what it will take to make their organization cyber resilient.
+
+
+### Cyber security firms
+
+FireEye, a US network security company that provides automated threat forensics and dynamic malware protection against advanced cyber threats, such as advanced persistent threats and spear phishing, recommends firms to have certain principles in place to create resilience in their supply chain, which includes having:
+
+* **A small supplier base:** This allows a firm to have tighter control over its suppliers.
+* **Stringent vendor controls:** Imposing stringent controls on suppliers in order to abide by lists of an approved protocols. Also conducting occasional site audits at supplier locations and having personnel visiting the sites on a regular basis for business purposes allows greater control.
+* **Security built into design:** Security features, such as check digits, should be designed into the software to detect any previous unauthorized access to the code. An iterative testing process to get the code functionally hardened and security-hardened is a good approach.
+
+On 27 April 2015, Sergey Lozhkin, a Senior Security Researcher with GReAT at Kaspersky Lab, spoke about the importance of managing risk from targeted attacks and cyber-espionage campaigns, during a conference on cyber security he stated:
+
+> "Mitigation strategies for advanced threats should include security policies and education, network security, comprehensive system administration and specialized security solutions, like... software patching features, application control, whitelisting and a default deny mode."
+

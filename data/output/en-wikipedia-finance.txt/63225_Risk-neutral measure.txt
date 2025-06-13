@@ -1,0 +1,106 @@
+Risk-neutral measure
+
+
+# Risk-neutral measure
+
+
+
+In mathematical finance, a **risk-neutral measure** (also called an equilibrium measure, or *equivalent martingale measure*) is a probability measure such that each share price is exactly equal to the discounted expectation of the share price under this measure.
+This is heavily used in the pricing of financial derivatives due to the fundamental theorem of asset pricing, which implies that in a complete market, a derivative's price is the discounted expected value of the future payoff under the unique risk-neutral measure. Such a measure exists if and only if the market is arbitrage-free.
+
+
+## A risk-neutral measure is a probability measure
+
+The easiest way to remember what the risk-neutral measure is, or to explain it to a probability generalist who might not know much about finance, is to realize that it is:
+
+1. The probability measure of a transformed random variable. Typically this transformation is the utility function of the payoff. The risk-neutral measure would be the measure corresponding to an expectation of the payoff with a linear utility.
+2. An *implied* probability measure, that is one implied from the current observable/posted/traded prices of the relevant instruments. Relevant means those instruments that are causally linked to the events in the probability space under consideration (i.e. underlying prices plus derivatives), and
+3. It is the implied probability measure (solves a kind of inverse problem) that is defined using a linear (risk-neutral) utility in the payoff, assuming some known model for the payoff. This means that you try to find the risk-neutral measure by solving the equation where current prices are the expected present value of the future pay-offs under the risk-neutral measure. The concept of a unique risk-neutral measure is most useful when one imagines making prices across a number of derivatives that *would* make a unique risk-neutral measure, since it implies a kind of consistency in one's hypothetical untraded prices, and theoretically points to arbitrage opportunities in markets where bid/ask prices are visible.
+
+It is also worth noting that in most introductory applications in finance, the pay-offs under consideration are deterministic given knowledge of prices at some terminal or future point in time. This is not strictly necessary to make use of these techniques.
+
+
+## Motivating the use of risk-neutral measures
+
+Prices of assets depend crucially on their risk as investors typically demand more profit for bearing more risk. Therefore, today's price of a claim on a risky amount realised tomorrow will generally differ from its expected value. Most commonly, investors are risk-averse and today's price is *below* the expectation, remunerating those who bear the risk.
+
+It turns out that in a complete market with no arbitrage opportunities there is an alternative way to do this calculation: Instead of first taking the expectation and then adjusting for an investor's risk preference, one can adjust, once and for all, the probabilities of future outcomes such that they incorporate all investors' risk premia, and then take the expectation under this new probability distribution, the *risk-neutral measure*. The main benefit stems from the fact that once the risk-neutral probabilities are found, *every* asset can be priced by simply taking the present value of its expected payoff. Note that if we used the actual real-world probabilities, every security would require a different adjustment (as they differ in riskiness).
+
+The absence of arbitrage is crucial for the existence of a risk-neutral measure. In fact, by the fundamental theorem of asset pricing, the condition of no-arbitrage is equivalent to the existence of a risk-neutral measure. Completeness of the market is also important because in an incomplete market there are a multitude of possible prices for an asset corresponding to different risk-neutral measures. It is usual to argue that market efficiency implies that there is only one price (the "law of one price"); the correct risk-neutral measure to price which must be selected using economic, rather than purely mathematical, arguments.
+
+A common mistake is to confuse the constructed probability distribution with the real-world probability. They will be different because in the real-world, investors demand risk premia, whereas it can be shown that under the risk-neutral probabilities all assets have the same expected rate of return, the risk-free rate (or short rate) and thus do not incorporate any such premia. The method of risk-neutral pricing should be considered as many other useful computational tools—convenient and powerful, even if seemingly artificial.
+
+
+## Definition
+
+
+### Equivalent martingale measure
+
+Let {\displaystyle S} be a d-dimensional market representing the price processes of the risky assets, {\displaystyle B} the risk-free bond and {\displaystyle (\Omega ,{\mathcal {F}},P)} the underlying probability space. Then a measure {\displaystyle Q} is called an equivalent (local) martingale measure if
+
+1. {\displaystyle Q\approx P}, i.e., {\displaystyle Q} is equivalent to {\displaystyle P},
+2. the processes {\displaystyle \left({\frac {S\_{t}^{i}}{B\_{t}}}\right)\_{t}} are (local) martingales w.r.t. {\displaystyle Q} {\displaystyle \forall \,i=1,\dots ,d}.
+
+### Risk-neutral measure
+
+Risk-neutral measures make it easy to express the value of a derivative in a formula. Suppose at a future time {\displaystyle T} a derivative (e.g., a call option on a stock) pays {\displaystyle H\_{T}} units, where {\displaystyle H\_{T}} is a random variable on the probability space describing the market. Further suppose that the discount factor from now (time zero) until time {\displaystyle T} is {\displaystyle DF(0,T)}. Then today's fair value of the derivative is
+
+where any martingale measure {\displaystyle Q} that solves the equation is a risk-neutral measure.
+
+
+### Change of measure
+
+This can be re-stated in terms of an alternative measure *P* as
+
+where {\displaystyle {\frac {dQ}{dP}}} is the Radon–Nikodym derivative of {\displaystyle Q} with respect to {\displaystyle P}, and therefore is still a martingale.
+
+If in a financial market there is just one risk-neutral measure, then there is a unique arbitrage-free price for each asset in the market. This is the **fundamental theorem of arbitrage-free pricing**. If there are more such measures, then in an interval of prices no arbitrage is possible. If no equivalent martingale measure exists, arbitrage opportunities do.
+
+In markets with transaction costs, with no numéraire, the consistent pricing process takes the place of the equivalent martingale measure. There is in fact a 1-to-1 relation between a consistent pricing process and an equivalent martingale measure.
+
+
+## Example 1 – Binomial model of stock prices
+
+Given a probability space {\displaystyle (\Omega ,{\mathfrak {F}},\mathbb {P} )}, consider a single-period binomial model, denote the initial stock price as {\displaystyle S\_{0}} and the stock price at time 1 as {\displaystyle S\_{1}} which can randomly take on possible values: {\displaystyle S^{u}} if the stock moves up, or {\displaystyle S^{d}} if the stock moves down. Finally, let {\displaystyle r>0} denote the risk-free rate. These quantities need to satisfy {\displaystyle S^{d}\leq (1+r)S\_{0}\leq S^{u}} else there is arbitrage in the market and an agent can generate wealth from nothing.
+
+A probability measure {\displaystyle \mathbb {P} ^{\*}} on {\displaystyle \Omega } is called risk-neutral if {\displaystyle S\_{0}=\mathbb {E} \_{\mathbb {P} ^{\*}}(S\_{1}/(1+r))} which can be written as {\displaystyle S\_{0}(1+r)=\pi S^{u}+(1-\pi )S^{d}}. Solving for {\displaystyle \pi } we find that the risk-neutral probability of an upward stock movement is given by the number
+
+Given a derivative with payoff {\displaystyle X^{u}} when the stock price moves up and {\displaystyle X^{d}} when it goes down, we can price the derivative via
+
+
+## Example 2 – Brownian motion model of stock prices
+
+Suppose our economy consists of 2 assets, a stock and a risk-free bond, and that we use the Black–Scholes model. In the model the evolution of the stock price can be described by Geometric Brownian Motion:
+
+where {\displaystyle W\_{t}} is a standard Brownian motion with respect to the physical measure. If we define
+
+Girsanov's theorem states that there exists a measure {\displaystyle Q} under which {\displaystyle {\tilde {W}}\_{t}} is a Brownian motion.
+{\displaystyle {\frac {\mu -r}{\sigma }}} is known as the market price of risk.
+Utilizing rules within Itô calculus, one may informally differentiate with respect to {\displaystyle t} and rearrange the above expression to derive the SDE
+
+Put this back in the original equation:
+
+Let {\displaystyle {\tilde {S}}\_{t}} be the discounted stock price given by {\displaystyle {\tilde {S}}\_{t}=e^{-rt}S\_{t}}, then by Ito's lemma we get the SDE:
+
+{\displaystyle Q} is the unique risk-neutral measure for the model.
+The discounted payoff process of a derivative on the stock {\displaystyle H\_{t}=\operatorname {E} \_{Q}(H\_{T}|F\_{t})} is a martingale under {\displaystyle Q}. Notice the drift of the SDE is {\displaystyle r}, the risk-free interest rate, implying risk neutrality. Since {\displaystyle {\tilde {S}}} and {\displaystyle H} are {\displaystyle Q}-martingales we can invoke the martingale representation theorem to find a replicating strategy – a portfolio of stocks and bonds that pays off {\displaystyle H\_{t}} at all times {\displaystyle t\leq T}.
+
+
+## Origin of the risk-neutral measure
+
+It is natural to ask how a risk-neutral measure arises in a market free of arbitrage. Somehow the prices of all assets will determine a probability measure. One explanation is given by utilizing the Arrow security. For simplicity, consider a discrete (even finite) world with only one future time horizon. In other words, there is the present (time 0) and the future (time 1), and at time 1 the state of the world can be one of finitely many states. An Arrow security corresponding to state *n*, *Aₙ*, is one which pays $1 at time 1 in state *n* and $0 in any of the other states of the world.
+
+What is the price of *Aₙ* now? It must be positive as there is a chance you will gain $1; it should be less than $1 as that is the maximum possible payoff. Thus the price of each *Aₙ*, which we denote by *Aₙ(0)*, is strictly between 0 and 1.
+
+Actually, the sum of all the security prices must be equal to the present value of $1, because holding a portfolio consisting of each Arrow security will result in certain payoff of $1. Consider a raffle where a single ticket wins a prize of all entry fees: if the prize is $1, the entry fee will be 1/number of tickets. For simplicity, we will consider the interest rate to be 0, so that the present value of $1 is $1.
+
+Thus the *Aₙ(0)*'s satisfy the axioms for a probability distribution. Each is non-negative and their sum is 1. This is the risk-neutral measure! Now it remains to show that it works as advertised, i.e. taking expected values with respect to this probability measure will give the right price at time 0.
+
+Suppose you have a security *C* whose price at time 0 is *C(0)*. In the future, in a state *i*, its payoff will be *Cᵢ*. Consider a portfolio *P* consisting of *Cᵢ* amount of each Arrow security *Aᵢ*. In the future, whatever state *i* occurs, then *Aᵢ* pays $1 while the other Arrow securities pay $0, so *P* will pay *Cᵢ*. In other words, the portfolio *P* replicates the payoff of *C* regardless of what happens in the future. The lack of arbitrage opportunities implies that the price of *P* and *C* must be the same now, as any difference in price means we can, without any risk, (short) sell the more expensive, buy the cheaper, and pocket the difference. In the future we will need to return the short-sold asset but we can fund that exactly by selling our bought asset, leaving us with our initial profit.
+
+By regarding each Arrow security price as a *probability*, we see that the portfolio price *P(0)* is the expected value of *C* under the risk-neutral probabilities. If the interest rate R were not zero, we would need to discount the expected value appropriately to get the price. In particular, the portfolio consisting of each Arrow security now has a present value of {\displaystyle {\frac {1}{1+R}}}, so the risk-neutral probability of state i becomes {\displaystyle (1+R)} times the price of each Arrow security *Aᵢ*, or its forward price.
+
+Note that Arrow securities do not actually need to be traded in the market. This is where market completeness comes in. In a complete market, every Arrow security can be replicated using a portfolio of real, traded assets. The argument above still works considering each Arrow security as a portfolio.
+
+In a more realistic model, such as the Black–Scholes model and its generalizations, our Arrow security would be something like a double digital option, which pays off $1 when the underlying asset lies between a lower and an upper bound, and $0 otherwise. The price of such an option then reflects the market's view of the likelihood of the spot price ending up in that price interval, adjusted by risk premia, entirely analogous to how we obtained the probabilities above for the one-step discrete world.
+

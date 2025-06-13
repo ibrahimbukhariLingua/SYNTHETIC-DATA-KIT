@@ -1,0 +1,36 @@
+COGIX
+
+
+# COGIX
+
+
+
+The so-called **COGIX** (COGeneration IndeX) is an indicator for the operating efficiency of CHP-plants, that receive revenues at the wholesale electricity market. It is similar to the spark spread resp. green spark spread including emission costs for greenhouse gases, which is a contribution margin calculated from fuel costs, emission costs and revenues from electricity sales. In the COGIX framework, also the revenues from heat sales of the CHP-plant are considered.
+
+
+## Index Calculation
+
+The COGIX evaluates generalised assumptions on cogeneration plants and the current reference prices for input and output streams, such as fuel, greenhouse gases, electrical and thermal energy. The index is for the assessment of the economic situation of the whole cogen-industry, not for single CHP projects, thus the values for technical parameters (efficiency, power-to-heat ratio) should be chosen according to BAT or industry average. Prices refer to delivery at the system boundary of the CHP-plant, e.g. the price for the fuel includes a lump-sum for transportation costs and the estimated heat price has to consider distribution expenses.
+
+With
+
+COGIX : contribution margin for cogenerated electricity in €/MWhₑₗ
+pₑₗ : electricity price in €/MWhₑₗ
+pₜₕ : heat price in €/MWhₜₕ
+pf : fuel price in €/MWhf
+pCO₂ : CO₂ price in €/tCO₂ₑ
+ef : fuel specific CO₂ emissions in tCO₂ₑ/MWhf
+ηₑₗCHP : electrical efficiency of the CHP-plant
+σECHP : energy-based power-to-heat ratio of the CHP-plant
+
+
+## Application
+
+The COGIX has been developed in 2011 to analyse the situation of gas-fired cogeneration in the German energy market and is used regularly for an update. A practical figure for the value of heat turned out to be 1,3 times the price for natural gas. This estimate fits both for large industrial heat user and smaller heat customers in extensive district heating networks. As the power-to-heat ratio does affect the COGIX only insignificantly, a ratio of σ=1 is usually chosen normatively, as shown by small CCGT plants and large combustion engines in practical life. The standard assumption for the overall efficiency is 85%, resulting in thermal and electrical efficiencies of ηₑₗ = ηₜₕ = 42,5 %. The emission factor for national gas is 0,2 t per MWh fuel.
+
+Generating capacity is usually sold on a long-term basis at the future market, therefore COGIX's variable reference prices (for baseload electricity, natural gas, CO₂-certificates) are also taken from the futures market, specifically the Y+1 segment with delivery in the following calendar year. Considering the wholesale gas price, an overall surcharge of €4 /MWh (based on the superior heating value Hₛ) has been added for transportation and structuring.
+
+Roughly estimated, the COGIXgₐₛ is for current CHP technology the electricity price minus the natural gas price minus half the CO₂ price.
+
+*Note:* There is also the option to calculate a COGIX for coal-fired CHP plants with adjusted emission factors, efficiencies and fuel prices. The emission factor of hard coal is 0,34 t per MWh fuel. The coal-fired cogeneration plant has an assumed power-to-heat ratio of 0,7, this results in ηₑₗ = 35% and ηₜₕ = 50%. The estimation for the coal transportation costs is €2 /MWhfᵤₑₗ.
+

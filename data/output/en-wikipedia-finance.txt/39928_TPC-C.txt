@@ -1,0 +1,60 @@
+TPC-C
+
+
+# TPC-C
+
+
+
+**TPC-C**, short for **Transaction Processing Performance Council Benchmark C**, is a benchmark used to compare the performance of online transaction processing (OLTP) systems. This industry standard was published in August 1992, and eventually replaced the earlier TPC-A, which was declared obsolete in 1995. It has undergone a number of changes to keep it relevant as computer performance grew by several orders of magnitude, with the current version as of 2021ᵘᵖᵈᵃᵗᵉ, 5.11, released in 2010. In 2006, a newer OLTP benchmark was added to the suite, TPC-E, but TPC-C remains in widespread use.
+
+The TPC-C system models a multi-warehouse wholesale operation, known simply as "the Company". In a minimal test, the company has ten warehouses, each with ten user terminals. Each warehouse serves ten defined sales districts, each with 3,000 customers who are ordering against a product catalog of 100,000 items. The most frequent transactions are customer orders, with an average of ten items on each order, and customer payments. Less frequent requests query the status of orders and warehouse inventory, ship orders and replenish stocks that get low. To test the performance of a given system, the number of warehouses is increased to meet the required minimum needed to measure the targeted performance level.
+
+The results of the benchmark are measured in transactions per minute, known as **tpmC**. The first tpmC result was published in September 1992 for an IBM AS/400 and returned a result of 54 tpmC. By the 2000s, the average result for high-end machines was 2.4 million tpmC, and companies were building systems of very large size in an effort to capture the record. The current record was set in 2020 using cloud computing that provided 707.3 million tpmC. Recent results for smaller on-premises systems have focused on lowering the cost-per-tpmC.
+
+IBM modified TPC-C to create a simplified version known as the Commercial Processing Workload for their own internal use. Similar conversions are commonplace but generally not known outside the respective companies.
+
+
+## History
+
+
+### Prior work
+
+The release of relational databases like Oracle led to debates within the industry between the relational model and the older CODASYL concepts. Out of these debates grew a desire to offer realistic performance estimates. In 1985, Jim Gray of Tandem Computers co-authored a paper now known as "Anon et.al.", which outlined a potential standard named DebitCredit.
+
+This quickly saw many modifications and apples-to-oranges comparison, which, in turn, led to a June 1988 effort by Tom Sawyer and Omri Serlin to standardize the system and publish a new version. The publication of this version and ongoing controversy over its use led to the August 1988 creation of an industry consortium named the Transaction Processing Performance Council, or TPC, to take over such work and create a formal industry standard.
+
+The TPC produced its first industry standard benchmark, named TPC-A, on the basis of DebitCredit with the addition of full ACID properties. Other requirements were primarily organizational; to submit a result one now had to provide complete details of the system and testing, with 3rd party audits suggested, and any pricing information had to include maintenance contracts over a period of five years. A related benchmark was released shortly after and named TPC-B, which differed primarily in that it used batch inputs rather than emulating terminal input.
+
+
+### Order-Entry
+
+Around the time that TPC-A was being finalized, Digital Equipment Corporation (DEC) was working on a new distributed database system, RdbStar. This led to the development of a new benchmark to measure the performance of the new database system. The RdbStar performance team surveyed many existing pre-TPC benchmarks like the Wisconsin benchmark, AS3AP, and the Set Query Benchmark. They also examined real-world database use cases from a canvassing of DEC's European division's customers. Ultimately they selected components of an unpublished workload from the Austin-based Microelectronics and Computer Consortium that simulated a warehousing operation. The team used this workload as the basis for their own benchmark, known as Order-Entry.
+
+By the time TPC-B had been published in August 1990, there were already concerns that Debit/Credit was too simple and not really modeling typical workloads. In November a new effort started with a call to industry to provide a new benchmark. IBM responded with their RAMP-C while DEC offered Order-Entry. DEC's proposal was selected, and its primary author, Francois Raab, was selected as technical lead for the standardization effort. This effort lasted eighteen months and culminated in the release of TPC-C version 1.0 on 13 August 1992.
+
+
+### Post-release
+
+The TPC-C benchmark specification underwent several minor revisions over the next few years. Revision 1.1 of June 1993 clarified some of the language and required customer-side pricing of the tested system. 2.0 of October 1993 changed various reporting requirements and added language to exclude any benchmark-specific enhancements. 3.0 of February 1996 added transaction tracking, new fields for the addition of images (ultimately never used), and the removal of the terminals from the total system price, as by this time the cost of the servers had sufficiently declined that the cost of the terminals was becoming too large of a portion of the total price.
+
+The benchmark continued to evolve to accommodate the emergence of new computing architectures like the client-server model and to clarify the rules governing the proper execution of the testing steps and the required reporting. The most significant changes took place in 2000 and consisted in switching the maintenance pricing from five to three years and from five 8-hour days (5x8) to seven 24-hour days (7x24), reducing the measurement duration from eight to two hours and reducing the archival space requirement by a factor of three. These three major changes were released as version 5.0 on 26 February 2001. Minor changes have been made since involving clarification of various requirements spelled out in the benchmark specification. As of 2021ᵘᵖᵈᵃᵗᵉ, the latest revision is 5.11, published 11 February 2010.
+
+The first *published* result from the new benchmark was published in September 1992 at 54 tpmC. Since then, the records for TPC-C increased over time almost exactly according to Moore's Law. Initial results were in the tens, but after a year these stood in the hundreds, and by January 1998 the record stood at 52,871. By 2010 this reached the million range. During the 2000s, the number of records decreased as the cost of breaking the record grew tremendously. Through this period, Microsoft turned their attention to the newer TPC-E benchmark, leaving Oracle to build huge systems and repeatedly set the record that others could not afford to match.
+
+Record attempts after this point were relatively few until the rise of cloud computing in the late 2010s. The current record holder is Ant Financial, whose OceanBase powers Alibaba. In August 2019 they set the record at just over 60 million, the first attempt since Oracle's 8 million result in 2013. Others were quick to point out that Oracle's record was on a single workstation while Ant's required a complete computing farm. To put such complaints to rest, in May 2020 Ant published a new record at 707 million. This record stands to this day.
+
+
+## Description
+
+TPC-C is based on an Order-Entry workload presented to the TPC by DEC. The earlier TPC-A benchmark had focused primarily on database updates matching the operations in a simplistic Debit/Credit bookkeeping system, which did not match real-world usage patterns. A sample of production workloads showed that a more complex mix of inserts interspersed with updates and read-only operations were needed to more adequately represented real world patterns. Moreover, the TPC-A database did not have much complexity; real-world systems spread their data across many more tables of more varied size and complexity.
+
+TPC-C uses a database schema with nine tables in total. The structure is driven primarily by the Warehouse table, which contains a number of warehouse entries denoted W. W has a minimum value of 10, and must be increased to match the saturation level of the tested systems, using W as a scaling factor. The reported performance metric cannot exceed 12.86 x W. Warehouses all maintain a stock of the same catalogue of items. The Item table has 100,000 rows and the Stock table has W x 100,000 rows. A second branch of the schema are the Districts, with 10 entries for each Warehouse. Districts have Customers, 3000 per District. They generate Orders with 5 to 15 Order-Lines per Order. This means Order-Line is the largest table, with about W(arehouses) x 3000 (Customers) x 10 (initial Orders) x 10 (Order Lines) = W x 300,000 entries. The process of filling an order interacts with the Stock entries associated with one or more warehouses.
+
+The activity consists of a series of W x 10 virtual terminals entering transactions according to a semi-random formula; the primary transaction is New-Order which creates a single order. Each order results in one Payment transaction and one Delivery. One Order-Status and one Stock-Level transaction is generated for every ten New-Order transactions. A "remote terminal emulator" (RTE) is programmed to simulate a user's data entry, typing delays, inter-field and inter-transaction delays. The RTE also keeps track of the time between the user's request of each transaction and its completion, called response time. The rate of New-Order transactions executed per minute is reported as the tpmC value (transaction per minute C) and represents the primary performance metric of the benchmark.
+
+Early results indicated that in comparison to TPC-A, TPC-C's workload was roughly ten times as complex. Only one transaction type out of five, 44% of the total, is included in the transaction-per-minute TPC-C result, while TPC-A is measured in transactions-per-second and includes every transaction. This means the two numbers are not directly comparable without some conversion, multiplying by 60 to account for seconds-to-minutes, and 2.3 to account for the subset of transactions included. Considering a single machine, the IBM RS/6000 Model 570, TPC-A returns a value of 129 tpsA, whereas TPC-C returns 365.45 tpmC. Multiplying the tpmC by 2.3 and then dividing by 60 to convert to tpsA terms, the result is 13.5, a difference in performance of about 9.5 times.
+
+Submission of a TPC-C result also requires the disclosure of the detailed pricing of the tested configuration, including hardware and software maintenance with 7/24 coverage over a three-year period. The priced system has to include not only the system itself, but also sufficient storage to hold the data generated by running the system at the quoted tpmC rate over a period of 60 days. In theory, a tpmC of 1 will generate 252 kB of entries in History, 133 in Orders, and 1325 kB in Order-Line. The total system price is combined with the measured tpmC to produce a price/performance metric. While some published results aimed at producing the highest possible tpmC, many more published results have targeted a top spot in the competitive price/performance category, at times with a relatively low tpmC.
+
+The benchmark is typically executed by the vendor of one of the main components (e.g. database system, back-end server, etc.) who has to submit a disclosure report with complete details on the system configuration, its setup, the conditions of the testing and all results collected. The entire benchmark implementation, all testing steps, the measured results, the system pricing and the disclosure report must be validated by an independent auditor certified by the TPC.
+

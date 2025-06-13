@@ -1,0 +1,77 @@
+Business rule
+
+
+# Business rule
+
+
+
+A **business rule** defines or constrains some aspect of a business. It may be expressed to specify an action to be taken when certain conditions are true or may be phrased so it can only resolve to either true or false. Business rules are intended to assert business structure or to control or influence the behavior of the business. Business rules describe the operations, definitions and constraints that apply to an organization. Business rules can apply to people, processes, corporate behavior and computing systems in an organization, and are put in place to help the organization achieve its goals.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ For example, a business rule might state that *no credit check is to be performed on return customers*. Other examples of business rules include requiring a rental agent to disallow a rental tenant if their credit rating is too low, or requiring company agents to use a list of preferred suppliers and supply schedules. While a business rule may be informal or even unwritten, documenting the rules clearly and making sure that they don't conflict is a valuable activity.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ When carefully managed, rules can be used to help the organization to better achieve goals, remove obstacles to market growth, reduce costly mistakes, improve communication, comply with legal requirements, and increase customer loyalty.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+
+## Introduction
+
+Business rules tell an organization what it can do in detail, while strategy tells it how to focus the business at a macro level to optimize results.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ A strategy provides high-level direction about what an organization should do. Business rules provide detailed guidance about how a strategy can be translated to action.
+
+Business rules exist for an organization whether or not they are ever written down, talked about or even part of the organization's consciousness. However it is a fairly common practice for organizations to gather business rules. This may happen in one of two ways.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+Organizations may choose to proactively describe their business practices, producing a database of rules. While this activity may be beneficial, it may be expensive and time-consuming. For example, they might hire a consultant to comb through the organization to document and consolidate the various standards and methods currently in practice.
+
+Gathering business rules is also called rules harvesting or business rule mining. The business analyst or consultant can extract the rules from IT documentation (like use cases, specifications or system code). They may also organize workshops and interviews with subject matter experts (commonly abbreviated as SMEs). Software technologies designed to capture business rules through analysis of legacy source code or of actual user behavior can accelerate the rule gathering processing.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+More commonly, business rules are discovered and documented informally during the initial stages of a project. In this case, the collecting of the business rules is incidental. In addition, business projects, such as the launching of a new product or the re-engineering of a complex process, might lead to the definition of new business rules. This practice of incidental, or emergent, business rule gathering is vulnerable to the creation of inconsistent or even conflicting business rules within different organizational units, or within the same organizational unit over time. This inconsistency creates problems that can be difficult to find and fix.
+
+
+### Business rules approach
+
+Allowing business rules to be documented during the course of business projects is less expensive and easier to accomplish than the first approachᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ, but if the rules are not collected in a consistent manner, they are not valuable. In order to teach business people about the best ways to gather and document business rules, experts in business analysis have created the Business Rules Methodology. This methodology defines a process of capturing business rules in natural language, in a verifiable and understandable way. This process is not difficult to learn, can be performed in real-time, and empowers business stakeholders to manage their own business rules in a consistent manner.
+
+
+## Categories
+
+According to the white paper by the Business Rules Group, a statement of a business rule falls into one of four categories:
+
+* Definitions of business terms
+
+The most basic element of a business rule is the language used to express it. The very definition of a term is itself a business rule that describes how people think and talk about things. Thus, defining a term is establishing a category of business rule. Terms have traditionally been documented in a Glossary or as entities in a conceptual model.
+
+* Facts relating terms to each other
+
+The nature or operating structure of an organization can be described in terms of the facts that relate terms to each other. To say that a customer can place an order is NOT a business rule, but a *fact*. **Facts** can be documented as natural language sentences or as relationships, attributes, and generalization structures in a graphical model.
+
+* Constraints (also called "action assertions")
+
+Every enterprise constrains behavior in some way, and this is closely related to constraints on what data may or may not be updated. To prevent a record from being made is, in many cases, to prevent an action from taking place.
+
+* Derivations
+
+Business rules (including laws of nature) define how knowledge in one form may be transformed into other knowledge, possibly in a different form.
+
+
+## Real world applications and obstacles
+
+Business rules are gathered in these situations:
+
+1. When dictated by law
+2. During the business analysis
+3. As an ephemeral aid to engineers.
+
+This lack of consistent approach is mostly due to the cost and effort required to maintain the list of rules.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+While newer software tools are able to combine business rule management and execution, it is important to realize that these two ideas are distinct, and each provides value that is different from the other. Software packages automate business rules using business logic. The term *business rule* is sometimes used interchangeably with *business logic*; however the latter connotes an engineering practice and the former an intrinsic business practiceᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ. There is value in outlining an organization's business rules regardless of whether this information is used to automate its operations.
+
+One of the pitfalls in trying to fill the gap between rules management and execution is trying to give business rules the syntax of logic, and merely describing logical constructs in a natural language. Translation for engines is easier, but business users will no longer be able to write down the rules.
+
+
+## Formal specification
+
+Business rules can be expressed using modeling approaches such as Unified Modeling Language (UML), Z notation, Business Process Execution Language (BPEL), Business Process Modeling Notation (BPMN), Decision Model and Notation (DMN) or the Semantics of Business Vocabulary and Business Rules (SBVR).ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+
+### Business rules
+
+Business rules encoded in computer code in an operational program are known as business logic.
+
+Similar to how business risks can be structured as:
+
+a business rule can be structured as:
+

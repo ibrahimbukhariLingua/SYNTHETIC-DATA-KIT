@@ -1,0 +1,57 @@
+Inventory Information Approval System
+
+
+# Inventory Information Approval System
+
+
+
+The **Inventory Information Approval System**, or **IIAS**, is a point-of-sale technology used by retailers that accept FSA debit cards, which are issued for use with medical flexible spending accounts (FSAs), health reimbursement accounts (HRAs), and some health savings accounts (HSAs) in the United States.
+
+By the end of 2007, all grocery stores, discount stores, and online pharmacies that accept FSA debit cards must have an IIAS; by the end of 2008, most pharmacies have an IIAS as well.
+
+The predecessor to the current IIAS was developed by the online retailer drugstore.com for its "FSA store" in 2005; it was first introduced to brick-and-mortar retailing by Walgreens in 2006. Wal-Mart became the first discounter with an IIAS in late 2006.
+
+
+## How IIAS works
+
+IIAS is similar to the system used by grocery stores ever since they introduced the first barcode scanners in the 1970s to separate items eligible for purchase under the Food Stamp Program from those that are not eligible. Every item in the grocery store's database is flagged "yes" or "no" for food-stamp eligibility; the scanner automatically keeps a separate total for food-stamp items. In the beginning, the cashier pressed a special "food-stamp total" key, and the customer presented paper food stamps; today, the customer swipes an Electronic Benefit Transfer (EBT) card and selects the "food stamp" account, and the register charges only the food-stamp total to the EBT card. The remaining balance must be paid for by other means.
+
+IIAS works in much the same way, but with medical FSAs, HRAs, or HSAs instead of food stamps: (Usually, the term "FSA" is used to cover all of them; HRAs, HSAs, and non-medical FSAs are relatively rare, and HSAs can also have regular debit cards though many of them have FSA debit cards instead.)
+
+* Every item in the store's scanner database is flagged "yes" or "no" for FSA eligibility. (This flag is separate from the one for food stamps, if there is one.)
+* Prescription drugs are usually not in the main scanner database (though they may be made scannable by tying the pharmacy system into the scanners), but they are almost always FSA-eligible; therefore, the pharmacy department is often categorically flagged as FSA-eligible, the only department to be so treated. (In contrast, multiple departments of most grocery stores are categorically flagged as food-stamp eligible, including the meat, produce, and dry-grocery departments.)
+* At checkout, the scanner (for brick-and-mortar retailers) or shopping cart (for online retailers) keeps a separate total for those items that are "FSA-eligible".
+* If an FSA debit card is presented for payment, the scanner or shopping cart will charge the card, but for no more than the "FSA-eligible" total.
+* If there are other items in the order (or if the FSA debit card did not pay for all eligible items), the scanner or shopping cart then demands another form of payment, such as cash, check, credit card or debit card, to pay for the remaining items.
+
+IIAS does have one additional requirement that is not normally found with food stamps, though the U.S. Department of Agriculture can audit retailers directly for similar purposes: Beginning January 1, 2007, the merchant must make a record of each transaction available to the employer, or more commonly, to the employer's FSA or HRA provider. This can be done contemporaneously with the transaction, or it may be provided later if the Internal Revenue Service ever audits the employer.
+
+The terminology used by the IRS in its descriptions of IIAS may seem unusual at first. This stems from the history of IIAS, as it was first developed by an online retailer (drugstore.com) and only later adapted to brick-and-mortar retailing. For example, IIAS is described by the IRS as an "inventory control" system tied to SKUs; but it's generally easier to understand as it was implemented by Walgreens and Wal-Mart, i.e., as a point-of-sale system tied to UPCs.
+
+
+## IRS requirements to use IIAS
+
+Though IIAS was first used in 2005, it was not officially approved by the Internal Revenue Service until July 2006, in IRS Notice 2006–69. At the same time, the IRS decided to crack down on FSA/HRA providers that were not following prior IRS guidance on FSA debit cards. As part of this, the IRS decided that grocery and discount stores would not be allowed to accept FSA debit cards unless they installed an IIAS; they decided it would be too easy to misuse the cards if they could be used at grocers and discounters for anything they sold, even if the grocer or discounter also had a pharmacy. However, they permitted stand-alone chain or independent pharmacies (known as "true pharmacies") to accept the card without an IIAS.
+
+Grocers and discounters immediately challenged the IRS ruling, claiming that their pharmacies were being discriminated against, and that since most "true pharmacies" sold ineligible goods as well, the risk from them was just as great. Therefore, two changes were made by IRS Ruling 2007–02 in December 2006:
+
+* Grocers and discounters are allowed to keep accepting the cards until December 31, 2007; this was to give them sufficient time to install an IIAS.
+* "True pharmacies" are required to install an IIAS after June 30, 2009, unless at least 90% of the individual pharmacy's sales are of "FSA-eligible" items, i.e., prescription drugs or over-the-counter (OTC) items.
+
+Most major pharmacy chains report that 60–65% of their sales come from the pharmacy; therefore, OTC would have to account for 25–30% of their total sales for them to qualify, which is unlikely—especially since each individual pharmacy must qualify separately. Therefore, only independent pharmacies are likely to qualify for the exemption.
+
+Because of this ruling, by 2009 most grocers, discounters, and chain or Internet pharmacies in the U.S. must have an IIAS in place in order to accept FSA debit cards.
+
+
+## Importance of IIAS
+
+In addition to the above IRS requirements, IIAS is important in promoting the use of tax-favored health accounts, especially FSAs (which are usually set up by employees), for these reasons:
+
+* While other IRS-approved "auto-adjudication" systems for electronic substantiation of FSA debit card charges are geared towards health plan expenses, such as copay matching or electronic transmittal of explanations of benefits, IIAS is the only one that is designed for use with over-the-counter drugs and similar items (OTC) as well as prescription drugs.
+* IIAS is the first system with 100% "auto-adjudication" of an entire class of FSA debit card charges that has been widely adopted by the FSA industry. A few FSA vendors had previously used proprietary systems which provided 100% auto-adjudication of prescription charges thru a pharmacy benefits manager, but they ran into numerous technical and educational issues and were not adaptable to OTC.
+* Some of the IRS rules on what OTC items are and are not eligible for FSAs have proven rather arcane in practice; for example, condoms are OK since they prevent pregnancy, but K-Y Jelly is not if it is used to lubricate them. IIAS effectively manages this problem by verifying eligibility of each OTC item at point-of-sale.
+* Both paper claims and manual substantiation of FSA debit card charges often required the submission of receipts with "full names" of OTC items; but many stores abbreviate item names in such a way that it is almost impossible to tell if the item is eligible or not. Also, most providers did not reimburse sales tax on paper claims with "mixed" FSA/non-FSA receipts because they could not "split" the tax line item without being versed in the sales tax laws of every state and locality in the U.S., a near impossibility. IIAS avoids this by having the retailer itself verify item eligibility and "split" the sales tax.
+* The process of demanding receipts or reimbursement for FSA debit card charges that are not "auto-adjudicated", known as "pay and chase" in the industry (a term recognized by the IRS in Notice 2007–02), proved particularly cumbersome for OTC items due to the lack of "auto-adjudication" systems and the high potential for fraudulent or erroneous charges; IIAS eliminates this by providing an "auto-adjudication" system for OTC while preventing many fraudulent or erroneous charges at retailers.
+
+Since IIAS eliminates many of the roadblocks that previously existed for use of medical FSAs at retailers (especially for OTC items), it is hoped that it will lead to increased enrollment in medical FSAs.
+

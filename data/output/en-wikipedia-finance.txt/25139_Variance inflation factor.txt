@@ -1,0 +1,79 @@
+Variance inflation factor
+
+
+# Variance inflation factor
+
+
+
+In statistics, the **variance inflation factor** (**VIF**) is the ratio (quotient) of the variance of a parameter estimate when fitting a full model that includes other parameters to the variance of the parameter estimate if the model is fit with only the parameter on its own. The VIF provides an index that measures how much the variance (the square of the estimate's standard deviation) of an estimated regression coefficient is increased because of collinearity.
+
+Cuthbert Daniel claims to have invented the concept behind the variance inflation factor, but did not come up with the name.
+
+
+## Definition
+
+Consider the following linear model with *k* independent variables:
+
+The standard error of the estimate of *β*ⱼ is the square root of the *j* + 1 diagonal element of *s*²(*X*′*X*)¹, where *s* is the root mean squared error (RMSE) (note that RMSE² is a consistent estimator of the true variance of the error term, {\displaystyle \sigma ^{2}}); *X* is the regression design matrix — a matrix such that *X*ᵢ, ⱼ+₁ is the value of the *j*ᵗʰ independent variable for the *i*ᵗʰ case or observation, and such that *X*ᵢ,₁, the predictor vector associated with the intercept term, equals 1 for all *i*. It turns out that the square of this standard error, the estimated variance of the estimate of *β*ⱼ, can be equivalently expressed as:
+
+where *R*ⱼ² is the multiple R² for the regression of *X*ⱼ on the other covariates (a regression that does not involve the response variable *Y*) and {\displaystyle {\hat {\beta }}\_{j}} are the coefficient estimates, id est, the estimates of {\displaystyle {\beta }\_{j}}. This identity separates the influences of several distinct factors on the variance of the coefficient estimate:
+
+* *s*²: greater scatter in the data around the regression surface leads to proportionately more variance in the coefficient estimates
+* *n*: greater sample size results in proportionately less variance in the coefficient estimates
+* {\displaystyle {\widehat {\operatorname {var} }}(X\_{j})}: greater variability in a particular covariate leads to proportionately less variance in the corresponding coefficient estimate
+
+The remaining term, 1 / (1 − *R*ⱼ²) is the VIF. It reflects all other factors that influence the uncertainty in the coefficient estimates. The VIF equals 1 when the vector *X*ⱼ is orthogonal to each column of the design matrix for the regression of *X*ⱼ on the other covariates. By contrast, the VIF is greater than 1 when the vector *X*ⱼ is not orthogonal to all columns of the design matrix for the regression of *X*ⱼ on the other covariates. Finally, note that the VIF is invariant to the scaling of the variables (that is, we could scale each variable *X*ⱼ by a constant *c*ⱼ without changing the VIF).
+
+Now let {\displaystyle r=X^{T}X}, and without losing generality, we reorder the columns of *X* to set the first column to be {\displaystyle X\_{j}}
+
+By using Schur complement, the element in the first row and first column in {\displaystyle r^{-1}} is,
+
+Then we have,
+
+Here {\displaystyle {\hat {\beta }}\_{\*j}} is the coefficient of regression of dependent variable {\displaystyle X\_{j}} over covariate {\displaystyle X\_{-j}}. {\displaystyle \mathrm {RSS} \_{j}} is the corresponding residual sum of squares.
+
+
+## Calculation and analysis
+
+We can calculate *k* different VIFs (one for each *X*ᵢ) in three steps:
+
+
+### Step one
+
+First we run an ordinary least square regression that has *X*ᵢ as a function of all the other explanatory variables in the first equation.
+If *i* = 1, for example, equation would be
+
+where {\displaystyle \alpha \_{0}} is a constant and {\displaystyle \varepsilon } is the error term.
+
+
+### Step two
+
+Then, calculate the VIF factor for {\displaystyle {\hat {\alpha }}\_{i}} with the following formula :
+
+where *R*²ᵢ is the coefficient of determination of the regression equation in step one, with {\displaystyle X\_{i}} on the left hand side, and all other predictor variables (all the other X variables) on the right hand side.
+
+
+### Step three
+
+Analyze the magnitude of multicollinearity by considering the size of the {\displaystyle \operatorname {VIF} ({\hat {\alpha }}\_{i})}. A rule of thumb is that if {\displaystyle \operatorname {VIF} ({\hat {\alpha }}\_{i})>10} then multicollinearity is high (a cutoff of 5 is also commonly used). However, there is no value of VIF greater than 1 in which the variance of the slopes of predictors isn't inflated. As a result, including two or more variables in a multiple regression that are not orthogonal (i.e. have correlation = 0), will alter each other's slope, SE of the slope, and P-value, because there is shared variance between the predictors that can't be uniquely attributed to any one of them.
+
+Some software instead calculates the tolerance which is just the reciprocal of the VIF. The choice of which to use is a matter of personal preference.
+
+
+## Interpretation
+
+The square root of the variance inflation factor indicates how much larger the standard error increases compared to if that variable had 0 correlation to other predictor variables in the model.
+
+**Example**
+If the variance inflation factor of a predictor variable were 5.27 (√5.27 = 2.3), this means that the standard error for the coefficient of that predictor variable is 2.3 times larger than if that predictor variable had 0 correlation with the other predictor variables.
+
+
+## Implementation
+
+* `vif` function in the car R package
+* `ols_vif_tol` function in the olsrr R package
+* `PROC REG` in SAS System
+* `variance_inflation_factor` function in statsmodels Python package
+* `estat vif` in Stata
+* r.vif addon for GRASS GIS
+* `vif` (non categorical) and `gvif` (categorical data) functions in StatsModels Julia programing language

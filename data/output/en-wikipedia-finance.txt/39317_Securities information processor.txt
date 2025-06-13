@@ -1,0 +1,76 @@
+Securities information processor
+
+
+# Securities information processor
+
+
+
+A **securities information processor (SIP)** is a part of the infrastructure of public market data providers in the United States that process, consolidate, and disseminate quotes and trade data from different US securities exchanges and market centers. An important purpose of the SIPs for US securities is to publish the prevailing National Best Bid Offer (NBBO).
+
+There are three exclusive SIPs in operation as of 2023. The UTP Plan oversees the SIP for securities listed on Nasdaq and over-the-counter securities, also called unlisted trading privileges securities. The Consolidated Tape Association (CTA) Plan oversees the SIP for securities listed on all other exchanges, including the New York Stock Exchange, NYSE Arca, NYSE American, NYSE Chicago, and Cboe stock exchanges. The Options Price Reporting Authority (OPRA) oversees the SIP for all exchange-traded securities options in the US.
+
+
+## History
+
+
+### Securities Acts Amendments of 1975
+
+The SIPs were introduced in 1975 through the passage of amendments to Section 11A of the Securities Exchange Act of 1934.
+
+Subsequently, the CTA Plan and UTP Plan were established in the late 1970s, and each obtained an exclusive contract to consolidate and distribute market data for a set of securities.
+
+
+### Regulation NMS
+
+The amendments of 1975 later led to the enactment of Regulation NMS in 2005, which established comprehensive requirements for collecting, consolidating, and disseminating the data by the SIPs. Among other changes, Regulation NMS introduced the definition of a National Best Bid Offer (NBBO), and the responsibility of the SIPs to disseminate the NBBO.
+
+
+### 2020 modern market data infrastructure rules
+
+In 2020, the SEC adopted a sweeping set of changes to its market data infrastructure rules. The new rules required the SIPs to include more detailed trading information and adopted a new model for competing consolidators that removed the exclusive purpose of the SIPs as consolidators of public market data.
+
+The rule changes were subsequently challenged by Nasdaq, the New York Stock Exchange, and other exchange groups in the courts before finally being upheld by the D.C. Circuit Court. In September 2023, following the DC circuit's ruling, the SEC issued an order directing the exchange groups to submit a new NMS plan, referred to as the CT Plan.
+
+
+## Operation
+
+Each participant that reports trades and quotes to a SIP is called a plan participant. Current participants of the CTA Plan and UTP Plan include all U.S. securities exchanges such as Nasdaq, NYSE, NYSE Arca, MIAX Pearl, Members Exchange, and others.
+
+
+### Tape A, B, and C
+
+The market data for U.S. securities is distributed on three networks: Tape A, B, and C. Trades and quotes of securities listed on Nasdaq and over-the-counter securities are distributed on Tape C, whereas trades and quotes of all other listed securities are distributed on Tape A and B.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+The CTA SIP handles Tape A and B securities and provides two feeds: the Consolidated Quotation System (CQS) for quotes and, the NBBO, and the Consolidated Tape System (CTS) for trades. The UTP SIP handles Tape C securities and provides two feeds, the UQDF for quotes and the NBBO and the UTDF for trades.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+
+### Financial operations
+
+SIPs redistribute their profits to participants, rewarding them for providing competitive quotes and executing trades at the best price. This process incentivizes exchanges to vie for the most advantageous quotes, stimulating a more efficient and dynamic market. According to a joint 2018 report by the SIPs' operating committees, the SIPs generated nearly $400 million in average annual revenue from 2007 through 2017.
+
+
+## Criticism
+
+According to a 2020 statement by the then-Commissioner of the Securities Exchange Commission (SEC) Allison Lee, the SIPs have not kept pace in terms of competition, speed, and content.
+
+
+### Lack of competition
+
+The CTA and OPRA are affiliated with NYSE, whereas the UTP Plan is affiliated with Nasdaq. The Securities Industry Automation Corporation (SIAC), which is a subsidiary of NYSE, operates and maintains the CTA's and OPRA's infrastructure. The participant exchanges and market centers that send trade and quote data to the UTP Plan's SIP operate under a service agreement with Nasdaq.
+
+Since the SIPs are run by for-profit exchange groups that also offer their own proprietary market data products that compete with the SIPs, brokers and trading firms have complained that the SIP providers are conflicted and have little incentive for improvement.
+
+Market participants have also argued that the exclusivity of the CTA and UTP's contracts, the exchanges' unique right to sell proprietary market data, and the regulatory requirements for best execution that compel broker-dealers and market participants to purchase either the SIP data or competing proprietary market data, have caused SIP data to become overpriced.
+
+
+### Speed
+
+Another common criticism of the SIPs is that the competing proprietary exchange feeds are significantly faster. In a highly publicized debate on CNBC between then President of BATS Global Markets William O'Brien and IEX's Brad Katsuyama, Katsuyama pointed out that the SIPs were slower than the proprietary market data products sold by the exchange groups. BATS later issued statements confirming this claim.
+
+
+### Content
+
+The SIPs only publish quotes protected under Regulation NMS, meaning only round lots of 100 shares or more are included. From around 2015, odd lots of fewer than 100 shares began to account for a growing proportion of all exchange trades because of retail interest, reaching a record of nearly 50% of all trading volume by 2019. As such, the SIPs are missing a significant portion of liquidity in their published data feeds.
+
+Unlike the proprietary direct feeds, the SIPs do not publish the trade sign (or trade aggressor side) that identifies if a trade was buyer-initiated or seller-initiated. Instead, the trade sign has to be inferred, which could have an accuracy as low as 55% to 72%.
+

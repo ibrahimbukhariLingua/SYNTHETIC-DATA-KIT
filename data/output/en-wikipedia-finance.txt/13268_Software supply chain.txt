@@ -1,0 +1,25 @@
+Software supply chain
+
+
+# Software supply chain
+
+
+
+A **software supply chain** is the components, libraries, tools, and processes used to develop, build, and publish a software artifact.
+
+A **software bill of materials** (**SBOM**) declares the inventory of components used to build a software artifact, including any open source and proprietary software components. It is the software analogue to the traditional manufacturing BOM, which is used as part of supply chain management.
+
+
+## Usage
+
+An SBOM allows builders to make sure open-source and third-party software components are up to date and respond quickly to new vulnerabilities. Buyers and other stakeholders can use an SBOM to perform vulnerability or license analysis, which can be used to evaluate and manage risk in a product.
+
+While many companies use a spreadsheet for general BOM management, there are additional risks and issues in an SBOM written to a spreadsheet. It is best practice for SBOMs to be collectively stored in a repository that can be part of other automation systems and easily queried by other applications.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+
+## Legislation
+
+The Cyber Supply Chain Management and Transparency Act of 2014 was a failed piece of US legislation that proposed to require government agencies to obtain SBOMs for any new products they purchase and to obtain SBOMs for "any software, firmware, or product in use by the United States Government". The act spurred later legislation such as "Internet of Things Cybersecurity Improvement Act of 2017."
+
+The US Executive Order on Improving the Nation’s Cybersecurity of May 12, 2021 ordered NIST and NTIA to lay down guidelines for software supply chain management, including for SBOMs. The NTIA outlines three broad categories of minimum elements of SBOMs: data fields (baseline information about each software component), automation support (the ability to generate SBOMs in machine- and human-readable formats), and practices and processes (how and when organizations should generate SBOMs). The "automation support" requirement specifies the need for "automatic generation," which is possible with the use of Software Composition Analysis (SCA) solutions.
+

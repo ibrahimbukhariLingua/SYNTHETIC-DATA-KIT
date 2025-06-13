@@ -1,0 +1,136 @@
+Ordinal Pareto efficiency
+
+
+# Ordinal Pareto efficiency
+
+
+
+**Ordinal Pareto efficiency** refers to several adaptations of the concept of Pareto-efficiency to settings in which the agents only express ordinal utilities over items, but not over bundles. That is, agents rank the items from best to worst, but they do not rank the subsets of items. In particular, they do not specify a numeric value for each item. This may cause an ambiguity regarding whether certain allocations are Pareto-efficient or not. As an example, consider an economy with three items and two agents, with the following rankings:
+
+* Alice: x > y > z.
+* George: x > z > y.
+
+Consider the allocation [Alice: x, George: y,z]. Whether or not this allocation is Pareto-efficient depends on the agents' numeric valuations. For example:
+
+* It is possible that Alice prefers {y,z} to {x} and George prefers {x} to {y,z} (for example: Alice's valuations for x,y,z are 8,7,6 and George's valuations are 7,1,2, so the utility profile is 8,3). Then the allocation is not Pareto-efficient, since both Alice and George would be better-off by exchanging their bundles (the utility profile would be 13,7).
+* In contrast, it is possible that Alice prefers {x} to {y,z} and George prefers {y,z} to {x} (for example: Alice's valuations are 12,4,2 and George's valuations are 6,3,4). Then the allocation is Pareto-efficient: in any other allocation, if Alice still gets x, then George's utility is lower; if Alice does not get x, then Alice's utility is lower. Moreover, the allocation is Pareto-efficient even if the items are divisible (that is, it is fractionally Pareto efficient): if Alice yields any amount *r* of x to George, then George would have to give her at least 3*r* of y or 6*r* of z in order to keep her utility at the same level. But then George's utility would change by 6*r*-9*r* or 6*r*-24*r*, which is negative.
+
+Since the Pareto-efficiency of an allocation depends on the rankings of bundles, it is a-priori not clear how to determine the efficiency of an allocation when only rankings of items are given.
+
+
+## Definitions
+
+An allocation X = (X₁,...,Xₙ) **Pareto-dominates** another allocation Y = (Y₁,...,Yₙ), if every agent *i* weakly prefers the bundle Xᵢ to the bundle Yᵢ, and at least one agent *j* strictly prefers Xⱼ to Yⱼ. An allocation X is **Pareto-efficient** if no other allocation Pareto-dominates it. Sometimes, a distinction is made between **discrete-Pareto-efficiency**, which means that an allocation is not dominated by a discrete allocation, and the stronger concept of **Fractional Pareto efficiency**, which means that an allocation is not dominated even by a fractional allocation.
+
+The above definitions depend on the agents' ranking of *bundles* (sets of items). In our setting, agents report only their rankings of *items*. A bundle ranking is called **consistent** with an item ranking if it ranks the singleton bundles in the same order as the items they contain. For example, if Alice's ranking is w < x < y < z, then any consistent bundle ranking must have {w} < {x} < {y} < {z]. Often, one makes additional assumptions on the set of allowed bundle rankings, which imposes additional restrictions on consistency. Example assumptions are:
+
+* **Monotonicity:** adding an item to a bundle always improves the bundle. This corresponds to the assumption that all items are good. Thus, Alice's bundle ranking must have e.g. {y} < {y,x}.
+* Responsivity: replacing an item with a better item always improves the bundle. Thus, Alice's bundle ranking must have e.g. {w,x} < {w,y} < {x,y} < {x,z}. This is stronger than consistency.
+* **Additivity**: the agent assigns a value to each item, and values each bundle at the sum of its contents. This assumption is stronger than responsivity. For example, if Alice ranks {x,y}<{z} then she must rank {w,x,y}<{w,z}.
+* Lexicographic:the agent always ranks a bundle that contains some item x above any bundle that contains only items ranked lower than x. In the above example, Alice must rank {w,x,y} < {z}.
+
+## Necessary Pareto-efficiency
+
+Brams, Edelman and Fishburn⁹ call an allocation **Pareto-ensuring** if it is Pareto-efficient for *all* bundle rankings that are consistent with the agents' item rankings (they allow all *monotonic* and *responsive* bundle rankings). For example:
+
+* If agents' valuations are assumed to be positive, then every allocation giving all items to a single agent is Pareto-ensuring.
+* If Alice's ranking is x>y and George's ranking is y>x, then the allocation [Alice:x, George:y] is Pareto-ensuring.
+* If Alice's ranking is x>y>z and George's ranking is x>z>y and the allocations must be discrete, then the allocation [Alice: x,y; George: z] is Pareto-ensuring.⁵ᶜˡᵃʳⁱᶠⁱᶜᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+* With the above rankings, the allocation [Alice: x, George: y,z] is **not** Pareto-ensuring. As explained in the introduction, it is not Pareto-efficient e.g. when Alice's valuations for x,y,z are 8,7,6 and George's valuations are 7,1,2. Note that both these valuations are consistent with the agents' rankings.
+
+Bouveret, Endriss and Lang.³ use an equivalent definition. They say that an allocation X **possibly Pareto-dominates** an allocation Y if there exists some bundle rankings consistent with the agents' item rankings, for which X Pareto-dominates Y. An allocation is called **Necessarily-Pareto-efficient (NecPE)** if no other allocation possibly-Pareto-dominates it.
+
+The two definitions are logically equivalent:
+
+* "X is Pareto-ensuring" is equivalent to "For every consistent bundle ranking, for every other allocation Y, Y does not Pareto-dominate X".
+* "X is NecPE" is equivalent to "For every other allocation Y, for every consistent bundle ranking, Y does not Pareto-dominate X". Exchanging the order of "for all" quantifiers does not change the logical meaning.
+
+The NecPE condition remains the same whether we allow *all* additive bundle rankings, or we allow only rankings that are based on additive valuations with diminishing differences.Sᵉᶜ.⁸
+
+
+### Existence
+
+NecPE is a very strong requirement, which often cannot be satisfied. For example, suppose two agents have the same item ranking. One of them, say Alice, necessarily receives the lowest-ranked item. There are consistent additive bundle-rankings in which Alices values this item at 0 while George values it at 1. Hence, giving it to Alice is not Pareto-efficient.
+
+If we require that all items have a strictly positive value, then giving all items to a single agent is trivially NecPE, but it very unfair. If fractional allocations are allowed, then there may be no NecPE allocation which gives both agents a positive value. For example, suppose Alice and George both have the ranking x>y. If both get a positive value, then either Alice gets some x and George gets some y, or vice-versa. In the former case, it is possible that Alice's valuations are e.g. 4,2 and George's valuations are 8,1, so Alice can exchange a small amount *r* of x for a small amount 3*r* of y. Alice gains 6*r*-4*r* and George gains 8*r*-3*r*, so both gains are positive. In the latter case, an analogous argument holds.
+
+
+## Possible Pareto-efficiency
+
+Brams, Edelman and Fishburn⁹ call an allocation **Pareto-possible** if it is Pareto-efficient for *some* bundle rankings that are consistent with the agents' item rankings. Obviously, every Pareto-ensuring allocation is Pareto-possible. In addition:
+
+* If Alice's ranking is x>y>z and George's ranking is x>z>y, then the allocation [Alice: x, George: y,z] is Pareto-possible. As explained in the introduction, it is Pareto-efficient e.g. when Alice's valuations for x,y,z are 12,4,2 and George's valuations are 6,3,4. Note that both these valuations are consistent with the agents' rankings.
+* If Alice's ranking is x>y and George's ranking is y>x, then the allocation [Alice:y, George:x] is **not** Pareto-possible, since it is always Pareto-dominated by the allocation [Alice:x, George:y].
+
+Bouveret, Endriss and Lang.³ use a different definition. They say that an allocation X **necessarily Pareto-dominates** an allocation Y if for *all* bundle rankings consistent with the agents' item rankings, X Pareto-dominates Y. An allocation is called **Possibly-Pareto-efficient (PosPE)** if no other allocation necessarily-Pareto-dominates it.
+
+The two definitions are *not* logically equivalent:
+
+* "X is Pareto-possible" is equivalent to "There exist a consistent bundle ranking for which, for every other allocation Y, Y does not dominate X". It must be *the same* bundle ranking for all other allocations Y.
+* "X is PosPE" is equivalent to "For every other allocation Y, there exists a consistent bundle ranking, for which Y does not dominate X". There can be *a different* bundle ranking for every other allocation Y.
+
+If X is Pareto-possible then it is PosPE, but the other implication is not (logically) true.ᶜˡᵃʳⁱᶠⁱᶜᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+The Pareto-possible condition remains the same whether we allow *all* additive bundle rankings, or we allow only rankings that are based on additive valuations with *diminishing differences*.Sᵉᶜ.⁸
+
+
+## Stochastic-dominance Pareto-efficiency
+
+Bogomolnaia and Moulin³⁰²–³⁰³ present an efficiency notion for the setting of fair random assignment (where the bundle rankings are *additive*, the allocations are *fractional*, and the sum of fractions given to each agent must be *at most 1*). It is based on the notion of stochastic dominance.
+
+For each agent *i*, A bundle *Xᵢ* **weakly-stochastically dominates** **(wsd)** a bundle *Yᵢ* if for every item z, the total fraction of items better than *z* in *Xᵢ* is at least as large as in *Yᵢ* (if the allocations are discrete, then Xᵢ sd Yᵢ means that for every item z, the number of items better than *z* in *Xᵢ* is at least as large as in *Yᵢ*). The sd relation has several equivalent definitions; see responsive set extension. In particular, Xᵢ sd Yᵢ if-and-only-if, for every bundle ranking consistent with the item ranking, Xᵢ is at least as good as Yᵢ. A bundle *Xᵢ* **strictly-stochastically dominates** **(ssd)** a bundle *Yᵢ* if Xᵢ wsd Yᵢ and Xᵢ ≠ Yᵢ. Equivalently, for at least one item z, the "at least as large as in Yᵢ" becomes "strictly larger than in Yᵢ". In the ssd relation is written as *"Xᵢ* *>> Yᵢ".*
+
+An allocation X = (X₁,...,Xₙ) **stochastically dominates** another allocation Y = (Y₁,...,Yₙ), if for every agent *i*: Xᵢ wsd Yᵢ, and Y≠X (equivalently: for at least one agent i, Xᵢ ssd Yᵢ). In the stochastic domination relation between allocations is also written as *"X* *>> Y".* This is equivalent to necessary Pareto-domination.
+
+An allocation is called **sd-efficient** (also called: **ordinally efficient** or **O-efficient**) if there no allocation that stochastically dominates it. This is similar to PosPE, but emphasizes that the bundle rankings must be based on *additive* utility functions, and the allocations may be *fractional*.
+
+
+### Equivalences
+
+As noted above, Pareto-possible implies PosPE, but the other direction is not logically true. McLennan proves that they are equivalent in the fair random assignment problem (with strict or weak item rankings). Particularly, he proves that the following are equivalent:
+
+* (a) X is sd-efficient (that is, X is PosPE);
+* (b) there exists additive bundle-rankings consistent with the agents' item-rankings for which X is fractionally-Pareto-efficient (that is, X is Pareto-possible);
+* (c) there exists additive bundle-rankings consistent with the agents' item-rankings for which X maximizes the sum of agents' utilities.
+
+The implications (c) → (b) → (a) are easy; the challenging part is to prove that (a) → (c). McLennan proves it using the polyhedral separating hyperplane theorem.
+
+Bogomolnaia and MoulinLᵉᵐ.³ prove another useful characterization of sd-efficiency, for the same fair random assignment setting but with strict item rankings. Define the **exchange graph** of a given fractional allocation as a directed graph in which the nodes are the items, and there is an arc x→y iff there exists an agent *i* that prefers x and receives a positive fraction of y. Define an allocation as **acyclic** if its exchange graph has no directed cycles. Then, an allocation sd-efficient iff it is acyclic.
+
+Fishburn proved the following equivalence on dominance relations of *discrete* bundles, with *responsive* bundle rankings:Lᵉᵐ.².¹
+
+* If *Xᵢ* *>> Yᵢ* (that is: *Xᵢ* ≠ *Yᵢ* , and for every item z, *Xᵢ* has at least as many items that are at least as good as z), then for every responsive bundle-ranking consistent with the item-ranking, *Xᵢ* *>Yᵢ .*
+* If *not Xᵢ* *>> Yᵢ ,* then there exists at least one responsive bundle-ranking consistent with the item-ranking, for which *Xᵢ* *<Yᵢ .*
+
+Therefore, the following holds for dominance relations of discrete allocations: *X* *>> Y* iff *X* necessarily Pareto-dominates *Y*.⁸
+
+
+### Properties
+
+If *Xᵢ* wsd *Yᵢ*, then *|Xᵢ*| ≥ *|Yᵢ|*, that is, the total quantity of objects (discrete or fractional) in *Xᵢ* must be at least as large as in *Yᵢ*. This is because, if *|Xᵢ*| < *|Yᵢ|*, then for the valuation which assigns almost the same value for all items, v(*Xᵢ*) < v(*Yᵢ*).
+
+This means that, if X wsd Y and both X and Y are complete allocations (all objects are allocated), then necessarily *|Xᵢ*| = *|Yᵢ|* for all agents *i*.Lᵉᵐ.².² In other words, a complete allocation X can be necessarily-dominated only by an allocation Y which assigns to every agent the same amount as X does.
+
+This means that, in particular, if X is sd-efficient in the set of all allocations that give exactly 1 unit to each agent, then X is sd-efficient in general.
+
+
+## Lexicographic-dominance Pareto-efficiency
+
+Cho presents two other efficiency notions for the setting of fair random assignment, based on lexicographic dominance.
+
+An allocation X = (X₁,...,Xₙ) **downward-lexicographically (dl) dominates** another allocation Y = (Y₁,...,Yₙ), if for every agent *i,* Xᵢ weakly-dl-dominates Yᵢ, and for at least one agent *j*, Xⱼ strictly-dl-dominates Yⱼ. An allocation is called **dl-efficient** if there is no other allocation that dl-dominates it.
+
+Similarly, based on the notion of **upward-lexicographic (ul) domination**, An allocation is called **ul-efficient** if there is no other allocation that ul-dominates it.
+
+In general, sd-domination implies dl-domination and ul-domination. Therefore, dl-efficiency and ul-efficiency imply sd-efficiency.
+
+
+### Equivalences
+
+Consider the fair random assignment setting (the bundle rankings are *additive*, the allocations may be *fractional*, and the total fraction given to each agent must be 1), with strict item rankings, where there can be more items than agents (so some items may remain unallocated). Cho and Dogan prove that, in this particular case, dl-efficiency and ul-efficiency are equivalent to sd-efficiency. In particular, they prove that if an allocation X is sd/ld/ul efficient, then:
+
+* The exchange graph of X is acyclic, and -
+* X is non-wasteful ("wasteful" means that some agent *i*, who receives a positive fraction of an item *x*, prefers another item *y* which is not entirely allocated).
+
+The equivalence does not hold if there are distributional constraints: there are allocations which are sd-efficient but not dl-efficient.Eˣᵃᵐᵖˡᵉ ⁴
+

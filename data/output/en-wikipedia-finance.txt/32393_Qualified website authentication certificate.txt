@@ -1,0 +1,53 @@
+Qualified website authentication certificate
+
+
+# Qualified website authentication certificate
+
+
+
+A **qualified website authentication certificate** (**QWAC certificate**) is a qualified digital certificate under the trust services defined in the European Union eIDAS Regulation.
+
+A 2016 European Union Agency for Cybersecurity report proposed six strategies and twelve recommended actions as an escalated approach that targets the most important aspects viewed as critical for improving the website authentication market in Europe and successfully introducing qualified website authentication certificates as a means to increase transparency in this market.
+
+
+## QWAC in the context of other standards
+
+There are different types of website authentication certificates, which is distinguished by the content contained within the Subject of the certificate: Domain Validated (DV), Organization Validated (OV) and Extended Validation (EV).
+Another distinction that can be made is the number of domains that are secured by the certificate: Single domain, wildcard, multi domain. Extended Validation certificates have a distinct set of issuance policies, requiring an enhanced level of certificate subscriber identity verification as prescribed by the CA/Browser Forum, thus they have the highest level of identity assurance of all TLS certificates in the marketplace. "EV TLS Certificate Requirements". *CABF*. 31 August 2013. The EV certificate was distinguished in the browser by the presence of a green address bar, green text, and presence of legal business name in URL depending on which browser was used. Research conducted by Google and UC Berkeley identified that users didn't notably alter behavior based on the presence or absence of these indicators. The results of this research motivated Google, which commanded significant browser market share, to discontinue differentiation between the different certificate types. The EU approached the CABF in 2018 requesting to partner on updating existing EV requirements to include additional Subject information within the EV certificate. Google, followed by other browsers, was already in the process of deprecating EV indication and discouraged the EU from using EV certificates. As of 2019 most major browsers no longer have strong indication of EV certificates. Most financial institutions both in the EU and US continue to use EV certificates.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+With the reluctance of browsers to modify existing EV requirements to accommodate new eIDAS identifying information, eIDAS regulators began introducing a new parallel security structure relying on government certification of trust service providers (TSPs). This would exist alongside the existing multi-stakeholder Certificate authority (CA) system. The parallel security structure gives concern to industry stakeholders who have identified risks in the approach, mostly around government mandated CA governance, and raised concerns that implementation would undermine the privacy of individuals on the web.
+
+
+## eIDAS Regulation
+
+In the eIDAS Regulation trust services are defined as electronic services, normally provided by TSPs, which consist of electronic signatures, electronic seals, electronic time stamps, electronic registered delivery services and website authentication.
+
+In essence, the eIDAS Regulation provides a framework to promote:
+
+* Transparency and accountability: well-defined minimal obligations for TSPs and liability.
+* Guarantee of trustworthiness of the services together with security requirements for TSPs.
+* Technological neutrality: avoiding requirements which could only be met by a specific technology.
+* Market rules and standardization certainty.
+
+## Content
+
+Website authentication certificates are one of the five trust services defined in the eIDAS Regulation. Article 45 sets the requirement for trust service providers issuing qualified website authentication certificates of being qualified, which implies that all requirements for qualified trust service providers (QTSPs) described in the previous section will be applicable. Annex IV defines the content of qualified certificates for website authentication:
+
+1. An indication that the certificate has been issued as a qualified certificate for website authentication.
+2. A set of data unambiguously representing the qualified trust service provider issuing the qualified certificates including the member state in which that provider is established and adequately to the situation
+ 1. for a legal person: the name and, where applicable, registration number as stated in the official records,
+ 2. for a natural person: the person’s name.
+3. For natural persons: at least the name of the person to whom the certificate has been issued, or a pseudonym. If a pseudonym is used, it shall be clearly indicated. For legal persons: at least the name of the legal person to whom the certificate is issued and, where applicable, the registration number as stated in the official records.
+4. Elements of the address, including at least city and state, of the natural or legal person to whom the certificate is issued and, where applicable, as stated in the official records.
+5. The domain names operated by the natural or legal person to whom the certificate is issued.
+6. Certificate’s period of validity.
+7. The certificate identity code, which must be unique for the qualified trust service provider.
+8. The advanced electronic signature or advanced electronic seal of the issuing qualified trust service provider.
+9. The location where the certificate supporting the advanced electronic signature or advanced electronic seal referred to in point 8 is available free of charge.
+10. The location of the certificate validity status services that can be used to enquire as to the validity status of the qualified certificate.
+
+
+## Criticism
+
+Updates to eIDAS proposed in 2021 require browsers to provide new forms of assurance of website authenticity without specifying exactly how. They require web browsers like Chrome, Safari, and Firefox to incorporate a list of government-specified "Trusted Service Providers", and to accept and "displayed in a user friendly manner" the QWACs which those TSPs issue, despite a variety of trust, legal, technical and security concerns. The Internet Society and Mozilla say that requirements of the regulation require violating other requirements. They also assert that it would undermine technical neutrality and interoperability, undermine privacy for end users, and create dangerous security risks. They suggest instead continuing to build on the existing CA framework.
+

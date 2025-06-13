@@ -1,0 +1,44 @@
+Double-spending
+
+
+# Double-spending
+
+
+
+**Double-spending** is the unauthorized production and spending of money, either digital or conventional. It represents a monetary design problem: a good money is verifiably scarce, and where a unit of value can be spent more than once, the monetary property of scarcity is challenged. As with counterfeit money, such double-spending leads to inflation by creating a new amount of copied currency that did not previously exist. Like all increasingly abundant resources, this devalues the currency relative to other monetary units or goods and diminishes user trust as well as the circulation and retention of the currency.
+
+Fundamental cryptographic techniques to prevent double-spending, while preserving anonymity in a transaction, are the introduction of an authority (and hence centralization) for blind signatures and, particularly in offline systems, secret splitting.
+
+
+## Centralized digital currencies
+
+Prevention of double-spending is usually implemented using an online central trusted third party that can verify whether a token has been spent. This normally represents a single point of failure from both availability and trust viewpoints.
+
+
+## Decentralized digital currencies
+
+In a decentralized system, the double-spending problem is significantly harder to solve. To avoid the need for a trusted third party, many servers must store identical up-to-date copies of a public transaction ledger, but as transactions (requests to spend money) are broadcast, they will arrive at each server at slightly different times. If two transactions attempt to spend the same token, each server will consider the first transaction it sees to be valid, and the other invalid. Once the servers disagree, there is no way to determine true balances, as each server's observations are considered equally valid.
+
+Most decentralized systems solve this problem with a consensus algorithm, a way to bring the servers back in sync. Two notable types of consensus mechanisms are proof-of-work and proof-of-stake.
+
+By 2007, a number of distributed systems for the prevention of double-spending had been proposed.
+
+The cryptocurrency Bitcoin implemented a solution in early 2009. Its cryptographic protocol used a proof-of-work consensus mechanism where transactions are batched into blocks and chained together using a linked list of hash pointers (blockchain). Any server can produce a block by solving a computationally difficult puzzle (specifically finding a partial hash collision) called mining. The block commits to the entire history of bitcoin transactions as well as the new set of incoming transactions. The miner is rewarded some bitcoins for solving it.
+
+The double-spending problem persists, however, if two blocks (with conflicting transactions) are mined at the same approximate time. When servers inevitably disagree on the order of the two blocks, they each keep both blocks temporarily. As new blocks arrive, they must commit to one history or the other, and eventually a single chain will continue on, while the other(s) will not. Since the longest (more technically "heaviest") chain is considered to be the valid data set, miners are incentivized to only build blocks on the longest chain they know about in order for it to become part of that dataset (and for their reward to be valid).
+
+Transactions in this system are therefore never technically "final" as a conflicting chain of blocks can always outgrow the current canonical chain. However, as blocks are built on top of a transaction, it becomes increasingly costly and thus unlikely for another chain to overtake it.
+
+
+## 51% attack
+
+Due to the nature of a decentralized blockchain, and in lack of a central authority to do so, the correct succession of transactions is defined only by the dominating consensus. This leads to the possibility of one actor gaining majority control over the entities deciding said consensus, to force their own version of events, including alternative and double transactions. Due to information propagation delays, 51% attacks are temporarily possible for a localized subset of actors too.
+
+The total computational power of a decentralized proof-of-work system is the sum of the computational power of the nodes, which can differ significantly due to the hardware used. Larger computational power increases the chance to win the mining reward for each new block mined, which creates an incentive to accumulate clusters of mining nodes, or mining pools. Any pool that achieves 51% hashing power can effectively overturn network transactions, resulting in double spending.
+
+One of the Bitcoin forks, Bitcoin Gold, was hit by such an attack in 2018 and then again in 2020.
+
+A given cryptocurrency's susceptibility to attack depends on the existing hashing power of the network since the attacker needs to overcome it. For the attack to be economically viable, the market cap of the currency must be sufficiently large to justify the cost to rent hashing power.
+
+In 2014, mining pool GHash.io obtained 51% hashing power in Bitcoin which raised significant controversies about the safety of the network. The pool voluntarily capped their hashing power at 39.99% and requested other pools to follow in order to restore trust in the network.
+

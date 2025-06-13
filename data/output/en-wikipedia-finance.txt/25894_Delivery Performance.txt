@@ -1,0 +1,75 @@
+Delivery Performance
+
+
+# Delivery Performance
+
+
+
+**Delivery performance** (DP) is a broadly used standard KPI measurement in supply chains to measure the fulfillment of a customer's demand to the wish date. Following the nomenclature of the DR-DP-Matrix three main approaches to measure DP can be distinguished:
+
+* {\displaystyle DP\_{T}^{V}}
+* {\displaystyle DP\_{D}^{S}}
+* {\displaystyle DP\_{T}^{S}}
+
+## Volume/on time
+
+
+### Formula
+
+If ({\displaystyle (Demand\_{p,c}+Backlog\_{p-1,c})>0})
+
+Else
+
+Demand:= customers wish
+c:= product identifier
+p:= Time period e.g. a day, a week, a month ...
+
+The cumulation over a period and a group of product identifiers c is done as follows:
+{\displaystyle DP\_{p,c}={\frac {\sum \_{p,c}(DP\_{T}^{V})}{count\_{p,c}(DP\_{T}^{V}<>NULL)}}}
+
+whereas p is determined by demand period
+
+
+## Singular/delivery and singular/on time
+
+
+### Singular case definition
+
+To fit to the needs of the environment, the granularity of a singular case ({\displaystyle DP\_{\*}^{S}}) has to be defined. In general a singular case is described by a n-Tuple consisting of a set of the following order and delivery details:
+
+* order number
+* customer identifier
+* product identifier
+* wish date of customer
+* confirmed date of supplier
+* ship to information
+* delivery date
+* delivery note number
+
+### Formula
+
+* **{\displaystyle DP\_{D}^{S}}**
+
+arrival date = delivery date + transit time
+
+By cumulating the results of singular cases over a certain period p and, if necessary, additional criteria c (e.g. customer, product, ...) the delivery performance is calculated as follows:
+
+{\displaystyle DP\_{p,c}={\frac {\sum \_{p,c}(DP)}{count\_{p,c}(singularcases)}}}
+
+whereas p is determined by the arrival date
+
+* **{\displaystyle DP\_{T}^{S}}**
+
+arrival date = delivery date + transit time
+
+By cumulating the results of singular cases over a certain period p and, if necessary, additional criteria c (e.g. customer, product, ...) the delivery performance is calculated as follows:
+
+{\displaystyle DP\_{p,c}={\frac {\sum \_{p,c}(DP)}{count\_{p,c}(singularcases)}}}
+
+whereas p is determined by the first confirmed date
+
+
+## Result
+
+0%≤{\displaystyle DP\_{T/D}^{S/V}}≤100%
+

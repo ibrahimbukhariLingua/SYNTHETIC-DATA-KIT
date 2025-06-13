@@ -1,0 +1,87 @@
+Geac Computer Corporation
+
+
+# Geac Computer Corporation
+
+
+
+**Geac Computer Corporation, Ltd** (TWSE: GAC and Nasdaq: GEAC) was a producer of enterprise resource planning, performance management, and industry specific software based in Markham, Ontario. It was acquired by Golden Gate Capital's Infor unit in March 2006 for US$1 billion.
+
+
+## History
+
+Geac was incorporated in March 1971 by Robert Kurt Isserstedt and Robert Angus ("Gus") German.
+
+Geac started with a contract with the Simcoe County Board of Education to supply onsite accounting and student scheduling. They programmed inexpensive minicomputers to perform tasks that were traditionally done by expensive mainframe computers.
+
+
+### Hardware/software
+
+Geac designed additional hardware to support multiple simultaneous terminal connections, and with Dr Michael R Sweet developed its own operating system (named *Geac*) and own programming
+language (OPL) resulting in a multi-user real-time solution called the **Geac 500**.
+
+The initial implementation of this system at Donlands Dairy in Toronto led to a contract at Vancouver City Savings Credit Union ("Vancity") in Vancouver, British Columbia, to create a real-time multi-branch online banking system. Geac developed hardware and operating system software to link minicomputers together, and integrated multiple-access disk drives, thereby creating a multi-processor minicomputer with a level of protection from data loss. Subsequently, Geac replaced the minicomputers with a proprietary microcoded processor of its own design, resulting in vastly improved software flexibility, reliability, performance, and fault tolerance. This system, called the **Geac 8000** was introduced in 1978.
+
+Geac introduced its **library management software** in 1977, and a number of well-known libraries adopted it. These included the US Library of Congress and the Bibliothèque Nationale de France. In the mid-1980s, it released a suite of office automation apps (calendar, wordprocessor, e-mail, spreadsheet, etc.) running on the 8000. This application suite was piloted by the federal Office for Regional Development (ORD – later absorbed by Industry Canada) and later still was used by the NAFTA Trade Negotiations Office. Compared to similar LAN-based office initiatives of the same period, Geac's multi-user minicomputer-based offering provided significantly higher availability. And its software developers were exemplary in fixing bugs promptly and responding to requests for enhancements.
+
+
+### Financials
+
+During the 1990s the company successfully embarked on an aggressive acquisition strategy led by Steve Sadler, CEO, and expanded into a wide range of vertical markets, including newspaper publishing, health care, hospitality, property management, and others.
+
+Its 1999 acquisition of JBA Holdings PLC by the new leader, Doug Bergeron, Geac CEO, doubled the size of the company, but became a financial disaster.
+Geac's acquisitions were not aligned to any customer focused strategy: they covered a wide range of products and geographies, and many analysts accused Geac of "financial engineering".
+
+In the early 2000s, the company faced significant financial issues: in April 2001, the company's US$225 million credit line was in default, and during FY2001, Geac posted a loss of US$169 million on revenues of US$552 million. Geac updated some of its legacy software replaced its management team, ultimately tapping its chairman, Charles S. Jones, to be the CEO, Donna DeWinter to be the CFO (Ms. De Winter is currently CEO of Nexient Learning), and made Craig Thorburn the senior vice president of acquisitions (while he was a partner at Blake, Cassels & Graydon). Geac then paid off its bank loans, and significantly improved its profit margins, and its stock began to increase. It listed on the NASDAQ. It also embarked on a strategy of establishing a single focus for its software products around selling software to the chief financial officer of client organizations. It profitably divested its real estate software operations after making it profitable and a growing business, and acquired two business performance management companies: Comshare (Nasdaq: CSRE) and Extensity (Nasdaq: EXTN). Geac also obtained a $150 million credit line and fended off a proxy fight brought by Crescendo Partners. In March 2006, the company was acquired by Infor Global Solutions for US$1 billion, or $11.10 per share, compared to US$1.12 five years earlier, providing the investors a 10x return. In Fiscal 2001, the company posted a US$169.1 million loss, and in fiscal 2005, Geac posted net income of US$77 million.
+
+After it was acquired, several executives of Geac, including CEO Charles S. Jones, left the company to form Bedford Funding, a private equity fund that invests in software companies. While Geac was headquartered in Canada, Mr. Jones lived in Westchester County, NY, and also served on the board of the Westchester Land Trust, to which he donated over $100,000 in 2006. Mr. Jones would also later donate $100,000 to Iona Preparatory School.
+Bedford Funding would later make investments in several IT companies, including MDLIVE.
+
+
+## Geac programming languages
+
+Geac invented ZOPL. Geac's main low-level programming language was called OPL (Our Programming Language) which later became ZOPL (or Z-OPL). OPL found uses in:
+
+* a 1970s high-level minicomputer language on Hewlett Packard systems
+* conventional business-applications on minicomputers
+
+Geac had a number of higher level languages, such as Hugo (used by the Library division). These languages were quite different from ZOPL, and had only a limited number of variables (initially 24). They were very specifically designed for one many use - in this case Library Management Software, and there was a similar language for the Financial Systems business.
+
+
+## Geac operating system
+
+Geac Corporation's operating system was named **Geac**.
+
+
+## Geac minicomputers
+
+Between 1971 and 1977, four Geac minicomputers were introduced:
+
+* Geac 150 (1971)
+* Geac 500 (1972)
+* Geac 800 (1973)
+* Geac 8000 (1977)
+
+The 8000 had 300 MB disks, and initially supported 8–12 terminals (subsequently increased to permit 20–40). These terminals were custom-designed Informer units. However concentrators could be used to support multiple terminals per serial line.
+
+The 2nd version of the 8000, a dual-CPU system released 1978, supported up to about 1GB of hard disk.
+
+The Geac 9000 (or Concept 9000) was introduced in the 1980s. This was a very different machine from the previous ones. It was multi-processor 16-bit machine, and each processor could operate fairly autonomously. The operating system maintained a list of processes that needed to be performed, and allocated them to any processor that was available at the time. It was, in effect, an early multi-processor running in parallel. Disk drives were connected to one processor, so any disk reads and writes had to go through that processor. Otherwise any processor could be used for any task.
+
+All of the Geac computers had an unusual disc architecture. Disc files were fixed size, and could not grow. For this reason the Geac computers were not suitable for general-purpose multiuser systems, but it did make them superb designs for the applications for which they were intended. In a Library Management system, for instance, it is known at the outset how many titles, items (e.g. copies of books), borrowers and so forth were to be catered for. This means that, for instance, the borrower file size was known at the time of sale. The great advantage of this was that each borrower's data started at a known physical position on the disc, and all the information for that borrower was contiguous. In this way, given the ID number on the borrower's barcode, the physical location on the disc of that borrower's data is known, and the data could be located immediately, and with only one disc access and one disc read. In this way performance was fast and consistent, no matter how many books and borrowers were on the system.
+
+
+## Millennium
+
+Geac purchased Dun & Bradstreet Software Services in 1996, including a dozen software packages collectively known as Millennium.
+
+
+## Acquisitions
+
+Geac made numerous acquisitions during its existence, including:
+
+
+## Products
+
+Products that Geac produced included Anael, Expert & Millennium Server, MPC, RunTime, SmartStream, System21, and VUBIS.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+

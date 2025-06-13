@@ -1,0 +1,49 @@
+Qualified digital certificate
+
+
+# Qualified digital certificate
+
+
+
+In the context of Regulation (EU) No 910/2014 (eIDAS), a **qualified digital certificate** is a public key certificate issued by a trust service provider which has government-issued qualifications. The certificate is designed to ensure the authenticity and data integrity of an electronic signature and its accompanying message and/or attached data.
+
+
+## Description
+
+eIDAS defines several tiers of electronic signatures that can be used in conducting public sector and private transactions within and across the borders of EU member states. A qualified digital certificate, in addition to other specific services provided by a qualified trust service provider, is required to elevate the status of an electronic signature to that of being considered a qualified electronic signature. Using cryptography, the digital certificate, also known as a public key certificate, contains information to link it to its owner and the digital signature of the trust entity that verifies the authenticity of the content that has been signed.
+
+According to eIDAS, to be considered a qualified digital certificate, the certificate must meet the requirements provided in Annex I of Regulation (EU) No 910/2014, including, but not limited to:
+
+* Identification that the certificate is a qualified certificate for electronic signature
+* Identification of the qualified trust service provider who issued the qualified certificate, including such information
+* Corresponding electronic signature validation data and electronic signature creation data
+* Indication of the certificate's period of validity
+* Unique certificate identity code of the trust service provider
+* Qualified trust service provider's advanced electronic signature or electronic seal
+
+## Vision
+
+The need for non-repudiation and authentication of electronic signatures was originally addressed in the Electronic Signatures Directive 1999/93/EC to help facilitate secure transactions, specifically those that occur across the borders of EU Member states. The eIDAS Regulation later replaced the Directive and defined the standards to be used in the creation of qualified digital certificates by trust service providers.
+
+
+## Role of a qualified trust service provider
+
+A qualified digital certificate can only be issued by a qualified trust service provider that has received authorization from their member state's supervisory body to provide qualified trust services for creating qualified electronic signatures. The provider must be listed upon the EU Trust List; otherwise, they are not permitted to provide qualified digital certificates or other qualified trust services.
+The trust service provider is required to abide by the guidelines established under eIDAS for creating qualified digital certificate, which include:
+
+* Providing a valid date and time stamp of when the certificate was created,
+* immediate revocation of any signature that has an expired certificate,
+* providing appropriate training to all their employees who are involved with providing trust services,
+* any equipment or software that is used for trust services must be trustworthy and capable of preventing certificates from being forged.
+
+## Legal implications of electronic signatures with qualified digital certificates
+
+In court, a qualified electronic signature provided the highest level of probative value, which makes it difficult to refute its authorship. A qualified electronic signature, along with its qualified certificate is given the same consideration as a handwritten signature when used as evidence in legal proceedings. The validity of a qualified electronic signature that has been created with a qualified certificate must be accepted by other EU member states regardless of which member state the signature was produced in.
+
+
+## Global perspective
+
+In other parts of the world, similar concepts have been created to define standards for electronic signatures. In Switzerland, the digital signing standard ZertES has comparable standards that address the conformity and regulation of trust service providers who product digital certificates.
+
+In the United States, the NIST Digital Signature Standard (DSS) does not provide a comparable standard for regulating qualified certificates that would address non-repudiation of a signatory's qualified certificate.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ An amendment to NIST DSS is currently being discussed that would be more in-line with how eIDAS and ZertES handle trusted services.
+

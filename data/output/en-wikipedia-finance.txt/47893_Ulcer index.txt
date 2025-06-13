@@ -1,0 +1,43 @@
+Ulcer index
+
+
+# Ulcer index
+
+
+
+The **ulcer index** is a stock market risk measure or technical analysis indicator devised by Peter Martin in 1987, and published by him and Byron McCann in their 1989 book *The Investors Guide to Fidelity Funds*. It is a measure of downwards volatility, the amount of drawdown or retracement over a period.
+
+Other volatility measures like standard deviation treat up and down movement equally, but most market traders are long and so welcome upward movement in prices. It is the downside that causes stress and the stomach ulcers that the index's name suggests. (The name predates the discovery that most gastric ulcers are caused by a bacterium rather than stress.)
+
+The term *ulcer index* has also been used (later) by Steve Shellans, editor and publisher of MoniResearch Newsletter for a different calculation, also based on the ulcer-causing potential of drawdowns. Shellans' index is not described in this article.
+
+
+## Calculation
+
+The index is based on a given past period of N days. Working from oldest to newest a highest price (highest closing price) seen so far is maintained, and any close below that is a retracement, expressed as a percentage:
+
+{\displaystyle R\_{i}=100\times {\frac {{\text{price}}\_{i}-{\text{max price}}}{\text{max price}}}}
+
+For example, if the high so far is $5.00 then a price of $4.50 is a retracement of −10%. The first R is always 0, there being no drawdown from a single price. The quadratic mean (or root mean square) of these values is taken, similar to a standard deviation calculation.
+
+{\displaystyle {\text{Ulcer}}={\sqrt {R\_{1}^{2}+R\_{2}^{2}+\cdots R\_{N}^{2} \over N}}}
+
+Because the R values are squared it is immaterial whether they are expressed as positives or negatives; both result in a positive Ulcer Index.
+
+The calculation is relatively immune to the sampling rate used. It gives similar results when calculated on weekly prices as it does on daily prices. Martin advises against sampling less often than weekly though, since for instance with quarterly prices a fall and recovery could take place entirely within a period and thereby not affect the index.
+
+
+## Usage
+
+Martin recommends his index as a measure of risk in various contexts where usually the standard deviation (SD) is used for that purpose. For example, the Sharpe ratio, which rates an investment's excess return (return above a safe cash rate) against risk, is:
+
+{\displaystyle {\text{Sharpe ratio}}={\frac {{\text{return}}\ -\ {\text{risk-free return}}}{\text{SD}}}}
+
+The ulcer index can replace the SD to make an ulcer performance index (UPI) or Martin ratio:
+
+{\displaystyle {\text{UPI}}={\frac {{\text{return}}\ -\ {\text{risk-free return}}}{\text{ulcer index}}}}
+
+In both cases, annualized rates of return would be used (net of costs, inclusive of dividend reinvestment, etc.).
+
+The index can also be charted over time and used as a kind of technical analysis indicator, to show stocks going into ulcer-forming territory (for one's chosen time-frame), or to compare volatility in different stocks. As with the Sharpe Ratio, a higher value of UPI is better than a lower value (investors prefer more return for less risk).
+

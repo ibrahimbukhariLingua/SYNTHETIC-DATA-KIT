@@ -1,0 +1,158 @@
+Exponential tilting
+
+
+# Exponential tilting
+
+
+
+**Exponential Tilting** (ET), **Exponential Twisting**, or **Exponential Change of Measure** (ECM) is a distribution shifting technique used in many parts of mathematics.
+The different exponential tiltings of a random variable {\displaystyle X} is known as the natural exponential family of {\displaystyle X}.
+
+Exponential Tilting is used in Monte Carlo Estimation for rare-event simulation, and rejection and importance sampling in particular.
+In mathematical finance Exponential Tilting is also known as **Esscher tilting** (or the Esscher transform), and often combined with indirect Edgeworth approximation and is used in such contexts as insurance futures pricing.
+
+The earliest formalization of Exponential Tilting is often attributed to Esscher with its use in importance sampling being attributed to David Siegmund.
+
+
+## Overview
+
+Given a random variable {\displaystyle X} with probability distribution {\displaystyle \mathbb {P} }, density {\displaystyle f}, and moment generating function (MGF) {\displaystyle M\_{X}(\theta )=\mathbb {E} [e^{\theta X}]<\infty }, the exponentially tilted measure {\displaystyle \mathbb {P} \_{\theta }} is defined as follows:
+
+where {\displaystyle \kappa (\theta )} is the cumulant generating function (CGF) defined as
+
+We call
+
+the {\displaystyle \theta }-tilted density of {\displaystyle X}. It satisfies {\displaystyle f\_{\theta }(x)\propto e^{\theta x}f(x)}.
+
+The exponential tilting of a random vector {\displaystyle X} has an analogous definition:
+
+where {\displaystyle \kappa (\theta )=\log \mathbb {E} [\exp\{\theta ^{T}X\}]}.
+
+
+### Example
+
+The exponentially tilted measure in many cases has the same parametric form as that of {\displaystyle X}. One-dimensional examples include the normal distribution, the exponential distribution, the binomial distribution and the Poisson distribution.
+
+For example, in the case of the normal distribution, {\displaystyle N(\mu ,\sigma ^{2})} the tilted density {\displaystyle f\_{\theta }(x)} is the {\displaystyle N(\mu +\theta \sigma ^{2},\sigma ^{2})} density. The table below provides more examples of tilted densities.
+
+| Original distribution | θ-Tilted distribution |
+| --- | --- |
+| {\displaystyle \mathrm {Gamma} (\alpha ,\beta )} | {\displaystyle \mathrm {Gamma} (\alpha ,\beta -\theta )} |
+| {\displaystyle \mathrm {Binomial} (n,p)} | {\displaystyle \mathrm {Binomial} \left(n,{\frac {pe^{\theta }}{1-p+pe^{\theta }}}\right)} |
+| {\displaystyle \mathrm {Poisson} (\lambda )} | {\displaystyle \mathrm {Poisson} (\lambda e^{\theta })} |
+| {\displaystyle \mathrm {Exponential} (\lambda )} | {\displaystyle \mathrm {Exponential} (\lambda -\theta )} |
+| {\displaystyle {\mathcal {N}}(\mu ,\sigma ^{2})} | {\displaystyle {\mathcal {N}}(\mu +\theta \sigma ^{2},\sigma ^{2})} |
+| {\displaystyle {\mathcal {N}}(\mu ,\Sigma )} | {\displaystyle {\mathcal {N}}(\mu +\Sigma \theta ,\Sigma )} |
+| {\displaystyle \chi ^{2}(\kappa )} | {\displaystyle \mathrm {Gamma} \left({\frac {\kappa }{2}},{\frac {2}{1-2\theta }}\right)} |
+
+For some distributions, however, the exponentially tilted distribution does not belong to the same parametric family as {\displaystyle f}. An example of this is the Pareto distribution with {\displaystyle f(x)=\alpha /(1+x)^{\alpha },x>0}, where {\displaystyle f\_{\theta }(x)} is well defined for {\displaystyle \theta <0} but is not a standard distribution. In such examples, the random variable generation may not always be straightforward.
+
+In statistical mechanics, the energy of a system in equilibrium with a heat bath has the Boltzmann distribution: {\displaystyle \mathbb {P} (E\in dE)\propto e^{-\beta E}dE}, where {\displaystyle \beta } is the inverse temperature. Exponential tilting then corresponds to changing the temperature: {\displaystyle \mathbb {P} \_{\theta }(E\in dE)\propto e^{-(\beta -\theta )E}dE}.
+
+Similarly, the energy and particle number of a system in equilibrium with a heat and particle bath has the grand canonical distribution: {\displaystyle \mathbb {P} ((N,E)\in (dN,dE))\propto e^{\beta \mu N-\beta E}dNdE}, where {\displaystyle \mu } is the chemical potential. Exponential tilting then corresponds to changing both the temperature and the chemical potential.
+
+
+### Advantages
+
+In many cases, the tilted distribution belongs to the same parametric family as the original. This is particularly true when the original density belongs to the exponential family of distribution. This simplifies random variable generation during Monte-Carlo simulations. Exponential tilting may still be useful if this is not the case, though normalization must be possible and additional sampling algorithms may be needed.
+
+In addition, there exists a simple relationship between the original and tilted CGF,
+
+We can see this by observing that
+
+Thus,
+
+Clearly, this relationship allows for easy calculation of the CGF of the tilted distribution and thus the distributions moments. Moreover, it results in a simple form of the likelihood ratio. Specifically,
+
+
+## Properties
+
+* If {\displaystyle \kappa (\eta )=\log \mathrm {E} [\exp(\eta X)]} is the CGF of {\displaystyle X}, then the CGF of the {\displaystyle \theta }-tilted {\displaystyle X} is
+
+* Repeated tilting is additive. That is, tilting first by {\displaystyle \theta \_{1}} and then {\displaystyle \theta \_{2}} is the same as tilting once by {\displaystyle \theta \_{1}+\theta \_{2}}.
+
+* If {\displaystyle X} is the sum of independent, but not necessarily identical random variables {\displaystyle X\_{1},X\_{2},\dots }, then the {\displaystyle \theta }-tilted distribution of {\displaystyle X} is the sum of {\displaystyle X\_{1},X\_{2},\dots } each {\displaystyle \theta }-tilted individually.
+
+* If {\displaystyle \mu =\mathrm {E} [X]}, then {\displaystyle \kappa (\theta )-\theta \mu } is the Kullback–Leibler divergence
+
+* Similarly, since {\displaystyle \mathrm {E} \_{\theta }[X]=\kappa '(\theta )}, we have the Kullback-Leibler divergence as
+
+## Applications
+
+
+### Rare-event simulation
+
+The exponential tilting of {\displaystyle X}, assuming it exists, supplies a family of distributions that can be used as proposal distributions for acceptance-rejection sampling or importance distributions for importance sampling. One common application is sampling from a distribution conditional on a sub-region of the domain, i.e. {\displaystyle X|X\in A}. With an appropriate choice of {\displaystyle \theta }, sampling from {\displaystyle \mathbb {P} \_{\theta }} can meaningfully reduce the required amount of sampling or the variance of an estimator.
+
+
+### Saddlepoint approximation
+
+The saddlepoint approximation method is a density approximation methodology often used for the distribution of sums and averages of independent, identically distributed random variables that employs Edgeworth series, but which generally performs better at extreme values. From the definition of the natural exponential family, it follows that
+
+Applying the Edgeworth expansion for {\displaystyle f\_{\theta }({\bar {x}})}, we have
+
+where {\displaystyle \psi (z)} is the standard normal density of
+
+and {\displaystyle h\_{n}} are the hermite polynomials.
+
+When considering values of {\displaystyle {\bar {x}}} progressively farther from the center of the distribution, {\displaystyle |z|\rightarrow \infty } and the {\displaystyle h\_{n}(z)} terms become unbounded. However, for each value of {\displaystyle {\bar {x}}}, we can choose {\displaystyle \theta } such that
+
+This value of {\displaystyle \theta } is referred to as the saddle-point, and the above expansion is always evaluated at the expectation of the tilted distribution. This choice of {\displaystyle \theta } leads to the final representation of the approximation given by
+
+
+### Rejection sampling
+
+Using the tilted distribution {\displaystyle \mathbb {P} \_{\theta }} as the proposal, the rejection sampling algorithm prescribes sampling from {\displaystyle f\_{\theta }(x)} and accepting with probability
+
+where
+
+That is, a uniformly distributed random variable {\displaystyle p\sim {\mbox{Unif}}(0,1)} is generated, and the sample from {\displaystyle f\_{\theta }(x)} is accepted if
+
+
+### Importance sampling
+
+Applying the exponentially tilted distribution as the importance distribution yields the equation
+
+where
+
+is the likelihood function. So, one samples from {\displaystyle f\_{\theta }} to estimate the probability under the importance distribution {\displaystyle \mathbb {P} (dX)} and then multiplies it by the likelihood ratio. Moreover, we have the variance given by
+
+
+#### Example
+
+Assume independent and identically distributed {\displaystyle \{X\_{i}\}} such that {\displaystyle \kappa (\theta )<\infty }. In order to estimate {\displaystyle \mathbb {P} (X\_{1}+\cdots +X\_{n}>c)}, we can employ importance sampling by taking
+
+The constant {\displaystyle c} can be rewritten as {\displaystyle na} for some other constant {\displaystyle a}. Then,
+
+where {\displaystyle \theta \_{a}} denotes the {\displaystyle \theta } defined by the saddle-point equation
+
+
+### Stochastic processes
+
+Given the tilting of a normal R.V., it is intuitive that the exponential tilting of {\displaystyle X\_{t}}, a Brownian motion with drift {\displaystyle \mu } and variance {\displaystyle \sigma ^{2}}, is a Brownian motion with drift {\displaystyle \mu +\theta \sigma ^{2}} and variance {\displaystyle \sigma ^{2}}. Thus, any Brownian motion with drift under {\displaystyle \mathbb {P} } can be thought of as a Brownian motion without drift under {\displaystyle \mathbb {P} \_{\theta ^{\*}}}. To observe this, consider the process {\displaystyle X\_{t}=B\_{t}+\mu \_{t}}. {\displaystyle f(X\_{t})=f\_{\theta ^{\*}}(X\_{t}){\frac {d\mathbb {P} }{d\mathbb {P} \_{\theta ^{\*}}}}=f(B\_{t})\exp\{\mu B\_{T}-{\frac {1}{2}}\mu ^{2}T\}}. The likelihood ratio term, {\displaystyle \exp\{\mu B\_{T}-{\frac {1}{2}}\mu ^{2}T\}}, is a martingale and commonly denoted {\displaystyle M\_{T}}. Thus, a Brownian motion with drift process (as well as many other continuous processes adapted to the Brownian filtration) is a {\displaystyle \mathbb {P} \_{\theta ^{\*}}}-martingale.
+
+
+#### Stochastic Differential Equations
+
+The above leads to the alternate representation of the stochastic differential equation {\displaystyle dX(t)=\mu (t)dt+\sigma (t)dB(t)}: {\displaystyle dX\_{\theta }(t)=\mu \_{\theta }(t)dt+\sigma (t)dB(t)}, where {\displaystyle \mu \_{\theta }(t)} = {\displaystyle \mu (t)+\theta \sigma (t)}. Girsanov's Formula states the likelihood ratio {\displaystyle {\frac {d\mathbb {P} }{d\mathbb {P} \_{\theta }}}=\exp\{-\int \limits \_{0}^{T}{\frac {\mu \_{\theta }(t)-\mu (t)}{\sigma ^{2}(t)}}dB(t)+\int \limits \_{0}^{T}({\frac {\sigma ^{2}(t)}{2}})dt\}}. Therefore, Girsanov's Formula can be used to implement importance sampling for certain SDEs.
+
+Tilting can also be useful for simulating a process {\displaystyle X(t)} via rejection sampling of the SDE {\displaystyle dX(t)=\mu (X(t))dt+dB(t)}. We may focus on the SDE since we know that {\displaystyle X(t)} can be written {\displaystyle \int \limits \_{0}^{t}dX(t)+X(0)}. As previously stated, a Brownian motion with drift can be tilted to a Brownian motion without drift. Therefore, we choose {\displaystyle \mathbb {P} \_{proposal}=\mathbb {P} \_{\theta ^{\*}}}. The likelihood ratio {\displaystyle {\frac {d\mathbb {P} \_{\theta ^{\*}}}{d\mathbb {P} }}(dX(s):0\leq s\leq t)=}
+{\displaystyle \prod \limits \_{\tau \geq t}\exp\{\mu (X(\tau ))dX(\tau )-{\frac {\mu (X(\tau ))^{2}}{2}}\}dt=\exp\{\int \limits \_{0}^{t}\mu (X(\tau ))dX(\tau )-\int \limits \_{0}^{t}{\frac {\mu (X(s))^{2}}{2}}\}dt}. This likelihood ratio will be denoted {\displaystyle M(t)}. To ensure this is a true likelihood ratio, it must be shown that {\displaystyle \mathbb {E} [M(t)]=1}. Assuming this condition holds, it can be shown that {\displaystyle f\_{X(t)}(y)=f\_{X(t)}^{\theta ^{\*}}(y)\mathbb {E} \_{\theta ^{\*}}[M(t)|X(t)=y]}. So, rejection sampling prescribes that one samples from a standard Brownian motion and accept with probability {\displaystyle {\frac {f\_{X(t)}(y)}{f\_{X(t)}^{\theta ^{\*}}(y)}}{\frac {1}{c}}={\frac {1}{c}}\mathbb {E} \_{\theta ^{\*}}[M(t)|X(t)=y]}.
+
+
+## Choice of tilting parameter
+
+
+### Siegmund's algorithm
+
+Assume i.i.d. X's with light tailed distribution and {\displaystyle \mathbb {E} [X]>0}. In order to estimate {\displaystyle \psi (c)=\mathbb {P} (\tau (c)<\infty )} where {\displaystyle \tau (c)=\inf\{t:\sum \limits \_{i=1}^{t}X\_{i}>c\}}, when {\displaystyle c} is large and hence {\displaystyle \psi (c)} small, the algorithm uses exponential tilting to derive the importance distribution. The algorithm is used in many aspects, such as sequential tests, G/G/1 queue waiting times, and {\displaystyle \psi } is used as the probability of ultimate ruin in ruin theory. In this context, it is logical to ensure that {\displaystyle \mathbb {P} \_{\theta }(\tau (c)<\infty )=1}. The criterion {\displaystyle \theta >\theta \_{0}}, where {\displaystyle \theta \_{0}} is s.t. {\displaystyle \kappa '(\theta \_{0})=0} achieves this. Siegmund's algorithm uses {\displaystyle \theta =\theta ^{\*}}, if it exists, where {\displaystyle \theta ^{\*}} is defined in the following way:
+{\displaystyle \kappa (\theta ^{\*})=0}.
+It has been shown that {\displaystyle \theta ^{\*}} is the only tilting parameter producing bounded relative error ({\displaystyle {\underset {x\rightarrow \infty }{\lim \sup }}{\frac {Var\mathbb {I} \_{A(x)}}{\mathbb {P} A(x)^{2}}}<\infty }).
+
+
+### Black-Box algorithms
+
+We can only see the input and output of a black box, without knowing its structure. The algorithm is to use only minimal information on its structure. When we generate random numbers, the output may not be
+within the same common parametric class, such as normal or exponential distributions. An automated way may be used to perform ECM. Let {\displaystyle X\_{1},X\_{2},...}be i.i.d. r.v.’s with distribution {\displaystyle G}; for simplicity we assume {\displaystyle X\geq 0}. Define {\displaystyle {\mathfrak {F}}\_{n}=\sigma (X\_{1},...,X\_{n},U\_{1},...,U\_{n})}, where {\displaystyle U\_{1},U\_{2}}, . . . are independent (0, 1) uniforms. A randomized stopping time for {\displaystyle X\_{1},X\_{2}}, . . . is then a stopping time w.r.t. the filtration {\displaystyle \{{\mathfrak {F}}\_{n}\}}, . . . Let further {\displaystyle {\mathfrak {G}}} be a class of distributions {\displaystyle G} on {\displaystyle [0,\infty )} with {\displaystyle k\_{G}=\int \_{0}^{\infty }e^{\theta x}G(dx)<\infty } and define {\displaystyle G\_{\theta }} by {\displaystyle {\frac {dG\_{\theta }}{dG(x)}}=e^{\theta x-k\_{G}}}. We define a black-box algorithm for ECM for the given {\displaystyle \theta } and the given class {\displaystyle {\mathfrak {G}}}of distributions as a pair of a randomized stopping time {\displaystyle \tau } and an {\displaystyle {\mathfrak {F}}\_{\tau }-} measurable r.v. {\displaystyle Z} such that {\displaystyle Z} is distributed according to {\displaystyle G\_{\theta }} for any {\displaystyle G\in {\mathfrak {G}}}. Formally, we write this as {\displaystyle \mathbb {P} \_{G}(Z<x)=G\_{\theta }(x)} for all {\displaystyle x}. In other words, the rules of the game are that the algorithm may use
+simulated values from {\displaystyle G} and additional uniforms to produce an r.v. from {\displaystyle G\_{\theta }}.
+

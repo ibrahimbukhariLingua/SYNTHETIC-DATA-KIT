@@ -1,0 +1,153 @@
+Customs Handling of Import & Export Freight
+
+
+# Customs Handling of Import & Export Freight
+
+
+
+Until 2019, **Customs Handling of Import & Export Freight** (**CHIEF**) is the computer system of the United Kingdom's revenue and customs services, HMRC, used for managing the declaration and movement of goods into and out of the United Kingdom and allowing UK traders to communicate with counterpart customs systems in the other member states of the European Union. It also managed movement of goods across EU borders where the moved material belonged to a UK party. It has been partly replaced by the Customs Declaration Service (CDS). CHIEF is due to be retired during 2022.
+
+
+## Roles
+
+The major function of CHIEF was to manage the data behind import and export movements and calculate revenues due on those movements.
+CHIEF accepts customs declarations from traders (possibly via CSPs – see below), validates the data, and if valid records it. It profiles the data sent and will award a "route of entry" to the declaration. This describes the steps that must occur for the movement to be permitted, and may include automatic clearance for trusted traders or a physical inspection of the good or paperwork for other traders. Having accepted declaration data, CHIEF and the inventory system that is managing the physical movement of the goods communicate (without involving the trader).
+
+
+## Typical paths
+
+Typical flow of data and events might look like this.
+
+
+### Export
+
+1. Trader pre-declares data to CHIEF
+2. Goods physically arrive at the port
+3. Inventory system informs CHIEF of the goods' arrival
+4. CHIEF re-processes the stored declaration, now aware that the goods are at the port. It will grant 'permission to progress', at which point the goods may be loaded onto the craft.
+5. The craft departs and the inventory system informs CHIEF
+6. CSP informs the trader that the goods 'departed UK'
+
+## Import
+
+1. Trader or port system creates consignment on CSP inventory system
+2. Trader pre-declares data to CHIEF, stating that it represents goods on the above consignment
+3. CHIEF confirms with inventory system that the consignment exists
+4. Goods physically arrive at the port
+5. Inventory system informs CHIEF of the goods' arrival
+6. CHIEF re-processes the stored declaration, now aware that the goods are at the port. Declaration is awarded a 'route to clearance', which for trusted traders may mean automatic clearance, or may require a documentary or physical examination
+7. Goods are cleared automatically by CHIEF or by customs officers
+8. CHIEF informs inventory system of clearance
+9. CSP releases the cleared goods to the trader once all local port and commercial requirements are met
+
+### Reports
+
+In both import and export scenarios, unsolicited "reports" (data designed to be rendered by the recipient computer into a human-readable format to report upon changes) are sent when a change occurs on the declaration record, such as when the record is reprocessed upon goods' arrival or when the goods depart the UK. Reports are also used to communicate customs officers' enquires or requests to the trader. Traditionally the reports are automatically printed onto paper at the trader's office, although this is slowly being replaced by entirely electronic storage.
+
+
+## Management
+
+Until 2010, CHIEF was managed on behalf of HMRC by BT, British Telecommunications Plc, part of the BT Group Plc. The contract was not renewed and Capgemini took over on 17 January 2010. It was then managed by Aspire, a joint venture between HMRC, Fujitsu and Capgemini operating until 2017.
+The management of CHIEF and other EU customs systems was insourced by HMRC in 2016.
+
+
+## Technical information
+
+CHIEF is a proprietary application, which while under BT ran on the VME O/S on Fujitsu hardware. The database software is IDMSX.
+
+
+## EDIFACT data format
+
+CHIEF accepts declaration data from traders using proprietary EDIFACT messages based on the well-known United Nations D04A CUSDEC message. It replies using the D04A CUSRES, the CONTRL and using HMRC's twists on the UN's CONTRL and CUSRES messages, the UKCTRL and the UKCRES.
+Inventory management data are exchanged with the CSPs using entirely proprietary messages, UKCINV messages.
+
+
+## Access
+
+Being a vital government system that controls billions of pounds worth of revenue, access to CHIEF is tightly controlled. There are four major routes into CHIEF:
+
+
+### CSP
+
+Service providers are companies that have a special relationship with CHIEF and who run inventory management systems at ports. Movement of good through these ports is managed by the CSPs (customs/community service providers, who provide access to CHIEF for the traders and who liaise with CHIEF regarding the physical movements of the goods. Such CSPs are:
+
+* MCP - Maritime Cargo Processing (present at, among other ports, Felixstowe)
+* CNS - Community Network Services (present at, among other ports, Harwich)
+* CCS-UK - Cargo Community System (for airport movements) run by BT Group
+* Pentant - (present at, among other ports, Dover), run by Descartes Systems Group
+* DHL - the major integrated forwarder
+
+These CSPs have dedicated connections to CHIEF.
+
+Traders' declarations are usually submitted using the EDIFACT format defined by HMRC, sent to the CSP who will usually check its data against their inventory before forwarding the data to CHIEF. Responses from CHIEF are sent back to the trader, either as part of the transaction in which the upload occurred or as an unsolicited message.
+
+
+### Government Gateway
+
+For certain types of customs declarations, traders may access CHIEF without going through a CSP. This is achieved over the Internet using email, an XML web service or a website. The endpoint for the trade is a front door to all UK government services, the Government Gateway, who then use the GSI (Government Secure Intranet) to reach CHIEF (and indeed any other government computer systems).
+
+
+### HCI
+
+The Human-Computer Interface is a telnet-like application that allows green-screen access into CHIEF. Declarations may be completed by typing data directly into CHIEF. The CSPs provide the physical means to use this method, usually both the terminal software and the transport mechanism.
+
+
+### Customs access
+
+Customs officers, who have ultimate control of customs activities, need a means to perform their business operations. They access CHIEF using terminals.
+
+
+## Links to the EU - ECS
+
+The EU-wide export control system is an arrangement for sharing movement and security and safety data among member states. CHIEF using the ECN+ software to link to the central ECS domain in Brussels.
+Since 1 July 2009, CHIEF sends movement data to ECS but only when box 29, the office of exit, has been completed by the trader.
+CHIEF has had the capacity receive data from other member states for when a UK customs office acts as the office of exit for some time.
+
+Although the specification for the EDIFACT input for CHIEF for import declarations allows for CHIEF to be used for lodging pre-arrival declarations, this was never implemented and on 1 November 2010 an entirely separate Import Control System was launched.
+
+
+## Future plans
+
+
+### CHIEF STE
+
+In May 2010, HMRC formally announced its plans to retire (what has become known in the industry as) "Classic" CHIEF in summer 2012, replacing it with CHIEF STE (strategic technical enhancement). The objectives of this are to meet HMRC's obligations to have a service-oriented architecture for its applications, to incorporate TARIC 3 specifications and to allow for easier enhancements and changes. CHIEF STE will be a ground-up rewrite of the application baselined at Summer 2009 plus all formal changes (including ECS). Major changes include the dropping of EDIFACT in favour of XML (although a grace period will be allowed), compliance with TARIC 3, and the dropping of the HCI in favour of HTML web pages.
+
+According to the HMRC website:
+
+> Within the term of the current contract with Capgemini to run the CHIEF (Customs Handling of Import & Export Freight) service from 2010 to 2015, is a requirement for CHIEF to be replatformed to replace the outdated COBOL and VME-based existing system, with a Service Oriented Architecture (SOA) design, which will allow integration with other CSTP and other HMRC business processes. The solution will also take advantage of COTS packages, where appropriate.
+> Once delivered, CHIEF STE will provide a more agile solution, making future business changes easier to accommodate, whilst retaining existing response times and availability.
+> 
+> — CHIEF Strategic Technical Enhancement (STE), HMRC website archived at The National Archives
+
+In January 2012, when asked how the department is progressing with the delivery of CHIEF STE, HMRC
+stated that "HMRC continues to work with Capgemini to establish a way forward, gather requirements and re-plan the delivery. However, delivery will not now take place in 2012."
+
+In March 2012, HMRC stated
+"it was likely that the
+CHIEF rewrite project (Strategic Technical Enhancement - STE)
+would now be put out to tender under a new contract following
+negotiations with Cap Gemini. HMRC and Cap were close to
+agreement on closing the current STE project. The changes to the
+Cap Gemini contract with HMRC would not affect the running of the
+existing CHIEF Service".
+
+In November 2012,
+HMRC intimated that there was likely to be an announcement later in December 2012, but had no further updates for the meeting.
+
+The minutes of the JCCC Customs Change Sub Group Meeting in June 2013 state:
+
+> Guy Westhead introduced himself to the CCG. Guy has been appointed as the new Programme Director for the CHIEF replacement project taking over the role from Stella Jarvis. Whilst Capgemini continue to deliver the live CHIEF Service, work on the CHIEF STE project has concluded. HMRC expect to be retendering for a replacement service soon, and this could be as early as the end of this year. Any retender will be by Lean Open Procurement, following advice from the Cabinet Office, who will set strict rules on information sharing and timelines to be adhered to. The decision to progress issues whilst discussions are still ongoing has been made. The CHIEF 2 team now has 12 members of staff within Business Transformation and a growing support from IMS colleagues.
+> Whilst development depends on future funding, the department will be making an announcement in July regarding future trade events to be held either in September, or October, this year.
+> 
+> — Minutes of the Customs Change Sub Group Meeting, HMRC
+
+
+### CDS - Customs Declaration Service
+
+In around 2015, HMRC announced a new successor project to CHIEF. The project to replace CHIEF, after the demise of the CHIEF STE project, underwent various names, including "CHIEF 2" and "CHIEF Replacement Program". Ultimately a decision was made by HMRC to remove the name CHIEF from its successor, to reflect that it would be a new ground-up project.
+Customs Declaration Services was conceived as being a new service hosted on the central Multi-Digital Tax Platform, and accessed via the Government Gateway (or the successor thereto). In 2016 HMRC selected vendor IBM to provide off-the-shelf software that would be customised to meet the UK's needs. The contract to acquire this software was due to be signed the day after the EU Exit referendum on the anticipation of a remain vote; the signing was delayed until approximately September because of the relatively unexpected leave vote to allow HMRC to check that the IBM product would still be suitable.
+CDS will comprise the core IBM product, also used in the Netherlands, highly adapted to allow the continued use of some of the same concepts used under CHIEF.
+The release of CDS is phased, with the first stage going live in August 2018 for a limited number of traders and a very niche set of business scenarios. Refer to . A second phase, adding full import functionality, was expected in late 2019 but was delayed due to the need to prepare CHIEF to handle the increase in Customs declarations due to Brexit. A third phase, with export functional, is not expected to occur before late 2021.
+A complex solution to allow the dual-running of CHIEF and CDS for exports was developed, refer to
+

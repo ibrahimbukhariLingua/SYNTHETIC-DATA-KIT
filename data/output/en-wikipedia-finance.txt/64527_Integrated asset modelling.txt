@@ -1,0 +1,105 @@
+Integrated asset modelling
+
+
+# Integrated asset modelling
+
+
+
+**Integrated asset modelling** (**IAM**) is the generic term used in the oil industry for computer modelling of both the subsurface and the surface elements of a field development. Historically the reservoir has always been modelled separately from the surface network and the facilities. In order to capture the interaction between those two or more standalone models, several time-consuming iterations were required. For example, a change in the water breakthrough leads to a change in the deliverability of the surface network which in turn leads to a production acceleration or deceleration in the reservoir. In order to go through this lengthy process more quickly, the industry has slowly been adopting a more integrated approach which captures the constraints imposed by the infrastructure on the network immediately.
+
+
+## Basis
+
+As the aim of an IAM is to provide a production forecast which honours both the physical realities of the reservoir and the infrastructure it needs to contain the following elements;
+
+* A pressure network
+* A subsurface saturation model
+* An availability model
+* A constraint manager
+* A production optimisation algorithm
+
+Some but not all models also contain an economics and risk model component so that the IAM can be used for economic evaluation.
+
+
+## IAM vs. IPM
+
+The term *Integrated Asset Modeling* was first used by British Petroleum (BP), and this term is still maintained till date.
+Integrated asset modeling links individual simulators across technical disciplines, assets, computing environments, and locations. This collaborative methodology represents a shift in oil and gas field management, moving it toward a holistic management approach and away from disconnected teams working in isolation. The open framework of SLB’s Integrated Asset Modeling (IAM) software enables the coupling of a wide number of simulation software applications including reservoir simulation models (Eclipse, Intersect, MBX, IMEX, MBAL), multiphase flow simulation models (Pipesim, Olga, GAP), process and facilities simulation models (Symmetry, HYSYS, Petro-sim, UniSim) and economic domain models (Merak Peep).
+
+Historically the terms *Integrated Production Modeling* and *Integrated Asset Modeling* have been used interchangeably. The modern use of *Integrated Production Modeling* was coined when Petroleum Experts Ltd. joined their MBAL modeling software with their GAP and Prosper modeling software to form an *Integrated Production Model*.
+
+
+## Benefits of Integrated Asset Modelling
+
+Having an IAM built of an asset or future project offers several advantages;
+
+* Faster runtimes which allow scenario analysis and Monte Carlo analysis
+* Insight in the interactions between various components of a development
+* An answer in economic rather than recovery terms (not always available)
+
+## Difficulties of Integrated Asset Modelling
+
+By its very nature an IAM requires a multi disciplinary approach. Most companies are too compartmentalised for this to be easy, as a result of this an integrated approach has the following drawbacks;
+
+* More difficult to spot errors
+* Requires constant communication between various departments, ownership is either vague or too much part of one silo.
+
+The biggest barrier to adoption of IAM is frequently the resistance of reservoir engineers to any simplification of the subsurface. This argument is sometimes valid, sometimes not, see below.
+
+
+## Appropriate use of IAM
+
+As with any other software because of the inherent limitations in any virtual model use of an IAM is only appropriate during various stages of a project life. There are no hard and fast rules for this as there are a variety of software packages on the market which offer very accurate modelling of a very small scope to very rough modelling of a very large scope and anything in between. Currently the definition of IAM contains anything from daily optimisation to portfolio management. The success or failure of an IAM implementation project therefore depends on selecting the tool which is as complex as it needs to be but no more.
+The following contains some examples of areas where an IAM is the appropriate decision support tool
+
+* Concept Select
+* Debottlenecking and optimisation of very large or complex infrastructures
+* Life of field analysis of production optimisation scenarios
+
+Note that for most of these areas the accuracy of the reservoir proxy is not important, the decision is made based on relative performance differences, not absolute values.
+
+
+## Approach
+
+Several different software packages are commercially available and there is a clear difference in philosophy between some of them.
+
+
+### Linked Existing Software
+
+Some vendors who have previously marketed standalone software for the subsurface and the surface are now marketing additional software which provides a datalink between the various packages. The obvious benefit of this approach is that there is no loss in accuracy and it does not require a remodelling exercise. However this approach also has its drawbacks, there is no time gain and the integration component of the entire package requires expertise which is not readily available, external specialist are frequently called upon to build and maintain the links between the components.
+
+
+### Bespoke Software
+
+There are relatively few software packages on the market which are truly integrated, however these can offer the benefit of shorter runtimes and lower expertise thresholds.
+
+
+### Software as a service
+
+A number of the established service companies now offer integrated asset modelling as a service. In practice this means that existing models will be either converted or linked by specialists to form an integrated solution. This solution is expensive but frequently the preferred option if the highest accuracy is required.
+
+
+## Comparison of IAM tools
+
+| Name | Vendor | Philosophy | Complexity Application |
+| --- | --- | --- | --- |
+| Petrel | SLB | Full end-to-end integrated platform | Low - High |
+| Intersect | SLB | High-resolution, high-fidelity tool for full integration of pore to process workflows | Low - High |
+| Eclipse | SLB | Multi-reservoir to surface integrated asset modeling | Low - High |
+| tNavigator | Rock Flow Dynamics | Fully integrated surface and subsurface integrated asset model | Low - High |
+| CoFlow | CMG Ltd | A multi-fidelity, multi-disciplinary, IPSM tool | Low - High |
+| Nexus | Halliburton | Multi-reservoir and surface integrated asset model | Low - High |
+| enersight | 3esi-Enersight | Integrated Asset Development | Low - Moderate |
+| Pipe-It | Petrostreamz | Integrate and optimize models | Low - High |
+| Avocet-IAM | SLB | Linked existing packages | Low - High |
+| Pipesim | SLB | Linked existing packages | Low - High |
+| GasAssure | Stochastic Simulation | Fully Integrated, Reservoir to Market Solution | Low - High |
+| IPM | Petroleum Experts (PETEX) | Multi-Vendor packages linked | Low - High |
+| ReO | Weatherford | IPM with option to do life of field | Low - Moderate |
+| RAVE | Ingen | Bespoke | Low - Moderate/High |
+| PetroVR | Caesar Systems | Accelerate Confidently | Low - High |
+| FUTURE | Serafim Ltd | Simplification of large, complex networks | Low - High |
+| Maximus | KBC Advanced Technologies | Fully integrated surface and subsurface IPM tool | Low - High |
+| Precept | Cleverfield | The simplest yet powerful IAM software | Low - High |
+| Previso | Quorum Software | Model complex production systems in minutes | Low - High |
+

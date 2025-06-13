@@ -1,0 +1,53 @@
+Option on realized variance
+
+
+# Option on realized variance
+
+
+
+In finance, an **option on realized variance** (or **variance option**) is a type of variance derivatives which is the derivative securities on which the payoff depends on the annualized realized variance of the return of a specified underlying asset, such as stock index, bond, exchange rate, etc. Another liquidated security of the same type is variance swap, which is, in other words, the futures contract on realized variance.
+
+With a similar notion to the vanilla options, variance options give the owner a right but without obligation to buy or sell the realized variance in exchange with some agreed price (variance strike) sometime in the future (expiry date), except that risk exposure is solely subjected to the price's variance itself. This property gains interest among traders since they can use it as an instrument to speculate the future movement of the asset volatility to, for example, delta-hedge a portfolio, without taking a directional risk of possessing the underlying asset.
+
+
+## Definitions
+
+In practice, the annualized realized variance is defined by the sum of the square of discrete-sampling log-return of the specified underlying asset. In other words, if there are {\displaystyle n+1} sampling points of the underlying prices, says {\displaystyle S\_{t\_{0}},S\_{t\_{2}},\dots ,S\_{t\_{n}}} observed at time {\displaystyle t\_{i}} where {\displaystyle 0\leq t\_{i-1}<t\_{i}\leq T} for all {\displaystyle i\in \{1,\dots ,n\}}, then the realized variance denoted by {\displaystyle RV\_{d}} is valued of the form
+
+where
+
+* {\displaystyle A} is an annualised factor normally selected to be {\displaystyle A=252} if the price is monitored daily, or {\displaystyle A=52} or {\displaystyle A=12} in the case of weekly or monthly observation, respectively and
+* {\displaystyle T} is the options expiry date which is equal to the number {\displaystyle n/{A}.}
+
+If one puts
+
+* {\displaystyle K\_{\text{var}}^{C}} to be a variance strike and
+* {\displaystyle L} be a notional amount converting the payoffs into a unit amount of money, say, e.g., USD or GBP,
+
+then payoffs at expiry for the call and put options written on {\displaystyle RV\_{d}} (or just variance call and put) are
+
+and
+
+respectively.
+
+Note that the annualized realized variance can also be defined through continuous sampling, which resulted in the quadratic variation of the underlying price. That is, if we suppose that {\displaystyle \sigma (t)} determines the instantaneous volatility of the price process, then
+
+defines the continuous-sampling annualized realized variance which is also proved to be the limit in the probability of the discrete form i.e.
+
+However, this approach is only adopted to approximate the discrete one since the contracts involving realized variance are practically quoted in terms of the discrete sampling.
+
+
+## Pricing and valuation
+
+Suppose that under a risk-neutral measure {\displaystyle \mathbb {Q} } the underlying asset price {\displaystyle S=(S\_{t})\_{0\leq t\leq T}} solves the time-varying Black–Scholes model as follows:
+
+where:
+
+* {\displaystyle r(t)\in \mathbb {R} } is (time varying) risk-free interest rate,
+* {\displaystyle \sigma (t)>0} is (time varying) price volatility, and
+* {\displaystyle W=(W\_{t})\_{0\leq t\leq T}} is a Brownian motion under the filtered probability space {\displaystyle (\Omega ,{\mathcal {F}},\mathbb {F} ,\mathbb {Q} )} where {\displaystyle \mathbb {F} =({\mathcal {F}}\_{t})\_{0\leq t\leq T}} is the natural filtration of {\displaystyle W}.
+
+ฺBy this setting, in the case of variance call, its fair price at time {\displaystyle t\_{0}} denoted by {\displaystyle C\_{t\_{0}}^{\text{var}}} can be attained by the expected present value of its payoff function i.e.
+
+where {\displaystyle RV\_{(\cdot )}=RV\_{d}} for the discrete sampling while {\displaystyle RV\_{(\cdot )}=RV\_{c}} for the continuous sampling. And by put-call parity we also get the put value once {\displaystyle C\_{t\_{0}}^{\text{var}}} is known. The solution can be approached analytically with the similar methodology to that of the Black–Scholes derivation once the probability density function of {\displaystyle RV\_{(\cdot )}} is perceived, or by means of some approximation schemes, like, the Monte Carlo method.
+

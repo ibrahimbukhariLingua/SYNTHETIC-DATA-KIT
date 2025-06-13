@@ -1,0 +1,34 @@
+Enterprise bus matrix
+
+
+# Enterprise bus matrix
+
+
+
+The **enterprise bus matrix** is a data warehouse planning tool and model created by Ralph Kimball, and is part of the data warehouse bus architecture. The matrix is the logical definition of one of the core concepts of Kimball's approach to dimensional modeling conformed dimension.
+
+The bus matrix defines part of the data warehouse bus architecture and is an output of the business requirements phase in the Kimball lifecycle. It is applied in the following phases of dimensional modeling and development of the data warehouse. The matrix can be categorized as a hybrid model, being part technical design tool, part project management tool and part communication tool
+
+
+## Background
+
+The need for an enterprise bus matrix stems from the way one goes about creating the overall data warehouse environment. Historically there have been two approaches: a structured, centralized and planned approach and a more loosely defined, department specific approach, in which solutions are developed in a more independent matter. Autonomous projects can result in a range of isolated stove pipe data marts. Naturally each approach has its issues; the visionary approach often struggles with long delivery cycles and lack of reaction time as needs emerge and scope issues arise. On the other hand, the development of isolated data marts leads to stovepipe systems that lack synergy in development. Over time this approach will lead to a so-called data-mart-in-a-box architecture where interoperability and lack of cohesion is apparent, and can hinder the realization of an overall enterprise data warehouse. As an attempt to handle this issue, Ralph Kimball introduced the enterprise bus.
+
+
+## Description
+
+The bus matrix purpose is one of high abstraction and visionary planning on the data warehouse architectural level. By dictating coherency in the development and implementation of an overall data warehouse the bus architecture approach enables an overall vision of the broader enterprise integration and consistency while at the same time dividing the problem into more manageable parts – all in a technology and software independent manner.
+
+The bus matrix and architecture builds upon the concept of conformed dimensions, creating a structure of common dimensions that ideally can be used across the enterprise by all business processes related to the data warehouse and the corresponding fact tables from which they derive their context. According to Kimball and Margy Ross's article “Differences of Opinion” "*The Enterprise Data warehouse built on the bus architecture ”identifies and enforces the relationship between business process metrics (facts) and descriptive attributes (dimensions)*”.
+
+The concept of a bus is well known in the language of information technology, and is what reflects the conformed dimension concept in the data warehouse, creating the skeletal structure where all parts of a system connect, ensuring interoperability and consistency of data, and at the same time considers future expansion. This makes the conformed dimensions act as the integration ‘glue’, creating a robust backbone of the enterprise Data Warehouse.
+
+
+## Establishment and applicability
+
+Figure 1 shows the base for a single document planning tool for the whole of the data warehouse implementation - a graphical overview of the enterprises core business processes or events each correspond to a measurement table of facts, that typically is complemented by a major source system in the horizontal rows. In the vertical columns the groups of contextual data is found as the common, conformed dimensions.
+
+In this way the shared dimensions are defined, as each process indicates what dimensions it applies to through the cells figure 2. By this definition and coordination of conformed dimensions and processes the development of the overall data DW bus architecture is realized. The matrix identifies the shared dimensions related to processes and fact tables, and can be a tool for planning, prioritizing what needs to be approached, coordinating implementation and communicating the importance for conformed dimensions.
+
+Kimball extends the matrix bus in detail as seen in figure 3 by introducing the other steps of the datawarehouse methodology; the fact tables, granularity, and at last the description of the needed facts. Description of the fact tables, granularity and fact instances of each process, structuring and specifying what is needed across the enterprise in a more specific matter, further exemplifying how the matrix can be used as a planning tool.
+

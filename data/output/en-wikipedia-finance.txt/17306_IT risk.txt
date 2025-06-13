@@ -1,0 +1,306 @@
+IT risk
+
+
+# IT risk
+
+
+
+**Information technology risk**, **IT risk**, **IT-related risk**, or **cyber risk** is any risk relating to information technology. While information has long been appreciated as a valuable and important asset, the rise of the knowledge economy and the Digital Revolution has led to organizations becoming increasingly dependent on information, information processing and especially IT. Various events or incidents that compromise IT in some way can therefore cause adverse impacts on the organization's business processes or mission, ranging from inconsequential to catastrophic in scale.
+
+Assessing the probability or likelihood of various types of event/incident with their predicted impacts or consequences, should they occur, is a common way to assess and measure IT risks. Alternative methods of measuring IT risk typically involve assessing other contributory factors such as the threats, vulnerabilities, exposures, and asset values.
+
+
+## Definitions
+
+
+### ISO
+
+**IT risk**: *the potential that a given threat will exploit vulnerabilities of an asset or group of assets and thereby cause harm to the organization. It is measured in terms of a combination of the probability of occurrence of an event and its consequence.*
+
+
+### Committee on National Security Systems
+
+The Committee on National Security Systems of United States of America defined **risk** in different documents:
+
+* From CNSS Instruction No. 4009 dated 26 April 2010 the basic and more technical focused definition:
+ *Risk – Possibility that a particular threat will adversely impact an IS by exploiting a particular vulnerability.*
+* National Security Telecommunications and Information Systems Security Instruction (NSTISSI) No. 1000, introduces a probability aspect, quite similar to NIST SP 800-30 one:
+ *Risk – A combination of the likelihood that a threat will occur, the likelihood that a threat occurrence will result in an adverse impact, and the severity of the resulting impact*
+
+National Information Assurance Training and Education Center defines risk in the IT field as:
+
+1. The loss potential that exists as the result of threat-vulnerability pairs. Reducing either the threat or the vulnerability reduces the risk.
+2. The uncertainty of loss expressed in terms of probability of such loss.
+3. The probability that a hostile entity will successfully exploit a particular telecommunications or COMSEC system for intelligence purposes; its factors are threat and vulnerability.
+4. A combination of the likelihood that a threat shall occur, the likelihood that a threat occurrence shall result in an adverse impact, and the severity of the resulting adverse impact.
+5. the probability that a particular threat will exploit a particular vulnerability of the system.
+
+### NIST
+
+Many NIST publications define **risk** in IT context in different publications: FISMApedia term provide a list. Between them:
+
+* According to NIST SP 800-30:
+ *Risk is a function of the likelihood of a given threat-source’s exercising a particular potential vulnerability, and the resulting impact of that adverse event on the organization.*
+* From NIST FIPS 200
+ Risk – The level of impact on organizational operations (including mission, functions, image, or reputation), organizational assets, or individuals resulting from the operation of an information system given the potential impact of a threat and the likelihood of that threat occurring.
+
+NIST SP 800-30 defines:
+
+
+### Risk management insight
+
+IT risk is the probable frequency and probable magnitude of future loss.
+
+
+### ISACA
+
+ISACA published the Risk IT Framework in order to provide an end-to-end, comprehensive view of all risks related to the use of IT. There, IT risk is defined as:
+
+According to Risk IT, IT risk has a broader meaning: it encompasses not just only the negative impact of operations and service delivery which can bring destruction or reduction of the value of the organization, but also the benefit\value enabling risk associated to missing opportunities to use technology to enable or enhance business or the IT project management for aspects like overspending or late delivery with adverse business impact
+
+
+## Measuring IT risk
+
+Measuring IT risk (or cyber risk) can occur at many levels. At a business level, the risks are managed categorically. Front line IT departments and NOC's tend to measure more discrete, individual risks. Managing the nexus between them is a key role for modern CISO's.
+
+When measuring risk of any kind, selecting the correct equation for a given threat, asset, and available data is an important step. Doing so is subject unto itself, but there are common components of risk equations that are helpful to understand.
+
+> There are four fundamental forces involved in risk management, which also apply to cybersecurity. They are assets, impact, threats, and likelihood. You have internal knowledge of and a fair amount of control over *assets*, which are tangible and intangible things that have value. You also have some control over *impact*, which refers to loss of, or damage to, an asset. However, *threats* that represent adversaries and their methods of attack are external to your control. *Likelihood* is the wild card in the bunch. Likelihoods determine if and when a threat will materialize, succeed, and do damage. While never fully under your control, likelihoods can be shaped and influenced to manage the risk.
+
+> Mathematically, the forces can be represented in a formula such as: 
+> R
+> i
+> s
+> k
+> =
+> p
+> (
+> A
+> s
+> s
+> e
+> t
+> ,
+> T
+> h
+> r
+> e
+> a
+> t
+> )
+> ×
+> d
+> (
+> A
+> s
+> s
+> e
+> t
+> ,
+> T
+> h
+> r
+> e
+> a
+> t
+> )
+> 
+> 
+> {\textstyle Risk=p(Asset,Threat)\times d(Asset,Threat)}
+> 
+> where p() is the likelihood that a Threat will materialize/succeed against an Asset, and d() is the likelihood of various levels of damage that may occur.
+
+The field of IT risk management has spawned a number of terms and techniques which are unique to the industry. Some industry terms have yet to be reconciled. For example, the term *vulnerability* is often used interchangeably with likelihood of occurrence, which can be problematic. Often encountered IT risk management terms and techniques include:
+
+The risk **R** is the product of the likelihood **L** of a security incident occurring times the impact **I** that will be incurred to the organization due to the incident, that is:
+
+The likelihood of a security incident occurrence is a function of the likelihood that a threat appears and the likelihood that the threat can successfully exploit the relevant system vulnerabilities.
+
+The consequence of the occurrence of a security incident are a function of likely impact that the incident will have on the organization as a result of the harm the organization assets will sustain. Harm is related to the value of the assets to the organization; the same asset can have different values to different organizations.
+
+So R can be function of four factors:
+
+* A = Value of the assets
+* T = the likelihood of the threat
+* V = the nature of vulnerability i.e. the likelihood that can be exploited (proportional to the potential benefit for the attacker and inversely proportional to the cost of exploitation)
+* I = the likely impact, the extent of the harm
+
+If numerical values (money for impact and probabilities for the other factors), the risk can be expressed in monetary terms and compared to the cost of countermeasures and the residual risk after applying the security control. It is not always practical to express this values, so in the first step of risk evaluation, risk are graded dimensionless in three or five steps scales.
+
+OWASP proposes a practical risk measurement guideline based on:
+
+* Estimation of Likelihood as a mean between different factors in a 0 to 9 scale:
+ + Threat agent factors
+ - Skill level: How technically skilled is this group of threat agents? No technical skills (1), some technical skills (3), advanced computer user (4), network and programming skills (6), security penetration skills (9)
+ - Motive: How motivated is this group of threat agents to find and exploit this vulnerability? Low or no reward (1), possible reward (4), high reward (9)
+ - Opportunity: What resources and opportunity are required for this group of threat agents to find and exploit this vulnerability? full access or expensive resources required (0), special access or resources required (4), some access or resources required (7), no access or resources required (9)
+ - Size: How large is this group of threat agents? Developers (2), system administrators (2), intranet users (4), partners (5), authenticated users (6), anonymous Internet users (9)
+ + Vulnerability Factors: the next set of factors are related to the vulnerability involved. The goal here is to estimate the likelihood of the particular vulnerability involved being discovered and exploited. Assume the threat agent selected above.
+ - Ease of discovery: How easy is it for this group of threat agents to discover this vulnerability? Practically impossible (1), difficult (3), easy (7), automated tools available (9)
+ - Ease of exploit: How easy is it for this group of threat agents to actually exploit this vulnerability? Theoretical (1), difficult (3), easy (5), automated tools available (9)
+ - Awareness: How well known is this vulnerability to this group of threat agents? Unknown (1), hidden (4), obvious (6), public knowledge (9)
+ - Intrusion detection: How likely is an exploit to be detected? Active detection in application (1), logged and reviewed (3), logged without review (8), not logged (9)
+* Estimation of Impact as a mean between different factors in a 0 to 9 scale
+ + Technical Impact Factors; technical impact can be broken down into factors aligned with the traditional security areas of concern: confidentiality, integrity, availability, and accountability. The goal is to estimate the magnitude of the impact on the system if the vulnerability were to be exploited.
+ - Loss of confidentiality: How much data could be disclosed and how sensitive is it? Minimal non-sensitive data disclosed (2), minimal critical data disclosed (6), extensive non-sensitive data disclosed (6), extensive critical data disclosed (7), all data disclosed (9)
+ - Loss of integrity: How much data could be corrupted and how damaged is it? Minimal slightly corrupt data (1), minimal seriously corrupt data (3), extensive slightly corrupt data (5), extensive seriously corrupt data (7), all data totally corrupt (9)
+ - Loss of availability How much service could be lost and how vital is it? Minimal secondary services interrupted (1), minimal primary services interrupted (5), extensive secondary services interrupted (5), extensive primary services interrupted (7), all services completely lost (9)
+ - Loss of accountability: Are the threat agents' actions traceable to an individual? Fully traceable (1), possibly traceable (7), completely anonymous (9)
+ + Business Impact Factors: The business impact stems from the technical impact, but requires a deep understanding of what is important to the company running the application. In general, one should be aiming to support one's risk assessment with an evaluation of the impact on the business if the business fails to guard against risk, particularly if one's audience is at the executive level. The business risk is what justifies investment in fixing security problems.
+ - Financial damage: How much financial damage will result from an exploit? Less than the cost to fix the vulnerability (1), minor effect on annual profit (3), significant effect on annual profit (7), bankruptcy (9)
+ - Reputation damage: Would an exploit result in reputation damage that would harm the business? Minimal damage (1), Loss of major accounts (4), loss of goodwill (5), brand damage (9)
+ - Non-compliance: How much exposure does non-compliance introduce? Minor violation (2), clear violation (5), high-profile violation (7)
+ - Privacy violation: How much personally identifiable information could be disclosed? One individual (3), hundreds of people (5), thousands of people (7), millions of people (9)
+ + If the business impact is calculated accurately use it in the following otherwise use the Technical impact
+* Rate likelihood and impact in a LOW, MEDIUM, HIGH scale assuming that less than 3 is LOW, 3 to less than 6 is MEDIUM, and 6 to 9 is HIGH.
+* Calculate the risk using the following table
+
+| Overall Risk Severity | | | | |
+| --- | --- | --- | --- | --- |
+| Impact | HIGH | Medium | High | Critical |
+| MEDIUM | Low | Medium | High |
+| LOW | None | Low | Medium |
+| | LOW | MEDIUM | HIGH |
+| | Likelihood | | | |
+
+
+## IT risk management
+
+An IT risk management system (ITRMS) is a component of a broader enterprise risk management (ERM) system. ITRMS are also integrated into broader information security management systems (ISMS). The continuous update and maintenance of an ISMS is in turn part of an organisation's systematic approach for identifying, assessing, and managing information security risks.The Certified Information Systems Auditor Review Manual 2006 by ISACA provides this definition of risk management: "*Risk management is the process of identifying vulnerabilities and threats to the information resources used by an organization in achieving business objectives, and deciding what countermeasures, if any, to take in reducing risk to an acceptable level, based on the value of the information resource to the organization.*"
+The NIST Cybersecurity Framework encourages organizations to manage IT risk as part the *Identify* (ID) function:
+
+**Risk Assessment (ID.RA)**: The organization understands the cybersecurity risk to organizational operations (including mission, functions, image, or reputation), organizational assets, and individuals.
+
+* ID.RA-1: Asset vulnerabilities are identified and documented
+* ID.RA-2: Cyber threat intelligence and vulnerability information is received from information sharing forums and source
+* ID.RA-3: Threats, both internal and external, are identified and documented
+* ID.RA-4: Potential business impacts and likelihoods are identified
+* ID.RA-5: Threats, vulnerabilities, likelihoods, and impacts are used to determine risk
+* ID.RA-6: Risk responses are identified and prioritized
+
+**Risk Management Strategy (ID.RM)**: The organization’s priorities, constraints, risk tolerances, and assumptions are established and used to support operational risk decisions.
+
+* ID.RM-1: Risk management processes are established, managed, and agreed to by organizational stakeholders
+* ID.RM-2: Organizational risk tolerance is determined and clearly expressed
+* ID.RM-3: The organization’s determination of risk tolerance is informed by its role in critical infrastructure and sector specific risk analysis
+
+## IT risk laws and regulations
+
+In the following a brief description of applicable rules organized by source.
+
+
+### OECD
+
+OECD issued the following:
+
+* Organisation for Economic Co-operation and Development (OECD) Recommendation of the Council concerning guidelines governing the protection of privacy and trans-border flows of personal data (23 September 1980)
+* OECD Guidelines for the Security of Information Systems and Networks: Towards a Culture of Security (25 July 2002). Topic: General information security. Scope: Non binding guidelines to any OECD entities (governments, businesses, other organisations and individual users who develop, own, provide, manage, service, and use information systems and networks). The OECD Guidelines state the basic principles underpinning risk management and information security practices. While no part of the text is binding as such, non-compliance with any of the principles is indicative of a serious breach of RM/RA good practices that can potentially incur liability.
+
+### European Union
+
+The European Union issued the following, divided by topic:
+
+* Privacy
+ + Regulation (EC) No 45/2001 on the protection of individuals with regard to the processing of personal data by the Community institutions and bodies and on the free movement of such data provide an internal regulation, which is a practical application of the principles of the Privacy Directive described below. Furthermore, article 35 of the Regulation requires the Community institutions and bodies to take similar precautions with regard to their telecommunications infrastructure, and to properly inform the users of any specific risks of security breaches.
+ + Directive 95/46/EC on the protection of individuals with regard to the processing of personal data and on the free movement of such data require that any personal data processing activity undergoes a prior risk analysis in order to determine the privacy implications of the activity, and to determine the appropriate legal, technical and organisation measures to protect such activities;is effectively protected by such measures, which must be state of the art keeping into account the sensitivity and privacy implications of the activity (including when a third party is charged with the processing task) is notified to a national data protection authority, including the measures taken to ensure the security of the activity. Furthermore, article 25 and following of the Directive requires Member States to ban the transfer of personal data to non-Member States, unless such countries have provided adequate legal protection for such personal data, or barring certain other exceptions.
+ + Commission Decision 2001/497/EC of 15 June 2001 on standard contractual clauses for the transfer of personal data to third countries, under Directive 95/46/EC; and Commission Decision 2004/915/EC of 27 December 2004 amending Decision 2001/497/EC as regards the introduction of an alternative set of standard contractual clauses for the transfer of personal data to third countries. Topic: Export of personal data to third countries, specifically non-E.U. countries which have not been recognised as having a data protection level that is adequate (i.e. equivalent to that of the E.U.). Both Commission Decisions provide a set of voluntary model clauses which can be used to export personal data from a data controller (who is subject to E.U. data protection rules) to a data processor outside the E.U. who is not subject to these rules or to a similar set of adequate rules.
+ + International Safe Harbor Privacy Principles (see below USA and International Safe Harbor Privacy Principles )
+ + Directive 2002/58/EC of 12 July 2002 concerning the processing of personal data and the protection of privacy in the electronic communications sector
+* National Security
+ + Directive 2006/24/EC of 15 March 2006 on the retention of data generated or processed in connection with the provision of publicly available electronic communications services or of public communications networks and amending Directive 2002/58/EC (‘Data Retention Directive’). Topic: Requirement for the providers of public electronic telecommunications service providers to retain certain information for the purposes of the investigation, detection and prosecution of serious crime
+ + Council Directive 2008/114/EC of 8 December 2008 on the identification and designation of European critical infrastructures and the assessment of the need to improve their protection. Topic: Identification and protection of European Critical Infrastructures. Scope: Applicable to Member States and to the operators of European Critical Infrastructure (defined by the draft directive as ‘critical infrastructures the disruption or destruction of which would significantly affect two or more Member States, or a single Member State if the critical infrastructure is located in another Member State. This includes effects resulting from cross-sector dependencies on other types of infrastructure’). Requires Member States to identify critical infrastructures on their territories, and to designate them as ECIs. Following this designation, the owners/operators of ECIs are required to create Operator Security Plans (OSPs), which should establish relevant security solutions for their protection
+* Civil and Penal law
+ + Council Framework Decision 2005/222/JHA of 24 February 2005 on attacks against information systems. Topic: General decision aiming to harmonise national provisions in the field of cyber crime, encompassing material criminal law (i.e. definitions of specific crimes), procedural criminal law (including investigative measures and international cooperation) and liability issues. Scope: Requires Member States to implement the provisions of the Framework Decision in their national legal frameworks. Framework decision is relevant to RM/RA because it contains the conditions under which legal liability can be imposed on legal entities for conduct of certain natural persons of authority within the legal entity. Thus, the Framework decision requires that the conduct of such figures within an organisation is adequately monitored, also because the Decision states that a legal entity can be held liable for acts of omission in this regard.
+
+### Council of Europe
+
+* Council of Europe Convention on Cybercrime, Budapest, 23.XI.2001, European Treaty Series-No. 185. Topic: General treaty aiming to harmonise national provisions in the field of cyber crime, encompassing material criminal law (i.e. definitions of specific crimes), procedural criminal law (including investigative measures and international cooperation), liability issues and data retention. Apart from the definitions of a series of criminal offences in articles 2 to 10, the Convention is relevant to RM/RA because it states the conditions under which legal liability can be imposed on legal entities for conduct of certain natural persons of authority within the legal entity. Thus, the Convention requires that the conduct of such figures within an organisation is adequately monitored, also because the Convention states that a legal entity can be held liable for acts of omission in this regard.
+
+### United States
+
+United States issued the following, divided by topic:
+
+* Civil and Penal law
+ + Amendments to the Federal Rules of Civil Procedure with regard to electronic discovery. Topic: U.S. Federal rules with regard to the production of electronic documents in civil proceedings. The discovery rules allow a party in civil proceedings to demand that the opposing party produce all relevant documentation (to be defined by the requesting party) in its possession, so as to allow the parties and the court to correctly assess the matter. Through the e-discovery amendment, which entered into force on 1 December 2006, such information may now include electronic information. This implies that any party being brought before a U.S. court in civil proceedings can be asked to produce such documents, which includes finalised reports, working documents, internal memos and e-mails with regard to a specific subject, which may or may not be specifically delineated. Any party whose activities imply a risk of being involved in such proceedings must therefore take adequate precautions for the management of such information, including the secure storage. Specifically: The party must be capable of initiating a ‘litigation hold’, a technical/organisational measure which must ensure that no relevant information can be modified any longer in any way. Storage policies must be responsible: while deletion of specific information of course remains allowed when this is a part of general information management policies (‘routine, good-faith operation of the information system’, Rule 37 (f)), the wilful destruction of potentially relevant information can be punished by extremely high fines (in one specific case of 1.6 billion US$). Thus, in practice, any businesses who risk civil litigation before U.S. courts must implement adequate information management policies, and must implement the necessary measures to initiate a litigation hold.
+* Privacy
+ + California Consumer Privacy Act (CCPA)
+ + California Privacy Rights Act (CPRA)
+ + Gramm–Leach–Bliley Act (GLBA)
+ + USA PATRIOT Act, Title III
+ + Health Insurance Portability and Accountability Act (HIPAA) From an RM/RA perspective, the Act is particularly known for its provisions with regard to Administrative Simplification (Title II of HIPAA). This title required the U.S. Department of Health and Human Services (HHS) to draft specific rule sets, each of which would provide specific standards which would improve the efficiency of the health care system and prevent abuse. As a result, the HHS has adopted five principal rules: the Privacy Rule, the Transactions and Code Sets Rule, the Unique Identifiers Rule, the Enforcement Rule, and the Security Rule. The latter, published in the Federal Register on 20 February 2003 (see: http://www.cms.hhs.gov/SecurityStandard/Downloads/securityfinalrule.pdf Archived 2009-12-29 at the Wayback Machine), is specifically relevant, as it specifies a series of administrative, technical, and physical security procedures to assure the confidentiality of electronic protected health information. These aspects have been further outlined in a set of Security Standards on Administrative, Physical, Organisational and Technical Safeguards, all of which have been published, along with a guidance document on the basics of HIPAA risk management and risk assessment. European or other countries health care service providers will generally not be affected by HIPAA obligations if they are not active on the U.S. market. However, since their data processing activities are subject to similar obligations under general European law (including the Privacy Directive), and since the underlying trends of modernisation and evolution towards electronic health files are the same, the HHS safeguards can be useful as an initial yardstick for measuring RM/RA strategies put in place by European health care service providers, specifically with regard to the processing of electronic health information. HIPAA security standards include the following:
+ - Administrative safeguards:
+ * Security Management Process
+ * Assigned Security Responsibility
+ * Workforce Security
+ * Information Access Management
+ * Security Awareness and Training
+ * Security Incident Procedures
+ * Contingency Plan
+ * Evaluation
+ * Business Associate Contracts and Other Arrangements
+ - Physical safeguards
+ * Facility Access Controls
+ * Workstation Use
+ * Workstation Security
+ * Device and Media Controls
+ - Technical safeguards
+ * Access Control
+ * Audit Controls
+ * Integrity
+ * Person or Entity Authentication
+ * Transmission Security
+ - Organisational requirements
+ * Business Associate Contracts & Other Arrangements
+ * Requirements for Group Health Plans
+ + International Safe Harbor Privacy Principles issued by the US Department of Commerce on July 21, 2000 Export of personal data from a data controller who is subject to E.U. privacy regulations to a U.S. based destination; before personal data may be exported from an entity subject to E.U. privacy regulations to a destination subject to U.S. law, the European entity must ensure that the receiving entity provides adequate safeguards to protect such data against a number of mishaps. One way of complying with this obligation is to require the receiving entity to join the Safe Harbor, by requiring that the entity self-certifies its compliance with the so-called Safe Harbor Principles. If this road is chosen, the data controller exporting the data must verify that the U.S. destination is indeed on the Safe Harbor list (see safe harbor list)
+ + The United States Department of Homeland Security also utilizes Privacy Impact Assessment (PIA) as a decision making tool to identify and mitigate risks of privacy violations.
+* Sarbanes–Oxley Act
+* FISMA
+* SEC Cybersecurity Risk Management, Strategy, Governance, and Incident Disclosure
+
+As legislation evolves, there has been increased focus to require **'reasonable security'** for information management. CCPA states that "manufacturers of connected devices to equip the device with reasonable security." New York's SHIELD Act requires that organizations that manage NY residents' information “develop, implement and maintain reasonable safeguards to protect the security, confidentiality and integrity of the private information including, but not limited to, disposal of data.” This concept will influence how businesses manage their risk management plan as compliance requirements develop.
+
+
+## Standards organizations and standards
+
+* International standard bodies:
+ + International Organization for Standardization – ISO
+ + Payment Card Industry Security Standards Council
+ + Information Security Forum
+ + The Open Group
+* United States standard bodies:
+ + National Institute of Standards and Technology – NIST
+ + Federal Information Processing Standards – FIPS by NIST devoted to Federal Government and Agencies
+* UK standard bodies
+ + British Standard Institute
+
+### Short description of standards
+
+The list is chiefly based on:
+
+
+#### ISO
+
+* ISO/IEC 13335-1:2004 – Information technology—Security techniques—Management of information and communications technology security—Part 1: Concepts and models for information and communications technology security management http://www.iso.org/iso/en/CatalogueDetailPage.CatalogueDetail?CSNUMBER=39066. Standard containing generally accepted descriptions of concepts and models for information and communications technology security management. The standard is a commonly used code of practice, and serves as a resource for the implementation of security management practices and as a yardstick for auditing such practices. (See also http://csrc.nist.gov/publications/secpubs/otherpubs/reviso-faq.pdf Archived 2010-12-06 at the Wayback Machine)
+* ISO/IEC TR 15443-1:2005 – Information technology—Security techniques—A framework for IT security assurance reference:http://www.iso.org/iso/en/CatalogueDetailPage.CatalogueDetail?CSNUMBER=39733 (Note: this is a reference to the ISO page where the standard can be acquired. However, the standard is not free of charge, and its provisions are not publicly available. For this reason, specific provisions cannot be quoted). Topic: Security assurance – the Technical Report (TR) contains generally accepted guidelines which can be used to determine an appropriate assurance method for assessing a security service, product or environmental factor
+* ISO/IEC 15816:2002 – Information technology—Security techniques—Security information objects for access control reference:http://www.iso.org/iso/en/CatalogueDetailPage.CatalogueDetail?CSNUMBER=29139 (Note: this is a reference to the ISO page where the standard can be acquired. However, the standard is not free of charge, and its provisions are not publicly available. For this reason, specific provisions cannot be quoted). Topic: Security management – Access control. The standard allows security professionals to rely on a specific set of syntactic definitions and explanations with regard to SIOs, thus avoiding duplication or divergence in other standardisation efforts.
+* ISO/IEC TR 15947:2002 – Information technology—Security techniques—IT intrusion detection framework reference:http://www.iso.org/iso/en/CatalogueDetailPage.CatalogueDetail?CSNUMBER=29580 (Note: this is a reference to the ISO page where the standard can be acquired. However, the standard is not free of charge, and its provisions are not publicly available. For this reason, specific provisions cannot be quoted). Topic: Security management – Intrusion detection in IT systems. The standard allows security professionals to rely on a specific set of concepts and methodologies for describing and assessing security risks with regard to potential intrusions in IT systems. It does not contain any RM/RA obligations as such, but it is rather a tool for facilitating RM/RA activities in the affected field.
+* ISO/IEC 15408-1/2/3:2005 – Information technology — Security techniques — Evaluation criteria for IT security — Part 1: Introduction and general model (15408-1) Part 2: Security functional requirements (15408-2) Part 3: Security assurance requirements (15408-3) reference: http://isotc.iso.org/livelink/livelink/fetch/2000/2489/Ittf\_Home/PubliclyAvailableStandards.htm Topic: Standard containing a common set of requirements for the security functions of IT products and systems and for assurance measures applied to them during a security evaluation. Scope: Publicly available ISO standard, which can be voluntarily implemented. The text is a resource for the evaluation of the security of IT products and systems, and can thus be used as a tool for RM/RA. The standard is commonly used as a resource for the evaluation of the security of IT products and systems; including (if not specifically) for procurement decisions with regard to such products. The standard can thus be used as an RM/RA tool to determine the security of an IT product or system during its design, manufacturing or marketing, or before procuring it.
+* ISO/IEC 17799:2005 – Information technology—Security techniques—Code of practice for information security management. reference: http://www.iso.org/iso/en/CatalogueDetailPage.CatalogueDetail?CSNUMBER=39612&ICS1=35&ICS2=40&ICS3= (Note: this is a reference to the ISO page where the standard can be acquired. However, the standard is not free of charge, and its provisions are not publicly available. For this reason, specific provisions cannot be quoted). Topic: Standard containing generally accepted guidelines and general principles for initiating, implementing, maintaining, and improving information security management in an organization, including business continuity management. The standard is a commonly used code of practice, and serves as a resource for the implementation of information security management practices and as a yardstick for auditing such practices. (See also ISO/IEC 17799)
+* ISO/IEC TR 15446:2004 – Information technology—Security techniques—Guide for the production of Protection Profiles and Security Targets. reference: http://isotc.iso.org/livelink/livelink/fetch/2000/2489/Ittf\_Home/PubliclyAvailableStandards.htm Topic: Technical Report (TR) containing guidelines for the construction of Protection Profiles (PPs) and Security Targets (STs) that are intended to be compliant with ISO/IEC 15408 (the "Common Criteria"). The standard is predominantly used as a tool for security professionals to develop PPs and STs, but can also be used to assess the validity of the same (by using the TR as a yardstick to determine if its standards have been obeyed). Thus, it is a (nonbinding) normative tool for the creation and assessment of RM/RA practices.
+* ISO/IEC 18028:2006 – Information technology—Security techniques—IT network security reference: http://www.iso.org/iso/en/CatalogueDetailPage.CatalogueDetail?CSNUMBER=40008 (Note: this is a reference to the ISO page where the standard can be acquired. However, the standard is not free of charge, and its provisions are not publicly available. For this reason, specific provisions cannot be quoted). Topic: Five part standard (ISO/IEC 18028-1 to 18028-5) containing generally accepted guidelines on the security aspects of the management, operation and use of information technology networks. The standard is considered an extension of the guidelines provided in ISO/IEC 13335 and ISO/IEC 17799 focusing specifically on network security risks. The standard is a commonly used code of practice, and serves as a resource for the implementation of security management practices and as a yardstick for auditing such practices.
+* ISO/IEC 27001:2005 – Information technology—Security techniques—Information security management systems—Requirements reference: http://www.iso.org/iso/en/CatalogueDetailPage.CatalogueDetail?CSNUMBER=42103 (Note: this is a reference to the ISO page where the standard can be acquired. However, the standard is not free of charge, and its provisions are not publicly available. For this reason, specific provisions cannot be quoted). Topic: Standard containing generally accepted guidelines for the implementation of an Information Security Management System within any given organisation. Scope: Not publicly available ISO standard, which can be voluntarily implemented. While not legally binding, the text contains direct guidelines for the creation of sound information security practices The standard is a very commonly used code of practice, and serves as a resource for the implementation of information security management systems and as a yardstick for auditing such systems and the surrounding practices. Its application in practice is often combined with related standards, such as BS 7799-3:2006 which provides additional guidance to support the requirements given in ISO/IEC 27001:2005
+* ISO/IEC 27001:2013, the updated standard for information security management systems.
+* ISO/IEC TR 18044:2004 – Information technology—Security techniques—Information security incident management reference: http://www.iso.org/iso/en/CatalogueDetailPage.CatalogueDetail?CSNUMBER=35396 (Note: this is a reference to the ISO page where the standard can be acquired. However, the standard is not free of charge, and its provisions are not publicly available. For this reason, specific provisions cannot be quoted). Topic: Technical Report (TR) containing generally accepted guidelines and general principles for information security incident management in an organization. Scope: Not publicly available ISO TR, which can be voluntarily used. While not legally binding, the text contains direct guidelines for incident management. The standard is a high level resource introducing basic concepts and considerations in the field of incident response. As such, it is mostly useful as a catalyst to awareness raising initiatives in this regard.
+* ISO/IEC 18045:2005 – Information technology—Security techniques—Methodology for IT security evaluation reference: http://isotc.iso.org/livelink/livelink/fetch/2000/2489/Ittf\_Home/PubliclyAvailableStandards.htm Topic: Standard containing auditing guidelines for assessment of compliance with ISO/IEC 15408 (Information technology—Security techniques—Evaluation criteria for IT security) Scope Publicly available ISO standard, to be followed when evaluating compliance with ISO/IEC 15408 (Information technology—Security techniques—Evaluation criteria for IT security). The standard is a ‘companion document’, which is thus primarily of used for security professionals involved in evaluating compliance with ISO/IEC 15408 (Information technology—Security techniques—Evaluation criteria for IT security). Since it describes minimum actions to be performed by such auditors, compliance with ISO/IEC 15408 is impossible if ISO/IEC 18045 has been disregarded.
+* ISO/TR 13569:2005 – Financial services—Information security guidelines reference: http://www.iso.org/iso/en/CatalogueDetailPage.CatalogueDetail?CSNUMBER=37245 (Note: this is a reference to the ISO page where the standard can be acquired. However, the standard is not free of charge, and its provisions are not publicly available. For this reason, specific provisions cannot be quoted). Topic: Standard containing guidelines for the implementation and assessment of information security policies in financial services institutions. The standard is a commonly referenced guideline, and serves as a resource for the implementation of information security management programmes in institutions of the financial sector, and as a yardstick for auditing such programmes. (See also http://csrc.nist.gov/publications/secpubs/otherpubs/reviso-faq.pdf Archived 2010-12-06 at the Wayback Machine)
+* ISO/IEC 21827:2008 – Information technology—Security techniques—Systems Security Engineering—Capability Maturity Model (SSE-CMM): ISO/IEC 21827:2008 specifies the Systems Security Engineering – Capability Maturity Model (SSE-CMM), which describes the essential characteristics of an organization's security engineering process that must exist to ensure good security engineering. ISO/IEC 21827:2008 does not prescribe a particular process or sequence, but captures practices generally observed in industry. The model is a standard metric for security engineering practices.
+
+#### BSI
+
+* BS 25999-1:2006 – Business continuity management Part 1: Code of practice Note: this is only part one of BS 25999, which was published in November 2006. Part two (which should contain more specific criteria with a view of possible accreditation) is yet to appear. reference: http://www.bsi-global.com/en/Shop/Publication-Detail/?pid=000000000030157563 Archived 2009-08-27 at the Wayback Machine. Topic: Standard containing a business continuity code of practice. The standard is intended as a code of practice for business continuity management, and will be extended by a second part that should permit accreditation for adherence with the standard. Given its relative newness, the potential impact of the standard is difficult to assess, although it could be very influential to RM/RA practices, given the general lack of universally applicable standards in this regard and the increasing attention to business continuity and contingency planning in regulatory initiatives. Application of this standard can be complemented by other norms, in particular PAS 77:2006 – IT Service Continuity Management Code of Practice. The TR allows security professionals to determine a suitable methodology for assessing a security service, product or environmental factor (a deliverable). Following this TR, it can be determined which level of security assurance a deliverable is intended to meet, and if this threshold is actually met by the deliverable.
+* BS 7799-3:2006 – Information security management systems—Guidelines for information security risk management reference: (Note: this is a reference to the BSI page where the standard can be acquired. However, the standard is not free of charge, and its provisions are not publicly available. For this reason, specific provisions cannot be quoted). Topic: Standard containing general guidelines for information security risk management. Scope: Not publicly available BSI standard, which can be voluntarily implemented. While not legally binding, the text contains direct guidelines for the creation of sound information security practices. The standard is mostly intended as a guiding complementary document to the application of the aforementioned ISO 27001:2005, and is therefore typically applied in conjunction with this standard in risk assessment practices
+
+#### Information Security Forum
+
+* Standard of Good Practice for Information Security

@@ -1,0 +1,127 @@
+Valuation ring
+
+
+# Valuation ring
+
+
+
+In abstract algebra, a **valuation ring** is an integral domain *D* such that for every non-zero element *x* of its field of fractions *F*, at least one of *x* or *x*¹ belongs to *D*.
+
+Given a field *F*, if *D* is a subring of *F* such that either *x* or *x*¹ belongs to
+*D* for every nonzero *x* in *F*, then *D* is said to be **a valuation ring for the field *F*** or a **place** of *F*. Since *F* in this case is indeed the field of fractions of *D*, a valuation ring for a field is a valuation ring. Another way to characterize the valuation rings of a field *F* is that valuation rings *D* of *F* have *F* as their field of fractions, and their ideals are totally ordered by inclusion; or equivalently their principal ideals are totally ordered by inclusion. In particular, every valuation ring is a local ring.
+
+The valuation rings of a field are the maximal elements of the set of the local subrings in the field partially ordered by **dominance** or **refinement**, where
+
+Every local ring in a field *K* is dominated by some valuation ring of *K*.
+
+An integral domain whose localization at any prime ideal is a valuation ring is called a Prüfer domain.
+
+
+## Definitions
+
+There are several equivalent definitions of valuation ring (see below for the characterization in terms of dominance). For an integral domain *D* and its field of fractions *K*, the following are equivalent:
+
+1. For every non-zero *x* in *K*, at least one of *x* or *x*−¹ is in *D*.
+2. The ideals of *D* are totally ordered by inclusion.
+3. The principal ideals of *D* are totally ordered by inclusion (i.e. the elements in *D* are, up to units, totally ordered by divisibility.)
+4. There is a totally ordered abelian group Γ (called the **value group**) and a **valuation** ν: *K* → Γ ∪ {∞} with *D* = { *x* ∈ *K* | ν(*x*) ≥ 0 }.
+
+The equivalence of the first three definitions follows easily. A theorem of (Krull 1939) states that any ring satisfying the first three conditions satisfies the fourth: take Γ to be the quotient *K*/*D* of the unit group of *K* by the unit group of *D*, and take ν to be the natural projection. We can turn Γ into a totally ordered group by declaring the residue classes of elements of *D* as "positive".
+
+Even further, given any totally ordered abelian group Γ, there is a valuation ring *D* with value group Γ (see Hahn series).
+
+From the fact that the ideals of a valuation ring are totally ordered, one can conclude that a valuation ring is a local domain, and that every finitely generated ideal of a valuation ring is principal (i.e., a valuation ring is a Bézout domain). In fact, it is a theorem of Krull that an integral domain is a valuation ring if and only if it is a local Bézout domain. It also follows from this that a valuation ring is Noetherian if and only if it is a principal ideal domain. In this case, it is either a field or it has exactly one non-zero prime ideal; in the latter case it is called a discrete valuation ring. (By convention, a field is not a discrete valuation ring.)
+
+A value group is called *discrete* if it is isomorphic to the additive group of the integers, and a valuation ring has a discrete valuation group if and only if it is a discrete valuation ring.
+
+Very rarely, *valuation ring* may refer to a ring that satisfies the second or third condition but is not necessarily a domain. A more common term for this type of ring is *uniserial ring*.
+
+
+## Examples
+
+* Any field {\displaystyle \mathbb {F} } is a valuation ring. For example, the field of rational functions {\displaystyle \mathbb {F} (X)} on an algebraic variety {\displaystyle X}.
+* A simple non-example is the integral domain {\displaystyle \mathbb {C} [X]} since the inverse of a generic {\displaystyle f/g\in \mathbb {C} (X)} is {\displaystyle g/f\not \in \mathbb {C} [X]}.
+* The field of power series:
+
+* {\displaystyle \mathbb {Z} \_{(p)},} the localization of the integers {\displaystyle \mathbb {Z} } at the prime ideal (*p*), consisting of ratios where the numerator is any integer and the denominator is not divisible by *p*. The field of fractions is the field of rational numbers {\displaystyle \mathbb {Q} .}
+* The ring of meromorphic functions on the entire complex plane which have a Maclaurin series (Taylor series expansion at zero) is a valuation ring. The field of fractions are the functions meromorphic on the whole plane. If *f* does not have a Maclaurin series then 1/*f* does.
+* Any ring of p-adic integers {\displaystyle \mathbb {Z} \_{p}} for a given prime *p* is a local ring, with field of fractions the p-adic numbers {\displaystyle \mathbb {Q} \_{p}}. The integral closure {\displaystyle \mathbb {Z} \_{p}^{\text{cl}}} of the *p*-adic integers is also a local ring, with field of fractions {\displaystyle \mathbb {Q} \_{p}^{\text{cl}}} (the algebraic closure of the *p*-adic numbers). Both {\displaystyle \mathbb {Z} \_{p}} and {\displaystyle \mathbb {Z} \_{p}^{\text{cl}}} are valuation rings.
+* Let **k** be an ordered field. An element of **k** is called finite if it lies between two integers *n* < *x* < *m*; otherwise it is called infinite. The set *D* of finite elements of **k** is a valuation ring. The set of elements *x* such that *x* ∈ *D* and *x*−¹ ∉ *D* is the set of infinitesimal elements; and an element *x* such that *x* ∉ *D* and *x*−¹ ∈ *D* is called infinite.
+* The ring **F** of finite elements of a hyperreal field \***R** (an ordered field containing the real numbers) is a valuation ring of \***R**. **F** consists of all hyperreal numbers differing from a standard real by an infinitesimal amount, which is equivalent to saying a hyperreal number *x* such that −*n* < *x* < *n* for some standard integer *n*. The residue field, finite hyperreal numbers modulo the ideal of infinitesimal hyperreal numbers, is isomorphic to the real numbers.
+* A common geometric example comes from algebraic plane curves. Consider the polynomial ring {\displaystyle \mathbb {C} [x,y]} and an irreducible polynomial {\displaystyle f} in that ring. Then the ring {\displaystyle \mathbb {C} [x,y]/(f)} is the ring of polynomial functions on the curve {\displaystyle \{(x,y):f(x,y)=0\}}. Choose a point {\displaystyle P=(P\_{x},P\_{y})\in \mathbb {C} ^{2}} such that {\displaystyle f(P)=0} and it is a regular point on the curve; i.e., the local ring *R* at the point is a regular local ring of Krull dimension one or a discrete valuation ring.
+* For example, consider the inclusion {\displaystyle (\mathbb {C} [[X^{2}]],(X^{2}))\hookrightarrow (\mathbb {C} [[X]],(X))}. These are all subrings in the field of bounded-below power series {\displaystyle \mathbb {C} ((X))}.
+
+## Dominance and integral closure
+
+The units, or invertible elements, of a valuation ring are the elements *x* in *D* such that *x*−¹ is also a member of *D*. The other elements of *D* – called nonunits – do not have an inverse in *D*, and they form an ideal *M*. This ideal is maximal among the (totally ordered) ideals of D. Since *M* is a maximal ideal, the quotient ring *D*/*M* is a field, called the **residue field** of *D*.
+
+In general, we say a local ring {\displaystyle (S,{\mathfrak {m}}\_{S})} dominates a local ring {\displaystyle (R,{\mathfrak {m}}\_{R})} if {\displaystyle S\supseteq R} and {\displaystyle {\mathfrak {m}}\_{S}\cap R={\mathfrak {m}}\_{R}}; in other words, the inclusion {\displaystyle R\subseteq S} is a local ring homomorphism. Every local ring {\displaystyle (A,{\mathfrak {p}})} in a field *K* is dominated by some valuation ring of *K*. Indeed, the set consisting of all subrings *R* of *K* containing *A* and {\displaystyle 1\not \in {\mathfrak {p}}R} is nonempty and is inductive; thus, has a maximal element {\displaystyle R} by Zorn's lemma. We claim *R* is a valuation ring. *R* is a local ring with maximal ideal containing {\displaystyle {\mathfrak {p}}R} by maximality. Again by maximality it is also integrally closed. Now, if {\displaystyle x\not \in R}, then, by maximality, {\displaystyle {\mathfrak {p}}R[x]=R[x]} and thus we can write:
+
+Since {\displaystyle 1-r\_{0}} is a unit element, this implies that {\displaystyle x^{-1}} is integral over *R*; thus is in *R*. This proves *R* is a valuation ring. (*R* dominates *A* since its maximal ideal contains {\displaystyle {\mathfrak {p}}} by construction.)
+
+A local ring *R* in a field *K* is a valuation ring if and only if it is a maximal element of the set of all local rings contained in *K* partially ordered by dominance. This easily follows from the above.
+
+Let *A* be a subring of a field *K* and {\displaystyle f:A\to k} a ring homomorphism into an algebraically closed field *k*. Then *f* extends to a ring homomorphism {\displaystyle g:D\to k}, *D* some valuation ring of *K* containing *A*. (Proof: Let {\displaystyle g:R\to k} be a maximal extension, which clearly exists by Zorn's lemma. By maximality, *R* is a local ring with maximal ideal containing the kernel of *f*. If *S* is a local ring dominating *R*, then *S* is algebraic over *R*; if not, {\displaystyle S} contains a polynomial ring {\displaystyle R[x]} to which *g* extends, a contradiction to maximality. It follows {\displaystyle S/{\mathfrak {m}}\_{S}} is an algebraic field extension of {\displaystyle R/{\mathfrak {m}}\_{R}}. Thus, {\displaystyle S\to S/{\mathfrak {m}}\_{S}\hookrightarrow k} extends *g*; hence, *S* = *R*.)
+
+If a subring *R* of a field *K* contains a valuation ring *D* of *K*, then, by checking Definition 1, *R* is also a valuation ring of *K*. In particular, *R* is local and its maximal ideal contracts to some prime ideal of *D*, say, {\displaystyle {\mathfrak {p}}}. Then {\displaystyle R=D\_{\mathfrak {p}}} since {\displaystyle R} dominates {\displaystyle D\_{\mathfrak {p}}}, which is a valuation ring since the ideals are totally ordered. This observation is subsumed to the following: there is a bijective correspondence {\displaystyle {\mathfrak {p}}\mapsto D\_{\mathfrak {p}},\operatorname {Spec} (D)\to } the set of all subrings of *K* containing *D*. In particular, *D* is integrally closed, and the Krull dimension of *D* is the number of proper subrings of *K* containing *D*.
+
+In fact, the integral closure of an integral domain *A* in the field of fractions *K* of *A* is the intersection of all valuation rings of *K* containing *A*. Indeed, the integral closure is contained in the intersection since the valuation rings are integrally closed. Conversely, let *x* be in *K* but not integral over *A*. Since the ideal {\displaystyle x^{-1}A[x^{-1}]} is not {\displaystyle A[x^{-1}]}, it is contained in a maximal ideal {\displaystyle {\mathfrak {p}}}. Then there is a valuation ring *R* that dominates the localization of {\displaystyle A[x^{-1}]} at {\displaystyle {\mathfrak {p}}}. Since {\displaystyle x^{-1}\in {\mathfrak {m}}\_{R}}, {\displaystyle x\not \in R}.
+
+The dominance is used in algebraic geometry. Let *X* be an algebraic variety over a field *k*. Then we say a valuation ring *R* in {\displaystyle k(X)} has "center *x* on *X*" if {\displaystyle R} dominates the local ring {\displaystyle {\mathcal {O}}\_{x,X}} of the structure sheaf at *x*.
+
+
+## Ideals in valuation rings
+
+We may describe the ideals in the valuation ring by means of its value group.
+
+Let Γ be a totally ordered abelian group. A subset Δ of Γ is called a *segment* if it is nonempty and, for any α in Δ, any element between −α and α is also in Δ (end points included). A subgroup of Γ is called an *isolated subgroup* if it is a segment and is a proper subgroup.
+
+Let *D* be a valuation ring with valuation *v* and value group Γ. For any subset *A* of *D*, we let {\displaystyle \Gamma \_{A}} be the complement of the union of {\displaystyle v(A-0)} and {\displaystyle -v(A-0)} in {\displaystyle \Gamma }. If *I* is a proper ideal, then {\displaystyle \Gamma \_{I}} is a segment of {\displaystyle \Gamma }. In fact, the mapping {\displaystyle I\mapsto \Gamma \_{I}} defines an inclusion-reversing bijection between the set of proper ideals of *D* and the set of segments of {\displaystyle \Gamma }. Under this correspondence, the nonzero prime ideals of *D* correspond bijectively to the isolated subgroups of Γ.
+
+Example: The ring of *p*-adic integers {\displaystyle \mathbb {Z} \_{p}} is a valuation ring with value group {\displaystyle \mathbb {Z} }. The zero subgroup of {\displaystyle \mathbb {Z} } corresponds to the unique maximal ideal {\displaystyle (p)\subseteq \mathbb {Z} \_{p}} and the whole group to the zero ideal. The maximal ideal is the only isolated subgroup of {\displaystyle \mathbb {Z} }.
+
+The set of isolated subgroups is totally ordered by inclusion. The **height** or **rank** *r*(Γ) of Γ is defined to be the cardinality of the set of isolated subgroups of Γ. Since the nonzero prime ideals are totally ordered and they correspond to isolated subgroups of Γ, the height of Γ is equal to the Krull dimension of the valuation ring *D* associated with Γ.
+
+The most important special case is height one, which is equivalent to Γ being a subgroup of the real numbers {\displaystyle \mathbb {R} } under addition (or equivalently, of the positive real numbers {\displaystyle \mathbb {R} ^{+}} under multiplication.) A valuation ring with a valuation of height one has a corresponding absolute value defining an ultrametric place. A special case of this are the discrete valuation rings mentioned earlier.
+
+The **rational rank** *rr*(Γ) is defined as the rank of the value group as an abelian group,
+
+
+## Places
+
+
+### General definition
+
+A *place* of a field *K* is a ring homomorphism *p* from a valuation ring *D* of *K* to some field such that, for any {\displaystyle x\not \in D}, {\displaystyle p(1/x)=0}. The image of a place is a field called the **residue field** of *p*. For example, the canonical map {\displaystyle D\to D/{\mathfrak {m}}\_{D}} is a place.
+
+
+#### Example
+
+Let *A* be a Dedekind domain and {\displaystyle {\mathfrak {p}}} a prime ideal. Then the canonical map {\displaystyle A\_{\mathfrak {p}}\to k({\mathfrak {p}})} is a place.
+
+
+### Specialization of places
+
+We say a **place *p* *specializes to* a place *p′*,** denoted by {\displaystyle p\rightsquigarrow p'}, if the valuation ring of *p* contains the valuation ring of *p'*. In algebraic geometry, we say a prime ideal {\displaystyle {\mathfrak {p}}} specializes to {\displaystyle {\mathfrak {p}}'} if {\displaystyle {\mathfrak {p}}\subseteq {\mathfrak {p}}'}. The two notions coincide: {\displaystyle p\rightsquigarrow p'} if and only if a prime ideal corresponding to *p* specializes to a prime ideal corresponding to *p′* in some valuation ring (recall that if {\displaystyle D\supseteq D'} are valuation rings of the same field, then *D* corresponds to a prime ideal of {\displaystyle D'}.)
+
+
+#### Example
+
+For example, in the function field {\displaystyle \mathbb {F} (X)} of some algebraic variety {\displaystyle X} every prime ideal {\displaystyle {\mathfrak {p}}\in {\text{Spec}}(R)} contained in a maximal ideal {\displaystyle {\mathfrak {m}}} gives a specialization {\displaystyle {\mathfrak {p}}\rightsquigarrow {\mathfrak {m}}}.
+
+
+#### Remarks
+
+It can be shown: if {\displaystyle p\rightsquigarrow p'}, then {\displaystyle p'=q\circ p|\_{D'}} for some place *q* of the residue field {\displaystyle k(p)} of *p*. (Observe {\displaystyle p(D')} is a valuation ring of {\displaystyle k(p)} and let *q* be the corresponding place; the rest is mechanical.) If *D* is a valuation ring of *p*, then its Krull dimension is the cardinarity of the specializations other than *p* to *p*. Thus, for any place *p* with valuation ring *D* of a field *K* over a field *k*, we have:
+
+If *p* is a place and *A* is a subring of the valuation ring of *p*, then {\displaystyle \operatorname {ker} (p)\cap A} is called the *center* of *p* in *A*.
+
+
+### Places at infinity
+
+For the function field on an affine variety {\displaystyle X} there are valuations which are not associated to any of the primes of {\displaystyle X}. These valuations are called **the places at infinity**. For example, the affine line {\displaystyle \mathbb {A} \_{k}^{1}} has function field {\displaystyle k(x)}. The place associated to the localization of
+
+at the maximal ideal
+
+is a place at infinity.
+

@@ -1,0 +1,42 @@
+Open-core model
+
+
+# Open-core model
+
+
+
+The **open-core model** is a business model for the monetization of commercially produced open-source software. The open-core model primarily involves offering a "core" or feature-limited version of a software product as free and open-source software, while offering "commercial" versions or add-ons as proprietary software. The term was coined by Andrew Lampitt in 2008.
+
+The concept of open-core software has proven to be controversial, as many developers do not consider the business model to be true open-source software. Despite this, open-core models are used by many open-source software companies.
+
+
+## Use of contributor license agreements
+
+Some open-core products require their contributors to sign a contributor license agreement, which either dictates that the copyright of all contributions to the product become the property of its owner, or that the product's owner is given an unlimited, non-exclusive license to use the contributions, but the authors retain copyright ownership. In an open-core scenario, these agreements are typically meant to allow the commercial owner of the product (which in some cases, is ultimately the copyright holder to all of its code, regardless of its original author) to simultaneously market versions of the product under open-source and non-free licenses. This is in contrast with more traditional uses of CLAs, which are meant solely to allow the steward of an open-source project to defend and protect the copyrights of its contributors, or to guarantee that the code will only ever be made available under open-source terms (thus protecting it from becoming open core).
+
+
+## Examples
+
+* Kafka, a data streaming service under the Apache 2.0 license, is the open-source core to the company, Confluent, which issues a Confluent Community License, a source-available license that governs additional features in the Confluent Platform.
+* Cassandra, an open-source database under the Apache 2.0 license, is the core to the company, Datastax, which issues enterprise subscription license for additional management and security features inside DataStax Enterprise.
+* Instructure's Canvas learning management software.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+* Oracle's MySQL database software is dual-licensed under a proprietary license, and the GNU General Public License (GPL); proprietary versions offer additional features and enterprise support plans.
+* Oracle VM VirtualBox is GNU GPL-licensed, but some features, such as encryption and remote display, require Oracle's closed-source Extension Pack.
+* Elastic's core, which includes Elasticsearch, Kibana, Logstash and Beats, was under an Apache 2.0 license, while additional plugins are distributed under Elastic's own proprietary license. In January 2021, Elastic re-licensed its software under the non-free Server Side Public License and Elastic License, which restrict use of the software as part of managed services, and circumvention of software locks on premium features. This means it is no longer open core, but source available-software.
+* Eucalyptus, private cloud software, has a proprietary enterprise edition which provides additional features.
+* IntelliJ IDEA CE (Community Edition) is licensed under the Apache License, while IDEA Ultimate Edition is trialware.
+* GitLab CE (Community Edition) is under an MIT-style open source license, while GitLab EE (Enterprise Edition) is under a commercial license.
+* Neo4j CE (Community Edition) is licensed under GPL version 3, while Neo4j EE (Enterprise Edition) is under a commercial license, providing additional features including clustering and hot backups.
+* Seldon Core, a machine learning platform under the Apache 2.0 license, is the core to the company Seldon, which provides Seldon Deploy under a commercial license.
+* Redis was under a 3-clause BSD open source license, while Redis Labs offers Redis Modules under a Source-available software license, and Redis Enterprise under a commercial license which provides additional enterprise features such as on-the-fly scaling, replication performance tuning, and clustering support for Redis Modules. In March 2024, Redis Labs re-licensed Redis under 'Redis Source Available License' and Server Side Public License, both of which are non-free.
+
+### Restrictions on use in services
+
+A new variation of the practice emerged in 2018 among several open core products intended for server-side use, seeking to control use of the product as part of a service offered to a customer. These practices, in particular, target incorporation of the software into proprietary services by cloud application service providers such as Amazon Web Services, but with what vendors perceive to be inadequate compensation or contributions back to the upstream software in return.
+
+MongoDB changed its license from the GNU Affero General Public License (a variation of the GPL which requires that the software's source code be offered to those who use it over a network) to a modified version titled the "Server Side Public License" (SSPL), where the source code of the entire service (including, without limitation, all code needed for another user to run an instance of the service themselves) must be released under the SSPL if it incorporates an SSPL-licensed component (unlike the AGPL, where this provision only applies to the copyrighted work that is licensed under the AGPL). Bruce Perens, co-author of The Open Source Definition, argued that the SSPL violated its requirement for an open source license to not place restrictions on software distributed alongside the licensed software. The Open Source Initiative (OSI) ruled that the SSPL violates the Open Source Definition and is therefore not a free software license, as the provision discriminates against commercial users. Debian, Fedora, and Red Hat Enterprise Linux pulled MongoDB from their distributions after the license change, considering the new license to be in violation of their licensing policies.
+
+Redis Labs made its Redis plugins subject to the "Commons Clause", a restriction on sale of the software on top of the existing Apache License terms. After criticism, this was changed in 2019 to the "Redis Source Available License", a non-free license which forbids sale of the software as part of "a database, a caching engine, a stream processing engine, a search engine, an indexing engine or an ML/DL/AI serving engine". The last versions of the modules licensed solely under the Apache License were forked and are maintained by community members under the GoodFORM project. A similar move was made when HashiCorp switched to the non-free Business Source License (BSL) on its products, including Terraform, which received the Linux Foundation-backed fork OpenTofu.
+
+In September 2024, WP Engine—a hosting provider that uses the free and open source WordPress software—began to face criticism from Matt Mullenweg—the founder of the project's corporate sponsor Automattic, and owner of the competitor WordPress.com. During a presentation and blog post, he criticized WP Engine over inadequate upstream contributions, disabling of features, private equity funding, and trademark dilution of the "WP" prefix. He called the company a "cancer" to WordPress, and called for a boycott of its services. WP Engine sent a cease and desist to Automattic demanding the removal of the comments, stating that they operated within the WordPress Foundation trademark usage guidelines, and that Automattic had been demanding "significant percentage of its gross revenues" in licensing fees. While WordPress is licensed under the GNU General Public License, Mullenweg began to enforce restrictions against WP Engine by banning it from any services hosted under the WordPress.org domain, including automatic updates and the ability to download plug-ins and themes from within the software. The trademark guidelines were also modified to cover use of "WP". In October 2024, WP Engine formally filed a lawsuit against Automattic for defamation and extortion.
+

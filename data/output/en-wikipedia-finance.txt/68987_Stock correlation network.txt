@@ -1,0 +1,37 @@
+Stock correlation network
+
+
+# Stock correlation network
+
+
+
+A **stock correlation network** is a type of financial network based on stock price correlation used for observing, analyzing and predicting the stock market dynamics.
+
+
+## Background
+
+In the last decade, financial networks have attracted more attention from the research community. A study on company ownership based network showed a power law distribution with majority of companies controlled by small number of people. Another study focused on board of directors where the network was created between companies if represented by the same member on board. The board membership network thus created resulted in a power law with small number of board members representing large number of companies.
+Several studies have proposed network based models for studying the stock correlation network. Stock correlation network has proven its efficacy in predicting market movements. Chakrabortia and Onella showed that the average distance between the stocks can be a significant indicator of market dynamics. Their work focused on stock market (1985–1990) that included the stock market crash of 1987 (Black Monday). Andrew Lo and Khandaniy worked on the network of different hedge funds and observed the patterns before the August 2007 stock market turbulence.
+
+
+## Methods
+
+The basic approach for building the stock correlation network involves two steps. The first step aims at finding the correlation between each pair of stock considering their corresponding time series. The second step applies a criterion to connect the stocks based on their correlation. The popular method for connecting two correlated stocks is the minimum spanning tree method. The other methods are, planar maximally filtered graph, and winner take all method. In all three methods, the procedure for finding correlation between stocks remains the same.
+
+Step 1: Select the desired time series data. The time series data can be daily closing prices, daily trading volumes, daily opening prices, and daily price returns.
+
+Step 2: For a particular time series selected from step 1, find the cross correlation for each pair of stocks using the cross correlation formula.
+
+Step 3: Compute the cross correlation for all the stocks and create a cross correlation matrix {\displaystyle Cij}. The cross correlation is between stock {\displaystyle i} and stock {\displaystyle j} and their time series data is free of time delays.
+
+Step 4: In case of the minimum spanning tree method a metric distance {\displaystyle dij} is calculated using the cross correlation matrix.
+
+**{\displaystyle dij}= {\displaystyle (2(1-Cij))^{0.5}}**
+
+Where {\displaystyle dij} is the edge distance between stock {\displaystyle i} and stock {\displaystyle j}.
+The minimum spanning tree and planar maximally filtered graph may cause loss of information, i.e., some high correlation edges are discarded and low correlation edges are retained because of the topological reduction criteria. Tse, *et al.* introduced the winner take all connection criterion where in the drawback of minimum spanning tree and planar maximally filtered graph are eliminated. In winner take all method, step 1-3 are retained. However, in step 4 the nodes are linked based on a threshold.
+
+**{\displaystyle Cij} λ**
+
+The threshold values (λ) can be set between 0 and 1. Tse, *et al.* showed that for large values of threshold (0.7, 0.8, and 0.9) the stock correlation networks are scale free where the nodes linked in a manner that their degree distribution follows a power law. For small values of threshold, the network tends to be fully connected and does not exhibit scale free distribution.
+

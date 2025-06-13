@@ -1,0 +1,68 @@
+Embedded analytics
+
+
+# Embedded analytics
+
+
+
+**Embedded analytics** enables organisations to integrate analytics capabilities into their own, often software as a service, applications, portals, or websites. This differs from embedded software and web analytics (also commonly known as product analytics).
+
+This integration typically provides contextual insights, quickly, easily and conveniently accessible since these insights should be present on the web page right next to the other, operational, parts of the host application. Insights are provided through interactive data visualisations, such as charts, diagrams, filters, gauges, maps and tables often in combination as dashboards embedded within the system. This setup enables easier, in-depth data analysis without the need to switch and log in between multiple applications. Embedded analytics is also known as customer facing analytics.
+
+Embedded analytics is the integration of analytic capabilities into a host, typically browser-based, business-to-business, software as a service, application. These analytic capabilities would typically be relevant and contextual to the use-case of the host application.
+
+The use-case is, most commonly business-to business, since businesses typically have more sophisticated analytic expectations and needs than consumers. Here, though, the word "business" in "business-to-business software as a service", could also refer to organisational, operational use cases that ultimately benefit consumers (such as healthcare, for instance), e.g.: clinics & hospitals, care & correctional facilities, educational establishments (on/offline), government departments, municipalities, museums, not-for-profit organisations, overseers & regulators amongst others.
+
+Business-to-business-to-consumer use-cases might also be possible, for example a wealth management software as a service application serving wealth management organisations, where a user might be an advisor to consumers.
+
+
+## History
+
+The term "embedded analytics" was first used by Howard Dresner: consultant, author, former Gartner analyst and inventor of the term "business intelligence" said Howard Dresner while he was working for Hyperion Solutions, a company that Oracle bought in 2007. Oracle started then to use the term "embedded analytics" at their press release for Oracle Rapid Planning on 2009 ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ.
+
+
+## Considerations with embedded analytics
+
+When evaluating embedding analytics, consideration would normally be given to integration at various levels, these would likely include: security integration, data integration, application logic integration, business rules integration, and user experience integration.
+
+This is in contrast to traditional BI, which expects users to leave their workflow applications to look at data insights in a separate set of tools. This immediacy makes embedded analytics much more intuitive and likely to be valued by users. A December 2016 report from Nucleus Research found that using BI tools, which require toggling between applications, can take up as much as 1–2 hours of an employee's time each week, whereas embedded analytics eliminate the need to toggle between apps.
+
+There's a spectrum of options for embedding analytics, on the one hand, at the outset, for example in developing a software as a service minimum viable product, developers will often select a visualisation library, since this is assumed to be the most flexible way to create unique and differentiated analytic experiences. At the other end of the spectrum are Business Intelligence tools, these might make some sacrifices in flexibility for developers, but make up for this with the maturity and sophistication of products optimised for data scientists and analysts.
+
+With embedded analytics, developers and product managers are looking for some kind of compromise between those two extremes of flexibility and user sophistication: flexibility sufficient for product teams to innovate and differentiate, sophistication sufficient to provide advanced analytic capabilities yet without the user being a data scientist or necessarily having any analytic background experience or training. The objective would be intuitive, contextual analytics, consumed as regular web content, immersed into operational user experiences and workflows usable without any special knowledge or training required.
+
+
+## Use-cases for embedded analytics
+
+The use-cases for embedded analytics are as diverse as the vertical (industry-specific) or horizontal (function, process or role-specific - across industries) host applications in which they are embedded, some examples include:
+
+
+### Vertical use-case examples
+
+Automotive, reservation/rental & dealerships, education, energy management, Fintech (banking, asset management, wealth management), hospital management & healthcare (clinics, care-homes and in the field), learning management, property & facilities management, retail, staffing, supply chain management, transportation & fleet management, unified communications
+
+
+### Horizontal use-case examples
+
+Advertising & multichannel marketing, customer relationship management, enterprise resource planning, human resources, human capital management, payroll & benefits, information technology service management, procurement and purchase-topPay
+
+
+## Analytics vs analysis
+
+A common perception is that analytics is mostly, or solely, about analysis. A key value from analytics is the ability to analyse, however the potential for analytics can go substantially beyond this once embedded in the processes of a host software as a service]] application.
+
+When considering user profiles, the difference becomes clearer:
+
+* With analysis, the user would be expected to be trained, experienced or at least familiar with the principals of analysis and might have job titles such as analyst, data analyst or data scientist. This person, for example, would understand chart selection, in other words, given a specific data set, which chart type(s) would best illustrate what can be learnt from the data. This person probably has a good understanding of data structures, might have the ability to write queries, might be familiar with data modelling and would likely have a strong statistical awareness.
+* With embedded analytics, the user would be expected to be trained, experienced or at least familiar with business processes and might have no formal or other data science skills. This person is more interested in outcomes that can be driven from analytics rather than exploration into inconsistencies or anomalies that can be found in the data.
+
+With embedded analytics, a software as a service user is probably less interested in spending much time analysing, their purpose, with analytic content immersed as part of a business process, is to drive outcomes, potentially at scale. For this persona, an analytic journey might start with a dashboard helpful in highlighting an anomaly which needs prioritised attention. Clicking on that anomaly, guides the user in understanding the root-cause that's causing the need for action. Once a root-cause has been investigated, the embedded analytics can place the user in the part of the host application to act, potentially at scale. So rather than reschedule, reorder, reassign one thing, the embedded analytics can apply business rules and pass parameters to the host application to act 100 or 1,000 times, instead of once, where each action may be individually customised.
+
+
+## Types of embedded analytics products
+
+When considering the integration of analytics into your solution, you can choose from various categories of software products. These options can be broadly classified into three main groups:
+
+1. Embedded analytics for SaaS software: Specifically designed for software as a service applications, this category offers specialized embedded analytics solutions. They are ideal for enhancing the analytics capabilities of software as a service platforms, enabling data-driven insights and features tailored to software as a service environments. Like GoodData, icCube, Logi Analytics, Looker (company), Sisense.
+2. Business intelligence software: If your goal is to incorporate pre-existing, comprehensive Business Intelligence software into your solution, you can opt for this category. It allows for seamless integration of generic BI tools for data analysis and reporting.
+3. JavaScript graphics library: If you prefer to build analytics solutions from the ground up, utilizing JavaScript graphics libraries provides the flexibility to create custom analytics components tailored to your specific needs.

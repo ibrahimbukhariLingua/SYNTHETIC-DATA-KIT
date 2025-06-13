@@ -1,0 +1,64 @@
+PA-DSS
+
+
+# PA-DSS
+
+
+
+The **Payment Application Data Security Standard** (PA-DSS) is the global security standard created by the Payment Card Industry Security Standards Council (PCI SSC).
+PA-DSS was implemented in an effort to provide the definitive data standard for software vendors that develop payment applications. The standard aimed to prevent developed payment applications for third parties from storing prohibited secure data including magnetic stripe, CVV2, or PIN. In that process, the standard also dictates that software vendors develop payment applications that are compliant with the Payment Card Industry Data Security Standards (PCI DSS).
+
+Ultimately the PA-DSS was retired in late 2022, though existing implementations using PA-DSS applications do not necessarily lose their compliance status. The PCI Council since established a new software validation program, the PCI Software Security Framework.
+
+
+## Requirements
+
+For a payment application to be deemed **PA-DSS** compliant, software vendors must ensure that their software includes the following fourteen protections:
+
+1. Do not retain full track data, card verification code or value (CAV2, CID, CVC2, CVV2), or PIN block data.
+2. Protect stored cardholder data.
+3. Provide secure authentication features.
+4. Log payment application activity.
+5. Develop secure payment applications.
+6. Protect wireless transmissions.
+7. Test payment applications to address vulnerabilities and maintain payment application updates.
+8. Facilitate secure network implementation.
+9. Cardholder data must never be stored on a server connected to the Internet.
+10. Facilitate secure remote access to payment application.
+11. Encrypt sensitive traffic over public networks.
+12. Secure all non-console administrative access.
+13. Maintain a PA-DSS Implementation Guide for customers, resellers, and integrators.
+14. Assign PA-DSS responsibilities for personnel, and maintain training programs for personnel, customers, resellers, and integrators.
+
+## Governance and enforcement
+
+PCI SSC has compiled a list of payment applications that have been validated as PA-DSS compliant, with the list updated to reflect compliant payment applications as they are developed.
+Creation and enforcement of these standards currently rests with PCI SSC via Payment Application-Qualified Security Assessors (PA-QSA). PA-QSAs conduct payment application reviews that help software vendors ensure that applications are compliant with PCI standards.
+
+
+## History
+
+Governed originally by Visa Inc., under the PABP moniker, PA-DSS was launched on April 15, 2008 and updated on October 15, 2008. PA-DSS then became retroactively distinguished as "version 1.1" and "version 1.2".
+
+In October 2009, PA-DSS v1.2.1 was released with three noted changes:
+
+1. Under “Scope of PA-DSS,” align content with the PA-DSS Program Guide, v1.2.1, to clarify applications to which PA-DSS applies.
+2. Under Laboratory Requirement 6, corrected spelling of “OWASP.”
+3. In the Attestation of Validation, Part 2a, update “Payment Application Functionality” to be consistent with the application types listed in the PA-DSS Program Guide, and clarify annual re-validation procedures in Part 3b.
+
+In October 2010, PA-DSS 2.0 was released, indicating: *Update and implement minor changes from v1.2.1 and align with new PCI DSS v2.0. For details, please see PA-DSS – Summary of Changes from PA-DSS Version 1.2.1 to 2.0.*
+
+In November 2013, PA-DSS 3.0 was released, indicating: *Update from PA-DSS v2. For details of changes, please see PA-DSS – Summary of Changes from PA-DSS Version 2.0 to 3.0.*
+
+In May 2015, PA-DSS 3.1 was released indicating:*Update from PA-DSS v3.0. See PA-DSS – Summary of Changes from PA-DSS Version 3.0 to 3.1 for details of changes.*
+
+In May 2016, version 3.2 of the PA-DSS Program Guide and Standards were released. For details, see *Summary of Changes from PA-DSS Version 3.1 to 3.2.*
+
+
+## Supplemental information
+
+The PCI SSC has published additional materials that further clarify PA-DSS, including the following:
+
+* PA-DSS Requirements and security assessment procedures.
+* Changes from past standards.
+* General program guide for QSAs.

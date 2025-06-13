@@ -1,0 +1,49 @@
+Virtual valuation
+
+
+# Virtual valuation
+
+
+
+In auction theory, particularly Bayesian-optimal mechanism design, a **virtual valuation** of an agent is a function that measures the surplus that can be extracted from that agent.
+
+A typical application is a seller who wants to sell an item to a potential buyer and wants to decide on the optimal price. The optimal price depends on the *valuation* of the buyer to the item, {\displaystyle v}. The seller does not know {\displaystyle v} exactly, but he assumes that {\displaystyle v} is a random variable, with some cumulative distribution function {\displaystyle F(v)} and probability distribution function {\displaystyle f(v):=F'(v)}.
+
+The *virtual valuation* of the agent is defined as:
+
+
+## Applications
+
+A key theorem of Myerson says that:
+
+In the case of a single buyer, this implies that the price {\displaystyle p} should be determined according to the equation:
+
+This guarantees that the buyer will buy the item, if and only if his virtual-valuation is weakly-positive, so the seller will have a weakly-positive expected profit.
+
+This exactly equals the optimal sale price – the price that maximizes the expected value of the seller's profit, given the distribution of valuations:
+
+Virtual valuations can be used to construct Bayesian-optimal mechanisms also when there are multiple buyers, or different item-types.
+
+
+## Examples
+
+1. The buyer's valuation has a continuous uniform distribution in {\displaystyle [0,1]}. So:
+
+* {\displaystyle F(v)=v{\text{ in }}[0,1]}
+* {\displaystyle f(v)=1{\text{ in }}[0,1]}
+* {\displaystyle r(v)=2v-1{\text{ in }}[0,1]}
+* {\displaystyle r^{-1}(0)=1/2}, so the optimal single-item price is 1/2.
+
+2. The buyer's valuation has a normal distribution with mean 0 and standard deviation 1. {\displaystyle w(v)} is monotonically increasing, and crosses the *x*-axis in about 0.75, so this is the optimal price. The crossing point moves right when the standard deviation is larger.
+
+
+## Regularity
+
+A probability distribution function is called **regular** if its virtual-valuation function is weakly-increasing. Regularity is important because it implies that the virtual-surplus can be maximized by a truthful mechanism.
+
+A sufficient condition for regularity is monotone hazard rate, which means that the following function is weakly-increasing:
+
+Monotone-hazard-rate implies regularity, but the opposite is not true.
+
+The proof is simple: the monotone hazard rate implies {\displaystyle -{\frac {1}{r(v)}}} is weakly increasing in {\displaystyle v} and therefore the virtual valuation {\displaystyle v-{\frac {1}{r(v)}}} is strictly increasing in {\displaystyle v}.
+

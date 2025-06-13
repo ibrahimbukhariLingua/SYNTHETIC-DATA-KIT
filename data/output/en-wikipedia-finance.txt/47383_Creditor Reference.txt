@@ -1,0 +1,31 @@
+Creditor Reference
+
+
+# Creditor Reference
+
+
+
+The **Creditor Reference** (also called the **Structured Creditor Reference**) is an international business standard based on ISO 11649, implemented at the end of 2008.
+
+Using Creditor Reference, a company can automatically match its remittance information to its A/R. This means that the company's financial supply chain's automated processing will be increased.
+
+The Creditor Reference was first implemented within the SEPA rulebook 3.2.
+
+
+## Implementation
+
+A vendor adds the Creditor Reference to its invoices. When a customer pays the invoice, the company writes the Creditor Reference instead of the invoice number in the message section, or places a Creditor Reference field in its payment ledger.
+
+When the vendor receives the payment, it can automatically match the remittance information to its Accounts Receivable system.
+
+
+## Structure
+
+The Creditor Reference is an alphanumeric string, up to 25 characters long, with the letters "RF" at the beginning. After the letters are two check digits, which confirm that the reference will be entered correctly.
+
+The remaining part of the Creditor Reference (up to 21 alphanumeric characters) is the Reference. The content of the Creditor Reference can be determined without any restrictions. The Reference part can be subject to further restrictions when e.g. national reference numbers are converted from/to Creditor Reference format; in Finland the national reference number includes a single check digit by itself, and is limited to 4–20 characters in length.
+
+Example: **RF18 5390 0754 7034** [In this example, the check digits are "18". The message is structured in print format.]
+
+Example: **RF18000000000539007547034** [In this example, the reference is the same as above, but in digital format (All 25 characters present).]
+

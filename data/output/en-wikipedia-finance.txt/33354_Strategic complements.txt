@@ -1,0 +1,43 @@
+Strategic complements
+
+
+# Strategic complements
+
+
+
+In economics and game theory, the decisions of two or more players are called **strategic complements** if they mutually reinforce one another, and they are called **strategic substitutes** if they mutually offset one another. These terms were originally coined by Bulow, Geanakoplos, and Klemperer (1985).
+
+To see what is meant by 'reinforce' or 'offset', consider a situation in which the players all have similar choices to make, as in the paper of Bulow et al., where the players are all imperfectly competitive firms that must each decide how much to produce. Then the production decisions are strategic complements if an increase in the production of one firm increases the marginal revenues of the others, because that gives the others an incentive to produce more too. This tends to be the case if there are sufficiently strong aggregate increasing returns to scale and/or the demand curves for the firms' products have a sufficiently low own-price elasticity. On the other hand, the production decisions are strategic substitutes if an increase in one firm's output decreases the marginal revenues of the others, giving them an incentive to produce less.
+
+According to Russell Cooper and Andrew John, strategic complementarity is the basic property underlying examples of multiple equilibria in coordination games.
+
+
+## Calculus formulation
+
+Mathematically, consider a symmetric game with two players that each have payoff function {\displaystyle \,\Pi (x\_{i},x\_{j})}, where {\displaystyle \,x\_{i}} represents the player's own decision, and {\displaystyle \,x\_{j}} represents the decision of the other player. Assume {\displaystyle \,\Pi } is increasing and concave in the player's own strategy {\displaystyle \,x\_{i}}. Under these assumptions, the two decisions are strategic complements if an increase in each player's own decision {\displaystyle \,x\_{i}} raises the marginal payoff {\displaystyle {\frac {\partial \Pi \_{j}}{\partial x\_{j}}}} of the other player. In other words, the decisions are strategic complements if the second derivative {\displaystyle {\frac {\partial ^{2}\Pi \_{j}}{\partial x\_{j}\partial x\_{i}}}} is positive for {\displaystyle i\neq j}. Equivalently, this means that the function {\displaystyle \,\Pi } is supermodular.
+
+On the other hand, the decisions are strategic substitutes if {\displaystyle {\frac {\partial ^{2}\Pi \_{j}}{\partial x\_{j}\partial x\_{i}}}} is negative, that is, if {\displaystyle \,\Pi } is submodular.
+
+
+## Example
+
+In their original paper, Bulow et al. use a simple model of competition between two firms to illustrate their ideas.
+The revenue for firm x with production rates {\displaystyle (x\_{1},x\_{2})} is given by
+
+while the revenue for firm y with production rate {\displaystyle y\_{2}} in market 2 is given by
+
+At any interior equilibrium, {\displaystyle (x\_{1}^{\*},x\_{2}^{\*},y\_{2}^{\*})}, we must have
+
+Using vector calculus, geometric algebra, or differential geometry, Bulow et al. showed that the sensitivity
+of the Cournot equilibrium to changes in {\displaystyle p\_{1}} can be calculated in terms of second partial derivatives
+of the payoff functions:
+
+When {\displaystyle 1/4\leq p\_{1}\leq 2/3},
+
+This, as price is increased in market 1, Firm x sells more in market 1 and less in market 2, while firm y sells more in market 2. If the Cournot equilibrium of this model is calculated explicitly, we find
+
+
+## Supermodular games
+
+A game with strategic complements is also called a **supermodular game**. This was first formalized by Topkis, and studied by Vives. There are efficient algorithms for finding pure-strategy Nash equilibria in such games.
+

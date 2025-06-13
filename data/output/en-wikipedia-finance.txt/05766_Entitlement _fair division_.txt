@@ -1,0 +1,88 @@
+Entitlement (fair division)
+
+
+# Entitlement (fair division)
+
+
+
+In economics, philosophy, and social choice theory, a person's **entitlement** refers to the value of goods they are owed or deserve, i.e. the total value of the goods or resources that a player would ideally receive. For example, in party-list proportional representation, a party's seat entitlement is equal to its share of the vote, times the number of seats in the legislature.
+
+
+## Dividing money
+
+Even when only money is to be divided and some fixed amount has been specified for each recipient, the problem can be complex. The amounts specified may be more or less than the amount of money, and the profit or loss will then need to be shared out. The proportional rule is normally used in law nowadays, and is the default assumption in the theory of bankruptcy. However, other rules can also be used. For example:
+
+* The Shapley value is one common method of deciding bargaining power, as can be seen in the airport problem.
+* Welfare economics on the other hand tries to determine allocations depending on a social welfare function.
+* The people can also agree on their relative entitlements by a consensus process. For instance they could say what they think everyone else is entitled to and if the assessments agree then they have an agreed impartial consensus division.
+* *Priority rules* are another kind of mechanism for allocation with different entitlements.
+
+### In the Talmud
+
+The Talmud has a number of examples where entitlements are not decided on a proportional basis.
+
+* The disputed garment problem. If one person claims the whole of a cloth and another half then it is divided 3/4 and 1/4.
+* The estate division problem. Three wives have claims to 100, 200 and 300 zuz. Three cases are considered, if the estate is 100 zuz then they get 33 and a third each, if 200 then 50, 75, 75, and if 300 then 50, 100 and 150.
+* Profits from a joint fund. If two people put 200 and 100 into a fund and buy an ox for ploughing and use it for that purpose, they must divide the profit evenly between them. But if they instead slaughter the ox, the profit is divided proportionally. This is discussed in the Babylonian Talmud (just after the estate division problem).
+* Ibn Ezra's problem. This is a later problem of estate division that was solved in a different way. A man with an estate of 120 dies bequeathing 120, 60, 40 and 30 to his four sons. The recommendation was to award (120–60)/1+(60–40)/2+(40–30)/3+(30–0)/4 to the first and sums with leading terms removed for the rest ending with 30/4 for the last. This allocation is different from the previous estate division.
+
+These solutions can all be modeled by cooperative games. The estate division problem has a large literature and was first given a theoretical basis in game theory by Robert J. Aumann and Michael Maschler in 1985. See Contested garment rule.
+
+
+## Dividing continuous resources
+
+Fair cake-cutting is the problem of dividing a heterogeneous continuous resource. There always exists a proportional cake-cutting respecting the different entitlements. The two main research questions are (a) how many cuts are required for a fair division? (b) how many queries are needed for computing a division? See:
+
+* Proportional cake-cutting with different entitlements.
+* Envy-free cake-cutting with different entitlements.
+
+Cloud computing environments require to divide multiple homogeneous divisible resources (e.g. memory or CPU) between users, where each user needs a different combination of resources. The setting in which agents may have different entitlements has been studied by and.
+
+
+## Fair item allocation
+
+
+### Identical indivisible items - dividing seats in parliaments
+
+In parliamentary democracies with proportional representation, each party is entitled to seats in proportion to its number of votes. In multi-constituency systems, each constituency is entitled to seats in proportion to its population. This is a problem of dividing identical indivisible items (the seats) among agents with different entitlements. It is called the apportionment problem.
+
+The allocation of seats by size of population can leave small constituencies with no voice at all. The easiest solution is to have constituencies of equal size. Sometimes, however, this can prove impossible – for instance, in the European Union or United States. Ensuring the 'voting power' is proportional to the size of constituencies is a problem of entitlement.
+
+There are a number of methods which compute a voting power for different sized or weighted constituencies. The main ones are the Shapley–Shubik power index, the Banzhaf power index. These power indexes assume the constituencies can join up in any random way and approximate to the square root of the weighting as given by the Penrose method. This assumption does not correspond to actual practice and it is arguable that larger constituencies are unfairly treated by them.
+
+
+### Heterogeneous indivisible items
+
+In the more complex setting of fair item allocation, there are multiple different items with possibly different values to different people.
+
+Aziz, Gaspers, Mackenzie and Walshˢᵉᶜ.⁷.² define proportionality and envy-freeness for agents with different entitlements, when the agents reveal only an ordinal ranking on the items, rather than their complete utility functions. They present a polynomial-time algorithm for checking whether there exists an allocation that is *possibly proportional* (proportional according to at least one utility profile consistent with the agent rankings), or *necessarily proportional* (proportional according to all utility profiles consistent with the rankings).
+
+Farhadi, Ghodsi, Hajiaghayi, Lahaie, Pennock, Seddighin, Seddighin and Yami defined the Weighted Maximin Share (WMMS) as a generalization of the maximin share to agents with different entitlements. They showed that the best attainable multiplicative guarantee for the WMMS is 1/*n* in general, and 1/2 in the special case in which the value of each good to every agent is at most the agent's WMMS. Aziz, Chan and Li adapted the notion of WMMS to chores (items with negative utilities). They showed that, even for two agents, it is impossible to guarantee more than 4/3 of the WMMS (Note that with chores, the approximation ratios are larger than 1, and smaller is better). They present a 3/2-WMMS approximation algorithm for two agents, and an WMMS algorithm for n agents with binary valuations. They also define the OWMMS, which is the optimal approximation of WMMS that is attainable in the given instance. They present a polynomial-time algorithm that attains a 4-factor approximation of the OWMMS.
+
+The WMMS is a *cardinal* notion in that, if the cardinal utilities of an agent changes, then the set of bundles that satisfy the WMMS for the agent may change. Babaioff, Nisan and Talgam-Cohen introduced another adaptation of the MMS to agents with different entitlements, which is based only on the agent's *ordinal* ranking of the bundles. They show that this fairness notion is attained by a competitive equilibrium with different budgets, where the budgets are proportional to the entitlements. This fairness notion is called Ordinal Maximin Share (OMMS) by Chakraborty, Segal-Halevi and Suksompong. The relation between various ordinal MMS approximations is further studied by Segal-Halevi.
+
+Babaioff, Ezra and Feige present another ordinal notion, stronger than OMMS, which they call the *AnyPrice Share (APS)*. They show a polynomial-time algorithm that attains a 3/5-fraction of the APS.
+
+Aziz, Moulin and Sandomirskiy present a strongly polynomial time algorithm that always finds a Pareto-optimal and WPROP(0,1) allocation for agents with different entitlements and arbitrary (positive or negative) valuations.
+
+Relaxations of WEF have been studied, so far, only for goods. Chakraborty, Igarashi and Suksompong introduced the weighted round-robin algorithm for WEF(1,0). In a follow-up work, Chakraborty, Schmidt-Kraepelin and Suksompong generalized the weighted round-robin algorithm to general picking-sequences, and studied various monotonicity properties of these sequences.
+
+
+### Items and money
+
+In the problem of fair allocation of items and money, monetary transfers can be used to attain exact fairness of indivisible goods.
+
+Corradi and Corradi define an allocation as *equitable* if the utility of each agent *i* (defined as the value of items plus the money given to *i*) is *r* *tᵢ uᵢ* (AllItems), where *r* is the same for all agents.
+
+They present an algorithm that finds an equitable allocation with *r* >= 1, which means that the allocation is also proportional.
+
+
+## Bargaining
+
+Cooperative bargaining is the abstract problem of selecting a feasible vector of utilities, as a function of the set of feasible utility vectors (fair division is a special case of bargaining).
+
+Three classic bargaining solutions have variants for agents with different entitlements. In particular:
+
+* Kalai extended the Nash bargaining solution by introducing the max weighted Nash welfare rule;
+* Thomson extended the Kalai-Smorodinsky bargaining solution;
+* Driesen extended the leximin rule by introducing the asymmetric leximin rule.

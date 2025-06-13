@@ -1,0 +1,80 @@
+Cash conversion cycle
+
+
+# Cash conversion cycle
+
+
+
+| Part of a series on |
+| --- |
+| Accounting |
+| * Historical cost * Constant purchasing power * Management * Tax |
+| Major types * Audit * Budget * Cost * Forensic * Financial * Fund * Governmental * Management * Social * Tax |
+| Key concepts * Accounting period * Accrual * Constant purchasing power * Economic entity * Fair value * Going concern * Historical cost * Matching principle * Materiality * Revenue recognition * Unit of account |
+| Selected accounts * Assets * Cash * Cost of goods sold * Depreciation / Amortization (business) * Equity * Expenses * Goodwill * Liabilities * Profit * Revenue |
+| Accounting standards * Generally-accepted principles * Generally-accepted auditing standards * Convergence * International Financial Reporting Standards * International Standards on Auditing * Management Accounting Principles |
+| Financial statements * Annual report * Balance sheet * Cash-flow * Equity * Income * Management discussion * Notes to the financial statements |
+| Bookkeeping * Bank reconciliation * Debits and credits * Double-entry system * FIFO and LIFO * Journal * Ledger / General ledger * Trial balance |
+| Auditing * Financial * Internal * Firms * Report * Sarbanes–Oxley Act |
+| People and organizations * Accountants * Accounting organizations * Luca Pacioli |
+| Development * History * Research * Positive accounting * Sarbanes–Oxley Act |
+| Misconduct * Creative * Earnings management * Error account * Hollywood * Off-balance-sheet * Two sets of books |
+| * v * t * e |
+
+In management accounting, the **Cash conversion cycle** (**CCC**) measures how long a firm will be deprived of cash if it increases its investment in inventory in order to expand customer sales. It is thus a measure of the liquidity risk entailed by growth. However, shortening the CCC creates its own risks: while a firm could even achieve a negative CCC by collecting from customers before paying suppliers, a policy of strict collections and lax payments is not always sustainable.
+
+
+## Definition
+
+*CCC* is days between *disbursing cash* and *collecting cash* in connection with undertaking a discrete unit of operations.
+
+| *CCC* | = | Inventory conversion period | + | Receivables conversion period | − | Payables conversion period |
+| --- | --- | --- | --- | --- | --- | --- |
+| = | ⁠Avg. Inventory/COGS / 365⁠ | + | ⁠Avg. Accounts receivable/ Sales / 365⁠ | − | ⁠Avg. Accounts payable/ Purchases / 365⁠ |
+
+
+
+## Derivation
+
+**Cashflows insufficient.** The term "Cash Conversion Cycle" refers to the timespan between a firm's disbursing and collecting cash. However, the CCC cannot be directly observed in cashflows, because these are also influenced by investment and financing activities; it must be derived from Statement of Financial Position data associated with the firm's operations.
+
+**Equation describes retailer.** Although the term "cash conversion cycle" technically applies to a firm in any industry, the equation is generically formulated to apply specifically to a retailer. Since a retailer's operations consist of buying and selling inventory, the equation models the time between
+
+**Equation describes a firm that buys and sells on account.** Also, the equation is written to accommodate a firm that *buys and sells on account*. For a *cash-only firm*, the equation would only need data from sales operations (e.g. changes in inventory), because *disbursing cash* would be directly measurable as *purchase of inventory*, and *collecting cash* would be directly measurable as *sale of inventory*. However, no such 1:1 correspondence exists for a firm that *buys and sells on account*: Increases and decreases in inventory do not occasion cashflows but accounting vehicles (payables and receivables, respectively); increases and decreases in cash will remove these accounting vehicles (receivables and payables, respectively) from the books. Thus, the CCC must be calculated by tracing a change in cash through its effect upon receivables, inventory, payables, and finally back to cash—thus, the term *cash conversion **cycle***, and the observation that these four accounts "articulate" with one another.
+
+| *Label* | *Transaction* | *Accounting* (use different accounting vehicles if the transactions occur in a different order) |
+| --- | --- | --- |
+| A | Suppliers (agree to) deliver inventory →Firm owes $X cash (debt) to suppliers | * Operations (increasing inventory by $X) →Create accounting vehicle (increasing accounts payable by $X) |
+| B | Customers (agree to) acquire that inventory →Firm is owed $Y cash (credit) from customers | * Operations (increasing sales/revenue by $Y) →Create accounting vehicle (increasing accounts receivable of $Y) |
+| C | Firm disburses $X cash to suppliers →Firm removes its debts to its suppliers | * Cashflows (decreasing cash by $X) →Remove accounting vehicle (decreasing accounts payable by $X) |
+| D | Firm collects $Y cash from customers →Firm removes its credit from its customers. | * Cashflows (increasing cash by $Y) →Remove accounting vehicle (decreasing accounts receivable by $Y.) |
+
+Taking these four transactions in pairs, analysts draw attention to five important intervals, referred to as **conversion cycles** (or **conversion periods**):
+
+* the **Cash conversion cycle** emerges as interval C→D (i.e. *disbursing cash*→*collecting cash*).
+* the **Payables conversion period** (or "Days payables outstanding") emerges as interval A→C (i.e. *owing cash*→*disbursing cash*)
+* the **Operating cycle** emerges as interval A→D (i.e. owing cash→collecting cash)
+ + the **Inventory conversion period** or "Days inventory outstanding" emerges as interval A→B (i.e. *owing cash*→*being owed cash*)
+ + the **Receivables conversion period** (or "Days sales outstanding") emerges as interval B→D (i.e.*being owed cash*→*collecting cash*)
+
+Knowledge of any three of these conversion cycles permits derivation of the fourth (leaving aside the *operating cycle*, which is just the sum of the *inventory conversion period* and the *receivables conversion period*.)
+
+Hence,
+
+| interval {C → D} | = | interval {A → B} | + | interval {B → D} | – | interval {A → C} |
+| --- | --- | --- | --- | --- | --- | --- |
+| CCC (in days) | = | Inventory conversion period | + | Receivables conversion period | – | Payables conversion period |
+
+In calculating each of these three constituent conversion cycles, the equation Time = Level/Rate is used (since each interval roughly equals the Time needed for its Level to be achieved at its corresponding Rate).
+
+* Its LEVEL "during the period in question" is estimated as the average of its levels in the two balance-sheets that surround the period: (Lₜ₁+Lₜ₂)/2.
+* To estimate its Rate, note that Accounts Receivable grows only when revenue is accrued; and Inventory shrinks and Accounts Payable grows by an amount equal to the COGS expense (in the long run, since COGS actually accrues sometime after the inventory delivery, when the customers acquire it).
+ + **Payables conversion period**: Rate = [inventory increase + COGS], since these are the items for the period that can increase "trade accounts payables," i.e. the ones that grew its inventory.
+ An exception is made when calculating this interval: although a period average for the Level of inventory is used, any increase in inventory contributes to its Rate of change. This is because the purpose of the CCC is to measure the effects of inventory growth on cash outlays. If inventory grew during the period, this would be important to know.
+ + **Inventory conversion period**: Rate = COGS, since this is the item that (eventually) shrinks inventory.
+ + **Receivables conversion period**: Rate = revenue, since this is the item that can grow receivables (sales).
+
+## Aims
+
+The aim of studying cash conversion cycle and its calculation is to change the policies relating to credit purchase and credit sales. The standard of payment of credit purchase or getting cash from debtors can be changed on the basis of reports of cash conversion cycle. If it tells good cash liquidity position, past credit policies can be maintained. Its aim is also to study cash flow of business. Cash flow statement and cash conversion cycle study will be helpful for cash flow analysis. The CCC readings can be compared among different companies in the same industry segment to evaluate the quality of cash management.
+

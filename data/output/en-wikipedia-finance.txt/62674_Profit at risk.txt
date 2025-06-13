@@ -1,0 +1,27 @@
+Profit at risk
+
+
+# Profit at risk
+
+
+
+**Profit-at-Risk (PaR)** is a risk management quantity most often used for electricity portfolios that contain some mixture of generation assets, trading contracts and end-user consumption. It is used to provide a measure of the downside risk to profitability of a portfolio of physical and financial assets, analysed by time periods in which the energy is delivered. For example, the expected profitability and associated downside risk (PaR) might be calculated and monitored for each of the forward looking 24 months. The measure considers both price risk and volume risk (e.g. due to uncertainty in electricity generation volumes or consumer demand). Mathematically, the PaR is the quantile of the profit distribution of a portfolio.
+
+
+## Example
+
+If the confidence interval for evaluating the PaR is 95%, there is a 5% probability that due to changing commodity volumes and prices, the
+profit outcome for a specific period (e.g. December next year) will fall short of the expected profit result by more than the PaR value.
+
+Note that the concept of a set 'holding period' does not apply since the period is always up until the realisation of the profit outcome through the delivery of energy. That is the holding period is different for each of the specific delivery time periods being analysed e.g. it might be six months for December and therefore seven months for January.
+
+
+## History
+
+The PaR measure was originally pioneered at Norsk Hydro in Norway as part of an initiative to prepare for deregulation of the electricity market. Petter Longva and Greg Keers co-authored a paper "Risk Management in the Electricity Industry" (IAEE 17th Annual International Conference, 1994) which introduced the PaR method. This led to it being adopted as the basis for electricity market risk management at Norsk Hydro and later by most of the other electricity generating utilities in the Nordic region. The approach was based on monte-carlo simulations of paired reservoir inflow and spot price outcomes to produce a distribution of expected profit in future reporting periods. This tied directly with the focus of management reporting on profitability of operations, unlike the Value-at-Risk approach that had been pioneered by JP Morgan for banks focused on their balance sheet risks.
+
+
+## Critics
+
+As is the case with *Value at Risk*, for risk measures like the PaR, Earnings-at-Risk (EaR), the Liquidity-at-Risk (LaR) or the Margin-at-Risk (MaR), the exact risk measures implementation rule vary from firm to firm.
+

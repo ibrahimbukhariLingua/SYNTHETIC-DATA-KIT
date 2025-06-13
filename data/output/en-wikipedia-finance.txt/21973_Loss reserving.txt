@@ -1,0 +1,55 @@
+Loss reserving
+
+
+# Loss reserving
+
+
+
+**Loss reserving** is the calculation of the required reserves for a tranche of insurance business, including **outstanding claims reserves**.
+
+Typically, the claims reserves represent the money which should be held by the insurer so as to be able to meet all future claims arising from policies currently in force and policies written in the past.
+
+Methods of calculating reserves in general insurance are different from those used in life insurance, pensions and health insurance since general insurance contracts are typically of a much shorter duration. Most general insurance contracts are written for a period of one year, and typically there is only one payment of premium at the start of the contract in exchange for coverage over the year. Reserves are calculated differently from contracts of a longer duration with multiple premium payments since there are no future premiums to consider in this case. The reserves are calculated by forecasting future losses from past losses.
+
+
+## Methods
+
+The most popular methods of claims reserving for the shorter policies of general insurance and health insurance include the chain-ladder method and the Bornhuetter–Ferguson method.
+Another method is frequency-severity approach, used mainly when data is sparse.
+
+The chain-ladder method, also known as the development method, assumes that past experience is an indicator of future experience. Loss development patterns in the past are used to estimate how claim amounts will increase (or decrease) in the future.
+
+The Bornhuetter–Ferguson method uses both past loss development as well as an independently derived prior estimate of ultimate expected losses.
+
+
+## Outstanding claims reserves
+
+**Outstanding claims reserves** in general insurance are a type of technical reserve or accounting provision in the financial statements of an insurer. They seek to quantify the loss liabilities for insurance claims which have been reported and not yet settled
+(RBNS) or which have been incurred but not yet reported (IBNR) reserves. This is a technical reserve of an insurance company, and is established to provide for the future liability for claims which have occurred but which have not yet been settled.
+
+An insurance policy provides, in return for the payment of a premium, acceptance of the liability to make payments to the insured person on the occurrence of one or more specified events (insurance claims) over a specific time period. The occurrence of the specified events and the amount of the payment are both usually modeled as random variables. In general, there is a delay in the insurer's settlement of the claim. Typical reasons for this are: (i) reporting delay (time gap between
+claims occurrence and claims reporting at the insurance company) and; (ii) settlement delay (because
+it usually takes time to evaluate the whole size of the claim). The time difference between
+claims occurrence and claims closing (final settlement) can take days (e.g. in property insurance)
+but it can also take years (typically in liability insurance).
+
+Claims reserving now means that the insurance company puts sufficient provisions from the premium payments aside, so that it is able to settle all the claims that
+are caused by these insurance contracts. This is different from social insurance where one typically has a pay-as-you-go system which means that premium payments are not matched to the contracts that cause the claims
+
+
+### Method of estimation
+
+Various statistical methods have been established for the calculation of outstanding claims reserves in general insurance. These include:
+
+* Distribution-free chain-ladder method
+* Over-dispersed Poisson (ODP) model
+* Hertig's log-normal chain ladder model
+* Separation method
+* Average cost per claim methods
+* Bornhuetter–Ferguson method
+* Paid-incurred chain (PIC) claims reserving model
+* Bootstrap methods
+* Bayesian methods
+
+Most of these methods started off as *deterministic* algorithms. Later actuaries started to develop and analyze underlying stochastic models that justify these algorithms. The most popular stochastic model is probably the distribution-free chain ladder method, which was developed by T. Mack. These stochastic methods allow one to analyze and quantify the prediction uncertainty in the outstanding loss liabilities. Classical analysis studies the total prediction uncertainty, whereas recent research (under the influence of Solvency 2) also studies the one-year uncertainty, called claims development result (CDR).
+

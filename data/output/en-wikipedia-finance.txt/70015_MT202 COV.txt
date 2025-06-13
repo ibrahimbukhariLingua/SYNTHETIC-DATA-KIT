@@ -1,0 +1,38 @@
+MT202 COV
+
+
+# MT202 COV
+
+
+
+**MT202 COV** is a specific SWIFT message type used on the SWIFT network for financial institution (FI) funds transfer between financial institutions.
+
+
+## History
+
+MT202 COV was implemented in 2009 to create traceability of the origin of funds (institution and account) through to the destination of funds (institution and account). This was in response to anti-money laundering and associated banking requirements.
+
+Prior to MT202 COV the message format, MT202, were used primarily for two purposes, bank-to-bank payments (i.e. interest payments and settlement of FX trades) and cover payments. MT202 does not include origination/destination financial institution information. Particularly for cover payments, where a combination of MT103 and MT202 was used to direct funds transfers to a beneficiary account, the intermediate banks in the MT202 had no ability to understand and perform risk analysis/AML/compliance checks on the funds transfer based on the original and destination of the funds. Thus, intermediate banks could be unwittingly involved in illegal transactions under new regulations.
+
+
+## Scope and usage
+
+Wire transfers sent over the SWIFT network were originally completed by the serial transfer of MT103 (customer credit transfer/cash transfer) messages from the initiating financial institutions to the customer via different financial institutions.
+
+In order to improve the responsiveness of international banking, a method of cover payments was developed. All cover payments involve two messages, the MT103 and the MT202 COV. MT103 is the direct payment order to the beneficiary's bank that results in the beneficiary's account being credited a specific funding amount. The MT202 COV is the bank-to-bank order that instructs funds movement in alignment with the MT103 messages. The MT202 COV is needed because of correspondent banking networks and the complexity of international funds movements. Thus, an MT103 instruction is sent directly from the originator's bank to the beneficiary's bank instructing an account credit. The MT202 COV instruction then works across the correspondent banking network, instructing funds to move across intermediate banks.
+
+The MT202 is the original standard message format. It does not contain both the origination and destination FI/account information. Thus, the intermediary banks who are moving money across the banking network cannot perform AML or other risk-based analysis to comply with their specific or regional banking laws.
+
+The MT202 COV augments the MT202 message by containing the origination and destination FI and account, such that intermediary banks are aware of sources and destinations and can perform their own risk analysis as well as comply with their specific banking regulations.
+
+
+## Difference between MT202 and MT202 COV
+
+As previously stated, MT202 was previously used to fund bank-to-bank payments, as well as cover payments made in conjunction with MT103 messages.
+
+MT202 COV is now mandated for cover payments.
+
+MT202 is strictly for bank-to-bank payments.
+
+In MT202 COV sequence B, 50a and 59a i.e; ordering customer and beneficiary customer details respectively are made mandatory fields and thus it overcomes the loopholes of MT202.
+

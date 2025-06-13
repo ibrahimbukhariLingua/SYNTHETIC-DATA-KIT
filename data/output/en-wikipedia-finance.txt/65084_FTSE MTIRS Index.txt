@@ -1,0 +1,49 @@
+FTSE MTIRS Index
+
+
+# FTSE MTIRS Index
+
+
+
+The **FTSE MTIRS Indices** are designed to accurately move in direct correlation to OTC Interest Rate Swaps market with a total of 45 indices covering the USD curve from 2 years to 30 years including spreads and butterflies. FTSE MTIRS Indices account for changes to both fixed and floating rates and are rebalanced daily.
+
+The value of the FTSE MTIRS Indices change with the NPV (Net Present Value) changes and is mathematically rebalanced daily to ensure that the indices represent periods out of spot and remains at constant maturity. Composite market maker prices are used to calculate the FTSE MTIRS Index series and are used for rebalancing, supplying perfect correlation to OTC Interest Rate Swaps and effectively tracks fixed for floating Interest rates enabling the tracking of OTC Interest rate Swap exposure.
+
+
+## Structure
+
+* To buy the MTIRS index mirrors—receive fixed and pay floating.
+* To sell the MTIRS index mirrors—pay fixed and receive floating.
+* MTIRS index positions are worth: the nominal amount times (current index value minus entering index value) divided by 100
+* All indices started with an index value of 100.0.
+* All indices are calculated using mid rates.
+* All indices are updated in real-time.
+* A daily fixing of the indices is at 14:00 GMT.
+* Indices are rebalanced daily at 07:00 GMT.
+
+Day count: Fixed rate: 30/360 paid semi-annually modified following (UK business days) Floating rate: 3-month LIBOR act/360 quarterly modified following (UK business days)
+
+
+## Example
+
+If a market participant had bought $100 million notional of the 10 year MTIRS index at 98.73, and then the 10-year swap rate moved down by say 5 basis points, the index will then trade at 99.10.
+
+The MTIRS index position would then be worth $370,000 (=(99.10-98.73) x 100 mill / 100)
+
+
+## Underlying OTC Interest Rate Swap Market
+
+An interest rate swap is an OTC agreement between two parties who agree to exchange a cash flow or stream of cash flows for another. In a vanilla fixed for floating Interest Rate Swap, one party receives fixed rate payments, usually semi annually and pays floating, usually 3 monthly based on LIBOR.
+
+| * v * t * e Derivatives market | |
+| --- | --- |
+| Derivative (finance) | |
+| Options | | Terms | * Delta neutral * Exercise * Expiration * Moneyness * Open interest * Pin risk * Risk-free interest rate * Strike price * Synthetic position * the Greeks * Volatility | | --- | --- | | Vanillas | * American * Bond option * Call * Employee stock option * European * Fixed income * FX * Option styles * Put * Warrants | | Exotics | * Asian * Barrier * Basket * Binary * Callable bull/bear contract * Chooser * Cliquet * Commodore * Compound * Forward start * Interest rate * Lookback * Mountain range * Rainbow * Spread * Swaption | | Strategies | * Backspread * Box spread * Butterfly * Calendar spread * Collar * Condor * Covered option * Credit spread * Debit spread * Diagonal spread * Fence * Intermarket spread * Iron butterfly * Iron condor * Jelly roll * Ladder * Naked option * Straddle * Strangle * Protective option * Ratio spread * Risk reversal * Vertical spread (Bear, Bull) | | Valuation | * Bachelier * Binomial * Black * Black–Scholes (equation) * Finite difference * Garman–Kohlhagen * Heston * Lattices * Margrabe * Put–call parity * MC Simulation * Real options * Trinomial * Vanna–Volga | |
+| Swaps | * Amortising * Asset * Basis * Commodity * Conditional variance * Constant maturity * Correlation * Credit default * Currency * Dividend * Equity * Forex * Forward Rate Agreement * Inflation * Interest rate * Overnight indexed * Total return * Variance * Volatility * Year-on-year inflation-indexed * Zero Coupon * Zero-coupon inflation-indexed |
+| * Forwards * Futures | * Contango * Commodities future * Currency future * Dividend future * Forward market * Forward price * Forwards pricing * Forward rate * Futures pricing * Interest rate future * Margin * Normal backwardation * Perpetual futures * Single-stock futures * Slippage * Stock market index future |
+| Exotic derivatives | * Commodity derivative * Energy derivative * Freight derivative * Inflation derivative * Property derivative * Weather derivative |
+| Other derivatives | * Collateralized debt obligation (CDO) * Constant proportion portfolio insurance * Contract for difference * Credit-linked note (CLN) * Credit default option * Credit derivative * Equity-linked note (ELN) * Equity derivative * Foreign exchange derivative * Fund derivative * Fund of funds * Interest rate derivative * Mortgage-backed security * Power reverse dual-currency note (PRDC) |
+| Market issues | * Consumer debt * Corporate debt * Government debt * Great Recession * Municipal debt * Tax policy |
+| * Business portal | |
+
+

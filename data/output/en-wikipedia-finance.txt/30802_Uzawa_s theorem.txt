@@ -1,0 +1,84 @@
+Uzawa's theorem
+
+
+# Uzawa's theorem
+
+
+
+**Uzawa's theorem**, also known as the **steady-state growth theorem**, is a theorem in economic growth that identifies the necessary functional form of technological change for achieving a balanced growth path in the Solow–Swan and Ramsey–Cass–Koopmans growth models. It was proved by Japanese economist Hirofumi Uzawa in 1961.
+
+A general version of the theorem consists of two parts. The first states that, under the normal assumptions of the Solow-Swan and Ramsey models, if capital, investment, consumption, and output are increasing at constant exponential rates, these rates must be equivalent. The second part asserts that, within such a balanced growth path, the production function, {\displaystyle Y={\tilde {F}}({\tilde {A}},K,L)} (where {\displaystyle A} is technology, {\displaystyle K} is capital, and {\displaystyle L} is labor), can be rewritten such that technological change affects output solely as a scalar on labor (i.e. {\displaystyle Y=F(K,AL)}) a property known as labor-augmenting or Harrod-neutral technological change.
+
+Uzawa's theorem demonstrates a limitation of the Solow-Swan and Ramsey models. Imposing the assumption of balanced growth within such models requires that technological change be labor-augmenting. Conversely, a production function that cannot represent the effect of technology as a scalar augmentation of labor cannot produce a balanced growth path.
+
+
+## Statement
+
+Throughout this page, a dot over a variable will denote its derivative concerning time (i.e. {\displaystyle {\dot {X}}(t)\equiv {dX(t) \over dt}}). Also, the growth rate of a variable {\displaystyle X(t)} will be denoted {\displaystyle g\_{X}\equiv {\frac {{\dot {X}}(t)}{X(t)}}}.
+
+**Uzawa's theorem**
+
+The following version is found in Acemoglu (2009) and adapted from Schlicht (2006):
+
+Model with aggregate production function {\displaystyle Y(t)={\tilde {F}}({\tilde {A}}(t),K(t),L(t))}, where {\displaystyle {\tilde {F}}:\mathbb {R} \_{+}^{2}\times {\mathcal {A}}\to \mathbb {R} \_{+}} and {\displaystyle {\tilde {A}}(t)\in {\mathcal {A}}} represents technology at time t (where {\displaystyle {\mathcal {A}}} is an arbitrary subset of {\displaystyle \mathbb {R} ^{N}} for some natural number {\displaystyle N}). Assume that {\displaystyle {\tilde {F}}} exhibits constant returns to scale in {\displaystyle K} and {\displaystyle L}. The growth in capital at time t is given by
+
+{\displaystyle {\dot {K}}(t)=Y(t)-C(t)-\delta K(t)}
+
+where {\displaystyle \delta } is the depreciation rate and {\displaystyle C(t)} is consumption at time t.
+
+Suppose that population grows at a constant rate, {\displaystyle L(t)=\exp(nt)L(0)}, and that there exists some time {\displaystyle T<\infty } such that for all {\displaystyle t\geq T}, {\displaystyle {\dot {Y}}(t)/Y(t)=g\_{Y}>0}, {\displaystyle {\dot {K}}(t)/K(t)=g\_{K}>0}, and {\displaystyle {\dot {C}}(t)/C(t)=g\_{C}>0}. Then
+
+1. {\displaystyle g\_{Y}=g\_{K}=g\_{C}}; and
+
+2. There exists a function {\displaystyle F:\mathbb {R} \_{+}^{2}\to \mathbb {R} \_{+}} that is homogeneous of degree 1 in its two arguments such that, for any {\displaystyle t\geq T}, the aggregate production function can be represented as *{\displaystyle Y(t)=F(K(t),A(t)L(t))}*, where {\displaystyle A(t)\in \mathbb {R} \_{+}} and {\displaystyle g\equiv {\dot {A}}(t)/A(t)=g\_{Y}-n}.
+
+
+## Sketch of proof
+
+
+### Lemma 1
+
+For any constant {\displaystyle \alpha }, {\displaystyle g\_{X^{\alpha }Y}=\alpha g\_{X}+g\_{Y}}.
+
+**Proof**: Observe that for any {\displaystyle Z(t)}, {\displaystyle g\_{Z}={\frac {{\dot {Z}}(t)}{Z(t)}}={\frac {d\ln Z(t)}{dt}}}. Therefore,
+{\displaystyle g\_{X^{\alpha }Y}={\frac {d}{dt}}\ln[(X(t))^{\alpha }Y(t)]=\alpha {\frac {d\ln X(t)}{dt}}+{\frac {d\ln Y(t)}{dt}}=\alpha g\_{X}+g\_{Y}}.
+
+
+### Proof of theorem
+
+We first show that the growth rate of investment {\displaystyle I(t)=Y(t)-C(t)} must equal the growth rate of capital {\displaystyle K(t)} (i.e. {\displaystyle g\_{I}=g\_{K}})
+
+The resource constraint at time {\displaystyle t} implies
+
+By definition of {\displaystyle g\_{K}}, {\displaystyle {\dot {K}}(t)=g\_{K}K(t)} for all {\displaystyle t\geq T} . Therefore, the previous equation implies
+
+for all {\displaystyle t\geq T}. The left-hand side is a constant, while the right-hand side grows at {\displaystyle g\_{I}-g\_{K}} (by Lemma 1). Therefore, {\displaystyle 0=g\_{I}-g\_{K}} and thus
+
+From national income accounting for a closed economy, final goods in the economy must either be consumed or invested, thus for all {\displaystyle t}
+
+Differentiating with respect to time yields
+
+Dividing both sides by {\displaystyle Y(t)} yields
+
+Since {\displaystyle g\_{Y},g\_{C}} and {\displaystyle g\_{I}} are constants, {\displaystyle {\frac {C(t)}{Y(t)}}} is a constant. Therefore, the growth rate of {\displaystyle {\frac {C(t)}{Y(t)}}} is zero. By Lemma 1, it implies that
+
+Similarly, {\displaystyle g\_{Y}=g\_{I}}. Therefore, {\displaystyle g\_{Y}=g\_{C}=g\_{K}}.
+
+Next we show that for any {\displaystyle t\geq T}, the production function can be represented as one with labor-augmenting technology.
+
+The production function at time {\displaystyle T} is
+
+The constant return to scale property of production ({\displaystyle {\tilde {F}}} is homogeneous of degree one in {\displaystyle K} and {\displaystyle L}) implies that for any {\displaystyle t\geq T}, multiplying both sides of the previous equation by {\displaystyle {\frac {Y(t)}{Y(T)}}} yields
+
+Note that {\displaystyle {\frac {Y(t)}{Y(T)}}={\frac {K(t)}{K(T)}}} because {\displaystyle g\_{Y}=g\_{K}}(refer to solution to differential equations for proof of this step). Thus, the above equation can be rewritten as
+
+For any {\displaystyle t\geq T}, define
+
+and
+
+Combining the two equations yields
+
+By construction, {\displaystyle F(K,AL)} is also homogeneous of degree one in its two arguments.
+
+Moreover, by Lemma 1, the growth rate of {\displaystyle A(t)} is given by
+

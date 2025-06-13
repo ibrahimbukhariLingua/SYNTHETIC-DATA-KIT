@@ -1,0 +1,87 @@
+CcTalk
+
+
+# CcTalk
+
+
+
+**ccTalk** is a serial protocol in widespread use throughout the money transaction and point-of-sale industry. Peripherals such as the currency detectors for coins and banknotes found in a diverse range of automatic payment equipment such as transportation, ticketing, payphones, amusement machines, and retail cash management use ccTalk to talk to the host controller.
+The ccTalk protocol is an open standard.¹³
+
+ccTalk is one of 2 protocols specified by BACTA for use in all AWP machines with serial coin acceptors. (The other is the Host Intelligent Interface protocol developed by Mars Electronics International).²⁰ It was developed at a company called Coin Controls (hence "cc") on the outskirts of Manchester in north-west England mainly by Engineer Andrew William Barson. The first release of the protocol was in 1996. Coin control would later be renamed Money Controls and from 2010, Crane Payment Solutions.
+
+The protocol uses an asynchronous transfer of character frames in a similar manner to RS232. The main difference is that it uses a single two-way communication data line for half-duplex communication rather than separate transmit and receives lines. It operates at TTL voltages and is ‘multi-drop’ i.e. peripherals can be connected to a common bus and are logically separated by a device address. Each peripheral on the ccTalk bus must have a unique address. The original protocol operated at 4800 baud with subsequent releases standardising on 9600 baud. Low cost bridge chips are now available from a number of manufacturers to allow ccTalk to run over USB at baud rates of at least 1 Mbit/s.
+
+ccTalk protocol stacks have been implemented on a range of devices from tiny Microchip microcontrollers with 512 bytes of ROM to powerful ARM7 32-bit processors.¹²–¹³ The protocol supports all standard operations for electronic devices such as flash upgrading of firmware, secure transfer of data and detailed diagnostic information.
+
+Advantages of ccTalk include low cost UART technology, a simple-to-understand packet structure, an easily expandable command interface and no licensing requirements. The latter affords the protocol a good deal of popularity in a crowded and highly competitive field similar to open-source software.
+
+
+## Details
+
+The ccTalk protocol is a byte-oriented protocol. The series of bytes in a message—represented above as a series of decimal numbers—is transmitted as 8-N-1.
+
+Many devices have single electrical connector that carries both power (typically +12 V or +24 V) and the ccTalk data over a total of 4 wires.
+
+To reduce cost, for short interconnection distances CPI recommends sending ccTalk data over an unbalanced multi-drop open-collector interface: both transmit and receive messages occur on the same bi-directional serial DATA line at TTL level, driven through an open-collector NPN transistor.
+The pull-up resistor at the host pulls the DATA line to +5 V, so logical 1 (and idle) is nominally +5 V, and logical 0 (and start bit) is nominally 0 V.¹⁵,¹⁷
+For longer distances, CPI recommends sending ccTalk data over a balanced multi-drop RS-485 driver interface, also nominally +5 V and 0 V.¹⁷
+
+Secure peripherals require all bytes of a message to be encrypted, except for the first two bytes—the destination address byte and the data-length byte are never encrypted to allow standard and secure peripherals to be mixed on the same bus.²⁶
+
+The total length of a message packet can range from a minimum of 5 bytes (data-length byte equal to 0) to 260 bytes (data-length byte equal to 255). Longer transfers require a series of message packets.²⁸
+
+
+## An Example ccTalk Message Packet
+
+TX data = 2 0 1 245 8
+
+* 2 = destination address
+* 0 = zero data bytes
+* 1 = source address
+* 245 = command header ‘Request equipment category id’
+* 8 = checksum ( 2 + 0 + 1 + 245 + 8 = 256 = 0 mod 256 )
+
+This is a message from address 1 ( the host ) to peripheral address 2 to find out what it is.
+
+RX data = 1 13 2 0 67 111 105 110 32 65 99 99 101 112 116 111 114 22
+
+* 1 = destination address
+* 13 = 13 data bytes
+* 2 = source address
+* 0 = reply header
+* 67…114 = ASCII for ‘Coin Acceptor’
+* 22 = checksum ( sum of all packet bytes is zero )
+
+The reply from address 2 back to address 1 identifies it as a coin acceptor.
+
+
+## Secure extensions
+
+In 2010, DES encryption was added to certain commands so that it could be made more resilient against attacks on the bus.
+Each peripheral has its own unique DES key, which it communicates to the Game Machine on a "trusted key exchange mode". Key rotation is available. The intention is that cracking one peripheral does not compromise the whole system, and that a cracked one could change its keys. DES is considered insecure right from the start due to the small key size and has been further analyzed, but it does slow down fraudsters who might insert devices to tap onto the communication wire.
+
+A much stronger encryption protocol is found in Italian NewSlot machines. This scheme uses Diffie–Hellman key exchange and AES-256. The use of DH prevents eavesdropping of the key exchange, while AES is still unbroken – meaning an impossibly long brute-force process would be required.
+
+
+## Coin and Note Naming
+
+A number of associated standards have emerged over the years from within the ccTalk specification. For example, the global tags to identify the world’s forever changing coins and notes.
+
+In ccTalk a coin has a 6 character identifier of the format
+
+The country code conforms to ISO 3166. The issue code is assigned to different issue dates or special mint variations of the same coin.
+
+e.g.
+
+* US025A United States 25c
+* GB010B Great Britain 10p
+* EU200A Euro €2
+
+Bank notes follow the same pattern but 4 characters are allocated to the value and there is an associated scaling factor, usually x100, with the country.
+
+e.g.
+
+* US0001A United States $1
+* GB0020A Great Britain £20
+* EU0005A Euro €5

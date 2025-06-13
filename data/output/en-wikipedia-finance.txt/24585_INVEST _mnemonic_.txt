@@ -1,0 +1,63 @@
+INVEST (mnemonic)
+
+
+# INVEST (mnemonic)
+
+
+
+The **INVEST mnemonic** for Agile software development projects was created by Bill Wake as a reminder of the characteristics of a good quality Product Backlog Item (commonly written in user story format, but not required to be) or **PBI** for short.
+Such PBIs may be used in a Scrum backlog, Kanban board or XP project.
+
+| Letter | Meaning | Description |
+| --- | --- | --- |
+| **I** | Independent | The PBI should be self-contained. |
+| **N** | Negotiable | Draft PBIs are not explicit contracts and should leave space for discussion. |
+| **V** | Valuable | A PBI must deliver value to the stakeholders. |
+| **E** | Estimable | You must always be able to estimate the size of a PBI. |
+| **S** | Small | PBIs should not be so big as to become impossible to plan/task/order within a level of accuracy. |
+| **T** | Testable | The PBI or its related description must provide the necessary information to make test development possible. |
+
+
+## Independent
+
+One of the characteristics of Agile Methodologies such as Scrum, Kanban or XP is the ability to move PBIs around, taking into account, amongst other criteria, their business value. When PBIs are tightly dependent, it might be possible to combine them into a single PBI.
+
+
+## Negotiable
+
+According to Agile methodology, while the PBI lies in the product backlog it can be rewritten or even discarded, depending on business, market, technical or any other type of requirement by team members.
+
+Most notably though, Negotiability relates to the degree to which the Developer has freedom to negotiate the detail of the solution with the Business once in development. A draft story should not form a rigid contract detailing the design but should instead talk of business outcomes the user will be able to conduct once implemented. The amount of 'wiggle room' the analyst leaves the Developer in this regard is a measure of its Negotiability. A highly negotiable story therefore typically aims to keep away from detailed UI design, certainly insofar as the Value Statement and Acceptance Criteria are concerned. Draft stories are not detailed specifications and nor should they aim to be.
+
+Upon achieving Definition of Ready to be included in an iteration (and subsequently built), this Negotiation shall have taken place and Negotiable becomes Negotiated. This is necessary because story acceptance requires proof that what Development built matches the request by demonstrating that expected behavior align with observed behavior. The wording of Bill Wake's original article speaks to this negotiation process, "Over time, the card may acquire notes, test ideas, and so on, but we don’t need these to prioritize or schedule stories."
+
+
+## Valuable
+
+The aim of Agile Methodology being to continuously deliver valuable software, the PBI should bring value to the stakeholder.
+
+Sometimes a story might not result in a complete shippable feature in its own right, and it may simply be a measurable step towards that goal. Nevertheless, the story must at least be demonstrable to the stakeholder and show that progress (i.e. something of value) has been delivered. For example, it would be acceptable for a coded/text response back from a central service to be simply shown in the user's UI (as text) to demonstrate that data had been sent to - and accepted by that service - and have a better representation of that response to be covered in another story. In this sense, the story was demonstrable and achieved something of business value, albeit perhaps not the final iteration of the design.
+
+
+## Estimable
+
+Originally, Bill Wake reasoned that if a PBI size cannot be estimated, it will never be planned or tasked, and thus, it will never become part of an iteration. By this reasoning, PBI items should be capable of being estimated at some point. Note that this does not mean a PBI should in fact be estimated during the initial creation of the PBI, but only that it describes something which could be estimated.
+
+Subsequently, to the introduction of INVEST, the "No Estimates" movement has gained traction in moving product owners away from the belief that a PBI must have been estimated in order to be planned or tasked. Many software practitioners will take on work without estimating the effort involved, as long as the item is narrowed sufficiently in scope. Bill Wake has expressed that were he to re-pick INVEST today, he would remove "Estimability" and utilize the "E" to instead emphasize an aspect of the "V for Valuable" criteria.
+
+> A note of caution: Estimability is the most-abused aspect of INVEST (that is, the most energy spent for the least value). If I could re-pick, we’d have “E = External”; see the discussion under “V for Valuable”.
+> 
+> — Bill Wake, https://xp123.com/articles/estimable-stories-in-the-invest-model/
+
+"Estimable" as 'the capability to be estimated' is an American English definition. To avoid confusion with the British English meaning of 'worthy of esteem', some versions of the model use the reference "Estimate-able" which also is not a defined dictionary entry. Allen Holub has suggested that the British English meaning should be embraced, seeing the giving of an estimate as being harmful to the software development process.
+
+
+## Small
+
+Try to keep your PBI sizes to typically a few person-days and at most a few person-weeks (a good rule of thumb is that any single Product Backlog Item does not take more than 50% of an iteration; for example a single item won't take more than 5 days for a 2-week / 10 day sprint). Anything beyond that range should be considered too large to be estimated with a good level of certainty - these large PBIs may be called "Epics", where an Epic will take more than one iteration to deliver and, necessarily, will need to be broken down into smaller PBIs that can fit comfortably within Iterations. There's no problem in starting with epic PBIs, as long as they are broken down when the time to place them in an iteration backlog comes closer. This implements Lean software development's Just In Time analysis concept.
+
+
+## Testable
+
+A PBI should only be considered DONE, among other things, if it was tested successfully. If one cannot test a PBI due to lack of information or access (see "Estimable" above), the PBI should not be considered a good candidate to be part of an iteration Backlog. This is especially true for teams employing TDD - Test Driven Development.
+

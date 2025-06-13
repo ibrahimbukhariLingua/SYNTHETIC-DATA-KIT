@@ -1,0 +1,49 @@
+Piotroski F-score
+
+
+# Piotroski F-score
+
+
+
+**Piotroski F-score** is a number between 0 and 9 which is used to assess strength of company's financial position. The score is used by financial investors in order to find the best value stocks (nine being the best). The score is named after Stanford accounting professor Joseph Piotroski.
+
+
+## Calculation procedure
+
+The score is calculated based on 9 criteria divided into 3 groups.
+
+1. Return on Assets (ROA) (1 point if it is positive in the current year, 0 otherwise);
+2. Operating Cash Flow (1 point if it is positive in the current year, 0 otherwise);
+3. Change in Return of Assets (ROA) (1 point if ROA is higher in the current year compared to the previous one, 0 otherwise);
+4. Accruals (1 point if Operating Cash Flow/Total Assets is higher than ROA/Total Assets in the current year, 0 otherwise);
+
+1. Change in Leverage (long-term) ratio (1 point if the ratio is lower this year compared to the previous one, 0 otherwise);
+2. Change in Current ratio (1 point if it is higher in the current year compared to the previous one, 0 otherwise);
+3. Change in the number of shares (1 point if no new shares were issued during the last year);
+ ***Operating Efficiency***
+
+1. Change in Gross Margin (1 point if it is higher in the current year compared to the previous one, 0 otherwise);
+2. Change in Asset Turnover ratio (1 point if it is higher in the current year compared to the previous one, 0 otherwise);
+
+Some adjustments that were done in calculation of the required financial ratios are discussed in the original paper.
+
+The score is calculated based on the data from financial statement of a company. A company gets 1 point for each met criterion. Summing up of all achieved points gives Piotroski F-score (number between 0 and 9).
+
+
+## Interpretation
+
+The highest possible Piotroski score is 9 and the lowest is 0. Higher the score better the value of the company's stock. F-score of 8–9 is considered to be strong. Alternatively, firms achieving the F-score of 0–2 are considered to be weak.
+
+Average value of Piotroski F-score can be different in different branches of economy (e.g. manufacturing, finance, etc.). This should be taken into consideration when comparing companies with different specializations.
+
+
+## Limits
+
+The Piotroski F-score is a method invented or thought up a few decades ago. Since realities are no longer what they were when it was conceived, it can happen that this strategy, although effective, suffers from some shortcomings. First, it is a strategy that only compares a company's results in one year to those of the previous year. This makes it difficult to apply in cyclical sectors or during particular periods such as during health crises that affect the profitability of all sectors (e.g. the Covid-19 pandemic in 2020).
+
+
+## Other notes
+
+* Some improvements to the Piotroski F-score were suggested in Alpha Architect and American Association of Individual Investors (AAII) official blogs.
+* A 2024 study evaluates the formula for the U.S. market from 1963 to 2022 and compares it with the performance of the Magic Formula, Conservative Formula, and Acquirer’s Multiple. The study finds that all four formulas generate significant raw and risk-adjusted returns, primarily by providing efficient exposure to well-established style factors. However, no single formula consistently outperforms across all performance metrics.
+

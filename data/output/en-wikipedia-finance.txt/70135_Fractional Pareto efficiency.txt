@@ -1,0 +1,138 @@
+Fractional Pareto efficiency
+
+
+# Fractional Pareto efficiency
+
+
+
+In economics and computer science, **Fractional Pareto efficiency** or **Fractional Pareto optimality (fPO)** is a variant of Pareto efficiency used in the setting of fair allocation of discrete objects. An allocation of objects is called *discrete* if each item is wholly allocated to a single agent; it is called *fractional* if some objects are split among two or more agents. A discrete allocation is called Pareto-efficient (PO) if it is not Pareto-dominated by any discrete allocation; it is called **fractionally Pareto-efficient (fPO)** if it is not Pareto-dominated by any discrete *or fractional* allocation. So fPO is a stronger requirement than PO: every fPO allocation is PO, but not every PO allocation is fPO.
+
+
+## Formal definitions
+
+There is a set of *n* agents and a set of *m* objects. An *allocation* is determined by an *n*-by-*m* matrix **z**, where each element *z*[*i*,*o*] is a real number between 0 and 1. It represents the fraction that agent *i* gets from object *o*. For every object *o*, the sum of all elements in column *o* equals 1, since the entire object is allocated.
+
+An allocation is called *discrete* or *integral* if all its elements *z*[*i*,*o*] are either 0 or 1; that is, each object is allocated entirely to a single agent.
+
+An allocation **y** is called a **Pareto improvement** of an allocation **z**, if the utility of all agents in **y** is at least as large as in **z**, and the utility of some agents in **y** is strictly larger than in **z**. In this case, we also say that **y Pareto-dominates z**.
+
+If an allocation **z** is not Pareto-dominated by any discrete allocation, then it is called **discrete Pareto-efficient**, or simply **Pareto-efficient** (usually abbreviated **PO**).
+
+If **z** is not Pareto-dominated by any allocation at all - whether discrete or fractional - then it is called **fractionally Pareto-efficient** (usually abbreviated **fPO**).
+
+
+## Examples
+
+
+### PO does not imply fPO
+
+Suppose there are two agents and two items. Alice values the items at 3, 2 and George values them at 4, 1. Let **z** be the allocation giving the first item to Alice and the second to George. The utility profile of **z** is (3,1).
+
+* **z** is (discrete) Pareto-efficient. To see this, consider the other possible discrete allocations: their utility profiles are (7,0) or (0,3) or (2,4). In any case, the utility of at least one agent is smaller, so no discrete allocation dominates **z**.
+* However, **z** is not fractionally-Pareto-efficient. It is dominated by the allocation **y** giving to Alice 1/2 of the first item and the whole second item, and the other 1/2 of the first item to George; the utility profile of **y** is (3.5, 2), so it gives a higher utility to both agents.
+
+### The price of fPO
+
+The following example shows the "price" of fPO. The integral allocation maximizing the product of utilities (also called the Nash welfare) is PE but not fPO. Moreover, the product of utilities in any fPO allocation is at most 1/3 of the maximum product. There are five goods {h₁,h₂,g₁,g₂,g₃} and 3 agents with the following values (where *C* is a large constant and *d* is a small positive constant):
+
+| Agents ↓ Goods ⇒ | h₁ | h₂ | g₁ | g₂ | g₃ |
+| --- | --- | --- | --- | --- | --- |
+| A₁ | *C* | *C* | 1 | 1-*d* | 1-*d* |
+| A₂ | *C* | *C* | 1-*d* | 1 | 1-*d* |
+| A₃ | *C* | *C* | 1-*d* | 1-*d* | 1 |
+
+A max-product integral allocation is {h₁},{h₂},{g₁,g₂,g₃}, with product {\displaystyle C^{2}\cdot (3-2d)}. It is not fPO, since it is dominated by a fractional allocation: agent 3 can give g₁ to agent 1 (losing 1-*d* utility) in return to a fraction of h₁ that both agents value at 1-*d*/2. This trade strictly improves the welfare of both agents. Moreover, in *any* integral fPO allocation, there exists an agent A*ᵢ* who receives only (at most) the good *gᵢ* - otherwise a similar trade can be done. Therefore, a max-product fPO allocation is {g₁,h₁},{g₂,h₂},{g₃}, with product {\displaystyle (C+1)^{2}}. When *C* is sufficiently large and *d* is sufficiently small, the product ratio approaches 1/3.
+
+
+### No fPO allocation is almost-equitable
+
+The following exampleSᵉᶜ.⁶.⁶ shows that fPO is incompatible with a fairness notion known as **EQx** - equitability up to any good. There are three goods {g₁,g₂,g₃} and two agents with the following values (where *e* is a small positive constant):
+
+| Agents ↓ Goods ⇒ | g₁ | g₂ | g₃ |
+| --- | --- | --- | --- |
+| A₁ | 1+*e* | (*1+e*)¹⁰ | 1 |
+| A₂ | 1 | (*1+e*)¹⁰ | 1+*e* |
+
+Only two discrete allocations are EQx:
+
+* Agent 1 gets {*g*₂} and agent 2 gets {g₁,g₃}; the utility profile is ((*1+e*)¹⁰, 2+*e*). This allocation is PO but not fPO, since it is dominated by the fractional allocation giving to agent 1 the bundle {g₁, (1-(1+*e*)−⁹) fraction of g₂} and to agent 2 the bundle {g₃, (1+*e*)−⁹ fraction of g₂}, in which the utility profile is ((*1+e*)¹⁰, 2+2*e*).
+* Agent 1 gets {g₁,g₃} and agent 2 gets {*g*₂}; the utility profile is (2+*e*, (*1+e*)¹⁰). This allocation is PO but not fPO, since it is dominated by the fractional allocation giving to agent 2 the bundle {g₁, (1-(1+*e*)−⁹) fraction of g₂} and to agent 1 the bundle {g₃, (1+*e*)−⁹ fraction of g₂}, in which the utility profile is (2+2*e,* (*1+e*)¹⁰).
+
+The same instance shows that fPO is incompatible with a fairness notion known as **EFx** - envy-freeness up to any good.Rᵉᵐ.⁵
+
+
+## Characterization
+
+
+### Maximizing a weighted sum of utilities
+
+An allocation is fPO if-and-only-if it maximizes a weighted sum of the agents' utilities. Formally, let **w** be a vector of size *n*, assigning a weight *wᵢ* to every agent *i*. We say that an allocation **z** is **w**-maximal if one of the following (equivalent) properties hold:
+
+* Each object *o* is assigned only to agents *i* for whom the product {\displaystyle w\_{i}\cdot v\_{i,o}} is maximal.
+* {\displaystyle z\_{i,o}>0} implies {\displaystyle w\_{i}v\_{i,o}\geq w\_{j}v\_{j,o}} for all agents *i*, *j* and objects *o*.
+* The weighted sum of utilities, {\displaystyle \sum \_{i}w\_{i}\cdot u\_{i}(\mathbf {z} )}, is maximal among all allocations, where {\displaystyle u\_{i}(\mathbf {z} ):=\sum \_{o}v\_{i,o}\cdot z\_{i,o}=} the utility of agent *i* in the allocation **z**.
+
+An allocation is fPO if-and-only-if it is **w**-maximal for some vector **w** of strictly-positive weights. This equivalence was proved for goods by Negishi and Varian. The proof was extended for bads by Branzei and Sandomirskiy. It was later extended to general valuations (mixtures of goods and bads) by Sandomirskiy and Segal-Halevi.Lᵉᵐ.².³, Aᵖᵖ.A
+
+
+### No improvements cycles in the consumption graph
+
+An allocation is fPO if-and-only-if it its *directed consumption graph* does not contain cycles with product smaller than 1. The directed consumption graph of an allocation **z** is a bipartite graph in which the nodes on one side are agents, the nodes on the other side are objects, and the directed edges represent exchanges: an edge incoming into agent *i* represents objects that agent *i* would like to accept (goods he does not own, or bads he own); an edge incoming from agent *i* represents objects that agent *i* can pay by (goods he owns, or bads he does not own). The weight of edge *i* -> *o* is |*vᵢ,ₒ*|, The weight of edge *i* -> *o* is |*vᵢ,ₒ*| and the weight of edge *o* -> *i* is 1/|*vᵢ,ₒ*|.
+
+An allocation is called *malicious* if some object *o* is consumed by some agent *i* with *vᵢ,ₒ* ≤ 0, even though there is some other agent *j* with *vⱼ,ₒ* > 0; or, some object *o* is consumed by some agent *i* with *vᵢ,ₒ* < 0, even though there is some other agent *j* with *vⱼ,ₒ* ≥ 0. Clearly, every malicious allocation can be Pareto-improved by moving the object *o* from agent *i* to agent *j*. Therefore, non-maliciousness is a necessary condition for fPO.
+
+An allocation is fPO if-and-only-if it is non-malicious, and its directed consumption graph as no directed cycle in which the product of weights is smaller than 1. This equivalence was proved for goods in the context of cake-cutting by Barbanel. It was extended for bads by Branzei and Sandomirskiy. It was later extended to general valuations (mixtures of goods and bads) by Sandomirskiy and Segal-Halevi.Lᵉᵐ.².¹, Aᵖᵖ.A
+
+
+### Relation to market equilibrium
+
+In a Fisher market, when all agents have linear utilities, any market equilibrium is fPO. This is the first welfare theorem.
+
+
+## Algorithms
+
+
+### Deciding whether a given allocation is fPO
+
+The following algorithm can be used to decide whether a given an allocation **z** is fPO:
+
+* Compute the directed consumption graph of **z**;
+* Replace each weight with its logarithm;
+* Use an algorithm for finding a negative cycle, e.g., the Bellman-Ford algorithm.
+* Based on the above characterization, **z** is fPO if-and-only-if no negative cycle is found.
+
+The run-time of the algorithm is O(|*V*||*E*|). Here, |*V*|=*m*+*n* and |*E*|≤*m n*, where *m* is the number of objects and *n* the number of agents. Therefore, fPO can be decided in time O(*m n* (*m*+*n*)).Lᵉᵐ.².², Aᵖᵖ.A
+
+An alternative algorithm is to find a vector **w** such that the given allocation is **w**-maximizing. This can be done by solving a linear program. The run-time is weakly-polynomial.
+
+In contrast, deciding whether a given discrete allocation is PO is co-NP-complete. Therefore, if the divider claims that an allocation is fPO, the agents can efficiently verify this claim; but if the divider claims that an allocation is PO, it may be impossible to verify this claim efficiently.
+
+
+### Finding a dominating fPO allocation
+
+Finding an fPO allocation is easy. For example, it can be found using serial dictatorship: agent 1 takes all objects for which he has positive value; then agent 2 takes all remaining objects for which he has positive value; and so on.
+
+A more interesting challenge is: given an initial allocation **z** (that may be fractional, and not be fPO), find an fPO allocation **z\*** that is a Pareto-improvement of **z**. This challenge can be solved for *n* agents and *m* objects with mixed (positive and negative) valuations, in strongly-polynomial time, using O(*n*² *m*² (*n*+*m*)) operations. Moreover, in the computed allocation there are at most *n*-1 sharings.Lᵉᵐ.².⁵, Aᵖᵖ.A
+
+If the initial allocation **z** is the equal split, then the final allocation **z\*** is proportional. Therefore, the above lemma implies an efficient algorithm for finding a fractional PROP+fPO allocation, with at most *n*-1 sharings. Similarly, if **z** is an unequal split, then **z\*** is weighted-proportional (proportional for agents with different entitlements). This implies an efficient algorithm for finding a fractional WPROP+fPO allocation with at most *n*-1 sharings.
+
+Combining the above lemma with more advanced algorithms can yield, in strongly-polynomial time, allocations that are fPO and envy-free, with at most *n*-1 sharings.Cᵒʳ.².⁶
+
+
+### Enumerating the fPO allocations
+
+There is an algorithm that enumerates all consumption graphs that correspond to fPO allocations.Pʳᵒᵖ.³.⁷ The run-time of the algorithm is {\displaystyle O(3^{{\frac {(n-1)n}{2}}\cdot D}\cdot m^{{\frac {(n-1)n}{2}}+2})}, where *D* is the degree of *degeneracy* of the instance (*D*=*m*-1 for identical valuations; *D*=0 for non-degenerate valuations, where for every two agents, the value-ratios of all *m* objects are different). In particular, when *n* is constant and *D*=0, the run-time of the algorithm is strongly-polynomial.
+
+
+### Finding fair and fPO allocations
+
+Several recent works have considered the existence and computation of a discrete allocation that is both fPO and satisfies a certain notion of fairness.
+
+* Barman and Krishnamurthy prove that a discrete **fPO+PROP1** allocation of goods can be computed in strongly-polynomial time. They show a similar result for a discrete **fPO+EF11** allocation, where EF11 means "envy-free up to addition of one good and removal of another good".
+* Aziz, Moulin and Sandomirskiy present an algorithm that computes a fractional **fPO+WPROP** allocation of mixed objects (goods and chores). It uses a linear program that maximizes the sum of utilities subject to proportionality. If a basic feasible solution is found (e.g. using the simplex algorithm), then the consumption graph of the resulting allocation is acyclic. Alternatively, it is possible to remove cycles from the resulting consumption graph in polynomial time. They also present an algorithm that converts a fractional fPO+WPROP allocation to a discrete **fPO+WPROP1** allocation, in strongly-polynomial-time.
+* Barman, Krishnamurthy and Vaish prove that there always exists a discrete allocation of goods that is **fPO+EF1**.
+* Murhekar and Garg prove that a discrete **fPO+EF1** allocation of goods can be found in pseudo-polynomial time. They also prove that, when all values are positive, a discrete **fPO+EQ1** allocation can exists and can be found in pseudo-polynomial time. For *k*-ary instances (each agent has at most *k* different values for the goods), the above two results can be computed in polynomial time. Similarly, when the number of agents is a constant, the above two results can be computed in polynomial time.
+* Garg and Murhekar prove that, when the valuation matrix contains only two different (positive) values, a discrete **fPO+EFx** allocation of goods always exists and can be computed in polynomial time. This strengthens previous results which showed similar results for binary (0,1) valuations, and for PO+EFx. They show similar results for **PO+EQx**.
+* Garg, Murhekar and Qin prove that, when the valuation matrix contains only two different (negative) values, a discrete **fPO+EF1** allocation of chores always exists and can be computed in polynomial time. The also prove that, in this case, a fractional **fPO+EF** allocation of (divisible) chores can be computed in polynomial time.
+* Freeman, Sikdar, Vaish and Xia present a polynomial-time algorithm for computing a discrete allocation that is **fPO+approximately-EQ1**, for instances in which all valuations are powers of (1+*e*) for some constant *e*>0. They prove that, even for such instances (when there are at least 3 different valuations), there may be no discrete **fPO+EQx** allocation and no discrete **fPO+EFx** allocation.
+* Bai and Golz present an algorithm for computing a weight-vector **w** such that, when the utilities *uᵢ* of each agent *i* are drawn randomly and independently from a distribution (which may be different for different agents), each agent *i* has an equal probability that *wᵢ uᵢ* is larger than the *wⱼ uⱼ* of all other agents. They show, using Sperner's lemma, that a vector of equalizing weights always exists. When **w** is a vector of equalizing weights, the **w**-maximal allocation is envy-free with high probability. This implies that, with high probability (under suitable conditions on the utility distributions), there exists a discrete **fPO+EF** allocation.

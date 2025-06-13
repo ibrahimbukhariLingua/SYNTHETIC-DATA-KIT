@@ -1,0 +1,66 @@
+Expenditure function
+
+
+# Expenditure function
+
+
+
+In microeconomics, the **expenditure function** represents the minimum amount of expenditure needed to achieve a given level of utility, given a utility function and the prices of goods.
+
+Formally, if there is a utility function {\displaystyle u} that describes preferences over *n* goods, the expenditure function {\displaystyle e(p,u^{\*})} is defined as:
+
+where {\displaystyle p} is the price vector {\displaystyle u^{\*}} is the desired utility level, {\displaystyle \geq (u^{\*})=\{x\in {\textbf {R}}\_{+}^{n}:u(x)\geq u^{\*}\}} is the set of providing at least utility {\displaystyle u^{\*}}.
+
+Expressed equivalently, the individual minimizes expenditure {\displaystyle x\_{1}p\_{1}+\dots +x\_{n}p\_{n}} subject to the minimal utility constraint that {\displaystyle u(x\_{1},\dots ,x\_{n})\geq u^{\*},} giving optimal quantities to consume of the various goods as {\displaystyle x\_{1}^{\*},\dots x\_{n}^{\*}} as function of {\displaystyle u^{\*}} and the prices; then the expenditure function is
+
+
+## Properties
+
+Suppose {\displaystyle u} is a continuous utility function representing a locally non-satiated preference relation on {\displaystyle {\textbf {R}}\_{+}^{n}}. Then {\displaystyle e(p,u^{\*})} is
+
+1. Homogeneous of degree one in p: for all and {\displaystyle \lambda >0}, **{\displaystyle e(\lambda p,u)=\lambda e(p,u);}**
+2. Continuous in {\displaystyle p} and {\displaystyle u;}
+3. Nondecreasing in {\displaystyle p} and strictly increasing in {\displaystyle u} provided {\displaystyle p\gg 0;}
+4. Concave in {\displaystyle p}
+5. If the utility function is strictly quasi-concave, there is Shephard's lemma
+
+### Proofs
+
+(1) As in the above proposition, note that
+
+{\displaystyle e(\lambda p,u)=\min \_{x\in \mathbb {R} \_{+}^{n}:u(x)\geq u}} {\displaystyle \lambda p\cdot x=\lambda \min \_{x\in \mathbb {R} \_{+}^{n}:u(x)\geq u}} {\displaystyle p\cdot x=\lambda e(p,u)}
+
+(2) Continue on the domain {\displaystyle e}: {\displaystyle {\textbf {R}}\_{++}^{N}\*{\textbf {R}}\rightarrow {\textbf {R}}}
+
+(3) Let {\displaystyle p^{\prime }>p} and suppose {\displaystyle x\in h(p^{\prime },u)}. Then {\displaystyle u(h)\geq u}, and {\displaystyle e(p^{\prime },u)=p^{\prime }\cdot x\geq p\cdot x} . It follows immediately that {\displaystyle e(p,u)\leq e(p^{\prime },u)}.
+
+For the second statement, suppose to the contrary that for some {\displaystyle u^{\prime }>u}, {\displaystyle e(p,u^{\prime })\leq e(p,u)} Than, for some {\displaystyle x\in h(p,u)}, {\displaystyle u(x)=u^{\prime }>u}, which contradicts the "no excess utility" conclusion of the previous proposition
+
+(4) Let {\displaystyle t\in (0,1)} and suppose {\displaystyle x\in h(tp+(1-t)p^{\prime })}. Then, {\displaystyle p\cdot x\geq e(p,u)} and {\displaystyle p^{\prime }\cdot x\geq e(p^{\prime },u)}, so {\displaystyle e(tp+(1-t)p^{\prime },u)=(tp+(1-t)p^{\prime })\cdot x\geq }{\displaystyle te(p,u)+(1-t)e(p^{\prime },u)}.
+
+(5) {\displaystyle {\frac {\delta (p^{0},u^{0})}{\delta p\_{i}}}=x\_{i}^{h}(p^{0},u^{0})}
+
+
+## Expenditure and indirect utility
+
+The expenditure function is the inverse of the indirect utility function when the prices are kept constant. I.e, for every price vector {\displaystyle p} and income level {\displaystyle I}:¹⁰⁶
+
+There is a duality relationship between the expenditure function and the utility function. If given a specific regular quasi-concave utility function, the corresponding price is homogeneous, and the utility is monotonically increasing expenditure function, conversely, the given price is homogeneous, and the utility is monotonically increasing expenditure function will generate the regular quasi-concave utility function. In addition to the property that prices are once homogeneous and utility is monotonically increasing, the expenditure function usually assumes
+
+1. Is a non-negative function, i.e., {\displaystyle E(P\cdot u)>O;}
+2. For P, it is non-decreasing, i.e., {\displaystyle E(p^{1}u)>E(p^{2}u),u>Op^{l}>p^{2}>O\_{N}};
+3. E(Pu) is a concave function. That is, {\displaystyle e(np^{l}+(1-n)p^{2})u)>\lambda E(p^{1}u)(1-n)E(p^{2}u)y>0} {\displaystyle O<\lambda <1p^{l}\geq O\_{N}p^{2}\geq O\_{N}}
+
+Expenditure function is an important theoretical method to study consumer behavior. Expenditure function is very similar to cost function in production theory. Dual to the utility maximization problem is the cost minimization problem
+
+
+## Example
+
+Suppose the utility function is the Cobb-Douglas function {\displaystyle u(x\_{1},x\_{2})=x\_{1}^{.6}x\_{2}^{.4},} which generates the demand functions
+
+where {\displaystyle I} is the consumer's income. One way to find the expenditure function is to first find the indirect utility function and then invert it. The indirect utility function {\displaystyle v(p\_{1},p\_{2},I)} is found by replacing the quantities in the utility function with the demand functions thus:
+
+where {\displaystyle K=(.6^{.6}\times .4^{.4}).} Then since {\displaystyle e(p\_{1},p\_{2},u)=e(p\_{1},p\_{2},v(p\_{1},p\_{2},I))=I} when the consumer optimizes, we can invert the indirect utility function to find the expenditure function:
+
+Alternatively, the expenditure function can be found by solving the problem of minimizing {\displaystyle (p\_{1}x\_{1}+p\_{2}x\_{2})} subject to the constraint {\displaystyle u(x\_{1},x\_{2})\geq u^{\*}.} This yields conditional demand functions {\displaystyle x\_{1}^{\*}(p\_{1},p\_{2},u^{\*})} and {\displaystyle x\_{2}^{\*}(p\_{1},p\_{2},u^{\*})} and the expenditure function is then
+

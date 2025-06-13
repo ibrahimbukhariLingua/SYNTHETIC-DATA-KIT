@@ -1,0 +1,33 @@
+Business continuance volume
+
+
+# Business continuance volume
+
+
+
+In disk arrays, a **business continuance volume** (**BCV**) is EMC Corporation's term for an independently addressable copy of a data volume, that uses advanced mirroring technique for business continuity purposes.
+
+
+## Use
+
+BCVs can be detached from the active data storage at a point in time and mounted on non-critical servers to facilitate offline backup or parallel computing.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ Once offline processes are completed, these BCVs can be either:
+
+* discarded
+* used as a source to recover the production data
+* re-attached (re-synchronized) to the production data again
+
+## Types
+
+There are two types of BCVs:
+
+* A clone BCV is a traditional method, and uses one-to-one separate physical storage (splitable disk mirror)
+ + least impact on production performance
+ + high cost of the additional storage
+ + persistent usage
+
+* A snapshot BCV, that uses copy on write algorithm on the production volume
+ + uses only a small additional storage, that only holds the changes made to the production volume
+ - lower cost of the additional storage
+ - reads and writes impact performance of production storage
+ + once snapshot storage fills up, the snapshot becomes invalid and unusable
+ + short-term usage

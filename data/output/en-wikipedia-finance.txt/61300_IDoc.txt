@@ -1,0 +1,67 @@
+IDoc
+
+
+# IDoc
+
+
+
+**IDoc**, short for Intermediate Document, is an SAP document format for business transaction data transfers.
+Non SAP-systems can use **IDocs** as the standard interface (computing) for data transfer.
+IDoc is similar to XML in purpose, but differs in syntax. Both serve the purpose of data exchange and automation in computer systems, but the IDoc-Technology takes a different approach.
+
+While XML allows having some metadata about the document itself, an IDoc is obliged to have information at its header like its creator, creation time etc. While XML has a tag-like tree structure containing data and meta-data, IDocs use a table with the data and meta-data. IDocs also have a session that explains all the processes which the document passed or will pass, allowing one to debug and trace the status of the document.
+
+Different IDoc types are available to handle different types of messages. For example, the IDoc format ORDERS01 may be used for both purchase orders and order confirmations.
+
+IDoc technology offers many tools for automation, monitoring and error handling. For example, if the IDocs are customised that way on a particular server, then a user of SAP R/3 system creates a purchase order; this is automatically sent via an IDoc and a sales order is immediately created on the vendor's system.
+
+When this order cannot be created because of an application error (for example: The price per piece is lower than allowed for this material), then the administrator on the vendor's system sees this IDoc among the erroneous ones and can solve the situation. If the error is in the master data at the vendor's system, he can correct them and order the IDoc to be processed again.
+
+Because of the flexibility and transparency of IDoc technology, some non-SAP technologies use them as well.
+
+
+## Structure of the IDoc
+
+An IDoc consists of
+
+* **Control record** (it contains the type of IDoc, port of the partner, release of SAP R/3 which produced the IDoc etc.)
+* **Data records** of different types. The number and type of segments is mostly fixed for each IDoc type, but there is some flexibility (for example an SD order can have any number of items).
+* **Status records** containing messages like 'IDoc created', 'The recipient exists', 'IDoc was successfully passed to the port', 'Could not book the invoice because..'
+
+The IDoc itself is a structured Text-File, that means IDocs can be used on all platforms, there is no need to translate binary data. Each record is identified by the name of the record. The load (data) is stored in a 1000 byte long container. Use transaction WE60 in a SAP-System to get documentation for IDocs, like HTML files and C-header files.
+
+
+## IDoc Transactions in SAP
+
+The following transactions can be used to create and process IDocs. The list does not include any transaction required for the development of new IDoc types. Please note that you get a comprehensive list of available transactions by using area menu WEDI.
+
+* **WE02** - IDoc List report
+* **WE05** - IDoc List
+* **WE09** - IDoc Search for Business Content
+* **WLF\_IDOC** - IDoc Processing
+ + This transaction is used to display and edit IDocs.
+* **WE19** - Test Tool for Idoc Processing
+* **WE20** - Partner Profile
+ + This transaction determines a processing code based on the partner profile identified by the control record of the IDoc.
+* **WE21** - Ports in IDoc processing
+ + This transaction identifies an external port (RFC, File, ABAP-PI, etc.) that controls the IDoc flow to an external system.
+* **WE30** - IDoc Type Development
+* **WE31** - Development IDoc Segment
+* **WE32** - Development IDoc View
+* **WE41** - Outbound process code
+ + This transaction links an outbound processing code specified in a partner profile to a function module.
+* **WE42** - Inbound process code
+ + This transaction links an inbound processing code specified in a partner profile to a function module.
+* **WE60** - IDoc Documentation
+* **BD87** - Inbound processing
+ + This transaction processes outbound IDocs.
+
+## NAST
+
+NAST is a technique in SAP-Systems to create messages. Messages can be printed, sent or transferred into IDocs. SAP uses this for many applications e.g. Purchase Orders (PO ). The PO can create a message which might be printed, sent by FAX, or translated into an IDoc of type ORDERS. The IDoc ORDERS can be forwarded in an B2B-process to a vendor.
+
+
+## Error Handling
+
+Transactions like WE02, WE05, WE09, WE19, and BD87 are used in traditional approaches to error handling in IDOC administration. Drill down through the idocs status data to find the actual root case. However, SAP S/4 HANA has rectified this and now provides an upgraded version of all of these with the WLF\_ IDOC transaction.
+

@@ -1,0 +1,67 @@
+Conditional variance
+
+
+# Conditional variance
+
+
+
+In probability theory and statistics, a **conditional variance** is the variance of a random variable given the value(s) of one or more other variables.
+Particularly in econometrics, the conditional variance is also known as the **scedastic function** or **skedastic function**. Conditional variances are important parts of autoregressive conditional heteroskedasticity (ARCH) models.
+
+
+## Definition
+
+The conditional variance of a random variable *Y* given another random variable *X* is
+
+The conditional variance tells us how much variance is left if we use {\displaystyle \operatorname {E} (Y\mid X)} to "predict" *Y*.
+Here, as usual, {\displaystyle \operatorname {E} (Y\mid X)} stands for the conditional expectation of *Y* given *X*,
+which we may recall, is a random variable itself (a function of *X*, determined up to probability one).
+As a result, {\displaystyle \operatorname {Var} (Y\mid X)} itself is a random variable (and is a function of *X*).
+
+
+## Explanation, relation to least-squares
+
+Recall that variance is the expected squared deviation between a random variable (say, *Y*) and its expected value.
+The expected value can be thought of as a reasonable prediction of the outcomes of the random experiment (in particular, the expected value is the best constant prediction when predictions are assessed by expected squared prediction error). Thus, one interpretation of variance is that it gives the smallest possible expected squared prediction error. If we have the knowledge of another random variable (*X*) that we can use to predict *Y*, we can potentially use this knowledge to reduce the expected squared error. As it turns out, the best prediction of *Y* given *X* is the conditional expectation. In particular, for any {\displaystyle f:\mathbb {R} \to \mathbb {R} } measurable,
+
+By selecting {\displaystyle f(X)=\operatorname {E} (Y|X)}, the second, nonnegative term becomes zero, showing the claim.
+Here, the second equality used the law of total expectation.
+We also see that the expected conditional variance of *Y* given *X* shows up as the irreducible error of predicting *Y* given only the knowledge of *X*.
+
+
+## Special cases, variations
+
+
+### Conditioning on discrete random variables
+
+When *X* takes on countable many values {\displaystyle S=\{x\_{1},x\_{2},\dots \}} with positive probability, i.e., it is a discrete random variable, we can introduce {\displaystyle \operatorname {Var} (Y|X=x)}, the conditional variance of *Y* given that *X=x* for any *x* from *S* as follows:
+
+where recall that {\displaystyle \operatorname {E} (Z\mid X=x)} is the conditional expectation of Z given that X=x, which is well-defined for {\displaystyle x\in S}.
+An alternative notation for {\displaystyle \operatorname {Var} (Y|X=x)} is {\displaystyle \operatorname {Var} \_{Y\mid X}(Y|x).}
+
+Note that here {\displaystyle \operatorname {Var} (Y|X=x)} defines a constant for possible values of *x*, and in particular, {\displaystyle \operatorname {Var} (Y|X=x)}, is *not* a random variable.
+
+The connection of this definition to {\displaystyle \operatorname {Var} (Y|X)} is as follows:
+Let *S* be as above and define the function {\displaystyle v:S\to \mathbb {R} } as {\displaystyle v(x)=\operatorname {Var} (Y|X=x)}. Then, {\displaystyle v(X)=\operatorname {Var} (Y|X)} almost surely.
+
+
+### Definition using conditional distributions
+
+The "conditional expectation of *Y* given *X=x*" can also be defined more generally
+using the conditional distribution of *Y* given *X* (this exists in this case, as both here *X* and *Y* are real-valued).
+
+In particular, letting {\displaystyle P\_{Y|X}} be the (regular) conditional distribution {\displaystyle P\_{Y|X}} of *Y* given *X*, i.e., {\displaystyle P\_{Y|X}:{\mathcal {B}}\times \mathbb {R} \to [0,1]} (the intention is that {\displaystyle P\_{Y|X}(U,x)=P(Y\in U|X=x)} almost surely over the support of *X*), we can define
+
+{\displaystyle \operatorname {Var} (Y|X=x)=\int \left(y-\int y'P\_{Y|X}(dy'|x)\right)^{2}P\_{Y|X}(dy|x).}
+
+This can, of course, be specialized to when *Y* is discrete itself (replacing the integrals with sums), and also when the conditional density of *Y* given *X=x* with respect to some underlying distribution exists.
+
+
+## Components of variance
+
+The law of total variance says
+
+{\displaystyle \operatorname {Var} (Y)=\operatorname {E} (\operatorname {Var} (Y\mid X))+\operatorname {Var} (\operatorname {E} (Y\mid X)).}
+
+In words: the variance of *Y* is the sum of the expected conditional variance of *Y* given *X* and the variance of the conditional expectation of *Y* given *X*. The first term captures the variation left after "using *X* to predict *Y*", while the second term captures the variation due to the mean of the prediction of *Y* due to the randomness of *X*.
+

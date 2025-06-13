@@ -1,0 +1,28 @@
+Buffered probability of exceedance
+
+
+# Buffered probability of exceedance
+
+
+
+**Buffered probability of exceedance** (**bPOE**) is a function of a random variable used in statistics and risk management, including financial risk. The bPOE is the probability of a tail with known mean value {\displaystyle x}. The figure shows the bPOE at threshold {\displaystyle x} (marked in red) as the blue shaded area. Therefore, by definition, bPOE is equal to one minus the confidence level at which the Conditional Value at Risk (CVaR) is equal to {\displaystyle x}. bPOE is similar to the probability of exceedance of the threshold {\displaystyle x}, but the tail is defined by its mean rather than the lowest point {\displaystyle x} of the tail.
+
+bPOE has its origins in the concept of *buffered probability of failure (bPOF)*, developed by R. Tyrrell Rockafellar and Johannes Royset to measure failure risk. It was further developed and defined as the inverse CVaR by Matthew Norton, Stan Uryasev, and Alexander Mafusalov. Similar to CVaR, bPOE considers not only the probability that outcomes (losses) exceed the threshold {\displaystyle x}, but also the magnitude of these outcomes (losses).
+
+
+## Formal definition
+
+There are two slightly different definitions of bPOE, so called **Lower bPOE** and **Upper bPOE**.
+
+For a random variable, {\displaystyle X} the Lower bPOE, {\displaystyle {\bar {p}}\_{x}(X)}, at threshold {\displaystyle x\in [E[X],\sup X]} is given by:
+
+{\displaystyle {\bar {p}}\_{x}(X)=\min \_{a\geq 0}E[a(X-x)+1]^{+}=\min \_{\gamma <x}{\frac {E[X-\gamma ]^{+}}{x-\gamma }}}
+
+where {\displaystyle [\cdot ]^{+}=\max\{\cdot ,0\}}.
+
+bPOE can be expressed as the inverse function of CVaR:
+
+{\displaystyle {\bar {p}}\_{x}(X)=\{1-\alpha |{\bar {q}}\_{\alpha }(X)=x\}},
+
+where {\displaystyle {\bar {q}}\_{\alpha }(X)} is the CVaR of {\displaystyle X} with confidence level {\displaystyle \alpha }.
+

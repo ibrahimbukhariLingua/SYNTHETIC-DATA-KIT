@@ -1,0 +1,46 @@
+Penalized present value
+
+
+# Penalized present value
+
+
+
+**The Penalized Present Value (PPV)** is a method of capital budgeting under risk, where the value of the investment is "penalized" as a function of its risk.
+It was developed by Fernando Gómez-Bezares in the 1980s.
+
+
+## Method
+
+PPV is best understood by comparison to two other approaches where a penalty is applied for risk:
+
+* The risk-adjusted rate of return applies a risk-penalty by increasing the discount rate when calculating the Net Present Value (NPV);
+* The certainty equivalent approach does this by adjusting the cash-flow numerators of the NPV formula.
+
+Contrasting to both, PPV calculates the average NPV (μ) at the risk-free rate, penalizing it afterwards by subtracting "t" standard deviations of the NPV (tσ):
+{\displaystyle PPV=\mu -t\sigma }
+
+The PPV has many versions, a particularly pragmatic one can be reached by assuming that:
+(i) we know, *b*, the maximum or most optimistic NPV; (ii) the minimum or most pessimistic value, *a*; (iii) these NPVs are approximately normally distributed, and can be calculated using the risk-free rate.
+Then, we can approximate: {\displaystyle \mu \ ={\frac {a+b}{2}}} and {\displaystyle \sigma \ ={\frac {b-a}{6}}}.
+Assuming a reasonable *t* of 1.5: {\displaystyle PPV={\frac {a+b}{2}}-1.5{\frac {b-a}{6}}=0.25b+0.75a}
+
+Therefore, given that we are risk-averse, we weight more the worst case than the most favorable one; other weights could be applied.
+According to this criterion, the decision maker will look for investments with positive PPVs, and if a choice is needed, he or she will choose the investment with the highest PPV.
+
+
+## Derivation
+
+A reasonable derivation of the PPV is the PIRR (Penalized Internal Rate of Return), which can be useful, among other things, to measure the performance of an investment fund or an investment portfolio. Assuming that μIRR and σIRR are, respectively, the mean and the standard deviation of the Internal Rate of Return (IRR), and following the reasoning above we will have:
+
+{\displaystyle PIRR=\mu \_{IRR}-t\sigma \_{IRR}}
+
+Now calling r₀ the risk-free rate, μ\* the average return of the market portfolio and σ\* its standard deviation, we can do:
+
+{\displaystyle t={\frac {\mu ^{\*}-r\_{0}}{\sigma ^{\*}}}}
+
+which is the value of the Sharpe ratio of the market portfolio (premium per unit of risk σ asked by the market). So we can do:
+
+{\displaystyle PIRR=\mu \_{IRR}-\left({\frac {\mu ^{\*}-r\_{0}}{\sigma ^{\*}}}\right)\sigma \_{IRR}}
+
+This would be the linear version of the well-known Sharpe ratio.
+

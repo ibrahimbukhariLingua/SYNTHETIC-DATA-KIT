@@ -1,0 +1,109 @@
+Cisco Meraki
+
+
+# Cisco Meraki
+
+
+
+**Cisco Meraki** is a cloud-managed IT company headquartered in San Francisco, California. Their products include wireless, switching, security, enterprise mobility management (EMM) and security cameras, all centrally managed from the web. Meraki was acquired by Cisco Systems in December 2012.
+
+
+## History
+
+Meraki was founded by Sanjit Biswas and John Bicket, along with Hans Robertson. The company was based in part on the MIT Roofnet project, an experimental 802.11b/g mesh network developed by the Computer Science and Artificial Intelligence Laboratory at the Massachusetts Institute of Technology.
+
+Meraki was funded by Google and Sequoia Capital. The organization started in Mountain View, California, in 2006, before relocating to San Francisco. Meraki employed people who worked on the MIT Roofnet project.
+
+In 2007, Meraki selected San Francisco for their community-based Free the Net campaign.ʷʰʸ? They started putting gateway devices in the Lower Haight neighborhood to provide Internet access and giving away repeaters. In the first year of the project, the growth of the network was primarily in the Mission District. By October 2007, they estimated 20,000 distinct users connected and about 5 terabytes of data transferred in this network. In July 2008, Meraki said 100,000 people in San Francisco used its "Free the Net" service. Since then, Meraki discontinued this public service, though many access points remain active, but with no connection to the Internet.
+
+On November 18, 2012, Cisco Systems announced it would acquire Meraki for an estimated $1.2 billion.
+
+
+## Products
+
+
+### Access Points (MR)
+
+Table of Meraki MR Access Points
+| Model | Indoor/Outdoor | Wifi Capability | Ethernet | Architecture | System-on-Chip | CPU Speed | Flash-Chip | Flash Size | Ram Size | Wireless chip | End of Support |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| MR11 | Indoor | Aug 30, 2017 |
+| MR12 | Indoor | 2x2:2 802.11n (2.4 GHz) | Gigabit | MIPS | Atheros (AR7242/7241) | 400 MHz | Macronix | 16MB | 64MB | AR9283-AL1A | Oct 24, 2022 |
+| MR14 | Indoor | Aug 30, 2017 |
+| MR16 | Indoor | 2x2:2 802.11n | Gigabit | MIPS | Atheros AR7161-BC1A | 680 MHz | Macronix | 16MiB | 64MB | AR9283-AL1A | May 31, 2021 |
+| MR18 | Indoor | 2x2:2 802.11n | Gigabit | MIPS | Qualcomm QCA9557-AT4A | 720 | Hynix | 128MiB (NAND) | 128MB | SoC AR9550 + 2x Atheros AR9582-AR1A | Mar 31, 2024 |
+| MR20 | Indoor | 2x2:2 802.11ac Wave 2 | Gigabit |
+| MR24 | Indoor | 3x3:3 802.11n | Gigabit | May 31, 2021 |
+| MR30H | Indoor, In-room hotel or dormitory deployments | 2x2:2 802.11ac | Gigabit | July 26, 2027 |
+| MR32 | Indoor | 2x2:2 802.11ac | Gigabit | Mar 31, 2024 |
+| MR33 | Indoor | 2x2:2 802.11ac Wave 2 | Gigabit | ARMv7 | Qualcomm IPQ4029 | 716 MHz | Spansion S34ML01G200TFV00 | 128MiB | 256MB | Qualcomm QCA9887 | Jul 21, 2026 |
+| MR34 | Indoor | 3x3:3 802.11ac Wave 2 | Gigabit | Oct 31, 2023 |
+| MR36 | Indoor | 2x2:2 802.11ax | Gigabit | Qualcomm IPQ8070A | 1.0 GHz |
+| MR36H | Indoor, In-room hotel or dormitory deployments | 2x2:2 802.11ax | Gigabit |
+| MR42 | Indoor | 3x3:3 802.11ac Wave 2 | Gigabit | Jul 21, 2026 |
+| MR44 | Indoor | 2.5Gig |
+| MR45 | Indoor | 4x4:4 802.11ax | 2.5Gig |
+| MR46 | Indoor | 4x4:4 802.11ax | 2.5Gig |
+| MR52 | Indoor | 4x4:4 802.11ac Wave 2 | 2 x Gigabit | Jul 21, 2026 |
+| MR53 | Indoor | 4x4:4 802.11ac Wave 2 | 2.5Gig+Gigabit |
+| MR55 | Indoor | 8x8:8 802.11ax | 5Gig | Aug 1, 2028 |
+| MR56 | Indoor | 8x8:8 802.11ax | 5Gig |
+| MR57 | Indoor | 4x4:4 802.11ax 2,4 GHz, 5 GHz, 6 GHz (Wi-Fi 6E) | 2 x 5Gig |
+| MR58 | Outdoor | Oct 30, 2017 |
+| MR66 | Outdoor | 2x2:2 802.11n | Gigabit | Jun 9, 2024 |
+| MR70 | Outdoor | 2x2:2 802.11n | Gigabit |
+| MR72 | Outdoor | 2x2:2 802.11ac Wave 2 | Gigabit | Apr 30, 2024 |
+| MR74 | Outdoor | 2x2:2 802.11ac Wave 2 | Gigabit | Jul 21, 2026 |
+| MR76 | Outdoor | 2x2:2 802.11ax | Gigabit |
+| MR84 | Outdoor | 4x4:4 802.11ac Wave 2 | 2.5Gig+Gigabit | Jul 21, 2026 |
+| MR86 | Outdoor | 4x4:4 802.11ax | 5Gig |
+
+
+### Switches (MS)
+
+| Series | Deployment type | Interfaces | Uplinks | PoE capabilities | Power configuration | Stacking capabilities | Routing capabilities | Models |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| MS120-8 | Compact | 8 x 1GbE RJ45 | 2 x 1GbE SFP Fixed | 67W (LP model) 124W (FP model) | External PSU (non-PoE, LP model) Internal (FP Model) | Virtual only | DHCP Relay | MS120-8-HW MS120-8LP-HW MS120-8FP-HW |
+| MS225 | Branch & small campus | 24 / 48 x 1GbE RJ45 | 4 x SFP+ Fixed | 370W (LP model) 740W (FP model) | Internal | Yes, 80G physical + virtual | DHCP Relay | MS225-24-HW MS225-24P-HW MS225-48-HW MS225-48LP-HW MS225-48FP-HW |
+| MS355 | Branch & small campus | 24 / 48 x 1GbE RJ45 8 x XGbE RJ45 (24X only) | 2 × 40G (QSFP+) Fixed | 740W (24 port, X2 models) 740W (48 port, X2 models) | Removable PSU | 400G physical + virtual | Static + Dynamic DHCP Server + Relay | MS355-24-HW MS355-24X-HW MS355-48-HW MS355-48X-HW MS355-48X2-HW |
+| MS390 | High-performance campus & branch | 24 / 48 x 1GbE RJ45 24 / 48x XGbE RJ45 (in select models)\* | 4/8 x 10GbE SFP+ 2 x 40GbE QSFP Modular | 830W (24 port models) 822W (48 port models) | Removable PSU | Compatible only with MS390 480G physical + virtual | Static + Dynamic DHCP Server + Relay | MS390-24-HW MS390-24P-HW MS390-24U-HW MS390-24UX-HW MS390-48-HW MS390-48P-HW MS390-48U-HW MS390-48UX-HW MS390-48UX2-HW |
+| MS450 | 10G fiber aggregation | 12x 40GbE QSFP+ | 2 x 100GbE QSFP28 | N/A | Modular Redundant PSU optional (sold separately) | Front-port 160G + virtual | Static + Dynamic DHCP Server + Relay Warm spare (VRRP) | MS450-12-HW |
+
+
+### Security Appliances (MX)
+
+Table of Meraki MX Security Appliances
+| Model | Wifi Model | Interfaces | Stateful Firewall Throughput | Architecture | CPU Speed | End of Sale | End of support |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Z1 | Yes | 5 x GbE | 50 Mbit/s |
+| Z3 | Yes | 5 x GbE | 100 Mbit/s |
+| Z4 | Yes | WAN: 1 x GbE RJ45 LAN: 4 x GbE RJ45 (1 x PoE) | 500 Mbit/s |
+| MX60 | MX60W | 5 x GbE | 100 Mbit/s |
+| MX64 | MX64W | WAN: 1 x GbE RJ45 LAN: 4 x GbE RJ45 | 250 Mbit/s | July 26, 2022 | July 26, 2027 |
+| MX65 | MX65W | WAN: 2 x GbE RJ45 LAN: 10 x GbE RJ45 | 250 Mbit/s | May 28, 2019 | May 28, 2026 |
+| MX67 | MX67W |
+| MX68 | MX68W |
+| MX75 | N/A | WAN: 2 x GbE RJ45 1 x SFP LAN: 10 x GbE RJ45 (2 x PoE) | 1 Gbit/s |
+| MX80 | N/A | 5 x GbE | 250 Mbit/s | Aug 30, 2016 | Aug 30, 2023 |
+| MX84 | N/A | 5 x GbE | 500 Mbit/s | Oct 31, 2021 | Oct 31, 2026 |
+| MX85 | N/A | WAN: 2 x GbE RJ45 2 x SFP LAN: 8 x GbE RJ45 2 x SFP | 1000 Mbit/s |
+| MX90 | N/A | 9 x GbE, 2 x GbE (SFP) | 500 Mbit/s |
+| MX95 | N/A | WAN: 2 x 2.5GbE RJ45 2 x SFP+ LAN: 4 x GbE RJ45 2 x SFP+ | 2 Gbit/s |
+| MX100 | N/A | 9 x GbE, 2 x GbE (SFP) | 750 Mbit/s | Feb 1, 2022 | Feb 1, 2027 |
+| MX105 | N/A | WAN: 2 x 2.5GbE RJ45 2 x SFP+ LAN: 4 x GbE RJ45 2 x SFP+ | 3 Gbit/s |
+| MX250 | N/A | WAN: 2 x 10GbE (SFP+) LAN: 8 x GbE (RJ45), 8 x GbE (SFP), 8 x 10GbE (SFP+) | 4 Gbit/s |
+| MX400 | N/A | 8 x GbE (RJ45), 8 GbE (SFP), 4 x 10GbE (SFP+) | 1 Gbit/s | May 20, 2018 | May 20, 2025 |
+| MX450 | N/A | 6 Gbit/s |
+| MX600 | N/A | 8 x GbE (RJ45), 8 GbE (SFP), 4 x 10GbE (SFP+) | 2 Gbit/s | May 20, 2018 | May 20, 2025 |
+
+
+## Customer data loss incident
+
+On August 3, 2017, the engineering team made changes to the North American object storage service; the change caused some deletion of customer data. Cisco stated that the change was due to the application of "an erroneous policy". The data loss mostly affected media files uploaded by customers. Lost data included:
+
+* Systems Manager – Custom enterprise apps and contact images.
+* Meraki Communications – IVR audio files, hold music, contact images and VM greetings.
+* Wireless Device Dashboard – Custom floor plans, device placement photos, custom logos used for interface branding and reports and custom splash themes.
+
+On August 7 Meraki announced that some data on the cache service could be recovered. On August 9 customers were informed that recovery efforts were still underway but that they "do not expect to be able to recover most assets".
+

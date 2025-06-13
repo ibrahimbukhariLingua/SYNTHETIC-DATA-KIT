@@ -1,0 +1,57 @@
+Silver–Meal heuristic
+
+
+# Silver–Meal heuristic
+
+
+
+The **Silver–Meal heuristic** is a production planning method in manufacturing, composed in 1973 by Edward A. Silver and H.C. Meal. Its purpose is to determine production quantities to meet the requirement of operations at minimum cost.
+
+The method is an approximate heuristic for the dynamic lot-size model, perceived as computationally too complex.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+
+## Definition
+
+The Silver–Meal heuristic is a forward method that requires determining the average cost per period as a function of the number of periods the current order is to span and stopping the computation when this function first increases.
+
+
+## Procedure
+
+Define :
+
+*K*: the setup cost per lot produced.
+
+*h*: holding cost per unit per period.
+
+*C(T)* : the average holding and setup cost per period if the current order spans the next T periods.
+Let (r₁, r₂, r₃, .......,rₙ) be the requirements over the n-period horizon.
+
+To satisfy the demand for period 1
+
+* {\displaystyle C(1)=K}
+
+The average cost = only the setup cost and there is no inventory holding cost.
+
+To satisfy the demand for period 1, 2
+Producing lot 1 and 2 in one setup give us an average cost:
+
+* {\displaystyle C(2)={\frac {K+hr\_{2}}{2}}}
+
+The average cost = (the setup cost + the inventory holding cost of the lot required in period 2.) divided by 2 periods.
+
+To satisfy the demand for period 1, 2, 3
+Producing lot 1, 2 and 3 in one setup give us an average cost:
+
+* {\displaystyle C(3)={\frac {K+hr\_{2}+2hr\_{3}}{3}}}
+
+The average cost =( the setup cost + the inventory holding cost of the lot required in period 2+ the inventory holding cost of the lot required in period 3) divided by 3 periods.
+
+In general,
+
+* {\displaystyle C(j)={\frac {K+hr\_{2}+2hr\_{3}+...+(j-1)hr\_{j}}{j}}}
+
+The search for the optimal T continues until C(T) > C(T − 1).
+
+Once C(j) > C(j − 1), stop and produce r₁ + r₂ + r₃ + ... + rⱼ − ₁
+And, begin the process again starting from period j.
+

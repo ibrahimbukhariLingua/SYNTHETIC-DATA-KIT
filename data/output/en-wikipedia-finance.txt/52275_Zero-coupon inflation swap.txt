@@ -1,0 +1,45 @@
+Zero-coupon inflation swap
+
+
+# Zero-coupon inflation swap
+
+
+
+| Part of a series on |
+| --- |
+| Financial markets |
+| * Public market * Exchange **·** Securities |
+| Bond market |
+| * Bond valuation * Corporate bond * Fixed income * Government bond * High-yield debt * Municipal bond * Securitization |
+| Stock market |
+| * Common stock * Growth stock * Preferred stock * Registered share * Stock * Stockbroker * Stock certificate * Stock exchange * Watered stock |
+| Other markets |
+| Derivatives * (Credit derivative * Futures exchange * Hybrid security) Foreign exchange * (Currency * Exchange rate) * Commodity * ETF * Money * Mutual fund * Option * Real estate * Reinsurance * Structured product * Swap (finance) |
+| Over-the-counter (off-exchange) |
+| * Forwards * Options * Spot market * Swaps |
+| Trading |
+| * Participants * Regulation * Clearing |
+| Related areas |
+| * Alternative investment * Angel investor * Asset (economics) * Asset pricing * Banks and banking * Bull * Climate finance * Diversification (finance) * Eco-investing * Environmental finance * ESG * Financial + analysis + analyst + asset + betting + corporate + crime + forecast + personal + public + services * Fintech * Greenwashing * Growth investing * Impact investing * Investment management * Market risk * Market trend * Speculative attack * Sustainable development goals * Sustainable finance |
+| * v * t * e |
+
+A **zero-coupon inflation swap** (**ZCIS**), also called a **zero-coupon inflation-indexed swap** (**ZCIIS**), is a standard derivative product whose payoff depends on the inflation rate realized over a given period of time. The underlying asset is a single consumer price index (CPI).
+
+It is zero-coupon because there is only one cash flow at the maturity of the swap, without any intermediate coupon. It is called a swap because at maturity, one counterparty pays a fixed amount to the other in exchange for a floating amount (in this case linked to inflation). The final cash flow will therefore consist of the difference between the fixed amount and the value of the floating amount at expiry of the swap.
+
+
+## Detailed flows
+
+* At time {\displaystyle T\_{M}} = M years
+ + Party B pays Party A the fixed amount {\displaystyle N[(1+K)^{M}-1]}
+ + Party A pays Party B the floating amount {\displaystyle N{\Bigg [}{\frac {{\mathcal {I}}(T\_{M})}{{\mathcal {I}}(T\_{0})}}-1{\Bigg ]}}
+
+where:
+
+* {\displaystyle K} is the contract fixed rate
+* {\displaystyle N} the contract nominal value
+* {\displaystyle M} the number of years
+* {\displaystyle T\_{0}} is the start date
+* {\displaystyle T\_{M}} is the maturity date (end of the swap)
+* {\displaystyle {\mathcal {I}}(T\_{0})} is the inflation consumer price index at start date (time {\displaystyle T\_{0}})
+* {\displaystyle {\mathcal {I}}(T\_{M})} is the inflation consumer price index at maturity date (time {\displaystyle T\_{M}})

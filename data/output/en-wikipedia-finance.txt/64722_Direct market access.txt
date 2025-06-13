@@ -1,0 +1,49 @@
+Direct market access
+
+
+# Direct market access
+
+
+
+**Direct market access** (**DMA**) in financial markets is the electronic trading infrastructure that gives investors wishing to trade in financial instruments a way to interact with the order book of an exchange. Normally, trading on the order book is restricted to broker-dealers and market making firms that are members of the exchange. Using DMA, investment companies (also known as buy side firms) and other private traders use the information technology infrastructure of sell side firms such as investment banks and the market access that those firms possess, but control the way a trading transaction is managed themselves rather than passing the order over to the broker's own in-house traders for execution. Today, DMA is often combined with algorithmic trading giving access to many different trading strategies. Certain forms of DMA, most notably "sponsored access", have raised substantial regulatory concerns because of the possibility of a malfunction by an investor to cause widespread market disruption.
+
+
+## History
+
+As financial markets moved on from traditional open outcry trading on exchange trading floors towards decentralized electronic, screen-based trading and information technology improved, the opportunity for investors and other buy side traders to trade for themselves rather than handing orders over to brokers for execution began to emerge. The implementation of the FIX protocol gave market participants the ability to route orders electronically to execution desks. Advances in the technology enabled more detailed instructions to be submitted electronically with the underlying order.
+
+The logical conclusion to this, enabling investors to work their own orders directly on the order book without recourse to market makers, was first facilitated by electronic communication networks such as Instinet. Recognising the threat to their own businesses, investment banks began acquiring these companies (e.g. the purchase of Instinet in 2007 by Nomura Holdings) and developing their own DMA technologies. Most major sell-side brokers now provide DMA services to their clients alongside their traditional 'worked' orders and algorithmic trading solutions giving access to many different trading strategies.
+
+
+## Benefits
+
+There are several motivations for why a trader may choose to use DMA rather than alternative forms of order placement:
+
+* DMA usually offers lower transaction costs because only the technology is being paid for and not the usual order management and oversight responsibilities that come with an order passed to a broker for execution.
+* Orders are handled directly by the originator giving them more control over the final execution and the ability to exploit liquidity and price opportunities more quickly.
+* Information leakage is minimised because the trading is done anonymously using the DMA provider's identity as a cover. DMA systems are also generally shielded from other trading desks within the provider's organisation by a Chinese wall.
+* Direct market access allows a user to 'Trade the Spread' of a stock. This is facilitated by the permission of entering your order onto the 'Level 2' order book, effectively negating the need to pass through a broker or dealer.
+
+## Ultra-low latency direct market access (ULLDMA)
+
+Advanced trading platforms and market gateways are essential to the practice of high-frequency trading. Order flow can be routed directly to the line handler where it undergoes a strict set of Risk Filters before hitting the execution venue(s). Typically, ULLDMA systems built specifically for HFT can currently handle high amounts of volume and incur no delay greater than 500 microseconds. One area in which low-latency systems can contribute to best execution is with functionality such as direct strategy access (DSA) and Smart Order Router.
+
+
+## Sponsored access
+
+Following the Flash Crash, it has become difficult for a trading participant to get a true form of direct market access in a sponsored access arrangement with a broker. This owes to changes to the net capital rule, Rule 15c3-1, that the US Securities and Exchange Commission adopted in July 2013, which amended the regulatory capital requirements for US-regulated broker-dealers and required sponsored access trades to go through the sponsoring broker's pre-trade risk layer.
+
+
+## Foreign exchange direct market access
+
+Foreign exchange direct market access (FX DMA) refers to electronic facilities that match foreign exchange orders from individual investors, buy-side or sell-side firms with each other. FX DMA infrastructures, provided by independent FX agency desks or exchanges, consist of a front-end, API or FIX trading interfaces that disseminate order and available quantity data from all participants and enables buy-side traders, both institutions in the interbank market and individuals trading retail forex in a low latency environment.
+
+Other defining criteria of FX DMA:
+
+* Trades are matched solely on a price/time protocol. There are no re-quotes.
+* Platforms display the full range (0-9) of one-tenth pip or percentage in point consistent with professional FX market quotation protocols not half-pip pricing (0 or 5).
+* Anonymous platforms ensure neutral prices reflecting global FX market conditions, not a dealer's knowledge or familiarity with a client's trading methods, strategies, tactics or current position(s).
+* Enhanced control of trade execution by providing live, executable price and quantity data enabling a trader to see exactly at what price they can trade for the full amount of a transaction.
+* Orders are facilitated by agency brokers. The broker is not a market maker or liquidity destination on the DMA platform it provides to clients.f
+* Market structures show variable spreads related to interbank market conditions, including volatility, pending or recently released news, as well as market maker trading flows. By definition, FX DMA market structures cannot show fixed spreads, which are indicative of dealer platforms.
+* Fees are either a fixed markup into the client's dealing price and/or a commission.

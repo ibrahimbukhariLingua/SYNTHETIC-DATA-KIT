@@ -1,0 +1,147 @@
+Header bidding
+
+
+# Header bidding
+
+
+
+**Header** **bidding** is a programmatic advertising strategy where publishers offer their ad inventory to multiple ad exchanges simultaneously before making calls to their ad servers. This process contrasts with the traditional waterfall method, where inventory is offered to one ad exchange at a time.
+
+Header bidding allows publishers to maximize their revenue by letting multiple demand sources bid on the same inventory, driving up the price in a transparent and competitive environment. Its significance lies in its ability to increase visibility for advertisers while ensuring that publishers get fair value for their ad spaces, ultimately contributing to a more efficient and lucrative digital advertising ecosystem.
+
+
+## Definition
+
+**Header bidding**, also known as advance bidding or pre-bidding, is a programmatic advertising technique where publishers offer their ad inventory to multiple ad exchanges, or demand-side platforms (DSPs), at the same time before calling their ad servers. This approach stands in contrast to the traditional waterfall method, which involves offering inventory to one ad exchange at a time in a sequential manner based on historical performance data.
+
+In **header bidding**, a publisher’s web page will include a header bidding wrapper, typically a JavaScript code, that allows multiple ad exchanges to submit bids for the ad inventory simultaneously. The highest bid is then passed to the ad server, which decides which ad to display based on the winning bid.
+
+This process is executed in real-time, as the webpage loads, ensuring that every impression is sold at the highest price available at that moment.
+
+The primary distinction from traditional methods is the level of competition and the transparency it provides. Traditional methods tend to prioritize direct deals and then pass any unsold inventory down the waterfall to ad networks and exchanges in a tiered approach.
+
+This often leads to reduced revenue potential and a lack of access to diverse demand. Header bidding democratizes the auction process, giving all potential buyers an equal chance to bid on the inventory, often resulting in higher revenue for publishers and better access to quality inventory for advertisers.
+
+By implementing header bidding, publishers can maximize their ad revenue as bids are not only higher on average but also come from a larger pool of demand partners. This transparent marketplace ensures that inventory is fairly priced in a competitive environment, which is beneficial to both publishers and advertisers.
+
+
+## History
+
+Prior to the advent of header bidding, publishers typically engaged in direct deals that had precedence within their ad servers. Once these direct ad spots were filled, the remaining inventory was offered to demand partners in a sequential manner through the waterfall method.
+
+In this setup, demand partners, such as Supply-Side Platforms (SSPs) or ad networks, were ranked based on their size and historical performance, creating a hierarchy where the top-ranked partners got the first look at the available inventory, often resulting in suboptimal revenue for publishers due to sequentially decreasing Cost Per Mille (CPM) prices and limited access to premium ad inventory for advertisers.
+
+The inefficiencies and revenue limitations inherent in the waterfall model prompted the industry to seek better solutions, which led to the development of header bidding. This new approach allowed all demand partners to bid on the inventory simultaneously, ensuring a more competitive and fair auction.
+
+
+### 2014 introduction
+
+Header bidding was first introduced around 2014.
+
+It was around 2015 when the technology gained wider recognition, with industry publications like AdExchanger's famous article titled 'The Rise Of ‘Header Bidding’ And The End Of The Publisher Waterfall' marking a new era in programmatic advertising. The introduction of header bidding effectively resolved two major issues: it enabled publishers to maximize revenue from each ad impression and allowed advertisers an equal opportunity to bid on desired inventory.
+
+The initial adoption of header bidding technology was gradual, but as its benefits became more apparent, it saw rapid growth. In the first quarter of 2022, 70 percent of online publishing websites and 16 percent of the top 100 thousand websites in the United States were already using header bidding. By allowing multiple demand sources to bid at the same time, header bidding created a transparent and competitive environment that often led to higher revenues for publishers.
+
+This real-time bidding on ad inventory before making the ad server call became a catalyst for increased yield and more efficient ad operations.
+
+
+### Further adoption
+
+In the following years, open-source projects like Prebid.js, developed by AppNexus in 2015, played a pivotal role in facilitating the widespread adoption of header bidding by simplifying its implementation for publishers.
+
+The header bidding landscape continued to evolve, with various platforms offering proprietary header bidding solutions that integrated seamlessly with publishers' websites and ad servers.
+
+
+## Technical overview
+
+Header bidding is a programmatic advertising technology that allows publishers to offer their ad inventory to multiple demand partners in real-time. It involves a header bidding wrapper, which is a snippet of JavaScript code that resides in the header of a publisher’s webpage.
+
+1. **Initialization**: When a user visits a webpage, the header bidding code is triggered and sends out ad inventory bids to multiple demand partners or ad exchanges simultaneously.
+2. **Bidding**: These demand partners respond with their bids within a specified timeframe.
+3. **Bid Collection**: The header bidding wrapper collects these bids and then passes the highest bid to the publisher’s ad server, typically alongside other direct or non-header bidding demand.
+4. **Ad Selection**: The ad server, using its decisioning logic, then selects the highest bid and serves that ad to the user.
+
+### Header Bidding Wrappers
+
+Header bidding wrappers play a crucial role in managing the complexity of header bidding. They orchestrate the auction by:
+
+1. **Demand Partner Integration**: Connecting to various SSPs (Supply-Side Platforms) and demand partners to fetch bids for the inventory.
+2. **Bid Management**: Ensuring that all bids are collected within the allowed time window to prevent latency.
+3. **Ad Server Communication**: Sending the winning bid information to the ad server for final ad serving.
+4. **Configuration Control**: Allowing publishers to set parameters such as the number of bidders, floor prices, and timeout settings for the auction.
+
+The open-source project Prebid.js is a widely adopted header bidding wrapper. It is favored for its transparency and the control it affords publishers. However, maintaining such a system requires technical expertise and optimization skills, which is why managed services became a popular choice for many publishers. It had also led to the emergence of Google Certified Publishing Partners (GCPP), companies that are carefully vetted by Google to provide specialized services or technology and support to publishers using Google’s advertising and publishing products.
+
+These services provide the infrastructure and support to efficiently integrate and operate header bidding technology, thereby streamlining operations for publishers.
+
+In essence, header bidding wrappers facilitate a fair and transparent market for ad inventory by enabling multiple buyers to bid on the same inventory simultaneously, which contrasts sharply with traditional sequential bidding methods.
+
+
+## Types of Header Bidding
+
+
+### Client-side Header Bidding
+
+Client-side header biddin g, also known as browser-side header bidding, is the most common form of header bidding used by publishers. In this setup, the auction is conducted within the user's browser. When a user visits a website, a JavaScript tag initiates ad requests to multiple demand partners. The highest bid is then sent to the ad server, which can also include the publisher's direct deals, to determine the final ad to be displayed.
+
+
+### Server-side Header Bidding
+
+Server-side header bidding functions similarly to client-side but takes place on the server rather than the user’s browser. It reduces the browser's load by handling ad requests on a server, which sends out the bid requests to SSPs/ad exchanges. This method is beneficial for publishers who prioritize website speed and user experience, as it can reduce latency. However, one drawback is that it may offer less transparency and control over the auction process compared to client-side bidding.
+
+
+### Video Header Bidding
+
+Video header bidding allows publishers to auction off their video ad inventory in real-time. While it follows the same principles as display ad header bidding, the implementation differs due to the inclusion of video players, which lack header tags. Video header bidding requires the winning bid information to be passed into the video player while the auction occurs, usually facilitated by a header bidding wrapper like Prebid.js.
+
+
+### In-App Header Bidding
+
+In-app header bidding refers to the application of the header bidding process within mobile applications. It enables publishers to auction their in-app ad inventory in real-time through an SDK (Software Development Kit) integration.
+
+This type of header bidding automates bid generation from multiple advertisers by connecting the publisher’s inventory to various DSPs. Unlike the web environment, in-app bidding does not rely on browser headers but on the app's codebase and cloud-side auctions managed by the server-side platforms.
+
+
+## Implementation
+
+The implementation of header bidding involves several key steps, primarily the integration with ad servers and the setup of a header bidding wrapper.
+
+
+### Integration with Ad Servers (e.g., Google Ad Manager)
+
+**Ad Server Configuration**: The publisher must configure their ad server, such as Google Ad Manager, to recognize and process bids from the header bidding auction. This involves setting up order line items that correspond to different bid ranges to ensure that the ad server can compare the header bidding bids against direct sales and other programmatic deals.
+
+**Order and Line Items**: Each bid from the header bidding auction is associated with a unique order and line item within the ad server. This allows the ad server to prioritize bids accordingly and serve the highest-paying ad.
+
+**Key-Value Pairs**: Publishers often use key-value pairs in their ad server to pass bid information from the header bidding wrapper. This data is then used to target the appropriate line items that compete with the header bidding bids.
+
+**Dynamic Allocation**: In ad servers like Google Ad Manager, dynamic allocation allows the highest-paying bid, whether from direct sales, header bidding, or other programmatic sources, to win the ad impression.
+
+
+### Setting up a Header Bidding Wrapper
+
+1. **Wrapper Installation**: A header bidding wrapper, such as Prebid.js, is installed on the publisher’s website. It is a piece of JavaScript code that manages the header bidding auction by calling out to various demand partners and SSPs (Supply-Side Platforms).
+2. **Demand Partner Integration**: The wrapper integrates with multiple demand partners to solicit bids for the publisher’s ad inventory. Each demand partner responds with a bid for the inventory.
+3. **Auction Timing**: The wrapper includes a timeout setting that determines how long it waits for bids to ensure that page latency is not adversely affected.
+4. **Bid Passing**: Once the auction is complete and the highest bid is selected, the wrapper passes this bid to the ad server using key-value pairs.
+5. **Ad Serving**: The ad server then uses its decisioning logic to compare the bid from the header bidding auction against other bids and serve the winning ad.
+6. **Reporting and Optimization**: Post-implementation, publishers use reporting tools to analyze auction performance and optimize their header bidding setup for maximum yield.
+
+This implementation enables publishers to leverage the competitive advantage of header bidding, ensuring that their ad inventory is sold at the highest possible price through a real-time auction that is fair and transparent.
+
+
+## Comparison with Other Monetization Strategies
+
+Compared to other monetization strategies, such as Google AdSense, where publishers are limited to bids from a single demand source, header bidding platforms enable multiple demand sources to bid on ad inventory, potentially leading to higher CPMs and revenue.
+
+Header bidding platforms also offer a significant advantage over traditional RTB (Real-Time Bidding) and direct deals by providing a real-time auction environment that can include all forms of programmatic deals.
+
+The technology ensures transparency and maximizes yield by allowing publishers to sell their inventory to the highest bidder, rather than being locked into pre-negotiated prices or sequential bidding processes.
+
+
+## Market Impact: Effects on Ad Pricing and Revenue
+
+The introduction of header bidding has significantly altered the dynamics of ad pricing and revenue generation in the digital advertising ecosystem. By allowing multiple ad exchanges to bid on inventory simultaneously, header bidding has introduced a level of competition that was absent in the traditional waterfall method.
+
+This competition has led to an increase in the Cost Per Thousand Impressions (CPM) that publishers can charge, directly impacting their revenue in a positive manner.
+

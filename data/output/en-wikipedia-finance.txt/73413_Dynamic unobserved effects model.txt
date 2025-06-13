@@ -1,0 +1,46 @@
+Dynamic unobserved effects model
+
+
+# Dynamic unobserved effects model
+
+
+
+A **dynamic unobserved effects model** is a statistical model used in econometrics for panel analysis. It is characterized by the influence of previous values of the dependent variable on its present value, and by the presence of unobservable explanatory variables.
+
+The term “dynamic” here means the dependence of the dependent variable on its past history; this is usually used to model the “state dependence” in economics. For instance, for a person who cannot find a job this year, it will be harder to find a job next year because her present lack of a job will be a negative signal for the potential employers. “Unobserved effects” means that one or some of the explanatory variables are unobservable: for example, consumption choice of one flavor of ice cream over another is a function of personal preference, but preference is unobservable.
+
+
+## Continuous dependent variable
+
+
+## Censored dependent variable
+
+In a panel data tobit model, if the outcome {\displaystyle Y\_{i,t}} partially depends on the previous outcome history {\displaystyle Y\_{i,0},\ldots ,Y\_{t-1}} this tobit model is called "dynamic". For instance, taking a person who finds a job with a high salary this year, it will be easier for her to find a job with a high salary next year because the fact that she has a high-wage job this year will be a very positive signal for the potential employers. The essence of this type of dynamic effect is the state dependence of the outcome. The "unobservable effects" here refers to the factor which partially determines the outcome of individual but cannot be observed in the data. For instance, the ability of a person is very important in job-hunting, but it is not observable for researchers. A typical dynamic unobserved effects tobit model can be represented as
+
+In this specific model, {\displaystyle \rho y\_{i,t-1}} is the dynamic effect part and {\displaystyle c\_{i}} is the unobserved effect part whose distribution is determined by the initial outcome of individual *i* and some exogenous features of individual *i.*
+
+Based on this setup, the likelihood function conditional on {\displaystyle \{y\_{i,0}\}\_{i-1}^{N}} can be given as
+
+For the initial values {\displaystyle \{y\_{i,0}\}\_{i-1}^{N}}, there are two different ways to treat them in the construction of the likelihood function: treating them as constant or imposing a distribution on them and calculate out the unconditional likelihood function. But whichever way is chosen to treat the initial values in the likelihood function, we cannot get rid of the integration inside the likelihood function when estimating the model by maximum likelihood estimation (MLE). Expectation Maximum (EM) algorithm is usually a good solution for this computation issue. Based on the consistent point estimates from MLE, Average Partial Effect (APE) can be calculated correspondingly.
+
+
+## Binary dependent variable
+
+
+### Formulation
+
+A typical dynamic unobserved effects model with a binary dependent variable is represented as:
+
+where cᵢ is an unobservable explanatory variable, zᵢₜ are explanatory variables which are exogenous conditional on the cᵢ, and G(∙) is a cumulative distribution function.
+
+
+### Estimates of parameters
+
+In this type of model, economists have a special interest in ρ, which is used to characterize the state dependence. For example, *yᵢ,ₜ* can be a woman's choice whether to work or not, *zᵢₜ* includes the *i*-th individual's age, education level, number of children, and other factors. *cᵢ* can be some individual specific characteristic which cannot be observed by economists. It is a reasonable conjecture that one's labor choice in period *t* should depend on his or her choice in period *t* − 1 due to habit formation or other reasons. This dependence is characterized by parameter *ρ*.
+
+There are several MLE-based approaches to estimate *δ* and *ρ* consistently. The simplest way is to treat *yᵢ,₀* as non-stochastic and assume *cᵢ* is independent with *zᵢ*. Then by integrating *P(yᵢ,ₜ , yᵢ,ₜ-₁ , … , yᵢ,₁ | yᵢ,₀ , zᵢ , cᵢ)* against the density of *cᵢ*, we can obtain the conditional density P(yᵢ,ₜ , yᵢ,ₜ-₁ , ... , yᵢ,₁ |yᵢ,₀ , zᵢ). The objective function for the conditional MLE can be represented as: *{\displaystyle \sum \_{i=1}^{N}} log (P (yᵢ,ₜ , yᵢ,ₜ-₁, … , yᵢ,₁ | yᵢ,₀ , zᵢ)).*
+
+Treating *yᵢ,₀* as non-stochastic implicitly assumes the independence of *yᵢ,₀* on *zᵢ*. But in most cases in reality, *yᵢ,₀* depends on *cᵢ* and *cᵢ* also depends on *zᵢ*. An improvement on the approach above is to assume a density of *yᵢ,₀* conditional on (*cᵢ, zᵢ*) and conditional likelihood *P(yᵢ,ₜ , yᵢ,ₜ-₁ , … , yₜ,₁,yᵢ,₀ | cᵢ, zᵢ)* can be obtained. By integrating this likelihood against the density of *cᵢ* conditional on *zᵢ*, we can obtain the conditional density *P(yᵢ,ₜ , yᵢ,ₜ-₁ , … , yᵢ,₁ , yᵢ,₀ | zᵢ)*. The objective function for the conditional MLE is *{\displaystyle \sum \_{i=1}^{N}} log (P (yᵢ,ₜ , yᵢ,ₜ-₁, … , yᵢ,₁ | yᵢ,₀ , zᵢ)).*
+
+Based on the estimates for (*δ, ρ*) and the corresponding variance, values of the coefficients can be tested and the average partial effect can be calculated.
+

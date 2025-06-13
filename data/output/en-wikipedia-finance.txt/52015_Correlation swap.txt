@@ -1,0 +1,27 @@
+Correlation swap
+
+
+# Correlation swap
+
+
+
+A **correlation swap** is an over-the-counter financial derivative that allows one to speculate on or hedge risks associated with the observed average correlation, of a collection of underlying products, where each product has periodically observable prices, as with a commodity, exchange rate, interest rate, or stock index.
+
+
+## Payoff Definition
+
+The fixed leg of a correlation swap pays the notional {\displaystyle N\_{\text{corr}}} times the agreed strike {\displaystyle \rho \_{\text{strike}}}, while the floating leg pays the realized correlation {\displaystyle \rho \_{\text{realized }}}. The contract value at expiration from the pay-fixed perspective is therefore
+
+Given a set of nonnegative weights {\displaystyle w\_{i}} on {\displaystyle n} securities, the realized correlation is defined as the weighted average of all pairwise correlation coefficients {\displaystyle \rho \_{i,j}}:
+
+Typically {\displaystyle \rho \_{i,j}} would be calculated as the Pearson correlation coefficient between the daily log-returns of assets *i* and *j*, possibly under zero-mean assumption.
+
+Most correlation swaps trade using equal weights, in which case the realized correlation formula simplifies to:
+
+The specificity of correlation swaps is somewhat counterintuitive, as the protection buyer pays the fixed, unlike in usual swaps.
+
+
+## Pricing and valuation
+
+No industry-standard models yet exist that have stochastic correlation and are arbitrage-free.
+

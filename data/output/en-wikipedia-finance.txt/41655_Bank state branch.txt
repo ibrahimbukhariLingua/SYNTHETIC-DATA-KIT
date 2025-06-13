@@ -1,0 +1,186 @@
+Bank state branch
+
+
+# Bank state branch
+
+
+
+A **Bank State Branch** (often referred to as "**BSB**") is the name used in Australia for a bank code, which is a branch identifier. The BSB is normally used in association with the account number system used by each financial institution. The structure of the BSB + account number does not permit for account numbers to be transferable between financial institutions. While similar in structure, the New Zealand and Australian systems are only used in domestic transactions and are incompatible with each other. For international transfers, a SWIFT code is used in addition to the BSB and account number.
+
+The BSB identifier consists of six numerals, the first two or three of which is a bank identifier. Many banks only have one BSB for all branches and accounts. The BSB is used for processing of paper and electronic transactions, but not in payment card numbering.
+
+In Australia, the Australian Payments Network (AusPayNet) is now the regulatory body of cheque clearances and of the BSB codes in Australia. AusPayNet assigns the bank code to a financial institution and the financial institution allocates the other digits to its branches, in line with guidelines set by AusPayNet. Some financial institutions have more than one bank identifier, arising from mergers of financial institutions or consolidating by banks of their trading and savings banks operations. As of March 2012, almost 14,300 unique BSB code values were in use.
+
+
+## Usage
+
+In Australia, BSB codes are allocated by the Australian Payments Network (AusPayNet). BSB codes are used in a number of payment systems in Australia. To access the various clearance systems a financial institution must have its own BSB or use an intermediary with a BSB.
+
+
+### Paper transactions
+
+Cheques are the least used form of non-cash payment in Australia, but the most by value. Financial institutions are required to include BSB and bank account numbers on cheques, at the bottom of the cheque in MICR form, which identify the specific bank account number to be debited. BSB codes are also used on pre-printed deposit and other vouchers. Paper transactions are processed under the Australian Paper Clearing System (APCS) (also known as CS1) drawn up by AusPayNet. Account instructions which do not have a BSB code are processed manually.
+
+
+### Electronic transactions
+
+Electronic fund transfers (EFT) are the most common method of non-cash payment in Australia. EFT transactions between bank accounts use the Direct Entry system or the New Payments Platform (NPP). For transfers using the Direct Entry system, BSB and bank account numbers must be given for the accounts to be debited as well as for the account to which funds are to be transferred. For transfers using the NPP, BSB and account numbers or a payee's PayID must be given for the payee account to be credited. Electronic direct entry transactions are processed under the Bulk Electronic Clearing System (BECS) (also known as CS2) drawn up by AusPayNet. NPP transactions are processed under the NPP Regulations administered by NPP Australia Limited. The requirement for two-sided BSBs is eased in transactions involving payment cards, such as credit cards or debit cards, and in BPAY transactions, in which one side of the transfer is an account which includes the BSB electronically linked to the card and BPAY biller.
+
+
+### International transactions
+
+For incoming international transfers, SWIFT codes are used in addition to the Basic Bank Account Number (BBAN), which comprises a BSB and bank account number. There is no public discussion of the adoption of IBAN identifiers for incoming international transactions. Any process towards IBAN would involve considerable changes to bank software and computer systems, and the requirement for financial institutions to adopt defined length account numbers. Outgoing international transfers must use either the SWIFT or IBAN system in use in the destination country, which would incorporate that country's format for BBAN.
+
+
+## Format
+
+The BSB is a six-digit code, usually presented as nnn-nnn. Originally, the format of the BSB code was for the first two digits to indicate the "bank" and the other four digits specified the "branch" of that financial institution, the first digit of which was the state code indicating the state where the branch was located. Some banks may use only one BSB for all branches.
+
+For example, the Australian BSB code "033088" breaks down to:
+
+* 03 = Westpac, historically the trading operation
+* 3 = Victoria
+* 088 = 383 Chapel Street, Prahran
+
+Some of the larger banks had two bank codes, with separate codes for their trading (cheque) and savings bank entities. The first digit of the bank code was either 0 (for trading bank accounts) or 1 (for savings bank accounts), with a common second digit. For example, 03 was for Westpac's trading accounts, while 73 was for Westpac's savings accounts. Some banks continue to use two bank codes, which today are of only historic and legacy significance.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+
+## History
+
+Following the introduction in the United Kingdom in the 1960s of a "sort code", a comparable BSB identifier system was introduced in Australia in the early 1970s to streamline cheque clearance through the banking system in Australia. At the time the clearance systems were open only to financial institutions registered as banks. The BSB and account number was printed on cheques in MICR format to streamline the process of data capture as well as for mechanical sorting and bundling of the physical cheques for forwarding to the payer bank branch for final cheque clearance. Other financial institutions had to use banks as intermediaries to access the clearance of their "payment orders", which were the non-banking equivalents of cheques.
+
+Since then, the use of BSBs has been extended to electronic transactions, but not in payment card numbering.
+
+With the restructuring of the financial system in Australia, other financial institutions were given direct access to the clearing systems, and the structure of the BSB has had to be modified. While banks generally still follow the traditional state branch structure, building societies and credit unions often do not. This is because many of these institutions use an intermediary; for example, BSBs such as 80xxxx are administered by Cuscal, 579xxx are administered by Australian Settlements Limited, whereas 704xxx is administered by Indue. In these situations, the building society or credit union is identified by the 'state' and 'branch' components of the BSB whereas the 'bank' refers to the intermediary. Depending on the intermediary used, building societies (both current and former) BSBs generally start with 63xxxx and most credit unions BSBs will use either 704xxx or 80xxxx. The state code structure is not always used in these situations. For example, Bendigo Bank started as a building society in Victoria but now uses a single BSB nationally (633-000) while the Queensland-based Heritage Bank, also a former building society, uses 638xxx. Suncorp Bank uses 484-799 for all deposit accounts regardless of which branch or state the account was opened in.
+
+Furthermore, recent changes in Australia's financial system have allowed larger building societies and credit unions to establish their own BSBs, even if they are using an intermediary. Having their own BSB allows a financial institution to create new products and offer additional services.
+
+
+## List of Australian bank codes
+
+| Number | Code | Bank Name |
+| --- | --- | --- |
+| 01 | ANZ | ANZ |
+| 03 or 73 | WBC | Westpac |
+| 06 or 76 | CBA | Commonwealth Bank |
+| 08 or 78 | NAB | National Australia Bank |
+| 09 | RBA | Reserve Bank of Australia |
+| 10 | BSA | BankSA |
+| 11 or 33 | STG or SGP | St George Bank |
+| 12 or 639 | BQL or HOM | Bank of Queensland; 639 refers to Home Building Society which has since been acquired by Bank of Queensland |
+| 14 | PIB | Rabobank |
+| 15 | T&C | Town & Country Bank; acquired by ANZ |
+| 18 | MBL | Macquarie Bank |
+| 19 | BOM | Bank of Melbourne, previously Advance Bank |
+| 21 | CMB | JPMorgan Chase Bank |
+| 22 | BNP | BNP Paribas |
+| 23 | BAL | Bank of America |
+| 24 | CTI | Citibank Australia |
+| 255 | BPS | BNP Paribas |
+| 259 | ALX | Alex Bank |
+| 26 | BTA | BT Financial Group |
+| 28 | NMB | National Mutual Royal Bank, joint venture between Royal Bank of Canada & National Mutual Insurance (sold to ANZ) |
+| 29 | BOT | Bank of Tokyo |
+| 30 | BWA | Bankwest |
+| 31 | BAU | Bank Australia |
+| 325 | BYB | Beyond Bank Australia |
+| 34 or 985 | HBA or HSB | HSBC Bank Australia |
+| 35 or 980 | BOC or BCA | Bank of China |
+| 40 | CST | Commonwealth Bank, formerly Colonial State Bank, which was previously State Bank of New South Wales |
+| 41 | DBA | Deutsche Bank |
+| 42 or 52 | TBT | Colonial Trust Bank, formerly Trust Bank of Tasmania, now part of Commonwealth Bank |
+| 45 | OCB | OCBC Bank |
+| 46 | ADV | Advance Bank (branches in the ACT) |
+| 47 | CBL | Challenge Bank, which has since been acquired by Westpac |
+| 48 or 664 | MET or SUN | Suncorp Bank; 48 was used by Metway Bank prior to its merger with Suncorp Building Society |
+| 510 | CAN | Citibank Australia |
+| 512 | CFC | Community First Credit Union |
+| 514 | QTM | RACQ Bank, previously QT Mutual Bank |
+| 517 | VOL | Volt Bank commenced operations in Australia 2018 |
+| 527 | TBT | Trust Bank of Tasmania, now Commonwealth Bank |
+| 533 | BCC | Bananacoast Community Credit Union |
+| 55 | BML | Bank of Melbourne (1989), formerly RESI-Statewide Building Society, now part of the Westpac Group |
+| 57 | ASL | Australian Settlements, an intermediary used by many organisations including Building Societies |
+| 60 | SBV | State Bank of Victoria, prior to merger with Commonwealth Bank |
+| 610 | ADL | Adelaide Bank |
+| 611 | SEL | Australian Mutual Bank, previously Sydney Credit Union (611100) and Endeavour Mutual Bank (611000) |
+| 630 | ABS | ABS Building Society |
+| 632 | BAE | B&E now trading as Bank of us |
+| 633 | BBL | Bendigo & Adelaide Bank, includes UP Bank (633-123) and Rural Bank (633-111) |
+| 634 | UFS | Uniting Financial Services |
+| 636 | HAY | Hay Limited |
+| 637 | GBS | Greater Bank |
+| 638 or 880 | HBS | Heritage Bank |
+| 639 | HOM | Home Building Society (WA) acquired by Bank of Queensland |
+| 640 | HUM | Hume Bank |
+| 641 or 647 | IMB or AUB | IMB Bank |
+| 642 | ADC | Australian Military Bank, previously Australian Defence Credit Union |
+| 645 or 656 | MPB or BAY | Wide Bay Australia, now Auswide Bank |
+| 646 | MMB | Maitland Mutual Building Society |
+| 650 | NEW | Newcastle Permanent Building Society |
+| 653 | PPB | Pioneer Permanent Building Society; since acquired by Bank of Queensland |
+| 654 | ECU | ECU Australia |
+| 655 | ROK | The Rock Building Society, now part of MyState Bank |
+| 656 | BAY | Auswide Bank, previously Wide Bay Building Society |
+| 659 | GCB | G&C Mutual Bank, previously SGE Credit Union |
+| 670 | YOU | UBank commenced as 86400 Bank in 2018 then purchased by NAB and rebranded UBank |
+| 671 | HPC | Heritage People's Choice following the merger of Heritage Bank & People's Choice Credit Union |
+| 676 | GTW | Gateway Bank previously CBOA Credit Union |
+| 70 | CUS | Indue, an intermediary used by many organisations (particularly credit unions) |
+| 704-191 | CUS | BankFirst previously Victoria Teachers Credit Union & Victoria Teachers Mutual Bank |
+| 704-230 | CUS | BankVic previously Police Association Credit Co Operative or Police Credit & Police Credit Co-Op |
+| 704-865 | CUS | Qudos Bank trading name of Qudos Mutual Ltd, previously Qantas Credit Union & Qantas Staff Credit Union |
+| 721 | HCC | Holiday Coast Credit Union |
+| 722 | SNX | Southern Cross Credit Union |
+| 723 | HIC | Heritage Isle Credit Union |
+| 728 | SCU | Summerland Credit Union (1 July 2011 728-728) |
+| 775 | XIN | Xinja ceased trading late 2020 |
+| 772 | REV | Revolut Payments Australia |
+| 777 | PNB | Police & Nurses Ltd |
+| 80 | CRU | Cuscal, an intermediary used by many organisations (particularly credit unions) |
+| 805-050 | CRU | People's Choice Credit Union trading name of Australian Central Credit Union |
+| 812 | TMB | Teachers Mutual Bank |
+| 813 | CAP | The Capricornian |
+| 814 | CUA | Great Southern Bank |
+| 815 | PCU | Police Bank |
+| 817 | WCU | Warwick Credit Union |
+| 818 | COM | Bank of Communications |
+| 819 | IBK | Industrial & Commercial Bank of China |
+| 833 | DBL | Defence Bank, previously 803-205 Defence Force Credit Union |
+| 882 | MMP | Unity Bank previously Maritime, Mining & Power Credit Union |
+| 888 | CCB | China Construction Bank Corporation |
+| 889 | DBS | DBS\_Bank Australia Branch |
+| 902 | APO | Australia Post |
+| 911 | SMB | Sumitomo Mitsui Banking Corporation |
+| 913 | SSB | State Street Bank & Trust Company |
+| 915 | FNC | FNC Agency - Bank One, NA |
+| 917 | ARA | Arab Bank Australia |
+| 918 | MCB | Mizuho Corporate Bank |
+| 922 | UOB | United Overseas Bank |
+| 923 or 936 | ING or GNI | ING Bank |
+| 931 | ICB | Mega International Commercial Bank Co |
+| 932 | NEC | New England Credit Union (trading as Regional Australia Bank) |
+| 939 | AMP | AMP Bank |
+| 941 | BCY | Delphi Bank; formerly Bank of Cyprus Australia, since acquired by Bendigo Bank, brand retired by BBL in 2022 all account now under BSB 633 |
+| 942 | LBA | Bank of Sydney previously known as Bank of Beirut and Beirut Hellenic Bank |
+| 943 | TBB | Taiwan Business Bank |
+| 944 | MEB | ME Bank brand sold to BOQ |
+| 946 | UBS | UBS |
+| 951 | INV | Investec now trading as BOQ Specialist |
+| 952 | RBS | Royal Bank of Scotland |
+| 969 | MSL | Tyro Payments |
+| 980 | BCA | Bank of China |
+| 985 | HSB | HSBC Bank Australia |
+
+
+## State codes
+
+Historically, the major banks structured their BSB codes by states. This is largely historic and have only limited significance in electronic banking. For those that still maintain state codes, the state code is the first of the four digit branch field, as follows:
+
+* 2 - Australian Capital Territory, New South Wales
+* 3 - Victoria
+* 4 - Queensland
+* 5 - South Australia, Northern Territory
+* 6 - Western Australia
+* 7 - Tasmania
+* 8, 9 - (intermediary)

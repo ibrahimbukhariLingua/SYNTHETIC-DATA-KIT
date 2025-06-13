@@ -1,0 +1,64 @@
+Blade solidity
+
+
+# Blade solidity
+
+
+
+**Blade solidity** is an important design parameter for the axial flow impeller and is defined as the ratio of blade chord length to spacing.
+
+* Blade Solidity = c/s
+
+Where
+
+* {\displaystyle s=2\pi r\_{m}/n\_{b}} is the spacing
+* {\displaystyle r\_{m}} is the mean radius
+* {\displaystyle n\_{b}} is blade number
+* Chord length c is the length of the chord line
+
+In case of an axial flow impeller, the mean radius is defined in terms of hub ({\displaystyle r\_{h}},inner radius) and tip radius ({\displaystyle r\_{t}},outer radius) as :
+
+* {\displaystyle r\_{m}=[(r\_{t}^{2}+r\_{h}^{2})/2]^{0.5}}
+
+Blade solidity affects various turbomachinery parameters, so to vary those parameters, one needs to vary blade solidity. However, there are some limitations imposed by aspect ratio (span/chord) and pitch. If an impeller has only a few blades (i.e a large pitch), it will result in less lift force and in a similar manner for more blades (i.e. very low pitch), there will be high drag force.
+
+Blade solidity should not be confused with rotor solidity, which is the ratio of the total area of the rotor blades to the swept area of the rotor.
+
+
+## Flow over isolated airfoil
+
+Blade solidity is an important parameter that inter relates turbomachine parameters to airfoil parameters. Lift and drag coefficient for an airfoil is inter related to blade solidity as shown:
+
+* {\displaystyle C\_{L}=2(s/c)(\tan \beta \_{1}-\tan \beta \_{2})cos\beta \_{m}}
+* {\displaystyle C\_{d}=\left({\frac {s}{c}}\right)\left({\frac {\Delta p\_{0}}{\rho W\_{1}^{2}/2}}\right)}
+
+where:
+
+* {\displaystyle C\_{L}} is lift coefficient
+* {\displaystyle C\_{d}} is the drag coefficient
+* {\displaystyle \beta \_{1}} is the inlet flow angle on the airfoil
+* {\displaystyle \beta \_{2}} is the outlet flow angle on the airfoil
+* {\displaystyle \beta \_{m}} is the mean flow angle
+* {\displaystyle W\_{1}} is inlet flow velocity i.e relative to airfoil
+* {\displaystyle W\_{m}} is mean flow velocity
+* {\displaystyle \Delta p\_{0}} is the pressure loss
+* {\displaystyle \tan \beta \_{m}={\frac {1}{2}}(\tan \beta \_{1}+\tan \beta \_{2})}
+
+In an airfoil, the mean line curvature is designed to change the flow direction, the vane thickness is for strength and the streamlined shape is to delay the onset of boundary layer separation. Taking all the design factors of an airfoil, the resulting forces of lift and drag can be expressed in terms of lift and drag coefficient.
+
+* {\displaystyle F\_{L}=C\_{L}bc\left({\frac {1}{2}}\rho W\_{m}^{2}\right)}
+* {\displaystyle F\_{d}=C\_{d}bc\left({\frac {1}{2}}\rho W\_{m}^{2}\right)}
+
+## Preliminary design procedure
+
+The design of the impeller depends on specific speed, hub-tip ratio and solidity ratio. To illustrate the dependence, an expression for axial flow pump and fan is shown:
+
+where:
+
+* {\displaystyle {\frac {D\_{h}}{D\_{t}}}} is ratio of hub to tip diameter
+* {\displaystyle N\_{s}} is the specific speed
+
+Cordier diagram can be used to determine specific speed and impeller tip diameter {\displaystyle D\_{t}}. Accordingly solidity ratio and hub-tip ratio (range 0.3-0.7) can be adjusted.
+
+Solidity ratio generally falls in the range of 0.4-1.1
+

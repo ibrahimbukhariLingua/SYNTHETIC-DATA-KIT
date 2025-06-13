@@ -1,0 +1,35 @@
+2021 Microsoft Exchange Server data breach
+
+
+# 2021 Microsoft Exchange Server data breach
+
+
+
+A global wave of cyberattacks and data breaches began in January 2021 after four zero-day exploits were discovered in on-premises Microsoft Exchange Servers, giving attackers full access to user emails and passwords on affected servers, administrator privileges on the server, and access to connected devices on the same network. Attackers typically install a backdoor that allows the attacker full access to impacted servers even if the server is later updated to no longer be vulnerable to the original exploits. As of 9 March 2021ᵘᵖᵈᵃᵗᵉ, it was estimated that 250,000 servers fell victim to the attacks, including servers belonging to around 30,000 organizations in the United States, 7,000 servers in the United Kingdom, as well as the European Banking Authority, the Norwegian Parliament, and Chile's Commission for the Financial Market (CMF).
+
+On 2 March 2021, Microsoft released updates for Microsoft Exchange Server 2010, 2013, 2016 and 2019 to patch the exploit; this does not retroactively undo damage or remove any backdoors installed by attackers. Small and medium businesses, local institutions, and local governments are known to be the primary victims of the attack, as they often have smaller budgets to secure against cyber threats and typically outsource IT services to local providers that do not have the expertise to deal with cyber attacks.
+
+On 12 March 2021, Microsoft announced the discovery of "a new family of ransomware" being deployed to servers initially infected, encrypting all files, making the server inoperable and demanding payment to reverse the damage. On 22 March 2021, Microsoft announced that in 92% of Exchange servers the exploit has been either patched or mitigated.
+
+
+## Background
+
+Microsoft Exchange is considered a high-value target for hackers looking to penetrate business networks, as it is email server software, and, according to Microsoft, it provides "a unique environment that could allow attackers to perform various tasks using the same built-in tools or scripts that admins use for maintenance." In the past, Microsoft Exchange has been attacked by multiple nation-state groups.
+
+On 5 January 2021, security testing company DEVCORE made the earliest known report of the vulnerability to Microsoft, which Microsoft verified on 8 January. The first breach of a Microsoft Exchange Server instance was observed by cybersecurity company Volexity on 6 January 2021. By the end of January, Volexity had observed a breach allowing attackers to spy on two of their customers, and alerted Microsoft to the vulnerability. After Microsoft was alerted of the breach, Volexity noted the hackers became less stealthy in anticipation of a patch.
+
+On 2 March 2021, another cybersecurity company, ESET, wrote that they were observing multiple attackers besides Hafnium exploiting the vulnerabilities. *Wired* reported on 10 March that now that the vulnerability had been patched, many more attackers were going to reverse engineer the fix to exploit still-vulnerable servers. Analysts at two security firms reported they had begun to see evidence that attackers were preparing to run cryptomining software on the servers.
+
+On 10 March 2021, security researcher Nguyen Jang posted proof-of-concept code to Microsoft-owned GitHub on how the exploit works, totaling 169 lines of code; the program was intentionally written with errors so that while security researchers could understand how the exploit works, malicious actors would not be able to use the code to access servers. Later that day, GitHub removed the code as it "contains proof of concept code for a recently disclosed vulnerability that is being actively exploited". On 13 March, another group independently published exploit code, with this code instead requiring minimal modification to work; the CERT Coordination Center's Will Dormann said the "exploit is completely out of the bag by now" in response.
+
+The attacks came shortly after the 2020 United States federal government data breach, which also saw the compromising of Microsoft's Outlook web app and supply chain. Microsoft said there was no connection between the two incidents.
+
+
+## Perpetrator
+
+Microsoft said that the attack was initially perpetrated by the Hafnium, a Chinese state-sponsored hacking group (advanced persistent threat) that operates out of China. Hafnium is known to install the web shell China Chopper. Microsoft identified Hafnium as "a highly skilled and sophisticated actor" that historically has mostly targeted "entities in the United States for the purpose of exfiltrating information from a number of industry sectors, including infectious disease researchers, law firms, higher education institutions, defense contractors, policy think tanks and NGOs." Announcing the hack, Microsoft stated that this was "the eighth time in the past 12 months that Microsoft has publicly disclosed nation-state groups targeting institutions critical to civil society." As of 12 March 2021, there were, in addition to Hafnium, at least nine other distinct groups exploiting the vulnerabilities, each different styles and procedures.
+
+The Chinese government denied involvement, calling the accusations "groundless."
+
+In a July 19, 2021 joint statement, the US, UK, EU, NATO, and other Western nations accused the Ministry of State Security (MSS) of perpetrating the Exchange breach, along with other cyberattacks, "attributing with a high degree of confidence that malicious cyber actors affiliated with PRC’s MSS conducted cyber espionage operations utilizing the zero-day vulnerabilities in Microsoft Exchange Server disclosed in early March 2021."
+

@@ -1,0 +1,49 @@
+Cookie stuffing
+
+
+# Cookie stuffing
+
+
+
+**Cookie stuffing** is a deceptive tactic in affiliate marketing. In affiliate marketing, individuals (affiliates) are compensated for enticing consumers to buy products through specially crafted URLs that set cookies on users' browsers to track which affiliate referred the user to the site. Affiliates engaging in cookie stuffing use invasive techniques, like pop-up ads, to falsely claim credit for sales that they did not facilitate.
+
+Many affiliate marketing programs prohibit cookie stuffing, considering it fraudulent. It causes retail companies to lose revenue, potentially leading to higher prices for consumers and lost sales for legitimate affiliates. In 2014, Shawn Hogan, a prominent figure in eBay's affiliate program was convicted of wire fraud for engaging in cookie stuffing and received a five-month long federal prison sentence along with a $25,000 fine. However, despite occasional high-profile cases, researchers in 2015 found that cookie stuffing remains rare and most users do not encounter it frequently.
+
+
+## Background
+
+Affiliate marketing is a strategy employed by online retailers like GoDaddy, Amazon, and eBay to amplify website traffic. In the framework, third-party entities, or affiliates, receive compensation for promoting the retailer's products, aiming to increase sales of promoted products. The entry barrier for affiliates is very low, making affiliate marketing an accessible revenue model for those establishing a website without significant assets or brand recognition. The compensation model for affiliate marketing is predominantly performance-based, operating on a cost-per-sale structure where affiliates are paid only upon the successful purchase of the advertised product. This compensation model serves as a safeguard against potential fraud as it only requires a payment after a confirmed sale. The advantage of affiliate marketing lies in this perceived reduction of fraud risk compared to alternative advertising models. The efficacy of this risk reduction, however, hinges on the affiliate's ability to robustly track sales. In reality, tracking by affiliates often falls short, paving the way for deceptive practices such as cookie stuffing.
+
+
+## Mechanism
+
+
+Retailers use third-party cookies to track purchases driven by affiliates. Affiliates place advertisements on their website that contain specially crafted URLs. When users click on the link, a cookie is stored on the user's browser. Later, if the user continues with a purchase from the retailer, the merchant reads this cookie to identify which affiliate will receive a commission for the sale.
+
+Cookie stuffing works by tricking the browser into setting this cookie without the user clicking an affiliate link. Cookie stuffing can be done by embedding web pages in other web pages or via ads that open in separate windows without the user's knowledge. Later, if the user happens to purchase a product on that retailer's website, the retailer will pay a commission for the sale due to the presence of the cookie, even though the affiliate did not drive a sale.
+
+
+## Techniques
+
+Fraudulent affiliate marketers use multiple techniques to perform cookie stuffing. In a 2015 study covering 11,700 domains that had engaged in cookie stuffing, Chachra et al. found that over 91% of websites used redirects. This was manifested in the form of Hyper Text Transfer Protocol (HTTP) redirects (i.e., the use of the 302 and 301 status codes to redirect users to a different domain) or the use of Flash or JavaScript to redirect users. Other techniques used by fraudulent affiliates include using iframes to embed the online marketer's website in the code or using scripts and image tags to request specific resources that would set the cookie for the affiliate on the destination website.
+
+In the same study, Chachra et al. found that over 84% of cookies set by fraudulent marketers employed referrer obfuscation to hide their activities from retail websites. The referrer header is a HTTP header set by the browser that is often used by affiliates to determine the legitimacy of requests from affiliate marketing websites. Fraudulent marketers would set up websites referencing an image or a JavaScript file from an innocuous-looking domain. This domain would then redirect to multiple other domains before arriving at the destination affiliate website. By redirecting the user through several innocuous-looking domains, the fraudulent marketer can trick the browser into setting the wrong website in the referrer header of the request being made to the affiliate website, making it harder for the affiliate marketing firm to track down the source of the request.
+
+Another technique used by some malicious entities includes hijacking or publishing malicious browser extensions on the Chrome and Firefox extension stores. By modifying requests sent to online retailers and setting cookies or redirecting users to affiliate websites on startup, the malicious extension can trick online marketers into thinking that the user legitimately clicked on an affiliate link to navigate to their marketplace.
+
+
+## Legality
+
+Most affiliate marketing programs prohibit cookie stuffing because it tends to undermine genuine product advertising efforts. In the United States, the Federal Trade Commission lays out advertising guidelines mandating the clear disclosure of financial relationships between advertisers and retailers. Cookie stuffing deliberately operates in an opaque manner for users, conflicting with the guidelines that emphasize transparency to the user.
+
+In certain cases in the United States, cookie stuffing has been considered a form of wire fraud. In 2006, when eBay collaborated with the Federal Bureau of Investigation in a sting operation targeting top affiliate marketers, Shawn Hogan, eBay's largest affiliate marketer, was found to have engaged in cookie stuffing. His strategy involved modifying his website to load resources from eBay's servers, thereby setting affiliate cookies on users' browsers. The technique falsely attributed subsequent eBay purchases to Hogan's site. Despite Hogan making over $28 million through eBay's affiliate commissions, it was determined that Hogan's activities did not contribute any substantial revenue to eBay. In subsequent legal proceedings, Hogan pleaded guilty to a single wire fraud charge, leading to a five-month federal prison sentence and a $25,000 fine.
+
+Around the same time, another incident involved eBay's second most prolific affiliate marketer, Brian Dunning, who employed similar tactics to defraud eBay of over $5 million during 2006–2007. Dunning's fraudulent activities came to light as he utilized methods akin to Shawn Hogan's cookie-stuffing scheme. During the legal proceedings, Dunning admitted to collaborating with Hogan in executing the fraud, offering to teach him key techniques. Hogan denied the claim, alleging that Dunning ripped off his techniques. Dunning further alleged that he paid an account manager at an affiliate management network CJ Affiliates, for insider knowledge of how the affiliate network operated, although this claim was not officially confirmed. Dunning, like Hogan, pleaded guilty to a single wire fraud charge and was sentenced to 15 months in prison, followed by three years of supervision.
+
+
+## Impact
+
+Despite several high-profile cases, only a small number of users encounter cookie stuffing on the web. This has led researchers to infer that the practice of cookie stuffing is confined to a very small group of affiliates. Additionally, cookie stuffing and other forms of affiliate marketing fraud disproportionately impact larger affiliate marketing networks that oversee numerous affiliate marketing programs, as opposed to smaller in-house programs. This is because smaller in-house affiliate programs are motivated by their parent companies to eradicate fraud, given its direct impact on their revenue. On the other hand, larger affiliate marketing networks, which earn a commission only when a transaction occurs between an affiliate and an online marketer, are incentivized not to actively police their programs and to avoid detecting fraudulent practices. In certain cases, this behavioral practice has led to online marketers severing ties with affiliate marketing networks.
+
+Cookie stuffing has adverse effects on both end users and legitimate affiliates. For end users, a loss of revenue for the parent online retail company in the form of fraudulent affiliate commission payouts could result in items that would otherwise have been sold at a discount being listed at higher prices to offset the losses incurred by online marketers. Similarly, a decrease in the amount of traffic for an online marketing firm could lead to lower demand and, subsequently, higher prices for items. Legitimate affiliates, who employ advertising to attract consumers, suffer from the impact of cookie stuffing, as they lose out on conversions from affiliate sales that were manipulated as a result of cookie stuffing which overrides legitimate affiliate cookies.
+

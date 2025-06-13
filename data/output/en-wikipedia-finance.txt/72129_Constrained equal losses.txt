@@ -1,0 +1,52 @@
+Constrained equal losses
+
+
+# Constrained equal losses
+
+
+
+**Constrained equal losses** **(CEL)** is a division rule for solving bankruptcy problems. According to this rule, each claimant should lose an equal amount from his or her claim, except that no claimant should receive a negative amount. In the context of taxation, it is known as **poll tax**.
+
+
+## Formal definition
+
+There is a certain amount of money to divide, denoted by *{\displaystyle E}* (=Estate or Endowment). There are *n* *claimants*. Each claimant *i* has a claim denoted by *{\displaystyle c\_{i}}*. Usually, {\displaystyle \sum \_{i=1}^{n}c\_{i}>E}, that is, the estate is insufficient to satisfy all the claims.
+
+The **CEL** rule says that each claimant *i* should receive {\displaystyle \max(0,c\_{i}-r)}, where *r* is a constant chosen such that {\displaystyle \sum \_{i=1}^{n}\max(0,c\_{i}-r)=E}. The rule can also be described algorithmically as follows:
+
+* Initially, all agents are active, and each agent gets his full claim.
+* While the total allocation is larger than the estate:
+ + Remove one unit equally from all active agents.
+ + Each agent whose total allocation drops to zero becomes inactive.
+
+## Examples
+
+Examples with two claimants:
+
+* {\displaystyle CEL(60,90;100)=(35,65)}; here {\displaystyle r=25}.
+* {\displaystyle CEL(50,100;100)=(25,75)}; here {\displaystyle r=25} too.
+* {\displaystyle CEL(40,80;100)=(30,70)}; here {\displaystyle r=10}.
+
+Examples with three claimants:
+
+* {\displaystyle CEL(50,100,150;100)=(0,25,75)}; here {\displaystyle r=75}.
+* {\displaystyle CEL(50,100,150;200)=(16.667,66.666,116.667)}; here {\displaystyle r=33.333}.
+* {\displaystyle CEL(50,100,150;300)=(50,100,150)}; here {\displaystyle r=0}.
+
+## Usage
+
+In the Jewish law, if several bidders participate in an auction and then revoke their bids simultaneously, they have to compensate the seller for the loss. The loss is divided among the bidders according to the CEL rule.
+
+
+## Characterizations
+
+The CEL rule has several characterizations. It is the only rule satisfying the following sets of axioms:
+
+* Equal treatment of equals, minimal rights first, and composition down;
+* Conditional null compensation, and composition up;
+* Conditional null compensation, and the dual of claims-monotonicity.
+
+## Dual rule
+
+The **constrained equal awards** **(CEA)** rule is the *dual* of the CEL rule, that is: for each problem {\displaystyle (c,E)}, we have {\displaystyle CEA(c,E)=c-CEL(c,\sum c-E)}.
+

@@ -1,0 +1,157 @@
+Utility maximization problem
+
+
+# Utility maximization problem
+
+
+
+Utility maximization was first developed by utilitarian philosophers Jeremy Bentham and John Stuart Mill. In microeconomics, the **utility maximization problem** is the problem consumers face: "How should I spend my money in order to maximize my utility?" It is a type of optimal decision problem. It consists of choosing how much of each available good or service to consume, taking into account a constraint on total spending (income), the prices of the goods and their preferences.
+
+Utility maximization is an important concept in consumer theory as it shows how consumers decide to allocate their income. Because consumers are modelled as being rational, they seek to extract the most benefit for themselves. However, due to bounded rationality and other biases, consumers sometimes pick bundles that do not necessarily maximize their utility. The utility maximization bundle of the consumer is also not set and can change over time depending on their individual preferences of goods, price changes and increases or decreases in income.
+
+
+## Basic setup
+
+For utility maximization there are four basic steps process to derive consumer demand and find the utility maximizing bundle of the consumer given prices, income, and preferences.
+
+1) Check if Walras's law is satisfied
+2) 'Bang for buck'
+3) the budget constraint
+4) Check for negativity
+
+
+### 1) Walras's Law
+
+Walras's law states that if a consumers preferences are complete, monotone and transitive then the optimal demand will lie on the budget line.
+
+
+#### Preferences of the consumer
+
+For a utility representation to exist the preferences of the consumer must be complete and transitive (necessary conditions).
+
+
+##### Complete
+
+Completeness of preferences indicates that all bundles in the consumption set can be compared by the consumer. For example, if the consumer has 3 bundles A,B and C then;
+
+A {\displaystyle \succcurlyeq } B, A {\displaystyle \succcurlyeq } C, B {\displaystyle \succcurlyeq } A, B {\displaystyle \succcurlyeq }C, C {\displaystyle \succcurlyeq }B, C {\displaystyle \succcurlyeq }A, A {\displaystyle \succcurlyeq }A, B {\displaystyle \succcurlyeq }B, C {\displaystyle \succcurlyeq }C. Therefore, the consumer has complete preferences as they can compare every bundle.
+
+
+##### Transitive
+
+Transitivity states that individuals preferences are consistent across the bundles.
+
+therefore, if the consumer weakly prefers A over B (A {\displaystyle \succcurlyeq } B) and B {\displaystyle \succcurlyeq }C this means that A {\displaystyle \succcurlyeq } C (A is weakly preferred to C)
+
+
+##### Monotone
+
+For a preference relation to be monotone increasing the quantity of both goods should make the consumer strictly better off (increase their utility), and increasing the quantity of one good holding the other quantity constant should not make the consumer worse off (same utility).
+
+The preference {\displaystyle \succcurlyeq } is monotone if and only if;
+
+1){\displaystyle (x+\epsilon ,y)\succcurlyeq (x,y)}
+
+2) {\displaystyle (x,y+\epsilon )\succcurlyeq (x,y)}
+
+3) {\displaystyle (x+\epsilon ,y+\epsilon )\succ (x,y)}
+
+where {\displaystyle \epsilon } > 0
+
+
+### 2) 'Bang for buck'
+
+Bang for buck is a concept in utility maximization which refers to the consumer's desire to get the best value for their money. If Walras's law has been satisfied, the optimal solution of the consumer lies at the point where the budget line and optimal indifference curve intersect, this is called the tangency condition. To find this point, differentiate the utility function with respect to x and y to find the marginal utilities, then divide by the respective prices of the goods.
+
+{\displaystyle MU\_{x}/p\_{x}=MU\_{y}/p\_{y}}
+
+This can be solved to find the optimal amount of good x or good y.
+
+
+### 3) Budget constraint
+
+The basic set up of the budget constraint of the consumer is: {\displaystyle p\_{x}x+p\_{y}y\leq I}
+
+Due to Walras's law being satisfied: {\displaystyle p\_{x}x+p\_{y}y=I}
+
+The tangency condition is then substituted into this to solve for the optimal amount of the other good.
+
+
+### 4) Check for negativity
+
+Negativity must be checked for as the utility maximization problem can give an answer where the optimal demand of a good is negative, which in reality is not possible as this is outside the domain. If the demand for one good is negative, the optimal consumption bundle will be where 0 of this good is consumed and all income is spent on the other good (a corner solution). See figure 1 for an example when the demand for good x is negative.
+
+
+## A technical representation
+
+Suppose the consumer's consumption set, or the enumeration of all possible consumption bundles that could be selected if there were a budget constraint.
+
+The consumption set = {\displaystyle \mathbb {R} \_{+}^{n}\ .} (a set of positive real numbers, the consumer cannot preference negative amount of commodities).
+
+{\displaystyle x\in \mathbb {R} \_{+}^{n}\ .}
+
+Suppose also that the price vector (*p*) of the n commodities is positive,
+
+{\displaystyle p\in \mathbb {R} \_{+}^{n}\ ,}
+
+and that the consumer's income is {\displaystyle I}; then the set of all affordable packages, the budget set is,
+
+{\displaystyle B(p,I)=\{x\in \mathbb {R} \_{+}^{n}|\mathbb {\Sigma } \_{i=1}^{n}p\_{i}x\_{i}\leq I\}\ ,}
+
+The consumer would like to buy the best affordable package of commodities.
+
+It is assumed that the consumer has an ordinal utility function, called *u*. It is a real-valued function with domain being the set of all commodity bundles, or
+
+Then the consumer's optimal choice {\displaystyle x(p,I)} is the utility maximizing bundle of all bundles in the budget set if {\displaystyle x\in B(p,I)} then the consumers optimal demand function is:
+
+{\displaystyle x(p,I)=\{x\in B(p,I)|U(x)\geq U(y)\forall y\in B(p,I)\}}
+
+Finding {\displaystyle x(p,I)} is the **utility maximization problem**.
+
+If *u* is continuous and no commodities are free of charge, then {\displaystyle x(p,I)} exists, but it is not necessarily unique. If the preferences of the consumer are complete, transitive and strictly convex then the demand of the consumer contains a unique maximiser for all values of the price and wealth parameters. If this is satisfied then {\displaystyle x(p,I)} is called the Marshallian demand function. Otherwise, {\displaystyle x(p,I)} is set-valued and it is called the Marshallian demand correspondence.
+
+
+## Utility maximisation of perfect complements
+
+U = min {x, y}
+
+For a minimum function with goods that are perfect complements, the same steps cannot be taken to find the utility maximising bundle as it is a non differentiable function. Therefore, intuition must be used. The consumer will maximise their utility at the kink point in the highest indifference curve that intersects the budget line where x = y. This is intuition, as the consumer is rational there is no point the consumer consuming more of one good and not the other good as their utility is taken at the minimum of the two ( they have no gain in utility from this and would be wasting their income). See figure 3.
+
+
+## Utility maximisation of perfect substitutes
+
+U = x + y
+
+For a utility function with perfect substitutes, the utility maximising bundle can be found by differentiation or simply by inspection. Suppose a consumer finds listening to Australian rock bands AC/DC and Tame Impala perfect substitutes. This means that they are happy to spend all afternoon listening to only AC/DC, or only Tame Impala, or three-quarters AC/DC and one-quarter Tame Impala, or any combination of the two bands in any amount. Therefore, the consumer's optimal choice is determined entirely by the relative prices of listening to the two artists. If attending a Tame Impala concert is cheaper than attending the AC/DC concert, the consumer chooses to attend the Tame Impala concert, and vice versa. If the two concert prices are the same, the consumer is completely indifferent and may flip a coin to decide. To see this mathematically, differentiate the utility function to find that the MRS is constant - this is the technical meaning of perfect substitutes. As a result of this, the solution to the consumer's constrained maximization problem will not (generally) be an interior solution, and as such one must check the utility level in the boundary cases (spend entire budget on good x, spend entire budget on good y) to see which is the solution. The special case is when the (constant) MRS equals the price ratio (for example, both goods have the same price, and same coefficients in the utility function). In this case, any combination of the two goods is a solution to the consumer problem.
+
+
+## Reaction to changes in prices
+
+For a given level of real wealth, only relative prices matter to consumers, not absolute prices. If consumers reacted to changes in nominal prices and nominal wealth even if relative prices and real wealth remained unchanged, this would be an effect called money illusion. The mathematical first order conditions for a maximum of the consumer problem guarantee that the demand for each good is homogeneous of degree zero jointly in nominal prices and nominal wealth, so there is no money illusion.
+
+When the prices of goods change, the optimal consumption of these goods will depend on the substitution and income effects. The substitution effect says that if the demand for both goods is homogeneous, when the price of one good decreases (holding the price of the other good constant) the consumer will consume more of this good and less of the other as it becomes relatively cheeper. The same goes if the price of one good increases, consumers will buy less of that good and more of the other.
+
+The income effect occurs when the change in prices of goods cause a change in income. If the price of one good rises, then income is decreased (more costly than before to consume the same bundle), the same goes if the price of a good falls, income is increased (cheeper to consume the same bundle, they can therefore consume more of their desired combination of goods).
+
+
+## Reaction to changes in income
+
+If the consumers income is increased their budget line is shifted outwards and they now have more income to spend on either good x, good y, or both depending on their preferences for each good. if both goods x and y were normal goods then consumption of both goods would increase and the optimal bundle would move from A to C (see figure 5). If either x or y were inferior goods, then demand for these would decrease as income rises (the optimal bundle would be at point B or C).
+
+
+## Bounded rationality
+
+for further information see: Bounded rationality
+
+In practice, a consumer may not always pick an optimal bundle. For example, it may require too much thought or too much time. Bounded rationality is a theory that explains this behaviour. Examples of alternatives to utility maximisation due to bounded rationality are; satisficing, elimination by aspects and the mental accounting heuristic.
+
+* The satisficing heuristic is when a consumer defines an aspiration level and looks until they find an option that satisfies this, they will deem this option good enough and stop looking.
+* Elimination by aspects is defining a level for each aspect of a product they want and eliminating all other options that do not meet this requirement e.g. price under $100, colour etc. until there is only one product left which is assumed to be the product the consumer will choose.
+* The mental accounting heuristic: In this strategy it is seen that people often assign subjective values to their money depending on their preferences for different things. A person will develop mental accounts for different expenses, allocate their budget within these, then try to maximise their utility within each account.
+
+## Related concepts
+
+The relationship between the utility function and Marshallian demand in the utility maximisation problem mirrors the relationship between the expenditure function and Hicksian demand in the expenditure minimisation problem. In expenditure minimisation the utility level is given and well as the prices of goods, the role of the consumer is to find a minimum level of expenditure required to reach this utility level.
+
+The utilitarian social choice rule is a rule that says that society should choose the alternative that maximizes the *sum* of utilities. While utility-maximization is done by individuals, utility-sum maximization is done by society.
+

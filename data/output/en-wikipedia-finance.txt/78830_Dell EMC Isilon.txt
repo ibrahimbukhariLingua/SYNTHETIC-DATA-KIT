@@ -1,0 +1,48 @@
+Dell EMC Isilon
+
+
+# Dell EMC Isilon
+
+
+
+**Dell EMC Isilon** is a scale out network-attached storage platform offered by Dell EMC for high-volume storage, backup and archiving of unstructured data. It provides a cluster-based storage array based on industry standard hardware, and is scalable to 50 petabytes in a single filesystem using its FreeBSD-derived OneFS file system.
+
+An Isilon clustered storage system is composed of three or more nodes. Each node is a server integrated with proprietary operating system software called OneFS (based on FreeBSD), which unifies a cluster of nodes into a single shared resource.
+
+
+## Isilon Systems
+
+**Isilon Systems** was a computer hardware and software company founded in 2001 by Sujal Patel and Paul Mikesell, a 1996 graduate of the University of Maryland College of Computer, Mathematical, and Natural Sciences. It was headquartered in Seattle, Washington. It sold clustered file system hardware and software for digital content and other unstructured data to a variety of industries.
+
+Isilon Systems became a publicly traded company on December 16, 2006. By this time, Isilon was selling its products indirectly through a channel partner program that included over 100 resellers and distributors, as well as directly through a field sales force. Its customers included NBC Universal, Cedars-Sinai, Kelman Technologies, and Kodak, among others.
+
+Poor initial performance of the new public company led to management changes in 2007 that brought back founder Sujal Patel as CEO. In 2008, details emerged around an internal audit of Isilon System’s financials that led to a restatement of earnings. Just before the company would have announced four profitable quarters in a row – the first profitable year in the company’s history – Isilon Systems was acquired by EMC Corporation in November 2010 for $2.25 billion.
+
+
+## Isilon after merger
+
+EMC said that with its acquisition of Isilon, it would be better able to provide storage infrastructure for private and public cloud environments, with a focus on so-called big data, like gene sequencing, online streaming, and oil and natural gas seismic studies. At the time of acquisition, the list of Isilon’s clients had grown to include Sony, XM Radio, LexisNexis, Facebook, MySpace, Adobe, and several major movie studios and TV networks.
+
+On November 10, 2015, EMC announced an expansion of its Isilon NAS portfolio with a scaled-down, software storage system for remote locations, a cloud migration application and high-availability upgrades for Isilon OneFS. The two software additions, IsilonSD Edge and CloudPools, will be available alongside the new version of OneFS in 2016. They are part of the vendor's data lakes strategy for storing and managing unstructured data in large repositories. The new offerings will, according to one analyst, deliver a data lake-ready platform to enterprises with high-speed data analytics, and are aimed at three aspects of the Data Lake, the edge, the core, and the cloud.
+
+On May 8, 2017, Dell EMC announced a new line of Isilon systems based on the "Infinity" architecture that "can hit up to 6x the IOPS, 11x the throughput, and ... twice the capacity over the previous generation Isilon." The new Infinity architecture is modular, allowing system owners to increase each component as needed. Drive density has increased, with up to 60 drives in 4U of rack space, almost twice that of the previous generation. This also means the new nodes are physically smaller. Up to four nodes can sit blade-style in 4U of rack space. And Isilon now supports CPU and drive updates as they become available, without replacing the whole node.
+
+In June 2020, with the release of OneFS 9.0, the product line also started using the "PowerScale" moniker.
+
+
+## Technology and architecture
+
+Isilon clustered storage system architecture consists of independent nodes that are integrated with the OneFS operating system software. The systems can be installed in standard data center environments and are accessible to users and applications running Windows, Unix/Linux and Mac operating systems using industry standard file sharing protocols over standard Gigabit or 10-Gigabit Ethernet. Nodes within the clustered storage system communicate with each other over a dedicated 10Gb Ethernet local area network (Infiniband in legacy installations). The architecture is designed so that each node has full visibility and write/read access to or from a single expandable file system.
+
+Data protection is formed using Reed–Solomon error correction coding. When a file is written it is spread across several nodes using parity calculated by which level you set the whole or parts of the cluster to.
+
+Isilon provides multi-protocol access to files using NFS, SMB or FTP. In addition, Isilon supports HDFS as a protocol allowing Hadoop analytics to be performed on files resident on the storage. Data can be stored using one protocol and accessed using another protocol. The key building blocks for Isilon include the OneFS operating system, the NAS architecture, the scale-out data lakes, and other enterprise features.
+
+Recent deals between EMC and Cloudera will allow the Cloudera Enterprise Hadoop kit to be sold directly from EMC and its channel partners. The deal may benefit the thousands of EMC Isilon customers with existing data lakes by providing a base for running analytic processes on their data, giving them access to Impala, Cloudera's open source, massively parallel processing SQL query engine that runs on Hadoop.
+
+
+## Awards and recognition
+
+* EMC Isilon received the highest overall score among nine companies rated by Gartner in its January 2015 "Critical Capabilities for Scale-Out File System Storage" report. This report also called out Isilon’s scalable capacity, performance, easy-to-deploy clustered storage appliance approach and feature sets.
+* EMC was described by Gartner in its 2014 Magic Quadrant for General-Purpose Disk Arrays as a leader in the disk storage market because its management team invests heavily in its vision; is quick to correct mistakes; and is aggressive.
+* EMC Isilon was included in ComputerWeekly’s 2014 survey of the "big six" storage array makers’ scale-out NAS product ranges.

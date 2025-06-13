@@ -1,0 +1,66 @@
+Optimal labor income taxation
+
+
+# Optimal labor income taxation
+
+
+
+**Optimal labour income tax** is a sub-area of optimal tax theory which refers to the study of designing a tax on individual labour income such that a given economic criterion like social welfare is optimized.
+
+
+## Efficiency-equity tradeoff
+
+The modern literature on optimal labour income taxation largely follows from James Mirrlees' "Exploration in the Theory of Optimum Income Taxation". The approach is based on asymmetric information, as the government is assumed to be unable to observe the number of hours people work or how productive they are, but can observe individuals' incomes. This imposes incentive compatibility constraints that limit the taxes which the government is able to levy, and prevents it from taxing high-productivity people at higher rates than low-productivity people. The government seeks to maximise a utilitarian social welfare function subject to these constraints. It faces a tradeoff between efficiency and equity:
+
+* Higher levels of taxation on the rich create revenue that can be used to redistribute to the poor, which raises social welfare because the marginal utility of income is (assumed to be) higher for the poor than the rich;
+* However, taxation reduces the incentive to work, and so leads to labour supply below the optimal level.
+
+## Mechanical, behavioral and welfare effects
+
+Emmanuel Saez in his article titled "Using Elasticities to Derive Optimal Income Tax Rates" derives a formula for optimal level of income tax using both the compensated and uncompensated elasticities. Saez writes that the tradeoff between equity and efficiency is a central consideration of optimal taxation, and implementing a progressive tax allows the government to reallocate their resources where they are needed most. However, this deters those of higher income levels to work at their optimal level. Saez decomposes the marginal effects of a tax change into mechanical, behavioural and welfare effects, as follows:
+
+* The *mechanical effect* is the effect that the tax change would have on government revenue, if no individuals changed their behaviour in response. For a tax increase, this is positive.
+* The *behavioural effect* is the effect that the behavioural change induced by the tax change would have on government revenue, at the initial tax rates. Raising taxes will discourage labour supply, and this will lead to lower tax revenue as a result; so for a tax increase, this is negative.
+* The *welfare effect* is the effect that the tax change has on the social welfare function by changing individual's utilities. For a tax increase, this is negative.
+
+The sum of these effects should be zero at the optimum. Stipulating this condition results in the following formula for the optimal top tax rate, if incomes are Pareto distributed:
+
+where:
+
+* {\displaystyle \tau } is the tax rate
+* {\displaystyle {\bar {g}}} is the ratio of social marginal utility for the top bracket taxpayers to the marginal value of public funds for the government, which depends on the social welfare function. The case {\displaystyle {\bar {g}}=0} corresponds to one where the government does not care about the welfare of top bracket taxpayers, and wants to raise as much revenue as possible from them, so setting {\displaystyle {\bar {g}}=0} gives a formula for the revenue-maximising top tax rate.
+* {\displaystyle {\bar {\zeta }}^{u}} and {\displaystyle {\bar {\zeta }}^{c}} are respectively the uncompensated and compensated elasticity of labour supply; higher elasticities imply that labour supply will fall more in response to an increase in taxes.
+* {\displaystyle \alpha } is the shape parameter in the Pareto distribution of income.
+
+Empirical estimation of the parameters of this equation suggests that the revenue-maximising top tax rate is between approximately 50% and 80%, although this estimate neglects long-run behavioural responses, which would imply higher elasticities and a lower optimal tax rate. Saez's analysis can also be generalised to tax rates other than the top rate.
+
+
+## Arithmetic vs. economic effects
+
+In the late 1970s, Arthur Laffer developed the Laffer curve, which demonstrates that there are two effects of changing tax rates:
+
+* An *arithmetic effect* — if tax rates are lowered, revenue will be decrease by the same amount;
+* An *economic effect* — which provides incentives for individuals to increase their work output through low tax rates.
+
+These correspond to the mechanical and behavioural effects discussed by Saez. The Laffer curve illustrates that, for sufficiently high tax levels, the (negative) behavioural effect will outweigh the (positive) mechanical effect of a tax increase, and so increasing tax rates will reduce tax revenue. In fact, tax revenue with a tax rate of 100% is likely to be 0, since there is no remaining incentive to work at all. Therefore, the tax rate that maximises revenue collected will typically be below 100% - as estimated by Saez, the revenue-maximising top rate is between 50% and 80%.
+
+
+## Family and gender effects
+
+Since only economic actors who engage in market activity of "entering the labour market" have an income tax liability on their wages, people who are able to consume leisure or engage in household production outside the market, by, for example, providing housewife services in *lieu* of hiring a maid, are taxed more lightly. With the "married filing jointly" tax unit in U.S. income tax law, the second earner's income is added to the first wage earner's taxable income and thus gets the highest marginal rate. This type of tax creates a large distortion, disfavoring women from the labour force during years when the couple has the greatest child care needs.
+
+
+## Optimal linear income tax
+
+Eytan Sheshinski has studied a simplified income-tax model, in which the tax is a linear function of the income: {\displaystyle t(y)=-a+(1-b)y}, where *y* is the income, *t(y)* is the tax paid by an individual with an income of *y*, 1-*b* is the tax rate, and *a* is a lump sum tax. The goal is to find the values of *a* and *b* such that the social welfare (the sum of individual utilities) is maximized.
+
+In his model, all agents have the same utility function, which depends on consumption and labour: {\displaystyle u=u(c,l)}. The consumption *c* is determined by the after-income tax: {\displaystyle c(y)=y-t(y)=a+by}. The before-tax income *y* is determined by the amount of labor *l* and an innate ability factor *n*, where the relation is assumed to be linear too: {\displaystyle y=y(n,l)=n\cdot l}. Each individual decides on the amount of labour *l* which maximizes his utility: {\displaystyle u(a+bnl,l)}. These decisions define the labor supply as a function of the tax parameters *a* and *b*.
+
+Under certain natural assumptions, it is proved that the optimal linear tax has *a*>0, i.e., it provides a positive lump-sum to individuals with zero income. This coincides with the idea of universal basic income.
+Additionally, the optimal tax rate is bounded above by a fraction that decreases with the minimum elasticity of the labour supply.
+
+
+## Developments
+
+The theory of optimal labour income taxation started with a simple model of optimal linear taxation. It then developed to consider optimal nonlinear income taxation. Then, it considered various extensions of the standard model: tax avoidance, income shifting, international migration, rent-seeking, relative income concerns, couples and children, and non-cash transfers.
+

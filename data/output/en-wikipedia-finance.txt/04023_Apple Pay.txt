@@ -1,0 +1,288 @@
+Apple Pay
+
+
+# Apple Pay
+
+
+
+**Apple Pay** is a mobile payment service by Apple Inc. that allows users to make payments in person, in iOS apps, and on the web. Supported on iPhone, Apple Watch, iPad, Mac, and Vision Pro, Apple Pay digitizes and can replace a credit or debit card chip and PIN transaction at a contactless-capable point-of-sale terminal. It does not require Apple Pay–specific contactless payment terminals; it can work with any merchant that accepts contactless payments. It adds two-factor authentication via Touch ID, Face ID, Optic ID, PIN, or passcode. Devices wirelessly communicate with point of sale systems using near field communication (NFC), with an embedded secure element (eSE) to securely store payment data and perform cryptographic functions, and Apple's Touch ID and Face ID for biometric authentication.
+
+Apple Pay can also be used to ride some public transport networks either through the use of credit/debit cards (open loop) (for example across TfL in London, SL in Stockholm, and at OMNY readers across New York City's subway and city buses in Laval, with the STL and bus network) or dedicated travel cards such as JR East's Suica, the Chicago Transit Authority's Ventra, the San Francisco Bay Area's Clipper (closed loop) and Hong Kong's Octopus Card.
+
+
+## Service
+
+
+### Device compatibility
+
+The service is compatible with iPhone 6 and newer, iPad Air 2 and newer, Macs with Touch ID, and Apple Watch Series 1 and later. In iOS 17 or later, the number of cards able to be added to the service is determined by the capacity of the secure element, which varies by device.
+
+
+### Technology
+
+Apple Pay uses the EMV Payment Tokenization Specification.
+
+The service keeps customer payment information private from the retailer by replacing the customer's credit or debit card Funding Primary Account Number (FPAN) with a tokenized Device Primary Account Number (DPAN), and creates a "dynamic security code [...] generated for each transaction". The 'dynamic security code' is the cryptogram in an EMV-mode transaction, and the Dynamic Card Verification Value (dCVV) in a magnetic stripe data emulation-mode transaction. Apple added that they would not track usage, which would stay between the customers, the vendors, and the banks. Users can also remotely halt the service on a lost phone via the Find My iPhone service.
+
+To pay at points of sale, users hold their authenticated Apple device to the point of sale system's NFC card reader. iPhone users authenticate by using Touch ID, Face ID, or passcode, whereas Apple Watch users authenticate by double-clicking a button on an unlocked device. To pay in supported iOS apps, users choose Apple Pay as their payment method and authenticate with Touch ID or Face ID. Users can add payment cards to the service in any of four ways: through the payment card listed on their iTunes accounts, by taking a photo of the card, being provisioned from within the card issuer's app, or by entering the card information manually.
+
+Although users receive immediate notification of the transaction, the Apple Pay system is not an instant payment instrument, because the fund transfer between counter-parties is not immediate. The settlement time depends on the payment method chosen by the customer. (An exception being payments made using a card which stores the user's balance on the card itself, such as a Japanese Suica card or a Hong Kong Octopus card. These cards can transfer funds directly to the merchant without the need for an online connection.)
+
+In the United Kingdom, traditional contactless payments using bank cards are limited to £100 (previously £45 until 14 October 2021) as no cardholder authentication is provided as part of the transaction. Payments using Apple Pay, however, support payments of any amount owing to the increased security and lower risk of fraud in Apple Pay transactions (although some issuing banks may impose their own transaction limits, and not all contactless readers support this functionality – see CDCVM below). Similar transaction limits apply in other countries.
+
+Apple assumes some liability for fraudulent use of the service. Banks are expected to carry the burden of the service, and Apple is said to have negotiated smaller transaction fees. In turn, the banks hoped to capture purchases that were formerly handled without credit. *Financial Times* reported that Apple receives 0.15% cut of US purchases made with the service, but, following the UK launch, reported that Apple's cut is much lower in the UK. This is largely because Regulation (EU) 2015/751 capped interchange fees in the European Economic Area at 0.3% for personal credit cards and 0.2% for personal debit cards with effect from June 8, 2015. In Russia, Apple receives 0.05% for debit cards and 0.12% for credit cards of each purchase, and in addition the bank pays 45 rubles a year for each card added in the service.
+
+Apple is ending its in-house "buy now, pay later" service in the US, shifting to third-party lenders for instalment plans. Existing users can still manage payments via the Wallet app. Apple will partner with banks such as Citi, HSBC, and ANZ to offer these options in the upcoming iOS 18.
+
+
+### Consumer Device Cardholder Verification Method (CDCVM)
+
+In EMV-mode transactions, Apple Pay supports the use of the Consumer Device Cardholder Verification Method (CDCVM) using Touch ID, Face ID, or the phone's or watch's passcode. The use of CDCVM allows for the device itself to provide verification for the transaction and may not require the cardholder to sign a receipt or enter their PIN. Additionally, in certain markets which have a 'no verification contactless limit' using contactless cards (such as the £100 limit in the United Kingdom, the C$100 limit in Canada and the 300SAR limit in Saudi Arabia), the use of CDCVM can enable merchants to accept transactions higher than these amounts using Apple Pay, providing their terminal software is updated to support the latest network contactless specifications.
+
+
+### Global acceptance
+
+About two-thirds of merchants accept contactless payments. Due to provisioning differences between countries (and even between issuers), users may encounter acceptance issues when travelling to a different country. Some known examples include:
+
+* Canada, UK, Saudi Arabia, and possibly other non-US-issued Visa cards only support EMV-mode transactions and not legacy magnetic-stripe data-emulation transactions. Some contactless terminals in the US do not support EMV-mode contactless transactions (even if they support EMV contact transactions), and therefore these visitors to the US will receive a "Could Not Complete Payment" error on the iPhone screen and an error on the terminal when attempting to use Apple Pay.
+
+### Apple Cash
+
+**Apple Cash**, formerly **Apple Pay Cash**, is a feature that allows the transfer of money from one user to another via iMessage. When a user receives a payment, the funds are deposited in the recipient's Apple Cash card, where it is available for immediate use at merchants that accept Apple Pay. Prior to April 2022, the Apple Cash Card was provisioned as a Discover contactless debit card. Apple Cash device account numbers currently are issued/reissued on the Visa payment network, ensuring a larger acceptance for the Apple Cash card at more merchants.
+
+Alternatively, the user can choose to transfer the balance to a nominated bank account via ACH transfer.
+
+Since 2017, Apple Cash has been operated by Green Dot Corporation under the name "Green Dot Bank" and is available only for U.S. citizens or residents, 18 or older, with a physical residential address in the United States.
+
+
+## Cost
+
+Apple Pay does not cause additional fees for users and merchants. In Switzerland, for example, participating card issuers pay for the service. In 2020, Swiss banks paid a fixed commission 0.275 CHF (US$0.26) quarterly on every card to Apple. Additionally, they paid 0.12% for credit card transactions, and 0.17% for web or app based transactions. Swiss antitrust authorities require that an acquirer pays maximum 0.44% of the transaction amount to the issuer. The competition commission calls this amount "interchange fee". Apple charges between 27% and 39% of the credit card issuers' income earned from the acquirer.
+
+
+## History
+
+The service was in preparation for "a long time", as Apple acquired startups, hired executives and filed patents related to payments. Apple partnered with American Express, Mastercard and Visa. Their joint project began in January 2013, though they had discussed Apple's potential involvement for years. Their joint solution was a system where single-use digital tokens would replace the transfer of personal information. A Visa executive said that 750 people at the company worked on the anonymized "token" system for a year, and the other partners had similar teams in collaboration. Mastercard began work on the project in 2013 and hoped that their joint work would become a "standard for mobile payments". The announcement of the service came at a time when Mastercard and Visa policy created strong incentives for upgrading to mobile payment-compatible point of sale systems. Apple then approached several big banks in mid-2013 and did not divulge the names of the other banks. To maintain secrecy, JPMorgan set up a windowless "war room" where the majority of the sensitive work was done. Of their 300 people on the project, about 100 knew that the partner was Apple. Others close to the project did not know it was named "Apple Pay" until the announcement. The company's participation remained a secret leading up to its announcement.
+
+The service was announced at Apple's iPhone 6 event on September 9, 2014. At its announcement, Apple CEO Tim Cook described the magnetic stripe card payment process as broken for its reliance on plastic cards' "outdated and vulnerable magnetic interface", "exposed numbers", and insecure "security codes". The iOS 8.1 software update accompanying the service's launch activated Apple Pay on compatible devices. The company announced an API for app developers to build Apple Pay checkout into their apps.
+
+The service initially supported US-issued payment cards. An international roll-out was ongoing, beginning with support for UK-issued payment cards in July 2015. On December 17, 2015, Apple announced that it would launch Apple Pay with fifteen major banks in China, and Chinese users could start to use Apple Pay on February 18, 2016.
+
+In October 2015, Apple Pay vice president Jennifer Bailey confirmed that KFC, Chili's, and Starbucks would begin accepting Apple Pay in 2016.
+
+Bank of America is outfitting some of its ATMs with Apple Pay support and the ability to withdraw cash using it. The new Apple Pay enabled ATM is outfitted with the NFC reader and logo that Apple Pay users have become used to seeing since the service launched. The NFC reader is located directly to the left of the card reader, although unlike the card reader, the NFC reader does not light up. Bank of America has launched a new website detailing the simple process of withdrawing cash with a smartphone (Google Pay, Samsung Pay, or Apple Pay). Bank of America says that "Consumer Debit Cards, U.S. Trust Debit Cards, Small Business Debit Cards (owner card only)" are supported. Wells Fargo and JPMorgan Chase also integrated Apple Pay support into their ATMs.
+
+On September 7, 2016, Apple announced that iPhone 7 and Apple Watch Series 2 users in Japan can add both local credit cards and FeliCa cards to their Apple Pay wallets. Only Suica cards are supported by Apple Pay, which can be used at subway stations, convenience stores, etc., just like regular Suica cards. Apple Pay also supports payment via all QUICPay and iD enabled terminals that are already popular in Japan.
+
+On March 25, 2019, Apple Card was announced in partnership with Goldman Sachs and Mastercard.
+
+In June 2024, it was announced that online Apple Pay purchases would be able to be initiated from third party devices. Users will be provided with a code they must scan with an iPhone running iOS 18 or later to complete the transaction.
+
+
+## Legal scrutiny
+
+
+### United States
+
+In 2022, Apple faced a class action lawsuit from Affinity Credit Union that claimed Apple engaged in anti-competitive conduct to privilege Apple Pay by limiting users' ability to use alternate payment options. A federal judge allowed the lawsuit to go forward in an October 2023 decision.
+
+In 2023, the Consumer Financial Protection Bureau (CFPB) began rulemaking on a proposal that would make Apple Pay and other digital payments services subject to bank-like oversight. The rule was finalized in November 2024, and applies to six other non-bank services, including those provided by Google and Amazon. In 2024, the Department of Justice (DOJ) launched a broad antitrust suit against Apple; among other claims, the suit alleges that Apple has used anti-competitive practices to boost Apple Pay at the expense of rival payment platforms.
+
+
+### Europe
+
+In June 2020, it was announced that the European Commission (EC) will take two probes against Apple, one focused on Apple Pay. According to EC, Apple was abusing its control of its payment wallet by blocking third-party payment access to the NFC hardware that enabled contactless payments. Apple opposed the claim and cited the COVID-19 pandemic as a cause of the increased number of people using contactless paying.
+
+
+## Availability
+
+
+### Supported countries
+
+Apple Pay can be used with any EMV contactless terminal globally as long as the customer is using a supported card. At least one issuer in each of the following 90 countries and territories issues such cards.
+
+| Date launched | Support for payment cards issued in |
+| --- | --- |
+| October 20, 2014 | **United States** (except Puerto Rico & other unincorporated territories) |
+| July 14, 2015 | United Kingdom (except British Overseas Territories) |
+| November 17, 2015 | Canada |
+| November 19, 2015 | Australia |
+| February 18, 2016 | China (in-app and online payments only) |
+| April 19, 2016 | Singapore |
+| July 7, 2016 | Switzerland |
+| July 19, 2016 | France |
+| Monaco |
+| July 20, 2016 | Hong Kong |
+| October 4, 2016 | Russia (Suspended on March 25, 2022) |
+| October 13, 2016 | New Zealand |
+| October 25, 2016 | Japan |
+| December 1, 2016 | Spain |
+| March 7, 2017 | Guernsey |
+| Ireland |
+| Isle of Man |
+| Jersey |
+| March 29, 2017 | Taiwan |
+| May 17, 2017 | Italy |
+| San Marino |
+| Vatican City |
+| October 24, 2017 | Denmark |
+| Greenland |
+| Finland |
+| Sweden |
+| United Arab Emirates |
+| April 4, 2018 | Brazil |
+| May 17, 2018 | Ukraine |
+| June 19, 2018 | Poland |
+| June 20, 2018 | Norway |
+| November 28, 2018 | Kazakhstan |
+| Belgium |
+| December 11, 2018 | Germany |
+| February 19, 2019 | Czech Republic |
+| Saudi Arabia |
+| April 24, 2019 | Austria |
+| May 8, 2019 | Iceland |
+| May 21, 2019 | Hungary |
+| Luxembourg |
+| June 11, 2019 | Netherlands |
+| June 26, 2019 | European Union (All Parts) |
+| Bulgaria |
+| Croatia |
+| Cyprus (except Northern Cyprus) |
+| Estonia |
+| Greece |
+| Latvia |
+| Liechtenstein |
+| Lithuania |
+| Malta |
+| Portugal |
+| Romania |
+| Slovakia |
+| Slovenia |
+| July 2, 2019 | Faroe Islands |
+| August 6, 2019 | Macau |
+| September 3, 2019 | Georgia |
+| November 19, 2019 | Belarus |
+| January 28, 2020 | Montenegro |
+| June 30, 2020 | Serbia |
+| February 23, 2021 | Mexico |
+| March 30, 2021 | South Africa |
+| May 5, 2021 | Israel |
+| August 17, 2021 | Qatar |
+| October 5, 2021 | Bahrain |
+| Palestine |
+| November 2, 2021 | Azerbaijan |
+| Colombia |
+| Costa Rica |
+| January 18, 2022 | Armenia |
+| March 15, 2022 | Argentina |
+| Peru |
+| April 5, 2022 | Moldova |
+| August 9, 2022 | Malaysia |
+| December 6, 2022 | Kuwait |
+| Jordan |
+| March 21, 2023 | South Korea |
+| May 2, 2023 | El Salvador |
+| Guatemala |
+| May 16, 2023 | Panama |
+| Honduras |
+| July 18, 2023 | Morocco |
+| August 8, 2023 | Chile |
+| Vietnam |
+| April 16, 2024 | Ecuador |
+| August 6, 2024 | Dominican Republic |
+| September 24, 2024 | Oman |
+| November 5, 2024 | Paraguay |
+| December 3, 2024 | Uruguay |
+| December 10, 2024 | Egypt |
+| Mongolia |
+
+
+### Supported payment networks and card schemes
+
+* Visa (worldwide. Japanese Visa cards in Apple Pay also function as FeliCa-based QUICPay or iD cards in addition to EMV contactless cards, although some issuers do not support EMV contactless in Apple Pay, meaning such cards will only function as QUICPay or iD cards.)
+* Visa Electron (worldwide)
+* V Pay (only in Europe)
+* Mastercard (worldwide. Japanese Mastercard cards in Apple Pay also function as FeliCa-based QUICPay or iD cards in addition to EMV contactless cards, although some issuers do not support EMV contactless in Apple Pay, meaning such cards will only function as QUICPay or iD cards.)
+* Maestro (worldwide)
+* American Express (worldwide. Japanese American Express cards in Apple Pay also function as FeliCa-based QUICPay cards in addition to EMV contactless cards.)
+* Discover Card (only in the United States)
+* U.S. Debit (only in the U.S. CDCVM may not be supported, requiring the customer to enter their PIN on the terminal.)
+* Diners Club International (only in Japan. Only function as FeliCa-based QUICPay cards and do not support the global EMV contactless standard.)
+* JCB (worldwide. Japanese JCB cards in Apple Pay also function as FeliCa-based QUICPay or iD cards in addition to EMV contactless cards, although some issuers do not support EMV contactless in Apple Pay, meaning such cards will only function as QUICPay or iD cards.)
+* Cartes Bancaires (CB) (only in France)
+* Hyundai Card (only in South Korea)
+* Interac (only in Canada)
+* EFTPOS (only in Australia)
+* China UnionPay (only in China, Hong Kong and Macau)
+* China T-Union (select cities in China)
+* Dankort (only in Denmark)
+* Suica, PASMO, ICOCA, iD, QUICPay, WAON, and nanaco (only in Japan. FeliCa-supported iPhone and Apple Watch models only.)
+* SPTC transit card (only in Shanghai)
+* Yikatong (only in Beijing)
+* mada (only in Saudi Arabia)
+* Clipper (only in San Francisco Bay Area, California, United States)
+* Hop Fastpass (only in Portland, Oregon, United States)
+* SmarTrip (only in Washington, D.C., United States)
+* TAP (only in Los Angeles, California, United States)
+* Navigo (only in Île-de-France, France)
+* Ventra (only in Chicago, Illinois, United States)
+* Elo (only in Brazil)
+* Octopus (only in Hong Kong. FeliCa-supported iPhone and Apple Watch models only.)
+* girocard (only in Germany)
+* Mir (only in Russia, suspended as of March 26, 2022)
+* Bancontact (only in Belgium)
+* Meeza(only in Egypt)
+
+#### Upcoming
+
+* BankAxept (only in Norway)
+* NAPAS (only in Vietnam)
+* T-money (only in South Korea)
+
+## Reception
+
+
+### Reviews
+
+Journalists in the United States noted that the multiple previously unsuccessful efforts of other retailers to build mobile payments services, including those of PayPal, Walmart, Target, Google Wallet, and Softcard. They noted that previous efforts did not solve customer inconvenience issues, and felt that Apple Pay potentially did. *The Verge*'s Adrianne Jeffries noted that mobile payment market fragmentation was partially due to Apple's refusal to enter the market. BusinessWeek's Joshua Brustein added that Apple has a history of letting "first movers fail" with an early version of the service before releasing "a more polished version of the same idea". *The Verge*'s Dieter Bohn called Apple Pay the "week's most revolutionary product" and the announcement "a classic Apple moment of simplification and integration", and the partnership between payments services and Apple "a rare piece of collaboration and agreement". He predicted that the service's effect on the mobile payments industry would be similar to the iPhone's effect on the smartphone industry. Nathaniel Popper of *The New York Times* referred to the banks' level of coordination with Apple as "elaborate" and indicative of mutual "preparation and investment". Some analysts added that the service could reduce the standard credit card transaction fees over time since fees traditionally cover credit card fraud. The banks were willing to work with Apple in the face of efforts like Bitcoin and the Merchant Customer Exchange, which seeks to work around the card networks.
+
+Early reviews of the service regarded it as easy to use, but were not sure whether the service would become widely adopted. *The Verge*'s Nilay Patel wrote that the product demo was "remarkably smooth" and "a cohesive user experience". Patel said the process took five to ten seconds at a retail card reader and added that it may be less smooth at stores such as Walgreens, where cashiers prompt customers for loyalty cards and charity donations. *The New York Times*' Neil Irwin wrote that Apple exaggerated the inconvenience of credit cards. Among the plastic card's benefits, he included how others could make purchases on another's behalf and how dead cell phones could leave the owner stranded.
+
+In a 2018 publication released by *Consumer Reports*, Apple Pay Cash was the leading peer-to-peer payment service.
+
+
+### Adoption
+
+Apple announced that more than one million credit cards had been registered on Apple Pay in the first three days of its availability, making it the largest mobile payment system in the United States at the time. There were 220,000 participating vendors when it launched.
+
+In the United States, Apple faced opposition by the mobile payments industry, particularly the Merchant Customer Exchange (MCX) which was starting a competing system known as CurrentC. Several participants of CurrentC, such as Best Buy, Walmart, and Publix had initially stated that they would not accept Apple Pay as a result of exclusivity deals. CVS Pharmacy and Rite-Aid subsequently disabled all NFC payment systems in favor of CurrentC, although due to the exclusivity period ending in August 2015, Rite Aid started to accept it August 15, 2015. Both CVS and Best Buy started to accept Apple Pay at all stores starting in October 2015. MCX and CurrentC ended in March 2017.
+
+Target's CEO Brian Cornell said that they would be open to accepting Apple Pay eventually after the conversion to chip and PIN technology is done, but they remain involved with MCX. On January 22, 2019, Target announced the roll-out of Apple Pay support to all of its stores in the United States.
+
+Transport for London, one of Apple Pay's official UK launch partners and one of the largest contactless merchants in the world, became the UK's most used Apple Pay merchant.
+
+As of February 11, 2016, 20% of iPhone 6 users in the United States reported using the service at least once. Apple maintains an up-to-date list of merchants who accept Apple Pay on its website.
+
+On June 2, 2016, according to *Fortune*, Apple said its mobile payment platform is gaining a million new users each week, yet the company did not reveal the total number of Apple Pay users. Apple also revealed that transaction volume through the service is five times what it was a year ago, and that payment volume within apps more than doubled in the second half of 2015.
+
+With the launch of Apple Pay in China, the service hit three million provisions inside its first three days, while, more generally, it is adding one million new users per week worldwide.
+
+On July 11, 2016 Liquor Control Board of Ontario (LCBO) confirmed that it accepts Apple Pay at all of its over 850 stores in Ontario, Canada. LCBO had been gradually rolling out Apple Pay support since June at its stores, which had NFC-based terminals for contactless payments.
+
+Starting on August 19, 2016, Apple Pay will be available in Chick-fil-A restaurants across the United States, allowing fast food buyers to make their purchases both in-store and at the drive-thru using Apple Pay.
+
+On September 7, 2016, Wayfair announced that they will support Apple Pay online.
+
+On May 22, 2018, TransLink announced support for Apple Pay at all fare gates and on buses.
+
+On July 31, 2018, Tim Cook announced that both CVS and 7-Eleven in the United States will support the service.
+
+On May 31, 2019 New York City Transit announced support for Apple Pay at its OMNY terminals on busses and subways.
+
+On August 21, 2019, and December 23, 2019, Miami Dade Transit announced support for Apple Pay at all fare gates and on buses.
+
+In February 2020, Apple Pay accounted for 5% of global card transactions. On April 4, 2020, Publix CEO Todd Jones announced Publix would be supporting Apple Pay immediately to help consumers fight COVID-19.
+
+
+## Explanatory notes
+

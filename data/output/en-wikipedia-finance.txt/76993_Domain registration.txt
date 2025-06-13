@@ -1,0 +1,56 @@
+Domain registration
+
+
+# Domain registration
+
+
+
+**Domain registration** is the process of acquiring a domain name from a domain name registrar.
+
+
+## History
+
+In 1993 the U.S. Department of Commerce, in conjunction with several public and private entities, created InterNIC to maintain a central database that contains all the registered domain names and the associated IP addresses in the U.S. (other countries maintain their own NICs (Network Information Centers) -- there is a link below that discusses Canada's system, for example). Network Solutions, a member of InterNIC, was chosen to administer and maintain the growing number of Internet domain names and IP addresses. This central database is copied to Top Level Domain (TLD) servers around the world and creates the primary routing tables used by every computer that connects to the Internet.
+
+Each ICANN-accredited registrar must pay a fixed fee of US$4,000 plus a variable fee. The sum of variable registrar fees is intended to total US$3.8 million. The competition created by the shared registration system enables end users to choose from many registrars offering a range of related services at varying prices.
+
+
+## Designated registrar
+
+Domain registration information is maintained by the domain name registries, which contract with domain registrars to provide registration services to the public. Domain registrar examples include GoDaddy.com, Domain.com, Google Domains, NameCheap and IONOS. An end user selects a registrar to provide the registration service, and that registrar becomes the *designated registrar* for the domain chosen by the user.
+
+Only the designated registrar may modify or delete information about domain names in a central registry database. It is not unusual for an end user to switch registrars, invoking a domain transfer process between the registrars involved, that is governed by specific domain name transfer policies.
+
+Although the dedicated registrar is the only entity that can modify or delete information regarding domain names in the central registry, there are many domain resellers that allow you to sell domains. You do not have to become a designated registrar in order to sell and register domains.
+
+When a registrar registers a `com` domain name for an end-user, it must pay a maximum annual fee of US$7.34 to VeriSign, the registry operator for `com`, and a US$0.18 annual administration fee to ICANN. Most domain registrars price their services and products to address both the annual fees and the administration fees that must be paid to ICANN. Barriers to entry into the bulk registrar industry are high for new companies without an existing customer base.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+Many registrars also offer registration through reseller affiliates. An end-user registers either directly with a registrar, or indirectly through one or more layers of resellers. As of 2010, the retail cost generally ranges from a low of about $7.50 per year to about $35 per year for a simple domain registration, although registrars often drop the price far lower – sometimes even free – when ordered with other products.
+
+The maximum period of registration for a domain name is 10 years. Some registrars offer longer periods of up to 100 years, but such offers involve the registrar renewing the registration for their customer; the 100-year registration would not be in the official registration database.
+
+
+## DNS hosting
+
+Registration of a domain name establishes a set of Start of Authority (SOA) records in the DNS servers of the parent domain, indicating the IP address (or domain name) of DNS servers that are *authoritative* for the domain. This provides merely a reference for how to find the domain data – not the actual domain data.
+
+Registration of a domain does not automatically imply the provision of DNS services for the registered domain. Most registrars do offer DNS hosting as an optional free service for domains registered through them. If DNS services are not offered, or the end-user opts out, the end-user is responsible for procuring or self-hosting DNS services. Without DNS services for the domain, the registration is essentially useless for Internet services, although this situation is often encountered with domain parking and cybersquatting.
+
+
+## Domain name transfer
+
+A domain name transfer is the process of changing the designated registrar of a domain name. ICANN has defined a *Policy on Transfer of Registrations between Registrars*. The usual process of a domain name transfer is:
+
+1. The end user verifies that the whois admin contact info is correct, particularly the email address; obtains the authentication code (EPP transfer code) from the old registrar, and removes any domain lock that has been placed on the registration. If the whois information had been out of date and is now updated, the end-user should wait 12–24 hours before proceeding further, to allow time for the updated data to propagate.
+2. The end user contacts the new registrar with the wish to transfer the domain name to their service, and supplies the authentication code.
+3. The gaining Registrar must obtain express authorization from either the Registered Name Holder or the Administrative Contact. A transfer may only proceed if confirmation of the transfer is received by the gaining Registrar from one of these contacts. The authorization must be made via a valid Standardized Form of Authorization, which may be sent e.g. by e-mail to the e-mail addresses listed in the WHOIS. The Registered Name Holder or the Administrative Contact must confirm the transfer. The new registrar starts electronically the transfer of the domain with the help of the authentication code (auth code).
+4. The old registrar will contact the end user to confirm the authenticity of this request. The end user may have to take further action with the old registrar, such as returning to the online management tools, to re-iterate their desire to proceed, in order to expedite the transfer.
+5. The old registrar will release authority to the new registrar.
+6. The new registrar will notify the end user of transfer completion. The new registrar may have automatically copied over the domain server information, and everything on the website will continue to work as before. Otherwise, the domain server information will need to be updated with the new registrar.
+
+After this process, the new registrar is the domain name's designated registrar. The process may take about five days. In some cases, the old registrar may intentionally delay the transfer as long as allowable. After transfer, the domain cannot be transferred again for 60 days, except back to the previous registrar.
+
+It is unwise to attempt to transfer a domain immediately before it expires. In some cases, a transfer can take up to 14 days, meaning that the transfer may not complete before the registration expires. This could result in loss of the domain name registration and failure of the transfer. To avoid this, end users should either transfer well before the expiration date, or renew the registration before attempting the transfer.
+
+If a domain registration expires, irrespective of the reason, it can be difficult, expensive, or impossible for the original owner to get it back. After the expiration date, the domain status often passes through several management phases, often for a period of months; usually it does not simply become generally available.
+

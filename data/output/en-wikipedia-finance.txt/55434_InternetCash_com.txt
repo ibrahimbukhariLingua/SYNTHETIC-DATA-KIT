@@ -1,0 +1,29 @@
+InternetCash.com
+
+
+# InternetCash.com
+
+
+
+***InternetCash.com*** was a company that generated pre-paid cards, either in physical or electronic form, to distribute cash. The cash consisted of an InternetCash number together with a customer-selected PIN. The InternetCash e-currency could then be spent with participating online merchants. An early name for InternetCash, before it acquired the internetcash.com domain name, was SpendCash.com.
+
+InternetCash was founded in April 1999 and it filed several patents to protect its novel electronic money system. Its founders raised over $10 million, mostly from Jim Bidzos and ElDorado Ventures, a Menlo Park venture capital firm between May and December 1999.
+
+
+## Founders
+
+InternetCash's founders were Charles Doherty, Yiannis Tsiounis, Jason Richelson, and Ben Reddy. Doherty, an entrepreneur, had the idea about a pre-paid card system and contacted Yiannis Tsiounis, who had recently completed his Ph.D. in electronic cash, in order to build a suitable architecture for the system and write the appropriate patents. Tsiounis subsequently contacted Jim Bidzos who funded the first institutional investment round. Independently, Ben Reddy, also an entrepreneur, had the same idea and worked with Jason Richelson to write and file a similar patent in April 1999. Mr. Doherty, the CEO of InternetCash, proceeded to recruit Reddy and Richelson in May 1999 and the patent work was combined under the guidance of Dr. Tsiounis, by then InternetCash's CTO. Mr. Reddy took on the role of VP of Sales and Mr. Richelson that of VP of Operations.
+
+Todd Kahn took over as President and COO in April 2000. Other notable alumni include serial entrepreneur and 10X Capital founder Hans Thomas.
+
+
+## System architecture
+
+InternetCash faced the choice of piggybacking on existing payment networks, such as those of Visa and MasterCard, or to build its own payment network. It chose the latter in order to offer better security, especially on the Internet payment side. Therefore, InternetCash required merchants to redirect the customer to a new web page, which was operated by InternetCash and was called the "InternetCash payment window", where they would type in their card number and PIN. Part of the card number together with the transaction details and timestamp was then digitally signed by that window (using InternetCash's hardware encryption devices) and then sent back to the merchant for storage and reference. The digital signature and the transaction details were then sent to InternetCash's payment server, where the transaction was completed. This two-stage approach allowed full flexibility on the deployment of the "InternetCash Payment Window", which was effectively providing the payment security to the system, so it could be run on separate servers than the actual "banking" system, which maintained the card balances and performed the transactions.
+
+Visa, MasterCard and JCB adopted a similar architecture a few years later, in 2001, for their 3-D Secure (also known as "Verified by Visa", "MasterCard SecureCode" and "J/Secure") system.
+
+An additional advantage of this architecture was that the "InternetCash Payment Window" could be used to securely accept any type of payment, including credit cards (much like 3-D Secure), debit cards and checks, and not just its own pre-paid cards. In fact, efforts were made by its founders to enable American Express's "blue" chip cards and regular debit cards to be used online, but after the Internet crash many of the companies involved put these projects on hold.
+
+In addition to building its own secure Internet-based payment network, InternetCash utilized hardware encryption devices from nCipher (acquired by Thales on July 11, 2008) combined with custom code for generating its card numbers. InternetCash card generation used secret sharing techniques, requiring a quorum of authorized company Officers present when the cash was minted. The card numbers themselves included a digital signature based on keyed hash functions, thus preventing third parties from randomly generating a card number—a form of security not present in typical credit or debit card numbers.
+

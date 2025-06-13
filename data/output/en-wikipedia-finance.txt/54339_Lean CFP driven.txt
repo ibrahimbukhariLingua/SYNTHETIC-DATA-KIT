@@ -1,0 +1,80 @@
+Lean CFP driven
+
+
+# Lean CFP driven
+
+
+
+Lean CFP (Complex Flow Production) Driven is a new approach which takes into account not only the widely implemented Lean manufacturing, but combines the principles of Lean with the Operating Curve, an approach based on the theoretical approach of queuing theory developed in academia in the 1970s. The goal of Lean CFP Driven is to eliminate waste in order to achieve higher quality, increase productivity and at the same time understand the relationship between utilization, lead time and variability in order to maximize performance within the semiconductor industry.
+
+
+## Lean CFP Driven – Lean Complex Flow Production Driven
+
+
+### Background Semiconductor industry
+
+The semiconductor industry is one of the most productive and dynamic industries in the world. It faces a continuous and rapid advancement in technology which puts the companies under constant pressure to come up with superior and cheaper goods than those that were state-of-the-art only a few months ago. The market and development of the market is based on Moore's Law or More than Moore.
+
+Customer demand in the semiconductor market evolves and changes at a swift pace which leads to the fact that a high level of flexibility is necessary to serve and meet the requirements of the customers. The semiconductor industry is furthermore very capital intensive based on the fact that the production equipment is highly complex, specialized and thus incredibly expensive. Challenges that the industry is facing are to continuously improve yield performance, achieve the highest possible return on the expensive equipment, speed and zero defects.
+
+
+### Lean CFP Driven and Traditional Lean
+
+Lean CFP Driven moves in a new direction from the traditional Lean because of the additional focus on utilization, cycle time and variability. The different characteristics of the semiconductor industry, e.g. production structure and production related costs compared to other industries, forms the need to approach the Lean philosophy in a new way in order to meet these specific characteristics.
+
+There are five key characteristics for the semiconductor industry:
+
+* Long cycle time.
+* No parallel process possible, high complexity
+* Short product life cycle.
+* Capital intensive production
+* Drastic cost decrease over time
+
+The complex production flow of a semiconductor fab is due to what is called a reentrance flow. A reentrant flow is a well-known attribute within a wafer fab and refers to the wafer visiting each tool not only once, but maybe 20 times during the course through the fab. To duplicate the expensive equipment and create a linear flow would make it even more challenging to get the highest possible return on the equipment and reach an optimized utilization of each tool, even though it results in a very complex production.
+
+The reentrant flow does require a certain level of flexibility, which in terms of Lean, could be seen as muda (Waste). The necessary flexibility, also in order to meet fluctuations in customer demand, requires the companies to apply other tools to measure and forecast performance and this is what Lean CFP Driven provides to the Semiconductor Industry. Lean CFP Driven adds the **Operating Curve** to evaluate the factors *utilization*, *cycle time* and *variability* which cannot be done through implementation of Traditional Lean.
+
+Typical tools within the Traditional Lean which are also included in the new approach of Lean CFP Driven are as follows:
+
+* Poka-Yoke
+* Visual Management
+* Value Stream Mapping
+* Kanban
+* JIT
+* 5S
+* 5 Whys
+
+What distinguishes Lean CFP Driven from the traditional approach of Lean in terms of tools is that the new approach applies the tool Operating Curve in addition to the tools listed above. An example of how the Operating Curve could look like is shown in the figure below. The optimal operating point is indicated for different variabilities describing the non-uniformity of the production, {\displaystyle \alpha }. The great advantage of adding the Operating Curve tool is to maximize performance by optimizing both utilization and speed at the same time for the complex industry of Semiconductors by reducing the variability via the 4-partner method.
+
+The Operating Curve is a tool initially developed in academia in the 1970s, based on the queuing theory, which uses the indicators Cycle Time and Utilization to benchmark and forecast a manufacturing line’s performance. The Operating Curve can be applied for different reasons, for example:
+
+* Understanding the relationship between variability, cycle time and utilization
+* Quantify trade-off between cycle time and utilization
+* Documenting a single factory’s performance over time
+* Calculate and Measure line performance
+
+The Operating curve can be described by the following formula:
+{\displaystyle FF=\alpha {\frac {UU\_{m}}{1-UU\_{m}}}+1}
+
+where :
+
+| {\displaystyle FF} | Flow Factor ranging from 0 - ∞ |
+| --- | --- |
+| {\displaystyle \alpha } | Variability describing the non-uniformity of the production (low α indicates good performance). Alpha ranges from 0-1 |
+| {\displaystyle UU\_{m}} | Utilization, ranging from 0-100% |
+
+The flow factor can also be described as:
+
+{\displaystyle FF={\frac {CT}{RPT}}}
+
+Where:
+
+| **CT** | The line’s actual cycle time |
+| --- | --- |
+| **RPT** | The theoretical minimum amount of time that a lot (production unit) would need to move from beginning to end (i.e. without queuing or process inefficiencies) |
+| **CT** | = WIP/GR |
+| **WIP** | Average Work in Process (including all products, also lots on hold) |
+| **RPT** | Maximum number of units to be processed each day |
+| **UUm** | = GR/CapaPU |
+| **CapaPU** | Capacity of the production unit |
+

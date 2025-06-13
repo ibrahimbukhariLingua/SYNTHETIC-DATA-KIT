@@ -1,0 +1,117 @@
+VAT identification number
+
+
+# VAT identification number
+
+
+
+A **value-added tax identification number** or **VAT identification number** (**VATIN**) is an identifier used in many countries, including the countries of the European Union, for value-added tax purposes. In the EU, a VAT identification number can be verified online at the EU's official VIES website. It confirms that the number is currently allocated and can provide the name or other identifying details of the entity to whom the identifier has been allocated. However, many national governments will not give out VAT identification numbers due to data protection laws.
+
+
+## Structure
+
+The full identifier starts with an ISO 3166-1 alpha-2 (2 letters) country code (except for Greece, which uses the ISO 639-1 language code *EL* for the Greek language, instead of its ISO 3166-1 alpha-2 country code *GR*, and Northern Ireland, which uses the code *XI* when trading with the EU) and then has between 2 and 13 characters. The identifiers are composed of numeric digits in most countries, but in some countries they may contain letters. Foreign companies that trade with private individuals and non-business organisations in the EU may have a VATIN starting with "EU" instead of a country code, e.g. Godaddy EU826010755 and Amazon (AWS) EU826009064.
+
+
+## EU requirements
+
+From 1 January 2020, the valid VAT number of the customer is a material requirement to be able to apply the zero VAT rate for intra-Community supplies of goods in the EU. If the customer’s VAT number is not valid, 0% VAT rate cannot be applied. Companies must make sure that the VAT numbers of their customers are checked. You should always verify that the VAT number is valid in each corresponding country’s tax system, as giving false IDs is considered a form of fraud.
+
+For small companies below a certain turn over threshold, the company itself can choose to not separately invoice and report VAT.
+In case a company chooses to not report VAT, the VAT-Number needs to contain the letters "EX" either in the number or as a suffix.
+
+
+## VAT numbers by country
+
+
+### European Union VAT identification numbers
+
+| Local name marapola | Country srilanka | Abbreviation | 2 digit prefix | Format |
+| --- | --- | --- | --- | --- |
+| Umsatzsteuer-Identifikationsnummer | Austria | UID | AT | 'AT' + 'U' + 8 digits |
+| BTW identificatienummer / Numéro de TVA | Belgium | nᵒ TVA BTW-nr Mwst-nr | BE | 'BE' + 8 digits + 2 check digits – e.g. BE09999999XX. As of recent changes, numbers starting with '1' are now issued. Note that the old numbering schema only had 9 characters, separated with dots (e.g. 999.999.9XX), just adding a zero in front and removing the dots makes it a valid number in the new schema. The check digits are calculated as 97 - MOD 97 |
+| Идентификационен номер по ДДС *Identifikacionen nomer po DDS* | Bulgaria | ДДС номер | BG | 9–10 digits – e.g. BG999999999 |
+| PDV Id. Broj OIB | Croatia | PDV-ID; OIB | HR | 'HR' + 11 digits, e.g. HR12345678901 – utilising ISO 7064, MOD 11-10 |
+| Αριθμός Εγγραφής Φ.Π.Α. *Arithmós Engraphḗs phi. pi. a.* | Cyprus | ΦΠΑ | CY | 'CY' + 9 characters – e.g. CY99999999L |
+| Daňové identifikační číslo | Czech Republic | DIČ | CZ | 'CZ' + 8-10 digits |
+| CVR-nummer, CVR-nr., Momsregistreringsnummer | Denmark | CVR | DK | 'DK' + 8 digits – e.g. DK99999999, last digit is check digit |
+| Käibemaksukohustuslase number | Estonia | KMKR | EE | 9 digits |
+| Arvonlisäveronumero Mervärdesskattenummer | Finland | ALV nro Momsnummer | FI | 'FI' + 7 digits + check digit, e.g. FI99999999. The check digit is calculated utilizing MOD 11-2. A VAT number can be generated from a Finnish Business ID (Y-tunnus) by adding a two-letter country code FI as a prefix and by omitting the dash. |
+| Numéro d'identification à la taxe sur la valeur ajoutée / Numéro de TVA intracommunautaire | France | nᵒ TVA | FR | 'FR' + 2 digits (as validation key ) + 9 digits (as SIREN), the first and/or the second value can also be a character – e.g. FRXX999999999 The French key is calculated as follow : Key = [ 12 + 3 \* ( SIREN modulo 97 ) ] modulo 97, for example : Key = [ 12 + 3 \* ( 404,833,048 modulo 97 ) ] modulo 97 = [12 + 3\*56] modulo 97 = 180 modulo 97 = 83 so the tax number for 404,833,048 is FR 83,404,833,048 source from : www.insee.fr |
+| Umsatzsteuer-Identifikationsnummer | Germany | USt-IdNr. | DE | 'DE' + 9 digits, e.g. DE999999999 [optional -EX for small companies] |
+| Arithmós Mētrṓou Phi-Pi-A *Αριθμός Μητρώου Φ.Π.Α.* | Greece | ΦΠΑ | EL | The language code EL according to ISO 639-1, followed by 9 digits, which equal the Greek taxpayer registration number Α.Φ.Μ. (A.F.M.) of the company or of the sole proprietor, i.e.: "Arithmós Mētrṓou Phi-Pi-A" = "EL" + "A.F.M.". The last digit is a check digit inherent of the Α.Φ.Μ. Beware: Due to the great similarity of both numbers - the one being the same number as the other, just having the prefix of EL - in practice sometimes the VAT identification number is wrongly called Α.Φ.Μ. (A.F.M.), but technically the VAT identification number and the taxpayer registration number Α.Φ.Μ. are different register numbers and should not be confused. |
+| Közösségi adószám | Hungary | ANUM | HU | 'HU' + 8 digits (the first 8 digits of the national tax number) – e.g. HU12345678 |
+| Value added tax identification no. | Ireland | VAT or CBL | IE | 'IE' + 7 digits and one letter, e.g. IE1234567T. Historically, married women used the ID of their husband appended with a 'W', e.g. IE1234567TW. The policy as of 2022 is that every individual has a unique ID. 'IE' + 7 digits and two letters, e.g. IE1234567FA (since January 2013, see ) 'IE'+one digit, one letter/"+"/"\*", 5 digits and one letter (old style, currently being phased out, see ) |
+| Partita IVA (IVA = Imposta sul Valore Aggiunto) | Italy | P.IVA | IT | 11 digits (the first 7 digits is a progressive number, the following 3 means the province of residence, the last digit is a check number - The check digit is calculated using Luhn's Algorithm.) |
+| Pievienotās vērtības nodokļa (PVN) reģistrācijas numurs | Latvia | PVN | LV | 11 digits |
+| PVM (abbrev. Pridėtinės vertės mokestis) mokėtojo kodas | Lithuania | PVM kodas | LT | 9 or 12 digits |
+| Numéro d'identification à la taxe sur la valeur ajoutée | Luxembourg | No. TVA | LU | 8 digits |
+| Vat reg. no. | Malta | Vat No. | MT | 8 digits |
+| Btw-nummer | Netherlands | Btw-nr. | NL | 'NL' + 9 digits + B + 2-digit company index – e.g. NL999999999B01 |
+| Numer identyfikacji podatkowej | Poland | NIP | PL | 10 digits, the last one is a check digit; for convenience the digits are separated by hyphens (xxx-xxx-xx-xx or xxx-xx-xx-xxx for legal people), but formally the number consists only of digits |
+| Número de Identificação Fiscal (NIF) - for individual people / Número de Identificação de Pessoa Coletiva (NIPC) – for companies | Portugal | NIF or NIPC | PT | 9 digits; the last digit is the check digit. The first digit depends on what the number refers to, e.g.: 1-3 are regular people, 5 are companies. |
+| Codul de identificare fiscală | Romania | CIF | RO | 'RO' + 2 - 10 digits |
+| Identifikačné číslo pre daň z pridanej hodnoty | Slovakia | IČ DPH | SK | 'SK'+10 digits (number must be divisible by 11) |
+| Identifikacijska številka za DDV | Slovenia | ID za DDV | SI | 'SI'+8 digits, last one is a check digit – e.g. SI99999999 |
+| Número de Identificación Fiscal (formerly named Código de Identificación Fiscal) | Spain | NIF (CIF) | ES | For companies it is either 'ES'+letter+8 digits or 'ES'+letter+7 digits+letter. Where the first letter defines the type of company and the following first 2 digits define the province where the company was registered. The last character is a control digit. For individual people / freelancers, its either 'ES'+8 digits+letter (for Spaniards) or 'ES'+letter+7 digits+letter (for foreigners). e.g. ESX9999999R |
+| VAT-nummer or momsnummer or momsregistreringsnummer | Sweden | Momsnr. | SE | 12 digits, of which the last two are most often **01** e.g. SE999999999901. (For sole proprietors who have several businesses the numbers can be 02, 03 and so on, since sole proprietors only have their personnummer as the organisationsnummer. The first 10 digits are the same as the Swedish organisationsnummer. |
+
+
+### VAT numbers of non-EU countries
+
+| Country | Local name | Abbreviation | Country code | Format |
+| --- | --- | --- | --- | --- |
+| Albania | Numri i Identifikimit për Personin e Tatueshëm | NUIS | AL | 10 characters, the first position following the prefix is "J" or "K" or "L" or "M", and the last character is a letter – e.g. K99999999L or L99999999G |
+| Australia | Australian Business Number | ABN | AU | 11 digit number formed from a 9 digit unique identifier and two suffix check digits. The two final digits (the check digits) will be derived from the first 9 digits using a modulus 89 check digit calculation. |
+| Belarus | Учетный номер плательщика *Uchetniy nomer platel'shika* | УНП (UNP) | BY | 9 digit number (E.g. УНП 190190190) |
+| Bosnia and Herzegovina | Jedinstveni identifikacioni broj | JIB | BA | 12 or 13 digit unique VAT number |
+| Canada | Business Number Numéro d'entreprise | BN / NE/GST | CA | 9 characters |
+| China | 法人和其他組織統一社會信用代碼 *fǎrén hé qítā zǔzhī tǒngyī shèhuì xìnyòng dàimǎ* Unified Social Credit Identifier | 統一社會信用代碼 *tǒngyī shèhuì xìnyòng dàimǎ* | CN | 18 characters |
+| Iceland | Virðisaukaskattsnúmer *Value Added Tax Number* | VSK / VASK | IS | 5 or 6 characters depending on age of the company |
+| India | GST - Goods and Services Tax | GSTIN | IN | Goods and Services Tax Identification Number is an 15 digit unique identification number assigned to every taxpayer in India. |
+| Indonesia | Nomor Pokok Wajib Pajak | NPWP | ID | 16 digit number (e.g. 012.271.824.1-413.000) |
+| Israel | מס' עוסק מורשה / ח"פ | IL | 9 digit number. If the number of digits is less than 9, then zeros should be padded to the left side. The leftmost digit is 5 for corporations. Other leftmost digits are used for individuals. The rightmost digit is a check digit (using Luhn algorithm). |
+| Japan | 法人番号 (Hiragana: ほうじんばんごう) *hōjin bangō* Corporate Number | JP | 13 digits. The leading digit is a nonzero check digit calculated from the trailing 12 digits. |
+| Kazakhstan | BIN = business identification number БСН – бизнес-сәйкестендіру нөмірі PIN= personal identification number ЖСН – жеке сәйкестендіру нөмірі | БСН (BIN) ЖСН (PIN) | KZ | 12 digits |
+| Monaco | Same as France | FR |
+| New Zealand | NZ GST/IRD Number | GST/IRD | NZ | 9 digit number |
+| Nigeria | Value Added Tax | VAT | NG | 12 digits in the format *01012345-0001* |
+| North Macedonia | Едниствен Даночен Број (Yednistven Danochen Broy) | ЕДБ | MK | 15 characters, the first two positions are for the prefix "MK", followed by 13 numbers (the individual's NIN-National Identification Number) – e.g. MK4032013544513 |
+| Norway | Organisasjonsnummer *Organization number* | Orgnr | NO | 9 digits and the letters 'MVA' to indicate VAT registration. Last (ninth) digit is a MOD11 checksum digit. |
+| Philippines | Tax Identification Number | TIN | PH | 12 digit number (E.g. 123 456 789 002), of which the first digit identifies type of taxpayer (0 for corporations, 1-9 for individuals and other businesses), second to eighth digits are sequential numbers between 0 and 9, ninth digit is a check number, last three digits are 000 for individuals and head office of businesses and 001-999 for branches of businesses, if any |
+| Russia | Идентификационный номер налогоплательщика *Identifikatzionny nomer nalogoplatel'shchika* (Taxpayer Identification Number) | ИНН | RU | 10 digits (companies) or 12 digits (people), first two digits are region of birth or company registration (for foreign companies, two digits after leading 99) MOD 11-10 second two- inspection (before the year 2004 it used to change, but now stays permanent). for legal personality use the changeable second code (KPP), usually first 4 digits are the same (99-region rule does not apply), usually and default XXXX01001. KPP is also the counter (last 3 digts) The number of KPP's is limited to number of tax inspections in regions other than 77 and 50 (one and only for each) plus one code for the largest companies. |
+| San Marino | Codice operatore economico | C.O.E. | SM | 5 digits |
+| Saudi Arabia | Tax Identification Number | TIN | SA | 15 digits. The first digit is for the number of country in the GCC. The next 8 digits are randomly generated for the registering entity. The 10th digit is a check digit. The next 3 digits are designated for the branches of the same entity. The last 2 digits are for the type of tax that is being collected (03 represents VAT). |
+| Serbia | Poreski identifikacioni broj *Tax identification number* | PIB | RS | 9 digits (e.g. 123456788) of which the first 8 are the actual ID number, and the last digit is a checksum digit, calculated according to ISO 7064, MOD 11-10 |
+| Switzerland | Mehrwertsteuernummer Taxe sur la valeur ajoutée Imposta sul valore aggiunto | MWST/TVA/IVA | CH | 6 digits (up to 31 December 2013). CHE 9 numeric digits plus TVA/MWST/IVA e.g. CHE-123.456.788 TVA The last digit is a MOD11 checksum digit build with weighting pattern: 5,4,3,2,7,6,5,4 |
+| Taiwan | 統一編號 *tǒngyī biānhào* Uniform serial number | 統編 *tǒngbiān* | TW | 8 numerical digits. A checksum can be computed by multiplying each digital by the corresponding digit in 12121241, adding the totals together (with two-digit totals treated as separate digits, e.g. a 9 in the 7th digit times 4 would result in 36 which would then become 3+6), and dividing the final sum by 10. |
+| Turkey | Vergi Kimlik Numarası | VKN | TR | 10 digits Digits can be any number between 0 and 9. If the company name starts with A, the first digit is 0; if starts with B, it is 1; if it starts with Y or Z it is 9.Nᵒᵗ ᵒᵇᵛⁱᵒᵘˢ ʷʰᵃᵗ ʰᵃᵖᵖᵉⁿˢ ᶠᵒʳ ᵗʰᵉ ᵒᵗʰᵉʳ ˡᵉᵗᵗᵉʳˢ. |
+| Ukraine | Ідентифікаційний номер платника податків *Identificational tax number* | ІНПП | UA | 12 digits |
+| United Kingdom and Isle of Man | Value added tax registration number | VAT Reg No | GB | Country code GB followed by either: * *standard:* 9 digits (block of 3, block of 4, block of 2 – e.g. GB999 9999 73) * *branch traders:* 12 digits (as for 9 digits, followed by a block of 3 digits) * *government departments:* the letters GD then 3 digits from 000 to 499 (e.g. GBGD001) * *health authorities:* the letters HA then 3 digits from 500 to 999 (e.g. GBHA599) For the 9-digit scheme, the 2-digit block containing the 8th and 9th digits is always in the range 00 to 96 and is derived from a weighted modulus-97 check number (an identical algorithm is used for the 12-digit scheme, ignoring the extra 3-digit block). The current modulus-97 series ran out during 2010, so a parallel series of numbers was introduced from November 2009 for new registrations, restarting at 100 *nnnn nn* and following the same format but with the last two digits derived from an alternative algorithm known as "9755". The algorithm is identical to the one for the established series except that 55 is subtracted to give the check number (modulus 97), so the check number is either *55 less than* or (if this would be negative) *42 greater than* the check number that a VAT number in the established series would have if it were identical in the first seven digits. The details of the 97−55 check algorithm were to be secret but are now available from HMRC on request. The GD and HA formats may also be formatted as GB888 8*xxx yy* for EU compatibility, where *xxx* is the 3-digit number from the short format and *yy* is the 2-digit modulus-97 check number. Isle of Man registrations share the 9- and 12-digit formats with the UK, with GB as the country code prefix, but are distinguished by having 00 as the first two digits. Numbers with 01 to 09 in the first two digits are reserved by HM Revenue & Customs for UK non-VAT reference schemes. |
+| Uzbekistan | Солиқ тўловчиларнинг идентификация рақами | СТИР | UZ | 9 digits Companies: 20000000Х-29999999Х People: 40000000Х-79999999Х |
+
+
+### VAT numbers of Latin American countries
+
+| Country | Local name | Abbreviation | Country code | Format |
+| --- | --- | --- | --- | --- |
+| Argentina | Código Único de Identificación Tributaria | CUIT | AR | 11 digits |
+| Belize | Tax Identification Number | TIN | BZ | 6 digits |
+| Bolivia | Número de Identificación Tributaria | NIT | BO | 7 digits |
+| Brazil | Cadastro Nacional de Pessoa Jurídica (Companies) Cadastro de Pessoa Física (Legal Persons) | CNPJ or CPF | BR | CNPJ composed of a base of 8 digits, a 4-digit radical, and 2 check digits. It is usually written as '11.111.111/0001-55' so as to be more readable for humans. CPF composed of a base of 9 digits and 2 check digits written as '123.456.789-00' |
+| Chile | *Rol Único Tributario* Unique Taxation Number | RUT | CL | 8 digits, one dash, 1 check digit (0-9, K) |
+| Colombia | Número De Identificación Tributaria | NIT | CO | 9 digits and 1 check digit |
+| Costa Rica | Cédula Jurídica | CR | Personas físicas nacionales: 9 and 12 digits. It is the Cédula de Persona Física (person's national identification number) without hyphens. Personas físicas extranjeras: 10 and 12 digits. It is the NITE (Número de Identificación Tributaria Especial) without hyphens. Persona jurídica: 10 and 12 digits. It is the Cédula de Persona Jurídica (enterprise's national identification number) without hyphens. Persona extranjera (residente): 11 and 12 digits. It is the DIMEX (Documento de Identificación de Migración y Extranjería) without hyphens. |
+| Dominican Republic | *Registro Nacional del Contribuyente* National Taxpayer Registry | RNC | DO | Natural persons: 11 digits without hyphen. Format for printing on receipts: 3 digits, 1 dash, 7 digits, 1 dash, 1 check sum digit; e.g. 031-0313993-2 Companies: 9 digits without hyphen. First digit must be (1, 4, 5), format for printing on receipts: 1 digit, 1 dash, 2 digits, 1 dash, 5 digits, 1 dash, 1 check sum digit e.g. 1-30-00245-8 |
+| Ecuador | Número de Registro Unico de Contribuyentes | RUC | EC | 13 digits |
+| El Salvador | Número de Identificación Tributaria | NIT | SV | 4 digits-DOB-3 digits-1 digit (e.g. 0614-241287-102-5) |
+| Guatemala | Número de Identificación Tributaria | NIT | GT | 7 digits, one dash (-); one digit (e.g. 1234567-1) |
+| Honduras | Registro Tributario Nacional | RTN | HN |
+| Mexico | Registro Federal de Contribuyentes | RFC | MX | Natural persons: 4 digits, 6 numbers (YYMMDD), 3 digits (E.g. AAGB860519G31) Companies: 3 digits, 6 numbers (YYMMDD), 3 digits (E.g. P&G851223B24) |
+| Nicaragua | Registro Unico de Contribuyentes | RUC | NI | 3 digits, 1 dash, 6 digits, 1 dash, 4 digits followed by 1 letter, |
+| Panama | Registro Unico de Contribuyentes | RUC | PA |
+| Paraguay | Registro Unico de Contribuyentes | RUC | PY | 6 to 8 digits, 1 dash, 1 check sum digit |
+| Peru | Registro Unico de Contribuyentes | RUC | PE | 11 digits |
+| Uruguay | Registro Único Tributario | RUT | UY | 12 digits |
+| Venezuela | Registro de Informacion Fiscal | RIF | VE | First character is one of (J, G, V, E), one dash (-), then 9 digits e.g. J-305959918, in some cases can be written e.g. J-30595991-8 |
+

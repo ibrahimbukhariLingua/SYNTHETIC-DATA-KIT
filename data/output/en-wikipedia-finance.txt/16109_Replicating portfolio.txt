@@ -1,0 +1,43 @@
+Replicating portfolio
+
+
+# Replicating portfolio
+
+
+
+In mathematical finance, a **replicating portfolio** for a given asset or series of cash flows is a portfolio of assets with the same properties (especially cash flows). This is meant in two distinct senses: **static replication**, where the portfolio has the same cash flows as the reference asset (and no changes need to be made to maintain this), and **dynamic replication**, where the portfolio does not have the same cash flows, but has the same "Greeks" as the reference asset, meaning that for small (properly, infinitesimal) changes to underlying market parameters, the price of the asset and the price of the portfolio change in the same way. Dynamic replication requires continual adjustment, as the asset and portfolio are only assumed to behave similarly at a single point (mathematically, their partial derivatives are equal at a single point).
+
+Given an asset or liability, an offsetting replicating portfolio (a "hedge") is called a **static hedge** or **dynamic hedge**, and constructing such a portfolio (by selling or purchasing) is called **static hedging** or **dynamic hedging**. The notion of a replicating portfolio is fundamental to rational pricing, which assumes that market prices are arbitrage-free – concretely, arbitrage opportunities are exploited by constructing a replicating portfolio.
+
+In practice, replicating portfolios are seldom, if ever, *exact* replications. Most significantly, unless they are claims against the same counterparties, there is credit risk. Further, dynamic replication is invariably imperfect, since actual price movements are not infinitesimal – they may in fact be large – and transaction costs to change the hedge are not zero.
+
+
+## Applications
+
+
+### Derivatives pricing
+
+Dynamic replication is fundamental to the Black–Scholes model of derivatives pricing, which assumes that derivatives can be replicated by portfolios of other securities, and thus their prices determined. See explication under Rational pricing #The replicating portfolio.
+
+In limited cases static replication is sufficient, notably in put–call parity.
+
+An important technical detail is how cash is treated. Most often one considers a self-financing portfolio, where any required cash (such as for premium payments) is borrowed, and excess cash is loaned.
+
+
+### Insurance
+
+In the valuation of a life insurance company, the actuary considers a series of future uncertain cashflows (including incoming premiums and outgoing claims, for example) and attempts to put a value on these cashflows. There are many ways of calculating such a value (such as a net premium valuation), but these approaches are often arbitrary in that the interest rate chosen for discounting is itself arbitrarily chosen.
+
+One possible approach, and one that is gaining increasing attention, is the use of *replicating portfolios* or *hedge portfolios*. The theory is that a portfolio of assets (fixed interest bonds, zero coupon bonds, index-linked bonds, etc.) can be selected with cashflows identical to the magnitude and the timing of the cashflows to be valued.
+
+For example, suppose the cash flows over a 7-year period are, respectively, $2, $2, $2, $50, $2, $2, $102. One could buy a $100 seven-year bond with a 2% annual coupon, and a four-year zero-coupon bond with a maturity value of 48. The market price of those two instruments (that is, the cost of buying this simple replicating portfolio) might be $145 – and therefore the value of the cashflows is also taken to be $145 (as opposed to the face value of the total cash flows at the conclusion of the 7 years, which is $162). Such a construction, which requires only fixed-income securities, is even possible for participating contracts (at least when bonuses are based on the performance of the backing assets). The proof relies on a fixed point argument.
+
+Advantages of a static replicating portfolio approach include:
+
+* an arbitrary discount rate is not required.
+* the term structure of interest rates is automatically taken into account.
+
+Valuing options and guarantees can require complex nested stochastic calculations. Replicating portfolios can be set up to replicate such options and guarantees. It may be easier to value the replicating portfolio than to value the underlying feature (options and guarantees).
+
+For example, bonds and equities can be used to replicate a call option. The call option can then be easily valued as the value of the bond/equity portfolio, hence not requiring one to value the call option directly.
+

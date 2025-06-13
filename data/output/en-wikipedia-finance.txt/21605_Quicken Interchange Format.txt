@@ -1,0 +1,197 @@
+Quicken Interchange Format
+
+
+# Quicken Interchange Format
+
+
+
+**Quicken Interchange Format** (**QIF**) is an open specification for reading and writing financial data to media (i.e. files).
+
+
+## Background
+
+Although still widely used, QIF is a format older than Open Financial Exchange (OFX). The inability to reconcile imported transactions against the current account information is one of the primary shortcomings of QIF.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ Most personal money management software, such as Microsoft Money, GnuCash and Quicken's low end products (e.g. Quicken Personal and Quicken Personal Plus), can read QIF files to import information. Intuit's Quicken used to be able to import QIF, too, but with its 2006 version it dropped that support for several important account types, including checking, savings, and credit card accounts. The Australian version of Quicken still allows the importing of QIF files for these account types. However, unlike the American version, it is not possible to export data to QIF or any other file type for any account type. The QIF format does not allow a user to mark the currency in which a transaction was completed. In some cases this may cause problems for users who do use multiple currencies when they export or import into another software package.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+Quicken's proposed replacement for the QIF format has been the proprietary Quicken Web Connect (QFX) format.
+It is commonly supported by financial institutions to supply downloadable information to account holders, especially by banks that support integration of Money or Quicken with their online banking. Not everybody, however, was, or is, happy with this replacement. Some banks dislike it because Quicken (Intuit) charges licensing fees to use QFX. Other banks pass the fees on by charging customers for downloading QFX files. Because Microsoft Money imports either QIF or OFX format files, and Microsoft does not charge banks any licensing fees to use OFX for Money, banks do not normally charge for downloading QIF and OFX files. (QIF and OFX are open formats, free for anyone to use.)
+
+
+## Data format
+
+A QIF file typically has the following structure:
+
+Each record ends with a **`^`** (caret). All the data in the file is stored in ASCII strings, and the file could be edited in any text editor.
+
+
+### Header line
+
+The first line in the file must be a header line, to identify the type of data contained. Valid values for accounts are:
+
+| Code | Description |
+| --- | --- |
+| !Type:Cash | Cash Flow: Cash Account |
+| !Type:Bank | Cash Flow: Checking & Savings Account |
+| !Type:CCard | Cash Flow: Credit Card Account |
+| !Type:Invst | Investing: Investment Account |
+| !Type:Oth A | Property & Debt: Asset |
+| !Type:Oth L | Property & Debt: Liability |
+| !Type:Invoice | Invoice (Quicken for Business only) |
+
+There are also values for QIF files of internal Quicken information:
+
+| Code | Description |
+| --- | --- |
+| !Account N*Account Name* T*Account Type* D*Account Description* | Account list or which account follows |
+| !Type:Cat N*Category Name* D*Category description* | Category list |
+| !Type:Class | Class list |
+| !Type:Memorized | Memorized transaction list |
+
+A header line is **not** followed by a separator line; it is immediately followed by the first field of a detail item.
+
+
+### Detail items
+
+The Detail section consists of several Detail Items, each on a separate line. Each line begins with a single character identifying code in the first column, followed by the literal data for that field. The detail item is terminated by a separator line. The fields can be in any order (except that within split transactions, the category, amount, and memo must be adjacent). If a single transaction block contains several detail items with same code, the last row is used for import.
+
+Standard detail item
+
+| Code | Description | Used In | Example |
+| --- | --- | --- | --- |
+| D | Date. Leading zeroes on month and day can be skipped. Year can be either 4 digits or 2 digits or '6 (=2006). | All | D25 December 2006 |
+| T | Amount of the item. For payments, a leading minus sign is required. For deposits, either no sign or a leading plus sign is accepted. Do not include currency symbols ($, £, ¥, etc.). Comma separators between thousands are allowed. For investment transactions, this amount is always a positive number, even for Buy and CvrShrt transactions. | All | T-1,234.50 |
+| U | Seems identical to T field (amount of item.) Both T and U are present in QIF files exported from Quicken 2015. | All | U-1,234.50 |
+| M | Memo—any text you want to record about the item. | All | Mgasoline for my car |
+| C | Cleared status. Values are blank (unreconciled/not cleared), "\*" or "c" (cleared) and "X" or "R" (reconciled). | All | CR |
+| N | Number of the check. Can also be "Deposit", "Transfer", "Print", "ATM", "EFT". | Banking, Splits | N1001 |
+| P | Payee. Or a description for deposits, transfers, etc. | Banking, Investment | PStandard Oil, Inc. |
+| A | Address of Payee. Up to 5 address lines are allowed. A 6th address line is a message that prints on the check. 1st line is normally the same as the Payee line—the name of the Payee. | Banking, Splits | A101 Main St. |
+| L | Category or Transfer and (optionally) Class. The literal values are those defined in the Quicken Category list. SubCategories can be indicated by a colon (":") followed by the subcategory literal. If the Quicken file uses Classes, this can be indicated by a slash ("/") followed by the class literal. For Investments, MiscIncX or MiscExpX actions, Category/class or transfer/class. (40 characters maximum) | Banking, Splits | LFuel:car |
+| F | Flag this transaction as a reimbursable business expense. | Banking | F??? |
+| S | Split category. Same format as L (Categorization) field. (40 characters maximum) | Splits | Sgas from Esso |
+| E | Split memo—any text to go with this split item. | Splits | Ework trips |
+| $ | Amount for this split of the item. Same format as T field. | Splits | $1,000.50 |
+| % | Percent. Optional—used if splits are done by percentage. | Splits | %50 |
+| N | Investment Action (Buy, Sell, etc.). | Investment | NBuy |
+| Y | Security name. | Investment | YIDS Federal Income |
+| I | Price. | Investment | I5.125 |
+| Q | Quantity of shares (or split ratio, if Action is StkSplit). For investment transactions, this amount is always a positive number, even for Sell and ShtSell transactions. | Investment | Q4,896.201 |
+| O | Commission cost (generally found in stock trades) | Investment | O14.95 |
+| $ | Amount transferred, if cash is moved between accounts | Investment | $25,000.00 |
+| B | Budgeted amount - may be repeated many times for monthly budgets. | Categories | B85.00 |
+| X | Extended data for Quicken Business. Followed by a second character subcode (see below) followed by content data. | Invoices | XI3 |
+| XA | Ship-to address | Invoices | XAATTN: Receiving |
+| XI | Invoice transaction type: 1 for invoice, 3 for payment | Invoices | XI1 |
+| XE | Invoice due date | Invoices | XE6/17' 2 |
+| XC | Tax account | Invoices | XC[\*Sales Tax\*] |
+| XR | Tax rate | Invoices | XR7.70 |
+| XT | Tax amount | Invoices | XT15.40 |
+| XS | Line item description | Invoices | XSRed shoes |
+| XN | Line item category name | Invoices | XNSHOES |
+| X# | Line item quantity | Invoices | X#1 |
+| X$ | Line item price per unit (multiply by X# for line item amount) | Invoices | X$150.00 |
+| XF | Line item taxable flag | Invoices | XFT |
+
+Investment Actionsᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+| Investment Action | Description |
+| --- | --- |
+| Buy | Buy a security with cash in the account |
+| BuyX | Buy a security with cash transferred from another account |
+| Cash |
+| ContribX | Cash transferred into an account from another account. (The other side of WithdrwX.) |
+| WithdrwX | Cash transferred out of an account into another account. (The other side of ContribX.) |
+| ExercisX | Exercise stock options with cash transferred from another account |
+| Exercise | Exercise stock options |
+| Expire | Expiration of stock options |
+| Grant | Grant of stock options |
+| Vest | Vesting of stock options |
+| Sell | Sell a security with proceeds received in the account |
+| SellX | Sell a security and transfer the proceeds to another account |
+| ShtSell | Sell a security in a short sale transaction and deposit sale proceeds in the account |
+| CvrShrt | Buy back a security sold short to close the position with cash in the account |
+| CGLong | Long-term capital gains distribution received in the account |
+| CGLongX | Long-term capital gains distribution transferred to another account |
+| CGMid | Medium-term capital gains distribution received in the account |
+| CGMidX | Medium-term capital gains distribution transferred to another account |
+| CGShort | Short-term capital gains distribution received in the account |
+| CGShortX | Short-term capital gains transferred to another account |
+| Div | Dividend received in the account |
+| DivX | Dividend transferred to another account |
+| IntInc | Interest Income received in the account |
+| IntIncX | Interest Income transferred to another account |
+| ReinvDiv | Dividend reinvested in additional shares of the security |
+| ReinvInt | Interest Income reinvested in additional shares of the security |
+| ReinvLg | Long-term capital gains reinvested in additional shares of the security |
+| ReinvMd | Medium-term capital gains reinvested in additional shares of the security |
+| ReinvSh | Short-term capital gains reinvested in additional shares of the security |
+| Reprice | Reprice employee stock options |
+| XIn | Cash transferred into the account |
+| XOut | Cash transferred out of the account |
+| MiscExp | Miscellaneous expense |
+| MiscExpX | Miscellaneous expense covered by another account |
+| MiscInc | Miscellaneous income, optionally associated with a security |
+| MiscIncX | Miscellaneous income, optionally associated with a security, transferred to another account |
+| MargInt | Interest paid on a margin loan received in the account |
+| MargIntX | Interest paid on a margin loan transferred from another account |
+| RtrnCap | Return of capital received in the account |
+| RtrnCapX | Return of capital transferred to another account |
+| StkSplit | Change in the number of shares as a result of a stock split. |
+| ShrsOut | Removal of shares from an account |
+| ShrsIn | Addition of shares into an account |
+
+**Notes**
+
+* The S, E, $, and % fields are repeated for each split of this transaction.
+* For investment action codes that end in X, the Category field indicates the other account used to transfer cash from or to.
+* If the line immediately following an XS record does not begin with ^ or X, that is considered a continuation of the XS record.
+
+All the fields in detail items are optional—if not included, that field will be left blank in the imported transaction. Also, Quicken seems to do little error checking on these items; if the same field is included twice in the detail item, the second one will just overwrite the first one.
+
+
+### Record end
+
+The separator line signals the end of the current transaction. The last detail item in the file should end with a separator line.
+
+| Code | Description |
+| --- | --- |
+| ^ | A single caret in the first column, and the rest of the line blank. |
+
+
+## Export workarounds for QuickBooks: exporting to QIF
+
+QuickBooks doesn't allow exporting to QIF. Only the Intuit Interchange Format (IIF) is supported. An IIF to QIF converter will not solve the problem either, as journal entries can't be exported in IIF format, only lists are exportable. A viable way to overcome this problem is to set up a journal report, to show all journal entries. Print the report using the "print to file" option. Set the file type to Excel before printing. Rename the extension of the resulting file from PRN to CSV. Use this XL2QIF Excel macro to convert to QIF. The Excel file may need to be reorganized to generate the appropriate format for the macro to work, such as separating cheque accounts from term deposits, etc. The above referenced Excel macro supports split transactions.
+
+See references for further examples of reporting to excel
+
+
+## Import workarounds for Quicken 2005+: importing from QIF
+
+While Intuit officially only supports QIF importing on asset, liability, cash, small business payable, and invoice accounts, Quicken will still allow you to import transactions using QIF into any account type. Two methods are explained below:
+
+
+### Indirect (Temporary cash account) method
+
+Note: If you really need to get data from a QIF file into an account that does not support QIF imports (e.g. Quicken 2005 and later), you can import from the QIF file into a (temporary) Cash account. Make sure the first line in the QIF file says "!Type:Cash" for importing it into a Quicken Cash account. (QIF files can be edited in any text editor.) After importing the transactions, you can copy/paste them into a register of your choice. Tested in 2006 version. Note that you cannot copy cash transactions into brokerage accounts in Quicken 2007.
+
+
+### Direct method
+
+To import transactions into brokerage accounts (or any account), a little text editing is necessary. Ensure to prefix your transaction data by copying-and-pasting the top four lines from the example below - the example is for an investment transaction:
+
+Line 2 (N) in the example must contain the exact name of the account you are intending to import into. If you use an account name that does not exist, Quicken will ask if you want to create a new account (This functionality has been test in Quicken 2012). When importing the file, the account you choose in the QIF-import-dialog box is irrelevant (you can even choose "all accounts") - once you begin the import process, the application will prompt to confirm importing to the intended account. In order to be successfully read by Quicken the text file must be saved in ANSI format. Files saved in UTF-8 format will not be correctly processed.
+
+The example above was tested in Quicken 2007, Quicken 2008, Quicken 2010, Quicken 2012, Quicken 2015 and an equivalently formatted text file using "TCCard" instead of "TInvst" under Quicken 2011.
+
+If the transactions are being imported into an existing account, make sure to reconcile the account in the old data file before creating the QIF export file. Before accepting an import, validate any 'Match' transactions and change to 'New' where there isn't really a match. Quicken can match on amounts even when the dates are significantly different.
+
+When editing the QIF file, check for any transaction Category (the field starting with 'L') for an account name contained in brackets, such as [Checking Account]. The brackets reference another quicken account, and if left in place will post a transaction in that account in addition to the account being imported to, with potentially troublesome results. Avoid this by removing the text including the brackets and replacing with another category if desired. The only exception to this is an opening balance transaction, identified by 'Opening Balance' in the 'P' field (POpening Balance). In this case, the brackets need to be left in place, and the account name between the brackets must exactly match the account name in the 'N' field.
+
+The above two paragraphs are based on exporting and importing in Quicken 2010.
+
+
+## Sample Account Export
+
+An account with the following five transactions shown in the screenshot below was exported to a qif file. The content of that file is shown immediately beneath with commentary to the right of the transactions to better pair them against the table generated from an Account Transactions report of the sample account.
+
+**QIF File Content**
+

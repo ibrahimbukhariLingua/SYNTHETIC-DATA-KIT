@@ -1,0 +1,36 @@
+Individual Master File
+
+
+# Individual Master File
+
+
+
+The **Individual Master File** (**IMF**) is the system currently used by the United States Internal Revenue Service (IRS) to store and process tax submissions and used as the main data input to process the IRS's transactions. It is a running record of all of a person's individual tax events including refunds, payments, penalties and tax payer status. It is a batch-driven application that uses VSAM files.
+
+Written in assembly language and COBOL, the IMF was originally created by IBM for the IRS in the 1960s to run with an IBM System/360 and associated tape storage system. The IMF is frequently identified as a legacy system in need of modernization.
+
+
+## Description
+
+The IMF stores an individual's name, taxpayer identification number, address, income, deductions, credits, payments received, refunds issued and taxes dismissed.
+
+The IMF stores over 100 million Americans individual taxpayers' data.
+
+The IMF application is a system consisting of a series of batch runs, data records and files. The IMF system receives individual tax submissions in electronic format and processes them through a pre-posting phase. It then posts and analyzes the transactions which produces output in the form of Refund Data, Notice Data, Reports and information feeds to other entities and departments.
+
+
+## Age
+
+The IMF system began operation in the 1960s and is still used today, and is considered well overdue for modernization. Portions of the system are programmed in COBOL and others directly in assembly language. In a 2018 report to Congress, the Government Accountability Office identified the IMF and other IT systems at the IRS as "facing significant risks due to their reliance on legacy programming languages, outdated hardware, and a shortage of human resources with critical skills".
+
+The IMF and other legacy systems have been named as obstacles that prevent the IRS from acting quickly in exigent circumstances. In the weeks following the passage of the Coronavirus Aid, Relief, and Economic Security Act, the IRS attempted to rapidly disburse tens of millions of one-time economic stimulus payments, requiring code changes to the IMF and the creation of an associated online interface for taxpayers to view and update their payment information. However, the effort was only partially successful as many taxpayers received the wrong payment amount or were unable to view their payment status.
+
+There have also been multiple hardware failures at key times, including one which occurred on 17 April 2018 during the end of tax season.
+
+
+## Replacement
+
+The Customer Account Data Engine (CADE) is intended to replace the IMF system in day-to-day use. Work on the original CADE was begun in 2000 and stopped in 2009. The original CADE is in active use; for instance, in 2009, it was used to process over 40 million tax returns.
+
+In 2009, work began on CADE 2, with an initial planned implementation date of 2014 for major functionality. However, CADE 2's major functionality is not expected to be used until 2023 (as of 2021)ⁿᵉᵉᵈˢ ᵘᵖᵈᵃᵗᵉ and the full system is not expected to be implemented until 2030.
+

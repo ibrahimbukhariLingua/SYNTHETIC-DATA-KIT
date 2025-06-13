@@ -1,0 +1,61 @@
+Lightning Network
+
+
+# Lightning Network
+
+
+
+The **Lightning Network** (LN) is a payment protocol built on the bitcoin blockchain. It is intended to enable fast transactions among participating nodes (independently run members of the network) and has been proposed as a solution to the bitcoin scalability problem.
+
+
+## History
+
+Joseph Poon and Thaddeus Dryja published a Lightning Network white paper in February 2015.
+
+Lightning Labs launched the Lightning Network in 2018 with the goal of reducing the cost and time required for cryptocurrency transaction. Specifically, the bitcoin blockchain can only process around 7 transactions per second (compared to Visa Inc., which can process around 24,000 transactions per second). Despite initial enthusiasm for the Lightning Network, reports on social media of failed transactions, security vulnerabilities, and over-complication lead to a decline in interest.
+
+On January 19, 2019, pseudonymous Twitter user hodlonaut began a game-like promotional test of the Lightning Network by sending 100,000 satoshis (0.001 bitcoin) to a trusted recipient where each recipient added 10,000 satoshis ($0.34 at the time) to send to the next trusted recipient. The "lightning torch" payment reached notable personalities including former Twitter A.K.A X CEO Jack Dorsey, Litecoin Creator Charlie Lee, Lightning Labs CEO Elizabeth Stark, and Binance CEO "CZ" Changpeng Zhao, among others.
+
+
+## Design
+
+Andreas Antonopoulos calls the Lightning Network a second layer routing network. The payment channels allow participants to transfer money to each other without having to make all their transactions public on the blockchain. This is secured by penalizing uncooperative participants. When opening a channel, participants must commit an amount on the blockchain (a *funding transaction*). Time-based script extensions like CheckSequenceVerify and CheckLockTimeVerify make the penalties possible.
+
+Transacting parties use the Lightning Network by opening a payment channel and transferring (committing) funds to the relevant layer-1 blockchain (e.g. bitcoin) under a smart contract. The parties then make any number of off-chain Lightning Network transactions that update the tentative distribution of the channel's funds, without broadcasting to the blockchain. Whenever the parties have finished their transaction session, they close the payment channel, and the smart contract distributes the committed funds according to the transaction record.
+
+To initiate closing, one node first broadcasts the current state of the transaction record to the network, including a proposed settlement, a distribution of the committed funds. If both parties confirm the proposal, the funds are immediately paid on-chain. The other option is uncooperative closure, for example if one node has dropped from the network, or if it is broadcasting an incorrect (possibly fraudulent) transaction state. In this case settlement is delayed during a dispute period, when nodes may contest the proposal. If the second node broadcasts a more up-to-date timestamped distribution, including some transactions omitted by the first proposal, then all committed funds are transferred to the second node: this punitive *breach remedy transaction* thwarts attempts to defraud the other node by broadcasting out-of-date transactions.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+
+## Implementations
+
+
+### Benefits
+
+According to bitcoin advocate Andreas Antonopoulos, the Lightning Network provides several advantages over on-chain transactions:
+
+* Granularity – According to Andreas Antonopoulos, some implementations of the Lightning Network allow for payments that are smaller than a satoshi, the smallest unit on the base layer of bitcoin.
+* Privacy – Lightning network payments may be routed through many sequential channels where each node operator will be able to see payments across their channels, but they will not be able to see the source nor destination of those funds if they are non-adjacent.
+* Speed – Settlement time for lightning network transactions is under a minute and can occur in milliseconds. Confirmation time on the bitcoin blockchain, for comparison, occurs every ten minutes, on average.
+* Transaction throughput – There are no fundamental limits to the amount of payments per second that can occur under the protocol. The amount of transactions are only limited by the capacity and speed of each node.
+
+### Limitations
+
+The Lightning Network is made up of bidirectional payment channels between two nodes which combined create smart contracts. If at any time either party drops the channel, the channel will close and be settled on the blockchain. The on-chain transactions required to open and close lightning channels limit the scaleability of the lightning network. This can be mitigated if multiple users that trust each other share a lightning node.
+
+Lightning Network's dispute mechanism requires all users to watch the blockchain constantly for fraud. This vigilance can be outsourced to *watchtower* nodes, trusted providers who are paid to monitor for fraud. A period of 24 hours is allotted to create a bidirectional channel after receiving a request.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+
+### Routing
+
+In the event that a bi-directional payment channel is no longer open between the transacting parties, the payment must be routed through network intermediaries via an onion routing technique similar to Tor. This requires that the sender and receiver of the payment have open channels with enough established peer nodes to find a path for the payment.
+
+
+## Wallets
+
+Currently the LN is supported in Electrum, Cash App, ACINQ Phoenix, Blue Wallet and others.
+
+
+## Use cases
+
+Laszlo Hanyecz, famous for paying 10,000 BTC for two pizzas in 2010, bought two more pizzas in 2018 via Lightning Network for 0.00649 BTC.
+

@@ -1,0 +1,94 @@
+FCAPS
+
+
+# FCAPS
+
+
+
+**FCAPS** is the ISO Telecommunications Management Network model and framework for network management. *FCAPS* is an acronym for **fault, configuration, accounting, performance, security**, the management categories into which the ISO model defines network management tasks. In non-billing organizations *accounting* is sometimes replaced with *administration*.
+
+
+## Background
+
+The ISO, under the direction of the OSI group, has created a network management model as the primary means for understanding the major functions of network management systems. The model in question is interchangeably called either the *OSI network management model* or *ISO network management model* so the full name could be the *OSI/ISO network management model*.
+
+The comprehensive management of an organization's information technology (IT) infrastructure is a fundamental requirement. Employees and customers rely on IT services where availability and performance are mandated, and problems can be quickly identified and resolved. Mean time to repair (MTTR) must be as short as possible to avoid system downtimes where a loss of revenue or lives is possible.
+
+
+## History
+
+In the early 1980s the term FCAPS was introduced within the first Working Drafts (N1719) of ISO 10040, the Open Systems Interconnection (OSI) Systems Management Overview (SMO) standard. At that time the intention was to define five separate protocol standards, one for each functional area. Since initial experiences showed that these protocols would become very similar, the ISO working group responsible for the development of these protocols (ISO/TC97/SC16/WG4, later renamed into ISO-IEC/JTC1/SC21/WG4) decided to create a single protocol for all five areas instead. This protocol is called common management information protocol (CMIP). In the 1990s the ITU-T, as part of their work on Telecommunications Management Network (TMN), further refined the FCAPS as part of the TMN recommendation on Management Functions (M.3400). The idea of FCAPS turned out to be very useful for teaching network management functions; most textbooks therefore start with a section that explains the FCAPS.
+
+
+## The five areas of function of the model
+
+The OSI network management model categorizes five areas of function, sometimes referred to as the "FCAPS model:" FCAPS can be seen as the predecessor of the newer FAB model defined in the Business Process Framework (eTOM). FAB is short for fulfillment, assurance, billing. As guideline, you can map the two models as follows:
+
+FCAPS and ISO (FAB) models
+| FCAPS | FAB |
+| --- | --- |
+| Fault | Assurance |
+| Configuration | Fulfillment |
+| Accounting | Billing |
+| Performance | Assurance |
+| Security | Fulfillment |
+
+The FCAPS model can be seen as bottom-up or network-centric. The FAB model looks at the processes more from top-down, is customer/business-centric. The two standards that have emerged are Simple Network Management Protocol (SNMP) by IETF and Common Management Information Protocol (CMIP) by ITU-T.
+
+
+## Fault management
+
+A fault is an event that has a lot of significance. The goal of fault management is to recognize, isolate, correct and log faults that occur in the network. Furthermore, it uses trend analysis to predict errors so that the network is always available. This can be established by monitoring different things for abnormal behavior.
+
+When a fault or event occurs, a network component will often send a notification to the network operator using either a proprietary or open protocol such as SNMP (such as WhatsUp Gold, HP OpenView or Sun Solstice–formerly Net Manager), to collect information about network devices or at least write a message to its console for a console server to catch and log/page. In turn, the management station can be configured to make a network administrator aware of problems (by email, paging, or on-screen messages), allowing appropriate action to be taken. This notification is supposed to trigger manual or automatic activities. For example, the gathering of more data to identify the nature and severity of the problem or to bring backup equipment on-line.
+
+Fault logs are one input used to compile statistics to determine the provided service level of individual network elements, as well as sub-networks or the whole network. They are also used to determine apparently fragile network components that require further attention. Errors primarily occur in the areas of fault management and configuration management.
+
+Network elements produce alarms (also known as "traps" or "indications") that are monitored by a Fault management system. This function is known as alarm surveillance. Fault management systems include HP Network Node Manager i, IBM Tivoli, EMC Smarts, CA Spectrum, NetIQ, TTI Telecom Netrac, Objective Systems Integrators NETeXPERT, opEvents by Opmantek, Centina's vSure, Infosim StableNet, iReveal, ERAMON etc. Fault isolation tools like Delphi are also available, which are basically used to isolate the fault in any telecom network. A Fault management system is usually the primary feature of a network operations center.
+
+
+## Configuration management
+
+The goals of configuration management include:
+
+* to gather and store configurations from network devices (this can be done locally or remotely).
+* to simplify the configuration of the device
+* to track changes that are made to the configuration
+* to configure ('provision') circuits or paths through non-switched networks
+* to plan for future expansion and scaling
+
+Configuration management is concerned with monitoring system configuration information, and any changes that take place. This area is especially important, since many network issues arise as a direct result of changes made to configuration files, updated software versions, or changes to system hardware. A proper configuration management strategy involves tracking all changes made to network hardware and software. Examples include altering the running configuration of a device, updating the OS version of a router or switch, or adding a new modular interface card. While it is possible to track these changes manually, a more common approach is to gather this information using configuration management software, such as CiscoWorks 2000, HP Network Automation, ERAMON and Infosim. Opmantek and WhatsUp Gold uses Simple Network Management Protocol and Windows Management Instrumentation to collect application performance management, configuration management and infrastructure management information. Open source solutions are also available like Open-AudIT.
+
+
+## Accounting management
+
+The goal is to gather usage statistics for users.
+
+Accounting management is concerned with tracking network utilization information, such that individual users, departments, or business units can be appropriately billed or charged for accounting purposes. While this may not be applicable to all companies, in many larger organizations, the IT department is considered a cost center that accrues revenues according to resource utilization by individual departments or business units.
+For non-billed networks, "administration" replaces "accounting". The goals of administration are to administer the set of authorized users by establishing users, passwords, and permissions, and to administer the operations of the equipment such as by performing software backup and synchronization.
+
+Accounting is often referred to as billing management. Using the statistics, the users can be billed and usage quotas can be enforced. These can be disk usage, link utilization, CPU time, etc.
+
+
+## Performance management
+
+Performance management is focused on ensuring that network performance remains at acceptable levels. It enables the manager to prepare the network for the future, as well as to determine the efficiency of the current network, for example, in relation to the investments done to set it up. The network performance addresses the throughput, network response times, packet loss rates, link utilization, percentage utilization, error rates and so forth.
+
+This information is usually gathered through the implementation of an SNMP management system, either actively monitored, or configured to alert administrators when performance moves above or below predefined thresholds. Actively monitoring current network performance is an important step in identifying problems before they occur, as part of a proactive network management strategy. By collecting and analysing performance data, the network health can be monitored. Trends can indicate capacity or reliability issues before they affect services. Also, performance thresholds can be set in order to trigger an alarm. The alarm would be handled by the normal fault management process (see above). Alarms vary depending upon the severity of the problem. Tivoli Netcool/Proviso by IBM, CA Performance Management by CA Technologies, opEvents by Opmantek and SolarWinds are some of the products used for performance monitoring.
+
+
+## Security management
+
+Security management is the process of controlling access to assets in the network. Data security can be achieved mainly with authentication and encryption. Authorization to it configured with OS and DBMS access control settings.
+
+Security management is not only concerned with ensuring that a network environment is secure, but also that gathered security-related information is analyzed regularly. Security management functions include managing network authentication, authorization, and auditing, such that both internal and external users only have access to appropriate network resources. Other common tasks include the configuration and management of network firewalls, intrusion detection systems, and security policies (such as access lists). Network elements keep log files, which are examined during a security audit. Many telecommunications network elements produce a security alarm when a security violation is suspected. This will be monitored along with all other alarms in the normal alarm surveillance function of fault management. Technicians in a network operations center will see this immediately and take appropriate action.
+
+
+## Network management system
+
+In terms of the network management model, a **network management station** (**NMS**) is one that executes network management applications (NMAs) that monitor and control network elements (NE) such as hosts, gateways and terminal servers.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ These network elements use a management agent (MA) to perform the network management functions requested by the network management stations. The Simple Network Management Protocol (SNMP) is used to communicate management information between the network management stations and the agents in the network elements. NMS is described in RFC 1157 "A Simple Network Management Protocol".
+
+An NMS provides FCAPS functionality for the whole network. FCAPS: Fault, Configuration, Accounting, Performance, Security, are the categories defined by the ISO model. In non-billing organizations accounting is sometimes replaced with administration.
+
+Looking into the industry aspects, there are various players in the market like Nokia - NetAct, IBM - NetCool or Opmantek. Open source NMS solutions are also available like NMIS or OpenNMS.
+

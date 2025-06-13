@@ -1,0 +1,223 @@
+XBRL
+
+
+# XBRL
+
+
+
+| Part of a series on |
+| --- |
+| Accounting |
+| * Constant purchasing power * Historical cost * Management * Tax |
+| Major types * Audit * Budget * Cost * Forensic * Financial * Fund * Governmental * Management * Social * Tax |
+| Key concepts * Accounting period * Accrual * Constant purchasing power * Economic entity * Fair value * Going concern * Historical cost * Matching principle * Materiality * Revenue recognition * Unit of account |
+| Selected accounts * Assets * Cash * Cost of goods sold * Depreciation / Amortization (business) * Equity * Expenses * Goodwill * Liabilities * Profit * Revenue |
+| Accounting standards * Generally-accepted principles * Generally-accepted auditing standards * Convergence * International Financial Reporting Standards * International Standards on Auditing * Management Accounting Principles |
+| Financial statements * Annual report * Balance sheet * Cash-flow * Equity * Income * Management discussion * Notes to the financial statements |
+| Bookkeeping * Bank reconciliation * Debits and credits * Double-entry system * FIFO and LIFO * Journal * Ledger / General ledger * Trial balance |
+| Auditing * Financial * Internal * Firms * Report * Sarbanes–Oxley Act |
+| People and organizations * Accountants * Accounting organizations * Luca Pacioli |
+| Development * History * Research * Positive accounting * Sarbanes–Oxley Act |
+| Misconduct * Creative * Earnings management * Error account * Hollywood * Off-balance-sheet * Two sets of books |
+| * v * t * e |
+
+**XBRL** (**eXtensible Business Reporting Language**) is a freely available global framework for exchanging business information. XBRL allows the expression of semantics commonly required in business reporting. The standard was originally based on XML, but now additionally supports reports in JSON and CSV formats, as well as the original XML-based syntax. XBRL is also increasingly used in its Inline XBRL variant, which embeds XBRL tags into an HTML document. One common use of XBRL is the exchange of financial information, such as in a company's annual financial report. The XBRL standard is developed and published by XBRL International, Inc. (XII).
+
+XBRL is a standards-based way to communicate and exchange business information between business systems. These communications are defined by metadata set out in taxonomies, which capture the definition of individual reporting concepts as well as the relationships between concepts and other semantic meaning. Information being communicated or exchanged is provided within an XBRL instance.
+
+Early users of XBRL included regulators such as the U.S. Federal Deposit Insurance Corporation and the Committee of European Banking Supervisors (CEBS). Common functions in many countries that make use of XBRL include regulators of stock exchanges and securities, banking regulators, business registrars, revenue reporting and tax-filing agencies, and national statistical agencies.
+
+A list of known XBRL projects is published by XBRL International. Within the last ten years, the Securities and Exchange Commission (SEC), the United Kingdom's HM Revenue and Customs (HMRC), and Singapore's Accounting and Corporate Regulatory Authority (ACRA), had begun to require companies to use it, and other regulators were following suit. Development of the SEC's initial US GAAP Taxonomy was led by XBRL US and was accepted and deployed for use by public companies in 2008 in phases, with the largest filers going first: foreign companies which use International Financial Reporting Standards (IFRS) are expected to submit their financial returns to the SEC using XBRL once the IFRS taxonomy has been accepted by the SEC. In the UK in 2011, both HMRC and Companies House accepted XBRL in the iXBRL format. XBRL was adopted by the Ministry of Corporate Affairs (MCA) of India for filing financial and costing information with the Central Government.
+
+
+## Specification
+
+The current version of the base XBRL specification is 2.1, with errata corrections.
+
+The current version of the Inline XBRL specification is 1.1
+
+Conformance suites are available to test processors of XBRL and Inline XBRL documents.
+
+
+## XBRL document structure
+
+In typical usage, XBRL consists of an *XBRL instance*, containing primarily the business facts being reported, and a collection of taxonomies (called a Discoverable Taxonomy Set (DTS)), which define metadata about these facts, such as what the facts mean and how they relate to one another. XBRL uses XML Schema, XLink, and XPointer standards.
+
+
+### XBRL Instance
+
+The XBRL instance begins with the <xbrl> root element. There may be more than one XBRL instance embedded in a larger XML document. Xbrl Instance is also known as XBRL file. The XBRL instance itself holds the following information:
+
+* *Business Facts* – facts can be divided into two categories
+ + *Items* are facts holding a single value. They are represented by a single XML element with the value as its content.
+ + *Tuples* are facts holding multiple values. They are represented by a single XML element containing nested Items or Tuples.
+
+In the design of XBRL, all Item facts must be assigned a context.
+
+* *Contexts* define the entity, e.g., company or individual, to which the fact applies, the period of time the fact is relevant, and an optional scenario. Date and time information appearing in the period element must conform to ISO 8601. Scenarios provide further contextual information about the facts, such as whether the business values reported are actual, projected, or budgeted.
+* *Units* define the units used by numeric or fractional facts within the document, such as USD, shares. XBRL allows more complex units to be defined if necessary. Facts of a monetary nature must use a unit from the ISO 4217 namespace.
+* *Footnotes* use XLink to associate one or more facts with some content.
+* *References* to XBRL taxonomies, typically through schema references. It is also possible to link directly to a linkbase.
+
+This is an example of a fictitious Dutch company's International Financial Reporting Standards (IFRS) statement instance file :
+
+
+### XBRL Taxonomy
+
+An XBRL Taxonomy is a collection of taxonomy schemas and linkbases. A taxonomy schema is an XML schema document (file). Linkbases are XML documents (file) which follow the XLink specification. The schema must ultimately extend the XBRL instance schema document and typically extend other published XBRL schemas on the xbrl.org website.
+
+* *Taxonomy schemas* define Item and Tuple "concepts" using <xsd:element> elements. Concepts provide names for the fact and indicate whether or not it is a tuple or an item, the data type (such as monetary, numeric, fractional, or textual), and potentially more metadata. Items and Tuples can be regarded as "implementations" of concepts, or specific instances of a concept. A good analogy for those familiar with object oriented programming would be that Concepts are the classes and Items and Tuples are Object instances of those classes. This is the source of the use of the "XBRL instance" terminology. In addition to defining concepts, taxonomy schemas reference linkbase documents. Tuples instances are 1..n relationships with their parents; their metadata is simply the collection of their attributes.
+* *Linkbases* are a collection of Links, which themselves are a collection of locators, arcs, and potentially resources. Locators are elements that essentially reference a concept and provide an arbitrary label for it. In turn, arcs are elements indicating that a concept links to another concept by referencing the labels defined by the locators. Some arcs link concepts to other concepts. Other arcs link concepts to resources, the most common of which are human-readable labels for the concepts. The XBRL 2.1 specification defines five different kinds of linkbases.
+ + *Label Linkbase*
+ + *Reference Linkbase*
+ + *Calculation Linkbase*
+ + *Definition Linkbase*
+ + *Presentation Linkbase*
+
+#### Label Linkbase
+
+This linkbase provides human readable strings for concepts. Using the label linkbase, multiple languages can be supported, as well as multiple strings within each language.
+
+XBRL aims to become a worldwide standard for electronic business reporting. This requires taxonomies to present business data in many different languages. Therefore, it is important to be able to create an element that is assigned with labels for different languages. There may also be different labels for different purposes. All labels are stored and linked to the elements in a label linkbase.
+Elements defined in a schema are built to convey accounting meaning to computers. In order to make it easier for computers to process their names, they have to obey some rules. For example, the use of spaces is not allowed so 'Cash and Cash Equivalents' would be named 'CashAndCashEquivalents' . Additionally, big taxonomies such as IFRS obey specific rules of naming and labelling to ensure consistency within the schema. For example, there could be a list of words that are excluded from the names, e.g., :and:, "of" ..., or words that appear only in a particular order (i.e., 'Net' or 'Total' at the end of the label after a comma).
+In the label linkbase, elements are connected to human readable labels using "concept-label" arcrole.
+As mentioned above, elements can be assigned to labels in different languages. An example that describes definitions of labels of the IFRS element AssetsTotal in English, German and Polish is provided below.
+
+To distinguish between languages, XBRL uses the XML attribute lang. Taxonomy creators may also define different labels for one element. One of the ideas of XBRL is that the information about the period and currency for which the element is reported is not contained within an element definition but is described by a context in instance documents. In financial reporting on the other hand, many terms express the date for which they are being reported, for instance Property, Plant and Equipment at the beginning of year and Property, Plant and Equipment at the end of year. XBRL allows the creation of different labels depending on the context in which an element will be used.
+
+The example above shows how three different labels are assigned to one element by applying different role attributes on labels.
+
+
+#### Reference Linkbase
+
+This linkbase associates concepts with citations of some body of authoritative literature.
+
+Financial concepts appearing on business reports more often than not stem from regulatory documents issued by authorities. For example, the IFRS Taxonomy describes financial reports prepared based on IFRSs (Bound Volume).
+Elements defined by this taxonomy refer to the specific terms and concepts explained in the standards. For this reason, a taxonomy is often provided with a reference linkbase that presents relationships between elements and external regulations or standards (the other solution is to enclose documentation in label linkbase). This helps instance creators and users understand the intended meaning of each element and provides support for its inclusion in the taxonomy.
+The reference layer does not contain the full text of the regulations. Instead, it points to source documents by identifying their name and indicating the relevant paragraphs and clauses. This connection is created using "concept-reference" arcrole.
+There are several types of references that could be provided for each element.
+
+The example above indicates references for Cash Flow from (Used in) Operations. First, it provides a reference to a document which explains how and where the element should be presented in terms of its placement and labeling. In IAS 7, paragraph 14 we read that the concept Cash Flows from Operating Activities exists and what it is derived from. Second, the measurement reference provides explanations about what determines the value of the element and how it should be calculated. This description can be found in IAS 7 paragraph 18.a.
+XBRL also allows an element to be assigned other types of references containing examples, commentaries, etc.
+
+
+#### Calculation Linkbase
+
+This linkbase associates concepts with other concepts so that values appearing in an instance document may be checked for consistency.
+
+The idea of the calculation linkbase is to improve the quality of an XBRL report. It contains definitions of basic validation rules, which apply to all instance documents referring to a particular taxonomy. A hierarchical calculation linkbase sorts all monetary elements in this way so that lower level elements sum up to or are subtracted from one another so that the upper level concept is the result of these operations.
+
+The sign of the relationship depends on the weight attribute that is assigned to the arc connecting two elements. An example is provided below.
+
+The example shows that there are defined two calculation arcs providing details concerning relations between Gross profit, Revenue and Cost of Sales. In Income Statements, Gross profit is the difference between the other two.
+Therefore, we assign weight attribute value to "1" on the arc connecting Gross profit and Revenue and "-1" between Gross profit and Cost of Sales.
+The reason why there is a difference between calculation and presentation linkbases, is that the total element that stands for the summation of all others usually appears at the bottom in the financial statements whereas in the calculation linkbase it must be placed as the top concept.
+
+There are two major rules concerning calculation relations in XBRL.
+Firstly, we cannot carry out operations on elements that have different values of the periodType attribute. This is often called the cross-context rule and relates to defining some elements as "For period" (duration) and others as "As of date" (instant). For example, concepts that appear on the Balance Sheet are instant: which means that their value is presented for a specified day, while elements in the Income Statement or Statement of Cash Flows are duration: because they represent actions that took place over a period of time. The problem emerges for example in the Statement of Changes in Equity or Movements in Property, Plant and Equipment where instant elements mix with duration. The solution to this problem is a formula linkbase that will provide taxonomy creators with many more functions than just simple addition or subtraction.
+Secondly, the double entry accounting rule requires XBRL taxonomy creators to define the credit/debit nature of monetary elements appearing in the Balance Sheets and Income Statements. This rule does not only disallow the addition of elements with opposite balance attributes—they must be subtracted—it also defines whether the numerical value contained within an element should be positive or negative.
+
+
+#### Definition Linkbase
+
+This linkbase associates concepts with other concepts using a variety of arc roles to express relations such as is-a, whole-part, etc. Arc roles can be created by those who create XBRL taxonomies or commonly used arc roles can be added to the XBRL Link Role Registry (LRR).
+
+The definition linkbase provides taxonomy creators with the opportunity to define different kinds of relations between elements. There are four standard types of relationships supported by the definition linkbase.
+
+The first one is referred to as **general-special**. It distinguishes between concepts that have more generic or more specific meaning. For example, ZIP code is the US representation of Postal Code which is used worldwide. Therefore, to indicate that connection, taxonomy creators define Postal Code as a general term to which there is more specialised concept ZIP code.
+
+Second available relation type is **essence-alias**. By using it, taxonomy creators are able to indicate that two concepts have similar meaning. For example, some airlines may want to use the term Planes to describe their main component of their PPE while other would prefer Aircraft. To state that meaning of these two is the same and that they can be used interchangeably, taxonomy creators may connect them using "essence-alias" arcrole.
+
+The third standard type of relation is called **requires-element**. As its name indicates, taxonomy builders use it to force instance creators to enter the value of one element, if they provide the content of another. For instance, a regulator may want to require disclosures on a particular component of Assets if it appears on the Balance Sheet. In order to achieve that, the definition linkbase defines "requires-element" relationship between them (for example, Property, Plant and Equipment, Net and Property, Plant and Equipment Disclosures).
+
+The fourth relation is **similar-tuples**. It resembles "essence-alias" relation but is applied for tuples. It connects two tuples that are equivalents in terms of definition (documentation from label linkbase or reference in reference linkbase) but are diverse from XML perspective i.e., do not have identical content models, for example contain different elements. One of the reasons that this type of relation was introduced is the prohibition of schema redefinition which prevents changes in a tuple's content model.
+
+
+#### Presentation Linkbase
+
+This linkbase associates concepts with other concepts so that the resulting relations can guide the creation of a user interface, rendering, or visualization.
+
+Business reports are in general prepared in the form of tables or statements or other structures. The presentation linkbase stores information about relationships between elements in order to properly organize the taxonomy content. This allows the elements to be arranged in a structure that is appropriate to represent the hierarchical relationships in particular business data.
+These groupings can be performed in many ways. For example, a typical Balance Sheet contains Assets, Equity and Liabilities. Assets consist of Current Assets and Non-current Assets. Current Assets are split in Inventories, Receivables and so on. The presentation linkbase, using parent-child relations organizes elements in this way and helps users find concepts they are interested in.
+The main drawback of a tree-like (hierarchical) structure in a presentation linkbase is that it only allows the presentation of flat lists of elements, while financial statements also contain more sophisticated reports such as Changes in Equity or Movements in Property, Plant and Equipment . The XBRL Consortium is currently working on rendering solutions that would provide for the automatic creation of such reports.
+
+This is the taxonomy schema of the above shown instance file:
+
+XBRL's Global Ledger Framework (XBRL GL) is the only set of taxonomies that is developed and recommended by XBRL International.
+
+
+## XBRL modules
+
+XBRL International has issued and reissued a stability pledge in relation to the core XBRL 2.1 specification. In addition to the core XBRL 2.1 specification, work continues on the development of XBRL modules that define new, compatible functionality.
+
+* **XBRL Dimensions** – This module has achieved Recommendation status in 2005. A new edition of the Dimensions 1.0 Specification with errata corrections was issued on 7 September 2009. The Dimension 1.0 Specification is an optional extension to the XBRL 2.1 Specification that enriches the rules and procedures for constructing dimensional taxonomies and instance documents. It supports the use of XBRL taxonomy linkbases to define additional, structured contextual information for business facts. Each piece of contextual information is referred to as a "dimension." The base XBRL specification essentially defines three dimensions: reporting period, reporting entity (i.e.; a company or a division thereof), and a loosely defined reporting scenario, originally intended to distinguish between actual vs. projected facts. Taxonomies using XBRL Dimensions can define new dimensions, specify the valid values ("domains") for dimensions, designate which dimensions apply to which business concepts through mechanisms called "hypercubes", and relate other taxonomy metadata (labels, presentation information, etc.) to dimensions.
+* **XBRL Formula** – This module achieved Recommendation status 22 June 2009. The Formula Specification 1.0 supports the creation of expressions (using XPath) that can be applied to XBRL instances to validate its information or to calculate new XBRL facts in a new instance. To see how formula components interrelate, click Interactive diagram of related Formula specifications.
+* **Inline XBRL** (or iXBRL) – This module achieved Recommendation status 20 April 2010. The Inline XBRL Specification defines how XBRL metadata can be embedded within well-formed HTML or XHTML documents, so that data and associated rendering information can be encapsulated within a single document.
+* **XBRL Versioning** – This module achieved Recommendation status 27 February 2013. This specification enables creation of Versioning Report which can be used by the authors of XBRL taxonomies to provide documentation of the changes between two taxonomies. Many large taxonomies (such as the IFRS taxonomy) change every year.
+* **XBRL Table Linkbase** – This module allows taxonomy authors to define tabular reporting templates. The Table Linkbase can be used for presentation of XBRL data, and also for data entry, by allowing software to present a template for completion by the user. The Table Linkbase is well-suited to handling large, highly-dimensional reporting templates such as those used for Solvency II reporting to EIOPA, and COREP and FINREP reporting to the EBA.
+
+## Extensibility
+
+Besides the creation of additional modules, XBRL International supports several methods for continuing expansion of shared XBRL functionality.
+
+* Link Role Registry – This registry, hosted at xbrl.org, collects link roles and arc roles to promote reuse across taxonomies.
+* Functions Registry – This registry collects XPath functions for reuse in formula linkbases.
+* Transformation Rules Registry – This registry collects common transforms used to convert human-readable data in Inline XBRL documents (e.g. "1st January 2016") into the formats required by XBRL ("2016-01-01").
+
+## iXBRL
+
+**iXBRL** (Inline XBRL) is a development of XBRL in which the XBRL metadata are embedded in an HTML document, e.g., a published report and accounts. It requires the HTML document to be well-formed but does not otherwise specify the required XML format. Typically, iXBRL is implemented within HTML documents, which are displayed or printed by web browsers without revealing the XBRL metadata inside the document. The specification does, however, provide a normative schema which requires that any schema-valid iXBRL document should be in XHTML format.
+
+Most iXBRL financial reports are produced in one of two ways:
+
+1. The system which creates the report formats it directly in iXBRL. In the UK, where all companies are required to file in iXBRL, the main commercial accounting packages all provide iXBRL export of financial reports.
+2. The financial report is produced as a Microsoft Word or Microsoft Excel document, and a "Tagging Program" is used to add the XBRL concept metadata and to export the document as Inline XBRL.
+
+With large and complex financial statements, a single iXBRL file may be too large for a web browser to handle. This happens more often when, as in the UK, the company report, which may contain many graphics, is combined with the accounts in a single iXBRL document. The iXBRL specification allows for a set of iXBRL documents to be treated as a single iXBRL document set.
+
+In the UK, HM Revenue and Customs requires businesses to submit their report and accounts and tax computations in iXBRL format when making their Corporation Tax return. Businesses and their agents can use HMRC's Online Filing software to prepare their report and accounts and tax computations in iXBRL format or they can prepare the iXBRL files themselves and submit them to HMRC.
+
+HMRC's Online Filing software is an example of a program which generates iXBRL from source data. This uses a series of forms in which the key data (which will appear in XBRL tags) are entered in data entry fields. Additional data (the rest of the report and accounts) are entered in text boxes. The program generates the iXBRL report and accounts in a standard sequence of sections and a standard format. All other formatting of material is lost. While the resulting report and accounts meets HMRC's requirements, it is not an attractive document to view or read.
+
+iXBRL is mandated for corporate filings by government agencies in Japan, Denmark and the United Kingdom. In the United Kingdom, Companies House also accepts iXBRL. Although iXBRL is not mandated by Companies House, it makes up the majority of the filings received each year.
+
+Since June 2016 the SEC started allowing firms to file using iXBRL in the required HTML filings. In June 2018, the SEC announced plans to move to iXBRL, removing the requirement to file separate HTML and XBRL documents.
+
+Since January 2021, all EU listed companies that prepare annual financial reports under IFRS have been required to publish these reports in Inline XBRL format, as part of the European Single Electronic Format (ESEF) initiative.
+
+
+## History
+
+XBRL's beginning, in 1998, can be traced to the initial efforts of one person, Charles Hoffman, a Certified Public Accountant from Tacoma, Washington. The American Institute of Certified Public Accountants (AICPA) was also instrumental in pulling together what eventually became XBRL International.
+
+The specification went through several versions prior to XBRL v2.1 which was published in 2003.
+
+* 1.0 – Published on July 31, 2000, this version was based on DTDs. It expressed the difference between data exchange in instance documents and metadata exchange in taxonomy documents. Taxonomies were expressed as XML Schema files, but these were not used for instance validation.
+* 2.0 – Published December 14, 2001, this version introduced use of XML Schema substitution groups as a way of allowing schema validation of instances. Concept relations were broken out into separate XLink-based linkbases. Context data in the instance was collected into a separate element.
+* 2.1 – Published December 31, 2003, this version tightened the definition of terms significantly, allowing for the introduction of a conformance suite.
+
+XBRL v2.1 has remained stable since publication, and has been updated only for errata corrections. The standard has evolved significantly through the development of additional XBRL modules. Details of all versions of the specification and associated modules can be found on the XBRL Specification Subsite.
+
+
+## Lack of accuracy
+
+In April 2009 a study of the North Carolina State University Department of Accounting College of Management evaluated the accuracy of XBRL filings for 22 companies participating in the SEC's voluntary filing program in 2006. Results of a comparison of XBRL filings to Forms 10-K revealed multiple errors in signage, amounts, labeling, and classification. The study considers that these errors are serious, since XBRL data are computer-readable and users will not visually recognize the errors, especially when using XBRL analysis software.
+
+A different conclusion was reached by Du et al., 2013 who argued that companies are going through a learning curve and are steadily improving.
+
+In December 2017, Charlie Hoffman stated that there is a 10.2% chance that an XBRL-based public company financial report has errors in its primary financial statements. Hoffman predicts that per the current number of errors and the pace errors are being corrected, within about five years the information quality of XBRL-based public company financial reports will be very good.
+
+
+## Impact of XBRL
+
+An evaluation by Debreceny, Roger S., et al. 2005, of the impact of Financial Reporting in XBRL on the SEC's EDGAR System.
+
+A tool for converting the consolidated balance sheet, income statement, and statement of cash flows into XBRL‐tagged format.
+
+Corporate governance is significantly and positively associated with a firm's decision to be an early and voluntary filer of financial information in XBRL format.
+
+
+### Impact on financial reporting in the European Union
+
+On 18 December 2017 European Securities and Markets Authority published the final draft Regulatory Technical Standards (RTS) setting out the new European Single Electronic Format (ESEF). Under the draft regulation, starting in 2020, financial reports containing IFRS consolidated financial statements shall be labelled with XBRL tags.
+

@@ -1,0 +1,150 @@
+Multi-attribute utility
+
+
+# Multi-attribute utility
+
+
+
+In decision theory, a **multi-attribute utility** function is used to represent the preferences of an agent over bundles of goods either under conditions of certainty about the results of any potential choice, or under conditions of uncertainty.
+
+
+## Preliminaries
+
+A person has to decide between two or more options. The decision is based on the *attributes* of the options.
+
+The simplest case is when there is only one attribute, e.g.: money. It is usually assumed that all people prefer more money to less money; hence, the problem in this case is trivial: select the option that gives you more money.
+
+In reality, there are two or more attributes. For example, a person has to select between two employment options: option A gives him $12K per month and 20 days of vacation, while option B gives him $15K per month and only 10 days of vacation. The person has to decide between (12K,20) and (15K,10). Different people may have different preferences. Under certain conditions, a person's preferences can be represented by a numeric function. The article ordinal utility describes some properties of such functions and some ways by which they can be calculated.
+
+Another consideration that might complicate the decision problem is *uncertainty*. Although there are at least four sources of uncertainty - the attribute outcomes, and a decisionmaker's fuzziness about: a) the specific shapes of the individual attribute utility functions, b) the aggregating constants' values, and c) whether the attribute utility functions are additive, these terms being addressed presently - uncertainty henceforth means only randomness in attribute levels. This uncertainty complication exists even when there is a single attribute, e.g.: money. For example, option A might be a lottery with 50% chance to win $2, while option B is to win $1 for sure. The person has to decide between the lottery <2:0.5> and the lottery <1:1>. Again, different people may have different preferences. Again, under certain conditions the preferences can be represented by a numeric function. Such functions are called cardinal utility functions. The article Von Neumann–Morgenstern utility theorem describes some ways by which they can be calculated.
+
+The most general situation is that there are *both* multiple attributes *and* uncertainty. For example, option A may be a lottery with a 50% chance to win two apples and two bananas, while option B is to win two bananas for sure. The decision is between <(2,2):(0.5,0.5)> and <(2,0):(1,0)>. The preferences here can be represented by cardinal utility functions which take several variables (the attributes).²⁶–²⁷ Such functions are the focus of the current article.
+
+The goal is to calculate a utility function {\displaystyle u(x\_{1},...,x\_{n})} which represents the person's preferences on lotteries of bundles. I.e, lottery A is preferred over lottery B if and only if the expectation of the function {\displaystyle u} is higher under A than under B:
+
+
+## Assessing a multi-attribute cardinal utility function
+
+If the number of possible bundles is finite, *u* can be constructed directly as explained by von Neumann and Morgenstern (VNM): order the bundles from least preferred to most preferred, assign utility 0 to the former and utility 1 to the latter, and assign to each bundle in between a utility equal to the probability of an equivalent lottery.²²²–²²³
+
+If the number of bundles is infinite, one option is to start by ignoring the randomness, and assess an ordinal utility function {\displaystyle v(x\_{1},...,x\_{n})} which represents the person's utility on *sure* bundles. I.e, a bundle x is preferred over a bundle y if and only if the function {\displaystyle v} is higher for x than for y:
+
+This function, in effect, converts the multi-attribute problem to a single-attribute problem: the attribute is {\displaystyle v}. Then, VNM can be used to construct the function {\displaystyle u}.²¹⁹–²²⁰
+
+Note that *u* must be a positive monotone transformation of *v*. This means that there is a monotonically increasing function {\displaystyle r:\mathbb {R} \to \mathbb {R} }, such that:
+
+The problem with this approach is that it is not easy to assess the function *r*. When assessing a single-attribute cardinal utility function using VNM, we ask questions such as: "What probability to win $2 is equivalent to $1?". So to assess the function *r*, we have to ask a question such as: "What probability to win 2 units of value is equivalent to 1 value?". The latter question is much harder to answer than the former, since it involves "value", which is an abstract quantity.
+
+A possible solution is to calculate *n* one-dimensional cardinal utility functions - one for each attribute. For example, suppose there are two attributes: apples ({\displaystyle x\_{1}}) and bananas ({\displaystyle x\_{2}}), both range between 0 and 99. Using VNM, we can calculate the following 1-dimensional utility functions:
+
+* {\displaystyle u(x\_{1},0)} - a cardinal utility on apples when there are no bananas (the southern boundary of the domain);
+* {\displaystyle u(99,x\_{2})} - a cardinal utility on bananas when apples are at their maximum (the eastern boundary of the domain).
+
+Using linear transformations, scale the functions such that they have the same value on (99,0).
+
+Then, for every bundle {\displaystyle (x\_{1}',x\_{2}')}, find an equivalent bundle (a bundle with the same *v*) which is either of the form {\displaystyle (x\_{1},0)} or of the form {\displaystyle (99,x\_{2})}, and set its utility to the same number.²²¹–²²²
+
+Often, certain *independence* properties between attributes can be used to make the construction of a utility function easier. Some such independence properties are described below.
+
+
+## Additive independence
+
+The strongest independence property is called *additive independence*. Two attributes, 1 and 2, are called *additive independent*, if the preference between two lotteries (defined as joint probability distributions on the two attributes) depends only on their marginal probability distributions (the marginal PD on attribute 1 and the marginal PD on attribute 2).
+
+This means, for example, that the following two lotteries are equivalent:
+
+* {\displaystyle L}: An equal-chance lottery between {\displaystyle (x\_{1},x\_{2})} and {\displaystyle (y\_{1},y\_{2})};
+* {\displaystyle M}: An equal-chance lottery between {\displaystyle (x\_{1},y\_{2})} and {\displaystyle (y\_{1},x\_{2})}.
+
+In both these lotteries, the marginal PD on attribute 1 is 50% for {\displaystyle x\_{1}} and 50% for {\displaystyle y\_{1}}. Similarly, the marginal PD on attribute 2 is 50% for {\displaystyle x\_{2}} and 50% for {\displaystyle y\_{2}}. Hence, if an agent has additive-independent utilities, he must be indifferent between these two lotteries.²²⁹–²³²
+
+A fundamental result in utility theory is that, two attributes are additive-independent, if and only if their two-attribute utility function is additive and has the form:
+
+PROOF:
+
+{\displaystyle \longrightarrow }
+
+If the attributes are additive-independent, then the lotteries {\displaystyle L} and {\displaystyle M}, defined above, are equivalent. This means that their expected utility is the same, i.e.: {\displaystyle E\_{L}[u]=E\_{M}[u]}.
+Multiplying by 2 gives:
+
+This is true for *any* selection of the {\displaystyle x\_{i}} and {\displaystyle y\_{i}}. Assume now that {\displaystyle y\_{1}} and {\displaystyle y\_{2}} are fixed. Arbitrarily set {\displaystyle u(y\_{1},y\_{2})=0}. Write: {\displaystyle u\_{1}(x\_{1})=u(x\_{1},y\_{2})} and {\displaystyle u\_{2}(x\_{2})=u(y\_{1},x\_{2})}.
+The above equation becomes:
+
+{\displaystyle \longleftarrow }
+
+If the function *u* is additive, then by the rules of expectation, for every lottery {\displaystyle L}:
+
+This expression depends only on the marginal probability distributions of {\displaystyle L} on the two attributes.
+
+This result generalizes to any number of attributes: if preferences over lotteries on attributes 1,...,*n* depend only on their marginal probability distributions, then the *n*-attribute utility function is additive:²⁹⁵
+
+where {\displaystyle u} and the {\displaystyle u\_{i}} are normalized to the range {\displaystyle [0,1]}, and the {\displaystyle k\_{i}} are normalization constants.
+
+Much of the work in additive utility theory has been done by Peter C. Fishburn.
+
+
+## Utility independence
+
+A slightly weaker independence property is *utility independence*. Attribute 1 is *utility-independent* of attribute 2, if the conditional preferences on lotteries on attribute 1 given a constant value of attribute 2, do not depend on that constant value.
+
+This means, for example, that the preference between a lottery {\displaystyle <(x\_{1},x\_{2}):(y\_{1},x\_{2})>} and a lottery {\displaystyle <(x'\_{1},x\_{2}):(y'\_{1},x\_{2})>} is the same, regardless of the value of {\displaystyle x\_{2}}.
+
+Note that utility independence (in contrast to additive independence) is *not* symmetric: it is possible that attribute 1 is utility-independent of attribute 2 and not vice versa.²²⁴–²²⁹
+
+If attribute 1 is utility-independent of attribute 2, then the utility function for every value of attribute 2 is a linear transformation of the utility function for every other value of attribute 2. Hence it can be written as:
+
+when {\displaystyle x\_{2}^{0}} is a constant value for attribute 2. Similarly, If attribute 2 is utility-independent of attribute 1:
+
+If the attributes are *mutually utility independent*, then the utility function *u* has the following *multi-linear form*:²³³–²³⁵
+
+Where {\displaystyle k} is a constant which can be positive, negative or 0.
+
+* When {\displaystyle k=0}, the function *u* is additive and the attributes are additive-independent.
+* When {\displaystyle k\neq 0}, the utility function is multiplicative, since it can be written as:
+
+These results can be generalized to any number of attributes. Given attributes 1,...,*n*, if any subset of the attributes is utility-independent of its complement, then the *n*-attribute utility function is multi-linear and has one of the following forms:
+
+* Additive, or -
+* **Multiplicative**:²⁸⁹–²⁹⁰
+
+where:
+
+* The {\displaystyle u} and the {\displaystyle u\_{i}} are normalized to the range {\displaystyle [0,1]};
+* The {\displaystyle k\_{i}} are constants in {\displaystyle [0,1]};
+* {\displaystyle k} is a constant which is either in {\displaystyle (-1,0)} or in {\displaystyle (0,\infty )} (note that the limit when {\displaystyle k\to 0} is the additive form).
+
+## Comparison of independence concepts
+
+It is useful to compare three different concepts related to independence of attributes: Additive-independence (AI), Utility-independence (UI) and Preferential-independence (PI).³⁴⁴
+
+AI and UI both concern preferences on *lotteries* and are explained above. PI concerns preferences on *sure outcomes* and is explained in the article on ordinal utility.
+
+Their implication order is as follows:
+
+AI is a symmetric relation (if attribute 1 is AI of attribute 2 then attribute 2 is AI of attribute 1), while UI and PI are not.
+
+AI implies mutual UI. The opposite is, in general, not true; it is true only if {\displaystyle k=0} in the multi-linear formula for UI attributes. But if, in addition to mutual UI, there exist {\displaystyle x\_{1},x\_{2},y\_{1},y\_{2}} for which the two lotteries {\displaystyle L} and {\displaystyle M}, defined above, are equivalent - then {\displaystyle k} must be 0, and this means that the preference relation must be AI.²³⁸–²³⁹
+
+UI implies PI. The opposite is, in general, not true. But if:
+
+* there are at least 3 essential attributes, and:
+* all pairs of attributes {1,*i*} are PI of their complement, and:
+* attribute 1 is UI of its complement,
+
+then all attributes are mutually UI. Moreover, in that case there is a simple relation between the cardinal utility function {\displaystyle u} representing the preferences on lotteries, and the ordinal utility function {\displaystyle v} representing the preferences on sure bundles. The function {\displaystyle u} must have one of the following forms:³³⁰–³³²
+
+* Additive: {\displaystyle u(x\_{1},...,x\_{n})=v(x\_{1},...,x\_{n})}
+* Multiplicative: {\displaystyle u(x\_{1},...,x\_{n})=[exp(R\cdot v(x\_{1},...,x\_{n}))-1]/[exp(R)-1]}
+
+where {\displaystyle R\neq 0}.
+
+PROOF: It is sufficient to prove that *u* has constant absolute risk aversion with respect to the value *v*.
+
+* The PI assumption with {\displaystyle n\geq 3} imply that the value function is additive, i.e.:
+
+* Let {\displaystyle x\_{1},z\_{1}} be two different values for attribute 1. Let {\displaystyle y\_{1}} be the certainty-equivalent of the lottery {\displaystyle <x\_{1}:z\_{1}>}. The UI assumption implies that, for every combination {\displaystyle (w\_{2},\dots ,w\_{n})} of values of the other attributes, the following equivalence holds:
+
+* The two previous statements imply that for every *w*, the following equivalence holds in the value space:
+
+* This implies that, adding any quantity to both sides of a lottery (through the term {\displaystyle \sum \_{i=2}^{n}{\lambda \_{i}v\_{i}(w\_{i})}}), increases the certainty-equivalent of the lottery by the same quantity.
+* The latter fact implies constant risk aversion.

@@ -1,0 +1,66 @@
+Risk measure
+
+
+# Risk measure
+
+
+
+In financial mathematics, a **risk measure** is used to determine the amount of an asset or set of assets (traditionally currency) to be kept in reserve. The purpose of this reserve is to make the risks taken by financial institutions, such as banks and insurance companies, acceptable to the regulator. In recent years attention has turned to convex and coherent risk measurement.
+
+
+## Mathematically
+
+A risk measure is defined as a mapping from a set of random variables to the real numbers. This set of random variables represents portfolio returns. The common notation for a risk measure associated with a random variable {\displaystyle X} is {\displaystyle \rho (X)}. A risk measure {\displaystyle \rho :{\mathcal {L}}\to \mathbb {R} \cup \{+\infty \}} should have certain properties:
+
+
+## Set-valued
+
+In a situation with {\displaystyle \mathbb {R} ^{d}}-valued portfolios such that risk can be measured in {\displaystyle m\leq d} of the assets, then a set of portfolios is the proper way to depict risk. Set-valued risk measures are useful for markets with transaction costs.
+
+
+### Mathematically
+
+A set-valued risk measure is a function {\displaystyle R:L\_{d}^{p}\rightarrow \mathbb {F} \_{M}}, where {\displaystyle L\_{d}^{p}} is a {\displaystyle d}-dimensional Lp space, {\displaystyle \mathbb {F} \_{M}=\{D\subseteq M:D=cl(D+K\_{M})\}}, and {\displaystyle K\_{M}=K\cap M} where {\displaystyle K} is a constant solvency cone and {\displaystyle M} is the set of portfolios of the {\displaystyle m} reference assets. {\displaystyle R} must have the following properties:
+
+
+## Examples
+
+* Value at risk
+* Expected shortfall
+* Superposed risk measures
+* Entropic value at risk
+* Drawdown
+* Tail conditional expectation
+* Entropic risk measure
+* Superhedging price
+* Expectile
+
+### Variance
+
+Variance (or standard deviation) is **not** a risk measure in the above sense. This can be seen since it has neither the translation property nor monotonicity. That is, {\displaystyle Var(X+a)=Var(X)\neq Var(X)-a} for all {\displaystyle a\in \mathbb {R} }, and a simple counterexample for monotonicity can be found. The standard deviation is a deviation risk measure. To avoid any confusion, note that deviation risk measures, such as variance and standard deviation are sometimes called risk measures in different fields.
+
+
+## Relation to acceptance set
+
+There is a one-to-one correspondence between an acceptance set and a corresponding risk measure. As defined below it can be shown that {\displaystyle R\_{A\_{R}}(X)=R(X)} and {\displaystyle A\_{R\_{A}}=A}.
+
+
+### Risk measure to acceptance set
+
+* If {\displaystyle \rho } is a (scalar) risk measure then {\displaystyle A\_{\rho }=\{X\in L^{p}:\rho (X)\leq 0\}} is an acceptance set.
+* If {\displaystyle R} is a set-valued risk measure then {\displaystyle A\_{R}=\{X\in L\_{d}^{p}:0\in R(X)\}} is an acceptance set.
+
+### Acceptance set to risk measure
+
+* If {\displaystyle A} is an acceptance set (in 1-d) then {\displaystyle \rho \_{A}(X)=\inf\{u\in \mathbb {R} :X+u1\in A\}} defines a (scalar) risk measure.
+* If {\displaystyle A} is an acceptance set then {\displaystyle R\_{A}(X)=\{u\in M:X+u1\in A\}} is a set-valued risk measure.
+
+## Relation with deviation risk measure
+
+There is a one-to-one relationship between a deviation risk measure *D* and an expectation-bounded risk measure {\displaystyle \rho } where for any {\displaystyle X\in {\mathcal {L}}^{2}}
+
+* {\displaystyle D(X)=\rho (X-\mathbb {E} [X])}
+* {\displaystyle \rho (X)=D(X)-\mathbb {E} [X]}.
+
+{\displaystyle \rho } is called expectation bounded if it satisfies {\displaystyle \rho (X)>\mathbb {E} [-X]} for any nonconstant *X* and {\displaystyle \rho (X)=\mathbb {E} [-X]} for any constant *X*.
+

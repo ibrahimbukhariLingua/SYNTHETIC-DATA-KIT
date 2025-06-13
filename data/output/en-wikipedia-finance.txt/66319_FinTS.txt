@@ -1,0 +1,47 @@
+FinTS
+
+
+# FinTS
+
+
+
+**FinTS** (**Financial Transaction Services**), formerly known as **HBCI** (**Home Banking Computer Interface**), is a bank-independent protocol for online banking, developed and used by German banks.
+
+HBCI was originally designed by Germany's three banking "pillar" networks, namely the Sparkassen-Finanzgruppe, German Cooperative Financial Group, and Association of German Banks. The result of this effort was an open protocol specification, which is publicly available. The standardisation effort was necessary to replace the huge number of deprecated homemade software clients and servers (some of them still using BTX emulation).
+While IFX (Interactive Financial Exchange), OFX (Open Financial Exchange) and SET (Secure Electronic Transaction) are tailored for the North American market, HBCI is designed to meet the requirements of the European market.
+
+The FinTS-specification is publicly available on a website run by the ZKA (Central Credit Committee).
+
+
+## Features
+
+* Support for online-banking using PIN/TAN one time passwords.
+* Support for online-banking with SWIFT.
+* DES and RSA encryption and signatures.
+* Making use of XML and SOAP for data-exchange, encryption and signatures.
+* Implemented on top of HTTP, HTTPS and SMTP as communication layer.
+* Multibanking: The software clients are designed to support accounts on multiple banking companies.
+* Platform Independence: The specification allows software development for various types of clients.
+* Storage of the encryption keys on an external physical device (smart card) for improved security.
+* Possibility to use so called "Secoder" smart card readers to allow the user to cross check the transaction data on a secure device before signing it to uncover manipulations caused by malware. To use Secoder, the bank as well as the home banking software have to support the Secoder protocol extension of FinTS.
+
+HBCI has been superseded by its successor FinTS, and as of 2011, 2000 financial institutions in Germany are supporting FinTS.
+
+
+## Versions
+
+
+### HBCI 2.2 PIN/TAN
+
+**HBCI 2.2 PIN/TAN** (or **HBCI+**) is an extension to HBCI that added a security method based on PINs and TANs, which had already been in use with BTX and web banking.
+
+
+### FinTS 3.0
+
+For version **3.0**, which formally introduced the PIN/TAN method, the specification was renamed to **FinTS**, whereas the original DSA- and RSA-based security method retained the name **HBCI**.
+
+
+### FinTS 4.0
+
+In version **4.0**, the basic message syntax was switched over to XML. Further, the number of roundtrips necessary was reduced, allowing asynchronous communication (e.g. via SMTP) for simple transaction dialogues.
+

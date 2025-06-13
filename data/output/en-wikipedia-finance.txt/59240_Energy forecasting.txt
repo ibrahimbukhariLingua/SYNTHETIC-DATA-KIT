@@ -1,0 +1,51 @@
+Energy forecasting
+
+
+# Energy forecasting
+
+
+
+**Energy forecasting** includes forecasting demand (load) and price of electricity, fossil fuels (natural gas, oil, coal) and renewable energy sources (RES; hydro, wind, solar). Forecasting can be both expected price value and probabilistic forecasting.
+
+
+## Background
+
+When electricity sectors were regulated, utility monopolies used short-term load forecasts to ensure the reliability of supply and long-term demand forecasts as the basis for planning and investing in new capacity. However, since the early 1990s, the process of deregulation and the introduction of competitive electricity markets have been reshaping the landscape of the traditionally monopolistic and government-controlled power sectors. In many countries worldwide, electricity is now traded under market rules using spot and derivative contracts. At the corporate level, electricity load and price forecasts have become a fundamental input to energy companies’ decision making mechanisms. The costs of over- or undercontracting and then selling or buying power in the balancing market are typically so high that they can lead to huge financial losses and bankruptcy in the extreme case. In this respect electric utilities are the most vulnerable, since they generally cannot pass their costs on to the retail customers.
+
+While there have been a variety of empirical studies on point forecasts (i.e., the "best guess" or expected value of the spot price), probabilistic - i.e., interval and density - forecasts have not been investigated extensively to date. However, this is changing and nowadays both researchers and practitioners are focusing on the latter. While the Global Energy Forecasting Competition in 2012 was on point forecasting of electric load and wind power, the 2014 edition aimed at probabilistic forecasting of electric load, wind power, solar power and electricity prices.
+
+A 2023 textbook covers electricity load forecasting and provides tutorial material written in the python language.
+
+
+## Benefits from reducing electric load and price forecast errors
+
+Extreme volatility of wholesale electricity prices, which can be up to two orders of magnitude higher than that of any other commodity or financial asset, has forced market participants to hedge not only against volume risk but also against price movements. A generator, utility company or large industrial consumer who is able to forecast the volatile wholesale prices with a reasonable level of accuracy can adjust its bidding strategy and its own production or consumption schedule in order to reduce the risk or maximize the profits in day-ahead trading. Yet, since load and price forecasts are being used by many departments of an energy company, it is very hard to quantify the benefits of improving them. A rough estimate of savings from a 1% reduction in the mean absolute percentage error (MAPE) for a utility with 1GW peak load is:
+
+* $500,000 per year from long-term load forecasting,
+* $300,000 per year from short-term load forecasting,
+* $600,000 per year from short-term load and price forecasting.
+
+Besides forecasting electric load, there are also integrative approaches for grids with high renewable power penetration to directly forecast the net load.
+
+
+## Main areas of interest
+
+The most popular (in terms of the number of research papers and techniques developed) subfields of energy forecasting include:
+
+* Load forecasting (electric load forecasting, electric demand forecasting). Although "load" is an ambiguous term, in load forecasting the "load" usually means demand (in kW) or energy (in kWh) and since the magnitude of power and energy is the same for hourly data, usually no distinction is made between demand and energy. Load forecasting involves the accurate prediction of both the magnitudes and geographical locations over the different periods of the planning horizon. The basic quantity of interest is typically the hourly total system (or zonal) load. However, load forecasting is also concerned with the prediction of hourly, daily, weekly and monthly values of load and of the peak load. The most commonly used features for load forecasting come from seasonal data (time of day, holidays...), historical data (past electricity loads), weather data (temperature...), and human mobility data (tourism, work...).
+* Electricity price forecasting
+* Wind power forecasting
+* Solar power forecasting
+
+## Forecasting horizons
+
+It is customary to talk about short-, medium- and long-term forecasting, but there is no consensus in the literature as to what the thresholds should actually be:
+
+* *Short-term forecasting* generally involves horizons from a few minutes up to a few days ahead, and is of prime importance in day-to-day market operations. In load forecasting, *very short-term forecasting* with lead times measured in minutes is often considered as a separate class of forecasts.
+* *Medium-term* *forecasting*, from a few days to a few months ahead, is generally preferred for balance sheet calculations, risk management and derivatives pricing. In many cases, especially in electricity price forecasting, evaluation is based not on the actual point forecasts, but on the distributions of prices over certain future time periods. As this type of modeling has a long-standing tradition in finance, an inflow of "finance solutions" is observed.
+* *Long-term* *forecasting*, with lead times measured in months, quarters or even years, concentrates on investment profitability analysis and planning, such as determining the future sites or fuel sources of power plants.
+
+## Initiatives
+
+* IEEE Working Group on Energy Forecasting
+* Global Energy Forecasting Competitions

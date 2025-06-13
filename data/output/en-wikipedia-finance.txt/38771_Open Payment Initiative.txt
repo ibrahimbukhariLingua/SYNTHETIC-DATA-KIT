@@ -1,0 +1,37 @@
+Open Payment Initiative
+
+
+# Open Payment Initiative
+
+
+
+The **Open Payment Initiative**, or **O.P.I.** for short, was launched to standardize the application interface between the electronic point of sale (EPOS) application and any cashless payments solution installed on the electronic funds transfer at point of sale (EFTPOS) payment terminal. The specification for this interface focused mainly on international and cross-industry aspects. By 2005 The O.P.I. interface had become a de facto European standard, which spread from Germany to retailing projects throughout Europe.
+
+The specifications, which were first published in 2003, and reference installations are based on the POS EPS specifications from IFSF (International Forecourt Standards Forum), which were developed for the service station industry and to which retail features have been added. The universal O.P.I. interface has made it possible to integrate varying EFT/PoS solutions in European POS projects for the first time.
+
+
+## Versions
+
+| Version | Description | Published |
+| --- | --- | --- |
+| 1.2 | EFT-Standard Interface for POS Applications | Febr. 2003 |
+| 1.2.1 | EFT-Standard Interface for POS Applications | Sept. 2003 |
+| 1.3 | EFT-Standard Interface for POS Applications | Febr. 2005 |
+
+
+## Technical solution
+
+The O.P.I. interface implementation does not depend on a specific operating system. It is an XML-based interface. Communication takes place via TCP/IP. The XML messages are exchanged over two sockets that are referred to as channels (channel 0 and channel 1). The original OPI/IFSF specification defines three message pairs:
+
+* Card Request/Response (channel 0)
+* Service Request/Response (channel 0)
+* Device Request/Response (channel 1)
+
+Using the O.P.I. interface gives a payment solution access to the PoS peripherals, e.g. to a PoS printer to print out receipts, a display to output messages to the cashier or cardholder, or a magnetic card reader.
+Decoupling the interface in this way increases its flexibility for integration in international, solution and industry-specific scenarios for users as well as for PoS and payment solution providers, and therefore also protects their investments.
+
+
+## International installations
+
+Since 2003, the O.P.I. interface has been deployed by various software and EFT/PoS solution providers in numerous projects in the Netherlands, Germany, France, Ireland, Austria, Portugal, Switzerland, UK and Denmark.
+

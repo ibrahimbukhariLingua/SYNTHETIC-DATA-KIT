@@ -1,0 +1,162 @@
+Entropic value at risk
+
+
+# Entropic value at risk
+
+
+
+In financial mathematics and stochastic optimization, the concept of risk measure is used to quantify the risk involved in a random outcome or risk position. Many risk measures have hitherto been proposed, each having certain characteristics. The **entropic value at risk** (**EVaR**) is a coherent risk measure introduced by Ahmadi-Javid, which is an upper bound for the value at risk (VaR) and the conditional value at risk (CVaR), obtained from the Chernoff inequality. The EVaR can also be represented by using the concept of relative entropy. Because of its connection with the VaR and the relative entropy, this risk measure is called "entropic value at risk". The EVaR was developed to tackle some computational inefficienciesᶜˡᵃʳⁱᶠⁱᶜᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ of the CVaR. Getting inspiration from the dual representation of the EVaR, Ahmadi-Javid developed a wide class of coherent risk measures, called **g-entropic risk measures**. Both the CVaR and the EVaR are members of this class.
+
+
+## Definition
+
+Let {\displaystyle (\Omega ,{\mathcal {F}},P)} be a probability space with {\displaystyle \Omega } a set of all simple events, {\displaystyle {\mathcal {F}}} a {\displaystyle \sigma }-algebra of subsets of {\displaystyle \Omega } and {\displaystyle P} a probability measure on {\displaystyle {\mathcal {F}}}. Let {\displaystyle X} be a random variable and {\displaystyle \mathbf {L} \_{M^{+}}} be the set of all Borel measurable functions {\displaystyle X:\Omega \to \mathbb {R} } whose moment-generating function {\displaystyle M\_{X}(z)} exists for all {\displaystyle z\geq 0}. The entropic value at risk (EVaR) of {\displaystyle X\in \mathbf {L} \_{M^{+}}} with confidence level {\displaystyle 1-\alpha } is defined as follows:
+
+| {\displaystyle {\text{EVaR}}\_{1-\alpha }(X):=\inf \_{z>0}\left\{z^{-1}\ln \left({\frac {M\_{X}(z)}{\alpha }}\right)\right\}.} | **(1)** |
+| --- | --- |
+
+In finance, the random variable {\displaystyle X\in \mathbf {L} \_{M^{+}},} in the above equation, is used to model the *losses* of a portfolio.
+
+Consider the Chernoff inequality
+
+| {\displaystyle \Pr(X\geq a)\leq e^{-za}M\_{X}(z),\quad \forall z>0.} | **(2)** |
+| --- | --- |
+
+Solving the equation {\displaystyle e^{-za}M\_{X}(z)=\alpha } for {\displaystyle a,} results in
+
+By considering the equation (**1**), we see that
+
+which shows the relationship between the EVaR and the Chernoff inequality. It is worth noting that {\displaystyle a\_{X}(1,z)} is the *entropic risk measure* or *exponential premium*, which is a concept used in finance and insurance, respectively.
+
+Let {\displaystyle \mathbf {L} \_{M}} be the set of all Borel measurable functions {\displaystyle X:\Omega \to \mathbb {R} } whose moment-generating function {\displaystyle M\_{X}(z)} exists for all {\displaystyle z}. The dual representation (or robust representation) of the EVaR is as follows:
+
+| {\displaystyle {\text{EVaR}}\_{1-\alpha }(X)=\sup \_{Q\in \Im }(E\_{Q}(X)),} | **(3)** |
+| --- | --- |
+
+where {\displaystyle X\in \mathbf {L} \_{M},} and {\displaystyle \Im } is a set of probability measures on {\displaystyle (\Omega ,{\mathcal {F}})} with {\displaystyle \Im =\{Q\ll P:D\_{KL}(Q||P)\leq -\ln \alpha \}}. Note that
+
+is the relative entropy of {\displaystyle Q} with respect to {\displaystyle P,} also called the Kullback–Leibler divergence. The dual representation of the EVaR discloses the reason behind its naming.
+
+
+## Properties
+
+* The EVaR is a coherent risk measure.
+
+* The moment-generating function {\displaystyle M\_{X}(z)} can be represented by the EVaR: for all {\displaystyle X\in \mathbf {L} \_{M^{+}}} and {\displaystyle z>0}
+
+| {\displaystyle M\_{X}(z)=\sup \_{0<\alpha \leq 1}\{\alpha \exp(z{\text{EVaR}}\_{1-\alpha }(X))\}.} | **(4)** |
+| --- | --- |
+
+* For {\displaystyle X,Y\in \mathbf {L} \_{M}}, {\displaystyle {\text{EVaR}}\_{1-\alpha }(X)={\text{EVaR}}\_{1-\alpha }(Y)} for all {\displaystyle \alpha \in ]0,1]} if and only if {\displaystyle F\_{X}(b)=F\_{Y}(b)} for all {\displaystyle b\in \mathbb {R} }.
+
+* The entropic risk measure with parameter {\displaystyle \theta ,} can be represented by means of the EVaR: for all {\displaystyle X\in \mathbf {L} \_{M^{+}}} and {\displaystyle \theta >0}
+
+| {\displaystyle \theta ^{-1}\ln M\_{X}(\theta )=a\_{X}(1,\theta )=\sup \_{0<\alpha \leq 1}\{{\text{EVaR}}\_{1-\alpha }(X)+\theta ^{-1}\ln \alpha \}.} | **(5)** |
+| --- | --- |
+
+* The EVaR with confidence level {\displaystyle 1-\alpha } is the tightest possible upper bound that can be obtained from the Chernoff inequality for the VaR and the CVaR with confidence level {\displaystyle 1-\alpha };
+
+| {\displaystyle {\text{VaR}}(X)\leq {\text{CVaR}}(X)\leq {\text{EVaR}}(X).} | **(6)** |
+| --- | --- |
+
+* The following inequality holds for the EVaR:
+
+| {\displaystyle {\text{E}}(X)\leq {\text{EVaR}}\_{1-\alpha }(X)\leq {\text{esssup}}(X)} | **(7)** |
+| --- | --- |
+
+
+## Examples
+
+For {\displaystyle X\sim N(\mu ,\sigma ^{2}),}
+
+| {\displaystyle {\text{EVaR}}\_{1-\alpha }(X)=\mu +\sigma {\sqrt {-2\ln \alpha }}.} | **(8)** |
+| --- | --- |
+
+For {\displaystyle X\sim U(a,b),}
+
+| {\displaystyle {\text{EVaR}}\_{1-\alpha }(X)=\inf \_{t>0}\left\lbrace t\ln \left(t{\frac {e^{t^{-1}b}-e^{t^{-1}a}}{b-a}}\right)-t\ln \alpha \right\rbrace .} | **(9)** |
+| --- | --- |
+
+Figures 1 and 2 show the comparing of the VaR, CVaR and EVaR for {\displaystyle N(0,1)} and {\displaystyle U(0,1)}.
+
+
+## Optimization
+
+Let {\displaystyle \rho } be a risk measure. Consider the optimization problem
+
+| {\displaystyle \min \_{{\boldsymbol {w}}\in {\boldsymbol {W}}}\rho (G({\boldsymbol {w}},{\boldsymbol {\psi }})),} | **(10)** |
+| --- | --- |
+
+where {\displaystyle {\boldsymbol {w}}\in {\boldsymbol {W}}\subseteq \mathbb {R} ^{n}} is an {\displaystyle n}-dimensional real decision vector, {\displaystyle {\boldsymbol {\psi }}} is an {\displaystyle m}-dimensional real random vector with a known probability distribution and the function {\displaystyle G({\boldsymbol {w}},.):\mathbb {R} ^{m}\to \mathbb {R} } is a Borel measurable function for all values {\displaystyle {\boldsymbol {w}}\in {\boldsymbol {W}}.} If {\displaystyle \rho ={\text{EVaR}},} then the optimization problem (**10**) turns into:
+
+| {\displaystyle \min \_{{\boldsymbol {w}}\in {\boldsymbol {W}},t>0}\left\{t\ln M\_{G({\boldsymbol {w}},{\boldsymbol {\psi }})}(t^{-1})-t\ln \alpha \right\}.} | **(11)** |
+| --- | --- |
+
+Let {\displaystyle {\boldsymbol {S}}\_{\boldsymbol {\psi }}} be the support of the random vector {\displaystyle {\boldsymbol {\psi }}.} If {\displaystyle G(.,{\boldsymbol {s}})} is convex for all {\displaystyle {\boldsymbol {s}}\in {\boldsymbol {S}}\_{\boldsymbol {\psi }}}, then the objective function of the problem (**11**) is also convex. If {\displaystyle G({\boldsymbol {w}},{\boldsymbol {\psi }})} has the form
+
+| {\displaystyle G({\boldsymbol {w}},{\boldsymbol {\psi }})=g\_{0}({\boldsymbol {w}})+\sum \_{i=1}^{m}g\_{i}({\boldsymbol {w}})\psi \_{i},\qquad g\_{i}:\mathbb {R} ^{n}\to \mathbb {R} ,i=0,1,\ldots ,m,} | **(12)** |
+| --- | --- |
+
+and {\displaystyle \psi \_{1},\ldots ,\psi \_{m}} are independent random variables in {\displaystyle \mathbf {L} \_{M}}, then (**11**) becomes
+
+| {\displaystyle \min \_{{\boldsymbol {w}}\in {\boldsymbol {W}},t>0}\left\lbrace g\_{0}({\boldsymbol {w}})+t\sum \_{i=1}^{m}\ln M\_{g\_{i}({\boldsymbol {w}})\psi \_{i}}(t^{-1})-t\ln \alpha \right\rbrace .} | **(13)** |
+| --- | --- |
+
+which is computationally tractable. But for this case, if one uses the CVaR in problem (**10**), then the resulting problem becomes as follows:
+
+| {\displaystyle \min \_{{\boldsymbol {w}}\in {\boldsymbol {W}},t\in \mathbb {R} }\left\lbrace t+{\frac {1}{\alpha }}{\text{E}}\left[g\_{0}({\boldsymbol {w}})+\sum \_{i=1}^{m}g\_{i}({\boldsymbol {w}})\psi \_{i}-t\right]\_{+}\right\rbrace .} | **(14)** |
+| --- | --- |
+
+It can be shown that by increasing the dimension of {\displaystyle \psi }, problem (**14**) is computationally intractable even for simple cases. For example, assume that {\displaystyle \psi \_{1},\ldots ,\psi \_{m}} are independent discrete random variables that take {\displaystyle k} distinct values. For fixed values of {\displaystyle {\boldsymbol {w}}} and {\displaystyle t,} the complexity of computing the objective function given in problem (**13**) is of order {\displaystyle mk} while the computing time for the objective function of problem (**14**) is of order {\displaystyle k^{m}}. For illustration, assume that {\displaystyle k=2,m=100} and the summation of two numbers takes {\displaystyle 10^{-12}} seconds. For computing the objective function of problem (**14**) one needs about {\displaystyle 4\times 10^{10}} years, whereas the evaluation of objective function of problem (**13**) takes about {\displaystyle 10^{-10}} seconds. This shows that formulation with the EVaR outperforms the formulation with the CVaR (see for more details).
+
+
+## Generalization (g-entropic risk measures)
+
+Drawing inspiration from the dual representation of the EVaR given in (**3**), one can define a wide class of information-theoretic coherent risk measures, which are introduced in. Let {\displaystyle g} be a convex proper function with {\displaystyle g(1)=0} and {\displaystyle \beta } be a non-negative number. The {\displaystyle g}-entropic risk measure with divergence level {\displaystyle \beta } is defined as
+
+| {\displaystyle {\text{ER}}\_{g,\beta }(X):=\sup \_{Q\in \Im }{\text{E}}\_{Q}(X)} | **(15)** |
+| --- | --- |
+
+where {\displaystyle \Im =\{Q\ll P:H\_{g}(P,Q)\leq \beta \}} in which {\displaystyle H\_{g}(P,Q)} is the generalized relative entropy of {\displaystyle Q} with respect to {\displaystyle P}. A primal representation of the class of {\displaystyle g}-entropic risk measures can be obtained as follows:
+
+| {\displaystyle {\text{ER}}\_{g,\beta }(X)=\inf \_{t>0,\mu \in \mathbb {R} }\left\lbrace t\left[\mu +{\text{E}}\_{P}\left(g^{\*}\left({\frac {X}{t}}-\mu +\beta \right)\right)\right]\right\rbrace } | **(16)** |
+| --- | --- |
+
+where {\displaystyle g^{\*}} is the conjugate of {\displaystyle g}. By considering
+
+| {\displaystyle g(x)={\begin{cases}x\ln x&x>0\\0&x=0\\+\infty &x<0\end{cases}}} | **(17)** |
+| --- | --- |
+
+with {\displaystyle g^{\*}(x)=e^{x-1}} and {\displaystyle \beta =-\ln \alpha }, the EVaR formula can be deduced. The CVaR is also a {\displaystyle g}-entropic risk measure, which can be obtained from (**16**) by setting
+
+| {\displaystyle g(x)={\begin{cases}0&0\leq x\leq {\frac {1}{\alpha }}\\+\infty &{\text{otherwise}}\end{cases}}} | **(18)** |
+| --- | --- |
+
+with {\displaystyle g^{\*}(x)={\tfrac {1}{\alpha }}\max\{0,x\}} and {\displaystyle \beta =0} (see for more details).
+
+For more results on {\displaystyle g}-entropic risk measures see.
+
+
+## Disciplined Convex Programming Framework
+
+The disciplined convex programming framework of sample EVaR was proposed by Cajas and has the following form:
+
+| {\displaystyle {\begin{aligned}{\text{EVaR}}\_{\alpha }(X)&=\left\{{\begin{array}{ll}{\underset {z,\,t,\,u}{\text{min}}}&t+z\ln \left({\frac {1}{\alpha T}}\right)\\{\text{s.t.}}&z\geq \sum \_{j=1}^{T}u\_{j}\\&(X\_{j}-t,z,u\_{j})\in K\_{\text{exp}}\;\forall \;j=1,\ldots ,T\\\end{array}}\right.\end{aligned}}} | **(19)** |
+| --- | --- |
+
+where {\displaystyle z}, {\displaystyle t} and {\displaystyle u} are variables; {\displaystyle K\_{\text{exp}}} is an exponential cone; and {\displaystyle T} is the number of observations. If we define {\displaystyle w} as the vector of weights for {\displaystyle N} assets, {\displaystyle r} the matrix of returns and {\displaystyle \mu } the mean vector of assets, we can posed the minimization of the expected EVaR given a level of expected portfolio return {\displaystyle {\bar {\mu }}} as follows.
+
+| {\displaystyle {\begin{aligned}&{\underset {w,\,z,\,t,\,u}{\text{min}}}&&t+z\ln \left({\frac {1}{\alpha T}}\right)\\&{\text{s.t.}}&&\mu w^{\tau }\geq {\bar {\mu }}\\&&&\sum \_{i=1}^{N}w\_{i}=1\\&&&z\geq \sum \_{j=1}^{T}u\_{j}\\&&&(-r\_{j}w^{\tau }-t,z,u\_{j})\in K\_{\text{exp}}\;\forall \;j=1,\ldots ,T\\&&&w\_{i}\geq 0\;;\;\forall \;i=1,\ldots ,N\\\end{aligned}}} | **(20)** |
+| --- | --- |
+
+Applying the disciplined convex programming framework of EVaR to uncompounded cumulative returns distribution, Cajas proposed the **entropic drawdown at risk**(**EDaR**) optimization problem. We can posed the minimization of the expected EDaR given a level of expected return {\displaystyle {\bar {\mu }}} as follows:
+
+| {\displaystyle {\begin{aligned}&{\underset {w,\,z,\,t,\,u,\,d}{\text{min}}}&&t+z\ln \left({\frac {1}{\alpha T}}\right)\\&{\text{s.t.}}&&\mu w^{\tau }\geq {\bar {\mu }}\\&&&\sum \_{i=1}^{N}w\_{i}=1\\&&&z\geq \sum \_{j=1}^{T}u\_{j}\\&&&(d\_{j}-R\_{j}w^{\tau }-t,z,u\_{j})\in K\_{\text{exp}}\;\forall \;j=1,\ldots ,T\\&&&d\_{j}\geq R\_{j}w^{\tau }\;\forall \;j=1,\ldots ,T\\&&&d\_{j}\geq d\_{j-1}\;\forall \;j=1,\ldots ,T\\&&&d\_{j}\geq 0\;\forall \;j=1,\ldots ,T\\&&&d\_{0}=0\\&&&w\_{i}\geq 0\;;\;\forall \;i=1,\ldots ,N\\\end{aligned}}} | **(21)** |
+| --- | --- |
+
+where {\displaystyle d} is a variable that represent the uncompounded cumulative returns of portfolio and {\displaystyle R} is the matrix of uncompounded cumulative returns of assets.
+
+For other problems like risk parity, maximization of return/risk ratio or constraints on maximum risk levels for EVaR and EDaR, you can see for more details.
+
+The advantage of model EVaR and EDaR using a disciplined convex programming framework, is that we can use softwares like CVXPY or MOSEK to model this portfolio optimization problems. EVaR and EDaR are implemented in the python package Riskfolio-Lib.
+

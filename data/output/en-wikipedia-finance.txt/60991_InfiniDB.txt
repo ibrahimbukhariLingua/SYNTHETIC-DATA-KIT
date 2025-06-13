@@ -1,0 +1,36 @@
+InfiniDB
+
+
+# InfiniDB
+
+
+
+**InfiniDB** (formerly Calpont Corporation) was a database management software company based in Frisco, Texas. The company developed **InfiniDB**, a scalable, software-only columnar database management system for analytic applications.
+
+InfiniDB is a scalable database built for big data analytics, business intelligence, data warehousing and other read-intensive applications. InfiniDB's column-store architecture enables very quick load and query times. Its massive parallel processing (MPP) technology scales with any type of storage hardware.
+
+In 2014, The company raised $7.5 million in a new round of funding led by McDonnell Ventures.
+
+
+## Columnar databases
+
+By storing and managing data based on columns rather than rows, column-oriented architecture overcomes query limitations that exist in traditional row-based RDBMS. Only the necessary columns in a query are accessed, reducing I/O activities by skipping unneeded columns.
+
+InfiniDB is accessed through a MySQL interface. It then parallelizes queries and executes in a MapReduce fashion (similar in concept to the methodology used by Apache Hadoop). Each thread within the distributed architecture operates independently, avoiding thread-to-thread or node-to-node communication that can cripple scaling.
+
+InfiniDB is used to enable performance-intensive analytic applications. Customers include Bandwidth.com, Tucows, Warner Music Group, Genus, Aviation Software International, Caring Bridge, Navigant Consulting and 1&1 Internet.
+
+InfiniDB resellers included SkySQL (including many former MySQL employees) and KK Ashisuto in Japan.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+
+## Variants and forks
+
+On October 16, 2013, the company announced that InfiniDB would be licensed under the General Public License v. 2. The open source variants of InfiniDB databases are: *InfiniDB Standard Edition* and *InfiniDB for the Cloud* including *InfiniDB for Apache Hadoop*.
+
+MariaDB Corporation announced on April 5, 2016 the release of its first big data analytics engine, *MariaDB ColumnStore*. It is based both on a fork of InfiniDB and open-source community contributions. ColumnStore supports use cases including real-time, batch and algorithmic.
+
+
+## Bankruptcy
+
+On October 1, 2014, InfiniDB ceased operations and filed for bankruptcy protection in US Bankruptcy Court in the Eastern District of Texas. Existing customers may be able to receive support from other companies, notably MariaDB.
+

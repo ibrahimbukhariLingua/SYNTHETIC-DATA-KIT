@@ -1,0 +1,137 @@
+FAME (database)
+
+
+# FAME (database)
+
+
+
+**FAME** (Forecasting Analysis and Modeling Environment) is a time series database released in 1981 and owned by FIS Global.
+
+
+## History
+
+The FAME software environment had several development phases during its history.
+
+Lawrence C. Rafsky founded GemNet Software Corp to create FAME in 1981. It was an independent software company located in Ann Arbor, Michigan. The first version of the software was delivered to Harris Bank in 1983.
+
+The company was purchased by CitiCorp in 1984. During this time, development focused on the time-series-oriented database engine and the 4GL scripting language.
+
+Citigroup sold FAME to private investors headed by Warburg Pincus in 1994. Management focused on fixing bugs, developing remote database server access to FAME, and investing in expanding the FAME database engine. Emphasis was also placed on extending FAME by creating an object-oriented Java interface called TimeIQ that replicated many features of FAME 4GL in Java. This period also saw the release of the access point, which provides URL access to FAME objects in multiple output formats.
+
+SunGard acquired FAME in 2004.
+
+In 2010, Sungard merged FAME and MarketMap Data into the MarketMap brand.
+
+FIS Global acquired Sungard in 2015.
+
+
+## Toolkits and connectors
+
+**FAME Desktop Add-in for Excel:**
+FAME Desktop is an Excel add-in that supports the =FMD(expression, sd, ed,0, freq, orientation) and =FMS(expression, freq + date) formulas, just as the 4GL command prompt does. These formulas can be placed in Excel spreadsheets and are linked to FAME objects and analytics stored on a FAME server. Sample Excel templates for research and analytics, which act as accelerators for clients, are available in the template library. The FAME Desktop Add-in was first renamed FAME Populator, then MarketMap Analytics.
+
+**FAME Connector for MATLAB:** Matlab is an environment for technical computing applications that is also used in the financial sector by fixed-income analysts, equity research groups, and investment firms. Customers can store content in FAME and use Matlab to access and model their data. The Matlab-FAME Connector uses the FAME Java Toolkit to link Matlab scripts to FAME objects.
+
+**BITA Curve Connector:** The BITA Curve workstation provides a platform that can link to “in-database” analytics and content warehoused in FAME. Through the BITA Curve Connector, FAME users can better visualize and work with the content that they warehouse into FAME.
+
+**R Interface:**
+FAME customers have developed and released an interface as free software that links FAME objects to the open-source R statistical package. Originally developed at the Federal Reserve Board. Features include:
+
+* Time series adaptation of FAME to R
+* Frequency conformance
+* A set of fundamental statistical functions
+
+**SASEFAME:**
+SAS provides an interface to FAME databases called SASEFAME. This provides dynamic read-and-write access between a SAS application and FAME databases or a FAME server process
+
+**TROLL Interface:**
+TROLL’s interface to FAME provides read and write access from a TROLL application to a FAME Server or directly to a local FAME database
+
+
+## Development timeline
+
+**1982–1994:**
+GemNet introduced the first release of FAME in 1983. Citicorp purchased the company in 1984. Development milestones during this period:
+
+* 1990: First FAME Remote Database Server (FRDB) – master/back – released
+* 1991: Data distribution services launched
+* 1993: Multiple Client Analytical Database Server (MCADBS) released with FAME 7.5
+
+Before MCADBS, users could not use a thin C HLI client to leverage the power of 4GL on a remote host via client/server TCP. The 7.5 release also introduced some important 4GL features, including PostScript Reports, and database features such as global names and formulas.
+
+* 1994: FAME 7.6 made graphical and reporting enhancements as well as performance improvements.
+* The Mid-1990s: Standard & Poor’s, Thomson Financial, DRI, and FT Interactive Data product loaders created
+
+**1994–2004:**
+During this period, the focus was on improving managed content delivery to onsite FAME warehouses and hosted ASP FAME servers. Milestones included:
+
+* 1997: MSCI and Russell product loaders added
+* 1998: FAME 8.0 with FRDB write server released
+* FAME Populator 4.0 released
+* TimeIQ (now known as FAME Java Toolkit) beta 1 was released. FAME created an object-oriented Java programming interface.
+* 2001: FAME 9.0 increased the FAME database size limit from 2 GB to 64 GB.
+* 2002: FAME 9.0 for Windows released
+* 2003: FAME 9.0 ported to Linux
+* 2004: access Point (now known as FAME Web Access) with connection pooling released
+
+**2004–present:** After being acquired by SunGard, FAME’s development focus shifted to the 4GL scripting language and core FAME features. Milestones included:
+
+* 2004: access Point 1.5 released
+* August 2005: Enterprise FAME Java Toolkit 2.2 released
+* December 2005: reference Point launched
+* March 2006: Support for 64-bit Linux and UNIX introduced in FAME 9.2
+
+FAME 9.2 also added new 4GL debugging features, analytical functions, graphics, and reporting improvements. Other core 4GL features included the MOVE function and new forms of the SHIFT and FILESPEC functions. The FAME SEARCH command was enhanced with the PATH option. Memory support mapped FAME databases and the TUNE CACHE MEGABYTES option helped users to better manage large volume warehouses.
+
+* 2007: Pathfinder Global Formula run-time beta tested
+* June–September 2007: FAME 9.3 added new debugging features, including the DEBUG option and BREAK, STEP, and CONTINUE commands.
+
+FAME 9.3 also introduced new graphical features, including BUBBLE charts.
+
+* February 2008: Access Point 1.7 with Web Services released
+* May 2008: Site Server on Linux released
+* October 2008: FAME .NET Toolkit released
+* February 2009: FAME 10.0 released.
+
+**FAME 10** opens up the environment to real-time analysis with larger database storage, as well as support for new frequencies, such as millisecond and weekly patterns. New database formats increase the maximum size to 256 GB.
+
+During this period, FAME also focused on expanding the managed content delivered to the database, as well as out-of-the-box object models that warehouse builders can leverage when loading proprietary content.
+
+* Expanded managed content provides out-of-the-box data and object models for:
+ + Equity pricing
+ + Corporate bond pricing
+ + Futures, commodities, and options
+ + Company and index fundamentals
+ + Company and index estimates
+ + Macroeconomic indicators and benchmark construction
+* FAME 10 provides several enhanced features for creating object models, including
+ + Support for longer object names (up to 242 characters) and for assigning an unlimited number of user-defined attributes to an object
+ + Support for object names with up to 35 dimensions
+* December 2010: FAME 10.1 released.
+* December 2011: FAME 10.2 released.
+* March 2012: FAME 11.0 released.
+* June 2012: FAME 11.1 released.
+* December 2012: FAME 11.2 released.
+* March 2013: FAME 11.3 released.
+* June 2014: FAME 11.4 released.
+* November 2015: FAME 11.5 released.
+* April 2018: FAME 11.6 released.
+* February 2020: FAME 11.7 released.
+* December 2020: FAME 11.8 released.
+* March 2023: FIS Market Data Analyzer 2022.Q4 released.
+
+**FIS Market Data Analyzer 2022.Q4 Release**: MarketMap Analytic Platform (FAME) is now FIS Market Data Analyzer.
+FIS Market Data Analyzer was formerly named MarketMap Analytic Platform (also known as FAME).
+
+**Major Milestones and Changes**
+
+*New software versioning system*: Starting with the FIS Market Data Analyzer 2022.Q4 release, the internal FIS Market Data Analyzer
+release number is represented as a numeric value in the form xxxx.xxx.
+
+*Support for Amazon Web Services (AWS) cloud:* FIS Market Data Analyzer databases can now be deployed on AWS cloud.
+In the non-cluster environment on AWS cloud, the Elastic Block Storage (EBS) volumes has been used
+for deploying FIS Market Data Analyzer databases. In the cluster environment for Linux servers on AWS
+cloud, FIS used the EBS multi-attach volumes along with the GFS2 filesystem for deploying FIS Market
+Data Analyzer databases.
+
+* May 2024: FIS Market Data Analyzer 2023.Q4 released.

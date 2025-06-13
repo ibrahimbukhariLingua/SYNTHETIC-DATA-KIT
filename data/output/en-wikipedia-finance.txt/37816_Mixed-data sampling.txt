@@ -1,0 +1,43 @@
+Mixed-data sampling
+
+
+# Mixed-data sampling
+
+
+
+Econometric models involving data sampled at different frequencies are of general interest. **Mixed-data sampling (MIDAS)** is an econometric regression developed by Eric Ghysels with several co-authors. There is now a substantial literature on MIDAS regressions and their applications, including Ghysels, Santa-Clara and Valkanov (2006), Ghysels, Sinko and Valkanov, Andreou, Ghysels and Kourtellos (2010) and Andreou, Ghysels and Kourtellos (2013).
+
+
+## MIDAS Regressions
+
+A MIDAS regression is a direct forecasting tool which can relate future low-frequency data with current and lagged high-frequency indicators, and yield different forecasting models for each forecast horizon. It can flexibly deal with data sampled at different frequencies and provide a direct forecast of the low-frequency variable. It incorporates each individual high-frequency data in the regression, which solves the problems of losing potentially useful information and including mis-specification.
+
+A simple regression example has the independent variable appearing at a higher frequency than the dependent variable:
+
+where *y* is the dependent variable, *x* is the regressor, *m* denotes the frequency – for instance if *y* is yearly {\displaystyle x\_{t}^{(4)}} is quarterly – {\displaystyle \varepsilon } is the disturbance and {\displaystyle B(L^{1/m};\theta )} is a lag distribution, for instance the Beta function or the Almon Lag. For example {\displaystyle B(L^{1/m};\theta )=\sum \_{k=0}^{K}B(k;\theta )L^{k/m}}.
+
+The regression models can be viewed in some cases as substitutes for the Kalman filter when applied in the context of mixed frequency data. Bai, Ghysels and Wright (2013) examine the relationship between MIDAS regressions and Kalman filter state space models applied to mixed frequency data. In general, the latter involves a system of equations, whereas, in contrast, MIDAS
+regressions involve a (reduced form) single equation. As a consequence, MIDAS regressions might be less efficient, but also less prone to specification errors. In cases where the MIDAS regression is only an approximation, the approximation errors tend to be small.
+
+
+## Machine Learning MIDAS Regressions
+
+The MIDAS can also be used for machine learning time series and panel data nowcasting. The machine learning MIDAS regressions involve Legendre polynomials. High-dimensional mixed frequency time series regressions involve certain data structures that once taken into account should improve the performance of unrestricted estimators in small samples. These structures are represented by groups covering lagged dependent variables and groups of lags for a single (high-frequency) covariate. To that end, the machine learning MIDAS approach exploits the sparse-group LASSO (sg-LASSO) regularization that accommodates conveniently such structures. The attractive feature of the sg-LASSO estimator is that it allows us to combine effectively the approximately sparse and dense signals.
+
+
+## Software packages
+
+Several software packages feature MIDAS regressions and related econometric methods. These include:
+
+* MIDAS Matlab Toolbox
+* midasr, R package
+* midasml, R package for High-Dimensional Mixed Frequency Time Series Data
+* EViews
+* Python
+* Julia
+* Stata，midasreg
+
+## Alternatives
+
+In some situations it might be possible to alternatively use temporal disaggregation methods (for upsampling time series data from e.g. monthly to daily).
+

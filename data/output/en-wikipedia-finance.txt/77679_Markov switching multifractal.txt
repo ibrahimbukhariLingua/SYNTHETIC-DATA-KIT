@@ -1,0 +1,99 @@
+Markov switching multifractal
+
+
+# Markov switching multifractal
+
+
+
+In financial econometrics (the application of statistical methods to economic data), the **Markov-switching multifractal (MSM)** is a model of asset returns developed by Laurent E. Calvet and Adlai J. Fisher that incorporates stochastic volatility components of heterogeneous durations. MSM captures the outliers, log-memory-like volatility persistence and power variation of financial returns. In currency and equity series, MSM compares favorably with standard volatility models such as GARCH(1,1) and FIGARCH both in- and out-of-sample. MSM is used by practitioners in the financial industry for different types of forecasts.
+
+
+## MSM specification
+
+The MSM model can be specified in both discrete time and continuous time.
+
+
+### Discrete time
+
+Let {\displaystyle P\_{t}} denote the price of a financial asset, and let {\displaystyle r\_{t}=\ln(P\_{t}/P\_{t-1})} denote the return over two consecutive periods. In MSM, returns are specified as
+
+where {\displaystyle \mu } and {\displaystyle \sigma } are constants and {{\displaystyle \epsilon \_{t}}} are independent standard Gaussians. Volatility is driven by the first-order latent Markov state vector:
+
+Given the volatility state {\displaystyle M\_{t}}, the next-period multiplier {\displaystyle M\_{k,t+1}} is drawn from a fixed distribution M with probability {\displaystyle \gamma \_{k}}, and is otherwise left unchanged.
+
+| {\displaystyle M\_{k,t}} drawn from distribution M | with probability {\displaystyle \gamma \_{k}} |
+| --- | --- |
+| {\displaystyle M\_{k,t}=M\_{k,t-1}} | with probability {\displaystyle 1-\gamma \_{k}} |
+
+The transition probabilities are specified by
+
+The sequence {\displaystyle \gamma \_{k}} is approximately geometric {\displaystyle \gamma \_{k}\approx \gamma \_{1}b^{k-1}} at low frequency. The marginal distribution M has a unit mean, has a positive support, and is independent of k.
+
+
+#### Binomial MSM
+
+In empirical applications, the distribution M is often a discrete distribution that can take the values {\displaystyle m\_{0}} or {\displaystyle 2-m\_{0}} with equal probability. The return process {\displaystyle r\_{t}} is then specified by the parameters {\displaystyle \theta =(m\_{0},\mu ,{\bar {\sigma }},b,\gamma \_{1})}. Note that the number of parameters is the same for all {\displaystyle {\bar {k}}>1}.
+
+
+### Continuous time
+
+MSM is similarly defined in continuous time. The price process follows the diffusion:
+
+where {\displaystyle \sigma (M\_{t})={\bar {\sigma }}(M\_{1,t}\dots M\_{{\bar {k}},t})^{1/2}}, {\displaystyle W\_{t}} is a standard Brownian motion, and {\displaystyle \mu } and {\displaystyle {\bar {\sigma }}} are constants. Each component follows the dynamics:
+
+| {\displaystyle M\_{k,t}} drawn from distribution M | with probability {\displaystyle \gamma \_{k}dt} |
+| --- | --- |
+| {\displaystyle M\_{k,t+dt}=M\_{k,t}} | with probability {\displaystyle 1-\gamma \_{k}dt} |
+
+The intensities vary geometrically with k:
+
+When the number of components {\displaystyle {\bar {k}}} goes to infinity, continuous-time MSM converges to a multifractal diffusion, whose sample paths take a continuum of local Hölder exponents on any finite time interval.
+
+
+## Inference and closed-form likelihood
+
+When {\displaystyle M} has a discrete distribution, the Markov state vector {\displaystyle M\_{t}} takes finitely many values {\displaystyle m^{1},...,m^{d}\in R\_{+}^{\bar {k}}}. For instance, there are {\displaystyle d=2^{\bar {k}}} possible states in binomial MSM. The Markov dynamics are characterized by the transition matrix {\displaystyle A=(a\_{i,j})\_{1\leq i,j\leq d}} with components {\displaystyle a\_{i,j}=P\left(M\_{t+1}=m^{j}|M\_{t}=m^{i}\right)}.
+Conditional on the volatility state, the return {\displaystyle r\_{t}} has Gaussian density
+
+
+### Conditional distribution
+
+
+### Closed-form Likelihood
+
+The log likelihood function has the following analytical expression:
+
+Maximum likelihood provides reasonably precise estimates in finite samples.
+
+
+### Other estimation methods
+
+When {\displaystyle M} has a continuous distribution, estimation can proceed by simulated method of moments, or simulated likelihood via a particle filter.
+
+
+## Forecasting
+
+Given {\displaystyle r\_{1},\dots ,r\_{t}}, the conditional distribution of the latent state vector at date {\displaystyle t+n} is given by:
+
+MSM often provides better volatility forecasts than some of the best traditional models both in and out of sample. Calvet and Fisher report considerable gains in exchange rate volatility forecasts at horizons of 10 to 50 days as compared with GARCH(1,1), Markov-Switching GARCH, and Fractionally Integrated GARCH. Lux obtains similar results using linear predictions.
+
+
+## Applications
+
+
+### Multiple assets and value-at-risk
+
+Extensions of MSM to multiple assets provide reliable estimates of the value-at-risk in a portfolio of securities.
+
+
+### Asset pricing
+
+In financial economics, MSM has been used to analyze the pricing implications of multifrequency risk. The models have had some success in explaining the excess volatility of stock returns compared to fundamentals and the negative skewness of equity returns. They have also been used to generate multifractal jump-diffusions.
+
+
+## Related approaches
+
+MSM is a stochastic volatility model with arbitrarily many frequencies. MSM builds on the convenience of regime-switching models, which were advanced in economics and finance by James D. Hamilton.
+MSM is closely related to the Multifractal Model of Asset Returns. MSM improves on the MMAR's combinatorial construction by randomizing arrival times, guaranteeing a strictly stationary process.
+MSM provides a pure regime-switching formulation of multifractal measures, which were pioneered by Benoit Mandelbrot.
+

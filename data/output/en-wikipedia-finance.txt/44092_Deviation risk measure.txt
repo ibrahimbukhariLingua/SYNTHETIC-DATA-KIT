@@ -1,0 +1,41 @@
+Deviation risk measure
+
+
+# Deviation risk measure
+
+
+
+In financial mathematics, a **deviation risk measure** is a function to quantify financial risk (and not necessarily downside risk) in a different method than a general risk measure. Deviation risk measures generalize the concept of standard deviation.
+
+
+## Mathematical definition
+
+A function {\displaystyle D:{\mathcal {L}}^{2}\to [0,+\infty ]}, where {\displaystyle {\mathcal {L}}^{2}} is the L2 space of random variables (random portfolio returns), is a deviation risk measure if
+
+1. Shift-invariant: {\displaystyle D(X+r)=D(X)} for any {\displaystyle r\in \mathbb {R} }
+2. Normalization: {\displaystyle D(0)=0}
+3. Positively homogeneous: {\displaystyle D(\lambda X)=\lambda D(X)} for any {\displaystyle X\in {\mathcal {L}}^{2}} and {\displaystyle \lambda >0}
+4. Sublinearity: {\displaystyle D(X+Y)\leq D(X)+D(Y)} for any {\displaystyle X,Y\in {\mathcal {L}}^{2}}
+5. Positivity: {\displaystyle D(X)>0} for all nonconstant *X*, and {\displaystyle D(X)=0} for any constant *X*.
+
+## Relation to risk measure
+
+There is a one-to-one relationship between a deviation risk measure *D* and an expectation-bounded risk measure *R* where for any {\displaystyle X\in {\mathcal {L}}^{2}}
+
+* {\displaystyle D(X)=R(X-\mathbb {E} [X])}
+* {\displaystyle R(X)=D(X)-\mathbb {E} [X]}.
+
+*R* is expectation bounded if {\displaystyle R(X)>\mathbb {E} [-X]} for any nonconstant *X* and {\displaystyle R(X)=\mathbb {E} [-X]} for any constant *X*.
+
+If {\displaystyle D(X)<\mathbb {E} [X]-\operatorname {ess\inf } X} for every *X* (where {\displaystyle \operatorname {ess\inf } } is the essential infimum), then there is a relationship between *D* and a coherent risk measure.
+
+
+## Examples
+
+The most well-known examples of risk deviation measures are:
+
+* Standard deviation {\displaystyle \sigma (X)={\sqrt {E[(X-EX)^{2}]}}};
+* Average absolute deviation {\displaystyle MAD(X)=E(|X-EX|)};
+* Lower and upper semi-deviations {\displaystyle \sigma \_{-}(X)={\sqrt {{E[(X-EX)\_{-}}^{2}]}}} and {\displaystyle \sigma \_{+}(X)={\sqrt {{E[(X-EX)\_{+}}^{2}]}}}, where {\displaystyle [X]\_{-}:=\max\{0,-X\}} and {\displaystyle [X]\_{+}:=\max\{0,X\}};
+* Range-based deviations, for example, {\displaystyle D(X)=EX-\inf X} and {\displaystyle D(X)=\sup X-\inf X};
+* Conditional value-at-risk (CVaR) deviation, defined for any {\displaystyle \alpha \in (0,1)} by {\displaystyle {\rm {CVaR}}\_{\alpha }^{\Delta }(X)\equiv ES\_{\alpha }(X-EX)}, where {\displaystyle ES\_{\alpha }(X)} is Expected shortfall.

@@ -1,0 +1,121 @@
+Black–Scholes equation
+
+
+# Black–Scholes equation
+
+
+
+In mathematical finance, the **Black–Scholes equation**, also called the **Black–Scholes–Merton equation**, is a partial differential equation (PDE) governing the price evolution of derivatives under the Black–Scholes model. Broadly speaking, the term may refer to a similar PDE that can be derived for a variety of options, or more generally, derivatives.
+
+Consider a stock paying no dividends. Now construct any derivative that has a fixed maturation time {\displaystyle T} in the future, and at maturation, it has payoff {\displaystyle K(S\_{T})} that depends on the values taken by the stock at that moment (such as European call or put options). Then the price of the derivative satisfies
+
+where {\displaystyle V(t,S)} is the price of the option as a function of stock price *S* and time *t*, *r* is the risk-free interest rate, and {\displaystyle \sigma } is the volatility of the stock.
+
+The key financial insight behind the equation is that, under the model assumption of a frictionless market, one can perfectly hedge the option by buying and selling the underlying asset in just the right way and consequently “eliminate risk". This hedge, in turn, implies that there is only one right price for the option, as returned by the Black–Scholes formula.
+
+
+## Financial interpretation
+
+The equation has a concrete interpretation that is often used by practitioners and is the basis for the common derivation given in the next subsection. The equation can be rewritten in the form:
+
+The left-hand side consists of a "time decay" term, the change in derivative value with respect to time, called theta, and a term involving the second spatial derivative gamma, the convexity of the derivative value with respect to the underlying value. The right-hand side is the riskless return from a long position in the derivative and a short position consisting of 
+∂
+V
+
+/
+
+∂
+S
+
+
+
+{\textstyle {\partial V}/{\partial S}}
+
+ shares of the underlying asset.
+
+Black and Scholes' insight was that the portfolio represented by the right-hand side is riskless: thus the equation says that the riskless return over any infinitesimal time interval can be expressed as the sum of theta and a term incorporating gamma. For an option, theta is typically negative, reflecting the loss in value due to having less time for exercising the option (for a European call on an underlying without dividends, it is always negative). Gamma is typically positive and so the gamma term reflects the gains in holding the option. The equation states that over any infinitesimal time interval the loss from theta and the gain from the gamma term must offset each other so that the result is a return at the riskless rate.
+
+From the viewpoint of the option issuer, e.g. an investment bank, the gamma term is the cost of hedging the option. (Since gamma is the greatest when the spot price of the underlying is near the strike price of the option, the seller's hedging costs are the greatest in that circumstance.)
+
+
+## Derivation
+
+Per the model assumptions above, the price of the underlying asset (typically a stock) follows a geometric Brownian motion. That is
+
+where *W* is a stochastic variable (Brownian motion). Note that *W*, and consequently its infinitesimal increment *dW*, represents the only source of uncertainty in the price history of the stock. Intuitively, *W*(*t*) is a process that "wiggles up and down" in such a random way that its expected change over any time interval is 0. (In addition, its variance over time *T* is equal to *T*; see Wiener process § Basic properties); a good discrete analogue for *W* is a simple random walk. Thus the above equation states that the infinitesimal rate of return on the stock has an expected value of *μ* *dt* and a variance of {\displaystyle \sigma ^{2}dt}.
+
+The payoff of an option (or any derivative contingent to stock S) {\displaystyle V(S,T)} at maturity is known. To find its value at an earlier time we need to know how {\displaystyle V} evolves as a function of {\displaystyle S} and {\displaystyle t}. By Itô's lemma for two variables we have
+
+Replacing the differentials with deltas in the equations for *dS* and *dV* gives:
+
+Now consider a portfolio {\displaystyle \Pi } consisting of a short option and 
+∂
+V
+
+/
+
+∂
+S
+
+
+
+{\textstyle {\partial V}/{\partial S}}
+
+ long shares at time {\displaystyle t}. The value of these holdings is
+
+Over the time period {\displaystyle [t,t+\Delta t]}, the total profit or loss from changes in the values of the holdings is:
+
+Substituting {\displaystyle \Delta S} and {\displaystyle \Delta V} into the expression for {\displaystyle \Delta \Pi }:
+
+Note that the {\displaystyle \Delta W} term has vanished. Thus uncertainty has been eliminated and the portfolio is effectively riskless, i.e. a delta-hedge. The rate of return on this portfolio must be equal to the rate of return on any other riskless instrument; otherwise, there would be opportunities for arbitrage. Now assuming the risk-free rate of return is {\displaystyle r} we must have over the time period {\displaystyle [t,t+\Delta t]}
+
+If we now substitute our formulas for {\displaystyle \Delta \Pi } and {\displaystyle \Pi } we obtain:
+
+Simplifying, we arrive at the Black–Scholes partial differential equation:
+
+With the assumptions of the Black–Scholes model, this second order partial differential equation holds for any type of option as long as its price function {\displaystyle V} is twice differentiable with respect to {\displaystyle S} and once with respect to {\displaystyle t}.
+
+
+### Alternative derivation
+
+Here is an alternative derivation that can be utilized in situations where it is initially unclear what the hedging portfolio should be. (For a reference, see 6.4 of Shreve vol II).
+
+In the Black–Scholes model, assuming we have picked the risk-neutral probability measure, the underlying stock price *S*(*t*) is assumed to evolve as a geometric Brownian motion:
+
+Since this stochastic differential equation (SDE) shows the stock price evolution is Markovian, any derivative on this underlying is a function of time *t* and the stock price at the current time, *S*(*t*). Then an application of Itô's lemma gives an SDE for the discounted derivative process {\displaystyle e^{-rt}V(t,S(t))}, which should be a martingale. In order for that to hold, the drift term must be zero, which implies the Black—Scholes PDE.
+
+This derivation is basically an application of the Feynman–Kac formula and can be attempted whenever the underlying asset(s) evolve according to given SDE(s).
+
+
+## Solving methods
+
+Once the Black–Scholes PDE, with boundary and terminal conditions, is derived for a derivative, the PDE can be solved numerically using standard methods of numerical analysis, such as a type of finite difference method. In certain cases, it is possible to solve for an exact formula, such as in the case of a European call, which was done by Black and Scholes.
+
+The solution is conceptually simple. Since in the Black–Scholes model, the underlying stock price {\displaystyle S\_{t}} follows a geometric Brownian motion, the distribution of {\displaystyle S\_{T}}, conditional on its price {\displaystyle S\_{t}} at time {\displaystyle t}, is a log-normal distribution. Then the price of the derivative is just discounted expected payoff {\displaystyle E[e^{-r(T-t)}K(S\_{T})|S\_{t}]}, which may be computed analytically when the payoff function {\displaystyle K} is analytically tractable, or numerically if not.
+
+To do this for a call option, recall the PDE above has boundary conditions
+
+The last condition gives the value of the option at the time that the option matures. Other conditions are possible as *S* goes to 0 or infinity. For example, common conditions utilized in other situations are to choose delta to vanish as *S* goes to 0 and gamma to vanish as *S* goes to infinity; these will give the same formula as the conditions above (in general, differing boundary conditions will give different solutions, so some financial insight should be utilized to pick suitable conditions for the situation at hand).
+
+The solution of the PDE gives the value of the option at any earlier time, {\displaystyle \mathbb {E} \left[\max\{S-K,0\}\right]}. To solve the PDE we recognize that it is a Cauchy–Euler equation which can be transformed into a diffusion equation by introducing the change-of-variable transformation
+
+Then the Black–Scholes PDE becomes a diffusion equation
+
+The terminal condition {\displaystyle C(S,T)=\max\{S-K,0\}} now becomes an initial condition
+
+where *H*(*x*) is the Heaviside step function. The Heaviside function corresponds to enforcement of the boundary data in the *S*, *t* coordinate system that requires when *t* = *T*,
+
+assuming both *S*, *K* > 0. With this assumption, it is equivalent to the max function over all *x* in the real numbers, with the exception of *x* = 0. The equality above between the **max** function and the Heaviside function is in the sense of distributions because it does not hold for *x* = 0. Though subtle, this is important because the Heaviside function need not be finite at *x* = 0, or even defined for that matter. For more on the value of the Heaviside function at *x* = 0, see the section "Zero Argument" in the article Heaviside step function.
+
+Using the standard convolution method for solving a diffusion equation given an initial value function, *u*(*x*, 0), we have
+
+which, after some manipulation, yields
+
+where {\displaystyle N(\cdot )} is the standard normal cumulative distribution function and
+
+These are the same solutions (up to time translation) that were obtained by Fischer Black in 1976.
+
+Reverting {\displaystyle u,x,\tau } to the original set of variables yields the above stated solution to the Black–Scholes equation.
+
+which gives simply *S* when reverting to the original coordinates.
+

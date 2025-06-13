@@ -1,0 +1,146 @@
+Autoregressive integrated moving average
+
+
+# Autoregressive integrated moving average
+
+
+
+In time series analysis used in statistics and econometrics, **autoregressive integrated moving average** (**ARIMA**) and **seasonal ARIMA** (**SARIMA**) models are generalizations of the autoregressive moving average (ARMA) model to non-stationary series and periodic variation, respectively. All these models are fitted to time series in order to better understand it and predict future values. The purpose of these generalizations is to fit the data as well as possible. Specifically, ARMA assumes that the series is stationary, that is, its expected value is constant in time. If instead the series has a trend (but a constant variance/autocovariance), the trend is removed by "differencing", leaving a stationary series. This operation generalizes ARMA and corresponds to the "integrated" part of ARIMA. Analogously, periodic variation is removed by "seasonal differencing".
+
+
+## Components
+
+As in ARMA, the "autoregressive" (AR) part of ARIMA indicates that the evolving variable of interest is regressed on its prior values. The "moving average" (MA) part indicates that the regression error is a linear combination of error terms whose values occurred contemporaneously and at various times in the past. The "integrated" (I) part indicates that the data values have been replaced with the difference between each value and the previous value.
+
+According to Wold's decomposition theorem, the ARMA model is sufficient to describe a **regular** (a.k.a. purely nondeterministic) wide-sense stationary time series, so we are motivated to make such a non-stationary time series stationary, e.g., by using differencing, before we can use ARMA.
+
+If the time series contains a **predictable** sub-process (a.k.a. pure sine or complex-valued exponential process), the predictable component is treated as a non-zero-mean but periodic (i.e., seasonal) component in the ARIMA framework that it is eliminated by the seasonal differencing.
+
+
+## Mathematical formulation
+
+Non-seasonal ARIMA models are usually denoted ARIMA(*p*, *d*, *q*) where parameters *p*, *d*, *q* are non-negative integers: *p* is the order (number of time lags) of the autoregressive model, *d* is the degree of differencing (the number of times the data have had past values subtracted), and *q* is the order of the moving-average model. Seasonal ARIMA models are usually denoted ARIMA(*p*, *d*, *q*)(*P*, *D*, *Q*)ₘ, where the uppercase *P*, *D*, *Q* are the autoregressive, differencing, and moving average terms for the seasonal part of the ARIMA model and *m* is the number of periods in each season. When two of the parameters are 0, the model may be referred to based on the non-zero parameter, dropping "AR", "I" or "MA" from the acronym. For example, ⁠{\displaystyle {\text{ARIMA}}(1,0,0)}⁠ is AR(1), ⁠{\displaystyle {\text{ARIMA}}(0,1,0)}⁠ is I(1), and ⁠{\displaystyle {\text{ARIMA}}(0,0,1)}⁠ is MA(1).
+
+Given time series data *X*ₜ where *t* is an integer index and the *X*ₜ are real numbers, an {\displaystyle {\text{ARMA}}(p',q)} model is given by
+
+or equivalently by
+
+where {\displaystyle L} is the lag operator, the {\displaystyle \alpha \_{i}} are the parameters of the autoregressive part of the model, the {\displaystyle \theta \_{i}} are the parameters of the moving average part and the {\displaystyle \varepsilon \_{t}} are error terms. The error terms {\displaystyle \varepsilon \_{t}} are generally assumed to be independent, identically distributed variables sampled from a normal distribution with zero mean.
+
+If the polynomial {\displaystyle \textstyle \left(1-\sum \_{i=1}^{p'}\alpha \_{i}L^{i}\right)} has a unit root (a factor {\displaystyle (1-L)}) of multiplicity *d*, then it can be rewritten as:
+
+An ARIMA(*p*, *d*, *q*) process expresses this polynomial factorisation property with *p* = *p'−d*, and is given by:
+
+and so is special case of an ARMA(*p+d*, *q*) process having the autoregressive polynomial with *d* unit roots. (This is why no process that is accurately described by an ARIMA model with *d* > 0 is wide-sense stationary.)
+
+The above can be generalized as follows.
+
+This defines an ARIMA(*p*, *d*, *q*) process with **drift** {\displaystyle {\frac {\delta }{1-\sum \varphi \_{i}}}}.
+
+
+## Other special forms
+
+The explicit identification of the factorization of the autoregression polynomial into factors as above can be extended to other cases, firstly to apply to the moving average polynomial and secondly to include other special factors. For example, having a factor {\displaystyle (1-L^{s})} in a model is one way of including a non-stationary seasonality of period *s* into the model; this factor has the effect of re-expressing the data as changes from *s* periods ago. Another example is the factor {\displaystyle \left(1-{\sqrt {3}}L+L^{2}\right)}, which includes a (non-stationary) seasonality of period 2.ᶜˡᵃʳⁱᶠⁱᶜᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ The effect of the first type of factor is to allow each season's value to drift separately over time, whereas with the second type values for adjacent seasons move together.ᶜˡᵃʳⁱᶠⁱᶜᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+Identification and specification of appropriate factors in an ARIMA model can be an important step in modeling as it can allow a reduction in the overall number of parameters to be estimated while allowing the imposition on the model of types of behavior that logic and experience suggest should be there.
+
+
+## Differencing
+
+A stationary time series's properties do not change. Specifically, for a wide-sense stationary time series, the mean and the variance/autocovariance are constant over time. **Differencing** in statistics is a transformation applied to a non-stationary time-series in order to make it stationary *in the mean sense* (that is, to remove the non-constant trend), but it does not affect the non-stationarity of the variance or autocovariance. Likewise, **seasonal differencing** is applied to a seasonal time-series to remove the seasonal component.
+
+From the perspective of signal processing, especially the Fourier spectral analysis theory, the trend is a low-frequency part in the spectrum of a series, while the season is a periodic-frequency part. Therefore, differencing is a high-pass (that is, low-stop) filter and the seasonal-differencing is a comb filter to suppress respectively the low-frequency trend and the periodic-frequency season in the spectrum domain (rather than directly in the time domain).
+
+To difference the data, we compute the difference between consecutive observations. Mathematically, this is shown as
+
+It may be necessary to difference the data a second time to obtain a stationary time series, which is referred to as **second-order differencing**:
+
+Seasonal differencing involves computing the difference between an observation and the corresponding observation in the previous season e.g a year. This is shown as:
+
+The differenced data are then used for the estimation of an ARMA model.
+
+
+## Examples
+
+Some well-known special cases arise naturally or are mathematically equivalent to other popular forecasting models. For example:
+
+* An ARIMA(0, 1, 0) model (or I(1) model) is given by {\displaystyle X\_{t}=X\_{t-1}+\varepsilon \_{t}} — which is simply a random walk.
+* An ARIMA(0, 1, 0) with a constant, given by {\displaystyle X\_{t}=c+X\_{t-1}+\varepsilon \_{t}} — which is a random walk with drift.
+* An ARIMA(0, 0, 0) model is a white noise model.
+* An ARIMA(0, 1, 2) model is a Damped Holt's model.
+* An ARIMA(0, 1, 1) model without constant is a basic exponential smoothing model.
+* An ARIMA(0, 2, 2) model is given by {\displaystyle X\_{t}=2X\_{t-1}-X\_{t-2}+(\alpha +\beta -2)\varepsilon \_{t-1}+(1-\alpha )\varepsilon \_{t-2}+\varepsilon \_{t}} — which is equivalent to Holt's linear method with additive errors, or double exponential smoothing.
+
+## Choosing the order
+
+The order *p* and *q* can be determined using the sample autocorrelation function (ACF), partial autocorrelation function (PACF), and/or extended autocorrelation function (EACF) method.
+
+Other alternative methods include AIC, BIC, etc. To determine the order of a non-seasonal ARIMA model, a useful criterion is the Akaike information criterion (AIC). It is written as
+
+where *L* is the likelihood of the data, *p* is the order of the autoregressive part and *q* is the order of the moving average part. The *k* represents the intercept of the ARIMA model. For AIC, if *k* = 1 then there is an intercept in the ARIMA model (*c* ≠ 0) and if *k* = 0 then there is no intercept in the ARIMA model (*c* = 0).
+
+The corrected AIC for ARIMA models can be written as
+
+The Bayesian Information Criterion (BIC) can be written as
+
+The objective is to minimize the AIC, AICc or BIC values for a good model. The lower the value of one of these criteria for a range of models being investigated, the better the model will suit the data. The AIC and the BIC are used for two completely different purposes. While the AIC tries to approximate models towards the reality of the situation, the BIC attempts to find the perfect fit. The BIC approach is often criticized as there never is a perfect fit to real-life complex data; however, it is still a useful method for selection as it penalizes models more heavily for having more parameters than the AIC would.
+
+AICc can only be used to compare ARIMA models with the same orders of differencing. For ARIMAs with different orders of differencing, RMSE can be used for model comparison.
+
+
+## Estimation of coefficients
+
+
+## Forecasts using ARIMA models
+
+The ARIMA model can be viewed as a "cascade" of two models. The first is non-stationary:
+
+while the second is wide-sense stationary:
+
+Now forecasts can be made for the process {\displaystyle Y\_{t}}, using a generalization of the method of autoregressive forecasting.
+
+
+### Forecast intervals
+
+The forecast intervals (confidence intervals for forecasts) for ARIMA models are based on assumptions that the residuals are uncorrelated and normally distributed. If either of these assumptions does not hold, then the forecast intervals may be incorrect. For this reason, researchers plot the ACF and histogram of the residuals to check the assumptions before producing forecast intervals.
+
+95% forecast interval: {\displaystyle {\hat {y}}\_{T+h\,\mid \,T}\pm 1.96{\sqrt {v\_{T+h\,\mid \,T}}}}, where {\displaystyle v\_{T+h\mid T}} is the variance of {\displaystyle y\_{T+h}\mid y\_{1},\dots ,y\_{T}}.
+
+For {\displaystyle h=1}, {\displaystyle v\_{T+h\,\mid \,T}={\hat {\sigma }}^{2}} for all ARIMA models regardless of parameters and orders.
+
+For ARIMA(0,0,q), {\displaystyle y\_{t}=e\_{t}+\sum \_{i=1}^{q}\theta \_{i}e\_{t-i}.}
+
+In general, forecast intervals from ARIMA models will increase as the forecast horizon increases.
+
+
+## Variations and extensions
+
+A number of variations on the ARIMA model are commonly employed. If multiple time series are used then the {\displaystyle X\_{t}} can be thought of as vectors and a VARIMA model may be appropriate. Sometimes a seasonal effect is suspected in the model; in that case, it is generally considered better to use a SARIMA (seasonal ARIMA) model than to increase the order of the AR or MA parts of the model. If the time-series is suspected to exhibit long-range dependence, then the *d* parameter may be allowed to have non-integer values in an autoregressive fractionally integrated moving average model, which is also called a Fractional ARIMA (FARIMA or ARFIMA) model.
+
+
+## Software implementations
+
+Various packages that apply methodology like Box–Jenkins parameter optimization are available to find the right parameters for the ARIMA model.
+
+* EViews: has extensive ARIMA and SARIMA capabilities.
+* Julia: contains an ARIMA implementation in the TimeModels package
+* Mathematica: includes ARIMAProcess function.
+* MATLAB: the Econometrics Toolbox includes ARIMA models and regression with ARIMA errors
+* NCSS: includes several procedures for `ARIMA` fitting and forecasting.
+* Python: the "statsmodels" package includes models for time series analysis – univariate time series analysis: AR, ARIMA – vector autoregressive models, VAR and structural VAR – descriptive statistics and process models for time series analysis.
+* R: the standard R *stats* package includes an *arima* function, which is documented in "ARIMA Modelling of Time Series". Besides the ⁠{\displaystyle {\text{ARIMA}}(p,d,q)}⁠ part, the function also includes seasonal factors, an intercept term, and exogenous variables (*xreg*, called "external regressors"). The package astsa has scripts such as *sarima* to estimate seasonal or nonseasonal models and *sarima.sim* to simulate from these models. The CRAN task view on Time Series is the reference with many more links. The "forecast" package in R can automatically select an ARIMA model for a given time series with the `auto.arima()` function [that can often give questionable results] and can also simulate seasonal and non-seasonal ARIMA models with its `simulate.Arima()` function.
+* Ruby: the "statsample-timeseries" gem is used for time series analysis, including ARIMA models and Kalman Filtering.
+* JavaScript: the "arima" package includes models for time series analysis and forecasting (ARIMA, SARIMA, SARIMAX, AutoARIMA)
+* C: the "ctsa" package includes ARIMA, SARIMA, SARIMAX, AutoARIMA and multiple methods for time series analysis.
+* SAFE TOOLBOXES: includes ARIMA modelling and regression with ARIMA errors.
+* SAS: includes extensive ARIMA processing in its Econometric and Time Series Analysis system: SAS/ETS.
+* IBM SPSS: includes ARIMA modeling in the Professional and Premium editions of its Statistics package as well as its Modeler package. The default Expert Modeler feature evaluates a range of seasonal and non-seasonal autoregressive (*p*), integrated (*d*), and moving average (*q*) settings and seven exponential smoothing models. The Expert Modeler can also transform the target time-series data into its square root or natural log. The user also has the option to restrict the Expert Modeler to ARIMA models, or to manually enter ARIMA nonseasonal and seasonal *p*, *d*, and *q* settings without Expert Modeler. Automatic outlier detection is available for seven types of outliers, and the detected outliers will be accommodated in the time-series model if this feature is selected.
+* SAP: the APO-FCS package in SAP ERP from SAP allows creation and fitting of ARIMA models using the Box–Jenkins methodology.
+* SQL Server Analysis Services: from Microsoft includes ARIMA as a Data Mining algorithm.
+* Stata includes ARIMA modelling (using its arima command) as of Stata 9.
+* StatSim: includes ARIMA models in the Forecast web app.
+* Teradata Vantage has the ARIMA function as part of its machine learning engine.
+* TOL (Time Oriented Language) is designed to model ARIMA models (including SARIMA, ARIMAX and DSARIMAX variants) .
+* Scala: spark-timeseries library contains ARIMA implementation for Scala, Java and Python. Implementation is designed to run on Apache Spark.
+* PostgreSQL/MadLib: Time Series Analysis/ARIMA.
+* X-12-ARIMA: from the US Bureau of the Census

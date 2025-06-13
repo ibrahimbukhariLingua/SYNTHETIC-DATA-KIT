@@ -1,0 +1,99 @@
+Variance swap
+
+
+# Variance swap
+
+
+
+A **variance swap** is an over-the-counter financial derivative that allows one to speculate on or hedge risks associated with the magnitude of movement, i.e. volatility, of some underlying product, like an exchange rate, interest rate, or stock index.
+
+One leg of the swap will pay an amount based upon the realized variance of the price changes of the underlying product. Conventionally, these price changes will be daily log returns, based upon the most commonly used closing price. The other leg of the swap will pay a fixed amount, which is the strike, quoted at the deal's inception. Thus the net payoff to the counterparties will be the difference between these two and will be settled in cash at the expiration of the deal, though some cash payments will likely be made along the way by one or the other counterparty to maintain agreed upon margin.
+
+
+## Structure and features
+
+The features of a variance swap include:
+
+* the **variance strike**
+* the **realized variance**
+* the **vega notional**: Like other swaps, the payoff is determined based on a notional amount that is never exchanged. However, in the case of a variance swap, the notional amount is specified in terms of vega, to convert the payoff into dollar terms.
+
+The payoff of a variance swap is given as follows:
+
+where:
+
+* {\displaystyle N\_{\operatorname {var} }} = variance notional (a.k.a. variance units),
+* {\displaystyle \sigma \_{\text{realised}}^{2}} = annualised realised variance, and
+* {\displaystyle \sigma \_{\text{strike}}^{2}} = variance strike.
+
+The annualised realised variance is calculated based on a prespecified set of sampling points over the period. It does not always coincide with the classic statistical definition of variance as the contract terms may not subtract the mean. For example, suppose that there are {\displaystyle n+1} observed prices
+{\displaystyle S\_{t\_{0}},S\_{t\_{1}},...,S\_{t\_{n}}}
+where {\displaystyle 0\leq t\_{i-1}<t\_{i}\leq T}
+for {\displaystyle i=1} to {\displaystyle n}. Define {\displaystyle R\_{i}=\ln(S\_{t\_{i}}/S\_{t\_{i-1}}),} the natural log returns.
+Then
+
+* {\displaystyle \sigma \_{\text{realised}}^{2}={\frac {A}{n}}\sum \_{i=1}^{n}R\_{i}^{2}}
+
+where {\displaystyle A} is an annualisation factor normally chosen to be approximately the number of sampling points in a year (commonly 252) and {\displaystyle T} is set be the swaps contract life defined by the number {\displaystyle n/A}. It can be seen that subtracting the mean return will decrease the realised variance. If this is done, it is common to use {\displaystyle n-1} as the divisor rather than {\displaystyle n}, corresponding to an unbiased estimate of the sample variance.
+
+It is market practice to determine the number of contract units as follows:
+
+where {\displaystyle N\_{\text{vol}}} is the corresponding vega notional for a volatility swap. This makes the payoff of a variance swap comparable to that of a volatility swap, another less popular instrument used to trade volatility.
+
+
+## Pricing and valuation
+
+The variance swap may be hedged and hence priced using a portfolio of European call and put options with weights inversely proportional to the square of strike.
+
+Any volatility smile model which prices vanilla options can therefore be used to price the variance swap. For example, using the Heston model, a closed-form solution can be derived for the fair variance swap rate. Care must be taken with the behaviour of the smile model in the wings as this can have a disproportionate effect on the price.
+
+We can derive the payoff of a variance swap using Ito's Lemma. We first assume that the underlying stock is described as follows:
+
+Applying Ito's formula, we get:
+
+Taking integrals, the total variance is:
+
+We can see that the total variance consists of a rebalanced hedge of {\displaystyle {\frac {1}{S\_{t}}}\ } and short a log contract.
+Using a static replication argument, i.e., any twice continuously differentiable contract can be replicated using a bond, a future and infinitely many puts and calls, we can show that a short log contract position is equal to being short a futures contract and a collection of puts and calls:
+
+Taking expectations and setting the value of the variance swap equal to zero, we can rearrange the formula to solve for the fair variance swap strike:
+
+where:
+
+Often the cutoff {\displaystyle S^{\*}} is chosen to be the current forward price {\displaystyle S^{\*}=F\_{0}=S\_{0}e^{rT}}, in which case the fair variance swap strike can be written in the simpler form:
+
+
+### Analytically pricing variance swaps with discrete-sampling
+
+One might find discrete-sampling of the realized variance, says, {\displaystyle \sigma \_{\text{realized}}^{2}} as defined earlier, more practical in valuing the variance strike since, in reality, we are only able to observe the underlying price discretely in time. This is even more persuasive since there is an assertion that {\displaystyle \sigma \_{\text{realized}}^{2}} converges in probability to the actual one as the number of price's observation increases.
+
+Suppose that in the risk-neutral world with a martingale measure {\displaystyle \mathbb {Q} }, the underlying asset price {\displaystyle S=(S\_{t})\_{0\leq t\leq T}} solves the following SDE:
+
+where:
+
+* {\displaystyle T} imposes the swap contract expiry date,
+* {\displaystyle r(t)\in \mathbb {R} } is (time-dependent) risk-free interest rate,
+* {\displaystyle \sigma (t)>0} is (time-dependent) price volatility, and
+* {\displaystyle W=(W\_{t})\_{0\leq t\leq T}} is a Brownian motion under the filtered probability space {\displaystyle (\Omega ,{\mathcal {F}},\mathbb {F} ,\mathbb {Q} )} where {\displaystyle \mathbb {F} =({\mathcal {F}}\_{t})\_{0\leq t\leq T}} is the natural filtration of {\displaystyle W}.
+
+Given as defined above by {\displaystyle (\sigma \_{\text{realized}}^{2}-\sigma \_{\text{strike}}^{2})\times N\_{\text{var}}} the payoff at expiry of variance swaps, then its expected value at time {\displaystyle t\_{0}}, denoted by {\displaystyle V\_{t\_{0}}} is
+
+To avoid arbitrage opportunity, there should be no cost to enter a swap contract, meaning that {\displaystyle V\_{t\_{0}}} is zero. Thus, the value of fair variance strike is simply expressed by
+
+which remains to be calculated either by finding its closed-form formula or utilizing numerical methods, like Monte Carlo methods.
+
+
+## Uses
+
+Many traders find variance swaps interesting or useful for their purity. An alternative way of speculating on volatility is with an option, but if one only has interest in volatility risk, this strategy will require constant delta hedging, so that direction risk of the underlying security is approximately removed. What is more, a replicating portfolio of a variance swap would require an entire strip of options, which would be very costly to execute. Finally, one might often find the need to be regularly rolling this entire strip of options so that it remains centered on the current price of the underlying
+security.
+
+The advantage of variance swaps is that they provide pure exposure to the volatility of the underlying price, as opposed to call and put options which may carry directional risk (delta). The profit and loss from a variance swap depends directly on the difference between realized and implied volatility.
+
+Another aspect that some speculators may find interesting is that the quoted strike is determined by the implied volatility smile in the options market, whereas the ultimate payout will be based upon actual realized variance. Historically, implied variance has been above realized variance, a phenomenon known as the variance risk premium, creating an opportunity for volatility arbitrage, in this case known as the rolling short variance trade. For the same reason, these swaps can be used to hedge options on realized variance.
+
+
+## Related instruments
+
+Closely related strategies include straddle, volatility swap, correlation swap, gamma swap, conditional variance swap, corridor variance swap, forward-start variance swap, option on realized variance and correlation trading.
+

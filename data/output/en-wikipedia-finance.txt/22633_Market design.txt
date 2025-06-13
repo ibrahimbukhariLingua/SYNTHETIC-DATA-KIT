@@ -1,0 +1,142 @@
+Market design
+
+
+# Market design
+
+
+
+| Part of a series on |
+| --- |
+| Auctions |
+| Types |
+| * All-pay + Chinese + Bidding fee + Dollar * Amsterdam * Anglo-Dutch * Barter double * Best/not best * Brazilian * Calcutta * Candle * Click-box bidding * Combinatorial * Common value * Deferred-acceptance * Discriminatory price * Double * Dutch * English * Forward * French * Generalized first-price * Generalized second-price * Japanese * Knapsack * Multi-attribute * Multiunit * No-reserve * Rank * Reverse * Scottish * Sealed first-price * Simultaneous ascending * Single-price * Traffic light * Uniform price * Unique bid * Value of revenues * Vickrey * Vickrey–Clarke–Groves * Walrasian * Yankee |
+| Bidding |
+| * Shading * Calor licitantis * Cancellation hunt * Jump * Rigging * Sniping * Suicide * Tacit collusion |
+| Contexts |
+| * Algorithms * Autos * Art * Charity * Children * Players * Domain names * Flowers * Loans * Scam * Slaves * Spectrum * Stamps * Virginity * Wine * Wives |
+| Theory |
+| * Digital goods * Price of anarchy * Revenue equivalence * Winner's curse |
+| Online |
+| * Ebidding * Private electronic market * Software |
+| * v * t * e |
+
+**Market design** is an interdisciplinary, engineering-driven approach to economics and a practical methodology for creation of markets of certain properties, which is partially based on mechanism design. In market design, the focus is on the rules of exchange, meaning who gets allocated what and by what procedure. Market design is concerned with the workings of particular markets in order to fix them when they are broken or to build markets when they are missing. Practical applications of market design theory has included labor market matching (e.g. the national residency match program), organ transplantation, school choice, university admissions, and more.
+
+
+## Auction theory
+
+Early research on auctions focused on two special cases: common value auctions in which buyers have private signals of an items true value and private value auctions in which values are identically and independently distributed. Milgrom and Weber (1982) present a much more general theory of auctions with positively related values. Each of *n* buyers receives a private signal {\displaystyle {{x}\_{i}}} . Buyer *i*’s value {\displaystyle \phi ({{x}\_{i}},{{x}\_{-i}})} is strictly increasing in {\displaystyle {{x}\_{i}}} and is an increasing symmetric function of {\displaystyle {{x}\_{-i}}}. If signals are independently and identically distributed, then buyer *i*’s expected value {\displaystyle {{v}\_{i}}={{E}\_{{x}\_{-i}}}\{\phi ({{x}\_{i}},{{x}\_{-i}})\}} is independent of the other buyers’ signals. Thus, the buyers’ expected values are independently and identically distributed. This is the standard private value auction. For such auctions the revenue equivalence theorem holds. That is, expected revenue is the same in the sealed first-price and second-price auctions.
+
+Milgrom and Weber assumed instead that the private signals are “affiliated”. With two buyers, the random variables {\displaystyle {{v}\_{1}}} and {\displaystyle {{v}\_{2}}} with probability density function {\displaystyle f({{v}\_{1}},{{v}\_{2}})} are affiliated if
+
+Applying Bayes’ Rule it follows that
+{\displaystyle f({{v}\_{2}}^{\prime }|{{v}\_{1}}^{\prime })f({{v}\_{2}}|{{v}\_{1}})\geq f({{v}\_{2}}|{{v}\_{1}}^{\prime })f({{v}\_{2}}^{\prime }|{{v}\_{1}})}, for all {\displaystyle v} and all {\displaystyle {v}'<v}.
+
+Rearranging this inequality and integrating with respect to {\displaystyle {{v}\_{2}}^{\prime }} it follows that
+
+It is this implication of affiliation that is critical in the discussion below.
+
+For more than two symmetrically distributed random variables, let {\displaystyle V=\{{{v}\_{1}},...,{{v}\_{n}}\}} be a set of random variables that are continuously distributed with joint probability density function *f(v*) . The *n* random variables are affiliated if
+
+
+### Revenue Ranking Theorem (Milgrom and Weber)
+
+)
+
+Suppose each of *n* buyers receives a private signal {\displaystyle {{x}\_{i}}} . Buyer *i*’s value {\displaystyle \phi ({{x}\_{i}},{{x}\_{-i}})} is strictly increasing in {\displaystyle {{x}\_{i}}} and is an increasing symmetric function of {\displaystyle {{x}\_{-i}}}. If signals are affiliated, the equilibrium bid function in a sealed first-price auction {\displaystyle {{b}\_{i}}=B({{x}\_{i}})} is smaller than the equilibrium expected payment in the sealed second price auction.
+
+The intuition for this result is as follows: In the sealed second-price auction the expected payment of a winning bidder with value *v* is based on their own information. By the revenue equivalence theorem if all buyers had the same beliefs, there would be revenue equivalence. However, if values are affiliated, a buyer with value *v* knows that buyers with lower values have more pessimistic beliefs about the distribution of values. In the sealed high-bid auction such low value buyers therefore bid lower than they would if they had the same beliefs. Thus the buyer with value *v* does not have to compete so hard and bids lower as well. Thus the informational effect lowers the equilibrium payment of the winning bidder in the sealed first-price auction.
+
+
+### Equilibrium bidding in the sealed first- and second-price auctions
+
+We consider here the simplest case in which there are two buyers and each buyer’s value {\displaystyle {{v}\_{i}}=\phi ({{x}\_{i}})} depends only on his own signal. Then the buyers’ values are private and affiliated. In the sealed second-price (or Vickrey auction), it is a dominant strategy for each buyer to bid his value. If both buyers do so, then a buyer with value v has an expected payment of
+
+In the sealed first-price auction, the increasing bid function *B*(*v*) is an equilibrium if bidding strategies are mutual best responses. That is, if buyer 1 has value *v*, their best response is to bid *b* = *B*(*v*) if they believes that their opponent is using this same bidding function. Suppose buyer 1 deviates and bids *b* = *B*(*z*) rather than *B*(*v*) . Let U(z) be their resulting payoff. For *B*(*v*) to be an equilibrium bid function, *U*(*z*) must take on its maximum at *x* = *v*.
+With a bid of *b* = *B*(*z*) buyer 1 wins if
+
+The win probability is then {\displaystyle w=F(z|v)} so that buyer 1's expected payoff is
+
+Taking logs and differentiating by *z*,
+
+The first term on the right hand side is the proportional increase in the win probability as the buyer raises his bid from
+{\displaystyle B(z)} to {\displaystyle B(z+\Delta z)}. The second term is the proportional drop in the payoff if the buyer wins.
+We have argued that, for equilibrium, *U*(*z*) must take on its maximum at *z* = *v* . Substituting for *z* in (3) and setting the derivative equal to zero yields the following necessary condition.
+
+
+### Proof of the revenue ranking theorem
+
+Buyer 1 with value *x* has conditional p.d.f. {\displaystyle f({{v}\_{2}}|x)}.
+Suppose that he naively believes that all other buyers have the same beliefs. In the sealed high bid auction he computes the equilibrium bid function using these naive beliefs. Arguing as above, condition (3) becomes
+
+Since *x* > *v* it follows by affiliation (see condition (1)) that the proportional gain to bidding higher is bigger under the naive beliefs that place higher mass on higher values. Arguing as before, a necessary condition for equilibrium is that (3’) must be zero at *x* = *v*. Therefore, the equilibrium bid function {\displaystyle {{B}\_{x}}(v)} satisfies the following differential equation.
+
+Appealing to the revenue equivalence theorem, if all buyers have values that are independent draws from the same distribution then the expected payment of the winner is the same in the two auctions. Therefore, {\displaystyle {{B}\_{x}}(x)=e(x)}. Thus, to complete the proof we need to establish that {\displaystyle B(x)\leq {{B}\_{x}}(x)}.
+Appealing to (1), it follows from (4) and (5) that for all *v* < *x*.
+
+Therefore, for any *v* in the interval [0,x]
+
+Suppose that {\displaystyle B(x)>{{B}\_{x}}(x)}. Since the equilibrium bid of a buyer with value 0 is zero, there must be some *y* < *x* such that
+
+1. {\displaystyle {}B(y)-{{B}\_{x}}(y)={{0}\_{}}} and
+2. {\displaystyle {}B(v)-{{B}\_{x}}(v)>0{{,}\_{}}\forall v\in [y,x]}.
+
+But this is impossible since we have just shown that over such an interval, {\displaystyle B(v)-{{B}\_{x}}(v)} is decreasing.
+Since {\displaystyle {{B}\_{x}}(x)=e(x)} it follows that the winner bidder's expected payment is lower in the sealed high-bid auction.
+
+
+### Ascending auctions with package bidding
+
+Milgrom has also contributed to the understanding of combinatorial auctions. In work with Larry Ausubel (Ausubel and Milgrom, 2002), auctions of multiple items, which may be substitutes or complements, are considered. They define a mechanism, the “ascending proxy auction,” constructed as follows. Each bidder reports his values to a proxy agent for all packages that the bidder is interested in. Budget constraints can also be reported. The proxy agent then bids in an ascending auction with package bidding on behalf of the real bidder, iteratively submitting the allowable bid that, if accepted, would maximize the real bidder's profit (value minus price), based on the reported values. The auction is conducted with negligibly small bid increments. After each round, provisionally winning bids are determined that maximize the total revenue from feasible combinations of bids. All of a bidder's bids are kept live throughout the auction and are treated as mutually exclusive. The auction ends after a round occurs with no new bids. The ascending proxy auction may be viewed either as a compact representation of a dynamic combinatorial auction or as a practical direct mechanism, the first example of what Milgrom would later call a “core selecting auction.”
+
+They prove that, with respect to any reported set of values, the ascending proxy auction always generates a core outcome, i.e. an outcome that is feasible and unblocked. Moreover, if bidders’ values satisfy the substitutes condition, then truthful bidding is a Nash equilibrium of the ascending proxy auction and yields the same outcome as the Vickrey–Clarke–Groves (VCG) mechanism. However, the substitutes condition is robustly a necessary as well as a sufficient condition: if just one bidder's values violate the substitutes condition, then with appropriate choice of three other bidders with additively-separable values, the outcome of the VCG mechanism lies outside the core; and so the ascending proxy auction cannot coincide with the VCG mechanism and truthful bidding cannot be a Nash equilibrium. They also provide a complete characterization of substitutes preferences: Goods are substitutes if and only if the indirect utility function is submodular.
+
+Ausubel and Milgrom (2006a, 2006b) exposit and elaborate on these ideas. The first of these articles, entitled "The Lovely but Lonely Vickrey Auction", made an important point in market design. The VCG mechanism, while highly attractive in theory, suffers from a number of possible weaknesses when the substitutes condition is violated, making it a poor candidate for empirical applications. In particular, the VCG mechanism may exhibit: low (or zero) seller revenues; non-monotonicity of the seller's revenues in the set of bidders and the amounts bid; vulnerability to collusion by a coalition of losing bidders; and vulnerability to the use of multiple bidding identities by a single bidder. This may explain why the VCG auction design, while so lovely in theory, is so lonely in practice.
+
+Additional work in this area by Milgrom together with Larry Ausubel and Peter Cramton has been particularly influential in practical market design. Ausubel, Cramton and Milgrom (2006) together proposed a new auction format that is now called the combinatorial clock auction (CCA), which consists of a clock auction stage followed by a sealed-bid supplementary round. All of the bids are interpreted as package bids; and the final auction outcome is determined using a core selecting mechanism. The CCA was first used in the United Kingdom's 10–40 GHz spectrum auction of 2008. Since then, it has become a new standard for spectrum auctions: it has been utilized for major spectrum auctions in Austria, Denmark, Ireland, the Netherlands, Switzerland and the UK; and it is slated to be used in forthcoming auctions in Australia and Canada.
+
+At the 2008 Nemmers Prize conference, Penn State University economist Vijay Krishna and Larry Ausubel highlighted Milgrom's contributions to auction theory and their subsequent impact on auction design.
+
+
+## Matching theory
+
+According to economic theory, under certain conditions, the voluntary exchanges of all economic agents will lead to the maximum welfare of those engaged in the exchanges. In reality, however, the situation is different; We usually face market failures, and of course, we sometimes face conditions or constraints such as congested markets, repugnant markets, and unsafe markets. This is where market designers try to create interactive platforms with specific rules and constraints to achieve optimal situations. It is claimed that such platforms provide maximum efficiency and benefit to society.
+
+Matching refers to the idea of establishing a proper relationship between the two sides of the market, the demanders of a good or service and its suppliers. This theory explores who achieves what in economic interactions. The idea for the matching emerged in the form of theoretical efforts by mathematicians such as Shapley and Gale. It matured with the efforts of economists such as Roth, and now market design and matching are of the most important branches of microeconomics and game theory.
+
+Milgrom has also contributed to the understanding of matching market design. In work with John Hatfield (Hatfield and Milgrom, 2005), he shows how to generalize the stable marriage matching problem to allow for “matching with contracts”, where the terms of the match between agents on either side of the market arise endogenously through the matching process. They show that a suitable generalization of the deferred acceptance algorithm of David Gale and Lloyd Shapley finds a stable matching in their setting; moreover, the set of stable matchings forms a lattice, and similar vacancy chain dynamics are present.
+
+The observation that stable matchings are a lattice was a well known result that provided the key to their insight into generalizing the matching model. They observed (as did some other contemporary authors) that the lattice of stable matchings was reminiscent of the conclusion of Tarski's fixed point theorem, which states that an increasing function from a complete lattice to itself has a nonempty set of fixed points that form a complete lattice. But it wasn't apparent what was the lattice, and what was the increasing function. Hatfield and Milgrom observed that the accumulated offers and rejections formed a lattice, and that the bidding process in an auction and the deferred acceptance algorithm were examples of a cumulative offer process that was an increasing function in this lattice.
+
+Their generalization also shows that certain package auctions (see also: Paul Milgrom: Policy) can be thought of as a special case of matching with contracts, where there is only one agent (the auctioneer) on one side of the market and contracts include both the items to be transferred and the total transfer price as terms. Thus, two of market design's great success stories, the deferred acceptance algorithm as applied to the medical match, and the simultaneous ascending auction as applied to the FCC spectrum auctions, have a deep mathematical connection. In addition, this work (in particular, the "cumulative offer" variation of the deferred acceptance algorithm) has formed the basis of recently proposed redesigns of the mechanisms used to match residents to hospitals in Japan and cadets to branches in the US Army.
+
+
+## Application
+
+In general, the topics studied by market designers related to various problems in matching markets. Alvin Roth has divided the obstacles in the matching of the market participants into three main categories:
+
+1. Sometimes, the market participants do not know about each other because of "market thinness." In this case, the market suffers from a lack of enough thickness.
+2. In some cases, the cause of dysfunctionality is market congestion and the lack of opportunities for market participants to know each other. In these cases, the excessive market thickness causes the market parties not to have enough time to choose their preferred options.
+3. In some markets, due to special arrangements, there is a possibility of strategic behavior by market participants, and therefore people do not really reflect their preferences. In these cases, the market is not safe for expressing actual preferences.
+
+The solution of market designers in the face of these problems is to propose the creation of a Centralized Clearing House to receive the preference information of market participants and use appropriate matching algorithms. The aggregation of information, the design of some rules, and the use of these algorithms lead to the appropriate matching of market participants, the safeness of the market environment, and improving market allocation. In this formulation, the mechanism acts as a communication system between the parties of an economic interaction that determines the outcome of this interaction based on pre-determined rules and the signals received from market participants. Therefore, the purpose of market design is simply to determine the rule of the game to optimize the game's outcome.
+
+
+### Market design and matching in the labor market
+
+As mentioned, in some markets, the pricing mechanism may not allocate resources optimally. One such market is the labor market. Usually, employers or firms do not reduce the offered wage to such an extent that supply and demand in the labor market are equal. What is important for firms is to choose exactly "the most appropriate worker." In some labor markets, choosing "the most appropriate employer" is also important for job seekers. Since the process of informing market participants about each other's preferences is disrupted, rules should be designed to improve market performance.
+
+
+### Market design and matching in the kidney transplant market
+
+Another important application of the matching is the kidney transplant market. Kidney transplant applicants often face the problem of the lack of compatible kidneys. Market designers try to make the kidney exchange market more efficient by designing systems to match kidney applicants and kidney donors. Two general types of communication between kidney applicants and donors are chain and cyclical systems of exchanges. In cyclic exchange, kidney donors and recipients form a cycle for kidney exchange.
+
+
+### Simplifying participants’ messages
+
+Milgrom has contributed to the understanding of the effect of simplifying the message space in practical market design. He observed and developed as an important design element of many markets the notion of conflation—the idea of restricting a participant's ability to convey rich preferences by forcing them to enter the same value for different preferences. An example of conflation arises in Gale and Shapley's deferred acceptance algorithm for hospital and doctors matching when hospitals are allowed to submit only responsive preferences (i.e., the ranking of doctors and capacities) even though they could be conceivably asked to submit general substitutes preferences. In the Internet sponsored-search auctions, advertisers are allowed to submit a single per-click bid, regardless of which ad positions they win. A similar, earlier idea of a conflated generic-item auction is an important component of the Combinatorial Clock Auction (Ausubel, Cramton and Milgrom, 2006), widely used in spectrum auctions including the UK's recent 800 MHz / 2.6 GHz auction, and has also been proposed for Incentive Auctions. Bidders are allowed to express only the quantity of frequencies in the allocation stage of the auction without regard to the specific assignment (which is decided in a later assignment stage). Milgrom (2010) shows that with a certain “outcome closure property,” conflation adds no new unintended outcome as equilibrium and argued that, by thickening the markets, may intensify price competition and increase revenue.
+
+As a concrete application of the idea of simplifying messages, Milgrom (2009) defines assignment messages of preferences. In assignment messages, an agent can encode certain nonlinear preferences involving various substitution possibilities into linear objectives by allowing agents to describe multiple “roles” that objects can play in generating utility, with utility thus generated being added up. The valuation over a set of objects is the maximum value that can be achieved by optimally assigning them to various roles. Assignment messages can also be applied to resource allocation without money; see, for example, the problem of course allocation in schools, as analyzed by Budish, Che, Kojima, and Milgrom (2013). In doing so, the paper has provided a generalization of the Birkhoff-von Neumann Theorem (a mathematical property about Doubly Stochastic Matrices) and applied it to analyze when a given random assignment can be "implemented" as a lottery over feasible deterministic outcomes.
+
+A more general language, *endowed assignment message*, is studied by Hatfield and Milgrom (2005). Milgrom provides an overview of these issues in Milgrom (2011).
+

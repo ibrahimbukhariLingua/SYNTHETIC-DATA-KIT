@@ -1,0 +1,179 @@
+Price of anarchy in auctions
+
+
+# Price of anarchy in auctions
+
+
+
+| Part of a series on |
+| --- |
+| Auctions |
+| Types |
+| * All-pay + Chinese + Bidding fee + Dollar * Amsterdam * Anglo-Dutch * Barter double * Best/not best * Brazilian * Calcutta * Candle * Click-box bidding * Combinatorial * Common value * Deferred-acceptance * Discriminatory price * Double * Dutch * English * Forward * French * Generalized first-price * Generalized second-price * Japanese * Knapsack * Multi-attribute * Multiunit * No-reserve * Rank * Reverse * Scottish * Sealed first-price * Simultaneous ascending * Single-price * Traffic light * Uniform price * Unique bid * Value of revenues * Vickrey * Vickrey–Clarke–Groves * Walrasian * Yankee |
+| Bidding |
+| * Shading * Calor licitantis * Cancellation hunt * Jump * Rigging * Sniping * Suicide * Tacit collusion |
+| Contexts |
+| * Algorithms * Autos * Art * Charity * Children * Players * Domain names * Flowers * Loans * Scam * Slaves * Spectrum * Stamps * Virginity * Wine * Wives |
+| Theory |
+| * Digital goods * Price of anarchy * Revenue equivalence * Winner's curse |
+| Online |
+| * Ebidding * Private electronic market * Software |
+| * v * t * e |
+
+The Price of Anarchy (**PoA**) is a concept in game theory and mechanism design that measures how the social welfare of a system degrades due to selfish behavior of its agents. It has been studied extensively in various contexts, particularly in **auctions**.
+
+In an auction, there are one or more items and one or more agents with different valuations for the items.
+The items have to be divided among the agents. It is desired that the *social welfare* - the sum of values of all agents - be as high as possible.
+
+One approach to maximizing the social welfare is designing a truthful mechanism. In such a mechanism, each agent is incentivized to report his true valuations to the items. Then, the auctioneer can calculate and implement an allocation that maximizes the sum of values. An example to such a mechanism is the VCG auction.
+
+In practice, however, it is not always feasible to use truthful mechanisms. The VCG mechanism, for example, might be too complicated for the participants to understand, might take too long for the auctioneer to compute, and might have other disadvantages.
+In practice, non-truthful mechanisms are often used, and it is interesting to calculate how much social welfare is lost by this non-truthfulness.
+
+It is often assumed that, in a non-truthful auction, the participants play an equilibrium strategy, such as a Nash equilibrium. The **price-of-anarchy of the auction** is defined as the ratio between the optimal social welfare and the social welfare in the *worst* equilibrium:
+
+{\displaystyle PoA={\frac {\max \_{s\in Allocations}Welf(s)}{\min \_{s\in EquilibriumAllocations}Welf(s)}}}
+
+A related notion is the **Price of Stability** (**PoS**) which measures the ratio between the optimal social welfare and the social welfare in the *best* equilibrium:
+
+{\displaystyle PoS={\frac {\max \_{s\in Allocations}Welf(s)}{\max \_{s\in EquilibriumAllocations}Welf(s)}}}
+
+Obviously {\displaystyle 1\leq PoS\leq PoA\leq \infty }.
+
+When there is complete information (each agent knows the valuations of all other agents), the common equilibrium type is Nash equilibrium - either pure or mixed. When there is incomplete information, the common equilibrium type is Bayes-Nash equilibrium. In the latter case, it is common to speak of the *Bayesian price of anarchy*, or BPoA.
+
+
+## Single-item auctions
+
+In a first-price auction of a single item, a Nash equilibrium is always efficient, so the PoA and PoS are 1.
+
+In a second-price auction, there is a Nash equilibrium in which the agents report truthfully; it is efficient, so the PoS is 1. However, the PoA is unbounded. For example, suppose there are two players: Alice values the item as *a* and Bob as *b*, with *a*>*b*.
+
+There exists a "good" Nash equilibrium in which Alice bids *a* and Bob bids *b*; Alice receives the item and pays *b*. The social welfare is *a*, which is optimal.
+
+However, there also exists a "bad" Nash equilibrium in which Alice bids 0 and Bob bids e.g. *a*+1; Bob receives the item and pays nothing. This is an equilibrium since Alice does not want to overbid Bob. The social welfare is *b*. Hence, the PoA is *a*/*b*, which is unbounded.
+
+This result seems overly pessimistic:
+
+* First, in a second-price auction, it is a weakly-dominant strategy for each agent to report his true valuation. If we assume that agents follow their dominant strategies, then the PoA is 1.
+* Moreover, it is a dominated strategy for each agent to report any value above his true valuation.
+
+Therefore, it is common to analyze the PoA under a **no overbidding** assumption - no agent bids above his true valuation. Under this assumption, the PoA of a single-item auction is 1.
+
+
+## Parallel auctions
+
+In a parallel (simultaneous) auction, {\displaystyle m} items are sold at the same time to the same group of {\displaystyle n} participants. In contrast to a combinatorial auction - in which the agents can bid on bundles of items, here the agents can only bid on individual items independently of the others. I.e, a strategy of an agent is a vector of bids, one bid per item. The PoA depends on the type of valuations of the buyers, and on the type of auction used for each individual item.
+
+**Case 1: submodular buyers, second-price auctions, complete information**:
+
+* There exists a pure Nash equilibrium with optimal social welfare. Hence, the PoS is 1.
+* It is possible to calculate in polynomial time a pure Nash equilibrium with social welfare at least half the optimal. Hence, the price of "polynomial-time stability" is at most 2.
+* The PoA is unbounded - as already shown by the single-item example above. However, under a *strong-no-overbidding* assumption (the sum of bids of any buyer to any bundle is at most the value of that bundle to the buyer), the PoA is at most 2. The latter result also holds when the buyers' valuations are fractionally subadditive.
+
+**Case 2: fractionally subadditive buyers, 2nd-price auction, incomplete information**. Assuming *strong-no-overbidding*, any (mixed) Bayes-Nash equilibrium attains in expectation at least 1/2 the optimal welfare; hence the BPoA is at most 2. This result does not depend on the common prior of the agents.
+
+**Case 3: subadditive buyers, 2nd-price auctions**. Under a *strong-no-overbidding* assumption:
+
+* With complete information, the welfare of every pure Nash equilibrium is at least 1/2 the optimum, so the PoA is at most 2.
+* With incomplete information, there exist Bayes-Nash equilibria with welfare *less than 1/2* the optimum, so the BPoA is more than 2.
+* The BPoA is at most {\displaystyle 2\log {m}}, where {\displaystyle m} is the number of items. This guarantee is also valid to coarse correlated equilibrium - and hence to the special cases of mixed Nash equilibrium and correlated equilibrium.
+* Both of the above upper bounds on the PoA degrade gracefully when the subadditivity and no-overbidding assumptions are relaxed. E.g: if we assume that each player overbids by at most some constant factor, then the PoA grows by at most a constant factor.
+
+**Case 4: General (monotone) buyers, first-price auctions, complete information**:
+
+* The set of pure Nash equilibria of the game are exactly the Walrasian equilibria (price equilibria) of the market.
+* Since such equilibria are socially-optimal (by the first welfare theorem), the PoA of pure Nash equilibria is 1. Unfortunately, such equilibria might not exist.
+* A mixed Nash equilibrium always exists (when choosing the right tie-breaking rule). However, it is not necessarily socially-optimal. The PoA might be as high as {\displaystyle \Omega ({\sqrt {m}})}, and even the PoS might be as high as {\displaystyle \Omega ({\sqrt {m}}/\log {m})}.
+ + This result also extends to 2nd-price auctions, even with a *weak-no-overbidding* assumption.
+* The PoA is at most {\displaystyle O(m)}.
+* When all valuations are subadditive, the PoA is at most {\displaystyle O(\log {m})}.
+* When all valuations are {\displaystyle \beta }-fractionally subadditive, the PoA is at most {\displaystyle 2\beta } (in particular, for XOS buyers, the PoA is at most 2).
+* The latter three bounds hold also for coarse-correlated equilibria; they do NOT require a "no overbidding" assumption.
+
+**Case 5: General buyers, 2nd-price auctions, complete information**. With general valuations (that may have complementarities), the strong-no-overbidding assumption is too strong, since it prevents buyers from bidding high values on bundles of complementary items. For example, if a buyer's valuation is $100 for a pair of shoes but $1 for each individual shoe, then the strong-no-overbidding assumption prevents him from bidding more than $1 on each shoe, so that he has little chances of winning the pair. Therefore, it is replaced with a *weak-no-overbidding* assumption, which means that the no-overbidding condition holds only for the bundle that the agent finally wins (i.e, the sum of bids of the buyer to his allocated bundle is at most his value for this specific bundle). Under this weak-no-overbidding assumption:
+
+* The set of pure Nash equilibria of the game are exactly the *conditional price-equilibria* of the market.
+* Since such equilibria are half-socially-optimal (attain at least half the maximum social welfare), the PoA of pure Nash equilibria is at most 2. Unfortunately, such equilibria might not exist.
+
+**Case 6: General buyers, 1st-price auctions, incomplete information**. For any common prior:
+
+* The BPoA is at most {\displaystyle O(mn)}.
+* When all valuations are {\displaystyle \beta }-fractionally subadditive, the BPoA is at most {\displaystyle 4\beta } (in particular, for XOS buyers, the BPoA is at most 2, and for subadditive buyers, it is {\displaystyle O(\log m)}).
+
+**Case 7: Subadditive buyers, incomplete information**:
+
+* When the items are sold in first-price auctions, the BPoA is at most 2.
+* When the items are sold in second-price auctions, the BPoA is at most 4. This is true both under the strong-no-overbidding assumption (the sum of bids of any buyer to any bundle is at most the value of that bundle to the buyer), and under the *weak-no-overbidding* assumption (the expected sum of the winning bids of any buyer is at most the expected winning value of that buyer).
+
+## Sequential auctions
+
+In a sequential auction, {\displaystyle m} items are sold in consecutive auctions, one after the other. The common equilibrium type is subgame perfect equilibrium in pure strategies (SPEPS).
+When the buyers have full information (i.e., they know the sequence of auctions in advance), and a single item is sold in each round, a SPEPS always exists.⁸⁷²–⁸⁷⁴
+
+The PoA of this SPEPS depends on the utility functions of the bidders, and on the type of auction used for each individual item.
+
+The first five results below apply to agents with complete information (all agents know the valuations of all other agents):
+
+**Case 1: Identical items, two buyers, 2nd-price auctions**:
+
+* When at least one buyer has a concave valuation function (diminishing returns), the PoA is at most {\displaystyle 1/(1-e)\approx 1.58}.
+* Numerical results show that, when there are many bidders with concave valuation functions, the efficiency loss decreases as the number of users increases.
+
+**Case 2: additive buyers**: ⁸⁸⁵
+
+* With second-price auctions, the PoA is unbounded – the welfare in a SPEPS might be arbitrarily small!
+
+**Case 3: unit demand buyers**:
+
+* With first-price auctions, the PoA is at most 2 – the welfare in a SPEPS is always at least half the maximum (if mixed strategies are allowed, the PoA is at most 4).
+* With second-price auctions, the PoA is again unbounded.
+
+These results are surprising and they emphasize the importance of the design decision of using a first-price auction (rather than a second-price auction) in each round.
+
+**Case 4: submodular buyers** (note that additive and unit-demand are special cases of submodular):
+
+* With both 1st-price and 2nd-price auctions, the PoA is unbounded, even when there are only four bidders. The intuition is that the high-value bidder might prefer to let a low-value bidder win, in order to decrease the competition that he might face in the future rounds.
+
+**Case 5: additive+UD**. Suppose some bidders have additive valuations while others have unit-demand valuations. In a sequence of 1st-price auctions, the PoA might be at least {\displaystyle \min(n,m)}, where *m* is the number of items and *n* is the number of bidders. Moreover, the inefficient equilibria persist even under iterated elimination of weakly dominated strategies. This implies linear inefficiency for many natural settings, including:
+
+* buyers with gross substitute valuations,
+* capacitated valuations,
+* budget-additive valuations,
+* additive valuations with hard budget constraints on the payments.
+
+**Case 6: unit-demand buyers, incomplete information, 1st-price auctions**: The BPoA is at most 3.
+
+
+## Auctions employing greedy algorithms
+
+See
+
+
+## Generalized second-price auctions
+
+See
+
+
+## Related topics
+
+Studies on PoA in auctions have provided insights into other settings that are not related to auctions, such as network formation games
+
+
+## Summary table
+
+[Partial table - contains only parallel auctions - should be completed]
+
+| Multi-auction | Single auction | Information | Valuations | Assumptions | PoA | Pos | Comments |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Parallel | 2nd-price | complete | submodular | strong-no-overbidding | 2 | pure: 1 [always exists] |
+| Parallel | 2nd-price | Bayesian | XOS | strong-no-overbidding | 2 |
+| Parallel | 2nd-price | complete | subadditive | strong-no-overbidding | 2 |
+| Parallel | 2nd-price | Bayesian | subadditive | strong-no-overbidding | > 2, < 2 log(m) |
+| Parallel | 1st-price | complete | monotone | None | pure: 1 [when exists] | Pure NE = WE. |
+| Parallel | 1st-price | complete | monotone | None | mixed: {\displaystyle \Omega ({\sqrt {m}})} | {\displaystyle \Omega ({\sqrt {m}}/\log {m})} |
+| Parallel | 1st-price | Bayesian | monotone | None | {\displaystyle O(mn)} | {\displaystyle \Omega ({\sqrt {m}}/\log {m})} |
+| Parallel | 2nd-price | complete | monotone | weak-no-overbidding | pure: 2 [when exists] | Pure NE = Conditional WE |
+| Parallel | 1st-price | Bayesian | subadditive | None | 2 | {\displaystyle \Omega ({\sqrt {m}}/\log {m})} |
+| Parallel | 2nd-price | Bayesian | subadditive | weak/strong-no-overbidding | 4 |
+

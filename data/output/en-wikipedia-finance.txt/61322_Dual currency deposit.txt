@@ -1,0 +1,61 @@
+Dual currency deposit
+
+
+# Dual currency deposit
+
+
+
+In finance, a **dual currency deposit** (**DCD**, also known as **Dual Currency Instrument** or **Dual Currency Product**) is a derivative instrument which combines a money market deposit with a currency option to provide a higher yield than that available for a standard deposit. There is a higher risk than with the latter - the depositor can receive less funds than originally deposited and in a different currency. An investor could do a USD/JPY DCD depositing USD and receiving JPY.
+
+
+## Formal definition
+
+A dual currency deposit (“DCD”) is a foreign exchange-linked deposit in which the principal can be repaid after being converted into the alternative currency at the strike rate at maturity depending on the spot foreign exchange rate.
+If an investor has a view on the initial investment currency a dual currency strategy allows the investor to benefit from higher returns. The returns are higher than the returns on normal deposits in compensation for the higher risks that are associated with DCDs due to being exposed to foreign exchange.
+
+At maturity, if the local currency is weaker than the strike rate, funds will be redeemed in the local currency. If the local currency is stronger, the principal is repaid in the alternative currency, converted at the strike rate. The distance from current exchange rate to “strike” is determined by investor risk appetite: If the client is comfortable with risk the conversion level will be closer to the current level, and the interest payable will be higher as the risk of conversion increases.
+
+
+## Financial maths
+
+
+### DCD+
+
+The DCD is actually composed of a normal deposit and an option. Normally in the options market the seller of an option is paid before the premium value date or spot date, however in the case of the DCD the client is paid at the end of the deposit period. For this reason some banks offer their clients a product commonly called a DCD+ which includes an interest element to account for this.
+
+Adding this to the deposit redemption-amount means that the amount of currency that will need converting if the option strike is passed at expiry has now increased. So the option face amount needs to be altered to take the extra interest into account. This affects the premium again, and so on.
+
+To avoid having to compute this to infinity one can use a geometric series with
+
+{\displaystyle a=1+r{\frac {\text{delivery term days}}{\text{currency basis}}}}
+
+and
+
+{\displaystyle r={\text{yield of option}}}
+
+where yield is the forward value (FV) of the option premium giving a multiplier to change a DCD's option premium to a DCD+ of:
+
+{\displaystyle {\text{multiplier}}={\frac {1+r{\frac {\text{delivery term days}}{\text{currency basis}}}}{1-y}}}
+
+
+### Example of DCI/DCD
+
+Sample parameters selected by an investor
+
+* Currency pair: SGD/GBP
+* Base currency: Singapore dollars (SGD)
+* Alternate currency: British Pound Sterling (GBP)
+* Strike rate: Strike rate = 1.9950
+* Investment amount: SGD500,000
+* Term: 7 days
+
+Other investment parameters determined by product offering institution
+
+* Spot rate: The spot rate at the time of investment is 2.0029
+* Applicable yield : 7% per annum
+
+On the expiry date, the reference rate is 2.0017.
+
+Currency of repayment
+Since the reference rate on the expiry date (2.0017) is less than the strike rate selected by the investor (1.9950), proceeds will be paid in the base currency (SGD) to the investor on the maturity date. Here, the base currency (SGD) has appreciated no greater than the strike rate selected by the investor.
+

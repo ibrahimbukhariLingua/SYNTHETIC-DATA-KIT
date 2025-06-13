@@ -1,0 +1,95 @@
+Firo (cryptocurrency)
+
+
+# Firo (cryptocurrency)
+
+
+
+**Firo**, formerly known as **Zcoin**, is a cryptocurrency aimed at using cryptography to provide better privacy for its users compared to other cryptocurrencies such as Bitcoin.
+
+
+## History
+
+
+### Zcoin
+
+
+#### Creation
+
+In late 2014, Poramin Insom, a student in Masters in Security Informatics from Johns Hopkins University, wrote a paper on implementing the zerocoin protocol into a cryptocurrency with Matthew Green as a faculty member. The project to create a standalone cryptocurrency implementing the Zerocoin protocol was named "Moneta".
+
+On 28 September 2016, Zcoin, the first cryptocurrency to implement the zerocoin protocol, was launched by Poramin Insom and team. Roger Ver was the initial investor. Reuben Yap, a former lawyer and founder of virtual private network BolehVPN joined the team as co-founder shortly after the launch of Zcoin.
+
+
+#### 2017–2018
+
+On 20 February 2017, a malicious coding attack on the Zerocoin protocol created 370,000 fake tokens which perpetrators sold for over 400 Bitcoins ($440,000). Zcoin team announced that a single-symbol error in a piece of code "allowed an attacker to create Zerocoin spend transactions without a corresponding mint". Unlike Ethereum during the DAO event, developers have opted not to destroy any coins or attempt to reverse what happened with the newly generated ones.
+
+In September 2017, Poramin set up an exchange named "Satang Pro" that can convert Thai Baht to Zcoin directly.
+
+In April 2018, a cryptographic flaw was found in the Zerocoin protocol which allowed attackers to steal, destroy, and create Zcoins. The Zcoin cryptocurrency team, while acknowledging the flaw, stated the high difficulty in performing such attacks and the low probability of giving economic benefit to the attacker.
+
+In August 2018, Boozeat, a liquor delivery service in Malaysia accepted Zcoin as a payment method.
+
+In September 2018, Zcoin introduced the Dandelion protocol that hides the origin IP address of a sender without using The Onion Router (Tor) or Virtual Private Network (VPN).
+
+In November 2018, Zcoin conducted the world's first large-scale party elections for Thailand Democrat Party using blockchain instead of relying upon the election commission to count the votes. In the same month, a video named "Rap Against Dictatorship" was uploaded to Zcoin blockchain after Thailand government's threat of arresting the people involved in the video for speaking against government policies.
+
+In December 2018, Zcoin implemented Merkle tree proof, a mining algorithm that deters the usage of Application-specific integrated circuit (ASIC) in mining coins by being more memory intensive for the miners. This allows ordinary users to use a central processing unit (CPU) and graphics card for mining, so as to enable egalitarianism in coin mining.
+
+
+#### 2019–2020
+
+In February 2019, Zcoin was added to wallet supported by Binance cryptocurrency exchange. In the same month, Zcoin partnered with Binance Charity Foundation to raise funds for "Lunch for Children" program in Africa. The charity used blockchain to track and verify the progress of funds from donor to receiver. On 25 April 2019, Zcoin was listed on the Indonesian digital exchange KoinX.
+
+On 30 July 2019, Zcoin formally departed from the zerocoin protocol by adopting a new protocol called "Sigma" that prevents counterfeit privacy coins from inflating coin supply. This is achieved by removing a feature called "trusted setup" from the zerocoin protocol. In August 2019, Zcoin was added to an African cryptocurrency exchange named OVEX. In December 2019, Zcoin introduced a decentralised crowdfunding and decision-making system to fund ancillary tasks for the project. In July 2020, using the crowdfunding system, Zcoin raised US$22,500 from 89 contributors to fund the first phase of its third-party audit of Lelantus protocol.
+
+In May 2020, Zcoin announced that all founder rewards will be ceased, while at the same time increase development funding to 15% of the block reward, and allocated 35% of the block reward to masternodes. Besides, a US$100,000 reserve fund was set up to protect against price volatility. In September 2020, Zcoin completed first halving of block rewards. In the same month, Zcoin was added to Stakehound for easy accessibility to Decentralized finance (DeFi) while earning staking rewards.
+
+
+### Firo
+
+In October 2020, Zcoin announced rebranding to new name called "Firo" which signifies a unique way of burn (destroy) and redeem coins. Firo suffered an 51% attack in January 2021. In June 2021, Firo was added to NOBI trading platform based in Indonesia. Firo implemented Receiver Address Privacy (RAP) in June 2021. In August 2021, Firo announced the Lelantus Spark protocol. This protocol offers additional privacy features, including generating new one-time addresses for receiving payments, efficient multisignature operations, and the availability of view keys for authorised third parties to view a transaction.
+
+
+## Design
+
+
+### Zero-knowledge proofs
+
+Firo initially implemented the Zerocoin protocol. Unlike bitcoin, money does not travel from one block to another. Instead, it is traded as Zerocoin and redeem for a new coin without any history of transaction. However, the disadvantage of this system is that the transaction amount cannot be hidden. There had been little research interest into Zerocoin protocol because of its similarity to Zerocash protocol.
+
+There are three phases of a Lelantus transaction. Since trusted setup is not needed, it makes the algorithm faster. In the first phase, a block with transaction history is deleted, while generating a new block with no previous history (minting). A serial number is added to the minted coin to prevent double spending. In the second phase, all previous minted coins are parsed and the serial number are published to the blockchain (spending). In the third phase, the participants can verify the block without any actual inputs.
+
+
+### Dandelion++ protocol
+
+Firo implemented the Dandelion++ protocol in 2018. It is a protocol that helps to increase the anonymity of a sender during the dissemination of a transaction. There are two phases in the Dandelion protocol: stem phase and fluff phase. In the stem phase, a message is forwarded to a single, randomly chosen neighbour. Then, in the fluff phase, the message is broadcast to all the neighbours except forwarder of the message. Dandelion ++ is an improved version of the Dandelion protocol where the problem of transactions lost due to defective or malicious nodes is avoided by broadcasting the message if a node does not receive the message after a certain period of time in the fluff phase. These steps shuffles the IP addresses of the nodes to help to protect users' anonymity.
+
+
+### Receiver Address Privacy (RAP)
+
+In June 2021, Firo introduced Receiver Address Privacy (RAP) addresses, an adaptation of BIP47. RAP allows users to be able to publicly post their wallet addresses without having to worry about privacy. In the past, wallet users had to create and share freshly generated addresses to attempt to maintain their privacy.
+
+
+### Mining
+
+Firo implemented the MTP algorithm in December 2018. Using video cards, mining Firo can be more profitable than mining ethereum. Nvidia GeForce RTX 3080 Ti is able to churn out 6 to 6.5 Mhash/s of hash rate, earning about US$5 per day. Meanwhile, GeForce RTX 3080 is only able to churn out 5. 3 Mhash/s on this cryptocurrency. The algorithm has been changed to FiroPoW on October 26, 2021.
+
+
+## Regulatory responses
+
+In February 2021, Thailand Securities and Exchange Commission (SEC) mooted an idea of banning privacy coins from exchanges. Poramin Insom argued that such ban lacks rationale and clarity because all cryptocurrencies including bitcoin have some privacy features in it. Besides, exchanges can easily track customers' details by using Know-Your-Customer (KYC) and Anti-money laundering (AML) procedures. In September 2022, Seychelles-based cryptocurrency exchange Huobi delisted Firo because of financial regulations.
+
+
+## Price and volatility
+
+In October 2018, Firo was ranked top 25, with fully diluted market capitalisation of US$194,506,940. Firo had an all-time high price of US$170 per coin in 2017–2018. In February 2020, Firo price dropped to US$3 to US$5 per coin. Firo was priced at US$7.5 in September 2021.
+
+
+## Analysis
+
+According to researchers from Technical University of Denmark, Sigma and Lelantus protocols both contributed to the area of specialised trustless zero-knowledge proofs but seldom offered strong anonymity guarantees when compared to zk-SNARKS because of performance limitations. However, ZK-SNArK-like proof is complicated and research into simpler zero-knowledge protocols can provide practical and anonymous payments in the future. A cryptographic audit was done in September 2020. According to the audit, Lelantus protocol offers good privacy without trusted setup and reasonable proving time within 2 seconds and anonymity set size of 2¹⁶. According to R.E Shibai et al., Lelantus was described as "promising" in ensuring privacy and anonymity in cryptocurrency transactions. However, according to a master thesis written by Bontekoe, T.H from University of Twente, he would prefer zk-SNARKS for digital payments because as "the used primitives in Zcoin (Lelantus) do currently not allow for the extensive statements that we most likely require to make our scheme anonymous and auditable."
+
+Lelantus was also implemented into the Mimble Wimble protocol to produce a new protocol named Oscausi.
+

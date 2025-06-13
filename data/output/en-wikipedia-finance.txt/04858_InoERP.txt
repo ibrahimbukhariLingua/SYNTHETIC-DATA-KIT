@@ -1,0 +1,57 @@
+InoERP
+
+
+# InoERP
+
+
+
+The **inoERP** enterprise management system is an open-source Go and Flutter based Enterprise Resource Planning (ERP) application which can be used with MySQL, MariaDB or Oracle 12c databases. The objective of inoERP is to provide a dynamic pull based system where the demand /supply changes frequently and traditional planning systems (such as MRP or Kanban) are unable to provide a good inventory turn.
+
+
+## Primary modules
+
+The major features of inoERP are:
+
+* Organization Structure : Flexible enterprise, legal org, business unit, inventory, store, sub inventory & locator.
+* Finance : General Ledger, Accounts Payable, Accounts Receivable, Fixed Asset
+* Inventory Management : Product maintenance, ABC Analysis, Cycle count, Inventory Transactions, Inter Org Transfers, Sub Inventory Movements
+* Sales & Distribution : Sales Order, Order Booking, Delivery management, Point Of Sales
+* Bills & Routing : BOM, Department, Resource, Costing with Material, Material Overhead, Overhead, Resource and OSP
+* Manufacturing : Discrete, Process, Manufacturing Execution System
+* Purchasing: RFQ, Quotes, Standard & Blanket Purchases, Sourcing Rule, Approved Supplier List
+* Human Resources : Employee directory, Leaves management, Salary & Payroll, Approval Hierarchy
+* Planning : Forecast, MDS, MRP, Min Max, Multi-Bin Kanban
+* Asset Maintenance: Asset Tracking, Maintenance Activity, Maintenance Schedule, Planning & Maintenance Work Order, Cost Tracking
+* eCommerce : Product, Cart, Paid Order, Auto Sales Order Creation, Payment Method such as PayPal, COD
+* Other Modules : Quality, RFID & Barcode
+* Content Management : Blogs, Forums, Website management
+
+### Business Usage
+
+The primary objective of inoERP is to provide a dynamic pull system which can control the Raw Material, Work in Process and Finished Good Inventory
+to provide a good inventory turn.
+
+Dynamic pull system is an advanced version of pull system which encompasses the best feature of traditional pull system and MRP. The major disadvantage of the traditional kanban system is the fixed kanban size and requirement of at least 2 bins for full operation. In the event of a sudden demand decrease, a kanban system can result in extra inventory and the value of unused inventory can go up to 2 bin sizes. Similarly, In case of unexpected demand increasing, it can result in a line down and the issue will be severe if the lead times are not short. Dynamic pull systems overcome this issue by recalculating the bucket size (kanban size/lot size) before creating any supply (requisitions/purchase order/work order). Each time a new supply is created, the system automatically decides the best supply size as per the existing actual demand.
+
+
+### Application Architecture
+
+inoERP is developed completely in OOPs architecture utilizing all the advanced features of PHP 5.5. It works with the standard PHP configurations and does not require any additional PHP modules. Its modular design allows organizations to enable only selected features required for the business. It has a clean and simple user interface that is primarily written in JQuery.
+
+
+### Database
+
+inoERP uses mySQL as the database management system.
+
+
+## Software license
+
+inoERP is released under the MPL.
+
+
+## Source Code
+
+The source code of inoERP is hosted on GitHub, using the Git revision control system, and the contributions are also handled using GitHub.
+It can also be downloaded from Soureforge.
+The product can be forked from gitHUB
+

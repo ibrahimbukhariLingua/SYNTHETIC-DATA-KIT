@@ -1,0 +1,16 @@
+Chooser option
+
+
+# Chooser option
+
+
+
+In finance, a **chooser option** is a special type of option contract. It gives the purchaser a fixed period to decide whether the derivative will be a European call or put option.
+
+In more detail, a chooser option has a specified decision time {\displaystyle t\_{1}}, where the buyer has to make the decision described above. Finally, at the expiration time {\displaystyle t\_{2}} the option expires. If the buyer has chosen that it should be a call option, the payout is {\displaystyle \max(S-K,0)}. For the choice of a put option, the payout is {\displaystyle \max(K-S,0)}. Here {\displaystyle K} is the strike price of the option and {\displaystyle S} is the stock price at expiry.
+
+
+## Replication
+
+For stocks without dividend, the chooser option can be replicated using one call option with strike price {\displaystyle K} and expiration time {\displaystyle t\_{2}}, and one put option with strike price {\displaystyle Ke^{-r(t\_{2}-t\_{1})}} and expiration time {\displaystyle t\_{1}};.
+

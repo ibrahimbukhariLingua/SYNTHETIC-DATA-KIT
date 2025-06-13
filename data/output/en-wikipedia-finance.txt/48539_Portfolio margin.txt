@@ -1,0 +1,27 @@
+Portfolio margin
+
+
+# Portfolio margin
+
+
+
+**Portfolio margin** is a risk-based margin policy available to qualifying US investors. The goal of portfolio margin is to align margin requirements with the overall risk of the portfolio. Portfolio margin usually results in significantly lower margin requirements on hedged positions than under traditional rules. While the margin requirements of Regulation T generally limit leverage on equity to 2, with portfolio margin, leverage of 6.67 or more is possible.
+
+
+## Overview
+
+Portfolio margin is calculated using the Options Clearing Corporation's (OCC) Customer Portfolio Margin system. This system—based on the OCC's TIMS methodology—sets the margin requirement to the maximum hypothetical loss of the portfolio. The maximum loss is found by stressing the underlying securities in the portfolio across a range of hypothetical market moves and valuing the portfolio under each scenario. The size of the market move depends on the type of underlying:
+
+* High-Capitalization Broad Based Indexes: –8% to +6%
+* Non-High-Capitalization Broad Based Indexes: –10% to +10%
+* Sector Indexes, Individual Equities: –15% to +15%
+* Leveraged ETFs, Inverse ETFs: the above market moves are multiplied by the ETF's stated leverage.
+
+After the scenario P&Ls are determined for each group of securities with the same underlying, P&L offsets are applied across pairwise security groups. These offsets are set by The Options Clearing Corporation and are informed by the degree of correlation between pairwise securities. The offset percentages for different types of indexes and different levels of aggregation are defined in an offset table.
+
+Once the offsets are applied, the net P&L for the Portfolio can be determined under each market move scenario. For example, 90% of the profit on a Russell 3000 index ETF long position can be used to offset the loss on a S&P 500 index ETF short position. This corresponds with the 90% offset allowed for securities in the Broad Based Indexes product group. There are over 28 product groups in total, each with its own offset percentage. Note that (non-index) single stock positions do not obtain any P&L offsets and therefore a portfolio of these positions has a minimum margin requirement of 15%.
+
+In order to qualify for a portfolio margin account, a broker-dealer customer must meet the minimum equity guidelines as set by FINRA: $100,000 for customers of firms that have real-time intra-day monitoring systems, $150,000 for customers of firms without real-time intra-day monitoring systems, and $500,000 for Prime Broker customers or Introduced account customers where trades are executed away from the clearing firm.
+
+The NYSE began a pilot program in April 2007 that offered portfolio margin to certain qualified accounts. This program became permanent in Aug 2008.
+

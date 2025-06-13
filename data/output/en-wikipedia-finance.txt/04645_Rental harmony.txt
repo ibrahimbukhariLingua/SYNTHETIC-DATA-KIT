@@ -1,0 +1,287 @@
+Rental harmony
+
+
+# Rental harmony
+
+
+
+**Rental harmony** is a kind of a fair division problem in which indivisible items and a fixed monetary cost have to be divided simultaneously. The **housemates problem** and **room-assignment-rent-division** are alternative names to the same problem.³⁰⁵–³²⁸
+
+In the typical setting, there are {\displaystyle n} partners who rent together an {\displaystyle n}-room house for cost fixed by the homeowner. Each housemate may have different preferences — one may prefer a large room, another may prefer a room with a view to the main road, etc. The following two problems should be solved simultaneously:
+
+* (a) Assign a room to each partner,
+* (b) Determine the amount each partner should pay, such that the sum of payments equals the fixed cost.
+
+There are several properties that we would like the assignment to satisfy.
+
+* **Non-negativity (NN)**: all prices must be 0 or more: no partner should be paid to get a room.
+* **Envy-freeness (EF)**: Given a pricing scheme (an assignment of rent to rooms), we say that a partner *prefers* a given room if he believes that the parcel of room+rent is weakly better than all other parcels. EF means that every partner prefers his allotted room. I.e, no partner would like to take another room at the rent assigned to that room.
+* **Pareto-efficiency (PE)**: No other assignment of partners to rooms is weakly better for all partners and strictly better for at least one partner (given the price-vector).
+
+Envy-freeness implies Pareto-efficiency. *Proof:* Suppose by contradiction that there exists an alternative assignment, with the same price-vector, that is strictly better for at least one partner. Then, in the current allocation, that partner is envious.
+
+The rental-harmony problem has been studied under two different assumptions on the partners' preferences:
+
+* In the ordinal utility version, each partner has a preference relation on bundles [room, price]. Given a price-vector, the partner should only be able to say which room (or rooms) he prefers to rent at that price.
+* In the cardinal utility version, each partner has a vector of monetary valuations. The partner should say, for each room, exactly how much money he is willing to pay for that room. The partner is assumed to have quasilinear utility, i.e., if he values the room as {\displaystyle v} and pays {\displaystyle p}, his net utility is {\displaystyle v-p}.
+
+The cardinal assumption implies the ordinal assumption, since given a valuation vector it is always possible to construct a preference relation. The ordinal assumption is more general and puts less mental burden on the partners.
+
+
+## Ordinal version
+
+
+### Su: one person per room
+
+The protocol by Francis Su makes the following assumptions on the preferences of the partners:
+
+1. *Good house*: In any partition of the rent, each person finds at least one room+rent parcel acceptable.
+2. *No externalities*: The preference relation of each partner depends on the rooms and the rents, but not on choices made by others.
+3. *Miserly tenants*: every tenant weakly prefers a free room (a room with a rent of 0) over any other room.
+4. *Topologically closed preference sets*: A partner who prefers a room for a convergent sequence of prices, prefers that room at the limiting price.
+
+Normalize the total rent to 1. Then each pricing scheme is a point in an {\displaystyle (n-1)}-dimensional simplex with {\displaystyle n} vertices in {\displaystyle \mathbb {R} ^{n}}. Su's protocol operates on a dualized version of this simplex in a similar way to the Simmons–Su protocols for cake-cutting: for every vertex of a triangulation of the dual simplex, which corresponds to a certain price scheme, it asks the owning partner "which room do you prefer in that pricing scheme?". This results in a Sperner coloring of the dual simplex, and thus there exists a small sub-simplex which corresponds to an approximate envy-free assignment of rooms and rents.
+
+Su's protocol returns a sequence of allocations which converges to an envy-free allocation. The prices are always non-negative. Hence, the outcome satisfies the NN and EF requirements.
+
+Su's Rental Harmony protocol has been popularized in several news articles, and has several online implementations.
+
+
+### Azriely and Shmaya: room-mates
+
+Azriely and Shmaya generalize Su's solution to a situation in which the capacity of each room may be larger than one (i.e., several partners can live in the same room).
+
+They prove the existence of envy-free allocations in the following conditions:
+
+1. *Good house*: Every partner likes at least one of the rooms given each price vector.
+2. *No externalities*: All partners like free rooms.
+3. *Miserly partners*: The preferences are continuous in prices.
+
+The main tools used in the proof are:
+
+* The K-K-M-S theorem - a generalization of the K-k-m theorem.
+* Hall's marriage theorem.
+
+Their solution is constructive in the same sense as Su's solution - there is a procedure that approximates the solution to any given precision.
+
+
+### General properties of ordinal protocols
+
+**A.** In both Su's solution and Azrieli&Shmaya's solution, the preference relation of each partner is allowed (but not obliged) to depend on the entire price-vector. I.e, a partner may say "if room A costs 1000, then I prefer room B to room C, but if room A costs only 700, then I prefer room C to room B".
+
+There are several reasons such generality can be useful.
+
+1. Future planning. Suppose the partner thinks that room A is best, then B, then C. If A is expensive, the partner settles on B. But if A is cheaper, the partner might buy C (which is the cheapest), and then save some money and switch to A.
+2. Incomplete information. The price-vector may give the partner some indication on the quality of rooms.
+3. Neighbors. The price-vector may allow the partner to predict, to some extent, what kind of people are going to live in the neighboring rooms.
+4. Irrationality effects, e.g. framing effects. If room B and room C are of the same quality and have the same price, then the partner may buy A. But, if room B becomes more expensive, then the partner may switch to C, thinking that "it is the same as B but in bargain price..".
+
+**B.** Both Su's solution and Azrieli&Shmaya's solution make a "Miserly tenants" assumption - they assume that a tenant always prefers a free room to a non-free room. This assumption is strong and not always realistic. If one of the rooms is very bad, it is possible that some tenants will not want to live in that room even for free. This is easy to see in the cardinal version: if you believe that room A is worth 0 and room B is worth 100, and room A is free and room B costs 50, then you certainly prefer room B.
+
+Su suggests to weaken this assumption in the following way: each partner never chooses the most expensive room if there is a free room available. This does not require the person to choose the free room. In particular, this will hold if a person always prefers a free room to a room costing at least {\displaystyle 1/(n-1)} of the total rent. However, even this weakened assumption might be unrealistic, as in the above example.³²⁰–³²¹
+
+Segal-Halevi shows that the assumption can be weakened even further. Let us say that a price *T* is **too high** for some agent *i* if, whenever some room costs T and some other room is free, no agent prefers the room that costs *T*. Rental harmony exists whenever there exists a price that is too high for all agents. This assumption is weaker than the miserly tenants assumption, and weaker than quasilinearity. It is an open question, whether there is an even weaker assumption that guarantees existence of rental harmony.
+
+
+## Cardinal version
+
+As explained above, the input to the cardinal version is a matrix of bids: every partner has to submit a bid to each room, saying how much (in dollars) this room is worth for him. It is usually assumed that agents have quasilinear utilities, so that their utility to a room is their value for the room minus the room price.
+
+A key notion in the cardinal solutions is a **maxsum** (aka **utilitarian**) allocation. This is an allocation of partners to rooms, that maximizes the sum of bids. The problem of finding a maxsum allocation is known as the assignment problem, and it can be solved by the Hungarian algorithm in time {\displaystyle O(n^{3})} (where {\displaystyle n} is the number of partners). Every EF allocation is maxsum and every maxsum allocation is PE.
+
+
+### Incompatibility of EF and NN
+
+The two requirements of envy-freeness and non-negative payments are not always compatible. For example, suppose the total cost is 100 and the valuations are:
+
+| Room 1 | Room 2 |
+| --- | --- |
+| Partner 1 | 150 | 0 |
+| Partner 2 | 140 | 10 |
+
+Here, the only maxsum allocation is giving room 1 to partner 1 and room 2 to partner 2. In order to make sure partner 2 does not envy, partner 1 must pay 115 and partner 2 must pay -15.
+
+In this example, the sum of valuations is more than the total cost. If the sum of valuations equals the total cost, and there are two or three partners, then there always exists an EF and NN allocation.¹¹⁰–¹¹¹ But if there are four or more partners, then again EF and NN might be incompatible, as in the following example (see ³¹⁸–³¹⁹ for proof):
+
+| Room 1 | Room 2 | Room 3 | Room 4 |
+| --- | --- | --- | --- |
+| Partner 1 | 36 | 34 | 30 | 0 |
+| Partner 2 | 31 | 36 | 33 | 0 |
+| Partner 3 | 34 | 30 | 36 | 0 |
+| Partner 4 | 32 | 33 | 35 | 0 |
+
+Note that this example does not occur in the ordinal version, since the ordinal protocols make the "Miserly Partners" assumption - partners always prefer free rooms. When this assumption holds, there always exists an EF+NN allocation. But, in the above example, the assumption does not hold and an EF+NN allocation does not exist. Therefore, the protocols in the cardinal version have to compromise between EF and NN. Each protocol makes a different compromise.
+
+
+### Brams and Kilgour: NN but not EF
+
+Brams and Kilgour³⁰⁵–³²⁸ suggest the **Gap Procedure**:
+
+1. Calculate a maxsum allocation.
+2. If the max-sum is less than the total cost, then the problem is unsolvable, since the partners do not want to pay the total amount required by the houseowner.
+3. If the max-sum exactly equals the total cost, then the rooms are allocated and the partners pay their valuations.
+4. If the max-sum is more than the total cost, then the prices are lowered based on the *gap* between these prices and the next-lowest valuations (see the book for more details).
+
+The idea behind the last step is that the next-lowest valuations represent the "competition" on the rooms. If there a room is more wanted by the next-highest bidder, then it should cost more. This is similar in spirit to the Vickrey auction. However, while in the Vickrey auction the payment is entirely independent of the partner's bid, in the Gap procedure the payment is only partially independent. Therefore, the Gap procedure is not strategyproof.
+
+The Gap Procedure always assigns non-negative prices. Because the assignment is maxsum, it is obviously also Pareto-efficient. However, some partners may be envious. I.e, the Gap procedure satisfies NN and PE but not EF.
+
+Moreover, the Gap Procedure may return non-envy-free allocations, even when EF allocations exist. Brams relates to this problem saying that: "Gap prices do take into account the competitiveness of bidding for goods, which makes the pricing mechanism market-oriented. Although envy-freeness is a desirable property, I prefer a marketlike mechanism when there is a conflict between these two properties; partners *should* pay more when bids are competitive, even at the sacrifice of causing envy".³²¹
+
+
+### Haake and Raith and Su: EF but not NN
+
+Haake, Raith and Su present the Compensation Procedure. The problem it solves is more general than the rental-harmony problem in certain aspects:
+
+* The number of indivisible items to divide (*m*) may differ than the number of partners (*n*).
+* There can be arbitrary constraints on bundles of items, as long as they are anonymous (do not differentiate between partners based on their identity). For example, there can be no constraint at all, or a constraint such as "each partner must receive at least a certain number of items", or "some items must be bundled together" (e.g. because they are land-plots that must remain connected), etc.
+* The total "cost" can also be positive, which means that there is also some money to share. This is characteristic of inheritance division scenarios. Similarly, the "items" can have negative utility (e.g., they can represent indivisible chores).
+
+There is a "qualification requirement" for a partner: the sum of his bids must be at least the total cost.
+
+The procedure works in the following steps.
+
+1. Find a maxsum (utilitarian) allocation - an allocation with a highest sum-of-utilities that satisfies the constraints on bundles of items. If there are no constraints, then an allocation that gives each item to the partner with the highest valuation is maxsum. If there are constraints (such as "at least one item per partner"), then a maxsum allocation might be more difficult to find.
+2. Charge from each partner the value of the bundle allocated to him. This creates the initial pool of money.
+3. Pay the cost from the initial pool. If all partners satisfy the qualification requirement, then the money in the pool is sufficient, and there may be some remaining *surplus*.
+4. Eliminate envy by compensating envious partners. There are at most {\displaystyle n-1} rounds of compensation. The procedure is fully descriptive and says explicitly which compensations should be made, and in what order. Moreover, it is simple enough to be carried out without computer support.
+5. The sum of compensations made in all rounds is the smallest sum that is required to eliminate envy, and it never exceeds the surplus. If some surplus remains, it can be divided in any way that does not create envy, e.g., by giving an equal amount to each partner (the paper discusses other options that may be considered "fairer").
+
+When there are many item and complex constraints, the initial step - finding a maxsum allocation - may be difficult to calculate without a computer. In this case, the Compensation Procedure may start with an arbitrary allocation. In this case, the procedure might conclude with an allocation that contains *envy-cycles*. These cycles can be removed by moving bundles along the cycle. This strictly increases the total sum of utilities. Hence, after a bounded number of iterations, a maxsum allocation will be found, and the procedure can continue as above to create an envy-free allocation.
+
+The Compensation Procedure might charge some partners a negative payment (i.e., give the partners a positive amount of money). This means that the Compensation Procedure is EF (hence also PE) but not NN. The authors say:
+
+However, other authors claim that, in the usual housemates scenario:
+
+
+### Abdulkadiroglu and Sonmez and Unver: EF and NN if possible
+
+Abdulkadiroğlu et al. suggest a market-based approach. It is a combination of an ascending auction and a descending auction. It is simplest to describe as a continuous-price auction:
+
+1. Initialize the price of each room to {\displaystyle 1/n} of the total house cost.
+2. Calculate the *demand-set* of each partner: the room or set of rooms he likes most at the current prices.
+3. Calculate the set of over-demanded rooms (rooms that are demanded by more partners than the number of rooms; see the paper for exact definition).
+4. Increase the price of all over-demanded rooms in the same rate;
+5. Simultaneously, decrease the price of all other rooms in the same rate, such that the sum of prices of all rooms always equals the total cost.
+6. At each instant, update the demand of each partner and the set of over-demanded rooms.
+7. When the set of over-demanded rooms is empty, stop and apply Hall's marriage theorem to allocate to each partner a room in their demand-set.
+
+In practice, it is not necessary to change the price continuously, since the only interesting prices are prices in which the demand-sets of one or more partners change. It is possible to calculate the set of interesting prices in advance, and convert the continuous-price auction to a discrete-price auction. This discrete-price auction stops after a finite number of steps.⁵²⁵–⁵²⁸
+
+The returned allocation is always envy-free. The prices may be negative, like in the procedure of Haake et al. However, in contrast to that procedure, the prices are non-negative if there exists an EF allocation with non-negative prices.
+
+
+### Sung and Vlach: EF and NN if possible
+
+Sung and Vlach prove the following general properties of allocations:
+
+1. Envy-freeness implies maxsum: given an allocation *x*, if there is a price-vector *p* with which *x* is envy-free, then *x* is maxsum.
+2. Max-sum implies envy-freeness: given a price-vector *p*, if there is an allocation x with which *p* is envy-free, then *p* is envy-free for *any* maxsum allocation.
+
+Based on these properties, they propose the following algorithm:
+
+1. Find a maxsum allocation.
+2. Find a minsum price-vector (a vector in which the sum of prices is minimized), subject to the envy-freeness constraint. Such price-vector is a solution of a linear programming problem, and it can be found by the Bellman–Ford algorithm.
+3. If the min-sum equals the total cost, implement the maxsum allocation with the minsum prices and finish.
+4. If the min-sum is less than the total cost, then increase all prices in a constant rate until the sum equals the total cost (i.e., add to each price: {\displaystyle (cost-minsum)/n}). Changing all prices by the same amount ensures that the assignment remains envy-free.
+5. If the min-sum is more than the total cost, then there is no solution satisfying both NN and EF. There are several possible ways to proceed:
+ * Decrease all prices in a constant rate until the sum equals the total cost (i.e., subtract from each price: {\displaystyle (minsum-cost)/n}). Some prices will necessarily be negative, as in the solution of Haake Raith and Su.
+ * Decrease only the positive prices in a constant rate, until the sum equals the total cost. Here, the prices do not change by the same amount, so some partners will necessarily envious, as in the solution of Brams and Kilgour. However, in this solution, *the envious partners get their room for free*.
+
+The runtime complexity of both finding maxsum allocation and finding minsum prices is {\displaystyle O(n^{3})}.
+
+The solution of Sung and Vlach seems to have all the desirable properties of the previous protocols, i.e.: PE and EF and NN (if possible) and polynomial run-time, and in addition, it guarantees that every envious partner gets a free room. provides an implementation of a similar solution, also based on solving a linear-programming problem but citing a different paper.
+
+
+### Aragones: EF and money-Rawlsian
+
+Aragones presented a polytime algorithm for finding an EF solution that, among all EF solutions, maximizes the smallest payment by an agent (it is called the Money Rawlsian solution).
+
+
+### Mash, Gal, Procaccia and Zick: EF and egalitarian
+
+Gal, Mash, Procaccia and Zick, based on their experience with the rent division application in the Spliddit website, note that envy-freeness alone is insufficient to guarantee the satisfaction of the participants. Therefore, they build an algorithmic framework, based on linear programming, for calculating allocations that are both envy-free and optimize some criterion. Based on theoretic and experimental tests, they conclude that the egalitarian rule - maximizing the minimum utility of an agent subject to envy-freeness - attains optimal results.
+
+Note that, since their solution is always EF, it might return negative prices.
+
+The maximin solution is implemented in the spliddit.org website and in the pref.tools website.
+
+
+### Peters, Procaccia and Zhu: Robust EF
+
+Peters, Procaccia and Zhu study a practical setting in which agents may be unsure about their valuations.
+
+
+## Agents with a limited budget
+
+
+### Hard budget constraints
+
+Most papers in the cardinal model assume that agents have Quasilinear utility functions - their utility is the room value minus the price. But in reality, agents have budget constraints - if the room price is above their budget, the utility drops much faster than linearly. In fact, an agent always prefers any room with a price at most his budget, to a room with a price larger than his budget.
+
+In this case, there may not exist a price-vector that is both EF and affordable. For example, suppose the total rent is 1000, there are two rooms and two agents with identical valuations: 800 and 200, and identical budget: 600. There is a single price-vector in which both agents have the same quasilinear utility: (800,200); but the agent in room 1 does not have enough budget to pay. In contrast, there are affordable price-vectors, e.g. (600,400), but they are not envy-free.
+
+Note that the condition of "price too high" still holds in this case, but the preferences are not continuous (the agents prefer only room 2 when p1>600 and only room 1 when p1<=600).
+
+Procaccia, Velez and Yu present an efficient algorithm for finding whether there exists an allocation that is both EF and affordable. If so, it finds an allocation that, among all EF affordable allocations, maximizes the smallest utility (as in egalitarian item allocation).
+
+Airiau, Gilbert, Grandi, Lang and Wilczynski suggest two solutions to overcome the non-existence problem with budget constraints:
+
+* Relaxing EF to *budget-friendly EF*, which means that agent *i* is allowed to envy agent *j* if *j* pays more than *i*'s budget. A BF-EF allocation is more likely to exist than an EF allocation, but still not guaranteed to exist. They show a MILP for computing a BF-EF allocation if it exists. They also show a polytime algorithm for a fixed price-vector, and a pseudopolytime algorithm for a fixed room assignment.
+* Allowing *fractional allocation*, i.e., allocate (1,2) with price to agents (1,2) for half a year and reverse the allocation for the other half, and charge each agent 500. They show a linear program for finding a fractional EF allocation if it exists. They show that finding an EF allocation with a smallest amount of total switches is NP-hard (by reduction from Partition problem or from Hamming salesman problem), but can be solved in time O\*(2ᵏ) by dynamic programming, where *k* is the size of the Birkhoff algorithm (*k* ≤ *n*²). They conjecture that minimizing the largest amount of switches per agent is NP-hard too.
+
+Both these relaxations significantly enlarge the set of EF allocations. However, even with each of these relaxations, an EF allocation might not exist.
+
+
+### Soft budget constraints
+
+Velez studies EF rent division under *soft budget constraints*. Each agent reports their values for rooms, their budget, and their marginal disutility from having to pay more than the budget (e.g. the interest rate). He presents an algorithm that find an EF rent division that is, moreover, egalitarian (max min utility), or money-Rawlsian (min-max rent), or satisfies one of other similar conditions. The run-time is in O(*nᵏ*), where n is the number of agents, *k* is the number of different disutility values (e.g. different interest rates), and *c*>2 is some constant.
+
+Velez studies the strategic properties of these algorithms. He shows that, the complete-information non-cooperative outcomes of each of the algorithms are exactly the EF allocations w.r.t. true preferences, iff the number of allowed disutilities is bounded.
+
+
+## Piecewise linear utilities
+
+Arunachaleswaran, Barman and Rathi study a setting substantially more general than quasilinear, in which the utility of each agent from each room can be any piecewise linear function of the rent. This setting generalizes the soft budget constraint. As there is a too-high price, an EF allocation always exists. They show an FPTAS - an algorithm that finds an allocation that is EF up to (1+*ε*), in time polynomial in 1/*ε* and *nᵏ*, where n is the number of agents, *k* is the number of different disutility values (e.g. different interest rates), and *c*>2 is some constant. They also show that the problem lines in the intersection of the complexity classes PPAD and PLS.
+
+
+## Strategic considerations
+
+All protocols surveyed so far assume that the partners reveal their true valuations. They are not strategyproof - a partner can gain by reporting false valuations. Indeed, **strategyproofness is incompatible with envy-freeness**: there is no deterministic strategyproof protocol that always returns an envy-free allocation. This is true even when there are only two partners and when the prices are allowed to be negative. *Proof*:
+Assume that the total cost is 100 and the partners' valuations are as below (where {\displaystyle x,y} are parameters and {\displaystyle 0<x<y<100}):
+
+| Room 1 | Room 2 |
+| --- | --- |
+| Partner 1 | 100 | x |
+| Partner 2 | 100 | y |
+
+The only maxsum allocation is giving room 1 to partner 1 and room 2 to partner 2. Let {\displaystyle p\_{2}} be the price of room 2 (so that the price of room 1 is {\displaystyle 100-p\_{2}}). To ensure partner 1 does not envy, we must have {\displaystyle p\_{2}\geq x/2}. To ensure partner 2 does not envy, we must have {\displaystyle p\_{2}\leq y/2}.
+
+Suppose a deterministic protocol sets the price {\displaystyle p\_{2}} to some value in {\displaystyle [x/2,y/2]}. If the price is more than {\displaystyle x/2}, then partner 2 has an incentive to report a lower value of {\displaystyle y}, which is still above {\displaystyle x}, in order to push his payment down towards {\displaystyle x/2}. Similarly, if the price is less than {\displaystyle y/2}, then partner 1 has an incentive to report a higher value of {\displaystyle x}, which is still below {\displaystyle y}, in order to push the payment of partner 2 up towards {\displaystyle y/2} (and thus push his own payment down). Hence, the mechanism cannot be strategyproof.
+
+Researchers have coped with this impossibility in two ways.
+
+
+### Sun and Yang: Changing the problem
+
+There is a variant of the problem in which, instead of assuming that the total house cost is fixed, we assume that there is a maximum cost for each room. In this variant, a strategyproof mechanism exists: the deterministic allocation-rule selecting the min-sum cost is strategyproof.
+
+This result can be generalized for greater flexibility on the indivisible objects, and a proof of coalitional strategy-proofness.
+
+
+### Dufton and Larson: Using randomization
+
+Going back to the original rental-harmony problem, it is possible to consider **randomized mechanisms**. A randomized mechanism returns a probability distribution over room-assignments and rent-divisions. A randomized mechanism is *truthful in expectation* if no partner can increase the expected value of his utility by mis-reporting his valuations to the rooms. The fairness of a randomized mechanism can be measured in several ways:
+
+1. **Ex-ante Envy-Freeness** means that no partner envies the lottery of any other partner. This condition is trivial to achieve in a truthful mechanism: randomise over all possible allocations with
+equal probability and charge each partner {\displaystyle 1/n} of the total cost. But this condition is not appealing, since there is a large chance that in the outcome, many partners will be envious. They may not be comforted by the fact that the lottery has been fair.
+
+2. **Guaranteed Probability of Envy-Freeness (GPEF)** means that there is a certain probability {\displaystyle p} such that, regardless of the partners' valuations, with probability at least {\displaystyle p}, the outcome will be envy-free. It is possible to achieve a GPEF of {\displaystyle 1/n} in the following way: find an envy-free assignment; choose an integer {\displaystyle i\in \{0,\dots ,n-1\}} at random; and move each partner cyclically {\displaystyle i} rooms to the right. This randomized mechanism is truthful-in-expectation, since every partner has an equal probability to land in each room and the expected payment is {\displaystyle 1/n} of the total cost, regardless of the partner's bid. The probability of having an EF allocation is the probability that {\displaystyle i=0}, which is exactly {\displaystyle 1/n}. This is not encouraging, since the probability of envy-freeness converges to 0 when the number of partners grows. But it is impossible to do better: in every truthful-in-expectation mechanism, the GPEF is at most {\displaystyle 1/n}.
+
+3. **Expected Number of Envy-Free partners (ENEF)** means that there is a certain integer {\displaystyle N} such that, if we average the number of partners who do not envy in all possible outcomes of the mechanism, then regardless of the partners' valuations, the expectation is at least {\displaystyle N}. The ENEF criterion seems more appropriate than the GPEF criterion, because it measures not only the probability of entire envy-freeness, but also the quality of the cases in which the allocation is not entirely envy-free. The maximum ENEF of a truthful-in-expectation mechanism is at most {\displaystyle n-1+1/n}. It is possible to attain this bound for {\displaystyle n=2}. For {\displaystyle n>2}, there is a truthful-in-expectation mechanism that almost attains this bound: the ENEF is {\displaystyle n-1}. The general idea is as follows. Use the VCG mechanism to calculate a maxsum assignment and payments. Select one partner at random. Ignore that partner and use VCG again. Combine the outcomes in a way which guarantees that the total payment equals the total cost (see the paper for details). It is possible to show that: (a) the mechanism is truthful-in-expectation; (b) all partners except the ignored partner do not envy. Hence, the ENEF is {\displaystyle n-1}. Simulations show that in about 80% of the cases, the GPEF of this mechanism is also at its maximum of {\displaystyle 1/n}.
+
+
+### Andersson and Ehlers and Svensson: Attaining partial-strategyproofness
+
+A possible relaxation of the strategyproofness requirement is to try to minimize the "degree of manipulability". This is defined by counting, for each profile, the number of agents who can manipulate the rule. Maximally-preferred fair allocation rules are the minimally (individually and coalitionally) manipulable fair and budget-balanced allocation rules according to this new concept. Such rules choose allocations with the maximal number of agents for whom the utility is maximized among all fair and budget-balanced allocations.
+

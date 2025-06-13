@@ -1,0 +1,131 @@
+Eco-costs
+
+
+# Eco-costs
+
+
+
+**Eco-costs** are the costs of the environmental burden of a product on the basis of prevention of that burden. They are the costs which should be made to reduce the environmental pollution and materials depletion in our world to a level which is in line with the carrying capacity of our earth.
+
+For example: for each 1000 kg CO₂ emission, one should invest €150,- in offshore windmill parks (plus in the other CO₂ reduction systems at that price or less). When this is done consequently, the total of CO₂ emissions in the world is expected to be reduced to a level that is in compliance with the Paris agreement. As a result, global warming will stabilize (at a level of 2 degrees C). In short: "the eco-costs of 1000kg CO₂ are € 150,-".
+
+Similar calculations can be made on the environmental burden of acidification, eutrophication, summer smog, fine dust, eco-toxicity, and the scarcity of metals, rare earths, fossil fuels, water and land (nature).
+As such, the eco-costs are 'external costs', since they are not yet integrated in the real life costs of current production chains (Life Cycle Costs). The eco-costs should be regarded as hidden obligations.
+
+The eco-costs of a product are the sum of all eco-costs of emissions and use of resources during the life cycle "from cradle to cradle". The widely accepted method to make such a calculation is called life cycle assessment (LCA), which is basically a mass and energy balance, defined in the ISO 14040, and the ISO 14044 (for the building industry the EN 15804). The eco-costs method is in compliance with ISO 14008 (“Monetary valuation of environmental impacts and related environmental aspects”).
+
+The practical use of eco-costs is to compare the sustainability of several product types with the same functionality.
+The advantage of eco-costs is that they are expressed in a standardized monetary value (€) which appears to be easily understood 'by instinct'. Also the calculation is transparent and relatively easy, compared to damage based models which have the disadvantage of extremely complex calculations with subjective weighting of the various aspects contributing to the overall environmental burden.
+
+The system of eco-costs is part of the bigger model of the ecocosts/value ratio, EVR.
+
+
+## Background information
+
+The eco-costs system has been introduced in 1999 on conferences, and published in 2000-2004 in the International Journal of LCA,
+and in the *Journal of Cleaner Production*.,
+The eco-costs system has been uptated in 2007, 2012, 2017, 2022 (2023), and 2025. It is planned to update the system every 5 years to incorporate the latest developments in science.
+The system is summarized at the website www.ecocostsvalue.com, and published in two text books. Scientific elaborations can be found in 10 PhD theses, see the eco-costs website tab
+books and references
+
+The method of the eco-costs is based on the sum of the marginal prevention costs (end of pipe as well as system integrated) for toxic emissions related to human health as well as ecosystems, emissions that cause global warming, and resource depletion (metals, rare earths, fossil fuels, water, and land-use). For a visual display of the system see Figure 1.
+
+Marginal prevention costs of toxic emissions are derived from the so-called prevention curve as depicted in Figure 2. The basic idea behind such a curve is that a country (or a group of countries, such as the European Union), must take prevention measures to reduce toxic emissions (more than one measure is required to reach the target). From the point of view of the economy, the cheapest measures (in terms of euro/kg) are taken first. At a certain point at the curve, the reduction of the emissions is sufficient to bring the concentration of the pollution below the so-called no-effect-level. The no-effect-level of CO₂ emissions is the level that the emissions and the natural absorption of the earth are in equilibrium again at a maximum temperature rise of 2 degrees C. The no-effect-level of a toxic emission is the level where the concentration in nature is well below the toxicity threshold (most natural toxic substances have a toxicity threshold, below which they might even have a beneficial effect), or below the natural background level. For human toxicity the 'no-observed-adverse-effect level' is used.
+The eco-costs are the marginal prevention costs of the last measure of the prevention curve to reach the no-effect-level. See the abovementioned reference 4 and www.ecocostsvalue.com for a full description of the calculation method (note that in the calculation 'classes' of emissions with the same 'midpoint' are combined, as explained below).
+
+The classical way to calculate a 'single indicator' in LCA is based on the damage of the emissions. Pollutants are grouped in 'classes', multiplied by a 'characterisation' factor to account for their relative importance within a class, and totalised to the level of their 'midpoint' effect (global warming, acidification, nutrification, etc.). The classical problem is then to determine the relative importance of each midpoint effect. In damage based systems this is done by 'normalisation' (= comparison with the pollution in a country or a region) and 'weighting' (= giving each midpoint a weight, to take the relative importance into account) by an expert panel.
+
+The calculation of the eco-costs is based on classification and characterisation tables as well. Most of these tables stem from the Environmental Footprint system: for acidification, eutrophication, greenhouse gasses IPCC AR6 GWP 100 years 2021 (), and the USEtox model (). However, the eco-costs system has a different approach to the normalisation and weighting steps. Normalisation is done by calculating the marginal prevention costs for a region (i.e. the European Union), as described above. The weighting step is not required in the eco-costs system, since the total result is the sum of the eco-costs of all midpoints.
+The advantage of such a calculation is that the marginal prevention costs are related to the cost of the most expensive Best Available Technology which is needed to meet the target, and the corresponding level of Tradable Emission Rights which is required in future. From a business point of view, the eco-costs are the costs of non-compliance with future governmental regulations. Example from the past: NOₓ emissions of Volkswagen diesel.
+
+The eco-costs have been calculated for the situation in the European Union. It is expected that the situation in some states in the US, like California and Pennsylvania, give similar results. It might be argued that the eco-costs are also an indication of the marginal prevention costs for other parts of the globe, under the condition of a level playing field for production companies.
+
+
+## Eco-costs 2025
+
+The method of the eco-costs 2023 (version 1.0) comprises tables of over 58.000 emissions and 2200 materials and processes. It has been made operational by special databases for SimaPro and OpenLCA. Excel look-up tables are provided at www.ecocostsvalue.com.
+To provide quick benchmarking on materials in Cradle-to-cradle systems, Idematapp and IdematLightLCA have been developed for mobile telephones in IOS and Android.
+
+For emissions of toxic substances, the following set of multipliers (marginal prevention costs) is used in the eco-costs 2025 system:
+
+| eco-costs of | equivalent |
+| --- | --- |
+| acidification | 7.65 euro / mol H+ equivalent |
+| eutrophication | 5.38 €/kg phosphate equivalent |
+| ecotoxicity | 2.89 E-3 €/CTUe |
+| human toxicity, cancer | 920000 €/ CTUh |
+| human toxicity, non cancer | 216000 €/ CTUh |
+| summer smog (Photochemical oxidant formation) | 6.12 euro per kg NMVOS equivalent |
+| fine dust | 40.1 €/kg fine dust PM2.5 |
+| global warming (GWP 100) | 0.150 €/kg CO₂ equivalent |
+
+The characterization ('midpoint') tables which are applied in the eco-costs 2025 system, are recommended by the ILCD:
+
+* IPPC 2021, 100 years, for greenhouse gasses (EF version)
+* USETOX 2 (EF version), for human toxicity (cancer and non-cancer), and ecotoxicity
+* EF tables for acidification, eutrification, and photochemical oxidant formation
+* EF tables plus UNEP/SETAC 2016, for fine dust PM2.5.
+
+In addition to abovementioned eco-costs for emissions, there is an extra set of eco-costs to characterize the 'midpoints' of resource depletion and protection of Nature:
+
+* eco-costs of metal scarcity (including rare earth)
+* eco-costs of uranium and transport fuels
+* eco-costs of water scarcity (based on the Baseline Water Stress indicator - BWS - of countries )
+* eco-costs of loss of biodiversity (of vascular plants and mammals), based on land-use change
+* eco-costs of the plastic soup
+
+The abovementioned marginal prevention costs at midpoint level can be combined to 'endpoints' in three groups, plus global warming as a separate group:
+
+| eco-costs of human health | = the sum of cancer and non-cancer, summer smog, fine dust |
+| --- | --- |
+| eco-costs of protecting Nature (biodiversity) | = the sum of acidification, eutrophication, ecotoxicity, plastic soup, biodiversity |
+| eco-costs of resource scarcity | = the sum of metals scarcity, water, uranium and transport fuels, land-fill |
+| eco-costs of global warming | = the sum of CO₂ and other greenhouse gases (the GWP 100 table) |
+| total eco-costs | = the sum of human health, ecosystems, resource scarcity and global warming |
+
+Since the endpoints have the same monetary unit (e.g. euro, dollar), they are added up to the total eco-costs without applying a 'subjective' weighting system. This is an advantage of the eco-costs system (see also ISO 14044 section 4.4.3.4 and 4.4.5). So called 'double counting' (ISO 14044 section 4.4.2.2.3) is avoided.
+The eco-costs system is in compliance with ISO 14008 (“Monetary valuation of environmental impacts and related environmental aspects”), and uses the ‘averting costs method’, also called ‘(marginal) prevention costs method’ (see section 6.3).
+
+The eco-costs of global warming (also called eco-costs of carbon footprint) can be used as an indicator for the carbon footprint. The eco-costs of resource scarcity can be regarded as an indicator for 'circularity' in the theory of the circular economy. However, it is advised to include human toxicity and eco-toxicity, and include the eco-costs of global warming in the calculations on the circular economy as well. The eco-costs of global warming are required to reveal the difference between fossil-based products and bio-based products, since biogenic CO₂ is not counted in LCA (biogenic CO₂ is part of the natural recycle loop in the biosphere).
+Therefore, total eco-costs can be regarded as a robust indicator for cradle-to-cradle calculations in LCA for products and services in the theory of the circular economy.
+Since the economic viability of a business model is also an important aspect of the circular economy, the added value of a product-service system should be part of the analysis. This requires the two dimensional approach of Eco-efficient Value Creation as described at the Wikipedia page on the model of the ecocosts/value ratio, EVR.
+
+The Delft University of Technology has developed a single indicator for S-LCA as well, the so-called s-eco-costs, to incorporate the sometimes appalling working conditions in production chains (e.g. production of garments, mining of metals). Aspects are the low minimum wages in developing countries (the "fair wage deficit"), the aspects of "child labour" and extreme poverty", the aspect of "excessive working hours", and the aspect of "OSH (Occupational Safety and Health)". The s-eco-costs system has been published in the Journal of Cleaner Production.
+
+
+## Prevention costs versus damage costs
+
+Prevention measures will decrease the costs of the damage, related to environmental pollution. The damage costs are in most cases higher compared to the prevention costs. So the total effect of prevention measures on our society is that it results in a better environment at less total costs.
+
+
+## Discussion
+
+There are many 'single indicators' for LCA. Basically, they fall into three categories:
+
+* single issue
+* damage based
+* prevention based
+
+The best known 'single issue' indicator is the carbon footprint: the total emissions of kg CO₂, or kg CO₂ *equivalent* (taking methane and some other greenhouse gasses into account as well). The advantage of a single issue indicator is, that its calculation is simple and transparent, without any complex assumptions. It is easy as well to communicate to the public. The disadvantage is that is ignores the problems caused by other pollutants and it is not suitable for cradle-to-cradle calculations (because materials depletion is not taken into account).
+The most common single indicators are damage based. This stems from the period of the 1990s, when LCA was developed to make people aware of the damage of production and consumption. The advantage of damage based single indicators is, that they make people aware of the fact that they should consume less, and make companies aware that they should produce cleaner. The disadvantage is that these damage based systems are very complex, not transparent for others than who make the computer calculations, need many assumptions, and suffer from the subjective normalization and weighting procedure as last step, to combine the 3 scores for human health, ecosystems and resource depletion. Communication of the result is not easy, since the result is expressed in 'points' (scientific attempts to express the results in money were not very successful so far, because of methodological flaws and uncertainties).
+Prevention based indicators, like the system of the eco-costs, are relatively new. The advantage, in comparison to the damage based systems, is that the calculations are relatively easy and transparent, and that the results can be explained in terms of money and in measures to be taken. The system is focused on the decision taking processes of architects, business people, designers and engineers. The advantage is that it provides 1 single endpoint in euro's, without the need of normalization and weighting. The disadvantage is that the system is not focused on the fact that people should consume less.
+
+The eco-costs are calculated for the situation of the European Union, but are applicable worldwide under the assumption of a level playing field for business, and under the precautionary principle. There are two other prevention based systems, developed after the introduction of the eco-costs, which are based on the local circumstances of a specific country:
+
+* In the Netherlands, 'shadow prices' (the "MKI") have been developed in 2004 by TNO/MEP on basis of a local prevention curve: it are the costs of the most expensive prevention measure required by the Dutch government for each midpoint. It is obvious that such costs are relevant for the local companies, but such a shadow price system doesn't have any meaning outside the Netherlands, since it is not based on the no-effect-level
+* In Japan, a group of universities have developed a set of data for maximum abatement costs (MAC, similar to the midpoint multipliers of the eco-costs as given in the previous section), for the Japanese conditions. The development of the MAC method started in 2002 and has been published in 2005. The so-called avoidable abatement cost (AAC) in this method is comparable to the eco-costs.
+
+## Four available databases
+
+In line with the policy of the Delft University of Technology to bring LCA calculations within reach of everybody, open access excel databases (tables) are made available on the internet, free of charge (CCBY).
+Experts on LCA who want to use the eco-costs as a single indicator, can download the full database for Simapro (the Eco-costs Method as well as the Idemat LCIs), when they have a Simapro licence.
+The eco-costs system, the Idemat LCI database, and a special version of the Ecoinvent database, are also available in OpenLCA
+
+The following databases are available:
+
+* excel tables on www.ecocostsvalue.com, tab data (look-up tables for designers and engineers):
+ + an excel table with data on emissions and materials depletion (more than 35.000 substances), see
+ + 2 excel tables with LCIs of products and processes: (a) an open access excel file, called Idemat, and (b) an excel file with Ecoinvent data only for students at the campus, see
+* an import SimaPro database for the eco-costs method and an import SimaPro database for Idemat LCIs for people who have a Simapro licence
+* two databases for Open LCA
+* the IdematApp for Sustainable Materials Selection (available in the App Store of Apple and in the Google Play store). See for more information www.idematapp.com.

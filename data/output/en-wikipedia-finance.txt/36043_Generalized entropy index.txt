@@ -1,0 +1,39 @@
+Generalized entropy index
+
+
+# Generalized entropy index
+
+
+
+The **generalized entropy index** has been proposed as a measure of income inequality in a population. It is derived from information theory as a measure of redundancy in data. In information theory a measure of redundancy can be interpreted as non-randomness or data compression; thus this interpretation also applies to this index. In addition, interpretation of biodiversity as entropy has also been proposed leading to uses of generalized entropy to quantify biodiversity.
+
+
+## Formula
+
+The formula for general entropy for real values of {\displaystyle \alpha } is:
+
+{\displaystyle GE(\alpha )={\begin{cases}{\frac {1}{N\alpha (\alpha -1)}}\sum \_{i=1}^{N}\left[\left({\frac {y\_{i}}{\overline {y}}}\right)^{\alpha }-1\right],&\alpha \neq 0,1,\\{\frac {1}{N}}\sum \_{i=1}^{N}{\frac {y\_{i}}{\overline {y}}}\ln {\frac {y\_{i}}{\overline {y}}},&\alpha =1,\\-{\frac {1}{N}}\sum \_{i=1}^{N}\ln {\frac {y\_{i}}{\overline {y}}},&\alpha =0.\end{cases}}}
+where N is the number of cases (e.g., households or families), {\displaystyle y\_{i}} is the income for case i and {\displaystyle \alpha } is a parameter which regulates the weight given to distances between incomes at different parts of the income distribution. For large {\displaystyle \alpha } the index is especially sensitive to the existence of large incomes, whereas for small {\displaystyle \alpha } the index is especially sensitive to the existence of small incomes.
+
+
+## Properties
+
+The GE index satisfies the following properties:
+
+1. The index is symmetric in its arguments: {\displaystyle GE(\alpha ;y\_{1},\ldots ,y\_{N})=GE(\alpha ;y\_{\sigma (1)},\ldots ,y\_{\sigma (N)})} for any permutation {\displaystyle \sigma }.
+2. The index is non-negative, and is equal to zero only if all incomes are the same: {\displaystyle GE(\alpha ;y\_{1},\ldots ,y\_{N})=0} iff {\displaystyle y\_{i}=\mu } for all {\displaystyle i}.
+3. The index satisfies the principle of transfers: if a transfer {\displaystyle \Delta >0} is made from an individual with income {\displaystyle y\_{i}} to another one with income {\displaystyle y\_{j}} such that {\displaystyle y\_{i}-\Delta >y\_{j}+\Delta }, then the inequality index cannot increase.
+4. The index satisfies population replication axiom: if a new population is formed by replicating the existing population an arbitrary number of times, the inequality remains the same: {\displaystyle GE(\alpha ;\{y\_{1},\ldots ,y\_{N}\},\ldots ,\{y\_{1},\ldots ,y\_{N}\})=GE(\alpha ;y\_{1},\ldots ,y\_{N})}
+5. The index satisfies mean independence, or income homogeneity, axiom: if all incomes are multiplied by a positive constant, the inequality remains the same: {\displaystyle GE(\alpha ;y\_{1},\ldots ,y\_{N})=GE(\alpha ;ky\_{1},\ldots ,ky\_{N})} for any {\displaystyle k>0}.
+6. The GE indices are the *only* additively decomposable inequality indices. This means that overall inequality in the population can be computed as the sum of the corresponding GE indices within each group, and the GE index of the group mean incomes:
+
+## Relationship to other indices
+
+An Atkinson index for any inequality aversion parameter can be derived from a generalized entropy index under the restriction that {\displaystyle \epsilon =1-\alpha } - i.e. an Atkinson index with high inequality aversion is derived from a GE index with small {\displaystyle \alpha }.
+
+The formula for deriving an Atkinson index with inequality aversion parameter {\displaystyle \epsilon } under the restriction {\displaystyle \epsilon =1-\alpha } is given by:
+{\displaystyle A=1-[\epsilon (\epsilon -1)GE(\alpha )+1]^{(1/(1-\epsilon ))}\qquad \epsilon \neq 1}
+{\displaystyle A=1-e^{-GE(\alpha )}\qquad \epsilon =1}
+
+Note that the generalized entropy index has several income inequality metrics as special cases. For example, GE(0) is the mean log deviation a.k.a. Theil L index, GE(1) is the Theil T index, and GE(2) is half the squared coefficient of variation.
+

@@ -1,0 +1,48 @@
+Option symbol
+
+
+# Option symbol
+
+
+
+In finance, an **option symbol** is a code by which options are identified on an options exchange or a futures exchange.
+
+
+## History
+
+Before 2010, the ticker (trading) symbols for US options typically looked like this: *IBMAF*.
+This consisted of a *root symbol* ('IBM') + *month code* ('A') + *strike price* code ('F'). The root symbol is the symbol of the stock on the stock exchange. After this comes the month code, A-L mean January–December calls, M-X mean January–December puts. The strike price code is a letter corresponding with a certain strike price (which letter corresponds with which strike price depends on the stock).
+
+On February 12, 2010, the five-character ticker format stopped being used in the US and Canada.
+
+The new standard is now fully in place, as in the first few months after February 12 the LEAP roots and additional roots needed to handle large numbers of options for a given issuer were consolidated into a single root ticker for a given underlying symbol. Options Clearing Corporation's (OCC) Options Symbology Initiative (OSI) mandated an industry-wide change to a new option symbol structure, resulting in option symbols 21 characters in length. March 2010 - May 2010 was the symbol consolidation period in which all outgoing option roots will be replaced with the underlying stock symbol.
+
+On March 18, 2013, CBOE Mini Options became available for trading on a select group of securities (AMZN, AAPL, GOOG, GLD, and SPY). These options represent a deliverable of 10 shares of an underlying security, whereas standard equity options represent a deliverable of 100 shares. CBOE appended a "7" to the end of the security symbol to represent the mini option contracts. These options series were discontinued on Dec. 17, 2014, not so long after their introduction, and mini options on stocks and ETFs no longer trade.
+
+
+## The OCC Option Symbol
+
+The OCC option symbol consists of four parts:
+
+1. Root symbol of the underlying stock or ETF, padded with spaces to 6 characters
+2. Expiration date, 6 digits in the format yymmdd
+3. Option type, either P or C, for put or call
+4. Strike price, as the price x 1000, front padded with 0s to 8 digits
+
+Examples:
+
+The above symbol represents a put on SPX, expiring on 11/22/2014, with a strike price of $19.50.
+
+The above symbol represents a call on LAMR, expiring on 1/17/2015, with a strike price of $52.50. The OCC option symbol can be mapped to other identifiers, such as a Financial Instrument Global Identifier (FIGI).
+
+
+### Mini Options
+
+Mini-options contracts trade under a different trading symbol than standard-sized options contracts. Mini-options carry the number "7" at the end of the security symbol. For example, the Apple mini-options symbol is AAPL7.
+
+Examples:
+
+The above symbol represents a mini call option (10 shares) on AAPL, with a strike price of $470, expiring on Nov 1, 2013
+
+The above symbol represents the standard call option (100 shares), with the same strike and expiration date.
+

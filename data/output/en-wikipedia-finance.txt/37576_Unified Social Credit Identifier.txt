@@ -1,0 +1,33 @@
+Unified Social Credit Identifier
+
+
+# Unified Social Credit Identifier
+
+
+
+A **Unified Social Credit Identifier** is issued to registered companies and other types of organization by the Chinese government. It is "unified" in the sense that it is used both as the business registration number with the State Administration for Market Regulation (SAMR) and as the taxpayer identifier with the State Taxation Administration (STA). These identifiers are now used widely as the only organization id within and outside of the government. An identifier must be obtained before one can operate a business in China.
+
+
+## History
+
+Previously, business owners in China had to obtain a business permit with a unique id from the State Administration for Industry and Commerce (SAIC), a taxpayer identifier from the STA, and an organization code from Administration of Quality Supervision, Inspection and Quarantine (AQSIQ) until the reforms in 2015 introduced the USCC. SAIC and AQSIQ were merged into the newly founded SAMR following an organizational reform by the State Council in 2018.
+
+
+## Format
+
+Unified Social Credit Identifier is defined by GB 32100-2015 standard. It is 18 characters long and consists of Arabic numerals and uppercase English letters (but excluding I, O, Z, S, and V).
+
+| **9** | **1** | **3** | **5** | **0** | **1** | **0** | **0** | **M** | **0** | **0** | **0** | **1** | **0** | **0** | **Y** | **4** | **3** |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Registration management department code | Organization Category Code | Address code of the registration authority | | | | | | Entity identification code | | | | | | | | | Checksum |
+
+* **Registration management department code** (登记管理部门码) represents the major category of registration organization, for example, 1 is the government department category, 5 is a civil affairs category, 9 is an industrial and commercial category, and Y is a other category.
+* **Organization Category Code** (机构类别码) represents the minor category of registration organization.
+* **Address code of the registration authority** (登记管理机关行政区划码) refers to the registration authority's location, where administrative divisions (including cities, banners, and districts) have their own specific codes.
+* **Entity identification code** (主体标识码) is the unique serial number of the organization, Its predecessor is the "organization code (组织机构代码)" and is encoded in accordance with GB 11714.
+* The **Checksum** is the final digit, which confirms the validity of the ID number from the first 17 digits, utilizing **ISO 7064, MOD 31-3**.
+
+## Status
+
+* As of December 1, 2023, the USCC database contained over 188 million legal entities and organizations, a 12.14% increase from 2022.
+* The data has been widely applied in fields such as tax, banking, and insurance, supporting information sharing among more than 30 government departments and providing information services to the public. In 2023, the inquiry volume was approximately 255 million times.

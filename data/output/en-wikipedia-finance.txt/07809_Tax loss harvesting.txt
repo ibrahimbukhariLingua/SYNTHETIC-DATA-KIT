@@ -1,0 +1,41 @@
+Tax loss harvesting
+
+
+# Tax loss harvesting
+
+
+
+**Tax loss harvesting** (**TLH**) is an investment strategy for "generating" capital losses to gain a tax advantage. It occurs when an investor sells a security that has depreciated in value only for the tax losses. The effectiveness of this approach is dependant of the tax rules in a particular jurisdiction. In the United States CBS News describes tax loss harvesting specifically as "selling an investment at a loss with the intention of ultimately repurchasing the same investment after the IRS's 30 day window on wash sales has expired." This allows investors to lower their tax amount with the use of investment losses.
+
+
+## Overview
+
+Tax loss harvesting can be done throughout the fiscal year but historically has been performed in December. Tax-loss harvesting is still most common in the year's fourth quarter. This allows investors to "offset capital gains with capital losses." Under United States tax rules, if an investor has more capital losses than gains in a year, that year they can use up to $3,000 as a deduction to "offset ordinary income", with the remainder carrying over into future years if unused.
+
+Loss harvesting defers taxes, but doesn't eliminate them, and is essentially receiving a loan without interest from the federal government, assuming marginal tax rates are the same. If marginal rates are different, then there can be additional tax savings (e.g., deducting excess losses against a higher ordinary income rate in one year in exchange for additional long term capital gains tax at a lower rate in a later year) or even a tax penalty (e.g., deducting at a lower capital gains tax rate in several years in exchange for a much larger gain in one later year that puts one in a higher capital gains tax and Medicare investment income tax bracket.)
+
+The practice of tax loss harvesting has been both praised and criticized by investors, as deferring the taxes can result in higher rates later on relating to capital gains.
+
+
+## Risks
+
+Most simply, if "tax-loss harvesting is not done properly, it will create a wash-sale that will eliminate the tax benefits of the buying and selling". The investor can employ a number of techniques to avoid triggering the wash sale rule.
+
+1. The investor can wait 30 days to repurchase the security.
+2. The investor can purchase a security that is similar to the original, but that does not meet the IRS's definition of "substantially identical". For example, an investor can sell an ETF and buy another with similar investment objectives.
+
+## Investment companies
+
+The United States Internal Revenue Service (IRS) has published no exact definition of what constitutes a "substantially identical" security. Therefore, it is not clear whether or not the securities of different investment companies can be "substantially identical", even if their investment objectives are identical. As a result, if an investor trades in and out of Exchange-traded funds (ETFs) or mutual funds with almost identical holdings, some have held that it does not trigger the wash sale rule.
+
+For example, State Street's SPDR S&P 500 ETF (NYSEARCA: SPY) and iShare's Core S&P 500 ETF (NYSEARCA: IVV) both track the S&P 500. If an investor purchases shares in SPY and the market price declines, the IRS has not provided guidance on whether the investor can sell their shares in SPY, purchase shares in IVV, and claim a capital loss without triggering the wash sale rule, despite the fact that the two ETFs have nearly identical returns.
+
+
+## Methods
+
+One method is to use an initial set of portfolio weights {\displaystyle w\_{0}} and benchmark weights {\displaystyle w\_{B}}, it is possible to do TLH within the confines of mean-variance optimization by developing an objective function that maximizes the difference between *tax alpha* and the portfolio's tracking error:{\displaystyle \max \_{w}\;\underbrace {\alpha ^{T}(w-w\_{0})} \_{\text{Tax Alpha}}-\underbrace {{\lambda \over {2}}(w-w\_{B})^{T}\Sigma (w-w\_{B})} \_{\text{Tracking Error}}}
+
+where {\displaystyle \lambda } is a penalty term for excess tracking error and {\displaystyle \Sigma } is the covariance matrix of asset returns. For each asset that is bought/sold, it is necessary to include the constraints:{\displaystyle {\begin{cases}w\_{j}\geq w\_{0,j},\quad &({\text{Buy Trades}})\\w\_{j}\leq w\_{0,j},\quad &({\text{Sell Trades}})\end{cases}}}
+
+With this formulation, the TLH optimization may be applied within a mean-variance framework. The solution is readily computed using quadratic programming.
+

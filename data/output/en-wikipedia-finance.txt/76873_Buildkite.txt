@@ -1,0 +1,76 @@
+Buildkite
+
+
+# Buildkite
+
+
+
+**Buildkite** is a continuous integration (CI) and continuous delivery (CD) platform used in DevOps and company was founded in September 2013. Companies using Buildkite include Wayfair, Shopify, Slack, Twilio, Canva, Pinterest, Envato, MYOB and Lyft.
+
+
+## Company history
+
+Buildkite Pty Ltd was founded in September 2013 as Buildbox, with the product out of beta in November. Tim Lucas came on board as a co-founder. The original name of the company, Buildbox, had to be changed due to another company registering the trademark first, reportedly by only two weeks.
+
+In 2022, they announced a new tool, Test Analytics. In 2023, the company makes their first acquisition, PackageCloud, from a private equity firm. PackageCloud allows companies to store and distribute software to clients.
+
+
+### Financing
+
+In 2020, Buildkite raised $28M AUD, led by OpenView, with General Catalyst. The company was valued at 200M (AUD) in that deal. In November 2022, the company raised a Series B round of $21M ($32M AUD), with investors including One Ventures, Dominic Pym (angel) and AirTree. Total funding investment at the time of writing is $39MUSD.
+
+
+## Products
+
+
+### Pipelines
+
+Buildkite Pipelines, Buildkite's primary product, was built with a hybrid model where build agents are self-hosted, yet supported by a managed, cloud-powered interface. In the hybrid model, the customer provides their own infrastructure for running agents, including their secrets, while Pipelines has a web application to handle user authentication, build orchestration, store logs and metrics.
+
+Features of Buildkite Pipelines include parallelized builds, self-hosted agent infrastructure, build visualization, and integrations with services like GitHub, Bitbucket, GitLab, and Slack. Pipelines permits up to 10,000 agents per account for customers.
+
+The platform allows the creation of pipelines, which are the definitions (in YAML format) for entire automated build processes. A pipeline consists of individual steps, where each step defines an executable job that runs on one or more agents. Agents are the computers, virtual machines, or containerised infrastructure that provide the capabilities to execute these jobs.
+
+An example of a pipeline YAML file, consisting of three steps:
+
+
+### Test Analytics
+
+Buildkite Test Analytics provides development teams with data about their test suites through metrics and trend analysis, and integrates with Buildkite Pipelines. Using the input data, Test Analytics identifies flaky tests, visualizes historical test performance, and correlates test runs with builds and deployments.
+
+Test Analytics requires a test collector with a test suite that runs as a part of the pipelines definition. There is a Test Collector Buildkite plugin for JSON and Junit files, and some frameworks have specific test collectors, e.g. specific Javascript frameworks.
+
+The test collector gathers data about the test suite’s execution to report back to Test Analytics for visualization and interpretation through the web application. Data includes the performance and duration of tests, as well as the reliability (or flakiness) of tests.
+
+
+### Packages
+
+At the time of writing, Packages is in beta/early access. It's marketed as an artifact and package management solution that "supports all major package formats", splits storage from orchestration for security, includes support of the Buildkite command line interface (CLI), among other features.
+
+No public release date has been shared.
+
+
+### Components
+
+Buildkite’s products consist of the following software components.
+
+
+#### The Buildkite Web Application
+
+The Buildkite web application is the software component and platform that provides the user interface to integrate Pipelines, Test Analytics and Packages. The web application provides the following features:
+
+* Pipeline orchestration
+* Build/queue metrics
+* Agent utilization
+* Test suites
+* Artifact/package management (beta)
+
+#### Buildkite Agent
+
+The agent is a small software component that runs natively on different operating system environments and provides the agent capabilities to run a pipeline’s jobs from Buildkite Pipelines. An agent also refers to the computer, virtual machine or containerised infrastructure running the Buildkite agent software component that provides the capabilities to run jobs from a pipeline.
+
+
+#### Buildkite Test Collectors
+
+The test collectors are other small software components that integrate with a pipeline’s jobs running test suites. A test collector analyzes the performance and reliability of tests run by a test suite and reports the data analytics back to Test Analytics, assuming the customer has that product enabled.
+

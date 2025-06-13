@@ -1,0 +1,26 @@
+Configure, price and quote
+
+
+# Configure, price and quote
+
+
+
+**Configure, price, quote (CPQ)** software helps sellers quote complex and configurable products. An example could be a maker of heavy trucks. If the customer chooses a certain chassis (the base frame of a motor vehicle), the choice of engines may be limited, because certain engines might not fit a certain chassis. Given a certain choice of engine, the choice of trailer may be limited (e.g. a heavy trailer requires a stronger engine), and so on. If the product is highly configurable, the user may face combinatorial explosion, which means the rapid growth of the complexity of a problem. Thus a configuration engine is employed to alleviate this problem.
+
+
+## Configuration engines
+
+The "configure" in CPQ deals with the complex challenges of combining components and parts into a more viable product.
+
+There are a few main approaches used to alleviate the problem of combinatorial explosion:
+
+1. Rule-based truth-maintenance systems: These systems were the first generation of configuration engines, launched in the 1970s based on research results in artificial intelligence going back to the 1960s.
+2. Decision trees: A directed graph of nodes representing questions with different paths forward depending on the answer given in the current node (and taking into account answers from previous nodes) allow the engine to ask a non-static set of questions and present only the valid answers as well as adding and removing things from a bill of materials. For complex products and systems with sub-systems that are recurring between products, a structure of sub-trees called from the main decision tree can be used for simplifying maintenance.
+3. Constraint satisfaction engines: These engines were developed in the 1980s and 1990s. They can handle the full set of configuration rules to alleviate the problem of combinatorial explosion but can be complex and difficult to maintain as rules have to be written to accommodate the intended use.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ The constraints may be expressed as tables of valid combinations of values for different variables and may be pre-compiled or converted on the fly into binary decision diagrams. This approach compiles all possible combinations of a configuration problem or a sub-set thereof into a single file and is agnostic to how rules were originally expressed. This allows the import of rules from legacy systems but may for complex products lead to overwhelmingly large data sets unless partitioned into sub-sets of a small number of variables.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ The concept of configuration lifecycle management (CLM), of which CPQ is a component, describes how compile-based configuration can further be leveraged to address most of the problems related to product configuration for business employing mass customization.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+## Industry
+
+The CPQ industry has many vendors. Some vendors focus more on one component, for example, a price optimization provider may integrate their pricing software with another provider's configuration engine - and vice versa.
+
+The market for CPQ technology and services is currently highly fragmented with a few large suppliers penetrating a few key market segments while the rest of the market is divided among numerous small and mid-size firms. M&A activity, partnerships, and investment in these solutions will continue for the foreseeable future. The CPQ landscape is continuously evolving and thus a challenge to navigate when critical decisions that impact the future performance of a business need to be made.
+

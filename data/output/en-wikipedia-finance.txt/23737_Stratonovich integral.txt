@@ -1,0 +1,81 @@
+Stratonovich integral
+
+
+# Stratonovich integral
+
+
+
+In stochastic processes, the **Stratonovich integral** or **Fisk–Stratonovich integral** (developed simultaneously by Ruslan Stratonovich and Donald Fisk) is a stochastic integral, the most common alternative to the Itô integral. Although the Itô integral is the usual choice in applied mathematics, the Stratonovich integral is frequently used in physics.
+
+In some circumstances, integrals in the Stratonovich definition are easier to manipulate. Unlike the Itô calculus, Stratonovich integrals are defined such that the chain rule of ordinary calculus holds.
+
+Perhaps the most common situation in which these are encountered is as the solution to Stratonovich stochastic differential equations (SDEs). These are equivalent to Itô SDEs and it is possible to convert between the two whenever one definition is more convenient.
+
+
+## Definition
+
+The Stratonovich integral can be defined in a manner similar to the Riemann integral, that is as a limit of Riemann sums. Suppose that {\displaystyle W:[0,T]\times \Omega \to \mathbb {R} } is a Wiener process and {\displaystyle X:[0,T]\times \Omega \to \mathbb {R} } is a semimartingale adapted to the natural filtration of the Wiener process. Then the **Stratonovich integral**
+
+is a random variable {\displaystyle :\Omega \to \mathbb {R} } defined as the limit in mean square of
+
+as the mesh of the partition {\displaystyle 0=t\_{0}<t\_{1}<\dots <t\_{k}=T} of {\displaystyle [0,T]} tends to 0 (in the style of a Riemann–Stieltjes integral).
+
+
+## Calculation
+
+Many integration techniques of ordinary calculus can be used for the Stratonovich integral, e.g.: if {\displaystyle f:\mathbb {R} \to \mathbb {R} } is a smooth function, then
+
+and more generally, if {\displaystyle f:\mathbb {R} \times \mathbb {R} \to \mathbb {R} } is a smooth function, then
+
+This latter rule is akin to the chain rule of ordinary calculus.
+
+
+### Numerical methods
+
+Stochastic integrals can rarely be solved in analytic form, making stochastic numerical integration an important topic in all uses of stochastic integrals. Various numerical approximations converge to the Stratonovich integral, and variations of these are used to solve Stratonovich SDEs (Kloeden & Platen 1992).
+Note however that the most widely used Euler scheme (the Euler–Maruyama method) for the numeric solution of Langevin equations requires the equation to be in Itô form.
+
+
+## Differential notation
+
+If {\displaystyle X\_{t},Y\_{t}}, and {\displaystyle Z\_{t}} are stochastic processes such that
+
+for all {\displaystyle T>0}, we also write
+
+This notation is often used to formulate stochastic differential equations (SDEs), which are really equations about stochastic integrals. It is compatible with the notation from ordinary calculus, for instance
+
+
+## Comparison with the Itô integral
+
+The Itô integral of the process {\displaystyle X} with respect to the Wiener process {\displaystyle W} is denoted by {\displaystyle \int \_{0}^{T}X\_{t}\,\mathrm {d} W\_{t}} (without the circle). For its definition, the same procedure is used as above in the definition of the Stratonovich integral, except for choosing the value of the process {\displaystyle X} at the left-hand endpoint of each subinterval, i.e.,
+
+This integral does not obey the ordinary chain rule as the Stratonovich integral does; instead one has to use the slightly more complicated Itô's lemma.
+
+Conversion between Itô and Stratonovich integrals may be performed using the formula
+
+where {\displaystyle f} is any continuously differentiable function of two variables {\displaystyle W} and {\displaystyle t} and the last integral is an Itô integral (Kloeden & Platen 1992, p. 101).
+
+Langevin equations exemplify the importance of specifying the interpretation (Stratonovich or Itô) in a given problem. Suppose {\displaystyle X\_{t}} is a time-homogeneous Itô diffusion with continuously differentiable diffusion coefficient {\displaystyle \sigma }, i.e. it satisfies the SDE {\displaystyle \mathrm {d} X\_{t}=\mu (X\_{t})\,\mathrm {d} t+\sigma (X\_{t})\,\mathrm {d} W\_{t}}. In order to get the corresponding Stratonovich version, the term {\displaystyle \sigma (X\_{t})\,\mathrm {d} W\_{t}} (in Itô interpretation) should translate to {\displaystyle \sigma (X\_{t})\circ \mathrm {d} W\_{t}} (in Stratonovich interpretation) as
+
+Obviously, if {\displaystyle \sigma } is independent of {\displaystyle X\_{t}}, the two interpretations will lead to the same form for the Langevin equation. In that case, the noise term is called "additive" (since the noise term {\displaystyle dW\_{t}} is multiplied by only a fixed coefficient). Otherwise, if {\displaystyle \sigma =\sigma (X\_{t})}, the Langevin equation in Itô form may in general differ from that in Stratonovich form, in which case the noise term is called multiplicative (i.e., the noise {\displaystyle dW\_{t}} is multiplied by a function of {\displaystyle X\_{t}} that is {\displaystyle \sigma (X\_{t})}).
+
+More generally, for any two semimartingales {\displaystyle X} and {\displaystyle Y}
+
+where {\displaystyle [X,Y]\_{T}^{c}} is the continuous part of the covariation.
+
+
+## Stratonovich integrals in applications
+
+The Stratonovich integral lacks the important property of the Itô integral, which does not "look into the future". In many real-world applications, such as modelling stock prices, one only has information about past events, and hence the Itô interpretation is more natural. In financial mathematics the Itô interpretation is usually used.
+
+In physics, however, stochastic integrals occur as the solutions of Langevin equations. A Langevin equation is a coarse-grained version of a more microscopic model (Risken 1996); depending on the problem in consideration, Stratonovich or Itô interpretation or even more exotic interpretations such as the isothermal interpretation, are appropriate. The Stratonovich interpretation is the most frequently used interpretation within the physical sciences.
+
+The Wong–Zakai theorem states that physical systems with non-white noise spectrum characterized by a finite noise correlation time {\displaystyle \tau } can be approximated by a Langevin equations with white noise in Stratonovich interpretation in the limit where {\displaystyle \tau } tends to zero.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+Because the Stratonovich calculus satisfies the ordinary chain rule, stochastic differential equations (SDEs) in the Stratonovich sense are more straightforward to define on differentiable manifolds, rather than just on {\displaystyle \mathbb {R} ^{n}}. The tricky chain rule of the Itô calculus makes it a more awkward choice for manifolds.
+
+
+## Stratonovich interpretation and supersymmetric theory of SDEs
+
+In the supersymmetric theory of SDEs, one considers the evolution operator obtained by averaging the pullback induced on the exterior algebra of the phase space by the stochastic flow determined by an SDE. In this context, it is then natural to use the Stratonovich interpretation of SDEs.
+

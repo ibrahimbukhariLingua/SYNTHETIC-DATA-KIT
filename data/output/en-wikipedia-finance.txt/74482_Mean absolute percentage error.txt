@@ -1,0 +1,88 @@
+Mean absolute percentage error
+
+
+# Mean absolute percentage error
+
+
+
+The **mean absolute percentage error** (**MAPE**), also known as **mean absolute percentage deviation** (**MAPD**), is a measure of prediction accuracy of a forecasting method in statistics. It usually expresses the accuracy as a ratio defined by the formula:
+
+where *A*ₜ is the actual value and *F*ₜ is the forecast value. Their difference is divided by the actual value *A*ₜ. The absolute value of this ratio is summed for every forecasted point in time and divided by the number of fitted points *n*.
+
+
+## MAPE in regression problems
+
+Mean absolute percentage error is commonly used as a loss function for regression problems and in model evaluation, because of its very intuitive interpretation in terms of relative error.
+
+
+### Definition
+
+Consider a standard regression setting in which the data are fully described by a random pair {\displaystyle Z=(X,Y)} with values in {\displaystyle \mathbb {R} ^{d}\times \mathbb {R} }, and n i.i.d. copies {\displaystyle (X\_{1},Y\_{1}),...,(X\_{n},Y\_{n})} of {\displaystyle (X,Y)}. Regression models aim at finding a good model for the pair, that is a measurable function g from {\displaystyle \mathbb {R} ^{d}} to {\displaystyle \mathbb {R} } such that {\displaystyle g(X)} is close to Y.
+
+In the classical regression setting, the closeness of {\displaystyle g(X)} to Y is measured via the *L*₂ risk, also called the mean squared error (MSE). In the MAPE regression context, the closeness of {\displaystyle g(X)} to Y is measured via the MAPE, and the aim of MAPE regressions is to find a model {\displaystyle g\_{\text{MAPE}}} such that:
+
+{\displaystyle g\_{\mathrm {MAPE} }(x)=\arg \min \_{g\in {\mathcal {G}}}\mathbb {E} {\Biggl [}\left|{\frac {g(X)-Y}{Y}}\right||X=x{\Biggr ]}}
+
+where {\displaystyle {\mathcal {G}}} is the class of models considered (e.g. linear models).
+
+**In practice**
+
+In practice {\displaystyle g\_{\text{MAPE}}(x)} can be estimated by the empirical risk minimization strategy, leading to
+
+{\displaystyle {\widehat {g}}\_{\text{MAPE}}(x)=\arg \min \_{g\in {\mathcal {G}}}\sum \_{i=1}^{n}\left|{\frac {g(X\_{i})-Y\_{i}}{Y\_{i}}}\right|}
+
+From a practical point of view, the use of the MAPE as a quality function for regression model is equivalent to doing weighted mean absolute error (MAE) regression, also known as quantile regression. This property is trivial since
+
+{\displaystyle {\widehat {g}}\_{\text{MAPE}}(x)=\arg \min \_{g\in {\mathcal {G}}}\sum \_{i=1}^{n}\omega (Y\_{i})\left|g(X\_{i})-Y\_{i}\right|{\mbox{ with }}\omega (Y\_{i})=\left|{\frac {1}{Y\_{i}}}\right|}
+
+As a consequence, the use of the MAPE is very easy in practice, for example using existing libraries for quantile regression allowing weights.
+
+
+### Consistency
+
+The use of the MAPE as a loss function for regression analysis is feasible both on a practical point of view and on a theoretical one, since the existence of an optimal model and the consistency of the empirical risk minimization can be proved.
+
+
+## WMAPE
+
+**WMAPE** (sometimes spelled **wMAPE**) stands for weighted mean absolute percentage error. It is a measure used to evaluate the performance of regression or forecasting models. It is a variant of MAPE in which the mean absolute percent errors is treated as a weighted arithmetic mean. Most commonly the absolute percent errors are weighted by the actuals (e.g. in case of sales forecasting, errors are weighted by sales volume). Effectively, this overcomes the 'infinite error' issue.
+Its formula is:
+{\displaystyle {\mbox{wMAPE}}={\frac {\displaystyle \sum \_{i=1}^{n}\left(w\_{i}\cdot {\tfrac {\left|A\_{i}-F\_{i}\right|}{|A\_{i}|}}\right)}{\displaystyle \sum \_{i=1}^{n}w\_{i}}}={\frac {\displaystyle \sum \_{i=1}^{n}\left(|A\_{i}|\cdot {\tfrac {\left|A\_{i}-F\_{i}\right|}{|A\_{i}|}}\right)}{\displaystyle \sum \_{i=1}^{n}\left|A\_{i}\right|}}}
+
+Where {\displaystyle w\_{i}} is the weight, {\displaystyle A} is a vector of the actual data and {\displaystyle F} is the forecast or prediction.
+However, this effectively simplifies to a much simpler formula:
+{\displaystyle {\mbox{wMAPE}}={\frac {\displaystyle \sum \_{i=1}^{n}\left|A\_{i}-F\_{i}\right|}{\displaystyle \sum \_{i=1}^{n}\left|A\_{i}\right|}}}
+
+Confusingly, sometimes when people refer to wMAPE they are talking about a different model in which the numerator and denominator of the wMAPE formula above are weighted again by another set of custom weights {\displaystyle w\_{i}}. Perhaps it would be more accurate to call this the double weighted MAPE (wwMAPE). Its formula is:
+{\displaystyle {\mbox{wwMAPE}}={\frac {\displaystyle \sum \_{i=1}^{n}w\_{i}\left|A\_{i}-F\_{i}\right|}{\displaystyle \sum \_{i=1}^{n}w\_{i}\left|A\_{i}\right|}}}
+
+
+## Issues
+
+Although the concept of MAPE sounds very simple and convincing, it has major drawbacks in practical application, and there are many studies on shortcomings and misleading results from MAPE.
+
+* It cannot be used if there are zero or close-to-zero values (which sometimes happens, for example in demand data) because there would be a division by zero or values of MAPE tending to infinity.
+* For forecasts which are too low the percentage error cannot exceed 100%, but for forecasts which are too high there is no upper limit to the percentage error.
+* MAPE puts a heavier penalty on negative errors, {\displaystyle A\_{t}<F\_{t}} than on positive errors. As a consequence, when MAPE is used to compare the accuracy of prediction methods it is biased in that it will systematically select a method whose forecasts are too low. This little-known but serious issue can be overcome by using an accuracy measure based on the logarithm of the accuracy ratio (the ratio of the predicted to actual value), given by 
+ log
+ ⁡
+ (
+ predicted
+ actual
+ 
+ 
+ )
+ 
+ 
+ 
+ {\textstyle \log \left({\frac {\text{predicted}}{\text{actual}}}\right)}
+ 
+ . This approach leads to superior statistical properties and also leads to predictions which can be interpreted in terms of the geometric mean.
+* People often think the MAPE will be optimized at the median. But for example, a log normal has a median of {\displaystyle e^{\mu }} where as its MAPE is optimized at {\displaystyle e^{\mu -\sigma ^{2}}}.
+
+To overcome these issues with MAPE, there are some other measures proposed in literature:
+
+* Mean Absolute Scaled Error (MASE)
+* Symmetric Mean Absolute Percentage Error (sMAPE)
+* Mean Directional Accuracy (MDA)
+* Mean Arctangent Absolute Percentage Error (MAAPE): MAAPE can be considered a *slope as an angle*, while MAPE is a *slope as a ratio*.

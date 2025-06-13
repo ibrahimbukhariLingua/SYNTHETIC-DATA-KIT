@@ -1,0 +1,35 @@
+Alpha Profiling
+
+
+# Alpha Profiling
+
+
+
+**Alpha profiling** is an application of machine learning to optimize the execution of large orders in financial markets by means of algorithmic trading. The purpose is to select an execution schedule that minimizes the expected implementation shortfall, or more generally, ensures compliance with a best execution mandate.
+Alpha profiling models learn statistically-significant patterns in the execution of orders from a particular trading strategy or portfolio manager and leverages these patterns to associate an optimal execution schedule to new orders. In this sense, it is an application of statistical arbitrage to best execution. For example, a portfolio manager specialized in value investing may have a behavioral bias to place orders to buy while an asset is still declining in value. In this case, a slow or back-loaded execution schedule would provide better execution results than an urgent one. But this same portfolio manager will occasionally place an order after the asset price has already begun to rise in which case it should best be handled with urgency; this example illustrates the fact that Alpha Profiling must combine public information such as market data with private information including as the identity of the portfolio manager and the size and origin of the order, to identify the optimal execution schedule.
+
+
+## Market Impact
+
+Large block orders can generally not be executed immediately because there is no available counterparty with the same size. Instead, they must be sliced into smaller pieces which are sent to the market over time. Each slice has some impact on the price, so on average the realized price for a buy order will be higher than at the time of the decision, or less for a sell order. The implementation shortfall is the difference between the price at the time of the decision and the average expected price to be paid for executing the block, and is usually expressed in basis points as follows.
+
+
+## Alpha Profile
+
+The alpha profile of an order is the expected impact-free price conditioned on the order and the state of the market, form the decision time to the required completion time. In other words, it is the price that one expects for the security would have over the execution horizon if the order were not executed. To estimate the cost of an execution strategy, market impact must be added to the impact-free price. It is well worth stressing that attempts to estimate the cost of alternative schedules without impact adjustments are counter-productive: high urgency strategies would capture more liquidity near the decision time and therefore would always be preferred if one did not account for their impact. In fact, front-loaded execution schedules have a higher average impact cost.
+
+
+## Estimating an alpha profile
+
+One way to compute an alpha profile is to use a classification technique such as Naive Bayes: find in the historical record a collection of orders with similar features, compute the impact-free price for each case, and take the simple average return from trade start over the next few days. This method is robust and transparent: each order is attached to a class of orders that share specific features that can be shown to the user as part of an explanation for the proposed optimal decision. However, an alpha profiling model based on classifying trades by similarity has limited generalization power. New orders do not always behave in the same way as other orders with similar features behaved in the past. A more accurate estimation of alpha profiles can be accomplished using Machine Learning (ML) methods to learn the probabilities of future price scenarios given the order and the state of the market. Alpha profiles are then computed as the statistical average of the security price under various scenarios, weighted by scenario probabilities.
+
+
+## Risk-adjusted Cost
+
+Optimal execution is the problem of identifying the execution schedule that minimizes a risk-adjusted cost function, where the cost term is the expected effect of trading costs on the portfolio value and the risk term is a measure of the effect of trade execution on risk. It is difficult to attribute the effect of trade execution on portfolio returns, and even more difficult to attribute its effect on risk, so in practice an alternate specification is often used: cost is defined as the implementation shortfall and risk is taken to be the variance of the same quantity. While this specification is commonly used, it is important to be aware of two shortcomings. First, the implementation shortfall as just defined is only a measure of the cost to the portfolio if all orders are entirely filled as originally entered; if portfolio managers edit the size of orders or some orders are left incomplete, opportunity costs must be considered. Second, execution risk as just defined is not directly related to portfolio risk and therefore has little practical value.
+
+
+## Optimal Execution Schedule
+
+A method for deriving optimal execution schedules that minimize a risk-adjusted cost function was proposed by Bertsimas and Lo. Almgren and Chriss provided closed-form solutions of the basic risk-adjusted cost optimization problem with a linear impact model and trivial alpha profile. More recent solutions have been proposed based on a propagator model for market impact, but here again the alpha profile is assumed to be trivial. In practice, impact is non-linear and the optimal schedule is sensitive to the alpha profile. A diffusion model yields a functional form of market impact including an estimate of the speed exponent at 0.25 (trading faster causes more impact). It is possible to derive optimal execution solutions numerically with non-trivial alpha profiles using such a functional form.
+

@@ -1,0 +1,40 @@
+Information ratio
+
+
+# Information ratio
+
+
+
+The **information ratio** measures and compares the active return of an investment (e.g., a security or portfolio) compared to a benchmark index relative to the volatility of the active return (also known as **active risk** or **benchmark tracking risk**). It is defined as the active return (the difference between the returns of the investment and the returns of the benchmark) divided by the tracking error (the standard deviation of the active return, i.e., the additional risk). It represents the additional amount of return that an investor receives per unit of increase in risk.
+The information ratio is simply the ratio of the active return of the portfolio divided by the tracking error of its return, with both components measured relative to the performance of the agreed-on benchmark.
+
+It is often used to gauge the skill of managers of mutual funds, hedge funds, etc. It measures the active return of the manager's portfolio divided by the amount of risk that the manager takes relative to the benchmark. The higher the information ratio, the higher the active return of the portfolio, given the amount of risk taken, and the better the manager.
+
+The information ratio is similar to the Sharpe ratio, the main difference being that the Sharpe ratio uses a risk-free return as benchmark (such as a U.S. Treasury security) whereas the information ratio uses a risky index as benchmark (such as the S&P500). The Sharpe ratio is useful for an attribution of the absolute returns of a portfolio, and the information ratio is useful for an attribution of the relative returns of a portfolio.
+
+
+## Definition
+
+The information ratio {\displaystyle IR} is defined as:
+
+where {\displaystyle R\_{p}} is the portfolio return, {\displaystyle R\_{b}} is the benchmark return, {\displaystyle \alpha =E[R\_{p}-R\_{b}]} is the expected value of the active return, and {\displaystyle \omega =\sigma } is the standard deviation of the active return, which is an alternate definition of the aforementioned tracking error.
+
+Note in this case, {\displaystyle \alpha } is defined as excess return, not the risk-adjusted excess return or Jensen's alpha calculated using regression analysis. Some analysts, however, do use Jensen's alpha for the numerator and a regression-adjusted tracking error for the denominator (this version of the information ratio is often described as the appraisal ratio to differentiate it from the more common definition).
+
+
+## Use in finance
+
+Top-quartile investment managers typically achieve annualized information ratios of about one-half. There are both *ex ante* (expected) and *ex post* (observed) information ratios. Generally, the information ratio compares the returns of the manager's portfolio with those of a benchmark such as the yield on three-month Treasury bills or an equity index such as the S&P 500.
+
+Some hedge funds use Information ratio as a metric for calculating a performance fee.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+
+## Annualized Information ratio
+
+The information ratio is often annualized. While it is then common for the numerator to be calculated as the arithmetic difference between the annualized portfolio return and the annualized benchmark return, this is an approximation because the annualization of an arithmetic difference between terms is not the arithmetic difference of the annualized terms. Since the denominator is here taken to be the annualized standard deviation of the arithmetic difference of these series, which is a standard measure of annualized risk, and since the ratio of annualized terms is the annualization of their ratio, the annualized information ratio provides the annualized risk-adjusted active return of the portfolio relative to the benchmark.
+
+
+## Criticisms
+
+One of the main criticisms of the Information Ratio is that it considers arithmetic returns (rather than geometric returns) and ignores leverage. This can lead to the Information Ratio calculated for a manager being negative when the manager produces alpha to the benchmark and vice versa. A better measure of the alpha produced by the manager is the Geometric Information Ratioᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ.
+

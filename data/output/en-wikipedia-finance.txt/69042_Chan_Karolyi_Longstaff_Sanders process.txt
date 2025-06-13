@@ -1,0 +1,59 @@
+Chan–Karolyi–Longstaff–Sanders process
+
+
+# Chan–Karolyi–Longstaff–Sanders process
+
+
+
+In mathematics, the **Chan–Karolyi–Longstaff–Sanders process** (abbreviated as **CKLS process**) is a stochastic process with applications to finance. In particular it has been used to model the term structure of interest rates. The CKLS process can also be viewed as a generalization of the Ornstein–Uhlenbeck process. It is named after K. C. Chan, G. Andrew Karolyi, Francis A. Longstaff, and Anthony B. Sanders, with their paper published in 1992.
+
+
+## Definition
+
+The CKLS process {\displaystyle X\_{t}} is defined by the following stochastic differential equation:
+
+> {\displaystyle dX\_{t}=(\alpha +\beta X\_{t})dt+\sigma X\_{t}^{\gamma }dW\_{t}}
+
+where {\displaystyle W\_{t}} denotes the Wiener process. The CKLS process has the following equivalent definition:
+
+> {\displaystyle dX\_{t}=-k(X\_{t}-a)dt+\sigma X\_{t}^{\gamma }dW\_{t}}
+
+
+## Properties
+
+* CKLS is an example of a mean-reverting process
+* The moment-generating function (MGF) of {\displaystyle X\_{t}^{2(1-\gamma )}} has a singularity at a critical moment independent of {\displaystyle \gamma }. Moreover, the MGF can be written as the MGF of the CIR model plus a term that is a solution to a Nonlinear partial differential equation.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+* The CKLS equation has a unique pathwise solution.
+* Cai and Wang (2015) have derived a central limit theorem and deviation principle for the CKLS model while studying its asymptotic behavior.
+* CKLS has been referred to as a time-homogeneous model as usually the parameters {\displaystyle \alpha ,\beta ,\sigma ,\gamma } are taken to be time-independent.
+* The CKLS has also been referred to as a one-factor model (also see Factor analysis).
+
+## Special cases
+
+Many interest rate models and short-rate models are special cases of the CKLS process which can be obtained by setting the CKLS model parameters to specific values. In all cases, {\displaystyle \sigma } is assumed to be positive.
+
+Family of CKLS process under different parametric specifications.
+| Model/Process | {\displaystyle \alpha } | {\displaystyle \beta } | {\displaystyle \gamma } |
+| --- | --- | --- | --- |
+| Merton | Any | 0 | 0 |
+| Vasicek | Any | Any | 0 |
+| CIR or square root process | Any | Any | 1/2 |
+| Dothan | 0 | 0 | 1 |
+| Geometric Brownian motion or Black–Scholes–Merton model | 0 | Any | 1 |
+| Brennan and Schwartz | Any | Any | 1 |
+| CIR VR | 0 | 0 | 3/2 |
+| CEV | 0 | Any | Any |
+
+
+## Financial applications
+
+The CKLS process is often used to model interest rate dynamics and pricing of bonds, bond options, currency exchange rates, securities, and other options, derivatives, and contingent claims. It has also been used in the pricing of fixed income and credit risk and has been combined with other time series methods such as GARCH-class models.
+
+One question studied in the literature is how to set the model parameters, in particular the elasticity parameter {\displaystyle \gamma }. Robust statistics and nonparametric estimation techniques have been used to measure CKLS model parameters.
+
+In their original paper, CKLS argued that the elasticity of interest rate volatility is 1.5 based on historical data, a result that has been widely cited. Also, they showed that models with {\displaystyle \gamma \geq 1} can model short-term interest rates more accurately than models with {\displaystyle \gamma <1}.
+
+Later empirical studies by Bliss and Smith have shown the reverse: sometimes lower {\displaystyle \gamma } values (like 0.5) in the CKLS model can capture volatility dependence more accurately compared to higher {\displaystyle \gamma } values. Moreover, by redefining the regime period, Bliss and Smith have shown that there is evidence for regime shift in the Federal Reserve between 1979 and 1982. They have found evidence supporting the square root Cox-Ingersoll-Ross model (CIR SR), a special case of the CKLS model with {\displaystyle \gamma =1/2}.
+
+The period of 1979-1982 marked a change in monetary policy of the Federal Reserve, and this regime change has often been studied in the context of CKLS models.
+

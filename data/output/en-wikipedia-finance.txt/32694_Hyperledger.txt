@@ -1,0 +1,94 @@
+Hyperledger
+
+
+# Hyperledger
+
+
+
+**Hyperledger** (or the **Hyperledger Project**) is an umbrella project of open source blockchains and related tools that the Linux Foundation started in December 2015. IBM, Intel, and SAP Ariba have contributed to support the collaborative development of blockchain-based distributed ledgers. It was renamed the Hyperledger Foundation in October 2021.
+
+
+## History and aims
+
+In December 2015, the Linux Foundation announced the creation of the Hyperledger Project. The founding project members were announced in February 2016, with ten further members and the governing board announced a month later on March 29. On May 19, Brian Behlendorf was appointed the project’s executive director.
+
+The project’s objective is to advance cross-industry collaboration by developing blockchains and distributed ledgers, focusing on improving the systems’ performance and reliability (compared to cryptocurrency designs) so they can support global business transactions by major technological, financial, and supply chain companies. The project integrates independent open protocols and standards in a framework for use-specific modules, including blockchains with their own consensus and storage routines, and services for identity, access control and smart contracts. There was some debate about whether the Hyperledger would develop its own bitcoin-type cryptocurrency, but Behlendorf clearly stated the Hyperledger Project would never build its own cryptocurrency.
+
+In early 2016, the project began accepting proposals for incubation of codebases and other technologies as core elements. One of the first proposals was for a codebase combining previous work by Digital Asset, Blockstream's libconsensus and IBM's OpenBlockchain. This codebase was later named Fabric and the foundation was renamed Hyperledger, a trademark contributed by one of Hyperledger's founding members, Digital Asset, following their acquisition of a company called Hyperledger. In May, Intel's distributed ledger, named Sawtooth, was incubated.
+
+In January 2018, Hyperledger released the production-ready Sawtooth 1.0. In January 2019, the first long-term-support version of Hyperledger Fabric (v1.4) was announced.
+
+Daniela Barbosa was named executive director of Hyperledger Foundation in October 2021.
+
+Hart Montgomery was named Hyperledger Foundation first CTO in February 2022.
+
+
+## Members and governance
+
+Early members of the initiative included blockchain ISVs, (Blockchain, ConsenSys, Digital Asset, R3, Onchain), well-known technology platform companies (Cisco, Fujitsu, Hitachi, IBM, Intel, NEC, NTT DATA, Red Hat, VMware), financial services firms (ABN AMRO, ANZ Bank, BNY Mellon, CLS Group, CME Group, the Depository Trust & Clearing Corporation (DTCC), Deutsche Börse Group, J.P. Morgan, State Street, SWIFT, Wells Fargo, Sberbank), business software companies like SAP, academic institutions (Cambridge Centre for Alternative Finance, Blockchain at Columbia, UCLA Blockchain Lab), systems integrators and others (Accenture, Calastone, Wipro, Credits, Guardtime, IntellectEU, Nxt Foundation, Symbiont, Smart Block Laboratory).
+
+The governing board of the Hyperledger Project consists of ten members chaired by Robert Palatnick, (managing director and chief technology architect for DTCC), and a fifteen-member Technical Steering Committee chaired by Tracy Kuhrt, Associate Director, Blockchain and Multiparty Systems Architecture, at Accenture.
+
+
+## Notable frameworks
+
+
+### Hyperledger Besu
+
+Besu is an enterprise-grade Ethereum codebase.
+
+
+### Hyperledger Fabric
+
+Hyperledger Fabric is a permissioned blockchain infrastructure, originally contributed by IBM and Digital Asset, providing a modular architecture with a delineation of roles between the nodes in the infrastructure, execution of Smart Contracts (called "chaincode" in Fabric) and configurable consensus and membership services. A Fabric Network comprises (1) "Peer nodes", which execute chaincode, access ledger data, endorse transactions and interface with applications; (2) "Orderer nodes" which ensure the consistency of the blockchain and deliver the endorsed transactions to the peers of the network; and (3) Membership Service Providers (MSPs), each generally implemented as a Certificate Authority, managing X.509 certificates which are used to authenticate member identity and roles. Hyperledger Fabric allows for use of different consensus algorithms, but the consensus algorithm that is most commonly used with the platform is Practical Byzantine Fault Tolerance (PBFT).
+
+Fabric is primarily aimed at integration projects, in which a Distributed Ledger Technology (DLT) is required, offering no user facing services other than an SDK for Node.js, Java and Go.
+
+Fabric supports chaincode in Go and JavaScript (via Hyperledger Composer, or natively since v1.1) out-of-the-box, and other languages such as Java by installing appropriate modules. It is therefore potentially more flexible than competitors that only support a closed Smart Contract language.
+
+
+### Hyperledger Sawtooth
+
+Originally contributed by Intel, Sawtooth includes a dynamic consensus feature enabling hot swapping consensus algorithms in a running network. Among the consensus options is a novel consensus protocol known as "Proof of Elapsed Time," a lottery-design consensus protocol that optionally builds on trusted execution environments provided by Intel's Software Guard Extensions (SGX). Sawtooth supports Ethereum smart contracts via "seth" (a Sawtooth transaction processor integrating the Hyperledger Burrow EVM). In addition to Solidity support, Sawtooth includes SDKs for Python, Go, Javascript, Rust, Java, and C++.
+
+
+## Tools
+
+
+### Hyperledger Aries
+
+Hyperledger Aries is a toolkit for decentralized identity solutions. It supports issuance, storage, and presentations of verifiable credentials, providing the functionality to create and manage decentralized, self-sovereign identities. It supports secure, peer-to-peer messaging using a variety of protocols. Aries includes implementations in Python, Go, .NET, and JavaScript. Hyperledger Aries interacts with other Hyperledger projects like Indy and Ursa. Indy provides the ledger technology, and Ursa provides shared cryptographic functions.
+
+
+### Hyperledger Caliper
+
+Hyperledger Caliper is a blockchain benchmark tool and one of the Hyperledger projects hosted by The Linux Foundation. Hyperledger Caliper allows users to measure the performance of a specific blockchain implementation with a set of predefined use cases. Hyperledger Caliper will produce reports containing a number of performance indicators, such as TPS (Transactions Per Second), transaction latency, resource utilization etc. The intent is for Caliper results to be used by other Hyperledger projects as they build out their frameworks, and as a reference in supporting the choice of a blockchain implementation suitable for a user's specific needs. Hyperledger Caliper was initially contributed by developers from Huawei, Hyperchain, Oracle, Bitwise, Soramitsu, IBM and the Budapest University of Technology and Economics.
+
+
+### Hyperledger Cello
+
+Hyperledger Cello is a blockchain module toolkit and one of the Hyperledger projects hosted by The Linux Foundation. Hyperledger Cello aims to bring the on-demand "as-a-service" deployment model to the blockchain ecosystem to reduce the effort required for creating, managing and terminating blockchains. It provides a multi-tenant chain service efficiently and automatically on top of various infrastructures, e.g., baremetal, virtual machine, and more container platforms. Hyperledger Cello was initially contributed by IBM, with sponsors from Soramitsu, Huawei and Intel.
+
+Baohua Yang and Haitao Yue from IBM Research are committed part-time to developing and maintaining the project.
+
+
+### Hyperledger Composer
+
+Hyperledger Composer was a set of collaboration tools for building blockchain business networks that make it simple and fast for business owners and developers to create smart contracts and blockchain applications to solve business problems. Built with JavaScript, leveraging modern tools including node.js, npm, CLI and popular editors, Composer offered business-centric abstractions as well as sample apps with easy to test DevOps processes to create robust blockchain solutions that drive alignment across business requirements with technical development.
+
+Blockchain package management tooling contributed by IBM. Composer was a user-facing rapid prototyping tooling, running on top of Hyperledger Fabric, which allows the easy management of Assets (data stored on the blockchain), Participants (identity management, or member services) and Transactions (Chaincode, a.k.a. Smart Contracts, which operate on Assets on the behalf of a Participant). The resulting application can be exported as a package (a BNA file) which may be executed on a Hyperledger Fabric instance, with the support of a Node.js application (based on the Loopback application framework) and provide a REST interface to external applications.
+
+Composer provided a GUI user interface "Playground" for the creation of applications, and therefore represents an excellent starting point for Proof of Concept work.
+
+On the 27th of April, 2020 the Hyperledger Technical Steering Committee has moved the Hyperledger Composer to the "End of Life" lifecycle stage, ending new development.
+
+
+### Hyperledger Explorer
+
+Hyperledger Explorer is a blockchain module and one of the Hyperledger projects hosted by The Linux Foundation. Designed to create a user-friendly Web application, Hyperledger Explorer can view, invoke, deploy or query blocks, transactions and associated data, network information (name, status, list of nodes), chain codes and transaction families, as well as any other relevant information stored in the ledger. Hyperledger Explorer was initially contributed by IBM, Intel and DTCC.
+
+
+### Hyperledger Quilt
+
+Hyperledger Quilt is a business blockchain tool and one of the Hyperledger projects hosted by The Linux Foundation. Hyperledger Quilt offers interoperability between ledger systems by implementing the Interledger protocol (also known as ILP), which is primarily a payments protocol and is designed to transfer value across distributed ledgers and non-distributed ledgers. The Interledger protocol provides atomic swaps between ledgers (even non-blockchain or distributed ledgers) and a single account namespace for accounts within each ledger. With the addition of Quilt to Hyperledger, The Linux Foundation now hosts both the Java (Quilt) and JavaScript (Interledger.js) Interledger implementations. Hyperledger Quilt was initially contributed by NTT Data and Ripple.
+

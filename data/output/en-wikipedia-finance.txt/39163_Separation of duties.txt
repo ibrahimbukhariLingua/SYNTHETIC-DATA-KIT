@@ -1,0 +1,101 @@
+Separation of duties
+
+
+# Separation of duties
+
+
+
+| Part of a series on |
+| --- |
+| Accounting |
+| * Historical cost * Constant purchasing power * Management * Tax |
+| Major types * Audit * Budget * Cost * Forensic * Financial * Fund * Governmental * Management * Social * Tax |
+| Key concepts * Accounting period * Accrual * Constant purchasing power * Economic entity * Fair value * Going concern * Historical cost * Matching principle * Materiality * Revenue recognition * Unit of account |
+| Selected accounts * Assets * Cash * Cost of goods sold * Depreciation / Amortization (business) * Equity * Expenses * Goodwill * Liabilities * Profit * Revenue |
+| Accounting standards * Generally-accepted principles * Generally-accepted auditing standards * Convergence * International Financial Reporting Standards * International Standards on Auditing * Management Accounting Principles |
+| Financial statements * Annual report * Balance sheet * Cash-flow * Equity * Income * Management discussion * Notes to the financial statements |
+| Bookkeeping * Bank reconciliation * Debits and credits * Double-entry system * FIFO and LIFO * Journal * Ledger / General ledger * Trial balance |
+| Auditing * Financial * Internal * Firms * Report * Sarbanes–Oxley Act |
+| People and organizations * Accountants * Accounting organizations * Luca Pacioli |
+| Development * History * Research * Positive accounting * Sarbanes–Oxley Act |
+| Misconduct * Creative * Earnings management * Error account * Hollywood * Off-balance-sheet * Two sets of books |
+| * v * t * e |
+
+**Separation of duties** (SoD), also known as **segregation of duties**, is the concept of having more than one person required to complete a task. It is an administrative control used by organisations to prevent fraud, sabotage, theft, misuse of information, and other security compromises. In the political realm, it is known as the separation of powers, as can be seen in democracies where the government is separated into three independent branches: a legislature, an executive, and a judiciary.
+
+
+## General description
+
+Separation of duties is a key concept of internal controls. Increased protection from fraud and errors must be balanced with the increased cost/effort required.
+
+In essence, SoD implements an appropriate level of checks and balances upon the activities of individuals. R. A. Botha and J. H. P. Eloff in the *IBM Systems Journal* describe SoD as follows.
+
+> Separation of duty, as a security principle, has as its primary objective the prevention of fraud and errors. This objective is achieved by disseminating the tasks and associated privileges for a specific business process among multiple users. This principle is demonstrated in the traditional example of separation of duty found in the requirement of two signatures on a cheque.
+
+Actual job titles and organizational structure may vary greatly from one organization to another, depending on the size and nature of the business. Accordingly, rank or hierarchy are less important than the skillset and capabilities of the individuals involved. With the concept of SoD, business critical duties can be categorized into four types of functions: authorization, custody, record keeping, and reconciliation. In a perfect system, no one person should handle more than one type of function.
+
+
+### Principles
+
+Principally several approaches are optionally viable as partially or entirely different paradigms:
+
+* sequential separation (two signatures principle)
+* individual separation (four eyes principle)
+* spatial separation (separate action in separate locations)
+* factorial separation (several factors contribute to completion)
+
+### Auxiliary Patterns
+
+A person with multiple functional roles has the opportunity to abuse those powers. The pattern to minimize risk is:
+
+1. Start with a function that is indispensable, but potentially subject to abuse.
+2. Divide the function into separate steps, each necessary for the function to work or for the power that enables that function to be abused.
+3. Assign each step to a different person or organization.
+
+General categories of functions to be separated:
+
+* authorization function
+* recording function, e.g. preparing source documents or code or performance reports
+* custody of asset whether directly or indirectly, e.g. receiving checks in mail or implementing source code or database changes.
+* reconciliation or audit
+* splitting one security key in two (more) parts between responsible persons
+
+Primarily the individual separation is addressed as the only selection.
+
+
+## Application in general business and in accounting
+
+The term SoD is already well known in financial accounting systems. Companies in all sizes understand not to combine roles such as receiving cheques (payment on account) and approving write-offs, depositing cash and reconciling bank statements, approving time cards and have custody of pay cheques, etc. SoD is fairly new to most Information Technology (IT) departments, but a high percentage of Sarbanes-Oxley internal audit issues come from IT.
+
+In information systems, segregation of duties helps reduce the potential damage from the actions of one person. IS or end-user department should be organized in a way to achieve adequate separation of duties. According to ISACA's Segregation of Duties Control matrix, some duties should not be combined into one position. This matrix is not an industry standard, just a general guideline suggesting which positions should be separated and which require compensating controls when combined.
+
+Depending on a company's size, functions and designations may vary. Smaller companies with a lack of SoD typically face concerns in disbursement cycles where unauthorized purchases and payments can occur. When duties cannot be separated, compensating controls should be in place. Compensating controls are internal controls that are intended to reduce the risk of an existing or potential control weakness. If a single person can carry out and conceal errors and/or irregularities in the course of performing their day-to-day activities, they have been assigned SoD incompatible duties. There are several control mechanisms that can help to enforce the segregation of duties:
+
+1. Audit trails enable IT managers or Auditors to recreate the actual transaction flow from the point of origination to its existence on an updated file. Good audit trails should be enabled to provide information on who initiated the transaction, the time of day and date of entry, the type of entry, what fields of information it contained, and what files it updated.
+2. Reconciliation of applications and an independent verification process is ultimately the responsibility of users, which can be used to increase the level of confidence that an application ran successfully.
+3. Exception reports are handled at supervisory level, backed up by evidence noting that exceptions are handled properly and in timely fashion. A signature of the person who prepares the report is normally required.
+4. Manual or automated system or application transaction logs should be maintained, which record all processed system commands or application transactions.
+5. Supervisory review should be performed through observation and inquiry.
+6. To compensate mistakes or intentional failures by following a prescribed procedure, independent reviews are recommended. Such reviews can help detect errors and irregularities.
+
+## Application in information systems
+
+The accounting profession has invested significantly in separation of duties because of the understood risks accumulated over hundreds of years of accounting practice.
+
+By contrast, many corporations in the United States found that an unexpectedly high proportion of their Sarbanes-Oxley internal control issues came from IT. Separation of duties is commonly used in large IT organizations so that no single person is in a position to introduce fraudulent or malicious code or data without detection. Role-based access control is frequently used in IT systems where SoD is required. More recently, as the number of roles increases in a growing organization, a hybrid access control model with Attribute-based access control is used to resolve the limitations of its role-based counterpart.
+
+Strict control of software and data changes will require that the same person or organizations performs only one of the following roles:
+
+* Identification of a requirement (or change request); e.g. a business person
+* Authorization and approval; e.g. an IT governance board or manager
+* Design and development; e.g. a developer
+* Review, inspection and approval; e.g. another developer or architect.
+* Implementation in production; typically a software change or system administrator.
+
+This is not an exhaustive presentation of the software development life cycle, but a list of critical development functions applicable to separation of duties.
+
+To successfully implement separation of duties in information systems a number of concerns need to be addressed:
+
+* The process used to ensure a person's authorization rights in the system is in line with his role in the organization.
+* The authentication method used such as knowledge of a password, possession of an object (key, token) or a biometrical characteristic.
+* Circumvention of rights in the system can occur through database administration access, user administration access, tools which provide back-door access or supplier installed user accounts. Specific controls such as a review of an activity log may be required to address this specific concern.

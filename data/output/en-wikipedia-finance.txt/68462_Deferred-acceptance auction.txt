@@ -1,0 +1,49 @@
+Deferred-acceptance auction
+
+
+# Deferred-acceptance auction
+
+
+
+| Part of a series on |
+| --- |
+| Auctions |
+| Types |
+| * All-pay + Chinese + Bidding fee + Dollar * Amsterdam * Anglo-Dutch * Barter double * Best/not best * Brazilian * Calcutta * Candle * Click-box bidding * Combinatorial * Common value * Deferred-acceptance * Discriminatory price * Double * Dutch * English * Forward * French * Generalized first-price * Generalized second-price * Japanese * Knapsack * Multi-attribute * Multiunit * No-reserve * Rank * Reverse * Scottish * Sealed first-price * Simultaneous ascending * Single-price * Traffic light * Uniform price * Unique bid * Value of revenues * Vickrey * Vickrey–Clarke–Groves * Walrasian * Yankee |
+| Bidding |
+| * Shading * Calor licitantis * Cancellation hunt * Jump * Rigging * Sniping * Suicide * Tacit collusion |
+| Contexts |
+| * Algorithms * Autos * Art * Charity * Children * Players * Domain names * Flowers * Loans * Scam * Slaves * Spectrum * Stamps * Virginity * Wine * Wives |
+| Theory |
+| * Digital goods * Price of anarchy * Revenue equivalence * Winner's curse |
+| Online |
+| * Ebidding * Private electronic market * Software |
+| * v * t * e |
+
+A **deferred-acceptance auction** (**DAA**) is an auction in which the allocation is chosen by repeatedly rejecting the least attractive bids. It is a truthful mechanism with strategic properties that make it particularly suitable to complex auctions such as the radio spectrum reallocation auction. An important advantage of DAA over the more famous VCG auction is that DAA is immune to manipulations by coalitions of bidders, while VCG is immune to manipulations only by individual bidders.
+
+The deferred-acceptance auction is related to clock auctions like the Japanese auction, as they both work by rejecting bids that can't win until only the bids that must win remain.
+
+
+## Example
+
+Suppose the government wants to sell broadcasting rights in two areas: North and South. Three agents compete on these rights:
+
+* Alice needs both areas, and values them (together) as $3M.
+* Bob needs only the North, and values it as $1M.
+* Carl needs only the South, and values it as $1M.
+
+The government wants to maximize the social welfare. In this case, there are two feasible allocations: either give all rights to Alice (welfare=3), or give the North to Bob and the South to Carl (welfare=2). Since the valuations are private information of the agents, the government needs to use a truthful mechanism in order to induce the agents to reveal their true valuations. We compare two types of truthful mechanisms.
+
+
+### Vickrey–Clarke–Groves solution
+
+The Vickrey–Clarke–Groves (VCG) algorithm finds the socially-optimal allocation, which is to give both areas to Alice. Alice should pay a price determined by the externalities it imposes on the other agents. In this case, Alice pays $2M, since without her, the welfare of Bob and Carl would have been $2M. Bob and Carl receive nothing and pay nothing.
+
+
+### Deferred-acceptance auction solution
+
+The **deferred-acceptance auction** iteratively rejects the lowest-valued agent that can be rejected while keeping an optimal set of active agents. So, Carl is rejected first, then Bob. Alice remains and she is accepted. She then pays a threshold price, which is the value of the lowest bid she could have bid and still won. In this case, Alice's threshold price is $1M, which she pays.
+
+Both auction types are truthful - no single agent could gain by reporting a different value. However, they differ when agents can form coalitions. Suppose that Bob and Carl together increase their bid to $4M. Now, neither Bob nor Carl alone has any effect on Alice. So the VCG auction will accept Bob and Carl, charging each of them a price of 0! In contrast, the DAA will reject Alice, then accept Bob and Carl, and charge each of them his threshold price, which is $3M. They each lose $2M, hence the attempted strategy does not pay off.
+

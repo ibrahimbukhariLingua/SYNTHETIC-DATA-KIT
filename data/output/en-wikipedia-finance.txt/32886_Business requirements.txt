@@ -1,0 +1,95 @@
+Business requirements
+
+
+# Business requirements
+
+
+
+| IEEE software life cycle |
+| --- |
+| * Software project management * Software quality assurance * Software requirements specification * Software configuration management * Software design description * Software test documentation * Software verification and validation * Software user documentation * Software reviews and audit |
+| * v * t * e |
+
+**Business requirements**, also known as stakeholder requirements specifications (StRS), describe the characteristics of a proposed system from the viewpoint of the system's end user like a CONOPS. Products, systems, software, and processes are ways of *how* to deliver, satisfy, or meet business requirements. Consequently, business requirements are often discussed in the context of developing or procuring software or other systems.
+
+Three main reasons for such discussions:
+
+1. A common practice is to refer to objectives, or expected benefits, as 'business requirements.'
+2. People commonly use the term 'requirements' to describe the features of the product, system, software expected to be created.
+3. A widely held model claims that these two types of requirements differ only in their level of detail or abstraction — wherein 'business requirements' are high-level, frequently vague, and decompose into the detailed product, system, or software requirements.
+
+To Robin F. Goldsmith, such are confusions that can be avoided by recognizing that business requirements are not objectives, but rather meet objectives (i.e., provide value) when satisfied. Business requirements *whats* do not decompose into product/system/software requirement *hows*. Rather, products and their requirements represent a response to business requirements — presumably, *how* to satisfy *what*. Business requirements exist within the business environment and must be discovered, whereas product requirements are human-defined (specified). Business requirements are not limited to high-level existence, but need to be driven down to detail. Regardless of their level of detail, however, business requirements are always business deliverable *whats* that provide value when satisfied; driving them down to detail never turns business requirements into product requirements.
+
+In system or software development projects, business requirements usually require authority from stakeholders. This typically leads to the creation or updating of a product, system, or software. The product/system/software requirements usually consist of both functional requirements and non-functional requirements. Although typically defined in conjunction with the product/system/software functionality (features and usage), non-functional requirements often actually reflect a form of business requirements which are sometimes considered constraints. These could include necessary performance, security, or safety aspects that apply at a business level.
+
+Business requirements are often listed in a Business Requirements Document or BRD. The emphasis in a BRD is on process or activity of accurately accessing planning and development of the requirements, rather than on how to achieve it; this is usually delegated to a Systems Requirements Specification or Document (SRS or SRD), or other variation such as a Functional Specification Document. Confusion can arise between a BRD and a SRD when the distinction between business requirements and system requirements is disregarded. Consequently, many BRDs actually describe requirements of a product, system, or software.
+
+
+## Overview
+
+Business requirements in the context of software engineering or the software development life cycle, is the concept of eliciting and documenting business requirements of business users such as customers, employees, and vendors early in the development cycle of a system to guide the design of the future system. Business requirements are often captured by business analysts, who analyze business activities and processes, and often study "as-is" process to define a target "to-be" process.
+
+Business requirements often include
+
+* Business context, scope, and background, including reasons for change
+* Key business stakeholders that have requirements
+* Success factors for a future/target state
+* Constraints imposed by the business or other systems
+* Business process models and analysis, often using flowchart notations to depict either 'as-is' and 'to-be' business processes
+* Conceptual data models and data dictionary references
+* Glossaries of business terms and local jargon
+* Data flow diagrams to illustrate how data flows through the information systems (different from flowcharts depicting algorithmic flow of business activities)
+
+## Business requirements topics
+
+
+### Benefits
+
+| Description |
+| --- |
+| Reduce Project failure | Structured explanation of a business process or method defined early in the life cycle helps reduce project failures that occur due to misaligned or misrepresented requirements leading to failure of user expectations. |
+| Connects to broader business goals | Well-defined business requirements help lay out a project charter, a critical step in executing business strategy or business goals, and to take it to the next logical step of developing it into an IT system. This helps monitoring overall project health and provides for positive traction with key project stakeholders including sponsors. |
+| Consensus creation and collaboration | The benefit of a structured format typical of business requirements documentation helps create positive consensus and better collaboration where the business stakeholder group might be a large cross-functional team, distributed geographically. |
+| Saves costs | Good quality of business requirements when captured early on not only improves success of a project but also save overall costs associated with change requests, and related investments in training, infrastructure, etc. |
+
+
+### Roles
+
+Business requirements are typically defined by business analysts in collaboration with other project stakeholders.
+
+Both parties may be responsible for determining the business requirements and developing technical solutions. Business analysts tend to be involved in developing the implementation approach, and managing the impact on all business areas, including stakeholder engagement and risk management.
+
+
+### Format
+
+
+### Completeness
+
+Prototyping with early stage testing can assess the completeness and accuracy of captured business requirements. Stakeholders come in early to help define the requirements, and the result is sent to the project development teams who build the business system; other stakeholders test and evaluate the final deployed system. Clarity requires keeping track of the requirements and their solution, with a formal process for determining the appropriate template use. Business requirements scope is not necessarily limited to the stage of defining what needs to be built as a business system. It goes beyond, to envisage how a running business system is managed and maintained, and to ensure its maintained alignment with business goals or strategy. A business requirements document needs to be constantly revised in a controlled fashion. Having a standardized format, or templates that are designed for specific business functions and domains, can ensure completeness of business requirements, besides keeping the scope in focus.
+
+Although commonly considered a means of evaluating requirements, prototyping actually usually shifts attention from business requirements to the product, system, or software being built. Prototypes are working software, which means they are three steps (product/system/software requirements, engineering/technical design of said product/system/software, and implementation of the design in program code) removed from business requirements. Prototypes are preliminary versions of the software the developer intends to implement. Because prototypes are fairly concrete, stakeholders who try out the prototype can give more meaningful feedback regarding some aspects of what the developer is creating, which is the developer's interpretation of a way to satisfy business requirements, not the business requirements. Moreover, in order to create a prototype early and quickly, the graphical user interface (GUI) is emphasized and the "guts" are shortcut. The guts are the bulk of the program logic, and are where most business requirements would be addressed. In other words, issues that prototypes reveal are very unlikely to involve business requirements.
+
+It is important to recognize the changes to requirements, document them, and keep the definition of requirements up-to-date. However, business requirements tend not to change nearly so much as the awareness of them. A business requirement may be present, but not recognized or understood by the stakeholders, analysts, and project team. Change is more apparent in regard to what is usually referred to as "requirements changes" - the product/system/software requirements. These tend to reflect the presumed ways of satisfying inadequately identified business requirements. Much of the difficulties attributed to achieving business requirements in fact reflect the common practice of devoting almost all "requirements" effort to what is actually high-level design of a product, system, or software. This stems from failing to first adequately define the business requirements the product/system/software must satisfy in order to provide value. Development practices commonly keep revising the product/system/software until they eventually "back into" a solution that seems to do what is needed, i.e., apparently addresses a business requirement. Such costly trial-and-error indirect ways of identifying business requirements are the basis for much of "iterative development," including popular Agile development methods, that are touted as "best practices."
+
+Templates help prompt inquiry regarding particular topics that often may be relevant to business requirements. They can foster standardized documentation regarding business requirements, which can facilitate understanding. Templates do not ensure accuracy or completeness of business requirements. In fact, commonly misused, templates often negatively impact requirement research, since they tend to promote superficiality and mainly mechanical definition without meaningful analysis.
+
+
+## Difficulties
+
+Business requirements are often prematurely hardened due to the large stakeholder base involved in defining the requirements, where there is a potential for conflict in interests. The process of managing and building consensus can be delicate and even political by nature. A lesser challenge, though common, is that of distributed teams with stakeholders in multiple geographical locations. It is natural that sales staff is closer to their customers, while production staff is closer to manufacturing units; finance and HR, including senior management are closer to the registered headquarters. A system for example that involves sales and production users may see conflict of purpose – one side may be interested in offering maximum features, while the other may focus on lowest cost of production. These sorts of situations often end in a consensus with maximum features for a reasonable, profitable cost of production and distribution.
+
+To address these challenges, early stage stakeholder buy-in is achieved through demonstration of prototypes and joint working. Stakeholder workshops are common, either as facilitated sessions or simple huddled discussions, to aid in achieving consensus, especially for sensitive business requirements and where there is potential conflict of interest. Complexity of a business process is a factor. This may entail specialized knowledge required to comprehend legal or regulatory requirements, internal company-wide guidelines such as branding or corporate commitments to social responsibility. Business requirements analysis is not just about capturing the "what" of a business process along with "how" to provide its context. Translation into designing and building a working system may need to be addressed. At this stage, business requirements have to acknowledge technical details and feasibility.
+
+A custom-built solution in not always required for every new set of business requirements. There are often standardized processes and products, which with some tweaking or customization, can serve to address the business requirements. The target business system is frequently constrained by a specific technology choice, budget, or available products already deployed.
+
+Finally, standardization of format may cause difficulties. Multiple projects with multiple formats that lead to variation in structure and content of a requirements document renders these ineffective from a traceability and manageability perspective. In fact, when creating a template for use in a cross-functional requirement gathering exercise, different roles with complementary knowledge may find it difficult to work within a common format. It is therefore crucial to allow non-specialist or non-expert stakeholders to provide additional requirements by Appendices and additional attachments to cover their area of specification. Addressing various nuances, and arriving at a best fit, remains the single biggest challenge to effective requirements.
+
+
+## Identifying business needs
+
+Includes the following steps:
+
+1. Business definition
+2. Understand business domain(s)
+3. Organization goals
+4. Core competence

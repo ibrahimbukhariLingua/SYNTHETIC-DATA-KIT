@@ -1,0 +1,463 @@
+Information Services Procurement Library
+
+
+# Information Services Procurement Library
+
+
+
+The **Information Services Procurement Library** (**ISPL**) is a best practice library for the management of Information Technology related acquisition processes (derived from Euromethod). It helps both the customer and supplier organization to achieve the desired quality using the corresponded amount of time and money by providing methods and best practices for risk management, contract management, and planning. ISPL focuses on the relationship between the customer and supplier organization: It helps constructing the request for proposal, it helps constructing the contract and delivery plan according to the project situation and risks, and it helps monitoring the delivery phase. ISPL is a unique Information Technology method because where most other Information Technology methods and frameworks focus on development (e.g. DSDM, RUP), ISPL focuses purely on the procurement of information services. The target audience for ISPL consists of procurement managers, acquisition managers, programme managers, contract managers, facilities managers, service level managers, and project managers in the IT (Information Technology) area. Because of ISPL's focus on procurement it is very suitable to be used with ITIL (for IT Service Management) and PRINCE2 (for Project Management).
+
+
+## Benefits
+
+There are four main benefits of using ISPL.
+
+* The customer can take advantage of the competitive market
+* Proposals of suppliers become comparable
+* The use of a strategy that really fits the situation
+* The contract can be used as a control instrument
+
+These benefits are elaborated in the paragraphs below.
+
+**The customer can take advantage of the competitive market**
+ISPL helps the customer organisation to construct the Request for Proposal (RFP). It even provides the customer organisation with a table of contents. A very important part of the ISPL request for proposal is the elaboration on the supplier evaluation approach. The complete transparency of the supplier evaluation approach triggers the candidate supplier organisations to issue a really competitive proposal. As a result, the customer can take full advantage of the competitive market.
+
+**Proposals of suppliers become comparable**
+ISPL specifies the table of contents of the candidate supplier organisation's proposal. It also supplies the customer and candidate supplier organisations with one clear terminology. This makes the proposals of the candidate suppliers very easy to compare.
+
+**The use of a strategy that really fits the situation**
+ISPL provides the user with a really extensive risk management process. Based on best practices, it helps the management to design a delivery strategy that really fits the situation of both the customer and the supplier organizations. This is a benefit for both the customer and the supplier organizations because selecting a suboptimal strategy obviously brings along higher costs. The chapter #Service Planning describes the situation and risk analysis and the design of a service delivery strategy.
+
+**Contract as a control instrument**
+ISPL helps the customer and supplier organisations to set up a contract that specifies all critical aspects of the procurement. For example, the list of requirements, the budget and the delivery plan are all fixed in the contract. This provides both customer and supplier organisation with a very powerful control instrument. One of the benefits for the customer organisation is that the supplier organisation will be highly motivated to meet all the deadlines because otherwise the supplier commits contract breach. One of the benefits for the supplier organisation is that it becomes much harder for the customer organisation to change the requirements which would slow down the development process. In short, with ISPL there is a better control of costs and time-scales.
+
+
+## History
+
+ISPL is developed and published in 1999 by a consortium of five European companies: EXIN and ID Research (ORDINA) from the Netherlands, FAST from Germany, SEMA from France and TIEKE from Finland. The development of ISPL was part of the SPRITE-S2 programme that was launched in 1998 by the European Commission. ISPL is derived from Euromethod and based on the research of about 200 real-life acquisitions.
+
+
+## Structure
+
+Although ISPL is a best practice library it does not only consist of books. The structure of ISPL is displayed in Figure 1. In this figure the books are represented by squares and the other tools are represented by circles. The basis is formed by four practical books, the IS Procurement Management Essentials. Additionally, a specific book addresses public procurement. Plug-ins to the IS Procurement Management Essentials are provided for specific needs and situations. Currently, three plug-ins are available for which there is a large market potential. A fourth plug-in on the acquisition of product software is currently under construction.
+
+Follow the links below to get more information on the different parts of ISPL.
+
+* #Managing Acquisition Processes
+* #Specifying Deliverables
+* #Managing Risks and Planning Deliveries
+
+## Meta-Process Model
+
+Figure 2 illustrates the meta-process model of ISPL. This model can be used to easily link and compare ISPL to other Information Technology methods and frameworks. I will provide each process with a link to more information.
+
+**Define requirements**
+
+The definition of requirements is out of the scope of ISPL. For more information on defining requirements I would like to refer to the entry on Requirements management processes.
+
+**Specify deliverables**
+
+Both customer and supplier organisation have to specify the information and services they want to receive from the other party. More information on the specification of deliverables can be found in the chapter on #Specifying Deliverables.
+
+**Situation Analysis, Identify Risks, Select Strategy**
+
+The customer organisation has to conduct a situation analysis to be able to identify critical risks and mitigate them using an appropriate delivery strategy. More information can be found in the chapter '#Managing Risks and Planning Deliveries'.
+
+**Make decisions**
+
+During the execution of the delivery plan the customer and supplier make decisions at each decision point. This is the #Contract Monitoring phase.
+
+
+## Acquisition Process Sequence
+
+This chapter provides a high-level description of the ISPL acquisition process from a customer-supplier-interaction point-of-view. Figure 3 illustrates the sequence of customer and supplier processes during the acquisition. The following paragraphs link the processes in Figure 3 to the theoretical information that is present in this entry and thus provide a link from practise to theory.
+
+**Make RFP**
+
+To construct a request for proposal the customer first needs to describe the acquisition goal and other requirements, and perform a situation and risk analysis. Using the risk analysis a delivery plan has to be constructed. More information on all of these activities can be found in the chapter #Managing Risks and Planning Deliveries and the paragraph #Acquisition initiation in the chapter #Managing Acquisition Processes. The request for proposal is a #Tendering deliverable.
+
+**Make proposal**
+
+The supplier company writes a proposal in which it clarifies how it can fulfil the acquisition goal. More information on proposals can be found in the paragraph #Tendering deliverable.
+
+**Select**
+
+The customer selects a supplier. The selection activity is an important step in the #Tendering process, part of the #Procurement process.
+
+**Negotiate contract**
+
+Customer and supplier negotiate the contract. Usually this means that the delivery plan is refined to a more detailed level. The information in the chapter #Managing Risks and Planning Deliveries can be used to update the delivery plan.
+
+**Make decisions**
+
+For each contract the delivery plan is executed. Customer and supplier make decisions at each decision point. For an individual contract the final decision is whether #Contract Completion is reached. The deliverables used in this phase are of the #Decision point deliverable type. The final decision of the complete acquisition process is the #Acquisition completion.
+
+
+## Managing Acquisition Processes
+
+The ISPL Acquisition Process is the actual process of obtaining a system or service to achieve a goal contributing to business objectives and/or needs. It is one of the most important parts of the ISPL method. This chapter is a summary of [2].
+
+
+### Model
+
+Figure 4 displays a model of the ISPL acquisition process. The acquisition process consists of three sequential process steps.
+
+1. Acquisition initiation
+2. Procurement (one or more)
+3. Acquisition completion
+
+These individual process steps are discussed in more detail in the paragraphs below.
+
+
+### Target domain and service domain
+
+In ISPL the terms target domain and service domain are used quite frequently.
+
+**Target domain**
+The target domain is the part of the customer organization that is affected by the service.
+
+**Service domain**
+The service domain is the service organization that delivers the service, i.e. the supplier.
+
+
+### Acquisition initiation
+
+The first process to be executed by the customer contract authority within an acquisition is the acquisition initiation process. It consists of two sequential process steps: acquisition goal definition and acquisition planning. The final result of the process is an acquisition plan reflecting an acquisition strategy, along with a clear understanding of systems and services requirements defining the acquisition goal. The acquisition initiation process is illustrated in Figure 5.
+
+A more detailed description of the Acquisition Initiation phase can be found here.
+
+
+#### Acquisition goal definition
+
+The result of this step is a sufficiently clear understanding of the requirements to the systems and services that are the goal of the acquisition and the costs and benefits for the business and its various stakeholders. This process step consists of four activities:
+
+1. Define the target domain.
+2. Refine the definition of the acquisition goal in terms of systems and services requirements.
+3. Analyse costs and benefits.
+4. Analyse stakes and stakeholders.
+
+The input of business needs is ideally provided by Requirements management processes.
+
+
+#### Acquisition planning
+
+The goal of this phase is to define an acquisition strategy adapted to the situation, plan the main decision points of the acquisition, and establish the acquisition organisation. The acquisition planning phase consists of the following activities:
+
+1. Determine overall service delivery scenarios.
+2. Analyse risks.
+3. Design acquisition strategy within the risk management framework:
+4. Plan the main decision points of the acquisition.
+5. Setting-up the customer organisation within the acquisition
+
+Steps two to four are discussed in detail in the chapter #Managing Risks and Planning Deliveries.
+
+Both the acquisition goal definition and acquisition planning are activities within the phase of Acquisition Initiation. A more thorough entry of this phase can be found here.
+
+
+### Procurement process
+
+The procurement step of the ISPL acquisition process embodies the obtaining of one single contract. Note that the acquisition itself can contain multiple procurements. Such a contract consists of one or more projects or ongoing services. The procurement step consists of three sequencing processes:
+
+1. Tendering
+2. Contract monitoring
+3. Contract completion
+
+#### Tendering
+
+The aim of the tendering process is to select a supplier and a proposal for the considered services and systems and to agree with the chosen supplier on a contract in which both parties’ deliveries and responsibilities are defined. A very important aspect of such a contract is the planning of the decision points. The tendering process consists of four different steps:
+
+1. preparation of request for proposal
+2. response preparation
+3. supplier selection
+4. contract preparation and signing
+
+#### Contract Monitoring
+
+This process aims to monitor the services defined in the contract. It has to ensure that the deliverable and services conform to the requirements in the contract. The most important activity of the contract monitoring process is the execution of the decision points. In the decision point execution the customer organization makes judgments and decisions based on the status of the procurement at any given time.
+
+
+#### Contract Completion
+
+The aim of this process is to ensure that all outstanding technical and commercial requirements in the procurement contract (that was written and signed in the tendering phase) have been met.
+
+
+### Acquisition completion
+
+This is the formal completion of all the contracts of the acquisition. The acquisition manager (often this is the customer company's contract authority) has to verify the successful conclusion of all contracts and the achievement of the acquisition goal. The acquisition completion process consists of four activities:
+
+1. Check that all contracts have been completed
+2. Assess the achievement of the acquisition goal
+3. Decide whether the acquisition is complete
+4. Write an acquisition report
+
+The following paragraphs elaborate on the different activities of acquisition completion.
+
+
+#### Check that all contracts have been completed
+
+The acquisition manager has to check the completion of the different contracts by checking if each individual contract's completion phase has been achieved and the required reports are written. If necessary the acquisition manager has to trigger the contract completion process for contracts that need it.
+
+
+#### Assess the achievement of the acquisition goal
+
+Unfortunately, when all individual contracts’ goals are reached this does not automatically mean that the acquisition goal is achieved. In this activity of the acquisition completion the acquisition manager has to verify the customer company's business objectives have been met and there are no missing parts in the acquisition that have been overlooked.
+
+
+#### Decide whether the acquisition is complete
+
+Based on the assessment of the contract completions and the achievement of the acquisition goal the decision whether the acquisition is complete is made. This decision is generally made by the acquisition manager together with representatives of all the organizational authorities concerned with the acquisition. When one or more contracts are not completed or the acquisition goal is not reached this decision requires the involvement of the customer company's organizational authorities.
+
+
+#### Write an acquisition report
+
+The acquisition manager has to write an acquisition report. This report's purpose is to record all decisions made during the acquisition process, the level of acquisition completion, and lessons-to-be-learned for future acquisitions. Interesting data to be included in the acquisition report:
+
+* Real costs and duration versus budget and planning
+* Problems and their solution
+* Risks and an assessment of the used actions and strategies to mitigate them
+* Required expertise
+* Effectiveness of the delivery pans
+* Quality of the suppliers
+
+The whole idea behind the extensive acquisition report is that an enterprise can only learn from its faults and experiences when these are well documented available in relevant future situations.
+
+
+## Managing Risks and Planning Deliveries
+
+ISPL's form of risk management is purely based on heuristics. By describing and analyzing the situation, critical risks can be identified and mitigated by selecting actions and an appropriate strategy. ISPL provides heuristics that link risks and situational factors to mitigating actions and strategies. This chapter is a summary of [3] and also includes information from [4].
+
+
+### Model
+
+The process of managing risks and planning deliveries is illustrated in Figure 6. All the different steps in the process are described in detail in the paragraphs below.
+
+
+### Service Description
+
+The first step of the process is describing the service that is to be procured. It is important to note the differences between a project and an ongoing service. Both types of services are described differently. ISPL provides the user with two separate sets of guidelines
+
+
+#### Description of ongoing services
+
+There are two steps in describing an ongoing service. I will briefly elaborate on each of these steps in the following paragraphs.
+
+
+##### Identify type of service
+
+ISPL proposes two methods for identifying the type of service:
+
+* ISO Life Cycle Processes (ISO-LCP)
+* Public domain service packages
+
+These methods can be used in a successive way where the ISO-LCP standard is used to identify the different process types and public domain service packages are used to refine the ISO-LCP processes. An example of a publicly available description of service packages is the one that is present in ITIL. Note that in ITIL, service packages are referred to as processes. More info on the ISO-LCP standard can be found in the Wikipedia entry on ISO/IEC 12207.
+
+
+##### Describe service properties
+
+The service can be described in more detail by its service properties. All service properties can be divided into three groups:
+
+* Investment properties
+* Functional properties
+* Quality properties
+
+ISPL provides methods for describing all three groups of properties.
+
+
+#### Description of projects
+
+Projects are described by an initial and a final state, i.e. the current and the desired situation. This is done by specifying the operation items (the actual parts of the Information service to be procured), and specifying the descriptive items (documentation). A short outline of documenting the initial and final state is given in the paragraphs below. More information on describing operation and descriptive items is given in the chapter #Specifying Deliverables.
+
+
+##### Document the initial state
+
+For each component of the Information Service, contents and quality of the operation items have to be described. Secondary, an assessment has to be made on which already present descriptions of future operational items are relevant to use in the project.
+
+
+##### Document the final state
+
+All the operational items that will be in use at the final state have to be documented. When describing these operation items the focus should be on:
+
+* The difference between new operational items and ones that are adapted from initial operational items
+* Specification of manuals and support documentation
+* Conversion and migration of existing data into new operational items
+* Specification of interfaces with new and already present operation items
+
+Not only the operational items have to be described: Descriptions of the documentation of the Information Service that is to be procured are also necessary. The client has to describe the profiles of the documentation needed for maintenance on, and further development of the Information service.
+
+
+### Service Planning
+
+The service planning process consists of three sub-processes. These are:
+
+* Situation and risk analysis
+* Delivery strategy design
+* Decision point planning
+
+In practice, these three sub-processes are followed by a process of risk monitoring that can give input to the situation and risk analysis process.
+
+
+#### Complexity and uncertainty
+
+The terms complexity and uncertainty are used quite often in this chapter.
+
+**Complexity**
+In the context of ISPL, complexity can be regarded as the difficulty encountered in managing the available knowledge.
+
+**Uncertainty**
+In the context of ISPL, uncertainty can be regarded as the lack of available knowledge.
+
+
+#### Situation and risk analysis
+
+The analysis sub-process is divided into a situation analysis followed by a risk analysis.
+
+
+##### Situation analysis
+
+The situation of both the customer and supplier organizations has a lot of influence in the success of the Information Service acquisition process. The situation analysis is all about identifying situational factors and their values. A situational factor value says something about the relative contribution to the overall complexity or uncertainty of the service to be delivered. For both complexity and uncertainty it can have one of the following values: high, low or medium. The ISPL method provides a set of tables which aids the user in determining the situational factor values. An example of a part of such a table can be found in Table 1.
+
+The risk management strategy depends on the situation as is displayed in Figure 7.
+
+When all the situational factor values are determined it is possible to determine the overall complexity and uncertainty of the service. These two factors can be used by the manager for the Design of the service delivery strategy.
+
+
+##### Risk analysis
+
+In the #Situation analysis, complexity and uncertainty values have been attributed to each of the situational factors. In the Risk Analysis, these values are used to identify the possible risks and their probability. Examples of possible risks for the customer business are unpredictable/increased costs for the business, delays in system delivery and poor quality of service or system.
+Examples of possible risks affecting the quality of the service to be delivered are demotivate of service actors, unclear requirements and uncertain interfaces with other services or systems. ISPL provides tables that map situational factors to risks. An example of such a table can be found in Table 2.
+
+For each of the risks found, both the probability and impact, i.e. the consequence, are assessed. The product of these two values is called the risk exposure. The risk exposure value is used to identify the risks that are critical to service delivery. The critical risks influence the #Delivery strategy design and the #Decision point planning.
+
+
+#### Delivery strategy design
+
+This process uses the service description, the situation analysis and the risk analysis as inputs to define an optimal service delivery strategy. The resulting service delivery strategy consists of three elements:
+
+* A list of actions to mitigate risks
+* Service execution approach
+* Service control approach.
+
+##### Define actions
+
+ISPL provides heuristics on how to mitigate risks and change the individual situational factors that cause them. An excerpt of these heuristics can be found in Table 3.
+
+
+##### Service execution approach
+
+The service execution approach determines how the service is executed. For projects, the service execution approach is referred to as the development approach. It consists of a description approach, a construction approach and an installation approach. ISPL provides the user with heuristics on what type of description, construction and installation approach fits best to the situational factors and critical risks found in the #Situation analysis and #Risk analysis. For example, ISPL advises to use an evolutionary construction and installation approach when both overall complexity and uncertainty are high.
+
+
+##### Service control approach
+
+The selection of a service control approach is based on the situational factors and overall complexity and uncertainty found in the #Situation analysis. ISPL provides heuristics on which types of control are most suitable for various situational factors. In total there are six types of control: development, quality and configuration in a formal and frequent variant.
+
+
+##### Check consistency and analyse impact
+
+After defining a complete service strategy the consistency between the chosen strategy options has to be checked and possibly some choices have to be adjusted. The impact of the chosen strategy should also be analysed by checking that all critical risks have been addressed. It is also that some strategies cause new critical risks.
+
+
+#### Decision point planning
+
+The goal of decision point planning is to determine a sequence of decision points and give a clear description on each of the decision points, using the #Delivery strategy design as input.
+The sequence and contents of the decision points should reflect the chosen service delivery strategy. The decision point planning is made in the following order:
+
+1. Derive basic sequence of decision points.
+2. Adapt basic sequence to accommodate actions.
+3. Describe decision points.
+
+##### Derive basic sequence of decision points
+
+The basic sequence of decision points is based on the #Delivery strategy design. ISPL provides heuristics on what basic sequences should be used for different delivery strategy options.
+
+
+##### Adapt basic sequence to accommodate actions.
+
+The basic sequence found is adapted to the list of actions to mitigate risks of the #Delivery strategy design.
+
+
+##### Describe decision points
+
+ISPL gives information on what information elements should be in a decision point. Think of for instance purpose and the pre-conditions. For every decision has to be determined which deliverables are required. General rule is that the deliverables must contain the right amount of information to be able to make the decision but no more than that. Too much information is costly and blurs the focus of the decision makers. More information about this topic can be found in the chapter on #Specifying Deliverables.
+
+
+#### Risk monitoring
+
+Risk monitoring takes place after the #Decision point planning phase. Its results can serve as input for the #Situation and risk analysis phase of service planning if necessary. It involves the tracking, controlling and monitoring of risks and risk mitigating actions.
+
+
+## Specifying Deliverables
+
+ISPL focuses on the relationship between customer and supplier. It is very important that the communication between both parties is clear and unambiguous. A deliverable is a product that is exchanged between the supplier and customer organisations (both ways). Deliverables are exchanged in all phases of the acquisition process: e.g. the Request-For-Proposal during the tendering phase, the intermediate versions during the execution of the delivery plan, and the declaration of contract completion at the end of each contract. ISPL provides guidance for the specification of all deliverables needed in the acquisition process. This chapter is a summary of [5].
+
+
+### Types of deliverables
+
+ISPL divides deliverables in various types, each with a defined set of properties. These properties characterise the knowledge that is captured by each type of deliverable. Figure 8 illustrates the different types of deliverables.
+
+
+### Contract domain deliverables
+
+Contract domain deliverables are used to define and control all contracts in a procurement. There are two types of contract domain deliverables: the tendering deliverable and the decision point deliverable. In the following paragraphs each of these types is discussed in detail.
+
+
+#### Tendering deliverable
+
+Tendering deliverables are used in the tendering process to place requirements on all of the services within a procurement. There are four types of tendering deliverables:
+
+* Request for proposal
+* Response
+* Supplier evaluation report
+* Contract
+
+ISPL provides the customer and supplier organisations with templates for each of the different types. It is important to note that all of the tendering deliverables include the delivery plan in which all delivery and decision points are fixed.
+
+
+#### Decision point deliverable
+
+Decision point deliverables support the decision making during the execution of the delivery plan in the #Contract Monitoring phase. There are two types of decision point deliverables:
+
+* Decision point proposal
+* Decision point report
+
+Each of these types has its own, more specified subtype. The contract status report is a subtype of decision point proposal that describes the current status of a contract. The contract completion report, a subtype of the decision point proposal, records whether the contract has successfully achieved its business goals. ISPL provides the tables of content of each of the decision point deliverable types and subtypes.
+
+
+### Service domain deliverables
+
+Service domain deliverables describe the service domain (see paragraph #Target domain and service domain for more information). They are delivered by both customer and supplier organisations to plan and control services. There are two types of service domain deliverables: service plans and service reports.
+
+
+#### Service plan
+
+A service plan provides information on how to meet identifies goals in terms of service levels, deliverables, schedules, resources and costs. It can for instance give guidance on how to reach targets. ISPL describes the different properties that can be included in the service plan.
+
+
+#### Service report
+
+In contrast to the service plan, the service reports controls the service status by reviewing service levels and results. It records the service's productivity and proposes corrective actions. ISPL gives guidance on which information should be included for each property that is described in the service report.
+
+
+### Target domain deliverables
+
+The target domain is described using target domain deliverables. There are two different types of target domain deliverables: operational items and descriptive items. Both will be discussed in the following paragraphs.
+
+
+#### Operational item
+
+An operation item is a delivered system or system component that is or will be installed as part of the acquisition. They contribute to the functioning of the target domain. Some examples of different operational item types are listed below.
+
+* facilities
+* hardware devices
+* application software
+* physical data
+* user and operator manuals
+* trained actors
+
+In practice, descriptions of operational items often already present. It is important to make the distinction between functional and quality properties.
+
+
+#### Descriptive item
+
+A descriptive item captures knowledge about the target domain. They can be used to describe business organisations, business processes, information services et cetera. ISPL gives guidance on describing descriptive items by providing a descriptive item profile in which all properties of the descriptive item can easily be ordered.
+

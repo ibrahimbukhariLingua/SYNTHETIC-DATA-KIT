@@ -1,0 +1,43 @@
+Dirty price
+
+
+# Dirty price
+
+
+
+The price of a bond is the present value of its future cash-flows. To avoid the impact of the next coupon payment on the price of a bond, this cash flow is excluded from the price of the bond and is called the accrued interest. In finance, the **dirty price** is the price of a bond including any interest that has accrued since issue of the most recent coupon payment. This is to be compared with the clean price, which is the price of a bond excluding the accrued interest.
+
+When bond prices are quoted on a Bloomberg Terminal, Reuters or FactSet they are quoted using the clean price.
+
+
+## Bond pricing
+
+Bonds, as well as a variety of other fixed income securities, provide for coupon payments to be made to bond holders on a fixed schedule. The dirty price of a bond will decrease on the days coupons are paid, resulting in a saw-tooth pattern for the bond value. This is because there will be one fewer future cash flow (i.e., the coupon payment just received) at that point.
+
+To separate out the effect of the coupon payments, the accrued interest between coupon dates is subtracted from the value determined by the dirty price to arrive at the clean price. The accrued interest is based on the day count convention, coupon rate, and number of days from the preceding coupon payment date.
+
+The clean price more closely reflects changes in value due to issuer risk and changes in the structure of interest rates. Its graph is smoother than that of the dirty price. Use of the clean price also serves to differentiate interest income (based on the coupon rate) from trading profit and loss.
+
+It is market practice in US to quote bonds on a clean-price basis. When a bond settles the accrued interest is added to the value based on the clean price to reflect the full market value.
+
+
+## Example
+
+A corporate bond has a coupon rate of 7.2% and pays 4 times a year, on 15 January, April, July, and October. It uses the 30/360 US day count convention.
+
+A trade for 1,000 par value of the bond settles on January 25. The prior coupon date was January 15. The accrued interest reflects ten days' interest, or $2.00 = (7.2% of $1,000 \* (10 days/360 days)). Thus $2.00 is being paid to the seller as compensation for his or her share of the upcoming interest payment on April 15.
+
+The bonds are purchased from the market at $985.50. Given that $2.00 pays the accrued interest, the remainder ($983.50) represents the underlying value of the bonds. The following table illustrates the values of these terms.
+
+The market convention for corporate bond prices assigns a quoted (clean price) of $983.50. This is sometimes referred to as the price per 100 par value. The standard broker valuation formula (incorporated in the Price function in Excel or any financial calculator, such as the HP10bII) confirms this; the main term calculates the actual (dirty price), which is the total cash exchanged, less a second term which represents the amount of accrued interest. The result, the actual price less accrued interest is referred to as the quoted price. The actual price is a present value amount determined by applying the market rate of interest to the bond’s remaining cash flows. Accrued interest is simply a fractional (last interest date to the settlement date of the entire interest period) portion of an interest payment. Thus, the quoted price cannot be determined independently. Many people are confused by the fact that bonds are sold for “price plus accrued interest”. However,“price” here refers to the quoted (clean) price. Thus it is more precise to say that bonds sell for “quoted price plus accrued interest”, not because the quoted price is calculated and then accrued interest is added, but because the quoted price is determined by deducting accrued interest from the calculated actual (dirty) price.
+
+**Bond Pricing Example**
+| Term | Value |
+| --- | --- |
+| Par value | 1,000.00 |
+| Total amount at settlement | $985.50 |
+| Dirty price | $985.50 |
+| Accrued interest | $2.00 |
+| Market value less accrued interest | $983.50 |
+| Clean price | $983.50 |
+

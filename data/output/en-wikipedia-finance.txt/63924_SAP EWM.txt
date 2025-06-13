@@ -1,0 +1,57 @@
+SAP EWM
+
+
+# SAP EWM
+
+
+
+**SAP EWM** is part of SAP AG's Supply Chain Management Suite of solutions. The Extended Warehouse Management product is an integrated software platform for inflexible, automated support for processing goods movements and managing inventory in the warehouse.
+
+
+## Overview
+
+"SAP EWM firms have the ability to control warehouse processes and manage movements in the warehouse, mitigate problems and issues with enhanced warehouse efficiency, and transform operations into an adaptive fulfillment supply chain that can share its resources." SAP EWM is similar to SAP WM functionality, but with more flexibility in building objects like warehouse structure, picking, putting away, HU (handling unit), RF, and more. Also, activity areas, work centers, and resources are elements incorporated into SAP EWM that are new additions since SAP WM. SAP WM was the company's first foray into a specific Warehouse Management Solution. By 2025, SAP WM will no longer be supported and will be completely replaced by SAP EWM. Like SAP WM, SAP EWM is a part of SAP Supply Chain Management (SAP SCM) and supports all the processes within the logistics chain. The integrated functions and business processes within this warehouse management solution provide a high level of process and inventory transparency, precise planning of warehouse steps, as well as efficient distribution and storage. Achieving a viable return requires leveraging technology to improve and streamline the operation, not just automate existing, inefficient, and archaic processes. Most EWM implementations result in qualitative and quantitative benefits such as fewer product handling steps, increased productivity, reduced errors, tighter inventory control, and improved inventory accuracy and order quality.
+
+
+## History
+
+The following is an outline of SAP EWM development progression.
+
+1993 - First functions for the warehouse logistics were already implemented in the SAP R/2 environment. These functions were partially integrated into SAP R/3. The term "Warehouse Management" (WM) was used to sum up the warehouse processes as a component of the Materials Management (MM) in release 2.0.
+
+1995 - With the release of 3.0, additional integrated functions were implemented in the WM. With the organizational unit Production Supply Area (PSA) and control loops, processes for the product supply are created and the integration to the Production Planning (PP) is established.
+
+1997 - SAP recognizes that a warehouse also features openings to the outside world. With the gate and provision zone in release 4.0, new organizational units are made available that aim to integrate the transport.
+
+1998 - With release 4.5, the Logistics Execution (LE) is reborn as a separate module. From now on, the existing MM component WM and the existing SD components Shipment (SHP) and Transportation (TRA) form a common logistics solution consisting of Warehouse Management (LE-WM), Shipment (LE-SHP) and Transport (LE-TRA).
+
+2000 - While the 4.5 release was marked by consolidation of logistic functions, it obtained important new features in Release 4.6 like block entry into the LES, submodule with radio frequency (RF), and SAP transactions for mobile data acquisition.
+
+2002 - With the release 4.7, the extension set 1.10 is implemented in the LES. Task and Resource Management (TRM) is a very controversial function. It was primarily designed to enable the mapping of multi-stage movements. However, it connects itself below the transfer order logic using the system document "Task" and unnecessarily creates another system level for the processing of warehouse movements.
+
+2004 - The extension set 2.00 of the release 4.7 contains additional submodules that are connected to the core components of the LES. The submodule "Direct Store Delivery Backend" supports direct deliveries to the subsidiary branch offices carried out by the manufacturer and is therefore a supplement to the transport component (LE-TRA).
+
+2005 - The release mySAP ERP 2004 provides some additions in the Direct Store Delivery Backend area.
+
+2006 - In 2006, the last noteworthy development in the LES is made available in release ECC 6.0. SAP EWM 5.0 is already in the Ramp-Up process. With the introduction of a new system philosophy, the first release 5.0 is provided with already known and new processes and functions using a completely new system basis and document structure. The organizational units were taken over from SAP LES and supplemented by new organizational units.
+
+2008 - The release SAP EWM 5.1 is another important milestone in the history of SAP warehouse logistics. With the new Material Flow System (MFS) component, the EWM now features a fully integrated material flow calculator and thus significantly stands out in comparison to the old LES.
+
+2009 - In release 7.0, SAP closes the process gap in the production supply existing until then. The Cross Docking process area is supplemented by the opportunistic Cross Docking as well as the Merchandise Distribution Cross Docking.
+
+2010 - The release 7.01 includes expansions regarding the Material Flow System (MFS). On the performance side, the response times of the telegram exchange have been improved. The functions now also cover the requirements related to controlling the container conveyor equipment.
+
+2011 - The release 7.02 reflects the replacement of the old SAP LES. Using migration tools for taking over the master data and processes from the SAP LES as well the Rapid Deployment Solution (RDS), a fast deployment of and conversion to SAP EWM shall be made possible.
+
+2013 - With the release 9.0, SAP combines its three systems Extended Warehouse Management (EWM), Transportation Management (TM) and Event Management (EM), that are most important for the operative logistics, on the common system platform SAP Supply Chain Execution (SCE), thereby offering a lot of potential for optimizing the entire supply chain. Apart from the integration with TM and EM, EWM 9.0 offers a number of new functions. As far as the problem of changing quantities in delivered packagings is concerned, the standard version of EWM 9.0 offers a solution by using stock-specific units of quantity that will significantly facilitate the goods issue processes with different packaging units.
+
+2014 - The company released 9.1, in May 2014.
+
+2015 - The company released 9.2, in April 2015.
+
+2015 - The company released 9.3, in November 2015.
+
+2016 - The company released 9.4, in May 2016.
+
+2017 - The company released 9.5, in November 2017. SAP includes foremost additional functions in labor management, improvements in retail and e-commerce and the integration of SAP Global Batch Traceability (GBT).
+

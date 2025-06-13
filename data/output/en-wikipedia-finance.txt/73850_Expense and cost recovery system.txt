@@ -1,0 +1,233 @@
+Expense and cost recovery system
+
+
+# Expense and cost recovery system
+
+
+
+An **expense and cost recovery system** (**ECRS**) is a specialized subset of "extract, transform, load" (ETL) functioning as a powerful and flexible set of applications, including programs, scripts and databases designed to improve the cash flow of businesses and organizations by automating the movement of data between cost recovery systems, electronic billing from vendors, and accounting systems.
+
+
+## Expense and cost recovery system
+
+ECRS is an area of ETL most applicable to consulting businesses, accounting agencies, and law firms, companies that bill back clients for time and costs. As such, the terms "disbursement", "expense", "cost", and "charge" may be synonymous and can be industry-specific. Sometimes the terms refer to the state of a transaction as it is extracted from the vendor data, transformed in the ECRS and then loaded into the accounting system. The term "transaction", in an ECRS, is generally referring to a single record of a one-time business exchange incurring debt on the part of one company with a vendor. It is assumed that the company will pass on those individualized debts as line-item or summarized charges to its own clients or customers.
+
+An ECRS reduces the amount of manual and administrative effort required to exchange data between those vendors and the clients' bills. An ECRS also minimizes delays between the capture of cost transactions and electronic billing for various expenses as well as processing automatically into accounting databases.
+
+Once costs are appended to accounting or billing tables, the detailed transactions from an ECRS may be "rolled up" to higher-level totals for movement to invoices, statements and bills. However, the detailed transactions can remain in interim ECRS tables or files for subsequent reporting. Retaining the detail transactions minimizes the number of transactions that need to be loaded into the accounting system, but still allows access to the detail for auditing purposes, or for justifying certain types of expenses to clients, customers or bill recipients.
+
+
+## Retaining details
+
+An ECRS usually includes a database, set of tables or flat files to retain detailed transactions received from cost recovery systems that control devices such as photocopiers, telephone switches, fax systems, and electronic billing for services such as courier services, postal services, credit cards, legal research, etc.
+
+
+## Correcting exceptions
+
+An ECRS normally receives and retains all transactions from the source system or electronic bills. This includes valid transactions where all data is correct and invalid transactions that have invalid or missing elements. (Note: an ECRS can accept transactions into its database that have all fields valid or a minimum number of valid data elements.) Interactive portions of some ECRS packages allow review, updating and correction of individual costs.
+
+Transactions with invalid data in some columns are held for subsequent correction, transformed based on "business rules" or rejected, dictated by industry—and individual company—policy. Only transactions considered valid may be moved along to be loaded into a business' accounting application. The ECRS might include an on-line function to easily review and correct detailed cost transactions prior to passing them on. Reviewing and correcting transactions already in the system is much easier and faster than the traditional method used by non-ECRS practices such as printing out rejections and then manually entering them directly in the billing application.
+
+Non-ECRS processes typically import valid transactions only and generate an exception list of the invalid transactions. The exception list is then printed and distributed to users who correct the invalid data elements by annotating the report. When the annotated reports are completed and returned to the billing or accounting department, the entire transaction must be manually input into the billing system. Using an ECRS eliminates this costly and time-consuming procedure.
+
+Transactions received into an ECRS are identified with information about the source used to create the cost (i.e. telephone, photocopier, delivery service, outside reproduction, etc.) and the employee who created the transaction. An on-line correction feature can allow users to display the transactions for which they are responsible, and to easily correct invalid transactions (e.g. invalid dates, time of day, etc.) so they can be processed into billing. Security features are sometimes available to control access by the user to only those transactions they are directly or indirectly responsible for correcting (e.g. a secretary responsible for a department, supervisor managing sales reps, etc.).
+
+
+## Automating exchanges
+
+In a typical installation that incorporates cost recovery systems and electronic billing, there is a dedicated server to support the billing system (Host); a Local Area Network (LAN) to support user applications such as word processing, graphics, document management, spreadsheets; and cost recovery devices used to input data such as employee ID, client names, account numbers, etc. The accounting server and the cost recovery systems are usually connected to the LAN, and data must be transferred on a regular basis between each of the accounting server and the cost recovery systems.
+
+An ECRS can provide the ability to schedule tasks on both the accounting system server and the LAN. Individual tasks may be run at timed intervals separately, or grouped into task lists and run together. Scheduled tasks may include processes on the accounting server to extract validation information, transferring validation information to the LAN, updating a vendor's validation tables on the cost recovery system (such as employee IDs, accounting codes and cost-types), transferring cost transactions from the LAN to the accounting server and processing cost transactions into the billing system. Transaction processes can then be automated to minimize administrative overhead and reduce delays updating transactions into the billing system.
+
+
+## Identifying employees
+
+An advanced ECRS includes a number of features that permit a business to control how users are set up in the system.
+
+**Multiple user identifiers** – Employees can be recorded in an ECRS so that they may have an unlimited number of identifiers that are used with third-party systems to associate them with transactions and/or types of transactions. Identifiers may include telephone extensions, photocopy IDs, cell phone numbers, calling card codes, service account codes, login IDs, and credit card numbers.
+
+**User default accounts** – Personal accounts should be established for each employee. These accounts will receive invalid transactions (i.e. incorrect or missing data elements) that are not corrected and loaded within a company-defined grace period. In addition, employee IDs are sometimes mapped to a general ledger account number.
+
+**User activation status** – Better, or higher-level, ECRS applications will retain employee records forever and honor hire and fire dates. This permits a business to enable or disable users based on these dates, which is particular useful for temporary and recurring employees (summer replacements, temporary help, etc.).
+
+**User security access** – Access rights (viewing or editing) may be established by user and cost type. This permits a company to control who may have access to users' transactions. For example, a paralegal may be able to correct only his or her transactions, while a secretary may be allowed to correct transactions for more than one attorney. A sales supervisor might be able to see all of the phone calls his/her reps make, but only be able to write off reproduction (copy, print, scan) costs for those same subordinates.
+
+
+## Structuring rates
+
+Employers may set variable rates or costs for their employees. The criteria for these rates are often count-based (pages, copies, duration, etc.) and they are applied before charges are loaded into the billing system. Rates may be established by cost type, or may allow multiple rates based on count volumes within a single transaction. For example, a business may charge its clients $.20 for each copied page for the first 10 copies, and then $.15 per copy for each additional copy.
+
+
+## Processing phone numbers
+
+**Phone Number Criteria** – A company may set various levels of acceptance and rejection of telephone numbers found in long distance, local and fax calls. This feature, along with the ability to associate descriptions for these numbers using self-built or purchased telephone geographical tables, provides the ability to identify calls by the full number, area code and prefix, or area code alone, making it easier to identify the location called. The better ECRS will allow for custom input of business names at the exchange (XXX-XXX) and number levels (XXX-XXX-XXXX).
+
+**Number Default Accounts** – If a phone number or range of phone numbers can often be related to a specific account among a firm's clients, some ECRS programs can automatically identify that account with the call to be then charged during the processing of call transactions into the billing system.
+
+
+## Validating content
+
+**Account Validation Levels** – The firm may establish different criteria for exporting validation data, importing cost transactions, and modifying or correcting client account numbers. Allowing different criteria at different points in the processing and exchange of data provides a greater degree of flexibility. For example, new or pending accounts may be extracted from the billing system and sent to external cost recovery system(s) so that costs incurred for those accounts may be pre-identified. However, cost transactions for the new or pending accounts may not be able to get loaded into accounts receivable until they are formally added to the accounting database (i.e. after a contract is signed).
+
+**Account Posting Criteria** – A firm may set specific clients, or groups of accounts, to be processed into the billing system in separate batches. Accounts might be selected by client, by location, by sales rep, or by transaction type (i.e. telephone, fax, etc.).
+
+
+## Acquiring files
+
+Moving data between the application server and the Local Area Network (LAN) is simplified with an ECRS through support for a broad variety of file transfer methods, including serial communications, modem, diskette, or tape for devices not directly connected to the LAN, or for processing electronic bills from vendors.
+
+For devices directly connected to the LAN, or available over the Internet, other transfer methods are available, including industry standard File Transfer Protocol (FTP) and Network File System (NFS), which is software that allows your LAN to recognize disk drives on the application server as if they were mounted on the LAN server. This permits the direct copying of files from one system to another.
+
+
+## Supplying validations
+
+**Validation Table Creation** - Rules may be established for creating validation tables that match each of the requirements of your respective third-party vendors (i.e. photocopies, fax, shipping charges, etc.). These rules control the data elements extracted, and the criteria for extraction, including all clients, customer locations, employee IDs, phone extensions, corporate offices, etc. The validation tables may be produced at any time on demand, or they be created using scheduled tasks or task lists.
+
+**Transaction Validation Checking** - Various options may be established to monitor the movement of data from cost recovery systems and electronic bills. Transactions from unidentified users, accounts or pieces of equipment (i.e. those not defined in the ECRS) will normally be held for re-testing, rather than automatically stored in the ECRS tables. Notification of these transactions may be sent via E-mail or screen display to users that have the responsibility to manage these transactions. The reasoning behind such procedures is that vendors – even the largest national vendors – may include transactions not truly belonging to a certain company or may send an entire file or electronic bill to the wrong business. This sort of pre-validation will prevent purging of ECRS tables and, possibly, clean-up in the A/R or billing system.
+
+Transactions with missing or invalid company account codes are typically written into an ECRS database while notifying appropriate users of their need to be corrected. These transactions are not loaded into accounting until they are corrected or altered. Finally, invalid formats and specific data may be excluded from loads into the billing system, and data received in unacceptable formats may be pre-processed or filtered to create files acceptable for passing through the ECRS.
+
+
+## Reporting results
+
+Depending on the options selected for processing transactions, an ECRS can be used as a powerful application to centralize the recording and reporting of all costs. It eliminates the need to access different systems and applications in order to obtain cost reporting information by user, office, client or account. Since the detailed cost transactions are stored and retained in the ECRS, reporting on detail and summary level would always be available. Reports can be generated by user, by account, by client or even by type of cost transaction. Options can also include the ability to select un-loaded, loaded both statuses of transactions, as well as to select by one or more transaction types, such as photocopy, fax, postage, etc. Detailed lists of this nature are particularly useful when a business is required to submit cost justifications to clients or customers.
+
+
+## Handling notifications
+
+Companies have a need for notifications to occur based on certain levels of incoming transactions using ETL rules for cost recovery. The primary purpose is for notifying employees when certain minimum or maximum ceilings are approached, reached or passed.
+
+The following Conditions need to be set in the ECRS to establish Notification Levels:
+
+* Minimum Quantity expected from a specific Source for a specific time Period
+* Maximum Quantity expected from a specific Source for a specific time Period
+* Minimum Value expected from a specific Source for a specific time Period
+* Maximum Value expected from a specific Source for a specific time Period
+
+The **Quantity** is the actual number of transactions or the physical consideration.
+The **Value** is dollar amount or the financial consideration. For vendors which provide Quantities (or counts), such as photocopies or fax pages, the flat rate should be calculated first and then applied to the Value.
+The **Source** is the geographical consideration. This can be the entire vendor (by default), an office or a device.
+The **Period** is the chronological consideration. This can be monthly (by default), weekly or daily.
+There should also be two Levels for each Condition:
+
+... so that actions can be set such as logging for Warnings and e-mail for Exceptions.
+And, in addition to setting Levels for Conditions, an Average needs to be allowed for where the more data that is run through the system, the more accurate an Average. Once Averages are established, then in addition to Conditions—or perhaps as an alternative to Conditions—a percentage or Variance should be set as an allowable or Notifiable range.
+
+Below is an example chart, grid or table has been set up to show what cost recovery administrators would need to maintain for pertinent Notifications.
+
+| Vendor | Min Wrn Qty | Min Wrn Val | Min Err Qty | Min Err Val | Max Wrn Qty | Max Wrn Val | Max Err Qty | Max Err Val | Avg Qty | Avg Val | Var Wrn | Var Err | Freq | Src |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| **equitrac** | 100 | 200 | 0 | 0 | 1000 | 4000 | 2000 | 8000 | 750 | 1500 | 10 | 20 | D | D |
+| **copitrak** | 1000 | 2000 | 0 | 0 | 4000 | 8000 | 8000 | 9999 | 2000 | 3000 | 10 | 10 | D | D |
+| **fedex** | 10 | 150 | 0 | 0 | 50 | 1000 | 75 | 2000 | 35 | 500 | 5 | 10 | W | O |
+| **ups** | 200 | 50 | 0 | 0 | 400 | 800 | 500 | 1000 | 300 | 300 | 10 | 20 | W | O |
+| **at&t** | 5 | 30 | 0 | 0 | 50 | 500 | 60 | 750 | 20 | 300 | 50 | 25 | M | V |
+| **verizon** | 10 | 70 | 1 | 7 | 200 | 1400 | 300 | 2100 | 50 | 3500 | 30 | 20 | M | V |
+
+
+AT&T, "Copitrak"/Control Systems, Equitrac, "Fedex"/Federal Express, "UPS"/United Parcel Service, and Verizon all own their registered and/or respective trademarks.
+
+
+**Vendor – Vendor device-type**
+
+**Example**:
+
+Equitrac Photocopy –
+
+Generate a Warning message if…
+
+Each vendor will require at least minimum and maximum levels at the Vendor ("V") source. Any vendor can further be broken down to Office ("O") and Device ("D") assuming that the vendor has multiple "devices" within an office.
+
+Variance would be an option and, possibly, a non-zero in the "Var" columns would override the Min/Max settings. Also, a zero ("0") in any Max column would automatically shut that check off.
+
+The Avg would be determined, and adjusted, by more data flowing through the system over longer periods of time to a probably maximum of one year.
+
+If a Freq of "Daily" is used, a grid or table should be built for Mon-Fri and Sat-Sun/Holiday.
+
+
+## Summary
+
+An ECRS allows a company to use one comprehensive solution for managing cost recovery. Combining a fully functional Expense and Cost Recovery System dramatically reduces the administrative overhead and improves the efficiency of recovering firm costs and expenses. With an ECRS, a business is provided with a single focus point of support for small and large firms with a diverse set of cost tracking devices and expenses.
+
+
+## Interfaces
+
+There are many templates and record formats used by various vendors and vendor systems currently available, and more are constantly being developed. Even though there is a set of "standards" for electronic data interchange (EDI), the flexibility within those standards allows for customization that nearly every industry and every vendor modifies. It is much like HyperText Markup Language (HTML) for designing Web pages: the framework is established, but each browser/vendor has its own extensions, rules and implementations.
+
+In the legal industry, some standardization has been attempted with Legal Electronic Data Exchange Standard (LEDES). In other industries, Extensible Markup Language (XML) is used as more and more ECRS and ETL applications use Web interfaces.
+
+The following is a list of popular vendors and types of costs with transaction information as provided by the vendor or by intermediary companies:
+
+| AT&T Telephone | ASTRA Telephone |
+| --- | --- |
+| Balmar Reproductions | Big Apple Car Service |
+| Cable & Wireless Telephone | Carpe Diem |
+| Cellular Telephone | Certified Copying |
+| Control Systems CopiTrak, FaxTrak & PhoneTrak | Danyl Photocopy, Telephone, & Fax |
+| Delivery Service | Dial Car Service |
+| Docs Open | DTE |
+| Eastern Connection Delivery | Educational Services |
+| Equitrac Photocopy, Telephone, Fax, Telecopy, Postage & PrintLog | Expense Report Systems |
+| Falcon Courier | Fax Server |
+| Federal Express EDI | Filing Fees |
+| File Maker Fax | General Ledger |
+| Government Filing Fees | ICS Telephone |
+| iManage | Infortext Photocopy, Telephone, Fax & Postage |
+| Legal Fax | Lexis Research |
+| MCI Telephone | Metro Legal Services |
+| Microsoft Word | Navigant Travel |
+| On-Line Lookup | On Time Delivery |
+| PC Docs | Personal Fax |
+| Pitney Bowes | Pollcat Telephone |
+| Postage | Records Management System |
+| RedTop Car Service | Remote Time Entry |
+| RightFax | Secretarial Overtime |
+| Soft Solutions | Subsistence Expense |
+| Taxi Transportation | Trac Photocopy, Telephone, Fax |
+| Transportation Expense | Travel Expense |
+| United Parcel Service | Verizon |
+| Washington Express | Westlaw |
+
+
+ASP, AT&T, ASTRA, Balmar, Big Apple, Cable & Wireless, Carpe Diem, Control Systems, Danyl, Dial Car, Docs Open, DTE, Eastern Connection, Equitrac, Expense Report Systems, Falcon Courier, Federal Express, File Maker, iManage, Infortext, Legal Fax, Lexis, MCI, Metro Legal Services, Microsoft, On-Line Lookup, On Time Delivery, PC Docs, Pitney Bowes, Pollcat, Postage, Records Management System, RedTop, Remote Time Entry, RightFax, Soft Solutions, Trac Systems, United Parcel Service, Verizon, Washington Express, and Westlaw all own their registered and/or respective trademarks.
+
+
+
+## Billing systems
+
+These are vendors with time and billing systems packages which have ECRS interfaces or facilities to send/receive ECRS and EDI:
+
+* Elite – Thomson Reuters (http://www.elite.com)
+* CMS Open – Aderant (formerly Solution 6) (http://www.aderant.com)
+* Juris – Lexis-Nexis (http://www.lexisnexis.com/law-firms/practice-management/specialized-law/juris.aspx)
+* ProLaw – Thomson Reuters (http://www.elite.com/ProLaw)
+* Javelan – Aderant (formerly Barrister Information Systems, BISPoint, Keystone, and Solution 6) (http://www.aderant.com)
+
+
+Aderant, Barrister, CMS & CMS Open, Elite, Juris, Keystone, Lexis-Nexis, ProLaw, Solution 6, and Thomson Reuters, all own their registered and/or respective trademarks.
+
+
+
+## Products
+
+These are vendors with ECRS applications, ECRS products and third-party ECRS consultants:
+
+* Argos
+* BillBack
+* Control Systems
+* CostWare
+* Equitrac
+* ERS
+* Harvester
+* MiniSoft
+* Norman Wise & Co
+* nQueue
+* UDI
+* Wehrheim
+* WSI
+
+
+Argos, BillBack, Control Systems, CostWare, Equitrac, ERS, Harvester, MiniSoft, Norman Wise & Co, nQueue, UDI,
+Wehrheim, and WSI all own their registered and/or respective trademarks.
+
+

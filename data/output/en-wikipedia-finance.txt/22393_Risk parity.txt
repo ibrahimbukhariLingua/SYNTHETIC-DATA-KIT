@@ -1,0 +1,95 @@
+Risk parity
+
+
+# Risk parity
+
+
+
+**Risk parity** (or **risk premia parity**) is an approach to investment management which focuses on allocation of risk, usually defined as volatility, rather than allocation of capital. The risk parity approach asserts that when asset allocations are adjusted (leveraged or deleveraged) to the same risk level, the risk parity portfolio can achieve a higher Sharpe ratio and can be more resistant to market downturns than the traditional portfolio. Risk parity is vulnerable to significant shifts in correlation regimes, such as observed in Q1 2020, which led to the significant underperformance of risk-parity funds in the Covid-19 sell-off.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+Roughly speaking, the approach of building a risk parity portfolio is similar to creating a minimum-variance portfolio subject to the constraint that each asset (or asset class, such as bonds, stocks, real estate, etc.) contributes equally to the portfolio overall volatility.
+
+Some of its theoretical components were developed in the 1950s and 1960s but the first risk parity fund, called the *All Weather* fund, was pioneered in 1996. In recent years many investment companies have begun offering risk parity funds to their clients. The term, risk parity, came into use in 2005, coined by Edward Qian, of PanAgora Asset Management, and was then adopted by the asset management industry. Risk parity can be seen as either a passive or active management strategy.
+
+Interest in the risk parity approach has increased since the 2007–2008 financial crisis as the risk parity approach fared better than traditionally constructed portfolios, as well as many hedge funds. Some portfolio managers have expressed skepticism about the practical application of the concept and its effectiveness in all types of market conditions but others point to its performance during the 2007–2008 financial crisis as an indication of its potential success.
+
+
+## Description
+
+Risk parity is a conceptual approach to investing which attempts to provide a lower risk and lower fee alternative to the traditional portfolio allocation of 60% in shares and 40% bonds which carries 90% of its risk in the stock portion of the portfolio (see illustration). The risk parity approach attempts to equalize risk by allocating funds to a wider range of categories such as stocks, government bonds, credit-related securities and inflation hedges (including real assets, commodities, real estate and inflation-protected bonds), while maximizing gains through financial leveraging. According to Bob Prince, CIO at Bridgewater Associates, the defining parameters of a traditional risk parity portfolio are uncorrelated assets, low equity risk, and passive management.
+
+Some scholars contend that a risk parity portfolio requires strong management and continuous oversight to reduce the potential for negative consequences as a result of leverage and allocation building in the form of buying and selling of assets to keep dollar holdings at predetermined and equalized risk levels. For example, if the price of a security goes up or down and risk levels remain the same, the risk parity portfolio will be adjusted to keep its dollar exposure constant. On the other hand, some consider risk parity to be a passive approach, because it does not require the portfolio manager to buy or sell securities on the basis of judgments about future market behavior.
+
+The principles of risk parity may be applied differently by different financial managers, as they have different methods for categorizing assets into classes, different definitions of risk, different ways of allocating risk within asset classes, different methods for forecasting future risk and different ways of implementing exposure to risk. However, many risk parity funds evolve away from their original intentions, including passive management. The extent to which a risk parity portfolio is managed, is often the distinguishing characteristic between the various kinds of risk parity funds available today.
+
+
+## Equally-weighted risk contributions portfolios
+
+The best known version of risk parity is the equally-weighted risk contributions portfolio method.
+
+Equally-weighted risk contributions is not about "having the same volatility", it is about having each asset contributing in the same way to the portfolio overall volatility. For this we will have to define the contribution of each asset to the portfolio risk.
+
+Consider a portfolio of {\displaystyle N} assets: {\displaystyle x\_{1}}, ..., {\displaystyle x\_{N}} where the weight of the asset {\displaystyle x\_{i}} is {\displaystyle w\_{i}}. The {\displaystyle w\_{i}} form the allocation vector {\displaystyle w}. Let us further denote the covariance matrix of the assets {\displaystyle X} = {\displaystyle (x\_{1}}, ..., {\displaystyle x\_{N})} by {\displaystyle \Sigma }. The volatility of the portfolio is defined as the std of the random variable {\displaystyle w^{t}}{\displaystyle X} which is:
+
+Since {\displaystyle \sigma (w)} is homogeneous of degree 1 in {\displaystyle w}, it follows from Euler's theorem for homogeneous functions that:
+
+so that {\displaystyle \sigma \_{i}(w)} can be interpreted as the contribution of asset {\displaystyle i} in the portfolio to the overall risk of the portfolio.
+
+Equal risk contribution then means {\displaystyle \sigma \_{i}(w)=\sigma \_{j}(w)} for all {\displaystyle i,j} or equivalently
+
+This problem has a unique solution which can be determined
+with provably convergent convex optimization methods
+.
+Alternatively, the solution can be determined numerically
+by either solving the fixed point problem
+
+or by solving the minimization problem
+
+both with some constraint that eliminates the invariance of the problem with the scaling of {\displaystyle w}.
+
+Usually either the overall portfolio volatility is set to {\displaystyle \sigma }:
+
+or the gross investment of the portfolio is set to {\displaystyle G}
+
+The above minimization problem can be efficiently solved by the cyclical coordinate descent method, open source implementations of which are available in JavaScript, Python and R.
+
+For ease of use, to also be noted that a REST API with capabilities to solve equal risk contributions problems, as well as constrained equal risk contributions problems, is available online.
+
+
+## History
+
+The seeds for the risk parity approach were sown when economist and Nobel Prize winner, Harry Markowitz introduced the concept of the efficient frontier into modern portfolio theory in 1952. Then in 1958, Nobel laureate James Tobin concluded that the efficient frontier model could be improved by adding risk-free investments and he advocated leveraging a diversified portfolio to improve its risk/return ratio. The theoretical analysis of combining leverage and minimizing risk amongst multiple assets in a portfolio was also examined by Jack Treynor in 1961, William F. Sharpe in 1964, John Lintner in 1965 and Jan Mossin in 1966. However, the concept was not put into practice due to the difficulties of implementing leverage in the portfolio of a large institution.
+
+According to Joe Flaherty, senior vice president at MFS Investment Management, "the idea of risk parity goes back to the 1990s". In 1996, Bridgewater Associates launched a risk parity fund called the *All Weather* asset allocation strategy. Although Bridgewater Associates was the first to bring a risk parity product to market, they did not coin the term. Instead the term "risk parity" was first used by Edward Qian, of PanAgora Asset Management, when he authored a white paper in 2005. In 2008 the name Risk Parity (short for Risk Premia Parity) was given to this portfolio investment category by Andrew Zaytsev at the investment consulting firm Alan Biller and Associates. Soon, the term was adopted by the asset management industry. In time, other firms such as Aquila Capital (2004), AQR Capital Management (2006), Northwater, Wellingtonᶜˡᵃʳⁱᶠⁱᶜᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ, Invesco, First Quadrant, Putnam Investments, ATP (2006), PanAgora Asset Management (2006), BlackRock (2009 - formerly Barclays Global Investors), 1741 Asset Management (2009), Neuberger Berman (2009), AllianceBernstein (2010), Clifton Group (2011), Salient Partners (2012), Schroders (2012), Natixis Asset Management (2013) and Allianz Global Investors (2015) began establishing risk parity funds.
+
+
+## Performance
+
+A white paper report from Callan Investments Institute Research in Feb 2010 reported that a "levered Risk Parity portfolio would have significantly underperformed" versus a standard institutional portfolio in the 1990s but "would have significantly outperformed" a standard institutional portfolio during the decade of 2000 to 2010. According to a 2010 article in the Wall Street Journal "Risk-parity funds held up relatively well during the financial crisis" of 2008. For example, AQR's risk parity fund declined 18% to 19% in 2008 compared with the 22% decline in the Vanguard Balanced Index fund. According to a 2013 Wall Street Journal report the risk parity type of fund offered by hedge funds has "soared in popularity" and "consistently outperformed traditional strategies since the financial crisis". However, mutual funds using the risk parity strategy were reported to have incurred losses of 6.75% during the first half of the year. Proponents of risk parity argue that the value of balancing risks between asset classes will be realized over long periods including periods of recessions, growth and higher inflation regimes. Historical analysis does provide some evidence of better performance than equities in recessionary environments.
+
+
+## Reception
+
+With the bullish stock market of the 1990s, equity-heavy investing approaches outperformed risk parity in the near term. However, after the March 2000 crash, there was an increased interest in risk parity, first among institutional investors in the United States and then in Europe. USA investors include the Wisconsin State Investment Board and the Pennsylvania Public School Employees’ Retirement System (PSERS) which have invested hundreds of millions in the risk parity funds of AQR, BlackRock and Bridgewater Associates. The 2007–2008 financial crisis was also hard on equity-heavy and Yale Model portfolios, but risk parity funds fared reasonably well.
+
+Despite criticisms from skeptics, the risk parity approach has seen a "flurry of activity" following a decade of "subpar equity performance". During the period 2005 to 2012 several companies began offering risk parity products including: Barclays Global Investors (now BlackRock), Schroders, First Quadrant, Mellon Capital Management, Neuberger Berman and State Street Global Advisors. A 2011 survey of institutional investors and consultants suggests that over 50% of America-based benefit pension and endowments and foundations are currently using, or considering, risk parity products for their investment portfolios. A survey conducted by Chief Investor Officer magazine in 2014 shows how far the adoption has grown: 46% of institutional investors surveyed are using risk parity and 8% are considering investing.
+
+
+## Use of leverage
+
+According to a 2011 article in *Investments & Pensions Europe*, the risk parity approach has "moderate risks" which include: communicating its value to boards of directors; unforeseen events like the 2008 market decline; market timing risks associated with implementation; the use of leverage and derivatives and basis risks associated with derivatives. Other critics warn that the use of leverage and relying heavily on fixed income assets may create its own risk. Portfolio manager Ben Inker has criticized risk parity for being a benchmarking approach that gives too much relative weight to bonds when compared to other alternative portfolio approaches. However, proponents of risk parity say that its purpose is to avoid predicting future returns. Inker also says that risk parity requires too much leverage to produce the same expected returns as conventional alternatives. Proponents answer that the reduced risk from additional diversification more than offsets the additional leverage risk and that leverage through publicly traded futures and prime brokerage financing of assets also means a high percentage of cash in the portfolio to cover losses and margin calls. Additionally Inker says that bonds have negative skew, (small probability of large losses and large probability of small gains) which makes them a dangerous investment to leverage. Proponents have countered by saying that their approach calls for reduced exposure to bonds as volatility increases and provides less skew than conventional portfolios.
+
+Proponents of the use of leverage argue that using leverage can be risk-reducing rather than risk-increasing provided four conditions are met: (i) enough unencumbered cash is kept to meet any margin calls (ii) leverage is applied to a well-diversified portfolio (iii) assets can be rebalanced frequently and (iv) counterparty risk is minimized.
+
+
+## Risk parity and the bull market in bonds
+
+A 2012 article in the *Financial Times* indicated possible challenges for risk parity funds "at the peak of a 30-year bull market for fixed income". While advocates point out their diversification amongst bonds as well as "inflation-linked securities, corporate credit, emerging market debt, commodities and equities, balanced by how each asset class responds to two factors: changes in the expected rate of economic growth and changes to expectations for inflation". A 2013 article in the *Financial News* reported that "risk parity continues to prosper, as investors come to appreciate the better balance of different risks that it represents in an uncertain world."
+
+After the sharp fall in bond prices of 2013 ("taper tantrum"), investors continued to question the impact of rising rates on risk parity portfolios or other more concentrated equity portfolios. A historical analysis of episodes of rising rates show the value in distinguishing between orderly and disorderly rising rates regimes. Risk parity has weaker performance in disorderly rising rates environments but its performance over time is not dependent on falling bond yields.
+
+
+## Risk parity and the Capital Asset Pricing Model
+
+Risk parity advocates assert that the unlevered risk parity portfolio is quite close to the tangency portfolio, as close as can be measured given uncertainties and noise in the data. Theoretical and empirical arguments are made in support of this contention. One specific set of assumptions that puts the risk parity portfolio on the efficient frontier is that the individual asset classes are uncorrelated and have identical Sharpe ratios. Risk parity critics rarely contest the claim that the risk parity portfolio is near the tangency portfolio but they say that the leveraged investment line is less steep and that the levered risk parity portfolio has slight or no advantage over 60% stocks / 40% bonds, and carries the disadvantage of greater explicit leverage.
+

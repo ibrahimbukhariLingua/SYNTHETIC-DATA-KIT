@@ -1,0 +1,57 @@
+Ransomware as a service
+
+
+# Ransomware as a service
+
+
+
+**Ransomware as a service** (**RaaS**) is a cybercrime business model where ransomware operators write software and affiliates pay to launch attacks using said software. Affiliates do not need to have technical skills of their own but rely on the technical skills of the operators.
+
+The "ransomware as a service" model is a cybercriminal variation of the "software as a service" business model.
+
+
+## Revenue models
+
+Affiliates can choose from different revenue models, including monthly subscriptions, affiliate programs, one-time license fees, and pure profit sharing. The most advanced RaaS operators provide portals that allow their subscribers to track the status of infections, payments, and encrypted files. This level of support and functionality is similar to legitimate SaaS products.
+
+The RaaS market is highly competitive, with operators running marketing campaigns and developing websites that mimic legitimate companies. The global revenue from ransomware attacks was approximately $20 billion in 2020, highlighting the significant financial success of RaaS.
+
+Microsoft Threat Intelligence Centre (MSTIC) regards RaaS as different from previous forms of ransomware as it no longer has a tight link between tools, initial entry vector and payload choices. They regard them as having a double threat - both encrypting data and exfiltrating it and threatening to publish it.
+
+
+## Extortion methods
+
+Ransomware threat actors use different techniques to extort money from victims. Some of the main methods include:
+
+
+### Double extortion
+
+In a double extortion ransomware attack, the threat actors first encrypt the victim's data. They then threaten to publicly release exfiltrated data if the ransom is not paid. This puts additional pressure on the victim to pay the ransom to avoid having sensitive data leaked.
+
+According to analysis from cybersecurity firm Zscaler, 19 ransomware families adopted double or multi-extortion approaches in 2021. By 2022, this number grew to 44 families using this technique. Groups like Babuk and SnapMC pioneered double extortion ransomware. Other actors like RansomHouse, BianLian, and Karakurt later adopted it as well.
+
+
+### Multiple extortion
+
+Multiple extortion is a variant of double extortion. In addition to encrypting data and threatening to leak it, threat actors also launch DDoS attacks against the victim's website or infrastructure. This adds another element to pressure victims into paying.
+
+
+### Pure extortion
+
+In a "pure extortion" or "encryption-less ransomware" attack, the threat actors exfiltrate sensitive data but do not encrypt any files. They threaten to publish the stolen data online if the ransom is not paid. This approach allows threat actors to skip the complex technical work of developing encryptors.
+
+Groups like LAPSUS$ and Clop have used pure extortion techniques in high-profile attacks. Since victims' systems are not locked, this method tends to cause less disruption and draws less attention from authorities. However, the financial impact on targeted organizations can still be severe.
+
+
+## Main actors
+
+Several well-known examples of RaaS kits include Hive, DarkSide, REvil (also known as Sodinokibi), Dharma, and LockBit. These operators continually evolve and create new iterations of ransomware to maximize their impact.
+
+Examples of RaaS kits include Locky, Goliath, Shark, Stampado, Jokeroo and Encryptor.
+
+Hive garnered attention in April 2022 when they targeted Microsoft's Exchange Server customers. The US Department of Justice seized two servers belonging to Hive, disrupting their operations.
+
+DarkSide primarily targeted Windows machines but has expanded to Linux systems. They gained notoriety in the Colonial Pipeline incident, where the organization paid nearly $5 million to a DarkSide affiliate.
+
+REvil is associated with PINCHY SPIDER and became known for demanding one of the largest ransoms on record: $10 million.
+

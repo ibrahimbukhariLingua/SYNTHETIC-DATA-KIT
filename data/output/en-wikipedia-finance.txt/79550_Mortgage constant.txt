@@ -1,0 +1,27 @@
+Mortgage constant
+
+
+# Mortgage constant
+
+
+
+**Mortgage constant**, also called "mortgage capitalization rate", is the capitalization rate for debt. It is usually computed monthly by dividing the monthly payment by the mortgage principal. An annualized mortgage constant can be found by multiplying the monthly constant by 12 or by dividing the annual debt service by the mortgage principal.
+
+A mortgage constant is a rate that appraisers determine for use in the band of investment approach. It is also used in conjunction with the debt-coverage ratio that many commercial bankers use.
+
+The mortgage constant is commonly denoted as Rm. The Rm is higher than the interest rate for an amortizing loan because the Rm includes consideration of the principal as well as the interest. The Rm could be lower than the interest for a negatively amortizing loan.
+
+
+## Formula
+
+{\displaystyle LoanConstant=(i/m)/(1-(1/(1+(i/m))^{n}))\*12}
+
+Where:
+
+* i = Interest
+* n = Total number of months required to pay off the loan.
+* m = Number of payment months in a year (12).
+
+example:
+(0.055/12)/(1-(1/(POWER(1+(0.055/12),360))))\*12 for MS Excel
+

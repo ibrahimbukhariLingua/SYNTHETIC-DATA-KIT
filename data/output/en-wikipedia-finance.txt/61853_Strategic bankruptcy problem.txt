@@ -1,0 +1,100 @@
+Strategic bankruptcy problem
+
+
+# Strategic bankruptcy problem
+
+
+
+A **strategic bankruptcy problem** is a variant of a bankruptcy problem (also called *claims problem*) in which claimants may act strategically, that is, they may manipulate their claims or their behavior. There are various kinds of strategic bankruptcy problems, differing in the assumptions about the possible ways in which claimants may manipulate.
+
+
+## Definitions
+
+There is a divisible resource, denoted by *{\displaystyle E}* (=Estate or Endowment). There are *n* people who claim this resource or parts of it; they are called *claimants*. The amount claimed by each claimant *i* is denoted by *{\displaystyle c\_{i}}*. Usually, {\displaystyle \sum \_{i=1}^{n}c\_{i}>E}, that is, the estate is insufficient to satisfy all the claims. The goal is to allocate to each claimant an amount *{\displaystyle x\_{i}}* such that {\displaystyle \sum \_{i=1}^{n}x\_{i}=E}.
+
+
+## Unit-selection game
+
+O'Neill describes the following game.
+
+* The estate is divided to small units (for example, if all claims are integers, then the estate can be divided into *E* units of size 1).
+* Each claimant *i* chooses some *{\displaystyle c\_{i}}* units.
+* Each unit is divided equally among all agents who claim it.
+
+Naturally, the agents would try to choose units such that the overlap between different agents is minimal. This game has a Nash equilibrium. In any Nash equilibrium, there is some integer *k* such that each unit is claimed by either *k* or *k*+1 claimants. When there are two claimants, there is a unique equilibrium payoff vector, and it is identical to the one returned by the contested garment rule.
+
+
+## Rule-proposal games
+
+
+### Chun's game
+
+Chun describes the following game.
+
+* Each claimant proposes a division rule.
+* The proposed rule must satisfy the property of *order-preservation* (a claimant with a higher claim must have weakly-higher gain and weakly-higher loss).
+* All proposed rules are applied to the problem; each claimant's claim is replaced with the maximum amount awarded to him by a proposed rule.
+* The process repeats with the revised claims.
+
+The process converges. Moreover, it has a unique Nash equilibrium, in which the payoffs are equal to the ones prescribed by the constrained equal awards rule.
+
+
+### Herrero's game
+
+Herrero describes a dual game, in which, at each round, each claimant's claim is replaced with the *minimum* amount awarded to him by a proposed rule. This process, too, has a unique Nash equilibrium, in which the payoffs are equal to the ones prescribed by the constrained equal losses rule.
+
+
+## Amount-proposal game
+
+Sonn describes the following sequential game.
+
+* Claimant 1 proposes an amount to claimant 2.
+* If claimant 2 accepts, he leaves with it and claimant 1 then proposes an amount to claimant 3, etc.
+* If a claimant *k* rejects, then claimant 1 moves to the end of line, the claimant *k* starts making offerts to the next claimant.
+* The offer made to each claimant *i* must be at most *{\displaystyle c\_{i}}*, and at most the remaining amount.
+* The process continues until one claimant remains; that claimant gets the remaining estate.
+
+Sonn proves that, when the discount factor approaches 1, the limit of payoff vectors of this game converges to the constrained equal awards payoffs.
+
+
+## Division-proposal games
+
+
+### Serrano's game
+
+Serrano describes another sequential game of offers. It is parametrized by a two-claimant rule *R*.
+
+* The highest claimant (say, claimant 1) suggests a division.
+* Each other claimant can either accept or reject the offer.
+ + Any claimant that accepts the offer, leaves with it.
+ + Any claimant *k* that rejects the offer, receives the outcome of rule *R* on the two-claimant problem for *k* and 1, on the sum of the offers for *k* and 1.
+* The highest claimant receives the remainder.
+* The process is repeated with all the rejecters.
+
+If *R* satisfies resource monotonicity and super-modularity, then the above game has a unique subgame perfect equilibrium, at which each agent receives the amount recommended by the consistent extension of *R*.
+
+
+### Corchon and Herrero's game
+
+Corchon and Herrero describe the following game. It is parametrized by a "compromise function" (for example: arithmetic mean).
+
+* Agents propose division vectors, which must be bounded by the claims vector.
+* The compromise function is used to aggregate the proposals.
+
+A two-claimant rule is implementable in dominant strategies (using arithmetic mean) if-and-only-if it is strictly increasing in each claim, and the allocation of agnet *i* is a function of *{\displaystyle c\_{i}}* and *{\displaystyle E-c\_{j}}*. Rules for more than two claimants are usually not implementable in dominant strategies.
+
+
+## Implementation game for downward-manipulation of claims
+
+Dagan, Serrano and Volij consider a setting in which the claims are private information. Claimants may report false claims, as long as they are lower than the true ones. This assumption is relevant in taxation, where claimants may report incomes lower than the true ones. For each rule that is consistent and *strictly-claims-monotonic* (a person with higher claim gets strictly more), they construct a sequential game that implements this rule in subgame-perfect equilibrium.
+
+
+## Costly manipulations of claims
+
+Landsburg⁴²,ᶠᵗⁿ.⁶⁷ considers a setting in which claims are private information, and claimants may report false claims, but this manipulation is costly. The cost of manipulation increases with the magnitude of manipulation. In the special case in which the sum of claims equals the estate, there is a single generalized rule that is a truthful mechanism, and it is a generalization of constrained equal losses.
+
+
+## Manipulation by pre-donations
+
+Sertel considers a two-claimant setting in which a claimant may manipulate by pre-donating some of his claims to the other claimant. The payoff is then calculated using the Nash Bargaining Solution. In equilibrium, both claimants receive the payoffs prescribed by the contested garment rule.
+

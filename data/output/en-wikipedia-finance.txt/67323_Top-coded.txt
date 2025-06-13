@@ -1,0 +1,34 @@
+Top-coded
+
+
+# Top-coded
+
+
+
+In econometrics and statistics, a **top-coded** data observation is one for which data points whose values are above an upper bound are censored.
+
+Survey data are often topcoded before release to the public to preserve the anonymity of respondents. For example, if a survey answer reported a respondent with self-identified wealth of $79 billion, it would not be anonymous because people would know there is a good chance the respondent was Bill Gates. Top-coding may be also applied to prevent possibly-erroneous outliers from being published.
+
+Bottom-coding is analogous, e.g. if amounts below zero are reported as zero. Top-coding occurs for data recorded in groups, e.g. if age ranges are reported in these groups: 0-20, 21-50, 50-99, 100-and-up. Here we only know how many people have ages above 100, not their distribution. Producers of survey data sometimes release the average of the censored amounts to help users impute unbiased estimates of the top group.
+
+
+## Example: Top-coding of income at $30,000
+
+| id | age | actual wealth | wealth variable in data set |
+| --- | --- | --- | --- |
+| 1 | 26 | 24,778 | 24,778 |
+| 2 | 32 | 26,750 | 26,750 |
+| 3 | 45 | 26,780 | 26,780 |
+| 4 | 64 | 35,469 | **30000+** |
+| 5 | 27 | 43,695 | **30000+** |
+
+Top-coding is a general problem for analysis of public use data sets. Top-coding in the Current Population Survey makes it hard to estimate measures of income inequality since the shape of the distribution of high incomes is blocked. To help overcome this problem, CPS provides the mean value of top-coded values.
+
+The practice of top-coding, or capping the reported maximum value on tax returns to protect the earner's anonymity, complicates the analysis of the distribution of wealth in the United States.
+
+
+## Implications for ordinary least squares estimation
+
+* If the lower bound of the top-coded group is used as a regressor value (30000 in the example above), OLS is biased and inconsistent since the regressor's highest values are reported with a systematic error.
+* The top-coded observations can be omitted from the regression entirely. Provided there are no systematic differences between the omitted group and the included groups, OLS is consistent and unbiased.
+* The Tobit procedure is robust to top coding, and gives unbiased estimates.

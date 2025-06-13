@@ -1,0 +1,81 @@
+Risk-free bond
+
+
+# Risk-free bond
+
+
+
+A **risk-free bond** is a theoretical bond that repays interest and principal with absolute certainty. The rate of return would be the risk-free interest rate. It is primary security, which pays off 1 unit no matter state of economy is realized at time {\displaystyle t+1}. So its payoff is the same regardless of what state occurs. Thus, an investor experiences no risk by investing in such an asset.
+
+In practice, government bonds of financially stable countries are treated as risk-free bonds, as governments can raise taxes or indeed print money to repay their domestic currency debt.
+
+For instance, United States Treasury notes and United States Treasury bonds are often assumed to be risk-free bonds. Even though investors in United States Treasury securities do in fact face a small amount of credit risk, this risk is often considered to be negligible. An example of this credit risk was shown by Russia, which defaulted on its domestic debt during the 1998 Russian financial crisis.
+
+
+## Modelling the price by Black-Scholes model
+
+In financial literature, it is not uncommon to derive the Black-Scholes formula by introducing a continuously rebalanced *risk-free portfolio* containing an option and underlying stocks. In the absence of arbitrage, the return from such a portfolio needs to match returns on risk-free bonds. This property leads to the Black-Scholes partial differential equation satisfied by the arbitrage price of an option. It appears, however, that the risk-free portfolio does not satisfy the formal definition of a self-financing strategy, and thus this way of deriving the Black-Sholes formula is flawed.
+
+We assume throughout that trading takes place continuously in time, and unrestricted borrowing and lending of funds is possible at the same constant interest rate. Furthermore, the market is frictionless, meaning that there are no transaction costs or taxes, and no discrimination against the short sales. In other words, we shall deal with the case of a *perfect market*.
+
+Let's assume that the *short-term interest rate* {\displaystyle r} is constant (but not necessarily nonnegative) over the trading interval {\displaystyle [0,T^{\*}]}. The risk-free security is assumed to continuously compound in value at the rate {\displaystyle r}; that is, {\displaystyle dB\_{t}=rB\_{t}~dt}. We adopt the usual convention that {\displaystyle B\_{0}=1}, so that its price equals {\displaystyle B\_{t}=e^{rt}} for every {\displaystyle t\in [0,T^{\*}]}. When dealing with the Black-Scholes model, we may equally well replace the savings account by the *risk-free bond*. A unit zero-coupon bond maturing at time {\displaystyle T} is a security paying to its holder 1 unit of cash at a predetermined date {\displaystyle T} in the future, known as the bond's *maturity date*. Let {\displaystyle B(t,T)} stand for the price at time {\displaystyle t\in [0,T]} of a bond maturing at time {\displaystyle T}. It is easily seen that to replicate the payoff 1 at time {\displaystyle T} it suffices to invest {\displaystyle B\_{t}/B\_{T}} units of cash at time {\displaystyle t} in the savings account {\displaystyle B}. This shows that, in the absence of arbitrage opportunities, the price of the bond satisfies
+
+{\displaystyle B(t,T)=e^{-r(T-t)}~~~,~~~\forall t\in [0,T]~.}
+
+Note that for any fixed T, the bond price solves the ordinary differential equation
+
+{\displaystyle dB(t,T)=rB(t,T)dt~~~,~~~B(0,T)=e^{-rT}~.}
+
+We consider here a *risk-free* bond, meaning that its issuer will not default on his obligation to pat to the bondholder the face value at maturity date.
+
+
+## Risk-free bond vs. Arrow-Debreu security
+
+The risk-free bond can be replicated by a portfolio of two Arrow-Debreu securities. This portfolio exactly matches the payoff of the risk-free bond since the portfolio too pays 1 unit regardless of which state occurs. This is because if its price were different from that of the risk-free bond, we would have an *arbitrage opportunity* present in the economy. When an arbitrage opportunity is present, it means that riskless profits can be made through some trading strategy. In this specific case, if portfolio of Arrow-Debreu securities differs in price from the price of the risk-free bond, then the arbitrage strategy would be to buy the lower priced one and sell short the higher priced one. Since each has exactly the same payoff profile, this trade would leave us with zero net risk (the risk of one cancels the other's risk because we have bought and sold in equal quantities the same payoff profile). However, we would make a profit because we are buying at a low price and selling at a high price. Since arbitrage conditions cannot exist in an economy, the price of the risk-free bond equals the price of the portfolio.
+
+
+## Calculating the price
+
+The calculation is related to an Arrow-Debreu security. Let's call the price of the risk-free bond at time {\displaystyle t} as {\displaystyle P(t,t+1)}. The {\displaystyle t+1} refers to the fact that the bond matures at time {\displaystyle t+1}. As mentioned before, the risk-free bond can be replicated by a portfolio of two Arrow-Debreu securities, one share of {\displaystyle A(1)} and one share of {\displaystyle A(2)}.
+
+Using formula for the price of an {\displaystyle n} Arrow-Debreu securities
+
+{\displaystyle A(k)=p\_{k}{\frac {u^{\prime }(C\_{t+1}(k))}{u^{\prime }(C\_{t})}},~~~~~k=1,\dots ,n}
+
+which is a product of ratio of *the intertemporal marginal rate of substitution* (the ratio of marginal utilities across time, it is also referred to as the *state price density* and *the pricing kernel*) and *the probability* of state occurring in which the Arrow-Debreu security pays off 1 unit. The price of the portfolio is simply
+
+{\displaystyle P(t,t+1)=A(1)+A(2)=p\_{1}{\frac {u^{\prime }(C\_{t+1}(1))}{u^{\prime }(C\_{t})}}+p\_{2}{\frac {u^{\prime }(C\_{t+1}(2))}{u^{\prime }(C\_{t})}}}
+
+{\displaystyle P(t,t+1)=\mathbb {E} \_{t}^{\mathbb {P} }{\Bigg [}{\frac {u^{\prime }(C\_{t+1}(k))}{u^{\prime }(C\_{t})}}{\Bigg ]}}
+
+Therefore, the price of a risk-free bond is simply the expected value, taken with respect to the probability measure {\displaystyle \mathbb {P} =\{p\_{1},p\_{2}\}}, of the intertemporal marginal rate of substitution. The interest rate {\displaystyle r}, is now defined using the reciprocal of the bond price.
+
+{\displaystyle 1+r\_{t}={\frac {1}{P(t,t+1)}}}
+
+Therefore, we have the fundamental relation
+
+{\displaystyle {\frac {1}{1+r}}=\mathbb {E} \_{t}^{\mathbb {P} }{\Bigg [}{\frac {u^{\prime }(C\_{t+1}(k))}{u^{\prime }(C\_{t})}}{\Bigg ]}}
+
+that defines the interest rate in any economy.
+
+
+## Example
+
+Suppose that the *probability of state 1* occurring is 1/4, while *probability of state 2* occurring is 3/4. Also assume that *the pricing kernel* equals 0.95 for state 1 and 0.92 for state 2.
+
+Let the pricing kernel denotes as {\displaystyle U\_{k}} . Then we have two Arrow-Debreu securities {\displaystyle A(1),~A(2)} with parameters
+
+{\displaystyle p\_{1}=1/4~~,~~U\_{1}=0.95~,}
+
+{\displaystyle p\_{2}=3/4~~,~~U\_{2}=0.92~.}
+
+Then using the previous formulas, we can calculate the bond price
+
+{\displaystyle P(t,t+1)=A(1)+A(2)=p\_{1}U\_{1}+p\_{2}U\_{2}=1/4\cdot 0.95+3/4\cdot 0.92=0.9275~.}
+
+The interest rate is then given by
+
+{\displaystyle r={\frac {1}{P(t,t+1)}}-1={\frac {1}{0.9275}}-1=7.82\%~.}
+
+Thus, we see that the pricing of a bond and the determination of interest rate is simple to do once the set of Arrow-Debreu prices, the prices of Arrow-Debreu securities, are known.
+

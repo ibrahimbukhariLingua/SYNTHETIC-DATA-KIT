@@ -1,0 +1,42 @@
+Roy's identity
+
+
+# Roy's identity
+
+
+
+**Roy's identity** (named after French economist René Roy) is a major result in microeconomics having applications in consumer choice and the theory of the firm. The lemma relates the ordinary (Marshallian) demand function to the derivatives of the indirect utility function. Specifically, denoting the indirect utility function as {\displaystyle v(p,w),} the Marshallian demand function for good {\displaystyle i} can be calculated as
+
+where {\displaystyle p} is the price vector of goods and {\displaystyle w} is income, and where the superscript {\displaystyle {}^{m}} indicates Marshallian demand. The result holds for continuous utility functions representing locally non-satiated and strictly convex preference relations on a convex consumption set, under the additional requirement that the indirect utility function is differentiable in all arguments.
+
+Roy's identity is akin to the result that the price derivatives of the expenditure function give the Hicksian demand functions. The additional step of dividing by the wealth derivative of the indirect utility function in Roy's identity is necessary since the indirect utility function, unlike the expenditure function, has an ordinal interpretation: any strictly increasing transformation of the original utility function represents the same preferences.
+
+
+## Derivation of Roy's identity
+
+Roy's identity reformulates Shephard's lemma in order to get a Marshallian demand function for an individual and a good ({\displaystyle i}) from some indirect utility function.
+
+The first step is to consider the trivial identity obtained by substituting the expenditure function for wealth or income {\displaystyle w} in the indirect utility function {\displaystyle v(p,w)}, at a utility of {\displaystyle u}:
+
+This says that the indirect utility function evaluated in such a way that minimizes the cost for achieving a certain utility given a set of prices (a vector {\displaystyle p}) is equal to that utility when evaluated at those prices.
+
+Taking the derivative of both sides of this equation with respect to the price of a single good {\displaystyle p\_{i}} (with the utility level held constant) gives:
+
+Rearranging gives the desired result:
+
+with the second-to-last equality following from Shephard's lemma and the last equality from a basic property of Hicksian demand.
+
+
+## Alternative proof using the envelope theorem
+
+For expositional ease, consider the two-goods case. The indirect utility function {\displaystyle v(p\_{1},p\_{2},w)} is the value function of the constrained optimization problem characterized by the following Lagrangian:
+
+By the envelope theorem, the derivatives of the value function {\displaystyle v(p\_{1},p\_{2},w)} with respect to the parameters are:
+
+where {\displaystyle x\_{1}^{m}} is the maximizer (i.e. the Marshallian demand function for good 1). Hence:
+
+
+## Application
+
+This gives a method of deriving the Marshallian demand function of a good for some consumer from the indirect utility function of that consumer. It is also fundamental in deriving the Slutsky equation.
+

@@ -1,0 +1,102 @@
+CircleCI
+
+
+# CircleCI
+
+
+
+37°47′29″N 122°23′31″W﻿ / ﻿37.791303°N 122.392019°W﻿ / 37.791303; -122.392019
+
+**CircleCI** is a continuous integration (CI) and continuous delivery (CD) platform that can be used to implement DevOps practices. The company was founded in September 2011 and has raised $315 million in venture capital funding as of 2021, at a valuation of $1.7 billion. CircleCI is one of the world's most popular CI/CD platforms.
+Facebook, Coinbase, Sony, Kickstarter, GoPro, and Spotify used CircleCI in 2019.
+
+
+## Timeline
+
+**2011**
+
+* The company was founded in September 2011. The product was first released for beta testing on October 11, 2011. The first customers appeared three months after starting the company, while it was 6 months before the first payment.
+
+**2013**
+
+* Typed Clojure was used at CircleCI in production systems from September 2013 to September 2015.
+
+**2014**
+
+* In 2014, CircleCI acquired Distiller, a mobile continuous integration tool, where Jim Rose and Rob Zuber joined to assume CEO and CTO. Paul Biggar left the company after six months, but remained on the board.
+
+**2016**
+
+* In 2016, there was some controversy when Uber, who shared an office building with the company, redesigned their logo to be quite similar to CircleCI's. Another very similar logo can be found in the 2017 film The Circle.
+
+**2018**
+
+* In June 2018, CircleCI opened their first international office in Tokyo, and in October 2018 they opened an office in Boston, MA.
+* In October 2018, CircleCI became the first CI/CD tool authorized by FedRAMP.
+
+**2019**
+
+* In May 2019, CircleCI opened an office in Denver, CO.
+* In August 2019, CircleCI made support for Windows builds generally available.
+* In November 2019, CircleCI opened an office in London.
+
+**2020**
+
+* In February 2020, CircleCI launched support for AWS GovCloud.
+* In May 2020, CircleCI became the first CI/CD company to offer fully-compensated paid leave for employees recovering from transition-related medical procedures.
+* In October 2020, CircleCI released an insights dashboard for customers to monitor and optimize their CI/CD pipelines.
+* In November 2020, CircleCI introduced self-hosted runners (including Arm support) on its cloud platform.
+
+**2021**
+
+* In April 2021, CircleCI's cloud-hosted service announced SOC 2 Type II compliance.
+
+**2022**
+
+* In January 2022, CircleCI announced a more generous free tier.
+
+**2023**
+
+* In December 2023, founder Paul Biggar was removed from the board of CircleCI. Biggar alleges this was reprisal for a blog post where he publicly spoke out against Israel actions in Gaza.
+
+## Milestones and incidents
+
+
+### Financing
+
+CircleCI raised $50k from a small investor a few months after starting, $1.5m in seed funding in 2013, a $6m Series A round from DFJ in 2014, a $18M Series B financing round from Scale Venture Partners in 2016, a $31M Series C led by Top Tier Capital Partners in 2018, a $56M Series D led by Owl Rock Capital and NextEquity Partners in 2019, a $100M Series E round led by IVP in 2020, and a $100M Series F round led by Greenspring Associates in 2021. In total this is $315 million in funding.
+
+
+### Acquisitions
+
+CircleCI acquired Distiller in 2014, Vamp in 2021, and Ponicode in 2022.
+
+
+### Data breaches
+
+In 2013, CircleCI suffered a major data breach due to its provider MongoHQ, but was able to quickly respond and replace its security keys, resulting in almost no lost customers.
+
+In August 2019, there was a data breach in a third-party analytics vendor account used by CircleCI.
+
+In January 2023, CircleCI announced a recent system breach and advised customers to rotate "any and all secrets" stored in CircleCI.
+
+
+## Product
+
+CircleCI monitors GitHub, GitHub Enterprise, and Atlassian Bitbucket repositories and launches builds for each new commit. CircleCI automatically tests builds in either Docker containers or virtual machines and deploys passing builds to target environments. A dashboard and API allow tracking the status of builds and metrics related to builds. A Slack integration notifies teams if issues arise.
+
+SSH support allows locally running jobs, and security measures prevent tampering. CircleCI also offers a workflow approval feature that pauses the job(s) until manual approval is given.
+
+CircleCI supports Go, Java, Ruby, Python, Scala, Node.js, PHP, Haskell, and any other language that runs on Linux or macOS.
+
+The company offers a managed cloud service with a free tier available. The platform can also be self-hosted on a private server (behind a corporate firewall), or as a private deployment in the cloud. The cloud service was initially written from scratch but now uses HashiCorp's Nomad and Kubernetes.
+
+The cloud service can be set up within minutes, but is less customizable than Jenkins.
+
+
+### Orbs
+
+Orbs are shareable snippets of YAML that can be used to simplify CircleCI builds and perform deployments. CircleCI had integrations with 45 partners as of 2019. CircleCI's target deployment environments include Amazon Web Services, Heroku, Azure, Google Compute Engine, Docker images, and virtual Linux, Android, Windows, or macOS machines with VMware. In 2018 CircleCI's `config.yml` was the fastest growing YAML file on GitHub.
+
+The proprietary configuration syntax introduces vendor lock-in, meaning that switching CI services requires rewriting the pipeline.
+

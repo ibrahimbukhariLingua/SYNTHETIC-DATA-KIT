@@ -1,0 +1,91 @@
+Pension model
+
+
+# Pension model
+
+
+
+For pensions, a reliable **Pension model** is necessary for system simulations and projections, so it is important to have a sound database for pension system analyses. For an example of a complex pension model see e.g. (Deloitte, 2011).
+
+A pension system and its financing are some of the most important but also some of the most difficult roles of a modern country. Every prosperous community has a pension system at present; the citizens rely on its stability and the system provides most of them with the main part of their income in old age. The system's stability and financial sustainability are some of the key preconditions for successful operation of the state and satisfaction of its citizens.
+
+
+## Taxonomy of the Pension Models
+
+The summary of the pension system taxonomy is based on a study by (Gál, Horváth, Orbán, & Dekkers, 2009), see also (Deloitte, 2011).
+The chart below provides an overview of the basic types of models used in various EU countries for pension system modelling.
+
+| Model type | Subtype | Description | Countries where it is used |
+| --- | --- | --- | --- |
+| Standard models | Cohort | Use of cross-sectional information, no or limited use of individual data | Poland, Lithuania, Spain, Czech Republic, Slovakia, Austria, etc. |
+| Typical agent | Simulation of selected fictive individuals, no or limited use of individual data | Czech Republic, Slovakia, Greece, etc. |
+| Microsimulation models | Static | Use of individual data (large quantity of individuals), comparative statics, non-existence of historical time | Belgium, Denmark, Luxembourg |
+| Dynamic with static ageing | Use of individual data (large quantity of individuals), shift in time by means of weight changes | Netherlands |
+| Dynamic with dynamic ageing | Use of individual data (large quantity of individuals), complete history of lives of real individuals over time | UK, Sweden, France, Czech Republic |
+
+Source: (Gál, Horváth, Orbán, & Dekkers, 2009)
+.
+
+
+## Standard Models
+
+
+### Cohort Model
+
+This type of model is based on up-to-date cross-sectional information regarding the labour activity and social security contributions by various social groups (cohorts) that can be further broken down by gender, position in the labour market and demographic characteristics (such as family status and achieved level of education). The input information is made up of averages within certain population groups, i.e. the model is based on aggregate data for the cohort concerned which are then further broken down by pension type and benefit. Geographical differences and ethnic origin are included in some countries. An important feature of cohort models is forming of subgroups (usually cohorts, groups structured by gender and, as the case may be, other criteria) and assumptions regarding their future behaviour.
+
+Standard models of this type differentiate gender, age and type of pension, but some of them also use other data (such as ethnic origin). This type of model may come with explicit inclusion of the calculation of newly awarded pensions.
+
+The most important outputs from a cohort model are aggregate incomes and expenditures, number of contributors to the system and number of pensioners. The key sustainability indicators are pension system deficit and e.g. implicit debt of the pension system.
+
+
+### “Typical Agent” Model
+
+This model projects the lives of fictive individuals as a base for pension amount calculation. This approach provides a sophisticated estimate of the replacement ratio based on country-specific legislative parameters. The acquisition of pension entitlements can be properly modelled, because the entire history of the individual is available. This model is suitable for the evaluation of incentives regarding e.g. later retirement, for the exploration of the actuarial neutrality of the pension system, etc.
+
+The models may differ in the key features and life characteristics of the typical agent. Furthermore, there are various approaches to the collection of results provided by the typical agent.
+
+The key outputs are the replacement ratio plus, as the case may be, other micro-financial criteria (implicit tax, comparison of lifelong contributions and benefits, etc.).
+
+
+## Microsimulation Pension Models
+
+Models of this type simulate changes in a large sample of individuals (e.g. thousands, hundreds of thousands, sometimes even millions of individuals). The information regarding the sample concerned is usually acquired in two ways.
+
+* Administrative database – data provided by various government organisations (such as revenue office or social security administration office). This data is reliable and accurate but may not include all necessary information.
+* Selective surveys – this method provides the model with more information, but such data may be less reliable and is usually available for a limited population sample. If they cover only a small part of the population, they may pose a problem in terms of representativeness.
+
+We can differentiate between two types of information in terms of the time dimension.
+
+* Cross-sectional data is acquired across all cohorts at a certain time.
+* Panel (generation) data also include the individual's history.
+
+Furthermore, the input data for microsimulation models is usually further broken down based on whether such information regards
+
+* individuals (usually the administrative databases approach) or
+* households (usually the selective surveys approach).
+
+### Static Model
+
+The simplest form of microsimulation model – compares two “states of the world” or two different institutional arrangements.
+In contrast with dynamic models, this type does not include historical time, and population ageing therefore cannot be set up.
+
+
+### Dynamic Model with Static Ageing
+
+Cross-sectional characteristics are updated with exogenous future data – time can be seen as a series of different statuses.
+The model first works with individual cases in order to adapt the sample according to the projected demographic development and labour market development. As the second step, the aggregate results are further updated with certain exogenous development indicators (such as economic growth).
+
+
+### Dynamic Model with Dynamic Ageing
+
+Dynamic models with dynamic ageing (i.e. dynamic microsimulation pension models) create the complete history of each individual in a data set.
+This group of models can be further broken down to:
+
+* Cross-sectional models – individuals (one after another) are moved over time while their attributes are being updated. The advantage of this approach is that it simply admits the existence of relationships between individuals (such as wedding or death of the partner).
+* Generation (cohort) models – project the entire life cycle of an individual from their birth to their death and only then proceed to another individual.
+
+Dynamic models with dynamic ageing can be further differentiated by other criteria. Such models are then:
+
+* Deterministic – based on best estimates of input parameters (e.g. probability of transfer) and simultaneous modelling of all statuses;
+* Stochastic (e.g. Monte Carlo simulation) – based on random simulation of one status path for the individual concerned.

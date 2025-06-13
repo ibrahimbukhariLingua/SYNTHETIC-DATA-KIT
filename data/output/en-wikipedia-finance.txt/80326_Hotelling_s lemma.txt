@@ -1,0 +1,58 @@
+Hotelling's lemma
+
+
+# Hotelling's lemma
+
+
+
+**Hotelling's lemma** is a result in microeconomics that relates the supply of a good to the maximum profit of the producer. It was first shown by Harold Hotelling, and is widely used in the theory of the firm.
+
+Specifically, it states: *The rate of an increase in maximized profits with respect to a price increase is equal to the net supply of the good.* In other words, if the firm makes its choices to maximize profits, then the choices can be recovered from the knowledge of the maximum profit function.
+
+
+## Formal Statement
+
+Let {\displaystyle p} denote a variable price, and {\displaystyle w} be a constant cost of each input. Let {\displaystyle x:{\mathbb {R} ^{+}}\rightarrow X} be a mapping from the price to a set of feasible input choices {\displaystyle X\subset {\mathbb {R} ^{+}}}. Let {\displaystyle f:{\mathbb {R} ^{+}}\rightarrow {\mathbb {R} ^{+}}} be the production function, and {\displaystyle y(p)\triangleq f(x(p))} be the net supply.
+
+The maximum profit can be written by
+
+Then the lemma states that if the profit {\displaystyle \pi } is differentiable at {\displaystyle p}, the maximizing net supply is given by
+
+
+## Proof for Hotelling's lemma
+
+The lemma is a corollary of the envelope theorem.
+
+Specifically, the maximum profit can be rewritten as {\displaystyle \pi (p,x^{\*})=p\cdot f(x^{\*}(p))-w\cdot x^{\*}(p)} where {\displaystyle x^{\*}} is the maximizing input corresponding to {\displaystyle y^{\*}}. Due to the optimality, the first order condition gives
+
+| {\displaystyle {\frac {\partial \pi }{\partial x}}{\bigg |}\_{x=x^{\*}}=0.} | **(1)** |
+| --- | --- |
+
+By taking the derivative by {\displaystyle p} at {\displaystyle x^{\*}},
+
+where the second equality is due to (**1**). QED
+
+
+## Application of Hotelling's lemma
+
+Consider the following example. Let output {\displaystyle y} have price {\displaystyle p} and inputs {\displaystyle x\_{1}} and {\displaystyle x\_{2}} have prices {\displaystyle w\_{1}} and {\displaystyle w\_{2}}. Suppose the production function is {\displaystyle y=x\_{1}^{1/3}x\_{2}^{1/3}}. The unmaximized profit function is {\displaystyle \pi (p,w\_{1},w\_{2},x\_{1},x\_{2})=py-w\_{1}x\_{1}-w\_{2}x\_{2}}. From this can be derived the profit-maximizing choices of inputs and the maximized profit function, a function just of the input and output prices, which is
+
+{\displaystyle \pi (p,w\_{1},w\_{2})={\frac {1}{27}}{\frac {p^{3}}{w\_{1}w\_{2}}}}
+
+Hotelling's Lemma says that from the maximized profit function we can find the profit-maximizing choices of output and input by taking partial derivatives:
+
+{\displaystyle {\frac {\partial \pi (p,w\_{1},w\_{2})}{\partial p}}=y={\frac {1}{9}}{\frac {p^{2}}{w\_{1}w\_{2}}}}
+
+{\displaystyle {\frac {\partial \pi (p,w\_{1},w\_{2})}{\partial w\_{1}}}=-x\_{1}=-{\frac {1}{27}}{\frac {p^{3}}{w\_{1}^{2}w\_{2}}}}
+
+{\displaystyle {\frac {\partial \pi (p,w\_{1},w\_{2})}{\partial w\_{2}}}=-x\_{2}=-{\frac {1}{27}}{\frac {p^{3}}{w\_{1}w\_{2}^{2}}}}
+
+Note that Hotelling's lemma gives the *net* supplies, which are positive for outputs and negative for inputs, since profit rises with output prices and falls with input prices.
+
+
+## Criticisms and empirical evidence
+
+A number of criticisms have been made with regards to the use and application of Hotelling's lemma in empirical work.
+
+C. Robert Taylor points out that the accuracy of Hotelling's lemma is dependent on the firm maximizing profits, meaning that it is producing profit maximizing output {\displaystyle y^{\*}} and cost minimizing input {\displaystyle x^{\*}}. If a firm is not producing at these optima, then Hotelling's lemma would not hold.
+

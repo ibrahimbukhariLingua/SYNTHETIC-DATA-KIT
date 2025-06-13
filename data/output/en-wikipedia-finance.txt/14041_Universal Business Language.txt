@@ -1,0 +1,307 @@
+Universal Business Language
+
+
+# Universal Business Language
+
+
+
+**Universal Business Language** (**UBL**), ISO/IEC 19845, is an open library of standard electronic business documents and information models for supply chain, procurement, and transportation such as purchase orders, invoices, transport logistics and waybills. Originally developed by an OASIS Technical Committee with participation from a variety of industry data standards organizations. UBL is designed to plug directly into existing business, legal, auditing, and records management practices. It is designed to streamline information exchange through standardization, facilitating seamless connections between small, medium-sized, and large organization, thereby eliminating the re-keying of data and providing a comprehensive framework for electronic commerce.
+
+UBL is owned by OASIS and is available to all, with no royalty fees. The UBL semantic library is a well-developed information and data model with validators, authoring software, parsers and generators. As of June 2021, the latest approved OASIS Standard is UBL Version 2.3, which includes a total of 91 business document types. All UBL minor versions are fully backwards compatible back to UBL Version 2.0.
+
+Originally tracing it origins back to the EDI standards and other derived XML standards, UBL has evolved to include a broader range of syntaxes such as JSON, thereby enhancing global harmonization and interoperability. UBL now defines a syntax-neutral information model that can be restricted or extended to meet the requirements of particular industries, sectors, and communities, thus providing interoperability between systems and vendors when used as a generic interchange format.
+
+Ontologies are used to describe markup languages for business workflows. UBL is only one option to map e-business processes into an OWL description.
+
+
+## Downloads
+
+
+### Current
+
+UBL 2.4 - https://docs.oasis-open.org/ubl/UBL-2.4.html (Published 20 June 2024)
+
+UBL 2.3 - https://docs.oasis-open.org/ubl/UBL-2.3.html (Published 15 June 2021)
+
+UBL 2.2 - https://docs.oasis-open.org/ubl/UBL-2.2.html (Published 9 July 2018)
+
+UBL 2.1 - https://docs.oasis-open.org/ubl/UBL-2.1.html
+
+UBL 2.1 as ISO/IEC 19845:2015 - http://standards.iso.org/ittf/PubliclyAvailableStandards/
+
+
+### Historical
+
+UBL 2.0 - http://docs.oasis-open.org/ubl/os-UBL-2.0-update/
+
+UBL 1.0 - http://docs.oasis-open.org/ubl/cd-UBL-1.0/
+
+
+## UBL 2.1 (ISO/IEC 19845:2015) and UBL 2.2
+
+
+### OASIS UBL Technical Committee and ISO/IEC 19845 Maintenance Agency
+
+The OASIS Universal Business Language (UBL) Technical Committee is responsible for the creation and maintenance of the OASIS Standard and has been designated the maintenance agency for ISO/IEC 19845. The maintenance governance procedures describe how committee and non-committee members contribute to the development of the specification.
+
+
+### Business processes described and supported in UBL
+
+
+#### Business process support originating with UBL 1.0 (2004)
+
+Ordering, Fulfilment, Billing
+
+
+#### Business process support added in UBL 2.0 (2006)
+
+Catalogue, Quotation, Payment, Statement, Transport Services, Certificate of Origin
+
+
+#### Business process support added in UBL 2.1 (2013)
+
+eTendering, Vendor Managed Inventory, Intermodal Freight Management, Utility Billing, and Collaborative Planning, Forecasting, Replenishment and e-Invoice / e-Archive and e-Ledger in Turkey
+
+
+#### Business process support added in UBL 2.2 (2018)
+
+Weight Statement, Business Directory, eTendering
+
+
+### Standard document types defined by UBL
+
+
+#### Document types originally defined in UBL 1.0 (2004)
+
+Order, Order Response, Order Response Simple, Order Change, Order Cancellation, Despatch Advice [Advance Ship Notice], Receipt Advice, Invoice
+
+
+#### Document types added in UBL 2.0 (2006)
+
+Added document types for **sourcing:** Catalogue, Catalogue Deletion, Catalogue Item Specification Update, Catalogue Pricing Update, Catalogue Request, Quotation, Request for Quotation
+
+Added document types for **fulfillment:** Bill of Lading, Certificate of Origin, Forwarding Instructions, Packing List, Transportation Status, Waybill
+
+Added document types for **billing:** Credit Note, Debit Note, Freight Invoice, Reminder, Self Billed Credit Note, Self Billed Invoice
+
+Added document types for **payment:** Remittance Advice, Statement
+
+Added **supplementary** document types: Application Response, Attached
+Document
+
+
+#### Document types added in UBL 2.1 (2013)
+
+Added document types for **eTendering:** Awarded Notification, Call for Tenders, Contract Award Notice, Contract Notice, Guarantee Certificate, Tender, Tender Receipt, Tenderer Qualification, Tenderer Qualification Response, Unawarded Notification
+
+Added document types for **Collaborative planning, forecasting, and replenishment:** Exception Criteria, Exception Notification, Forecast, Forecast Revision, Item Information Request, Prior Information Notice, Trade Item Location Profile
+
+Added document types for **Vendor Managed Inventory:** Instruction for Returns, Inventory Report, Product Activity, Retail Event, Stock Availability Report
+
+Added document types for **Intermodal Freight Management:** Goods Item Itinerary, Transport Execution Plan, Transport Execution Plan Request, Transport Progress Status, Transport Progress Status Request, Transport Service Description, Transport Service Description Request, Transportation Status, Transportation Status Request
+
+Added document type for **Utility billing:** Utility Statement
+
+Added **supplementary** document types: Document Status, Document Status Request
+
+
+#### Document types added in UBL 2.2 (2018)
+
+http://docs.oasis-open.org/ubl/UBL-2.2.html
+Added document types for **eTendering**: Enquiry, Enquiry Response, Expression Of Interest Request, Expression Of Interest Response, Qualification Application Request, Qualification Application Response, Tender Contract, Tender Status, Tender Status Request, Tender Withdrawal, Unsubscribe From Procedure Request, Unsubscribe From Procedure Response
+
+Added document types for **transportation**: Weight Statement
+
+Added document types for **business directories and agreements**: Business Card, Digital Agreement, Digital Capability
+
+
+#### Document types added in UBL 2.3 (2021)
+
+Added document types for **transportation**: Common Transportation Report, Export Customs Declaration, Goods Certificate, Goods Item Passport, Import Customs Declaration, Manifest, Proof Of Reexportation, Proof Of Reexportation Reminder, Proof Of Reexportation Request, Transit Customs Declaration.
+
+
+#### Document types added in UBL 2.4 (2024)
+
+Added document types: Business Information, Purchase Receipt
+
+
+### UBL 2.1 as ISO/IEC 19845:2015
+
+The OASIS UBL 2.1 specification has been approved as ISO/IEC 19845 as of 2015-12-15:
+
+* http://www.iso.org/iso/home/store/catalogue\_tc/catalogue\_detail.htm?csnumber=66370
+
+### UBL 2.2
+
+The OASIS UBL 2.2 specification has been approved as an OASIS Standard as of 2018-07-09.
+
+
+### UBL 2.3
+
+OASIS UBL Version 2.3 has been approved as an OASIS Standard as of 15 June 2021.
+
+
+## Subsets and customizations of UBL
+
+
+### Danish subsets: OIOXML and OIOUBL
+
+In December 2003 Denmark legislated the mandatory use of a customization of UBL 0.7, using the OIOXML specification, for electronic invoicing for government procurement starting February 2005. In March 2010 Denmark legislated the mandatory use of a customization of UBL 2.0, using the OIOUBL specification.
+
+In 2011 the Danish government documented savings of €500,000,000 having used UBL.
+
+
+### Northern European Subset - NESUBL
+
+As part of the Northern European cooperation on e-commerce and e-procurement, representatives from Denmark, Sweden, Norway, Finland, UK and Iceland set up a working group for developing a Northern European subset of UBL 2.0 documents. The main focus of NES is to define the semantic use of UBL 2.0 as applied to specific business processes. To achieve this the UBL 2.0 standard is restricted on additional levels by using "profiles" that apply to defined business situations. The use of individual elements is specifically described to avoid conflicting interpretation. Additionally each country has developed guidelines that describe the application of the NESUBL subset to domestic business practices. The goal is to enable companies and institutions to implement e-commerce by agreeing to a specific profile and thus eliminate the need for bilateral implementation. Additional countries have shown interest in joining the work. The NESUBL subset was published in March 2007.
+
+Since its publication, NESUBL subset has influenced government eProcurement initiatives across Europe, for example in Denmark, Sweden, Norway, Iceland, The Netherlands, Turkey. It is also the basis for an eProcurement initiative, ePrior, by the European Commission, Directorate General's of the European Commission, starting with the Directorate General for Information Technology (DIGIT). It is also the basis of the syntax for business documents created by the CEN/BII (Business Interoperability Initiative).
+
+
+### European-wide deployment of UBL in PEPPOL
+
+PEPPOL adopts the work products of CEN/TC434 and CEN/TC440 that include UBL customizations and syntax serializations of different document types for European business processes. The goal of PEPPOL is to enable public procurement across borders within the EU.
+
+It was reported that CEN/TC434 has unanimously agreed to endorse UBL as one of two syntaxes complying with the forthcoming European Norm on e-Invoicing and will be listed in a specific CEN Technical Specification.
+
+These efforts support Directive 2014/55/EU on electronic invoicing in public procurement in Europe.
+
+On March 3, 2017, this summary update of recent announcements was published, including references to Austria, Belgium, Denmark, Italy (Emilia-Romagna region), Netherlands, Norway, Sweden.
+
+
+### Spanish UBL version based in CCI
+
+In Spain, UBL is being used primarily for electronic invoice encoding. The UBL Spanish Localization Committee has been actively developing UBL awareness and has created implementation guidelines to allow easy adoption of UBL based on previous work done by CCI.
+
+
+### UBL Turkish Customization - UBL-TR
+
+The UBL Turkish Localization Subcommittee customized the UBL 2.0 to be used in eInvoice process in Turkey. See also the IBM Knowledge Center.
+
+
+### Czech UBL Customization - ISDOC
+
+The SPIS consortium (currently named ICT unie) created an UBL 2.0 customization ISDOC to be used for e-Invoicing in the Czech Republic. The recently released ISDOC 6 supports e-Requests too.
+
+
+### Peruvian UBL Customization - SUNAT
+
+SUNAT, the national customs and tax administration for Peru, supports a customization of UBL 2.0. Plans have been announced by SUNAT to migrate to UBL 2.1
+
+
+### Belgian UBL Customization - e-fff
+
+In December 2011 the Belgian government specified a customization of UBL to maximize the interoperability of the electronic invoice between Belgian actors.
+
+
+### Swedish UBL Customization - Svefaktura
+
+SFTI, the joint project of the Swedish Association of Local Authorities and Regions (SKL), Financial Management Authority (ESV) and the government contracting authority specified Svefaktura, a UBL customization.
+
+As of November 1, 2018 it will be mandatory for Swedish electrical authorities to use PEPPOL.
+
+
+### Colombian UBL Customization - DIAN
+
+DIAN, the Colombian national tax and customs directorate, implements UBL 2 as the XML document format for electronic invoicing.
+
+
+### Norwegian UBL Customization - EHF
+
+The Norwegian Agency for Public and Financial Management (DFØ) has chosen to use Peppol BIS Billing 3.0 and UBL for implementation of national format for invoicing. Additional specifications using UBL as syntax based upon Peppol BIS are also used in the Norwegian market.
+
+DFØ follows the direction once set out by Norwegian Agency for Public Management and eGovernment (Difi) in using UBL and results from CEN BII (restarted as CEN TC434) as basis for national implementation of post-award document exchange.
+
+
+### Dutch UBL Customization - UBL-OHNL and Simplerinvoicing
+
+UBL-OHNL is a Dutch government-specific customization for submitting documents via Digipoort.
+
+Simplerinvoicing is a community of e-invoicing, ERP and accounting software providers making e-invoicing in UBL available for everyone. It includes access to the PEPPOL network for secure and reliable transfer.
+
+In response to the European Directive 2014/55/EU the Dutch government has mandated XML Invoicing for all contracts signed after January 1, 2017, using the UBL-OHNL customization via Digipoort or the Simplerinvoicing customization via PEPPOL.
+
+
+### Australia and New Zealand use of UBL
+
+As part of a national initiative to increase the proportion of businesses participating in the Australian digital economy the Digital Business Council endorsed an Interoperability Framework in 2016. The initial version of the framework includes a set of policies, standards and guidelines to promote the economy-wide adoption of eInvoicing. A subset of UBL 2.1 for the invoice and business response document was included in this initial release. The subset was initially based on a working draft of the European Committee for Standardization's work under the CEN/TC 434 - Electronic Invoicing project
+
+In 2017 OASIS established a localisation subcommittee to promote the harmonised use of UBL and to support the broader market adoption across Australia. The subcommittee facilitates an open dialogue for information sharing and collaboration, under the auspices of OASIS transparent governance and operating procedures.
+
+Further guidance and support is facilitated by third parties such as
+
+* DCAF Online - a contemporary and transparent approach to businesses having visibility of the digital standards and frameworks their service providers support. Recognised service providers are listed and resources are available to support the economy-wide adoption of digital procurement.
+
+In February 2019 "the two countries’ intention to jointly adopt the Pan-European Public Procurement Online (PEPPOL) interoperability framework for trans-Tasman e-invoicing" was announced by the Prime Ministers of New Zealand and Australia.
+
+
+### Italian use of UBL
+
+The future of e-invoicing in Italy will facilitate the correct implementation of the national Technical Rules for Interoperability between e-Procurement platforms (Circolare 3 AgID) and the automation of the end-to-end procurement process, based on PEPPOL or, where a PEPPOL specification is not available, by implementing a CEN BII profile using the OASIS UBL 2.1 syntax. In the long term, likely by 2022, the objective is to migrate to a single global standard, UBL, still supporting the other mandatory syntax with translations, and phasing out the national format.
+
+
+### Singaporean use of UBL
+
+Singapore has established the first PEPPOL Authority outside of Europe with the Info-communications Media Development Authority (IMDA) to help businesses in Singapore to benefit from digitalisation and better position themselves to plug into the international marketplace.
+
+
+### United States and Canadian use of UBL
+
+On October 4, 2018, the Business Payments Coalition e-Invoicing Subcommittee, an open technical committee consisting of US, Canadian, and Mexican interests in electronic invoicing and facilitated by the US Federal Reserve Bank of Minneapolis, released its first review of the semantic model of an invoice, expressed using the business objects of OASIS UBL 2.2.
+
+
+## National adoptions
+
+* on February 17, 2017, Canada formally adopted UBL 2.1 as Canadian national standard CAN/CSA-ISO/IEC 19845:16 (paid content identical to free content from OASIS download web site cited above)
+
+## Corporate support of UBL
+
+* MSC Belgium documented their adoption of UBL 2.1 for sales invoices as of March 15, 2016
+* EDF France documented their adoption of UBL 2.0 for orders as of March 23, 2010
+* IBM documents their support of PEPPOL UBL for e-Invoicing
+
+## Industry support of UBL
+
+
+### Textile Clothing and Footwear industry - eBiz-TCF
+
+* eBIZ is a UBL customization available for the Textile Clothing and Footwear industry.
+
+### The e-Freight Framework
+
+* a joint effort to create "One Common Framework for Information and Communication Systems in Transport and Logistics" from FREIGHTWISE, e‐Freight, INTEGRITY, Smart‐CM, SMARTFREIGHT, EURIDICE, RISING, DiSCwise, iCargo, COMCIS, eMAR and other projects, developing a reference model and logistics information exchange "document" that are now part of UBL 2.1 - ISO/IEC 19845
+
+### Danish Industry
+
+* ClearView Trade offers a portal for customers to obtain export documents using UBL
+
+## Products supporting UBL
+
+* Akretion has created open source UBL modules for open source Odoo (formerly OpenERP) and has produced a demonstration video in OGG Video format
+* Crane Softwrights Ltd. offers a subset schema preparation service
+* go2UBL offers a service of converting PDF documents into UBL documents
+* the backbone document format for the Tradeshift platform is UBL
+* UBLReady is an online validation service for UBL documents and for certifying the readiness of organizations according to the UBL Ready configuration
+* xa-elegans is a web application that accepts and runs rules over UBL documents as part of the Internet of Rules
+* Centiga is a cloud-based accounting software that utilises UBL to offer free invoicing services. The software is integrated with the majority for Norwegian banks, which means that one can control the economy as a whole in one place.
+* bBiller is a real world Ethereum Blockchain DAO for Double Entry Book-keeping and accounting using the International standard OASIS UBL Universal Business Language.
+* Semine is a Norwegian AI platform provider that provides automated double entry accounting for business documents received in the UBL format. The platform can be integrated with any ERP solutions using their open API.
+* Charlie-India is a tech startup providing a white-label e-invoicing platform; users of the services built on the platform can exchange invoice data in the OASIS UBL format.
+* Conta Conta is a web-based invoicing platform that utilizes UBL to deliver cost-free invoicing services within the Australian market.
+
+## Tools for working with UBL documents and models
+
+* Crane Softwrights Ltd.'s ods2obdgc and gc2obdndr tools are used by the UBL committee to create UBL document schemas from a spreadsheet expression of business objects described using the UN/CEFACT Core Component Technical Specification 2.01
+* iSURF eDoCreator 1.0 allows creation and customization of UBL document schemas.
+* ph-ubl Open Source Java library for reading and writing UBL 2.0, 2.1, 2.2 and UBL-TR documents. Licensed under the Apache 2.0 License
+* UBL Larsen C# .NET 4.0 library for reading and writing UBL 2.0 documents.
+* Kyktir universal file viewer with an UBL viewer included.
+
+## UBL Vocabulary Development
+
+The OASIS UBL Naming and Design Rules Version 3.0 documents how the UBL Technical Committee applies the OASIS Business Document Naming and Design Rules Version 1.0 specification for defining a business document creating XSD schemas on the basis of business objects described using the UN/CEFACT Core Component Technical Specification 2.01.
+
+The committee has published a reference for one to create one's own UBL subset schema by starting from the same resources used by the committee to publish the UBL distribution.
+
+The committee announced the first public review of the OASIS Business Document Naming and Design Rules Version 1.1 proposed OASIS Standard with new rules for creating JSON validation artefacts for JSON documents, complete with the OASIS Committee Note of all UBL 2.1 document types as JSON schemas and all UBL 2.1 example documents as JSON documents, beginning February 1, 2017 and closing April 1, 2017.
+

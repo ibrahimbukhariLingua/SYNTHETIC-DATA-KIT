@@ -1,0 +1,112 @@
+Dynamic enterprise modeling
+
+
+# Dynamic enterprise modeling
+
+
+
+**Dynamic enterprise modeling** (DEM) is an enterprise modeling approach developed by the Baan company, and used for the Baan enterprise resource planning system which aims "to align and implement it in the organizational architecture of the end-using company".
+
+According to Koning (2008), Baan introduced dynamic enterprise modelling in 1996 as a "means for implementing the Baan ERP product. The modelling focused on a Petri net–based technique for business process modelling to which the Baan application units were to be linked. DEM also contains a supply-chain diagram tool for the logistic network of the company and of an enterprise function modelling diagram".
+
+
+## Overview
+
+To align a specific company with dynamic enterprise modeling, the organizational structure is blueprinted top-down from high-level business processes to low-level processes. This blueprint is used as a roadmap of the organization, that is compatible with the structural roadmap of the software package. Having both roadmaps, the software package and the organizational structure are alienable. The blueprint of an organizational structure in dynamic enterprise modeling is called a reference model. A reference model is the total view of visions, functions, and organizational structures and processes, which together can be defined as a representative way of doing business in a certain organizational typology.
+
+The DEM reference model consists of a set of underlying models that depict the organizational architecture in a top-down direction. The underlying models are:
+
+* *Enterprise structure diagrams*: The company site structure is visualized with the dispersed geographic locations, the headquarters, manufacturing plants, warehouses, and supplier and customer locations. Physical as well as logical multi-site organizations for internal logistic or financial flow optimization can be diagrammed.
+* *Business control model* : The business control model represents the primary processes of the organization and their control, grouped in business functions. The DEM reference model exists of one main Business Control Model, resulting in several other Business Control Models per function area of the organization.
+* *Business function model* : The business function model is a function model that focuses on the targets of the several functions within the company.
+* *Business process model* : The business process model focuses on the execution of the functions and processes that originate from the business control model, and the business function model. Processes flows are depicted and processes are detailed out.
+* *Business organization model* : The business organization model focuses less on the processes and more on the organizational aspects such as roles and responsibilities.
+
+Together these models are capable of depicting the total organizational structure and aspects that are necessary during the implementation of the dynamic enterprise modeling. The models can have differentiations, which are based on the typology of the organization (i.e.: engineer-to-order organizations require different model structures than assemble-to-order organizations. To elaborate on the way that the reference model is used to implement software and to keep track of the scope of implementation methods, the business control model and the business process model will be explained in detail.
+
+
+## Dynamic enterprise modeling topics
+
+
+### Business control model
+
+The business control model exists of the business functions of the organization and their internal and external links. Basic features in the model are:
+
+* *Request-feedback-loop*: A link from, to, or between business functions is called a request-feedback-loop, which consists of 4 states that complete the process and information flows between both business functions. The states are labeled: requested, committed, completed, and accepted.
+* *Workflow case*. A workflow case is the description of the execution and the target of the process that occurs between two business functions. The most important critical factors of the workflow case are quantity, quality, and time. The 4 states of Request-feedback-loop the together represent the workflow case.
+* *Triggers*: Business functions are aggregates of business processes and focus mainly on the triggers (control) between processes, thus not on the information flows.
+* *Business functions* : In an optimal situation for the modeling process, a company has only one business function. Business functions are however subdivided when:
+ + The nature and characteristics of workflow cases fluctuate
+ + The frequency in underlying processes fluctuate
+ + Detail-level fluctuates
+ + More than 1 type of request triggers a function
+
+Next to interaction between two business functions, interaction can also exist between objects that are not in the scope of the reference model. These objects can be external business functions and agents.
+
+* *External business function* : this is a group of processes that are part of the organization (meaning that the organization can control the functions), but that is outside of the scope of the reference model.
+
+Agents on the other hand are entities similar to business functions with the exception that they are external of the business (i.e.: customers and suppliers).
+
+* Processes within or between business functions are executed by **triggers**, which can be **event-driven** or **time-driven**.
+* Exceptions in a system are handled, according to the set handling level in the business process configuration, when the success path of the model is not met in practice.
+
+Subroutines of processes can be modeled in the Business Control Model to take care of possible exceptions that can occur during the execution of a process (i.e.: delay handling in the delivery of goods).
+
+In addition to business functions that consist of the main processes of the organization, management functions exist.
+
+* *Management business functions*: These are functions that manage the business process itself, and that thus, support the execution and triggering of the main business functions.
+
+Having this reference, the main processes of the organization can be captured in the Business Control Model. The main functions of the organization are grouped in the business functions, which consist of the processes that are part of the specific business function. Interactions between the business functions are then depicted using the request-feedback loops.
+
+
+### Constructing the business control model
+
+A business control model is constructed according to a set path.
+
+* First, the **scope** of the business is defined. The scope includes scoping what to model and includes the definition of the agents and external business functions that relate to the business.
+* Next, the scope is depicted to a model of the black box with al the agents and external business functions surrounding the black box.
+* The next step is to define the process and information flows (request-feedback flows) between the agents and external business functions to and from the black box of the business control model. Defining the request-feedback flows enables the modeler to define what processes are inside the black box.
+
+After creating the main business functions within the business control model, the several business functions are detailed out.
+
+* In case of a production business it is vital to define the **customer order decoupling point**, referring to the split in the physical process where processes are based on the customer order instead of forecasts.
+* Service based businesses on the other hand do not have a physical goods flow and thus do not require a physical process model. It is however imaginable that the same type of process flow can be utilized to construct a business control model for a service based business, as a service can be interpreted as a product as well. In this way, a business control model can be constructed similarly for a service based business as for a physical goods production business, having intangible goods instead of tangible.
+* Next to the low-level physical production process, the high-level business functions need to be defined as well. In most cases the higher level business functions relate to planning functions and other tactical and strategical business functions, followed by functions as sales and purchase.
+
+After high-level detail definitions, the business functions are decomposed to lower-level detail definitions to make the business control model alienable to the lower models within the reference model, for this practice, mainly the Business Process Model. In the Business Process Model the processes are elaborated until the lowest level of detail. Given this level of detail, the Baan software functionality is then projected on the processes, depicted in the Business Process Model.
+
+
+### Business process model
+
+The modeling of processes in DEM, modeling the business process model is done using *Petri net building blocks*. DEM uses 4 construction elements:
+
+* State : A state element represents the state of a job token and is followed by the activity that executes the job token of the state.
+* Processing activity : A processing activity is the activity that processes the job token of a state, transforming the state of the job token to another state.
+* Control activity: A control activity navigates the process activity but does not execute it.
+* Sub-process : A sub-process is a collection of different other processes, aggregated in a single element by means of complexity management.
+
+These 4 construction elements enables the modeling of DEM models. The modeling is due to a set collection of modeling constraints, guiding the modeling process in order to have similarly created models by different modelers. Control activities exist in different structures in order to set different possible routes for process flows. The used structures for control activities are:
+
+* OR-split / XOR-split : This structure creates 2 new states out of 1 state, signaling the creation of 2 job tokens out of 1 job token. If the new state can be both of the output tokens, the split is OR, if not, the split is an exclusive OR split (XOR).
+* AND-join construction : 2 job tokens are both needed to enable the control activity, creating 1 new job token (thus 1 new state).
+* OR-join / XOR-join : 2 job tokens are needed to enable the control activity, creating 1 new job token.
+
+OR means one of the two starting job tokens can be used or both, XOR means only one of the tokens can be used to create the output job token.
+
+
+### An example
+
+The example below demonstrates the modeling of the concept of marriage and divorce using Petri net building blocks.
+
+* The Petri net built model expresses the transformation from a single man and woman to a married couple through marriage and back to single individuals through divorce.
+* The model starts with the two states called man and woman.
+* Through an AND-join construction (both man and woman are needed in order to form a couple) the two states are joined within the control activity called coupling to the new state called couple.
+* The couple state then is transformed through the processing activity called marriage, resulting in the transformed state of married couple.
+* The state married couple is then transformed to the state divorced couple using the process activity called divorce, resulting in the state called divorced couple.
+* The control activity called decoupling finally splits the divorced couple state into the states of man and woman.
+
+### Assessments
+
+Using an embedded method, brings the power that the method is designed to implement the software product that the method comes with. This suggests a less complicated usage of the method and more support possibilities.
+The negative aspect of an embedded method obviously is that it can only be used for specific product software. Engineers and consultants, operating with several software products, could have more use of a general method, to have just one way of working.
+

@@ -1,0 +1,135 @@
+TON (blockchain)
+
+
+# TON (blockchain)
+
+
+
+**TON**, also known as **The Open Network** (previously **Telegram Open Network**), is a decentralized layer-1 blockchain. TON was originally developed by Nikolai Durov who is also known for his role in creating the messaging platform, Telegram.
+
+Telegram had planned to use TON to launch its own cryptocurrency (Gram), but was forced to abandon the project in 2020 following an injunction by US regulators. The network was then renamed and independent developers have created their own cryptocurrencies and decentralized applications (dApps) using TON. Toncoin, the principal token of The Open Network is deeply integrated into the Telegram messaging app, used for paying rewards to creators and developers, buying Telegram ads, hosting giveaways or purchasing services such as Telegram Premium.
+
+
+## History
+
+In 2017–2018, the Telegram Messenger team begins to explore blockchain solutions for themselves. Finding no current Layer 1 blockchain able to support Telegram's 9-figure userbase, they decide to design their own layer-1 chain, then called Telegram Open Network.
+
+To obtain the resources required to make TON a reality, Telegram launched a Gram token (later renamed *Toncoin*) sale in Q1 2018. Durov considered venture capital financing but decided against it.
+
+However, on October 11, 2019, the US SEC filed an emergency action and obtained a temporary restraining order against Telegram Group Inc. and its wholly-owned subsidiary TON Issuer Inc., alleging that the defendants “failed to register their offers and sales of Grams, which are securities, in violation of the registration provisions of the Securities Act of 1933.”
+
+In the injunction order signed later in March 2020, United States District Judge, Kevin Castel noted that “Telegram pooled the money received from the initial purchasers of Gram and used it to develop the TON blockchain as well as to maintain and expand Messenger.”
+
+
+### Genesis (2018–2020)
+
+Telegram introduced the design and initial implementation of the TON Blockchain. The Telegram team releases a series of documents detailing the design of TON Blockchain. Telegram initially launched the TON Testnet to the public through a testing environment for the TON blockchain. During the early testnet phase, Telegram released testnet tokens, which had no value and were used for testing purposes.
+
+To fund the development of the messenger and the blockchain project, Telegram attracted investments through a private Gram offering, but in light of regulatory complications, the Telegram team withdrew from the TON project (May 2020).
+
+In July 2020 Telegram placed the remaining testnet tokens into special Giver smart contracts that allowed anyone to participate in future mining and discontinued support for the TON testnet.
+
+A small team of open-source developers and Telegram contest winners Anatoliy Makosov and Kirill Emelyanenko, originally under the name *NewTON*, took a deep dive into TON's codebase and resumed active blockchain development, adhering to the principles outlined in the original TON whitepaper.
+
+
+### Development and launch (2020–2022)
+
+After TON's private development phase, all of its code was released to as open source in September 7, 2019. The launch of the test network was initially scheduled for Q2 2018 with the main network launch in Q4, but the milestones were postponed several times. The testnet was launched in January 2019 with a half a year deviation from the plan. In May the company released the lite version of the TON blockchain network client. In September the company released the complete source code for TON nodes on GitHub, making it possible to launch a full node and explore the testnet. The launch of the TON main network was scheduled for October 31.
+
+
+## Design
+
+
+### TON blockchain
+
+The Open Network's fundamental infrastructure is a scalable multi-blockchain platform designed to support the creation and operation of decentralized applications (dApps) and smart contracts. Utilizing the proof-of-stake consensus mechanism, it can theoretically support up to 2^92 accompanying blockchains.
+
+TON's design philosophy involves leveraging sharding to attain scalability. Its blockchains are designed with the ability to split and merge automatically to adapt to fluctuating loads. This design feature ensures that block generation speed is independent of transaction volume, avoiding network congestion and maintaining low operational costs irrespective of demand.
+
+Hypercube routing mechanisms in TON ensure efficient data exchange between any two blockchains, regardless of the network size. Due to the logarithmic relationship between the time taken to transfer data and the number of blockchains in TON, the network can scale to millions of chains without compromising processing speed.
+
+TON employs an advanced proof-of-stake consensus mechanism. Validator nodes use deposit stakes to vouch for their reliability, achieving consensus through a variant of the Byzantine fault tolerance protocol. This approach is resource-efficient and allows TON to devote the computing power of nodes to processing transactions and executing smart contracts.
+
+The TON network comprises a masterchain and up to 2^32 workchains, each with its unique ruleset. These rulesets dictate various aspects of the workchains, such as account address formats, transaction protocols, and virtual machines for executing smart contracts and managing basic cryptocurrencies. The workchains function cohesively within the TON ecosystem while maintaining their individual characteristics.
+
+
+### Governance
+
+Governance in TON is inherently decentralized and decisions for network modifications are contingent upon approval from the majority of validators. This is facilitated through the proof-of-stake consensus mechanism where validators can vote for network configuration changes or update their software to accept proposed changes.
+
+
+### Security
+
+The TON (Telegram Open Network) incorporates security measures through collaborations with various Security Assurance Providers (SAP). These providers conduct testing and quality assurance for software within the TON ecosystem, aiming to enhance network security. The following is a list of SAPs associated with the TON Network such as Certik, Quantstamp, softstack (formerly Chainsulting), SlowMist, Hexens, Vidma, and Scalebit.
+
+
+## Applications
+
+
+### Toncoin (previously: *Gram*)
+
+Toncoin is the principal cryptocurrency of The Open Network (TON) blockchain, and in particular of its masterchain and basic workchain. It is used for transaction fees, securing the blockchain through staking, deciding how the network develops, gas payments (i.e., smart-contract message processing fees), and settling payments.
+
+
+### TON Proxy
+
+A network proxy and anonymizer layer designed for TON nodes, TON Proxy is akin to the Invisible Internet Project (I2P) and facilitates the creation of decentralized VPN services and blockchain-based Tor alternatives. This capability enhances online privacy and offers protection against censorship towards the facilitation of decentralized applications which may be more resistant to censorship. As of September 30, 2022, TON Proxy has been made compatible with HTTP Proxy.
+
+
+### TON DNS
+
+Launched by the TON Foundation on June 30, 2022, TON DNS operates similarly to domain names associated with other cryptocurrencies, offering ".ton" as its domain zone. The program assigns human-readable names to accounts, smart contracts, services, and network nodes. This service simplifies the process of accessing decentralized applications by allowing users to use short and simple domain names rather than long strings of alphanumeric characters. Domain names can also be associated with wallet addresses.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+
+### TON Storage
+
+On December 31, 2022, TON Storage, a decentralized file storage system, was introduced. TON Storage is a distributed file storage system accessible through the TON P2P Network, resembling torrent-like technology that utilizes smart contracts for reliability. TON Storage provides a platform for the storage and exchange of large amounts of data using the TON blockchain network, in an effort to eliminate the need for centralized web servers.
+
+
+### TON Payments
+
+Launched on June 30, 2022, TON Payments can be used for instant off-chain value transfers between users, bots, and other services. Security measures embedded in the system ensure that these transfers are as secure as on-chain transactions.
+
+
+## DeFi on TON
+
+The TON blockchain supports a growing decentralized finance (DeFi) ecosystem, enabling fast, low-cost transactions and seamless integration with Telegram. Key DeFi projects on TON :
+
+
+### **STON.fi**
+
+The largest decentralized exchange (DEX) utilizing an automated market maker (AMM) model, allowing users to swap TON-based tokens and provide liquidity.
+
+
+### **Tonkeeper**
+
+A non-custodial cryptocurrency wallet for storing, sending, and exchanging TON assets, with integrated swaps via STON.fi.
+
+
+### **Wallet**
+
+Telegram’s built-in crypto wallet, enabling users to store, send, and receive TON-based assets directly within the messaging app.
+
+
+### **TON Space**
+
+A self-custodial wallet within Telegram, providing users full control over their private keys and access to DeFi services.
+
+
+## Everscale
+
+By May 2020, when Telegram's commitment to the project was unclear, other projects started to develop the technology.
+
+Launched on May 7, 2020, "Free TON" [ᵣᵤ] is another project to continue development of Telegram Open Network technology using the source code freely available under GNU General Public License (GNU GPL). By January 2021, the community of the project reached 30,000 people. Free TON's token titled "TON Crystal" or just "TON" is distributed as a reward for contributions to the network. Of five billion tokens issued at the moment of launch, 85% were reserved for users, 5% for validators, and 10% for the developers (including 5% dedicated for TON Labs, the developer of TON OS middleware for TON blockchain, which is the essential part of Free TON). In 2021 it was rebranded to Everscaleʳᵘ.
+
+
+## Litigation
+
+On October 11, 2019, a couple of weeks before the planned TON launch, SEC obtained a temporary restrictive order to prevent the distribution of Grams. The regulator contended that initial Gram purchasers would be acting akin to underwriters, and the resale of Grams, once distributed, will be an unregistered distribution of securities.
+
+After a lengthy legal battle between Telegram and the SEC, Judge P. Kevin Castel of the U.S. District Court for the Southern District of New York agreed with the SEC's vision that the sale of Grams, the distribution to initial purchasers, and the highly likely future resale should be viewed as a single "scheme" to distribute Grams to the secondary market in an unregistered security offering. The "security" at issue consisted of the whole set of contracts, expectations, and understandings around the sale and the distribution of tokens to the interested public, and not the Grams themselves. In this case, the initial purchasers acted as underwriters that planned to resell tokens, and not to consume them. The restrictions on Gram distribution remained in force for purchasers based in and outside U.S., as Telegram had no tools to prevent U.S. citizens from purchasing Grams on the secondary market.
+
+Following the court decision, the Telegram Open Network team announced that they would be unable to launch the project by the expected 30 April 2020 deadline. On 12 May 2020, Pavel Durov announced the end of Telegram's active involvement with TON.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ On June 11, Telegram settled with SEC U.S. Securities & Exchange Commission and agreed to return $1.22 billion as "termination amounts" in Gram purchase agreements, and pay an $18.5 million penalty to SEC. The company also agreed to notify the SEC of any plans to issue digital assets over the next three years. The judge approved the settlement on June 26. "New and innovative businesses are welcome to participate in our capital markets, but they cannot do so in violation of the registration requirements of the federal securities laws," the SEC spokesperson noted. Telegram had subsequently shut down TON test network.
+
+In 2020, Telegram repaid TON investors $770 million and converted $443 million into a one-year debt at 10% interest, raising its total liabilities to $625.7 million. On 10 March 2021, the company made the placement of 5-year bonds worth $1 billion to cover the debts it had to return by 30 April 2021.
+

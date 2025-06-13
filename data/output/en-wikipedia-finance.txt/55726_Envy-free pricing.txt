@@ -1,0 +1,101 @@
+Envy-free pricing
+
+
+# Envy-free pricing
+
+
+
+**Envy-free pricing** is a kind of fair item allocation. There is a single seller that owns some items, and a set of buyers who are interested in these items. The buyers have different valuations to the items, and they have a quasilinear utility function; this means that the utility an agent gains from a bundle of items equals the agent's value for the bundle minus the total price of items in the bundle. The seller should determine a price for each item, and sell the items to some of the buyers, such that there is no envy. Two kinds of envy are considered:
+
+* *Agent envy* means that some agent assigns a higher utility (a higher difference value-price) to a bundle allocated to another agent.
+* *Market envy* means that some agent assigns a higher utility (a higher difference value-price) to any bundle.
+
+The no-envy conditions guarantee that the market is stable and that the buyers do not resent the seller. By definition, every market envy-free allocation is also agent envy-free, but not vice versa.
+
+There always exists a market envy-free allocation (which is also agent envy-free): if the prices of all items are very high, and no item is sold (all buyers get an empty bundle), then there is no envy, since no agent would like to get any bundle for such high prices. However, such an allocation is very inefficient. The challenge in envy-free pricing is to find envy-free prices that also maximize one of the following objectives:
+
+* The *social welfare* - the sum of buyers' utilities;
+* The *seller's revenue* (or *profit*) - the sum of prices paid by buyers.
+
+Envy-free pricing is related, but not identical, to other fair allocation problems:
+
+* In envy-free item allocation, monetary payments are not allowed.
+* In the rental harmony problem, monetary payments are allowed, and the agents are quasilinear, but all objects should be allocated (and each agent should get exactly one object).
+
+## Results
+
+A **Walrasian equilibrium** is a market-envy-free pricing with the additional requirement that all items with a positive price must be allocated (all unallocated items must have a zero price). It maximizes the social welfare.**^** However, a Walrasian equilibrium might not exist (it is guaranteed to exist only when agents have gross substitute valuations). Moreover, even when it exists, the sellers' revenue might be low. Allowing the seller to discard some items might help the seller attain a higher revenue.
+
+
+### Maximizing the seller's revenue subject to market-envy-freeness
+
+Many authors studied the computational problem of finding a price-vector that maximizes the seller's revenue, subject to market-envy-freeness.
+
+**Guruswami, Hartline, Karlin, Kempe, Kenyon and McSherry** (who introduced the term *envy-free pricing*) studied two classes of utility functions: *unit demand* and *single-minded*. They showed:
+
+* Computing market-envy-free prices to maximize the seller's revenue is APX-hard in both cases.
+* There is a logarithmic approximation algorithm for the revenue in both cases.
+* There are polynomial-time algorithms for some special cases.
+
+**Balcan, Blum and Mansour** studied two settings: goods with *unlimited supply* (e.g. digital goods), and goods with *limited supply*. They showed that a single price, selected at random, attains an expected revenue which is a non-trivial approximation of the maximum social welfare:
+
+* With unlimited supply, a random single price achieves a log-factor approximation to the maximum social welfare. This is true even with *general* (not monotone) valuations. For a single agent and *m* item types, the revenue is at least 4 log (2*m*) of the maximum welfare; for *n* buyers, it is at least O(log (*n*) + log (*m*)) of the maximum welfare.
+* With limited supply, for subadditive valuations, a random single price achieves revenue within 2O(√(ˡᵒᵍ ⁿ ˡᵒᵍˡᵒᵍ ⁿ)) of the maximum welfare.
+* In the multi-unit case, when no buyer requires more than a 1-ε fraction of the items, a random single price achieves revenue within O(log *n*) of the maximum welfare.
+* A lower bound for fractionally subadditive buyers: any single price has approximation ratio 2.
+
+**Briest and Krysta** focused on goods with unlimited supply and *single-minded* buyers - each buyer wants only a single bundle of goods. They showed that:
+
+* The problem is weakly NP-hard even when the wanted bundles are *nested*.
+* The problem is APX-hard even for very sparse instances.
+* There is a log-factor approximation algorithm.
+
+**Briest** focused on unit-demand min-pricing buyers. Each such buyer has a subset of wanted items, and he would like to purchase the cheapest affordable wanted-item given the prices. He focused on the uniform-budget case. He showed that, under some reasonable complexity assumptions:
+
+* The unit-demand min-buying pricing problem with uniform budgets cannot be approximated in polytime for some *ε*> 0.
+* A slightly more general problem, in which consumers are given as an explicit probability distribution, is even harder to approximate.
+* All the results apply to single-minded buyers too.
+
+**Chen, Ghosh and Vassilvtskii** focused on items with *metric substitutability* - buyer *i*’s value for item *j* is *vᵢ* − *cᵢ,ⱼ*, and the substitution costs *cᵢ,ⱼ*, form a metric. They show that
+
+* With metric substitutability, the problem can be solved exactly in polynomial time.
+* When the substitution costs are only approximately a metric (i.e., they satisfy the triangle inequality approximately), the problem becomes NP-hard.
+
+**Wang, Lu and Im** study the problem with supply constraints given as an independence system over the items, such as matroid constraints. They focus on unit-demand buyers.
+
+**Chen and Deng** study multi-item markets: there are *m* indivisible items with unit supply each and *n* potential buyers where each buyer wants to buy a single item. They show:
+
+* A polytime algorithm to compute a revenue maximizing EF pricing when every buyer evaluates at most two items at a positive valuation (they use the Strong Perfect Graph Theorem).
+* The problem becomes NP-hard if some buyers are interested in at least three items.
+
+**Cheung and Swamy** present polytime approximation algorithms for single-minded agents with limited supply. They approximate the revenue w.r.t. the maximum social welfare.
+
+**Hartline and Yan** study revenue-maximization using prior-free truthful mechanisms. They also show the simple structure of nvy-free pricing and its connection to truthful mechanism design.
+
+**Chalermsook, Chuzhoy, Kannan and Khanna** study two variants of the problem. In both variants, each buyer has a set of "wanted items".
+
+* *Unit-demand min-buying pricing*: each buyer buys his cheapest wanted item if its price is ≤ the agent's budget; otherwise he buys nothing.
+* *Single-minded pricing*: each buyer buys all his wanted items if their price is ≤ the agent's budget; otherwise he buys nothing.
+
+They also study the *Tollbooth Pricing* problem - a special case of single-minded pricing in which each item is an edge in a graph, and each wanted-items set is a path in this graph.
+
+**Chalermsook, Laekhanukit and Nanongkai** prove approximation hardness to a variant called *k-hypergraph pricing*. They also prove hardness for unit-demand min-buying and single-minded pricing.
+
+**Demaine, Feige, Hajiaghayi and Salavatipour** show hardness-of-approximation results by reduction from the unique coverage problem.
+
+**Anshelevich, Kar and Sekar** study EF pricing in large markets. They consider both revenue-maximization and welfare-maximization.
+
+**Bilo, Flammini and Monaco** study EF pricing with sharp demands—where each buyer is interested in a fixed quantity of an item.
+
+**Colini-Baldeschi, Leonardi, Sankowski and Zhang** and **Feldman, Fiat, Leonardi and Sankowski** study EF pricing with budgeted agents.
+
+**Monaco, Sankowski and Zhang** study multi-unit markets. They study revenue maximization under both market-envy-freeness and agent-envy-freeness. They consider both item-pricing and bundle-pricing.
+
+
+### Relaxed notions of envy-freeness
+
+* **Chen and Rudra** consider a relaxation of Walrasian equilibrium, in which only the winners must be envy-free. The goal is to maximize the number of envy-free buyers.
+* **Alon, Mansour and Tennenholtz** and **Amanatidis, Fulla, Markakis and Sornat** consider a relaxation of market-envy-freeness, in which buyers are arranged in a social network, the prices should be similar only between nodes that are adjacent on the network, and the losers must not envy.
+* **Flammini, Mauro and Tonelly** consider a relaxation of market-envy-freeness in which each agent sees only the items of neighboring agents (on a given social network).
+* **Elbassioni, Fouz and Swamy** consider a relaxation of agent-envy-freeness, in which only the winners must not envy. They consider bundle-pricing.
+* **Bérczi, Codazzi, Golak and Grigoriev** explore the concept of dynamic pricing where prices can adapt to market conditions to maintain fairness among consumers, extending traditional notions of envy-freeness beyond static scenarios.

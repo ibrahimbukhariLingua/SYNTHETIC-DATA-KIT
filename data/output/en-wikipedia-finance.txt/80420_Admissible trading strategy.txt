@@ -1,0 +1,26 @@
+Admissible trading strategy
+
+
+# Admissible trading strategy
+
+
+
+In finance, an **admissible trading strategy** or **admissible strategy** is any trading strategy with wealth almost surely bounded from below. In particular, an admissible trading strategy precludes unhedged short sales of any unbounded assets. A typical example of a trading strategy which is not *admissible* is the doubling strategy.
+
+
+## Mathematical definition
+
+
+### Discrete time
+
+In a market with {\displaystyle d} assets, a trading strategy {\displaystyle x\in \mathbb {R} ^{d}} is *admissible* if {\displaystyle x^{T}{\bar {S}}=x^{T}{\frac {S}{1+r}}} is almost surely bounded from below. In the definition let {\displaystyle S} be the vector of prices, {\displaystyle r} be the risk-free rate (and therefore {\displaystyle {\bar {S}}} is the discounted price).
+
+In a model with more than one time then the wealth process associated with an admissible trading strategy must be uniformly bounded from below.
+
+
+### Continuous time
+
+Let {\displaystyle S=(S\_{t})\_{t\geq 0}} be a d-dimensional semimartingale market and {\displaystyle H=(H\_{t})\_{t\geq 0}} a predictable stochastic process/trading strategy. Then {\displaystyle H} is called *admissible integrand for the semimartingale* {\displaystyle S} or just *admissible*, if
+
+1. the stochastic integral {\displaystyle H\cdot S} is well defined.
+2. there exists a constant {\displaystyle M\geq 0} such that {\displaystyle (H\cdot S)\_{t}\geq -M\,a.s.,\quad \forall t\geq 0}.

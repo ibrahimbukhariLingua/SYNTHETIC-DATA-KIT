@@ -1,0 +1,20 @@
+Black–Litterman model
+
+
+# Black–Litterman model
+
+
+
+In finance, the **Black–Litterman model** is a mathematical model for portfolio allocation developed in 1990 at Goldman Sachs by Fischer Black and Robert Litterman. It seeks to overcome problems that institutional investors have encountered in applying modern portfolio theory in practice. The model starts with an asset allocation based on the equilibrium assumption (assets will perform in the future as they have in the past) and then modifies that allocation by taking into account the opinion of the investor regarding future asset performance.
+
+
+## Background
+
+Asset allocation is the decision faced by an investor who must choose how to allocate their portfolio across a number of asset classes. For example, a globally invested pension fund must choose how much to allocate to each major country or region.
+
+In principle modern portfolio theory (the mean-variance approach of Markowitz) offers a solution to this problem once the expected returns and covariances of the assets are known. While modern portfolio theory is an important theoretical advance, its application has universally encountered a problem: although the covariances of a few assets can be adequately estimated, it is difficult to come up with reasonable estimates of expected returns.
+
+Black–Litterman overcame this problem by not requiring the user to input estimates of expected return; instead it assumes that the initial expected returns are whatever is required so that the equilibrium asset allocation is equal to what we observe in the markets. The user is only required to state how his assumptions about expected returns differ from the markets and to state his degree of confidence in the alternative assumptions. From this, the Black–Litterman method computes the desired (mean-variance efficient) asset allocation.
+
+In general, when there are portfolio constraints – for example, when short sales are not allowed – the easiest way to find the optimal portfolio is to use the Black–Litterman model to generate the expected returns for the assets, and then use a mean-variance optimizer to solve the constrained optimization problem.
+

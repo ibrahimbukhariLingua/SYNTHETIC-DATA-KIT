@@ -1,0 +1,68 @@
+Credit valuation adjustment
+
+
+# Credit valuation adjustment
+
+
+
+| CVA related concepts: |
+| --- |
+| * The mathematical concept as defined below; * A part of the regulatory Capital and RWA (risk-weighted asset) calculation introduced under Basel 3; * The CVA desk of an investment bank, whose purpose is to: + hedge for possible losses due to counterparty default; + hedge to reduce the amount of capital required under the CVA calculation of Basel 3; * The "CVA charge". The hedging of the CVA desk has a cost associated to it, i.e. the bank has to buy the hedging instrument. This cost is then allocated to each business line of an investment bank (usually as a contra revenue). This allocated cost is called the "CVA Charge". |
+
+A **Credit valuation adjustment** (**CVA**),
+in financial mathematics, is an "adjustment" to a derivative's price, as charged by a bank to a counterparty to compensate it for taking on the credit risk of that counterparty during the life of the transaction.
+"CVA" can refer more generally to several related concepts, as delineated aside.
+The most common transactions attracting CVA involve interest rate derivatives, foreign exchange derivatives, and combinations thereof.
+CVA has a specific capital charge under Basel III, and may also result in earnings volatility under IFRS 13, and is therefore managed by a specialized desk.
+CVA is one of a family of related valuation adjustments, collectively xVA; for further context here see Financial economics § Derivative pricing.
+
+
+## Calculation
+
+In financial mathematics one defines CVA as the difference between the risk-free portfolio value and the true portfolio value that takes into account the possibility of a counterparty's default.
+In other words, CVA is the market value of counterparty credit risk.
+This price adjustment will depend on counterparty credit spreads as well as on the market risk factors that drive derivatives' values and, therefore, exposure.
+It is typically calculated under a simulation framework.
+(Which can become computationally intensive; see .)
+
+
+### Risk-neutral expectation
+
+Unilateral CVA is given by the risk-neutral expectation of the discounted loss. The risk-neutral expectation can be written
+as
+
+where {\displaystyle T} is the maturity of the longest transaction in the portfolio, {\displaystyle B\_{t}} is the future value of one unit of the base currency invested today at the prevailing interest rate for maturity {\displaystyle t}, {\displaystyle LGD} is the loss given default, {\displaystyle \tau } is the time of default, {\displaystyle E(t)} is the exposure at time {\displaystyle t}, and {\displaystyle \mathrm {PD} (s,t)} is the risk neutral probability of counterparty default between times {\displaystyle s} and {\displaystyle t}.
+These probabilities can be obtained from the term structure of credit default swap (CDS) spreads.
+
+
+### Exposure, independent of counterparty default
+
+Assuming independence between exposure and counterparty's credit quality greatly simplifies the analysis. Under this assumption this simplifies to
+
+where {\displaystyle \mathrm {EE} ^{\*}} is the risk-neutral discounted expected exposure (EE):
+
+
+### Approximation
+
+The full calculation of CVA, as above, is via a Monte-Carlo simulation on all risk factors; this is computationally demanding.
+There exists a simple approximation for CVA, sometimes referred to as the "net current exposure method".
+This consists in: buying default protection, typically a Credit Default Swap, netted for each counterparty; and the CDS price may then be used to back out the CVA charge.
+
+
+### Accounting treatment
+
+The CVA charge may be seen as an accounting adjustment made to reserve a portion of profits on uncollateralized financial derivatives.
+These reserved profits can be viewed as the net present value of the credit risk embedded in the transaction.
+Thus, as outlined, under IFRS 13 changes in counterparty risk will result in earnings volatility; see XVA § Accounting impact and next section.
+
+
+## Function of the CVA desk
+
+In the course of trading and investing, Tier 1 investment banks generate counterparty *EPE* and *ENE* (expected positive/negative exposure).
+Whereas historically, this exposure was a concern of both the Front Office trading desk and Middle Office finance teams,
+increasingly CVA pricing and hedging is under the "ownership" of a centralized CVA desk.
+
+In particular, this desk addresses volatility in earnings due to the abovementioned IFRS 13 accounting standard requiring that CVA be considered in mark-to-market accounting.
+The hedging here focuses on addressing changes to the counterparty's credit worthiness, offsetting potential future exposure at a given quantile.
+Further, since under Basel III, banks are required to hold specific regulatory capital on the net CVA-risk, the CVA desk is responsible also for managing (minimizing) the capital requirements under Basel.
+

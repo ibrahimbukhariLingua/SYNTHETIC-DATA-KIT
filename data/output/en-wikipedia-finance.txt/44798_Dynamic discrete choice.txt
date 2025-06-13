@@ -1,0 +1,131 @@
+Dynamic discrete choice
+
+
+# Dynamic discrete choice
+
+
+
+**Dynamic discrete choice (DDC) models**, also known as **discrete choice models of** dynamic programming, model an agent's choices over discrete options that have future implications. Rather than assuming observed choices are the result of static utility maximization, observed choices in DDC models are assumed to result from an agent's maximization of the present value of utility, generalizing the utility theory upon which discrete choice models are based.
+
+The goal of DDC methods is to estimate the structural parameters of the agent's decision process. Once these parameters are known, the researcher can then use the estimates to simulate how the agent would behave in a counterfactual state of the world. (For example, how a prospective college student's enrollment decision would change in response to a tuition increase.)
+
+
+## Mathematical representation
+
+Agent {\displaystyle n}'s maximization problem can be written mathematically as follows:
+
+where
+
+* {\displaystyle x\_{nt}} are state variables, with {\displaystyle x\_{n0}} the agent's initial condition
+* {\displaystyle d\_{nt}} represents {\displaystyle n}'s decision from among {\displaystyle J} discrete alternatives
+* {\displaystyle \beta \in \left(0,1\right)} is the discount factor
+* {\displaystyle U\_{nit}} is the flow utility {\displaystyle n} receives from choosing alternative {\displaystyle i} in period {\displaystyle t}, and depends on both the state {\displaystyle x\_{nt}} and unobserved factors {\displaystyle \varepsilon \_{nit}}
+* {\displaystyle T} is the time horizon
+* The expectation {\displaystyle \mathbb {E} \left(\cdot \right)} is taken over both the {\displaystyle x\_{nt}}'s and {\displaystyle \varepsilon \_{nit}}'s in {\displaystyle U\_{nit}}. That is, the agent is uncertain about future transitions in the states, and is also uncertain about future realizations of unobserved factors.
+
+### Simplifying assumptions and notation
+
+It is standard to impose the following simplifying assumptions and notation of the dynamic decision problem:
+
+The flow utility can be written as an additive sum, consisting of deterministic and stochastic elements. The deterministic component can be written as a linear function of the structural parameters.
+
+Define by {\displaystyle V\_{nt}(x\_{nt})} the *ex ante* value function for individual {\displaystyle n} in period {\displaystyle t} just before {\displaystyle \varepsilon \_{nt}} is revealed:
+
+where the expectation operator {\displaystyle \mathbb {E} } is over the {\displaystyle \varepsilon }'s, and where {\displaystyle dF\left(x\_{t+1}\mid x\_{t}\right)} represents the probability distribution over {\displaystyle x\_{t+1}} conditional on {\displaystyle x\_{t}}. The expectation over state transitions is accomplished by taking the integral over this probability distribution.
+
+It is possible to decompose {\displaystyle V\_{nt}(x\_{nt})} into deterministic and stochastic components:
+
+where {\displaystyle v\_{nit}} is the value to choosing alternative {\displaystyle i} at time {\displaystyle t} and is written as
+
+where now the expectation {\displaystyle \mathbb {E} } is taken over the {\displaystyle \varepsilon \_{njt+1}}.
+
+The states {\displaystyle x\_{t}} follow a Markov chain. That is, attainment of state {\displaystyle x\_{t}} depends only on the state {\displaystyle x\_{t-1}} and not {\displaystyle x\_{t-2}} or any prior state.
+
+
+## Conditional value functions and choice probabilities
+
+The value function in the previous section is called the **conditional value function**, because it is the value function conditional on choosing alternative {\displaystyle i} in period {\displaystyle t}. Writing the conditional value function in this way is useful in constructing formulas for the choice probabilities.
+
+To write down the choice probabilities, the researcher must make an assumption about the distribution of the {\displaystyle \varepsilon \_{nit}}'s. As in static discrete choice models, this distribution can be assumed to be iid Type I extreme value, generalized extreme value, multinomial probit, or mixed logit.
+
+For the case where {\displaystyle \varepsilon \_{nit}} is multinomial logit (i.e. drawn iid from the Type I extreme value distribution), the formulas for the choice probabilities would be:
+
+
+## Estimation
+
+Estimation of dynamic discrete choice models is particularly challenging, due to the fact that the researcher must solve the backwards recursion problem for each guess of the structural parameters.
+
+The most common methods used to estimate the structural parameters are maximum likelihood estimation and method of simulated moments.
+
+Aside from estimation methods, there are also solution methods. Different solution methods can be employed due to complexity of the problem. These can be divided into **full-solution methods** and **non-solution methods**.
+
+
+### Full-solution methods
+
+The foremost example of a full-solution method is the nested fixed point (NFXP) algorithm developed by John Rust in 1987.
+The NFXP algorithm is described in great detail in its documentation manual.
+
+A recent work by Che-Lin Su and Kenneth Judd in 2012 implements another approach (dismissed as intractable by Rust in 1987), which uses constrained optimization of the likelihood function, a special case of mathematical programming with equilibrium constraints (MPEC).
+Specifically, the likelihood function is maximized subject to the constraints imposed by the model, and expressed in terms of the additional variables that describe the model's structure. This approach requires powerful optimization software such as Artelys Knitro because of the high dimensionality of the optimization problem.
+Once it is solved, both the structural parameters that maximize the likelihood, and the solution of the model are found.
+
+In the later article Rust and coauthors show that the speed advantage of MPEC compared to NFXP is not significant. Yet, because the computations required by MPEC do not rely on the structure of the model, its implementation is much less labor intensive.
+
+Despite numerous contenders, the NFXP maximum likelihood estimator remains the leading estimation method
+for Markov decision models.
+
+
+### Non-solution methods
+
+An alternative to full-solution methods is non-solution methods. In this case, the researcher can estimate the structural parameters without having to fully solve the backwards recursion problem for each parameter guess. Non-solution methods are typically faster while requiring more assumptions, but the additional assumptions are in many cases realistic.
+
+The leading non-solution method is conditional choice probabilities, developed by V. Joseph Hotz and Robert A. Miller.
+
+
+## Examples
+
+
+### Bus engine replacement model
+
+The bus engine replacement model developed in the seminal paper Rust (1987) is one of the first dynamic stochastic models of discrete choice estimated using real data, and continues to serve as classical example of the problems of this type.
+
+The model is a simple regenerative optimal stopping stochastic dynamic problem faced by the decision maker, Harold Zurcher, superintendent of maintenance at the Madison Metropolitan Bus Company in Madison, Wisconsin. For every bus in operation in each time period Harold Zurcher has to decide whether to replace the engine and bear the associated replacement cost, or to continue operating the bus at an ever raising cost of operation, which includes insurance and the cost of lost ridership in the case of a breakdown.
+
+Let {\displaystyle x\_{t}} denote the odometer reading (mileage) at period {\displaystyle t}, {\displaystyle c(x\_{t},\theta )} cost of operating the bus which depends on the vector of parameters {\displaystyle \theta }, {\displaystyle RC} cost of replacing the engine, and {\displaystyle \beta } the discount factor. Then the per-period utility is given by
+
+where {\displaystyle d} denotes the decision (keep or replace) and {\displaystyle \xi \_{t,{\text{keep}}}} and {\displaystyle \xi \_{t,{\text{replace}}}} represent the component of the utility observed by Harold Zurcher, but not John Rust. It is assumed that {\displaystyle \xi \_{t,{\text{keep}}}} and {\displaystyle \xi \_{t,{\text{replace}}}} are independent and identically distributed with the Type I extreme value distribution, and that {\displaystyle \xi \_{t,\bullet }} are independent of {\displaystyle \xi \_{t-1,\bullet }} conditional on {\displaystyle x\_{t}}.
+
+Then the optimal decisions satisfy the Bellman equation
+
+where {\displaystyle p(dx'\mid x,d,\theta )} and {\displaystyle q(d\xi '\mid x',\theta )} are respectively transition densities for the observed and unobserved states variables. Time indices in the Bellman equation are dropped because the model is formulated in the infinite horizon settings, the unknown optimal policy is stationary, i.e. independent of time.
+
+Given the distributional assumption on {\displaystyle q(d\xi '\mid x',\theta )}, the probability of particular choice {\displaystyle d} is given by
+
+where {\displaystyle EV(x,d,\theta )} is a unique solution to the functional equation
+
+It can be shown that the latter functional equation defines a contraction mapping if the state space {\displaystyle x\_{t}} is bounded, so there will be a unique solution {\displaystyle EV(x,d,\theta )} for any {\displaystyle \theta }, and further the implicit function theorem holds, so {\displaystyle EV(x,d,\theta )} is also a smooth function of {\displaystyle \theta } for each {\displaystyle (x,d)}.
+
+
+#### Estimation with nested fixed point algorithm
+
+The contraction mapping above can be solved numerically for the fixed point {\displaystyle EV(x,d,\theta )} that yields choice probabilities {\displaystyle P(d\mid x,\theta )} for any given value of {\displaystyle \theta }. The log-likelihood function can then be formulated as
+
+where {\displaystyle x\_{i,t}} and {\displaystyle d\_{i,t}} represent data on state variables (odometer readings) and
+decision (keep or replace) for {\displaystyle i=1,\dots ,N} individual buses, each in {\displaystyle t=1,\dots ,T\_{i}} periods.
+
+The joint algorithm for solving the fixed point problem given a particular value of parameter {\displaystyle \theta } and maximizing the log-likelihood {\displaystyle L(\theta )} with respect to {\displaystyle \theta } was named by John Rust *nested fixed point algorithm* (NFXP).
+
+Rust's implementation of the nested fixed point algorithm is highly optimized for this problem, using Newton–Kantorovich iterations to calculate {\displaystyle P(d\mid x,\theta )} and quasi-Newton methods, such as the Berndt–Hall–Hall–Hausman algorithm, for likelihood maximization.
+
+
+#### Estimation with MPEC
+
+In the nested fixed point algorithm, {\displaystyle P(d\mid x,\theta )} is recalculated for each guess of the parameters *θ*. The MPEC method instead solves the constrained optimization problem:
+
+This method is faster to compute than non-optimized implementations of the nested fixed point algorithm, and takes about as long as highly optimized implementations.
+
+
+#### Estimation with non-solution methods
+
+The conditional choice probabilities method of Hotz and Miller can be applied in this setting. Hotz, Miller, Sanders, and Smith proposed a computationally simpler version of the method, and tested it on a study of the bus engine replacement problem. The method works by estimating conditional choice probabilities using simulation, then backing out the implied differences in value functions.
+

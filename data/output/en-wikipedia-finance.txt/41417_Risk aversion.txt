@@ -1,0 +1,175 @@
+Risk aversion
+
+
+# Risk aversion
+
+
+
+In economics and finance, **risk aversion** is the tendency of people to prefer outcomes with low uncertainty to those outcomes with high uncertainty, even if the average outcome of the latter is equal to or higher in monetary value than the more certain outcome.
+
+Risk aversion explains the inclination to agree to a situation with a lower average payoff that is more predictable rather than another situation with a less predictable payoff that is higher on average. For example, a risk-averse investor might choose to put their money into a bank account with a low but guaranteed interest rate, rather than into a stock that may have high expected returns, but also involves a chance of losing value.
+
+
+## Example
+
+A person is given the choice between two scenarios: one with a guaranteed payoff, and one with a risky payoff with same average value. In the former scenario, the person receives $50. In the uncertain scenario, a coin is flipped to decide whether the person receives $100 or nothing. The expected payoff for both scenarios is $50, meaning that an individual who was insensitive to risk would not care whether they took the guaranteed payment or the gamble. However, individuals may have different **risk attitudes**.
+
+A person is said to be:
+
+* **risk averse** (or **risk avoiding**) - if they would accept a certain payment (certainty equivalent) of less than $50 (for example, $40), rather than taking the gamble and possibly receiving nothing.
+* **risk neutral** – if they are indifferent between the bet and a certain $50 payment.
+* **risk loving** (or **risk seeking**) – if they would accept the bet even when the guaranteed payment is more than $50 (for example, $60).
+
+The average payoff of the gamble, known as its expected value, is $50. The smallest guaranteed dollar amount that an individual would be indifferent to compared to an uncertain gain of a specific average predicted value is called the certainty equivalent, which is also used as a measure of risk aversion. An individual that is risk averse has a certainty equivalent that is smaller than the prediction of uncertain gains. The risk premium is the difference between the expected value and the certainty equivalent. For risk-averse individuals, risk premium is positive, for risk-neutral persons it is zero, and for risk-loving individuals their risk premium is negative.
+
+
+## Utility of money
+
+In expected utility theory, an agent has a utility function *u*(*c*) where *c* represents the value that he might receive in money or goods (in the above example *c* could be $0 or $40 or $100).
+
+The utility function *u*(*c*) is defined only up to positive affine transformation – in other words, a constant could be added to the value of *u*(*c*) for all *c*, and/or *u*(*c*) could be multiplied by a positive constant factor, without affecting the conclusions.
+
+An agent is risk-averse if and only if the utility function is concave. For instance *u*(0) could be 0, *u*(100) might be 10, *u*(40) might be 5, and for comparison *u*(50) might be 6.
+
+The expected utility of the above bet (with a 50% chance of receiving 100 and a 50% chance of receiving 0) is
+
+and if the person has the utility function with *u*(0)=0, *u*(40)=5, and *u*(100)=10 then the expected utility of the bet equals 5, which is the same as the known utility of the amount 40. Hence the certainty equivalent is 40.
+
+The risk premium is ($50 minus $40)=$10, or in proportional terms
+
+or 25% (where $50 is the expected value of the risky bet: ({\displaystyle {\tfrac {1}{2}}0+{\tfrac {1}{2}}100}). This risk premium means that the person would be willing to sacrifice as much as $10 in expected value in order to achieve perfect certainty about how much money will be received. In other words, the person would be indifferent between the bet and a guarantee of $40, and would prefer anything over $40 to the bet.
+
+In the case of a wealthier individual, the risk of losing $100 would be less significant, and for such small amounts his utility function would be likely to be almost linear. For instance, if u(0) = 0 and u(100) = 10, then u(40) might be 4.02 and u(50) might be 5.01.
+
+The utility function for perceived gains has two key properties: an upward slope, and concavity. (i) The upward slope implies that the person feels that more is better: a larger amount received yields greater utility, and for risky bets the person would prefer a bet which is first-order stochastically dominant over an alternative bet (that is, if the probability mass of the second bet is pushed to the right to form the first bet, then the first bet is preferred). (ii) The concavity of the utility function implies that the person is risk averse: a sure amount would always be preferred over a risky bet having the same expected value; moreover, for risky bets the person would prefer a bet which is a mean-preserving contraction of an alternative bet (that is, if some of the probability mass of the first bet is spread out without altering the mean to form the second bet, then the first bet is preferred).
+
+
+## Measures of risk aversion under expected utility theory
+
+There are various measures of the risk aversion expressed by those given utility function. Several functional forms often used for utility functions are represented by these measures.
+
+
+### Absolute risk aversion
+
+The higher the curvature of {\displaystyle u(c)}, the higher the risk aversion. However, since expected utility functions are not uniquely defined (are defined only up to affine transformations), a measure that stays constant with respect to these transformations is needed rather than just the second derivative of {\displaystyle u(c)}. One such measure is the **Arrow–Pratt measure of absolute risk aversion** (**ARA**), after the economists Kenneth Arrow and John W. Pratt, also known as the **coefficient of absolute risk aversion**, defined as
+
+where {\displaystyle u'(c)} and {\displaystyle u''(c)} denote the first and second derivatives with respect to {\displaystyle c} of {\displaystyle u(c)}. For example, if {\displaystyle u(c)=\alpha +\beta ln(c),} so {\displaystyle u'(c)=\beta /c} and {\displaystyle u''(c)=-\beta /c^{2},} then {\displaystyle A(c)=1/c.} Note how {\displaystyle A(c)} does not depend on {\displaystyle \alpha } and {\displaystyle \beta ,} so affine transformations of {\displaystyle u(c)} do not change it.
+
+The following expressions relate to this term:
+
+* Exponential utility of the form {\displaystyle u(c)=1-e^{-\alpha c}} is unique in exhibiting *constant absolute risk aversion* (CARA): {\displaystyle A(c)=\alpha } is constant with respect to *c*.
+* Hyperbolic absolute risk aversion (HARA) is the most general class of utility functions that are usually used in practice (specifically, CRRA (constant relative risk aversion, see below), CARA (constant absolute risk aversion), and quadratic utility all exhibit HARA and are often used because of their mathematical tractability). A utility function exhibits HARA if its absolute risk aversion is a hyperbola, namely
+
+The solution to this differential equation (omitting additive and multiplicative constant terms, which do not affect the behavior implied by the utility function) is:
+
+where {\displaystyle R=1/a} and {\displaystyle c\_{s}=-b/a}.
+Note that when {\displaystyle a=0}, this is CARA, as {\displaystyle A(c)=1/b=const}, and when {\displaystyle b=0}, this is CRRA (see below), as {\displaystyle cA(c)=1/a=const}.
+See
+
+* *Decreasing/increasing absolute risk aversion* (DARA/IARA) is present if {\displaystyle A(c)} is decreasing/increasing. Using the above definition of ARA, the following inequality holds for DARA:
+
+and this can hold only if {\displaystyle u'''(c)>0}. Therefore, DARA implies that the utility function is positively skewed; that is, {\displaystyle u'''(c)>0}. Analogously, IARA can be derived with the opposite directions of inequalities, which permits but does not require a negatively skewed utility function ({\displaystyle u'''(c)<0}). An example of a DARA utility function is {\displaystyle u(c)=\log(c)}, with {\displaystyle A(c)=1/c}, while {\displaystyle u(c)=c-\alpha c^{2},} {\displaystyle \alpha >0}, with {\displaystyle A(c)=2\alpha /(1-2\alpha c)} would represent a quadratic utility function exhibiting IARA.
+
+* Experimental and empirical evidence is mostly consistent with decreasing absolute risk aversion.
+* Contrary to what several empirical studies have assumed, wealth is not a good proxy for risk aversion when studying risk sharing in a principal-agent setting. Although {\displaystyle A(c)=-{\frac {u''(c)}{u'(c)}}} is monotonic in wealth under either DARA or IARA and constant in wealth under CARA, tests of contractual risk sharing relying on wealth as a proxy for absolute risk aversion are usually not identified.
+
+### Relative risk aversion
+
+The **Arrow–Pratt measure of relative risk aversion** (RRA) or **coefficient of relative risk aversion** is defined as
+
+Unlike ARA whose units are in $−¹, RRA is a dimensionless quantity, which allows it to be applied universally. Like for absolute risk aversion, the corresponding terms *constant relative risk aversion* (CRRA) and *decreasing/increasing relative risk aversion* (DRRA/IRRA) are used. This measure has the advantage that it is still a valid measure of risk aversion, even if the utility function changes from risk averse to risk loving as *c* varies, i.e. utility is not strictly convex/concave over all *c*. A constant RRA implies a decreasing ARA, but the reverse is not always true. As a specific example of constant relative risk aversion, the utility function {\displaystyle u(c)=\log(c)} implies RRA = 1.
+
+In intertemporal choice problems, the elasticity of intertemporal substitution often cannot be disentangled from the coefficient of relative risk aversion. The isoelastic utility function
+
+exhibits constant relative risk aversion with {\displaystyle R(c)=\rho } and the elasticity of intertemporal substitution {\displaystyle \varepsilon \_{u(c)}=1/\rho }. When {\displaystyle \rho =1,} using l'Hôpital's rule shows that this simplifies to the case of *log utility*, *u*(*c*) = log *c*, and the income effect and substitution effect on saving exactly offset.
+
+A time-varying relative risk aversion can be considered.
+
+
+### Implications of increasing/decreasing absolute and relative risk aversion
+
+The most straightforward implications of increasing or decreasing absolute or relative risk aversion, and the ones that motivate a focus on these concepts, occur in the context of forming a portfolio with one risky asset and one risk-free asset. If the person experiences an increase in wealth, he/she will choose to increase (or keep unchanged, or decrease) the *number of dollars* of the risky asset held in the portfolio if *absolute* risk aversion is decreasing (or constant, or increasing). Thus economists avoid using utility functions such as the quadratic, which exhibit increasing absolute risk aversion, because they have an unrealistic behavioral implication.
+
+Similarly, if the person experiences an increase in wealth, he/she will choose to increase (or keep unchanged, or decrease) the *fraction* of the portfolio held in the risky asset if *relative* risk aversion is decreasing (or constant, or increasing).
+
+In one model in monetary economics, an increase in relative risk aversion increases the impact of households' money holdings on the overall economy. In other words, the more the relative risk aversion increases, the more money demand shocks will impact the economy.
+
+
+### Portfolio theory
+
+In modern portfolio theory, risk aversion is measured as the additional expected reward an investor requires to accept additional risk. If an investor is risk-averse, they will invest in multiple uncertain assets, but only when the predicted return on a portfolio that is uncertain is greater than the predicted return on one that is not uncertain will the investor will prefer the former. Here, the risk-return spectrum is relevant, as it results largely from this type of risk aversion. Here risk is measured as the standard deviation of the return on investment, i.e. the square root of its variance. In advanced portfolio theory, different kinds of risk are taken into consideration. They are measured as the n-th root of the n-th central moment. The symbol used for risk aversion is A or Aₙ.
+
+
+### Von Neumann-Morgenstern utility theorem
+
+The von Neumann-Morgenstern utility theorem is another model used to denote how risk aversion influences an actor’s utility function. An extension of the expected utility function, the von Neumann-Morgenstern model includes risk aversion axiomatically rather than as an additional variable.
+
+John von Neumann and Oskar Morgenstern first developed the model in their book *Theory of Games and Economic Behaviour.* Essentially, von Neumann and Morgenstern hypothesised that individuals seek to maximise their expected utility rather than the expected monetary value of assets. In defining expected utility in this sense, the pair developed a function based on preference relations. As such, if an individual’s preferences satisfy four key axioms, then a utility function based on how they weigh different outcomes can be deduced.
+
+In applying this model to risk aversion, the function can be used to show how an individual’s preferences of wins and losses will influence their expected utility function. For example, if a risk-averse individual with $20,000 in savings is given the option to gamble it for $100,000 with a 30% chance of winning, they may still not take the gamble in fear of losing their savings. This does not make sense using the traditional expected utility model however;
+
+{\displaystyle EU(A)=0.3(\$100,000)+0.7(\$0)}
+
+{\displaystyle EU(A)=\$30,000}
+
+{\displaystyle EU(A)>\$20,000}
+
+The von Neumann-Morgenstern model can explain this scenario. Based on preference relations, a specific utility {\displaystyle u} can be assigned to both outcomes. Now the function becomes;
+
+{\displaystyle EU(A)=0.3u(\$100,000)+0.7u(\$0)}
+
+For a risk averse person, {\displaystyle u} would equal a value that means that the individual would rather keep their $20,000 in savings than gamble it all to potentially increase their wealth to $100,000. Hence a risk averse individuals’ function would show that;
+
+{\displaystyle EU(A)\prec \$20,000(keepingsavings)}
+
+
+## Limitations of expected utility treatment of risk aversion
+
+Using expected utility theory's approach to risk aversion to analyze *small stakes decisions* has come under criticism. Matthew Rabin has showed that a risk-averse, expected-utility-maximizing individual who,
+
+*from any initial wealth level [...] turns down gambles where she loses $100 or gains $110, each with 50% probability [...] will turn down 50–50 bets of losing $1,000 or gaining any sum of money.*
+
+Rabin criticizes this implication of expected utility theory on grounds of implausibility—individuals who are risk averse for small gambles due to diminishing marginal utility would exhibit extreme forms of risk aversion in risky decisions under larger stakes. One solution to the problem observed by Rabin is that proposed by prospect theory and cumulative prospect theory, where outcomes are considered relative to a reference point (usually the status quo), rather than considering only the final wealth.
+
+Another limitation is the reflection effect, which demonstrates the reversing of risk aversion. This effect was first presented by Kahneman and Tversky as a part of the prospect theory, in the behavioral economics domain.
+The reflection effect is an identified pattern of opposite preferences between negative as opposed to positive prospects: people tend to avoid risk when the gamble is between gains, and to seek risks when the gamble is between losses. For example, most people prefer a certain gain of 3,000 to an 80% chance of a gain of 4,000. When posed the same problem, but for losses, most people prefer an 80% chance of a loss of 4,000 to a certain loss of 3,000.
+
+The reflection effect (as well as the certainty effect) is inconsistent with the expected utility hypothesis. It is assumed that the psychological principle which stands behind this kind of behavior is the overweighting of certainty. Options which are perceived as certain are over-weighted relative to uncertain options. This pattern is an indication of risk-seeking behavior in negative prospects and eliminates other explanations for the certainty effect such as aversion for uncertainty or variability.
+
+The initial findings regarding the reflection effect faced criticism regarding its validity, as it was claimed that there are insufficient evidence to support the effect on the individual level. Subsequently, an extensive investigation revealed its possible limitations, suggesting that the effect is most prevalent when either small or large amounts and extreme probabilities are involved.
+
+
+## Bargaining and risk aversion
+
+Numerous studies have shown that in riskless bargaining scenarios, being risk-averse is disadvantageous. Moreover, opponents will always prefer to play against the most risk-averse person. Based on both the von Neumann-Morgenstern and Nash Game Theory model, a risk-averse person will happily receive a smaller commodity share of the bargain. This is because their utility function concaves hence their utility increases at a decreasing rate while their non-risk averse opponents may increase at a constant or increasing rate. Intuitively, a risk-averse person will hence settle for a smaller share of the bargain as opposed to a risk-neutral or risk-seeking individual.
+
+
+## In the brain
+
+Attitudes towards risk have attracted the interest of the field of neuroeconomics and behavioral economics. A 2009 study by Christopoulos et al. suggested that the activity of a specific brain area (right inferior frontal gyrus) correlates with risk aversion, with more risk averse participants (i.e. those having higher risk premia) also having higher responses to safer options. This result coincides with other studies, that show that neuromodulation of the same area results in participants making more or less risk averse choices, depending on whether the modulation increases or decreases the activity of the target area.
+
+
+## Public understanding and risk in social activities
+
+In the real world, many government agencies, e.g. Health and Safety Executive, are fundamentally risk-averse in their mandate. This often means that they demand (with the power of legal enforcement) that risks be minimized, even at the cost of losing the utility of the risky activity.
+It is important to consider the opportunity cost when mitigating a risk; the cost of not taking the risky action. Writing laws focused on the risk without the balance of the utility may misrepresent society's goals. The public understanding of risk, which influences political decisions, is an area which has recently been recognised as deserving focus. In 2007 Cambridge University initiated the Winton Professorship of the Public Understanding of Risk, a role described as outreach rather than traditional academic research by the holder, David Spiegelhalter.
+
+
+### Children
+
+Children's services such as schools and playgrounds have become the focus of much risk-averse planning, meaning that children are often prevented from benefiting from activities that they would otherwise have had. Many playgrounds have been fitted with impact-absorbing matting surfaces. However, these are only designed to save children from death in the case of direct falls on their heads and do not achieve their main goals. They are expensive, meaning that less resources are available to benefit users in other ways (such as building a playground closer to the child's home, reducing the risk of a road traffic accident on the way to it), and—some argue—children may attempt more dangerous acts, with confidence in the artificial surface. Shiela Sage, an early years school advisor, observes "Children who are only ever kept in very safe places, are not the ones who are able to solve problems for themselves. Children need to have a certain amount of risk taking ... so they'll know how to get out of situations."ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+
+### Game shows and investments
+
+One experimental study with student-subject playing the game of the TV show Deal or No Deal finds that people are more risk averse in the limelight than in the anonymity of a typical behavioral laboratory. In the laboratory treatments, subjects made decisions in a standard, computerized laboratory setting as typically employed in behavioral experiments. In the limelight treatments, subjects made their choices in a simulated game show environment, which included a live audience, a game show host, and video cameras. In line with this, studies on investor behavior find that investors trade more and more speculatively after switching from phone-based to online trading and that investors tend to keep their core investments with traditional brokers and use a small fraction of their wealth to speculate online.
+
+
+## The behavioural approach to employment status
+
+The basis of the theory, on the connection between employment status and risk aversion, is the varying income level of individuals. On average higher income earners are less risk averse than lower income earners. In terms of employment the greater the wealth of an individual the less risk averse they can afford to be, and they are more inclined to make the move from a secure job to an entrepreneurial venture. The literature assumes a small increase in income or wealth initiates the transition from employment to entrepreneurship-based decreasing absolute risk aversion (DARA), constant absolute risk aversion (CARA), and increasing absolute risk aversion (IARA) preferences as properties in their utility function. The apportioning risk perspective can also be used to as a factor in the transition of employment status, only if the strength of downside risk aversion exceeds the strength of risk aversion. If using the behavioural approach to model an individual’s decision on their employment status there must be more variables than risk aversion and any absolute risk aversion preferences.
+
+Incentive effects are a factor in the behavioural approach an individual takes in deciding to move from a secure job to entrepreneurship. Non-financial incentives provided by an employer can change the decision to transition into entrepreneurship as the intangible benefits helps to strengthen how risk averse an individual is relative to the strength of downside risk aversion. Utility functions do not equate for such effects and can often screw the estimated behavioural path that an individual takes towards their employment status.
+
+The design of experiments, to determine at what increase of wealth or income would an individual change their employment status from a position of security to more risky ventures, must include flexible utility specifications with salient incentives integrated with risk preferences. The application of relevant experiments can avoid the generalisation of varying individual preferences through the use of this model and its specified utility functions.
+

@@ -1,0 +1,44 @@
+Bayesian econometrics
+
+
+# Bayesian econometrics
+
+
+
+**Bayesian econometrics** is a branch of econometrics which applies Bayesian principles to economic modelling. Bayesianism is based on a degree-of-belief interpretation of probability, as opposed to a relative-frequency interpretation.
+
+The Bayesian principle relies on Bayes' theorem which states that the probability of B conditional on A is the ratio of joint probability of A and B divided by probability of B. Bayesian econometricians assume that coefficients in the model have prior distributions.
+
+This approach was first propagated by Arnold Zellner.
+
+
+## Basics
+
+Subjective probabilities have to satisfy the standard axioms of probability theory if one wishes to avoid losing a bet regardless of the outcome. Before the data is observed, the parameter {\displaystyle \theta } is regarded as an unknown quantity and thus random variable, which is assigned a prior distribution {\displaystyle \pi (\theta )} with {\displaystyle 0\leq \theta \leq 1}. Bayesian analysis concentrates on the inference of the posterior distribution {\displaystyle \pi (\theta |y)}, i.e. the distribution of the random variable {\displaystyle \theta } conditional on the observation of the discrete data {\displaystyle y}. The posterior density function {\displaystyle \pi (\theta |y)} can be computed based on Bayes' Theorem:
+
+where {\displaystyle p(y)=\int p(y|\theta )\pi (\theta )d\theta }, yielding a normalized probability function. For continuous data {\displaystyle y}, this corresponds to:
+
+where {\displaystyle f(y)=\int f(y|\theta )\pi (\theta )d\theta } and which is the centerpiece of Bayesian statistics and econometrics. It has the following components:
+
+* {\displaystyle \pi (\theta |y)}: the posterior density function of {\displaystyle \theta |y};
+* {\displaystyle f(y|\theta )}: the likelihood function, i.e. the density function for the observed data {\displaystyle y} when the parameter value is {\displaystyle \theta };
+* {\displaystyle \pi (\theta )}: the prior distribution of {\displaystyle \theta };
+* {\displaystyle f(y)}: the probability density function of {\displaystyle y}.
+
+The posterior function is given by {\displaystyle \pi (\theta |y)\propto f(y|\theta )\pi (\theta )}, i.e., the posterior function is proportional to the product of the likelihood function and the prior distribution, and can be understood as a method of updating information, with the difference between {\displaystyle \pi (\theta )} and {\displaystyle \pi (\theta |y)} being the information gain concerning {\displaystyle \theta } after observing new data. The choice of the prior distribution is used to impose restrictions on {\displaystyle \theta }, e.g. {\displaystyle 0\leq \theta \leq 1}, with the beta distribution as a common choice due to (i) being defined between 0 and 1, (ii) being able to produce a variety of shapes, and (iii) yielding a posterior distribution of the standard form if combined with the likelihood function {\displaystyle \theta ^{\Sigma y\_{i}}(1-\theta )^{n-\Sigma y\_{i}}}. Based on the properties of the beta distribution, an ever-larger sample size implies that the mean of the posterior distribution approximates the maximum likelihood estimator {\displaystyle {\bar {y}}.}
+The assumed form of the likelihood function is part of the prior information and has to be justified. Different distributional assumptions can be compared using posterior odds ratios if a priori grounds fail to provide a clear choice. Commonly assumed forms include the beta distribution, the gamma distribution, and the uniform distribution, among others. If the model contains multiple parameters, the parameter can be redefined as a vector. Applying probability theory to that vector of parameters yields the marginal and conditional distributions of individual parameters or parameter groups. If data generation is sequential, Bayesian principles imply that the posterior distribution for the parameter based on new evidence will be proportional to the product of the likelihood for the new data, given previous data and the parameter, and the posterior distribution for the parameter, given the old data, which provides an intuitive way of allowing new information to influence beliefs about a parameter through Bayesian updating. If the sample size is large, (i) the prior distribution plays a relatively small role in determining the posterior distribution, (ii) the posterior distribution converges to a degenerate distribution at the true value of the parameter, and (iii) the posterior distribution is approximately normally distributed with mean {\displaystyle {\hat {\theta }}}.
+
+
+## History
+
+The ideas underlying Bayesian statistics were developed by Rev. Thomas Bayes during the 18th century and later expanded by Pierre-Simon Laplace. As early as 1950, the potential of the Bayesian inference in econometrics was recognized by Jacob Marschak. The Bayesian approach was first applied to econometrics in the early 1960s by W. D. Fisher, Jacques Drèze, Clifford Hildreth, Thomas J. Rothenberg, George Tiao, and Arnold Zellner. The central motivation behind these early endeavors in Bayesian econometrics was the combination of the parameter estimators with available uncertain information on the model parameters that was not included in a given model formulation. From the mid-1960s to the mid-1970s, the reformulation of econometric techniques along Bayesian principles under the traditional structural approach dominated the research agenda, with Zellner's *An Introduction to Bayesian Inference in Econometrics* in 1971 as one of its highlights, and thus closely followed the work of frequentist econometrics. Therein, the main technical issues were the difficulty of specifying prior densities without losing either economic interpretation or mathematical tractability and the difficulty of integral calculation in the context of density functions. The result of the Bayesian reformulation program was to highlight the fragility of structural models to uncertain specification. This fragility came to motivate the work of Edward Leamer, who emphatically criticized modelers' tendency to indulge in "post-data model construction" and consequently developed a method of economic modelling based on the selection of regression models according to the types of prior density specification in order to identify the prior structures underlying modelers' working rules in model selection explicitly. Bayesian econometrics also became attractive to Christopher Sims' attempt to move from structural modeling to VAR modeling due to its explicit probability specification of parameter restrictions. Driven by the rapid growth of computing capacities from the mid-1980s on, the application of Markov chain Monte Carlo simulation to statistical and econometric models, first performed in the early 1990s, enabled Bayesian analysis to drastically increase its influence in economics and econometrics.
+
+
+## Current research topics
+
+Since the beginning of the 21st century, research in Bayesian econometrics has concentrated on:
+
+* sampling methods suitable for parallelization and GPU calculations;
+* complex economic models accounting for nonlinear effects and complete predictive densities;
+* analysis of implied model features and decision analysis;
+* incorporation of model incompleteness in econometric analysis.

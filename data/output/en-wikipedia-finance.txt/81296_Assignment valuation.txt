@@ -1,0 +1,32 @@
+Assignment valuation
+
+
+# Assignment valuation
+
+
+
+In economics, **assignment valuation** is a kind of a utility function on sets of items. It was introduced by Shapley and further studied by Lehmann, Lehmann and Nisan, who use the term **OXS valuation** (not to be confused with XOS valuation). Fair item allocation in this setting was studied by Benabbou, Chakraborty, Elkind, Zick and Igarashi.
+
+Assignment valuations correspond to preferences of groups. In each group, there are several individuals; each individual attributes a certain numeric value to each item. The assignment-valuation of the group to a set of items *S* is the value of the maximum weight matching of the items in *S* to the individuals in the group.
+
+The assignment valuations are a subset of the submodular valuations.
+
+
+## Example
+
+Suppose there are three items and two agents who value the items as follows:
+
+| x | y | z |
+| --- | --- | --- |
+| Alice: | 5 | 3 | 1 |
+| George: | 6 | 2 | 4.5 |
+
+Then the assignment-valuation *v* corresponding to the group {Alice,George} assigns the following values:
+
+* {\displaystyle v(\{x\})=6} - since the maximum-weight matching assigns x to George.
+* {\displaystyle v(\{y\})=3} - since the maximum-weight matching assigns y to Alice.
+* {\displaystyle v(\{z\})=4.5} - since the maximum-weight matching assigns z to George.
+* {\displaystyle v(\{x,y\})=9} - since the maximum-weight matching assigns x to George and y to Alice.
+* {\displaystyle v(\{x,z\})=9.5} - since the maximum-weight matching assigns z to George and x to Alice.
+* {\displaystyle v(\{y,z\})=7.5} - since the maximum-weight matching assigns z to George and y to Alice.
+* {\displaystyle v(\{x,y,z\})=9.5} - since the maximum-weight matching assigns z to George and x to Alice.

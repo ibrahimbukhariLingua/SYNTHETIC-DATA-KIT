@@ -1,0 +1,79 @@
+Options Price Reporting Authority
+
+
+# Options Price Reporting Authority
+
+
+
+The **Options Price Reporting Authority** (**OPRA**) oversees the Securities Information Processor (SIP) that provides last sale information and current options quotations from a committee of participant exchanges. In turn, this committee is designated as the Options Price Reporting Authority.
+
+OPRA is a national market system plan that governs the process by which options market data are collected from participant exchanges, consolidated, and disseminated.
+
+
+## Participant exchanges
+
+Current OPRA participants include:
+
+* Cboe Options Exchange
+* Cboe EDGX Options Exchange
+* Cboe BZX Options Exchange
+* Cboe C2 Options Exchange
+* Nasdaq PHLX
+* Nasdaq ISE
+* Nasdaq Options Market
+* Nasdaq GEMX
+* Nasdaq BX Options
+* Nasdaq MRX
+* NYSE Arca Options
+* NYSE American Options
+* Miami International Holdings
+* BOX Options
+* Members Exchange
+
+## Acquisition and distribution of market data
+
+The Securities Industry Automation Corporation (SIAC) administers the Securities Information Processor (SIP) for OPRA. The SIP gathers the last sale and quote information from each of the participant exchanges. SIAC then consolidates and disseminates that data to approved vendors.
+
+
+### Available data
+
+The OPRA data feed provides:
+
+* Trades: last sale reports for completed securities transactions
+* Quotes: bids and offers for options
+* Open interest
+* Index values
+* End of day summary
+
+## Technology infrastructure
+
+SIAC is responsible for the OPRA systems and networks. CBOE serves as the OPRA administrator.
+
+
+### Messages per second
+
+A significant gauge of the level of options market data is messages per second (MPS), which is the number of messages (i.e., options trade and quote data) reported to OPRA by the options exchanges during any given second of a trading day.
+
+Data volume has increased dramatically since the early 1990s, as illustrated in the following table.
+
+| Date | Peak MPS |
+| --- | --- |
+| 1992 | 100 |
+| 1995 | 500 |
+| 1998 | 1,500 |
+| July 2000 | 4,000 |
+| September 2005 | 83,339 |
+| July 2007 | 573,000 |
+| January 2008 | 701,000 (projected) |
+| July 2008 | 907,000 (projected) |
+| 25 March 2015 11:31 | 10,244,894 (1 second peak) |
+| 20th Nov 2015 11:00 | 22,462,900 (10 millisecond peak) |
+
+Commentators suggest that there are three underlying causes of the increase:
+
+1. Penny Pricing: In early February 2007, the options industry started switching its minimum price increment from $0.05 (nickels) to $0.01 (pennies). Because options prices are automatically updated as soon as the underlying stock price changes, the potential existed to update at five times as many price points.
+2. Dollar Strikes: The standard stock option strike prices are in increments of $2.50 at and below $25, and in $5.00 increments for strikes above $25. A Dollar Strike Program would potentially increase the number of available options contracts by five times.
+3. Regulation NMS
+
+The OPRA MPS data rates are more than 60 times those seen in the equities market, and options data represents well over 75% of all market data.
+

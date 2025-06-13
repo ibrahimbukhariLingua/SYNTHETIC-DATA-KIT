@@ -1,0 +1,169 @@
+Fair allocation of items and money
+
+
+# Fair allocation of items and money
+
+
+
+**Fair allocation of items and money** is a class of fair item allocation problems in which, during the allocation process, it is possible to give or take money from some of the participants. Without money, it may be impossible to allocate indivisible items fairly. For example, if there is one item and two people, and the item must be given entirely to one of them, the allocation will be unfair towards the other one. Monetary payments make it possible to attain fairness, as explained below.
+
+
+## Two agents and one item
+
+With two agents and one item, it is possible to attain fairness using the following simple algorithm (which is a variant of cut and choose):
+
+* Alice says a price *p* that she is willing to pay for the item.
+* George chooses whether to take the item and pay *p*, or leave the item to Alice so that Alice pays *p*.
+
+The algorithm always yields an envy-free allocation. If the agents have quasilinear utilities, that is, their utility is the value of items plus the amount of money that they have, then the allocation is also proportional. If George thinks that Alice's price is low (he is willing to pay more than *p*), then he takes the item and pay *p*, and his utility is positive, so he does not envy Alice. Alice, too, does not envy George since his utility - in her eyes - is 0. Similarly, if George thinks that Alice's price is high (he is willing to pay *p* or more), then he leaves the item to Alice and does not envy, since Alice's utility in his eyes is negative.
+
+The paid money *p* can later be divided equally between the players, since an equal monetary transfer does not affect the relative utilities. Then, effectively, the buying agent pays *p*/2 to the selling agent. The total utility of each agent is at least 1/2 of his/her utility for the item. If the agents have different entitlements, then the paid money *p* should be divided between the partners in proportion to their entitlements.
+
+There are various works extending this simple idea to more than two players and more complex settings. The main fairness criteria in these works is **envy-freeness**. In addition, some works consider a setting in which a benevolent third-party is willing to subsidize the allocation, but wants to *minimize* the amount of subsidy subject to envy-freeness. This problem is called the **minimum-subsidy envy-free allocation**.
+
+
+## Unit-demand agents
+
+Unit-demand agents are interested in at most a single item.
+
+
+### Rental harmony
+
+A special case of this setting is when dividing rooms in an apartment between tenants. It is characterized by three requirements: (a) the number of agents equals the number of items, (b) each agent must get exactly one item (room), (c) the total amount of money paid by the agents must equal a fixed constant, which represents the total apartment rent. This is known as the Rental Harmony problem.
+
+
+### More general settings
+
+In general, in the economics literature, it is common to assume that each agent has a utility function on bundles (a bundle is a pair of an object and a certain amount of money). The utility function should be continuous and increasing in money. It does not have to be linear in money, but does have to be "Archimedean", i.e., there exists some value *V* such that, for every two objects *j* and *k*, the utility of object *j* plus *V* should be larger than the utility of object *k* (alternatively, the utility of getting object *j* for free is larger than the utility of getting object *k* and paying *V*). Quasilinear utility is a special case of Archimedean utility, in which *V* is the largest value-difference (for the same agent) between two objects.
+
+**Svensson** first proved that, when all agents are Archimedean, an envy-free allocation exists and is Pareto-optimal.
+
+**Demange, Gale and Sotomayor** showed a natural ascending auction that achieves an envy-free allocation using monetary payments for unit demand agents.
+
+**Maskin** proved the existence of a Pareto-optimal envy-free allocation when the total money endowment is more than (*n-1*)*V.* The proofs use competitive equilibrium.
+
+Note that a subsidy of (*n*-1)*V* may be required: if all agents value a single object at *V* and the other objects at 0, then envy-freeness requires a subsidy of *V* for each agent who does not receive the object.
+
+**Tadenuma and Thomson** study several consistency properties of envy-free allocation rules.
+
+**Aragones** characterizes the minimum amount of subsidy required for envy-freeness. The allocation that attains this minimum subsidy is almost unique: there is only one way to combine objects with agents, and all agents are indifferent among all minimum-subsidy allocations. It coincides with the solution called the "money-Rawlsian solution" of Alkan, Demange and Gale. It can be found in polynomial time, by finding a maximum-weight matching and then finding shortest paths in a certain induced graph.
+
+**Klijn** presents another polynomial-time algorithm for the same setting. His algorithm uses the polytope of side-payments that make a given allocation envy-free: this polytope is nonempty iff the original allocation is Pareto-efficient. Connectivity of the undirected envy graph characterizes the extreme points of this polytope. This implies a method for finding extreme envy-free allocations.
+
+
+## Additive agents
+
+Additive agents may receive several objects, so the allocation problem becomes more complex - there are many more possible allocations.
+
+
+### Knaster's auction
+
+The first procedure for fair allocation of items and money was invented by Bronislaw Knaster and published by Hugo Steinhaus. This auction works as follows, for each item separately:
+
+* Each agent submits a bid over the item.
+* The item is given to the highest bidder (breaking ties arbitrarily).
+* The winner pays (*n*-1)/*n* of his bid;
+* Each of the other agents receives 1/*n* of his bid;
+* Since the winner is the highest bidder, there is a non-negative surplus; the surplus is divided equally among the agents.
+
+The utility of every agent is at least 1/*n* of the value he attributes to the entire set of objects, so the allocation is proportional. Moreover, the allocation maximizes the sum of utilities, so it is Pareto efficient.
+
+Knaster's auction is not strategyproof. Some researchers analysed its performance when agents play strategically:
+
+* Essen proves that the equilibrium allocation is still Pareto-efficient, but may not be proportional ex-post. However, on average, agents receive the same outcome as if everyone were truthful. That is, the mechanism is proportional ex-ante.
+* Fragnelli and Marina show that, even agents who are infinitely risk-averse, may a safe gain via a joint misreporting of their valuations, regardless of the declarations of the other agents.
+
+Knaster's auction has been adapted to fair allocation of wireless channels.
+
+
+### Raith's auction
+
+Matthias G. Raith presented a variant on Knaster's auction, which he called "Adjusted Knaster". As in Knaster's auction, each item is given to the highest bidder. However, the payments are different. The payments are determined as follows:
+
+* Each agent winning an item pays his bid for this item;
+* The total amount of money paid by the agents is partitioned between them in proportion to their bids.
+
+To illustrate the difference between Knaster's auction and Raith's auction, consider a setting with two items and two agents with the following values:
+
+| Item 1 | Item 2 | Sum |
+| --- | --- | --- |
+| Alice | 10 | 10 | 20 |
+| George | 60 | 120 | 180 |
+
+In both auctions, George wins both items, but the payments are different:
+
+* In Knaster's auction, George pays 90, Alice receives 10, and the difference of 80 is divided equally, so the net utilities are 50, 130.
+* In Raith's auction, George pays 180 and it is divided in ratio 20:180 = 1:9, that is, Alice gets 18 and George gets 162. Note that the payments are computed to all items at once - not for each item separately.
+
+In experiments with human subjects, it was found that participants prefer the Raith's auction (Adjusted Knaster) to Divide-and-Choose and to Proportional Knaster (a variant in which each winner pays 1/n of the winning to each loser; in the above example, George pays 90 to Alice, and the net utilities are 90, 90).
+
+
+### Compensation procedure
+
+**Haake, Raith and Su** present the Compensation Procedure. Their procedure allows arbitrary constraints on bundles of items, as long as they are anonymous (do not differentiate between partners based on their identity). For example, there can be no constraint at all, or a constraint such as "each partner must receive at least a certain number of items", or "some items must be bundled together" (e.g. because they are land-plots that must remain connected), etc. The "items" can have both positive or negative utilities. There is a "qualification requirement" for a partner: the sum of his bids must be at least the total cost. The procedure works in the following steps.
+
+1. Find a maxsum (utilitarian) allocation - an allocation with a highest sum-of-utilities that satisfies the constraints on bundles of items. If there are no constraints, then an allocation that gives each item to the partner with the highest valuation is maxsum. If there are constraints (such as "at least one item per partner"), then a maxsum allocation might be more difficult to find.
+2. Charge from each partner the value of the bundle allocated to him. This creates the initial pool of money.
+3. Pay the cost from the initial pool. If all partners satisfy the qualification requirement, then the money in the pool is sufficient, and there may be some remaining *surplus*.
+4. Eliminate envy by compensating envious partners. There are at most {\displaystyle n-1} rounds of compensation. The procedure is fully descriptive and says explicitly which compensations should be made, and in what order. Moreover, it is simple enough to be carried out without computer support.
+5. The sum of compensations made in all rounds is the smallest sum that is required to eliminate envy, and it never exceeds the surplus. If some surplus remains, it can be divided in any way that does not create envy, e.g., by giving an equal amount to each partner (the paper discusses other options that may be considered "fairer").
+
+When there are many item and complex constraints, the initial step - finding a maxsum allocation - may be difficult to calculate without a computer. In this case, the Compensation Procedure may start with an arbitrary allocation. In this case, the procedure might conclude with an allocation that contains *envy-cycles*. These cycles can be removed by moving bundles along the cycle, as in the envy-graph procedure. This strictly increases the total sum of utilities. Hence, after a bounded number of iterations, a maxsum allocation will be found, and the procedure can continue as above to create an envy-free allocation.
+
+The Compensation Procedure might charge some partners a negative payment (i.e., give the partners a positive amount of money). The authors say:
+
+
+### MInimum subsidy procedures
+
+Some works assume that a benevolent third-party is willing to subsidize the allocation, but wants to *minimize* the amount of subsidy subject to envy-freeness. This problem is called the **minimum-subsidy envy-free allocation**.
+
+**Halpern and Shah** study subsidy minimization in the general item-allocation setting. They consider two cases:
+
+1. The allocation is given in advance. In this case, it is "envy-freeable" if and only if it maximizes the sum of utilities across all reassignments of its bundles to agents, if and only if its envy-graph has no cycles. An envy-free price with minimum subsidy can be computed in strongly polynomial time, by constructing the weighted envy-graph and giving, to each agent *i*, a price equal to the maximum weight of a path emanating from *i*. The weight of each path is at most the sum of *m* terms, each of which is the value of some agent to some good. In particular, if the value of each good for each agent is at most *V*, then the weight of each path is at most *mV*. Since we can always reduce the prices such that one agent gets zero subsidy, it follows that there always exists an envy-free allocation with a subsidy of at most (*n*-1)*mV*. This subsidy may be necessary, for example when all goods are identical and one agent gets all of them.
+2. The allocation can be chosen. In this case, a subsidy of (*n*-1)*V* is sufficient in the following cases:
+ * When the agents' valuations are binary (0 or 1). Then, any max-product allocation or leximin-optimal allocation requires at most (*n*-1)*V* subsidy, and can be found in polynomial time. Computing the minimum subsidy required to achieve EF is Turing-equivalent to checking the existence of an envy-free allocation, which is NP-hard when restricted to non-wasteful allocations.
+ * When all agents have the same additive valuation. Then, every allocation is envy-freeable. An allocation that requires at most (*n*-1)*V* subsidy can be found in polynomial time. An allocation minimizes the subsidy iff it minimizes the maximum utility to any agent. Computing such an allocation is NP-hard, and can be solved by the max-product algorithm.
+ * When there are two agents, round-robin item allocation with a specific agent ordering finds an allocation that is envy-freeable with subsidy at most *V.*
+
+**Brustle, Dippel, Narayan, Suzuki and Vetta** improve the upper bounds on the required subsidy:
+
+* With additive valuations, a subsidy of at most *V* per agent, and at most (*n*-1)*V* in general, is always sufficient. Moreover, there is an allocation attaining this bound that is also EF1 and balanced (the cardinalities of the allocated bundles differ by at most one good). It can be computed in polynomial time by a simple algorithm: iteratively find a maximum-weight matching in the agents-objects bipartite graph.
+* With general monotone valuations, a subsidy of at most 2(*n*-1)*V* per agent, and at most O(*n*²*V*), is always sufficient. In particular, the required subsidy does not depend on the number of objects. An allocation attaining this bound can be computed in polynomial time using value-queries.
+
+**Caragiannis and Ioannidis** study the computational problem of minimizing the subsidy:
+
+* For a constant number of agents, they present an algorithm that approximates the minimum amount of subsidies within any required accuracy. For any *ε* > 0, it finds an allocation with subsidy at most {\displaystyle OPT+\varepsilon \cdot S}, where *S* is the maximum value that an agent assigns to *all* objects. The algorithm uses dynamic programming and runs in time {\displaystyle O((m/\varepsilon )^{n^{2}+1})}.
+* For a variable number of agents, a trivial approximation algorithm attains {\displaystyle OPT+(n-1)\cdot S}. However, attaining an approximation factor independent of *n* is hard: it is NP-hard to compute an allocation with subsidy at most {\displaystyle OPT+3\cdot 10^{-4}\cdot S}. The proof is by reduction from a restricted variant of maximum 3-dimensional matching, in which each vertex appears exactly twice.
+
+Note that an envy-free allocation with subsidy remains envy-free if a fixed amount is taken from every agent. Therefore, similar methods can be used to find allocations that are not subsidized:
+
+* Charging each agent the average payment yields an envy-free allocation that is also budget-balanced. Minimizing the subsidy is equivalent to minimizing the maximum amount that any individual agent has to pay.
+* It is also possible to use negative subsidy (tax), while minimizing the total amount that all agents have to pay.
+
+### Additional procedures
+
+**Alkan, Demange and Gale** showed that an envy-free allocation always exists when the amount of money is sufficiently large. This is true even when items may have negative valuations.
+
+**Meertens, Potters and Reijnierse** prove the existence of envy-free and Pareto-optimal allocations under very mild assumptions on the valuations (not necessarily quasilinear).
+
+**Cavallo** generalizes the traditional binary criteria of envy-freeness, proportionality, and efficiency (welfare) to measures of degree that range between 0 and 1. In the canonical fair division settings, under any allocatively-efficient mechanism the worst-case welfare rate is 0 and disproportionality rate is 1; in other words, the worst-case results are as bad as possible. He looks for a mechanism that achieves high welfare, low envy, and low disproportionality in expectation across a spectrum of fair division settings. The VCG mechanism is not a satisfactory candidate, but the redistribution mechanism of **Bailey** and **Cavallo** is.
+
+
+## Related problems
+
+
+### Envy-free pricing
+
+When selling objects to buyers, the sum of payments is not fixed in advance, and the goal is to *maximize* either the seller's revenue, or the social welfare, subject to envy-freeness. Additionally, the number of objects may be different than the number of agents, and some objects may be discarded. This is known as the Envy-free Pricing problem.
+
+
+## Multi-dimensional objectives
+
+Often, some other objectives have to be attained besides fairness. For example, when assigning tasks to agents, it is required both to avoid envy, and to minimize the makespan (- the completion time of the last agent). **Mu'alem** presents a general framework for optimization problems with envy-freeness guarantee that naturally extends fair item allocations using monetary payments.
+
+**Aziz** aims to attain, using monetary transfers, an allocation that is both envy-free and equitable. He studies not only additive positive utilities, but also for any superadditive utilities, whether positive or negative:
+
+* For superadditive utilities, there is a polynomial-time algorithm that attains envy-freeness, equitability, and budget balance (it is easy to exchange budget-balance with subsidy).
+* If a given allocation is EFEQ-convertible, then the minimum subsidy required to make it EF+EQ can be found in linear time.
+* Finding an allocation that is EFEQ-convertible with minimum subsidy is NP-hard, and cannot be approximated within any positive factor. This is simply because checking the existence of an EF allocation (which requires 0 subsidy) is NP-hard.
+* A subsidy of at most (*n*-1)*mV* is always sufficient, and may be necessary whether an allocation is given or not.

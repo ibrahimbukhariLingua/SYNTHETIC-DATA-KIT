@@ -1,0 +1,136 @@
+Valuation risk
+
+
+# Valuation risk
+
+
+
+| Categories of |
+| --- |
+| Financial risk |
+| Credit risk |
+| * Settlement risk * Concentration risk * Sovereign risk * Default risk |
+| Market risk |
+| * Interest rate risk * Inflation risk * Currency risk * Equity risk * Commodity risk * Volatility risk * Systemic risk |
+| Liquidity risk |
+| * Refinancing risk * Deposit risk * Margining risk |
+| Investment risk |
+| * Model risk * Execution risk * Valuation risk |
+| Business risk |
+| * Reputational risk * Operational risk * Country risk * Political risk * Legal risk * Moral hazard |
+| Profit risk |
+| Non-financial risk |
+| * Stranded asset |
+| * v * t * e |
+
+**Valuation risk** is the risk that an entity suffers a loss when trading an asset or a liability due to a difference between the accounting value and the price effectively obtained in the trade.
+
+In other words, valuation risk is the uncertainty about the difference between the value reported in the balance sheet for an asset or a liability and the price that the entity could obtain if it effectively sold the asset or transferred the liability (the so-called "exit price").
+
+This risk is especially significant for financial assets and related marketable contracts with complex features and limited liquidity, that are valued using internally developed pricing models. Valuation errors can result for instance from missing consideration of risk factors, inaccurate modeling of risk factors, or inaccurate modeling of the sensitivity of instrument prices to risk factors. Errors are more likely when models use inputs that are unobservable or for which little information is available, and when financial instruments are illiquid so that the accuracy of pricing models cannot be verified with regular market trades.
+
+
+## Measurement of financial instrument fair value according to accounting rules
+
+According to the International Financial Reporting Standards, or IFRS, entities must classify their financial instruments in different categories, depending on their business model and their intention to trade such instruments or keep them in their balance sheet. The classification of financial instruments determines the methodology for their valuation. The admitted categories are:
+
+* Held to Collect (HTC), measured at fair value on first-time recognition and at amortized cost afterwards
+* Fair Value Through Other Comprehensive Income (FVTOCI), measured at fair value with changes in fair value recorded in an equity reserve
+* Fair Value Through Profit & Loss (FVTP&L), measured at fair value with changes in fair value recorded in the profit and loss statement
+
+The fair value is therefore a key concept in accounting for financial instruments. The accounting principle IFRS 13 defines the rules for the determination of fair value. Whenever possible, the fair value should be determined based on the prices recorded in actual trades. However, when an instrument is not traded in active markets and prices are not regularly available, entities may use models to determine its fair value. Entities should classify each financial instrument measured at fair value on an ongoing basis (FVTOCI and FVTP&L) within a three-level "fair value hierarchy", depending on the level of "observability" of the inputs used for its valuation. Inputs are defined by IFRS 13 as "The assumptions that market participants would use when pricing the asset or liability, including assumptions about risk".
+
+Inputs can be observable or unobservable, according to the following IFRS 13 definitions:
+
+* Observable: "Inputs that are developed using market data, such as publicly available information about actual events or transactions, and that reflect the assumptions that market participants would use when pricing the asset or liability"
+* Unobservable: "Inputs for which market data are not available and that are developed using the best information available about the assumptions that market participants would use when pricing the asset or liability"
+
+In practice, inputs include:
+
+* Market prices, i.e. prices from actual trades. Prices from trades executed in active markets are observable inputs and should be used by preference. When market prices are not available, an entity can use prices for comparable instruments.
+* Pricing models, which entities use when market prices are not available. For certain instruments (for example, plain-vanilla OTC interest rate swaps) the pricing models are common practice and use inputs that can be easily drawn from traded instrument prices; in such cases, pricing models can be considered observable.
+* Parameters, which are inputs to the pricing models, including market parameters (drawn from market trades: e.g. the Euro yield curve, that can be calculated from trades of interest rate Euro instruments) and parameters calculated within the model (e.g. the correlation between risk factors). Market and model parameters can be considered observable when they can be directly or indirectly drawn from market prices quoted on active markets by means of widely accepted methodologies.
+
+Entities must classify the inputs they use according to the following hierarchy defined by IFRS 13:
+
+* Level 1 inputs: quoted prices (unadjusted) in active markets for identical assets or liabilities that the entity can access at the measurement date.
+* Level 2 inputs: inputs, other than quoted prices included within Level 1, that are observable for the asset or liability, either directly or indirectly.
+* Level 3 inputs: unobservable inputs for the asset or liability.
+
+Once entities have classified the inputs, they must proceed to classify the financial instruments in the appropriate level of the fair value hierarchy, according to a criterion whereby an instrument "Is categorised in its entirety in the same level of the fair value hierarchy as the lowest level input that is significant to the entire measurement."
+
+The exposure of financial instruments to valuation risk is lowest for Level 1 instruments (whose value can be easily determined based upon prices from actual trades in a liquid market, i.e. entirely observable inputs) and increases as a direct function of the significance of unobservable inputs used in the valuation, reaching a maximum with Level 3 instruments.
+
+
+## Taxonomy of valuation risk
+
+Valuation risk is a financial risk. However, it is different in nature from other financial risks, like market risk. The latter is measured as the potential loss deriving from the evolution of the prices of an entity's financial instruments over time and is calculated as the potential difference in the instrument price at the valuation date and after a certain number of days in the future (the "holding period"). This implies two key conceptual and methodological differences vs. valuation risk:
+
+* Valuation risk is the uncertainty about the difference between the fair value reported for a financial instrument at the valuation date and the price that could be obtained on that same date if the instrument were effectively traded. It is therefore an instantaneous risk that is measured at a specific point in time; its measurement does not involve any time interval.
+* Market risk and other financial risks are measured by simulating adverse movements of the risk factors affecting the value of an entity's financial instruments during the holding period, implicitly assuming that the pricing models used by the entity correctly reflect the instrument value and that capacity is maintained along all the holding period. On the opposite, valuation risk represents the uncertainty over the capacity of the pricing models to correctly represent the instrument prices.
+
+## The example of banks
+
+Banks are the entities most likely to be exposed to valuation risk as a result of their massive holdings of financial instruments classified as Level 2 or 3 of the fair value hierarchy. In Europe, at the end of 2020 the banks under the direct supervision of the European Central Bank (ECB) held fair-valued financial instruments in an amount of € 8.7 trillion, of which € 6.6 trillion classified as Level 2 or 3. Level 2 and Level 3 instruments respectively amounted to 495% and 23% of the banks' highest-quality capital (so-called Tier 1 Capital). As an implication, even small errors in such financial instruments' valuations may have significant impacts on banks' capital.
+See valuation control.
+
+In February 2020 the European Systemic Risk Board warned in a report that banks' substantial amounts of financial instruments with complex features and limited liquidity are a source of risk for the stability of the global financial system.
+
+A 2017 report by the Basel Committee on Banking Supervision, an international regulator for the banking sector, noted that IFRS 13 leaves entities significant discretion in determining financial instrument fair value and identified this discretion as a potential source of moral hazard: "The evidence consistent with accounting discretion as contributing to moral hazard behavior indicates that (additional) prudential valuation requirements may be justified."
+
+Areas where discretion may be applied in the determination of financial instrument fair value include:
+
+* Definition of active market
+* Choice of pricing models and methodologies
+* Classification of inputs used in pricing models as observable or non-observable
+* Estimation of the level of significance of unobservable inputs used in pricing models
+
+Banking regulators have taken actions to limit discretion and reduce valuation uncertainties. A row of regulatory documents has been issued, providing detailed prudential requirements that have many points of contact with the accounting rules and have the indirect effect of limiting the discretion left to banks in valuating financial instruments.
+
+The ECB in a Supervision Newsletter of 2021 identified valuation risk as a priority and noted that its inspections had "highlighted severe weaknesses in banks' internal valuation risk frameworks." The ECB acknowledged "The interconnectedness of the accounting and prudential frameworks" and consistently adopted in its inspections on banks a comprehensive perspective covering both the accounting space ("valuation uncertainty, observability of valuation inputs, model risk, fair value classification, recognition of profits when instruments are first recorded in the balance sheet (often referred to as day one profits), independence of price verification, market data quality control") and the prudential space ("prudent valuation practices").
+
+
+## Issues in estimating banks' valuation risk exposures
+
+A 2017 paper of the Bank of Italy noted significant challenges in the assessment of banks' exposure to valuation risk as a result of insufficient published data. The Basel Committee on Banking Supervision also highlighted this lack of transparency in the above-mentioned 2017 report: "Accounting values may embed a significant degree of uncertainty and, as a result, may impede the market's ability to assess a bank's risk profile and overall capital adequacy."
+
+Subsequent research confirmed that more informative analysis of banks' valuation risk exposures, fair value measurement methodologies and practices, risk management processes, and prudential capital allocation would only be made possible by a significant overhaul in banks' disclosures.
+
+Critical lack of disclosed data has been identified in the following areas:
+
+* Qualitative information about the governance and controls on valuation risk
+* Segmentation of Level 2 instruments (which represent the bulk of banks' holdings of instruments potentially exposed to valuation risk) by significance of the unobservable inputs used for their valuation
+* Details on unobservable inputs, their use in the valuation models, their significance for pricing, and the sensitivity of financial instrument valuations to changes in unobservable inputs
+* Contribution of liabilities to valuation risk, i.e. whether liabilities mitigate a bank's valuation risk exposure (because they are exposed to the same valuation risk factors as assets, with a similar functional form and sensitivity, and with opposite sign) or instead contribute to it
+
+## Valuation risk measurement
+
+The consensus methodology for measuring risks relating to financial instruments follows the approach prescribed for regulated financial entities like banks and insurance companies, which are required to measure the risks in their balance sheets and set aside capital that will allow them to absorb the losses should the risks materialize (generally referred to as "economic capital"). This methodology requires building a probability distribution of the relevant risk factors and pick the value corresponding to a predefined confidence interval.
+
+For valuation risk, this implies building a probability distribution of exit prices. This task is challenging due to the sheer nature of valuation risk, i.e. the fact that a database of exit prices is hardly available. There is no commonly accepted methodology, and additional research will be required. Initial approaches proposed in literature include:
+
+* Whenever possible, build benchmark curves for key risk factors by leveraging market-traded instruments whose risk factor exposure shows similarities with the instrument being evaluated
+* Build hypothetical exit prices based on assumptions about the return that investors are expected to ask for the specific risk (an approach similar to one often used for pricing non-performing loans)
+
+With respect to the amount of economic capital to be effectively allocated for a given instrument, one methodological approach suggests that valuation risk on one side, and all other risks relating to the same instrument on the other side are mutually exclusive. In fact, valuation risk for a financial instrument is measured under the assumption that the entity sells it (or transfers it to a third party, in case of a liability); once that instrument has been traded, the entity is no longer exposed to market, credit or other risks for that instrument and can release any capital previously posted against them. Under this assumption, if an entity suffers a loss due to valuation risk, its prudential capital will be affected by two impacts of opposite sign:
+
+* A negative impact due to the loss incurred in the trade, that directly dents into available capital
+* A positive impact due to the release of the capital previously set aside for the traded instrument for all risks other than valuation risk
+
+Under this approach, an entity may allocate economic capital for valuation risk for a given financial instrument to the extent that the risk of loss due to price uncertainty (valuation risk) exceeds the total amount of economic capital set aside for all other risks, as expressed by the following formula:
+
+Where:
+
+* {\displaystyle Capital\_{VR}(i,t\_{Exit})} is the amount of economic capital to be set aside for valuation risk for instrument {\displaystyle {i}} at time {\displaystyle {t\_{Exit}}}
+* {\displaystyle Loss(i,t\_{Exit})} is the hypothetical loss assumed to occur on time {\displaystyle {t\_{Exit}}} from the trade of instrument {\displaystyle {i}}
+* {\displaystyle Capital\_{OR}(i,t\_{Exit})} is the total amount of economic capital set aside for all risks other than valuation risk for instrument {\displaystyle {i}} at time {\displaystyle {t\_{Exit}}} before the trade
+* {\displaystyle t\_{Exit}} is the evaluation date, i.e. the date when instrument {\displaystyle {i}} is assumed to be traded
+
+Another way of expressing the same concept is that the total economic capital to be allocated for a financial instrument, including valuation risk and all other risks, is equal to the biggest of the economic capital allocated to valuation risk and the economic capital allocated to the other risks, as per the following formula:
+
+Where:
+
+* {\displaystyle Capital(i,t\_{Exit})} is the total amount of economic capital to be set aside for instrument {\displaystyle {i}} at time {\displaystyle {t\_{Exit}}}
+* {\displaystyle Capital\_{VR}(i,t\_{Exit})} is the amount of economic capital calculated for valuation risk for instrument {\displaystyle {i}} at time {\displaystyle {t\_{Exit}}} (corresponding to {\displaystyle Loss(i,t\_{Exit})} in the previous equation)
+* {\displaystyle Capital\_{OR}(i,t\_{Exit})} is the total amount of economic capital calculated for risks other than valuation risk for instrument {\displaystyle {i}} at time {\displaystyle {t\_{Exit}}} before the trade
+* {\displaystyle t\_{Exit}} is the evaluation date, i.e. the date when instrument {\displaystyle {i}} is assumed to be traded

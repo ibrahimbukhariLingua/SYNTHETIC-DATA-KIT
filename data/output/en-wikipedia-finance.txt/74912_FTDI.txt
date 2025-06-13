@@ -1,0 +1,39 @@
+FTDI
+
+
+# FTDI
+
+
+
+**Future Technology Devices International Limited**, commonly known by its acronym **FTDI**, is a Scottish privately held fabless semiconductor device company, specialising in Universal Serial Bus (USB) technology.
+
+It develops, manufactures, and supports devices and their related cables and software drivers for converting RS-232 or TTL serial transmissions to and from USB signals, in order to provide support for legacy devices with modern computers.
+
+The company also provides application-specific integrated circuit (ASIC) design services, and consultancy services for product design, specifically in the realm of electronic devices.
+
+
+## History
+
+FTDI was founded on 13 March 1992 by its current CEO, Fred Dart (whose initials happen to be "FTD"). The company is an indirect descendant of Computer Design Concepts Ltd, a former semiconductor technology startup also founded by Dart.
+
+FTDI's initial products were chipsets for personal computer motherboards, the primary customer of which was IBM, which used them in its AMBRA and PS/1 personal computers. It later expanded its product line to include interface translators, such as the MM232R and the USB-COM232-PLUS1, along with other devices for converting between USB and other communication protocols.
+
+The headquarters of FTDI is in Glasgow, Scotland. It has offices in Singapore, Taipei (Taiwan), and Portland, Oregon, and a subsidiary in China. The company's manufacturing is handled by subcontractors in the Asia-Pacific region.
+
+In 2012, FTDI signed a global distribution agreement with Arrow Electronics, which was expanded in 2013. Also in 2012, they began a collaboration with Altium providing the board level IC components from FTDI for its Altium Designer software. In 2013 the distribution agreement with Arrow was expanded and FTDI also began a collaboration with Mikroelektronika.
+
+FTDI appointed a new distributor in 2014 for the Chinese market, Shanghai Jing Xi Electronics Information Systems Company Ltd.
+
+Through a technology partnership in 2014, FTDI and MCCI (USB software developer) released TrueTask USB, an embedded USB host stack for the FTDI FT900 product family.
+
+FTDI created a separate company called Bridgetek in 2016 to focus on microcontroller units (MCUs) and Embedded Video Engine (EVE).
+
+
+### Driver controversy
+
+On 29 September 2014, FTDI released an updated version of their USB-to-Serial driver for Windows on their website. Users who manually downloaded the new drivers reported problems. After Windows drivers became available on 14 October (*Patch Tuesday*) via Windows Update, it was reported by users of hardware enthusiast forums and websites that the drivers could soft-brick counterfeit and software-compatible clones of the chips by changing their USB "Product ID" to "0000". The change prevents the chip from being recognised by drivers of any OS, effectively making them inoperable unless the product ID is changed back. The behaviour was supported by a notice in the drivers' end user license agreement, which warned that use of the drivers with non-genuine FTDI products would "irretrievably damage" them. Critics felt that FTDI's actions were unethical, considering that users may be unaware that their chips were counterfeit, or that Windows had automatically installed a driver meant to disable them. On 22 October 2014, an emergency patch was made to the FTDI drivers in the Linux kernel to recognise devices with the "0000" ID.
+
+On 24 October 2014, in response to the criticism, FTDI withdrew the driver and admitted that the measure was intended to protect its intellectual property and encourage users to purchase genuine FTDI products. The company also stated that it was working to create an updated driver which would notify users of non-genuine FTDI products in a "non-invasive" manner.
+
+In February 2016, it was reported that FTDI had published another driver on Windows Update with DRM components intended to block non-genuine products. This time, the driver will communicate with affected devices, but all transmitted and received data is replaced with the looped ASCII string "NON GENUINE DEVICE FOUND!", which could cause irregular interactions with devices.
+

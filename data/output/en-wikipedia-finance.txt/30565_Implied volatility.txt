@@ -1,0 +1,84 @@
+Implied volatility
+
+
+# Implied volatility
+
+
+
+In financial mathematics, the **implied volatility** (**IV**) of an option contract is that value of the volatility of the underlying instrument which, when input in an option pricing model (usually Black–Scholes), will return a theoretical value equal to the price of the option. A non-option financial instrument that has embedded optionality, such as an interest rate cap, can also have an implied volatility. Implied volatility, a forward-looking and subjective measure, differs from historical volatility because the latter is calculated from known past returns of a security. To understand where implied volatility stands in terms of the underlying, **implied volatility rank** is used to understand its implied volatility from a one-year high and low IV.
+
+
+## Motivation
+
+An option pricing model, such as Black–Scholes, uses a variety of inputs to derive a theoretical value for an option. Inputs to pricing models vary depending on the type of option being priced and the pricing model used. However, in general, the value of an option depends on an estimate of the future realized price volatility, σ, of the underlying. Or, mathematically:
+
+where *C* is the theoretical value of an option, and *f* is a pricing model that depends on σ, along with other inputs.
+
+The function *f* is monotonically increasing in σ, meaning that a higher value for volatility results in a higher theoretical value of the option. Conversely, by the inverse function theorem, there can be at most one value for σ that, when applied as an input to {\displaystyle f(\sigma ,\cdot )\,}, will result in a particular value for *C*.
+
+Put in other terms, assume that there is some inverse function *g* = *f*¹, such that
+
+where {\displaystyle \scriptstyle {\bar {C}}\,} is the market price for an option. The value {\displaystyle \sigma \_{\bar {C}}\,} is the volatility **implied** by the market price {\displaystyle \scriptstyle {\bar {C}}\,}, or the **implied volatility**.
+
+In general, it is not possible to give a closed form formula for implied volatility in terms of call price (for a review see ). However, in some cases (large strike, low strike, short expiry, large expiry) it is possible to give an asymptotic expansion of implied volatility in terms of call price. A different approach based on closed form approximations has been also investigated.
+
+
+### Example
+
+A European call option, {\displaystyle C\_{XYZ}}, on one share of non-dividend-paying XYZ Corp with a strike price of $50 expires in 32 days. The risk-free interest rate is 5%. XYZ stock is currently trading at $51.25 and the current market price of {\displaystyle C\_{XYZ}} is $2.00. Using a standard Black–Scholes pricing model, the volatility implied by the market price {\displaystyle C\_{XYZ}} is 18.7%, or:
+
+To verify, we apply implied volatility to the pricing model, *f ,* and generate a theoretical value of $2.0004:
+
+which confirms our computation of the market implied volatility.
+
+
+## Solving the inverse pricing model function
+
+In general, a pricing model function, *f*, does not have a closed-form solution for its inverse, *g*. Instead, a root finding technique is often used to solve the equation:
+
+While there are many techniques for finding roots, two of the most commonly used are Newton's method and Brent's method. Because options prices can move very quickly, it is often important to use the most efficient method when calculating implied volatilities.
+
+Newton's method provides rapid convergence; however, it requires the first partial derivative of the option's theoretical value with respect to volatility; i.e., {\displaystyle {\frac {\partial C}{\partial \sigma }}\,}, which is also known as *vega* (see The Greeks). If the pricing model function yields a closed-form solution for *vega*, which is the case for Black–Scholes model, then Newton's method can be more efficient. However, for most practical pricing models, such as a binomial model, this is not the case and *vega* must be derived numerically. When forced to solve for *vega* numerically, one can use the Christopher and Salkin method or, for more accurate calculation of out-of-the-money implied volatilities, one can use the Corrado-Miller model.
+
+Specifically in the case of the Black[-Scholes-Merton] model, Jaeckel's "Let's Be Rational" method computes the implied volatility to full attainable (standard 64 bit floating point) machine precision for all possible input values in sub-microsecond time. The algorithm comprises an initial guess based on matched asymptotic expansions, plus (always exactly) two Householder improvement steps (of convergence order 4), making this a three-step (i.e., non-iterative) procedure. A reference implementation in C++ is freely available.
+Besides the above mentioned root finding techniques, there are also methods that approximate the multivariate inverse function directly. Often they are based on polynomials or rational functions.
+
+For the Bachelier ("normal", as opposed to "lognormal") model, Jaeckel published a fully analytic and comparatively simple two-stage formula that gives full attainable (standard 64 bit floating point) machine precision for all possible input values.
+
+
+## Implied volatility parametrisation
+
+With the arrival of big data and data science, parametrising the implied volatility has taken central importance for the sake of coherent interpolation and extrapolation purposes. The classic models are the SABR and SVI model with their IVP extension.
+
+
+## Implied volatility as measure of relative value
+
+As stated by Brian Byrne, the implied volatility of an option is a more useful measure of the option's relative value than its price. The reason is that the price of an option depends most directly on the price of its underlying asset. If an option is held as part of a delta neutral portfolio (that is, a portfolio that is hedged against small moves in the underlying's price), then the next most important factor in determining the value of the option will be its implied volatility.
+
+Implied volatility is so important that options are often quoted in terms of volatility rather than price, particularly among professional traders.
+
+
+### Example
+
+A call option is trading at $1.50 with the underlying trading at $42.05. The implied volatility of the option is determined to be 18.0%. A short time later, the option is trading at $2.10 with the underlying at $43.34, yielding an implied volatility of 17.2%. Even though the option's price is higher at the second measurement, it is still considered cheaper based on volatility.
+The reason is that the underlying needed to hedge the call option can be sold for a higher price.
+
+
+## As a price
+
+Another way to look at implied volatility is to think of it as a price, not as a measure of future stock moves.
+In this view, it simply is a more convenient way to communicate option prices than currency. Prices are different in nature from statistical quantities: one can estimate volatility of future underlying returns using any of a large number of estimation methods; however, the number one gets is not a price. A price requires two counterparties, a buyer, and a seller. Prices are determined by supply and demand. Statistical estimates depend on the time-series and the mathematical structure of the model used.
+It is a mistake to confuse a price, which implies a transaction, with the result of a statistical estimation, which is merely what comes out of a calculation. Implied volatilities are prices: they have been derived from actual transactions. Seen in this light, it should not be surprising that implied volatilities might not conform to what a particular statistical model would predict.
+
+However, the above view ignores the fact that the values of implied volatilities depend on the model used to calculate them: different models applied to the same market option prices will produce different implied volatilities. Thus, if one adopts this view of implied volatility as a price, then one also has to concede that there is no unique implied-volatility-price and that a buyer and a seller in the same transaction might be trading at different "prices".
+
+
+## Non-constant implied volatility
+
+In general, options based on the same underlying but with different strike values and expiration times will yield different implied volatilities. This can be viewed as evidence that an underlying's volatility is not constant but instead depends on factors such as price level or time, or it can be viewed as evidence that the underlying's price changes do not follow the distribution that is assumed in the model under consideration (such as Black-Scholes). There exist few known parametrisation of the volatility surface (Schonbusher, SVI, and gSVI) as well as their de-arbitraging methodologies. See stochastic volatility and volatility smile for more information.
+
+
+## Volatility instruments
+
+Volatility instruments are financial instruments that track the value of implied volatility of other derivative securities. For instance, the CBOE Volatility Index (VIX) is calculated from a weighted average of implied volatilities of various options on the S&P 500 Index. There are also other commonly referenced volatility indices such as the VXN index (Nasdaq 100 index futures volatility measure), the QQV (QQQ volatility measure), IVX – Implied Volatility Index (an expected stock volatility over a future period for any of US securities and exchange-traded instruments), as well as options and futures derivatives based directly on these volatility indices themselves.
+

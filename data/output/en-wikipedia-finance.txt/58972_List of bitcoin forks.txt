@@ -1,0 +1,56 @@
+List of bitcoin forks
+
+
+# List of bitcoin forks
+
+
+
+Bitcoin forks are defined variantly as changes in the protocol of the bitcoin network or as the situations that occur "when two or more blocks have the same block height". A fork influences the validity of the rules. Forks are typically conducted in order to add new features to a blockchain, to reverse the effects of hacking or catastrophic bugs. Forks require consensus to be resolved or else a permanent split emerges.
+
+
+## Forks of the client software
+
+The following are forks of the software client for the bitcoin network:
+
+All three software clients attempt to increase transaction capacity of the network. None achieved a majority of the hash power.
+
+
+## Intended hard forks splitting the cryptocurrency
+
+Hard forks splitting bitcoin (aka "split coins") are created via changes of the blockchain rules and sharing a transaction history with bitcoin up to a certain time and date. The first hard fork splitting bitcoin happened on 1 August 2017, resulting in the creation of Bitcoin Cash.
+
+The following is a list of notable hard forks splitting bitcoin by date and/or block:
+
+* Bitcoin Cash: Forked at block 478558, 1 August 2017, for each bitcoin (BTC), an owner got 1 Bitcoin Cash (BCH)
+ + Bitcoin Satoshi Vision: Forked at block 556766, 15 November 2018, for each Bitcoin Cash (BCH), an owner got 1 Bitcoin SV (BSV).
+ + eCash: Forked at block 661648, 15 November 2020, for each Bitcoin Cash (BCH), an owner got 1,000,000 eCash (XEC).
+* Bitcoin Gold: Forked at block 491407, 24 October 2017, for each bitcoin (BTC), an owner got 1 Bitcoin Gold (BTG)
+
+## Intended soft forks splitting from a not-most-work block
+
+* The fork fixing the value overflow incident was controversial because it was announced after the exploit was mined. It was assigned CVE-2010-5139.
+
+## Intended soft forks splitting from the most-work block
+
+
+### Segwit
+
+
+### Taproot
+
+Taproot is an agreed soft fork in the transaction format. The fork adds support for Schnorr signatures, and improves functionality of smart contracts and the Lightning Network. The fork was installed in November 2021. The upgrade adds privacy features. Taproot includes Bitcoin Improvement Proposal numbers BIP340, BIP341, BIP342.
+
+Advantages:
+
+* Complex transactions, such as those requiring multiple signatures or those with delayed release, are indistinguishable from simple transactions in terms of on-chain data.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+* Reduced transaction costs: The data size of complex Bitcoin transactions is reduced, which leads to lower transaction fees.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+* Support for more complicated conditions for a transaction via Schnorr signatures.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+* Benefits for the Lightning Network: More flexibility, privacy enhancement, lower costs.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+## Bitcoin hard forks
+
+Three hard forks were created by "protocol change" definition:
+
+* July 2010 Chain Fork (addition of OP\_NOP functions)
+* March 2013 Chain Fork (migration from BerkeleyDB to LevelDB caused a chain split)
+* CVE-2018-17144 (Bitcoin 0.15 allowed double spending certain inputs in the same block. Not exploited)

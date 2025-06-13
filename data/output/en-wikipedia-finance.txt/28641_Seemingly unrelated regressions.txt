@@ -1,0 +1,60 @@
+Seemingly unrelated regressions
+
+
+# Seemingly unrelated regressions
+
+
+
+In econometrics, the **seemingly unrelated regressions** (**SUR**)³⁰⁶²⁷⁹³³² or **seemingly unrelated regression equations** (**SURE**)² model, proposed by Arnold Zellner in (1962), is a generalization of a linear regression model that consists of several regression equations, each having its own dependent variable and potentially different sets of exogenous explanatory variables. Each equation is a valid linear regression on its own and can be estimated separately, which is why the system is called *seemingly unrelated*,³³² although some authors suggest that the term *seemingly related* would be more appropriate,³⁰⁶ since the error terms are assumed to be correlated across the equations.
+
+The model can be estimated equation-by-equation using standard ordinary least squares (OLS). Such estimates are consistent, however generally not as efficient as the SUR method, which amounts to feasible generalized least squares with a specific form of the variance-covariance matrix. Two important cases when SUR is in fact equivalent to OLS are when the error terms are in fact uncorrelated between the equations (so that they are truly unrelated) and when each equation contains exactly the same set of regressors on the right-hand-side.
+
+The SUR model can be viewed as either the simplification of the general linear model where certain coefficients in matrix {\displaystyle \mathrm {B} } are restricted to be equal to zero, or as the generalization of the general linear model where the regressors on the right-hand-side are allowed to be different in each equation. The SUR model can be further generalized into the simultaneous equations model, where the right-hand side regressors are allowed to be the endogenous variables as well.
+
+
+## The model
+
+Suppose there are *m* regression equations
+
+Here *i* represents the equation number, *r* = 1, …, *R* is the individual observation, and we are taking the transpose of the {\displaystyle x\_{ir}} column vector. The number of observations *R* is assumed to be large, so that in the analysis we take *R* → {\displaystyle \infty }, whereas the number of equations *m* remains fixed.
+
+Each equation *i* has a single response variable *y*ᵢᵣ, and a *k*ᵢ-dimensional vector of regressors *x*ᵢᵣ. If we stack observations corresponding to the *i*-th equation into *R*-dimensional vectors and matrices, then the model can be written in vector form as
+
+where *y*ᵢ and *ε*ᵢ are *R*×1 vectors, *X*ᵢ is a *R*×*k*ᵢ matrix, and *β*ᵢ is a *k*ᵢ×1 vector.
+
+Finally, if we stack these *m* vector equations on top of each other, the system will take the form ᵉ𐞥. (².²)
+
+| {\displaystyle {\begin{pmatrix}y\_{1}\\y\_{2}\\\vdots \\y\_{m}\end{pmatrix}}={\begin{pmatrix}X\_{1}&0&\ldots &0\\0&X\_{2}&\ldots &0\\\vdots &\vdots &\ddots &\vdots \\0&0&\ldots &X\_{m}\end{pmatrix}}{\begin{pmatrix}\beta \_{1}\\\beta \_{2}\\\vdots \\\beta \_{m}\end{pmatrix}}+{\begin{pmatrix}\varepsilon \_{1}\\\varepsilon \_{2}\\\vdots \\\varepsilon \_{m}\end{pmatrix}}=X\beta +\varepsilon \,.} | **(1)** |
+| --- | --- |
+
+The assumption of the model is that error terms *ε*ᵢᵣ are independent across observations, but may have cross-equation correlations within observations. Thus, we assume that E[ *εᵢᵣ εᵢₛ* | *X* ] = 0 whenever *r ≠ s*, whereas E[ *ε*ᵢᵣ *ε*ⱼᵣ | *X* ] = *σᵢⱼ*. Denoting Σ = [*σ*ᵢⱼ] the *m×m* skedasticity matrix of each observation, the covariance matrix of the stacked error terms *ε* will be equal to ᵉ𐞥. (².⁴)³³²
+
+where *I*R is the *R*-dimensional identity matrix and ⊗ denotes the matrix Kronecker product.
+
+
+## Estimation
+
+The SUR model is usually estimated using the feasible generalized least squares (FGLS) method. This is a two-step method where in the first step we run ordinary least squares regression for (**1**). The residuals from this regression are used to estimate the elements of matrix {\displaystyle \Sigma }:¹⁹⁸
+
+In the second step we run generalized least squares regression for (**1**) using the variance matrix {\displaystyle \scriptstyle {\hat {\Omega }}\;=\;{\hat {\Sigma }}\,\otimes \,I\_{R}}:
+
+This estimator is unbiased in small samples assuming the error terms *εᵢᵣ* have symmetric distribution; in large samples it is consistent and asymptotically normal with limiting distribution¹⁹⁸
+
+Other estimation techniques besides FGLS were suggested for SUR model: the maximum likelihood (ML) method under the assumption that the errors are normally distributed; the iterative generalized least squares (IGLS), where the residuals from the second step of FGLS are used to recalculate the matrix {\displaystyle \scriptstyle {\hat {\Sigma }}}, then estimate {\displaystyle \scriptstyle {\hat {\beta }}} again using GLS, and so on, until convergence is achieved; the iterative ordinary least squares (IOLS) scheme, where estimation is performed on equation-by-equation basis, but every equation includes as additional regressors the residuals from the previously estimated equations in order to account for the cross-equation correlations, the estimation is run iteratively until convergence is achieved. Kmenta and Gilbert (1968) ran a Monte-Carlo study and established that all three methods—IGLS, IOLS and ML—yield numerically equivalent results, they also found that the asymptotic distribution of these estimators is the same as the distribution of the FGLS estimator, whereas in small samples neither of the estimators was more superior than the others. Zellner and Ando (2010) developed a direct Monte Carlo method for the Bayesian analysis of SUR model.
+
+
+## Equivalence to OLS
+
+There are two important cases when the SUR estimates turn out to be equivalent to the equation-by-equation OLS. These cases are:
+
+1. When the matrix Σ is known to be diagonal, that is, there are no cross-equation correlations between the error terms. In this case the system becomes not seemingly but truly unrelated.
+2. When each equation contains exactly the same set of regressors, that is *X*₁ = *X*₂ = … = *Xₘ*. That the estimates turn out to be numerically identical to OLS estimates follows from Kruskal's tree theorem,³¹³ or can be shown via the direct calculation.¹⁹⁷
+
+## Statistical packages
+
+* In R, SUR can be estimated using the package “systemfit”.
+* In SAS, SUR can be estimated using the `syslin` procedure.
+* In Stata, SUR can be estimated using the `sureg` and `suest` commands.
+* In Limdep, SUR can be estimated using the `sure` command
+* In Python, SUR can be estimated using the command `SUR` in the “linearmodels” package.
+* In gretl, SUR can be estimated using the `system` command.

@@ -1,0 +1,167 @@
+Stochastic dynamic programming
+
+
+# Stochastic dynamic programming
+
+
+
+Originally introduced by Richard E. Bellman in (Bellman 1957), **stochastic dynamic programming** is a technique for modelling and solving problems of decision making under uncertainty. Closely related to stochastic programming and dynamic programming, stochastic dynamic programming represents the problem under scrutiny in the form of a Bellman equation. The aim is to compute a policy prescribing how to act optimally in the face of uncertainty.
+
+
+## A motivating example: Gambling game
+
+A gambler has $2, she is allowed to play a game of chance 4 times and her goal is to maximize her probability of ending up with a least $6. If the gambler bets ${\displaystyle b} on a play of the game, then with probability 0.4 she wins the game, recoup the initial bet, and she increases her capital position by ${\displaystyle b}; with probability 0.6, she loses the bet amount ${\displaystyle b}; all plays are pairwise independent. On any play of the game, the gambler may not bet more money than she has available at the beginning of that play.
+
+Stochastic dynamic programming can be employed to model this problem and determine a betting strategy that, for instance, maximizes the gambler's probability of attaining a wealth of at least $6 by the end of the betting horizon.
+
+Note that if there is no limit to the number of games that can be played, the problem becomes a variant of the well known St. Petersburg paradox.
+
+
+## Formal background
+
+Consider a discrete system defined on {\displaystyle n} stages in which each stage {\displaystyle t=1,\ldots ,n} is characterized by
+
+* an **initial state** {\displaystyle s\_{t}\in S\_{t}}, where {\displaystyle S\_{t}} is the set of feasible states at the beginning of stage {\displaystyle t};
+* a **decision variable** {\displaystyle x\_{t}\in X\_{t}}, where {\displaystyle X\_{t}} is the set of feasible actions at stage {\displaystyle t} – note that {\displaystyle X\_{t}} may be a function of the initial state {\displaystyle s\_{t}};
+* an **immediate cost/reward function** {\displaystyle p\_{t}(s\_{t},x\_{t})}, representing the cost/reward at stage {\displaystyle t} if {\displaystyle s\_{t}} is the initial state and {\displaystyle x\_{t}} the action selected;
+* a **state transition function** {\displaystyle g\_{t}(s\_{t},x\_{t})} that leads the system towards state {\displaystyle s\_{t+1}=g\_{t}(s\_{t},x\_{t})}.
+
+Let {\displaystyle f\_{t}(s\_{t})} represent the optimal cost/reward obtained by following an *optimal policy* over stages {\displaystyle t,t+1,\ldots ,n}. Without loss of generality in what follow we will consider a reward maximisation setting. In deterministic dynamic programming one usually deals with functional equations taking the following structure
+
+where {\displaystyle s\_{t+1}=g\_{t}(s\_{t},x\_{t})} and the boundary condition of the system is
+
+The aim is to determine the set of optimal actions that maximise {\displaystyle f\_{1}(s\_{1})}. Given the current state {\displaystyle s\_{t}} and the current action {\displaystyle x\_{t}}, we *know with certainty* the reward secured during the current stage and – thanks to the state transition function {\displaystyle g\_{t}} – the future state towards which the system transitions.
+
+In practice, however, even if we know the state of the system at the beginning of the current stage as well as the decision taken, the state of the system at the beginning of the next stage and the current period reward are often random variables that can be observed only at the end of the current stage.
+
+**Stochastic dynamic programming** deals with problems in which the current period reward and/or the next period state are random, i.e. with multi-stage stochastic systems. The decision maker's goal is to maximise expected (discounted) reward over a given planning horizon.
+
+In their most general form, stochastic dynamic programs deal with functional equations taking the following structure
+
+where
+
+* {\displaystyle f\_{t}(s\_{t})} is the maximum expected reward that can be attained during stages {\displaystyle t,t+1,\ldots ,n}, given state {\displaystyle s\_{t}} at the beginning of stage {\displaystyle t};
+* {\displaystyle x\_{t}} belongs to the set {\displaystyle X\_{t}(s\_{t})} of feasible actions at stage {\displaystyle t} given initial state {\displaystyle s\_{t}};
+* {\displaystyle \alpha } is the discount factor;
+* {\displaystyle \Pr(s\_{t+1}\mid s\_{t},x\_{t})} is the conditional probability that the state at the end of stage {\displaystyle t} is {\displaystyle s\_{t+1}} given current state {\displaystyle s\_{t}} and selected action {\displaystyle x\_{t}}.
+
+Markov decision processes represent a special class of stochastic dynamic programs in which the underlying stochastic process is a stationary process that features the Markov property.
+
+
+### Gambling game as a stochastic dynamic program
+
+Gambling game can be formulated as a Stochastic Dynamic Program as follows: there are {\displaystyle n=4} games (i.e. **stages**) in the planning horizon
+
+* the **state** {\displaystyle s} in period {\displaystyle t} represents the initial wealth at the beginning of period {\displaystyle t};
+* the **action** given state {\displaystyle s} in period {\displaystyle t} is the bet amount {\displaystyle b};
+* the **transition probability** {\displaystyle p\_{i,j}^{a}} from state {\displaystyle i} to state {\displaystyle j} when action {\displaystyle a} is taken in state {\displaystyle i} is easily derived from the probability of winning (0.4) or losing (0.6) a game.
+
+Let {\displaystyle f\_{t}(s)} be the probability that, by the end of game 4, the gambler has at least $6, given that she has ${\displaystyle s} at the beginning of game {\displaystyle t}.
+
+* the **immediate profit** incurred if action {\displaystyle b} is taken in state {\displaystyle s} is given by the expected value {\displaystyle p\_{t}(s,b)=0.4f\_{t+1}(s+b)+0.6f\_{t+1}(s-b)}.
+
+To derive the **functional equation**, define {\displaystyle b\_{t}(s)} as a bet that attains {\displaystyle f\_{t}(s)}, then at the beginning of game {\displaystyle t=4}
+
+* if {\displaystyle s<3} it is impossible to attain the goal, i.e. {\displaystyle f\_{4}(s)=0} for {\displaystyle s<3};
+* if {\displaystyle s\geq 6} the goal is attained, i.e. {\displaystyle f\_{4}(s)=1} for {\displaystyle s\geq 6};
+* if {\displaystyle 3\leq s\leq 5} the gambler should bet enough to attain the goal, i.e. {\displaystyle f\_{4}(s)=0.4} for {\displaystyle 3\leq s\leq 5}.
+
+For {\displaystyle t<4} the functional equation is {\displaystyle f\_{t}(s)=\max \_{b\_{t}(s)}\{0.4f\_{t+1}(s+b)+0.6f\_{t+1}(s-b)\}}, where {\displaystyle b\_{t}(s)} ranges in {\displaystyle 0,...,s}; the aim is to find {\displaystyle f\_{1}(2)}.
+
+Given the functional equation, an optimal betting policy can be obtained via forward recursion or backward recursion algorithms, as outlined below.
+
+
+## Solution methods
+
+Stochastic dynamic programs can be solved to optimality by using backward recursion or forward recursion algorithms. Memoization is typically employed to enhance performance. However, like deterministic dynamic programming also its stochastic variant suffers from the curse of dimensionality. For this reason approximate solution methods are typically employed in practical applications.
+
+
+### Backward recursion
+
+Given a bounded state space, *backward recursion* (Bertsekas 2000) begins by tabulating {\displaystyle f\_{n}(k)} for every possible state {\displaystyle k} belonging to the final stage {\displaystyle n}. Once these values are tabulated, together with the associated optimal state-dependent actions {\displaystyle x\_{n}(k)}, it is possible to move to stage {\displaystyle n-1} and tabulate {\displaystyle f\_{n-1}(k)} for all possible states belonging to the stage {\displaystyle n-1}. The process continues by considering in a *backward* fashion all remaining stages up to the first one. Once this tabulation process is complete, {\displaystyle f\_{1}(s)} – the value of an optimal policy given initial state {\displaystyle s} – as well as the associated optimal action {\displaystyle x\_{1}(s)} can be easily retrieved from the table. Since the computation proceeds in a backward fashion, it is clear that backward recursion may lead to computation of a large number of states that are not necessary for the computation of {\displaystyle f\_{1}(s)}.
+
+
+#### Example: Gambling game
+
+
+### Forward recursion
+
+Given the initial state {\displaystyle s} of the system at the beginning of period 1, *forward recursion* (Bertsekas 2000) computes {\displaystyle f\_{1}(s)} by progressively expanding the functional equation (*forward pass*). This involves recursive calls for all {\displaystyle f\_{t+1}(\cdot ),f\_{t+2}(\cdot ),\ldots } that are necessary for computing a given {\displaystyle f\_{t}(\cdot )}. The value of an optimal policy and its structure are then retrieved via a (*backward pass*) in which these suspended recursive calls are resolved. A key difference from backward recursion is the fact that {\displaystyle f\_{t}} is computed only for states that are relevant for the computation of {\displaystyle f\_{1}(s)}. Memoization is employed to avoid recomputation of states that have been already considered.
+
+
+#### Example: Gambling game
+
+We shall illustrate forward recursion in the context of the Gambling game instance previously discussed. We begin the *forward pass* by considering
+{\displaystyle f\_{1}(2)=\min \left\{{\begin{array}{rr}b&{\text{success probability in periods 1,2,3,4}}\\\hline 0&0.4f\_{2}(2+0)+0.6f\_{2}(2-0)\\1&0.4f\_{2}(2+1)+0.6f\_{2}(2-1)\\2&0.4f\_{2}(2+2)+0.6f\_{2}(2-2)\\\end{array}}\right.}
+
+At this point we have not computed yet {\displaystyle f\_{2}(4),f\_{2}(3),f\_{2}(2),f\_{2}(1),f\_{2}(0)}, which are needed to compute {\displaystyle f\_{1}(2)}; we proceed and compute these items. Note that {\displaystyle f\_{2}(2+0)=f\_{2}(2-0)=f\_{2}(2)}, therefore one can leverage memoization and perform the necessary computations only once.
+
+{\displaystyle f\_{2}(0)=\min \left\{{\begin{array}{rr}b&{\text{success probability in periods 2,3,4}}\\\hline 0&0.4f\_{3}(0+0)+0.6f\_{3}(0-0)\\\end{array}}\right.}
+
+{\displaystyle f\_{2}(1)=\min \left\{{\begin{array}{rr}b&{\text{success probability in periods 2,3,4}}\\\hline 0&0.4f\_{3}(1+0)+0.6f\_{3}(1-0)\\1&0.4f\_{3}(1+1)+0.6f\_{3}(1-1)\\\end{array}}\right.}
+
+{\displaystyle f\_{2}(2)=\min \left\{{\begin{array}{rr}b&{\text{success probability in periods 2,3,4}}\\\hline 0&0.4f\_{3}(2+0)+0.6f\_{3}(2-0)\\1&0.4f\_{3}(2+1)+0.6f\_{3}(2-1)\\2&0.4f\_{3}(2+2)+0.6f\_{3}(2-2)\\\end{array}}\right.}
+
+{\displaystyle f\_{2}(3)=\min \left\{{\begin{array}{rr}b&{\text{success probability in periods 2,3,4}}\\\hline 0&0.4f\_{3}(3+0)+0.6f\_{3}(3-0)\\1&0.4f\_{3}(3+1)+0.6f\_{3}(3-1)\\2&0.4f\_{3}(3+2)+0.6f\_{3}(3-2)\\3&0.4f\_{3}(3+3)+0.6f\_{3}(3-3)\\\end{array}}\right.}
+
+{\displaystyle f\_{2}(4)=\min \left\{{\begin{array}{rr}b&{\text{success probability in periods 2,3,4}}\\\hline 0&0.4f\_{3}(4+0)+0.6f\_{3}(4-0)\\1&0.4f\_{3}(4+1)+0.6f\_{3}(4-1)\\2&0.4f\_{3}(4+2)+0.6f\_{3}(4-2)\end{array}}\right.}
+
+We have now computed {\displaystyle f\_{2}(k)} for all {\displaystyle k} that are needed to compute {\displaystyle f\_{1}(2)}. However, this has led to additional suspended recursions involving {\displaystyle f\_{3}(4),f\_{3}(3),f\_{3}(2),f\_{3}(1),f\_{3}(0)}. We proceed and compute these values.
+
+{\displaystyle f\_{3}(0)=\min \left\{{\begin{array}{rr}b&{\text{success probability in periods 3,4}}\\\hline 0&0.4f\_{4}(0+0)+0.6f\_{4}(0-0)\\\end{array}}\right.}
+
+{\displaystyle f\_{3}(1)=\min \left\{{\begin{array}{rr}b&{\text{success probability in periods 3,4}}\\\hline 0&0.4f\_{4}(1+0)+0.6f\_{4}(1-0)\\1&0.4f\_{4}(1+1)+0.6f\_{4}(1-1)\\\end{array}}\right.}
+
+{\displaystyle f\_{3}(2)=\min \left\{{\begin{array}{rr}b&{\text{success probability in periods 3,4}}\\\hline 0&0.4f\_{4}(2+0)+0.6f\_{4}(2-0)\\1&0.4f\_{4}(2+1)+0.6f\_{4}(2-1)\\2&0.4f\_{4}(2+2)+0.6f\_{4}(2-2)\\\end{array}}\right.}
+
+{\displaystyle f\_{3}(3)=\min \left\{{\begin{array}{rr}b&{\text{success probability in periods 3,4}}\\\hline 0&0.4f\_{4}(3+0)+0.6f\_{4}(3-0)\\1&0.4f\_{4}(3+1)+0.6f\_{4}(3-1)\\2&0.4f\_{4}(3+2)+0.6f\_{4}(3-2)\\3&0.4f\_{4}(3+3)+0.6f\_{4}(3-3)\\\end{array}}\right.}
+
+{\displaystyle f\_{3}(4)=\min \left\{{\begin{array}{rr}b&{\text{success probability in periods 3,4}}\\\hline 0&0.4f\_{4}(4+0)+0.6f\_{4}(4-0)\\1&0.4f\_{4}(4+1)+0.6f\_{4}(4-1)\\2&0.4f\_{4}(4+2)+0.6f\_{4}(4-2)\end{array}}\right.}
+
+{\displaystyle f\_{3}(5)=\min \left\{{\begin{array}{rr}b&{\text{success probability in periods 3,4}}\\\hline 0&0.4f\_{4}(5+0)+0.6f\_{4}(5-0)\\1&0.4f\_{4}(5+1)+0.6f\_{4}(5-1)\end{array}}\right.}
+
+Since stage 4 is the last stage in our system, {\displaystyle f\_{4}(\cdot )} represent **boundary conditions** that are easily computed as follows.
+
+{\displaystyle {\begin{array}{ll}f\_{4}(0)=0&b\_{4}(0)=0\\f\_{4}(1)=0&b\_{4}(1)=\{0,1\}\\f\_{4}(2)=0&b\_{4}(2)=\{0,1,2\}\\f\_{4}(3)=0.4&b\_{4}(3)=\{3\}\\f\_{4}(4)=0.4&b\_{4}(4)=\{2,3,4\}\\f\_{4}(5)=0.4&b\_{4}(5)=\{1,2,3,4,5\}\\f\_{4}(d)=1&b\_{4}(d)=\{0,\ldots ,d-6\}{\text{ for }}d\geq 6\end{array}}}
+
+At this point it is possible to proceed and recover the optimal policy and its value via a *backward pass* involving, at first, stage 3
+
+{\displaystyle f\_{3}(0)=\min \left\{{\begin{array}{rr}b&{\text{success probability in periods 3,4}}\\\hline 0&0.4(0)+0.6(0)=0\\\end{array}}\right.}
+
+{\displaystyle f\_{3}(1)=\min \left\{{\begin{array}{rrr}b&{\text{success probability in periods 3,4}}&{\mbox{max}}\\\hline 0&0.4(0)+0.6(0)=0&\leftarrow b\_{3}(1)=0\\1&0.4(0)+0.6(0)=0&\leftarrow b\_{3}(1)=1\\\end{array}}\right.}
+
+{\displaystyle f\_{3}(2)=\min \left\{{\begin{array}{rrr}b&{\text{success probability in periods 3,4}}&{\mbox{max}}\\\hline 0&0.4(0)+0.6(0)=0\\1&0.4(0.4)+0.6(0)=0.16&\leftarrow b\_{3}(2)=1\\2&0.4(0.4)+0.6(0)=0.16&\leftarrow b\_{3}(2)=2\\\end{array}}\right.}
+
+{\displaystyle f\_{3}(3)=\min \left\{{\begin{array}{rrr}b&{\text{success probability in periods 3,4}}&{\mbox{max}}\\\hline 0&0.4(0.4)+0.6(0.4)=0.4&\leftarrow b\_{3}(3)=0\\1&0.4(0.4)+0.6(0)=0.16\\2&0.4(0.4)+0.6(0)=0.16\\3&0.4(1)+0.6(0)=0.4&\leftarrow b\_{3}(3)=3\\\end{array}}\right.}
+
+{\displaystyle f\_{3}(4)=\min \left\{{\begin{array}{rrr}b&{\text{success probability in periods 3,4}}&{\mbox{max}}\\\hline 0&0.4(0.4)+0.6(0.4)=0.4&\leftarrow b\_{3}(4)=0\\1&0.4(0.4)+0.6(0.4)=0.4&\leftarrow b\_{3}(4)=1\\2&0.4(1)+0.6(0)=0.4&\leftarrow b\_{3}(4)=2\\\end{array}}\right.}
+
+{\displaystyle f\_{3}(5)=\min \left\{{\begin{array}{rrr}b&{\text{success probability in periods 3,4}}&{\mbox{max}}\\\hline 0&0.4(0.4)+0.6(0.4)=0.4\\1&0.4(1)+0.6(0.4)=0.64&\leftarrow b\_{3}(5)=1\\\end{array}}\right.}
+
+and, then, stage 2.
+
+{\displaystyle f\_{2}(0)=\min \left\{{\begin{array}{rrr}b&{\text{success probability in periods 2,3,4}}&{\mbox{max}}\\\hline 0&0.4(0)+0.6(0)=0&\leftarrow b\_{2}(0)=0\\\end{array}}\right.}
+
+{\displaystyle f\_{2}(1)=\min \left\{{\begin{array}{rrr}b&{\text{success probability in periods 2,3,4}}&{\mbox{max}}\\\hline 0&0.4(0)+0.6(0)=0\\1&0.4(0.16)+0.6(0)=0.064&\leftarrow b\_{2}(1)=1\\\end{array}}\right.}
+
+{\displaystyle f\_{2}(2)=\min \left\{{\begin{array}{rrr}b&{\text{success probability in periods 2,3,4}}&{\mbox{max}}\\\hline 0&0.4(0.16)+0.6(0.16)=0.16&\leftarrow b\_{2}(2)=0\\1&0.4(0.4)+0.6(0)=0.16&\leftarrow b\_{2}(2)=1\\2&0.4(0.4)+0.6(0)=0.16&\leftarrow b\_{2}(2)=2\\\end{array}}\right.}
+
+{\displaystyle f\_{2}(3)=\min \left\{{\begin{array}{rrr}b&{\text{success probability in periods 2,3,4}}&{\mbox{max}}\\\hline 0&0.4(0.4)+0.6(0.4)=0.4&\leftarrow b\_{2}(3)=0\\1&0.4(0.4)+0.6(0.16)=0.256\\2&0.4(0.64)+0.6(0)=0.256\\3&0.4(1)+0.6(0)=0.4&\leftarrow b\_{2}(3)=3\\\end{array}}\right.}
+
+{\displaystyle f\_{2}(4)=\min \left\{{\begin{array}{rrr}b&{\text{success probability in periods 2,3,4}}&{\mbox{max}}\\\hline 0&0.4(0.4)+0.6(0.4)=0.4\\1&0.4(0.64)+0.6(0.4)=0.496&\leftarrow b\_{2}(4)=1\\2&0.4(1)+0.6(0.16)=0.496&\leftarrow b\_{2}(4)=2\\\end{array}}\right.}
+
+We finally recover the value {\displaystyle f\_{1}(2)} of an optimal policy
+
+{\displaystyle f\_{1}(2)=\min \left\{{\begin{array}{rrr}b&{\text{success probability in periods 1,2,3,4}}&{\mbox{max}}\\\hline 0&0.4(0.16)+0.6(0.16)=0.16\\1&0.4(0.4)+0.6(0.064)=0.1984&\leftarrow b\_{1}(2)=1\\2&0.4(0.496)+0.6(0)=0.1984&\leftarrow b\_{1}(2)=2\\\end{array}}\right.}
+
+This is the optimal policy that has been previously illustrated. Note that there are multiple optimal policies leading to the same optimal value {\displaystyle f\_{1}(2)=0.1984}; for instance, in the first game one may either bet $1 or $2.
+
+**Python implementation.** The one that follows is a complete Python implementation of this example.
+
+**Java implementation.** GamblersRuin.java is a standalone Java 8 implementation of the above example.
+
+
+### Approximate dynamic programming
+
+An introduction to approximate dynamic programming is provided by (Powell 2009).
+

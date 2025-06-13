@@ -1,0 +1,33 @@
+Superhedging price
+
+
+# Superhedging price
+
+
+
+The **superhedging price** is a coherent risk measure. The superhedging price of a portfolio (A) is equivalent to the smallest amount necessary to be paid for an admissible portfolio (B) at the current time so that at some specified future time the value of B is at least as great as A. In a complete market the superhedging price is equivalent to the price for hedging the initial portfolio.
+
+
+## Mathematical definition
+
+If the set of equivalent martingale measures is denoted by EMM then the superhedging price of a portfolio *X* is {\displaystyle \rho (-X)} where {\displaystyle \rho } is defined by
+
+{\displaystyle \rho } defined as above is a coherent risk measure.
+
+
+## Acceptance set
+
+The acceptance set for the superhedging price is the negative of the set of values of a self-financing portfolio at the terminal time. That is
+
+
+## Subhedging price
+
+The **subhedging price** is the greatest value that can be paid so that in any possible situation at the specified future time you have a second portfolio worth less or equal to the initial one. Mathematically it can be written as {\displaystyle \inf \_{Q\in \mathrm {EMM} }\mathbb {E} ^{Q}[X]}. It is obvious to see that this is the negative of the superhedging price of the negative of the initial claim ({\displaystyle -\rho (X)}). In a complete market then the supremum and infimum are equal to each other and a unique hedging price exists. The upper and lower bounds created by the subhedging and superhedging prices respectively are the no-arbitrage bounds, an example of good-deal bounds.
+
+
+## Dynamic superhedging price
+
+The dynamic superhedging price has conditional risk measures of the form:
+
+where {\displaystyle \operatorname {ess\,sup} } denotes the essential supremum. It is a widely shown result that this is time consistent.
+

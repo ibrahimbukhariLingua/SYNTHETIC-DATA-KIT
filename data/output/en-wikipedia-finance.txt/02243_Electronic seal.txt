@@ -1,0 +1,22 @@
+Electronic seal
+
+
+# Electronic seal
+
+
+
+An **electronic seal** is a piece of data attached to an electronic document or other data, which ensures data origin and integrity.
+The term is used in the EU Regulation No 910/2014 (eIDAS Regulation) for electronic transactions within the internal European market.
+
+
+## Description
+
+Conceptually similar to electronic signatures and usually technically realized as digital signatures, electronic seals serve as evidence that an electronic document was issued by a specific legal entity. For this purpose, an electronic seal must be linked to the data sealed with it in such a way that any subsequent change in the data is detectable and also in such a way that a fake seal cannot be created without access to the data (usually a private key) used for creation of the digital seal. This is usually achieved through use of a qualified digital certificate that is involved in creation of a digital seal. The unique private key used in the creation of the digital seal ensures non-repudiation: the entity that created the digital seal cannot later deny that it created the seal for that document. If the document is modified after its digital seal was created, the digital seal is not valid for the modified document. This can be checked by anyone with access of the public key corresponding to the private key used in the creation of the digital seal, ensuring the integrity of the sealed document.
+
+Besides authenticating the document issued by the legal entity, e-Seals can also be used to authenticate any digital asset of the legal person, such as software code or servers. The important difference between a digital signature and an electronic seal is that the latter is usually created by a legal person while digital signatures are created by a natural person. For the creation of a digital signature, action of the person signing a document or data is required. In contrast, the creation of the digital seals can be incorporated in automated processes executed in a digital environment.
+
+
+## Qualified electronic seal
+
+A qualified electronic seal is an electronic seal that is compliant to EU Regulation No 910/2014 (eIDAS Regulation) for electronic transactions within the internal European market. It enables to verify the issuer of a document over long periods of time. Qualified electronic seals can be considered as digital equivalent to seals of legal entities on paper. According to the eIDAS regulation, a qualified electronic seal must be created by a qualified electronic device and based on a qualified certificate for electronic seal.
+

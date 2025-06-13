@@ -1,0 +1,53 @@
+Diamond coconut model
+
+
+# Diamond coconut model
+
+
+
+The **Diamond coconut model** is an economic model constructed by the American economist and 2010 Nobel laureate Peter Diamond which analyzes how a search economy in which traders cannot find partners instantaneously operates. The model was first presented in a 1982 paper published in the *Journal of Political Economy*. The main implication of the model is that people's expectations as to the level of aggregate activity play a crucial role in actually determining this level of aggregate economic activity. A frequent interpretation of its conclusion, as applied to the labor market, is that the so-called natural rate of unemployment may not be unique (in fact there may exist a continuum of "natural rates") and even if it is unique, it may not be efficient. Diamond's model was of interest to New Keynesian economists who saw it as potential source of coordination failure, which could cause markets to fail to clear.
+
+The model takes its name from the abstract set up imagined by Diamond. He envisioned an island (a closed economy) populated by individuals who only consume coconuts. Coconuts are obtained by being picked (they are "produced") from palm trees at a cost. Because of a particular taboo existing on this island a person who has picked a coconut cannot consume it themselves but must find another person with a coconut. At that point the two individuals can trade their respective coconuts and eat them. The key point is that when an individual finds a palm tree, because climbing the tree is costly, they will only be willing to climb it to get a coconut if there are a sufficiently high number of other individuals who are willing to do likewise. If nobody else is obtaining coconuts then there won't be any potential trading partners and obtaining coconuts is not worth climbing the tree. Hence, what individuals believe others will do plays a crucial role in determining the overall outcome. As a result, people's (fully rational) expectations become a self-fulfilling prophecy and the economy can wind up with multiple equilibria, most if not all of them characterized by inefficiency.
+
+
+## Population flows in the model
+
+The agents in the model are always in one of two "states"; they are either currently carrying a coconut and looking for someone to trade it with, or they are searching for a palm tree in order to possibly pick a coconut. The number of agents who are carrying a coconut at time t is denoted by {\displaystyle e(t)} (for "employed") and they find trading partners at the rate {\displaystyle b(e(t))} at which point they trade coconuts, earn income {\displaystyle y} and become "searchers".
+
+The fact that the probability of finding a trading partner is increasing in the number of people who already have coconuts - mathematically {\displaystyle b'(e)>0} - represents a "thick market externality"; the "thicker" the market in the sense of more potential traders, the more trades occur. It involves an externality because each person who chooses to pick a coconut does so with only their own self-interest in mind, but the fact that they do so has an effect on the overall social outcome.
+
+People who are currently looking for coconut palm trees find these at a random rate {\displaystyle f}. This means that the finding of palm trees follows a Poisson process characterized by the parameter {\displaystyle f}. If total population is normalized to 1 (hence, {\displaystyle e(t)} is the share of the population that is employed) then the number of searchers in this economy is {\displaystyle 1-e(t)}.
+
+The figure above illustrates the population flows in this economy.
+
+
+## The value of having a coconut or looking for one
+
+Each state can be thought of as a form of an asset, for example, the asset "having a coconut". The present discounted value of this asset depends on the benefit or cost incurred when a person finds a trading partner or a palm tree (this is like a one time dividend payment), and the capital gain (or loss) involved in switching states when a trade or coconut-picking occurs. Additionally, out of steady state, the value of the asset may fluctuate over time.
+
+Mathematically, the present discounted value of having a coconut is given by
+
+where {\displaystyle V\_{e}} is the value of having a coconut, {\displaystyle V\_{u}} is the value of being in the state "looking for a palm tree", {\displaystyle y} is the gain to be realized upon finding a trading partner and {\displaystyle r} is the discount rate which measures individual's impatience. Likewise, the present discounted value of searching for palm trees is given by
+
+where {\displaystyle f} is the rate at which searchers find palm trees, and {\displaystyle E(c)} is the expected cost (hence it enters with a minus sign) of climbing a palm tree when one is found.
+
+In the general version of the model, the cost of climbing a palm tree is a random draw from some (publicly known) probability distribution with non-negative support, for example the uniform distribution on {\displaystyle (c\_{low},c\_{hi})}. This means that on the island "some trees are tall and some are short", and as a result picking coconuts from them can be hard or easy.
+
+
+## Simple mathematical version of the model
+
+In the most simple version of Diamond's model, the probability of finding a trading partner—another person who's carrying a coconut—is exactly equal to the share of the population that is currently in possession of a coconut, {\displaystyle b(e)=e}. Additionally the cost of obtaining a coconut when one finds a palm tree is constant, at {\displaystyle c} (this is the "all trees are of the same height" assumption).
+
+The evolution of the proportion of people who are currently carrying coconuts and looking for trading partners is given by:
+
+In the first equation {\displaystyle f(1-e)} is just the number of searchers who happen to find a palm tree at a particular time {\displaystyle t} (the "inflow" of coconut carriers), while {\displaystyle e^{2}} is the number of previous coconut-carriers who managed to successfully find a trading partner and hence reverted to being searchers (the "outflow"). In the second equation, since nobody ever bothers to climb a tree and obtain coconuts, the number of coconut-carriers simply declines over time. The two potential adjustment paths are illustrated in the figure below.
+
+
+### The steady state
+
+In the steady state of this economy, the number of searchers and the number of coconut carriers has to be constant, {\displaystyle {\frac {de}{dt}}=0}. Hence there are two possible steady state in the simple version of the model. The "bad" outcome where nobody who finds a palm tree picks a coconut so that {\displaystyle e^{\*}=0} and an interior equilibrium where {\displaystyle e^{\*}=(1/2)(-f+{\sqrt {f^{2}+4f}})}. The bad results occurs if everyone who finds a palm tree believes that not enough other people will pick coconuts and as a result it is not worth it to pick the coconut themselves. This then becomes a pessimistic self-fulfilling belief.
+
+Whether or not the good outcome is possible depends on parameter values, and as these determine the value of each asset in steady state. In this case the value of the assets will be constant so that {\displaystyle {\frac {dV\_{e}}{dt}}={\frac {dV\_{u}}{dt}}=0} and we can solve for the difference between {\displaystyle V\_{e}} and {\displaystyle V\_{u}}:
+
+For it to be worth it to climb a palm tree this difference has to be greater than the cost of climbing a tree. If {\displaystyle e^{\*}=0} we have {\displaystyle fc/(r+f)>c} which means no one will want to pick coconuts. Hence {\displaystyle e=0} is indeed an equilibrium. Otherwise we need {\displaystyle e>{\frac {rc}{y-c}}}. Note that this {\displaystyle e} is independent of {\displaystyle f} while the {\displaystyle e^{\*}} given above is a function of {\displaystyle f} only. This means that the critical value of {\displaystyle e} could be below or above the "good" steady state value. If costs of climbing the tree are high, or the agents are very impatient (high {\displaystyle r}) then {\displaystyle e=0} will be the only equilibrium. If {\displaystyle c} and {\displaystyle r} are low then there will be two equilibria, and which one the economy winds up at will depend on initial conditions (the level of employment that the economy begins with).
+

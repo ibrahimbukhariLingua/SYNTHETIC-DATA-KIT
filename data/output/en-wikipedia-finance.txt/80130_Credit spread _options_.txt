@@ -1,0 +1,124 @@
+Credit spread (options)
+
+
+# Credit spread (options)
+
+
+
+| Part of a series on |
+| --- |
+| Finance |
+| Markets | Assets | | --- | | * Asset (economics) * Bond * Asset growth * Capital asset * Commodity * Derivatives * Domains * Equity * Foreign exchange * Money * Over-the-counter * Private equity * Real estate * Spot * Stock | | Participants | | * Angel investor * Bull (stock market speculator) * Financial planner * Investor + institutional * Retail * Speculator | | Locations | | * Financial centres * Offshore financial centres * Conduit and sink OFCs | |
+| Instruments * Bond * Cash * Collateralised debt obligation * Credit default swap * Time deposit (certificate of deposit) * Credit line * Deposit * Derivative * Futures contract * Indemnity * Insurance * Letter of credit * Loan * Mortgage * Option (call * exotic * put) * Performance bonds * Repurchase agreement * Stock * Security * Syndicated loan * Synthetic CDO |
+| Corporate | General | | --- | | * Accounting * Audit * Capital budgeting * Capital structure * Corporate finance * Credit rating agency * Enterprise risk management * Enterprise value * Risk management * Financial statements | | Transactions | | * Leveraged buyout * Mergers and acquisitions * Structured finance * Venture capital | | Taxation | | * Base erosion and profit shifting (BEPS) * Corporate tax haven * Tax inversion * Tax haven * Transfer pricing | |
+| Personal * Credit / Debt * Employment contract * Financial planning * + Retirement + Student loan |
+| Public | Government spending | | --- | | * Final consumption expenditure * + Operations + Redistribution * Transfer payment | | Government revenue | | * + Taxation + Deficit spending * + Budget (balance) + Debt * Non-tax revenue * Warrant of payment | |
+| Banking * Central bank * Deposit account * Fractional-reserve * Full-reserve * Investment banking * Loan * Money supply * Lists of banks | Bank regulation | | --- | | * Banking license * Basel Accords * Bank for International Settlements * Financial Stability Board * Deposit insurance * Separation of investment and retail banking | |
+| Regulation **·** Financial law | * International Financial Reporting Standards * ISO 31000 * Professional certification * Fund governance | | --- | |
+| Economic history * Private equity and venture capital * Recession * Stock market bubble * Stock market crash * Accounting scandals |
+| * Outline * Business and Economics portal * Money portal |
+| * v * t * e |
+
+In finance, a **credit spread**, or **net credit spread** is an options strategy that involves a purchase of one option and a sale of another option in the same class and expiration but different strike prices. It is designed to make a profit when the spreads between the two options *narrows*.
+
+Investors receive a net credit for entering the position, and want the spreads to *narrow* or expire for profit. In contrast, an investor would have to pay to enter a debit spread. In this context, "to narrow" means that the option sold by the trader is in the money at expiration, but by an amount that is less than the net premium received, in which event the trade is profitable but by less than the maximum that would be realized if both options of the spread were to expire worthless.
+
+
+## Bullish strategies
+
+Bullish options strategies are employed when the options trader expects the underlying stock price to move upwards. It is necessary to assess how high the stock price can go and the time frame in which the rally will occur in order to select the optimum trading strategy.
+
+Moderately bullish options traders usually set a target price for the bull run and utilize bull spreads to reduce cost. (It does not reduce risk because the options can still expire worthless.) While maximum profit is capped for these strategies, they usually cost less to employ for a given nominal amount of exposure. The bull call spread and the bull put spread are common examples of moderately bullish strategies.
+
+
+## Bearish strategies
+
+Bearish options strategies are employed when the options trader expects the underlying stock price to move downwards. It is necessary to assess how low the stock price can go and the time frame in which the decline will happen in order to select the optimum trading strategy.
+
+Moderately bearish' options traders usually set a target price for the expected decline and utilize bear spreads to reduce cost. While maximum profit is capped for these strategies, they usually cost less to employ. The bear call spread and the bear put spread are common examples of moderately bearish strategies.
+
+
+## Breakeven
+
+To find the credit spread breakeven points for call spreads, the net premium is added to the lower strike price. For put spreads, the net premium is subtracted from the higher strike price to breakeven.
+
+Most brokers will let you engage in these defined risk / defined reward trades.
+
+
+## Maximum potential
+
+The maximum gain and loss potential are the same for call and put spreads. Note that *net credit = difference in premiums*.
+
+
+### Maximum gain
+
+Maximum gain = net credit, realized when both options expire out of the money.
+
+
+### Maximum loss
+
+Maximum loss = difference in strike prices - net credit. Realized when both options expire in the money.
+
+
+### Submaximal loss
+
+Submaximal loss = expected payout of the short option. Realized when the price of the underlying at expiration is in between the strikes of the options.
+
+
+### Expected value
+
+Expected value = (credit received \* short leg OTM probability) - (maximum loss \* long leg ITM probability) - (expected short leg payout \* (short leg ITM probability - long leg ITM probability)).
+
+
+## Analysis
+
+* Credit spreads are *negative vega* since, *if the price of the underlying doesn't change*, the trader will tend to make money as volatility goes down.
+* Credit spreads are also *positive theta* in that, broadly speaking *if the price of the underlying doesn't move past the short strike*, the trader will tend to make money just by the passage of time.
+* Credit spreads are also short gamma. As the short strike gets closer to in-the-money, then Delta will start to ramp up against the credit spreads
+
+## Examples
+
+For example, one uses a credit spread as a conservative strategy designed to earn modest income for the trader while also having losses strictly limited. It involves simultaneously buying and selling (writing) options on the same security/index in the same month, but at different strike prices. (This is also a vertical spread)
+
+If the trader is bearish (expects prices to fall), you use a bearish call spread. It's named this way because you're buying and selling a call and taking a bearish position.
+
+Look at the following example.
+
+Trader Joe expects XYZ to fall from its current price of $35 a share.
+
+Write 10 January 36 calls at 1.10 $1100
+Buy 10 January 37 calls at .75 ($ 750)
+
+net credit $350
+
+Consider the following scenarios:
+
+The stock falls or remains below $36 by expiration. In this case, all the options expire worthless and the trader keeps the net credit of $350 minus commissions (probably about $20 on this transaction) netting approximately $330 profit.
+
+If the stock rises above $37 by expiration, you must unwind the position by buying the 36 calls back, and selling the 37 calls you bought; this difference will be $1, the difference in strike prices. For all ten calls, this costs you $1000; when you subtract the $350 credit, this gives you a maximum loss of $650.
+
+If the final price was between 36 and 37 your losses would be less or your gains would be less. The "breakeven" stock price would be $36.35: the lower strike price plus the credit for the money you received up front.
+
+Traders often using charting software and technical analysis to find stocks that are overbought (have run up in price and are likely to sell off a bit, or stagnate) as candidates for bearish call spreads.
+
+If the trader is bullish, you set up a bullish credit spread using puts. Look at the following example.
+
+Trader Joe expects XYZ to rally sharply from its current price of $20 a share.
+
+Write 10 January 19 puts at $0.75 $750
+Buy 10 January 18 puts at $.40 ($400)
+
+net credit $350
+
+Consider the following scenarios:
+
+If the stock price stays the same or rises sharply, both puts expire worthless and you keep your $350, minus commissions of about $20 or so.
+
+If the stock price instead, falls to below 18 say, to $15, you must unwind the position by buying back the $19 puts at $4 and selling back the 18 puts at $3 for a $1 difference, costing you $1000. Minus the $350 credit, your maximum loss is $650.
+
+A final stock price between $18 and $19 would provide you with a smaller loss or smaller gain; the break-even stock price is $18.65, which is the higher strike price minus the credit.
+
+Traders often scan price charts and use technical analysis to find stocks that are oversold (have fallen sharply in price and perhaps due for a rebound) as candidates for bullish put spreads. Additionally, writing (selling) credit spreads with higher current IV (implied volatility) 50% and higher, will increase the prospects for a profitable trade.
+
+Notice in both cases the losses and gains are strictly limited.
+

@@ -1,0 +1,84 @@
+Sahm rule
+
+
+# Sahm rule
+
+
+
+In macroeconomics, the **Sahm rule**, or **Sahm rule recession indicator**, is a heuristic measure by the United States' Federal Reserve for determining when an economy has entered a recession. It is useful in real-time evaluation of the business cycle and relies on monthly unemployment data from the Bureau of Labor Statistics (BLS). It is named after economist Claudia Sahm, formerly of the Federal Reserve and Council of Economic Advisors.
+
+The Sahm rule states:
+
+> When the three-month moving average of the national unemployment rate is 0.5 percentage point or more above its low over the prior twelve months, we are in the early months of recession.
+
+
+## Origin
+
+The Sahm rule originates from a chapter in the Brookings Institution's report on the use of fiscal policy to stabilize the economy during recessions. The chapter, written by Sahm, proposes fiscal policy to automatically send stabilizing payments to citizens to boost economic well-being. By automating this process she saw the opportunity to get aid to people faster. Because the sooner the help was distributed in her view the better the odds that small business can stay open and that people could stay in their homes and keep their jobs. Her rule should thereby function as an early warning to detect the early stages of an recession and then to step in and help manage the recession on autopilot with direct payments to individuals when conditions get bad.
+
+Instead of relying on human intuition to determine when such payments should be sent, Sahm outlines a method-based case to trigger the payments. The trigger suggested indicates an economy beginning a recession and is now known as the *Sahm rule*. Different thresholds have been used for similar purposes—for example William C. Dudley wrote in 2000 an increase in the unemployment of over one-third of a percent would predict a recession—but Sahm has written that her rule (and its accompanying threshold) is specifically suited as an indicator of the early stages of a recession for the purposes of a fiscal policy response.
+
+Sahm cautioned:
+
+> "The Sahm rule is an empirical regularity. It’s not a proposition; it’s not a law of nature."
+
+And further explained:
+
+> "I created the Sahm rule to send out stimulus checks automatically. The idea was to act fast to make the recession less severe and help families. The star was always the stimulus check, not the indicator that other people named after me."
+
+
+### Implementation
+
+The Sahm rule was published by The St. Louis Federal Reserve bank's Federal Reserve Economic Data (FRED) system in October 2019. It is retroactively calculated to evaluate performance from past recessions. The recession rule is defined as:
+
+> Sahm Recession Indicator signals the start of a recession when the three-month moving average of the national unemployment rate (U3) rises by 0.50 percentage points or more relative to its low during the previous 12 months.
+
+Relying on the change in unemployment from the previous 12 months means the natural rate of unemployment is seamlessly integrated. A rule relying on a fixed level of unemployment, in contrast, cannot take into account drifts caused by changes in demographics, technology, or labor market frictions.
+
+The rule only relies on a single data series, national unemployment, which is published monthly by the BLS. This differentiates the index from other recession indicators based on statistical models, which may rely on dozens of inputs. Further, unemployment can be more easily understood than complex financial series.
+
+
+## Historical accuracy
+
+The Sahm rule is a robust tool that has been very accurate in identifying a downturn in the business cycle and almost always doesn't trigger outside of a recession. The simplicity of the calculation contributes to its reliability. The Sahm rule signals the early stages (onset) of a recession and generated only two false positive recession alerts since the year 1959 (there have been 11 recessions since 1950); in both instances — in 1959 and 1969 — it was just a little untimely, with the recession warning appearing a few months before a slide in the U.S. economy began. In the case of the false positive warning related to the year 1959 it was followed by an actual recession six months later. The Sahm rule typically signals a recession before GDP data makes it clear.
+
+The Sahm rule is designed to indicate that the U.S. economy is in the early months of a recession, rather than forecasting future recessions. While the historical performance and timeliness of the Sahm rule has been very accurate, the reliability of the Sahm rule in today's economy has been questioned by many economists (including Claudia Sahm) due to several distortions and there is reason to believe that the economy might act differently this time around due to unique unusual conditions. This suggests that caution should be exercised when interpreting the Sahm rule in the current unprecedented economic situation. Like all economic indicators, it should be considered alongside other economic data and indicators. However, the Sahm Rule remains a valuable tool for economists and policymakers for early detection of economic downturns.
+
+Table: Historical accuracy of the Sahm rule; Alert coincides with recession:
+(U.S. unemployment rate, dates when the Sahm rule triggered & actual recession time)
+| Unemployment rate % | Sahm value | Time when Sahm > 0.5 | Recession starts... |
+| --- | --- | --- | --- |
+| 3.50% | 0.63 | Nov 1953 | 4 months prior (Jul 1953) |
+| 4.50% | 0.50 | Oct 1957 | 2 months prior (Aug 1957) |
+| 5.80% | 0.60 | Nov 1959 | 5 months *later* (Apr 1960) |
+| 4.40% | 0.77 | Mar 1970 | 3 months prior (Dec 1969) |
+| 5.50% | 0.60 | Jul 1974 | 8 months prior (Nov 1973) |
+| 6.30% | 0.53 | Feb 1980 | 1 month prior (Jan 1980) |
+| 8.30% | 0.60 | Nov 1981 | 4 months prior (Jul 1981) |
+| 5.90% | 0.53 | Oct 1990 | 3 months prior (Jul 1990) |
+| 4.50% | 0.50 | Jun 2001 | 3 months prior (Mar 2001) |
+| 4.90% | 0.53 | Feb 2008 | 2 months prior (Dec 2007) |
+| 14.80% | 4.00 | Apr 2020 | 2 months prior (Feb 2020) |
+| 4.30% | 0.53 | Aug 2024 | - |
+
+In summary, the Sahm rule's reliability lies in its consistent performance throughout various economic climates, particularly in signaling the beginning of a recession with a high degree of accuracy.
+
+
+## Two-sided Sahm rule modifications
+
+Economists Pascal Michaillat and Emmanuel Saez have created a two-sided Sahm rule-based indicator (which the Financial Times named the 'Michez rule'), using both the unemployment rate and also the vacancy rate for jobs. The economists noted that their modified indicator functioned for recessions going back to the year 1930, while Sahm's worked only back to the 1950s. Another notable difference: The 'Michez rule' is usually triggered earlier than the Sahm rule as it detects recessions on average 1.4 months after they have started.
+
+
+## Employment-to-population Sahm rule modifications
+
+Morgan Stanley economists have constructed an indicator which has the same 0.5% recession threshold as the Sahm rule, but uses the employment-to-population, or EPR, ratio. It emphasizes the ratio of employed individuals to the total working-age population and may provide a more accurate picture of the labor market's state. The Morgan Stanley economists combined their approach with the modification made by Michaillat and Saez, which uses two thresholds, to create the 'Triumvirate rule'. "The Triumvirate rule has moved to 100% probability of recession within 2 to 6 months after rising above 20% historically, with an average of 3.7 months."
+
+
+## Reception
+
+The Sahm rule has received recognition by popular economics news sources. American financial weekly newspaper Barron's describes the metric as a "well-regarded economic rule", American financial news channel CNBC labels the recession indicator as a "fail-safe gauge," while Investopedia writes that "economists love the indicator for its simplicity and reliability".
+
+Its low rate of false positives are attractive features. Federal Reserve Chair Jerome Powell characterized the Sahm rule as a "statistical regularity" at a press conference in late July 2024.
+
+While the Sahm rule indicates recessions sooner than the formal NBER recession indications, which can take anywhere from half to two years, it is by no means predictive, when using the 3-month simple moving average as filter (because this smoothing of the U.S unemployment data adds a multiple month lag to the calculation). The commonly used version of the Sahm rule with the smoothed 3-month average triggered approximately three months into each of the last NBER recession starts, with the beginning of the recession retroactively officially determined by the NBER.
+

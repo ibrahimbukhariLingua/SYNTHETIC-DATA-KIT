@@ -1,0 +1,86 @@
+Zero coupon swap
+
+
+# Zero coupon swap
+
+
+
+In finance, a **zero coupon swap** (**ZCS**) is an interest rate derivative (IRD). In particular it is a linear IRD, that in its specification is very similar to the much more widely traded interest rate swap (IRS).
+
+
+## General description
+
+A zero coupon swap (ZCS) is a derivative contract made between two parties with terms defining two 'legs' upon which each party either makes or receives payments. One leg is the traditional fixed leg, whose cashflows are determined at the outset, usually defined by an agreed fixed rate of interest. A second leg is the traditional floating leg, whose payments at the outset are forecast but subject to change and dependent upon future publication of the interest rate index upon which the leg is benchmarked. This is same description as with the more common interest rate swap (IRS).
+A ZCS differs from an IRS in one major respect; timings of scheduled payments. A ZCS takes its name from a zero coupon bond which has no interim coupon payments and only a single payment at maturity. A ZCS, unlike an IRS, also only has a single payment date on each leg at the maturity of the trade. The calculation methodology for determining payments is, as a result, slightly more complicated than for IRSs.
+
+
+## Extended description
+
+Zero coupon swaps (ZCSs) hedged by the more commonly traded interest rate swaps (IRSs) introduce cross-gamma into an IRD portfolio. As such, and due to correlation between different instruments, ZCSs are required to have a pricing adjustment, to equate their value to IRSs under a no arbitrage principle. Otherwise this is considered rational pricing. This adjustment is referred to in literature as the zero coupon swap convexity adjustment (ZCA).
+
+
+## Valuation and pricing
+
+ZCSs are bespoke financial products whose customisation can include changes to payment dates, accrual period adjustment and calculation convention changes (such as a day count convention of 30/360E to ACT/360 or ACT/365).
+
+A vanilla ZCS is the term used for standardised ZCSs. Typically these will have none of the above customisations, and instead exhibit constant notional throughout, implied payment and accrual dates and benchmark calculation conventions by currency. A vanilla ZCS is also characterised by one leg being 'fixed' and the second leg 'floating' often referencing an -IBOR index. The net present value (PV) of a vanilla ZCS can be computed by determining the PV of each fixed leg and floating leg separately and summing. For pricing a mid-market ZCS the underlying principle is that the two legs must have the same value initially; see further under Rational pricing.
+
+Calculating the fixed leg requires discounting the known, single cashflow by an appropriate discount factor:
+
+where {\displaystyle C\_{n}} is the fixed cashflow, {\displaystyle v\_{n}} is the discount factor associated with the date of the payment indexed by variable {\displaystyle n}.
+
+Calculating the floating leg is more complicated due to the compounding effect which has to be applied ahead of the final cashflow payment:
+
+where {\displaystyle n\_{2}} is the number of periods applicable to the floating leg and {\displaystyle r\_{j}} are the forecast -IBOR index rates of the appropriate currency of those periods. {\displaystyle v\_{n}} is the terminal discount factors associated with the payment date at maturity.
+
+The PV of the IRS from the perspective of receiving the fixed leg is then:
+
+Historically IRSs and ZCSs were valued using discount factors derived from the same curve used to forecast the -IBOR rates. This has been called 'self-discounted'. Some early literature described some incoherence introduced by that approach and multiple banks were using different techniques to reduce them. It became more apparent with the 2007–2008 financial crisis that the approach was not appropriate, and alignment towards discount factors associated with physical collateral of the IRSs was needed.
+
+After the 2007–2008 financial crisis, to accommodate credit risk, the now-standard pricing framework is the *multi-curves framework* where forecast -IBOR rates and discount factors exhibit disparity. Note that the economic pricing principle is unchanged: leg values are still identical at initiation. See Multi-curve framework for the math. and Financial economics § Derivative pricing for further context.
+
+Overnight index swap (OIS) rates are typically used to derive discount factors, since that index is the standard inclusion on credit support annexes (CSAs) to determine the rate of interest payable on collateral for IRS contracts. Since the basis spread between LIBOR rates of different maturities widened during the 2007–2008 financial crisis, forecast curves are generally constructed for each LIBOR tenor used in floating rate derivative legs. Currency basis will require additional curves. Regarding the curve build, the old framework, of a single self discounted curve was "bootstrapped", exactly returning the prices of selected instruments. Under the new framework, the various curves are best fitted—as a "set"—to observed market data prices. See
+
+The complexities of modern curvesets mean that there may not be discount factors available for a specific -IBOR index curve. These curves are known as 'forecast only' curves and only contain the information of a forecast -IBOR index rate for any future date. Some designs constructed with a discount based methodology mean forecast -IBOR index rates are implied by the discount factors inherent to that curve:
+
+where {\displaystyle x\_{i-1}} and {\displaystyle x\_{i}} are the start and end *discount factors* associated with the relevant forward curve of a particular -IBOR index in a given currency.
+
+To price the mid-market cashflow value of a ZCS the above formula is re-arranged to:
+
+In the event old methodologies are applied and the discount factors {\displaystyle x\_{k}} are used assuming contiguity of compounding periods the above reduces to:
+
+During the life of the swap the same valuation technique is used, but since, over time, both the discounting factors and the forward rates change, the PV of the swap will deviate from its initial value. Therefore, the swap will be an asset to one party and a liability to the other. The way these changes in value are reported is the subject of IAS 39 for jurisdictions following IFRS, and FAS 133 for U.S. GAAP. Swaps are marked to market by debt security traders to visualize their inventory at a certain time.
+
+
+## Uses and risks
+
+As with interest rate swaps, zero coupon swaps expose users to many different types of financial risk.
+
+Predominantly they expose the user to market risks. The value of an interest rate swap will change as market interest rates rise and fall. In market terminology this is often referred to as delta risk. Other specific types of market risk that interest rate swaps have exposure to are basis risks (where various IBOR tenor indexes can deviate from one another) and reset risks (where the publication of specific tenor IBOR indexes are subject to daily fluctuation). Interest rate swaps also exhibit gamma risk whereby their delta risk increases or decreases as market interest rates fluctuate.
+
+Uncollateralised interest rate swaps (that are those executed bilaterally without a credit support annex (CSA) in place) expose the trading counterparties to funding risks and credit risks. Funding risks because the value of the swap might deviate to become so negative that it is unaffordable and cannot be funded. Credit risks because the respective counterparty, for whom the value of the swap is positive, will be concerned about the opposing counterparty defaulting on its obligations.
+
+Collateralised interest rate swaps expose the users to collateral risks. Depending upon the terms of the CSA, the type of posted collateral that is permitted might become more or less expensive due to other extraneous market movements. Credit and funding risks still exist for collateralised trades but to a much lesser extent.
+
+Due to regulations set out in the Basel III Regulatory Frameworks trading interest rate derivatives commands a capital usage. Dependent upon their specific nature interest rate swaps might command more capital usage and this can deviate with market movements. Thus capital risks are another concern for users.
+
+Reputation risks also exist. The mis-selling of swaps, over-exposure of municipalities to derivative contracts, and IBOR manipulation are examples of high-profile cases where trading interest rate swaps has led to a loss of reputation and fines by regulators.
+
+Hedging interest rate swaps can be complicated and relies on numerical processes of well designed risk models to suggest reliable benchmark trades that mitigate all market risks. The other, aforementioned risks must be hedged using other systematic processes.
+
+
+## Quotation and market-making
+
+The quotation (i.e. price of a ZCS given by a market-maker) for a ZCS, which is often itself specified by its start and end date parameters, as well as the notional size and the benchmark -IBOR index in the sought currency, can be provided in one of two ways; either as a directly specified fixed cashflow amount or as fixed rate which determines that same cashflow value. This type of fixed rate is often called an internal rate of return (IRR) due to its familiar calculation.
+
+where {\displaystyle f} is the frequency of the fixed IRR payments per year, {\displaystyle D\_{n}} is the full day count fraction between the start and end date of the ZCS and {\displaystyle R} is the IRR. It is rare that the IRR is not quoted with an annual frequency to simplify the formula and minimise other discrepancies. Also note a further cause of common error is to use a rounded {\displaystyle D\_{n}} as opposed to the exact {\displaystyle D\_{n}}. For ZCS encompassing a whole number of years a whole number can be taken as {\displaystyle D\_{n}}, when in fact due to business days and day count conventions this might not necessarily be the exact value.
+
+The market-making of ZCSs is an involved process involving multiple tasks; curve construction with reference to interbank markets, individual derivative contract pricing, risk management of credit, cash and capital. The cross disciplines required include quantitative analysis and mathematical expertise, disciplined and organized approach towards profits and losses, and coherent psychological and subjective assessment of financial market information and price-taker analysis. The time sensitive nature of markets also creates a pressurized environment. Many tools and techniques have been designed to improve efficiency of market-making in a drive to efficiency and consistency.
+
+
+## Trivia
+
+On its December 2014 statistics release, the Bank for International Settlements reported that interest rate swaps were the largest component of the global OTC derivative market representing 60% of it, with the notional amount outstanding in OTC interest rate swaps of $381 trillion, and the gross market value of $14 trillion.
+
+Interest rate swaps can be traded as an index through the FTSE MTIRS Index.
+

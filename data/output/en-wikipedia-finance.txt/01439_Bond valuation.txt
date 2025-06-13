@@ -1,0 +1,150 @@
+Bond valuation
+
+
+# Bond valuation
+
+
+
+| Part of a series on |
+| --- |
+| Financial markets |
+| * Public market * Exchange **·** Securities |
+| Bond market |
+| * Bond valuation * Corporate bond * Fixed income * Government bond * High-yield debt * Municipal bond * Securitization |
+| Stock market |
+| * Common stock * Growth stock * Preferred stock * Registered share * Shareholder * Stock * Stockbroker * Stock certificate * Stock exchange * Watered stock |
+| Other markets |
+| Derivatives * (Credit derivative * Futures exchange * Hybrid security) Foreign exchange * (Currency * Exchange rate) * Commodity * ETF * Money * Mutual fund * Option * Real estate * Reinsurance * Structured product * Swap (finance) |
+| Alternative investment |
+| * Private equity * Private credit * Leveraged buyout * Venture * Growth * Secondaries * SPAC * Carried Interest * Leveraged finance |
+| Over-the-counter (off-exchange) |
+| * Forwards * Options * Spot market * Swaps |
+| Trading |
+| * Participants * Regulation * Clearing |
+| Related areas |
+| * Asset management * Banks and banking * Bulls and Bears * Diversification * ESG + Climate finance + Eco-investing + Impact investing + Sustainable finance + Greenwashing * Fintech * Investment management * Market risk * Market trend * Speculative attack |
+| * v * t * e |
+
+**Bond valuation** is the process by which an investor arrives at an estimate of the theoretical fair value, or intrinsic worth, of a bond. As with any security or capital investment, the theoretical fair value of a bond is the present value of the stream of cash flows it is expected to generate. Hence, the value of a bond is obtained by discounting the bond's expected cash flows to the present using an appropriate discount rate.
+
+In practice, this discount rate is often determined by reference to similar instruments, provided that such instruments exist. Various related yield-measures are then calculated for the given price. Where the market price of bond is less than its par value, the bond is selling at a **discount**. Conversely, if the market price of bond is greater than its par value, the bond is selling at a **premium**. For this and other relationships between price and yield, see below.
+
+If the bond includes embedded options, the valuation is more difficult and combines option pricing with discounting. Depending on the type of option, the option price as calculated is either added to or subtracted from the price of the "straight" portion. See further under Bond option. This total is then the value of the bond.
+
+
+## Bond valuation
+
+The fair price of a "straight bond" (a bond with no embedded options; see Bond (finance) § Features) is usually determined by discounting its expected cash flows at the appropriate discount rate. Although this present value relationship reflects the theoretical approach to determining the value of a bond, in practice its price is (usually) determined with reference to other, more liquid instruments. The two main approaches here, Relative pricing and Arbitrage-free pricing, are discussed next. Finally, where it is important to recognise that future interest rates are uncertain and that the discount rate is not adequately represented by a single fixed number—for example when an option is written on the bond in question—stochastic calculus may be employed.
+
+
+### Present value approach
+
+The basic method for calculating a bond's theoretical fair value, or intrinsic worth, uses the present value (PV) formula shown below, using a single market interest rate to discount cash flows in all periods. A more complex approach would use different interest rates for cash flows in different periods.²⁹⁴ The formula shown below assumes that a coupon payment has just been made (see below for adjustments on other dates).
+
+
+### Relative price approach
+
+Under this approach—an extension, or application, of the above—the bond will be priced relative to a benchmark, usually a government security; see Relative valuation. Here, the yield to maturity on the bond is determined based on the bond's Credit rating relative to a government security with similar maturity or duration; see Credit spread (bond). The better the quality of the bond, the smaller the spread between its required return and the YTM of the benchmark. This required return is then used to discount the bond cash flows, replacing {\displaystyle i} in the formula above, to obtain the price.
+
+
+### Arbitrage-free pricing approach
+
+As distinct from the two related approaches above, a bond may be thought of as a "package of cash flows"—coupon or face—with each cash flow viewed as a zero-coupon instrument maturing on the date it will be received. Thus, rather than using a single discount rate, one should use multiple discount rates, discounting each cash flow at its own rate. Here, each cash flow is separately discounted at the same rate as a zero-coupon bond corresponding to the coupon date, and of equivalent credit worthiness (if possible, from the same issuer as the bond being valued, or if not, with the appropriate credit spread).
+
+Under this approach, the bond price should reflect its "arbitrage-free" price, as any deviation from this price will be exploited and the bond will then quickly reprice to its correct level. Here, we apply the rational pricing logic relating to "Assets with identical cash flows". In detail: (1) the bond's coupon dates and coupon amounts are known with certainty. Therefore, (2) some multiple (or fraction) of zero-coupon bonds, each corresponding to the bond's coupon dates, can be specified so as to produce identical cash flows to the bond. Thus (3) the bond price today must be equal to the sum of each of its cash flows discounted at the discount rate implied by the value of the corresponding ZCB.
+
+
+### Stochastic calculus approach
+
+When modelling a bond option, or other interest rate derivative (IRD), it is important to recognize that future interest rates are uncertain, and therefore, the discount rate(s) referred to above, under all three cases—i.e. whether for all coupons or for each individual coupon—is not adequately represented by a fixed (deterministic) number. In such cases, stochastic calculus is employed.
+
+The following is a partial differential equation (PDE) in stochastic calculus, which, by arbitrage arguments,
+is satisfied by any zero-coupon bond {\displaystyle P}, over (instantaneous) time {\displaystyle t}, for corresponding changes in {\displaystyle r}, the short rate.
+
+{\displaystyle {\frac {1}{2}}\sigma (r)^{2}{\frac {\partial ^{2}P}{\partial r^{2}}}+[a(r)+\sigma (r)+\varphi (r,t)]{\frac {\partial P}{\partial r}}+{\frac {\partial P}{\partial t}}-rP=0}
+
+The solution to the PDE (i.e. the corresponding formula for bond value) — given in Cox et al. — is:
+
+{\displaystyle P[t,T,r(t)]=E\_{t}^{\ast }[e^{-R(t,T)}]}
+
+To actually determine the bond price, the analyst must choose the specific short-rate model to be employed. The approaches commonly used are:
+
+* the CIR model
+* the Black–Derman–Toy model
+* the Hull–White model
+* the HJM framework
+* the Chen model.
+
+Note that depending on the model selected, a closed-form (“Black like”) solution may not be available, and a lattice- or simulation-based implementation of the model in question is then employed. See also Bond option § Valuation.
+
+
+## Clean and dirty price
+
+When the bond is not valued precisely on a coupon date, the calculated price, using the methods above, will incorporate accrued interest: i.e. any interest due to the owner of the bond over the "stub period" since the previous coupon date (see day count convention). The price of a bond which includes this accrued interest is known as the "dirty price" (or "full price" or "all in price" or "Cash price"). The "clean price" is the price excluding any interest that has accrued. Clean prices are generally more stable over time than dirty prices. This is because the dirty price will drop suddenly when the bond goes "ex interest" and the purchaser is no longer entitled to receive the next coupon payment.
+In many markets, it is market practice to quote bonds on a clean-price basis. When a purchase is settled, the accrued interest is added to the quoted clean price to arrive at the actual amount to be paid.
+
+
+## Yield and price relationships
+
+Once the price or value has been calculated, various yields relating the price of the bond to its coupons can then be determined.
+
+
+### Yield to maturity
+
+The yield to maturity (YTM) is the discount rate which returns the market price of a bond without embedded optionality; it is identical to {\displaystyle i} (required return) in the above equation. YTM is thus the internal rate of return of an investment in the bond made at the observed price. Since YTM can be used to price a bond, bond prices are often quoted in terms of YTM.
+
+To achieve a return equal to YTM, i.e. where it is the required return on the bond, the bond owner must:
+
+* buy the bond at price {\displaystyle P\_{0}},
+* hold the bond until maturity, and
+* redeem the bond at par.
+
+### Coupon rate
+
+The coupon rate is the coupon payment {\displaystyle C} as a percentage of the face value {\displaystyle F}.
+
+Coupon yield is also called nominal yield.
+
+
+### Current yield
+
+The current yield is the coupon payment {\displaystyle C} as a percentage of the (*current*) bond price {\displaystyle P}.
+
+
+### Relationship
+
+The concept of current yield is closely related to other bond concepts, including yield to maturity, and coupon yield. The relationship between yield to maturity and the coupon rate is as follows:
+
+Relationship between yield to maturity and the coupon rate
+| Status | Connection |
+| --- | --- |
+| At a discount | YTM > current yield > coupon yield |
+| At a premium | coupon yield > current yield > YTM |
+| Sells at par | YTM = current yield = coupon yield |
+
+
+## Price sensitivity
+
+The sensitivity of a bond's market price to interest rate (i.e. yield) movements is measured by its duration, and, additionally, by its convexity.
+
+Duration is a linear measure of how the price of a bond changes in response to interest rate changes. It is approximately equal to the percentage change in price for a given change in yield, and may be thought of as the elasticity of the bond's price with respect to discount rates. For example, for small interest rate changes, the duration is the approximate percentage by which the value of the bond will fall for a 1% per annum increase in market interest rate. So the market price of a 17-year bond with a duration of 7 would fall about 7% if the market interest rate (or more precisely the corresponding force of interest) increased by 1% per annum.
+
+Convexity is a measure of the "curvature" of price changes. It is needed because the price is not a linear function of the discount rate, but rather a convex function of the discount rate. Specifically, duration can be formulated as the first derivative of the price with respect to the interest rate, and convexity as the second derivative (see: Bond duration closed-form formula; Bond convexity closed-form formula; Taylor series). Continuing the above example, for a more accurate estimate of sensitivity, the convexity score would be multiplied by the square of the change in interest rate, and the result added to the value derived by the above linear formula.
+
+For embedded options, see effective duration and effective convexity; more generally, see Corporate bond § Risk analysis.
+
+
+## Accounting treatment
+
+In accounting for liabilities, any bond discount or premium must be amortized over the life of the bond. A number of methods may be used for this depending on applicable accounting rules. One possibility is that amortization amount in each period is calculated from the following formula:ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+{\displaystyle n\in \{0,1,...,N-1\}}
+
+{\displaystyle a\_{n+1}} = amortization amount in period number "n+1"
+
+{\displaystyle a\_{n+1}=|iP-C|{(1+i)}^{n}}
+
+Bond Discount or Bond Premium = {\displaystyle |F-P|} = {\displaystyle a\_{1}+a\_{2}+...+a\_{N}}
+
+Bond Discount or Bond Premium = {\displaystyle F|i-i\_{F}|({\frac {1-(1+i)^{-N}}{i}})}
+

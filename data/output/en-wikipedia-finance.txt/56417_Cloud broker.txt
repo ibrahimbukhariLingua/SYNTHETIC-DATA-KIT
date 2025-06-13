@@ -1,0 +1,42 @@
+Cloud broker
+
+
+# Cloud broker
+
+
+
+**Cloud Broker** is an entity that manages the use, performance and delivery of cloud services, and negotiates relationships between cloud providers and cloud consumers. As cloud computing evolves, the integration of cloud services may be too complex for cloud consumers to manage alone.
+
+In such cases, a cloud consumer may request cloud services from a cloud broker, instead of contacting a cloud provider directly," according to NIST Cloud Computing Reference Architecture.
+
+
+## Overview
+
+Cloud Brokers provides a single point of entry to manage multiple cloud services for business or technical purposes. The two important unique features of a cloud broker are the ability to provide a single consistent interface to multiple differing cloud providers and the clear visibility that the broker allows into which company is providing the services in the background.
+
+In general, cloud brokers provide services in three categories:
+
+* Aggregation: A cloud broker combines and integrates multiple services into one or more new services. The broker provides data integration and ensures the security of data in transition between the cloud consumer and multiple cloud providers.
+* Arbitrage: Service arbitrage is similar to service aggregation, except that the services being aggregated are not fixed. Service arbitrage means a broker has the flexibility to choose services from multiple Providers, depending upon the characteristics of the data or the context of the service.
+* Intermediation: A cloud broker enhances a given service by improving some specific capability and providing value-added services to cloud consumers. The improvement can be managing access to cloud services, identity management, performance reporting, enhanced security, etc.The service intermediation can happen at three points: At cloud provider's location, at cloud consumers location or as a service.
+
+## Benefits of using a cloud broker
+
+Benefits of using a cloud broker for a business or technical purpose include the following:
+
+* Cloud interoperability - Integration between several cloud offerings.
+* Cloud portability - Move application(s) between different cloud vendors.
+* Increase business continuity by reducing dependency on one cloud provider.
+* Increase SLAs by leveraging multiple cloud providers.
+* Cost savings - Most IaaS clouds offer significant volume discounts to those who have purchased a large number of instances. For example, Amazon provides 20% or even higher volume discounts in Amazon Elastic Compute Cloud (EC2). Due to the sheer volume of the aggregated demand, the cloud broker can easily qualify for such discounts, which further reduces the cost of serving all the users.
+
+Pay for what is needed: Cloud brokers provide a selected assortment of services required by the consumer.
+
+
+## Drawbacks of using a cloud broker
+
+Despite the benefits that a cloud broker can provide, there are also concerns related to the use of a cloud broker:
+
+* The greatest drawback in using a cloud broker is business reliance on the broker to be continuously up to date on new cloud technologies, options and offerings.
+* Using a cloud broker also adds complexity in maintaining an organization's security requirements throughout the entire delivery chain as the broker adds a layer between the cloud service providers and the organization.
+* There are potential conflicts of interest, so the organization needs to ensure that the broker is consistently representing its best interests when recommending cloud offerings.

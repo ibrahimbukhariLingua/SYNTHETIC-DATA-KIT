@@ -1,0 +1,36 @@
+Kaseya VSA ransomware attack
+
+
+# Kaseya VSA ransomware attack
+
+
+
+On 2 July 2021, a number of managed service providers (MSPs) and their customers became victims of a ransomware attack perpetrated by the REvil group, causing widespread downtime for over 1,000 companies. The attack was carried out by exploiting a vulnerability in VSA (Virtual System Administrator), a remote monitoring and management software package developed by Kaseya. Two suspects were identified and one sentenced.
+
+
+## Timeline and impact
+
+On March 23, DIVD researcher Wietse Boonstra found six zero-day vulnerabilities in Kaseya VSA (Virtual Systems Administrator). The DIVD warned Kaseya and worked together with company experts to solve four of the seven reported vulnerabilities. The DIVD later wrote an KASEYA VSA, behind the scenes blog about finding the 0-days.
+
+Despite the advance warning from DIVD, Kaseya did not patch all the reported bugs before they were exploited by REvil to deploy ransomware. An authentication bypass vulnerability in the software allowed attackers to compromise VSA and distribute a malicious payload through hosts managed by the software, amplifying the reach of the attack. In response, the company shut down its VSA cloud and SaaS servers and issued a security advisory to any customers, including those with on-premises deployments of VSA.
+
+Initial reports of companies affected by the incident include Norwegian financial software developer Visma, who manages some systems for Swedish supermarket chain Coop. The supermarket chain had to close down its 800 stores for almost a week, some in small villages without any other food shop. They did not pay ransom, but rebuilt their systems from scratch after waiting for an update from Kaseya.
+
+The REvil ransomware gang officially took credit for the attack and claimed to have encrypted more than one million systems during the incident. They initially asked for a $70 million ransom payment to release a universal decryptor to unlock all affected systems. On July 5, Kaseya said that between 800 and 1,500 downstream businesses were impacted in the attack.
+
+After a 9 July 2021 phone call between United States president Joe Biden and Russian president Vladimir Putin, Biden told the press, "I made it very clear to him that the United States expects when a ransomware operation is coming from his soil even though it’s not sponsored by the state, we expect them to act if we give them enough information to act on who that is." Biden later added that the United States would take the group's servers down if Putin did not.
+
+On 13 July 2021, REvil websites and other infrastructure vanished from the internet.
+
+On 5 July 2021, REvil announced that they would release a universal decryptor in exchange 70 million USD paid in Bitcoin. On 23 July, Kaseya announced it had received a universal decryptor tool for the REvil-encrypted files from an unnamed "trusted third party" and was helping victims restore their files.
+
+On 8 October 2021, Ukrainian national Yaroslav Vasinskyi was arrested in Poland in connection with the ransomware attack, pending extradition to the United States.
+
+On 8 November 2021, the United States Department of Justice unsealed indictments against Yaroslav Vasinskyi, who was still in Polish custody, and another suspect — Russian national Yevgeniy Polyanin. Vasinskyi was charged with conducting ransomware attacks against multiple victims including Kaseya, facing a maximum sentence of 115 years in prison. Polyanin was charged with conducting ransomware attacks against multiple victims including Texas businesses and government entities, facing a maximum sentence of 145 years in prison.
+
+On 3 March 2022, Yaroslav Vasinskyi was extradited to the United States and arraigned in Texas a few days later.
+
+On 1 May 2024, Yaroslav Vasinskyi was sentenced to 13 years and seven months in prison and ordered to pay over $16 million in restitution for "his role in conducting over 2,500 ransomware attacks and demanding over $700 million in ransom payments".
+
+As of 23 June 2024, Yevgeniy Polyanin was still wanted by the FBI and was believed to be living in Russia.
+

@@ -1,0 +1,52 @@
+Calvo (staggered) contracts
+
+
+# Calvo (staggered) contracts
+
+
+
+A **Calvo contract** is the name given in macroeconomics to the pricing model that when a firm sets a nominal price there is a constant probability that a firm might be able to reset its price which is independent of the time since the price was last reset. The model was first put forward by Guillermo Calvo in his 1983 article "Staggered Prices in a Utility-Maximizing Framework". The original article was written in a continuous time mathematical framework, but nowadays is mostly used in its discrete time version. The Calvo model is the most common way to model nominal rigidity in new Keynesian DSGE macroeconomic models.
+
+
+## The Calvo model of pricing
+
+We can define the probability that the firm can reset its price in any one period as **h** (the hazard rate), or equivalently the probability (**1-h**) that the price will remain unchanged in that period (the survival rate). The probability **h** is sometimes called the "Calvo probability" in this context. In the Calvo model the crucial feature is that the price-setter does not know how long the nominal price will remain in place. The probability of the current price lasting for exactly i periods more is
+
+The probability of surviving i subsequent periods thus follows a geometric distribution, with the expected duration of the nominal price from when it is first set is {\displaystyle E[\mathrm {Pr} [i]]=h^{-1}}. For example, if the Calvo probability *h* is 0.25 per period, the expected duration is 4 periods. Since the Calvo probability is constant and does not depend on how long it has been since the price was set, the probability that it will survive i *more* periods is given by exactly the same geometric distribution for all {\displaystyle i=1,\dotsc ,\infty }. Thus if *h* = 0.25, then however old the price is, it is expected to last another 4 periods.
+
+
+## Calvo pricing and nominal rigidity
+
+With the Calvo model the response of prices to a shock is spread out over time. Suppose a shock hits the economy at time *t*. A proportion *h* of prices can respond immediately and the rest *(1-h)* remain fixed. The next period, there will still be {\displaystyle (1-h)^{2}} who have remained fixed and not responded to the shock. i periods after the shock this which have shrunk to {\displaystyle (1-h)^{i}}. After any finite time, there will still be some proportion of prices that have not responded and remained fixed. This contrasts with the Taylor model, where there is a fixed length for contracts - for example 4 periods. After 4 periods, firms will have reset their price.
+
+The Calvo pricing model played a key role in the derivation of the New Keynesian Phillips curve by John Roberts in 1995, and since been used in New Keynesian DSGE models.
+
+where
+
+The current expectations of next period's inflation are incorporated as {\displaystyle \beta E\_{t}[\pi \_{t+1}]}. The coefficient {\displaystyle \kappa } captures the responsiveness of current inflation to current output. The New Keynesian Phillips curve reflects the fact that price-setting is forward looking, and what influences current inflation is not only the level of current demand (as represented by output) but also expected future inflation.
+
+There are different ways of measuring nominal rigidity in an economy. There will be many firms (or price-setters), some tend to change price frequently, others less so. Even a firm which changes its "normal" price infrequently might make a special offer or sale for a short period before returning to its normal price.
+
+Two possible ways of measuring nominal rigidity that have been suggested are:
+
+(i) **The average age of contracts**. One can take all of the firms and ask how long the prices have been set at their current level. With Calvo price setting, assuming that all firms have the same hazard rate *h*, there will be a proportion h which have just been reset, a proportion *h.(1-h)* which reset in the previous period and remain fixed this period, and in general, the proportion of prices set i periods ago that survive today is given by {\displaystyle \alpha ^{i}}, where:
+
+The average age of contracts {\displaystyle A^{\*}} is then
+
+The average age of contracts is one measure of nominal rigidity. However, it suffers from interruption bias: at any point of time, we will only observe how long a price has been at its current level. We might wish to ask what will its completed length be at the next price change. This is the second measure.
+
+(ii) **The average completed length of contracts**. This is similar to the average age in that it looks at the current prices set by firms. However, rather than asking how long was it since the price was last set (the age of the contract), it asks how long will the price have lasted when the price next changes. Clearly for a single firm, this is random. Across all firms, however, the Law of large numbers kicks in and we can calculate the exact distribution of completed contract lengths. It can be shown that the average completed length of contracts is given by **T**:
+
+That is, the completed length of contracts is twice the average age minus 1. Thus, for example, if *h*= 0.25, 25% of prices change each period. At any time, the average age of prices will be 4 periods. However, the corresponding average completed length of contracts is 7 periods.
+
+
+## Development of the concept
+
+One of the major problems with the Calvo contract as a model of pricing is that the inflation dynamics it results in do not fit the data. Inflation is better described by the hybrid new Keyensian Phillips curve which includes lagged inflation:
+
+This has led to the original Calvo model to be developed in a number of directions:
+
+(a) **Indexation**. With indexation, prices are automatically updated in response to lagged inflation (at least to some degree), which gives rise to the hybrid new Keyensian Phillips curve. The Calvo probability refers to the firm being able to choose the price it sets that period (which happens with probability {\displaystyle h}) or to have the price rise by indexation (which happens with probability {\displaystyle (1-h)}. The Calvo model with indexation is adopted by many new Keynesian researchers
+
+(b) **Duration dependent hazard function** {\displaystyle h(i)}. A key feature of the Calvo model is that the hazard rate is constant: the probability of changing the price does not depend on how old the price is. In 1999, Wolman suggested that the model should be generalized to allow for the hazard rate to vary with the duration. The key idea is that an older price may be more or less likely to change than a newer price, which is captured by the hazard function *h(i)* which allows the hazard rate to be a function of age i. This *generalized Calvo model* with duration dependent hazard rate has been developed by several authors.
+

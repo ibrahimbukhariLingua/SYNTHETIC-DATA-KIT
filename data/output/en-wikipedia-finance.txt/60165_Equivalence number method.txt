@@ -1,0 +1,59 @@
+Equivalence number method
+
+
+# Equivalence number method
+
+
+
+The **equivalence number method** is a cost calculation method for co-production in cost and activity accounting. The resulting costs of the input factors are allocated to the individual products according to a weighting key, the so-called equivalence numbers.
+
+
+## Description
+
+As with the other cost allocation methods, the conservation of the cost sum applies, that is:
+
+The cost of the main product, usually for the product with the highest physical or economical output, receives for example the equivalence number 1. On the basis of selected indicators (average market prices, physical properties, etc.) other equivalence numbers are formed, using suitable ratios between the different co-products. Multiplying the equivalence numbers by the production or sales figures results in the allocation keys for a specific product type. From this the cost of a co-product can be calculated, both for main and by-products.
+
+
+## Application examples
+
+An airline can determine the cost of the transportation service by dividing air freight and passengers by weight. The average passenger weight of booked seats is to be compared to the weight of the loaded air cargo containers.
+
+* aₚₐₛₛ = mₚₐₛₛ / (mₚₐₛₛ + mfᵣₑᵢgₕₜ)
+* afᵣₑᵢgₕₜ = mfᵣₑᵢgₕₜ / (mₚₐₛₛ + mfᵣₑᵢgₕₜ)
+
+In a refinery, one can assume the input as crude oil and as output gasoline, diesel and heavy fuel oil as well as (flare) losses. The equivalence number method can use the energy content of the products as an allocation key. E is the product of energy density and production quantity.
+
+* agₐₛ = Egₐₛ / (Egₐₛ + Edᵢₑₛₑₗ + EHFO)
+* adᵢₑₛₑₗ = Edᵢₑₛₑₗ / (Egₐₛ + Edᵢₑₛₑₗ + EHFO)
+* aHFO = EHFO / (Egₐₛ + Edᵢₑₛₑₗ + EHFO)
+
+In the cogeneration plants, the Carnot method allocates the fuel to the products useful heat and electrical work. The weighting key is the exergy content of the output energies.
+
+* aₑₗ= ηₑₗ / (ηₑₗ + ηc × ηₜₕ)
+* aₜₕ= (ηc x ηₜₕ) / (ηₑₗ + ηc × ηₜₕ)
+
+In the alternative generation method, the key is thermal and weighted electrical efficiency, where the weighting factor is the ratio of thermal to electrical reference efficiencies (γ = ηₜₕ, ᵣₑf/ηₑₗ,ᵣₑf).
+
+* aₑₗ= (γ ηₑₗ) / (γ ηₑₗ + ηₜₕ)
+* aₜₕ= ηₜₕ / (γ ηₑₗ + ηₜₕ)
+
+## Criticism
+
+Criticism of the equivalence number method is justified by the fact that completely arbitrary and random keys can be chosen. For example, in the case of allocating the potable water bill in a house with only one common meter, the water consumption could be divided according to the number of occupants per apartment or the apartment's net dwelling area in m².
+
+
+## Mathematical background
+
+From a one-dimensional input I, a two-dimensional output is assumed with *O₁ = f₁(I) \* I* and *O₂ = f₂(I) \* I*.
+
+Note: One interpretation for *f* is a conversion efficiency from the input to the respective output. More than 2 co-products are also conceivable.
+
+The costs *k₁*, *k₂* are the variable costs of the two outputs which need to be determined. *kI* represents the known variable costs of the input. *Kᵛᵃʳ* denotes the respective sum of the variable costs. *a₁* and *a₂* are the allocation factors for the respective output, i.e. they describe the proportion of the input that is assigned to a co-product.
+
+The weighting keys are *f₁* and *f₂*:
+
+This results in specific variable costs *k₁* and *k₂*:
+
+According to the introducing relation of the cost allocation, the following applies:
+

@@ -1,0 +1,88 @@
+Levelized cost of electricity
+
+
+# Levelized cost of electricity
+
+
+
+The **levelized cost of electricity** (**LCOE**) is a measure of the average net present cost of electricity generation for a generator over its lifetime. It is used for investment planning and to compare different methods of electricity generation on a consistent basis.
+
+The more general term **levelized cost of energy** may include the costs of either electricity or heat. The latter is also referred to as *levelized cost of heat* or *levelized cost of heating* (**LCOH**), or *levelized cost of thermal energy*.
+
+
+## Definition
+
+The cost of a electricity production depends on costs during the *expected* lifetime of the generator and the amount of electricity the generator is *expected* to produce over its lifetime. The levelized cost of electricity (LCOE) is the average cost in currency per energy unit, for example, EUR per kilowatt-hour or AUD per megawatt-hour.
+
+LCOE is defined by the formula:
+
+
+## Applicability
+
+LCOE is an estimation of the *cost of production* of electricity and not the *price of electricity*. The price of electricity may be influenced by additional factors including markup and price controls.
+
+LCOE is commonly used for:
+
+* Feasibility study decisions for new electricity generation projects.
+* Investment strategy decisions made by businesses and governments.
+* Energy policy decisions made by governments.
+
+Significant caution needs to be applied to use of LCOE as outputs are highly sensitive to the selection of input values. The ability to interpret and compare LCOE model outputs is dependent upon the level of detailed justification provided for input values and the results of sensitivity analysis against the selection of input values. For any given electricity generation technology, LCOE can vary significantly from region to region depending on factors such as the cost of fuel or availability of renewable energy resources. For LCOE to be usable for rank-ordering energy-generation alternatives, caution must be taken to calculate it in "real" terms, i.e. including adjustment for expected inflation.
+
+An energy efficiency gap phenomenon exists due to observed lack of consideration of and implementation of demand-side energy conservation. LCOE is typically used in support of supply-side generation capacity replacement and expansion decision making. The energy efficiency gap phenomenon suggests demand-side energy conservation should also be considered in investment strategies and energy policy.
+
+
+### Limitations
+
+LCOE is often cited as a convenient summary measure of the overall competitiveness of different generating technologies, however, it has potential limitations. One of the most important potential limitations of LCOE is that it may not control for time effects associated with matching electricity production to demand. This can happen at two levels:
+
+* Dispatchability, the ability of a generating system to come online, go offline, or ramp up or down, quickly as demand swings.
+* The extent to which the availability profile matches or conflicts with the market demand profile.
+
+In particular, if the costs of matching grid energy storage are not included in projects for variable renewable energy sources such as solar and wind, they may produce electricity when it is not needed in the grid without storage. The value of this electricity may be lower than if it was produced at another time, or even negative. At the same time, variable sources can be competitive if they are available to produce when demand and prices are highest, such as solar during summertime mid-day peaks seen in hot countries where air conditioning is a major consumer.
+
+To ensure enough electricity is always available to meet demand, storage or backup generation may be required, which adds costs that are not included in some instances of LCOE. Excess generation when not needed may force curtailments, thus reducing the revenue of an energy provider. Decisions about investments in energy generation technologies may be guided by other measures such as the levelized cost of storage (LCOS) and the levelized avoided cost of energy (LACE), in addition to the LCOE.
+
+Another potential limitation of LCOE is that some analyses may not adequately consider the indirect costs of generation. These can include the social cost of greenhouse gas emissions, other environmental externalities such as air pollution, or grid upgrade requirements.
+
+The LCOE for a given generator tends to be inversely proportional to its capacity. For instance, larger power plants have a lower LCOE than smaller power plants. Therefore, making investment decisions based on insufficiently comprehensive LCOE can lead to a bias towards larger installations while overlooking opportunities for energy efficiency and conservation unless their costs and effects are calculated, and included alongside LCOE numbers for other options such as generation infrastructure for comparison. If this is omitted or incomplete, LCOE may not give a comprehensive picture of potential options available for meeting energy needs.
+
+
+## Selection of input values
+
+
+### Electrical energy generated
+
+The amount of electrical energy generated {\displaystyle E\_{t}} or estimated to be generated is dependent upon a large number of factors including:
+
+* **Natural resource economics** and the availability of economically viable resources required for generator operation is variable per generation technology. For variable renewable energy generators, wind resource assessment and solar potential assessment are examples of methods used to assess the availability of resources required for wind turbines and solar panels to generate energy. For non-renewable generators, fuel availability over the lifespan of a generator may be temporarily impacted by geopolitical factors (an example being the 1970s energy crisis) or impacted by gradual depletion of and discovery of new non-renewable resource reserves. Oil and gas reserves and resource quantification is an example of a method used to assess long term availability of economically viable fuel resources for non-renewable generators.
+
+* Electricity market effects of **grid balancing** may require a load-following power plant to curtail generation of energy if the grid does not demand energy (negative spot prices) or allow a generator with high variable costs to be brought online to dispatch into a grid with significant unmet demand and high spot prices. Battery, run-of-the-river hydroelectricity with pondage, variable renewable energy and natural gas turbine generators are examples of dispatchable generators. Seasonal diurnal cycles and climatology, as well as short term meteorological events have significant impacts to grid balancing from both supply and demand perspectives. The geographical region within which LCOE is being assessed, the mix of generators in a grid, the proportion of demand flexibility (or conversely firm power demand) within a grid and transmission capacity limits within a grid also significantly influence required generation curtailment.
+
+* The cost of **operational availability** 
+ A
+ o
+ 
+ 
+ 
+ 
+ {\textstyle A\_{o}}
+ 
+ (known as availability factor for electricity generators) is variable per generation technology. Different generator technologies require differing levels of planned and unplanned maintenance preventing nameplate capacity output being achieved continuously for the lifespan of the generator. As an additional external influence, governments differ in their wiliness to accept risks of power outages and lack of resilience against natural disasters and military attack on electricity grids. Examples of historical events impacting grid resilience are the 1991 Gulf War air campaign against civilian infrastructure, 2015 Ukraine power grid hack, 2021 Texas power crisis and Russian strikes against Ukrainian infrastructure (2022–present). Low risk tolerance may require electricity grids to be more significantly overbuilt to mitigate the potential costs of electricity grid interruptions and outages, impacting on a technology-by-technology basis the amount of generation curtailment necessary under normal grid conditions.
+
+For a proposed generator with only the proposed nameplate capacity known, observed capacity factor data available for similar existing generators can be used to estimate the electrical energy generated for the proposed new generator.
+
+
+### Expenditures
+
+Investment expenditures {\displaystyle I\_{t}}, operations and maintenance expenditures {\displaystyle M\_{t}} and fuel expenditures {\displaystyle F\_{t}} are influenced by a variety of taxes commonly imposed by governments including tariffs impacting the cost of importing generation equipment and fuels, excises impacting the cost of production of fuels, carbon taxes for offsetting the social cost of carbon and other taxes for recouping shared industry costs of electric power transmission and research and development of energy technologies. Expenditures can also be influenced by a variety of energy subsidies.
+
+Assumptions are required to be made due to the subjective nature of prediction of future levels of taxation and subsidies and influence of the politics of climate change.
+
+
+### Discount rate
+
+Cost of capital expressed as the discount rate {\displaystyle r} is one of the most controversial inputs into the LCOE equation, as it significantly impacts the outcome and a number of comparisons assume arbitrary discount rate values with little transparency of why a specific value was selected. Comparisons that assume public funding, subsidies, and social cost of capital tend to choose low discount rates (3%), while comparisons prepared by private investment banks tend to assume high discount rates (7–15%) associated with commercial for-profit funding.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ Assuming a low discount rate favours nuclear and sustainable energy projects, which require a high initial investment but then have low operational costs.
+
+In a 2020 analysis by Lazard, sensitivity to discount factor changes in the range of 6–16% results in different LCOE values but the identical ordering of different types of power plants if the discount rates are the same for all technologies.
+

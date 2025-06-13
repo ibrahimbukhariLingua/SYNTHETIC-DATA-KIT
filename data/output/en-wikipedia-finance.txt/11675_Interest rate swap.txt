@@ -1,0 +1,160 @@
+Interest rate swap
+
+
+# Interest rate swap
+
+
+
+In finance, an **interest rate swap** (**IRS**) is an interest rate derivative (IRD). It involves exchange of interest rates between two parties. In particular it is a "linear" IRD and one of the most liquid, benchmark products. It has associations with forward rate agreements (FRAs), and with zero coupon swaps (ZCSs).
+
+In its December 2014 statistics release, the Bank for International Settlements reported that interest rate swaps were the largest component of the global OTC derivative market, representing 60%, with the notional amount outstanding in OTC interest rate swaps of $381 trillion, and the gross market value of $14 trillion.
+
+Interest rate swaps can be traded as an index through the FTSE MTIRS Index.
+
+
+## Interest rate swaps
+
+
+### General description
+
+An interest rate swap's (IRS's) effective description is a derivative contract, agreed between two counterparties, which specifies the nature of an exchange of payments benchmarked against an interest rate index.
+The most common IRS is a fixed for floating swap, whereby one party will make payments to the other based on an initially agreed fixed rate of interest, to receive back payments based on a floating interest rate index.
+Each of these series of payments is termed a "leg", so a typical IRS has both a fixed and a floating leg.
+The floating index is commonly an interbank offered rate (IBOR) of specific tenor in the appropriate currency of the IRS, for example LIBOR in GBP, EURIBOR in EUR, or STIBOR in SEK.
+
+To completely determine any IRS a number of parameters must be specified for each leg:
+
+* the notional principal amount (or varying notional schedule);
+* the start and end dates, value-, trade- and settlement dates, and date scheduling (date rolling);
+* the fixed rate (i.e. "swap rate", sometimes quoted as a "swap spread" over a benchmark);
+* the chosen floating interest rate index tenor;
+* the day count conventions for interest calculations.
+
+Each currency has its own standard market conventions regarding the frequency of payments, the day count conventions and the end-of-month rule.
+
+
+### Extended description
+
+| There are several types of IRS, typically: |
+| --- |
+| * "Vanilla" fixed for floating * Basis swap * Cross currency basis swaps * Amortising swap * Zero coupon swap * Constant maturity swap * Overnight indexed swap |
+
+As OTC instruments, interest rate swaps (IRSs) can be customised in a number of ways and can be structured to meet the specific needs of the counterparties.
+For example: payment dates could be irregular, the notional of the swap could be amortized over time, reset dates (or fixing dates) of the floating rate could be irregular, mandatory break clauses may be inserted into the contract, etc.
+A common form of customisation is often present in **new issue swaps** where the fixed leg cashflows are designed to replicate those cashflows received as the coupons on a purchased bond.
+The interbank market, however, only has a few standardised types.
+
+There is no consensus on the scope of naming convention for different types of IRS.
+Even a wide description of IRS contracts only includes those whose legs are denominated in the same currency.
+It is generally accepted that swaps of similar nature whose legs are denominated in different currencies are called cross currency basis swaps.
+Swaps which are determined on a floating rate index in one currency but whose payments are denominated in another currency are called Quantos.
+
+In traditional interest rate derivative terminology an IRS is a **fixed leg versus floating leg** derivative contract referencing an **IBOR** as the floating leg.
+If the floating leg is redefined to be an overnight index, such as EONIA, SONIA, FFOIS, etc. then this type of swap is generally referred to as an **overnight indexed swap (OIS)**.
+Some financial literature may classify OISs as a subset of IRSs and other literature may recognise a distinct separation.
+
+**Fixed leg versus fixed leg** swaps are rare, and generally constitute a form of specialised loan agreement.
+
+**Float leg versus float leg** swaps are much more common. These are typically termed (single currency) basis swaps (SBSs). The legs on SBSs will necessarily be different interest indexes, such as 1M LIBOR, 3M LIBOR, 6M LIBOR, SONIA, etc. The pricing of these swaps requires a **spread** often quoted in basis points to be added to one of the floating legs in order to satisfy value equivalence.
+
+
+### Uses
+
+Interest rate swaps are used to hedge against or speculate on changes in interest rates. They are also used to manage cashflows by converting floating to fixed interest payments, or vice versa.
+
+Interest rate swaps are also used speculatively by hedge funds or other investors who expect a change in interest rates or the relationships between them. Traditionally, fixed income investors who expected rates to fall would purchase cash bonds, whose value increased as rates fell. Today, investors with a similar view could enter a floating-for-fixed interest rate swap; as rates fall, investors would pay a lower floating rate in exchange for the same fixed rate.
+
+Interest rate swaps are also popular for the arbitrage opportunities they provide. Varying levels of creditworthiness means that there is often a positive quality spread differential that allows both parties to benefit from an interest rate swap.
+
+The interest rate swap market in USD is closely linked to the Eurodollar futures market which trades among others at the Chicago Mercantile Exchange.
+
+
+## Valuation and pricing
+
+IRSs are bespoke financial products whose customisation can include changes to payment dates, notional changes (such as those in amortised IRSs), accrual period adjustment and calculation convention changes (such as a day count convention of 30/360E to ACT/360 or ACT/365).
+
+A vanilla IRS is the term used for standardised IRSs. Typically these will have none of the above customisations, and instead exhibit constant notional throughout, implied payment and accrual dates and benchmark calculation conventions by currency. A vanilla IRS is also characterised by one leg being "fixed" and the second leg "floating" referencing an -IBOR index. The net present value (PV) of a vanilla IRS can be computed by determining the PV of each fixed leg and floating leg separately and summing. For pricing a mid-market IRS the underlying principle is that the two legs must have the same value initially; see further under Rational pricing.
+
+Calculating the fixed leg requires discounting all of the known cashflows by an appropriate discount factor:
+
+where {\displaystyle N} is the notional, {\displaystyle R} is the fixed rate, {\displaystyle n\_{1}} is the number of payments, {\displaystyle d\_{i}} is the decimalised day count fraction of the accrual in the i'th period, and {\displaystyle v\_{i}} is the discount factor associated with the payment date of the i'th period.
+
+Calculating the floating leg is a similar process replacing the fixed rate with forecast index rates:
+
+where {\displaystyle n\_{2}} is the number of payments of the floating leg and {\displaystyle r\_{j}} are the forecast -IBOR index rates of the appropriate currency.
+
+The PV of the IRS from the perspective of receiving the fixed leg is then:
+
+Historically IRSs were valued using discount factors derived from the same curve used to forecast the -IBOR rates. This has been called "self-discounted". Some early literature described some incoherence introduced by that approach and multiple banks were using different techniques to reduce them. It became more apparent with the 2007–2008 financial crisis that the approach was not appropriate, and alignment towards discount factors associated with physical collateral of the IRSs was needed.
+
+Post crisis, to accommodate credit risk, the now-standard pricing approach is the **multi-curve framework**, applied where forecast discount factors and -IBOR (the erstwhile reference rate) exhibit disparity.
+Note that the economic pricing principle is unchanged: leg values are still identical at initiation. See Financial economics § Derivative pricing for further context.
+Here, overnight index swap (OIS) rates are typically used to derive discount factors, since that index is the standard inclusion on Credit Support Annexes (CSAs) to determine the rate of interest payable on collateral for IRS contracts. As regards the rates forecast, since the basis spread between LIBOR rates of different maturities widened during the crisis, forecast curves are generally constructed for each LIBOR tenor used in floating rate derivative legs.
+
+Regarding the curve build, see:
+Under the old framework a single self-discounted curve was "bootstrapped" for each tenor;
+i.e.: solved such that it exactly returned the observed prices of selected instruments—IRSs, with FRAs in the short end—with the build proceeding sequentially, date-wise, through these instruments.
+Under the new framework, the various curves are best fitted to observed market prices—as a "curve set"—one curve for discounting, one for each IBOR-tenor "forecast curve",
+and the build is then based on quotes for IRSs *and* OISs, with FRAs included as before.
+Here, since the observed average overnight rate is swapped for the -IBOR rate over the same period (the most liquid tenor in that market), and the -IBOR IRSs are in turn discounted on the OIS curve, the problem entails a nonlinear system, where all curve points are solved at once, and specialized iterative methods are usually employed — very often a modification of Newton's method.
+The forecast-curves for other tenors can be solved in a "second stage", bootstrap-style, with discounting on the now-solved OIS curve.
+
+Under both frameworks, the following apply.
+(i) Maturities for which rates are solved directly are referred to as "pillar points", these correspond to the input-instrument maturities; other rates are interpolated, often using (monotone) Hermitic splines.
+(ii) The objective function: prices must be "exactly" returned, as described.
+(iii) The penalty function will weigh: that forward rates are positive, with the curve then likely arbitrage free, and (secondarily) curve "smoothness"; both, in turn, a function of the interpolation method.
+(iv) The initial estimate: usually, the most recently solved curve set.
+((v) All that need be stored are the solved spot rates for the pillar points, and the interpolation rule.)
+
+A CSA could allow for collateral, and hence interest payments on that collateral, in any currency.
+To accommodate this, banks include in their curve-set a USD discount-curve to be used for discounting local-IBOR trades which have USD collateral; this curve is sometimes called the "basis-curve".
+It is built by solving for observed (mark-to-market) cross-currency swap rates, where the local -IBOR is swapped for USD LIBOR with USD collateral as underpin.
+The latest, pre-solved USD-LIBOR-curve is therefore an (external) element of the curve-set, and the basis-curve is then solved in the "third stage".
+Each currency's curve-set will thus include a local-currency discount-curve and its USD discounting basis-curve.
+As required, a third-currency discount curve — i.e. for local trades collateralized in a currency other than local or USD (or any other combination) — can then be constructed from the local-currency basis-curve and third-currency basis-curve, combined via an arbitrage relationship known here as "FX Forward Invariance".
+
+LIBOR is being phased out, with replacements including SOFR and TONAR ("market reference rates", MRRs, as based on secured overnight funding transactions).
+With the coexistence of "old" and "new" rates in the market, multi-curve and OIS curve "management" is necessary, with changes required to incorporate new discounting and compounding conventions, while the underlying logic is unaffected; see.
+
+The complexities of modern curvesets mean that there may not be discount factors available for a specific -IBOR index curve. These curves are known as 'forecast only' curves and only contain the information of a forecast -IBOR index rate for any future date. Some designs constructed with a discount based methodology mean forecast -IBOR index rates are implied by the discount factors inherent to that curve:
+
+To price the mid-market or par rate, {\displaystyle S} of an IRS (defined by the value of fixed rate {\displaystyle R} that gives a net PV of zero), the above formula is re-arranged to:
+
+In the event old methodologies are applied the discount factors {\displaystyle v\_{k}} can be replaced with the self discounted values {\displaystyle x\_{k}} and the above reduces to:
+
+In both cases, the PV of a general swap can be expressed exactly with the following intuitive formula:{\displaystyle P\_{\text{IRS}}=N(R-S)A}
+where {\displaystyle A} is the so-called Annuity factor {\displaystyle A=\sum \_{i=1}^{n\_{1}}d\_{i}v\_{i}} (or {\displaystyle A=\sum \_{i=1}^{n\_{1}}d\_{i}x\_{i}} for self-discounting). This shows that the PV of an IRS is roughly linear in the swap par rate (though small non-linearities arise from the co-dependency of the swap rate with the discount factors in the Annuity sum).
+
+
+## Risks
+
+Interest rate swaps expose traders and institutions to various categories of financial risk: predominantly market risk - specifically interest rate risk - and credit risk. Reputation risks also exist. The mis-selling of swaps, over-exposure of municipalities to derivative contracts, and IBOR manipulation are examples of high-profile cases where trading interest rate swaps has led to a loss of reputation and fines by regulators.
+
+As regards market risk, during the swap's life, both the discounting factors and the forward rates change, and thus, per the above valuation techniques, the PV of a swap will deviate from its initial value. The swap will therefore at times be an asset to one party and a liability to the other. (The way these changes in value are reported is the subject of IAS 39 for jurisdictions following IFRS, and FAS 133 for U.S. GAAP.) In market terminology, the first-order link of swap value to interest rates is referred to as delta risk; their gamma risk reflects how delta risk changes as market interest rates fluctuate (see Greeks (finance)). Other specific types of market risk that interest rate swaps have exposure to are basis risks — where various IBOR tenor indexes can deviate from one another — and reset risks - where the publication of specific tenor IBOR indexes are subject to daily fluctuation.
+
+Uncollateralised interest rate swaps — those executed bilaterally without a CSA in place — expose the trading counterparties to funding risks and counterparty credit risks. Funding risks because the value of the swap might deviate to become so negative that it is unaffordable and cannot be funded. Credit risks because the respective counterparty, for whom the value of the swap is positive, will be concerned about the opposing counterparty defaulting on its obligations. Collateralised interest rate swaps, on the other hand, expose the users to collateral risks: here, depending upon the terms of the CSA, the type of posted collateral that is permitted might become more or less expensive due to other extraneous market movements. Credit and funding risks still exist for collateralised trades but to a much lesser extent. Regardless, due to regulations set out in the Basel III Regulatory Frameworks, trading interest rate derivatives commands a capital usage. The consequence of this is that, dependent upon their specific nature, interest rate swaps might command a high capital usage, possibly sensitive to market movements. Capital risks are thus another concern for users, and Banks typically calculate a credit valuation adjustment, CVA - as well as XVA for other risks - which then incorporate these risks into the instrument value.
+
+Debt security traders, daily mark to market their swap positions so as to "visualize their inventory" (see product control).
+As required, they will attempt to hedge, both to protect value and to reduce volatility. Since the cash flows of component swaps offset each other, traders will implement this hedging on a net basis for entire books. Here, the trader would typically hedge her interest rate risk through offsetting Treasuries (either spot or futures).
+For credit risks – which will not typically offset – traders estimate:
+for each counterparty the probability of default using models such as Jarrow–Turnbull and KMV, or by stripping these from CDS prices;
+and then for each trade, the potential future exposure and expected exposure to the counterparty.
+Credit derivatives will then be purchased as appropriate.
+Often, a specialized XVA-desk centrally monitors and manages overall CVA and XVA exposure and capital, and will then implement this hedge.
+The other risks must be managed systematically, sometimes involving group treasury.
+
+These processes will all rely on well-designed numerical risk models: both to measure and forecast the (overall) change in value, and to suggest reliable offsetting benchmark trades which may be used to mitigate risks. Note, however, (and re P&L Attribution) that the multi-curve framework adds complexity in that (individual) positions are (potentially) affected by numerous instruments not obviously related.
+
+
+## Quotation and market-making
+
+
+### ICE Swap rate
+
+ICE Swap rate replaced the rate formerly known as ISDAFIX in 2015. Swap Rate benchmark rates are calculated using eligible prices and volumes for specified interest rate derivative products. The prices are provided by trading venues in accordance with a “Waterfall” Methodology. The first level of the Waterfall (“Level 1”) uses eligible, executable prices and volumes provided by regulated, electronic, trading venues. Multiple, randomised snapshots of market data are taken during a short window before calculation. This enhances the benchmark's robustness and reliability by protecting against attempted manipulation and temporary aberrations in the underlying market.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+
+### Market-making
+
+The market-making of IRSs is an involved process involving multiple tasks; curve construction with reference to interbank markets, individual derivative contract pricing, risk management of credit, cash and capital. The cross disciplines required include quantitative analysis and mathematical expertise, disciplined and organized approach towards profits and losses, and coherent psychological and subjective assessment of financial market information and price-taker analysis. The time sensitive nature of markets also creates a pressurized environment. Many tools and techniques have been designed to improve efficiency of market-making in a drive to efficiency and consistency.
+

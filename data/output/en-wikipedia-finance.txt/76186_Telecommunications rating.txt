@@ -1,0 +1,89 @@
+Telecommunications rating
+
+
+# Telecommunications rating
+
+
+
+In telecommunications **rating** is the activity of determining the cost of a particular call. The rating process involves converting call-related data into a monetary-equivalent value.
+
+Call-related data is generated at various points in the network or measurements may be taken by third party equipment such as network probes. Generally this data is something quantifiable and specific. The usage data so gathered is then either packaged by the equipment or it may be sent to a charging gateway.etc.
+
+Rating systems typically use some or all of the following types of data about a call:
+
+* Time property of the call (day of week, date, time of day)
+* Amount of usage (Duration of call, amount of data, number of messages, number of songs)
+* Destination of the call (land line, overseas, etc.)
+* Origin of call/ Location of the caller (for mobile networks)
+* Premium charges (third party charges for premium content, cost of physical items such as movie tickets)
+
+Generally individual calls are rated and then the rated amounts are sent to a billing system to provide a bill to the subscriber. Often the rating system will be a module of a larger "Billing System" architecture.
+
+A rating system must be adapted to the constantly changing pricing policies, which have the strategic goal of stimulating demand.
+
+
+## Data structures
+
+To perform the rating calculations it is necessary to produce a Call detail record/EDR.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ A Call detail record (CDR, also known as *Call Data Record*) is "a record of a call setup and completion", and its format "varies among telecom providers or programs", which some allow to be configured by the user.
+
+EDR stands for *Event Data/Detail Record*. EDR records are used for systems that charge more than calls - content. e.g. buying ring tones.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ The generated CDR/EDR may not be in a form suitable for the particular rating system. In this case a piece of software, known as the mediation system, may be required to render the data into a form useful by the rating system. The mediation system is also useful for gathering data from various sources to aggregate into one record.
+
+In spoken language CDR usually refers to any type of record: voice, SMS or data.
+
+
+## Design choices: support for non programming configuration
+
+In complex systems there's the need of the flexibility to modify and maintain the system by an interface more human-readable than programming code, like editing tables where the behavior of the system is defined. This allows both a quicker editing and the possibility to let the configuration and maintenance of the system to non programmers, like business/tariff analysts. This flexibility comes at the cost of a heavier computational time. The support for "code external" textual configuration of both rating cases-amounts and the algorithmic rating process steps, is sometimes called "Rule-based Rating". Rule-based rating is one simple example of the use of the more general control table technique.
+
+As the telecommunications market comes under increasing pressure from new technologies (for example WiMAX), the leading differentiating factors between competing operators is often the innovation in new product offerings, and time to market. This leads to a natural tension between the capabilities that are offered by:
+
+* conventional configuration only systems (in which the products one operator can configure can also be offered by another),
+* rule based systems (in which new offerings can be created more easily, but performance considerations might not allow these to be offered to mass markets), and
+* programmed systems (in which you can create many more innovations, but the time to market and cost of implementation may be higher).
+
+In real life situations, even the most configurable systems generally have an implementation phase, in which new capabilities are created using programming methods, and a configuration phase, in which the new capabilities are configured and offered to the mass market.
+
+
+## Complex rating
+
+As competition increased in the telecommunications space, rating is getting increasingly complex. Some rating scenarios use multiple measurements.
+
+Example:
+
+Example:
+
+Complex rating could also involve non-network related parameters. Some of the rating data may come from the customer care or billing sub-systems.
+
+Example:
+
+Complex rating behaviour could be due to particular real or virtual behaviour.
+
+Example:
+
+Among the issues of rating that are unexpected sources of complexity is Daylight Saving Time time offsets.
+
+
+## Neutral currency rating
+
+Modern rating engines may also be currency neutral. Certain multi-national telecommunication providers provide the ability for subscribers settlement in multiple currencies. In this scenario the rating engine generates a currency neutral billing record. It is the billing engine which is assigned with converting the virtual currency into an actualized cost.
+
+
+## Re-rating
+
+In some scenarios it may be necessary to re-rate calls but not all rating engines are capable of this. There is a philosophical argument as to the usefulness of re-rating, with no clear correct answer:
+
+
+### Pro re-rating
+
+* It is useful to be able to correct errors that are identified.
+* The calculation of complex discounts may not be possible until all the calls for a billing cycle have been received.
+* Re-rating solves problems with CDRs arriving late. The flow of CDRs that reach the rating processes often can not be relied on to deliver the calls in the order in which they are needed for customer access to their billing information. When you charge for services provided by other providers (for example, international calls made while roaming in another carrier's region, services billed to your home number from a pay phone or other remote location), these CDRs may be delayed and arrive out of the order expected in the reporting of usage to customers. When usage records arrive out of order, you may need to re-rate previously received usage records.
+
+### Against re-rating
+
+* The pro re-rating arguments are in fact based on a dying paradigm: Billing is done in a batch system, and the customer has no access to the un-billed information. This is not really the case any more:
+ + Modern billing systems are convergent (they can handle real time and batch rating on the same platform at the same time). Re-rating is not possible for real time events, because they would no longer be real time by definition
+ + Modern billing systems with self-care interfaces (so that the customer can see their charges on a web site in near real-time) means that re-rating is not possible. It would be unacceptable for the customer to see one price one day, and a different one later
+ + Re-rating must be completed before the bill production, which is usually monthly. It is sometimes not possible to perform re-rating for all the CDRs that should be re-rated, because the billing cycle is already closed. A closed bill is a legal document and cannot under any circumstances be modified
+* There is a natural wastefulness in re-rating: Telecommunications hardware is expensive, and should normally be exploited near to its capacity to maximise the return on investment. Re-rating means that extra capacity must be purchased, and will usually not be used.
+* Re-rating is often seen as a safety net for human error. However, if there is a safety net, errors are more likely to occur, and testing and planning may decrease in quality and thoroughness

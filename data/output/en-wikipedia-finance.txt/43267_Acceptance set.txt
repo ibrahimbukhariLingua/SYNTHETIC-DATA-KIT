@@ -1,0 +1,68 @@
+Acceptance set
+
+
+# Acceptance set
+
+
+
+In financial mathematics, **acceptance set** is a set of acceptable future net worth which is acceptable to the regulator. It is related to risk measures.
+
+
+## Mathematical Definition
+
+Given a probability space {\displaystyle (\Omega ,{\mathcal {F}},\mathbb {P} )}, and letting {\displaystyle L^{p}=L^{p}(\Omega ,{\mathcal {F}},\mathbb {P} )} be the Lp space in the scalar case and {\displaystyle L\_{d}^{p}=L\_{d}^{p}(\Omega ,{\mathcal {F}},\mathbb {P} )} in d-dimensions, then we can define acceptance sets as below.
+
+
+### Scalar Case
+
+An acceptance set is a set {\displaystyle A} satisfying:
+
+1. {\displaystyle A\supseteq L\_{+}^{p}}
+2. {\displaystyle A\cap L\_{--}^{p}=\emptyset } such that {\displaystyle L\_{--}^{p}=\{X\in L^{p}:\forall \omega \in \Omega ,X(\omega )<0\}}
+3. {\displaystyle A\cap L\_{-}^{p}=\{0\}}
+4. Additionally if {\displaystyle A} is convex then it is a convex acceptance set
+ 1. And if {\displaystyle A} is a positively homogeneous cone then it is a coherent acceptance set
+
+### Set-valued Case
+
+An acceptance set (in a space with {\displaystyle d} assets) is a set {\displaystyle A\subseteq L\_{d}^{p}} satisfying:
+
+1. {\displaystyle u\in K\_{M}\Rightarrow u1\in A} with {\displaystyle 1} denoting the random variable that is constantly 1 {\displaystyle \mathbb {P} }-a.s.
+2. {\displaystyle u\in -\mathrm {int} K\_{M}\Rightarrow u1\not \in A}
+3. {\displaystyle A} is directionally closed in {\displaystyle M} with {\displaystyle A+u1\subseteq A\;\forall u\in K\_{M}}
+4. {\displaystyle A+L\_{d}^{p}(K)\subseteq A}
+
+Additionally, if {\displaystyle A} is convex (a convex cone) then it is called a **convex (coherent) acceptance set**.
+
+Note that {\displaystyle K\_{M}=K\cap M} where {\displaystyle K} is a constant solvency cone and {\displaystyle M} is the set of portfolios of the {\displaystyle m} reference assets.
+
+
+## Relation to Risk Measures
+
+An acceptance set is convex (coherent) if and only if the corresponding risk measure is convex (coherent). As defined below it can be shown that {\displaystyle R\_{A\_{R}}(X)=R(X)} and {\displaystyle A\_{R\_{A}}=A}.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+
+### Risk Measure to Acceptance Set
+
+* If {\displaystyle \rho } is a (scalar) risk measure then {\displaystyle A\_{\rho }=\{X\in L^{p}:\rho (X)\leq 0\}} is an acceptance set.
+* If {\displaystyle R} is a set-valued risk measure then {\displaystyle A\_{R}=\{X\in L\_{d}^{p}:0\in R(X)\}} is an acceptance set.
+
+### Acceptance Set to Risk Measure
+
+* If {\displaystyle A} is an acceptance set (in 1-d) then {\displaystyle \rho \_{A}(X)=\inf\{u\in \mathbb {R} :X+u1\in A\}} defines a (scalar) risk measure.
+* If {\displaystyle A} is an acceptance set then {\displaystyle R\_{A}(X)=\{u\in M:X+u1\in A\}} is a set-valued risk measure.
+
+## Examples
+
+
+### Superhedging price
+
+The acceptance set associated with the superhedging price is the negative of the set of values of a self-financing portfolio at the terminal time. That is
+
+
+### Entropic risk measure
+
+The acceptance set associated with the entropic risk measure is the set of payoffs with positive expected utility. That is
+
+where {\displaystyle u(X)} is the exponential utility function.
+

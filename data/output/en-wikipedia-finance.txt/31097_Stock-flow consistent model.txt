@@ -1,0 +1,80 @@
+Stock-flow consistent model
+
+
+# Stock-flow consistent model
+
+
+
+**Stock-flow consistent models** (SFC) are a family of non-equilibrium macroeconomic models based on a rigorous accounting framework, that seeks to guarantee a correct and comprehensive integration of all the flows and the stocks of an economy. These models were first developed in the mid-20th century but have recently become popular, particularly within the post-Keynesian school of thought. Stock-flow consistent models are in contrast to dynamic stochastic general equilibrium models, which are used in mainstream economics.
+
+
+## Background and history
+
+The ideas for an accounting approach to macroeconomics go back to Knut Wicksell, John Maynard Keynes (1936) and Michał Kalecki. The accounting framework behind stock-flow consistent macroeconomic modelling can be traced back to Morris Copeland's development of flow of funds analysis back in 1949. Copeland wanted to understand where the money to finance increases in Gross National Product came from, and what happened to unspent money if GNP declined. He developed a set of tables to show the relationship between flows of income and expenditure and changes to the stocks of outstanding debt and financial assets held in the US economy.
+
+James Tobin and his collaborators used features of stock-flow consistent modelling including the social accounting matrix and discrete time to develop a macroeconomic model that integrated financial and non-financial variables. He outlined the following distinguishing features of his approach in his Nobel lecture
+
+1. Modelling changes between discrete short-run time periods rather than a long run equilibrium
+2. Tracking changes in stocks of assets held by different groups
+3. Multiple assets with different rates of return,
+4. Modelling of monetary policy operations
+5. Subjecting the demand functions to "adding up constraints"
+
+Also Robert Clower based his Keynesian price and business cycle theories on stock-flow relations. A similar approach was developed in Germany by Wolfgang Stützel as Balances Mechanics.
+
+The current SFC models mainly emerged from the separate economic tradition of the Post Keynesians, Wynne Godley being the most famous contributor in this regard. Godley argued in favour of wider adoption of stock-flow consistent methods, expressing the view that they would improve the transparency and logical coherence of most macro models. The Post Keynesians aimed at developing a macroeconomic theory that rejects the classical dichotomy, the neutrality of money and general equilibrium theory. Instead, they wanted to model the financial stocks and flows and their relations, the sectoral balances.¹⁸ From some models of "monetary circuit theory", far-reaching consequences were derived, such as the thesis of a "monetary growth imperative", which, however, could be explained by inconsistent accounting. By respecting accounting constraints, "black holes" have to be avoided, where money vanishes without an offsetting entry in the balance sheet.
+
+The models gained popularity at the beginning of the 21st century and especially after the beginning of the financial crisis of 2007–08, as some authors had foreseen the critical developments with accounting models. Wynne Godley, one of the pioneers of the SFC approach since the 1970s, had warned since 2000 in publications that the US housing market would weaken and cause a recession. In DSGE models, which dominate macroeconomics, crises usually cannot arise because of behavioural assumptions such as rational expectations and intertemporal optimisation. Although they treat stock and flow variables consistently, they usually model only individual stock variables such as physical capital, while monetary variables such as credit relations and debt are neglected. Therefore, attempts are made to analyse financial crises using stock-flow consistent models based on the accounting approach.
+
+While ecological aspects were not considered by post-Keynesian authors like Godley or Lavoie, SFC models are now widely used within Ecological Macroeconomics. In addition to cash flows, resource or energy flows and stocks or an ecosystem with renewable resources are modeled. References are made in particular to the flow-fund models of Nicholas Georgescu-Roegen. Other approaches integrate concepts of SFC models into agent-based modeling (ABM) or input–output models.
+
+Current researchers in the SFC approach to macroeconomic modelling are based in University of Limerick, Levy Economics Institute and University of Oxford.
+
+
+## Structure of the models
+
+SFC models usually consist of two main components: an accounting part and a set of equations describing the laws of motion of the system. The consistency of the accounting is ensured by the use of three matrices: i) the aggregate balance sheets, with all the initial stocks, ii) the transaction flow, recording all the transactions taking places in the economy (e.g. consumption, interests payments); iii) the stock revaluation matrix, showing the changes in the stocks resulting from the transactions (the transaction flow and the stock revaluation matrix are often merged in the full integration matrix).
+The matrices are built respecting intuitive principles. Someone's asset is someone else's liability and someone's inflow is someone else's outflows. Furthermore, each sector and the economy as a whole must respect their budget constraint. No fund can come from (or end up) nowhere.
+
+The second component of SFC models, the behavioural equations, include the main theoretical assumption of the model. Most of the papers in the existing literature are based on post-Keynesian theory. However, the behavioural equations are not restricted to a single school of thought.
+
+Most SFC models are formulated in discrete time, but can also be formulated in continuous time as differential equations or differential-algebraic equations.
+
+Simple models can be solved analytically and investigated by means of concepts of dynamical system theory such as bifurcation analysis. More complex models must be numerically simulated.
+
+
+## Advantages and disadvantages
+
+The comprehensive accounting framework has several advantages. Tracking all the monetary flows taking place in an economy and the way they accumulate, allows for a consistent integration of the real and the financial side of the economy (for a detailed discussion see Godley and Lavoie, 2007). Furthermore, as balance sheets are updated in any period, SFC models can be used to identify unsustainable processes, for example a prolonged deficit of a sector will result in an unsustainable stock of debt. These models were used by Wynne Godley in forecasting, showing promising results. Moreover, from a modelling perspective, the consistent accounting framework prevents the modellers from leaving "black holes" i.e., unexplained parts of the model.
+
+
+## Example of SFC model
+
+
+### Flow of funds between sectors in a closed economy
+
+| Households | Firms | Government | Rest of the World | **Σ** |
+| --- | --- | --- | --- | --- |
+| Consumption | -C | +C | **0** |
+| Govt. Expenditures | +G | -G | **0** |
+| **[OUTPUT]** | **[Y]** |
+| Wages | +W | -W | **0** |
+| Taxes | -T | +T | **0** |
+| Changes in Money | -ΔHₕ | +ΔHₛ | **0** |
+| **Σ** | **0** | **0** | **0** |
+
+The above table shows the flow of funds between different sectors for a closed economy with no explicit financial sector from a model by Wynne Godley and Marc Lavoie. The minus (-) sign in the table represents that the sector has paid out while the plus (+) sign indicates the receipts of that sector, e.g., -C for the household sector shows that the household has paid for their consumption whereas the counter party of this transaction is the firm which receives +C. This implies that the firms have received the payments from the households. Similarly, all the respective flows in the economy are reported in the flow of funds. More advanced SFC models consist of a financial sector including banks and is further extended to an open economy by introducing the Rest of World sector.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ Introducing the financial sector enables in tracing the flow of loans between the sectors, which in turn helps in determining the level of debt every sector holds.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ These models become more complicated as new sectors and assets are added to the system.
+
+
+### The model structure
+
+Once the accounting framework is fulfilled then the structure of the model, based on stylized facts, is defined. The set of equations in the model defines relationship between different variables, not determined by the accounting framework. The model structure basically helps in understanding how the flows are connected from a behavioral perspective or in simple words how the behavior of a sector affects the flow of funds in the system, e.g., the factors that affect the consumption (C) of the household is not clear from the flow of funds but can be explained by the model. The model structure with a set of equations for a simple closed economy is given by:
+
+{\displaystyle {\begin{aligned}Y&=C+G\\T&=\theta \cdot Y\\YD&=Y-T\\C&=\alpha \_{1}\cdot Y+\alpha \_{2}\cdot H\_{t-1}\\\Delta H\_{s}&=G-T\\\Delta H\_{h}&=YD-C\\H&=\Delta H+H\_{t-1}\\\end{aligned}}}
+
+Y (Income), C (Consumption), G (Government Expenditures), T (Taxes), YD (Disposable Income), ΔH (Changes in stock of money) and θ is the tax rate on the income of household sector.
+α₁ is the household consumption out of disposable income.
+α₂ is the household consumption out of previous wealth.
+
+The SFC models are solved in different ways depending on the aspect of research but in general initial values are assigned to the stocks and then the model is calibrated or estimated.
+

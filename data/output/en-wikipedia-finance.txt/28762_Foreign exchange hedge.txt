@@ -1,0 +1,116 @@
+Foreign exchange hedge
+
+
+# Foreign exchange hedge
+
+
+
+A **foreign exchange hedge** (also called a FOREX hedge) is a method used by companies to eliminate or "hedge" their foreign exchange risk resulting from transactions in foreign currencies (see foreign exchange derivative). This is done using either the cash flow hedge or the fair value method. The accounting rules for this are addressed by both the International Financial Reporting Standards (IFRS) and by the US Generally Accepted Accounting Principles (US GAAP) as well as other national accounting standards.
+
+A foreign exchange hedge transfers the foreign exchange risk from the trading or investing company to a business that carries the risk, such as a bank. There is a cost to the company for setting up a hedge. By setting up a hedge, the company also forgoes any profit if the movement in the exchange rate would be favourable to it.
+
+
+## Foreign exchange risk
+
+When companies conduct business across borders, they must deal in foreign currencies. Companies must exchange foreign currencies for home currencies when dealing with receivables, and vice versa for payables. This is done at the current exchange rate between the two countries. Foreign exchange risk is the risk that the exchange rate will change unfavorably before payment is made or received in the currency. For example, if a United States company doing business in Japan is compensated in yen, that company has risk associated with fluctuations in the value of the yen versus the United States dollar.
+
+
+## Hedge
+
+A hedge is a type of derivative, or a financial instrument, that derives its value from an underlying asset. Hedging is a way for a company to minimize or eliminate foreign exchange risk. Two common hedges are forward contracts and options.
+
+A forward contract will lock in an exchange rate today at which the currency transaction will occur at the future date.
+
+An option sets an exchange rate at which the company may choose to exchange currencies. If the current exchange rate is more favorable, then the company will not exercise this option.
+
+The main difference between the hedge methods is who derives the benefit of a favourable movement in the exchange rate. With a forward contract the other party derives the benefit, while with an option the company retains the benefit by choosing not to exercise the option if the exchange rate moves in its favour.
+
+
+## Accounting for Derivatives
+
+
+### Under IFRS
+
+Guidelines for accounting for financial derivatives are given under IFRS 7. Under this standard, “an entity shall group financial instruments into classes that are appropriate to the nature of the information disclosed and that take into account the characteristics of those financial instruments. An entity shall provide sufficient information to permit reconciliation to the line items presented in the balance sheet”. Derivatives should be grouped together on the balance sheet and valuation information should be disclosed in the footnotes. This seems fairly straightforward, but IASB has issued two standards to help further explain this procedure.
+
+The International Accounting Standards IAS 32 and 39 help to give further direction for the proper accounting of derivative financial instruments. IAS 32 defines a “financial instrument” as “any contract that gives rise to a financial asset of one entity and a financial liability or equity instrument of another entity”. Therefore, a forward contract or option would create a financial asset for one entity and a financial liability for another. The entity required to pay the contract holds a liability, while the entity receiving the contract payment holds an asset. These would be recorded under the appropriate headings on the balance sheet of the respective companies. IAS 39 gives further instruction, stating that the financial derivatives be recorded at fair value on the balance sheet.
+IAS 39 defines two major types of hedges. The first is a cash flow hedge, defined as: “a hedge of the exposure to variability in cash flows that (i) is attributable to a particular risk associated with a recognized asset or liability or a highly probable forecast transaction, and (ii) could affect profit or loss”. In other words, a cash flow hedge is designed to eliminate the risk associated with cash transactions that can affect the amounts recorded in net income.
+
+Below is an example of a cash flow hedge for a company purchasing Inventory items in year 1 and making the payment for them in year 2, after the exchange rate has changed.
+
+| Date | Spot Rate | US $ value | Change | Fwd. Rate | US $ value | FV of contract | Change |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 12/1/Y1 | $1.00 | $20,000.00 | $0.00 | $1.04 | $20,800.00 | $0.00 | $0.00 |
+| 12/31/Y1 | $1.05 | $21,000.00 | $1,000.00 | $1.10 | $22,000.00 | ($1,176.36) | ($1,176.36) |
+| 3/2/Y2 | $1.12 | $22,400.00 | $1,400.00 | $1.12 | $22,400.00 | ($1,600.00) | ($423.64) |
+
+
+### Cash Flow Hedge Example
+
+| 12/1/Y1 | Inventory | $20,000.00 | To record purchase and A/P of 20000C |
+| --- | --- | --- | --- |
+| A/P | $20,000.00 |
+| 12/31/Y1 | Foreign Exchange Loss | $1,000.00 | To adjust value for spot of $1.05 |
+| A/P | $1,000.00 |
+| AOCI | $1,000.00 | To record a gain on the forward contract |
+| Gain on Forward Contract | $1,000.00 |
+| Forward Contract | $1,176.36 | To record the forward contract as an asset |
+| AOCI | $1,176.36 |
+| Premium Expense | $266.67 | Allocate the fwd contract discount |
+| AOCI | $266.67 |
+| 3/1/Y2 | Foreign Exchange Loss | $1,400.00 | To adjust value for spot of $1.12 |
+| A/P | $1,400.00 |
+| AOCI | $1,400.00 | To record a gain on the forward cont. |
+| Gain on Forward Contract | $1,400.00 |
+| Forward Contract | $423.64 | To adjust the fwd. cont. to its FV of $1600 |
+| AOCI | $423.64 |
+| Premium Expense | $533.33 | To allocate the remaining fwd. cont. discount |
+| AOCI | $533.33 |
+| Foreign Currency | $22,400.00 | To record the settlement of the fwd. cont. |
+| Forward Contract | $1,600.00 |
+| Cash | $20,800.00 |
+| A/P | $22,400.00 | To record the payment of the A/P |
+| Foreign Currency | $22,400.00 |
+
+Notice how in year 2 when the payable is paid off, the amount of cash paid is equal to the forward rate of exchange back in year 1. Any change in the forward rate, however, changes the value of the forward contract. In this example, the exchange rate climbed in both years, increasing the value of the forward contract. Since the derivative instruments are required to be recorded at fair value, these adjustments must be made to the forward contract listed on the books. The offsetting account is other comprehensive income. This process allows the gain and loss on the position to be shown in Net income.
+
+The second is a fair value hedge. Again, according to IAS 39 this is “a hedge of the exposure to changes in fair value of a recognized asset or liability or an unrecognized firm commitment, or an identified portion of such an asset, liability or firm commitment, that is attributable to a particular risk and could affect profit or loss”. More simply, this type of hedge would eliminate the fair value risk of assets and liabilities reported on the Balance sheet. Since Accounts receivable and payable are recorded here, a fair value hedge may be used for these items. The following are the journal entries that would be made if the previous example were a fair value hedge.
+
+
+### Fair Value Hedge Example
+
+| 12/1/Y1 | Inventory | $20,000.00 | to record purchase and A/P of 20000C |
+| --- | --- | --- | --- |
+| A/P | $20,000.00 |
+| 12/31/Y1 | Foreign Exchange Loss | $1,000.00 | to adjust value for S.R of $1.05 |
+| A/P | $1,000.00 |
+| Forward Contract | $1,176.36 | to record forward contract at fair value |
+| Gain on Forward Contract | $1,176.36 |
+| 3/1/Y2 | Foreign Exchange Loss | $1,400.00 | to adjust value for S.R. of $1.12 |
+| A/P | $1,400.00 |
+| Forward Contract | $423.64 | to adjust the fwd. contract to its FV |
+| Gain on Forward Contract | $423.64 |
+| Foreign Currency | $22,400.00 | to record the settlement of the fwd. cont. |
+| Forward Contract | $1,600.00 |
+| Cash | $20,800.00 |
+| A/P | $22,400.00 | to record the payment of the A/P |
+| Foreign Currency | $22,400.00 |
+
+Again, notice that the amounts paid are the same as in the cash flow hedge. The big difference here is that the adjustments are made directly to the assets and not to the other comprehensive income holding account. This is because this type of hedge is more concerned with the fair value of the asset or liability (in this case the account payable) than it is with the profit and loss position of the entity.
+
+
+### Under US GAAP
+
+The US Generally Accepted Accounting Principles also include instruction on accounting for derivatives. For the most part, the rules are similar to those given under IFRS. The standards that include these guidelines are SFAS 133 and 138. SFAS 133, written in 1998, stated that a “recognized asset or liability that may give rise to a foreign currency transaction gain or loss under Statement 52 (such as a foreign-currency-denominated receivable or payable) not be the hedged item in a foreign currency fair value or cash flow hedge”. Based on the language used in the statement, this was done because the FASB felt that the assets and liabilities listed on a company’s books should reflect their historic cost value, rather than being adjusted for fair value. The use of a hedge would cause them to be revalued as such. Remember that the value of the hedge is derived from the value of the underlying asset. The amount recorded at payment or reception would differ from the value of the derivative recorded under SFAS 133.
+As illustrated above in the example, this difference between the hedge value and the asset or liability value can be effectively accounted for by using either a cash flow or a fair value hedge. Thus, two years later FASB issued SFAS 138 which amended SFAS 133 and allowed both cash flow and fair value hedges for foreign exchanges. Citing the reasons given previously, SFAS 138 required the recording of derivative assets at fair value based on the prevailing spot rate.
+
+
+## Do companies hedge?
+
+Since 2004, the Bank of Canada has carried out a qualitative annual survey to assess the degree of activity in Canadian foreign exchange (FX) hedging. The survey participants consist of banks that are active in Canadian FX markets, including the eleven members of the Canadian Foreign Exchange Committee (CFEC). The main findings for the 2013 survey were:
+
+* Banks have increased their attention on regulatory issues.
+* Volatility was the main reason for hedging.
+* Institutional customer volume accounted for the majority of hedging activity.
+* There was high marginal use of derivatives in hedging.
+* Credit has remained important.

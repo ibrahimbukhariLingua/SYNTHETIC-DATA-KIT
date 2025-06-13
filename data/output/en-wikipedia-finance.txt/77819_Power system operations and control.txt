@@ -1,0 +1,85 @@
+Power system operations and control
+
+
+# Power system operations and control
+
+
+
+**Power system operations** is a term used in electricity generation to describe the process of decision-making on the timescale from one day (**day-ahead operation**) to minutes prior to the power delivery. The term **power system control** describes actions taken in response to unplanned *disturbances* (e.g., changes in demand or equipment failures) in order to provide reliable electric supply of acceptable quality. The corresponding engineering branch is called **Power System Operations and Control**. Electricity is hard to store, so at any moment the supply (generation) shall be balanced with demand ("grid balancing"). In an electrical grid the task of real-time balancing is performed by a regional-based control center, run by an electric utility in the traditional (vertically integrated) electricity market. In the restructured North American power transmission grid, these centers belong to *balancing authorities* numbered 74 in 2016, the entities responsible for operations are also called independent system operators, transmission system operators. The other form of balancing resources of multiple power plants is a power pool. The balancing authorities are overseen by reliability coordinators.
+
+
+## Day-ahead operation
+
+Day-ahead operation schedules the generation units that can be called upon to provide the electricity on the next day (**unit commitment**). The dispatchable generation units can produce electricity on demand and thus can be scheduled with accuracy. The production of the weather-dependent variable renewable energy for the next day is not certain, its sources are thus non-dispatchable. This variability, coupled with uncertain future power demand and the need to accommodate possible generation and transmission failures requires scheduling of operating reserves that are not expected to produce electricity, but can be dispatched on a very short notice.
+
+Some units have unique features that require their commitment much earlier: for example, the nuclear power stations take a very long time to start, while hydroelectric plants require planning of water resources usage way in advance, therefore commitment decisions for these are made weeks or even months before prior to the delivery.
+
+For a "traditional" vertically integrated electric utility the main goal of the unit commitment is to minimize both the marginal cost of producing the unit electricity and the (quite significant for fossil fuel generation) start-up costs. In a "restructured" electricity market a market clearing algorithm is utilized, frequently in a form of an auction; the merit order is sometimes defined not just by the monetary costs, but also by the environmental concerns.
+
+Unit commitment is more complex than the shorter-time-frame operations, since unit availability is subject to multiple constraints:
+
+* demand-supply balance need to be maintained, including the sufficient spinning reserves for contingency. The balance need to reflect the transmission constraints;
+* thermal units might have limits on minimum uptime (once switched on, cannot be turned off quickly) and downtime (once stopped, cannot be quickly restarted again);
+* "must-run" units have to run due to technical constraints (for example, combined heat and power plants must run if their heat is needed);
+* there is usually a single crew at the plant that needs to be present during a thermal unit start-up, so only one unit can be started at a time.
+
+## Hours-ahead operation
+
+In the hours prior to the delivery, a system operator might need to deploy additional supplemental reserves or even commit more generation units, primarily to ensure the reliability of the supply while still trying to minimize the costs. At the same time, operator must ensure that enough reactive power reserves are available to prevent the voltage collapse.
+
+
+### Dispatch curve
+
+The decisions ("economic dispatch") are based on the **dispatch curve**, where the X-axis constitutes the system power, intervals for the generation units are placed on this axis in the *merit order* with the interval length corresponding to the maximum power of the unit, Y-axis values represent the marginal cost (per-MWh of electricity, ignoring the startup costs). For cost-based decisions, the units in the merit order are sorted by the increasing marginal cost. The graph on the right describes an extremely simplified system, with three committed generator units (fully dispatchable, with constant per-MWh cost):
+
+* unit A can deliver up to 120 MW at the cost of $30 per MWh (from 0 to 120 MW of system power);
+* unit B can deliver up to 80 MW at $60/MWh (from 120 to 200 MW of system power);
+* unit C is capable of 50 MW at $120/MWh (from 200 to 250 MW of system power).
+
+At the expected demand is 150 MW (a vertical line on the graph), unit A will be engaged at full 120 MW power, unit B will run at the **dispatch level** of 30 MW, unit C will be kept in reserve. The area under the dispatch curve to the left of this line represents the cost per hour of operation (ignoring the startup costs, $30 \* 120 + $60 \* 30 = $5,400 per hour), the incremental cost of the next MWh of electricity ($60 in the example, represented by a horizontal line on the graph) is called **system lambda** (thus another name for the curve, *system lambda curve*).
+
+In real systems the cost per MWh usually is not constant, and the lines of the dispatch curve are therefore not horizontal (typically the marginal cost of power increases with the dispatch level, although for the combined cycle power plants there are multiple cost curves depending on the mode of operation, so the power-cost relationship is not necessarily monotonic).
+
+If the minimum level of demand in the example will stay above 120 MW, the unit A will constantly run at full power, providing baseload power, unit B will operate at variable power, and unit C will need to be turned on and off, providing the "intermediate" or "cycling" capacity. If the demand goes above 200 MW only occasionally, the unit C will be idle most of the time and will be considered a peaking power plant (a "peaker"). Since a peaker might run for just tens of hours per year, the cost of peaker-produced electricity can be very high in order to recover the capital investment and fixed costs (see the right side of a hypothetical full-scale dispatch curve).
+
+
+### Redispatch
+
+Sometimes the grid constraints change unpredictably and a need arises to change the previously set unit commitments. This **system redispatch** change is controlled in real-time by the central operator issuing directives to market participants that submit in advance bids for the increase/decrease in the power levels. Due to the centralized nature of redispatch, there is no delay to negotiate terms of contracts; the cost incurred are allocated either to participants responsible for the disruption based on preestablished tariffs or in equal shares.
+
+
+## Minutes-ahead operation
+
+In the minutes prior to the delivery, a system operator is using the power-flow study algorithms in order to find the optimal power flow. At this stage the goal is reliability ("security") of the supply. The practical electric networks are too complex to perform the calculations by hand, so from the 1920s the calculations were automated, at first in the form of specially-built analog computers, so called *network analyzers*, replaced by digital computers in the 1960s.
+
+
+## Control after disturbance
+
+Small mismatches between the total demand and total load are typical and initially are taken care of by the kinetic energy of the rotating machinery (mostly synchronous generators): when there is too much supply, the devices absorb the excess, and frequency goes above the scheduled rate, conversely, too much demand causes the generator to deliver extra electricity through slowing down, with frequency slightly decreasing, not requiring an intervention from the operator. There are obvious limits to this "immediate control", so a *control continuum* is built into a typical power grid, spanning reaction intervals from seconds ("primary control") to hours ("time control").
+
+
+### Seconds-after control
+
+The *primary control* is engaged automatically within seconds after the frequency disturbance. Primary control stabilizes the situation, but does not return the conditions to the normal and is applied both to the generation side (where the governor adjusts the power of the prime mover) and to the load, where:
+
+* induction motors self-adjust (lower frequency reduces the energy use);
+* under-frequency relays disconnect interruptible loads;
+* ancillary services are engaged (load is reduced as procured via reliability services contracts).
+
+Another term commonly used for the primary control is **frequency response** (or "beta"). Frequency response also includes the inertial response of the generators. This is the parameter that is approximated by the frequency bias coefficient of the area control error (ACE) calculation used for automatic generation control.
+
+
+### Minutes-after control
+
+The *secondary control* is used to restore the system frequency after a disturbance, with adjustments made by the balancing authority control computer (this is typically referred to as load-frequency control or automatic generation control) and manual actions taken by the balancing authority staff. Secondary control uses both the spinning and non-spinning reserves, with balancing services deployed within minutes after disturbance (hydropower plants are capable of an even faster reaction).
+
+
+### Tertiary control
+
+The *tertiary control* involves reserve deployment and restoration to handle the current and future contingencies.
+
+
+## Time control
+
+The goal of the **time control** is to maintain the long-term frequency at the specified value within a wide area synchronous grid. Due to the disturbances, the average frequency drifts, and a *time error* accumulates between the official time and the time measured in the AC cycles. In the US, the average 60 Hz frequency is maintained within each interconnection by a designated entity, **time monitor**, that periodically changes the frequency target of the grid (*scheduled frequency*) to bring the overall time offset within the predefined limits. For example, in the Eastern Interconnection the action (temporarily setting the frequency to 60.02 Hz or 59.98 Hz) is initiated when the time offset reaches 10 seconds and ceases once the offset reaches 6 seconds. Time control is performed either by a computer (*Automatic Time Error Correction*), or by the monitor requesting balancing authorities to adjust their settings.
+

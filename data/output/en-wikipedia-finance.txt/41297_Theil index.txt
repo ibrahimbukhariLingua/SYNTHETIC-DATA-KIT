@@ -1,0 +1,115 @@
+Theil index
+
+
+# Theil index
+
+
+
+The **Theil index** is a statistic primarily used to measure economic inequality and other economic phenomena, though it has also been used to measure racial segregation. The Theil index *T*T is the same as redundancy in information theory which is the maximum possible entropy of the data minus the observed entropy. It is a special case of the generalized entropy index. It can be viewed as a measure of redundancy, lack of diversity, isolation, segregation, inequality, non-randomness, and compressibility. It was proposed by a Dutch econometrician Henri Theil (1924–2000) at the Erasmus University Rotterdam.
+
+Henri Theil himself said (1967): "The (Theil) index can be interpreted as the expected information content of the indirect message which transforms the population shares as prior probabilities into the income shares as posterior probabilities." Amartya Sen noted, "But the fact remains that the Theil index is an arbitrary formula, and the average of the logarithms of the reciprocals of income shares weighted by income is not a measure that is exactly overflowing with intuitive sense."
+
+
+## Formula
+
+For a population of *N* "agents" each with characteristic *x*, the situation may be represented by the list *x*ᵢ (*i* = 1,...,*N*) where *x*ᵢ is the characteristic of agent *i*. For example, if the characteristic is income, then *xᵢ* is the income of agent *i*.
+
+The Theil *T* index is defined as
+
+and the Theil *L* index is defined as
+
+where {\displaystyle \mu } is the mean income:
+
+Theil-L is an income-distribution's dis-entropy per person, measured with respect to maximum entropy (...which is achieved with complete equality).
+
+(In an alternative interpretation of it, Theil-L is the natural-logarithm of the geometric-mean of the ratio: (mean income)/(income i), over all the incomes. The related Atkinson(1) is just 1 minus the geometric-mean of (income i)/(mean income), over the income distribution.)
+
+Because a transfer between a larger income & a smaller one will change the smaller income's ratio more than it changes the larger income's ratio, the transfer-principle is satisfied by this index.
+
+Equivalently, if the situation is characterized by a discrete distribution function *f*ₖ (*k* = 0,...,*W*) where *f*ₖ is the fraction of the population with income *k* and *W* = *Nμ* is the total income, then {\displaystyle \sum \_{k=0}^{W}f\_{k}=1} and the Theil index is:
+
+where {\displaystyle \mu } is again the mean income:
+
+Note that in this case income *k* is an integer and *k=1* represents the smallest increment of income possible (e.g., cents).
+
+if the situation is characterized by a continuous distribution function *f*(*k*) (supported from 0 to infinity) where *f*(*k*) *dk* is the fraction of the population with income *k* to *k* + *dk*, then the Theil index is:
+
+where the mean is:
+
+Theil indices for some common continuous probability distributions are given in the table below:
+
+| Income distribution function | PDF(*x*) (*x* ≥ 0) | Theil coefficient (nats) |
+| --- | --- | --- |
+| Dirac delta function | {\displaystyle \delta (x-x\_{0}),\,x\_{0}>0} | 0 |
+| Uniform distribution | {\displaystyle {\begin{cases}{\frac {1}{b-a}}&a\leq x\leq b\\0&{\text{otherwise}}\end{cases}}} | {\displaystyle \ln \left({\frac {2a}{(a+b){\sqrt {e}}}}\right)+{\frac {b^{2}}{b^{2}-a^{2}}}\ln(b/a)} |
+| Exponential distribution | {\displaystyle \lambda e^{-x\lambda },\,\,x>0} | {\displaystyle 1-} {\displaystyle \gamma } |
+| Log-normal distribution | {\displaystyle {\frac {1}{\sigma {\sqrt {2\pi }}}}e^{(-(\ln(x)-\mu )^{2})/\sigma ^{2}}} | {\displaystyle {\frac {\sigma ^{2}}{2}}} |
+| Pareto distribution | {\displaystyle {\begin{cases}{\frac {\alpha k^{\alpha }}{x^{\alpha +1}}}&x\geq k\\0&x<k\end{cases}}} | {\displaystyle \ln(1\!-\!1/\alpha )+{\frac {1}{\alpha -1}}} (α>1) |
+| Chi-squared distribution | {\displaystyle {\frac {2^{-k/2}e^{-x/2}x^{k/2-1}}{\Gamma (k/2)}}} | {\displaystyle \ln(2/k)+} {\displaystyle \psi ^{(0)}}{\displaystyle (1\!+\!k/2)} |
+| Gamma distribution | {\displaystyle {\frac {e^{-x/\theta }x^{k-1}\theta ^{-k}}{\Gamma (k)}}} | {\displaystyle \psi ^{(0)}}{\displaystyle (1+k)-\ln(k)} |
+| Weibull distribution | {\displaystyle {\frac {k}{\lambda }}\left({\frac {x}{\lambda }}\right)^{k-1}e^{-(x/\lambda )^{k}}} | {\displaystyle {\frac {1}{k}}} {\displaystyle \psi ^{(0)}}{\displaystyle (1+1/k)-\ln \left(\Gamma (1+1/k)\right)} |
+
+If everyone has the same income, then *T*T equals 0. If one person has all the income, then *T*T gives the result {\displaystyle \ln N}, which is maximum inequality. Dividing *T*T by {\displaystyle \ln N} can normalize the equation to range from 0 to 1, but then the independence axiom is violated: {\displaystyle T[x\cup x]\neq T[x]} and does not qualify as a measure of inequality.
+
+The Theil index measures an entropic "distance" the population is away from the egalitarian state of everyone having the same income. The numerical result is in terms of negative entropy so that a higher number indicates more order that is further away from the complete equality. Formulating the index to represent negative entropy instead of entropy allows it to be a measure of inequality rather than equality.
+
+
+### Relation to Atkinson Index
+
+The Theil index can be transformed into an Atkinson index, which has a range between 0 and 1 (0% and 100%), where 0 indicates perfect equality and 1 (100%) indicates maximum inequality. (See Generalized entropy index for the transformation.)
+
+
+## Derivation from entropy
+
+The Theil index is derived from Shannon's measure of information entropy {\displaystyle S}, where entropy is a measure of randomness in a given set of information. In information theory, physics, and the Theil index, the general form of entropy is
+
+When looking at the distribution of income in a population, {\displaystyle p\_{i}} is equal to the ratio of a particular individual's income to the total income of the entire population. This gives the observed entropy {\displaystyle S\_{\text{Theil}}} of a population to be:
+
+The Theil index {\displaystyle T\_{T}} measures how far the observed entropy ({\displaystyle S\_{\text{Theil}}}, which represents how randomly income is distributed) is from the highest possible entropy ({\displaystyle S\_{\text{max}}=\ln \left({N}\right)}, which represents income being maximally distributed amongst individuals in the population– a distribution analogous to the [most likely] outcome of an infinite number of random coin tosses: an equal distribution of heads and tails). Therefore, the Theil index is the difference between the theoretical maximum entropy (which would be reached if the incomes of every individual were equal) minus the observed entropy:
+
+When {\displaystyle x} is in units of population/species, {\displaystyle S\_{\text{Theil}}} is a measure of biodiversity and is called the Shannon index. If the Theil index is used with x=population/species, it is a measure of inequality of population among a set of species, or "bio-isolation" as opposed to "wealth isolation".
+
+The Theil index measures what is called redundancy in information theory. It is the left over "information space" that was not utilized to convey information, which reduces the effectiveness of the price signal.ᵒʳⁱᵍⁱⁿᵃˡ ʳᵉˢᵉᵃʳᶜʰ? The Theil index is a measure of the redundancy of income (or other measure of wealth) in some individuals. Redundancy in some individuals implies scarcity in others. A high Theil index indicates the total income is not distributed evenly among individuals in the same way an uncompressed text file does not have a similar number of byte locations assigned to the available unique byte characters.
+
+| Notation | Information theory | Theil index TT |
+| --- | --- | --- |
+| {\displaystyle N} | number of unique characters | number of individuals |
+| {\displaystyle i} | a particular character | a particular individual |
+| {\displaystyle x\_{i}} | count of *i*th character | income of *i*th individual |
+| {\displaystyle N{\bar {x}}} | total characters in document | total income in population |
+| {\displaystyle T\_{T}} | unused information space | unused potential in price mechanismᵒʳⁱᵍⁱⁿᵃˡ ʳᵉˢᵉᵃʳᶜʰ? |
+| data compression | progressive taxᵒʳⁱᵍⁱⁿᵃˡ ʳᵉˢᵉᵃʳᶜʰ? |
+
+
+## Decomposability
+
+According to the World Bank,
+
+> "The best-known entropy measures are Theil’s T ({\displaystyle T\_{T}}) and Theil’s L ({\displaystyle T\_{L}}), both of which allow one to decompose inequality into the part that is due to inequality within areas (e.g. urban, rural) and the part that is due to differences between areas (e.g. the rural-urban income gap). Typically at least three-quarters of inequality in a country is due to within-group inequality, and the remaining quarter to between-group differences."
+
+If the population is divided into {\displaystyle m} subgroups and
+
+* {\displaystyle s\_{i}} is the income share of group {\displaystyle i},
+* {\displaystyle N} is the total population and {\displaystyle N\_{i}} is the population of group {\displaystyle i},
+* {\displaystyle T\_{i}} is the Theil index for that subgroup,
+* {\displaystyle {\overline {x}}\_{i}} is the average income in group {\displaystyle i}, and
+* {\displaystyle \mu } is the average income of the population,
+
+then Theil's T index is
+
+For example, inequality within the United States is the average inequality within each state, weighted by state income, plus the inequality between states.
+
+The decomposition of the Theil index which identifies the share attributable to the between-region component becomes a helpful tool for the positive analysis of regional inequality as it suggests the relative importance of spatial dimension of inequality.
+
+
+### Theil's *T* versus Theil's *L*
+
+Both Theil's *T* and Theil's *L* are decomposable. The difference between them is based on the part of the outcomes distribution that each is used for. Indexes of inequality in the generalized entropy (GE) family are more sensitive to differences in income shares among the poor or among the rich depending on a parameter that defines the GE index. The smaller the parameter value for GE, the more sensitive it is to differences at the bottom of the distribution.
+
+The decomposability is a property of the Theil index which the more popular Gini coefficient does not offer. The Gini coefficient is more intuitive to many people since it is based on the Lorenz curve. However, it is not easily decomposable like the Theil.
+
+
+## Applications
+
+In addition to multitude of economic applications, the Theil index has been applied to assess performance of irrigation systems and distribution of software metrics.
+

@@ -1,0 +1,68 @@
+Netezza
+
+
+# Netezza
+
+
+
+**IBM Netezza** (pronounced ne-teez-a) is a subsidiary of American technology company IBM that designs and markets high-performance data warehouse appliances and advanced analytics applications for the most demanding analytic uses including enterprise data warehousing, business intelligence, predictive analytics and business continuity planning.
+
+Netezza was acquired by IBM on September 20, 2010. IBM released 4 generations of Netezza Appliances (Twinfin, Striper, Mako) where it was later reintroduced in June 2019 as a fourth generation NPS, Netezza Performance Server, part of the IBM CloudPak for Data offering (Hammerhead).
+
+
+## History
+
+Netezza was founded in 1999 by Foster Hinshaw. In 2000 Jit Saxena joined Hinshaw as co-founder. The company was incorporated in Delaware on December 30, 1999 as Intelligent Data Engines, Inc. and changed its name to Netezza Corporation in November 2000. Netezza announced the industry's first "data warehouse appliance" in 2003 to meet the industry's need to make use of the rapidly increasing ability to collect consumer data. In July 2007, Netezza Corporation had its initial public offering under the ticker “NZ” on NYSE Arca.
+
+Hinshaw coined the term "data warehouse appliance" to describe a product of shared nothing parallel nodes specifically targeted for high data volumes for modern data analytics.
+He left Netezza to found Dataupia in 2005.
+
+Netezza software was based on PostgreSQL 7.2.
+
+Jim Baum was appointed CEO of Netezza in January 2008 after co-founder Jit Saxena announced his retirement. Baum started at Netezza as chief operating officer in 2006.
+
+IBM and Netezza on September 20, 2010 announced they entered into a definitive agreement for IBM to acquire Netezza in a cash transaction at a price of $27 per share or at a net price of approximately $1.7 billion, after adjusting for cash.
+
+IBM released 4 generations of Netezza Appliances (Twinfin N1001 (in 2010), Striper N2001, Mako N3001 (in 2015)), where it was later introduced in June 2019 as a fourth generation NPS system, part of the IBM CloudPak for Data System offering (Hammerhead).
+
+IBM also released Netezza as a service (SaaS) fully managed and hosted offering, in 2020, on both Microsoft Azure as well as on AWS, fully backward compatible with the on-premise appliance form factor.
+
+In August 2023, IBM Netezza picked up a table format from Apache Iceberg which would extend the reach of Netezza capabilities into a data lake house. Furthermore it's integration with IBM watsonx.data (released in 2023) allows it to become a unique, hybrid compute engine based data lake house solution, the next generation data store, extending it's strategic importance even further.
+
+
+## Products
+
+TwinFin, Netezza’s primary product, is designed for rapid analysis of data volumes scaling into petabytes. The company introduced the fourth generation of the TwinFin product in August 2009. Netezza introduced a scaled-down version of this appliance under the Skimmer brand in January 2010.
+
+In February 2010, Netezza announced that it had opened up its systems to support major programming models, including Hadoop, MapReduce, Java, C++, and Python models. Netezza's partners predicted to leverage this analytic application support are Tibco Spotfire, MicroStrategy, Pursway, DemandTec and QuantiSense.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+The company also markets specialized appliances for retail, spatial, complex analytics and regulatory compliance needs. Netezza sells software-based products for migrating from Oracle Exadata and for implementing data virtualization and federation (data abstraction) schemes.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+The Netezza appliance was the foundation of IBM Db2 Analytics Accelerator (IDAA).
+
+In 2012 the products were re-branded as IBM PureData for Analytics.
+
+In 2017, IBM released next to Netezza, the Integrated Analytics System using Power-8 processing frame and Db2 as the database engine in an offering called Db2 Warehouse. It featured both row-based and columnar storage plus high-speed flash drives. The Db2 Warehouse engine runs both on the cloud or on-prem.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+In 2019, after acquiring Red Hat, IBM established Cloud Pak offerings based on OpenShift, and revived Netezza as Netezza Performance Server under Cloud Pak for Data, both of which could run on-prem or on the cloud. The offering is a 64-bit NPS with flash drives and optimized FPGAs. The modernized NPS is 100 percent identical in feature compatibility to Netezza Mako, and moving to this platform required only, either nzmigrate to clone the environment or an nzmigrate or nzbackup/restore.
+
+In 2020, the first Netezza Performance Server in the cloud was GA on Amazon Web Services. This offering uses the actual AMPP Netezza Hardware, not commodity hardware running Netezza software. Migrating to this platform also requires only an nzmigrate or nzbackup/restore through an S3 bucket. It is a direct competitor to Amazon's Red Shift database. It is also available in Azure and IBM Cloud.
+
+
+## Technology
+
+Netezza’s proprietary AMPP (Asymmetric Massively Parallel Processing) architecture is a two-tiered system designed to quickly handle very large queries from multiple users.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+The first tier is a high-performance Linux SMP host that compiles data query tasks received from business intelligence applications, and generates query execution plans. It then divides a query into a sequence of sub-tasks, or snippets that can be executed in parallel, and distributes the snippets to the second tier for execution.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+The second tier consists of one to hundreds of snippet processing blades, or S-Blades, where all the primary processing work of the appliance is executed. The S-Blades are intelligent processing nodes that make up the massively parallel processing (MPP) engine of the appliance. Each S-Blade is an independent server that contains multi-core Intel-based CPUs and Netezza’s proprietary multi-engine, high-throughput FPGAs. The S-Blade is composed of a standard blade-server combined with a special Netezza Database Accelerator card that snaps alongside the blade. Each S-Blade is, in turn, connected to multiple disk drives processing multiple data streams in parallel in TwinFin or Skimmer.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+AMPP employs industry-standard interfaces (SQL, ODBC, JDBC, OLE DB) and provides load times in excess of 2 TB/hour and backup/restore data rates of more than 4 TB/hour.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+In 2009, the company transitioned from PowerPC processors to Intel CPUs. In August, 2009, with the introduction of the 4th generation TwinFin product, Netezza moved from proprietary blades to IBM blades.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+
+## Recognition and criticism
+
+Netezza was added to Gartner’s Magic Quadrant for DBMS in January, 2009.
+

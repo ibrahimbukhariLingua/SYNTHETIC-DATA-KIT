@@ -1,0 +1,175 @@
+Utility functions on indivisible goods
+
+
+# Utility functions on indivisible goods
+
+
+
+Some branches of economics and game theory deal with **indivisible goods**, discrete items that can be traded only as a whole. For example, in combinatorial auctions there is a finite set of items, and every agent can buy a subset of the items, but an item cannot be divided among two or more agents.
+
+It is usually assumed that every agent assigns subjective utility to every subset of the items. This can be represented in one of two ways:
+
+* An ordinal utility preference relation, usually marked by {\displaystyle \succ }. The fact that an agent prefers a set {\displaystyle A} to a set {\displaystyle B} is written {\displaystyle A\succ B}. If the agent only weakly prefers {\displaystyle A} (i.e. either prefers {\displaystyle A} or is indifferent between {\displaystyle A} and {\displaystyle B}) then this is written {\displaystyle A\succeq B}.
+* A cardinal utility function, usually denoted by {\displaystyle u}. The utility an agent gets from a set {\displaystyle A} is written {\displaystyle u(A)}. Cardinal utility functions are often normalized such that {\displaystyle u(\emptyset )=0}, where {\displaystyle \emptyset } is the empty set.
+
+A cardinal utility function implies a preference relation: {\displaystyle u(A)>u(B)} implies {\displaystyle A\succ B} and {\displaystyle u(A)\geq u(B)} implies {\displaystyle A\succeq B}. Utility functions can have several properties.
+
+
+## Monotonicity
+
+Monotonicity means that an agent always (weakly) prefers to have extra items. Formally:
+
+* For a preference relation: {\displaystyle A\supseteq B} implies {\displaystyle A\succeq B}.
+* For a utility function: {\displaystyle A\supseteq B} implies {\displaystyle u(A)\geq u(B)} (i.e. *u* is a monotone function).
+
+Monotonicity is equivalent to the *free disposal* assumption: if an agent may always discard unwanted items, then extra items can never decrease the utility.
+
+
+## Additivity
+
+Additive utility
+| {\displaystyle A} | {\displaystyle u(A)} |
+| --- | --- |
+| {\displaystyle \emptyset } | 0 |
+| apple | 5 |
+| hat | 7 |
+| apple and hat | 12 |
+
+Additivity (also called *linearity* or *modularity*) means that "the whole is equal to the sum of its parts." That is, the utility of a set of items is the sum of the utilities of each item separately. This property is relevant only for cardinal utility functions. It says that for every set {\displaystyle A} of items,
+
+assuming that {\displaystyle u(\emptyset )=0}. In other words, {\displaystyle u} is an additive function. An equivalent definition is: for any sets of items {\displaystyle A} and {\displaystyle B},
+
+An additive utility function is characteristic of independent goods. For example, an apple and a hat are considered independent: the utility a person receives from having an apple is the same whether or not he has a hat, and vice versa. A typical utility function for this case is given at the right.
+
+
+## Submodularity and supermodularity
+
+Submodular utility
+| {\displaystyle A} | {\displaystyle u(A)} |
+| --- | --- |
+| {\displaystyle \emptyset } | 0 |
+| apple | 5 |
+| bread | 7 |
+| apple and bread | 9 |
+
+**Submodularity** means that "the whole is not more than the sum of its parts (and may be less)." Formally, for all sets {\displaystyle A} and {\displaystyle B},
+
+In other words, {\displaystyle u} is a submodular set function.
+
+An equivalent property is diminishing marginal utility, which means that for any sets {\displaystyle A} and {\displaystyle B} with {\displaystyle A\subseteq B}, and every {\displaystyle x\notin B}:
+
+A submodular utility function is characteristic of substitute goods. For example, an apple and a bread loaf can be considered substitutes: the utility a person receives from eating an apple is smaller if he has already ate bread (and vice versa), since he is less hungry in that case. A typical utility function for this case is given at the right.
+
+Supermodular utility
+| {\displaystyle A} | {\displaystyle u(A)} |
+| --- | --- |
+| {\displaystyle \emptyset } | 0 |
+| apple | 5 |
+| knife | 7 |
+| apple and knife | 15 |
+
+**Supermodularity** is the opposite of submodularity: it means that "the whole is not less than the sum of its parts (and may be more)". Formally, for all sets {\displaystyle A} and {\displaystyle B},
+
+In other words, {\displaystyle u} is a supermodular set function.
+
+An equivalent property is *increasing marginal utility*, which means that for all sets {\displaystyle A} and {\displaystyle B} with {\displaystyle A\subseteq B}, and every {\displaystyle x\notin B}:
+
+A supermoduler utility function is characteristic of complementary goods. For example, an apple and a knife can be considered complementary: the utility a person receives from an apple is larger if he already has a knife (and vice versa), since it is easier to eat an apple after cutting it with a knife. A possible utility function for this case is given at the right.
+
+A utility function is additive if and only if it is both submodular and supermodular.
+
+
+## Subadditivity and superadditivity
+
+Subadditive but not submodular
+| {\displaystyle A} | {\displaystyle u(A)} |
+| --- | --- |
+| {\displaystyle \emptyset } | 0 |
+| X or Y or Z | 2 |
+| X,Y or Y,Z or Z,X | 3 |
+| X,Y,Z | 5 |
+
+**Subadditivity** means that for every pair of disjoint sets {\displaystyle A,B}
+
+In other words, {\displaystyle u} is a subadditive set function.
+
+Assuming {\displaystyle u(\emptyset )} is non-negative, every submodular function is subadditive.
+However, there are non-negative subadditive functions that are not submodular.
+For example, assume that there are 3 identical items, {\displaystyle X,Y}, and Z, and the utility depends only on their quantity. The table on the right describes a utility function that is subadditive but not submodular, since
+
+Superadditive but not supermodular
+| {\displaystyle A} | {\displaystyle u(A)} |
+| --- | --- |
+| {\displaystyle \emptyset } | 0 |
+| X or Y or Z | 1 |
+| X,Y or Y,Z or Z,X | 3 |
+| X,Y,Z | 4 |
+
+**Superadditivity** means that for every pair of disjoint sets {\displaystyle A,B}
+
+In other words, {\displaystyle u} is a superadditive set function.
+
+Assuming {\displaystyle u(\emptyset )} is non-positive, every supermodular function is superadditive.
+However, there are non-negative superadditive functions that are not supermodular.
+For example, assume that there are 3 identical items, {\displaystyle X,Y}, and Z, and the utility depends only on their quantity. The table on the right describes a utility function that is non-negative and superadditive but not supermodular, since
+
+A utility function with {\displaystyle u(\emptyset )=0} is said to be additive if and only if it is both superadditive and subadditive.
+
+With the typical assumption that {\displaystyle u(\emptyset )=0}, every submodular function is subadditive and every supermodular function is superadditive.
+Without any assumption on the utility from the empty set, these relations do not hold.
+
+In particular, if a submodular function is not subadditive, then {\displaystyle u(\emptyset )} must be negative.
+For example, suppose there are two items, {\displaystyle X,Y}, with {\displaystyle u(\emptyset )=-1}, {\displaystyle u(\{X\})=u(\{Y\})=1} and {\displaystyle u(\{X,Y\})=3}.
+This utility function is submodular and supermodular and non-negative except on the empty set, but is not subadditive, since
+
+Also, if a supermodular function is not superadditive, then {\displaystyle u(\emptyset )} must be positive.
+Suppose instead that {\displaystyle u(\emptyset )=u(\{X\})=u(\{Y\})=u(\{X,Y\})=1}.
+This utility function is non-negative, supermodular, and submodular, but is not superadditive, since
+
+
+## Unit demand
+
+Unit demand utility
+| {\displaystyle A} | {\displaystyle u(A)} |
+| --- | --- |
+| {\displaystyle \emptyset } | 0 |
+| apple | 5 |
+| pear | 7 |
+| apple and pear | 7 |
+
+Unit demand (UD) means that the agent only wants a single good. If the agent gets two or more goods, he uses the one of them that gives him the highest utility, and discards the rest. Formally:
+
+* For a preference relation: for every set {\displaystyle B} there is a subset {\displaystyle A\subseteq B} with cardinality {\displaystyle |A|=1}, such that {\displaystyle A\succeq B}.
+* For a utility function: For every set {\displaystyle A}:
+
+A unit-demand function is an extreme case of a submodular function. It is characteristic of goods that are pure substitutes. For example, if there are an apple and a pear, and an agent wants to eat a single fruit, then his utility function is unit-demand, as exemplified in the table at the right.
+
+
+## Gross substitutes
+
+Gross substitutes (GS) means that the agents regards the items as substitute goods or independent goods but not complementary goods. There are many formal definitions to this property, all of which are equivalent.
+
+* Every UD valuation is GS, but the opposite is not true.
+* Every GS valuation is submodular, but the opposite is not true.
+
+See Gross substitutes (indivisible items) for more details.
+
+Hence the following relations hold between the classes:
+
+See diagram on the right.
+
+
+## Aggregates of utility functions
+
+A utility function describes the happiness of an individual. Often, we need a function that describes the happiness of an entire society. Such a function is called a social welfare function, and it is usually an aggregate function of two or more utility functions. If the individual utility functions are additive, then the following is true for the aggregate functions:
+
+| Aggregate function | Property | Example values of functions on {a}, {b} and {a,b} | | | |
+| --- | --- | --- | --- | --- | --- |
+| f | g | h | aggregate(f,g,h) |
+| Sum | Additive | 1,3; 4 | 3,1; 4 | 4,4; 8 |
+| Average | Additive | 1,3; 4 | 3,1; 4 | 2,2; 4 |
+| Minimum | Super-additive | 1,3; 4 | 3,1; 4 | 1,1; 4 |
+| Maximum | Sub-additive | 1,3; 4 | 3,1; 4 | 3,3; 4 |
+| Median | neither | 1,3; 4 | 3,1; 4 | 1,1; 2 | 1,1; 4 |
+| 1,3; 4 | 3,1; 4 | 3,3; 6 | 3,3; 4 |
+

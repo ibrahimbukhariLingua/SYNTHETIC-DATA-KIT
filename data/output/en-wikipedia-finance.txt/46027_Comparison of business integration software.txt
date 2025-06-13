@@ -1,0 +1,129 @@
+Comparison of business integration software
+
+
+# Comparison of business integration software
+
+
+
+This article is a **comparison of notable business integration** and **business process automation** software.
+
+
+## General
+
+
+### Scope
+
+Scope of this comparison:
+
+* Service-oriented architecture implementations;
+* Message-oriented middleware and message brokers;
+* Enterprise service bus implementations;
+* BPEL implementations;
+* Enterprise application integration software.
+
+### General information
+
+| Software | Creator | Edition | Release Date | Cost (USD) | Open source | Software license | Implementation |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| AdroitLogic UltraESB | AdroitLogic | 17.01 | 2017-01 | Subscription based licensing and support or perpetual licensing | No | Proprietary | Enterprise Service Bus |
+| Anypoint Platform | MuleSoft | Mule 3.7 | 2015-06 | Sold as software as a subscription with various packaged options to serve different use cases. The pricing scales with usage as measured by number of cores on-premises and virtual cores in the cloud. | No | Dual (CPAL or proprietary |
+| Apache Camel | Apache Software Foundation | 2.23.3 | 2018-11-29 | Free/Commercial support available | Yes | Apache Software License |
+| Apache Kafka | Apache Software Foundation | 0.10.20 | 2017-02 | Free / Commercial support available | Yes | Apache Software License |
+| Apache ServiceMix | Apache Software Foundation | 7.0 | 2017-01 | Free / Commercial support available | Yes | Apache Software License |
+| Apache Synapse | Apache Software Foundation | 3.0 | 2016-12 | Free / Commercial support available | Yes | Apache Software License |
+| Artix ESB | Progress Software | 5.x | 2003 | No | Proprietary |
+| Automation Anywhere Integration Pack | Automation Anywhere | 6.1 | 2011-02 | $5500 | No | Proprietary |
+| BizTalk Server | Microsoft | 2016 | 2016-12 | Enterprise Edition: $10,835 per core; Standard Edition: $2,485 per core; Branch Edition: $620 per core (minimum 4 cores required); Developer Edition – per seat, available under Volume or MSDN licence. | No | Proprietary | Enterprise Application Integration, Hub and Spoke architecture, Cloud ready |
+| Flow Software | Flow Software Ltd | 2.3.0 | 2010-05 | Free Community Edition, and Enterprise licenses | No | Proprietary |
+| Fuse – Enterprise Camel | Red Hat | 7.0 | 2018 | Yes | based on Apache Software License |
+| IBM Integration Bus (formerly WebSphere Message Broker ) | IBM | 10.0 | 2015-03 | Varies between approximately 100 and 850 per Value Unit | No | Proprietary | Enterprise Service Bus |
+| Informatica Power Center | Informatica | 8.5 | 2007-10 | Varies: 50,000 – 100,000 generally | No | Proprietary |
+| InterSystems IRIS (formerly InterSystems Caché + Ensemble + DeepSee) | InterSystems | All versions | 2018-01 | Free and commercial licenses (subscription, purchase) | No | Proprietary | InterSystems IRIS Interoperability |
+| JBoss Enterprise Service Bus (ESB) | JBoss, a division of Red Hat, Inc. | 4.12 | 2013-03 | Free / Commercial support available | Yes | GNU LGPL | Enterprise Service Bus, Replaced by JBoss Fuse |
+| JBoss Enterprise SOA Platform | JBoss, a division of Red Hat, Inc. | 5.1 | 2011-02 | Free / Commercial support available | Yes | GNU LGPL | Replaced by JBoss Fuse |
+| Magic xpi Integration Platform | Magic Software Enterprises | 4.0 | 2015-05 | No | Proprietary |
+| Openadaptor | The Software Conservancy | 3.4.6 | 2011-02 | Free | Yes | variant of MIT |
+| OpenESB | OpenESB Community | 3.2.2 | 2014-12-02 | Free / Enterprise Edition with commercial support | Yes | CDDL |
+| OpenLink Virtuoso | OpenLink Software | 7.2.5.1 | 2018-08-15 | Varies | Yes | Dual (GPL or proprietary) |
+| Oracle BPEL Process Manager | Oracle Corporation | 12.1.3.0.0 | 2014-06 | Varies | No | Proprietary |
+| Oracle Enterprise Service Bus | Oracle Corporation | 12.1.3.0.0 | 2014-06 | Varies | No | Proprietary |
+| PEtALS ESB | OW2 Consortium | 3.1.3 | 2011-07 | Free / Commercial support available | Yes | GNU LGPL |
+| Sonic ESB | Progress Software | 8.x | 2011 | No | Proprietary | Enterprise Service Bus |
+| SAP NetWeaver Process Integration (short SAP PI) | SAP AG | 7.5 | 2011 | Varies | No | Proprietary |
+| Sun Java Composite Application Platform Suite | Sun Microsystems | 6 | 2008-06 | $100 per employee per year subscription, perpetual per socket licensing available | No | Proprietary |
+| TrackerSuite.Net | Automation Centre | 4.0 | 2012-06 | Based on number of users and modules utilized. Available as SaaS, or as a licensed installation. | No | Proprietary |
+| Unify NXJ | Unify Corporation | 11 | No | Proprietary |
+| webMethods Integration Server | Software AG | 9.0 | 2013-05 | varies | No | Proprietary | Enterprise Service Bus |
+| WebSphere Message Broker | IBM | 8.0 | 2011-10 | No longer marketed under this name – replacement name is IBM Integration Bus | No | Proprietary | Enterprise Service Bus |
+| WSO2 Enterprise Integrator | WSO2 | 6.4 | 2018 | Free / Commercial support available | Yes | Apache License 2.0 | Enterprise Service Bus, Message Broker, Application Server, Business Process Server, Data Services Server |
+| WSO2 Enterprise Service Bus (ESB) | WSO2 | 5.0.0 | 2016 | Free / Commercial support available | Yes | Apache Software License |
+
+
+## Compatibility and interoperability
+
+
+### Operating system support
+
+| Software | Microsoft Windows | | | | | | | | | Darwin/ OS X | Linux | | | | IBM | | | | HP-UX | illumos/ Solaris |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 2000 | XP | Vista | 2003 Server | 2008 R2 Server | 2008 Server | 2012 Server | 7–64 bit | 8–64 bit | Red Hat | SUSE | Ubuntu | CentOS | AIX | OS/390 | IBM i | z/OS |
+| AdroitLogic UltraESB | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No | No | No | No | Yes |
+| Anypoint Platform | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No | No | No | Yes | Yes |
+| Artix ESB | with SP3, SP4 | with SP1, SP2 | Yes | No | Yes | Yes | Yes | No | Yes | Yes | Yes |
+| Automation Anywhere Integration Pack | Yes | Yes | Yes | Yes | No | No | No | No | No | No | No | No | No |
+| BizTalk Server | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No | No | No | No | No | No | No | No |
+| Flow Software | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No | No | No | No | No | No | No | No | No |
+| IBM Integration Bus | No | No | No | No | Yes | Yes | Yes | Yes | Yes | No | Yes | Yes | Yes | No | Yes | No | No | Yes | Yes | Yes |
+| JBoss Enterprise Service Bus (ESB) | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| JBoss Enterprise SOA Platform | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Informatica Power Center | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Openadaptor | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| OpenESB | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No | No | No | Yes | Yes |
+| OpenLink Virtuoso | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No | No | No | Yes | Yes |
+| Oracle BPEL Process Manager | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | 5L | No | No | Yes | Yes |
+| Oracle Enterprise Service Bus | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No | No | Yes | Yes |
+| PEtALS ESB | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No | No | No | Yes | Yes |
+| SAP Exchange Infrastructure | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No | Yes | Yes | Yes | Yes |
+| Sonic ESB | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No | No | No | Yes | Yes |
+| Spagic | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No | No | No | Yes | Yes |
+| Sun Java Composite Application Platform Suite | Yes | Yes | Yes | Yes | Yes | Yes | No | No | No | Yes | Yes |
+| TrackerSuite.Net | No | with SP2 | Yes | Yes |
+| Unify NXJ | with SP4 | with SP1 | Yes | No | Yes | Yes | 5.3 | No | No | Yes | Yes |
+| WSO2 Enterprise Service Bus (ESB) | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+
+
+### Hardware support
+
+Supported hardware depends on supported operating systems.
+
+
+### Database support
+
+| Software | API | | Sybase | | Apache Derby | IBM | | | | Firebird | Microsoft | | MySQL | Oracle | PostgreSQL |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| ODBC | JDBC | ASA | ASE | IBM Db2 | Db2 for i | Cloudscape | Informix | SQL Server | Azure SQL |
+| AdroitLogic UltraESB | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Anypoint Platform | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Apache Synapse | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Artix ESB |
+| Automation Anywhere Integration Pack | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| BizTalk Server | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Flow Software | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| IBM Integration Bus | Yes | Yes | No | Yes | No | Yes | Yes | No | Yes | No | Yes | Yes | No | Yes | No |
+| Informatica Power Center | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| JBoss Enterprise Service Bus (ESB) | No | Yes | Yes | Yes | Yes | No | Yes | Yes | Yes | Yes | Yes | Yes |
+| JBoss Enterprise SOA Platform | No | Yes | Yes | Yes | Yes | No | Yes | Yes | Yes | Yes | Yes |
+| Openadaptor | Yes | Yes | Yes | Yes | Yes | Yes |
+| OpenESB | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| OpenLink Virtuoso | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Oracle BPEL Process Manager |
+| Oracle Enterprise Service Bus |
+| PEtALS ESB | Yes |
+| SAP Exchange Infrastructure | Yes | Yes | Yes | Yes |
+| Sun Java Composite Application Platform Suite | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Unify NXJ |
+| WSO2 Enterprise Service Bus (ESB) | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+
+
+### Web servers support
+

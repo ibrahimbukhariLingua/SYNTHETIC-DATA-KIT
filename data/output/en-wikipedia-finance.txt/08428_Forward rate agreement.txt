@@ -1,0 +1,65 @@
+Forward rate agreement
+
+
+# Forward rate agreement
+
+
+
+In finance, a **forward rate agreement** (**FRA**) is an interest rate derivative (IRD). In particular, it is a linear IRD with strong associations with interest rate swaps (IRSs).
+
+
+## General description
+
+A forward rate agreement's (FRA's) effective description is a cash for difference derivative contract, between two parties, benchmarked against an interest rate index. That index is commonly an interbank offered rate (-IBOR) of specific tenor in different currencies, for example LIBOR in USD, GBP, EURIBOR in EUR or STIBOR in SEK. An FRA between two counterparties requires a fixed rate, notional amount, chosen interest rate index tenor and date to be completely specified.
+
+
+## Extended description
+
+Forward rate agreements (FRAs) are interconnected with short term interest rate futures (STIR futures). Because STIR futures settle against the same index as a subset of FRAs, IMM FRAs, their pricing is related. The nature of each product has a distinctive gamma (convexity) profile resulting in rational, no arbitrage, pricing adjustments. This adjustment is called futures convexity adjustment (FCA) and is usually expressed in basis points.
+
+Interest rate swaps (IRSs) are often considered a series of FRAs but this view is technically incorrect due to differences in calculation methodologies in cash payments and this results in very small pricing differences.
+
+FRAs are not loans, and do not constitute agreements to loan any amount of money on an unsecured basis to another party at any pre-agreed rate. Their nature as an IRD product creates only the effect of leverage and the ability to speculate, or hedge, interest rate risk exposure.
+
+
+## Valuation and pricing
+
+The cash for difference value on an FRA, exchanged between the two parties, calculated from the perspective of having sold an FRA (which imitates receiving the fixed rate) is calculated as:
+
+where {\displaystyle N} is the notional of the contract, {\displaystyle R} is the fixed rate, {\displaystyle r} is the published -IBOR fixing rate and {\displaystyle d} is the decimalised day count fraction over which the value start and end dates of the -IBOR rate extend. For USD and EUR this follows an ACT/360 convention and GBP follows an ACT/365 convention. The cash amount is paid on the value start date applicable to the interest rate index (depending in which currency the FRA is traded, this is either immediately after or within two business days of the published -IBOR fixing rate).
+
+For mark-to-market (MTM) purposes the net present value (PV) of an FRA can be determined by discounting the expected cash difference, for a forecast value {\displaystyle r}:
+
+where {\displaystyle v\_{n}} is the discount factor of the payment date upon which the cash for difference is physically settled, which, in modern pricing theory, will be dependent upon which discount curve to apply based on the credit support annex (CSA) of the derivative contract.
+
+
+## Uses and risks
+
+Many banks and large corporations will use FRAs to hedge future interest or exchange rate exposure. The buyer hedges against the risk of rising interest rates, while the seller hedges against the risk of falling interest rates. Other parties that use forward rate agreements are speculators purely looking to make bets on future directional changes in interest rates. The development of swaps in the 1980s provided organisations with an alternative to FRAs for hedging and speculating.
+
+In other words, a forward rate agreement (FRA) is a tailor-made, over-the-counter financial futures contract on short-term deposits. A FRA transaction is a contract between two parties to exchange payments on a deposit, called the *Notional amount*, to be determined on the basis of a short-term interest rate,
+referred to as the *Reference rate*, over a predetermined time period at a future date. FRA transactions are entered as a hedge against interest rate changes. The buyer of the contract locks in the interest rate in an effort to protect against an interest rate increase, while the seller protects against a possible interest rate decline. At maturity, no funds exchange hands; rather, the
+difference between the contracted interest rate and the market rate is exchanged. The buyer of the contract is paid if the published reference rate is above the fixed, contracted rate, and the buyer pays to the seller if the published reference rate is below the fixed, contracted rate. A company that seeks to hedge against a possible increase in interest rates would purchase FRAs, whereas a company that seeks an interest hedge against a possible decline of the rates would sell FRAs.
+
+
+## Quotation and market-making
+
+FRA Descriptive Notation and Interpretation
+
+| Notation | Effective Date from now | Termination Date from now | Underlying Rate |
+| --- | --- | --- | --- |
+| 1 x 4 | 1 month | 4 months | 4-1 = 3 months LIBOR |
+| 1 x 7 | 1 month | 7 months | 7-1 = 6 months LIBOR |
+| 0 x 3 | Today (SPOT) | 3 months | 3-0 = 3 months LIBOR |
+| 3 x 6 | 3 months | 6 months | 6-3 = 3 months LIBOR |
+| 3 x 9 | 3 months | 9 months | 9-3 = 6 months LIBOR |
+| 6 x 12 | 6 months | 12 months | 12-6 = 6 months LIBOR |
+| 12 x 18 | 12 months | 18 months | 18-12 = 6 months LIBOR |
+
+How to interpret a quote for FRA?
+
+[US$ 3x9 − 3.25/3.50%p.a ] – means deposit interest starting 3 months from now for 6 months is 3.25% and borrowing interest rate
+starting 3 months from now for 6 months is 3.50% (see also bid–ask spread). Entering a "payer FRA" means paying the fixed rate (3.50% p.a.) and receiving a floating 6-month rate, while entering a "receiver FRA" means paying the same floating rate and receiving a fixed rate (3.25% p.a.).
+
+This information on the notation on FRAs is consistent with the material presented in this citation. This text goes on to specify the additional property of a FRA's 'roll-day' which describes which day of the month (from 1 to 31) that the FRA's value start date is effective from.
+

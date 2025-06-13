@@ -1,0 +1,119 @@
+Four Corners Model for Payment Security
+
+
+# Four Corners Model for Payment Security
+
+
+
+The **Four Corners model**, often referred to as the **Four Party Scheme** is the most used card scheme in card payment systems worldwide. This model was introduced in the 1990s. It is a user-friendly card payment system based on an interbank clearing system and economic model established on multilateral interchange fees (MIF) paid between banks or other payment institutions.
+
+The most significant benefit of using the Four Corners Model is that bank cards are accepted everywhere. Additional benefits include:
+
+* A guarantee that the merchant will receive payment
+* Reliability and security because of a lower risk of fraud
+* Traceability as a weapon against money laundering
+
+Security in the Four Corners Models is standardized through the Payment Card Industry Data Security Standard (PCI DSS). The PCI Standard is mandated by the card brands but administered by the Payment Card Industry Security Standards Council.
+
+
+## Description
+
+The Four Corner Model involves several flows between its four components that perform different jobs. However, the system is an extraordinarily complex mechanism that requires clearing and settlement processes.
+
+In the Model, the Merchant connects to their Acquirer, who connects through a scheme to the Cardholder's card Issuer. There is usually one or more third parties that act as a switch or gateway between the Merchant and Acquirer.
+
+Typically, the Issuer is different from the Acquirer. When this occurs, there is a need for interbank processes. These processes involve transferring money and compensation between the involved banks.
+
+The Four Corners Model begins with the action of the Cardholder's making a purchase using their payment card from a merchant. The Merchant triggers an authentication flow to its Acquirer bank, and then the Acquirer bank sends the information to the Issuer bank. This flow is sent through a vast network of switches, gateways, and servers managed by the appropriate card scheme network.
+
+The returning authorization flow will be binary as either a positive (authorized) or negative (declined) response. One of the following scenarios will typically occur at this point:
+
+* A positive authorization will generally result in the Merchant delivering the purchased goods or services and a printed receipt.
+* A negative response will result in the Merchant inputting the card information again or requesting another payment method.
+
+The Four Corners Model can also be applied to other payment scenarios, including using an ATM where a positive authorization will result in banknotes and transaction receipts being dispensed to the Cardholder. However, a negative response will result in the bankcard being declined and no funds being dispensed.
+
+Often, the Four Corner Model transforms into a Three-Corner Model (triangle). This occurs when the Acquirer bank is skipped, and the authorization flow is routed directly to the Issuer by the switches and gateways. Skipping the Acquirer bank speeds up the transaction and creates fewer problems on the payment network.
+
+
+## Participants
+
+The Four Corners Model involves four participants: the Cardholder, the Merchant, the Issuer, and the Acquirer.
+
+
+### 1. Cardholder
+
+The Cardholder is the consumer who has been issued a payment card by their bank or other types of financial institution. The Cardholder does not own this card. Instead, it remains as the property of the issuing financial institution, e.g., the Issuer. The Cardholder is given the authorization to use the card.
+
+Typically, the Cardholder has an account with the issuing financial institution directly linked to the payment card, e.g., a banking debit card. This is not always the case, for example, when corporate credit cards or fleet/fuel cards are given to employees.
+
+
+### 2. Merchant
+
+Often referred to as “The Acceptor,” the Merchant is the vendor receiving payment from the Cardholder/consumer. The Merchant accepts card payments for the goods or services it sells to the Cardholder.
+
+Example of Merchants include:
+
+* Retail stores
+* Restaurants
+* Hotels
+* Filling stations
+
+An Automated teller machine (ATM) is also considered a Merchant even though it is a fully-automated machine. Its primary role is to accept payment cards.
+
+
+### 3. Issuer
+
+The Issuer is the bank or other financial institution that issues the payment card given to the Cardholder. There are typically three different types of payment cards:
+
+* Debit card
+* Credit card
+* Prepaid card
+
+The Issuer provides the payment cards on behalf of a card payment network. Such networks include:
+
+* Visa
+* Mastercard
+* Discover
+* American Express
+* Europay
+* JCB
+
+The card payment network might also be a private, closed-loop network, such as a domestic scheme.
+
+The Issuer bank handles the manufacturing of its payment cards and management of the cards’ associated cryptography. Generally, this is done with a card integrator company.
+
+
+### 4. Acquirer
+
+The Acquirer provides the tools used by the Merchant to accept payment cards. Often, the Acquirer is a third-party system that may not directly be the bank where the Merchant has an account. The Acquirer typically provides the Merchant with the hardware and software needed to process transactions involving card payments.
+
+The Acquirer manages the final return codes for the payment transactions. These codes will either be an authorization for the charge or a decline of the transaction. The Acquirer's job within the Four Corners Model is to authorize payment from the Cardholder to the Merchant when a good or service is purchased.
+
+
+## Technology
+
+The Four Corner Model requires end-to-end secure transactions. These transactions are ciphered and must be protected at each corner. The use of specialized tools, such as hardware security modules (HSMs) and automated key management, is an essential part of the model.
+
+
+### Hardware Security Modules
+
+Cryptography is requested between all actors involved in the Four Corner Model. The many cryptographic keys and operations must be performed within a secure environment, such as a hardware security module (HSM). HSMs are a necessity in handling an increasing number of transactions and warding off attacks from skilled cybercriminals.
+
+* Cardholders: If their payment card has a chip, as is mandatory for EMV transactions, this acts as a micro-portative HSM.
+* Merchants: A smaller business will typically have one or more payment terminals (also POS terminal) with secure memory and cryptographic-specific hardware that allow the machines to act as small HSMs. Isolated ATMs payment transactions are grouped, and the POS terminals are managed. These hubs require network-attached HSMs to keep transactions secure as they are collected.
+* Issuers: They need HSMs for issuing cards, holding keys, and managing the cryptography associated with the cards. Issuers also need HSMs to authorize the cryptographic flow.
+* Acquirers: According to the Four Corner Model, Acquirers must manage all financial terminal keys for the Merchants and process the cryptographic flow toward the Issuer. These processes require a large quantity of performant and robust HSMs.
+
+### Key Management Systems
+
+In addition to HSMs, a modern key management system is needed to provide the framework for managing multiple keys during their life cycles. There are different types of key management systems that can be implemented in different ways.
+
+Essential features for KMS for payment security include:
+
+* Support for a variety of key types and formats
+* A certified hardware random number generator for strong key generation within an HSM
+* A certified, tamper-resistant hardware device to protect stored keys
+* Automation to perform common or tedious tasks
+* Logical access controls with strong user authentication
+* A tamper-proof audit log for compliance audits

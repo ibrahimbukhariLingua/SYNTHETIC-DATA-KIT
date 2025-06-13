@@ -1,0 +1,302 @@
+Duration (finance)
+
+
+# Duration (finance)
+
+
+
+In finance, the **duration** of a financial asset that consists of fixed cash flows, such as a bond, is the weighted average of the times until those fixed cash flows are received.
+When the price of an asset is considered as a function of yield, duration also measures the price sensitivity to yield, the rate of change of price with respect to yield, or the percentage change in price for a parallel shift in yields.
+
+The dual use of the word "duration", as both the weighted average time until repayment and as the percentage change in price, often causes confusion. Strictly speaking, **Macaulay duration** is the name given to the weighted average time until cash flows are received and is measured in years. **Modified duration** is the name given to the price sensitivity. It is (-1) times the rate of change in the price of a bond as a function of the change in its yield.
+
+Both measures are termed "duration" and have the same (or close to the same) numerical value, but it is important to keep in mind the conceptual distinctions between them. Macaulay duration is a time measure with units in years and really makes sense only for an instrument with fixed cash flows. For a standard bond, the Macaulay duration will be between 0 and the maturity of the bond. It is equal to the maturity if and only if the bond is a zero-coupon bond.
+
+Modified duration, on the other hand, is a mathematical derivative (rate of change) of price and measures the percentage rate of change of price with respect to yield. (Price sensitivity with respect to yields can also be measured in absolute (dollar or euro, etc.) terms, and the absolute sensitivity is often referred to as dollar (euro) duration, DV01, BPV, or delta (δ or Δ) risk). The concept of modified duration can be applied to interest-rate-sensitive instruments with non-fixed cash flows and can thus be applied to a wider range of instruments than can Macaulay duration. Modified duration is used more often than Macaulay duration in modern finance.
+
+For everyday use, the equality (or near-equality) of the values for Macaulay and modified duration can be a useful aid to intuition. For example, a standard ten-year coupon bond will have a Macaulay duration of somewhat but not dramatically less than 10 years and from this, we can infer that the modified duration (price sensitivity) will also be somewhat but not dramatically less than 10%. Similarly, a two-year coupon bond will have a Macaulay duration of somewhat below 2 years and a modified duration of somewhat below 2%.
+
+
+## Macaulay duration
+
+**Macaulay duration**, named for Frederick Macaulay who introduced the concept, is the weighted average maturity of cash flows, in which the time of receipt of each payment is weighted by the present value of that payment. The denominator is the sum of the weights, which is precisely the price of the bond. Consider some set of fixed cash flows. The present value of these cash flows is:
+
+The Macaulay duration is defined as:
+
+where:
+
+* {\displaystyle i} indexes the cash flows,
+* {\displaystyle PV\_{i}} is the present value of the {\displaystyle i}th cash payment from an asset,
+* {\displaystyle t\_{i}} is the time in years until the {\displaystyle i}th payment will be received,
+* {\displaystyle V} is the present value of all future cash payments from the asset.
+
+In the second expression the fractional term is the ratio of the cash flow {\displaystyle PV\_{i}} to the total PV. These terms add to 1.0 and serve as weights for a weighted average. Thus the overall expression is a weighted average of time until cash flow payments, with weight {\displaystyle {\frac {PV\_{i}}{V}}} being the proportion of the asset's present value due to cash flow {\displaystyle i}.
+
+For a set of all-positive fixed cash flows the weighted average will fall between 0 (the minimum time), or more precisely {\displaystyle t\_{1}} (the time to the first payment) and the time of the final cash flow. The Macaulay duration will equal the final maturity if and only if there is only a single payment at maturity. In symbols, if cash flows are, in order, {\displaystyle (t\_{1},...,t\_{n})}, then:
+
+with the inequalities being strict unless it has a single cash flow. In terms of standard bonds (for which cash flows are fixed and positive), this means the Macaulay duration will equal the bond maturity only for a zero-coupon bond.
+
+Macaulay duration has the diagrammatic interpretation shown in figure 1.
+
+This represents the bond discussed in the example below - two year maturity with a coupon of 20% and continuously compounded yield of 3.9605%. The circles represent the present value of the payments, with the coupon payments getting smaller the further in the future they are, and the final large payment including both the coupon payment and the final principal repayment. If these circles were put on a balance beam, the fulcrum (balanced center) of the beam would represent the weighted average distance (time to payment), which is 1.78 years in this case.
+
+For most practical calculations, the Macaulay duration is calculated using the yield to maturity to calculate the {\displaystyle PV(i)}:
+
+where:
+
+* {\displaystyle i} indexes the cash flows,
+* {\displaystyle PV\_{i}} is the present value of the {\displaystyle i}th cash payment from an asset,
+* {\displaystyle CF\_{i}} is the cash flow of the {\displaystyle i}th payment from an asset,
+* {\displaystyle y} is the yield to maturity (continuously compounded) for an asset,
+* {\displaystyle t\_{i}} is the time in years until the {\displaystyle i}th payment will be received,
+* {\displaystyle V} is the present value of all cash payments from the asset until maturity.
+
+Macaulay gave two alternative measures:
+
+* Expression (1) is **Fisher–Weil duration** which uses zero-coupon bond prices as discount factors, and
+* Expression (3) which uses the bond's yield to maturity to calculate discount factors.
+
+The key difference between the two durations is that the Fisher–Weil duration allows for the possibility of a sloping yield curve, whereas the second form is based on a constant value of the yield {\displaystyle y}, not varying by term to payment. With the use of computers, both forms may be calculated but expression (3), assuming a constant yield, is more widely used because of the application to modified duration.
+
+
+### Duration versus Weighted Average Life
+
+Similarities in both values and definitions of Macaulay duration versus Weighted Average Life can lead to confusing the purpose and calculation of the two. For example, a 5-year fixed-rate interest-only bond would have a Weighted Average Life of 5, and a Macaulay duration that should be very close. Mortgages behave similarly. The differences between the two are as follows:
+
+1. Macaulay duration only measures fixed period cash flows, Weighted Average Life factors in all principal cash flows whether they be in fixed or floating. Thus for Fixed Period Hybrid ARM mortgages, for modeling purposes, the entire fixed period ends on the date of the last fixed payment or the month prior to reset.
+2. Macaulay duration discounts all cash flows at the corresponding cost of capital. Weighted Average Life does not discount.
+3. Macaulay duration uses both principal and interest when weighting cash flows. Weighted Average Life only uses principal.
+
+## Modified duration
+
+In contrast to Macaulay duration, modified duration (sometimes abbreviated MD) is a price sensitivity measure, defined as the percentage derivative of price with respect to yield (the logarithmic derivative of bond price with respect to yield). Modified duration applies when a bond or other asset is considered as a function of yield. In this case one can measure the logarithmic derivative with respect to yield:
+
+When the yield is expressed continuously compounded, Macaulay duration and modified duration are numerically equal. To see this, if we take the derivative of price or present value, expression (2), with respect to the continuously compounded yield {\displaystyle y} we see that:
+
+In other words, for yields expressed continuously compounded,
+
+where:
+
+* {\displaystyle i} indexes the cash flows,
+* {\displaystyle t\_{i}} is the time in years until the {\displaystyle i}th payment will be received,
+* {\displaystyle V} is the present value of all cash payments from the asset.
+
+### Periodically compounded
+
+In financial markets, yields are usually expressed periodically compounded (say annually or semi-annually) instead of continuously compounded. Then expression (2) becomes:
+
+To find modified duration, when we take the derivative of the value {\displaystyle V} with respect to the periodically compounded yield we find
+
+Rearranging (dividing both sides by *-V* ) gives:
+
+which is the well-known relationship between modified duration and Macaulay duration:
+
+where:
+
+* {\displaystyle i} indexes the cash flows,
+* {\displaystyle k} is the compounding frequency per year (1 for annual, 2 for semi-annual, 12 for monthly, 52 for weekly, etc.),
+* {\displaystyle CF\_{i}} is the cash flow of the {\displaystyle i}th payment from an asset,
+* {\displaystyle t\_{i}} is the time in *years* until the {\displaystyle i}th payment will be received (e.g. a two-year semi-annual would be represented by a {\displaystyle t\_{i}} index of 0.5, 1.0, 1.5, and 2.0),
+* {\displaystyle y\_{k}} is the yield to maturity for an asset, periodically compounded
+* {\displaystyle V} is the present value of all cash payments from the asset.
+
+This gives the well-known relation between Macaulay duration and modified duration quoted above. It should be remembered that, even though Macaulay duration and modified duration are closely related, they are conceptually distinct. Macaulay duration is a weighted average time until repayment (measured in units of time such as years) while modified duration is a price sensitivity measure when the price is treated as a function of yield, the *percentage change* in price with respect to yield.
+
+
+### Units
+
+Macaulay duration is measured in years.
+
+Modified duration is measured as the percent change in price per one unit (percentage *point*) change in yield per year (for example yield going from 8% per year (y = 0.08) to 9% per year (y = 0.09)). This will give modified duration a numerical value close to the Macaulay duration (and equal when rates are continuously compounded).
+
+Formally, modified duration is a semi-elasticity, the *percent* change in price for a *unit* change in yield, rather than an elasticity, which is a percentage change in output for a *percentage* change in input. Modified duration is a rate of change, the percent change in price per change in yield.
+
+
+### Non-fixed cash flows
+
+Modified duration can be extended to instruments with non-fixed cash flows, while Macaulay duration applies only to fixed cash flow instruments. Modified duration is defined as the logarithmic derivative of price with respect to yield, and such a definition will apply to instruments that depend on yields, whether or not the cash flows are fixed.
+
+
+### Finite yield changes
+
+Modified duration is defined above as a derivative (as the term relates to calculus) and so is based on infinitesimal changes. Modified duration is also useful as a measure of the sensitivity of a bond's market price to finite interest rate (i.e., yield) movements. For a small change in yield, {\displaystyle \Delta y},
+
+Thus modified duration is approximately equal to the percentage change in price for a given finite change in yield. So a 15-year bond with a Macaulay duration of 7 years would have a modified duration of roughly 7 years and would fall approximately 7% in value if the interest rate increased by one percentage point (say from 7% to 8%).
+
+
+## Fisher–Weil duration
+
+Fisher–Weil duration is a refinement of Macaulay’s duration which takes into account the term structure of interest rates. Fisher–Weil duration calculates the present values of the relevant cashflows (more strictly) by using the zero coupon yield for each respective maturity.
+
+
+## Key rate duration
+
+Key rate durations (also called partial DV01s or partial durations) are a natural extension of the total modified duration to measuring sensitivity to shifts of different parts of the yield curve. Key rate durations might be defined, for example, with respect to zero-coupon rates with maturity '1M', '3M', '6M', '1Y', '2Y', '3Y', '5Y', '7Y', '10Y', '15Y', '20Y', '25Y', '30Y'. Thomas Ho (1992) introduced the term key rate duration. Reitano covered multifactor yield curve models as early as 1991 and has revisited the topic in a recent review.
+
+Key rate durations require that we value an instrument off a yield curve and requires building a yield curve. Ho's original methodology was based on valuing instruments off a zero or spot yield curve and used linear interpolation between "key rates", but the idea is applicable to yield curves based on forward rates, par rates, and so forth. Many technical issues arise for key rate durations (partial DV01s) that do not arise for the standard total modified duration because of the dependence of the key rate durations on the specific type of the yield curve used to value the instruments (see Coleman, 2011 ).
+
+
+## Bond formulas
+
+For a standard bond with fixed, semi-annual payments the bond duration closed-form formula is:ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+* *FV* = par value
+* *C* = coupon payment per period (half-year)
+* *i* = discount rate per period (half-year)
+* *a* = fraction of a period remaining until next coupon payment
+* *m* = number of full coupon periods until maturity
+* *P* = bond price (present value of cash flows discounted with rate *i*)
+
+For a bond with coupon frequency {\displaystyle k} but an integer number of periods (so that there is no fractional payment period), the formula simplifies to:
+
+where
+
+* *y* = Yield (per year, in percent),
+* *c* = Coupon (per year, in decimal form),
+* *m* = Number of coupon periods.
+
+### Example 1
+
+Consider a 2-year bond with face value of $100, a 20% semi-annual coupon, and a yield of 4% semi-annually compounded. The total PV will be:
+
+The Macaulay duration is then
+
+The simple formula above gives (y/k =.04/2=.02, c/k = 20/2 = 10):
+
+The modified duration, measured as percentage change in price per one percentage point change in yield, is:
+
+The DV01, measured as dollar change in price for a $100 nominal bond for a one percentage point change in yield, is
+
+where the division by 100 is because modified duration is the percentage change.
+
+
+### Example 2
+
+Consider a bond with a $1000 face value, 5% coupon rate and 6.5% annual yield, with maturity in 5 years. The steps to compute duration are the following:
+
+1. Estimate the bond value
+The coupons will be $50 in years 1, 2, 3 and 4. Then, on year 5, the bond will pay coupon and principal, for a total of $1050. Discounting to present value at 6.5%, the bond value is $937.66. The detail is the following:
+
+Year 1: $50 / (1 + 6.5%) ^ 1 = 46.95
+
+Year 2: $50 / (1 + 6.5%) ^ 2 = 44.08
+
+Year 3: $50 / (1 + 6.5%) ^ 3 = 41.39
+
+Year 4: $50 / (1 + 6.5%) ^ 4 = 38.87
+
+Year 5: $1050 / (1 + 6.5%) ^ 5 = 766.37
+
+2. Multiply the time each cash flow is received, times its present value
+
+Year 1: 1 \* $46.95 = 46.95
+
+Year 2: 2 \* $44.08 = 88.17
+
+Year 3: 3 \* $41.39 = 124.18
+
+Year 4: 4 \* $38.87 = 155.46
+
+Year 5: 5 \* 766.37 = 3831.87
+
+TOTAL: 4246.63
+
+3. Compare the total from step 2 with the bond value (step 1)
+
+Macaulay duration: 4246.63 / 937.66 = 4.53
+
+
+## Money duration
+
+The **money duration**, or **basis point value** or Bloomberg **Risk**ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ, also called **dollar duration** or **DV01** in the United States, is defined as negative of the derivative of the value with respect to yield:
+
+so that it is the product of the modified duration and the price (value):
+
+or
+
+The DV01 is analogous to the delta in derivative pricing (one of the "Greeks") – it is the ratio of a price change in output (dollars) to unit change in input (a basis point of yield). Dollar duration or DV01 is the change in price in *dollars,* not in *percentage.* It gives the dollar variation in a bond's value per unit change in the yield. It is often measured per 1 basis point - DV01 is short for "dollar value of an 01" (or 1 basis point).
+The name BPV (basis point value) or Bloomberg "Risk" is also used, often applied to the dollar change for a $100 notional for 100bp change in yields - giving the same units as duration.
+PV01 (present value of an 01) is sometimes used, although PV01 more accurately refers to the value of a one dollar or one basis point annuity. (For a par bond and a flat yield curve the DV01, derivative of price w.r.t. yield, and PV01, value of a one-dollar annuity, will actually have the same value.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ)
+DV01 or dollar duration can be used for instruments with zero up-front value such as interest rate swaps where percentage changes and modified duration are less useful.
+
+
+### Application to value-at-risk (VaR)
+
+Dollar duration {\displaystyle D\_{\$}} is commonly used for value-at-risk (VaR) calculation. To illustrate applications to portfolio risk management, consider a portfolio of securities dependent on the interest rates {\displaystyle r\_{1},\ldots ,r\_{n}} as risk factors, and let
+
+denote the value of such portfolio. Then the exposure vector {\displaystyle {\boldsymbol {\omega }}=(\omega \_{1},\ldots ,\omega \_{n})} has components
+
+Accordingly, the change in value of the portfolio can be approximated as
+
+that is, a component that is linear in the interest rate changes plus an error term which is at least quadratic. This formula can be used to calculate the VaR of the portfolio by ignoring higher order terms. Typically cubic or higher terms are truncated. Quadratic terms, when included, can be expressed in terms of (multi-variate) bond convexity. One can make assumptions about the joint distribution of the interest rates and then calculate VaR by Monte Carlo simulation or, in some special cases (e.g., Gaussian distribution assuming a linear approximation), even analytically. The formula can also be used to calculate the DV01 of the portfolio (cf. below) and it can be generalized to include risk factors beyond interest rates.
+
+
+## Risk – duration as interest rate sensitivity
+
+The primary use of duration (modified duration) is to measure interest rate sensitivity or exposure. Thinking of risk in terms of interest rates or yields is very useful because it helps to normalize across otherwise disparate instruments. Consider, for example, the following four instruments, each with 10-year final maturity:
+
+| Description | Coupon ($ per year) | Initial Price (per $100 notional) | Final Principal Re-Payment | Yield | Macaulay Duration (years) | Modified Duration (% per 100bp yld ch) | BPV or DV01 ($ per 100bp yld ch) |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 5% semi-annual coupon bond | $5 | $100 | $100 | 5% | 7.99yrs | 7.79% | $7.79 |
+| 5% semi-annual annuity | $5 | $38.9729 | $0 | 5% | 4.84yrs | 4.72% | $1.84 |
+| zero-coupon bond | $0 | $61.0271 | $100 | 5% | 10yrs | 9.76% | $5.95 |
+| 5% fixed-floating swap, Receive fixed | $5 | $0 | $0 | 5% | NA | NA | $7.79 |
+
+All four have a 10-year maturity, but the sensitivity to interest rates, and thus the risk, will be different: the zero-coupon has the highest sensitivity and the annuity the lowest.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+Consider first a $100 investment in each, which makes sense for the three bonds (the coupon bond, the annuity, the zero-coupon bond - it does not make sense for the interest rate swap for which there is no initial investment). Modified duration is a useful measure to compare interest rate sensitivity across the three. The zero-coupon bond will have the highest sensitivity, changing at a rate of 9.76% per 100bp change in yield. This means that if yields go up from 5% to 5.01% (a rise of 1bp) the price should fall by roughly 0.0976% or a change in price from $61.0271 per $100 notional to roughly $60.968. The original $100 invested will fall to roughly $99.90. The annuity has the lowest sensitivity, roughly half that of the zero-coupon bond, with a modified duration of 4.72%.
+
+Alternatively, we could consider $100 notional of each of the instruments. In this case the BPV or DV01 (dollar value of an 01 or dollar duration) is the more natural measure. The BPV in the table is the dollar change in price for $100 notional for 100bp change in yields. The BPV will make sense for the interest rate swap (for which modified duration is not defined) as well as the three bonds.
+
+Modified duration measures the *size* of the interest rate sensitivity. Sometimes we can be misled into thinking that it measures *which part* of the yield curve the instrument is sensitive to. After all, the modified duration (% change in price) is almost the same number as the Macaulay duration (a kind of weighted average years to maturity). For example, the annuity above has a Macaulay duration of 4.8 years, and we might think that it is sensitive to the 5-year yield. But it has cash flows out to 10 years and thus will be sensitive to 10-year yields. If we want to measure sensitivity to parts of the yield curve, we need to consider key rate durations.
+
+For bonds with fixed cash flows a price change can come from two sources:
+
+1. The passage of time (convergence towards par). This is of course totally predictable, and hence not a risk.
+2. A change in the yield. This can be due to a change in the benchmark yield, and/or change in the yield spread.
+
+The yield-price relationship is inverse, and the modified duration provides a very useful measure of the price sensitivity to yields. As a first derivative it provides a linear approximation. For large yield changes, convexity can be added to provide a quadratic or second-order approximation. Alternatively, and often more usefully, convexity can be used to measure how the modified duration changes as yields change. Similar risk measures (first and second order) used in the options markets are the delta and gamma.
+
+Modified duration and DV01 as measures of interest rate sensitivity are also useful because they can be applied to instruments and securities with varying or contingent cash flows, such as options.
+
+
+## Embedded options and effective duration
+
+For bonds that have embedded options, such as putable and callable bonds, modified duration will not correctly approximate the price move for a change in yield to maturity.
+
+Consider a bond with an embedded put option. As an example, a $1,000 bond that can be redeemed by the holder at par at any time before the bond's maturity (i.e. an American put option). No matter how high interest rates become, the price of the bond will never go below $1,000 (ignoring counterparty risk). This bond's price sensitivity to interest rate changes is different from a non-puttable bond with otherwise identical cash flows.
+
+To price such bonds, one must use option pricing to determine the value of the bond, and then one can compute its delta (and hence its lambda), which is the duration. The **effective duration** is a discrete approximation to this latter, and will require an option pricing model.
+
+where Δ *y* is the amount that yield changes, and {\displaystyle V\_{-\Delta y}} and {\displaystyle V\_{+\Delta y}} are the values that the bond will take if the yield falls by *y* or rises by *y*, respectively. (A "parallel shift"; note that this value may vary depending on the value used for Δ *y*.)
+
+These values are typically calculated using a tree-based model, built for the *entire* yield curve (as opposed to a single yield to maturity), and therefore capturing exercise behavior at each point in the option's life as a function of both time and interest rates; see Lattice model (finance) § Interest rate derivatives.
+
+
+## Spread duration
+
+Spread duration is the sensitivity of a bond's market price to a change in option-adjusted spread (OAS). Thus the index, or underlying yield curve, remains unchanged. Floating rate assets that are benchmarked to an index (such as 1-month or 3-month LIBOR) and reset periodically will have an effective duration near zero but a spread duration comparable to an otherwise identical fixed rate bond.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+
+## Average duration
+
+The sensitivity of a portfolio of bonds such as a bond mutual fund to changes in interest rates can also be important. The average duration of the bonds in the portfolio is often reported. The duration of a portfolio equals the weighted average maturity of all of the cash flows in the portfolio. If each bond has the same yield to maturity, this equals the weighted average of the portfolio's bond's durations, with weights proportional to the bond prices. Otherwise the weighted average of the bond's durations is just a good approximation, but it can still be used to infer how the value of the portfolio would change in response to changes in interest rates.
+
+
+## Convexity
+
+Duration is a linear measure of how the price of a bond changes in response to interest rate changes. As interest rates change, the price does not change linearly, but rather is a convex function of interest rates. Convexity is a measure of the curvature of how the price of a bond changes as the interest rate changes. Specifically, duration can be formulated as the first derivative of the price function of the bond with respect to the interest rate in question, and the convexity as the second derivative.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+Convexity also gives an idea of the spread of future cashflows. (Just as the duration gives the discounted mean term, so convexity can be used to calculate the discounted standard deviation, say, of return.)
+
+Note that convexity can be positive or negative. A bond with *positive convexity* will not have any call features - i.e. the issuer must redeem the bond at maturity - which means that as rates fall, both its duration and price will rise.
+
+On the other hand, a bond *with* call features - i.e. where the issuer can redeem the bond early - is deemed to have *negative convexity* as rates approach the option strike, which is to say its duration will fall as rates fall, and hence its price will rise less quickly. This is because the issuer can redeem the old bond at a high coupon and re-issue a new bond at a lower rate, thus providing the issuer with valuable optionality. Similar to the above, in these cases, it may be more correct to calculate an effective convexity.
+
+Mortgage-backed securities (pass-through mortgage principal prepayments) with US-style 15- or 30-year fixed-rate mortgages as collateral are examples of callable bonds.
+
+
+## Sherman ratio
+
+The "Sherman ratio" is the yield offered per unit of bond duration, named after DoubleLine Capital's chief investment officer, Jeffrey Sherman. It has been called the "Bond Market's Scariest Gauge", and hit an all-time low of 0.1968 for the Bloomberg Barclays US Corporate Bond Index on Dec 31, 2020. The ratio is simply the yield offered (as a percentage), divided by the bond duration (in years).
+

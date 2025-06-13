@@ -1,0 +1,46 @@
+Bond option
+
+
+# Bond option
+
+
+
+Example
+| * Trade Date: 1 March 2003 * Maturity Date: 6 March 2006 * Option Buyer: Bank A * Underlying asset: FNMA Bond * Spot Price: $101 * Strike Price: $102 | * On the Trade Date, Bank A enters into an option with Bank B to buy certain FNMA Bonds from Bank B for the Strike Price mentioned. Bank A pays a premium to Bank B which is the premium percentage multiplied by the face value of the bonds. * At the maturity of the option, Bank A either exercises the option and buys the bonds from Bank B at the predetermined strike price, or chooses not to exercise the option. In either case, Bank A has lost the premium to Bank B. |
+| --- | --- |
+
+In finance, a **bond option** is an option to buy or sell a bond at a certain price on or before the option expiry date. These instruments are typically traded OTC.
+
+* A European bond option is an option to buy or sell a bond at a certain date in future for a predetermined price.
+* An American bond option is an option to buy or sell a bond *on or before* a certain date in future for a predetermined price.
+
+Generally, one buys a call option on the bond if one believes that interest rates will fall, causing an increase in bond prices. Likewise, one buys the put option if one believes that interest rates will rise. One result of trading in a bond option, is that the price of the underlying bond is "locked in" for the term of the contract, thereby reducing the credit risk associated with fluctuations in the bond price.
+
+
+## Valuation
+
+Bonds, the underlyers in this case, exhibit what is known as pull-to-par: as the bond reaches its maturity date, all of the prices involved with the bond become known, thereby decreasing its volatility. On the other hand, the Black–Scholes model, which assumes constant volatility, does not reflect this process, and cannot therefore be applied here; see Black–Scholes model § Valuing bond options.
+
+Addressing this, bond options are usually valued using the Black model or with a lattice-based short-rate model such as Black-Derman-Toy, Ho-Lee or Hull–White. The latter approach is theoretically more correct, , although in practice the Black Model is more widely used for reasons of simplicity and speed. For American- and Bermudan- styled options, where exercise is permitted prior to maturity, only the lattice-based approach is applicable.
+
+* Using the Black model, the spot price in the formula is not simply the market price of the underlying bond, rather it is the forward bond price. This forward price is calculated by first subtracting the present value of the coupons between the valuation date (i.e. today) and the exercise date from today's dirty price, and then forward valuing this amount to the exercise date. (These calculations are performed using today's yield curve, as opposed to the bond's YTM.) The reason that the Black Model may be applied in this way is that the numeraire is then $1 at the time of delivery (whereas under Black–Scholes, the numeraire is $1 today). This allows us to assume that (a) the bond price is a random variable at a future date, but also (b) that the risk-free rate between now and then is constant (since using the forward measure moves the discounting outside of the expectation term ). Thus the valuation takes place in a risk-neutral "forward world" where the expected future spot rate is the forward rate, and its standard deviation is the same as in the "physical world"; see Girsanov's theorem. The volatility used, is typically "read-off" an Implied volatility surface.
+
+* The lattice-based model entails a tree of short rates – a zeroeth step – consistent with today's yield curve and short rate (often caplet) volatility, and where the final time step of the tree corresponds to the date of the underlying bond's maturity. Using this tree (1) the bond is valued at each node by "stepping backwards" through the tree: at the final nodes, bond value is simply face value (or $1), plus coupon (in cents) if relevant; at each earlier node, it is the discounted expected value of the up- and down-nodes in the later time step, plus coupon payments during the current time step. Then (2), the option is valued similar to the approach for equity options: at nodes in the time-step corresponding to option maturity, value is based on moneyness; at earlier nodes, it is the discounted expected value of the option at the up- and down-nodes in the later time step, and, depending on option style (and other specifications – see below), of the bond value at the node. For both steps, the discounting is at the short rate for the tree-node in question. (Note that the Hull-White tree is usually Trinomial: the logic is as described, although there are then three nodes in question at each point.) See Lattice model (finance) § Interest rate derivatives.
+
+## Embedded options
+
+The term "bond option" is also used for option-like features of some bonds ("embedded options"). These are an inherent part of the bond, rather than a separately traded product. These options are not mutually exclusive, so a bond may have several options embedded. Bonds of this type include:
+
+* Callable bond: allows the issuer to buy back the bond at a predetermined price at a certain time in future. The holder of such a bond has, in effect, sold a call option to the issuer. Callable bonds cannot be called for the first few years of their life. This period is known as the *lock out period*.
+* Puttable bond: allows the holder to demand early redemption at a predetermined price at a certain time in future. The holder of such a bond has, in effect, purchased a put option on the bond.
+* Convertible bond: allows the holder to demand conversion of bonds into the stock of the issuer at a predetermined price at a certain time period in future.
+* Extendible bond: allows the holder to extend the bond maturity date by a number of years.
+* Exchangeable bond: allows the holder to demand conversion of bonds into the stock of a different company, usually a public subsidiary of the issuer, at a predetermined price at certain time period in future.
+
+Callable and putable bonds can be valued using the lattice-based approach, as above, but additionally allowing that the effect of the embedded option is incorporated at each node in the tree, impacting the bond price and / or the option price as specified. These bonds are also sometimes valued using Black–Scholes. Here, the bond is priced as a "straight bond" (i.e. as if it had no embedded features) and the option is valued using the Black Scholes formula. The option value is then added to the straight bond price if the optionality rests with the buyer of the bond; it is subtracted if the seller of the bond (i.e. the issuer) may choose to exercise. ᵖᵉʳᵐᵃⁿᵉⁿᵗ ᵈᵉᵃᵈ ˡⁱⁿᵏ For convertible and exchangeable bonds, a more sophisticated approach is to model the instrument as a "coupled system" comprising an equity component and a debt component, each with different default risks; see Lattice model (finance) § Hybrid securities.
+
+
+## Relationship with caps and floors
+
+European Put options on zero coupon bonds can be seen to be equivalent to suitable caplets, i.e. interest rate cap components, whereas call options can be seen to be equivalent to suitable floorlets, i.e. components of interest rate floors. See for example Brigo and Mercurio (2001), who also discuss bond options valuation with different models.
+

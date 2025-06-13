@@ -1,0 +1,112 @@
+Chicago Mercantile Exchange Hurricane Index
+
+
+# Chicago Mercantile Exchange Hurricane Index
+
+
+
+The **Chicago Mercantile Exchange Hurricane Index** (**CMEHI**) is an index which describes the potential for damage from an Atlantic hurricane in the United States. The CMEHI is used as the basis for trading hurricane futures and options on the Chicago Mercantile Exchange (CME). It is very similar to the Hurricane Severity Index, which also factors both size and intensity of a hurricane.
+
+
+## Index calculation
+
+The CMEHI takes as input two variables: the maximum sustained wind speed of a hurricane in miles per hour and the radius to hurricane-force winds of a hurricane in miles (i.e. how far from the center of the hurricane winds of 74 mph or greater are experienced). If the maximum sustained wind speed is denoted by *V* and the radius to hurricane-force winds is denoted by *R* then the CMEHI is calculated as follows:
+
+where the subscript *0* denotes reference values. For use on the CME, the reference values of 74 mph and 60 miles are used for the maximum sustained wind speed and radius of hurricane-force winds respectively.
+
+
+## Index history and data
+
+The development of the CMEHI was based on work published by Lakshmi Kantha at the Department of Aerospace Studies at the University of Colorado in Boulder, Colorado. Kantha's paper in Eos developed a number of indices based on various characteristics of hurricanes. The ReAdvisory team at the reinsurance broker RK Carvill used the basics of the Kantha paper to develop an index which became the Carvill Hurricane Index (CHI). In 2009, the scale was renamed the Chicago Mercantile Exchange Hurricane Index (CMEHI).
+
+The data for the CMEHI comes from the public advisories issued for named storms by the National Hurricane Center. Specifically, to determine the maximum sustained wind speed, the following verbiage is looked for:
+
+MAXIMUM SUSTAINED WINDS ARE NEAR *XX* MPH
+
+To determine the radius to hurricane-force winds, the following phrase is looked for:
+
+HURRICANE FORCE WINDS EXTEND OUTWARD UP TO *XX* MILES
+
+For example, Advisory 23A for Hurricane Katrina at 1pm Central daylight time on Sunday, August 28, 2005, gave the maximum sustained wind speed of 175 mph and the radius of hurricane-force winds of 105 miles resulting in a CMEHI value of 27.9.
+
+
+## Data
+
+Public advisories from the National Hurricane Center are archived back to 1998. The table below lists the CMEHI values for all the landfalling hurricanes since 1998 based on the NHC Public Advisories, and uses alternate sources for hurricanes between 1989 and 1998.
+
+| CMEHI indices of historical storms (1989 – present) | | | | | | | |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Name | Year | Landfall | NHC advisory number | Windspeed at/near landfall (operational) | Radius of hurricane–force winds at/near landfall | CMEHI index | Ref(s) |
+| **1** Jerry | 1989 | Texas | N/A | 85 mph (140 km/h) | 25 mi (40 km) | 2.3 |
+| **4** Hugo | 1989 | U.S. Virgin Islands | N/A | 140 mph (220 km/h) | 85 mi (135 km) | 14.4 |
+| **3** Hugo | 1989 | Puerto Rico | N/A | 125 mph (205 km/h) | 85 mi (135 km) | 10.9 |
+| **4** Hugo | 1989 | South Carolina | N/A | 140 mph (220 km/h) | 140 mi (225 km) | 19.3 |
+| **4** Andrew | 1992 | Florida | N/A | 145 mph (230 km/h) | 25 mi (40 km) | 9.9 |
+| **1** Erin | 1995 | Florida | N/A | 85 mph (140 km/h) | 35 mi (55 km) | 2.7 |
+| **2** Marilyn | 1995 | U.S. Virgin Islands | N/A | 110 mph (175 km/h) | 30 mi (50 km) | 4.9 |
+| **3** Opal | 1995 | Florida | N/A | 115 mph (185 km/h) | 60 mi (95 km) | 7.4 |
+| **2** Bertha | 1996 | North Carolina | N/A | 105 mph (165 km/h) | 115 mi (185 km) | 8.6 |
+| **3** Fran | 1996 | North Carolina | 44 | 115 mph (185 km/h) | 175 mi (280 km) | 14.3 |
+| **1** Hortense | 1996 | Puerto Rico | N/A | 80 mph (130 km/h) | 60 mi (95 km) | 3.0 |
+| **1** Danny | 1997 | Louisiana | N/A | 75 mph (120 km/h) | 20 mi (30 km) | 1.5 |
+| **2** Bonnie | 1998 | North Carolina | 33 | 100 mph (155 km/h) | 115 mi (185 km) | 7.7 |
+| **1** Earl | 1998 | Florida | 11A | 80 mph (130 km/h) | 115 mi (185 km) | 4.6 |
+| **3** Georges | 1998 | Puerto Rico | 26B | 115 mph (185 km/h) | 85 mi (135 km) | 8.9 |
+| **2** Georges | 1998 | Mississippi | 52 | 105 mph (165 km/h) | 45 mi (70 km) | 5.1 |
+| **3** Bret | 1999 | Texas | 17A | 125 mph (205 km/h) | 40 mi (65 km) | 7.7 |
+| **2** Floyd | 1999 | North Carolina | 34A | 110 mph (175 km/h) | 115 mi (185 km) | 9.6 |
+| **1** Irene | 1999 | Florida | 10 | 75 mph (120 km/h) | 45 mi (70 km) | 2.1 |
+| **1** Lili | 2002 | Louisiana | 49 | 90 mph (150 km/h) | 70 mi (115 km) | 4.4 |
+| **1** Claudette | 2003 | Texas | 28A | 80 mph (130 km/h) | 30 mi (50 km) | 2.1 |
+| **2** Isabel | 2003 | North Carolina | 49A | 100 mph (155 km/h) | 115 mi (185 km) | 7.7 |
+| **4** Charley | 2004 | Florida | 18 | 145 mph (230 km/h) | 30 mi (50 km) | 10.4 |
+| **2** Frances | 2004 | Florida | 44A | 105 mph (165 km/h) | 75 mi (120 km) | 6.6 |
+| **4** Ivan | 2004 | Alabama | 55B | 130 mph (215 km/h) | 105 mi (170 km) | 13.5 |
+| **3** Jeanne | 2004 | Florida | 49B | 115 mph (185 km/h) | 70 mi (115 km) | 8.0 |
+| **3** Dennis | 2005 | Florida | 25B | 120 mph (195 km/h) | 40 mi (65 km) | 6.9 |
+| **1** Katrina | 2005 | Florida | 9 | 75 mph (120 km/h) | 15 mi (25 km) | 1.4 |
+| **4** Katrina | 2005 | Louisiana | 26A | 145 mph (230 km/h) | 120 mi (195 km) | 19.0 |
+| **3** Rita | 2005 | Texas | 26B | 120 mph (195 km/h) | 85 mi (135 km) | 9.9 |
+| **3** Wilma | 2005 | Florida | 36 | 125 mph (205 km/h) | 90 mi (145 km) | 11.2 |
+| **1** Humberto | 2007 | Texas | 4 | 80 mph (130 km/h) | 15 mi (25 km) | 1.7 |
+| **2** Dolly | 2008 | Texas | 13A | 100 mph (155 km/h) | 25 mi (40 km) | 3.6 |
+| **2** Gustav | 2008 | Louisiana | 31B | 110 mph (175 km/h) | 70 mi (115 km) | 7.2 |
+| **2** Ike | 2008 | Texas | 48B | 110 mph (175 km/h) | 120 mi (195 km) | 9.9 |
+| **1** Irene | 2011 | Puerto Rico | 7 | 75 mph (120 km/h) | 15 mi (25 km) | 1.4 |
+| **1** Irene | 2011 | North Carolina | 28A | 85 mph (140 km/h) | 90 mi (145 km) | 4.5 |
+| **1** Isaac | 2012 | Louisiana | 33 | 80 mph (130 km/h) | 60 mi (95 km) | 3.0 |
+| **2** Arthur | 2014 | North Carolina | 13 | 100 mph (155 km/h) | 40 mi (65 km) | 4.3 |
+| **1** Hermine | 2016 | Florida | 19A | 80 mph (130 km/h) | 45 mi (70 km) | 2.6 |
+| **1** Matthew | 2016 | South Carolina | 42 | 75 mph (120 km/h) | 25 mi (40 km) | 1.6 |
+| **4** Harvey | 2017 | Texas | 23 | 130 mph (215 km/h) | 40 mi (65 km) | 8.5 |
+| **4** Irma | 2017 | Florida | 45A | 130 mph (215 km/h) | 80 mi (130 km) | 11.6 |
+| **4** Maria | 2017 | Puerto Rico | 17 | 155 mph (250 km/h) | 60 mi (95 km) | 15.8 |
+| **1** Nate | 2017 | Louisiana | 14A | 85 mph (140 km/h) | 40 mi (65 km) | 2.8 |
+| **1** Florence | 2018 | North Carolina | 61 | 80 mph (130 km/h) | 70 mi (115 km) | 3.3 |
+| **4** Michael | 2018 | Florida | 16A | 155 mph (250 km/h) | 45 mi (70 km) | 14.1 |
+| **1** Barry | 2019 | Louisiana | 13 | 75 mph (120 km/h) | 45 mi (70 km) | 2.1 |
+| **1** Dorian | 2019 | North Carolina | 52A | 90 mph (150 km/h) | 45 mi (70 km) | 3.5 |
+| **1** Hanna | 2020 | Texas | 12 | 90 mph (150 km/h) | 30 mi (50 km) | 2.9 |
+| **1** Isaias | 2020 | North Carolina | 28 | 85 mph (140 km/h) | 25 mi (40 km) | 2.3 |
+| **4** Laura | 2020 | Louisiana | 29A | 150 mph (240 km/h) | 60 mi (95 km) | 14.5 |
+| **2** Sally | 2020 | Alabama | 21 | 105 mph (165 km/h) | 40 mi (65 km) | 4.9 |
+| **2** Delta | 2020 | Louisiana | Update | 100 mph (155 km/h) | 40 mi (65 km) | 4.3 |
+| **2** Zeta | 2020 | Louisiana | 17 | 110 mph (175 km/h) | 35 mi (55 km) | 5.2 |
+| **4** Ida | 2021 | Louisiana | 14 | 150 mph (240 km/h) | 50 mi (80 km) | 13.5 |
+| **1** Nicholas | 2021 | Texas | 8A | 75 mph (120 km/h) | 25 mi (40 km) | 1.6 |
+| **1** Fiona | 2022 | Puerto Rico | 17A | 85 mph (140 km/h) | 30 mi (50 km) | 2.5 |
+| **4** Ian | 2022 | Florida | 24A | 155 mph (250 km/h) | 45 mi (70 km) | 14.1 |
+| **1** Ian | 2022 | South Carolina | 33 | 85 mph (140 km/h) | 70 mi (115 km) | 3.8 |
+| **4** Idalia | 2023 | Florida | 15 | 130 mph (215 km/h) | 25 mi (40 km) | 7.4 |
+| **1** Beryl | 2024 | Texas | 39 | 80 mph (130 km/h) | 45 mi (70 km) | 2.6 |
+| **1** Debby | 2024 | Florida | 12 | 80 mph (130 km/h) | 25 mi (40 km) | 2.0 |
+| **2** Francine | 2024 | Louisiana | 13 | 100 mph (155 km/h) | 40 mi (65 km) | 4.3 |
+| **4** Helene | 2024 | Florida | 15 | 140 mph (220 km/h) | 60 mi (95 km) | 12.1 |
+
+Prior to 1998, the data becomes sparse. However, using data from the HURSAT database at NOAA it is possible to construct a set of CMEHI values for storms back to 1983.
+
+Modeled data is available from a number of sources:
+
+* Seasonal data, suitable for use in the insurance and reinsurance community, is provided by AIR Worldwide
+* Atmospheric and Environmental Research, Inc. provide CMEHI values for live storms through their *hCast-SR* product
+* MDA Federal provide a real-time CMEHI forecasting product

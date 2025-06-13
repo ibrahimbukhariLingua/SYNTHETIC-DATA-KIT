@@ -1,0 +1,34 @@
+Entropic risk measure
+
+
+# Entropic risk measure
+
+
+
+In financial mathematics (concerned with mathematical modeling of financial markets), the **entropic risk measure** is a risk measure which depends on the risk aversion of the user through the exponential utility function. It is a possible alternative to other risk measures as value-at-risk or expected shortfall.
+
+It is a theoretically interesting measure because it provides different risk values for different individuals whose attitudes toward risk may differ. However, in practice it would be difficult to use since quantifying the risk aversion for an individual is difficult to do. The entropic risk measure is the prime example of a convex risk measure which is not coherent. Given the connection to utility functions, it can be used in utility maximization problems.
+
+
+## Mathematical definition
+
+The entropic risk measure with the risk aversion parameter {\displaystyle \theta >0} is defined as
+
+where {\displaystyle H(Q|P)=E\left[{\frac {dQ}{dP}}\log {\frac {dQ}{dP}}\right]} is the relative entropy of *Q* << *P*.
+
+
+## Acceptance set
+
+The acceptance set for the entropic risk measure is the set of payoffs with positive expected utility. That is
+
+where {\displaystyle u(X)} is the exponential utility function.
+
+
+## Dynamic entropic risk measure
+
+The conditional risk measure associated with dynamic entropic risk with risk aversion parameter {\displaystyle \theta } is given by
+
+This is a time consistent risk measure if {\displaystyle \theta } is constant through time,
+and can be computed efficiently using forward-backwards differential equations
+.
+

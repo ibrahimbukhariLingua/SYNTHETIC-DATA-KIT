@@ -1,0 +1,89 @@
+Reinsurance Actuarial Premium
+
+
+# Reinsurance Actuarial Premium
+
+
+
+Actuarial reinsurance premium calculation uses the similar mathematical tools as actuarial insurance premium. Nevertheless, Catastrophe modeling, Systematic risk or risk aggregation statistics tools are more important.
+
+
+## Burning cost
+
+Typically burning cost is the estimated cost of claims in the forthcoming insurance period, calculated from previous years' experience adjusted for changes in the numbers insured, the nature of cover and medical inflation.
+
+1. Historical (aggregate) data extraction
+2. Adjustments to obtain 'as if' data:
+ 1. present value adjustment using actuarial rate, prices index,...
+ 2. base insurance premium correction,
+ 3. underwriting policy evolution,
+3. clauses application 'as if' data, calcul of the 'as if' historical reinsurance indemnity,
+4. Reinsurance pure premium rate computing,
+5. add charges, taxes and reduction of treaty
+
+"As if" data involves the recalculation of prior years of loss experience to demonstrate what the underwriting results of a particular program would have been if the proposed program had been in force during that period.
+
+
+## Probabilist methods
+
+
+### Premium formulation
+
+Let us note {\displaystyle p} the and {\displaystyle f} the deductible of XS or XL, with the limite {\displaystyle l=p+f} ({\displaystyle p} XS {\displaystyle f}).
+
+The premium :
+{\displaystyle \mathbb {E} \left[S\_{N}\right]=\mathbb {E} \left[\sum \_{i=1}^{N}Y\_{i}\right]=\mathbb {E} [N]\times \mathbb {E} [Y]}
+
+where
+{\displaystyle \mathbb {E} [Y]=l\mathbb {P} [X>l]-f\times \mathbb {P} [X\geq f]+\mathbb {E} [X\mid f\geq x\geq l]}
+
+
+### XS or XL premium formulation with Pareto
+
+If {\displaystyle l=\infty } and {\displaystyle \alpha \neq 1} :
+{\displaystyle \mathbb {E} [S\_{N}]=\lambda {\frac {t^{\alpha }}{\alpha -1}}f^{1-\alpha }}$
+
+if {\displaystyle l=\infty } and {\displaystyle \alpha =1} there is no solution.
+
+If {\displaystyle l<\infty } and {\displaystyle \alpha \neq 1} :
+{\displaystyle \mathbb {E} [S\_{N}]=\lambda {\frac {t^{\alpha }}{\alpha -1}}\left(f^{1-\alpha }-l^{1-\alpha }\right)}
+
+If {\displaystyle l<\infty } and {\displaystyle \alpha =1} :
+{\displaystyle \mathbb {E} [S\_{N}]=\lambda t\ln \left({\frac {1}{f}}\right)}
+
+
+### XS premium using Lognormal cost distribution
+
+If {\displaystyle X} follows {\displaystyle LN(x\_{\mathrm {m} },\mu ,\sigma )} then {\displaystyle X-x\_{\mathrm {m} }} follows {\displaystyle LN(\mu ,\sigma )}
+
+Then:
+{\displaystyle \mathbb {P} [X>f]=\mathbb {P} [X-x\_{\mathrm {m} }>f-x\_{\mathrm {m} }]=1-\Phi \left({\frac {\ln(f-x\_{\mathrm {m} })-\mu }{\sigma }}\right)}
+
+{\displaystyle {\begin{aligned}\mathbb {E} [X\mid X>f]=&\mathbb {E} \left[X-x\_{\mathrm {m} }\mid X-x\_{\mathrm {m} }>f-x\_{\mathrm {m} }\right]+x\_{\mathrm {m} }\mathbb {P} [X>f]\\=&e^{m+\sigma ^{2}/2}\left[1-\Phi \left({\frac {\ln(f-x\_{\mathrm {m} })-(\mu +\sigma ^{2})}{\sigma }}\right)\right]\\&+x\_{\mathrm {m} }\left(1-\Phi \left({\frac {\ln(f-x\_{\mathrm {m} })-\mu }{\sigma }}\right)\right)\end{aligned}}}
+
+With deductible and without limit :
+
+{\displaystyle {\begin{aligned}\mathbb {E} [S\_{N}]=&\lambda \left(\mathbb {E} \left[X-x\_{\mathrm {m} }\mid X-x\_{\mathrm {m} }>f-x\_{\mathrm {m} }\right]+x\_{\mathrm {m} }\mathbb {P} [X>f]-f\mathbb {P} [X>f]\right)\\=&\lambda \left(e^{m+\sigma ^{2}/2}\left[1-\Phi \left({\frac {\ln(f-x\_{\mathrm {m} })-(\mu +\sigma ^{2})}{\sigma }}\right)\right]\right)\\&+\lambda (x\_{\mathrm {m} }-l)\left(1-\Phi \left({\frac {\ln(f-x\_{\mathrm {m} })-\mu }{\sigma }}\right)\right)\end{aligned}}}
+
+
+## Monte Carlo estimation
+
+
+## Vulnerability curve
+
+
+## Regression estimation
+
+This method uses data along the x-y axis to compute fitted values. It is actually based on the equation for a straight line, y=bx+a.(2)
+
+
+## Includes reinsurances specificities
+
+
+### Clauses
+
+
+### Long-Term Indemnity Claims
+
+Actuarial reserves modellisation.
+

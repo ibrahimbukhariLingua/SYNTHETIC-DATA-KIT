@@ -1,0 +1,44 @@
+Currency sign (generic)
+
+
+# Currency sign (generic)
+
+
+
+The **currency sign** ¤ is a character used to denote an unspecified currency. It can be described as a circle the size of a lowercase character with four short radiating arms at 45° (NE), 135° (SE), 225° (SW) and 315° (NW). It is raised slightly above the baseline. The character is sometimes called **scarab**.⁵
+
+
+## History
+
+The symbol was first encoded for computers in 1972, as a placeholder for national currency symbols such as the dollar sign, in national variants (ISO 646) of ASCII and the International Reference Variant. It was proposed by Italy as an alternative (to the dollar sign) at 0x24. In reality, most national standards retained the dollar sign as too important.⁶ ASCII and ISO 646 were specified as 7-bit encoding, which allowed for 96 printable characters and 32 control codes. The character is used in the GSM default 7-bit encoding as specified in 3GPP TS 23.038 / GSM 03.38 at 0x24.
+
+The introduction of 8-bit encoding and the ISO/IEC 8859 code pages meant that all major national currency symbols (in use at the time) could be accommodated. When ISO 8859 was standardized, this symbol was placed at code point 0xA4 in the Latin, Arabic, and Hebrew character sets. The Cyrillic set included it in early drafts, but it was removed in the published version in favour of including the section sign, §, and it was not included in all later added Latin sets. In Soviet computer systems (usually using some variant of KOI character set) this symbol was placed at the code point used by the dollar sign in ASCII. ISO Latin 9 reallocated the code point used for this symbol to the euro sign, €, but this standard failed to gain significant acceptance given the dominance at the time of Microsoft's Windows-1252 code page. In the modern era, the Unicode standard gives each of the major currency symbols – and this one – its own unique and device-independent code point, with implementation (or lack of) left to font designers.
+
+
+## Other uses
+
+The symbol is used as a non-printing "end of cell" marker for tables in Microsoft Word.
+
+
+## Unicode
+
+It is represented in Unicode as U+00A4 ¤ CURRENCY SIGN (&curren;)
+
+
+### Keyboard entry
+
+The symbol is available on some keyboard layouts, for example, French, Danish, Norwegian, Swedish, Finnish, Estonian, Slovak and Hungarian.
+
+Otherwise, it may be typed
+
+* in Windows using `Alt`+`0``1``6``4`
+ + US international setting in Windows: `AltGr`+`4` (with this setting, the right-hand Alt key acts as an AltGr key)
+* In Linux as `Compose``o``x`
+* In Linux and ChromeOS using `Ctrl`+`⇧ Shift`+`u` `A``4``space`
+ + In ChromeOS (if using US international keyboard setting) `right alt`+`4`
+* Using `\textcurrency` in LaTeX.
+
+## OS-specific
+
+The currency sign was once a part of the Mac OS Roman character set, but Apple changed the symbol at that code point to the euro sign in Mac OS 8.5. In pre-Unicode Windows character sets (Windows-1252), the generic currency sign was retained at 0xA4 and the euro sign was introduced as a new code point, at 0x80 in the little used (by Microsoft) control-code space 0x80 to 0x9F.
+

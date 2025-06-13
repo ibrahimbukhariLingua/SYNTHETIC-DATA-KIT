@@ -1,0 +1,280 @@
+Modified Dietz method
+
+
+# Modified Dietz method
+
+
+
+The **modified Dietz method** is a measure of the *ex post* (i.e. historical) performance of an investment portfolio in the presence of external flows. (External flows are movements of value such as transfers of cash, securities or other instruments in or out of the portfolio, with no equal simultaneous movement of value in the opposite direction, and which are not income from the investments in the portfolio, such as interest, coupons or dividends.)
+
+To calculate the modified Dietz return, divide the gain or loss in value, net of external flows, by the average capital over the period of measurement. The average capital weights individual cash flows by the length of time between those cash flows until the end of the period. Flows which occur towards the beginning of the period have a higher weight than flows occurring towards the end. The result of the calculation is expressed as a percentage return over the holding period.
+
+
+## GIPS
+
+This method for return calculation is used in modern portfolio management. It is one of the methodologies of calculating returns recommended by the Investment Performance Council (IPC) as part of their Global Investment Performance Standards (GIPS). The GIPS are intended to provide consistency to the way portfolio returns are calculated internationally.
+
+
+## Origin
+
+The method is named after Peter O. Dietz. The original idea behind the work of Peter Dietz was to find a quicker, less computer-intensive way of calculating an IRR as the iterative approach using the then-quite-slow computers that were available was taking a significant amount of time; the research was produced for BAI, Bank Administration institute.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ The modified Dietz method is a linear IRR.
+
+
+## Formula
+
+The formula for the modified Dietz method is as follows:
+
+where
+
+and
+
+The weight {\displaystyle W\_{i}} is the proportion of the time period between the point in time when the flow {\displaystyle F\_{i}} occurs and the end of the period. Assuming that the flow happens at the end of the day, {\displaystyle W\_{i}} can be calculated as
+
+where
+
+This assumes that the flow happens at the end of the day. If the flow happens at the beginning of the day, the flow is in the portfolio for an additional day, so use the following formula for calculating the weight:
+
+
+## Comparison with time-weighted return and internal rate of return
+
+The modified Dietz method has the practical advantage over the true time-weighted rate of return method, in that the calculation of a modified Dietz return does not require portfolio valuations at each point in time whenever an external flow occurs. The internal rate of return method shares this practical advantage with the modified Dietz method.
+Conversely, if there exists a portfolio valuation at any point in time, the implied modified Dietz valuation of cashflows at that point in time is quite unlikely to agree with the actual valuation.
+
+With the advance of technology, most systems can calculate a time-weighted return by calculating a daily return and geometrically linking in order to get a monthly, quarterly, annual or any other period return. However, the modified Dietz method remains useful for performance attribution, because it still has the advantage of allowing modified Dietz returns on assets to be combined with weights in a portfolio, calculated according to average invested capital, and the weighted average gives the modified Dietz return on the portfolio. Time weighted returns do not allow this.
+
+The modified Dietz method also has the practical advantage over internal rate of return (IRR) method that it does not require repeated trial and error to get a result.
+
+The modified Dietz method is based upon a simple rate of interest principle. It approximates the internal rate of return method, which applies a compounding principle, but if the flows and rates of return are large enough, the results of the Modified Dietz method will significantly diverge from the internal rate of return.
+
+The modified Dietz return is the solution {\displaystyle R} to the equation:
+
+where
+
+and
+
+Compare this with the (unannualized) internal rate of return (IRR). The IRR (or more strictly speaking, an un-annualized holding period return version of the IRR) is a solution {\displaystyle R} to the equation:
+
+
+### Example
+
+Suppose the value of a portfolio is $100 at the beginning of the first year, and $300 at the end of the second year, and there is an inflow of $50 at the end of the first year/beginning of the second year. (Suppose further that neither year is a leap year, so the two years are of equal length.)
+
+To calculate the gain or loss over the two-year period,
+
+To calculate the average capital over the two-year period,
+
+so the modified Dietz return is:
+
+The (unannualized) internal rate of return in this example is 125%:
+
+so in this case, the modified Dietz return is noticeably less than the unannualized IRR. This divergence between the modified Dietz return and the unannualized internal rate of return is due to a significant flow within the period, together with the fact that the returns are large. If there are no flows, there is no difference between the modified Dietz return, the unannualized IRR, or any other method of calculating the holding period return. If the flows are small, or if the returns themselves are small, then the difference between the modified Dietz return and the unannualized internal rate of return is small.
+
+The IRR is 50% since:
+
+but the unannualized holding period return, using the IRR method, is 125%. Compounding an annual rate of 50% over two periods gives a holding period return of 125%:
+
+
+## The simple Dietz method
+
+The modified Dietz method is different from the simple Dietz method, in which the cash flows are weighted equally regardless of when they occurred during the measurement period. The simple Dietz method is a special case of the Modified Dietz method, in which external flows are assumed to occur at the midpoint of the period, or equivalently, spread evenly throughout the period, whereas no such assumption is made when using the Modified Dietz method, and the timing of any external flows is taken into account.
+Note that in the example above, the flow occurs midway through the overall period, which matches the assumption underlying the simple Dietz method. This means the simple Dietz return and modified Dietz return are the same in this particular example.
+
+
+## Adjustments
+
+If either the start or the end value is zero, or both, the start and/or end dates need to be adjusted to cover the period over which the portfolio has content.
+
+
+### Example
+
+Suppose we are calculating the 2016 calendar year return, and that the portfolio is empty until a transfer in of EUR 1m cash in a non-interest bearing account on Friday 30 December. By the end of the day on Saturday 31 December 2016, the exchange rate between euros and Hong Kong dollars has changed from 8.1 HKD per EUR to 8.181, which is a 1 percent increase in value, measured in Hong Kong dollar terms, so the right answer to the question of what is the return in Hong Kong dollars is intuitively 1 percent.
+
+However, blindly applying the modified Dietz formula, using an end-of-day transaction timing assumption, the day-weighting on the inflow of 8.1m HKD on 30 December, one day before the end of the year, is 1/366, and the average capital is calculated as:
+
+and the gain is:
+
+so the modified Dietz return is calculated as:
+
+So which is the correct return, 1 percent or 366 percent?
+
+
+### Adjusted time interval
+
+The only sensible answer to the example above is that the holding period return is unambiguously 1 percent. This means the start date should be adjusted to the date of the initial external flow. Likewise, if the portfolio is empty at the end of the period, the end date should be adjusted to the final external flow. The end value is effectively the final external flow, not zero.
+
+The return annualized using a simple method of multiplying-up 1 percent per day by the number of days in the year will give the answer 366 percent, but the holding period return is still 1 percent.
+
+
+### Example corrected
+
+The example above is corrected if the start date is adjusted to the end of the day on 30 December, and the start value is now 8.1m HKD. There are no external flows thereafter.
+
+The corrected gain or loss is the same as before:
+
+but the corrected average capital is now:
+
+so the corrected modified Dietz return is now:
+
+
+### Second example
+
+Suppose that a bond is bought for HKD 1,128,728 including accrued interest and commission on trade date 14 November, and sold again three days later on trade date 17 November for HKD 1,125,990 (again, net of accrued interest and commission). Assuming transactions take place at the start of the day, what is the modified Dietz holding-period return in HKD for this bond holding over the year to-date until the end-of-day on 17 November?
+
+
+#### Answer
+
+The answer is that firstly, the reference to the holding period year to-date until the end-of-day on 17 November includes both the purchase and the sale. This means the effective adjusted holding period is actually from the purchase at the start of the day on 14 November until it is sold three days later on 17 November. The adjusted start value is the net amount of the purchase, the end value is the net amount of the sale, and there are no other external flows.
+
+There are no flows, so the gain or loss is:
+
+and the average capital equals the start value, so the modified Dietz return is:
+
+
+### Contributions - when not to adjust the holding period
+
+This method of restricting the calculation to the actual holding period by applying an adjusted start or end date applies when the return is calculated on an investment in isolation. When the investment belongs inside a portfolio, and the weight of the investment in the portfolio, and the contribution of that return to that of the portfolio as a whole is required, it is necessary to compare like with like, in terms of a common holding period.
+
+
+#### Example
+
+Suppose that at the beginning of the year, a portfolio contains cash, of value $10,000, in an account which bears interest without any charges. At the beginning of the fourth quarter, $8,000 of that cash is invested in some US dollar shares (in company X). The investor applies a buy-and-hold strategy, and there are no further transactions for the remainder of the year. At the end of the year, the shares have increased in value by 10% to $8,800, and $100 interest is capitalized into the cash account.
+
+What is the return on the portfolio over the year? What are the contributions from the cash account and the shares? Furthermore, what is the return on the cash account?
+
+
+##### Answer
+
+The end value of the portfolio is $2,100 in cash, plus shares worth $8,800, which is in total $10,900. There has been a 9 percent increase in value since the beginning of the year. There are no external flows in or out of the portfolio over the year.
+
+so
+
+so the return is:
+
+This 9% portfolio return breaks down between 8 percent contribution from the $800 earned on the shares and 1 percent contribution from the $100 interest earned on the cash account, but how more generally can we calculate contributions?
+
+The first step is to calculate the average capital in each of the cash account and the shares over the full year period. These should sum to the $10,000 average capital of the portfolio as a whole. From the average capital of each of the two components of the portfolio, we can calculate weights. The weight of the cash account is the average capital of the cash account, divided by the average capital ($10,000) of the portfolio, and the weight of the shares is the average capital of the shares over the whole year, divided by the average capital of the portfolio.
+
+For convenience, we will assume the time weight of the outflow of $8,000 cash to pay for the shares is exactly 1/4. This means that the four quarters of the year are treated as having equal length.
+
+The average capital of the cash account is:
+
+The average capital of the shares over the last quarter requires no calculation, because there are no flows after the beginning of the last quarter. It is the $8,000 invested in the shares. However, the average capital in the shares over the whole year is something else. The start value of the shares at the beginning of the year was zero, and there was an inflow of $8,000 at the beginning of the last quarter, so:
+
+We can see immediately that the weight of the cash account in the portfolio over the year was:
+
+and the weight of the shares was:
+
+which sum to 100 percent.
+
+We can calculate the return on the cash account, which was:
+
+The contribution to the portfolio return is:
+
+How about the contribution to the portfolio return from the shares?
+
+The adjusted holding period return on the shares is 10 percent. If we multiply this by the 20 percent weight of the shares in the portfolio, the result is only 2 percent, but the correct contribution is 8 percent.
+
+The answer is to use the return on the shares over the unadjusted full-year period to calculate the contribution:
+
+Then the contribution from the shares to the portfolio return is:
+
+This does not mean that the correct holding period return on the shares is 40 percent, but for calculation of the contribution, use the unadjusted period return, which is the 40 percent figure, not the actual 10 percent holding period return.
+
+
+## Fees
+
+To measure returns net of fees, allow the value of the portfolio to be reduced by the amount of the fees. To calculate returns gross of fees, compensate for them by treating them as an external flow, and exclude accrued fees from valuations.
+
+
+## Annual rate of return
+
+Note that the Modified Dietz return is a holding-period return, not an annual rate of return, unless the period happens to be one year. Annualisation, which is conversion of the holding-period return to an annual rate of return, is a separate process.
+
+
+## Money-weighted return
+
+The modified Dietz method is an example of a money (or dollar) weighted methodology (as opposed to time-weighted). In particular, if the modified Dietz return on two portfolios are {\displaystyle R\_{1}} and {\displaystyle R\_{2}}, measured over a common matching time interval, then the modified Dietz return on the two portfolios put together over the same time interval is the weighted average of the two returns:
+
+where the weights of the portfolios depend on the average capital over the time interval:
+
+
+## Linked return versus true time-weighted return
+
+An alternative to the modified Dietz method is to link geometrically the modified Dietz returns for shorter periods. The linked modified Dietz method is classed as a time-weighted method, but it does not produce the same results as the true time weighted method, which requires valuations at the time of each cash flow.
+
+
+## Issues
+
+
+### Problems with timing assumptions
+
+There are sometimes difficulties when calculating or decomposing portfolio returns, if all transactions are treated as occurring at a single time of day, such as the end of the day or beginning of the day. Whatever method is applied to calculate returns, an assumption that all transactions take place simultaneously at a single point in time each day can lead to errors.
+
+For example, consider a scenario where a portfolio is empty at the start of a day, so that the start value A is zero. There is then an external inflow during that day of F = $100. By the close of the day, market prices have moved, and the end value is $99.
+
+If all transactions are treated as occurring at the end of the day, then there is zero start value A, and zero value for average capital, because the day-weight on the inflow is zero, so no modified Dietz return can be calculated.
+
+Some such problems are resolved if the modified Dietz method is further adjusted so as to put purchases at the open and sales at the close, but more sophisticated exception-handling produces better results.
+
+There are sometimes other difficulties when decomposing portfolio returns, if all transactions are treated as occurring at a single point during the day.
+
+For example, consider a fund opening with just $100 of a single stock that is sold for $110 during the day. During the same day, another stock is purchased for $110, closing with a value of $120. The returns on each stock are 10% and 120/110 - 1 = 9.0909% (4 d.p.) and the portfolio return is 20%. The asset weights *wᵢ* (as opposed to the time weights *Wᵢ*) required to get the returns for these two assets to roll up to the portfolio return are 1200% for the first stock and a negative 1100% for the second:
+
+Such weights are absurd, because the second stock is not held short.
+
+The problem only arises because the day is treated as a single, discrete time interval.
+
+
+### Negative or zero average capital
+
+In normal circumstances, average capital is positive. When an intra-period outflow is large and early enough, average capital can be negative or zero. Negative average capital causes the Modified Dietz return to be negative when there is a profit, and positive when there is a loss. This resembles the behaviour of a liability or short position, even if the investment is not actually a liability or a short position. In cases where the average capital is zero, no Modified Dietz return can be calculated. If the average capital is close to zero, the Modified Dietz return will be large (large and positive, or large and negative).
+
+One partial workaround solution involves as a first step, to capture the exception, detecting for example when the start value (or first inflow) is positive, and the average capital is negative. Then in this case, use the simple return method, adjusting the end value for outflows. This is equivalent to the sum of constituent contributions, where the contributions are based on simple returns and weights depending on start values.
+
+
+#### Example
+
+For example, in a scenario where only part of the holdings are sold, for significantly more than the total starting value, relatively early in the period:
+
+The gain or loss is end value - start value + outflow:
+
+There is a gain, and the position is long, so we would intuitively expect a positive return.
+
+The average capital in this case is:
+
+The modified Dietz return in this case goes awry, because the average capital is negative, even though this is a long position. The Modified Dietz return in this case is:
+
+Instead, we notice that the start value is positive, but the average capital is negative. Furthermore, there is no short sale. In other words, at all times, the number of shares held is positive.
+
+We then measure the simple return from the shares sold:
+
+and from the shares still held at the end:
+
+and combine these returns with the weights of these two portions of the shares within the starting position, which are:
+
+This gives the contributions to the overall return, which are:
+
+The sum of these contributions is the return:
+
+This is equivalent to the simple return, adjusting the end value for outflows:
+
+
+#### Limitations
+
+This workaround has limitations. It is possible only if the holdings can be split up like this.
+
+It is not ideal, for two further reasons, which are that it does not cover all cases, and it is inconsistent with the Modified Dietz method. Combined with Modified Dietz contributions for other assets, the sum of constituent contributions will fail to add up to the overall return.
+
+Another situation in which average capital can be negative is short selling. Instead of investing by buying shares, shares are borrowed and then sold. A decline in the share price results in a profit instead of a loss. The position is a liability instead of an asset. If the profit is positive, and the average capital is negative, the Modified Dietz return is negative, indicating that although the number of shares is unchanged, the absolute value of the liability has shrunk.
+
+In the case of a purchase, followed by a sale of more shares than had been bought, resulting in a short position (a negative number of shares), the average capital can also be negative. What was an asset at the time of the purchase became a liability after the sale. The interpretation of the Modified Dietz return varies from one situation to another.
+
+
+## Visual Basic
+
+
+## Java method for modified Dietz return
+
+
+## Excel VBA function for modified Dietz return
+

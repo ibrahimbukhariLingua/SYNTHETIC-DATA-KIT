@@ -1,0 +1,226 @@
+Market anomaly
+
+
+# Market anomaly
+
+
+
+A **market anomaly** in a financial market is predictability that seems to be inconsistent with (typically risk-based) theories of asset prices. Standard theories include the capital asset pricing model and the Fama-French Three Factor Model, but a lack of agreement among academics about the proper theory leads many to refer to anomalies without a reference to a benchmark theory (Daniel and Hirschleifer 2015 and Barberis 2018, for example). Indeed, many academics simply refer to anomalies as "return predictors", avoiding the problem of defining a benchmark theory.
+
+Academics have documented more than 150 return predictors (see *List of Anomalies Documented in Academic Journals).* These "anomalies", however, come with many caveats. Almost all documented anomalies focus on illiquid, small stocks. Moreover, the studies do not account for trading costs. As a result, many anomalies do not offer profits, despite the presence of predictability. Additionally, return predictability declines substantially after the publication of a predictor, and thus may not offer profits in the future. Finally, return predictability may be due to cross-sectional or time-variation in risk, and thus does not necessarily provide a good investment opportunity. Relatedly, return predictability by itself does not disprove the efficient market hypothesis, as one needs to show predictability over and above that implied by a particular model of risk.
+
+The four primary explanations for market anomalies are (1) mispricing, (2) unmeasured risk, (3) limits to arbitrage, and (4) selection bias. Academics have not reached a consensus on the underlying cause, with prominent academics continuing to advocate for selection bias, mispricing, and risk-based theories.
+
+Anomalies can be broadly categorized into time-series and cross-sectional anomalies. Time-series anomalies refer to predictability in the aggregate stock market, such as the often-discussed Cyclically Adjusted Price-Earnings (CAPE) predictor. These time-series predictors indicate times in which it is better to be invested in stocks vs a safe asset (such as Treasury bills). Cross-sectional anomalies refer to the predictable out-performance of particular stocks relative to others. For example, the well-known size anomaly refers to the fact that stocks with lower market capitalization tend to out-perform stocks with higher market capitalization in the future.
+
+
+## Explanations for anomalies
+
+
+### Mispricing
+
+Many, if not most, of the papers which document anomalies attribute them to mispricing (Lakonishok, Shelifer, and Visny 1994, for example). The mispricing explanation is natural, as anomalies are by definition deviations from a benchmark theory of asset prices. "Mispricing" is then defined as the deviation relative to the benchmark.
+
+The most common benchmark is the CAPM (Capital-Asset-Pricing Model). The deviation from this theory is measured by a non-zero intercept in an estimated security market line. This intercept is commonly denoted by the Greek letter alpha:
+
+{\displaystyle E(R\_{t}-R\_{f,t})=\alpha +\beta [E(R\_{M,t}-R\_{f,t})]\,}
+
+where {\displaystyle R\_{t}} is the return on the anomaly, {\displaystyle R\_{f,t}} is the return on the risk-free rate, {\displaystyle \beta } is the slope from regressing the anomaly's return on the market's return, and {\displaystyle R\_{M,t}} is the return on the "market", often proxied by the return on the CRSP index (an index of all publicly traded U.S. stocks).
+
+The mispricing explanations are often contentious within academic finance, as academics do not agree on the proper benchmark theory (see Unmeasured Risk, below). This disagreement is closely related to the "joint-hypothesis problem" of the efficient market hypothesis.
+
+
+### Unmeasured risk
+
+Among academics, a common response to claims of mispricing was the idea that the anomaly captures a dimension of risk that is missing from the benchmark theory. For example, the anomaly may generate expected returns beyond those measured using the CAPM regression because the time-series of its returns are correlated with labor income, which is not captured by standard proxies for the market return.
+
+Perhaps the most well-known example of this unmeasured risk explanation is found in Fama and French's seminar paper on their 3-factor model: "if assets are priced rationally, variables that are related to average returns ... ..., must proxy for sensitivity to common (shared and thus undiversifiable) risk factors in returns. The [3-factor model] time-series regressions give direct evidence on this issue."
+
+The unmeasured risk explanation is closely related to the shortcomings of the CAPM as a theory of risk as well as shortcomings of empirical tests of the CAPM and related models. Perhaps the most common critique of the CAPM is that it is derived in a single period setting, and thus is missing dynamic features like periods of high uncertainty. In a more general setting, the CAPM typically implies multiple risk factors, as shown in Merton's Intertemporal CAPM theory. Moreover, the ICAPM generally implies the expected returns vary over time, and thus time-series predictability is not clear evidence of mispricing. Indeed, since the CAPM cannot at all capture dynamic expected returns, evidence of time-series predictability is less often regarded as mispricing as compared to cross-sectional predictability.
+
+Empirical shortcomings primarily regard the difficulty in measuring wealth or marginal utility. Theoretically, wealth includes not only stock market wealth, but also non-tradable wealth like private assets and future labor income. In the consumption CAPM, (which is theoretically equivalent to Merton's ICAPM), the proper proxy for wealth is consumption, which is difficult to measure (Savov 2011, for example).
+
+Despite the theoretical soundness of the unmeasured risk explanation, there is little consensus among academics about the proper risk model over and above the CAPM. Propositions include the well-known Fama-French 3-Factor Model, Fama-French-Carhart 4-factor model, Fama-French 5-factor model, and Stambaugh and Yuan's 4-factor model. These models are all empirically-oriented, rather than derived from a formal theory of equilibrium like Merton's ICAPM.
+
+
+### Limits to arbitrage
+
+Anomalies are almost always documented using closing prices from the CRSP dataset. These prices do not reflect trading costs, which can prevent arbitrage and thus the elimination predictability. Moreover, almost all anomalies are documented using equally-weighted portfolios, and thus require trading of illiquid (costly-to-trade) stocks.
+
+The limits to arbitrage explanation can be thought of as a refinement of the mispricing framework. A return pattern only offers profits if the returns it offers survives trading costs, and thus should not be considered mispricing unless trading costs are accounted for.
+
+A large literature documents that trading costs greatly reduce anomaly returns. This literature goes back to Stoll and Whaley (1983) and Ball, Kothari, and Shanken (1995). A recent paper that studies dozens of anomalies finds that trading costs have a massive effect on the average anomaly (Novy-Marx and Velikov 2015).
+
+
+### Selection bias
+
+The documented anomalies are likely the best performers from a much larger set of potential return predictors. This selection creates a bias and implies that estimates of the profitability of anomalies is overstated. This explanation for anomalies is also known as data snooping, p-hacking, data mining, and data dredging, and is closely related to the multiple comparisons problem. Concerns about selection bias in anomalies goes back at least to Jensen and Bennington (1970).
+
+Most research on selection bias in market anomalies focuses on particular subsets of predictors. For example, Sullivan, Timmermann, and White (2001) show that calendar-based anomalies are no longer significant after adjusting for selection bias. A recent meta-analysis of the size premium shows that the reported estimates of the size premium are exaggerated twofold because of selection bias.
+
+Research on selection bias for anomalies more generally is relatively limited and inconclusive. McLean and Pontiff (2016) use an out-of-sample test to show that selection bias accounts for at most 26% of the typical anomaly's mean return during the sample period of the original publication. To show this, they replicate almost 100 anomalies, and show that the average anomaly's return is only 26% smaller in the few years immediately after the end of the original samples. As some of this decline may be due to investor learning effects, the 26% is an upper bound. In contrast, Harvey, Liu, and Zhu (2016) adapt multiple testing adjustments from statistics such as the False Discovery Rate to asset pricing "factors". They refer to a factor as any variable that helps explain the cross-section of expected returns, and thus include many anomalies in their study. They find that multiple-testing statistics imply that factors with t-stats < 3.0 should not be considered statistically significant, and conclude that most published findings are likely false.
+
+
+## List of anomalies documented in academic journals
+
+The **small firm effect** proposes that small companies outperform larger ones. It has been debated in academic journals as to whether the effect is real or arises due to certain systemic errors.
+
+It is related to the neglected firm effect.
+
+| Description | Author(s) | Year | Journal | Broad Category |
+| --- | --- | --- | --- | --- |
+| Change in capital investment, industry adjusted | Abarbanell and Bushee | 1998 | The Accounting Review | Cross-Sectional |
+| Gross Margin growth over sales growth | Abarbanell and Bushee | 1998 | The Accounting Review | Cross-Sectional |
+| Proxy Fights | Ikenberry and Lakonishok | 1993 | Journal of Business | Cross-Sectional |
+| Sales growth over inventory growth | Abarbanell and Bushee | 1998 | The Accounting Review | Cross-Sectional |
+| Sales growth over overhead growth | Abarbanell and Bushee | 1998 | The Accounting Review | Cross-Sectional |
+| Operating Cash flows to price | Desai, Rajgopal, and Benkatachalam | 2004 | The Accounting Review | Cross-Sectional |
+| Earnings Forecast | Elgers, Lo, and Pfeiffer | 2001 | The Accounting Review | Cross-Sectional |
+| Growth in Long term net operating assets | Fairfield, Whisenant and Yohn | 2003 | The Accounting Review | Cross-Sectional |
+| Earnings Surprise | Foster, Olsen and Shevliln | 1984 | The Accounting Review | Cross-Sectional |
+| Percent Operating Accruals | Hafzalla, Lundholm, and Van Winkle | 2011 | The Accounting Review | Cross-Sectional |
+| Percent Total Accruals | Hafzalla, Lundholm, and Van Winkle | 2011 | The Accounting Review | Cross-Sectional |
+| Real dirty surplus | Landsman et al. | 2011 | The Accounting Review | Cross-Sectional |
+| Taxable income to income | Lev and Nissim | 2004 | The Accounting Review | Cross-Sectional |
+| Piotroski F-score | Piotroski | 2000 | The Accounting Review | Cross-Sectional |
+| Accruals | Sloan | 1996 | The Accounting Review | Cross-Sectional |
+| Asset Turnover | Soliman | 2008 | The Accounting Review | Cross-Sectional |
+| Change in Asset Turnover | Soliman | 2008 | The Accounting Review | Cross-Sectional |
+| Change in Noncurrent Operating Assets | Soliman | 2008 | The Accounting Review | Cross-Sectional |
+| Change in Net Working Capital | Soliman | 2008 | The Accounting Review | Cross-Sectional |
+| Change in Profit Margin | Soliman | 2008 | The Accounting Review | Cross-Sectional |
+| Profit Margin | Soliman | 2008 | The Accounting Review | Cross-Sectional |
+| Abnormal Accruals | Xie | 2001 | The Accounting Review | Cross-Sectional |
+| Earnings Consistency | Alwathainani | 2009 | British Accounting Review | Cross-Sectional |
+| Deferred Revenue | Prakash and Sinha | 2012 | Contemporary Accounting Research | Cross-Sectional |
+| Sales-to-price | Barbee, Mukherji, and Raines | 1996 | Financial Analysts' Journal | Cross-Sectional |
+| earnings / assets | Balakrishnan, Bartov, and Faurel | 2010 | Journal of Accounting and Economics | Cross-Sectional |
+| Net debt financing | Bradshaw, Richardson, and Sloan | 2006 | Journal of Accounting and Economics | Cross-Sectional |
+| Net equity financing | Bradshaw, Richardson, and Sloan | 2006 | Journal of Accounting and Economics | Cross-Sectional |
+| Net external financing | Bradshaw, Richardson, and Sloan | 2006 | Journal of Accounting and Economics | Cross-Sectional |
+| Net Operating Assets | Hirschleifer, Hou Teoh, and Zhang | 2004 | Journal of Accounting and Economics | Cross-Sectional |
+| Change in depreciation to gross PPE | Holthausen Larcker | 1992 | Journal of Accounting and Economics | Cross-Sectional |
+| Change in equity to assets | Richardson, Sloan Soliman and Tuna | 2005 | Journal of Accounting and Economics | Cross-Sectional |
+| Change in current operating assets | Richardson, Sloan Soliman and Tuna | 2005 | Journal of Accounting and Economics | Cross-Sectional |
+| Change in current operating liabilities | Richardson, Sloan Soliman and Tuna | 2005 | Journal of Accounting and Economics | Cross-Sectional |
+| Change in financial liabilities | Richardson, Sloan Soliman and Tuna | 2005 | Journal of Accounting and Economics | Cross-Sectional |
+| Change in long-term investment | Richardson, Sloan Soliman and Tuna | 2005 | Journal of Accounting and Economics | Cross-Sectional |
+| Enterprise component of BM | Penman, Richardson, and Tuna | 2007 | Journal of Accounting Research | Cross-Sectional |
+| Leverage component of BM | Penman, Richardson, and Tuna | 2007 | Journal of Accounting Research | Cross-Sectional |
+| Net debt to price | Penman, Richardson, and Tuna | 2007 | Journal of Accounting Research | Cross-Sectional |
+| Change in Taxes | Thomas and Zhang | 2011 | Journal of Accounting Research | Cross-Sectional |
+| IPO and no R&D spending | Gou, Lev, and Shi | 2006 | Journal of Business, Finance and Accounting | Cross-Sectional |
+| Change in capex (two years) | Anderson and Garcia-Feijoo | 2006 | Journal of Finance | Cross-Sectional |
+| Idiosyncratic risk | Ang, Hodrick, Xing, and Zhang | 2006 | Journal of Finance | Cross-Sectional |
+| Junk Stock Momentum | Avramov, Chordia, Jostova, and Philipov | 2007 | Journal of Finance | Cross-Sectional |
+| Maximum return over month | Bali, Cakici, and Whitelaw | 2010 | Journal of Finance | Cross-Sectional |
+| Consensus Recommendation | Barber, Lehavy, McNichols, and Trueman | 2001 | Journal of Finance | Cross-Sectional |
+| Down forecast EPS | Barber, Lehavy, McNichols, and Trueman | 2001 | Journal of Finance | Cross-Sectional |
+| Up Forecast | Barber, Lehavy, McNichols, and Trueman | 2001 | Journal of Finance | Cross-Sectional |
+| Earnings-to-Price Ratio | Basu | 1977 | Journal of Finance | Cross-Sectional |
+| Price | Blume and Husic | 1972 | Journal of Finance | Cross-Sectional |
+| Net Payout Yield | Boudoukh, Michaely, Richardson, and Roberts | 2007 | Journal of Finance | Cross-Sectional |
+| Payout Yield | Boudoukh, Michaely, Richardson, and Roberts | 2007 | Journal of Finance | Cross-Sectional |
+| Failure probability | Campbell, Hilscher, and Szilagyi | 2008 | Journal of Finance | Cross-Sectional |
+| Earnings announcement return | Chan, Jegadeesh, and Lakonishok | 1996 | Journal of Finance | Cross-Sectional |
+| Earnings forecast revisions | Chan, Jegadeesh, and Lakonishok | 1996 | Journal of Finance | Cross-Sectional |
+| Advertising Expense | Chan, Lakonishok, and Sougiannis | 2001 | Journal of Finance | Cross-Sectional |
+| R&D over market cap | Chan, Lakonishok, and Sougiannis | 2001 | Journal of Finance | Cross-Sectional |
+| Asset Growth | Cooper, Gulen and Schill | 2008 | Journal of Finance | Cross-Sectional |
+| Intangible return | Daniel and Titman | 2006 | Journal of Finance | Cross-Sectional |
+| Share issuance (5 year) | Daniel and Titman | 2006 | Journal of Finance | Cross-Sectional |
+| Momentum-Reversal | De Bondt and Thaler | 1985 | Journal of Finance | Cross-Sectional |
+| Long-run reversal | De Bondt and Thaler | 1985 | Journal of Finance | Cross-Sectional |
+| Exchange Switch | Dharan Ikenberry | 1995 | Journal of Finance | Cross-Sectional |
+| Credit Rating Downgrade | Dichev Piotroski | 2001 | Journal of Finance | Cross-Sectional |
+| EPS Forecast Dispersion | Diether et al. | 2002 | Journal of Finance | Cross-Sectional |
+| Unexpected R&D increase | Eberhart et al. | 2004 | Journal of Finance | Cross-Sectional |
+| Organizational Capital | Eisfeldt and Papanikolaou | 2013 | Journal of Finance | Cross-Sectional |
+| Pension Funding Status | Franzoni and Martin | 2006 | Journal of Finance | Cross-Sectional |
+| 52 week high | George and Hwang | 2004 | Journal of Finance | Cross-Sectional |
+| Tangibility | Hahn and Lee | 2009 | Journal of Finance | Cross-Sectional |
+| Industry concentration (Herfindahl) | Hou and Robinson | 2006 | Journal of Finance | Cross-Sectional |
+| Momentum (12 month) | Jegadeesh and Titman | 1993 | Journal of Finance | Cross-Sectional |
+| Momentum (6 month) | Jegadeesh and Titman | 1993 | Journal of Finance | Cross-Sectional |
+| Change in recommendation | Jegadeesh et al. | 2004 | Journal of Finance | Cross-Sectional |
+| Short term reversal | Jegedeesh | 1989 | Journal of Finance | Cross-Sectional |
+| Long-term EPS forecast | La Porta | 1996 | Journal of Finance | Cross-Sectional |
+| Cash flow to market | Lakonishok, Scheifer, and Vishny | 1994 | Journal of Finance | Cross-Sectional |
+| Revenue Growth Rank | Lakonishok, Scheifer, and Vishny | 1994 | Journal of Finance | Cross-Sectional |
+| Momentum and Volume | Lee Swaminathan | 2000 | Journal of Finance | Cross-Sectional |
+| Public Seasoned Equity Offerings | Loughran Ritter | 1995 | Journal of Finance | Cross-Sectional |
+| Dividend Initiation | Michaely et al. | 1995 | Journal of Finance | Cross-Sectional |
+| Dividend Omission | Michaely et al. | 1995 | Journal of Finance | Cross-Sectional |
+| Institutional ownership interactions with anomalies | Nagel | 2005 | Journal of Finance | Cross-Sectional |
+| Dividend Yield | Naranjo et al. | 1998 | Journal of Finance | Cross-Sectional |
+| Share issuance (1 year) | Pontiff and Woodgate | 2008 | Journal of Finance | Cross-Sectional |
+| Initial Public Offerings | Ritter | 1991 | Journal of Finance | Cross-Sectional |
+| Firm Age - Momentum | Zhang | 2004 | Journal of Finance | Cross-Sectional |
+| Book to market | Stattman | 1980 | The Chicago MBA | Cross-Sectional |
+| Bid-ask spread | Amihud and Mendelsohn | 1986 | Journal of Financial Economics | Cross-Sectional |
+| Institutional Ownership for stocks with high short interest | Asquith, Pathak, and Ritter | 2005 | Journal of Financial Economics | Cross-Sectional |
+| Cash-based operating profitability | Ball, Gerakos, Linnainmaa, and Nikolaev | 2016 | Journal of Financial Economics | Cross-Sectional |
+| Size | Banz | 1981 | Journal of Financial Economics | Cross-Sectional |
+| Market leverage | Bhandari | 1988 | Journal of Financial Economics | Cross-Sectional |
+| Past trading volume | Brennan, Chordia, and Subrahmanyam | 1998 | Journal of Financial Economics | Cross-Sectional |
+| Breadth of ownership | Chen Hong Stein | 2002 | Journal of Financial Economics | Cross-Sectional |
+| Turnover volatility | Chordia, Subrahmanyam, and Anshuman | 2001 | Journal of Financial Economics | Cross-Sectional |
+| Volume Variance | Chordia, Subrahmanyam, and Anshuman | 2001 | Journal of Financial Economics | Cross-Sectional |
+| Conglomerate return | Cohen and Lou | 2012 | Journal of Financial Economics | Cross-Sectional |
+| Spinoffs | Cusatis et al. | 1993 | Journal of Financial Economics | Cross-Sectional |
+| Short Interest | Dechow, Hutton, Meulbroek, and Sloan | 2001 | Journal of Financial Economics | Cross-Sectional |
+| O Score | Dichev | 1998 | Journal of Financial Economics | Cross-Sectional |
+| Altman Z-Score | Dichev | 1998 | Journal of Financial Economics | Cross-Sectional |
+| operating profits / book equity | Fama and French | 2006 | Journal of Financial Economics | Cross-Sectional |
+| Industry Momentum | Grinblatt Moskowitz | 1999 | Journal of Financial Economics | Cross-Sectional |
+| Dividends | Hartzmark Salomon | 2013 | Journal of Financial Economics | Cross-Sectional |
+| net income / book equity | Haugen and Baker | 1996 | Journal of Financial Economics | Cross-Sectional |
+| Cash-flow variance | Haugen and Baker | 1996 | Journal of Financial Economics | Cross-Sectional |
+| Volume to market equity | Haugen and Baker | 1996 | Journal of Financial Economics | Cross-Sectional |
+| Volume Trend | Haugen and Baker | 1996 | Journal of Financial Economics | Cross-Sectional |
+| Return Seasonality | Heston and Sadka | 2008 | Journal of Financial Economics | Cross-Sectional |
+| Sin Stock (selection criteria) | Hong Kacperczyk | 2009 | Journal of Financial Economics | Cross-Sectional |
+| Share repurchases | Ikenberry, Lakonishok and Vermaelen | 1995 | Journal of Financial Economics | Cross-Sectional |
+| Revenue Surprise | Jegadeesh and Livnat | 2006 | Journal of Financial Economics | Cross-Sectional |
+| Option Volume relative to recent average | Johnson So | 2012 | Journal of Financial Economics | Cross-Sectional |
+| Option Volume to Stock Volume | Johnson So | 2012 | Journal of Financial Economics | Cross-Sectional |
+| Days with zero trades | Liu | 2006 | Journal of Financial Economics | Cross-Sectional |
+| Intermediate Momentum | Novy-Marx | 2012 | Journal of Financial Economics | Cross-Sectional |
+| gross profits / total assets | Novy-Marx | 2013 | Journal of Financial Economics | Cross-Sectional |
+| Cash to assets | Palazzo | 2012 | Journal of Financial Economics | Cross-Sectional |
+| Debt Issuance | Spiess Affleck-Graves | 1999 | Journal of Financial Economics | Cross-Sectional |
+| Slope of smile | Yan | 2011 | Journal of Financial Economics | Cross-Sectional |
+| Amihud's illiquidity | Amihud | 2002 | Journal of Financial Markets | Cross-Sectional |
+| Share Volume | Datar, Naik, and Radcliffe | 1998 | Journal of Financial Markets | Cross-Sectional |
+| Enterprise Multiple | Loughran and Wellman | 2011 | Journal of Financial and Quantitative Analysis | Cross-Sectional |
+| Efficient frontier index | Nguyen Swanson | 2009 | Journal of Financial and Quantitative Analysis | Cross-Sectional |
+| Investment | Titman, Wei, and Xie | 2004 | Journal of Financial and Quantitative Analysis | Cross-Sectional |
+| Convertible debt indicator | Valta | 2016 | Journal of Financial and Quantitative Analysis | Cross-Sectional |
+| Volatility smirk | Xing Zhang Zhao | 2010 | Journal of Financial and Quantitative Analysis | Cross-Sectional |
+| Stock Splits | Ikenberry, Rankine, Stice | 1996 | Journal of Financial and Quantitative Analysis | Cross-Sectional |
+| Sustainable Growth | Lockwood Prombutr | 2010 | Journal of Financial Research | Cross-Sectional |
+| Momentum and LT Reversal | Chan and Kot | 2006 | Journal of Investment Management | Cross-Sectional |
+| Employment growth | Belo, Lin, and Bazdresch | 2014 | Journal of Political Economy | Cross-Sectional |
+| CAPM beta squared | Fama and MacBeth | 1973 | Journal of Political Economy | Cross-Sectional |
+| Number of consecutive earnings increases | Loh Warachka | 2012 | Management Science | Cross-Sectional |
+| Governance Index | Gompers, Ishii and Metrick | 2003 | Quarterly Journal of Economics | Cross-Sectional |
+| Change in Forecast and Accrual | Barth and Hutton | 2004 | Review of Accounting Studies | Cross-Sectional |
+| Excluded Expenses | Doyle et al. | 2003 | Review of Accounting Studies | Cross-Sectional |
+| Mohanram G-score | Mohanram | 2005 | Review of Accounting Studies | Cross-Sectional |
+| Order backlog | Rajgopal, Shevlin and Venkatachalam | 2003 | Review of Accounting Studies | Cross-Sectional |
+| Inventory Growth | Thomas and Zhang | 2002 | Review of Accounting Studies | Cross-Sectional |
+| Operating Leverage | Novy-Marx | 2010 | Review of Finance | Cross-Sectional |
+| Decline in Analyst Coverage | Scherbina | 2008 | Review of Finance | Cross-Sectional |
+| Earnings surprise of big firms | Hou | 2007 | Review of Financial Studies | Cross-Sectional |
+| Industry return of big firms | Hou | 2007 | Review of Financial Studies | Cross-Sectional |
+| Price delay | Hou and Moskowitz | 2005 | Review of Financial Studies | Cross-Sectional |
+| Tail risk beta | Kelly and Jiang | 2014 | Review of Financial Studies | Cross-Sectional |
+| Kaplan Zingales index | Lamont, Polk, and Saa-Requejo | 2001 | Review of Financial Studies | Cross-Sectional |
+| Growth in advertising expenses | Lou | 2014 | Review of Financial Studies | Cross-Sectional |
+| Composite debt issuance | Lyandres, Sun and Zhang | 2008 | Review of Financial Studies | Cross-Sectional |
+| Real estate holdings | Tuzel | 2010 | Review of Financial Studies | Cross-Sectional |
+| Book-to-market and accruals | Bartov and Kim | 2004 | Review of Quantitative Finance and Accounting | Cross-Sectional |
+| Weekend Effect | Smirlock and Starks | 1986 | Journal of Financial Economics | Time-Series |
+| January Effect | Keims | 1985 | Journal of Financial Economics | Time-Series |
+| Turn of the Month Effect | Agrawal and Tandon | 1994 | Journal of International Money and Finance | Time-Series |
+

@@ -1,0 +1,35 @@
+Reduced form
+
+
+# Reduced form
+
+
+
+In statistics, and particularly in econometrics, the **reduced form** of a system of equations is the result of solving the system for the endogenous variables. This gives the latter as functions of the exogenous variables, if any. In econometrics, the equations of a structural form model are estimated in their theoretically given form, while an alternative approach to estimation is to first solve the theoretical equations for the endogenous variables to obtain reduced form equations, and then to estimate the reduced form equations.
+
+Let *Y* be the vector of the variables to be explained (endogeneous variables) by a statistical model and *X* be the vector of explanatory (exogeneous) variables. In addition let {\displaystyle \varepsilon } be a vector of error terms. Then the general expression of a **structural form** is {\displaystyle f(Y,X,\varepsilon )=0}, where *f* is a function, possibly from vectors to vectors in the case of a multiple-equation model. The **reduced form** of this model is given by {\displaystyle Y=g(X,\varepsilon )}, with *g* a function.
+
+
+## Structural and reduced forms
+
+Exogenous variables are variables which are not determined by the system. If we assume that demand is influenced not only by price, but also by an exogenous variable, *Z*, we can consider the structural supply and demand model
+
+where the terms {\displaystyle u\_{i}} are random errors (deviations of the quantities supplied and demanded from those implied by the rest of each equation). By solving for the unknowns (endogenous variables) *P* and *Q*, this structural model can be rewritten in the reduced form:
+
+where the parameters {\displaystyle \pi \_{ij}} depend on the parameters {\displaystyle a\_{i},b\_{i},c} of the structural model, and where the reduced form errors {\displaystyle e\_{i}} each depend on the structural parameters and on both structural errors. Note that both endogenous variables depend on the exogenous variable *Z*.
+
+If the reduced form model is estimated using empirical data, obtaining estimated values for the coefficients {\displaystyle \pi \_{ij},} some of the structural parameters can be recovered: By combining the two reduced form equations to eliminate *Z*, the structural coefficients of the supply side model ({\displaystyle a\_{S}} and {\displaystyle b\_{S}}) can be derived:
+
+Note however, that this still does not allow us to identify the structural parameters of the demand equation. For that, we would need an exogenous variable which is included in the supply equation of the structural model, but not in the demand equation.
+
+
+## The general linear case
+
+Let *y* be a column vector of *M* endogenous variables. In the case above with *Q* and *P*, we had *M* = 2. Let *z* be a column vector of *K* exogenous variables; in the case above *z* consisted only of *Z*. The structural linear model is
+
+where {\displaystyle v} is a vector of structural shocks, and *A* and *B* are matrices; *A* is a square *M* × *M* matrix, while *B* is *M* × *K*. The reduced form of the system is:
+
+with vector {\displaystyle w} of reduced form errors that each depends on all structural errors, where the matrix *A* must be nonsingular for the reduced form to exist and be unique. Again, each endogenous variable depends on potentially each exogenous variable.
+
+Without restrictions on the *A* and *B*, the coefficients of *A* and *B* cannot be identified from data on *y* and *z*: each row of the structural model is just a linear relation between *y* and *z* with unknown coefficients. (This is again the parameter identification problem.) The *M* reduced form equations (the rows of the matrix equation *y* = Π *z* above) can be identified from the data because each of them contains only one endogenous variable.
+

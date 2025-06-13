@@ -1,0 +1,30 @@
+OjAlgo
+
+
+# OjAlgo
+
+
+
+**oj! Algorithms** or **ojAlgo**, is an open source Java library for mathematics, linear algebra and optimisation. It was first released in 2003 and is 100% pure Java source code and free from external dependencies. Its feature set make it particularly suitable for use within the financial domain.
+
+
+## Capabilities
+
+* Linear algebra in Java
+ + "high performance" multi-threaded feature-complete linear algebra package.
+* Optimisation (mathematical programming) including LP, QP and MIP solvers.
+* Finance related code (certainly usable in other areas as well):
+ + Extensive set of tools to work with time series - CalendarDateSeries, CoordinationSet & PrimitiveTimeSeries.
+ + Random numbers and stochastic processes - even multi-dimensional such - and the ability to drive these to do things like Monte Carlo simulations.
+ + A collection of Modern Portfolio Theory related classes - FinancePortfolio and its subclasses the Markowitz and Black-Litterman model implementations.
+ + Ability to download data from Yahoo Finance and Google Finance.
+
+It requires Java 8 since version v38. As of version 44.0, the finance specific code has been moved to its own project/module named ojAlgo-finance.
+
+
+## Usage example
+
+Example of singular value decomposition:
+
+Example of matrix multiplication:
+

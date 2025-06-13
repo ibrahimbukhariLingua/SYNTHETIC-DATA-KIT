@@ -1,0 +1,37 @@
+Bit-stream access
+
+
+# Bit-stream access
+
+
+
+**Bit-stream access** refers to the situation where a wireline incumbent installs a high-speed access link to the customer's premises (e.g., by installing ADSL equipment in the local access network) and then makes this access link available to third parties, to enable them to provide high-speed services to customers. This type of access does not entail any third-party access to the copper pair in the local loop.
+
+The incumbent may also provide transmission services to its competitors, using its Asynchronous Transfer Mode (ATM) or IP network, to carry competitors' traffic from the digital subscriber line access multiplexer (DSLAM) to a higher level in the network hierarchy where new entrants may already have a point of presence (e.g. a transit switch location). Bit-stream handover points thus can be at various levels:
+
+* Handover at DSLAM
+* Handover at ATM-PoP
+* Handover at IP level
+
+Bit-stream access is nowadays considered a key tool for opening competition in the broadband market. It enables competitors to offer their own products to consumers even if they do not operate the local loop (the last mile). Bit-stream access allows the new entrant to use the high-speed modems and other equipment provided by the incumbent and thus avoid maintenance and investments into the local loop. This affects the economics of the service and places restrictions on the type of modems that the customer of the new entrant can buy or rent.
+
+The main elements defining bit-stream access are the following:
+
+* High-speed access link to the customer premises (end user part) provided by the incumbent and transmission capacity for broadband data in both direction, enabling new entrants to offer their own, value-added services to end users;
+* New entrants have the possibility to differentiate their services by altering technical characteristics and/or the use of their own network.
+
+Thus, bit-stream access is a wholesale product consisting of the access (typically ADSL) and “backhaul” services of the (data) backbone network (ATM, IP backbone).
+
+
+## EU regulation
+
+Unlike unbundled access, the provision of bit-stream access services is not mandated under European Union law, but where an incumbent operator provides bit-stream DSL services to its own services, subsidiary or third party, then, in accordance with community law, it must also provide such forms of access under transparent and non-discriminatory terms or conditions to others (Directive 98/10/EC Article 16).
+
+Bit-stream access service allows the incumbent to retain control of the rate of deployment of high-speed access services, and the geographical regions in which these service are rolled out. From the regulatory point of view, such services are therefore seen as complementing the other forms of unbundled access, but not substituting them.
+
+
+## Bit stream general model
+
+* Backhauling: is the physical linking of Telecommunications Terminal Equipment and/or licensed ISP Networks to Public Telecommunications Networks in order to allow Users of the licensed ISP Networks or the Users of the Telecommunications Terminal Equipment to communicate with Users of a Public Telecommunications Network or Users of the same or another licensed ISP Networks or to access services provided on a Public Telecommunications Network as appropriate
+* Points of interconnections: are the border physical connections between licensed Internet Service Provider, and the Access Network of a Telecommunication Network, marked as the demarcation zone, and the aim is to allow the licensed Internet Service Providers to acquire logical port capacity to serve IP stream and access services provided on a Public Telecommunications Network as appropriate. Points of Internet connection are physically represented by aggregation switches which allows port bundling, link aggregation to form logical capacity to serve the backhauling connectivity. Point of Interconnection, are the major POPs identified by the telecommunication provider at the feasible flexible to connect points.
+* Backhauling Port Capacity: is the logical summation of all Backhauling Connectivity links to deliver Ip stream and various services from Point of Interconnection to the end consumer CPE.

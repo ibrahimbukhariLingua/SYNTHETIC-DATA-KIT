@@ -1,0 +1,173 @@
+Ergodicity economics
+
+
+# Ergodicity economics
+
+
+
+**Ergodicity economics** is a research programme that applies the concept of ergodicity to problems in economics and decision-making under uncertainty. The programme's main goal is to understand how traditional economic theory, framed in terms of the *expectation values*, changes when replacing expectation value with time averages. In particular, the programme is interested in understanding how behaviour is shaped by non-ergodic economic processes, that is processes where the expectation value of an observable does not equal its time average.
+
+
+## Background
+
+Mean values and expected values are used extensively in economic theory, most commonly as a summary statistic, e.g. used for modelling agents’ decisions under uncertainty. Early economic theory was developed at a time when the expected value had been invented but its relation to the time average had not been studied. No clear distinction was made between the two mathematical objects, which can be interpreted as an implicit assumption of ergodicity. Ergodicity economics explores what aspects of economics can be informed by avoiding this implicit assumption.
+
+While one common critique of modelling decisions based on expected values is the sensitivity of the mean to outliers, ergodicity economics focuses on a different critique. It emphasizes the physical meaning of expected values as averages across a statistical ensemble of parallel systems. It insists on a physical justification when expected values are used. In essence, at least one of two conditions must hold:
+
+* the average value of an observable across many real systems is relevant to the problem, and the sample of systems is large enough to be well approximated by a statistical ensemble;
+
+* the average value of an observable in one real system over a long time is relevant to the problem, and the observable is well modelled as ergodic.
+
+In ergodicity economics, expected values are replaced, where necessary, by averages that account for the ergodicity or non-ergodicity of the observables involved. Non-ergodicity is closely related to the problems of irreversibility and path dependence that are common themes in economics.
+
+
+### Relation to other sciences
+
+In mathematics and physics, the concept of ergodicity is used to characterise dynamical systems and stochastic processes. A system is said to be ergodic, if a point of a moving system will eventually visit all parts of the space that the system moves in, in a uniform and random sense. Ergodicity implies that the average behaviour along a single trajectory through time (time average) is equivalent to the average behaviour of a large ensemble at one point in time (ensemble average). For an infinitely large ensemble, the ensemble average of an observable is equivalent to the expected value.
+
+Ergodicity economics inherits from these ideas the probing of the ergodic properties of stochastic processes used as economic models.
+
+
+### Historical Background
+
+Ergodicity economics questions whether expected value is a useful indicator of an economic observable's behaviour over time. In doing so it builds on existing critiques of the use of expected value in the modeling of economic decisions. Such critiques started soon after the introduction of expected value in 1654. For instance, expected-utility theory was proposed in 1738 by Daniel Bernoulli as a way of modeling behavior which is inconsistent with expected-value maximization. In 1956, John Kelly devised the Kelly criterion by optimizing the use of available information, and Leo Breiman later noted that this is equivalent to optimizing time-average performance, as opposed to expected value.
+
+The ergodicity economics research programme originates in two papers by Ole Peters in 2011, a theoretical physicist and current external professor at the Santa Fe Institute. The first studied the problem of optimal leverage in finance and how this may be achieved by considering the non-ergodic properties of geometric brownian motion. The second paper applied principles of non-ergodicity to propose a possible solution for the St. Petersburg paradox. More recent work has suggested possible solutions for the equity premium puzzle, the insurance puzzle, gamble-selection, probability weighting, and has provided insights into the dynamics of income inequality.
+
+
+## Decision theory
+
+Ergodicity economics emphasizes what happens to an agent's wealth {\displaystyle x(t)} over time {\displaystyle t}. From this follows a possible decision theory where agents maximize the time-average growth rate of wealth. The functional form of the growth rate, {\displaystyle g}, depends on the wealth process {\displaystyle x(t)}. In general, a growth rate takes the form {\displaystyle g={\frac {\Delta v(x)}{\Delta t}}}, where the function {\displaystyle v(x)}, linearizes {\displaystyle x(t)}, such that growth rates evaluated at different times can be meaningfully compared.
+
+Growth processes {\displaystyle x(t)} generally violate ergodicity, but their growth rates may nonetheless be ergodic. In this case, the time-average growth rate, {\displaystyle g\_{t}} can be computed as the rate of change of the expected value of {\displaystyle v(x)}, i.e.
+
+In this context, {\displaystyle v(x)} is called the ergodicity transformation.
+
+
+### Relation to classic decision theory
+
+An influential class of models for economic decision-making is known as expected utility theory. The following specific model can be mapped to the growth-rate optimization highlighted by ergodicity economics. Here, agents evaluate monetary wealth {\displaystyle x} according to a utility function {\displaystyle u(x)}, and it is postulated that decisions maximize the expected value of the change in utility,
+
+This model was proposed as an improvement of expected-value maximization, where agents maximize {\displaystyle E[\Delta x]}. A non-linear utility function allows the encoding of behavioral patterns not represented in expected-value maximization. Specifically, expected-utility maximizing agents can have idiosyncratic risk preferences. An agent specified by a convex utility function is more risk-seeking than an expected wealth maximizer, and a concave utility function implies greater risk aversion.
+
+Comparing (2) to (1), we can identify the utility function {\displaystyle u(x)} with the linearization {\displaystyle v(x)}, and make the two expressions identical by dividing (2) by {\displaystyle \Delta t}. Division by {\displaystyle \Delta t} simply implements a preference for faster utility growth in the expected-utility-theory decision protocol.
+
+This mapping shows that the two models will yield identical predictions if the utility function applied under expected-utility theory is the same as the ergodicity transformation, needed to compute an ergodic growth rate.
+
+Ergodicity economics thus emphasizes the dynamic circumstances under which a decision is made, whereas expected-utility theory emphasizes idiosyncratic preferences to explain behavior. Different ergodicity transformations indicate different types of wealth dynamics, whereas different utility functions indicate different personal preferences. The mapping highlights the relationship between the two approaches, showing that differences in personal preferences can arise purely as a result of different dynamic contexts of decision makers.
+
+
+### Continuous example: Geometric Brownian motion
+
+A simple example for an agent's wealth process, {\displaystyle x(t)}, is geometric Brownian motion (GBM), commonly used in mathematical finance and other fields.
+{\displaystyle x(t)} is said to follow GBM if it satisfies the stochastic differential equation
+
+where {\displaystyle dW\_{t}} is the increment in a Wiener process, and {\displaystyle \mu } ('drift') and {\displaystyle \sigma } ('volatility') are constants. Solving (3) gives
+
+In this case the ergodicity transformation is {\displaystyle v(x)=\ln(x)}, as is easily verified:
+{\displaystyle \ln x(t)=\ln x(0)+\left(\mu -{\frac {\sigma ^{2}}{2}}\right)t+\sigma W\_{t}} grows linearly in time.
+
+Following the recipe laid out above, this leads to the time-average growth rate
+
+It follows that for geometric Brownian motion, maximizing the rate of change in the logarithmic utility function, {\displaystyle u(x)=\ln(x)}, is equivalent to maximizing the time-average growth rate of wealth, i.e. what happens to the agent's wealth over time.
+
+Stochastic processes other than (3) possess different ergodicity transformations, where growth-optimal agents maximize the expected value of utility functions other than the logarithm. Trivially, replacing (3) with additive dynamics implies a linear ergodicity transformation, and many similar pairs of dynamics and transformations can be derived.
+
+
+### Discrete example: multiplicative Coin Toss
+
+A popular illustration of non-ergodicity in economic processes is a repeated multiplicative coin toss, an instance of the binomial multiplicative process. It demonstrates how an expected-value analysis can indicate that a gamble is favorable although the gambler is guaranteed to lose over time.
+
+
+#### Definition
+
+In this thought experiment, discussed in, a person participates in a simple game where they toss a fair coin. If the coin lands heads, the person gains 50% on their current wealth; if it lands tails, the person loses 40%.
+
+The game shows the difference between the expected value of an investment, or bet, and the time-average or real-world outcome of repeatedly engaging in that bet over time.
+
+
+#### Calculation of Expected Value
+
+Denoting current wealth by {\displaystyle x(t)}, and the time when the payout is received by {\displaystyle t+\delta t}, we find that wealth after one round is given by the random variable {\displaystyle x(t+\delta t)}, which takes the values {\displaystyle 1.5\times x(t)} (for heads) and {\displaystyle 0.6\times x(t)} (for tails), each with probability {\displaystyle p\_{\text{H}}=p\_{\text{T}}=1/2}. The expected value of the gambler's wealth after one round is therefore
+
+{\displaystyle {\begin{aligned}E[x(t+\delta t)]&=p\_{\text{H}}\times 1.5x(t)+p\_{\text{T}}\times 0.6x(t)\\&=1.05x(t).\end{aligned}}}
+
+By induction, after {\displaystyle T} rounds expected wealth is {\displaystyle E[x(t+T\delta t)]=1.05^{T}x(t)}, increasing exponentially at 5% per round in the game.
+
+This calculation shows that the game is favorable in expectation—its expected value increases with each round played.
+
+
+#### Calculation of Time-Average
+
+The time-average performance indicates what happens to the wealth of a single gambler who plays repeatedly, reinvesting their entire wealth every round.
+Due to compounding, after {\displaystyle T} rounds the wealth will be
+
+{\displaystyle x(t+T\delta t)=\prod \_{\tau =1}^{T}r\_{\tau }x(t),}
+
+where we have written {\displaystyle r\_{\tau }} to denote the realized random factor by which wealth is multiplied in the {\displaystyle \tau ^{\text{th}}} round of the game (either {\displaystyle r\_{\tau }=r\_{\text{H}}=1.5} for heads; or {\displaystyle r\_{\tau }=r\_{\text{T}}=0.6}, for tails). Averaged over time, wealth has grown per round by a factor
+
+{\displaystyle {\bar {r}}\_{T}=\left({\frac {x(t+T\delta t)}{x(t)}}\right)^{1/T}.}
+
+Introducing the notation {\displaystyle n\_{\text{H}}} for the number of heads in a sequence of coin tosses we re-write this as
+
+{\displaystyle {\bar {r}}\_{T}=\left(r\_{\text{H}}^{n\_{\text{H}}}r\_{\text{T}}^{T-n\_{\text{H}}}\right)^{1/T}=r\_{\text{H}}^{n\_{\text{H}}/T}r\_{\text{T}}^{(T-n\_{\text{H}})/T}.}
+
+For any finite {\displaystyle T}, the time-average per-round growth factor, {\displaystyle {\bar {r}}\_{T}}, is a random variable. The long-time limit, found by letting the number of rounds diverge {\displaystyle T\to \infty }, provides a characteristic scalar which can be compared with the per-round growth factor of the expected value. The proportion of heads tossed then converges to the probability of heads (namely 1/2), and the time-average growth factor is
+
+{\displaystyle \lim \_{T\to \infty }{\bar {r}}\_{T}=\left(r\_{\text{H}}r\_{\text{T}}\right)^{\frac {1}{2}}\approx 0.95.}
+
+
+#### Discussion
+
+The comparison between expected value and time-average performance illustrates an effect of broken ergodicity: over time, with probability one, wealth *decreases* by about 5% per round, in contrast to the increase by 5% per round of the expected value.
+
+
+### How the mind is tricked when betting on a non-stationary system
+
+To explain the danger of betting in a non-stationary system, a simple game is used. We have two people sitting opposite each other separated by a black cloth, so that they cannot see each other. They are playing the following game: the person we will call A tosses a coin and the person we will call B tries to guess the state in which the coin is on the table. This game lasts an arbitrary interval of time and person A is free to choose how many tosses to make during the chosen interval of time, person B does not see the toss of the coin but can at any time, within the interval of time, make a bet. When he makes a bet, if he guesses the state in which the coin is at that moment, he wins. The game begins, A tosses only once (result: heads), while B bets twice on heads, winning both times.
+
+**Question:** What is the overall probability of the outcome?
+
+**• B** calculates a probability of 25% (0.5 × 0.5), considering bets as independent.
+
+**• A** calculates a probability of 50% since there was only one toss and not two separate events.
+
+The difference arises from the estimate of the conditional probability:
+
+**• B** estimates the conditional probability in this way P(E2 | E1) = P(E2) treating the events (bets) as completely independent.
+
+**• A** estimates the conditional probability in this other way P(E2 | E1) = 1 treating the events as completely dependent.
+
+E1=first bet
+
+E2=second bet
+
+The correct answer depends on information: only the person tossing the coin (A) knows the number of tosses and can correctly estimate the probability.
+
+**Application to financial markets**
+
+The game highlights how traders (player B) often treat their trades as independent, ignoring the non-ergodic structure of financial markets (player A). Markets are not ergodic because sequences of events cannot be simply represented by long-term statistical averages. In other words, returns do not follow independent and identically distributed (i.i.d.) processes, and historical conditions profoundly influence future outcomes. This error leads to an overestimation of predictive capabilities and excessive risk-taking.
+
+
+## Coverage in the wider media
+
+In December 2020, Bloomberg news published an article titled "Everything We’ve Learned About Modern Economic Theory Is Wrong" discussing the implications of ergodicity in economics following the publication of a review of the subject in Nature Physics. Morningstar covered the story to discuss the investment case for stock diversification.
+
+In the book *Skin in the Game*, Nassim Nicholas Taleb suggests that the ergodicity problem requires a rethinking of how economists use probabilities. A summary of the arguments was published by Taleb in a Medium article in August 2017.
+
+In the book *The End of Theory*, Richard Bookstaber lists non-ergodicity as one of four characteristics of our economy that are part of financial crises, that conventional economics fails to adequately account for, and that any model of such crises needs to take adequate account of. The other three are: computational irreducibility, emergent phenomena, and radical uncertainty.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+In the book *The Ergodic Investor and Entrepreneur*, Boyd and Reardon tackle the practical implications of non-ergodic capital growth for investors and entrepreneurs, especially for those with a sustainability, circular economy, net positive, or regenerative focus.
+
+James White and Victor Haghani discuss the field of ergodicity economics in their book *The Missing Billionaires*.
+
+
+## Criticisms
+
+It has been claimed that expected utility theory implicitly assumes ergodicity in the sense that it optimizes an expected value which is only relevant to the long-term benefit of the decision-maker if the relevant observable is ergodic. Doctor, Wakker, and Tang argue that this is wrong because such assumptions are “outside the scope of expected utility theory as a static theory”. They further argue that ergodicity economics overemphasizes the importance of long-term growth as “the primary factor that explains economic phenomena,” and downplays the importance of individual preferences. They also caution against optimizing long-term growth inappropriately.
+
+Doctor, Wakker, and Tang gives the example of a short-term decision between A) a great loss incurred with certainty and B) a gain enjoyed with almost-certainty paired with an even greater loss at negligible probability. In the example the long-term growth rate favors the certain loss and seems an inappropriate criterion
+for the short-term decision horizon.
+
+Finally, an experiment by Meder and colleagues claims to find that individual risk preferences change with dynamical conditions in ways predicted by ergodicity economics. Doctor, Wakker, and Tang criticize the experiment for being confounded by differences in ambiguity and the complexity of probability calculations. Further, they criticize the analysis for applying static expected utility theory models to a context where dynamic versions are more appropriate. In support of this, Goldstein claims to show that multi-period EUT predicts a similar change in risk preferences as observed in the experiment.
+

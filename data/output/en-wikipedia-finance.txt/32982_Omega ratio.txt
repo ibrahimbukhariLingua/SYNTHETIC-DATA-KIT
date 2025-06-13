@@ -1,0 +1,22 @@
+Omega ratio
+
+
+# Omega ratio
+
+
+
+The **Omega ratio** is a risk-return performance measure of an investment asset, portfolio, or strategy. It was devised by Con Keating and William F. Shadwick in 2002 and is defined as the probability weighted ratio of gains versus losses for some threshold return target. The ratio is an alternative for the widely used Sharpe ratio and is based on information the Sharpe ratio discards.
+
+Omega is calculated by creating a partition in the cumulative return distribution in order to create an area of losses and an area for gains relative to this threshold.
+
+The ratio is calculated as:
+
+where {\displaystyle F} is the cumulative probability distribution function of the returns and {\displaystyle \theta } is the target return threshold defining what is considered a gain versus a loss. A larger ratio indicates that the asset provides more gains relative to losses for some threshold {\displaystyle \theta } and so would be preferred by an investor. When {\displaystyle \theta } is set to zero the gain-loss-ratio by Bernardo and Ledoit arises as a special case.
+
+Comparisons can be made with the commonly used Sharpe ratio which considers the ratio of return versus volatility. The Sharpe ratio considers only the first two moments of the return distribution whereas the Omega ratio, by construction, considers all moments.
+
+
+## Optimization of the Omega ratio
+
+The standard form of the Omega ratio is a non-convex function, but it is possible to optimize a transformed version using linear programming. To begin with, Kapsos et al. show that the Omega ratio of a portfolio is:{\displaystyle \Omega (\theta )={w^{T}\operatorname {E} (r)-\theta \over {\operatorname {E} [(\theta -w^{T}r)\_{+}]}}+1}The optimization problem that maximizes the Omega ratio is given by:{\displaystyle \max \_{w}{w^{T}\operatorname {E} (r)-\theta \over {\operatorname {E} [(\theta -w^{T}r)\_{+}]}},\quad {\text{s.t. }}w^{T}\operatorname {E} (r)\geq \theta ,\;w^{T}{\bf {1}}=1,\;w\geq 0}The objective function is non-convex, so several modifications are made. First, note that the discrete analogue of the objective function is:{\displaystyle {w^{T}\operatorname {E} (r)-\theta \over {\sum \_{j}p\_{j}(\theta -w^{T}r)\_{+}}}}For {\displaystyle m} sampled asset class returns, let {\displaystyle u\_{j}=(\theta -w^{T}r\_{j})\_{+}} and {\displaystyle p\_{j}=m^{-1}}. Then the discrete objective function becomes:{\displaystyle {w^{T}\operatorname {E} (r)-\theta \over {m^{-1}{\bf {1}}^{T}u}}\propto {w^{T}\operatorname {E} (r)-\theta \over {{\bf {1}}^{T}u}}}Following these substitutions, the non-convex optimization problem is transformed into an instance of linear-fractional programming. Assuming that the feasible region is non-empty and bounded, it is possible to transform a linear-fractional program into a linear program. Conversion from a linear-fractional program to a linear program yields the final form of the Omega ratio optimization problem:{\displaystyle {\begin{aligned}\max \_{y,q,z}{}&y^{T}\operatorname {E} (r)-\theta z\\{\text{s.t. }}&y^{T}\operatorname {E} (r)\geq \theta z,\;q^{T}{\bf {1}}=1,\;y^{T}{\bf {1}}=z\\&q\_{j}\geq \theta z-y^{T}r\_{j},\;q,z\geq 0,\;z{\mathcal {L}}\leq y\leq z{\mathcal {U}}\end{aligned}}}where {\displaystyle {\mathcal {L}},\;{\mathcal {U}}} are the respective lower and upper bounds for the portfolio weights. To recover the portfolio weights, normalize the values of {\displaystyle y} so that their sum is equal to 1.
+

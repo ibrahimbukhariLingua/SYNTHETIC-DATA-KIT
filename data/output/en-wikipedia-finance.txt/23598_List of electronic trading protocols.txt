@@ -1,0 +1,69 @@
+List of electronic trading protocols
+
+
+# List of electronic trading protocols
+
+
+
+Communications on electronic trading platforms are based on a list of well-defined protocols.
+
+Although FIX protocol has grown significant market share, the exchange specific protocols (also called "Native" interfaces) have found a strong backing with people using low latency trading.
+
+
+## Protocols used by electronic exchanges
+
+List of Electronic Exchanges along with the protocols they currently expose as their E-Trading interface.
+
+
+### Americas
+
+| Exchange | Native Order Flow | FIX Order Flow | Market Data |
+| --- | --- | --- | --- |
+| B3 (stock exchange) (aka BM&FBovespa) | FIX | FIX4.4 | UMDF (FIX/FAST) |
+| Bolsa Mexicana de Valores | FIX | 4.4 - version 2.4 | INTRA (UDP) / SIVA (TCP) |
+| BIVA | OUCH | FIX 5.0 | ITCH |
+| Boston Options Exchange | SAIL | 4.2 | HSVF |
+| Cboe | BOE | 4.2 | PITCH |
+| Chicago Mercantile Exchange | iLink | FIX | Simple Binary Encoding |
+| Montreal Exchange | SAIL | 4.2 | HSVF |
+| Nasdaq | OUCH 5.0 Clientᵖᵉʳᵐᵃⁿᵉⁿᵗ ᵈᵉᵃᵈ ˡⁱⁿᵏ | - | ITCH5.0 |
+| NYSE | Pillar | 4.2ᵖᵉʳᵐᵃⁿᵉⁿᵗ ᵈᵉᵃᵈ ˡⁱⁿᵏ |
+| TSX | FIX Client | TSX-FIX | QUANTUMFEED |
+| Aequitas Neo | FIX | FIX | NITCH |
+| ICE | FIX | FIX | iMpact |
+
+
+### Europe
+
+| Exchange | Native Order Flow | FIX Order Flow | Market Data |
+| --- | --- | --- | --- |
+| Cboe Europe | BOE | 4.2 | PITCH |
+| Eurex | T7 ETI (Derivatives Markets Reference) | 4.4 | EOBI / FIX/FAST |
+| Euronext | SBE | 5.0 | SBE |
+| Borsa Italiana IDEM Derivatives | SAIL | 4.2 | HSVF |
+| Liffe (ICE EU) | FIX | FIX | iMpact |
+| London Stock Exchange | Native | 5.0sp2 | GTP |
+| Moscow Exchange (MICEX) | MTESRL-TSMR | 4.4 | FIX/FAST |
+| Moscow Exchange (RTS) | Plaza2 | 4.4 | FIX/FAST |
+| Oslo Børs (Derivatives) | SBE | 5.0 | SBE |
+| Oslo Børs (Equities) | SBE | 5.0 | SBE |
+| London Stock Exchange UK Derivatives | SAIL (Native) | 4.2 | HSVF |
+| Turquoise | Native | GTP |
+| Warsaw Stock Exchange | UTP | 4.4 | XDP |
+| Xetra | T7 ETI (Cash Markets Reference) | 4.4 | EOBI / FIX/FAST |
+
+
+### Asia
+
+| Exchange | Native Order Flow | FIX Order Flow | Market Data |
+| --- | --- | --- | --- |
+| Taiwan Stock Exchange | TMP (TWSE Message Protocol) | 4.4 | FIX/FAST |
+| Taipei Exchange | TMP (TWSE Message Protocol) | 4.4 |
+| Tokyo Stock Exchange | Arrowhead | 4.2 | FLEX |
+| Indonesia Stock Exchange | OUCH | FIX 5.0 | ITCH |
+| Singapore Exchange Securities Trading (SGXST) | OMEX | - |
+| Singapore Exchange Derivatives Trading (SGXDT) | OMEX | - |
+| Hong Kong Stock Exchange (HKSE) | OCG | - | OMD |
+| Hong Kong Futures Exchange (HKFE) | OMEX | - | OMD |
+| National Stock Exchange (NSE) | NEAT |
+

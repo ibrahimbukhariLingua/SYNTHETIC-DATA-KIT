@@ -1,0 +1,77 @@
+Accounting information system
+
+
+# Accounting information system
+
+
+
+| Part of a series on |
+| --- |
+| Accounting |
+| * Historical cost * Constant purchasing power * Management * Tax |
+| Major types * Audit * Budget * Cost * Forensic * Financial * Fund * Governmental * Management * Social * Tax |
+| Key concepts * Accounting period * Accrual * Constant purchasing power * Economic entity * Fair value * Going concern * Historical cost * Matching principle * Materiality * Revenue recognition * Unit of account |
+| Selected accounts * Assets * Cash * Cost of goods sold * Depreciation / Amortization (business) * Equity * Expenses * Goodwill * Liabilities * Profit * Revenue |
+| Accounting standards * Generally-accepted principles * Generally-accepted auditing standards * Convergence * International Financial Reporting Standards * International Standards on Auditing * Management Accounting Principles |
+| Financial statements * Annual report * Balance sheet * Cash-flow * Equity * Income * Management discussion * Notes to the financial statements |
+| Bookkeeping * Bank reconciliation * Debits and credits * Double-entry system * FIFO and LIFO * Journal * Ledger / General ledger * Trial balance |
+| Auditing * Financial * Internal * Firms * Report * Sarbanes–Oxley Act |
+| People and organizations * Accountants * Accounting organizations * Luca Pacioli |
+| Development * History * Research * Positive accounting * Sarbanes–Oxley Act |
+| Misconduct * Creative * Earnings management * Error account * Hollywood * Off-balance-sheet * Two sets of books |
+| * v * t * e |
+
+An **accounting information system** (AIS) is a system of collecting, storing and processing financial and accounting data that are used by decision makers. An accounting information system is generally a computer-based method for tracking accounting activity in conjunction with information technology resources. The resulting financial reports can be used internally by management or externally by other interested parties including investors, creditors and tax authorities. Accounting information systems are designed to support all accounting functions and activities including auditing, financial accounting porting, -managerial/ management accounting and tax. The most widely adopted accounting information systems are auditing and financial reporting modules.
+
+
+## History
+
+Traditionally, accounting is purely based on a manual approach. The experience and skillfulness of an individual accountant are critical in accounting processes. Even using the manual approach can be ineffective and inefficient. Accounting information systems resolve many of the above issues. AISs can support the automation of processing a large amounts of data and produce timely and accurate information.
+
+Early accounting information systems were designed for payroll functions in 1970s. Initially, accounting information systems were developed "in-house" as no packaged solutions were available. Such solutions were expensive to develop and difficult to maintain. Therefore, many accounting practitioners preferred the manual approach rather than computer-based. Today, accounting information systems are more commonly sold as prebuilt software packages from large vendors such as Microsoft, Sage Group, SAP and Oracle where it is configured and customized to match the organization's business processes. Small businesses often use accounting lower costs software packages such as Tally.ERP 9, MYOB and Quickbooks. Large organisations would often choose ERP systems. As the need for connectivity and consolidation between other business systems increased, accounting information systems were merged with larger, more centralized systems enterprise resource planning (ERP). Before, with separate applications to manage different business functions, organizations had to develop complex interfaces for the systems to communicate with each other. In ERP, a system such as an accounting information system is built as a module integrated into a suite of applications that can include manufacturing, supply chain, human resources. These modules are integrated together and are able to access the same data and execute complex business processes. Today, Cloud-based accounting information systems are increasingly popular for both SMEs and large organisations for lower costs. With adoption of accounting information systems, many businesses have removed low skills, transactional, and operational accounting roles.
+
+
+## An example of architecture
+
+An AIS typically follows a multitier architecture separating the presentation to the user, application processing and data management in distinct layers. The presentation layer manages how the information is displayed to and viewed by functional users of the system (through mobile devices, web browsers or client application). The entire system is backed by a centralized database that stores all of the data. This can include transactional data generated from the core business processes (purchasing, inventory, accounting) or static, master data that is referenced when processing data (employee and customer account records and configuration settings). As transactions occur, the data is collected from the business events and stored into the system's database where it can be retrieved and processed into information that is useful for making decisions. The application layer retrieves the raw data held in the log database layer, processes it based on the configured business logic and passes it onto the presentation layer to display to the users. For example, consider the accounts payable department when processing an invoice. With an accounting information system, an accounts payable clerk enters the invoice, provided by a vendor, into the system where it is then stored in the database. When goods from the vendor are received, a receipt is created and also entered into the AIS. Before the accounts payable department pays the vendor, the system's application processing tier performs a three-way matching where it automatically matches the amounts on the invoice against the amounts on the receipt and the initial purchase order. Once the match is complete, an email is sent to an accounts payable manager for approval. From here a voucher can be created and the vendor can ultimately be paid.
+
+
+## Advantages and implications
+
+A big advantage of computer-based accounting information systems is that they automate and streamline reporting, develop advanced modelling and support data mining. Reporting is major tool for organizations to accurately see summarized, timely information used for decision-making and financial reporting. The accounting information system pulls data from the centralized database, processes and transforms it and ultimately generates a summary of that data as information that can now be easily consumed and analyzed by business analysts, managers or other decision makers. These systems must ensure that the reports are timely so that decision-makers are not acting on old, irrelevant information and, rather, able to act quickly and effectively based on report results. Consolidation is one of the hallmarks of reporting as people do not have to look through an enormous number of transactions. For instance, at the end of the month, a financial accountant consolidates all the paid vouchers by running a report on the system. The system's application layer provides a report with the total amount paid to its vendors for that particular month. With large corporations that generate large volumes of transactional data, running reports with even an AIS can take days or even weeks.
+
+After the wave of corporate scandals from large companies such as Tyco International, Enron and WorldCom, major emphasis was put on enforcing public companies to implement strong internal controls into their transaction-based systems. This was made into law with the passage of the Sarbanes–Oxley Act of 2002 which stipulated that companies must generate an internal control report stating who is responsible for an organization's internal control structure and outlines the overall effectiveness of these controls. Since most of these scandals were rooted in the companies' accounting practices, much of the emphasis of Sarbanes Oxley was put on computer-based accounting information systems. Today, AIS vendors tout their governance, risk management, and compliance features to ensure business processes are robust and protected and the organization's assets (including data) are secured.
+
+
+## Implementation
+
+Many large and SMEs are now adopting cost effective cloud-based accounting information system in recent years. However the majority of existing automated accounting systems use typical databases (DBF, MS SQL, MS ACCESS etc.). In 2020 accounting software used 94% of pollees.
+
+Looking back years ago, most organizations, even larger ones, hire outside consultants, either from the software publisher or consultants who understand the organization and who work to help select and implement the ideal configuration, taking all components into consideration.
+
+The steps to implement an accounting information system are as follows:
+
+
+## Evolution
+
+Accounting Information System is characterize by large amount of different approaches and methodologies Over the past 50 years. Due to the restrictions and weaknesses of previous models each new model evolved. Interestingly After the production of newest technique the newer or recent models of evolution does not eliminate or replace the older or previous technique instantly. However Several Generations and peers of systems exists among different institutions, organizations, groups at the same time and possibly exists with in a single or same institution. Similarly The up-to-date inspector needs to be aware with the functioning features of all AIS approaches that he or she is likely to encounter. currently there are four approaches can be identified which has been evolved during last 50 years.
+
+* Manual Process Model
+* Flat File Model
+* Database Model System
+* REA Model (Resource, Event and Agents)
+
+
+## Career
+
+Many AIS professionals work for consulting firms, large corporations, insurance companies, financial firms, government agencies and public accounting firms, among other types of companies. With technological advancement, traditional accounting practice will shift to accounting information systems practice. Both accounting and information technology professional bodies are working on the new directions of accounting programs and industry practices. System Auditors is one of the top choices in the past two decades, they look at the controls, data processing, data integrity, general operation, maintenance, security and other aspects of all types of information systems used by businesses. Some job titles in this field of work include financial manager, financial examiner and chief financial officer. Other job titles include computer systems analyst, a computer information systems manager or a computer software engineer or programmer specializing in financial software.
+
+There are industry associations offer certificates that related to AIS area include CISA, AIS, CISSP, CIA, AFE, CFE, and CITP.
+
+
+## Elements of accounting systems
+
+* Accounting software
+* Comparison of accounting software
+* List of ERP software packages
+* Final accounts

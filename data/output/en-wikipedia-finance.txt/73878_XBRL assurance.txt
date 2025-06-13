@@ -1,0 +1,98 @@
+XBRL assurance
+
+
+# XBRL assurance
+
+
+
+**XBRL assurance** is the auditor's opinion on whether a financial statement or other business report published in XBRL, is relevant, accurate, complete, and fairly presented. An XBRL report is an electronic file and called instance in XBRL terminology.
+
+IFAC and other accounting organizations are discussing the topic to decide on a common approach and XBRL auditing standards. The auditor may give assurance to an XBRL financial statement, an XBRL business report and XBRL real-time reporting (often referred to as continuous reporting). The short term focus is on XBRL financial statements and regulatory reports, while the future focus is expected to be more on real-time reporting.
+
+
+## Digital reporting process
+
+An XBRL report is part of a digital reporting supply chain. The auditor should not focus only on the reliability of the report itself. It is better to focus on the whole supply chain including the communication over a network of the report. The auditor needs to check if the report that has been sent (and received) is complete and in time.
+
+In assessing the XBRL reporting process the auditor can use a reference model in which the layering of the whole digital reporting supply chain is reflected. The auditor performs an audit on every layer of the digital reporting supply chain, with assistance of experts and use of software tools on specific areas.
+A known example of a reference model is the OSI model. The use of a more comprehensive and detailed reference model by the auditor seems logical.
+
+
+## Model
+
+XBRL assurance is a container concept which covers multiple types of XBRL reports, audits, audit reports and related topics. In order for the auditor to be able to give the assurance, several aspects need to be clear:
+
+* The identification of the audit object
+* The XBRL audit objectives, XBRL auditing standards and audit approach that fit with the XBRL audit object;
+* Content of the audit report, the text including the auditor's opinion;
+* How to keep the (unbreakable) link between the (electronic) audit object and the audit report with use of the auditor's (electronic) signature.
+
+With XBRL assurance the auditor needs to distinguish between primary and secondary audit objects:
+
+* The primary audit object is the XBRL file (instance) containing the data. The auditor may give assurance to an XBRL financial statement, an XBRL report or XBRL real-time reporting.
+* The secondary audit objects containing metadata that play a role in the XBRL reporting chain:
+ + The XBRL taxonomy, in three different instances:
+ 1. (reporting on the basis of) a standard taxonomy
+ 2. (reporting on the basis of) a custom taxonomy
+ 3. (reporting on the basis of) a combination: both standard base-taxonomy and custom extension-taxonomy.
+ + Presentation- or rendering metadata may come in different forms: XSLT stylesheet, inline XBRL, XBRL rendering linkbase or proprietary software.
+
+The term standard taxonomy is here used in the context of clear ownership. A standard taxonomy is owned by an authoritative body and responsibility for the quality is taken by the owner. Obvious taxonomy owners are governments, regulators and standard setters. Ownership can be linked with creation, maintenance, publication and/or certification of the taxonomy.
+A custom taxonomy is not owned by an authoritative body.
+
+Base-taxonomy and extension-taxonomy refer to the XBRL mechanism where an extension-taxonomy refers to -or imports- a base-taxonomy to expand the available reporting concepts and/or their relations.
+
+XBRL assurance can be described using following model:
+
+| **Primary audit object** | *XBRL financial statement* | *XBRL report/filing* | *Real time reporting* |
+| --- | --- | --- | --- |
+|
+| **Aspect** |
+| *Audit objectives, auditing standards and audit approach* |
+| *Audit report (text) including the auditor's opinion* |
+| *Link between audit report and audit object and auditor's signature* |
+
+
+## Description
+
+
+### Audit objectives and approach
+
+The following, mainly XBRL specific reporting steps serve as a basis for the audit approach. The auditor checks that:
+
+1. the right standard (base) taxonomy has been used;
+2. the custom (extension) taxonomy is complete, correct and accurate;
+3. the sourcedata used for reporting is reliable;
+4. the correct and complete mapping (or tagging) of sourcedata to taxonomy elements has occurred;
+5. the XBRL report (instance) is technically correct and validates with the taxonomy;
+6. the sending of the XBRL reporting was complete, accurate and timely.
+
+The distinction between a standard (base) taxonomy and a custom (extension) taxonomy is important for the auditor. A standard taxonomy is normally owned, created and published by the government or regulator. It is the responsibility of the government or regulator to create a taxonomy that is correct. The quality of a standard taxonomy is fixed input for the auditor. The auditor just needs to check -with help of software tools- that the right taxonomy is used.
+With a custom (extension) taxonomy this is not the case. The auditor needs to validate the custom (extension) taxonomy, a secondary audit object. He needs to perform an audit to check if this taxonomy complies with regulations and if it is accurate and complete.
+
+A significant difference with paper based assurance is the concept of material misstatement. Material misstatement concerns the accuracy of the audit opinion on a financial statement or filing as a whole. An XBRL report contains a collection of individually identifiable business facts. The facts are building blocks of an XBRL report. Material misstatement in an XBRL report concerns the individually identifiable business facts.
+
+
+### Audit report
+
+The most common audit report in the world is an external auditor's report on an auditee's financial statements and its accompanying notes. XBRL assurance covers different audit reports depending on the primary and secondary audit objects.
+
+To let the auditor to give an opinion on fair view is not obvious. An XBRL report (instance) contains little presentation metadata. More presentation metadata is needed to present the XBRL report in a human readable manner.
+
+The auditor opts for an approach whereby the current audit object (a paper based report) will be cut in two new audit objects, each with its own audit report and opinion. The primary audit object is the instance containing all the business facts. The secondary audit object contains the presentation or rendering metadata.
+
+The split in primary and secondary audit objects with different audit reports (and opinions) is necessary to prevent any confusion about the assurance the auditor adds to the XBRL financial statement instance or any other XBRL report without presentation in a human readable form.
+
+One approach to this is to have different auditor opinions on the primary audit object and the secondary object that combined make clear the XBRL report provides a fair view.
+
+
+### Electronic Signature
+
+This aspect covers the unbreakable linkage of the audit report and auditor's signature to the (primary or secondary) audit object. Both the primary and the secondary audit objects are electronic files which can be altered without leaving a trace.
+All this means that the auditor must use techniques like encryption and electronic signatures, ensuring that his opinion actually came from him and is permanently linked to the audited XBRL audit object without any unauthorized changes.
+
+
+## Other aspects
+
+The XBRL standard has the ability to define business rules. These business rules can be found in different places in the XBRL taxonomy, that is in datatypes or linkbases. Application of these business rules will contribute to the reliability of the XBRL report. The business rules can be used by the reporting company, the taxonomy author or the auditor.
+

@@ -1,0 +1,53 @@
+Anomali
+
+
+# Anomali
+
+
+
+**Anomali Inc.** is an American cybersecurity company that develops and provides threat intelligence products. In 2023, the company moved into providing security analytics powered by artificial intelligence (AI).
+
+
+## History
+
+Anomali was founded in 2013 under the name ThreatStream, by Greg Martin and Colby DeRodeff. At that time, the company's products provided filtering and customization options to give companies visibility into indicators of compromise (IOCs). In 2013, the company launched the first version of ThreatStream, a threat intelligence platform (TIP), uses different sources to track known threats, monitor and detect security breaches.
+
+In 2016, company rebranded as Anomali and introduced new products and a new approach to threat intelligence. This included providing SaaS and on-premise platforms that customers could use to upload their logs. It launched its second product, Anomali, which later became Anomali Match, an enterprise threat detection service that matched data against threat intelligence for existing IOCs.
+
+By 2018, Anomali had received $96.3 million in funding from 11 investors, including Paladin Capital Group, Institutional Venture Partners (IVP), GV (formerly Google Ventures), General Catalyst, Telstra Ventures, and Lumina Capital. The company works with government and business organizations such as the Bank of England, Citigroup, and Alaska Airlines.
+
+In 2019, Anomali introduced Anomali Lens, a web-browser extension that highlights and collects relevant threat data from web pages. The data is added to ThreatStream and matched with internal network events using Anomali’s Match platform. Since being founded, Anomali has collaborated with partners spanning channel resellers, managed security services providers (MSSPs), systems integrators, and Commercial Threat Intelligence Feed providers to build out the Anomali Preferred Partner Store (Anomali APP Store). Anomali has established a collaborative relationship with Microsoft to integrate threat intelligence from ThreatStream with security insights from Microsoft Graph security API. This allowed companies to correlate cloud service and network activity with adversary threat information. The company also partnered with the National Health Information Sharing and Analysis Center (NH-ISAC) to bring cybersecurity tools and threat intelligence to the healthcare community.
+
+In March 2021, the company signed a partnership with Netpoleon, a network security distributor. This was the company’s first partnership in Australia and New Zealand. In January 2022, a distribution agreement was signed with ACA Pacific to reach markets in Singapore, Malaysia, Indonesia, and Thailand.
+
+In 2021, Anomali joined MITRE Engenuity’s Center for Threat-Informed Defense to collaborate on the Attack Flow Project to better understand adversary behavior and improve defensive capabilities. This partnership culminated with the public release of the project in March 2022.
+
+In March 2022, the company released its Cloud-Native XDR (eXtended Detection and Response) solution. It works with Anomali’s threat intelligence and IOC repositories to help companies improve existing security infrastructure. It can be integrated with the MITRE ATT&CK framework and other security frameworks.
+
+That same month, Anomali started its Resilience Partner Program for Global Systems Integrators (GSIs), Value Added Resellers (VARs), Distributors, and service providers. The program gives partners simplified access to the Anomali Platform and Cloud-Native XDR.
+
+
+## Investigations / Anomali Threat Research (ATR) Team
+
+In January 2019, Anomali uncovered a phishing scam targeting Australian businesses. Hackers would email companies, claim that they had been selected by the Department of Infrastructure and Regional Development to submit a tender for a commercial project, and then require companies to register in the tender portal to continue. The link in the email took businesses to a replica site of the government's AusTender website. The ATR team alerted the government to the scam.
+
+In July 2019, the ATR observed a new ransomware targeting QNAP Network Attached Storage (NAS) devices and named it eCh0raix. A decryptor was released in August.
+
+In December 2019, Anomali published research that said that Gamaredon, a hacking group, had launched attacks targeting Ukrainian military and government agencies, including the Ministry of Foreign Affairs, journalists, law enforcement, and nongovernmental organizations (NGOs). The attacks started in mid-September.
+
+In June 2020, the company identified twelve apps posing as coronavirus contact tracing apps that were designed to steal personal and financial information from Android users. Four of the apps used either the Anubis banking malware or the SpyNote Trojan. The apps targeted people in Armenia, Brazil, Colombia, India, Indonesia, Iran, Italy, Kyrgyzstan, Russia and Singapore.
+
+in February 2021, ATR identified a cyberespionage campaign targeting UAE and Kuwait government agencies. The work was attributed to Static Kitten (aka MERCURY and MuddyWater) and the objective was to install the remote management tool ScreenConnect with "unique launch parameters that have custom properties with malware samples and URLs masquerading as the Ministry of Foreign Affairs of Kuwait and the UAE National Council". Static Kitten is a state-sponsored hacking group believed to be working for Iran's Islamic Republic Guard Corps.
+
+In May 2021, the team identified threat actors who were using Microsoft Build Engine (MSBuild) to filelessly deliver remote access trojans and password-stealing malware on targeted Windows systems. The campaign had been active since April, with the attackers using the Microsoft application to load the attack code, thereby avoiding any traces of infection. The samples analyzed by Anomali delivered Remcos RAT, Quasar RAT, and RedLine Stealer.
+
+In September, ATR identified action from the FIN7 financial cybercrime gang. The gang was delivering JavaScript backdoors using Word documents to steal payment-card data.
+
+
+## Products and services
+
+* **ThreatStream** - a threat intelligence platform that automates threat detection, investigation, and response; collects intelligence from different sources
+* **Match** - a breach detection platform that will match external threat intelligence to internal events
+* **Lens** - a web browser-based plugin that uses natural language processing (NLP) to scan structured and unstructured internet content to automate the identification of adversaries, malware, and cyber threats that are present in the users' network, actively attacking the user's network, or newly detected
+* **Anomali Preferred Partner (APP) Store** - companies can use APP to purchase additional intelligence; the store was created by collaborating with channel resellers, Managed Security Services Providers (MSSPs), Systems Integrators, and Commercial Threat Intelligence Feed providers.
+* **Cloud-Native XDR** - helps companies monitor and improve their existing security telemetry infrastructure

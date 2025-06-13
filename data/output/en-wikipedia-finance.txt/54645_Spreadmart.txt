@@ -1,0 +1,29 @@
+Spreadmart
+
+
+# Spreadmart
+
+
+
+A **spreadmart** (spreadsheet data mart) is a business data analysis system running on spreadsheets or other desktop databases that is created and maintained by individuals or groups to perform tasks that can be done in a more structured way by a data mart or data warehouse. Typically a spreadmart is created by individuals at different times using different data sources and rules for defining metrics in an organization, creating a decentralized, fractured view of the enterprise.
+
+The concept was coined in 2002 by Wayne Eckerson at TDWI in his article *Taming Spreadsheet Jockeys*, and intended pejoratively, as an undesirable system, which should be replaced by a data mart. However, critics such as Stephen Samild argue that spreadmarts have advantages over data marts and can be a desirable system.
+
+
+## Problems
+
+Usually, spreadmarts grow where standard business intelligence (BI) reporting is too inflexible and too slow. A business analyst uses the "export to Microsoft Excel" button in the BI software and creates their own report with the exported data table. By this, the number of independently generated spreadsheets dealing with a particular group of analyses grows inside the company, and the data inside each spreadsheet is uncoupled from its source. When this happens, the data reflected in the spreadsheets is no longer verifiable and is not automatically kept up to date.
+Usually these spreadsheet files are distributed via email to colleagues resulting in even more copies of the data roaming through the enterprise. With Microsoft Power Pivot for Microsoft SharePoint, Excel spreadsheets can be distributed as dashboards throughout the entire company, giving even more users the tools to create spreadmarts.
+
+The growth of spreadmarts poses tangible risks for companies, since undefined and uncoupled data can be used to draw false conclusions that lead to wrong decisions, which will cost time and money to discover and correct. Although Business Intelligence 2.0 software vendors claim to have overcome this issue, locally installed spreadsheet and graphing software continues to be easier to access and use, giving the business analyst the freedom to create the needed analysis quickly, and choose to live with the risk of data inconsistency that goes with it.
+
+
+## Criticism of concept
+
+Critics like Stephen Samild argue that the definition stems from a biased view that sees a data warehouse as desirable end-result, whereas *One might more accurately define data marts and data warehouses as "scaled-up systems which perform some of the tasks normally done by a spreadmart"*. In the rest of the article Stephen Samild argues that a spreadmart fulfills a number of roles that a data warehouse cannot fulfill as easily or as cheaply due to the lack of integration with unstructured data, the lack of read-write capabilities, the long time span needed for integration of new sources in the data warehouse and the inherent 'free form' of many analytical presentations done in Word, PowerPoint or Excel.
+
+
+## Related technologies
+
+* Microsoft Excel with PowerPivot as the standard
+* LibreOffice Calc, the open source alternative to Excel

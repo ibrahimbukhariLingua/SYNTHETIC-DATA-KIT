@@ -1,0 +1,69 @@
+Affine term structure model
+
+
+# Affine term structure model
+
+
+
+An **affine term structure model** is a financial model that relates zero-coupon bond prices (i.e. the discount curve) to a spot rate model. It is particularly useful for deriving the yield curve – the process of determining spot rate model inputs from observable bond market data. The affine class of term structure models implies the convenient form that log bond prices are linear functions of the spot rate (and potentially additional state variables).
+
+
+## Background
+
+Start with a stochastic short rate model {\displaystyle r(t)} with dynamics:
+
+and a risk-free zero-coupon bond maturing at time {\displaystyle T} with price {\displaystyle P(t,T)} at time {\displaystyle t}. The price of a zero-coupon bond is given by:{\displaystyle P(t,T)=\mathbb {E} ^{\mathbb {Q} }\left\{\exp \left[-\int \_{t}^{T}r(t')dt'\right]\right\}}where {\displaystyle T=t+\tau }, with {\displaystyle \tau } being is the bond's maturity. The expectation is taken with respect to the risk-neutral probability measure {\displaystyle \mathbb {Q} }. If the bond's price has the form:
+
+where {\displaystyle A} and {\displaystyle B} are deterministic functions, then the short rate model is said to have an **affine term structure**. The yield of a bond with maturity {\displaystyle \tau }, denoted by {\displaystyle y(t,\tau )}, is given by:{\displaystyle y(t,\tau )=-{1 \over {\tau }}\log P(t,\tau )}
+
+
+### Feynman-Kac formula
+
+For the moment, we have not yet figured out how to explicitly compute the bond's price; however, the bond price's definition implies a link to the Feynman-Kac formula, which suggests that the bond's price may be explicitly modeled by a partial differential equation. Assuming that the bond price is a function of {\displaystyle x\in \mathbb {R} ^{n}} latent factors leads to the PDE:{\displaystyle -{\partial P \over {\partial \tau }}+\sum \_{i=1}^{n}\mu \_{i}{\partial P \over {\partial x\_{i}}}+{1 \over {2}}\sum \_{i,j=1}^{n}\Omega \_{ij}{\partial ^{2}P \over {\partial x\_{i}\partial x\_{j}}}-rP=0,\quad P(0,x)=1}where {\displaystyle \Omega } is the covariance matrix of the latent factors where the latent factors are driven by an Ito stochastic differential equation in the risk-neutral measure:{\displaystyle dx=\mu ^{\mathbb {Q} }dt+\Sigma dW^{\mathbb {Q} },\quad \Omega =\Sigma \Sigma ^{T}}Assume a solution for the bond price of the form:{\displaystyle P(\tau ,x)=\exp \left[A(\tau )+x^{T}B(\tau )\right],\quad A(0)=B\_{i}(0)=0}The derivatives of the bond price with respect to maturity and each latent factor are:{\displaystyle {\begin{aligned}{\partial P \over {\partial \tau }}&=\left[A'(\tau )+x^{T}B'(\tau )\right]P\\{\partial P \over {\partial x\_{i}}}&=B\_{i}(\tau )P\\{\partial ^{2}P \over {\partial x\_{i}\partial x\_{j}}}&=B\_{i}(\tau )B\_{j}(\tau )P\\\end{aligned}}}With these derivatives, the PDE may be reduced to a series of ordinary differential equations:{\displaystyle -\left[A'(\tau )+x^{T}B'(\tau )\right]+\sum \_{i=1}^{n}\mu \_{i}B\_{i}(\tau )+{1 \over {2}}\sum \_{i,j=1}^{n}\Omega \_{ij}B\_{i}(\tau )B\_{j}(\tau )-r=0,\quad A(0)=B\_{i}(0)=0}To compute a closed-form solution requires additional specifications.
+
+
+## Existence
+
+Using Ito's formula we can determine the constraints on {\displaystyle \mu } and {\displaystyle \sigma } which will result in an affine term structure. Assuming the bond has an affine term structure and {\displaystyle P} satisfies the term structure equation, we get:
+
+The boundary value
+
+implies
+
+Next, assume that {\displaystyle \mu } and {\displaystyle \sigma ^{2}} are affine in {\displaystyle r}:
+
+The differential equation then becomes
+
+Because this formula must hold for all {\displaystyle r}, {\displaystyle t}, {\displaystyle T}, the coefficient of {\displaystyle r} must equal zero.
+
+Then the other term must vanish as well.
+
+Then, assuming {\displaystyle \mu } and {\displaystyle \sigma ^{2}} are affine in {\displaystyle r}, the model has an affine term structure where {\displaystyle A} and {\displaystyle B} satisfy the system of equations:
+
+
+## Models with ATS
+
+
+### Vasicek
+
+The Vasicek model {\displaystyle dr=(b-ar)\,dt+\sigma \,dW} has an affine term structure where
+
+
+## Arbitrage-Free Nelson-Siegel
+
+One approach to affine term structure modeling is to enforce an arbitrage-free condition on the proposed model. In a series of papers, a proposed dynamic yield curve model was developed using an arbitrage-free version of the famous Nelson-Siegel model, which the authors label AFNS. To derive the AFNS model, the authors make several assumptions:
+
+1. There are three latent factors corresponding to the *level*, *slope*, and *curvature* of the yield curve
+2. The latent factors evolve according to multivariate Ornstein-Uhlenbeck processes. The particular specifications differ based on the measure being used:
+ 1. {\displaystyle dx=K^{\mathbb {P} }(\theta -x)dt+\Sigma dW^{\mathbb {P} }} (Real-world measure {\displaystyle \mathbb {P} })
+ 2. {\displaystyle dx=-K^{\mathbb {Q} }xdt+\Sigma dW^{\mathbb {Q} }} (Risk-neutral measure {\displaystyle \mathbb {Q} })
+3. The volatility matrix {\displaystyle \Sigma } is diagonal
+4. The short rate is a function of the level and slope ({\displaystyle r=x\_{1}+x\_{2}})
+
+From the assumed model of the zero-coupon bond price:{\displaystyle P(\tau ,x)=\exp \left[A(\tau )+x^{T}B(\tau )\right]}The yield at maturity {\displaystyle \tau } is given by:{\displaystyle y(\tau )=-{A(\tau ) \over {\tau }}-{x^{T}B(\tau ) \over {\tau }}}And based on the listed assumptions, the set of ODEs that must be solved for a closed-form solution is given by:{\displaystyle -\left[A'(\tau )+B'(\tau )^{T}x\right]-B(\tau )^{T}K^{\mathbb {Q} }x+{1 \over {2}}B(\tau )^{T}\Omega B(\tau )-\rho ^{T}x=0,\quad A(0)=B\_{i}(0)=0}where {\displaystyle \rho ={\begin{pmatrix}1&1&0\end{pmatrix}}^{T}} and {\displaystyle \Omega } is a diagonal matrix with entries {\displaystyle \Omega \_{ii}=\sigma \_{i}^{2}}. Matching coefficients, we have the set of equations:{\displaystyle {\begin{aligned}-B'(\tau )&=\left(K^{\mathbb {Q} }\right)^{T}B(\tau )+\rho ,\quad B\_{i}(0)=0\\A'(\tau )&={1 \over {2}}B(\tau )^{T}\Omega B(\tau ),\quad A(0)=0\end{aligned}}}To find a tractable solution, the authors propose that {\displaystyle K^{\mathbb {Q} }} take the form:{\displaystyle K^{\mathbb {Q} }={\begin{pmatrix}0&0&0\\0&\lambda &-\lambda \\0&0&\lambda \end{pmatrix}}}Solving the set of coupled ODEs for the vector {\displaystyle B(\tau )}, and letting {\displaystyle {\mathcal {B}}(\tau )=-{1 \over {\tau }}B(\tau )}, we find that:{\displaystyle {\mathcal {B}}(\tau )={\begin{pmatrix}1&{1-e^{-\lambda \tau } \over {\lambda \tau }}&{1-e^{-\lambda \tau } \over {\lambda \tau }}-e^{-\lambda \tau }\end{pmatrix}}^{T}}Then {\displaystyle x^{T}{\mathcal {B}}(\tau )} reproduces the standard Nelson-Siegel yield curve model. The solution for the yield adjustment factor {\displaystyle {\mathcal {A}}(\tau )=-{1 \over {\tau }}A(\tau )} is more complicated, found in Appendix B of the 2007 paper, but is necessary to enforce the arbitrage-free condition.
+
+
+### Average expected short rate
+
+One quantity of interest that may be derived from the AFNS model is the average expected short rate (AESR), which is defined as:{\displaystyle {\text{AESR}}\equiv {1 \over {\tau }}\int \_{t}^{t+\tau }\mathbb {E} \_{t}(r\_{s})ds=y(\tau )-{\text{TP}}(\tau )}where {\displaystyle \mathbb {E} \_{t}(r\_{s})} is the conditional expectation of the short rate and {\displaystyle {\text{TP}}(\tau )} is the term premium associated with a bond of maturity {\displaystyle \tau }. To find the AESR, recall that the dynamics of the latent factors under the real-world measure {\displaystyle \mathbb {P} } are:{\displaystyle dx=K^{\mathbb {P} }(\theta -x)dt+\Sigma dW^{\mathbb {P} }}The general solution of the multivariate Ornstein-Uhlenbeck process is:{\displaystyle x\_{t}=\theta +e^{-K^{\mathbb {P} }t}(x\_{0}-\theta )+\int \_{0}^{t}e^{-K^{\mathbb {P} }(t-t')}\Sigma dW^{\mathbb {P} }}Note that {\displaystyle e^{-K^{\mathbb {P} }t}} is the matrix exponential. From this solution, it is possible to explicitly compute the conditional expectation of the factors at time {\displaystyle t+\tau } as:{\displaystyle \mathbb {E} \_{t}(x\_{t+\tau })=\theta +e^{-K^{\mathbb {P} }\tau }(x\_{t}-\theta )}Noting that {\displaystyle r\_{t}=\rho ^{T}x\_{t}}, the general solution for the AESR may be found analytically:{\displaystyle {1 \over {\tau }}\int \_{t}^{t+\tau }\mathbb {E} \_{t}(r\_{s})ds=\rho ^{T}\left[\theta +{1 \over {\tau }}\left(K^{\mathbb {P} }\right)^{-1}\left(I-e^{-K^{\mathbb {P} }\tau }\right)(x\_{t}-\theta )\right]}
+

@@ -1,0 +1,27 @@
+Smith–Wilson method
+
+
+# Smith–Wilson method
+
+
+
+The **Smith–Wilson method** is a method for extrapolating forward rates. It is recommended by EIOPA to extrapolate interest rates. It was introduced in 2000 by A. Smith and T. Wilson for Bacon & Woodrow.
+
+
+## Mathematical formulation
+
+Let UFR be some ultimate forward rate and {\displaystyle u\_{i}} be the time to the i'th maturity. Then {\displaystyle P(t)} defines the price of a zero-coupon bond at time t.
+
+{\displaystyle P(t)=e^{-UFR\cdot t}+\sum \_{j=1}^{N}\xi \_{j}\cdot W(t,u\_{j})}
+
+Where
+{\displaystyle W(t,u\_{j})=e^{-UFR\cdot (t+u\_{j})}\cdot (\alpha \cdot \min(t,u\_{j})-0.5e^{-\alpha \cdot \max(t,u\_{j})}\cdot (e^{\alpha \cdot \min(t,u\_{j})}-e^{-\alpha \cdot \min(t,u\_{j})}))}
+
+and the symmetric W matrix is
+{\displaystyle W=(W(u\_{i},u\_{j}))\_{i=1,...,N:j=1,...,N}}
+
+and
+{\displaystyle p=(P(u\_{1}),...,P(u\_{N}))^{T}},
+{\displaystyle \mu =(e^{-UFR\cdot u\_{1}},...,e^{-UFR\cdot u\_{N}})^{T}},
+{\displaystyle \xi =W^{-1}(p-\mu )}.
+

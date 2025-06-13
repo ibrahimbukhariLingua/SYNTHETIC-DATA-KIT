@@ -1,0 +1,35 @@
+Forward measure
+
+
+# Forward measure
+
+
+
+In finance, a ***T*-forward measure** is a pricing measure absolutely continuous with respect to a risk-neutral measure, but rather than using the money market as numeraire, it uses a bond with maturity *T*. The use of the forward measure was pioneered by Farshid Jamshidian (1987), and later used as a means of calculating the price of options on bonds.
+
+
+## Mathematical definition
+
+Let
+
+be the bank account or money market account numeraire and
+
+be the discount factor in the market at time 0 for maturity *T*. If {\displaystyle Q\_{\*}} is the risk neutral measure, then the forward measure {\displaystyle Q\_{T}} is defined via the Radon–Nikodym derivative given by
+
+Note that this implies that the forward measure and the risk neutral measure coincide when interest rates are deterministic. Also, this is a particular form of the change of numeraire formula by changing the numeraire from the money market or bank account *B*(*t*) to a *T*-maturity bond *P*(*t*,*T*). Indeed, if in general
+
+is the price of a zero coupon bond at time *t* for maturity *T*, where {\displaystyle {\mathcal {F}}(t)} is the filtration denoting market information at time *t*, then we can write
+
+from which it is indeed clear that the forward *T* measure is associated to the *T*-maturity zero coupon bond as numeraire. For a more detailed discussion see Brigo and Mercurio (2001).
+
+
+## Consequences
+
+The name "forward measure" comes from the fact that under the forward measure, forward prices are martingales, a fact first observed by Geman (1989) (who is responsible for formally defining the measure). Compare with futures prices, which are martingales under the risk neutral measure. Note that when interest rates are deterministic, this implies that forward prices and futures prices are the same.
+
+For example, the discounted stock price is a martingale under the risk-neutral measure:
+
+The forward price is given by {\displaystyle F\_{S}(t,T)={\frac {S(t)}{P(t,T)}}}. Thus, we have {\displaystyle F\_{S}(T,T)=S(T)}
+
+by using the Radon-Nikodym derivative {\displaystyle {\frac {dQ\_{T}}{dQ\_{\*}}}} and the equality {\displaystyle F\_{S}(T,T)=S(T)}. The last term is equal to unity by definition of the bond price so that we get
+

@@ -1,0 +1,63 @@
+Dell EMC Data Domain
+
+
+# Dell EMC Data Domain
+
+
+
+**Dell EMC Data Domain** was Dell EMC’s data deduplication storage system. Development began with the founding of Data Domain, and continued since that company’s acquisition by EMC Corporation (and EMC’s later merger with Dell to form Dell EMC).
+
+
+## History
+
+The technology started in a separate company, which was then acquired and re-branded twice.
+
+
+### Data Domain Corporation
+
+The **Data Domain Corporation** was founded by Kai Li, Ben Zhu, and Brian Biles in 2001 as a company specializing in target-based data deduplication products for disk-based backup.
+Hugo Patterson joined as chief architect 3 months after initial funding.
+The company started operations in a series of venture capital offices around Palo Alto, California, pre-funding at U.S. Venture Partners, where Zhu was an entrepreneur in residence (EIR), then at New Enterprise Associates (NEA), where Li was an EIR, and post-funding at Greylock Partners.
+NEA and Greylock provided Series A funding in 2002.
+
+The first product revenue was realized in the beginning of 2004.
+
+
+### Funding, IPO and Acquisition
+
+NEA and Greylock led the company’s $9.3 million Series A funding round in 2002. Sutter Hill Ventures led its $17 million Series B funding round in 2003, joined again by NEA and Greylock. Through 2005, the three companies invested a total of $40 million in Data Domain.
+
+The company had their initial public offering on June 27, 2007, with a total market capitalization of $776.5 million, above its forecast range despite years of losses. This put the stock price at $15 per share, above the forecasted range of $11.50 to $13.50. The company’s market capitalization was $776.5 million at the time of the IPO. It was listed on Nasdaq with symbol DDUP.
+
+
+### EMC Data Domain
+
+In May 2009, NetApp announced it would acquire Data Domain for about $1.5 billion. In June 2009, EMC Corporation announced their intention to acquire Data Domain Corp for $2.4 billion, outbidding the previous offer. In July, the two companies agreed to the acquisition. Post-acquisition, Data Domain would operate as a brand and line of products under EMC, known as **EMC Data Domain**.
+
+Former CEO Frank Slootman published a book about his experiences in 2011.
+
+Since acquiring Data Domain, EMC integrated the Data Domain platform with its Data Protection Suite software and expanded software enhancements. According to a 2013 analysis sponsored by EMC, Data Domain reduced loss of user productivity from backup, restore, and retrieval operations.
+
+
+### Dell EMC Data Domain
+
+In 2016, EMC merged with Dell to become Dell EMC, which continued the Data Domain brand until 2019. During this period, the brand was named **Dell EMC Data Domain**. On September 24, 2019, Dell EMC announced via blog post that Data Domain products will be branded as PowerProtect DD products going forward.
+
+
+## Technologies
+
+The goal of the Data Domain technology was to eliminate logistical concerns of using backup or archival tape libraries, by implementing a suitable disk-based substitute for backup tapes. It did this by inventing a fast implementation of lossless data compression, optimized for streaming workloads, which compares incoming large data segments against all others in its store. This provided significant speed advantages compared to tape. Originally categorized as "capacity optimization" by industry analysts, it became more widely known as inline "data deduplication." Also, unlike most non-archival computer storage products, Data Domain went to technical lengths to ensure data longevity (vs. system longevity).
+
+Unlike most of Data Domain's early competition, it was first packaged as a file-system appliance; this made it more predictable than a software product and simpler to manage than a virtual tape library system. This product package included the storage hardware itself, as well as a specialized proprietary OS and file system.
+
+Alongside the standalone appliances, Data Domain also created a method to unify multiple of their appliances into a larger data storage system called a DDX Array. A DDX Array is a singular rack-mounted storage system, consisting of multiple individual Data Domain storage appliances acting as "controllers". This system's data storage capacity could be further expanded by connecting to and controlling "integrated or third party external storage". DDX Arrays provided increased throughput (scaling with the number of appliances used as controllers) into a single storage source, and greater overall storage capacity, when compared to an individual Data Domain appliance.
+
+
+## Products and Services
+
+The first Data Domain system, the DD200 in 2004, had a 1.25 TB addressable capacity and was able to accept data at a rate of 40 MB/sec. Because its implementation put most of the system stress on CPU/RAM, rather than disk I/O, it was able to improve at the rate of Intel technology.
+
+In May 2008, Data Domain Corporation announced the DD690, which used quad-core CPUs and could accept data at a rate of 166 MB/sec. This singular rack-mounted appliance could be combined with other DD690s to form a "DDX Array".
+
+By 2018, Dell EMC would produce the DD9800, which had an addressable capacity of up to 50 PB (depending on configuration), and could accept data at a rate of 8611 MB/sec.
+

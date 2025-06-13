@@ -1,0 +1,60 @@
+Slippage (finance)
+
+
+# Slippage (finance)
+
+
+
+With regard to futures contracts as well as other financial instruments, **slippage** is the difference between where the computer signaled the entry and exit for a trade and where actual clients, with actual money, entered and exited the market using the computer's signals. Market impact, liquidity, and frictional costs may also contribute.
+
+Algorithmic trading is often used to reduce slippage, and algorithms can be backtested on past data to see the effects of slippage, but it is impossible to eliminate.
+
+
+## Measurement
+
+
+### Using initial mid price
+
+Nassim Nicholas Taleb (1997) defines slippage as the difference between the average execution price and the initial midpoint of the bid and the offer for a given quantity to be executed.
+
+
+### Using initial execution price
+
+Knight and Satchell mention a flow trader needs to consider the effect of executing a large order on the market and to adjust the bid-ask spread accordingly. They calculate the liquidity cost as the difference between the execution price and the initial execution price.
+
+
+## Example
+
+The associated image depicts the Level II (Market Depth) quotes of the SPY ETF (Exchange-Traded Fund) at a given instant in time.
+
+The left hand side of the image contains the market depth for the current BID prices and the right hand side of the image contains the market depth for the current ASK prices. Each side of the image contains three columns:
+
+* MM Name: the Market Maker name column
+* Price: the "market depth" price
+* Size: the number of shares at this price level (represented in hundreds). So, 2 actually means 200 shares.
+
+The top left of the image represents the current BID price ($151.07) and the top right of the image represents the current ASK price ($151.08). At the $151.07 bid price point, there are 300 shares available (200 by the ARCA Market Maker and 100 by the DRCTEDGE). At the $151.08 ask price point, there are 3900 shares available (2800 by the ARCA Market Maker and 1100 by the BATS Market Maker). This is typically represented in quote form as: $151.07 X 300 by $151.08 X 3900).
+
+To properly understand slippage, let's use the following example: Say, you (as a trader) wanted to purchase 20,000 shares of SPY right now. The problem here is that the current ASK price of $151.08 only contains 3900 shares being offered for sale, but you want to purchase 20,000 shares. If you need to purchase those shares now, then you must use a market order and you will incur slippage by doing so. Using a market order to purchase your 20,000 shares would yield the following executions (assuming no hidden orders in the market depth):
+
+* Buy 2800 @ $151.08
+* Buy 1100 @ $151.08
+* Buy 3800 @ $151.09
+* Buy 900 @ $151.10
+* Buy 3700 @ $151.11
+* Buy 1200 @ $151.12
+* Buy 3700 @ $151.13
+* Buy 200 @ $151.14
+* Buy 1000 @ $151.15
+* Buy 400 @ $151.18
+* Buy 100 @ $151.22
+* Buy 600 @ $151.24
+* Buy 500 @ $151.25 (only 500 shares out of the 2000 being offered at this price point are executed, because this will represent our entire 20,000 share order)
+
+The average purchase price of the above execution is $151.11585. The difference between the current ASK price ($151.08) and the average purchase price ($151.11585) represents the slippage. In this case, the cost of slippage would be calculated as follows: 20,000 X $151.08 - 20,000 X $151.11585 = $-717.00
+
+
+## Reverse slippage
+
+Reverse slippage, as described by Taleb, occurs when the purchase of a large position is done at increasing prices, so that the mark to market value of the position increases. The danger occurs when the trader attempts to exit their position. If the trader manages to create a squeeze large enough then this phenomenon can be profitable. This can also be considered a type of market making.
+

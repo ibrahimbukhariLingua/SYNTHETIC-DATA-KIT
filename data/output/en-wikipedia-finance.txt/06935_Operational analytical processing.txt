@@ -1,0 +1,36 @@
+Operational analytical processing
+
+
+# Operational analytical processing
+
+
+
+**Operational analytical processing**, more popularly known as **operational analytics**, is a subset of data analytics that focuses on improving the operational nature of a business or entity.
+
+The main characteristic that distinguishes operational analytics from other types of analytics is that it is analytics on the fly, which means that signals emanating from various parts of a business are processed in real-time to feed back into instant decision-making for the business. This is sometimes referred to as "continuous analytics," which is another way to emphasize the continuous digital feedback loop that can exist from one part of a business to its other parts.
+
+
+## Overview
+
+The rapid digital transformation of many businesses means that an increasing number of business signals are being recorded and stored in digital form. Businesses are using these signals to improve their efficiency, improve their performance and provide better experiences to their users and customers. A Forrester Report details how digitization of a business is impacting its customer experiences by leveraging data. Operational analytics allows you to process various types of information from different sources and then decide what to do next: what action to take, whom to talk to, what immediate plans to make. Gartner defines this as Continuous Intelligence in a research report and goes on to describe this as *a design pattern in which real-time analytics are integrated within a business operation, processing current and historical data to prescribe actions in response to events*. Andreessen Horowitz describes this as *...more and more decisions are automated away altogether—think of Amazon continually updating prices for its products throughout the day*. This form of analytics has become popular with the digitization trend in almost all industry verticals, because it is digitization that furnishes the data needed for operational decision-making.
+
+A few examples of operational analytics include... a product manager who looks at product-usage logs to determine which features of the product are liked by its users, which features slow them down, and which features are disliked by its users. The product manager can gather all these answers by querying data that records usage patterns from the product's user base; and he or she can immediately feed that information back to make the product better. Similarly, in the case of marketing analytic in the pre-digitized world, a marketing manager would organize a few focus groups, try out a few experiments based on their own creativity and then implement them. Depending on the results of experimentation, they would then decide what to do next. An experiment may take weeks or months. In the digitized world, there is the "marketing engineer," a person who is well-versed in using data systems. These marketing engineers can run multiple experiments at once, gather results from experiments in the form of data, terminate the ineffective experiments and nurture the ones that work, all through the use of data-based software systems. The more experiments they can run and the quicker the turnaround times of results, the better their effectiveness in marketing their product.
+
+An MIT Technology Review article describes how a ride-sharing application uses algorithms for real-time monitoring of traffic and trip times to balance demand and supply for ride sourcing—and to adjust fees accordingly and rapidly. The use of operations analytics is not confined to the field of information technology. Data from business intelligence, finance, science, weather, and even current events are combined and then analyze together to extract valuable insight from it, and this in turn, drives quick decision making in almost every conceivable use. A metrics collection system like Scuba is an operational analytics system because it *is used extensively for interactive, ad hoc, analysis queries that run in under a second over live data.*
+
+
+## Definition of an operational analytics processing engine
+
+The definition of an operational analytics processing engine (OPAP) can be expressed in the form of the following six propositions:
+
+1. **Complex queries**: Support for queries like inner & outer joins, aggregations, sorting, relevance, etc.
+2. **Low data latency**: An update to any data record is visible in query results in under than a few seconds.
+3. **Low query latency**: A simple search query returns in under a few milliseconds.
+4. **High query volume**: Able to serve at least a few hundred concurrent queries per second.
+5. **Live sync with data sources**: Ability to keep itself in sync with various external sources without having to write external scripts. This can be done via change-data-capture of an external database, or by tailing streaming data sources.
+6. **Mixed types**: Allows values of different types in the same column. This is needed to be able to ingest new data without needing to manipulate them at write time.
+
+## System requirements
+
+Operational Analytics is a subset of the broader set of processes that characterizes OLAP (online analytical processing). As such, it inherits the large data sizes and complex queries that OLAP systems typically has to handle. However, the characteristics that uniquely identify operational analytics is the requirement for quick predictions based on most recent signals. This means that the data latency and query latency are very small. For example, operational analytics applied to real time business processes specify that data latency be zero. It also means that queries should be fast and finish at interactive speeds. Because these decisions are taken at a micro-level and are very personalizedᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ to each individual entity, operational analytics processing is characterized by how easy it is to deliver personalized recommendations using such a system.
+

@@ -1,0 +1,143 @@
+Doob's martingale convergence theorems
+
+
+# Doob's martingale convergence theorems
+
+
+
+In mathematics – specifically, in the theory of stochastic processes – **Doob's martingale convergence theorems** are a collection of results on the limits of supermartingales, named after the American mathematician Joseph L. Doob. Informally, the **martingale convergence theorem** typically refers to the result that any supermartingale satisfying a certain boundedness condition must converge. One may think of supermartingales as the random variable analogues of non-increasing sequences; from this perspective, the martingale convergence theorem is a random variable analogue of the monotone convergence theorem, which states that any bounded monotone sequence converges. There are symmetric results for submartingales, which are analogous to non-decreasing sequences.
+
+
+## Statement for discrete-time martingales
+
+A common formulation of the martingale convergence theorem for discrete-time martingales is the following. Let {\displaystyle X\_{1},X\_{2},X\_{3},\dots } be a supermartingale. Suppose that the supermartingale is bounded in the sense that
+
+where {\displaystyle X\_{t}^{-}} is the negative part of {\displaystyle X\_{t}}, defined by 
+X
+t
+
+−
+
+
+=
+−
+min
+(
+X
+t
+
+
+,
+0
+)
+
+
+{\textstyle X\_{t}^{-}=-\min(X\_{t},0)}
+
+. Then the sequence converges almost surely to a random variable {\displaystyle X} with finite expectation.
+
+There is a symmetric statement for submartingales with bounded expectation of the positive part. A supermartingale is a stochastic analogue of a non-increasing sequence, and the condition of the theorem is analogous to the condition in the monotone convergence theorem that the sequence be bounded from below. The condition that the martingale is bounded is essential; for example, an unbiased {\displaystyle \pm 1} random walk is a martingale but does not converge.
+
+As intuition, there are two reasons why a sequence may fail to converge. It may go off to infinity, or it may oscillate. The boundedness condition prevents the former from happening. The latter is impossible by a "gambling" argument. Specifically, consider a stock market game in which at time {\displaystyle t}, the stock has price {\displaystyle X\_{t}}. There is no strategy for buying and selling the stock over time, always holding a non-negative amount of stock, which has positive expected profit in this game. The reason is that at each time the expected change in stock price, given all past information, is at most zero (by definition of a supermartingale). But if the prices were to oscillate without converging, then there would be a strategy with positive expected profit: loosely, buy low and sell high. This argument can be made rigorous to prove the result.
+
+
+### Proof sketch
+
+The proof is simplified by making the (stronger) assumption that the supermartingale is uniformly bounded; that is, there is a constant {\displaystyle M} such that {\displaystyle |X\_{n}|\leq M} always holds. In the event that the sequence {\displaystyle X\_{1},X\_{2},\dots } does not converge, then {\displaystyle \liminf X\_{n}} and {\displaystyle \limsup X\_{n}} differ. If also the sequence is bounded, then there are some real numbers {\displaystyle a} and {\displaystyle b} such that {\displaystyle a<b} and the sequence crosses the interval {\displaystyle [a,b]} infinitely often. That is, the sequence is eventually less than {\displaystyle a}, and at a later time exceeds {\displaystyle b}, and at an even later time is less than {\displaystyle a}, and so forth ad infinitum. These periods where the sequence starts below {\displaystyle a} and later exceeds {\displaystyle b} are called "upcrossings".
+
+Consider a stock market game in which at time {\displaystyle t}, one may buy or sell shares of the stock at price {\displaystyle X\_{t}}. On the one hand, it can be shown from the definition of a supermartingale that for any {\displaystyle N\in \mathbf {N} } there is no strategy which maintains a non-negative amount of stock and has positive expected profit after playing this game for {\displaystyle N} steps. On the other hand, if the prices cross a fixed interval {\displaystyle [a,b]} very often, then the following strategy seems to do well: buy the stock when the price drops below {\displaystyle a}, and sell it when the price exceeds {\displaystyle b}. Indeed, if {\displaystyle u\_{N}} is the number of upcrossings in the sequence by time {\displaystyle N}, then the profit at time {\displaystyle N} is at least {\displaystyle (b-a)u\_{N}-2M}: each upcrossing provides at least {\displaystyle b-a} profit, and if the last action was a "buy", then in the worst case the buying price was {\displaystyle a\leq M} and the current price is {\displaystyle -M}. But any strategy has expected profit at most {\displaystyle 0}, so necessarily
+
+By the monotone convergence theorem for expectations, this means that
+
+so the expected number of upcrossings in the whole sequence is finite. It follows that the infinite-crossing event for interval {\displaystyle [a,b]} occurs with probability {\displaystyle 0}. By a union bound over all rational {\displaystyle a} and {\displaystyle b}, with probability {\displaystyle 1}, no interval exists which is crossed infinitely often. If for all {\displaystyle a,b\in \mathbf {Q} } there are finitely many upcrossings of interval {\displaystyle [a,b]}, then the limit inferior and limit superior of the sequence must agree, so the sequence must converge. This shows that the martingale converges with probability {\displaystyle 1}.
+
+
+### Failure of convergence in mean
+
+Under the conditions of the martingale convergence theorem given above, it is not necessarily true that the supermartingale {\displaystyle (X\_{n})\_{n\in \mathbf {N} }} converges in mean (i.e. that {\displaystyle \lim \_{n\to \infty }\operatorname {E} [|X\_{n}-X|]=0}).
+
+As an example, let {\displaystyle (X\_{n})\_{n\in \mathbf {N} }} be a {\displaystyle \pm 1} random walk with {\displaystyle X\_{0}=1}. Let {\displaystyle N} be the first time when {\displaystyle X\_{n}=0}, and let {\displaystyle (Y\_{n})\_{n\in \mathbf {N} }} be the stochastic process defined by {\displaystyle Y\_{n}:=X\_{\min(N,n)}}. Then {\displaystyle N} is a stopping time with respect to the martingale {\displaystyle (X\_{n})\_{n\in \mathbf {N} }}, so {\displaystyle (Y\_{n})\_{n\in \mathbf {N} }} is also a martingale, referred to as a stopped martingale. In particular, {\displaystyle (Y\_{n})\_{n\in \mathbf {N} }} is a supermartingale which is bounded below, so by the martingale convergence theorem it converges pointwise almost surely to a random variable {\displaystyle Y}. But if {\displaystyle Y\_{n}>0} then {\displaystyle Y\_{n+1}=Y\_{n}\pm 1}, so {\displaystyle Y} is almost surely zero.
+
+This means that {\displaystyle \operatorname {E} [Y]=0}. However, {\displaystyle \operatorname {E} [Y\_{n}]=1} for every {\displaystyle n\geq 1}, since {\displaystyle (Y\_{n})\_{n\in \mathbf {N} }} is a random walk which starts at {\displaystyle 1} and subsequently makes mean-zero moves (alternately, note that {\displaystyle \operatorname {E} [Y\_{n}]=\operatorname {E} [Y\_{0}]=1} since {\displaystyle (Y\_{n})\_{n\in \mathbf {N} }} is a martingale). Therefore {\displaystyle (Y\_{n})\_{n\in \mathbf {N} }} cannot converge to {\displaystyle Y} in mean. Moreover, if {\displaystyle (Y\_{n})\_{n\in \mathbb {N} }} were to converge in mean to any random variable {\displaystyle R}, then some subsequence converges to {\displaystyle R} almost surely. So by the above argument {\displaystyle R=0} almost surely, which contradicts convergence in mean.
+
+
+## Statements for the general case
+
+In the following, {\displaystyle (\Omega ,F,F\_{\*},\mathbf {P} )} will be a filtered probability space where {\displaystyle F\_{\*}=(F\_{t})\_{t\geq 0}}, and {\displaystyle N:[0,\infty )\times \Omega \to \mathbf {R} } will be a right-continuous supermartingale with respect to the filtration {\displaystyle F\_{\*}}; in other words, for all {\displaystyle 0\leq s\leq t<+\infty },
+
+
+### Doob's first martingale convergence theorem
+
+Doob's first martingale convergence theorem provides a sufficient condition for the random variables {\displaystyle N\_{t}} to have a limit as {\displaystyle t\to +\infty } in a pointwise sense, i.e. for each {\displaystyle \omega } in the sample space {\displaystyle \Omega } individually.
+
+For {\displaystyle t\geq 0}, let {\displaystyle N\_{t}^{-}=\max(-N\_{t},0)} and suppose that
+
+Then the pointwise limit
+
+exists and is finite for {\displaystyle \mathbf {P} }-almost all {\displaystyle \omega \in \Omega }.
+
+
+### Doob's second martingale convergence theorem
+
+It is important to note that the convergence in Doob's first martingale convergence theorem is pointwise, not uniform, and is unrelated to convergence in mean square, or indeed in any Lᵖ space. In order to obtain convergence in *L*¹ (i.e., convergence in mean), one requires uniform integrability of the random variables {\displaystyle N\_{t}}. By Chebyshev's inequality, convergence in *L*¹ implies convergence in probability and convergence in distribution.
+
+The following are equivalent:
+
+* {\displaystyle (N\_{t})\_{t>0}} is uniformly integrable, i.e.
+
+* there exists an integrable random variable {\displaystyle N\in L^{1}(\Omega ,\mathbf {P} ;\mathbf {R} )} such that {\displaystyle N\_{t}\to N} as {\displaystyle t\to \infty } both {\displaystyle \mathbf {P} }-almost surely and in {\displaystyle L^{1}(\Omega ,\mathbf {P} ;\mathbf {R} )}, i.e.
+
+## Doob's upcrossing inequality
+
+The following result, called **Doob's upcrossing inequality** or, sometimes, **Doob's upcrossing lemma**, is used in proving Doob's martingale convergence theorems. A "gambling" argument shows that for uniformly bounded supermartingales, the number of upcrossings is bounded; the upcrossing lemma generalizes this argument to supermartingales with bounded expectation of their negative parts.
+
+Let {\displaystyle N} be a natural number. Let {\displaystyle (X\_{n})\_{n\in \mathbf {N} }} be a supermartingale with respect to a filtration {\displaystyle ({\mathcal {F}}\_{n})\_{n\in \mathbf {N} }}. Let {\displaystyle a}, {\displaystyle b} be two real numbers with {\displaystyle a<b}. Define the random variables {\displaystyle (U\_{n})\_{n\in \mathbf {N} }} so that {\displaystyle U\_{n}} is the maximum number of disjoint intervals {\displaystyle [n\_{i\_{1}},n\_{i\_{2}}]} with {\displaystyle n\_{i\_{2}}\leq n}, such that {\displaystyle X\_{n\_{i\_{1}}}<a<b<X\_{n\_{i\_{2}}}}. These are called **upcrossings** with respect to interval {\displaystyle [a,b]}. Then
+
+where {\displaystyle X^{-}} is the negative part of {\displaystyle X}, defined by 
+X
+−
+
+
+=
+−
+min
+(
+X
+,
+0
+)
+
+
+{\textstyle X^{-}=-\min(X,0)}
+
+.
+
+
+## Applications
+
+
+### Convergence in *L*ᵖ
+
+Let {\displaystyle M:[0,\infty )\times \Omega \to \mathbf {R} } be a continuous martingale such that
+
+for some {\displaystyle p>1}. Then there exists a random variable {\displaystyle M\in L^{p}(\Omega ,\mathbf {P} ;\mathbf {R} )} such that {\displaystyle M\_{t}\to M} as {\displaystyle t\to +\infty } both {\displaystyle \mathbf {P} }-almost surely and in {\displaystyle L^{p}(\Omega ,\mathbf {P} ;\mathbf {R} )}.
+
+The statement for discrete-time martingales is essentially identical, with the obvious difference that the continuity assumption is no longer necessary.
+
+
+### Lévy's zero–one law
+
+Doob's martingale convergence theorems imply that conditional expectations also have a convergence property.
+
+Let {\displaystyle (\Omega ,F,\mathbf {P} )} be a probability space and let {\displaystyle X} be a random variable in {\displaystyle L^{1}}. Let {\displaystyle F\_{\*}=(F\_{k})\_{k\in \mathbf {N} }} be any filtration of {\displaystyle F}, and define {\displaystyle F\_{\infty }} to be the minimal σ-algebra generated by {\displaystyle (F\_{k})\_{k\in \mathbf {N} }}. Then
+
+both {\displaystyle \mathbf {P} }-almost surely and in {\displaystyle L^{1}}.
+
+This result is usually called **Lévy's zero–one law** or **Levy's upwards theorem**. The reason for the name is that if {\displaystyle A} is an event in {\displaystyle F\_{\infty }}, then the theorem says that {\displaystyle \mathbf {P} [A\mid F\_{k}]\to \mathbf {1} \_{A}} almost surely, i.e., the limit of the probabilities is 0 or 1. In plain language, if we are learning gradually all the information that determines the outcome of an event, then we will become gradually certain what the outcome will be. This sounds almost like a tautology, but the result is still non-trivial. For instance, it easily implies Kolmogorov's zero–one law, since it says that for any tail event *A*, we must have {\displaystyle \mathbf {P} [A]=\mathbf {1} \_{A}} almost surely, hence {\displaystyle \mathbf {P} [A]\in \{0,1\}}.
+
+Similarly we have the **Levy's downwards theorem** :
+
+Let {\displaystyle (\Omega ,F,\mathbf {P} )} be a probability space and let {\displaystyle X} be a random variable in {\displaystyle L^{1}}. Let {\displaystyle (F\_{k})\_{k\in \mathbf {N} }} be any decreasing sequence of sub-sigma algebras of {\displaystyle F}, and define {\displaystyle F\_{\infty }} to be the intersection. Then
+
+both {\displaystyle \mathbf {P} }-almost surely and in {\displaystyle L^{1}}.
+

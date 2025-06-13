@@ -1,0 +1,82 @@
+Treasury Information System Architecture Framework
+
+
+# Treasury Information System Architecture Framework
+
+
+
+The **Treasury Information System Architecture Framework** (TISAF) is an early 1990s Enterprise Architecture framework to assist US Treasury Bureaus to develop their Enterprise Information System Architectures (EISAs).
+
+The TISAF was developed by the US Department of the Treasury in 1997, and let to the development of the Treasury Enterprise Architecture Framework, released in 2000. The TEAF represents the second-generation framework for Treasury. TISAF was the first-generation framework.
+
+
+## Overview
+
+The Treasury Information System Architecture Framework (TISAF) consists of a list of goals and objectives for planning Treasury information technology a set of architectural principles for developing information systems, an EISA model for describing distinct views of enterprise information systems, and a set of standards for guiding specific product selection.
+
+The EISA model provides four architectural views to organize, plan, and build enterprise information systems, consisting of the Information, Functional, and Work architectures and the Infrastructure.
+
+
+## History
+
+TISAF incorporated elements from the C4ISR Architecture Framework, which was developed by the Mitre Corporation from 1994 on. In January 1997, US Department of the Treasury issued TISAF Version 1, consisting of three volumes:
+
+* the Treasury Information Systems Architecture Framework,
+* Treasury Architecture Development Guidance, and
+* the Treasury Architecture Development Process.
+
+In July 1997, the Treasury issued additional guidance to complement Treasury Information System Architecture Framework (TISAF). This guidance, which was finalized in September 1997, provides "how to" processes for developing an information systems architecture in accordance with TISAF. In 1989 US congress granted $200,000 for the department-wide implementation of the Treasury Information System Architecture Framework.
+
+Further developments in the US Department of the Treasury let to the development of the Treasury Enterprise Architecture Framework, first published in July 2000. The TEAF represents a revision to TISAF and incorporated elements of FEAF. It was the result of an evaluation of Department and bureau experiences in applying and using the TISAF, and emerging best practices from other government organizations and industry.
+
+TEAF is intended to emphasize the broader scope of the architecture framework, which includes both business and technical vantage points within an enterprise-wide perspective. The TEAF includes descriptions of a common suite of work products for documenting and modeling EAs. These work products align with FEAF models and with Department of Defense Architecture Framework (DoDAF) products.
+
+
+## TISAF building blocks
+
+
+### Departmentwide architecture framework
+
+According to TISAF, a complete architecture has the following four components, each representing a different perspective or view of the agency:
+
+* *Functional*: A representation of what the organization does (i.e., its mission and business processes) and how the organization can use information systems to support its business operations.
+* *Work*: A description of where and by whom information systems are to be used throughout the agency.
+* *Information*: A description of what information is needed to support business operations.
+* *Infrastructure*: A description of the hardware and "services" (e.g., software and telecommunications) needed to implement information systems across the agency.
+
+TISAF's functional, work, and information components together form the logical view of the architecture, while its infrastructure represents the technical view of the architecture.
+
+
+### Top-down approach
+
+To develop and evolve systems that effectively support business functions, a top-down process must be followed. The logical architecture (e.g., business functions and information flows) is defined first and then used to specify supporting systems (e.g., interfaces, standards, and protocols).
+
+Treasury endorses this top-down approach. Treasury officials responsible for developing and implementing TISAF stated that development of the architecture begins with defining and describing the agency's major business functions. Once this is accomplished, the agency can identify the relationships among the functions, the information needed to perform the functions, the users and locations of the functions, and the existing and needed applications and related information technology required to execute and support the business functions. According to Treasury guidance, the architecture's infrastructure component (i.e., its systems
+specifications and standards) should be derived from the other three components. In addition, the guidance states that each element of the architecture must be integrated and traceable, and the relationships between them must be explicit.
+
+
+### TISAF Architecture
+
+The Information Architecture is the "what" of information systems which defines and organizes all information needed to perform business operations and describes the relationships among this information. The Functional Architecture is the "how" of information systems which defines and organizes the business functions, processes, or activities that capture, manipulate, and manage the business information to support business operations.
+
+The Work Architecture is the "where" of information systems which depicts the decentralization of the business, the description of the work organizations to business locations, and the communications and coordination between these locations.
+The Infrastructure is the "enabler" of information systems which describes the supporting services, computing platforms, and internal and external interfaces needed to provide technology environments within which information systems run.
+
+To provide a context for discussing technical standards, a Technical Reference Model (TRM) is developed to organize and depict building blocks of an information system as a set of services categorized by functional areas.
+
+
+## TISAF 1997 to TEAF 2000
+
+Key changes from TISAF 1997 to Treasury Enterprise Architecture Framework (TEAF) 2000 are summarized below:
+
+* The Principles have been revamped
+* The Work Architecture is renamed to Organizational View
+* The order of the TEAF Matrix columns has been changed to: Functional, Information, Organizational, and Infrastructure
+* The TISAF Matrix rows have been renamed in the TEAF Matrix to: Planner, Owner, Designer, Builder
+* Work products have been revamped
+* The concept of essential vs. supporting work products has been introduced
+* The TISAF Technical Reference Model has been removed. Example TRMs are cited
+* The Standards Profile content has been removed from the TEAF. A Standards Profile is part of an EA, but not part of a framework
+* Inputs that drive the development of EA are now included and are documented as EA Direction resources and work products
+* Approaches for implementing an EA are now included and are documented as EA Accomplishment work products
+* Alignments of the TEAF with the FEAF and the Zachman Framework are provided

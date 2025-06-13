@@ -1,0 +1,78 @@
+EbXML
+
+
+# EbXML
+
+
+
+**Electronic Business using eXtensible Markup Language**, commonly known as **e-business XML**, or **ebXML** (pronounced ee-bee-ex-em-el, [i'bi,eks,em'el]) as it is typically referred to, is a family of XML based standards sponsored by OASIS and UN/CEFACT whose mission is to provide an open, XML-based infrastructure that enables the global use of electronic business information in an interoperable, secure, and consistent manner by all trading partners.
+
+The ebXML architecture is a unique set of concepts; part theoretical and part implemented in the existing ebXML standards work.
+
+The ebXML work stemmed from earlier work on ooEDI (object oriented EDI), UML / UMM, XML markup technologies and the X12 EDI "Future Vision" work sponsored by ANSI X12 EDI.
+
+The melding of these components began in the original ebXML work and the theoretical discussion continues today. Other work relates, such as the Object Management Group work and the OASIS BCM (Business-Centric Methodology) standard (2006).
+
+
+## Conceptual overview of ebXML architecture
+
+While the ebXML standards adopted by ISO and OASIS seek to provide formal XML-enabled mechanisms that can be implemented directly, the ebXML architecture is on concepts and methodologies that can be more broadly applied to allow practitioners to better implement e-business solutions.
+
+A particular instance is the Core Components Technical Specification (CCTS) work that continues within UN/CEFACT, whereas its cousin - UBL - Universal Business Language - specification is used within OASIS that implements specific XML transactions by applying the principles of CCTS to typical supply chain transactions such as invoice, purchase order, ship notice and so on.
+
+
+## History
+
+ebXML was started in 1999 as a joint initiative between the United Nations Centre for Trade facilitation and Electronic Business (UN/CEFACT) and Organization for the Advancement of Structured Information Standards (OASIS). A joint coordinating committee composed of representatives from each of the two organizations led the effort. Quarterly meetings of the working groups were held between November 1999 and May 2001. At the final plenary a Memorandum of Understanding was signed by the two organizations, splitting up responsibility for the various specifications but continuing oversight by the joint coordinating committee.
+
+The original project envisioned five layers of data specification, including XML standards for:
+
+* Business processes,
+* Collaboration protocol agreements,
+* Core data components,
+* Messaging,
+* Registries and repositories
+
+All work was completed based on a normative requirements document and the ebXML Technical Architecture Specification.
+
+After completion of the 6 specifications by the two organizations, 5 parts of the work were submitted to ISO TC 154 for approval. The International Organization for Standardization (ISO) has approved the following five ebXML specifications as the ISO 15000 standard, under the general title, Electronic business eXtensible markup language:
+
+* ISO 15000-1: ebXML Collaborative Partner Profile Agreement (ebCPP)
+* ISO 15000-2: ebXML Messaging Service Specification (ebMS)
+* ISO 15000-3: ebXML Registry Information Model (ebRIM)
+* ISO 15000-4: ebXML Registry Services Specification (ebRS)
+* ISO 15000-5: ebXML Core Components Specification (CCS)
+
+OASIS technical committees and UN/CEFACT retain the responsibility for maintaining and advancing the above specifications.
+
+
+## Collaborative Partner Profile Agreement
+
+Collaborative Partner Profile Agreements are XML based documents specifying a trading agreement between trading partners.
+Each trading partner will have their own Collaboration Protocol Profile (CPP) document that describes their abilities in an XML format. For instance, this can include the messaging protocols they support, or the security capabilities they support.
+A CPA (Collaboration Protocol Agreement) document is the intersection of two CPP documents, and describes the formal relationship between two parties. The following information will typically be contained in a CPA document:
+
+* Identification information: the unique identifiers for each party and their roles within the trading relationship
+* Security information: for instance, are digital signatures required, and what algorithms do they use
+* Communication information: the protocols that will be used when exchanging documents
+* Endpoint locations: the URL, service and action messages should be sent to
+* Rules to follow when acknowledgments are not received for messages, including how long to wait before resending, and how many times to resend
+* Whether duplicate messages should be ignored
+* Whether acknowledgments are required for all messages
+
+## Messaging Service Specification
+
+The Message Service Specification (ebMS) describes a communication-neutral mechanism Message Service Handlers (MSH) must implement in order to exchange business documents. ebMS3.0 is the current version of the specification.
+ebMS3.0 is built as an extension on top of the SOAP with Attachments specification. The SOAP message contains the meta-data required to exchange the business document in a secure and reliable manner, while the business payload is attached to the SOAP message. Multiple business payloads may be attached to a single message, and the format of the payloads is beyond the scope of the ebXML specifications.
+The information trading partners place in ebMS messages is largely dictated by the CPA agreement that defines the relationship between them. The following information is typically contained within ebMS messages:
+
+* Unique message identifier
+* Who the message is for
+* Who sent the message
+* A conversation identifier for linking related messages
+* A digital signature based on the XML Signature specification
+* An indication for whether duplicate messages should be ignored
+* An indication for whether acknowledgments are required
+
+ebMS is communication protocol neutral, although the most common underlying protocols are HTTP and SMTP.
+

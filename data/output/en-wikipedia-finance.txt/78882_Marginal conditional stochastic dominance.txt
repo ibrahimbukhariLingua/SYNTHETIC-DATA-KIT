@@ -1,0 +1,18 @@
+Marginal conditional stochastic dominance
+
+
+# Marginal conditional stochastic dominance
+
+
+
+In finance, **marginal conditional stochastic dominance** is a condition under which a portfolio can be improved in the eyes of all risk-averse investors by incrementally moving funds out of one asset (or one sub-group of the portfolio's assets) and into another. Each risk-averse investor is assumed to maximize the expected value of an increasing, concave von Neumann-Morgenstern utility function. All such investors prefer portfolio B over portfolio A if the portfolio return of B is second-order stochastically dominant over that of A; roughly speaking this means that the density function of A's return can be formed from that of B's return by pushing some of the probability mass of B's return to the left (which is disliked by all increasing utility functions) and then spreading out some of the density mass (which is disliked by all concave utility functions).
+
+If a portfolio A is marginally conditionally stochastically dominated by some incrementally different portfolio B, then it is said to be **inefficient** in the sense that it is not the optimal portfolio for anyone. Note that this context of portfolio optimization is not limited to situations in which mean-variance analysis applies.
+
+The presence of marginal conditional stochastic dominance is sufficient, but not necessary, for a portfolio to be inefficient. This is because marginal conditional stochastic dominance only considers incremental portfolio changes involving two sub-groups of assets—one whose holdings are decreased and one whose holdings are increased. It is possible for an inefficient portfolio to not be second-order stochastically dominated by any such one-for-one shift of funds, and yet to by dominated by a shift of funds involving three or more sub-groups of assets.
+
+
+## Testing
+
+Yitzhaki and Mayshar presented a linear programming-based approach to testing for portfolio inefficiency which works even when the necessary conditional of marginal conditional stochastic dominance is not met. Other similar tests have also been developed.
+

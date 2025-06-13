@@ -1,0 +1,115 @@
+3-D Secure
+
+
+# 3-D Secure
+
+
+
+**3-D Secure** is a protocol designed to be an additional security layer for online credit and debit card transactions. The name refers to the "three domains" which interact using the protocol: the merchant/acquirer domain, the issuer domain, and the interoperability domain.
+
+Originally developed in the autumn of 1999 by Celo Communications AB (which was acquired by Gemplus Associates and integrated into Gemplus, Gemalto and now Thales Group) for Visa Inc. in a project named "p42" ("p" from Pole vault as the project was a big challenge and "42" as the answer from the book *The Hitchhiker's Guide to the Galaxy*).
+A new updated version was developed by Gemplus between 2000-2001.
+
+In 2001 Arcot Systems (now CA Technologies) and Visa Inc. with the intention of improving the security of Internet payments, and offered to customers under the **Verified by Visa** brand (later rebranded as **Visa Secure**). Services based on the protocol have also been adopted by Mastercard as **SecureCode** (later rebranded as **Identity Check**), by Discover as **ProtectBuy**, by JCB International as **J/Secure**, and by American Express as **American Express SafeKey**. Later revisions of the protocol have been produced by EMVCo under the name **EMV 3-D Secure**. Version 2 of the protocol was published in 2016 with the aim of complying with new EU authentication
+requirements and resolving some of the short-comings of the original protocol.
+
+Analysis of the first version of the protocol by academia has shown it to have many security issues that affect the consumer, including a greater surface area for phishing and a shift of liability in the case of fraudulent payments.
+
+
+## Description and basic aspects
+
+The basic concept of the protocol is to tie the financial authorization process with online authentication. This additional security authentication is based on a three-domain model (hence the "3-D" in the name). The three domains are:
+
+* Acquirer domain (the bank and the merchant to which the money is being paid),
+* Issuer domain (the card issuer),
+* Interoperability Domain (the infrastructure provided by the card scheme, credit, debit, prepaid or other types of a payment card, to support the 3-D Secure protocol). It includes the Internet, merchant plug-in, access control server, and other software providers.
+
+The protocol uses XML messages sent over SSL connections with client authentication (this ensures the authenticity of both peers, the server and the client, using digital certificates).
+
+A transaction using Verified by Visa or SecureCode will initiate a redirection to the website of the card issuer to authorize the transaction. Each issuer could use any kind of authentication method (the protocol does not cover this) but typically, a password tied to the card is entered when making online purchases. The Verified by Visa protocol recommends the card issuer's verification page to load in an inline frame session. In this way, the card issuer's systems can be held responsible for most security breaches. Today it is easy to send a one-time password as part of an SMS text message to users' mobile phones and emails for authentication, at least during enrollment and for forgotten passwords.
+
+The main difference between Visa and Mastercard implementations lies in the method to generate the UCAF (Universal Cardholder Authentication Field): Mastercard uses AAV (Accountholder Authentication Value) and Visa uses CAVV (Cardholder Authentication Verification Value).ᶜˡᵃʳⁱᶠⁱᶜᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+
+
+### ACS providers
+
+In the 3-D Secure protocol, the ACS (access control server) is on the card issuer side. Currently, most card issuers outsource ACS to a third party. Commonly, the buyer's web browser shows the domain name of the ACS provider, rather than the card issuer's domain name; however, this is not required by the protocol. Dependent on the ACS provider, it is possible to specify a card issuer-owned domain name for use by the ACS.
+
+
+### MPI providers
+
+Each 3-D Secure version 1 transaction involves two Internet request/response pairs: VEReq/VERes and PAReq/PARes. Visa and Mastercard do not permit merchants to send requests directly to their servers. Merchants must instead use MPI (merchant plug-in) providers.
+
+
+## Merchants
+
+The advantage for merchants is the reduction of "unauthorized transaction" chargebacks. One disadvantage for merchants is that they have to purchase a merchant plug-in (MPI) to connect to the Visa or Mastercard directory server. This is expensiveᶜˡᵃʳⁱᶠⁱᶜᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ (setup fee, monthly fee, and per-transaction fee); at the same time, it represents additional revenue for MPI providers. Supporting 3-D Secure is complicated and, at times, creates transaction failures. Perhaps the biggest disadvantage for merchants is that many users view the additional authentication step as a nuisance or obstacle, which results in a substantial increase in transaction abandonment and lost revenue.
+
+
+## Buyers and credit card holders
+
+In most current implementations of 3-D Secure, the card issuer or its ACS provider prompts the buyer for a password that is known only to the card issuer or ACS provider and the buyer. Since the merchant does not know this password and is not responsible for capturing it, it can be used by the card issuer as evidence that the purchaser is indeed their cardholder. This is intended to help decrease risk in two ways:
+
+1. Copying card details, either by writing down the numbers on the card itself or by way of modified terminals or ATMs, does not result in the ability to purchase over the Internet because of the additional password, which is not stored on or written on the card.
+2. Since the merchant does not capture the password, there is a reduced risk from security incidents at online merchants; while an incident may still result in hackers obtaining other card details, there is no way for them to get the associated password.
+
+3-D Secure does not strictly *require* the use of password authentication. It is said to be possible to use it in conjunction with smart card readers, security tokens and the like. These types of devices might provide a better user experience for customers as they free the purchaser from having to use a secure password. Some issuers are now using such devices as part of the Chip Authentication Program or Dynamic Passcode Authentication schemes.
+
+One significant disadvantage is that cardholders are likely to see their browser connect to unfamiliar domain names as a result of vendors' MPI implementations and the use of outsourced ACS implementations by card issuers, which might make it easier to perform phishing attacks on cardholders.
+
+
+## General criticism
+
+
+### Verifiability of site identity
+
+The system involves a pop-up window or inline frame appearing during the online transaction process, requiring the cardholder to enter a password which, if the transaction is legitimate, their card issuer will be able to authenticate. The problem for the cardholder is determining if the pop-up window or frame is really from their card issuer when it could be from a fraudulent website attempting to harvest the cardholder's details. Such pop-up windows or script-based frames lack any access to any security certificate, eliminating any way to confirm the credentials of the implementation of 3-D Secure.
+
+The Verified by Visa system has drawn some criticism, since it is hard for users to differentiate between the legitimate Verified by Visa pop-up window or inline frame, and a fraudulent phishing site. This is because the pop-up window is served from a domain which is:
+
+* Not the site where the user is shopping
+* Not the card issuer
+* Not visa.com or mastercard.com
+
+In some cases, the Verified by Visa system has been mistaken by users for a phishing scam and has itself become the target of some phishing scams. The newer recommendation to use an inline frame (iframe) instead of a pop-up has reduced user confusion, at the cost of making it harder, if not impossible, for the user to verify that the page is genuine in the first place. As of 2022ᵘᵖᵈᵃᵗᵉ, web browsers do not provide a way to check the security certificate for the contents of an iframe. Some of these concerns about site validity for Verified by Visa are mitigated, however, as its current implementation of the enrollment process requires entering a personal message which is displayed in later Verified by Visa pop-ups to provide some assurance to the user the pop-ups are genuine.
+
+Some card issuers also use activation-during-shopping (ADS), in which cardholders who are not registered with the scheme are offered the opportunity of signing up (or forced into signing up) during the purchase process. This will typically take them to a form in which they are expected to confirm their identity by answering security questions which should be known to their card issuer. Again, this is done within an iframe where they cannot easily verify the site they are providing this information to—a cracked site or illegitimate merchant could in this way gather all the details they need to pose as the customer.
+
+Implementation of 3-D Secure sign-up will often not allow a user to proceed with a purchase until they have agreed to sign up to 3-D Secure and its terms and conditions, not offering any alternative way of navigating away from the page than closing it, thus abandoning the transaction.
+
+Cardholders who are unwilling to take the risk of registering their card during a purchase, with the commerce site controlling the browser to some extent, can in some cases go to their card issuer's website in a separate browser window and register from there. When they return to the commerce site and start over they should see that their card is registered. The presence on the password page of the personal assurance message (PAM) that they chose when registering is their confirmation that the page is coming from the card issuer. This still leaves some possibility of a man-in-the-middle attack if the cardholder cannot verify the TLS/SSL server certificate for the password page. Some commerce sites will devote the full browser page to the authentication rather than using a frame (not necessarily an iframe), which is a less secure object. In this case, the lock icon in the browser should show the identity of either the card issuer or the operator of the verification site. The cardholder can confirm that this is in the same domain that they visited when registering their card if it is not the domain of their card issuer.
+
+Mobile browsers present particular problems for 3-D Secure due to the common lack of certain features such as frames and pop-ups. Even if the merchant has a mobile website, unless the issuer is also mobile-aware, the authentication pages may fail to render properly, or even at all. In the end, manyᵛᵃᵍᵘᵉ analysts have concluded that the activation-during-shopping (ADS) protocols invite more risk than they remove and furthermore transfer this increased risk to the consumer.
+
+In some cases, 3-D Secure ends up providing little security to the cardholder, and can act as a device to pass liability for fraudulent transactions from the card issuer or retailer to the cardholder. Legal conditions applied to the 3-D Secure service are sometimes worded in a way that makes it difficult for the cardholder to escape liability from fraudulent transactions.
+
+
+### Geographic discrimination
+
+Card issuers and merchants may use 3-D Secure systems unevenly with regard to card issuers that issue cards in several geographic locations, creating differentiation, for example, between the domestic US- and non-US-issued cards. For example, since Visa and Mastercard treat the unincorporated US territory of Puerto Rico as a non-US international, rather than a domestic US location, cardholders there may confront a greater incidence of 3-D Secure queries than cardholders in the fifty states. Complaints to that effect have been received by Puerto Rico Department of Consumer Affairs "equal treatment" economic discrimination site.
+
+
+### 3-D Secure as strong customer authentication
+
+Version 2 of 3-D Secure, which incorporates one-time passcodes, is a form of software-based strong customer authentication as defined by the EU's Revised Directive on Payment Services (PSD2); earlier variants used static passwords, which are not sufficient to meet the directive's requirements.
+
+3-D Secure relies upon the issuer actively being involved and ensuring that any card issued becomes enrolled by the cardholder; as such, acquirers must either accept unenrolled cards without performing strong customer authentication or reject such transactions, including those from smaller card schemes which do not have 3-D Secure implementations.
+
+Alternative approaches perform authentication on the acquiring side, without requiring prior enrollment with the issuer. For instance, PayPal's patented 'verification' uses one or more dummy transactions are directed towards a credit card, and the cardholder must confirm the value of these transactions, although the resulting authentication cannot be directly related to a specific transaction between merchant and cardholder. A patented system called iSignthis splits the agreed transaction amount into two (or more) random amounts, with the cardholder then proving that they are the owner of the account by confirming the amounts on their statement.
+
+
+### ACCC blocks 3-D Secure proposal
+
+A proposal to make 3-D Secure mandatory in Australia was blocked by the Australian Competition & Consumer Commission (ACCC) after numerous objections and flaw-related submissions were received.
+
+
+### India
+
+Some countries like India made use of not only CVV2, but 3-D Secure mandatory, a SMS code sent from a card issuer and typed in the browser when you are redirected when you click "purchase" to the payment system or card issuer system site where you type that code and only then the operation is accepted. Nevertheless, Amazon can still do transactions from other countries with turned-on 3-D Secure.
+
+
+## 3-D Secure 2.0
+
+In October 2016, EMVCo published the specification for 3-D Secure 2.0; it is designed to be less intrusive than the first version of the specification, allowing more contextual data to be sent to the customer's card issuer (including mailing addresses and transaction history) to verify and assess the risk of the transaction. The customer would only be required to pass an authentication challenge if their transaction is determined to be of a high risk. In addition, the workflow for authentication is designed so that it no longer requires redirects to a separate page, and can also activate out-of-band authentication via an institution's mobile app (which, in turn, can also be used with biometric authentication). 3-D Secure 2.0 is compliant with EU "strong customer authentication" mandates.
+

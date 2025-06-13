@@ -1,0 +1,59 @@
+Sethi model
+
+
+# Sethi model
+
+
+
+The **Sethi model** was developed by Suresh P. Sethi and describes the process of how sales evolve over time in response to advertising. The model assumes that the rate of change in sales depend on three effects: response to advertising that acts positively on the unsold portion of the market, the loss due to forgetting or possibly due to competitive factors that act negatively on the sold portion of the market, and a random effect that can go either way.
+
+Suresh Sethi published his paper "Deterministic and Stochastic Optimization of a Dynamic Advertising Model" in 1983. The Sethi model is a modification as well as a stochastic extension of the Vidale-Wolfe advertising model. The model and its competitive and multi-echelon channel extensions have been used extensively in the literature.
+Moreover, some of these extensions have been also tested empirically.
+
+
+## Model
+
+The Sethi advertising model or simply the Sethi model provides a sales-advertising dynamics in the form of the following stochastic differential equation:
+
+Where:
+
+* {\displaystyle X\_{t}} is the market share at time {\displaystyle t}
+* {\displaystyle U\_{t}} is the rate of advertising at time {\displaystyle t}
+* {\displaystyle r} is the coefficient of the effectiveness of advertising
+* {\displaystyle \delta } is the decay constant
+* {\displaystyle \sigma (X\_{t})} is the diffusion coefficient
+* {\displaystyle z\_{t}} is the Wiener process (Standard Brownian motion); {\displaystyle dz\_{t}} is known as White noise.
+
+### Explanation
+
+The rate of change in sales depend on three effects: response to advertising that acts positively on the unsold portion of the market via {\displaystyle r}, the loss due to forgetting or possibly due to competitive factors that act negatively on the sold portion of the market via {\displaystyle \delta }, and a random effect using a diffusion or White noise term that can go either way.
+
+* The coefficient {\displaystyle r} is the coefficient of the effectiveness of advertising innovation.
+* The coefficient {\displaystyle \delta } is the decay constant.
+* The square-root term brings in the so-called word-of-mouth effect at least at low sales levels.
+* The diffusion term {\displaystyle \sigma (X\_{t})dz\_{t}} brings in the random effect.
+
+### Example of an optimal advertising problem
+
+Subject to the Sethi model above with the initial market share {\displaystyle x}, consider the following objective function:
+
+where {\displaystyle \pi } denotes the sales revenue corresponding to the total market, i.e., when {\displaystyle x=1}, and {\displaystyle \rho >0} denotes the discount rate.
+
+The function {\displaystyle V(x)} is known as the value function for this problem, and it is shown to be
+
+where
+
+The optimal control for this problem is
+
+where
+
+and
+
+
+## Extensions of the Sethi model
+
+* Competitive model: Nash differential games
+* Multi-echelon Model
+* Empirical testing of the Sethi model and extensions
+* Cooperative advertising: Stackelberg differential games
+* The Sethi durable goods model

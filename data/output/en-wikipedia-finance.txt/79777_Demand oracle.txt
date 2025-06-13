@@ -1,0 +1,38 @@
+Demand oracle
+
+
+# Demand oracle
+
+
+
+In algorithmic game theory, a branch of both computer science and economics, a **demand oracle** is a function that, given a price-vector, returns the demand of an agent. It is used by many algorithms related to pricing and optimization in online market. It is usually contrasted with a **value oracle**, which is a function that, given a set of items, returns the value assigned to them by an agent.
+
+
+## Demand
+
+The **demand** of an agent is the bundle of items that the agent most prefers, given some fixed prices of the items. As an example, consider a market with three objects and one agent, with the following values and prices.
+
+| Value | Price |
+| --- | --- |
+| Apple | 2 | 5 |
+| Banana | 4 | 3 |
+| Cherry | 6 | 1 |
+
+Suppose the agent's utility function is additive (= the value of a bundle is the sum of values of the items in the bundle), and quasilinear (= the utility of a bundle is the value of the bundle minus its price). Then, the demand of the agent, given the prices, is the set {Banana, Cherry}, which gives a utility of (4+6)-(3+1) = 6. Every other set gives the agent a smaller utility. For example, the empty set gives utility 0, while the set of all items gives utility (2+4+6)-(5+3+1)=3.
+
+
+## Oracle
+
+With additive valuations, the demand function is easy to compute - there is no need for an "oracle". However, in general, agents may have *combinatorial valuations*. This means that, for each combination of items, they may have a different value, which is not necessarily a sum of their values for the individual items. Describing such a function on *m* items might require up to 2ᵐ numbers - a number for each subset. This may be infeasible when *m* is large. Therefore, many algorithms for markets use two kinds of oracles:
+
+* A *value oracle* can answer *value queries*: given a bundle, it returns its value.
+* A *demand oracle* can answer *demand queries*: given a price-vector, it returns a bundle that maximizes the quasilinear utility (value minus price).
+
+## Applications
+
+Some examples of algorithms using demand oracles are:
+
+* Welfare maximization: there are *n* agents and *m* items. Each agent is represented by a value-oracle and a demand-oracle. It is required to allocate the items among the agents such that the sum of values is maximized. In general the problem is NP-hard, but approximations are known for special cases, such as submodular valuations (this is called the "submodular welfare problem"). Some algorithms use only a value oracle; other algorithms use also a *demand oracle*.
+* Envy-free pricing: there are *n* agents and *m* items. Each agent is represented by a value-oracle and a demand-oracle. It is required to find a price-vector and an allocation of the items, such that no agent is envious, and subject to that, the seller's revenue is maximized.
+* Market equilibrium computation.
+* *Learning strong-substitutes demand*.

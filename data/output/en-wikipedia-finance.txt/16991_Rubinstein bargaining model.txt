@@ -1,0 +1,64 @@
+Rubinstein bargaining model
+
+
+# Rubinstein bargaining model
+
+
+
+A **Rubinstein bargaining model** refers to a class of bargaining games that feature alternating offers through an infinite time horizon. The original proof is due to Ariel Rubinstein in a 1982 paper. For a long time, the solution to this type of game was a mystery; thus, Rubinstein's solution is one of the most influential findings in game theory.
+
+
+## Requirements
+
+A standard Rubinstein bargaining model has the following elements:
+
+* Two players
+* A Prize
+* Complete information
+* Unlimited offers—the game keeps going until one player accepts an offer
+* Alternating offers—the first player makes an offer in the first period, if the second player rejects, the game moves to the second period in which the second player makes an offer, if the first rejects, the game moves to the third period, and so forth
+* Delays are costly
+
+## Solution
+
+Consider the typical Rubinstein bargaining game in which two players decide how to divide a pie of size 1. An offer by a player takes the form *x* = (*x*₁, *x*₂) with *x*₁ + *x*₂ = 1 and {\displaystyle x\_{1},x\_{2}\geqslant 0}. Assume the players discount at the geometric rate of *d*, which can be interpreted as cost of delay or "pie spoiling". That is, 1 step later, the pie is worth d times what it was, for some d with 0<d<1.
+
+Any *x* can be a Nash equilibrium outcome of this game, resulting from the following strategy profile: Player 1 always proposes *x* = (*x*₁, *x*₂) and only accepts offers *x'* where *x*₁' ≥ *x*₁. Player 2 always proposes *x* = (*x*₁, *x*₂) and only accepts offers *x'* where *x*₂' ≥ *x*₂.
+
+In the above Nash equilibrium, player 2's threat to reject any offer less than *x*₂ is not credible. In the subgame where player 1 did offer *x*₂' where *x*₂ > *x*₂' > *d* *x*₂, clearly player 2's best response is to accept.
+
+To derive a sufficient condition for subgame perfect equilibrium, let *x* = (*x*₁, *x*₂) and *y* = (*y*₁, *y*₂) be two divisions of the pie with the following property:
+
+1. *x*₂ = *d* *y*₂, and
+2. *y*₁ = *d* *x*₁,
+
+i.e.
+
+1. *x* = (*x*₁, *x*₂), and
+2. *y* = (*d* *x*₁, {\displaystyle {\frac {1}{d}}x\_{2}}).
+
+Consider the strategy profile where player 1 offers *x* and accepts no less than *y*₁, and player *2* offers *y* and accepts no less than *x*₂. Player 2 is now indifferent between accepting and rejecting, therefore the threat to reject lesser offers is now credible. Same applies to a subgame in which it is player 1's turn to decide whether to accept or reject. In this subgame perfect equilibrium, player 1 gets 1/(1+*d*) while player 2 gets *d*/(1+*d*). This subgame perfect equilibrium is essentially unique.
+
+
+### A Generalization
+
+When the discount factor is different for the two players, {\displaystyle d\_{1}} for the first one and {\displaystyle d\_{2}} for the second, let us denote the value for the first player as {\displaystyle v(d\_{1},d\_{2})}.
+Then a reasoning similar to the above gives
+
+{\displaystyle 1-v(d\_{1},d\_{2})=d\_{2}\times v(d\_{2},d\_{1})}
+{\displaystyle 1-v(d\_{2},d\_{1})=d\_{1}\times v(d\_{1},d\_{2})}
+
+yielding {\displaystyle v(d\_{1},d\_{2})={\frac {1-d\_{2}}{1-d\_{1}d\_{2}}}}. This expression reduces to the original one for {\displaystyle d\_{1}=d\_{2}=d}.
+
+
+## Desirability
+
+Rubinstein bargaining has become pervasive in the literature because it has many desirable qualities:
+
+* It has all the aforementioned requirements, which are thought to accurately simulate real-world bargaining.
+* There is a unique solution.
+* The solution is pretty clean, which wasn't necessarily expected given the game is infinite.
+* There is no delay in the transaction.
+* As both players become infinitely patient or can make counteroffers increasingly quickly (i.e. as d approaches 1), then both sides get half of the pie.
+* The result quantifies the advantage of being the first to propose (and thus potentially avoiding the discount).
+* The generalized result quantifies the advantage of being less pressed for time, i.e. of having a discount factor closer to 1 than that of the other party.

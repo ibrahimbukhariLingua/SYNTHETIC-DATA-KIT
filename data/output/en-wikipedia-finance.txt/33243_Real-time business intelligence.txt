@@ -1,0 +1,75 @@
+Real-time business intelligence
+
+
+# Real-time business intelligence
+
+
+
+**Real-time business intelligence** (**RTBI**) is a concept describing the process of delivering business intelligence (BI) or information about business operations as they occur. Real time means near to zero latency and access to information whenever it is required.
+
+The speed of today's processing systems has allowed typical data warehousing to work in real-time. The result is real-time business intelligence. Business transactions as they occur are fed to a real-time BI system that maintains the current state of the enterprise. The RTBI system not only supports the classic strategic functions of data warehousing for deriving information and knowledge from past enterprise activity, but it also provides real-time tactical support to drive enterprise actions that react immediately to events as they occur. As such, it replaces both the classic data warehouse and the enterprise application integration (EAI) functions. Such event-driven processing is a basic tenet of real-time business intelligence.
+
+In this context, "real-time" means a range from milliseconds to a few seconds (5s) after the business event has occurred. While traditional BI presents historical data for manual analysis, RTBI compares current business events with historical patterns to detect problems or opportunities automatically. This automated analysis capability enables corrective actions to be initiated and/or business rules to be adjusted to optimize business processes.
+
+RTBI is an approach in which up-to-a-minute data is analyzed, either directly from operational sources or feeding business transactions into a real time data warehouse and business intelligence system.
+
+
+## Latency
+
+All real-time business intelligence systems have some latency, but the goal is to minimize the time from the business event happening to a corrective action or notification being initiated. Analyst Richard Hackathorn describes three types of latency:
+
+* Data latency; the time taken to collect and store the data
+* Analysis latency; the time taken to analyze the data and turn it into actionable information
+* Action latency; the time taken to react to the information and take action
+
+Real-time business intelligence technologies are designed to reduce all three latencies to as close to zero as possible, whereas traditional business intelligence only seeks to reduce data latency and does not address analysis latency or action latency since both are governed by manual processes.
+
+Some commentators have introduced the concept of *right time business intelligence* which proposes that information should be delivered just before it is required, and not necessarily in real-time.
+
+
+## Architectures
+
+
+### Event-based
+
+Real-time Business Intelligence systems are event driven, and may use Complex Event Processing, Event Stream Processing and Mashup (web application hybrid) techniques to enable events to be analysed without being first transformed and stored in a database. These in-memory database techniques have the advantage that high rates of events can be monitored, and since data does not have to be written into databases data latency can be reduced to milliseconds.
+
+
+### Data warehouse
+
+An alternative approach to event driven architectures is to increase the refresh cycle of an existing data warehouse to update the data more frequently. These real-time data warehouse systems can achieve near real-time update of data, where the data latency typically is in the range from minutes to hours. The analysis of the data is still usually manual, so the total latency is significantly different from event driven architectural approaches.
+
+
+### Server-less technology
+
+The latest alternative innovation to "real-time" event driven and/or "real-time" data warehouse architectures is MSSO Technology (Multiple Source Simple Output) which removes the need for the data warehouse and intermediary servers altogether since it is able to access live data directly from the source (even from multiple, disparate sources). Because live data is accessed directly by server-less means, it provides the potential for zero-latency, real-time data in the truest sense.
+
+
+### Process-aware
+
+This is sometimes considered a subset of operational intelligence and is also identified with Business Activity Monitoring. It allows entire processes (transactions, steps) to be monitored, metrics (latency, completion/failed ratios, etc.) to be viewed, compared with warehoused historic data, and trended in real-time. Advanced implementations allow threshold detection, alerting and providing feedback to the process execution systems themselves, thereby 'closing the loop'.
+
+
+### Technologies that support real-time analytics
+
+Technologies that can be supported to enable real-time business intelligence are data visualization, data federation, enterprise information integration, enterprise application integration and service oriented architecture. Complex event processing tools can be used to analyze data streams in real time and either trigger automated actions or alert workers to patterns and trends.
+
+
+## Application areas
+
+* Fraud detection
+* Systems monitoring
+* Application performance monitoring
+* Customer Relationship Management
+* Demand sensing
+* Dynamic pricing and yield management
+* Data validation
+* Operational intelligence and risk management
+* Payments & cash monitoring
+* Data security monitoring
+* Supply chain optimization
+* RFID/sensor network data analysis
+* Workstreaming
+* Call center optimization
+* Enterprise Mashups and Mashup Dashboards
+* Transportation

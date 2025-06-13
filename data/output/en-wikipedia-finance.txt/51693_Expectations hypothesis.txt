@@ -1,0 +1,38 @@
+Expectations hypothesis
+
+
+# Expectations hypothesis
+
+
+
+The **expectations hypothesis** of the term structure of interest rates (whose graphical representation is known as the yield curve) is the proposition that the long-term rate is determined purely by current and future expected short-term rates, in such a way that the expected final value of wealth from investing in a sequence of short-term bonds equals the final value of wealth from investing in long-term bonds.
+
+This hypothesis assumes that the various maturities are perfect substitutes and suggests that the shape of the yield curve depends on market participants' expectations of future interest rates. These expected rates, along with an assumption that arbitrage opportunities will be minimal, is enough information to construct a complete yield curve. For example, if investors have an expectation of what 1-year interest rates will be next year, the 2-year interest rate can be calculated as the compounding of this year's interest rate by next year's interest rate. More generally, returns (1 + yield) on a long-term instrument are equal to the geometric mean of the returns on a series of short-term instruments, as given by
+
+where *lt* and *st* respectively refer to long-term and short-term bonds, and where interest rates *i* for future years are expected values.
+This theory is consistent with the observation that yields usually move together. However, it fails to explain the persistence in the non-horizontal shape of the yield curve.
+
+
+## Definition
+
+The expectation hypothesis states that the current price of an asset is equal to the sum of expected discounted future dividends conditional on the information known now. Mathematically if there are discrete dividend payments {\displaystyle d\_{t}} at times {\displaystyle t=1,2,...} and with risk-free rate {\displaystyle r} then the price at time {\displaystyle t} is given by
+
+where {\displaystyle {\mathcal {F}}\_{t}} is a filtration which defines the market at time {\displaystyle t}.
+
+In particular, the price of a coupon bond, with coupons given by {\displaystyle m\_{t}} at time {\displaystyle t}, is given by
+
+where {\displaystyle r(t,T)} is the short-term interest rate from time {\displaystyle t} to time {\displaystyle T} and {\displaystyle B(t,T)} is the value of a zero-coupon bond at time {\displaystyle t} and maturity {\displaystyle T} with payout of 1 at maturity. Explicitly, the price of a zero-coupon bond is given by
+
+
+## Shortcomings
+
+The expectation hypothesis neglects the risks inherent in investing in bonds (because forward rates are not perfect predictors of future rates). In particular this can be broken down into two categories:
+
+1. Interest rate risk
+2. Reinvestment rate risk
+
+It has been found that the expectation hypothesis has been tested and rejected using a wide variety of interest rates, over a variety of time periods and monetary policy regimes. This analysis is supported in a study conducted by Sarno,
+where it is concluded that while conventional bivariate procedure provides mixed results, the more powerful testing procedures, for example expanded vector autoregression test, suggest rejection of the expectation hypothesis throughout the maturity spectrum examined. A common reason given for the failure of the expectation hypothesis is that the risk premium is not constant as the expectation hypothesis requires, but is time-varying. However, research by Guidolin and Thornton (2008) suggest otherwise. It is postulated that the expectation hypothesis fails because short-term interest rates are not predictable to any significant degree.
+
+While traditional term structure tests mostly indicate that expected future interest rates are ex post inefficient forecasts, Froot (1989) has an alternative take on it. At short maturities, the expectation hypothesis fails. At long maturities, however, changes in the yield curve reflect changes in expected future rates one-for-one.
+

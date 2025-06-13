@@ -1,0 +1,162 @@
+Market equilibrium computation
+
+
+# Market equilibrium computation
+
+
+
+**Market equilibrium computation** (also called **competitive equilibrium computation** or **clearing-prices computation**) is a computational problem in the intersection of economics and computer science. The input to this problem is a *market*, consisting of a set of *resources* and a set of *agents*. There are various kinds of markets, such as Fisher market and Arrow–Debreu market, with divisible or indivisible resources. The required output is a *competitive equilibrium*, consisting of a *price-vector* (a price for each resource), and an *allocation* (a resource-bundle for each agent), such that each agent gets the best bundle possible (for him) given the budget, and the market *clears* (all resources are allocated).
+
+Market equilibrium computation is interesting due to the fact that a competitive equilibrium is always Pareto efficient. The special case of a Fisher market, in which all buyers have equal incomes, is particularly interesting, since in this setting a competitive equilibrium is also envy-free. Therefore, market equilibrium computation is a way to find an allocation which is both fair and efficient.
+
+
+## Definitions
+
+The **input** to the market-equilibrium-computation consists of the following ingredients:ᶜʰᵃᵖ.⁵
+
+1. A set of {\displaystyle m} *resources* with pre-specified supplies. The resources can be *divisible* (in which case, their supply is w.l.o.g. normalized to 1), or *indivisible* .
+ * A *bundle* is represented by a vector {\displaystyle \mathbf {x} =x\_{1},\dots ,x\_{m}}, where {\displaystyle x\_{j}} is the quantity of resource {\displaystyle j}. When resources are indivisible, all *xⱼ* are integers; when resources are divisible, the *xⱼ* can be arbitrarily real numbers (usually normalized to [0,1]).
+2. A set of {\displaystyle n} *agents*. For each agent, there is a preference relation over bundles, which can be represented by a utility function. The utility function of agent {\displaystyle i} is denoted by {\displaystyle u\_{i}}.
+3. An initial *endowment* for each agent.
+ * In a Fisher market, the endowment is a budget {\displaystyle B\_{i}} of "fiat money" - a money that has no value outside the market, and thus does not enter the utility function. Since the agents come with money only, they are often called *buyers*.
+ * In an Arrow–Debreu market, the endowment is an arbitrary bundle {\displaystyle \mathbf {e} ^{i}}; in this model, agents can be both buyers and sellers.
+
+The required **output** should contain the following ingredients:
+
+1. A *price-vector* {\displaystyle \mathbf {p} =p\_{1},\dots ,p\_{m}}; a price for each resource. The price of a bundle is the sum of the prices of the resources in the, so the price of a bundle {\displaystyle \mathbf {x} } is {\displaystyle \mathbf {p} \cdot \mathbf {x} =\sum \_{j=1}^{m}p\_{j}\cdot x\_{j}}.
+2. An *allocation* - a bundle {\displaystyle \mathbf {x} ^{i}} for each agent *i*.
+
+The output should satisfy the following requirements:
+
+1. The bundle {\displaystyle \mathbf {x} ^{i}} should be *affordable* to *i*, that is, its price should be at most the price of agent *i*'s endowment.
+ * In a Fisher market, this means that {\displaystyle \mathbf {p} \cdot \mathbf {x} ^{i}\leq B\_{i}}.
+ * In an Arrow-Debreu market, this means that {\displaystyle \mathbf {p} \cdot \mathbf {x} ^{i}\leq \mathbf {p} \cdot \mathbf {e} ^{i}}.
+2. The bundle {\displaystyle \mathbf {x} ^{i}} should be in the *demand set* of *i*: {\displaystyle \mathbf {x} ^{i}\in {\text{Demand}}\_{i}(\mathbf {p} )}, defined as the set of bundles maximizing the agent's utility among all affordable bundles (regardless of supply), e.g., in a Fisher market: {\displaystyle {\text{Demand}}\_{i}(\mathbf {p} ):=\arg \max \_{\mathbf {p} \mathbf {x} \leq B\_{i}}u\_{i}(\mathbf {x} )}
+3. The market *clears*, i.e., all resources are allocated. The corresponding prices are called *market-clearing prices*.
+
+A price and allocation satisfying these requirements are called *a competitive equilibrium* (CE) or a *market equilibrium*; the prices are also called *equilibrium prices* or *clearing prices*.
+
+
+## Kinds of utility functions
+
+Market equilibrium computation has been studied under various assumptions regarding the agents' utility functions.
+
+* **Concavity**: the most general assumption (made by Fisher and Arrow&Debreu) is that the agents' utilities are concave functions, i.e., display diminishing returns.
+* **Homogeneity**: In some cases, it is assumed that the utilities are homogeneous functions. This includes, in particular, utilities with constant elasticity of substitution.
+* **Separability**: A utility function is called separable if the utility of a bundle is the sum of the utilities of the individual resources in the bundle, i.e., {\displaystyle u\_{i}(\mathbf {x} )=\sum \_{j=1}^{m}u\_{i,j}(x\_{j})}.
+* **Piecewise-linearity** is a special case of separability, in which the utility function for each individual resource, {\displaystyle u\_{i,j}(x\_{j})}, is a piecewise linear function of *x*j.
+* **Linearity** is an even more special case, in which the utility function for each individual resource is a linear function. That is, {\displaystyle u\_{i}(\mathbf {x} )=\sum \_{j=1}^{m}u\_{i,j}\cdot x\_{j}}, where {\displaystyle u\_{i,j}} are constants.
+
+Utilities that are piecewise-linear and concave are often called PLC; if they are also separable, then they are called SPLC.
+
+
+## Main results
+
+
+### Approximate algorithms
+
+Scarf was the first to show the existence of a CE using Sperner's lemma (see Fisher market). He also gave an algorithm for computing an approximate CE.
+
+Merrill gave an extended algorithm for approximate CE.
+
+Kakade, Kearns and Ortiz gave algorithms for approximate CE in a generalized Arrow-Debreu market in which agents are located on a graph and trade may occur only between neighboring agents. They considered non-linear utilities.
+
+Newman and Primak studied two variants of the ellipsoid method for finding a CE in an Arrow-Debreu market with linear utilities. They prove that the inscribed ellipsoid method is more computat`ionally efficient than the circumscribed ellipsoid method.
+
+
+### Hardness results
+
+In some cases, computing an approximate CE is PPAD-hard:
+
+* Devanur and Kannan proved PPAD-hardness in an Arrow-Debreu market with Leontief utilities - a special case of PLC utilities.
+* Chen, Dai, Du and Teng proved PPAD-hardness in an Arrow-Debreu market with SPLC utilities. Their proof shows that this market-equilibrium problem does not have an FPTAS unless PPAD is in P.
+* Chen and Teng proved PPAD-hardness in a Fisher market with SPLC utilities.
+* Chaudhury, Garg, McGlaughlin and Mehta proved PPAD-hardness in a Exchange (Arrow-Debreu) market with bads and linear utilities, even under a certain condition that guarantees CE existence.
+
+### Exact algorithms
+
+Devanur, Papadimitriou, Saberi and Vazirani gave a polynomial-time algorithm for exactly computing an equilibrium for *Fisher* markets with *linear* utility functions. Their algorithm uses the primal–dual paradigm in the enhanced setting of KKT conditions and convex programs. Their algorithm is weakly-polynomial: it solves{\displaystyle O((n+m)^{5}\log(u\_{\max })+(n+m)^{4}\log {B\_{\max }})} maximum flow problems, and thus it runs in time {\displaystyle O((n+m)^{8}\log(u\_{\max })+(n+m)^{7}\log {B\_{\max }})}, where *u*ₘₐₓ and *B*ₘₐₓ are the maximum utility and budget, respectively.
+
+Orlin gave an improved algorithm for a Fisher market model with linear utilities, running in time {\displaystyle O((n+m)^{4}\log(u\_{\max })+(n+m)^{3}B\_{\max })}. He then improved his algorithm to run in strongly-polynomial time: {\displaystyle O((m+n)^{4}\log(m+n))}.
+
+Devanur and Kannan gave algorithms for *Arrow-Debreu* markets with *concave* utility functions, where all resources are goods (the utilities are positive):
+
+* When the utilities are SPLC and either *n* or *m* is a constant, their algorithm is polynomial in the other parameter. The technique is decomposing the space of possible prices into *cells* using a constant number of hyperplanes, so that in each cell, each buyer’s threshold marginal utility is known (when both *n* and *m* are variable, it was left open whether a polytime algorithm exists).
+* When the utilities are PLC (not necessarily separable) and *m* is constant, their algorithm is polynomial in *n*. When both *m* and *n* are variable, finding a CE is PPAD-hard even for Leontief utilities, which are a special case of PLC utilities (when *n* is constant but *m* is variable, it was left open whether a polytime algorithm exists).
+
+Codenotti, McCune, Penumatcha and Varadarajan gave an algorithm for Arrow-Debreu markes with CES utilities where the elasticity of substitution is at least 1/2.
+
+
+### Bads and mixed manna
+
+Bogomolnaia and Moulin and Sandomirskiy and Yanovskaia studied the existence and properties of CE in a Fisher market with bads (items with negative utilities) and with a mixture of goods and bads. In contrast to the setting with goods, when the resources are bads the CE does not solve any convex optimization problem even with linear utilities. CE allocations correspond to local minima, local maxima, and saddle points of the product of utilities on the Pareto frontier of the set of feasible utilities. The CE rule becomes multivalued. This work has led to several works on algorithms of finding CE in such markets:
+
+* Branzei and Sandomirskiy gave an algorithm for finding all the CE in a Fisher market with bads and linear utilities. Their algorithm runs in strongly-polynomial time if either *n* or *m* is fixed. Their approach combines three ideas: all consumption graphs of PO allocations can be listed in polynomial time; for a given consumption graph, a CE candidate can be constructed via explicit formula; and a given allocation can be checked for being a CE using a maximum flow computation.
+* Garg and McGlaughlin gave an algorithm for computing all the CE in a Fisher market with mixed manna and linear utilities. Their algorithm runs in polynomial time if either *n* or *m* is fixed.
+* Chaudhury, Garg, McGlaughlin and Mehta gave an algorithm for computing a single CE in a Fisher market with mixed manna and SPLC utilities. Their algorithm is simplex-like and based on Lemke's scheme. While its worst-case runtime is not polynomial (the problem is PPAD-hard even with goods), it runs fast on random instances. It also proves that the problem is in PPAD, the solutions are rational-valued, and the number of solutions is odd. Their algorithm runs in polynomial time in the special case in which all utilities are negative.
+
+If both *n* and *m* are variable, the problem becomes computationally hard:
+
+* Chaudhury, Garg, McGlaughlin and MehtaTʰᵐ.³ show that, in a Fisher market with bads and linear utilities, it is NP-hard to decide whether a CE exists. The same hardness holds even for finding an (11/12+δ)-CE for any δ>0, and even with equal incomes. They also prove a sufficient condition, based on graph connectivity, to the existence of a CE. With this condition, a CE always exists, but finding it is PPAD-hard.Tʰᵐ.⁵
+
+## Main techniques
+
+
+### Bang-for-buck
+
+When the utilities are linear, the *bang-per-buck* of agent *i* (also called BPB or *utility-per-coin*) is defined as the utility of *i* divided by the price paid. The BPB of a single resource is {\displaystyle bpb\_{i,j}:={\frac {u\_{i,j}}{p\_{j}}}}; the total BPB is {\displaystyle bpb\_{i,total}:={\frac {\sum \_{j=1}^{m}u\_{i,j}\cdot x\_{i,j}}{B\_{i}}}}.
+
+A key observation for finding a CE in a Fisher market with linear utilities is that, in any CE and for any agent *i*:
+
+* The total BPB is weakly larger than the BPB from any individual resource, {\displaystyle \forall j:bpb\_{i,j}\leq bpb\_{i,total}}.
+* Agent *i* consumes only resources with the maximum possible BPB, i.e., {\displaystyle \forall j:x\_{i,j}>0\implies bpb\_{i,j}=bpb\_{i,total}}.
+
+Assume that every product {\displaystyle j} has a potential buyer - a buyer {\displaystyle i} with {\displaystyle u\_{i,j}>0}. Then, the above inequalities imply that {\displaystyle p\_{j}>0}, i.e, all prices are positive.
+
+
+### Cell decomposition
+
+Cell decomposition is a process of partitioning the space of possible prices {\displaystyle \mathbb {R} \_{+}^{m}} into small "cells", either by hyperplanes or, more generally, by polynomial surfaces. A cell is defined by specifying on which side of each of these surfaces it lies (with polynomial surfaces, the cells are also known as semialgebraic sets). For each cell, we either find a market-clearing price-vector (i.e., a price in that cell for which a market-clearing allocation exists), or verify that the cell does not contain a market-clearing price-vector. The challenge is to find a decomposition with the following properties:
+
+* The total number of cells is polynomial in the size of the input. This uses the fact that any collection of *k* hyperplanes in {\displaystyle \mathbb {R} \_{+}^{m}} partitions the space into {\displaystyle O(k^{m})} cells.Tʰᵐ.² This is polynomial if *m* is fixed. Moreover, any collection of *k* polynomial surfaces of degree at most *d* partitions the space into {\displaystyle O(k^{m+1}\cdot d^{O(m)})} non-empty cells, and they can be enumerated in time linear in the output size.
+* Finding a market-clearing price-vector in each cell can be done in polynomial time, e.g., using linear programming.
+
+### Convex optimization: homogeneous utilities
+
+If the utilities of all agents are homogeneous functions, then the equilibrium conditions in the Fisher model can be written as solutions to a convex optimization program called the **Eisenberg-Gale convex program**. This program finds an allocation that maximizes the *weighted geometric mean* of the buyers' utilities, where the weights are determined by the budgets. Equivalently, it maximizes the weighted arithmetic mean of the logarithms of the utilities:
+
+(since supplies are normalized to 1).
+
+This optimization problem can be solved using the Karush–Kuhn–Tucker conditions (KKT). These conditions introduce Lagrangian multipliers that can be interpreted as the *prices*, {\displaystyle p\_{1},\dots ,p\_{m}}. In every allocation that maximizes the Eisenberg-Gale program, every buyer receives a demanded bundle. I.e, a solution to the Eisenberg-Gale program represents a market equilibrium.¹⁴¹–¹⁴²
+
+
+### Vazirani's algorithm: linear utilities, weakly polynomial-time
+
+A special case of homogeneous utilities is when all buyers have linear utility functions. We assume that each resource has a *potential buyer* - a buyer that derives positive utility from that resource. Under this assumption, market-clearing prices exist and are unique. The proof is based on the Eisenberg-Gale program. The KKT conditions imply that the optimal solutions (allocations {\displaystyle x\_{i,j}} and prices {\displaystyle p\_{j}}) satisfy the following inequalities:
+
+1. All prices are non-negative: {\displaystyle p\_{j}\geq 0}.
+2. If a product has a positive price, then all its supply is exhausted: {\displaystyle p\_{j}>0\implies \sum \_{i=1}^{n}x\_{i,j}=1}.
+3. The total BPB is weakly larger than the BPB from any individual resource, {\displaystyle \forall j:bpb\_{i,j}\leq bpb\_{i,total}}.
+4. Agent *i* consumes only resources with the maximum possible BPB, i.e., {\displaystyle \forall j:x\_{i,j}>0\implies bpb\_{i,j}=bpb\_{i,total}}.
+
+Assume that every product {\displaystyle j} has a potential buyer - a buyer {\displaystyle i} with {\displaystyle u\_{i,j}>0}. Then, inequality 3 implies that {\displaystyle p\_{j}>0}, i.e, all prices are positive. Then, inequality 2 implies that all supplies are exhausted. Inequality 4 implies that all buyers' budgets are exhausted. I.e, the market clears. Since the log function is a strictly concave function, if there is more than one equilibrium allocation then the utility derived by each buyer in both allocations must be the same (a decrease in the utility of a buyer cannot be compensated by an increase in the utility of another buyer). This, together with inequality 4, implies that the prices are unique.¹⁰⁷
+
+Vazirani¹⁰⁹–¹²¹ presented an algorithm for finding equilibrium prices and allocations in a linear Fisher market. The algorithm is based on condition 4 above. The condition implies that, in equilibrium, every buyer buys only products that give him maximum BPB. Let's say that a buyer "likes" a product, if that product gives him maximum BPB in the current prices. Given a price-vector, construct a flow network in which the capacity of each edge represents the total money "flowing" through that edge. The network is as follows:
+
+* There is a source node, *s*.
+* There is a node for each product; there is an edge from *s* to each product *j*, with capacity {\displaystyle p\_{j}} (this is the maximum amount of money that can be expended on product *j*, since the supply is normalized to 1).
+* There is a node for each buyer; there is an edge from a product to a buyer, with infinite capacity, iff the buyer likes the product (in the current prices).
+* There is a target node, *t*; there is an edge from each buyer *i* to *t*, with capacity {\displaystyle B\_{i}} (the maximum expenditure of *i*).
+
+The price-vector *p* is an equilibrium price-vector, if and only if the two cuts ({s},V\{s}) and (V\{t},{t}) are min-cuts. Hence, an equilibrium price-vector can be found using the following scheme:
+
+* Start with very low prices, which are guaranteed to be below the equilibrium prices; in these prices, buyers have some budget left (i.e, the maximum flow does not reach the capacity of the nodes into *t*).
+* Continuously increase the prices and update the flow-network accordingly, until all budgets are exhausted.
+
+There is an algorithm that solves this problem in weakly polynomial time.
+
+
+## Online computation
+
+Recently, Gao, Peysakhovich and Kroer presented an algorithm for online computation of market equilibrium.
+

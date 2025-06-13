@@ -1,0 +1,76 @@
+Control function (econometrics)
+
+
+# Control function (econometrics)
+
+
+
+**Control functions** (also known as **two-stage residual inclusion**) are statistical methods to correct for endogeneity problems by modelling the endogeneity in the error term. The approach thereby differs in important ways from other models that try to account for the same econometric problem. Instrumental variables, for example, attempt to model the endogenous variable *X* as an often invertible model with respect to a relevant and exogenous instrument *Z*. Panel analysis uses special data properties to difference out unobserved heterogeneity that is assumed to be fixed over time.
+
+Control functions were introduced by Heckman and Robb although the principle can be traced back to earlier papers. A particular reason why they are popular is because they work for non-invertible models (such as discrete choice models) and allow for heterogeneous effects, where effects at the individual level can differ from effects at the aggregate. A well-known example of the control function approach is the Heckman correction.
+
+
+## Formal definition
+
+Assume we start from a standard endogenous variable setup with additive errors, where *X* is an endogenous variable, and *Z* is an exogenous variable that can serve as an instrument.
+
+| {\displaystyle Y=g(X)+U} | 1 |
+| --- | --- |
+
+| {\displaystyle X=\pi (Z)+V} | 2 |
+| --- | --- |
+
+| {\displaystyle E[U\mid Z,V]=E[U\mid V]} | 3 |
+| --- | --- |
+
+| {\displaystyle E[V\mid Z]=0} | 4 |
+| --- | --- |
+
+A popular instrumental variable approach is to use a two-step procedure and estimate equation (**2**) first and then use the estimates of this first step to estimate equation (**1**) in a second step. The control function, however, uses that this model implies
+
+| {\displaystyle E[Y\mid Z,V]=g(X)+E[U\mid Z,V]=g(X)+E[U\mid V]=g(X)+h(V)} | 5 |
+| --- | --- |
+
+The function *h*(*V*) is effectively the control function that models the endogeneity and where this econometric approach lends its name from.
+
+In a Rubin causal model potential outcomes framework, where *Y*₁ is the outcome variable of people for who the participation indicator *D* equals 1, the control function approach leads to the following model
+
+| {\displaystyle E[Y\_{1}\mid X,Z,D=1]=\mu \_{1}(X)+E[U\mid D=1]} | 6 |
+| --- | --- |
+
+as long as the potential outcomes *Y*₀ and *Y*₁ are independent of *D* conditional on *X* and *Z*.
+
+
+## Variance correction
+
+Since the second-stage regression includes generated regressors, its variance-covariance matrix needs to be adjusted.
+
+
+## Examples
+
+
+### Endogeneity in Poisson regression
+
+Wooldridge and Terza provide a methodology to both deal with and test for endogeneity within the exponential regression framework, which the following discussion follows closely. While the example focuses on a Poisson regression model, it is possible to generalize to other exponential regression models, although this may come at the cost of additional assumptions (e.g. for binary response or censored data models).
+
+Assume the following exponential regression model, where {\displaystyle a\_{i}} is an unobserved term in the latent variable. We allow for correlation between {\displaystyle a\_{i}} and {\displaystyle x\_{i}} (implying {\displaystyle x\_{i}} is possibly endogenous), but allow for no such correlation between {\displaystyle a\_{i}} and {\displaystyle z\_{i}}.
+
+The variables {\displaystyle z\_{i}} serve as instrumental variables for the potentially endogenous {\displaystyle x\_{i}}. One can assume a linear relationship between these two variables or alternatively project the endogenous variable {\displaystyle x\_{i}} onto the instruments to get the following reduced form equation:
+
+| {\displaystyle x\_{i}=z\_{i}\Pi +v\_{i}} | 1 |
+| --- | --- |
+
+The usual rank condition is needed to ensure identification. The endogeneity is then modeled in the following way, where {\displaystyle \rho } determines the severity of endogeneity and {\displaystyle v\_{i}} is assumed to be independent of {\displaystyle e\_{i}}.
+
+Imposing these assumptions, assuming the models are correctly specified, and normalizing {\displaystyle \operatorname {E} [\exp(e\_{i})]=1}, we can rewrite the conditional mean as follows:
+
+| {\displaystyle \operatorname {E} [y\_{i}\mid x\_{i},z\_{i},v\_{i}]=\exp(x\_{i}b\_{0}+z\_{i}c\_{0}+v\_{i}\rho )} | 2 |
+| --- | --- |
+
+If {\displaystyle v\_{i}} were known at this point, it would be possible to estimate the relevant parameters by quasi-maximum likelihood estimation (QMLE). Following the two step procedure strategies, Wooldridge and Terza propose estimating equation (**1**) by ordinary least squares. The fitted residuals from this regression can then be plugged into the estimating equation (**2**) and QMLE methods will lead to consistent estimators of the parameters of interest. Significance tests on {\displaystyle {\hat {\rho }}} can then be used to test for endogeneity within the model.
+
+
+## Extensions
+
+The original Heckit procedure makes distributional assumptions about the error terms, however, more flexible estimation approaches with weaker distributional assumptions have been established. Furthermore, Blundell and Powell show how the control function approach can be particularly helpful in models with nonadditive errors, such as discrete choice models. This latter approach, however, does implicitly make strong distributional and functional form assumptions.
+

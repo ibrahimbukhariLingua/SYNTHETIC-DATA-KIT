@@ -1,0 +1,56 @@
+Statistical arbitrage
+
+
+# Statistical arbitrage
+
+
+
+In finance, **statistical arbitrage** (often abbreviated as **Stat Arb** or **StatArb**) is a class of short-term financial trading strategies that employ mean reversion models involving broadly diversified portfolios of securities (hundreds to thousands) held for short periods of time (generally seconds to days). These strategies are supported by substantial mathematical, computational, and trading platforms.
+
+
+## Trading strategy
+
+Broadly speaking, StatArb is actually any strategy that is bottom-up, beta-neutral in approach and uses statistical/econometric techniques in order to provide signals for execution. Signals are often generated through a contrarian mean reversion principle but can also be designed using such factors as lead/lag effects, corporate activity, short-term momentum, etc. This is usually referred toᵇʸ ʷʰᵒᵐ? as a multi-factor approach to StatArb.
+
+Because of the large number of stocks involved, the high portfolio turnover and the fairly small size of the effects one is trying to capture, the strategy is often implemented in an automated fashion and great attention is placed on reducing trading costs.
+
+Statistical arbitrage has become a major force at both hedge funds and investment banks. Many bank proprietary operations now center to varying degrees around statistical arbitrage trading.
+
+As a trading strategy, statistical arbitrage is a heavily quantitative and computational approach to securities trading. It involves data mining and statistical methods, as well as the use of automated trading systems.
+
+Historically, StatArb evolved out of the simpler pairs trade strategy, in which stocks are put into pairs by fundamental or market-based similarities. When one stock in a pair outperforms the other, the under performing stock is bought long and the outperforming stock is sold short with the expectation that under performing stock will climb towards its outperforming partner.
+
+Mathematically speaking, the strategy is to find a pair of stocks with high correlation, cointegration, or other common factor characteristics. Various statistical tools have been used in the context of pairs trading ranging from simple distance-based approaches to more complex tools such as cointegration and copula concepts.
+
+StatArb considers not pairs of stocks but a portfolio of a hundred or more stocks—some long, some short—that are carefully matched by sector and region to eliminate exposure to beta and other risk factors. Portfolio construction is automated and consists of two phases. In the first or "scoring" phase, each stock in the market is assigned a numeric score or rank that reflects its desirability; high scores indicate stocks that should be held long and low scores indicate stocks that are candidates for shorting. The details of the scoring formula vary and are highly proprietary, but, generally (as in pairs trading), they involve a short term mean reversion principle so that, e.g., stocks that have done unusually well in the past week receive low scores and stocks that have underperformed receive high scores. In the second or "risk reduction" phase, the stocks are combined into a portfolio in carefully matched proportions so as to eliminate, or at least greatly reduce, market and factor risk. This phase often uses commercially available risk models like MSCI/Barra, APT, Northfield, Risk Infotech, and Axioma to constrain or eliminate various risk factors.
+
+
+## Risks
+
+Over a finite period of time, a low probability market movement may impose heavy short-term losses. If such short-term losses are greater than the investor's funding to meet interim margin calls, its positions may need to be liquidated at a loss even when its strategy's modeled forecasts ultimately turn out to be correct. The 1998 default of Long-Term Capital Management was a widely publicized example of a fund that failed due to its inability to post collateral to cover adverse market fluctuations.
+
+Statistical arbitrage is also subject to model weakness as well as stock- or security-specific risk. The statistical relationship on which the model is based may be spurious, or may break down due to changes in the distribution of returns on the underlying assets. Factors, which the model may not be aware of having exposure to, could become the significant drivers of price action in the markets, and the inverse applies also. The existence of the investment based upon model itself may change the underlying relationship, particularly if enough entrants invest with similar principles. The exploitation of arbitrage opportunities themselves increases the efficiency of the market, thereby reducing the scope for arbitrage, so continual updating of models is necessary.
+
+On a stock-specific level, there is risk of M&A activity or even default for an individual name. Such an event would immediately invalidate the significance of any historical relationship assumed from empirical statistical analysis of the past data.
+
+
+## StatArb and systemic risk: events of summer 2007
+
+During July and August 2007, a number of StatArb (and other Quant type) hedge funds experienced significant losses at the same time, which is difficult to explain unless there was a common risk factor. While the reasons are not yet fully understood, several published accounts blame the emergency liquidation of a fund that experienced capital withdrawals or margin calls. By closing out its positions quickly, the fund put pressure on the prices of the stocks it was long and short. Because other StatArb funds had similar positions, due to the similarity of their alpha models and risk-reduction models, the other funds experienced adverse returns. One of the versions of the events describes how Morgan Stanley's highly successful StatArb fund, PDT, decided to reduce its positions in response to stresses in other parts of the firm, and how this contributed to several days of hectic trading.
+
+In a sense, the fact of a stock being heavily involved in StatArb is itself a risk factor, one that is relatively new and thus was not taken into account by the StatArb models. These events showed that StatArb has developed to a point where it is a significant factor in the marketplace, that existing funds have similar positions and are in effect competing for the same returns. Simulations of simple StatArb strategies by Khandani and Lo show that the returns to such strategies have been reduced considerably from 1998 to 2007, presumably because of competition.
+
+It has also been argued that the events during August 2007 were linked to reduction of liquidity, possibly due to risk reduction by high-frequency market makers during that time.
+
+It is a noteworthy point of contention, that the common reduction in portfolio value could also be attributed to a causal mechanism. The 2007-2008 financial crisis also occurred at this time. Many, if not the vast majority, of investors of any form, booked losses during this one year time frame. The association of observed losses at hedge funds using statistical arbitrage is not necessarily indicative of dependence. As more competitors enter the market, and funds diversify their trades across more platforms than StatArb, a point can be made that there should be no reason to expect the platform models to behave anything like each other. Their statistical models could be entirely independent.
+
+
+## Worldwide practice
+
+Statistical arbitrage faces different regulatory situations in different countries or markets. In many countries where the trading security or derivatives are not fully developed, investors find it infeasible or unprofitable to implement statistical arbitrage in local markets.
+
+
+### China
+
+In China, quantitative investment including statistical arbitrage is not the mainstream approach to investment. A set of market conditions restricts the trading behavior of funds and other financial institutions. The restriction on short selling as well as the market stabilization mechanisms (e.g. daily limit) set heavy obstacles when either individual investors or institutional investors try to implement the trading strategy implied by statistical arbitrage theory.
+

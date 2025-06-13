@@ -1,0 +1,77 @@
+Doob's martingale inequality
+
+
+# Doob's martingale inequality
+
+
+
+In mathematics, **Doob's martingale inequality**, also known as **Kolmogorov’s submartingale inequality** is a result in the study of stochastic processes. It gives a bound on the probability that a submartingale exceeds any given value over a given interval of time. As the name suggests, the result is usually given in the case that the process is a martingale, but the result is also valid for submartingales.
+
+The inequality is due to the American mathematician Joseph L. Doob.
+
+
+## Statement of the inequality
+
+The setting of Doob's inequality is a submartingale relative to a filtration of the underlying probability space. The probability measure on the sample space of the martingale will be denoted by *P*. The corresponding expected value of a random variable X, as defined by Lebesgue integration, will be denoted by E[*X*].
+
+Informally, Doob's inequality states that the expected value of the process at some final time controls the probability that a sample path will reach above any particular value beforehand. As the proof uses very direct reasoning, it does not require any restrictive assumptions on the underlying filtration or on the process itself, unlike for many other theorems about stochastic processes. In the continuous-time setting, right-continuity (or left-continuity) of the sample paths is required, but only for the sake of knowing that the supremal value of a sample path equals the supremum over an arbitrary countable dense subset of times.
+
+
+### Discrete time
+
+Let *X*₁, ..., *X*ₙ be a discrete-time submartingale relative to a filtration {\displaystyle {\mathcal {F}}\_{1},\ldots ,{\mathcal {F}}\_{n}} of the underlying probability space, which is to say:
+
+The **submartingale inequality**ᶜˡᵃʳⁱᶠⁱᶜᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ says that
+
+for any positive number C. The proof relies on the set-theoretic fact that the event defined by max(*X*ᵢ) > *C* may be decomposed as the disjoint union of the events *E*ᵢ defined by *(X*ᵢ > *C* and *(X*ⱼ ≤ *C* for all *j* < *i*)). Then
+
+having made use of the submartingale property for the last inequality and the fact that {\displaystyle E\_{i}\in {\mathcal {F}}\_{i}} for the last equality. Summing this result as i ranges from 1 to n results in the conclusion
+
+which is sharper than the stated result. By using the elementary fact that *X*ₙ ≤ max(*X*ₙ, 0), the given submartingale inequality follows.
+
+In this proof, the submartingale property is used once, together with the definition of conditional expectation. The proof can also be phrased in the language of stochastic processes so as to become a corollary of the powerful theorem that a stopped submartingale is itself a submartingale. In this setup, the minimal index i appearing in the above proof is interpreted as a stopping time.
+
+
+### Continuous time
+
+Now let *X*ₜ be a submartingale indexed by an interval [0, *T*] of real numbers, relative to a filtration *F*ₜ of the underlying probability space, which is to say:
+
+for all *s* < *t*. The **submartingale inequality**ᶜˡᵃʳⁱᶠⁱᶜᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ says that if the sample paths of the martingale are almost-surely right-continuous, then
+
+for any positive number C. This is a corollary of the above discrete-time result, obtained by writing
+
+in which *Q*₁ ⊂ *Q*₂ ⊂ ⋅⋅⋅ is any sequence of finite sets whose union is the set of all rational numbers. The first equality is a consequence of the right-continuity assumption, while the second equality is purely set-theoretic. The discrete-time inequality applies to say that
+
+for each i, and this passes to the limit to yield the submartingale inequality. This passage from discrete time to continuous time is very flexible, as it only required having a countable dense subset of [0,T], which can then automatically be built out of an increasing sequence of finite sets. As such, the submartingale inequality holds even for more general index sets, which are not required to be intervals or natural numbers.
+
+
+## Further inequalities
+
+There are further submartingale inequalities also due to Doob. Now let *X*ₜ be a martingale or a positive submartingale; if the index set is uncountable, then (as above) assume that the sample paths are right-continuous. In these scenarios, Jensen's inequality implies that |*X*ₜ|ᵖ is a submartingale for any number *p* ≥ 1, provided that these new random variables all have finite integral. The submartingale inequality is then applicable to say that
+
+for any positive number C. Here T is the *final time*, i.e. the largest value of the index set. Furthermore one has
+
+if p is larger than one. This, sometimes known as *Doob's maximal inequality*, is a direct result of combining the layer cake representation with the submartingale inequality and the Hölder inequality.
+
+In addition to the above inequality, there holds
+
+
+## Related inequalities
+
+Doob's inequality for discrete-time martingales implies Kolmogorov's inequality: if *X*₁, *X*₂, ... is a sequence of real-valued independent random variables, each with mean zero, it is clear that
+
+so S*ₙ* = *X*₁ + ... + *Xₙ* is a martingale. Note that Jensen's inequality implies that |S*ₙ*| is a nonnegative submartingale if S*ₙ* is a martingale. Hence, taking *p* = 2 in Doob's martingale inequality,
+
+which is precisely the statement of Kolmogorov's inequality.
+
+
+## Application: Brownian motion
+
+Let *B* denote canonical one-dimensional Brownian motion. Then
+
+The proof is just as follows: since the exponential function is monotonically increasing, for any non-negative λ,
+
+By Doob's inequality, and since the exponential of Brownian motion is a positive submartingale,
+
+Since the left-hand side does not depend on *λ*, choose *λ* to minimize the right-hand side: *λ* = *C*/*T* gives the desired inequality.
+

@@ -1,0 +1,82 @@
+Compiere
+
+
+# Compiere
+
+
+
+**Compiere** (pronounced KOM-pyeh-reh, "to accomplish, complete, fulfill" in Italian) is an open-source ERP and CRM business solution for Small and Medium-sized Enterprises (SME) in distribution, retail, service, and manufacturing. Compiere is distributed by Consona Corporation and through a Partner Network, who are a collection of trained and authorized business partners.
+
+Compiere was founded in 1999 by Jorg Janke and was among the top 10 projects in SourceForge from 2002 for 4 years, reaching one million downloads and 100 partners in 2006.
+
+In 2006, Compiere, Inc. raised venture capital from New Enterprise Associates with the goal of transforming the successful open-source ERP project into a growing and sustainable commercial open-source business. In 2007, the company added new executives, revamped engineering and support processes, and expanded its sales and services channels. The Compiere product line expanded to include Professional, Enterprise, and Cloud Editions while the company continued to maintain the open-source foundation as Community Edition.
+
+Like many commercial ventures built around open-source projects, there was a degree of contention between company management (who sought to monetize the investments in R&D, Services and Support) and voices from the community (who desired that Compiere source code and business processes remained free and open as Adempiere at that moment and iDempiere some years later). On June 16, 2010, Consona acquired Compiere, Inc. Terms of the deal were not disclosed
+.
+
+The application and source code are provided based on the GNU General Public License version 2; this comprises the Community Edition. Also available for a fee is a Professional Edition with more features, a commercial license, documentation and support contracts.
+
+
+## Functionality
+
+Compiere encompasses ERP functionality, but in order to avoid the duplication of information and fulfill the need for synchronization, it was organized in a different way. Compiere modules are: Quote to Cash, Requisition-to-Pay, Customer relationship management, Partner Relations Management, Supply Chain Management, Performance Analysis, Warehouse, Double-entry bookkeeping, Work-flow-Management and Web Store. A manufacturing module is being developed within an independent project CMPCS *(see external links section)*.
+
+
+## Architecture
+
+Compiere is a Model Driven Architecture development, deployment and maintenance framework designed with the intention of following changes as business evolves. At any time, customers can change the information structure, adjusting to new information needs. Compiere provides multiple views of business information based on the detail of the actual transactions. This structure allows flexibility and integration of supplemental external information. And since information is presented as views (using Compiere's MVC architecture), they can be changed to meet the needs of the business. Compiere is entirely based on the concept of *Active Data Dictionary* (ADD). Compiere *Data Dictionary* contains definitions of a data entity (type, validation, etc.), how it is displayed (label on screens and reports, help, display sequence and position relative to other fields), and the display rules. It also contains security and access rules.
+
+Compiere has been developed with Java EE.
+
+
+## Database independence
+
+Compiere has been criticized for not being a pure open-source product because of its dependence on Oracle database (including the free Oracle XE); this is changing now, since version 2.5.2 Compiere is database independent to some extent. The project has released a *Database Kit* for porting Compiere to multiple databases. PostgreSQL, MySQL and Sybase ports are in Beta status. Compiere can also be run under the Firebird database using the Fyracle extensions, without porting.
+
+Taking advantage of the *Database Kit* to create a port for the Apache Derby database the ER/Box project provides an integrated all-Java, all open source *Compiere distribution*. In addition to the Apache Derby database port ER/Box is also capable of running on PostgreSQL.
+
+Compiere also works with the open-source alternative to Oracle database, EnterpriseDB. User documentation is still offered on a fee-based accessibility.
+
+
+## Releases
+
+Compiere ERP + CRM Released Versions
+| Version | Release Date | Description |
+| --- | --- | --- |
+| 1.0.0 Beta | 1999 | Preview version |
+| 2.0.0 Beta | 2000 | Initial version of Compiere ERP + CRM |
+| 2.3.1 Beta | 2001-10-10 | Compiere ERP + CRM Business Solution for Linux and Windows |
+| 2.4.0 Beta | 2001-11-12 | Compiere ERP + CRM Business Solution for Linux and Windows |
+| 2.4.2 | 2002-03-05 | Major release, for Linux and Windows |
+| 2.4.2b | 2002-03-14 | Minor release, for Linux and Windows |
+| 2.4.2d | 2002-06-17 | Minor release, for Linux and Windows |
+| 2.4.3b | 2002-11-18 | Maintenance release, non-specific OS |
+| 2.4.3c | 2002-12-12 | Maintenance release, non-specific OS |
+| R2.4.4 | 2003-02-24 | Maintenance, non-specific platform release |
+| R2.4.4a | 2003-03-21 | Maintenance, non-specific platform release |
+| R2.4.4b | 2003-04-30 | Maintenance, non-specific platform release |
+| R2.4.4c | 2003-05-15 | Maintenance, non-specific platform release |
+| R2.5.0d | 2003-10-10 | Maintenance, non-specific platform release |
+| R2.5.0d | 2003-12-03 | Maintenance, non-specific platform release |
+| R2.5.0e | 2004-01-31 | Maintenance release for non-specific OS, Platform Specific releases were discontinued from now |
+| R2.5.1 | 2004-02-18 | Major release |
+| R2.5.1a | 2004-05-03 | Maintenance release |
+| R2.5.1b | 2004-05-09 | Maintenance release |
+| R2.5.1e | 2004-08-28 | Maintenance release |
+| R2.5.1f | 2004-09-10 | Maintenance release |
+| R2.5.1g | 2004-11-09 | Maintenance release |
+| R2.5.2 | 2005-02-14 | Major release |
+| R2.5.2a | 2005-02-27 | Maintenance release |
+| R2.5.2b | 2005-03-19 | Maintenance release |
+| R2.5.2c | 2005-05-09 | Maintenance release |
+| R2.5.2d | 2005-06-02 | Maintenance release |
+| R2.5.3a | 2005-10-29 | Maintenance release |
+| R2.5.3b | 2006-02-25 | Maintenance release |
+| R2.6.0a | 2006-11-04 | Maintenance release |
+| R2.6.0c | 2007-02-11 | Maintenance release |
+| R2.6.1 | 2007-05-14 | Major release |
+| R3.0.0 | 2007-12-04 | Major release |
+| R3.1.0 | 2008-08-06 | Major release |
+| R3.2.0 | 2010-01-19 | Major release for Community |
+| R3.3.0 | 2010-06-01 | Major release |
+

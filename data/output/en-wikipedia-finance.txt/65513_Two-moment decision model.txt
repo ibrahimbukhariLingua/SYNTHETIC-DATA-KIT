@@ -1,0 +1,33 @@
+Two-moment decision model
+
+
+# Two-moment decision model
+
+
+
+In decision theory, economics, and finance, a **two-moment decision model** is a model that describes or prescribes the process of making decisions in a context in which the decision-maker is faced with random variables whose realizations cannot be known in advance, and in which choices are made based on knowledge of two moments of those random variables. The two moments are almost always the mean—that is, the expected value, which is the first moment about zero—and the variance, which is the second moment about the mean (or the standard deviation, which is the square root of the variance).
+
+The most well-known two-moment decision model is that of modern portfolio theory, which gives rise to the decision portion of the Capital Asset Pricing Model; these employ **mean-variance analysis**, and focus on the mean and variance of a portfolio's final value.
+
+
+## Two-moment models and expected utility maximization
+
+Suppose that all relevant random variables are in the same location-scale family, meaning that the distribution of every random variable is the same as the distribution of some linear transformation of any other random variable. Then for any von Neumann–Morgenstern utility function, using a mean-variance decision framework is consistent with expected utility maximization, as illustrated in example 1:
+
+*Example* 1: Let there be one risky asset with random return {\displaystyle r}, and one riskfree asset with known return {\displaystyle r\_{f}}, and let an investor's initial wealth be {\displaystyle w\_{0}}. If the amount {\displaystyle q}, the choice variable, is to be invested in the risky asset and the amount {\displaystyle w\_{0}-q} is to be invested in the safe asset, then, contingent on {\displaystyle q}*,* the investor's random final wealth will be {\displaystyle w=(w\_{0}-q)r\_{f}+qr}. Then for any choice of {\displaystyle q}, {\displaystyle w} is distributed as a location-scale transformation of {\displaystyle r}. If we define random variable {\displaystyle x} as equal in distribution to {\displaystyle {\tfrac {w-\mu \_{w}}{\sigma \_{w}}},} then {\displaystyle w} is equal in distribution to {\displaystyle \mu \_{w}+\sigma \_{w}x}, where *μ* represents an expected value and σ represents a random variable's standard deviation (the square root of its second moment). Thus we can write expected utility in terms of two moments of {\displaystyle w}:
+
+where {\displaystyle u(\cdot )} is the von Neumann–Morgenstern utility function, {\displaystyle f(x)} is the density function of {\displaystyle x}, and {\displaystyle v(\cdot ,\cdot )} is the derived mean-standard deviation choice function, which depends in form on the density function *f*. The von Neumann–Morgenstern utility function is assumed to be increasing, implying that more wealth is preferred to less, and it is assumed to be concave, which is the same as assuming that the individual is risk averse.
+
+It can be shown that the partial derivative of *v* with respect to *μw* is positive, and the partial derivative of *v* with respect to σw is negative; thus more expected wealth is always liked, and more risk (as measured by the standard deviation of wealth) is always disliked. A mean-standard deviation indifference curve is defined as the locus of points (*σ*w, *μ*w) with *σ*w plotted horizontally, such that E*u*(*w*) has the same value at all points on the locus. Then the derivatives of *v* imply that every indifference curve is upward sloped: that is, along any indifference curve *dμw* / *d*σw > 0. Moreover, it can be shown that all such indifference curves are convex: along any indifference curve, *d*²μw / *d*(σw)² > 0.
+
+*Example* 2: The portfolio analysis in example 1 can be generalized. If there are *n* risky assets instead of just one, and if their returns are jointly elliptically distributed, then all portfolios can be characterized completely by their mean and variance—that is, any two portfolios with identical mean and variance of portfolio return have identical distributions of portfolio return—and all possible portfolios have return distributions that are location-scale-related to each other. Thus portfolio optimization can be implemented using a two-moment decision model.
+
+*Example* 3: Suppose that a price-taking, risk-averse firm must commit to producing a quantity of output *q* before observing the market realization *p* of the product's price. Its decision problem is to choose *q* so as to maximize the expected utility of profit:
+
+where E is the expected value operator, *u* is the firm's utility function, *c* is its variable cost function, and *g* is its fixed cost. All possible distributions of the firm's random revenue *pq*, based on all possible choices of *q*, are location-scale related; so the decision problem can be framed in terms of the expected value and variance of revenue.
+
+
+## Non-expected-utility decision making
+
+If the decision-maker is not an expected utility maximizer, decision-making can still be framed in terms of the mean and variance of a random variable if all alternative distributions for an unpredictable outcome are location-scale transformations of each other.
+

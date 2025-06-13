@@ -1,0 +1,460 @@
+EMV
+
+
+# EMV
+
+
+
+**EMV** is a payment method based on a technical standard for smart payment cards and for payment terminals and automated teller machines which can accept them. EMV stands for "Europay, Mastercard, and Visa", the three companies that created the standard.
+
+EMV cards are smart cards, also called chip cards, integrated circuit cards, or IC cards, which store their data on integrated circuit chips, in addition to magnetic stripes for backward compatibility. These include cards that must be physically inserted or "dipped" into a reader, as well as contactless cards that can be read over a short distance using near-field communication technology. Payment cards which comply with the EMV standard are often called **chip and PIN** or **chip and signature** cards, depending on the authentication methods employed by the card issuer, such as a personal identification number (PIN) or electronic signature. Standards exist, based on ISO/IEC 7816, for contact cards, and based on ISO/IEC 14443 for contactless cards (Mastercard Contactless, Visa PayWave, American Express ExpressPay).ᵇᵉᵗᵗᵉʳˢᵒᵘʳᶜᵉⁿᵉᵉᵈᵉᵈ
+
+
+## History
+
+Until the introduction of chip & PIN, all face-to-face credit or debit card transactions involved the use of a magnetic stripe or mechanical imprint to read and record account data, and a signature for purposes of identity verification. The customer hands their card to the cashier at the point of sale who then passes the card through a magnetic reader or makes an imprint from the raised text of the card. In the former case, the system verifies account details and prints a slip for the customer to sign. In the case of a mechanical imprint, the transaction details are filled in, a list of stolen numbers is consulted, and the customer signs the imprinted slip. In both cases the cashier must verify that the customer's signature matches that on the back of the card to authenticate the transaction.
+
+Using the signature on the card as a verification method has a number of security flaws, the most obvious being the relative ease with which cards may go missing before their legitimate owners can sign them. Another involves the erasure and replacement of legitimate signature, and yet another involves the forgery of the correct signature.
+
+The invention of the silicon integrated circuit chip in 1959 led to the idea of incorporating it onto a plastic smart card in the late 1960s by two German engineers, Helmut Gröttrup and Jürgen Dethloff. The earliest smart cards were introduced as calling cards in the 1970s, before later being adapted for use as payment cards. Smart cards have since used MOS integrated circuit chips, along with MOS memory technologies such as flash memory and EEPROM (electrically erasable programmable read-only memory).
+
+The first standard for smart payment cards was the Carte Bancaire B0M4 from Bull-CP8 deployed in France in 1986, followed by the B4B0' (compatible with the M4) deployed in 1989. Geldkarte in Germany also predates EMV. EMV was designed to allow cards and terminals to be backwardly compatible with these standards. France has since migrated all its card and terminal infrastructure to EMV.
+
+EMV stands for Europay, Mastercard, and Visa, the three companies that created the standard. The standard is now managed by EMVCo, a consortium with control split equally among Visa, Mastercard, JCB, American Express, China UnionPay, and Discover. EMVCo accepts public comment on its draft standards and processes, but also allows other organizations to become "Associates" and "Subscribers" for deeper collaboration. JCB joined the consortium in February 2009, China UnionPay in May 2013, and Discover in September 2013.
+
+The top vendors of EMV cards and chips are: ABnote (American Bank Corp), CPI Card Group, IDEMIA (from the merger of Oberthur Technologies and Safran Identity & Security (Morpho) in 2017), Gemalto (acquired by the Thales Group in 2019) Giesecke & Devrient and Versatile Card Technology.
+
+
+## Differences and benefits
+
+There are two major benefits to moving to smart-card-based credit card payment systems: improved security (with associated fraud reduction), and the possibility for finer control of "offline" credit-card transaction approvals. One of the original goals of EMV was to provide for multiple applications on a card: for a credit and debit card application or an e-purse. Beginning in 2013, new-issue debit cards in the US contain two applications — a card association (Visa, Mastercard etc.) application, and a common debit application.
+
+EMV chip card transactions improve security against fraud compared to magnetic stripe card transactions that rely on the holder's signature and visual inspection of the card to check for features such as hologram. The use of a PIN and cryptographic algorithms such as Triple DES, RSA and SHA provide authentication of the card to the processing terminal and the card issuer's host system. The processing time is comparable to online transactions, in which communications delay accounts for the majority of the time, while cryptographic operations at the terminal take comparatively little time. The supposed increased protection from fraud has allowed banks and credit card issuers to establish a "liability shift", such that merchants are liable (as of 1 January 2005 in the EU region and 1 October 2015 in the US) for any fraud that results from transactions on systems that are not EMV-capable. The majority of implementations of EMV cards and terminals confirm the identity of the cardholder by requiring the entry of a personal identification number (PIN) rather than signing a paper receipt. Whether or not PIN authentication takes place depends upon the capabilities of the terminal and programming of the card.
+
+When credit cards were first introduced, merchants used mechanical rather than magnetic portable card imprinters that required carbon paper to make an imprint. They did not communicate electronically with the card issuer, and the card never left the customer's sight. The merchant had to verify transactions over a certain currency limit by telephoning the card issuer. During the 1970s in the United States, many merchants subscribed to a regularly-updated list of stolen or otherwise invalid credit card numbers. This list was commonly printed in booklet form on newsprint, in numerical order, much like a slender phone book, yet without any data aside from the list of invalid numbers. Checkout cashiers were expected to thumb through this booklet each and every time a credit card was presented for payment of any amount, prior to approving the transaction, which incurred a short delay.
+
+Later ʷʰᵉⁿ?, terminal equipment at the merchant electronically contacted the card issuer, using information from the magnetic stripe to verify the card and authorize the transaction. This was much faster, but required the transaction to occur in a fixed location. Consequently, if the transaction did not take place near a terminal (in a restaurant, for example) the clerk or waiter had to take the card away from the customer and to the card machine. It was easily possible for a dishonest employee to swipe the card surreptitiously through a cheap machine that instantly recorded the information on the card and stripe; in fact, even at the terminal, a thief could bend down in front of the customer and swipe the card on a hidden reader. This made illegal cloning of cards relatively easy and a more common occurrence than before.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+Since the introduction of payment card chip and PIN, cloning of the chip is not feasible; only the magnetic stripe can be copied, and a copied card cannot be used by itself on a terminal requiring a PIN. The introduction of chip and PIN coincided with wireless data transmission technology becoming inexpensive and widespread. In addition to mobile-phone-based magnetic readers, merchant personnel can now bring wireless PIN pads to the customer, so the card is never out of the cardholder's sight. Thus, both chip and PIN and wireless technologies can be used to reduce the risks of unauthorized swiping and card cloning.
+
+
+## Chip and PIN vis-à-vis chip and signature
+
+Chip and PIN is one of the two verification methods that EMV enabled cards can employ. Rather than physically signing a receipt for identification purposes, the user enters a personal identification number (PIN), typically of four to six digits in length. This number must correspond to the information stored on the chip or PIN at Host. Chip and PIN technology makes it much harder for fraudsters to use a found card, inasmuch as if someone steals a card, they are unable to make fraudulent purchases unless they know the PIN.
+
+Chip and signature, on the other hand, differentiates itself from chip and PIN by verifying a consumer's identity with a signature.
+
+As of 2015, chip and signature cards are more common in the US, Mexico, parts of South America (such as Argentina and Peru) and some Asian countries (such as Taiwan, Hong Kong, Thailand, South Korea, Singapore, and Indonesia), whereas chip and PIN cards are more common in most European countries (e.g., the UK, Ireland, France, Portugal, Finland and the Netherlands) as well as in Pakistan, Iran, Brazil, Colombia, Venezuela, India, Sri Lanka, Canada, Australia and New Zealand.
+
+
+## Online, phone, and mail order transactions
+
+While EMV technology has helped reduce crime at the point of sale, fraudulent transactions have shifted to more vulnerable telephone, Internet, and mail order transactions—known in the industry as card-not-present or CNP transactions. CNP transactions made up at least 50% of all credit card fraud. Because of physical distance, it is not possible for the merchant to present a keypad to the customer in these cases, so alternatives have been devised, including
+
+* Software approaches for online transactions that involve interaction with the card-issuing bank or network's website, such as Verified by Visa and Mastercard SecureCode (implementations of Visa's 3-D Secure protocol). 3-D Secure is now being replaced by Strong Customer Authentication as defined in the European Second Payment Services Directive.
+* Creating a one-time virtual card linked to a physical card with a given maximum amount.
+* Additional hardware with keypad and screen that can produce a one-time password, such as the Chip Authentication Program.
+* Keypad and screen integrated into complex cards to produce a one-time password. Since 2008, Visa has been running pilot projects using the Emue card where the generated number replaces the code printed on the back of standard cards.
+
+As for which is faster, *The New York Times* explained that it's a matter of perception: While the chip method requires that the chip stay in the machine until the transaction and the authorization process is completed, the phone swipe method does the authorization in the background; a receipt starts coming out right away.
+
+
+## Commands
+
+ISO/IEC 7816-3 defines the transmission protocol between chip cards and readers. Using this protocol, data is exchanged in *application protocol data units* (APDUs). This comprises sending a command to a card, the card processing it, and sending a response. EMV uses the following commands:
+
+* application block
+* application unblock
+* card block
+* external authenticate (7816-4)
+* generate application cryptogram
+* get data (7816-4)
+* get processing options
+* internal authenticate (7816-4)
+* PIN change / unblock
+* read record (7816-4)
+* select (7816-4)
+* verify (7816-4).
+
+Commands followed by "7816-4" are defined in ISO/IEC 7816-4 and are interindustry commands used for many chip card applications such as GSM SIM cards.
+
+
+## Transaction flow
+
+An EMV transaction has the following steps:ᵗʰⁱʳᵈ-ᵖᵃʳᵗʸ ˢᵒᵘʳᶜᵉ ⁿᵉᵉᵈᵉᵈ
+
+1. Application selection
+2. Initiate application processing
+3. Read application data
+4. Processing restrictions
+5. Offline data authentication
+6. Certificates
+7. Cardholder verification
+8. Terminal risk management
+9. Terminal action analysis
+10. First card action analysis
+11. Online transaction authorization (only carried out if required by the result of the previous steps; mandatory in ATMs)
+12. Second card action analysis
+13. Issuer script processing
+
+## Application selection
+
+ISO/IEC 7816 defines a process for application selection. The intent of application selection was to let cards contain completely different applications—for example GSM and EMV. However, EMV developers implemented application selection as a way of identifying the type of product, so that all product issuers (Visa, Mastercard, etc.) must have their own application. The way application selection is prescribed in EMV is a frequent source of interoperability problems between cards and terminals. Book 1 of the EMV standard devotes 15 pages to describing the application selection process.
+
+An *application identifier* (AID) is used to address an application in the card or Host Card Emulation (HCE) if delivered without a card. An AID consists of a *registered application provider identifier* (RID) of five bytes, which is issued by the ISO/IEC 7816-5 registration authority. This is followed by a *proprietary application identifier extension* (PIX), which enables the application provider to differentiate among the different applications offered. The AID is printed on all EMV cardholder receipts. Card issuers can alter the application name from the name of the card network.
+
+List of applications:
+
+| Card scheme / payment network | RID | Product | PIX | AID |
+| --- | --- | --- | --- | --- |
+| FBF-1886 (Denmark) | A000000001 | Loyalty card | 0001 | A0000000010001 |
+| Danmønt (Denmark) | A000000001 | Cash card | 1010 | A0000000011010 |
+| Visa | A000000003 | Visa credit or debit | 1010 | A0000000031010 |
+| Visa Electron | 2010 | A0000000032010 |
+| V Pay | 2020 | A0000000032020 |
+| Plus | 8010 | A0000000038010 |
+| Mastercard | A000000004 | Mastercard credit or debit | 1010 | A0000000041010 |
+| Mastercard | 9999 | A0000000049999 |
+| Maestro | 3060 | A0000000043060 |
+| Cirrus ATM card only | 6000 | A0000000046000 |
+| Chip Authentication Program Securecode | 8002 | A0000000048002 |
+| A000000005 | Maestro UK (formerly Switch) | 0001 | A0000000050001 |
+| A000000010 | Mastercard (China, debit and credit cards) | 8888 | A0000000108888 |
+| American Express | A000000025 | American Express | 01 | A00000002501 |
+| A000000790 | AMEX CHINA (debit and credit cards) | 01 | A00000079001 |
+| U.S. Debit (all interbank networks) (USA) | A000000098 | Visa-branded card | 0840 | A0000000980840 |
+| A000000004 | Mastercard-branded card | 2203 | A0000000042203 |
+| A000000152 | Discover-branded card | 4010 | A0000001524010 |
+| Menards Credit Card (store card) (USA) | A000000817 | Store card | 002001 | A000000817002001 |
+| LINK ATM network (UK) | A000000029 | ATM card | 1010 | A0000000291010 |
+| CB (France) | A000000042 | CB (credit or debit card) | 1010 | A0000000421010 |
+| CB (Debit card only) | 2010 | A0000000422010 |
+| JCB (Japan) | A000000065 | Japan Credit Bureau | 1010 | A0000000651010 |
+| Dankort (Denmark) | A000000121 | Dankort | 1010 | A0000001211010 |
+| VisaDankort | 4711 | A0000001214711 |
+| Dankort (J/speedy) | 4712 | A0000001214712 |
+| Consorzio Bancomat (Italy) | A000000141 | Bancomat/PagoBancomat | 0001 | A0000001410001 |
+| Diners Club/Discover | A000000152 | Diners Club/Discover | 3010 | A0000001523010 |
+| Banrisul (Brazil) | A000000154 | Banricompras Debito | 4442 | A0000001544442 |
+| SPAN2 (Saudi Arabia) | A000000228 | SPAN | 1010 | A0000002281010 |
+| Interac (Canada) | A000000277 | Debit card | 1010 | A0000002771010 |
+| Discover (USA) | A000000324 | ZIP | 1010 | A0000003241010 |
+| UnionPay (China) | A000000333 | Debit | 010101 | A000000333010101 |
+| Credit | 010102 | A000000333010102 |
+| Quasi-credit | 010103 | A000000333010103 |
+| Electronic cash | 010106 | A000000333010106 |
+| DK (Germany) | A000000359 | Girocard | 1010028001 | A0000003591010028001 |
+| EAPS Bancomat (Italy) | A000000359 | PagoBancomat | 10100380 | A00000035910100380 |
+| Verve (Nigeria) | A000000371 | Verve | 0001 | A0000003710001 |
+| The Exchange Network ATM network (Canada/USA) | A000000439 | ATM card | 1010 | A0000004391010 |
+| RuPay (India) | A000000524 | RuPay | 1010 | A0000005241010 |
+| Dinube (Spain) | A000000630 | Dinube Payment Initiation (PSD2) | 0101 | A0000006300101 |
+| MIR (Russia) | A000000658 | MIR Debit | 2010 | A0000006582010 |
+| MIR Credit | 1010 | A0000006581010 |
+| Edenred (Belgium) | A000000436 | Ticket Restaurant | 0100 | A0000004360100 |
+| eftpos (Australia) | A000000384 | Savings (debit card) | 10 | A00000038410 |
+| Cheque (debit card) | 20 | A00000038420 |
+| GIM-UEMOA (Eight West African countries: Benin, Burkina Faso, Côte d'Ivoire, Guinea Bissau, Mali, Niger, Senegal, Togo) | A000000337 | Retrait | 01 000001 | A000000337301000 |
+| Standard | 01 000002 | A000000337101000 |
+| Classic | 01 000003 | A000000337102000 |
+| Prepaye Online | 01 000004 | A000000337101001 |
+| Prepaye Possibile Offline | 01 000005 | A000000337102001 |
+| Porte Monnaie Electronique | 01 000006 | A000000337601001 |
+| meeza (Egypt) | A000000732 | meeza Card | 100123 | A000000732100123 |
+| Mercury (UAE) | A000000529 | Mercury Card | 1010 | A0000005291010 |
+| China T-Union | A000000632 | MOT Electronic Purse | 010105 | A000000632010105 |
+| MOT Electronic Cash | 010106 | A000000632010106 |
+
+
+### Initiate application processing
+
+The terminal sends the *get processing options* command to the card. When issuing this command, the terminal supplies the card with any data elements requested by the card in the *processing options data objects list* (PDOL). The PDOL (a list of tags and lengths of data elements) is optionally provided by the card to the terminal during application selection. The card responds with the *application interchange profile* (AIP), a list of functions to perform in processing the transaction. The card also provides the *application file locator* (AFL), a list of files and records that the terminal needs to read from the card.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+
+### Read application data
+
+Smart cards store data in files. The AFL contains the files that contain EMV data. These all must be read using the read record command. EMV does not specify which files data is stored in, so all the files must be read. Data in these files is stored in BER TLV format. EMV defines tag values for all data used in card processing.
+
+
+### Processing restrictions
+
+The purpose of the *processing restrictions* is to see if the card should be used. Three data elements read in the previous step are checked: Application version number, Application usage control (this shows whether the card is only for domestic use, etc.), Application effective/expiration dates checking.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+If any of these checks fails, the card is not necessarily declined. The terminal sets the appropriate bit in the terminal verification results (TVR), the components of which form the basis of an accept/decline decision later in the transaction flow. This feature lets, for example, card issuers permit cardholders to keep using expired cards after their expiry date, but for all transactions with an expired card to be performed on-line.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+
+### Offline data authentication (ODA)
+
+Offline data authentication is a cryptographic check to validate the card using public-key cryptography. There are three different processes that can be undertaken depending on the card:ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+* *Static data authentication* (SDA) ensures data read from the card has been signed by the card issuer. This prevents modification of data, but does not prevent cloning.
+* *Dynamic data authentication* (DDA) provides protection against modification of data and cloning.
+* *Combined DDA/generate application cryptogram* (CDA) combines DDA with the generation of a card's *application cryptogram* to assure card validity. Support of CDA in devices may be needed, as this process has been implemented in specific markets. This process is not mandatory in terminals and can only be carried out where both card and terminal support it.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+### EMV certificates
+
+To verify the authenticity of payment cards, EMV certificates are used. The EMV Certificate Authority issues digital certificates to payment card issuers. When requested, the payment card chip provides the card issuer's public key certificate and SSAD to the terminal. The terminal retrieves the CA's public key from local storage and uses it to confirm trust for the CA and, if trusted, to verify the card issuer's public key was signed by the CA. If the card issuer's public key is valid, the terminal uses the card issuer's public key to verify the card's SSAD was signed by the card issuer.
+
+
+### Cardholder verification
+
+Cardholder verification is used to evaluate whether the person presenting the card is the legitimate cardholder. There are many cardholder verification methods (CVMs) supported in EMV. They areᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+* Signature
+* Offline plaintext PIN
+* Offline enciphered PIN
+* Offline plaintext PIN and signature
+* Offline enciphered PIN and signature
+* Online PIN
+* No CVM required
+* Consumer Device CVM
+* Fail CVM processing
+
+The terminal uses a CVM list read from the card to determine the type of verification to perform. The CVM list establishes a priority of CVMs to use relative to the capabilities of the terminal. Different terminals support different CVMs. ATMs generally support online PIN. POS terminals vary in their CVM support depending on type and country.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+For offline enciphered PIN methods, the terminal encrypts the cleartext PIN block with the card's public key before sending it to the card with the Verify command. For the online PIN method, the cleartext PIN block is encrypted by the terminal using its point-to-point encryption key before sending it to the acquirer processor in the authorization request message.
+
+All offline methods are vulnerable to man-in-the-middle attacks.
+In 2017, EMVCo added support for biometric verification methods in version 4.3 of the EMV specifications.
+
+
+### Terminal risk management
+
+Terminal risk management is only performed in devices where there is a decision to be made whether a transaction should be authorised on-line or offline. If transactions are always carried out on-line (e.g., ATMs) or always off-line, this step can be skipped. Terminal risk management checks the transaction amount against an offline ceiling limit (above which transactions should be processed on-line). It is also possible to have a 1 in an online counter, and a check against a hot card list (which is only necessary for off-line transactions). If the result of any of these tests is positive, the terminal sets the appropriate bit in the terminal verification results (TVR).
+
+
+### Terminal action analysis
+
+The results of previous processing steps are used to determine whether a transaction should be approved offline, sent online for authorization, or declined offline. This is done using a combination of data objects known as *terminal action codes* (TACs) held in the terminal and *issuer action codes* (IACs) read from the card. The TAC is logically OR'd with the IAC, to give the transaction acquirer a level of control over the transaction outcome. Both types of action code take the values Denial, Online, and Default. Each action code contains a series of bits which correspond to the bits in the Terminal verification results (TVR), and are used in the terminal's decision whether to accept, decline or go on-line for a payment transaction. The TAC is set by the card acquirer; in practice card schemes advise the TAC settings that should be used for a particular terminal type depending on its capabilities. The IAC is set by the card issuer; some card issuers may decide that expired cards should be rejected, by setting the appropriate bit in the Denial IAC. Other issuers may want the transaction to proceed on-line so that they can in some cases allow these transactions to be carried out.ᵇᵉᵗᵗᵉʳˢᵒᵘʳᶜᵉⁿᵉᵉᵈᵉᵈ
+
+When an online-only device performs IAC-Online and TAC-Online processing the only relevant TVR bit is "Transaction value exceeds the floor limit". Because the floor limit is set to zero, the transaction should always go online and all other values in TAC-Online or IAC-Online are irrelevant. Online-only devices do not need to perform IAC-default processing. An online-only device such as an ATM always attempts to go on-line with the authorization request, unless declined off-line due to IAC-Denial settings. During IAC-Denial and TAC-Denial processing, for an online only device, the only relevant Terminal verification results bit is "Service not allowed".
+
+
+### First card action analysis
+
+One of the data objects read from the card in the Read application data stage is CDOL1 (Card Data object List). This object is a list of tags that the card wants to be sent to it to make a decision on whether to approve or decline a transaction (including transaction amount, but many other data objects too). The terminal sends this data and requests a cryptogram using the generate application cryptogram command. Depending on the terminal's decision (offline, online, decline), the terminal requests one of the following cryptograms from the card:ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+* Transaction certificate (TC)—offline approval
+* Authorization Request Cryptogram (ARQC)—online authorization
+* Application Authentication Cryptogram (AAC)—offline decline
+
+This step gives the card the opportunity to accept the terminal's action analysis or to decline a transaction or force a transaction on-line. The card cannot return a TC when an ARQC has been asked for, but can return an ARQC when a TC has been asked for.
+
+
+### Online transaction authorization
+
+Transactions go online when an ARQC has been requested. The ARQC is sent in the authorisation message. The card generates the ARQC. Its format depends on the card application. EMV does not specify the contents of the ARQC. The ARQC created by the card application is a digital signature of the transaction details, which the card issuer can check in real time. This provides a strong cryptographic check that the card is genuine. The issuer responds to an authorization request with a response code (accepting or declining the transaction), an authorisation response cryptogram (ARPC) and optionally an issuer script (a string of commands to be sent to the card).
+
+ARPC processing is not performed in contact transactions processed with Visa Quick Chip for EMV and Mastercard M/Chip Fast, and in contactless transactions across schemes because the card is removed from the reader after the ARQC has been generated.
+
+
+### Second card action analysis
+
+CDOL2 (Card data object list) contains a list of tags that the card wanted to be sent after online transaction authorisation (response code, ARPC, etc.). Even if for any reason the terminal could not go online (e.g., communication failure), the terminal should send this data to the card again using the generate authorisation cryptogram command. This lets the card know the issuer's response. The card application may then reset offline usage limits.
+
+
+### Issuer script processing
+
+If a card issuer wants to update a card post issuance it can send commands to the card using issuer script processing. Issuer scripts are meaningless to the terminal and can be encrypted between the card and the issuer to provide additional security. Issuer script can be used to block cards, or change card parameters.
+
+Issuer script processing is not available in contact transactions processed with Visa Quick Chip for EMV and Mastercard M/Chip Fast, and for contactless transactions across schemes.
+
+
+## EMV chip specification
+
+The first version of EMV standard was published in 1995. Now the standard is defined and managed by the privately owned corporation EMVCo LLC. The current members of EMVCo are American Express, Discover Financial, JCB International, Mastercard, China UnionPay, and Visa Inc. Each of these organizations owns an equal share of EMVCo and has representatives in the EMVCo organization and EMVCo working groups.
+
+Recognition of compliance with the EMV standard (i.e., device certification) is issued by EMVCo following submission of results of testing performed by an accredited testing house.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+EMV Compliance testing has two levels: EMV Level 1, which covers physical, electrical and transport level interfaces, and EMV Level 2, which covers payment application selection and credit financial transaction processing.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+After passing common EMVCo tests, the software must be certified by payment brands to comply with proprietary EMV implementations such as Visa VSDC, American Express AEIPS, Mastercard MChip, JCB JSmart, or EMV-compliant implementations of non-EMVCo members such as LINK in the UK, or Interac in Canada.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+
+## List of EMV documents and standards
+
+As of 2011, since version 4.0, the official EMV standard documents which define all the components in an EMV payment system are published as four "books" and some additional documents:
+
+* Book 1: Application Independent ICC to Terminal Interface Requirements
+* Book 2: Security and Key Management
+* Book 3: Application Specification
+* Book 4: Cardholder, Attendant, and Acquirer Interface Requirements
+* Common Payment Application Specification
+* EMV Card Personalisation Specification
+
+### Versions
+
+The first EMV standard came into view in 1995 as EMV 2.0. This was upgraded to EMV 3.0 in 1996 (sometimes referred to as EMV '96) with later amendments to EMV 3.1.1 in 1998. This was further amended to version 4.0 in December 2000 (sometimes referred to as EMV 2000). Version 4.0 became effective in June 2004. Version 4.1 became effective in June 2007. Version 4.2 is in effect since June 2008. Version 4.3 is in effect since November 2011.
+
+
+## Vulnerabilities
+
+
+### Opportunities to harvest PINs and clone magnetic stripes
+
+In addition to the track-two data on the magnetic stripe, EMV cards generally have identical data encoded on the chip, which is read as part of the normal EMV transaction process. If an EMV reader is compromised to the extent that the conversation between the card and the terminal is intercepted, then the attacker may be able to recover both the track-two data and the PIN, allowing construction of a magnetic stripe card, which, while not usable in a Chip and PIN terminal, can be used, for example, in terminal devices that permit fallback to magstripe processing for foreign customers without chip cards, and defective cards. This attack is possible only where (a) the offline PIN is presented in plaintext by the PIN entry device to the card, where (b) magstripe fallback is permitted by the card issuer and (c) where geographic and behavioural checking may not be carried out by the card issuer.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+APACS, representing the UK payment industry, claimed that changes specified to the protocol (where card verification values differ between the magnetic stripe and the chip – the iCVV) rendered this attack ineffective and that such measures would be in place from January 2008. Tests on cards in February 2008 indicated this may have been delayed.
+
+
+#### Successful attacks
+
+Conversation capturing is a form of attack which was reported to have taken place against Shell terminals in May 2006, when they were forced to disable all EMV authentication in their petrol stations after more than £1 million was stolen from customers.
+
+In October 2008, it was reported that hundreds of EMV card readers intended for use in Britain, Ireland, the Netherlands, Denmark, and Belgium had been tampered with in China during or shortly after manufacture. For nine months, details and PINs of credit and debit cards were sent over mobile phone networks to criminals in Lahore, Pakistan. United States National Counterintelligence Executive Joel Brenner said, "Previously only a nation state's intelligence agency would have been capable of pulling off this type of operation. It's scary." Stolen data was typically used a couple of months after the card transactions to make it harder for investigators to pin down the vulnerability. After the fraud was discovered it was found that tampered-with terminals could be identified as the additional circuitry increased their weight by about 100 grams. Tens of millions of pounds are believed to have been stolen. This vulnerability spurred efforts to implement better control of POS devices over their entire lifecycle, a practice endorsed by electronic payment security standards like those being developed by the Secure POS Vendor Alliance (SPVA).
+
+
+#### PIN harvesting and stripe cloning
+
+In a February 2008 BBC *Newsnight* programme Cambridge University researchers Steven Murdoch and Saar Drimer demonstrated one example attack, to illustrate that Chip and PIN is not secure enough to justify passing the liability to prove fraud from banks onto customers. The Cambridge University exploit allowed the experimenters to obtain both card data to create a magnetic stripe and the PIN.
+
+APACS, the UK payments association, disagreed with the majority of the report, saying "The types of attack on PIN entry devices detailed in this report are difficult to undertake and not currently economically viable for a fraudster to carry out." They also said that changes to the protocol (specifying different card verification values between the chip and magnetic stripe – the iCVV) would make this attack ineffective from January 2008.
+
+In August 2016, NCR Corporation security researchers showed how credit card thieves can rewrite the code of a magnetic strip to make it appear like a chipless card, which allows for counterfeiting.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+
+### 2010: Hidden hardware disables PIN checking on stolen card
+
+On 11 February 2010 Murdoch and Drimer's team at Cambridge University announced that they had found "a flaw in chip and PIN so serious they think it shows that the whole system needs a re-write" that was "so simple that it shocked them". A stolen card is connected to an electronic circuit and to a fake card which is inserted into the terminal ("man-in-the-middle attack"). Any four digits can be typed in and accepted as a valid PIN.
+
+A team from the BBC's *Newsnight* programme visited a Cambridge University cafeteria (with permission) with the system, and were able to pay using their own cards (a thief would use stolen cards) connected to the circuit, inserting a fake card and typing in "0000" as the PIN. The transactions were registered as normal, and were not picked up by banks' security systems. A member of the research team said, "Even small-scale criminal systems have better equipment than we have. The amount of technical sophistication needed to carry out this attack is really quite low." The announcement of the vulnerability said, "The expertise that is required is not high (undergraduate level electronics). We dispute the assertion by the banking industry that criminals are not sophisticated enough, because they have already demonstrated a far higher level of skill than is necessary for this attack in their miniaturized PIN entry device skimmers." It was not known if this vulnerability had been exploited, but it could explain unresolved cases of claimed fraud.
+
+EMVCo disagreed and published a response saying that, while such an attack might be theoretically possible, it would be extremely difficult and expensive to carry out successfully, that current compensating controls are likely to detect or limit the fraud, and that the possible financial gain from the attack is minimal while the risk of a declined transaction or exposure of the fraudster is significant. The Cambridge team disagrees: they carried it out without the banks noticing, with off-the-shelf equipment with some non-sophisticated additions. Less bulky versions could easily be made. The ones producing such equipment for the attack need not put themselves at risk, but can sell it to anybody via the Internet.
+
+When approached for comment, several banks (Co-operative Bank, Barclays and HSBC) each said that this was an industry-wide issue, and referred the *Newsnight* team to the banking trade association for further comment. According to Phil Jones of the Consumers' Association, Chip and PIN has helped to bring down instances of card crime, but many cases remain unexplained. "What we do know is that we do have cases that are brought forward from individuals which seem quite persuasive."ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+The attack uses the fact that the choice of authentication method is unauthenticated, which allows the man in the middle. The terminal asks for a PIN, gets it and gets the transaction confirmed by the card – which thinks it is doing a card-and-signature transaction, which could indeed succeed offline. It also works online, perhaps because of insufficient checks.
+
+Originally, bank customers had to prove that they had not been negligent with their PIN before getting redress, but UK regulations in force from 1 November 2009 placed the onus on banks to prove that a customer has been negligent in any dispute, with the customer given 13 months to make a claim. Murdoch said that "[the banks] should look back at previous transactions where the customer said their PIN had not been used and the bank record showed it has, and consider refunding these customers because it could be they are victim of this type of fraud."
+
+
+### 2011: CVM downgrade allows arbitrary PIN harvest
+
+At the CanSecWest conference in March 2011, Andrea Barisani and Daniele Bianco presented research uncovering a vulnerability in EMV that would allow arbitrary PIN harvesting despite the cardholder verification configuration of the card, even when the supported CVMs data is signed.
+
+The PIN harvesting can be performed with a chip skimmer. In essence, a CVM list that has been modified to downgrade the CVM to Offline PIN is still honoured by POS terminals, despite its signature being invalid.
+
+
+### PIN bypass
+
+In 2020, researchers David Basin, Ralf Sasse, and Jorge Toro from ETH Zurich reported a security issue affecting Visa contactless cards: lack of cryptographic protection of critical data sent by the card to the terminal during an EMV transaction. The data in question determines the cardholder verification method (such as PIN verification) to be used for the transaction. The team demonstrated that it is possible to modify this data to trick the terminal into believing that no PIN is required because the cardholder was verified using their device (e.g. smartphone). The researchers developed a proof-of-concept Android app that effectively turns a physical Visa card into a mobile payment app (e.g. Apple Pay, Google Pay) to perform PIN-free, high-value purchases. The attack is carried out using two NFC-enabled smartphones, one held near the physical card and the second held near the payment terminal. The attack might affect cards by Discover and China's UnionPay but this was not demonstrated in practice, in contrast to Visa cards.
+
+In early 2021, the same team disclosed that Mastercard cards are also vulnerable to a PIN bypass attack. They showed that criminals can trick a terminal into transacting with a Mastercard contactless card while believing it to be a Visa card. This *card brand mixup* has critical consequences since it can be used in combination with the PIN bypass for Visa to also bypass the PIN for Mastercard cards.
+
+
+## Implementation
+
+EMV stands for "Europay, Mastercard, and Visa", the three companies that created the standard. The standard is now managed by EMVCo, a consortium of financial companies. Additional widely known chips of the EMV standard are:
+
+* AEIPS: American Express
+* UICS: China Union Pay
+* J Smart: JCB
+* D-PAS: Discover/Diners Club International
+* Rupay: NPCI
+* Verve
+
+Visa and Mastercard have also developed standards for using EMV cards in devices to support card not present transactions (CNP) over the telephone and Internet. Mastercard has the Chip Authentication Program (CAP) for secure e-commerce. Its implementation is known as EMV-CAP and supports a number of modes. Visa has the Dynamic Passcode Authentication (DPA) scheme, which is their implementation of CAP using different default values.
+
+In many countries of the world, debit card and/or credit card payment networks have implemented liability shifts.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ Normally, the card issuer is liable for fraudulent transactions. However, after a liability shift is implemented, if the ATM or merchant's point of sale terminal does not support EMV, the ATM owner or merchant is liable for the fraudulent transaction.
+
+Chip and PIN systems can cause problems for travellers from countries that do not issue Chip and PIN cards as some retailers may refuse to accept their chipless cards. While most terminals still accept a magnetic strip card, and the major credit card brands require vendors to accept them, some staff may refuse to take the card, under the belief that they are held liable for any fraud if the card cannot verify a PIN. Non-chip-and-PIN cards may also not work in some unattended vending machines at, for example, train stations, or self-service check-out tills at supermarkets.
+
+
+### Africa
+
+* Mastercard's liability shift among countries within this region took place on 1 January 2006. By 1 October 2010, a liability shift had occurred for all point of sale transactions.
+* Visa's liability shift for points of sale took place on 1 January 2006. For ATMs, the liability shift took place on 1 January 2008.
+
+#### South Africa
+
+* Mastercard's liability shift took place on 1 January 2005.
+
+### Asian and Pacific countries
+
+* Mastercard's liability shift among countries within this region took place on 1 January 2006. By 1 October 2010, a liability shift had occurred for all point of sale transactions, except for domestic transactions in China and Japan.
+* Visa's liability shift for points of sale took place on 1 October 2010. For ATMs, the liability shift date took place on 1 October 2015, except in China, India, Japan, and Thailand, where the liability shift was on 1 October 2017. Domestic ATM transactions in China are not currently not subject to a liability shift deadline.
+
+#### Australia
+
+* Mastercard required that all point of sale terminals be EMV capable by April 2013. For ATMs, the liability shift took place in April 2012. ATMs must be EMV compliant by the end of 2015.
+* Visa's liability shift for ATMs took place 1 April 2013.
+
+#### Malaysia
+
+* Malaysia is the first country in the world to completely migrate to EMV-compliant smart cards two years after its implementation in 2005.
+
+#### New Zealand
+
+* Mastercard required all point of sale terminals to be EMV compliant by 1 July 2011. For ATMs, the liability shift took place in April 2012. ATMs are required to be EMV compliant by the end of 2015.
+* Visa's liability shift for ATMs was 1 April 2013.
+
+### Europe
+
+* Mastercard's liability shift took place on 1 January 2005.
+* Visa's liability shift for points of sale took place on 1 January 2006. For ATMs, the liability shift took place on 1 January 2008.
+* France has cut card fraud by more than 80% since its introduction in 1992 (see Carte Bleue).
+
+#### United Kingdom
+
+Chip and PIN was trialled in Northampton, England from May 2003, and as a result was rolled out nationwide in the United Kingdom on 14 February 2006 with advertisements in the press and national television touting the "Safety in Numbers" slogan. During the first stages of deployment, if a fraudulent magnetic swipe card transaction was deemed to have occurred, the retailer was refunded by the issuing bank, as was the case prior to the introduction of Chip and PIN. On January 1, 2005, the liability for such transactions was shifted to the retailer; this acted as an incentive for retailers to upgrade their point of sale (PoS) systems, and most major high-street chains upgraded on time for the EMV deadline. Many smaller businesses were initially reluctant to upgrade their equipment, as it required a completely new PoS system—a significant investment.
+
+New cards featuring both magnetic strips and chips are now issued by all major banks. The replacement of pre-Chip and PIN cards was a major issue, as banks simply stated that consumers would receive their new cards "when their old card expires" — despite many people having had cards with expiry dates as late as 2007. The card issuer Switch lost a major contract with HBOS to Visa, as they were not ready to issue the new cards as early as the bank wanted.
+
+The Chip and PIN implementation was criticised as designed to reduce the liability of banks in cases of claimed card fraud by requiring the customer to prove that they had acted "with reasonable care" to protect their PIN and card, rather than on the bank having to prove that the signature matched. Before Chip and PIN, if a customer's signature was forged, the banks were legally liable and had to reimburse the customer. Until 1 November 2009 there was no such law protecting consumers from fraudulent use of their Chip and PIN transactions, only the voluntary Banking Code. There were many reports that banks refused to reimburse victims of fraudulent card use, claiming that their systems could not fail under the circumstances reported, despite several documented successful large-scale attacks.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+The Payment Services Regulations 2009 came into force on 1 November 2009 and shifted the onus onto the banks to prove, rather than assume, that the cardholder is at fault. The Financial Services Authority (FSA) said "It is for the bank, building society or credit card company to show that the transaction was made by you, and there was no breakdown in procedures or technical difficulty" before refusing liability.
+
+
+### Latin America and the Caribbean
+
+* Mastercard's liability shift among countries within this region took place on 1 January 2005.
+* Visa's liability shift for points of sale took place on 1 October 2012, for any countries in this region that had not already implemented a liability shift. For ATMs, the liability shift took place on 1 October 2014, for any countries in this region that had not already implemented a liability shift.
+
+#### Brazil
+
+* Mastercard's liability shift took place on 1 March 2008.
+* Visa's liability shift for points of sale took place on 1 April 2011. For ATMs, the liability shift took place on 1 October 2012.
+
+#### Colombia
+
+* Mastercard's liability shift took place on 1 October 2008.
+
+#### Mexico
+
+* Discover implemented a liability shift on 1 October 2015. For pay at the pump at gas stations, the liability shift was on 1 October 2017.
+* Visa's liability shift for points of sale took place on 1 April 2011. For ATMs, the liability shift took place on 1 October 2012.
+
+#### Venezuela
+
+* Mastercard's liability shift took place on 1 July 2009.
+
+### Middle East
+
+* Mastercard's liability shift among countries within this region took place on 1 January 2006. By 1 October 2010, a liability shift had occurred for all point of sale transactions.
+* Visa's liability shift for points of sale took place on 1 January 2006. For ATMs, the liability shift took place on 1 January 2008.
+
+### North America
+
+
+#### Canada
+
+* American Express implemented a liability shift on 31 October 2012.
+* Discover implemented a liability shift on 1 October 2015 for all transactions except pay-at-the-pump at gas stations; those transactions shifted on 1 October 2017.ᵗʰⁱʳᵈ-ᵖᵃʳᵗʸ ˢᵒᵘʳᶜᵉ ⁿᵉᵉᵈᵉᵈ
+* Interac (Canada's debit card network) stopped processing non-EMV transactions at ATMs on 31 December 2012, and mandated EMV transactions at point-of-sale terminals on 30 September 2016, with a liability shift taking place on 31 December 2015.ᶠᵃⁱˡᵉᵈ ᵛᵉʳⁱᶠⁱᶜᵃᵗⁱᵒⁿᵗʰⁱʳᵈ-ᵖᵃʳᵗʸ ˢᵒᵘʳᶜᵉ ⁿᵉᵉᵈᵉᵈ
+* Mastercard implemented domestic transaction liability shift on 31 March 2011, and international liability shift on 15 April 2011. For pay at the pump at gas stations, the liability shift was implemented 31 December 2012.
+* Visa implemented domestic transaction liability shift on 31 March 2011, and international liability shift on 31 October 2010. For pay at the pump at gas stations, the liability shift was implemented 31 December 2012.
+* Over a five-year period post-EMV migration, domestic card-card present fraudulent transactions significantly reduced in Canada. According to Helcim's reports, card-present domestic debit card fraud reduced 89.49% and credit card fraud 68.37%.
+
+#### United States
+
+After widespread identity theft due to weak security in the point-of-sale terminals at Target, Home Depot, and other major retailers, Visa, Mastercard and Discover in March 2012 – and American Express in June 2012 – announced their EMV migration plans for the United States. Since the announcement, multiple banks and card issuers have announced cards with EMV chip-and-signature technology, including American Express, Bank of America, Citibank, Wells Fargo, JPMorgan Chase, U.S. Bank, and several credit unions.
+
+In 2010, a number of companies began issuing pre-paid debit cards that incorporate Chip and PIN and allow Americans to load cash as euros or pound sterling. United Nations Federal Credit Union was the first United States issuer to offer Chip and PIN credit cards. In May 2010, a press release from Gemalto (a global EMV card producer) indicated that United Nations Federal Credit Union in New York would become the first EMV card issuer in the United States, offering an EMV Visa credit card to its customers. JPMorgan was the first major bank to introduce a card with EMV technology, namely its Palladium card, in mid-2012.
+
+As of April 2016, 70% of U.S. consumers had EMV cards and as of December 2016 roughly 50% of merchants were EMV compliant. However, deployment has been slow and inconsistent across vendors. Even merchants with EMV hardware may not be able to process chip transactions due to software or compliance deficiencies. Bloomberg has also cited issues with software deployment, including changes to audio prompts for Verifone machines which can take several months to release and deploy software out. Industry experts, however, expect more standardization in the United States for software deployment and standards. Visa and Mastercard have both implemented standards to speed up chip transactions with a goal of reducing the time for these to be under three seconds. These systems are labelled as Visa Quick Chip and Mastercard M/Chip Fast.
+
+* American Express implemented liability shift for point of sale terminals on 1 October 2015.ᵖʳᵒᵐᵒᵗⁱᵒⁿᵃˡ ˢᵒᵘʳᶜᵉ? For pay at the pump, at gas stations, the liability shift was 16 April 2021. This was extended from 1 October 2020 due to the COVID-19 pandemic.
+* Discover implemented liability shift on 1 October 2015. For pay at the pump, at gas stations, the liability shift was 1 October 2020.
+* Maestro implemented liability shift of 19 April 2013, for international cards used in the United States.
+* Mastercard implemented liability shift for point of sale terminals on 1 October 2015. For pay at the pump, at gas stations, the liability shift formally was on 1 October 2020. For ATMs, the liability shift date was on 1 October 2016.
+* Visa implemented liability shift for point of sale terminals on 1 October 2015. For pay at the pump, at gas stations, the liability shift formally was on 1 October 2020. For ATMs, the liability shift date was on 1 October 2017.

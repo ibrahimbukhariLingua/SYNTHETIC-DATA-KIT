@@ -1,0 +1,51 @@
+Törnqvist index
+
+
+# Törnqvist index
+
+
+
+In economics, the **Törnqvist index** is a price or quantity index. In practice, Törnqvist index values are calculated for consecutive periods, then these are strung together, or "*chained*". Thus, the core calculation does not refer to a single base year.
+
+
+## Computation
+
+The price index for some period is usually normalized to be 1 or 100, and that period is called "base period."
+
+A Törnqvist or Törnqvist-Theil price index is the weighted geometric mean of the price relatives using arithmetic averages of the value shares in the two periods as weights.
+
+The data used are prices and quantities in two time-periods, (t-1) and (t), for each of *n* goods which are indexed by *i*.
+
+If we denote the price of item *i* at time t-1 by {\displaystyle p\_{i,t-1}}, and, analogously, we define {\displaystyle q\_{i,t}} to be the quantity purchased of item *i* at time t, then, the Törnqvist price index {\displaystyle P\_{t}} at time t can be calculated as follows:
+
+The denominators in the exponent are the sums of total expenditure in each of the two periods.
+This can be expressed more compactly in vector notation. Let {\displaystyle p\_{t-1}} denote the vector of all prices at time t-1 and analogously define vectors {\displaystyle q\_{t-1}}, {\displaystyle p\_{t}}, and {\displaystyle q\_{t}}. Then the above expression can be rewritten:
+
+In this second expression, notice that *the overall exponent is the average share of expenditure on good i across the two periods*. The Törnqvist index weighs the experiences in the two periods equally, so it is said to be a *symmetric* index. Usually, that share doesn't change much; e.g. food expenditures across a million households might be 20% of income in one period and 20.1% the next period.
+
+In practice, Törnqvist indexes are often computed using an equation that results from taking logs of both sides, as in the expression below which computes the same {\displaystyle P\_{t}} as those above.
+
+A Törnqvist quantity index can be calculated analogously using prices for weights. Quantity indexes are used in computing aggregate indexes for physical "capital" summarizing equipment and structures of different types into one time series. Swapping p's for q's and q's for p's gives an equation for a quantity index:
+
+If one needs matched quantity and price indexes they can be calculated directly from these equations, but it is more common to compute a price index by dividing total expenditure each period by the quantity index so the resulting indexes multiply out to total expenditure. This approach is called the *indirect* way of calculating a Törnqvist index, and it generates numbers that are not exactly the same as a direct calculation. There is research on which method to use based partly on whether price changes or quantity changes are more volatile. For multifactor productivity calculations, the indirect method is used.
+
+Törnqvist indexes are close to the figures given by the Fisher index. The Fisher index is sometimes preferred in practice because it handles zero-quantities without special exceptions, whereas in the equations above a quantity of zero would make the Törnqvist index calculation break down.
+
+
+## Theory
+
+A Törnqvist index is a discrete approximation to a continuous Divisia index. A Divisia index is a theoretical construct, a continuous-time weighted sum of the growth rates of the various components, where the weights are the component's shares in total value. For a Törnqvist index, the growth rates are defined to be the difference in natural logarithms of successive observations of the components (i.e. their log-change) and the weights are equal to the mean of the factor shares of the components in the corresponding pair of periods (usually years). Divisia-type indexes have advantages over constant-base-year weighted indexes, because as relative prices of inputs change, they incorporate changes both in quantities purchased and relative prices. For example, a Törnqvist index summarizing labor input may weigh the growth rate of the hours of each group of workers by the share of labor compensation they receive.
+
+The Törnqvist index is a superlative index, meaning it can approximate any smooth production or cost function. "Smooth" here means that small changes in relative prices for a good will be associated with small changes in the quantity of it used. The Törnqvist corresponds exactly to the translog production function, meaning that given a change in prices and an optimal response in quantities, the level of the index will change exactly as much as the change in production or utility would be. To express that thought, Diewert (1978) uses this phrasing which other economists now recognize: the Törnqvist index procedure "is exact for" the translog production or utility function. For this reason, the term **translog index** is sometimes used for a Törnqvist index.
+
+The Törnqvist index is approximately "consistent in aggregation", meaning that the almost exactly the same index values result from (a) combining many prices and quantities together, or (b) combining subgroups of them together then combining those indexes. For some purposes (like large annual aggregates), this is treated as consistent enough, and for others (like monthly price changes) it is not.
+
+
+## History and use
+
+The Törnqvist index theory is attributed to Leo Törnqvist (1936), perhaps working with others at the Bank of Finland.
+
+Törnqvist indexes are used in a variety of official price and productivity statistics.
+
+The time periods can be years, as in multifactor productivity statistics, or months, as in the U.S.'s Chained CPI.
+

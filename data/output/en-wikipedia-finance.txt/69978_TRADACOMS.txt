@@ -1,0 +1,45 @@
+TRADACOMS
+
+
+# TRADACOMS
+
+
+
+**Tradacoms** is an early standard for EDI (Electronic Data Interchange) primarily used in the UK retail sector. It was introduced in 1982 as an implementation of the **UN/GTDI** syntax, one of the precursors of EDIFACT, and was maintained and extended by the UK Article Numbering Association (now called GS1 UK).
+
+The standard is obsolescent since development of it effectively ceased in 1995 in favour of the GS1 EDI EANCOM subsets. Despite this it has proved durable and the majority of the retail EDI traffic in the UK still uses it.
+
+
+## Transactions
+
+There are 25 transactions defined in Tradacoms:
+
+There are additional transactions defined for use in the Insurance Industry which use the Tradacoms syntax, but with implicit nesting. The service is known as Brokernet and was established in 1986.
+
+The UK Book Trade also has additional transactions defined for Orders, Issues, and Price & Availability Updates. There are industry message variants for the News Trade, Textiles and Home Shopping.
+
+
+## Syntax and usage
+
+The syntax is very similar to EDIFACT, with the following principal differences:
+
+* STX/END segments used instead of UNB/UNZ
+* BAT/EOB segments instead of UNG/UNE
+* MHD/MTR segments instead of UNH/UNT
+* The segment tag delimiter is an '=' rather than a data element separator
+* Explicit nesting is always used, but implemented as data elements rather than tag extensions
+* Only implicit decimals are used
+* The compression rules are less rigorous, being merely advisory.
+* The underlying GTDI standard uses SCH instead of UNA, but this is not implemented in Tradacoms. The default EDIFACT UNOA separators are used.
+
+The use of qualifiers, and consequently of composite data elements, is minor compared to EDIFACT. In particular any segment can occur only once in a Tradacoms message definition, and so the segments tend to be very specific rather than generic with a qualifier to identify their function. Tradacoms is not a 'Lego' system in the manner of EDIFACT.
+
+In EDIFACT a message is a transaction. Tradacoms uses 'Files'; with one or more examples of the message being preceded by a header message, and followed by one or more trailer messages. This avoids the duplication of common header and trailer information which can occur in a series of EDIFACT messages.
+
+Tradacoms files are equivalent to industry EDIFACT subsets. They are not generic in the way UN/EDIFACT messages are. They are only supposed to be for use within the UK, since they make no allowance for currencies other than sterling and tax information is geared to UK requirements.
+
+
+## Sample Tradacoms Order
+
+This is an example of a one line order. Some of the data content has been anonymised.
+

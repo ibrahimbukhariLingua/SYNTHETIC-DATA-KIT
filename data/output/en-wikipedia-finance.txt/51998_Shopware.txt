@@ -1,0 +1,70 @@
+Shopware
+
+
+# Shopware
+
+
+
+**Shopware** is an open source e-commerce software written in PHP. The software is developed in Germany.
+
+
+## History
+
+**Shopware AG** was founded in Schöppingen, Germany in 2000 by brothers Stefan Hamann and Sebastian Hamann.
+
+The **Community Edition** was introduced in October 2010 based on Shopware 3, making the source available. With the release of Shopware 4 on August 28, 2012, the e-commerce platform became free and open-source software under the AGPL3 license, forming the technical foundation for the commercial SaaS editions that include proprietary software plugins.
+
+In 2016, the company announced during its annual *Shopware Community Day* event that the source code of premium plugins would no longer be encrypted using the proprietary ionCube integration, with ionCube becoming optional in Shopware 5.2. As of Shopware 5.5, support for ionCube and encrypted plugins was removed.
+
+Former Magento chief Ben Marks joined the Shopware team as Director of market development in 2021. As of 2021, the company employs 250 people.
+
+In 2021, EHI Retail Institute reported Shopware reached 11.5% market share among top 1000 e-commerce sites in Germany, second after Magento. By 2022, Shopware surpassed Magento and became market leader in Germany with 12.2% market share among top 1000 e-commerce sites. An estimated 100,000 e-commerce companies use Shopware, generating a combined revenue of 12 billion Euro.
+
+In 2022, Shopware AG announced that it had received a $100 million investment from PayPal and Carlyle. Furthermore the company opened its first office in New York City, USA.
+
+According to BuiltWith, 5% of online shopping sites in Germany are built with Shopware as of August 2023. According to W3Tech, 0.2% of content-managed websites of the top 10 million websites worldwide are built with Shopware as of August 2023.
+
+
+## Extensions
+
+The official Shopware Shop registry features over 2,200 plugins as of July 2021, including payment merchant integrations for PayPal and Stripe. Developers can create their own plugins.
+
+
+## Technology
+
+Shopware is developed in the PHP programming language. It requires a relational MySQL database.
+
+Shopware 4 and earlier were based on the Enlight framework, a proprietary e-commerce extension to the Zend Framework. Shopware 5 and later are based on the Symfony open-source framework.
+
+As of Shopware 5.4, installation of plugins can be managed via Composer.
+
+As of Shopware 5.5, Elasticsearch integration is supported by default for fast search functionality.
+
+Shopware 5 built its user interface using the Smarty template engine, jQuery, and Ext JS.
+
+Since Shopware 6, the Twig template engine is used instead with Bootstrap and jQuery for the shop frontend, and Vue.js for the administration frontend. Since version 6.5, and the introduction of Bootstrap 5 for the storefront, the dependency on jQuery has been removed.
+
+A Git repository is used for version control, which is also available on GitHub.
+
+
+## Release history
+
+
+### Version 4
+
+With the release of Shopware 4.0 on August 28, 2012, the software was placed under the AGPL license, becoming free and open-source software. Key changes included:
+
+* A media manager centrally manages images, videos, and other media through drag-and-drop.
+* A REST API provides a collection of functions for connecting external software.
+* The speed of the Community and Professional Editions backend and frontend was improved, and support was added for reverse proxy caching such as Varnish.
+
+### Version 6
+
+In May 2019, a developer preview of Shopware 6 was presented at the annual *Shopware Community Day* event. Shopware 6.0 was released later that year. The release is a complete rewrite of the software, from the monolithic codebase of Shopware 5 to a modular approach, with a headless backend API separate from its frontend.
+
+There is no in-place upgrade from Shopware 5 to Shopware 6. Data can be migrated from a Shopware 5 online shop to a new Shopware 6 instance. Plugins are not compatible. Shopware 5 is supported with bug fixes until 2023 and security patches until 2024.
+
+Key changes included:
+
+* A new "First Run" wizard guides through configuration and installation of recommended or popular plugins, such as translation plugins to localize the user interface, and PayPal integration.
+* Product reviews allow customers to rate products.

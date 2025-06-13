@@ -1,0 +1,60 @@
+Winner's curse
+
+
+# Winner's curse
+
+
+
+| Part of a series on |
+| --- |
+| Auctions |
+| Types |
+| * All-pay + Chinese + Bidding fee + Dollar * Amsterdam * Anglo-Dutch * Barter double * Best/not best * Brazilian * Calcutta * Candle * Click-box bidding * Combinatorial * Common value * Deferred-acceptance * Discriminatory price * Double * Dutch * English * Forward * French * Generalized first-price * Generalized second-price * Japanese * Knapsack * Multi-attribute * Multiunit * No-reserve * Rank * Reverse * Scottish * Sealed first-price * Simultaneous ascending * Single-price * Traffic light * Uniform price * Unique bid * Value of revenues * Vickrey * Vickrey–Clarke–Groves * Walrasian * Yankee |
+| Bidding |
+| * Shading * Calor licitantis * Cancellation hunt * Jump * Rigging * Sniping * Suicide * Tacit collusion |
+| Contexts |
+| * Algorithms * Autos * Art * Charity * Children * Players * Domain names * Flowers * Loans * Scam * Slaves * Spectrum * Stamps * Virginity * Wine * Wives |
+| Theory |
+| * Digital goods * Price of anarchy * Revenue equivalence * Winner's curse |
+| Online |
+| * Ebidding * Private electronic market * Software |
+| * v * t * e |
+
+The **winner's curse** is a phenomenon that may occur in common value auctions, where all bidders have the same (*ex post*) value for an item but receive different private (*ex ante*) signals about this value and wherein the winner is the bidder with the most optimistic evaluation of the asset and therefore will tend to overestimate and overpay. Accordingly, the winner will be "cursed" in one of two ways: either the winning bid will exceed the value of the auctioned asset making the winner worse off in absolute terms, or the value of the asset will be less than the bidder anticipated, so the bidder may garner a net gain but will be worse off than anticipated. However, an actual overpayment will generally occur only if the winner fails to account for the winner's curse when bidding (an outcome that, according to the revenue equivalence theorem, need never occur).
+
+The winner’s curse phenomenon was first addressed in 1971 by three Atlantic Richfield petroleum engineers who claimed that oil companies suffered unexpectedly low returns "year after year" in early Outer Continental Shelf oil lease auctions. Outer Continental Shelf auctions are common value auctions, where the value of the oil in the ground is essentially the same to all bidders.
+
+
+## Explanation
+
+In a common value auction, the auctioned item is of roughly equal value to all bidders, but the bidders don't know the item's market value when they bid. Each player independently estimates the value of the item before bidding.
+
+The winner of an auction is the bidder who submits the highest bid. Since the auctioned item is worth roughly the same to all bidders, they are distinguished only by their respective estimates of the market value. The winner, then, is the bidder making the highest estimate. If we assume that the *average* bid is accurate, then the highest bidder overestimates the item's value. Thus, the auction's winner is likely to overpay.
+
+More formally, this result is obtained using conditional expectation. We are interested in a bidder's expected value from the auction (the expected value of the item, minus the expected price) conditioned on the assumption that the bidder wins the auction. It turns out that for a bidder's true estimate the expected value is negative, meaning that on average the winning bidder is overpaying.
+
+Savvy bidders will avoid the winner's curse by bid shading, or placing a bid that is below their ex ante estimation of the value of the item for sale—but equal to their ex post belief about the value of the item, given that they win the auction. The key point is that winning the auction is *bad news* about the value of the item for the winner. It means that he or she was the most optimistic and, if bidders are correct in their estimations on average, that too much was paid. Therefore savvy bidders revise their ex ante estimations downwards to take account of this effect.
+
+The severity of the winner's curse increases with the number of bidders. This is because the more bidders, the more likely it is that some of them have overestimated the auctioned item's value. In technical terms, the winner's expected estimate is the value of the *nᵗʰ* order statistic, which increases as the number of bidders increases.
+
+There is often confusion that the winner's curse applies to the winners of all auctions. However, it is worth repeating here that for auctions with private value (i.e. when the item is desired independently of its value in the market), winner's curse does not arise. Similarly, there may be occasions when the *average* bid is too low relative to exterior market conditions e.g. a dealer recognizing an antique or other collectible as highly saleable elsewhere when other bidders do not have the necessary expertise.
+
+
+## Examples
+
+Since most auctions involve at least some amount of common value, and some degree of uncertainty about that common value, the winner's curse is an important phenomenon.
+
+In the 1950s, when the term *winner's curse* was first coined, there was no accurate method to estimate the potential value of an offshore oil field. So if, for example, an oil field had an actual intrinsic value of $10 million, oil companies might guess its value to be anywhere from $5 million to $20 million. The company who wrongly estimated at $20 million and placed a bid at that level would win the auction, and later find that it was not worth as much.
+
+Other auctions where the winner's curse is significant:
+
+* Spectrum auctions in which companies bid on licenses to use portions of the electromagnetic spectrum. Here, the uncertainty would come from, for example, estimating the value of the cell phone market in New York City.
+* IPOs, in which bidders need to estimate what the market value of a company's stock will be.
+* Pay per click advertising online, in which advertisers gain higher ranking if they bid higher amounts per click from a search engine user.
+* Federal offshore oil leases: the term *winner's curse* was originated in a paper published in the *Journal of Petroleum Technology*, volume 23, 1971, pages 641-653. The authors were Capen, Clapp & Campbell.
+* Free agency in professional sports.
+
+## Related uses
+
+The term *winner's curse* is also used in statistics to refer to the regression toward the mean phenomenon, particularly in genome-wide association studies and epidemiology. In studies involving many tests on one sample of the full population, the consequent stringent standards for significance make it likely that the first person to report a significant test (the *winner*) will also report an effect size much larger than is likely to be seen in subsequent replication studies.
+

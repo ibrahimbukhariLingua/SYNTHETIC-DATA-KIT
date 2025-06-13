@@ -1,0 +1,34 @@
+Kramkov's optional decomposition theorem
+
+
+# Kramkov's optional decomposition theorem
+
+
+
+In probability theory, **Kramkov's optional decomposition theorem** (or just *optional decomposition theorem*) is a mathematical theorem on the decomposition of a positive supermartingale {\displaystyle V} with respect to a family of equivalent martingale measures into the form
+
+where {\displaystyle C} is an adapted (or optional) process.
+
+The theorem is of particular interest for financial mathematics, where the interpretation is: {\displaystyle V} is the wealth process of a trader, {\displaystyle (H\cdot X)} is the gain/loss and {\displaystyle C} the consumption process.
+
+The theorem was proven in 1994 by Russian mathematician Dmitry Kramkov. The theorem is named after the Doob-Meyer decomposition but unlike there, the process {\displaystyle C} is no longer predictable but only adapted (which, under the condition of the statement, is the same as dealing with an optional process).
+
+
+## Kramkov's optional decomposition theorem
+
+Let {\displaystyle (\Omega ,{\mathcal {A}},\{{\mathcal {F}}\_{t}\},P)} be a filtered probability space with the filtration satisfying the usual conditions.
+
+A {\displaystyle d}-dimensional process {\displaystyle X=(X^{1},\dots ,X^{d})} is *locally bounded* if there exist a sequence of stopping times {\displaystyle (\tau \_{n})\_{n\geq 1}} such that {\displaystyle \tau \_{n}\to \infty } almost surely if {\displaystyle n\to \infty } and {\displaystyle |X\_{t}^{i}|\leq n} for {\displaystyle 1\leq i\leq d} and {\displaystyle t\leq \tau \_{n}}.
+
+
+### Statement
+
+Let {\displaystyle X=(X^{1},\dots ,X^{d})} be {\displaystyle d}-dimensional càdlàg (or RCLL) process that is locally bounded. Let {\displaystyle M(X)\neq \emptyset } be the space of equivalent local martingale measures for {\displaystyle X} and without loss of generality let us assume {\displaystyle P\in M(X)}.
+
+Let {\displaystyle V} be a positive stochastic process then {\displaystyle V} is a {\displaystyle Q}-supermartingale for each {\displaystyle Q\in M(X)} if and only if there exist an {\displaystyle X}-integrable and predictable process {\displaystyle H} and an adapted increasing process {\displaystyle C} such that
+
+
+#### Commentary
+
+The statement is still true under change of measure to an equivalent measure.
+

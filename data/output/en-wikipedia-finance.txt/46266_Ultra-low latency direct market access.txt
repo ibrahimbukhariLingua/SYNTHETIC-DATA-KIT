@@ -1,0 +1,14 @@
+Ultra-low latency direct market access
+
+
+# Ultra-low latency direct market access
+
+
+
+**Ultra-low latency direct market access** is a set of technologies used as part of modern trading strategies, where speed of execution is critical. Direct market access (DMA), often combined with algorithmic trading is a means of executing trading flow on a selected trading venue by bypassing the brokers' discretionary methods. As defined by the International Organization of Securities Commissions (IOSCO), DMA arrangement is a process by which traders transmit orders on their own, without any handling or re-entry by another person, directly into the market’s trade matching system for execution. Because of the lack of interaction with the broker, this is sometimes referred to as *no-touch*. DMA flow passes directly through the DMA gateway and onto the venue while passing through strict risk checking and position keeping algorithms. It is at this point that brokers may monitor the behaviour of their DMA clients.
+
+
+## Rationale
+
+For the purpose of best execution, first to market is an important feature for some buy-side strategies such as high-frequency trading. DMA therefore has to handle large volumes of orders in less than a second. Typically order volumes of over 5000 orders a second can be sent to the venue with order and execution report round trip times of 100 microseconds. Financial technology companies have such offerings. Other technologies firms offer independent products to measure such low latencies.
+

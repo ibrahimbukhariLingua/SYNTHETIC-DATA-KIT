@@ -1,0 +1,29 @@
+Trinomial tree
+
+
+# Trinomial tree
+
+
+
+The **trinomial tree** is a lattice-based computational model used in financial mathematics to price options. It was developed by Phelim Boyle in 1986. It is an extension of the binomial options pricing model, and is conceptually similar. It can also be shown that the approach is equivalent to the explicit finite difference method for option pricing. For fixed income and interest rate derivatives see Lattice model (finance)#Interest rate derivatives.
+
+
+## Formula
+
+Under the trinomial method, the underlying stock price is modeled as a recombining tree, where, at each node the price has three possible paths: an up, down and stable or middle path. These values are found by multiplying the value at the current node by the appropriate factor {\displaystyle u\,}, {\displaystyle d\,} or {\displaystyle m\,} where
+
+and the corresponding probabilities are:
+
+In the above formulae: {\displaystyle \Delta t\,} is the length of time per step in the tree and is simply time to maturity divided by the number of time steps; {\displaystyle r\,} is the risk-free interest rate over this maturity; {\displaystyle \sigma \,} is the corresponding volatility of the underlying; {\displaystyle q\,} is its corresponding dividend yield.
+
+As with the binomial model, these factors and probabilities are specified so as to ensure that the price of the underlying evolves as a martingale, while the moments – considering node spacing and probabilities – are matched to those of the log-normal distribution (and with increasing accuracy for smaller time-steps). Note that for {\displaystyle p\_{u}}, {\displaystyle p\_{d}}, and {\displaystyle p\_{m}} to be in the interval {\displaystyle (0,1)} the following condition on {\displaystyle \Delta t} has to be satisfied {\displaystyle \Delta t<2{\frac {\sigma ^{2}}{(r-q)^{2}}}}.
+
+Once the tree of prices has been calculated, the option price is found at each node largely as for the binomial model, by working backwards from the final nodes to the present node ({\displaystyle t\_{0}}). The difference being that the option value at each non-final node is determined based on the three – as opposed to *two* – later nodes and their corresponding probabilities.
+
+If the length of time-steps {\displaystyle \Delta t} is taken as an exponentially distributed random variable and interpreted as the waiting time between two movements of the stock price then the resulting stochastic process is a birth–death process. The resulting model is soluble and there exist analytic pricing and hedging formulae for various options.
+
+
+## Application
+
+The trinomial model is considered to produce more accurate results than the binomial model when fewer time steps are modelled, and is therefore used when computational speed or resources may be an issue. For vanilla options, as the number of steps increases, the results rapidly converge, and the binomial model is then preferred due to its simpler implementation. For exotic options the trinomial model (or adaptations) is sometimes more stable and accurate, regardless of step-size.
+

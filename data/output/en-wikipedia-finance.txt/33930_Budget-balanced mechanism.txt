@@ -1,0 +1,40 @@
+Budget-balanced mechanism
+
+
+# Budget-balanced mechanism
+
+
+
+| Part of a series on |
+| --- |
+| Auctions |
+| Types |
+| * All-pay + Chinese + Bidding fee + Dollar * Amsterdam * Anglo-Dutch * Barter double * Best/not best * Brazilian * Calcutta * Candle * Click-box bidding * Combinatorial * Common value * Deferred-acceptance * Discriminatory price * Double * Dutch * English * Forward * French * Generalized first-price * Generalized second-price * Japanese * Knapsack * Multi-attribute * Multiunit * No-reserve * Rank * Reverse * Scottish * Sealed first-price * Simultaneous ascending * Single-price * Traffic light * Uniform price * Unique bid * Value of revenues * Vickrey * Vickrey–Clarke–Groves * Walrasian * Yankee |
+| Bidding |
+| * Shading * Calor licitantis * Cancellation hunt * Jump * Rigging * Sniping * Suicide * Tacit collusion |
+| Contexts |
+| * Algorithms * Autos * Art * Charity * Children * Players * Domain names * Flowers * Loans * Scam * Slaves * Spectrum * Stamps * Virginity * Wine * Wives |
+| Theory |
+| * Digital goods * Price of anarchy * Revenue equivalence * Winner's curse |
+| Online |
+| * Ebidding * Private electronic market * Software |
+| * v * t * e |
+
+In mechanism design, a branch of economics, a **weakly-budget-balanced (WBB) mechanism** is a mechanism in which the total payment made by the participants is at least 0. This means that the mechanism operator does not incur a deficit, i.e., does not have to subsidize the market. Weak budget balance is considered a necessary requirement for the economic feasibility of a mechanism. A **strongly-budget-balanced (SBB) mechanism** is a mechanism in which the total payment made by the participants is *exactly* 0. This means that all payments are made among the participants - the mechanism has neither a deficit nor a surplus. The term **budget-balanced mechanism** is sometimes used as a shorthand for WBB, and sometimes as a shorthand for SBB.
+
+
+## Weak budget balance
+
+A simple example of a WBB mechanism is the Vickrey auction, in which the operator wants to sell an object to one of *n* potential buyers. Each potential buyer bids a value, the highest bidder wins an object and pays the second-highest bid. As all bids are positive, the total payment is trivially positive too.
+
+As an example of a non-WBB mechanism, consider its extension to a bilateral trade setting. Here, there is a buyer and a seller; the buyer has a value of *b* and the seller has a cost of *s*. Trade should occur if and only if *b* > *s*. The only truthful mechanism that implements this solution must charge a trading buyer the cost *s* and pay a trading seller the value *b*; but since *b* > *s*, this mechanism runs a deficit. In fact, the Myerson–Satterthwaite theorem says that *every* Pareto-efficient truthful mechanism must incur a deficit.
+
+McAfee developed a solution to this problem for a large market (with many potential buyers and sellers): McAfee's mechanism is WBB, truthful and almost Pareto-efficient - it performs all efficient deals except at most one. McAfee's mechanism has been extended to various settings, while keeping its WBB property. See double auction for more details.
+
+
+## Strong budget balance
+
+In a strongly-budget-balanced (SBB) mechanism, all payments are made between the participants themselves. An advantage of SBB is that all the gain from trade remains in the market; thus, the long-term welfare of the traders is larger and their tendency to participate may be higher.
+
+McAfee's double-auction mechanism is WBB but not SBB - it may have a surplus, and this surplus may account for almost all the gain from trade. There is a simple SBB mechanism for bilateral trading: trade occurs iff *b* > *s*, and in this case the buyer pays (*b*+*s*)/2 to the seller. Since the payment goes directly from the buyer to the seller, the mechanism is SBB; however, it is not truthful, since the buyer can gain by bidding *b'* < *b* and the seller can gain by bidding *s'* > *s*. Recently, some truthful SBB mechanisms for double auction have been developed. Some of them have been generalized to multi-sided markets.
+

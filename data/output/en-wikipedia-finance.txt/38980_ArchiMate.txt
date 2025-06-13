@@ -1,0 +1,191 @@
+ArchiMate
+
+
+# ArchiMate
+
+
+
+**ArchiMate** (/ˈɑːrkɪmeɪt/ AR-ki-mayt) is an open and independent enterprise architecture modeling language to support the description, analysis and visualization of architecture within and across business domains in an unambiguous way.
+
+ArchiMate is a technical standard from The Open Group and is based on concepts from the now superseded IEEE 1471 standard. It is supported by various tool vendors and consulting firms. ArchiMate is also a registered trademark of The Open Group.
+The Open Group has a certification program for ArchiMate users, software tools and courses.
+
+ArchiMate distinguishes itself from other languages such as Unified Modeling Language (UML) and Business Process Modeling and Notation (BPMN) by its enterprise modelling scope.
+
+Also, UML and BPMN are meant for a specific use and they are quite heavy – containing about 150 (UML) and 250 (BPMN) modeling concepts whereas ArchiMate works with just about 50 (in version 2.0). The goal of ArchiMate is to be ”as small as possible”, not to cover every edge scenario imaginable. To be easy to learn and apply, ArchiMate was intentionally restricted “to the concepts that suffice for modeling the proverbial 80% of practical cases".
+
+
+## Overview
+
+ArchiMate offers a common language for describing the construction and operation of business processes, organizational structures, information flows, IT systems, and technical infrastructure. This insight helps the different stakeholders to design, assess, and communicate the consequences of decisions and changes within and between these business domains.
+
+The main concepts and relationships of the ArchiMate language can be seen as a framework, the so-called Archimate Framework: It divides the enterprise architecture into a business, application and technology layer. In each layer, three aspects are considered: active elements, an internal structure and elements that define use or communicate information.
+
+One of the objectives of the ArchiMate language is to define the relationships between concepts in different architecture domains. The concepts of this language therefore hold the middle between the detailed concepts, which are used for modeling individual domains (for example, the Unified Modeling Language (UML) for modeling software products), and Business Process Model and Notation (BPMN), which is used for business process modeling.
+
+
+## History
+
+ArchiMate is partly based on the now superseded IEEE 1471 standard. It was developed in the Netherlands by a project team from the Telematica Instituut in cooperation with several Dutch partners from government, industry and academia. Among the partners were Ordinaⁿˡ, Radboud Universiteit Nijmegen, the Leiden Institute for Advanced Computer Science (LIACS) and the Centrum Wiskunde & Informatica (CWI). Later, tests were performed in organizations such as ABN AMRO, the Dutch Tax and Customs Administration and the ABP.
+
+The development process lasted from July 2002 to December 2004, and took about 35 person years and approximately 4 million euros. The development was funded by the Dutch government (Dutch Tax and Customs Administration), and business partners, including ABN AMRO and the ABP Pension Fund.
+
+In 2008 the ownership and stewardship of ArchiMate was transferred to The Open Group. It is now managed by the
+ArchiMate Forum within The Open Group.
+In February 2009 The Open Group published the ArchiMate 1.0 standard as a formal technical standard. In January 2012 the ArchiMate 2.0 standard, and in 2013 the ArchiMate 2.1 standard was released.
+
+In June 2016, the Open Group released version 3.0 of the ArchiMate Specification. An update to Archimate 3.0.1 came out in August 2017. Archimate 3.1 was published 5 November 2019. The latest version of the ArchiMate Specification is version 3.2 released October 2022.
+
+Version 3.0 adds enhanced support for capability-oriented strategic modelling, new entities representing physical resources (for modelling the ingredients, equipment and transport resources used in the physical world) and a generic metamodel showing the entity types and the relationships between them.
+
+
+## ArchiMate framework
+
+
+### Core framework
+
+The main concepts and elements of the ArchiMate language are being presented as ArchiMate core framework. It consists of three layers and three aspects. This creates a matrix of combinations. Every layer has its passive structure, behavior and active structure aspects.
+
+
+#### Layers
+
+ArchiMate has a layered and service-oriented look on architectural models. The higher layers make use of services that are provided by the lower layers. Although, at an abstract level, the concepts that are used within each layer are similar, we define more concrete concepts that are specific for a certain layer. In this context, we distinguish three main layers:
+
+* The *business layer* is about business processes, services, functions and events of business units. This layer "offers products and services to external customers, which are realized in the organization by business processes performed by business actors and roles".
+* The *application layer* is about software applications that "support the components in the business with application services".
+* The *technology layer* deals "with the hardware and communication infrastructure to support the application layer. This layer offers infrastructural services needed to run applications, realized by computer and communication hardware and system software".
+
+Each of these main layers can be further divided in sub-layers. For example, in the business layer, the primary business processes realising the products of a company may make use of a layer of secondary (supporting) business processes; in the application layer, the end-user applications may make use of generic services offered by supporting applications. On top of the business layer, a separate environment layer may be added, modelling the external customers that make use of the services of the organisation (although these may also be considered part of the business layer).
+
+In line with service orientation, the most important relation between layers is formed by use relations, which show how the higher layers make use of the services of lower layers. However, a second type of link is formed by realisation relations: elements in lower layers may realise comparable elements in higher layers; e.g., a ‘data object’ (application layer) may realise a ‘business object’ (business layer); or an ‘artifact’ (technology layer) may realise either a ‘data object’ or an ‘application component’ (application layer).
+
+
+#### Aspects
+
+* *Passive structure* is the set of entities on which actions are conducted. In the business layer the example would be information objects, in the application layer data objects and in the technology layer, they could include physical objects.
+* *Behavior* refers to the processes and functions performed by the actors. "*Structural elements are assigned to behavioral elements, to show who or what displays the behavior*".
+* *Active structure* is the set of entities that display some behavior, e.g. business actors, devices, or application components.
+
+### Full framework
+
+The Full ArchiMate framework is enriched by the *physical layer*, which was added to allow modeling of “physical equipment, materials, and distribution networks” and was not present in the previous version.
+
+The *implementation and migration layer* adds elements that allow architects to model a state of transition, to mark parts of the architecture that are temporary for the purpose, as the name says, of implementation and migration.
+
+*Strategy layer* adds three elements: resource, capability and course of action. These elements help to incorporate strategic dimension to the ArchiMate language by allowing it to depict the usage of resources and capabilities in order to achieve some strategic goals.
+
+Finally, there is a *motivation aspect* that allows different stakeholders to describe the motivation of specific actors or domains, which can be quite important when looking at one thing from several different angles. It adds several elements like stakeholder, value, driver, goal, meaning etc.
+
+
+## ArchiMate language
+
+The ArchiMate language is formed as a top-level and is hierarchical. On the top, there is a model. A model is a collection of concepts. A concept can be either an element or a relationship. An element can be either of behavior type, structure, motivation or a so-called *composite element* (which means that it does not fit just one aspect of the framework, but two or more).
+
+The functionality of all concepts without a dependency on a specific layer is described by the *generic metamodel*. This layer-independent description of concepts is useful when trying to understand the mechanics of the Archimate language.
+
+
+### Concepts
+
+
+#### Elements
+
+The generic elements are distributed into the same categories as the layers:
+
+* Active structure elements
+* Behavior elements
+* Passive structure elements
+* Motivation elements
+
+Active structure elements represent entities that are capable of performing behavior. Based on two levels of abstraction that ArchiMate provides, it is possible to distinguish between *internal active structure elements*, which stand for active elements within the system - *e. g.,* business actors - and *external active structure elements* which stand for elements that carry out the behavior outside the system - *e. g.,* interfaces.
+
+Behavior elements can be internal or external as well. An *internal behavior element* is one that stands for an activity carried out by an *active structure element* within the system. Archimate defines for instance *process* and *function* elements. *External behavior* is a service that the whole system provides to the environment.
+
+Passive structure elements are objects that can be used by behavior elements (and thus *active structure elements* can perform behavior on them). They usually stand for information objects in the business layer and data objects in the application layer, but they may also be used to represent physical objects.
+
+As described in the previous chapter, motivation elements are answering the question *Why?*, they are trying to give a context and explain the motives behind the architecture. They can be of an *active structure*, as a stakeholder and also of a *passive structure* - value, meaning, driver, etc.
+
+
+#### Relationships
+
+ArchiMate sets several types of relationships that can connect different sets of source and target concepts. The classification of relationships is following:
+
+* Structural relationships – create a static construction of concepts of the same or different types
+* Dependency relationships – define how elements can support other elements
+* Dynamic relationships – model behavioral dependencies
+* Other relationships
+
+### General structure of models within the different layers
+
+The general structure of models within the different layers is similar. The same types of concepts and relations are used, although their exact nature and granularity differ.
+
+First, it is necessary to distinguish the structural or static aspect and the behavioural or dynamic aspect. Behavioural concepts are assigned to structural concepts, to show who or what displays the behaviour. For example, role, interface and collaboration are assigned to business process, organisational service and business interaction, respectively.
+
+Second, there must be a distinction between an external view and an internal view on systems. When looking at the behavioral aspect, these views reflect the principles of service orientation. The service concept represents a unit of essential functionality that a system exposes to its environment. For the external users, only this external functionality, together with non-functional aspects such as the quality of service, costs etc., are relevant. Services are accessible through interfaces, which constitute the external view on the structural aspect.
+
+Although for the external users only the external view is relevant, the design of organisations or systems and their internal operations and management also requires knowledge about the internal realisation of the services and interfaces. For this realisation, it is necessary to make a distinction between behavior that is performed by an individual structural element (e.g., actor, role component, etc.), or collective behavior (interaction) that is performed by a collaboration of multiple structural elements.
+
+
+### Notation
+
+The ArchiMate language separates the concepts from their notation (contrary to the UML or BPMN). As there are different groups of stakeholders, they may need different notations. This might be confusing, but it is solved by the viewpoint mechanism.
+
+Although ArchiMate doesn't stress the only one notation, it comes with one and it aims to those "*used to existing technical modeling techniques such as ERD, UML, or BPMN, and therefore resembles them"*.
+
+
+#### Use of colors
+
+Formally, color has no meaning in ArchiMate, but many modelers use colors to distinguish between the different layers:
+
+* Yellow for the business layer
+* Blue for the application layer
+* Green for the technology layer
+
+The original ArchiMate description from 2004 used colors differently:
+
+* Blue for active elements
+* Yellow for behavioural elements
+* Green for passive elements
+
+Over the years, ArchiMate has moved from the second style as customary to the first. The older second style can also still be found. E.g. the *Mastering ArchiMate* book uses a style based on this original pattern.
+
+
+#### Letters
+
+As another way to distinguish to which layer an element belongs, according to the *full framework* layers, there can also be a capital letter in the left top corner of the element that stands for the specific layer (M for *motivation*, B for *business*, etc.)
+
+
+#### Element shape
+
+The shape of elements helps to distinguish aspects. Structural elements have square corners, behavioral elements come with round corners. Diagonal corners indicate a motivational element.
+
+
+## Viewpoints
+
+The latest version of ArchiMate introduces *views* and *viewpoints*. They allow stakeholders to define specific conditions like concepts, analysis techniques, models, and visualizations – a viewpoint, from which the model should be perceived.
+
+A view (or a view model) “*is defined as a part of an architecture description that addresses a set of related concerns and is tailored for specific stakeholders”*. In return, the stakeholders give their feedback which creates a bi-directional communication.
+
+Ultimately, this allows the stakeholders/architects to communicate their ideas and concerns easily with others. Also by reducing the “view” by setting the right conditions and intentionally limiting the perspective, it is easier solve specific problems and also, for stakeholders from specific areas it makes the model easier to read.
+
+
+## Benefits and pitfalls of ArchiMate
+
+
+### Benefits
+
+* Ensures consistency across all architecture models (business domains)
+* Allows the stakeholders to be involved in design, to assess all the requirements and it works well as a communication tool
+* Richness of the tool – core framework, motivation extension that enriches the core with reasons why and implementation and migration extension
+* It is regularly updated with quite broad base of certified users
+* 3.0.1 version supports IOT features
+* It provides user with viewpoints
+
+### Pitfalls
+
+Some of the concepts are more useful than others, and some of the motivational concepts have been found confusing and/or duplicative, according to finished research. Like other related content frameworks (e.g. the TOGAF content metamodel introduced in TOGAF 9), the framework covers a number of layers including both business and technology. The business layers can be harder to model because the concepts there are perhaps less tangible. However, this difficulty is not restricted just to ArchiMate, but some of the concepts at the business layer are also ill-defined
+
+
+## Exchange file format
+
+A standard model exchange file format has been developed for ArchiMate 2.1 and 3.0 models. This is an XML/XSD based file format, and is intended for exchange rather than a persistent file format.
+

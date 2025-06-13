@@ -1,0 +1,31 @@
+Indifference price
+
+
+# Indifference price
+
+
+
+In finance, **indifference pricing** is a method of pricing financial securities with regard to a utility function. The **indifference price** is also known as the **reservation price** or **private valuation**. In particular, the indifference price is the price at which an agent would have the same expected utility level by exercising a financial transaction as by not doing so (with optimal trading otherwise). Typically the indifference price is a pricing range (a bid–ask spread) for a specific agent; this price range is an example of good-deal bounds.
+
+
+## Mathematics
+
+Given a utility function {\displaystyle u} and a claim {\displaystyle C\_{T}} with known payoffs at some terminal time {\displaystyle T,} let the function {\displaystyle V:\mathbb {R} \times \mathbb {R} \to \mathbb {R} } be defined by
+
+where {\displaystyle x} is the initial endowment, {\displaystyle {\mathcal {A}}(x)} is the set of all self-financing portfolios at time {\displaystyle T} starting with endowment {\displaystyle x}, and {\displaystyle k} is the number of the claim to be purchased (or sold). Then the indifference bid price {\displaystyle v^{b}(k)} for {\displaystyle k} units of {\displaystyle C\_{T}} is the solution of {\displaystyle V(x-v^{b}(k),k)=V(x,0)} and the indifference ask price {\displaystyle v^{a}(k)} is the solution of {\displaystyle V(x+v^{a}(k),-k)=V(x,0)}. The indifference price bound is the range {\displaystyle \left[v^{b}(k),v^{a}(k)\right]}.
+
+
+## Example
+
+Consider a market with a risk free asset {\displaystyle B} with {\displaystyle B\_{0}=100} and {\displaystyle B\_{T}=110}, and a risky asset {\displaystyle S} with {\displaystyle S\_{0}=100} and {\displaystyle S\_{T}\in \{90,110,130\}} each with probability {\displaystyle 1/3}. Let your utility function be given by {\displaystyle u(x)=1-\exp(-x/10)}. To find either the bid or ask indifference price for a single European call option with strike 110, first calculate {\displaystyle V(x,0)}.
+
+Which is maximized when {\displaystyle \beta =0}, therefore {\displaystyle V(x,0)=1-\exp \left(-{\frac {1.10x}{10}}\right)}.
+
+Now to find the indifference bid price solve for {\displaystyle V(x-v^{b}(1),1)}
+
+Which is maximized when {\displaystyle \beta =-{\frac {1}{2}}}, therefore {\displaystyle V(x-v^{b}(1),1)=1-{\frac {1}{3}}\exp(-1.10x/10)\exp(1.10v^{b}(1)/10)\left[1+2\exp(-1)\right]}.
+
+Therefore {\displaystyle V(x,0)=V(x-v^{b}(1),1)} when {\displaystyle v^{b}(1)={\frac {10}{1.1}}\log \left({\frac {3}{1+2\exp(-1)}}\right)\approx 4.97}.
+
+Similarly solve for {\displaystyle v^{a}(1)} to find the indifference ask price.
+

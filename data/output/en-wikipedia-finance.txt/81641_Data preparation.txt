@@ -1,0 +1,55 @@
+Data preparation
+
+
+# Data preparation
+
+
+
+**Data preparation** is the act of manipulating (or pre-processing) raw data (which may come from disparate data sources) into a form that can be readily and accurately analysed, e.g. for business purposes.
+
+Data preparation is the first step in data analytics projects and can include many discrete tasks such as loading data or data ingestion, data fusion, data cleaning, data augmentation, and data delivery.
+
+The issues to be dealt with fall into two main categories:
+
+* systematic errors involving large numbers of data records, probably because they have come from different sources;
+* individual errors affecting small numbers of data records, probably due to errors in the original data entry.
+
+## Data specification
+
+The first step is to set out a full and detailed specification of the format of each data field and what the entries mean. This should take careful account of:
+
+* most importantly, consultation with the users of the data
+* any available specification of the system which will use the data to perform the analysis
+* a full understanding of the information available, and any gaps, in the source data.
+
+See also data definition specification.
+
+
+## Example
+
+Suppose there is a two-character alphabetic field that indicates geographical location. It is possible that in one data source a code "EE" means "Europe" and in another data source the same code means "Estonia". One would need to devise an unambiguous set of codes and amend the code in one set of records accordingly.
+
+Furthermore, the "geographical area" might refer to any of e.g. delivery address, billing address, address from which goods supplied, billing currency, or applicable national regulations. All these matters must be covered in the specification.
+
+There could be some records with "X" or "555" in that field. Clearly, this is invalid data as it does not conform to the specification. If there are only small numbers of such records, one would either correct them manually or if precision is not important, simply delete those records from the file. Another possibility would be to create a "not known" category.
+
+
+## Other examples of invalid data requiring correction
+
+* Telephone numbers are in the correct format and have the correct values for the territory indicated in the geographical location field. The country code may be present in some records and not in others: it should either be removed or inserted (based on the geographical location) depending on the data specification. Similarly, the formats of dates and units of measurement (weights, lengths) may be inconsistent.
+* In some cases missing data should be supplied from external sources (e.g. finding the ZIP/postal code of an address via an external data source)
+* Data should be consistent between different but related data records (e.g. the same individual might have different birthdates in different records or datasets).
+
+Where possible and economic, data should be verified against an authoritative source (e.g. business information is referenced against a D&B database to ensure accuracy).
+
+Given the variety of data sources (e.g. databases, business applications) that provide data and formats that data can arrive in, data preparation can be quite involved and complex. There are many tools and technologies that are used for data preparation. The cost of cleaning the data should always be balanced against the value of the improved accuracy.
+
+
+## Self-service data preparation
+
+Traditional tools and technologies, such as scripting languages or extract, transform, load (ETL) and data quality tools are not meant for business users. They typically require programming or IT skills that most business users don’t have.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+Several companies, such as Paxata, Trifacta, Alteryx, Talend, and Ataccama provide visual interfaces that display the data and allow the user to directly explore, structure, clean, augment, and update sample data provided by the user.
+
+Once the preparation work is complete, the underlying steps can be run on other datasets to perform the same operations. This reuse provides a significant productivity boost when compared to more traditional manual and hand-coding methods for data preparation.
+

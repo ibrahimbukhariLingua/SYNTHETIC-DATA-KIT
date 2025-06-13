@@ -1,0 +1,53 @@
+Lottery (decision theory)
+
+
+# Lottery (decision theory)
+
+
+
+In expected utility theory, a **lottery** is a discrete distribution of probability on a set of *states of nature*. The elements of a lottery correspond to the probabilities that each of the states of nature will occur, (e.g. Rain: 0.70, No Rain: 0.30). Much of the theoretical analysis of choice under uncertainty involves characterizing the available choices in terms of lotteries.
+
+In economics, individuals are assumed to rank lotteries according to a rational system of preferences, although it is now accepted that people make irrational choices systematically. Behavioral economics studies what happens in markets in which some of the agents display human complications and limitations.
+
+
+## Choice under risk
+
+According to expected utility theory, someone chooses among lotteries by multiplying his subjective estimate of the probabilities of the possible outcomes by a utility attached to each outcome by his personal utility function. Thus, each lottery has an expected utility, a linear combination of the utilities of the outcomes in which weights are the subjective probabilities. It is also founded in the famous example, the St. Petersburg paradox: as Daniel Bernoulli mentioned, the utility function in the lottery could be dependent on the amount of money which he had before the lottery.
+
+For example, let there be three outcomes that might result from a sick person taking either novel drug A or B for his condition: "Cured", "Uncured", and "Dead". Each drug is a lottery. Suppose the probabilities for lottery A are (Cured: .90, Uncured: .00, Dead: .10), and for lottery B are (Cured: .50, Uncured: .50, Dead: .00).
+
+If the person had to choose between lotteries A and B, how would they do it? A theory of choice under risk starts by letting people have preferences on the set of lotteries over the three states of nature—not just A and B, but all other possible lotteries. If preferences over lotteries are complete and transitive, they are called rational. If people follow the axioms of expected utility theory, their preferences over lotteries will follow each lottery's ranking in terms of expected utility. Let the utility values for the sick person be:
+
+* Cured: 16 utils
+* Uncured: 12 utils
+* Dead: 0 utils
+
+In this case, the expected utility of Lottery A is 14.4 (= .90(16) + .10(12)) and the expected utility of Lottery B is 14 (= .50(16) + .50(12))ᶜˡᵃʳⁱᶠⁱᶜᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ, so the person would prefer Lottery A. Expected utility theory implies that the same utilities could be used to predict the person's behavior in all possible lotteries. If, for example, he had a choice between lottery A and a new lottery C consisting of (Cured: .80, Uncured: .15 Dead: .05), expected utility theory says he would choose C, because its expected utility is 14.6 (= .80(16) + .15(12) + .05(0)).
+
+The paradox argued by Maurice Allais complicates expected utility in the lottery.
+
+* Situation 1
+ + Option a: U(-$500)
+ + Option b: 0.5 U(-$1000) + 0.5 U($0)
+* Situation 2
+ + Option a: 0.1 U(-$500) + 0.9 U($0)
+ + Option b: 0.05 U(-$1000) + 0.95 U($0)
+
+Many people tend to make different decisions between situations. People prefer option 1a to 1b in situation 1, and 2b to 2a in situation 2. However two situations have the same structure, which causes a paradox:
+
+* Situation 1: U(-$500) > 0.5 U(-$1000) + 0.5 U($0)
+* Situation 2:
+ + 0.1 U(-$500) + 0.9 U($0) < 0.05 U(-$1000) + 0.95 U($0)
+ + 0.1 U(-$500) < 0.05 U(-$1000) + 0.05 U($0)
+ + U(-$500) < 0.5 U(-$1000) + 0.5 U($0)
+
+The possible explanation for the above is that it has a ‘certainty effect’, that the outcomes without probabilities (determined in advance) will make a larger effect on the utility functions and final decisions. In many cases, this focusing on the certainty may cause inconsistent decisions and preferences. Plus, people tend to find some clues from the format or context of the lotteries.
+
+It was additionally argued that how much people got trained about statistics could impact the decision making in the lottery. Throughout a series of experiments, he concluded that a person statistically trained will be more likely to have consistent and confident outcomes which could be a generalized form.
+
+The assumption about combining linearly the individual utilities and making the resulting number be the criterion to be maximized can be justified of the grounds of the independence axiom. Therefore, the validity of expected utility theory depends on the validity of the independence axiom. The preference relation {\displaystyle \succsim \!} satisfies independence if for any three simple lotteries {\displaystyle p}, {\displaystyle q}, {\displaystyle r}, and any number {\displaystyle \alpha \in (0,1)} it holds that
+
+{\displaystyle p\succsim \!q} if and only if {\displaystyle \alpha p+(1-\alpha )r\succsim \!\alpha q+(1-\alpha )r.}
+
+Indifference maps can be represented in the simplex.
+

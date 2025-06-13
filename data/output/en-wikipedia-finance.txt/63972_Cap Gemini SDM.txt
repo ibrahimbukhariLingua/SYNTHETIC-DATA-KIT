@@ -1,0 +1,104 @@
+Cap Gemini SDM
+
+
+# Cap Gemini SDM
+
+
+
+**Cap Gemini SDM**, or **SDM2** (System Development Methodology) is a software development method developed by the software company Pandata in the Netherlands in 1970. The method is a waterfall model divided in seven phases that have a clear start and end. Each phase delivers subproducts, called milestones. It was used extensively in the Netherlands for ICTᶜˡᵃʳⁱᶠⁱᶜᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ projects in the 1980s and 1990s. Pandata was purchased by the Capgemini group in the 1980s, and the last version of SDM to be published in English was SDM2 (6th edition) in 1991 by Cap Gemini Publishing BV. The method was regularly taught and distributed among Capgemini consultants and customers, until the waterfall method slowly went out of fashion in the wake of more iterative extreme programming methods such as Rapid application development, Rational Unified Process and Agile software development.
+
+
+## The Cap Gemini SDM Methodology
+
+In the early to mid-1970s, the various generic work steps of system development methodologies were replaced with work steps based on various structured analysis or structured design techniques. SDM, SDM2, SDM/70, and Spectrum evolved into system development methodologies that were based on the works of Steven Ward, Tom Demarco, Larry Constantine, Ken Orr, Ed Yourdon, Michael A. Jackson and others, as well as data modeling techniques developed by Thomas Bachmann and Peter Chen. SDM is a top-down model. Starting from the system as a whole, its description becomes more detailed as the design progresses. The method was marketed as a proprietary method that all company developers were required to use to ensure quality in customer projects. This method shows several similarities with the proprietary methods of CAP Gemini's most important competitors in 1990. A similar waterfall method that was later used against the company itself in court proceedings in 2002 was CMG:Commander.
+
+
+## History
+
+SDM was developed in 1970 by a company known as PANDATA, now part of Cap Gemini, which itself was created as a joint venture by three Dutch companies: AKZO, Nationale Nederlanden and Posterijen, Telegrafie en Telefonie (Nederland). The company was founded in order to develop the method and create training materials to propagate the method. It was successful, but was revised in 1987 to standardize and separate the method theory from the more technical aspects used to implement the method. Those aspects were bundled into the process modelling tool called "Software Development Workbench", that was later sold in 2000 to BWise, another Dutch company. This revised version of the method without the tool is commonly known as SDM2.
+
+
+### Main difference between SDM and SDM2
+
+SDM2 was a revised version of SDM that attempted to solve a basic problem that occurred often in SDM projects; the delivered system failed to meet the customer requirements. Though any number of specific reasons for this could arise, the basic waterfall method used in SDM was a recipe for this problem due to the relatively large amount of time spent by development teams between the Definition Study and the Implementation phases. It was during the design phases that the project often became out of sync with customer requirements.
+
+During the SDM functional design phase called BD (Basic Design), design aspects were documented (out of phase) in detail for the later technical design DD (Detailed Design). This caused a gray zone of responsibility to occur between the two phases; the functional crew responsible for the data flows and process flows in the BD were making decisions that the technical crew later needed to code, although their technical knowledge was not detailed enough to make those decisions. This obviously led to problems in collaboration between project teams during both the BD and DD phases. Because of the waterfall method of Go/No Go decisions at the end of each phase, the technical crew would have to make a formal Change request in order to make corrections in the detailed sections of the Basic Design. Such changes were often confusing for the customer, because these originated from the project team rather than directly from the customer requirements, *even after a change freeze was put in place*. Usually the customer was only allowed to produce requirements up to and including the functional design in the BD phase. After that, the customer had to wait patiently until acceptance testing in the Implementation phase.
+
+In SDM2, the term "Basic Design" was replaced by the term "Global Design" to indicate that this document was continuously updated and subject to change during both the BD and DD phases. Thus the "Basic design" is both global and detailed at the end of the project. In the global design, the principles of functionality and construction, as well as their relations, are documented. This is how the idea of iterative development got started; a functional design is by nature influenced by the technology platform chosen for implementation, and some basic design decisions will need to be revisited when early assumptions prove later to be wrong or costly to implement. This became the forerunner of the Rapid Application Development method, which caused these two phases to become cyclical and work in tandem.
+
+SDM2 only partially solved the problem of meeting customer requirements; modern software development methods go several steps further by insisting for example on incremental deliveries, or that the customer appoint key users of the delivered system to play a role in the project from start to finish.
+
+
+## The SDM method
+
+SDM is a method based on phases. Before every phase, an agreement needs to be reached detailing the activities for that phase. These documents are known as milestone documents. Several uses for these documents exist:
+
+* Traceability — Through applying deadlines to milestone documents, clients can keep track on whether a project is on schedule
+* Consolidation — By approving a milestone document, it gains a certain status. The client can not change any of the specifications later during development.
+* If necessary, the project can be aborted. This mostly happens during the start of development.
+
+## Phases
+
+The method uses 7 phases which are successively executed, like the waterfall model. The phases are:
+
+1. Information planning: Problem definition and initial plan
+2. Definition study: Requirements analysis and revised plan
+3. Basic Design: High level technical design and revised plan
+4. Detailed Design: Building the system (and revised plan)
+5. Realization: Testing and acceptance (and revised plan)
+6. Implementation: Installation, data conversion, and cut-over to production
+7. Operation and Support: Delivery to ICT support department
+
+Upon completion of a phase, it is decided whether to go on to the next phase or not; the terms 'Go' and 'No-Go' are used for this. The next phase will not start until a 'Go' is given, while if there is a 'No-Go', the project either stays in the current phase to be improved or is canceled completely.
+
+
+### Information planning
+
+In this phase, the problems that have to be solved by the project are defined. The current and desired situations are analysed, and goals for the project are decided upon. In this phase, it is important to consider the needs of all parties, such as future users and their management. Often, their expectations clash, causing problems later during development or during use of the system.
+
+
+### Definition study
+
+In this phase, a more in-depth study of the project is made. The organization is analysed to determine their needs and determine the impact of the system on the organization. The requirements for the system are discussed and decided upon. The feasibility of the project is determined. Aspects that can be considered to determine feasibility are:
+
+* Advisable — Are the resources (both time and knowledge) available to complete the project.
+* Significance — Does the current system need to be replaced?
+* Technique — Can the available equipment handle the requirements the system places on it?
+* Economics — Are the costs of developing the system lower than the profit made from using it?
+* Organization — Will the organization be able to use the new system?
+* Legal — Does the new system conflict with existing laws?
+
+### Basic Design
+
+In this phase, the design for the product is made. After the definition study has determined what the system needs to do, the design determines how this will be done. This often results in two documents: The functional design, or User interface design explaining what each part of the system does, and the high-level technical design, explaining how each part of the system is going to work. This phase combines the functional and technical design and only gives a broad design for the whole system. Often, the architecture of the system is described here.
+
+SDM2 split this step in two parts, one for the BD phase, and one for the DD phase, in order to create a Global Design document.
+
+
+### Detailed Design
+
+In this phase, the design for the product is described technically in the jargon needed for software developers (and later, the team responsible for support of the system in the O&S phase). After the basic design has been signed off, the technical detailed design determines how this will be developed with software. This often results in a library of source documentation: The functional design per function, and the technical design per function, explaining how each part of the system is going to work, and how they relate to each other.
+
+In SDM2, this phase elaborates on the Global Design by creating more detailed designs, or further refining existing detailed designs, to the point where they can be used to build the system itself.
+
+
+### Realization
+
+In this phase, the design is converted to a working system. The actual way this is done will depend on the system used. Where in older systems programmers often had to write all of the code, newer systems allow the programmers to convert the design into code directly, leaving less work to be done and a smaller chance for errors. At the same type, the system becomes more reliant on the design—if the design has been properly tested, the proper code will be generated, but if the design is not fully correct, the code will be incorrect without a programmer to look for such problems.
+
+
+### Implementation
+
+The implementation, or testing phase consists of two steps: a system test and an acceptance test.
+
+During the system test the development team—or a separate testing team—tests the system. Most of this will be focused on the technical aspects: does the system work as it should, or are there bugs still present? Bugs that are found in this phase will be fixed. At the ending of this phase, the program should work properly.
+
+During the acceptance test, the end-users will test the system. They will test to see if the program does what they want it to do. They will not test every possible scenario, but they will test to see if the program does what they want and expect it to do and that it works in an easy way. Bugs that are found in this phase will be reported to the development team so that they can fix these bugs.
+
+During this phase, the final version of the system is implemented by the organization: the hardware is set up, the software is installed, end user documentation is created and, end users trained to use the program, existing data is entered into the system.
+
+
+### Operation and Support
+
+Once the system has been implemented, it is used within the organization. During its lifetime, it needs to be kept running and possibly enhanced.
+

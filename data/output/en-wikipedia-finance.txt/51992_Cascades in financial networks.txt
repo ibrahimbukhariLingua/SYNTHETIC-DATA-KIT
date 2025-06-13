@@ -1,0 +1,76 @@
+Cascades in financial networks
+
+
+# Cascades in financial networks
+
+
+
+**Cascades in financial networks** are situations in which the failure of one financial institution causes a cascading failure in another member of the financial network. In an extreme this can cause failure of the whole network in what is known as systemic failure. It can be defined as the discontinuous value loss (e.g. default) of the organization caused by the discontinuous value loss of another organization in the network. There are three conditions required for a cascade, there are; a failure, contagion and interconnection.
+
+Diversification and integration in the financial network determine whether and how failures will spread. Using the data on cross-holdings of organizations and on the value of organizations, it is possible to construct the dependency matrix to simulate cascades in the financial network.
+
+
+## Diversification and integration
+
+Elliot, Golub and Jackson (2013) characterize the financial network by diversification and integration. Diversification means to which extent assets of the one organization are spread out among the other members of the network, given the fraction of the assets of the organization cross-held by other organizations is fixed. Integration refers to the fraction of the assets of the organization cross-held by other organizations given the number of the organizations cross-holding is fixed.
+
+Using random network, the authors show that high integration decreases the percentage of *first failures*; and as the network approaches complete integration the percentage of the first failures approaches zero. However, the integration increases the percentage of organizations that fail due to higher interconnection. In addition, up to some threshold, diversification does increase the percentage of discontinuous drops in value. Yet after the threshold level, the diversification decreases the percentage of failures: the authors say the following with respect to diversification: “it gets worse before it gets better”.
+
+Intuitively, the higher the threshold value for the discontinuous drop in the organization’s value the higher the percentage of failures is.
+
+The authors conclude that the financial network is most susceptible to cascades if it has medium diversification and medium integration.
+
+
+## Models
+
+
+### Without Failure Costs
+
+Eliot, Golub and Jackson (2013) provide an empirical method how to model cascades in financial networks. They assume that organizations in the network can cross hold assets of other organizations in the network. Also, they assume that players outside of the network can hold assets of the organizations in the network. They call the letter *outside shareholders.* Their model starts with the following assumptions (all notations are borrowed from Elliot, Golub and Jackson (2013)):
+
+* There are n organizations that form a set N=[1,...,n]
+* There are m "primitive" assets (e.g. factors of production)
+* Market price of an asset *k* is {\displaystyle p\_{k}}
+* {\displaystyle D\_{ik}} is a share of the asset *k* that an organization *i* holds
+* **D** is then n by m matrix
+* {\displaystyle C\_{ij}\geq \ 0} is a fraction of primitive assets of the organization *j* held by the organization *i*
+* {\displaystyle C\_{ii}=0}
+* **C** is a n by n matrix with zeros as diagonal elements
+* {\displaystyle F\_{ii}=1-\sum \_{j}C\_{ji}}
+* F is a n by n matrix whose diagonal element is :{\displaystyle F\_{ii}}
+
+The authors find the equity value of an organization using the works by Brioschi, Buzzachi and Colombo (1989) and Fedina, Hodder and Trianitis (1994):
+
+The equity value is defined as the value of primitive assets and the value of claims on the primitive assets in other organizations in the network.
+
+The counterpart of the equation above in terms of matrix algebra is given by
+
+The letter implies
+
+The market value is defined by
+
+Market value of *i* is the equity value of *i* less the claims of other organizations in the network on i.
+
+The letter implies
+
+where **A** is the dependence matrix.
+
+The element {\displaystyle A\_{ij}} represents the fraction of *j's* primitive assets that *i* holds directly and indirectly.
+
+
+### With Failure Costs
+
+The equity value and the market value equations are extended by introducing threshold value {\displaystyle t\_{i}}. If the value of the organization *i* goes below this value, then a discontinuous drop in value happens and the organization fails. The cap on failure costs is {\displaystyle k\_{i}}.
+
+Further, let {\displaystyle I} be an indicator function that is equal to 1 if the value of *i* is below the threshold and 0 if the value of *i* is above the threshold.
+
+Then the equity value becomes
+
+Using matrix algebra, the expression above is equivalent to
+
+where {\displaystyle b(v)} is a vector whose element {\displaystyle b\_{i}=k\_{i}I\_{i}}.
+
+The market value including failure costs is given then by
+
+The element {\displaystyle A\_{ij}} represents the fraction of failure costs of {\displaystyle j} that *i* incurs if *j* fails.
+

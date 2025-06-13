@@ -1,0 +1,25 @@
+Business object
+
+
+# Business object
+
+
+
+A **business object** is an entity within a multi-tiered software application that works in conjunction with the data access and business logic layers to transport data.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+Business objects separate state from behaviour because they are communicated across the tiers in a multi-tiered system, while the real work of the application is done in the business tier and does not move across the tiers.
+
+
+## Function
+
+Whereas a program may implement classes, which typically end in objects managing or executing behaviours, a business object usually does nothing itself but holds a set of instance variables or properties, also known as attributes, and associations with other business objects, weaving a map of objects representing the business relationships.
+
+A domain model where business objects do not have behaviour is called an anemic domain model.
+
+
+## Examples
+
+For example, a "Manager" would be a business object where its attributes can be "Name", "Second name", "Age", "Area", "Country" and it could hold a 1-n association with its employees (a collection of "Employee" instances).
+
+Another example would be a concept like "Process" having "Identifier", "Name", "Start date", "End date" and "Kind" attributes and holding an association with the "Employee" (the responsible) that started it.
+

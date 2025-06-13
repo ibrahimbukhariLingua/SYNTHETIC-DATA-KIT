@@ -9,18 +9,26 @@ import json
 from typing import List, Dict, Any
 
 def split_into_chunks(text: str, chunk_size: int = 4000, overlap: int = 200) -> List[str]:
-    """Split text into chunks with optional overlap"""
+    """Split text into chunks with optional overlap and numbered sentences"""
     paragraphs = text.split("\n\n")
     chunks = []
     current_chunk = ""
-    
+    # sentence_counter = 1
+
+    def number_sentences(chunk: str) -> str:
+        # Split into sentences using regex to preserve punctuation
+        sentences = re.split(r'(?<=[.!?])\s+', chunk.strip())
+        numbered = [f"[S{0 + i}] {s}" for i, s in enumerate(sentences, 1)]
+        return ' '.join(numbered)
+
     for para in paragraphs:
         if len(current_chunk) + len(para) > chunk_size and current_chunk:
-            chunks.append(current_chunk)
-            # Keep some overlap for context
-            sentences = current_chunk.split('. ')
+            numbered_chunk = number_sentences(current_chunk)
+            chunks.append(f"Chunk:\n\n{numbered_chunk}")
+            # Create overlap
+            sentences = re.split(r'(?<=[.!?])\s+', current_chunk.strip())
             if len(sentences) > 3:
-                current_chunk = '. '.join(sentences[-3:]) + "\n\n" + para
+                current_chunk = ' '.join(sentences[-3:]) + "\n\n" + para
             else:
                 current_chunk = para
         else:
@@ -28,10 +36,11 @@ def split_into_chunks(text: str, chunk_size: int = 4000, overlap: int = 200) -> 
                 current_chunk += "\n\n" + para
             else:
                 current_chunk = para
-    
+
     if current_chunk:
-        chunks.append(current_chunk)
-    
+        numbered_chunk = number_sentences(current_chunk)
+        chunks.append(f"Chunk:\n\n{numbered_chunk}")
+
     return chunks
 
 def extract_json_from_text(text: str) -> Dict[str, Any]:

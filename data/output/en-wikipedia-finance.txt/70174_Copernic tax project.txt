@@ -1,0 +1,22 @@
+Copernic tax project
+
+
+# Copernic tax project
+
+
+
+**Copernic** project is undergoing a major modernisation programme in France that will recast and upgrade the entire fiscal information system in the country. Copernic project is set to run over 10 years (2001–2009) by "Direction générale des Impôts" and "Direction générale de la Comptabilité publique". It covers 70 individual IT projects, employs over 600 personnel and has a budget of almost 1 billion euros.
+
+
+## Objective
+
+Its objective is to enable the French tax administration to offer new, citizen-centered services and to boost the efficiency of its internal processes. Copernic will provide a simplified unique fiscal account for all French taxpayers, both individuals and businesses. They will be provided with 24/7 online access to their fiscal account and will be able to trace and follow-up processed data. Ultimately, users will be able to check their fiscal account at any time and execute all fiscal transactions and declarations online, while the tax administration will be able to provide new services such as payment reminders and information alerts. In addition to the Internet, e-tax services will be delivered through a variety of channels, including call centers and traditional physical service. The
+Copernic program will also open the possibility of implementing a new income tax recovery system as of 2007.
+
+
+## Architecture
+
+Copernic wanted a service-oriented architecture (SOA) featuring complete control of IT systems, long-term sustainability and vendor independence. To cover all the fiscal information and its processing for 55 million citizens and 3 million enterprises, it decided to use free and open-source software.
+
+Copernic deployed 4000 Linux servers and application architecture is based upon Java EE. It has full FOSS system monitoring (Nagios, Multi Router Traffic Grapher (MRTG)) and software development platform (Eclipse). The presenter added, "FOSS is now our standard policy even for critical applications." They also needed a unique Enterprise JavaBean (EJB) reference implementation. After a tough competition between many candidates (Oracle Weblogic Server, IBM WebSphere, Oracle Database, JBoss application server), they finally chose an open source middleware, JBoss. This is due to its known reliability, modularity, security and more importantly its independence from traditional industry constraints.
+

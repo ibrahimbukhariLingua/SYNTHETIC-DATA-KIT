@@ -1,0 +1,160 @@
+Vanna–Volga pricing
+
+
+# Vanna–Volga pricing
+
+
+
+The **Vanna–Volga method** is a mathematical tool used in finance. It is a technique for pricing first-generation exotic options in foreign exchange market (FX) derivatives.
+
+
+## Description
+
+It consists of adjusting the Black–Scholes theoretical value (BSTV)
+by the cost of a portfolio which hedges three main risks
+associated to the volatility of the option: the Vega {\displaystyle {\mathcal {V}}}, the Vanna
+and the Volga.
+The Vanna is the sensitivity of the Vega with respect to a change in the spot FX rate:
+
+{\displaystyle {\textrm {Vanna}}={\frac {\partial {\mathcal {V}}}{\partial S}}}.
+
+Similarly, the Volga is the sensitivity
+of the Vega with respect to a change of the implied volatility
+{\displaystyle \sigma }:
+
+{\displaystyle {\textrm {Volga}}={\frac {\partial {\mathcal {V}}}{\partial \sigma }}}.
+
+If we consider a smile volatility term structure {\displaystyle \sigma (K)} with ATM strike {\displaystyle K\_{0}}, ATM volatility {\displaystyle \sigma \_{0}}, 25-Delta call/put volatilities {\displaystyle \sigma (K\_{c/p})}, and where {\displaystyle K\_{c/p}} are the 25-Delta
+call/put strikes (obtained by solving the equations {\displaystyle \Delta \_{call}(K\_{c},\sigma (K\_{c}))=1/4} and {\displaystyle \Delta \_{put}(K\_{p},\sigma (K\_{p}))=-1/4} where {\displaystyle \Delta \_{call/put}(K,\sigma )} denotes the
+Black–Scholes Delta sensitivity) then the hedging portfolio
+will be composed of the *at-the-money* (ATM), *risk-reversal* (RR) and *butterfly* (BF)
+strategies:
+
+{\displaystyle {\begin{aligned}{\textrm {ATM}}(K\_{0})&={\frac {1}{2}}\left({\textrm {Call}}(K\_{0},\sigma \_{0})+{\textrm {Put}}(K\_{0},\sigma \_{0})\right)\\{\textrm {RR}}(K\_{c},K\_{p})&={\textrm {Call}}(K\_{c},\sigma (K\_{c}))-{\textrm {Put}}(K\_{p},\sigma (K\_{p}))\\{\textrm {BF}}(K\_{c},K\_{p})&={\frac {1}{2}}\left({\textrm {Call}}(K\_{c},\sigma (K\_{c}))+{\textrm {Put}}(K\_{p},\sigma (K\_{p}))\right)-{\textrm {ATM}}(K\_{0})\end{aligned}}}
+
+with {\displaystyle {\textrm {Call}}(K,\sigma )} the Black–Scholes price of a call option (similarly for the put).
+
+The simplest formulation of the Vanna–Volga method suggests that the
+Vanna–Volga price {\displaystyle X^{VV}} of an exotic instrument {\displaystyle X} is
+given by
+
+{\displaystyle X^{\rm {VV}}=X^{BS}+\underbrace {\frac {{\textrm {X}}\_{vanna}}{{\textrm {RR}}\_{vanna}}} \_{w\_{RR}}{RR}\_{cost}+\underbrace {\frac {{\textrm {X}}\_{volga}}{{\textrm {BF}}\_{volga}}} \_{w\_{BF}}{BF}\_{cost}}
+
+where by {\displaystyle X^{BS}} denotes the Black–Scholes price of the
+exotic and the Greeks are calculated with ATM volatility and
+
+{\displaystyle {\begin{aligned}RR\_{cost}&=\left[{\textrm {Call}}(K\_{c},\sigma (K\_{c}))-{\textrm {Put}}(K\_{p},\sigma (K\_{p}))\right]-\left[{\textrm {Call}}(K\_{c},\sigma \_{0})-{\textrm {Put}}(K\_{p},\sigma \_{0})\right]\\BF\_{cost}&={\frac {1}{2}}\left[{\textrm {Call}}(K\_{c},\sigma (K\_{c}))+{\textrm {Put}}(K\_{p},\sigma (K\_{p}))\right]-{\frac {1}{2}}\left[{\textrm {Call}}(K\_{c},\sigma \_{0})+{\textrm {Put}}(K\_{p},\sigma \_{0})\right]\end{aligned}}}
+
+These quantities represent a *smile cost*, namely the
+difference between the price computed with/without including the
+smile effect.
+
+The rationale behind the above formulation of the Vanna-Volga price is that one can extract
+the *smile cost* of an exotic option by measuring the
+*smile cost* of a portfolio designed to hedge its Vanna and
+Volga risks. The reason why one chooses the strategies BF and RR
+to do this is because they are liquid FX instruments and they
+carry mainly Volga, and respectively Vanna risks. The weighting
+factors {\displaystyle w\_{RR}} and {\displaystyle w\_{BF}} represent
+respectively the amount of RR needed to replicate the option's
+Vanna, and the amount of BF needed to replicate the option's
+Volga. The above approach ignores the small (but non-zero)
+fraction of Volga carried by the RR and the small fraction of
+Vanna carried by the BF. It further neglects the cost of hedging
+the Vega risk. This has led to a more general formulation of the
+Vanna-Volga method in which one considers that within the Black–Scholes
+assumptions the exotic option's Vega, Vanna and Volga can be
+replicated by the weighted sum of three instruments:
+
+{\displaystyle X\_{i}=w\_{ATM}\,{ATM\_{i}}+w\_{RR}\,{RR\_{i}}+w\_{BF}\,{BF\_{i}}\,\,\,\,\,i{\text{=vega, vanna, volga}}}
+
+where the weightings are obtained by solving the system:
+{\displaystyle {\vec {x}}=\mathbb {A} {\vec {w}}}
+
+with
+
+{\displaystyle \mathbb {A} ={\begin{pmatrix}ATM\_{vega}&RR\_{vega}&BF\_{vega}\\ATM\_{vanna}&RR\_{vanna}&BF\_{vanna}\\ATM\_{volga}&RR\_{volga}&BF\_{volga}\end{pmatrix}}},
+{\displaystyle {\vec {w}}={\begin{pmatrix}w\_{ATM}\\w\_{RR}\\w\_{BF}\end{pmatrix}}},
+{\displaystyle {\vec {x}}={\begin{pmatrix}X\_{vega}\\X\_{vanna}\\X\_{volga}\end{pmatrix}}}
+
+Given this replication, the Vanna–Volga method adjusts the BS
+price of an exotic option by the *smile cost* of the above
+weighted sum (note that the ATM smile cost is zero by
+construction):
+
+{\displaystyle {\begin{aligned}X^{\rm {VV}}&=X^{BS}+w\_{RR}({RR}^{mkt}-{RR}^{BS})+w\_{BF}({BF}^{mkt}-{BF}^{BS})\\&=X^{BS}+{\vec {x}}^{T}(\mathbb {A} ^{T})^{-1}{\vec {I}}\\&=X^{BS}+X\_{vega}\,\Omega \_{vega}+X\_{vanna}\,\Omega \_{vanna}+X\_{volga}\,\Omega \_{volga}\\\end{aligned}}}
+
+where
+
+{\displaystyle {\vec {I}}={\begin{pmatrix}0\\{RR}^{mkt}-{RR}^{BS}\\{BF}^{mkt}-{BF}^{BS}\end{pmatrix}}}
+
+and
+
+{\displaystyle {\begin{pmatrix}\Omega \_{vega}\\\Omega \_{vanna}\\\Omega \_{volga}\end{pmatrix}}=(\mathbb {A} ^{T})^{-1}{\vec {I}}}
+
+The quantities {\displaystyle \Omega \_{i}} can be interpreted as the
+market prices attached to a unit amount of Vega, Vanna and Volga,
+respectively. The resulting correction, however, typically turns
+out to be too large. Market practitioners thus modify
+{\displaystyle X^{VV}} to
+
+{\displaystyle {\begin{aligned}X^{\rm {VV}}&=X^{BS}+p\_{vanna}X\_{vanna}\Omega \_{vanna}+p\_{volga}X\_{volga}\Omega \_{volga}\end{aligned}}}
+
+The Vega contribution turns out to be
+several orders of magnitude smaller than the Vanna and Volga terms
+in all practical situations, hence one neglects it.
+
+The terms {\displaystyle p\_{vanna}} and {\displaystyle p\_{volga}} are put in by-hand and represent factors that ensure the correct behaviour of the price of an exotic option near a barrier:
+as the knock-out barrier level {\displaystyle B} of an option
+is gradually moved toward the spot level {\displaystyle S\_{0}}, the BSTV price of a
+knock-out option must be a monotonically decreasing function, converging
+to zero exactly at {\displaystyle B=S\_{0}}. Since the Vanna-Volga method is a
+simple rule-of-thumb and not a rigorous model, there is no
+guarantee that this will be a priori the case. The attenuation factors are of a different from for the Vanna or the Volga
+of an instrument. This is because for barrier values close to the spot they behave differently: the Vanna becomes large while,
+on the contrary, the Volga becomes small. Hence the
+attenuation factors take the form:
+
+{\displaystyle {\begin{aligned}p\_{\rm {vanna}}&=a\,\gamma \\p\_{\rm {volga}}&=b+c\gamma \end{aligned}}}
+
+where {\displaystyle \gamma \in [0,1]} represents some measure of the barrier(s)
+vicinity to the spot with the features
+
+{\displaystyle {\begin{aligned}\gamma =0\ \ &{for}\ \ S\_{0}\to B\\\gamma =1\ \ &{for}\ \ |S\_{0}-B|\gg 0\end{aligned}}}
+
+The coefficients {\displaystyle a,b,c} are found through calibration of the model to ensure that it reproduces the vanilla smile. Good candidates for {\displaystyle \gamma } that ensure the appropriate behaviour close to the barriers are the *survival probability* and the *expected first exit time*. Both of these quantities offer the desirable property that they vanish close to a barrier.
+
+
+## Survival probability
+
+The survival probability {\displaystyle p\_{surv}\in [0,1]} refers to the
+probability that the spot does not touch one or more barrier
+levels {\displaystyle \{B\_{i}\}}. For example, for a single barrier option we have
+
+{\displaystyle p\_{surv}=\mathbb {E} [1\_{S\_{t}<B,t\_{\textrm {tod}}<t<t\_{\textrm {mat}}}]=\mathrm {NT} (B)/\mathrm {DF} (t\_{\textrm {tod}},t\_{\textrm {mat}})}
+
+where {\displaystyle \mathrm {NT} (B)} is the value of a *no-touch* option and {\displaystyle \mathrm {DF} (t\_{\textrm {tod}},t\_{\textrm {mat}})} the discount factor between today and maturity. Similarly, for options with two barriers
+the survival probability is given through the undiscounted value
+of a double-no-touch option.
+
+
+## First-exit time
+
+The first exit time (FET) is the minimum between: (i) the time in
+the future when the spot is expected to exit a barrier zone before
+maturity, and (ii) maturity, if the spot has not hit any of the
+barrier levels up to maturity. That is, if we denote the FET by
+{\displaystyle u(S\_{t},t)} then {\displaystyle u(S\_{t},t)=}min{\displaystyle \{\phi ,T\}} where
+{\displaystyle \phi ={\textrm {inf}}\{\ell \in [0,T)\}} such that {\displaystyle S\_{t+\ell }>H} or
+{\displaystyle S\_{t+\ell }<L} where {\displaystyle L,H} are the 'low' vs 'high' barrier levels and
+{\displaystyle S\_{t}} the spot of today.
+
+The first-exit time is the solution of the following PDE
+
+{\displaystyle {\frac {\partial u(S,t)}{\partial t}}+{\frac {1}{2}}\sigma ^{2}S^{2}{\frac {\partial ^{2}u(S,t)}{\partial S^{2}}}+\mu S{\frac {\partial u(S,t)}{\partial S}}=0}
+
+This equation is solved backwards
+in time starting from the terminal condition {\displaystyle u(S,T)=T} where {\displaystyle T} is the time to maturity and
+boundary conditions {\displaystyle u(L,t')=u(H,t')=t'}. In case of a single
+barrier option we use the same PDE with either {\displaystyle H\gg S\_{0}} or {\displaystyle L\ll S\_{0}}. The parameter {\displaystyle \mu } represents the risk-neutral drift of the underlying stochastic process.
+

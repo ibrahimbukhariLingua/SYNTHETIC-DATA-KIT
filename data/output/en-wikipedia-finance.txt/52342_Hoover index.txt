@@ -1,0 +1,54 @@
+Hoover index
+
+
+# Hoover index
+
+
+
+The **Hoover index**, also known as the **Robin Hood index** or the **Schutz index**, is a measure of income inequality. It is equal to the percentage of the total population's income that would have to be redistributed to make all the incomes equal.
+
+i.e. The Hoover is the total amount (as a percentage of the national-income) by which people have less than their equal income-share.
+
+The Hoover Index can be calculated by the following subtraction: The percentage of the people getting less than their equal-share (i.e. less than the national mean income), minus their percentage of the national income.
+
+It can be graphically represented as the longest vertical distance between the Lorenz curve (which graphs cumulative income vs cumulative population (income-ordered population-percentile)and the 45 degree line representing perfect equality).
+
+It would be informative to express the Hoover in terms of its average cost to individuals who get less than their equal-share:
+
+If the Hoover is divided by the percentage of the population whose income is less than their equal-share (i.e. the mean income), that gives the average cost of that Hoover-value, per person whose income is less than their equal-share. ...that cost being expressed in terms of the national mean income.
+
+If, instead, the Hoover is divided by the percentage of the total national income received by the people getting less than their equal-share (i.e. less than the mean income), then that gives the percentage by which those people, as a group, would get more than they currently do, if income were equal.
+
+...in other words the cost, to them, of that Hoover value, expressed in terms of their actual current income.
+
+That latter cost can also be gotten by dividing, instead of subtracting, the two numbers that were subtracted to get the Hoover.
+
+...i.e. dividing the percentage of the population whose income is less than the mean by their percentage of the national income.
+
+...and then subtracting 1.
+
+The Hoover index is typically used in applications related to socio-economic class (SES) and health. It is conceptually one of the simplest inequality indices used in econometrics.
+
+A more frequently encountered inequality measure is the Gini coefficient which is based on the summation, over all income-ordered population-percentiles, of the cumulative income up to each percentile. That sum is divided by the maximum value that it could have (its value with complete equality), to express it as a percentage of its maximum-possible value. The result is subtracted from one, to get a measure of inequality.
+
+A report from the National Library of Medicine, of the National Institute of Health, described a statistical study that compared how the Robin Hood and the Gini are correlated with mortality:
+
+> Results: The Robin Hood index was positively correlated with total mortality adjusted for age (r = 0.54; P < 0.05). This association remained after adjustment for poverty (P < 0.007), where each percentage increase in the index was associated with' an increase in the total mortality of 21.68 deaths per 100,000. Effects of the index were also found for infant mortality (P = 0.013); coronary heart disease (P = 0.004); malignant neoplasms (P = 0.023); and homicide (P < 0.001). Strong associations were also found between the index and causes of death amenable to medical intervention. The Gini coefficient showed very little correlation with any of the causes of death.
+
+The Gini, like the Theil (below), is an impartial measure of inequality over the entire population. That can be of interest and use, but the Robin Hood differs, as a not-impartial examination of the total amount by which members of the population get less than their equal-share.
+
+
+## Computation
+
+Let {\displaystyle x\_{i}} be the income of the {\displaystyle i}-th person and {\displaystyle {\bar {x}}} be the mean income. Then the Hoover index {\displaystyle H} is:
+
+{\displaystyle H={\frac {1}{2}}{\frac {\sum \_{i}|x\_{i}-{\bar {x}}|}{\sum \_{i}x\_{i}}}.}
+
+This value can also be computed using quantiles. For the formula, a notation is used, where the amount {\displaystyle N} of quantiles only appears as upper border of summations. Thus, inequities can be computed for quantiles with different widths {\displaystyle A}. For example, {\displaystyle E\_{i}} could be the income in the quantile #i and {\displaystyle A\_{i}} could be the amount (absolute or relative) of earners in the quantile #i. {\displaystyle E\_{\text{total}}} then would be the sum of incomes of all {\displaystyle N} quantiles and {\displaystyle A\_{\text{total}}} would be the sum of the income earners in all {\displaystyle N} quantiles.
+
+Computation of the Robin Hood index {\displaystyle H}:
+
+For comparison, here also the computation of the symmetrized Theil index {\displaystyle T\_{s}} is given:
+
+Both formulas can be used in spreadsheet computations.
+

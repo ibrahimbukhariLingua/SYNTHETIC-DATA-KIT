@@ -1,0 +1,58 @@
+Fact table
+
+
+# Fact table
+
+
+
+In data warehousing, a **fact table** consists of the measurements, metrics or facts of a business process. It is located at the center of a star schema or a snowflake schema surrounded by dimension tables. Where multiple fact tables are used, these are arranged as a fact constellation schema. A fact table typically has two types of columns: those that contain facts and those that are a foreign key to dimension tables. The primary key of a fact table is usually a composite key that is made up of all of its foreign keys. Fact tables contain the content of the data warehouse and store different types of measures like additive, non-additive, and semi-additive measures.
+
+Fact tables provide the (usually) additive values that act as independent variables by which dimensional attributes are analyzed. Fact tables are often defined by their grain. The grain of a fact table represents the most atomic level by which the facts may be defined. The grain of a sales fact table might be stated as "sales volume by day by product by store". Each record in this fact table is therefore uniquely defined by a day, product, and store. Other dimensions might be members of this fact table (such as location/region) but these add nothing to the uniqueness of the fact records. These "affiliate dimensions" allow for additional slices of the independent facts but generally provide insights at a higher level of aggregation (a region contains many stores).
+
+
+## Example
+
+If the business process is sales, then the corresponding fact table will typically contain columns representing both raw facts and aggregations in rows such as:
+
+* *$12,000*, being "sales for New York store for 15-Jan-2005".
+* *$34,000*, being "sales for Los Angeles store for 15-Jan-2005"
+* *$22,000*, being "sales for New York store for 16-Jan-2005"
+* *$21,000*, being "average daily sales for Los Angeles Store for Jan-2005"
+* *$65,000*, being "average daily sales for Los Angeles Store for Feb-2005"
+* *$33,000*, being "average daily sales for Los Angeles Store for year 2005"
+
+*"Average daily sales"* is a measurement that is stored in the fact table. The fact table also contains foreign keys from the dimension tables, where time series (e.g. dates) and other dimensions (e.g. store location, salesperson, product) are stored.
+
+All foreign keys between fact and dimension tables should be surrogate keys, not reused keys from operational data.
+
+
+## Measure types
+
+* Additive - measures that can be added across any dimension.
+* Non-additive - measures that cannot be added across any dimension.
+* Semi-additive - measures that can be added across some dimensions.
+
+A fact table might contain either detail-level facts or facts that have been aggregated (fact tables that contain aggregated facts are often instead called summary tables).
+
+Special care must be taken when handling ratios and percentages. One good design rule is to never store percentages or ratios in fact tables but only calculate these in the data access tool. Thus only store the numerator and denominator in the fact table, which then can be aggregated and the aggregated stored values can then be used for calculating the ratio or percentage in the data access tool.
+
+In the real world, it is possible to have a fact table that contains no measures or facts. These tables are called "factless fact tables", or "junction tables".
+
+The *factless fact tables* may be used for modeling many-to-many relationships or for capturing timestamps of events.
+
+
+## Types of fact tables
+
+There are four fundamental measurement events, which characterize all fact tables.
+
+
+## Steps in designing a fact table
+
+* Identify a business process for analysis (e.g., sales).
+* Identify measures of facts (sales dollar), by asking questions like 'what number of X are relevant for the business process?', replacing the X with various options that make sense within the context of the business.
+* Identify dimensions for facts (product dimension, location dimension, time dimension, organization dimension), by asking questions that make sense within the context of the business, like 'analyze by X', where X is replaced with the subject to test.
+* List the columns that describe each dimension (region name, branch name, business unit name).
+* Determine the lowest level (granularity) of summary in a fact table (e.g. sales dollars).
+
+An alternative approach is the four-step design process described in Kimball: select the business process, declare the grain, identify the dimensions, and identify the facts.
+

@@ -1,0 +1,51 @@
+Namecoin
+
+
+# Namecoin
+
+
+
+**Namecoin** (Abbreviation: **NMC**; sign: **{\displaystyle \mathbb {N} }**) is a cryptocurrency originally forked from bitcoin software. It uses proof-of-work algorithm. Like bitcoin, it is limited to 21 million coins.
+
+Namecoin can store data within its own blockchain transaction database. The original proposal for Namecoin called for Namecoin to insert data into bitcoin's blockchain directly. Anticipating scaling difficulties with this approach, a shared proof-of-work system was proposed to secure new cryptocurrencies with different use cases.
+
+Namecoin's flagship use case is the censorship-resistant top level domain `.bit`, which is functionally similar to `.com` or `.net` domains but is independent of the Internet Corporation for Assigned Names and Numbers, the main governing body for domain names. In practice, the top level domain is used by a handful of functional websites. As of 2019, OpenNIC no longer supports the .bit domain.
+
+
+## Transactions
+
+A peer-to-peer network similar to handles Namecoin's transactions, balances and issuance through a based proof-of-work scheme (they are issued when a small enough hash value is found, at which point a block is created).
+
+
+### Records
+
+Each Namecoin record consists of a name and a value. Each name is actually a path, with the namespace preceding the name of the record. The key `d/example` signifies a record stored in the DNS namespace `d` with the name `example` and corresponds to the record for the `example.bit` website. The content of `d/example` is expected to conform to the DNS namespace specification. As of 2015ᵘᵖᵈᵃᵗᵉ, the fee for a record was 0.01 NMC and records expired after 36000 blocks (~200 days) unless updated or renewed.
+
+
+## Uses
+
+.bit is a top-level domain, created outside the commonly used Domain Name System, and is not sanctioned by ICANN. The .bit domain is served via Namecoin infrastructure, which acts as a decentralized domain name system.
+
+Proposed potential uses for Namecoin besides domain name registration include notary/timestamp systems.
+
+
+## History
+
+In September 2010, a discussion was startedᵇʸ ʷʰᵒᵐ? in the BitcoinTalk forum about a hypothetical system called BitDNS and generalizing bitcoin. Gavin Andresen and Satoshi Nakamoto joined the discussion in the BitcoinTalk forum and supported the idea of BitDNS, and a reward for implementing BitDNS was announced on the forum in December 2010.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+On block 19200 Namecoin activated the merged mining upgrade to allow mining of Bitcoin and Namecoin simultaneously, instead of having to choose between one or the other; this fixed the issue of miners jumping from one blockchain to another when the profitability becomes favorable in the former.
+
+Two years later, in June 2013, NameID was launched. NameID allows to associate profile information with identities on the Namecoin blockchain, and an OpenID provider to allow logging into existing websites with Namecoin identities. The main site itself is accompanied by an open protocol for password-less authentication with Namecoin identities, a corresponding free-software implementation and a supporting extension for Firefox.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+In October 2013, Michael Gronager, main developer of libcoin, found a security issue in the Namecoin protocol, which allowed modifying foreign names. It was successfully fixed in a short timeframe and was never exploited, except for bitcoin.bit as a proof-of-concept.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+Namecoin was also mentioned by ICANN in a public report as the most well-known example of distributing control and privacy in DNS.
+
+A 2015 study found that of the 120,000 domain names registered on Namecoin, only 28 were in use.
+
+In December 2018, a proposal was tabled on the OpenNIC mailing list to drop support for Namecoin .bit domains., citing Spamhaus' (and by extension other antivirus software) blocking of several of their servers owing to spread of malware from some .bit domains, as well as concerns about potential child pornography. The vote did not reach a consensus.
+
+In the same month, OpenNIC was advised to drop support for .bit namespace owing to security concerns of Namecoin and PRISM Break developers.
+
+In July 2019, OpenNIC again voted on dropping the .bit namespace, citing "numerous problems with support of NameCoin domains" and recent animosity between the two projects. The vote passed. Namecoin developer Jeremy Rand welcomed the move, thanking OpenNIC and describing it as the "right decision".
+

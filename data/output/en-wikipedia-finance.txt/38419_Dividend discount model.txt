@@ -1,0 +1,74 @@
+Dividend discount model
+
+
+# Dividend discount model
+
+
+
+In financial economics, the **dividend discount model** (**DDM**) is a method of valuing the price of a company's capital stock or business value based on the assertion that intrinsic value is determined by the sum of future cash flows from dividend payments to shareholders, discounted back to their present value. The constant-growth form of the DDM is sometimes referred to as the **Gordon growth model** (**GGM**), after Myron J. Gordon of the Massachusetts Institute of Technology, the University of Rochester, and the University of Toronto, who published it along with Eli Shapiro in 1956 and made reference to it in 1959. Their work borrowed heavily from the theoretical and mathematical ideas found in John Burr Williams 1938 book "The Theory of Investment Value," which put forth the dividend discount model 18 years before Gordon and Shapiro.
+
+When dividends are assumed to grow at a constant rate, the variables are: {\displaystyle P} is the current stock price. {\displaystyle g} is the constant growth rate in perpetuity expected for the dividends. {\displaystyle r} is the constant cost of equity capital for that company. {\displaystyle D\_{1}} is the value of dividends at the end of the first period.
+
+
+## Derivation of equation
+
+The model uses the fact that the current value of the dividend payment {\displaystyle D\_{0}(1+g)^{t}} at (discrete) time {\displaystyle t} is {\displaystyle {\frac {D\_{0}(1+g)^{t}}{{(1+r)}^{t}}}}, and so the current value of all the future dividend payments, which is the current price {\displaystyle P}, is the sum of the infinite series
+
+This summation can be rewritten as
+
+where
+
+The series in parentheses is the geometric series with common ratio {\displaystyle r'} so it sums to {\displaystyle {\frac {1}{1-r'}}} if {\displaystyle \mid r'\mid <1}. Thus,
+
+Substituting the value for {\displaystyle r'} leads to
+
+which is simplified by multiplying by {\displaystyle {\frac {1+r}{1+r}}}, so that
+
+
+## Income plus capital gains equals total return
+
+The DDM equation can also be understood to state simply that a stock's total return equals the sum of its income and capital gains.
+
+So the dividend yield {\displaystyle (D\_{1}/P\_{0})} plus the growth {\displaystyle (g)} equals cost of equity {\displaystyle (r)}.
+
+Consider the dividend growth rate in the DDM model as a proxy for the growth of earnings and by extension the stock price and capital gains. Consider the DDM's cost of equity capital as a proxy for the investor's required total return.
+
+
+## Growth cannot exceed cost of equity
+
+From the first equation, one might notice that {\displaystyle r-g} cannot be negative. When growth is expected to exceed the cost of equity in the short run, then usually a two-stage DDM is used:
+
+Therefore,
+
+where {\displaystyle g} denotes the short-run expected growth rate, {\displaystyle g\_{\infty }} denotes the long-run growth rate, and {\displaystyle N} is the period (number of years), over which the short-run growth rate is applied.
+
+Even when *g* is very close to *r*, P approaches infinity, so the model becomes meaningless.
+
+
+## Some properties of the model
+
+ **a)**
+When the growth *g* is zero, the dividend is capitalized.
+
+ **b)**
+This equation is also used to estimate the cost of capital by solving for {\displaystyle r}.
+
+ **c)**
+which is equivalent to the formula of the Gordon Growth Model *(or Yield-plus-growth Model)*:
+
+where “{\displaystyle P\_{0}}” stands for the present stock value, “{\displaystyle D\_{1}}” stands for expected dividend per share one year from the present time, “g” stands for rate of growth of dividends, and “k” represents the required return rate for the equity investor.
+
+
+## Problems with the constant-growth form of the model
+
+The following shortcomings have been noted;ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+See also Discounted cash flow § Shortcomings.
+
+1. The presumption of a steady and perpetual growth rate less than the cost of capital may not be reasonable.
+2. If the stock does not currently pay a dividend, like many growth stocks, more general versions of the discounted dividend model must be used to value the stock. One common technique is to assume that the Modigliani–Miller hypothesis of dividend irrelevance is true, and therefore replace the stock's dividend *D* with *E* earnings per share. However, this requires the use of earnings growth rather than dividend growth, which might be different. This approach is especially useful for computing the residual value of future periods.
+3. The stock price resulting from the Gordon model is sensitive to the growth rate {\displaystyle g} chosen; see Sustainable growth rate § From a financial perspective
+
+## Related methods
+
+The dividend discount model does not include projected cash flow from the sale of the stock at the end of the investment time horizon. A related approach, known as a discounted cash flow analysis, can be used to calculate the intrinsic value of a stock including both expected future dividends and the expected sale price at the end of the holding period. If the intrinsic value exceeds the stock’s current market price, the stock is an attractive investment.
+

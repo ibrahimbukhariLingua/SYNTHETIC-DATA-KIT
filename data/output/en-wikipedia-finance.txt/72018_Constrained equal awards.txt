@@ -1,0 +1,53 @@
+Constrained equal awards
+
+
+# Constrained equal awards
+
+
+
+**Constrained equal awards** **(CEA)**, also called **constrained equal gains**, is a division rule for solving bankruptcy problems. According to this rule, each claimant should receive an equal amount, except that no claimant should receive more than his/her claim. In the context of taxation, it is known as **leveling tax**.
+
+
+## Formal definition
+
+There is a certain amount of money to divide, denoted by *{\displaystyle E}* (=Estate or Endowment). There are *n* *claimants*. Each claimant *i* has a claim denoted by *{\displaystyle c\_{i}}*. Usually, {\displaystyle \sum \_{i=1}^{n}c\_{i}>E}, that is, the estate is insufficient to satisfy all the claims.
+
+The **CEA** rule says that each claimant *i* should receive {\displaystyle \min(c\_{i},r)}, where *r* is a constant chosen such that {\displaystyle \sum \_{i=1}^{n}\min(c\_{i},r)=E}. The rule can also be described algorithmically as follows:
+
+* Initially, all agents are active, and all agents get 0.
+* While there are remaining units of the estate:
+ + The next estate unit is divided equally among all active agents.
+ + Each agent whose total allocation equals its claim becomes inactive.
+
+## Examples
+
+Examples with two claimants:
+
+* {\displaystyle CEA(60,90;100)=(50,50)}; here {\displaystyle r=50}. In general, when all claims are at least {\displaystyle E/n}, each claimant receives exactly {\displaystyle E/n}.
+* {\displaystyle CEA(40,80;100)=(40,60)}; here {\displaystyle r=60}.
+
+Examples with three claimants:
+
+* {\displaystyle CEA(50,100,150;100)=(33.333,33.333,33.333)}; here {\displaystyle r=33.333}.
+* {\displaystyle CEA(50,100,150;200)=(50,75,75)}; here {\displaystyle r=75}.
+* {\displaystyle CEA(50,100,150;300)=(50,100,150)}; here {\displaystyle r=150}.
+* {\displaystyle CEA(100,200,300;300)=(100,100,100)}; here {\displaystyle r=100}.
+* {\displaystyle CEA(100,200,300;500)=(100,200,200)}; here {\displaystyle r=200}.
+
+## Usage
+
+In the Jewish law, if several creditors have claims to the same bankrupt debtor, all of which have the same precedence (e.g. all loans have the same date), then the debtor's assets are divided according to CEA.
+
+
+## Characterizations
+
+The CEA rule has several characterizations. It is the only rule satisfying the following sets of axioms:
+
+* Equal treatment of equals, invariance under truncation of claims, and composition up;
+* Conditional full compensation, and composition down;
+* Conditional full compensation, and claims-monotonicity.
+
+## Dual rule
+
+The **constrained equal losses** **(CEL)** rule is the *dual* of the CEA rule, that is: for each problem {\displaystyle (c,E)}, we have {\displaystyle CEL(c,E)=c-CEA(c,\sum c-E)}.
+

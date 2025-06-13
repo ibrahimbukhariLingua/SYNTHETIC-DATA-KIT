@@ -1,0 +1,25 @@
+First-order approach
+
+
+# First-order approach
+
+
+
+In microeconomics and contract theory, the **first-order approach** is a simplifying assumption used to solve models with a principal-agent problem. It suggests that, instead of following the usual assumption that the agent will take an action that is utility-maximizing, the modeller use a weaker constraint, and looks only for actions which satisfy the first-order conditions of the agent's problem. This makes the model mathematically more tractable (usually resulting in closed-form solutions), but it may not always give a valid solution to the agent's problem.
+
+
+## History
+
+Historically, the first-order approach was the main tool used to solve the first formal moral hazard models, such as those of Richard Zeckhauser, Michael Spence, and Joseph Stiglitz. Not long after these models were published, James Mirrlees was the first to point out that the approach was not generally valid, and sometimes imposed even stronger necessary conditions than those of the original problem. Following this realization, he and other economists such as Bengt Holmström, William P. Rogerson and Ian Jewitt gave both sufficient conditions for cases where the first-order approach gives a valid solution to the problem, and also different techniques that could be applied to solve general principal-agent models.
+
+
+## Mathematical formulation
+
+In mathematical terms, the first-order approach relaxes the more general incentive compatibility constraint in the principal's problem. The principal decides on an action {\displaystyle a} and proposes a contract {\displaystyle w} to the agent by solving the following program:
+
+where {\displaystyle U(w,a)} and {\displaystyle V(w,a)} are the principal's and the agent's expected utilities, respectively. Constraint {\displaystyle (1)} is usually called the participation constraint (where {\displaystyle {\bar {V}}} is the agent's reservation utility), and constraint {\displaystyle (2)} is the incentive compatibility constraint.
+
+Constraint {\displaystyle (2)} states that the action {\displaystyle a} that the principal wants the agent to take must be utility-maximizing for the agent – that is, it must be compatible with her incentives. The first-order approach relaxes this constraint with the first-order condition
+
+Equation {\displaystyle (3)} is oftentimes much simpler and easier to work with than constraint {\displaystyle (2)}, which justifies the attractiveness of the first-order approach. Nonetheless, it is only a necessary condition, and not equivalent to the more general incentive compatibility constraint.
+

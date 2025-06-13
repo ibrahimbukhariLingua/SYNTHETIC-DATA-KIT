@@ -1,0 +1,50 @@
+Merton's portfolio problem
+
+
+# Merton's portfolio problem
+
+
+
+**Merton's portfolio problem** is a problem in continuous-time finance and in particular intertemporal portfolio choice. An investor must choose how much to consume and must allocate their wealth between stocks and a risk-free asset so as to maximize expected utility. The problem was formulated and solved by Robert C. Merton in 1969 both for finite lifetimes and for the infinite case. Research has continued to extend and generalize the model to include factors like transaction costs and bankruptcy.
+
+
+## Problem statement
+
+The investor lives from time 0 to time *T*; their wealth at time *T* is denoted *W*T. He starts with a known initial wealth *W*₀ (which may include the present value of wage income). At time *t* he must choose what amount of his wealth to consume, *c*ₜ, and what fraction of wealth to invest in a stock portfolio, *π*ₜ (the remaining fraction 1 − *π*ₜ being invested in the risk-free asset).
+
+The objective is
+
+where *E* is the expectation operator, *u* is a known utility function (which applies both to consumption and to the terminal wealth, or bequest, *W*T), *ε* parameterizes the desired level of bequest, *ρ* is the subjective discount rate, and {\displaystyle \gamma } is a constant which expresses the investor's risk aversion: the higher the gamma, the more reluctance to own stocks.
+
+The wealth evolves according to the stochastic differential equation
+
+where *r* is the risk-free rate, (*μ*, *σ*) are the expected return and volatility of the stock market and *dB*ₜ is the increment of the Wiener process, i.e. the stochastic term of the SDE.
+
+The utility function is of the constant relative risk aversion (CRRA) form:
+
+Consumption cannot be negative: *c*ₜ ≥ 0, while *π*ₜ is unrestricted (that is borrowing or shorting stocks is allowed).
+
+Investment opportunities are assumed constant, that is *r*, *μ*, *σ* are known and constant, in this (1969) version of the model, although Merton allowed them to change in his intertemporal CAPM (1973).
+
+
+## Solution
+
+Somewhat surprisingly for an optimal control problem, a closed-form solution exists. The optimal consumption and stock allocation depend on wealth and time as follows:⁴⁰¹
+
+This expression is commonly referred to as Merton's fraction. Because *W* and *t* do not appear on the right-hand side; a constant fraction of wealth is invested in stocks, no matter what the age or prosperity of the investor.
+
+where {\displaystyle 0\leq \epsilon \ll 1} and
+
+
+## Extensions
+
+Many variations of the problem have been explored, but most do not lead to a simple closed-form solution.
+
+* Flexible retirement age can be taken into account.
+* A utility function other than CRRA can be used.
+* Transaction costs can be introduced.
+ + For *proportional transaction costs* the problem was solved by Davis and Norman in 1990. It is one of the few cases of stochastic singular control where the solution is known. For a graphical representation, the amount invested in each of the two assets can be plotted on the *x*- and *y*-axes; three diagonal lines through the origin can be drawn: the upper boundary, the Merton line and the lower boundary. The **Merton line** represents portfolios having the stock/bond proportion derived by Merton in the absence of transaction costs. As long as the point which represents the current portfolio is near the Merton line, i.e. between the upper and the lower boundary, no action needs to be taken. When the portfolio crosses above the upper or below the lower boundary, one should rebalance the portfolio to bring it back to that boundary. In 1994 Shreve and Soner provided an analysis of the problem via the Hamilton–Jacobi–Bellman equation and its viscosity solutions.
+ + When there are *fixed transaction costs* the problem was addressed by Eastman and Hastings in 1988. A numerical solution method was provided by Schroder in 1995.
+ + Morton and Pliska considered trading costs that are proportional to the wealth of the investor for logarithmic utility. Although this cost structure seems unrepresentative of real life transaction costs, it can be used to find approximate solutions in cases with additional assets, for example individual stocks, where it becomes difficult or intractable to give exact solutions for the problem.
+* The assumption of constant investment opportunities can be relaxed. This requires a model for how {\displaystyle r,\mu ,\sigma } change over time. An interest rate model could be added and would lead to a portfolio containing bonds of different maturities. Some authors have added a stochastic volatility model of stock market returns.
+* Bankruptcy can be incorporated. This problem was solved by Karatzas, Lehoczky, Sethi and Shreve in 1986. Many models incorporating bankruptcy are collected in Sethi (1997).

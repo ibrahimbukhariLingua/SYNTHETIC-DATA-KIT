@@ -1,0 +1,103 @@
+Widevine
+
+
+# Widevine
+
+
+
+**Widevine** is a proprietary digital rights management (DRM) system that is included in most major web browsers and in the operating systems Android and iOS. It is used by streaming services such as Netflix, Amazon Prime, Hulu etc., to allow authorized users to view media while preventing them from creating unauthorized copies.
+
+Widevine was originally developed in 1999 by Internet Direct Media, who later rebranded as Widevine Technologies. Following several rounds of funding, the company was acquired by Google in 2010 for an undisclosed amount.
+
+
+## History
+
+
+### Origins (1998–2006)
+
+Widevine was created by Seattle-based Internet Direct Media in 1999 as Widevine Cypher. The company, founded by executive Brian Baker and cryptography researcher Jeremy Horwitz, changed its name to Widevine Technologies.
+
+In February 2001, Widevine Technologies released Widevine Cypher Enterprise; at the time, techniques such as screen recording and network request monitoring were common. Widevine Cypher used DES-X encryption to prevent these techniques. Widevine Technologies partnered with Bellevue-based streaming company Midstream Technologies in April. Baker returned to the company in 2001, leading it through a restructuring process; the process involved recapitalizing the company and firing many of its employees.
+
+In June 2003, Widevine Technologies secured US$7.8 million in funding from venture capital firms Constellation Ventures and Pacesetter Capital. That same year, Widevine Technologies partnered with Taiwanese telecommunications company Chunghwa Telecom in an effort to secure their video-on-demand service. Widevine Technologies would receive further funding in 2004 from Constellation Ventures and Pacesetter Capital, along with Phoenix Capital Partners, in a funding round led by VantagePoint Venture Partners, netting the company $13 million.
+
+Widevine Technologies branched out into digital watermarking in 2005, partnering with content processing company TVN Entertainment (now Vubiquity) for its Mensor system. Widevine Mensor inserts a 64-bit payload into the signal, a computationally inexpensive operation.
+
+
+### Growth (2006–2010)
+
+In April 2006, Constellation Ventures, Pacesetter Capital, Phoenix Capital Partners, and VantagePoint Venture Partners joined digital communications company Cisco Systems and Canadian telecommunications company Telus to invest $16 million into Widevine Technologies. Cisco's involvement in the investment followed its acquisition of set-top box manufacturer Scientific Atlanta for $7 billion. In a six-year agreement, Widevine was awarded a contract with Telus to use its technology in Telus's platforms.
+
+On August 3, 2007, Widevine Technologies filed a patent infringement lawsuit against content security company Verimatrix. The two companies reached a settlement in March 2010.
+
+Vendors utilizing Widevine steadily increased up until 2010. In August 2008, CinemaNow used Widevine to expand its reach to multiple devices, including the Nintendo Wii, disc players from LG and Samsung, and the iPhone and iPod. To implement DRM into Microsoft Silverlight for browsers not using Microsoft Windows, Microsoft worked with Widevine Technologies. Widevine was also implemented into several streaming services using Adobe Flash, including content from Sony and Warner Bros. distributed in the virtual social network Gaia Online.
+
+In December 2009, Widevine received an additional $15 million in funding from telecommunications company Liberty Global and Samsung Ventures, the venture capital subsidiary of Samsung. Samsung would expand its use of Widevine in June 2010. LoveFilm signed a deal with Widevine in July 2010.
+
+
+### Acquisition by Google (2010–present)
+
+On December 3, 2010, Google announced that it had acquired Widevine for an undisclosed amount. The acquisition occurred on the same day Viacom filed an appeal in *Viacom v. YouTube*, a case regarding Google's role in users uploading content owned by Viacom onto YouTube. A CNN report in February 2011 revealed that Google had paid $150 million for Widevine, despite an internal valuation of the company being between $30 million and $40 million, making it the company's ninth largest acquisition until that point.
+
+
+## Architecture
+
+Widevine is divided into three security levels. The security level used is dependent on the usage of a trusted execution environment (TEE) in the client device. For example, ARM Cortex-A processors implement TrustZone technology, allowing cryptography and video processing to occur entirely within the TEE. In Widevine L1, media decryption and processing occurs entirely in a TEE, and content is available in its original resolution. In Widevine L2, media decryption and processing occurs in software or dedicated video hardware, despite the presence of a TEE, and content is available in a fixed resolution. In Widevine L3, media decryption and processing occurs in software and no TEE is present, and content is available in a fixed resolution.
+
+In Android, Widevine L1 can be implemented into Stagefright, Android's media playback engine. This is implemented in Qualcomm chips, where an OpenMAX (OMX) component communicates with the video driver at the kernel level. Multimedia memory is carved out through the memory management unit driver for ION, a memory manager introduced in Android 4.0 to address the various memory management interfaces across Android. The input/output buffer is then allocated, and the content is decrypted and stored to a secured input buffer in TrustZone.
+
+
+### Input → output overview
+
+Widevine uses multiple standards and specifications, including MPEG Common Encryption (CENC), Encrypted Media Extensions (EME), Media Source Extensions (MSE), and Dynamic Adaptive Streaming over HTTP (DASH). In addition, Widevine supports the HTTP Live Streaming (HLS) protocol, developed by Apple Inc. in 2009.
+
+In one implementation of Widevine, a browser receives encrypted content from a content delivery network (CDN). The content is then sent to the Content Decryption Module (CDM), which creates a license request to send to the license server. The player then receives a license from the license server and passes it to the CDM. To decrypt the stream, the CDM sends the media and the license to the OEMCrypto module, required to decrypt the content. OEMCrypto is an interface to the TEE; most implementations ensure that session keys, decrypted content keys, and the decrypted content stream are not accessible to other running applications. This is usually accomplished through a secondary processor with separate memory. The content is then sent to the video stack and displayed to the end user in chunks. License request and license response messages are sent and received using Protocol Buffers.
+
+Vendors may implement their own proxy server within the license server, in cases where user authorization is managed by the vendor's preexisting proxy server. This setup requires the use of the proxy server as a middleman. Widevine requires the use of service certificates beginning in Chrome 59, along with iOS and some configurations of ChromeOS. A proxy server may choose to refuse to issue licenses for browsers that do not implement a "verifiable" framework, otherwise known as Verified Media Path (VMP). Notably, browsers running on Linux are not included in VMP. Similarly, the High-bandwidth Digital Content Protection (HDCP) version used on the client device may be enforced by the proxy server.
+
+In Widevine L1 devices, certificate provisioning is usually performed once. During provisioning, the CDM creates a nonce and derives keys for certificate decryption and integrity checks, as well as dynamically generated buffers. The device key is treated as the Root of Trust (RoT). The RoT-derived client key protects the request using HMAC. The RoT is established through a factory-provisioned component called the "keybox". The keybox is 128 bytes long with two special fields. The integrity of the keybox is checked by verifying the last eight bytes match a magic number ("kbox") followed by a cyclic redundancy check (CRC-32). The other 120 bytes comprise an internal device ID (32 bytes), an Advanced Encryption Standard key (16 bytes), and a provisioning token (72 bytes).
+
+Summary of Widevine keybox fields
+| Field | Description | Size (bytes) |
+| --- | --- | --- |
+| Device ID | Obtained in the OEMCrypto module using `OEMCrypto_GetDeviceID` | 32 |
+| Device key | 128-bit AES key. Derived into multiple keys in the OEMCrypto module using `OEMCrypto_GenerateDerivedKeys` | 16 |
+| Provisioning token | Also known as "key data". Used to provision requests. Obtained in the OEMCrypto module using `OEMCrypto_GetKeyData` | 72 |
+| Magic number | Referred to as "kbox" | 4 |
+| CRC-32 | Validates the integrity of the keybox | 4 |
+
+Each content key is associated with a 128-bit key control block, specifying security constraints. The key control block ensures data path security requirements on clients such as Android, where video and audio are encrypted separately, and to provide a timeout value to the TEE. The block is AES-128-CBC encrypted with a random initialization vector (IV), and the fields are defined in big-endian byte order. The values of the block comprise a verification field, a duration field (expressed in seconds), a nonce, and control bits, all 32 bits each. The control bits are a series of bit fields controlling the HDCP version that can be used, the data path type, whether or not a nonce should be used, and the Copy General Management System (CGMS) used. Despite this, vendors may still choose to encrypt audio and video with the same key or may not even encrypt the audio at all.
+
+
+### Client support
+
+Widevine is included in most major web browsers, including Google Chrome. Derivatives of Chromium, including Microsoft Edge, Vivaldi, and Opera, also implement Widevine. Since June 2016, Firefox has supported Widevine directly in an effort to remove NPAPI support. In addition, Widevine is supported on Android and iOS. Streaming services utilizing Widevine include Netflix, Disney+, Amazon Prime Video, Max, Hulu, Paramount+, and Discovery+. Since Android 5, the version of Google Chrome used in Android supports Widevine. In February 2021, Firefox for Android added Widevine.
+
+In Android, Widevine is implemented through a hardware abstraction layer (HAL) module plugin. The Widevine library on Android translates Android DRM API calls to Widevine CDM ones, and its role varies depending on the security level implemented; in Widevine L1, the Widevine library acts as a proxy for the TEE, while in L3, the library contains the obfuscated CDM. Additionally, the library `liboemcrypto.so` marshals and unmarshals requests to the Widevine trustlet for Widevine L1 through a specialized TEE driver, such as `QSEEComAPI.so` for Qualcomm Secure Execution Environment (QSEE).
+
+iOS does not natively support DASH or CENC. To work around this limitation, Widevine transmuxes DASH to HLS; the Universal DASH Transmuxer (UDT) parses the DASH manifest using an XML parser, such as libxml2. The UDT then creates an HLS playlist.
+
+On May 31, 2021, support for 32-bit Linux was stopped, and DRM-protected content cannot be played on this platform.
+
+
+## Security
+
+Widevine has been exploited multiple times. Researchers at Ben-Gurion University of the Negev discovered a vulnerability in Widevine in June 2016; the vulnerability allowed users to obtain a decrypted version of protected content in cache.
+
+In January 2019, security researcher David Buchanan claimed to have broken Widevine L3 through a differential fault analysis attack in Widevine's white-box implementation of AES-128, allowing Buchanan to retrieve the original key used to encrypt a stream. The MPEG-CENC stream could then be decrypted using ffmpeg. A similar vulnerability was exploited in October 2020.
+
+In 2021, the Android version of Widevine L3 was reverse engineered and broken by security researchers. The same year, Qi Zhao presented the first attack breaking Widevine L1 in Android by recovering the L1 keybox.
+
+
+## Criticism
+
+In 2019, a developer tried to bundle Widevine in an Electron/Chromium-based application for video playing and did not get any response from Google after asking for a license agreement, effectively blocking DRM usage in the project. He later got the reply:
+
+> I'm sorry but we're not supporting an open source solution like this
+> 
+> — Google Widevine Support, https://blog.samuelmaddock.com/widevine/gmail-thread.html
+
+The same happened to other Electron projects.
+
+Widevine does support Electron and Electron projects through a third-party integrator.
+

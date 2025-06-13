@@ -1,0 +1,48 @@
+Price puzzle
+
+
+# Price puzzle
+
+
+
+The **price puzzle** is a phenomenon in monetary economics observed within structural vector autoregression (SVAR) models. It refers to the counterintuitive result where a contractionary monetary policy shock—typically modeled as an increase in short-term interest rates—is followed by an increase, rather than a decrease, in the price level. This anomaly challenges conventional macroeconomic theories that predict a decline in prices as monetary tightening reduces aggregate demand.
+
+
+## Historical Context
+
+The term "price puzzle" was first introduced by Lawrence Christiano in 1992, who observed this anomaly in SVAR models analyzing U.S. monetary policy. Early studies found that when using short-term interest rates, such as the federal funds rate, as the primary indicator of monetary policy, SVAR models often produced results inconsistent with theoretical expectations. This sparked a series of investigations into the limitations of these models and the underlying causes of the puzzle.
+
+
+## Efforts to Resolve the Price Puzzle
+
+
+### Augmented Information Sets
+
+One approach to resolving the price puzzle involves expanding the information set in SVAR models. For instance, including variables like commodity prices or Federal Reserve forecasts (e.g., Greenbook data) can provide additional context for policy decisions, reducing the puzzle's prevalence.
+
+
+### Improved Identification Strategies for Monetary Policy Shocks
+
+
+#### High-Frequency Identification (HFI)
+
+High-frequency identification exploits financial market reactions in narrow windows around monetary policy announcements (Gertler and Karadi, 2015; Nakamura and Steinsson, 2018). This approach leverages the fact that movements in financial instruments (like federal funds futures) during a tight window around Federal Open Market Committee (FOMC) announcements are likely driven by monetary policy news rather than other macroeconomic factors.
+
+
+#### Sign Restrictions
+
+Uhlig (2005) pioneered the use of sign restrictions in monetary policy SVARs. This approach imposes theoretically motivated restrictions on impulse responses while remaining agnostic about the response of key variables of interest (like prices). Modern applications often combine sign restrictions with other identifying assumptions:
+
+* Narrative restrictions (Antolín-Díaz and Rubio-Ramírez, 2018)
+* Zero restrictions (Arias et al., 2019)
+* Long-run restrictions (Matthes and Schwartzman, 2019)
+
+### New Explanation: Cost Channel of Monetary Policy
+
+One prominent explanation is the cost channel of monetary transmission. Higher interest rates increase firms' borrowing costs for working capital (used to pay wages and intermediate inputs), which can lead to higher production costs that are passed on to consumers in the form of higher prices, at least in the short run. The existence of this channel has important implications for the conduct of optimal monetary policy.
+
+
+### Divisia Monetary Aggregates
+
+The study of Divisia monetary aggregates as superior policy indicators has its roots in the work of Keating et al. and Belongia and Ireland, who emphasized the importance of incorporating broad monetary aggregates into economic models to better understand monetary policy effects. Their research demonstrated that Divisia aggregates outperform traditional simple-sum measures, such as M1 and M2, by resolving anomalies like the price puzzle and establishing a more stable relationship between money supply and macroeconomic variables.
+

@@ -1,0 +1,21 @@
+Historical simulation (finance)
+
+
+# Historical simulation (finance)
+
+
+
+**Historical simulation** in finance's value at risk (VaR) analysis is a procedure for predicting the value at risk by 'simulating' or constructing the cumulative distribution function (CDF) of assets returns over time assuming that future returns will be directly sampled from past returns.
+
+Unlike parametric VaR models, historical simulation does not assume a particular distribution of the asset returns. Also, it is relatively easy to implement. However, there are a couple of shortcomings of historical simulation. Traditional historical simulation applies equal weight to all returns of the whole period; this is inconsistent with the diminishing predictability of data that are further away from the present.
+
+
+## Weighted historical simulation
+
+Weighted historical simulation applies decreasing weights to returns that are further away from the present, which overcomes the inconsistency of historical simulation with diminishing predictability of data that are further away from the present. However, weighted historical simulation still assumes independent and identically distributed random variables (IID) asset returns.
+
+
+## Filtered historical simulation
+
+Filtered historical simulation tries to capture volatility which is one of the causes for violation of IID.
+

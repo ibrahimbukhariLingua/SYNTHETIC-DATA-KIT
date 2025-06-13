@@ -1,0 +1,130 @@
+Business chess
+
+
+# Business chess
+
+
+
+**Business chess** is a variant of chess played in teams. It was invented in 1992 by Dr. Grachya Ovakimyan of Moscow with the aim of making chess more entertaining and spectacular.
+
+In the opinion of the inventor, free and open discussion between team members and collective decision-making process may make the game spectacular by increasing its dynamism and presenting the various stages of chess players' thinking, evaluation of positions, calculation of variants, choice of alternatives, and so on. In turn, in order to ensure active team discussion and effective decision-making process the *Interactive Cognitive Scenario* was developed.
+
+Ovakimyan describes this version of chess as a sports business game.
+
+
+## Key ideas
+
+* **Branch** – version of a chess game having own rating, that is played on one demonstration chessboard (Photo 2).
+* **Branch rating** – a number indicating how important the branch, which is a marks (colored chips), located in the upper part of the demonstration chessboard (Photo 2). The score of each branch is equal to its chess result, multiplied by the rating of the given branch.
+* **Branching** – splitting a branch of a single move by splitting one of the existing branches (the "parent") into two and distributing the ratings between the two "child" branches. Different moves will subsequently be made in each branch. This can only be done if there is a free demonstration chessboard.
+* **Selection** – removing a branch in a single move in recognition of defeat from a position on that branch, and redistribution of its branch rating between those of its remaining siblings. The opponent team gets points equal to the lost branch rating.
+* **Passing** – transferring one unit (colored chip) in a single move from one branch rating to a sibling, with no gain nor loss of points.
+
+## Description
+
+The board, pieces, their positions and rules of movement are the same as for standard chess. But several parallel branches (versions of the same game) can be played at the same time on the several boards, with the help of rating (importance) indicators of a certain branch (red marks on top of the board, see Photo 2). The game is for two teams, recommended each to have five members. During the game members of one team may discuss it, as well as actively move, and then form the alternative (parallel) branches. They also can change the rating of each branch by transferring its marks. With the possibility of changing the number of simultaneously played branches and their ratings, qualitatively new, tactical and strategic methods of competition appear which are inherent only in this version of chess.
+
+In the Interactive Cognitive Scenario the following mechanisms are envisaged: (Photo 1 and Figure 1):
+
+1. Official moves in business chess are made on demonstration chessboards. Up to five such boards may be displayed side-by-side each with a branch arising during one game. Each demonstration board involved in a game has its rating (Photo 2). The basic mechanisms of the scenario – *Branching*, *Selection* and *Passing* of chess positions – are shown on the demonstration boards. These mechanisms affect the current and final score in a game and require members of both teams to coordinate their actions and carry out their decisions.
+2. To discuss positions and calculate variants, each of the teams is provided with five ordinary chessboards with full sets of pieces.
+3. To limit the time of a game there is only one chess clock, however many branches are played in parallel. It is started after the team makes a move in all branches. The time of each team is limited to one hour. If one branch remains in the endgame, an additional five minutes is given.
+
+## Interactive Cognitive Scenario
+
+
+### Demonstration boards
+
+Parallel variants of a game (**branches**) can be played on five nearby demonstration boards, numbered 1 to 5, each of which has its own **rating** (See Photo 2). Teams can decide to change the number of branches and their ratings. The score of each branch (on a particular board) is equal to its chess result, multiplied by the rating of the given branch. The final score of the game is equal to the sum of results of all branches.
+
+The game begins on one demonstration board only, representing branch 1 (see Figure 1) with rating 10 (**game rating**). **Branching** is used (see Figure 2) to increase the number of branches.
+
+To carry out a Branching the team on its move copies the position from board 1 to a free demonstration board, apply differing continuations (for example, on a demonstration board 1 move **e4**, and on a board 2 – **g3**). In this case, the rating of the original (maternal) branch is distributed between the child branches according to the decision made by the team making the branch. As a result of the subsequent branching there will appear branches 3, 4, and 5.
+
+If in the course of a game one of the teams gets a branch with a lost position (e.g. branch 1 in Figure 3), then the team may resign the game in that branch and transfer all the chips of its rating to the demonstration board of another (parallel) branch, where the team has an undefeated position (e.g. branch 2). This represents the so-called **Selection**, which offers a team a possibility of winning back what has been lost.
+
+As a result of such a redistribution, the rating of the lost branch is added to the rating of the remaining one and the opponent gets points equal to the lost branch rating (in the given case, three points).
+
+A Business chess game tree structure resulting from operations of Branching and Selection is shown in Figure 4.
+
+On Figure 4 the increasing number of branches is shown (after move 7, there are already two branches, after move 11, three, after the move 12, four, and after move 18, five branches). Then, as a result of the selection and drawing (on moves 24, 25, 29 and 37, respectively) the number of branches gradually decreases. After move 37 and until the end of the game there remains only one branch, with a rating of eight.
+
+A very important tactical element of the business chess scenario is chess **Passing**. Such a pass enables one to transfer, in a single move, one unit of rating from one branch to another without loss of points. It is a way of adjusting branch ratings as the team reassesses their positions. The game tree with Passing has a more complicated form (see Figure 5).
+
+Only one member of the team may move pieces and ratings on the demonstration board after the team decides collectively. This stops players crowding in front of the demonstration boards. For this purpose the zone before the rows of demonstration boards is separated from the zone of team location by red lines which only one team member may cross.
+
+
+### Discussion
+
+Each team is provided five ordinary chess boards to freely discuss positions and calculate variants (Figure 1). At each board the team (or part of it) discusses the position arising in one of the branches of a game (Photo 3 and Video). The team itself determines how it organizes discussions and makes decisions. Interactive Cognitive Scenario only suggests the possibility of alternative actions of each team member (using branching) in combination with the possibility of subsequent rejection from them when it becomes clear for team that these actions were erroneous (using selection).
+
+
+## Game parameters
+
+There is a huge number of possible ways the Interactive Cognitive Scenario can be realized. Therefore, before a game is played some parameters should be agreed:
+
+* Initial game rating
+* The number of demonstration boards (the maximum allowed number of branches)
+* The number of players in each team and the rules for their replacement during the game
+* The rules of branching, selection, distribution, redistribution and passing
+* The time allowed for thinking over the moves and the form of time control.
+
+### Broadcast
+
+The author of the idea of business chess considers the following format to be optimal for a live broadcast:
+
+* A game on three boards with a game rating of 8.
+* Each team is allowed one branching.
+* An hour is allocated to each of the teams for the entire game.
+* If one branch remains at the end of the game, extra time (5 minutes) is allotted, with the addition of N seconds for every move.
+* Every team has 4 players, who assume to be five key roles:
+ 1. Classic: An expert in the classical debut theory establishes the direction of the main attack and also wards off the rival’s strike in the versions of the classical debuts.
+ 2. Diversionist: Works out new distracting debuts, employed when exercising the right to branching.
+ 3. Anti-diversionist or Fisher: Expected to play against the opposing diversionist in the unfamiliar positions of his distracting debut, similarly to Fisher’s chess game terms.
+ 4. Moderator: Organizes the discussion process within the team, for instance, with a fresh head and critical mind, he approaches his teammates throughout the game and assists them in evaluating and calculating their position. For TV operators, he is a marker of attention — a key figure in the broadcast of the game.
+ 5. Blitzer: Aims to play the endgame in extra time. He has 5 minutes for this, which is nearly blitz. Any team member may combine the fifth role with one of the others mentioned above.
+
+## Spectators
+
+
+### Focus on chess
+
+During the game, spectators are able to hear and see team discussions: what information and in what scope the players analyze, how much and what options are offered for continuation, at what depth they are calculated, how the evaluations of positions changes during the passing and what final decisions are taken as a result. For the first time this becomes available for spectators' assessment directly, rather than via expert analysis.
+
+The demonstration boards show several competing versions of the game (branches). Their number and ratings change throughout the game and directly affect the current and final score of the game.
+
+
+### Focus on people
+
+Business chess creates a team spirit and socio-psychological atmosphere that is not specific to chess. It may be of interest even for spectators who do not care much for chess.
+
+Playing business chess brings out familiar social problems for the teams such as leadership and psychological compatibility, a division of labor and specialization, choosing effective ways of management (authoritarian, democratic, etc.) and problem solving, generating new ideas, their discussion, implementation and development in a competitive environment, and so on.
+
+Spectators can also watch almost all varieties of situations typical in group competition, and their continuous change, depending on the availability or shortage of advantages, time, alternative ways of development, and so on.
+
+
+## Tournaments
+
+Tournaments have been held regularly since 1997. Running commentary of one of them was broadcast on Armenian national television.
+
+In Moscow Russian leading grandmasters participated in two representative tournaments. The first was held in the Central House of Chess by M. M. Botvinnik in 2004, the proceedings of which were broadcast by the *Sports* channel of Russian TV. The second was held in the Moscow Chess Club by T. V. Petrosian in 2005.
+
+
+## Wider aspects
+
+Apart from being a sport, Business Chess can also be used for scientific modelling of mental activity, the processes of problem solving and a choice of strategy, as a general educational business game, method of psychological evaluation, psychological training and play therapy. Such opportunity is conditioned by team active discussion and a multistage process of group decision-making based on sociocultural evolution depending on changing conditions (game). It can be seen that the main mechanisms of Interactive Cognitive Scenario (branching and selection) resemble biological mechanisms of evolution (genetic mutation and natural selection).
+
+
+### Scientific model
+
+Business chess as a scientific model can be effectively used for researches in following areas: game theory, bifurcation theory, information theory, control theory and decision theory, the theory of innovation diffusion, management science, sociocultural evolution, cognitive psychology and social psychology, research into natural intelligence and artificial intelligence, and so on. Thus as an expert system the application of existing chess computer programs is possible.
+
+
+### In school
+
+Experts in the field of child psychology agree that the system of national school education must first socialize pupils, that is, accustom and adapt them for the life in social structures. With this purpose it is reasonable to use Business Chess as a general educational business game. The primary goal of similar lessons is to carry out intellectual and socially-psychological trainings for the pupils to make them skilled in constructive communication, communicative competence, efficient management, social self-organization, psychological strength and adaptation in group. It is supposed, that it promotes effective socialization and harmonious development of cogitative (cognitive), behavioral (interactive) and emotional (motivational) components of pupils' personality studying at comprehensive schools.
+
+It is also reasonable to use Business Chess for carrying out psychological evaluation at schools. The opportunity to register a lot of individual and group psychological parameters at the same time so as to observe their changes in dynamics, allows a complex estimation of intelligence, aptitude, level of achievement, personal situational correlations and mental development. Available expert systems in the form of modern chess computer programs enhance reliability of such researches.
+
+A section of the "Business Chess" book is devoted to this subject, and also a lot of popular articles are included in the collection entitled "Sports business games: Business Chess, Go, Renju and others", 2007.
+

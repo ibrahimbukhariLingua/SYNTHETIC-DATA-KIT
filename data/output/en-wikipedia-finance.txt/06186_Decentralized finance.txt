@@ -1,0 +1,91 @@
+Decentralized finance
+
+
+# Decentralized finance
+
+
+
+**Decentralized finance** (often stylized as **DeFi**) provides financial instruments and services through smart contracts on a programmable, permissionless blockchain. This approach reduces the need for intermediaries such as brokerages, exchanges, or banks. DeFi platforms enable users to lend or borrow funds, speculate on asset price movements using derivatives, trade cryptocurrencies, insure against risks, and earn interest in savings-like accounts. The DeFi ecosystem is built on a layered architecture and highly composable building blocks. While some applications offer high interest rates, they carry high risks. Coding errors and hacks are a common challenge in DeFi.
+
+
+## History
+
+Decentralized exchanges (abbreviated DEXs) are alternative payment ecosystems that use new protocols for financial transactions. They emerged within decentralized finance (DeFi), a sector of blockchain technology and fintech.
+
+Centralized exchanges (CEXs), DEXs and DEX aggregators are all built on a multi-layered DeFi architecture, with each layer serving a well-defined purpose. (See Figure: *Multi-layered Architecture of the DeFi Stack*).
+
+While they share common components of the first four layers, such as *the Settlement layer*, *Asset layer*, *Protocol layer* and *Application layer*, DEX aggregators have an additional component or *Aggregator layer*, which allows them to connect and interact with other DEXs via smart contracts.
+
+The Ethereum blockchain popularized smart contracts, which are the basis of DeFi, in 2017. Other blockchains have since implemented smart contracts.
+
+As of 2021ᵘᵖᵈᵃᵗᵉ, MakerDAO was a prominent lending DeFi platform based on a stablecoin that was established in 2017. It allowed users to borrow DAI, a token pegged to the US dollar. Through a set of smart contracts that govern the loan, repayment, and liquidation processes, MakerDAO aimed to maintain the stable value of DAI in a decentralized and autonomous manner.ⁿᵉᵉᵈˢ ᵘᵖᵈᵃᵗᵉ
+
+In June 2020, Compound Finance, a decentralized finance protocol enabling users to lend or borrow cryptocurrency assets and which provides typical interest payments to lenders, started rewarding lenders and borrowers with a cryptocurrency called Comp. This token, which is used for running Compound, can also be traded on cryptocurrency exchanges. Other platforms followed suit, leading to stacked investment opportunities known as "yield farming" or "liquidity mining", where speculators shift cryptocurrency assets between pools in a platform and between platforms to maximize their total yield, which includes not only interest and fees but also the value of additional tokens received as rewards.
+
+In July 2020, *The Washington Post* described decentralized finance techniques and the risks involved. In September 2020, Bloomberg said that DeFi made up two-thirds of the cryptocurrency market in terms of price changes and that DeFi collateral levels had reached $9 billion. Ethereum saw a rise in developers during 2020 due to the increased interest in DeFi.
+
+DeFi has attracted venture capitalists such as Andreessen Horowitz and Michael Novogratz.
+
+*The Economist* regarded the future of digital finance in 2022 as a "three-way fight" between: Big Tech, such as Facebook with its digital wallet; "big rich countries" that have been testing their own digital currencies; and software developers "building all sorts of applications" to decentralize finance. Handling the risks presented by crypto-assets already valued at $2.5 trillion was a particular challenge for US regulators.
+
+
+## Key characteristics
+
+DeFi revolves around decentralized applications, also known as DApps, that perform financial functions on distributed ledgers called blockchains, a technology that was made popular by Bitcoin and has since been adapted more broadly. Rather than transactions being made through a centralized intermediary such as a cryptocurrency exchange or a traditional securities exchange, transactions are directly made between participants, mediated by smart contract programs. These smart contracts, or DeFi protocols, typically run using open-source software that is built and maintained by a community of developers.
+
+DApps are typically accessed through a browser extension or application. For example, MetaMask allows users to directly interact with Ethereum through a digital wallet. Many of these DApps can be linked to create complex financial services. For example, stablecoin holders can lend assets such as USD Coin or DAI to a liquidity pool in a borrow/lending protocol such as the Aave protocol, and allow others to borrow those digital assets by depositing their own collateral. The protocol automatically adjusts interest rates based on the demand for the asset. Some DApps source external (off-chain) data, such as the price of an asset, through blockchain oracles.
+
+Additionally, Aave Protocol popularized "flash loans", which are uncollateralized loans of an arbitrary amount that are taken out and paid back within a single blockchain transaction. Max Wolff is credited with the original invention of flash loans with the original implementation released in 2018 by Marble Protocol. Many exploits of DeFi platforms have used flash loans to manipulate cryptocurrency spot prices.
+
+Another DeFi protocol is Uniswap, which is a decentralized exchange (DEX) set up to trade tokens issued on Ethereum. Rather than using a centralized exchange to fill orders, Uniswap pays users to form liquidity pools in exchange for a percentage of the fees collected from traders swapping tokens in and out of the liquidity pools. Because no centralized party runs Uniswap (the platform is governed by its users), and any development team can use the open-source software, there is no entity to check the identities of the people using the platform and meet KYC/AML regulations. As of 2020, it is not clear what position regulators will take on the legality of such platforms.
+
+
+## Decentralized exchanges
+
+Decentralized exchanges (DEX) are a type of cryptocurrency exchange, which allow for either direct peer-to-peer, or Automated Market Maker (AMM) liquidity pool cryptocurrency transactions to take place without the need for an intermediary. The lack of an intermediary differentiates them from centralized exchanges (CEX).ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+In transactions made through decentralized exchanges, the typical third party entities which would normally oversee the security and transfer of assets (e.g. banks, stockbrokers, online payment gateways, government institutions, etc.) are substituted by a blockchain or distributed ledger. Some common methods of operation include the use of smart contracts or order book relaying – although many other variations are possible, with differing degrees of decentralization.
+
+
+### Advantages
+
+Because traders on a decentralized exchange often do not need to transfer their assets to the exchange before executing a trade, decentralized exchanges reduce the risk of theft from hacking of exchanges, but liquidity providers do need to transfer tokens to the decentralized exchange. Decentralized exchanges are also more anonymous than exchanges that implement know your customer (KYC) requirements.
+
+There are some signs that decentralized exchanges have been suffering from low trading volumes and reduced market liquidity. The 0x project, a protocol for building decentralized exchanges with interchangeable liquidity, attempts to solve this issue.
+
+
+### Disadvantages
+
+Due to a lack of KYC processes, and no way to revert a transaction, users are at a loss if they are ever hacked for their passwords or private keys. Additionally, liquidity providers staking in DeFi protocols can suffer what is called an impermanent loss if, when withdrawn, the token pairs they have invested in have altered in value ratio significantly.
+
+Although liquidity pool DEX are the most widely used, they may have some drawbacks. The most common problems of liquidity pool DEXes are market price impact, slippage, and front running.
+
+Price impact occurs because of the AMM (Automated Market Makers) nature itself — the larger the deal, the stronger impact it has on the price. For example, if the constant product AMM is in use, every deal must keep the product xy = k constant, where x and y are quantities of two cryptocurrencies (or tokens) in the pool. Price impact is non-linear, so the larger is the input amount Δx, the lower is the final ratio y / x that gives an exchange price. The problem is mostly significant for relatively large deals versus the liquidity pool size.ᵇᵉᵗᵗᵉʳˢᵒᵘʳᶜᵉⁿᵉᵉᵈᵉᵈ
+
+Front running is a special type of attack in public blockchains when some participant (usually a miner) seeing an upcoming trading transaction puts his own transaction ahead (playing with a transaction fee for example), making the initial transaction less profitable or even reverted. To provide some protection against front running attacks, many DeFi exchanges offer a slippage tolerance option for end-users. This option serves as a safeguard, allowing users to set a limit on the worst acceptable price they are willing to accept from the time of transaction signing.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+
+### Degrees of decentralization
+
+A decentralized exchange can still have centralized components, whereby some control of the exchange is still in the hands of a central authority. The governance of a DeFi platform, typically as part of a Decentralized Autonomous Organization, is done through tokens that grant voting rights and are distributed amongst participants. However, the majority of these tokens are often held by few individuals and are rarely used to vote.
+
+In July 2018, the decentralized exchange Bancor was reportedly hacked and suffered a loss of $13.5M in assets before freezing funds. In a Tweet, Charlie Lee, the creator of Litecoin spoke out and claimed an exchange cannot be decentralized if it can lose or freeze customer funds.
+
+Operators of decentralized exchanges can face legal consequences from government regulators. One example is the founder of EtherDelta, who in November 2018 settled charges with the U.S. Securities and Exchange Commission over operating an unregistered securities exchange.
+
+
+## Errors and hacking
+
+Coding errors and hacks are common in DeFi. Blockchain transactions are irreversible, which means that an incorrect or fraudulent DeFi transaction cannot be corrected easily.
+
+The person or entity behind a DeFi protocol may be unknown and may disappear with investors' money. Investor Michael Novogratz has described some DeFi protocols as "Ponzi-like".
+
+DeFi has been compared to the initial coin offering craze of 2017, part of a cryptocurrency bubble. Inexperienced investors are at particular risk of losing money because of the sophistication required to interact with DeFi platforms and the lack of any intermediary with customer support. On the other hand, as the code for DeFi smart contracts is generally open-source software that can be copied to set up competing platforms, experienced users and user-created bots might create instabilities as funds shift between platforms which share the same code. In addition, DeFi platforms might inadvertently provide incentives for cryptocurrency miners to destabilize the system.
+
+In 2021, half of cryptocurrency crime was related to DeFi. This rise has been attributed to a combination of developer incompetence and non-existent or poorly enforced regulations. Theft from DeFi can come from either external hackers stealing from vulnerable projects, or "rug pulls", where the developers and influencers promote a project and then take the money, as a form of pump-and-dump.
+
+
+## Regulation
+
+In October 2021, the FATF included DeFi in the guidance for crypto service providers, making the authority's aim to regulate this type of asset.They are expecting each individual country to determine if individuals involved in DeFi can be considered a virtual asset provider and be subjected to the FATF's guidelines.
+

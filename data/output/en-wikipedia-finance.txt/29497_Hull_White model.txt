@@ -1,0 +1,95 @@
+Hull–White model
+
+
+# Hull–White model
+
+
+
+In financial mathematics, the **Hull–White model** is a model of future interest rates. In its most generic formulation, it belongs to the class of no-arbitrage models that are able to fit today's term structure of interest rates. It is relatively straightforward to translate the mathematical description of the evolution of future interest rates onto a tree or lattice and so interest rate derivatives such as bermudan swaptions can be valued in the model.
+
+The first Hull–White model was described by John C. Hull and Alan White in 1990. The model is still popular in the market today.
+
+
+## The model
+
+
+### One-factor model
+
+The model is a short-rate model. In general, it has the following dynamics:
+
+There is a degree of ambiguity among practitioners about exactly which parameters in the model are time-dependent or what name to apply to the model in each case. The most commonly accepted naming convention is the following:
+
+* {\displaystyle \theta } has *t* (time) dependence — **the Hull–White model**.
+* {\displaystyle \theta } and {\displaystyle \alpha } are both time-dependent — **the extended Vasicek model**.
+
+### Two-factor model
+
+The two-factor Hull–White model (Hull 2006:657–658) contains an additional disturbance term whose mean reverts to zero, and is of the form:
+
+where {\displaystyle \displaystyle f} is a deterministic function, typically the identity function (extension of the one-factor version, analytically tractable, and with potentially negative rates), the natural logarithm (extension of Black–Karasinski, not analytically tractable, and with positive interest rates), or combinations (proportional to the natural logarithm on small rates and proportional to the identity function on large rates); and {\displaystyle \displaystyle u} has an initial value of 0 and follows the process:
+
+
+## Analysis of the one-factor model
+
+For the rest of this article we assume only {\displaystyle \theta } has *t*-dependence.
+Neglecting the stochastic term for a moment, notice that for {\displaystyle \alpha >0} the change in *r* is negative if *r* is currently "large" (greater than {\displaystyle \theta (t)/\alpha )} and positive if the current value is small. That is, the stochastic process is a mean-reverting Ornstein–Uhlenbeck process.
+
+θ is calculated from the initial yield curve describing the current term structure of interest rates. Typically α is left as a user input (for example it may be estimated from historical data). σ is determined via calibration to a set of caplets and swaptions readily tradeable in the market.
+
+When {\displaystyle \alpha }, {\displaystyle \theta }, and {\displaystyle \sigma } are constant, Itô's lemma can be used to prove that
+
+which has distribution
+
+where {\displaystyle {\mathcal {N}}(\mu ,\sigma ^{2})} is the normal distribution with mean {\displaystyle \mu } and variance {\displaystyle \sigma ^{2}}.
+
+When {\displaystyle \theta (t)} is time-dependent,
+
+which has distribution
+
+
+## Bond pricing using the Hull–White model
+
+It turns out that the time-*S* value of the *T*-maturity discount bond has distribution (note the *affine term* structure here!)
+
+where
+
+Note that their terminal distribution for {\displaystyle P(S,T)} is distributed log-normally.
+
+
+## Derivative pricing
+
+By selecting as numeraire the time-*S* bond (which corresponds to switching to the *S*-forward measure), we have from the fundamental theorem of arbitrage-free pricing, the value at time *t* of a derivative which has payoff at time *S*.
+
+Here, {\displaystyle \mathbb {E} \_{S}} is the expectation taken with respect to the forward measure. Moreover, standard arbitrage arguments show
+that the time *T* forward price {\displaystyle F\_{V}(t,T)} for a payoff at time *T* given by *V(T)* must satisfy {\displaystyle F\_{V}(t,T)=V(t)/P(t,T)}, thus
+
+Thus it is possible to value many derivatives *V* dependent solely on a single bond {\displaystyle P(S,T)} analytically when working in the Hull–White model. For example, in the case of a bond put
+
+Because {\displaystyle P(S,T)} is lognormally distributed, the general calculation used for the Black–Scholes model shows that
+
+where
+
+and
+
+Thus today's value (with the *P*(0,*S*) multiplied back in and *t* set to 0) is:
+
+Here {\displaystyle \sigma \_{P}} is the standard deviation (relative volatility) of the log-normal distribution for {\displaystyle P(S,T)}. A fairly substantial amount of algebra shows that it is related to the original parameters via
+
+Note that this expectation was done in the *S*-bond measure, whereas we did not specify a measure at all for the original Hull–White process. This does not matter — the volatility is all that matters and is measure-independent.
+
+Because interest rate caps/floors are equivalent to bond puts and calls respectively, the above analysis shows that caps and floors can be priced analytically in the Hull–White model. Jamshidian's trick applies to Hull–White (as today's value of a swaption in the Hull–White model is a monotonic function of today's short rate). Thus knowing how to price caps is also sufficient for pricing swaptions. In the event that the underlying is a compounded backward-looking rate rather than a (forward-looking) LIBOR term rate, Turfus (2020) shows how this formula can be straightforwardly modified to take into account the additional convexity.
+
+Swaptions can also be priced directly as described in Henrard (2003). Direct implementations are usually more efficient.
+
+
+## Monte-Carlo simulation, trees and lattices
+
+However, valuing vanilla instruments such as caps and swaptions is useful primarily for calibration. The real use of the model is to value somewhat more exotic derivatives such as bermudan swaptions on a lattice, or other derivatives in a multi-currency context such as Quanto Constant Maturity Swaps, as explained for example in Brigo and Mercurio (2001). The efficient and exact Monte-Carlo simulation of the Hull–White model with time dependent parameters can be easily performed, see Ostrovski (2013) and (2016). An open-source implementation of the exact Monte-Carlo simulation following Fries (2016) can be found in finmath lib.
+
+
+## Forecasting
+
+Even though single factor models such as Vasicek, CIR and Hull–White model has been devised for pricing, recent research has shown their potential with regard to forecasting. In Orlando et al. (2018, 2019,) was provided a new methodology to forecast future interest rates called CIR#.
+The ideas, apart from turning a short-rate model used for pricing into a forecasting tool, lies in an appropriate partitioning of the dataset into subgroups according to a given distribution ).
+In there it was shown how the said partitioning enables capturing statistically significant time changes in volatility of interest rates. following the said approach, Orlando et al. (2021) ) compares the Hull–White model with the CIR model in terms of forecasting and prediction of interest rate directionality.
+

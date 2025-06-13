@@ -1,0 +1,47 @@
+Artificial economics
+
+
+# Artificial economics
+
+
+
+**Artificial Economics** can be defined as ″a research field that aims at improving our understanding of socioeconomic processes with the help of computer simulation″.
+Like in Theoretical Economics, the approach followed in *Artificial Economics* to gain understanding of socioeconomic processes involves building and analysing formal models. However, in contrast with Theoretical Economics, models in *Artificial Economics* are implemented in a programming language so that computers can be employed to analyse them.
+
+
+## Method
+
+Concretely, the method followed in *Artificial Economics* to analyse formal models most often comprises two stages: 1) deductive generation of samples, and 2) inductive inference of general patterns.
+
+1. The deductive generation of samples consists in running the model many times for different particularisations of the variables that the model contains. Specifically, if the model is stochastic, then each computer simulation run is conducted with a specific realisation of each and every random variable in the model. The result of this first stage is a set of inputs and their corresponding outputs, which have been derived by the computer using pure deduction, i.e. applying to the inputs the inference rules that define the model.
+2. Once a sufficient number of samples have been obtained, an inductive approach is then employed to infer general patterns about the behaviour of the model. This inductive process can only lead to probable –rather than necessarily true– conclusions (unless all possible particular instances are explored), since it tries to infer general properties out of particular instances.
+
+Thus, using this computer simulation approach, the data is produced by the computer using strict deduction, but the general patterns about how the rules of the model transform the inputs into the outputs are inferred using generalisation by induction.
+
+
+## Scope
+
+The benefit of using the computer simulation approach described above (vs. pure logical deduction only) is that it enables the exploration of (formal) models that are –currently– intractable using the most advanced mathematical techniques. This is so because the set of assumptions that can be investigated using computer simulation is not limited by the strong restrictions that mathematical tractability imposes. This point is particularly important in the study of socioeconomic processes, which –due to its complex nature– are oftentimes difficult or impossible to address adequately using a purely deductive approach only. The strictly deductive approach often requires so many simplifications to ensure mathematical tractability that the correspondence between the real world and the model assumptions turns out disappointingly weak.
+
+Some of these simplifications have been outlined in the left column of the table below, together with some of the features that can be explored using the *Artificial Economics* approach (right column).
+
+| Traditional restrictions imposed to ensure mathematical tractability | Features that can be explored with Computer Simulation (*Artificial Economics* approach) |
+| --- | --- |
+| Representative agent or a continuum of agents | Explicit and individual representation of agents (agent-based modelling) |
+| Rationality (and sometimes common knowledge of rationality) | Adaptation at the individual level (learning) or at the population level (evolution). Satisficing |
+| Perfect information | Local and asymmetric information |
+| Focus on static equilibria | Focus on out-of-equilibrium dynamics |
+| Determinism | Stochasticity |
+| Top-down analysis | Bottom-up synthesis |
+| Random or complete networks of interaction | Arbitrary (and potentially endogenous) networks of interaction |
+| Minor role of physical space | Explicit representation of physical space |
+| Infinite populations | Finite populations |
+| Preference for uniqueness of solutions | Path dependency and historical contingency |
+
+The differences in the type of assumptions investigated using the strictly deductive approach only and those investigated in *Artificial Economics* are so fundamental that some scholars see these differences as the defining features of *Artificial Economics*. Other scholars find that the distinctive characteristic of *Artificial Economics* is methodological, i.e. the use of the computer simulation approach. The fact that models in *Artificial Economics* are implemented in a programming language (rather than expressed as a set of equations) is not considered substantial since any model implemented in computer code can be expressed as a well-defined mathematical function.
+
+
+## Artificial Economics Conference Series
+
+One of the aim of these conferences is to favour the meeting of people and ideas coming from two communities of scientists –computer science and economics– in order to construct a more structured multi-disciplinary approach. Proceedings of every conference in the series have been published as a volume in the Lecture Notes in Economics and Mathematical Systems Springer series.
+

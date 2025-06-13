@@ -1,0 +1,37 @@
+Hierarchical Risk Parity
+
+
+# Hierarchical Risk Parity
+
+
+
+**Hierarchical Risk Parity** (**HRP**) is an advanced investment portfolio optimization framework developed in 2016 to compete with the prevailing mean-variance optimization (MVO) framework developed by Harry Markowitz in 1952, and for which he received the Nobel Prize in economic sciences. HRP algorithms apply machine learning techniques to create diversified and robust investment portfolios that outperform MVO methods out-of-sample. HRP aims to address the limitations of traditional portfolio construction methods, particularly when dealing with highly correlated assets. Following its publication, HRP has been implemented in numerous open-source libraries, and received multiple extensions.
+
+
+## Key Features
+
+Algorithms within the HRP framework are characterized by the following features:
+
+* *Machine Learning Approach*: HRP employs hierarchical clustering, a machine learning technique, to group similar assets based on their correlations. This allows the algorithm to identify the underlying hierarchical structure of the portfolio, and avoid that errors spread through the entire network.
+* *Risk-Based Allocation*: The algorithm allocates capital based on risk, ensuring that assets only compete with similar assets for representation in the portfolio. This approach leads to better diversification across different risk sources, while avoiding the instability associated with noisy returns estimates.
+* *Covariance Matrix Handling*: Unlike traditional methods like Mean-Variance Optimization, HRP does not require inverting the covariance matrix. This makes it more stable and applicable to portfolios with a large number of assets, particularly when the covariance matrix's condition number is high.
+
+## Steps
+
+The HRP algorithm typically consists of three main steps:
+
+1. *Hierarchical Clustering*: Assets are grouped into clusters based on their correlations, forming a hierarchical tree structure.
+2. *Quasi-Diagonalization*: The correlation matrix is reordered based on the clustering results, revealing a block diagonal structure.
+3. *Recursive Bisection*: Weights are assigned to assets through a top-down approach, splitting the portfolio into smaller sub-portfolios and allocating capital based on inverse variance.
+
+## Advantages
+
+HRP algorithms offer several advantages over the (at the time) MVO state-of-the-art methods:
+
+* *Improved diversification*: HRP creates portfolios that are well-diversified across different risk sources.
+* *Robustness*: The algorithm has shown to generate portfolios with robust out-of-sample properties.
+* *Flexibility*: HRP can handle singular covariance matrices and incorporate various constraints.
+* *Intuitive approach*: The clustering-based method provides an intuitive understanding of the portfolio structure.
+
+By combining elements of machine learning, risk parity, and traditional portfolio theory, HRP offers a sophisticated approach to portfolio construction that aims to overcome the limitations of conventional methods.
+

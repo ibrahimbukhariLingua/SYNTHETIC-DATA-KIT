@@ -1,0 +1,47 @@
+Cross-industry standard process for data mining
+
+
+# Cross-industry standard process for data mining
+
+
+
+**The Cross-industry standard process for data mining**, known as **CRISP-DM**, is an open standard process model that describes common approaches used by data mining experts. It is the most widely-used analytics model.
+
+In 2015, IBM released a new methodology called *Analytics Solutions Unified Method for Data Mining/Predictive Analytics* (also known as ASUM-DM), which refines and extends CRISP-DM.
+
+
+## History
+
+CRISP-DM was conceived in 1996 and became a European Union project under the ESPRIT funding initiative in 1997. The project was led by five companies: Integral Solutions Ltd (ISL), Teradata, Daimler AG, NCR Corporation, and OHRA, an insurance company.
+
+This core consortium brought different experiences to the project. ISL, was later acquired and merged into SPSS. The computer giant NCR Corporation produced the Teradata data warehouse and its own data mining software. Daimler-Benz had a significant data mining team. OHRA was starting to explore the potential use of data mining.
+
+The first version of the methodology was presented at the 4th CRISP-DM SIG Workshop in Brussels in March 1999, and published as a step-by-step data mining guide later that year.
+
+Between 2006 and 2008, a CRISP-DM 2.0 SIG was formed, and there were discussions about updating the CRISP-DM process model. The current status of these efforts is not known. However, the original crisp-dm.org website cited in the reviews, and the CRISP-DM 2.0 SIG website are both no longer active.
+
+While many non-IBM data mining practitioners use CRISP-DM, IBM is the primary corporation that currently uses the CRISP-DM process model. It makes some of the old CRISP-DM documents available for download and it has incorporated it into its SPSS Modeler product.
+
+Based on current research, CRISP-DM is the most widely used form of data-mining model because of its various advantages which solved the existing problems in the data mining industries. Some of the drawbacks of this model is that it does not perform project management activities. The success of CRISP-DM is largely attributable to the fact that it is industry, tool, and application neutral.
+
+
+## Major phases
+
+CRISP-DM breaks the process of data mining into six major phases:
+
+* Business Understanding
+* Data Understanding
+* Data Preparation
+* Modeling
+* Evaluation
+* Deployment
+
+The sequence of the phases is not strict and moving back and forth between different phases is usually required. The arrows in the process diagram indicate the most important and frequent dependencies between phases. The outer circle in the diagram symbolizes the cyclic nature of data mining itself. A data mining process continues after a solution has been deployed. The lessons learned during the process can trigger new, often more focused business questions, and subsequent data mining processes will benefit from the experiences of previous ones.
+
+
+## Polls and Alternative Process Frameworks
+
+Polls conducted at the same website (KDNuggets) in 2002, 2004, 2007, and 2014 show that it was the leading methodology used by industry data miners who decided to respond to the survey. The only other data mining approach named in these polls was SEMMA. However, SAS Institute clearly states that SEMMA is not a data mining methodology, but rather a "logical organization of the functional toolset of SAS Enterprise Miner." A review and critique of data mining process models in 2009 called the CRISP-DM the "de facto standard for developing data mining and knowledge discovery projects." Other reviews of CRISP-DM and data mining process models include Kurgan and Musilek's 2006 review, and Azevedo and Santos' 2008 comparison of CRISP-DM and SEMMA. Efforts to update the methodology started in 2006, but have, as of June 2015, not led to a new version, and the "Special Interest Group" (SIG) responsible along with the website has long disappeared (see History of CRISP-DM).
+
+In 2024, Harvard Business Review published an updated framework, bizML, that is designed for greater relevance to business personnel and to be specific for machine learning projects in particular, rather than for analytics, data science, or data mining projects in general.
+

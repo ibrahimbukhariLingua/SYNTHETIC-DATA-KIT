@@ -1,0 +1,92 @@
+XLeratorDB
+
+
+# XLeratorDB
+
+
+
+**XLeratorDB** is a suite of database function libraries that enable Microsoft SQL Server to perform a wide range of additional (non-native) business intelligence and ad hoc analytics. The libraries, which are embedded and run centrally on the database, include more than 450 individual functions similar to those found in Microsoft Excel spreadsheets. The individual functions are grouped and sold as six separate libraries based on usage: finance, statistics, math, engineering, unit conversions and strings. WestClinTech, the company that developed **XLeratorDB**, claims it is "the first commercial function package add-in for Microsoft SQL Server."
+
+
+## Company history
+
+WestClinTech (LLC), founded by software industry veterans Charles Flock and Joe Stampf in 2008, is located in Irvington, New York, United States. Flock was a co-founder of The Frustum Group, developer of the OPICS enterprise banking and trading platform, which was acquired by London-based Misys, PLC in 1996. Stampf joined Frustum in 1994 and with Flock remained active with the company after acquisition, helping to develop successive generations of OPICS now employed by over 150 leading financial institutions worldwide.
+
+Following a full year of research, development and testing, WestClinTech introduced and recorded its first commercial sale of **XLeratorDB** in April 2009. In September 2009, **XLeratorDB** became available to all Federal agencies through NASA's Strategic Enterprise-Wide Procurement (SEWP-IV) program, a government-wide acquisition contract.
+
+
+## Technology
+
+**XLeratorDB** uses Microsoft SQL CLR(Common Language Runtime) technology. SQL CLR allows managed code to be hosted by, and run in, the Microsoft SQL Server environment. SQL CLR relies on the creation, deployment and registration of .NET Framework assemblies that are physically stored in managed code dynamic-link libraries (DLL). The assemblies may contain .NET namespaces, classes, functions, and properties. Because managed code compiles to native code prior to execution, functions using SQL CLR can achieve significant performance increases versus the equivalent functions written in T-SQL in some scenarios.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+**XLeratorDB** requires Microsoft SQL Server 2005 or SQL Server 2005 Express editions, or later (compatibility mode 90 or higher). The product installs with PERMISSION\_SET=SAFE. SAFE mode, the most restrictive permission set, is accessible by all users. Code executed by an assembly with SAFE permissions cannot access external system resources such as files, the network, the internet, environment variables, or the registry.
+
+
+## Functions
+
+In computer science, a function is a portion of code within a larger program which performs a specific task and is relatively independent of the remaining code. As used in database and spreadsheet applications these functions generally represent mathematical formulas widely used across a variety of fields. While this code may be user-generated, it is also embedded as a pre-written sub-routine in applications. These functions are typically identified by common nomenclature which corresponds to their underlying operations: e.g. **IRR** identifies the function which calculates Internal Rate of Return on a series of periodic cash flows.
+
+
+### Function uses
+
+As subroutines, functions can be integrated and used in a variety of ways, and as part of larger, more complicated applications. Within large enterprise applications they may, for example, play an important role in defining business rules or risk management parameters, while remaining virtually invisible to end users. Within database management systems and spreadsheets, however, these kinds of functions also represent discrete sets of tools; they can be accessed directly and utilized on a stand-alone basis, or in more complex, user-defined configurations. In this context, functions can be used for business intelligence and ad hoc analysis of data in fields such as finance, statistics, engineering, math, etc.
+
+
+### Function types
+
+**XLeratorDB** uses three kinds of functions to perform analytic operations: scalar, aggregate, and a hybrid form which WestClinTech calls ***Range Queries***. Scalar functions take a single value, perform an operation and return a single value. An example of this type of function is **LOG**, which returns the logarithm of a number to a specified base. Aggregate functions operate on a series of values but return a single, summarizing value. An example of this type of function is **AVG**, which returns the average of values in a specified group.
+
+In **XLeratorDB** there are some functions which have characteristics of aggregate functions (operating on multiple series of values) but cannot be processed in SQL CLR using single column inputs, such as **AVG** does. For example, irregular internal rate of return (**XIRR**), a financial function, operates on a collection of cash flow values from one column, but must also apply variable period lengths from another column and an initial iterative assumption from a third, in order to return a single, summarizing value. WestClinTech documentation notes that ***Range Queries*** specify the data to be included in the result set of the function independently of the WHERE clause associated with the T-SQL statement, by incorporating a SELECT statement into the function as a string argument; the function then traps that SELECT statement, executes it internally and processes the result.
+
+Some **XLeratorDB** functions that employ ***Range Queries*** are: **NPV**, **XNPV**, **IRR**, **XIRR**, **MIRR**, **MULTINOMIAL**, and **SERIESSUM**. Within the application these functions are identified by a "**\_q**" naming convention: e.g. **NPV\_q**, **IRR\_q**, etc.
+
+
+## Analytic functions
+
+
+### SQL Server functions
+
+Microsoft SQL Server is the #3 selling database management system (DBMS), behind Oracle and IBM. (While versions of SQL Server have been on the market since 1987, **XLeratorDB** is compatible with only the 2005 edition and later.) Like all major DBMS, SQL Server performs a variety of data mining operations by returning or arraying data in different views (also known as drill-down). In addition, SQL Server uses Transact-SQL (T-SQL) to execute four major classes of pre-defined functions in native mode. Functions operating on the DBMS offer several advantages over client layer applications like Excel: they utilize the most up-to-date data available; they can process far larger quantities of data; and, the data is not subject to exporting and transcription errors.
+
+SQL Server 2008 includes a total of 58 functions that perform relatively basic aggregation (12), math (23) and string manipulation (23) operations useful for analytics; it includes no native functions that perform more complex operations directly related to finance, statistics or engineering.
+
+
+### Excel functions
+
+Microsoft Excel, a component of Microsoft Office suite, is one of the most widely used spreadsheet applications on the market today.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ In addition to its inherent utility as a stand-alone desktop application, Excel overlaps and complements the functionality of DBMS in several ways: storing and arraying data in rows and columns; performing certain basic tasks such as pivot table and aggregating values; and facilitating sharing, importing and exporting of database data. Excel's chief limitation relative to a true database is capacity; Excel 2003 is limited to some 65k rows and 256 columns; Excel 2007 extends this capacity to roughly 1million rows and 16k columns. By comparison, SQL Server is able to manage over 500k terabytes of memory.
+
+Excel offers, however, an extensive library of specialized pre-written functions which are useful for performing ad hoc analysis on database data. Excel 2007 includes over 300 of these pre-defined functions, although customized functions can also be created by users, or imported from third party developers as add-ons. Excel functions are grouped by type:
+
+**Excel functions**
+| Financial | Statistical | Engineering | Math and trig |
+| --- | --- | --- | --- |
+| Information | Date and time | Text and data | Logical |
+| Add-ins and automation | Lookup and reference | Cube | Database and list management |
+
+
+### Excel business intelligence functions
+
+Operating on the client computing layer Excel plays an important role as a business intelligence tool because it:
+
+* performs a wide array of complex analytic functions not native to most DBMS software
+* offers far greater ad hoc reporting and analytic flexibility than most enterprise software
+* provides a medium for sharing and collaborating because of its ubiquity throughout the enterprise
+
+Microsoft reinforces this positioning with Business Intelligence documentation that positions Excel in a clearly pivotal role.
+
+
+### XLeratorDB vs. Excel functions
+
+While operating within the database environment, **XLeratorDB** functions utilize the same naming conventions and input formats, and in most cases, return the same calculation results as Excel functions. **XLeratorDB**, coupled with SQL Server's native capabilities, compares to Excel's function sets as follows:
+
+| Excel 2007 | | XLeratorDB + SQL Server | | | |
+| --- | --- | --- | --- | --- | --- |
+| Function Type | Total | Total | Match | New | Native |
+| Financial | 52 | 93 | 50 | 43 | 0 |
+| Statistics | 83 | 171 | 65 | 94 | 12 |
+| Math | 59 | 76 | 34 | 19 | 23 |
+| Engineering | 39 | 44 | 38 | 6 | 0 |
+| Conversions\* | 49 | 78 | 0 | 78 | 0 |
+| Strings | 26 | 63 | 11 | 29 | 23 |
+| *\*Microsoft includes these functions within Engineering using variable input configurations* | | | | | |
+

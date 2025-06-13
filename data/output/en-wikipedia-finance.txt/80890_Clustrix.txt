@@ -1,0 +1,57 @@
+Clustrix
+
+
+# Clustrix
+
+
+
+**Clustrix, Inc.** is a San Francisco-based private company founded in 2006 that developed a database management system marketed as NewSQL.
+
+
+## History
+
+Clustrix was founded in November 2006, and is sometimes called *Sprout-Clustrix* as it formed with the help of Y Combinator.
+Founders include Paul Mikesell (formerly of EMC Isilon) and Sergei Tsarev.
+Some of its technology tested at customers since 2008.
+
+Initially called *Sierra* during the development phase, at its official announcement in 2010, the product was launched with the product name *Clustered Database System (CDS)*.
+The company received $10 million in funding from Sequoia Capital, U.S. Venture Partners (USVP), and ATA Ventures in December 2010.
+Robin Purohit became chief executive in October 2011, and another round of $6.75 million was raised in July 2012.
+Another round of funding from the original backers of $16.5 million was announced in May 2013, and a round of $10 million in new funding in August 2013 was led by HighBAR Ventures.
+Purohit was replaced by Mike Azevedo in 2014.
+A round of over $23 million in debt financing was disclosed in February 2016.
+
+On September 20, 2018 it was announced that Clustrix was acquired by MariaDB Corporation.
+
+
+## Technology
+
+Clustrix supports workloads that involve scaling transactions and real-time analytics. The system is a drop-in replacement for MySQL, and is designed to overcome MySQL scalability issues with a minimum of disruption. It also has built in fault-tolerance features for high availability within a cluster. It has parallel backup and parallel replication among clusters for disaster recovery.
+Clustrix is a scale-out SQL database management system and part of what are often called the NewSQL database systems (modern relational database management systems), closely following the NoSQL movement.
+
+The product was marketed as a hardware "appliance" using InfiniBand through about 2014.
+Clustrix's database was made available as downloadable software and from the Amazon Web Services Marketplace by 2013.
+
+The primary competitors like Microsoft SQL Server and MySQL supported online transaction processing and online analytical processing but were not distributed. Clustrix provides a distributed relational, ACID database that scales transactions and support real-time analytics. Other distributed relational databases are columnar (they don't support primary transaction workload) and focus on offline analytics and this includes EMC Greenplum, HP Vertica, Infobright, and Amazon Redshift. Notable players in the primary SQL database space are in-memory. This includes VoltDB and MemSQL, which excel at low-latency transactions, but do not target real-time analytics.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ NoSQL competitors, like MongoDB are good at handling unstructured data and read heavy workloads, but do not compete in the space for write heavy workloads (no transactions, coarse grained (DB-level) locking, and no SQL features (like joins), so the NewSQL and NoSQL databases are complementary.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+
+### Query evaluation
+
+The Clustrix database operates on a distributed cluster of shared-nothing nodes using a query to data approach. Here nodes typically own a subset of the data. SQL queries are split into query fragments and sent to the nodes that own the data. This enables Clustrix to scale horizontally (scale out) as additional nodes are added.
+
+
+### Data distribution
+
+The Clustrix database automatically splits and distributes data evenly across nodes with each slice having copies on other nodes. Uniform data distribution is maintained as nodes are added, removed or if data is inserted unevenly. This automatic data distribution approach removes the need to shard and enables Clustrix to maintain database availability in the face of node loss.
+
+
+### Performance
+
+In a performance test completed by Percona in 2011, a three-node cluster saw about a 73% increase in speed over a similarly equipped single MySQL server running tests with 1024 simultaneous threads.
+Additional nodes added to the Clustrix cluster provided roughly linear increases in speed.
+
+
+## Project cancellation
+
+MariaDB announced in October of 2023 that Xpand (formerly known as Clustrix) had been discontinued.
+

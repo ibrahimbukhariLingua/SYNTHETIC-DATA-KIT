@@ -1,0 +1,109 @@
+SAP R/3
+
+
+# SAP R/3
+
+
+
+**SAP R/3** is the former name of the enterprise resource planning software produced by the German corporation SAP AG (now SAP SE). It is an enterprise-wide information system designed to coordinate all the resources, information, and activities needed to complete business processes such as order fulfillment, billing, human resource management, and production planning.
+
+The current successor software to SAP R/3 is known as SAP S/4HANA.
+
+
+## History of SAP S/4HANA
+
+
+### Earlier versions
+
+SAP R/2 was a mainframe-based business application software suite that was very successful in the 1980s and early 1990s. It was particularly popular with large multinational European companies that required soft-real-time business applications, with built-in multi-currency and multi-language capabilities.
+
+
+### R/3
+
+With the advent of distributed client–server computing, SAP SE brought out a client–server version of the software called SAP R/3 (the "R" was for "Real-time data processing" and "3" was for "3-tier": 1) database, 2) application server, and 3) client (SAPgui)). This new architecture is compatible with multiple platforms and operating systems, such as Microsoft Windows or UNIX. This opened up SAP to a whole new customer base.
+
+SAP R/3 was officially launched on 6 July 1992. Various releases of the software were made through the 1990s.
+
+A newer version of the software, with revised technical architecture, was released in 2004, and renamed as SAP ERP Central Component (ECC). SAP came to dominate the large business applications market. The newest version of the product is SAP ECC 6.0 Enhancement Pack 8.
+
+SAP ECC is the core component within the SAP's Business Suite (a collection of applications including SAP CRM, SAP SCM and others, alongside the ECC component). SAP ECC contains different, but integrated, functionality within its "modules" e.g. Finance module, HR module, Warehouse Management etc. all within the ECC). The combined complexity of the Business Suite, along with newer in-cloud competitors, has in recent years led SAP to invest heavily in simplification and massively improved system response times, culminating in the announcement of the S/4 Simple Suite in February 2015. S/4 has a single tenant architecture and is being built upon SAP's in-memory database technology stack (HANA) and will be available in a choice of in-cloud and on-premises deployment. The classic three-tier and database-agnostic architecture of R/3 is replaced with a two-tier architecture.
+
+
+## Releases
+
+* SAP R/1 System RF: 1973
+* SAP R/2 Mainframe System: 1979
+* SAP R/3 Enterprise Edition 1.0 A: July 1992
+* SAP R/3 Enterprise Edition 2.0B (SAP R/3 2.0B): July 1993
+* SAP R/3 Enterprise Edition 3.1l (SAP R/3 3.1I): 11 May 1998
+* SAP R/3 Enterprise Edition 4.0B (SAP R/3 4.0B): 6 April 1998
+* SAP R/3 Enterprise Edition 4.3
+* SAP R/3 Enterprise Edition 4.5B (SAP R/3 4.5B): 29 March 1999
+* SAP R/3 Enterprise Edition 4.6B (SAP R/3 4.6B): 6 December 1999
+* SAP R/3 Enterprise Edition 4.6C (SAP R/3 4.6C): 3 April 2000
+* SAP R/3 Enterprise Edition 4.6F
+* SAP R/3 ENTERPRISE 4.7X110: 15 July 2002
+* SAP R/3 ENTERPRISE 4.7X200: 22 September 2003
+* SAP ERP Central Component (ECC) 5.0: 21 June 2004
+* SAP ERP Central Component (ECC) 6.0: 24 October 2005
+ + SAP enhancement package 1 for SAP ERP 6.0 (EHP1 FOR SAP ERP 6.0): 21 December 2006
+ + SAP enhancement package 2 for SAP ERP 6.0 (EHP2 FOR SAP ERP 6.0): 27 July 2007
+ + SAP enhancement package 3 for SAP ERP 6.0 (EHP3 FOR SAP ERP 6.0): 7 December 2007
+ + SAP enhancement package 4 for SAP ERP 6.0 (EHP4 FOR SAP ERP 6.0): 21 November 2008
+ + SAP enhancement package 5 for SAP ERP 6.0 (EHP5 FOR SAP ERP 6.0): 12 July 2010
+ + SAP enhancement package 6 for SAP ERP 6.0 (EHP6 FOR SAP ERP 6.0): 24 August 2011
+ + SAP enhancement package 7 for SAP ERP 6.0 (EHP7 FOR SAP ERP 6.0): 13 August 2013
+ + SAP Fiori 1.0 for SAP ERP (UI FOR EHP7 FOR SAP ERP 6.0): 29 November 2013
+ + SAP enhancement package 8 for SAP ERP 6.0 (EHP8 FOR SAP ERP 6.0): 20 January 2016
+* SAP S/4HANA
+ + SAP S/4HANA 1511: November 2015
+ + SAP S/4HANA 1610: 31 October 2016
+ + SAP S/4HANA 1709: 15 September 2017
+ + SAP S/4HANA 1809: 21 September 2018
+ + SAP S/4HANA 1909: 20 September 2019
+ + SAP S/4HANA 2020: 7 October 2020
+ + SAP S/4HANA 2021 and SAP S/4HANA Cloud: 13 October 2021
+ + SAP S/4HANA 2022 and SAP S/4HANA Cloud, Private Edition: 10 October 2022
+
+## Software organization
+
+SAP R/3 was arranged into distinct functional modules, covering the typical functions in a business organization. The most widely used modules were Financials and Controlling (FICO), Human Resources (HR), Materials Management (MM), Sales & Distribution (SD), and Production Planning (PP).
+
+Each module handled specific business tasks on its own, but was linked to the other modules where applicable. For instance, an invoice from the billing transaction of Sales & Distribution would pass through to accounting, where it will appear in accounts receivable and cost of goods sold.
+
+SAP typically focused on best practice methodologies for driving its software processes, but more recently expanded into vertical markets. In these situations, SAP produced specialized modules (referred to as IS or Industry Specific) geared toward a particular market segment, such as utilities or retail.
+
+
+## Technology
+
+SAP based the architecture of R/3 on a three-tier client/server structure:
+
+1. Presentation layer (GUI)
+2. Application layer
+3. Database layer
+
+### Presentation layer
+
+SAP allows the IT supported processing of a multitude of tasks which occur in a typical company. The newer SAP ERP software differs from R/3 mainly because it is based on SAP NetWeaver: core components can be implemented in ABAP and in Java and new functional areas are mostly no longer created as part of the previous ERP system, with closely interconnected constituents, but as self-contained components or even systems.
+
+
+### Application server
+
+This server contains the SAP applications. In systems with two layers, this server forms part of the database server. Application server can be set up for online users, for background processing, or for both.
+
+An application server is a collection of executables that collectively interpret the ABAP/4 (Advanced Business Application Programming / 4th Generation) programs and manage the input and output for them. When an application server is started, these executables all start at the same time. When an application server is stopped, they all shut down together. The number of processes that start up when you bring up the application server is defined in a single configuration file called the application server profile.
+Each application server has a profile that specifies its characteristics when it starts up and while it is running. For example, an application server profile specifies:
+
+* Number of processes and their types
+* Amount of memory each process may use
+* Length of time a user is inactive before being automatically logged off.
+
+The application layer consists of one or more application servers and a message server. Each application server contains a set of services used to run the R/3 system. Not practical, only one application server is needed to run an R/3 system. But in practice, the services are distributed across more than one application server. This means that not all application servers will provide the full range of services. The message server is responsible for communication between the application servers. It passes requests from one application server to another within the system. It also contains information about application server groups and the current load balancing within them. It uses this information to choose an appropriate server when a user logs onto the system.
+
+The application server exists to interpret ABAP/4 programs, and they only run there. If an ABAP/4 program requests information from the database, the application server will send the request to the database server.
+
+
+### Security
+
+Server-to-server communications can be encrypted with the SAP cryptographic library. With the acquisition of relevant parts of SECUDE, SAP was able to provide cryptographic libraries with SAP R/3 for Secure Network Communications and Secure Sockets Layer.
+

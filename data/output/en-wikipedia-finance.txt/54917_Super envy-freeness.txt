@@ -1,0 +1,27 @@
+Super envy-freeness
+
+
+# Super envy-freeness
+
+
+
+A **super-envy-free division** is a kind of a fair division. It is a division of resources among *n* partners, in which each partner values his/her share at strictly *more* than his/her due share of 1/*n* of the total value, and simultaneously, values the share of every other partner at strictly less than 1/*n*. Formally, in a super-envy-free division of a resource *C* among *n* partners, each partner *i*, with value measure *Vᵢ*, receives a share *Xᵢ* such that:
+
+> {\displaystyle V\_{i}(X\_{i})>V\_{i}(C)/n~~{\text{ and }}~~\forall j\neq i:V\_{i}(X\_{j})<V\_{i}(C)/n}.
+
+This is a strong fairness requirement: it is stronger than both envy-freeness and super-proportionality.
+
+
+## Existence
+
+Super envy-freeness was introduced by Julius Barbanel in 1996. He proved that a super-envy-free cake-cutting exists if-and-only-if the value measures of the *n* partners are *linearly independent*. "Linearly independent" means that there is no vector of *n* non-zero real numbers {\displaystyle c\_{1},\ldots ,c\_{n}\in \mathbb {R} } for which {\displaystyle c\_{1}\cdot V\_{1}+\cdots +c\_{n}\cdot V\_{n}=0},
+
+
+## Computation
+
+In 1999, William Webb presented an algorithm that finds a super-envy-free allocation in this case. His algorithm is based on a *witness* to the fact that the measures are independent. A witness is an *n*-by-*n* matrix, in which element (*i*,*j*) is the value assigned by agent *i* to some piece *j* (where the pieces 1,...,*n* can be any partition of the cake, for example, partition to equal-length intervals). The matrix should be invertible - this is a witness to the linear independence of the measures.
+
+Using such a matrix, the algorithm partitions each of the *n* pieces in a near-exact division. It can be shown that, if the matrix is invertible and the approximation factor is sufficiently small (w.r.t. the values in the inverse of the matrix), then the resulting allocation is indeed super-envy-free.
+
+The run-time of the algorithm depends on the properties of the matrix. However, if the value measures are drawn uniformly at random from the unit simplex, with high probability, the runtime is polynomial in *n*.
+

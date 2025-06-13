@@ -1,0 +1,47 @@
+Stochastic frontier analysis
+
+
+# Stochastic frontier analysis
+
+
+
+**Stochastic frontier analysis** (SFA) is a method of economic modeling. It has its starting point in the stochastic production frontier models simultaneously introduced by Aigner, Lovell and Schmidt (1977) and Meeusen and Van den Broeck (1977).
+
+The *production frontier model* without random component can be written as:
+
+{\displaystyle y\_{i}=f(x\_{i};\beta )\cdot TE\_{i}}
+
+where *yᵢ* is the observed scalar output of the producer *i*; *i=1,..I, xᵢ* is a vector of *N* inputs used by the producer *i*; {\displaystyle \beta } is a vector of technology parameters to be estimated; and *f(xᵢ, β)* is the production frontier function.
+
+*TEᵢ* denotes the technical efficiency defined as the ratio of observed output to maximum feasible output.
+*TEᵢ = 1* shows that the *i-th* firm obtains the maximum feasible output, while *TEᵢ < 1* provides a measure of the shortfall of the observed output from maximum feasible output.
+
+A stochastic component that describes random shocks affecting the production process is added. These shocks are not directly attributable to the producer or the underlying technology. These shocks may come from weather changes, economic adversities or plain luck. We denote these effects with {\displaystyle \exp \left\{{v\_{i}}\right\}}. Each producer is facing a different shock, but we assume the shocks are random and they are described by a common distribution.
+
+The stochastic production frontier will become:
+
+{\displaystyle y\_{i}=f(x\_{i};\beta )\cdot TE\_{i}\cdot \exp \left\{{v\_{i}}\right\}}
+
+We assume that *TEᵢ* is also a stochastic variable, with a specific distribution function, common to all producers.
+
+We can also write it as an exponential {\displaystyle TE\_{i}=\exp \left\{{-u\_{i}}\right\}}, where *uᵢ ≥ 0*, since we required *TEᵢ ≤ 1*. Thus, we obtain the following equation:
+
+{\displaystyle y\_{i}=f(x\_{i};\beta )\cdot \exp \left\{{-u\_{i}}\right\}\cdot \exp \left\{{v\_{i}}\right\}}
+
+Now, if we also assume that *f(xᵢ, β)* takes the log-linear Cobb–Douglas form, the model can be written as:
+
+{\displaystyle \ln y\_{i}=\beta \_{0}+\sum \limits \_{n}{\beta \_{n}\ln x\_{ni}+v\_{i}-u\_{i}}}
+
+where *vᵢ* is the “noise” component, which we will almost always consider as a two-sided normally distributed variable, and *uᵢ* is the non-negative technical inefficiency component. Together they constitute a compound error term, with a specific distribution to be determined, hence the name of “composed error model” as is often referred.
+
+Stochastic frontier analysis has examined also "cost" and "profit" efficiency. The "cost frontier" approach attempts to measure how far from full-cost minimization (i.e. cost-efficiency) is the firm. Modeling-wise, the non-negative cost-inefficiency component is added rather than subtracted in the stochastic specification. "Profit frontier analysis" examines the case where producers are treated as profit-maximizers (both output and inputs should be decided by the firm) and not as cost-minimizers, (where level of output is considered as exogenously given). The specification here is similar with the "production frontier" one.
+
+Stochastic frontier analysis has also been applied in micro data of consumer demand in an attempt to benchmark consumption and segment consumers. In a two-stage approach, a stochastic frontier model is estimated and subsequently deviations from the frontier are regressed on consumer characteristics.
+
+
+## Extensions: The two-tier stochastic frontier model
+
+Polacheck & Yoon (1987) have introduced a three-component error structure, where one non-negative error term is added to, while the other is subtracted from, the zero-mean symmetric random disturbance. This modeling approach attempts to measure the impact of informational inefficiencies (incomplete and imperfect information) on the prices of realized transactions, inefficiencies that in most cases characterize both parties in a transaction (hence the two inefficiency components, to disentangle the two effects).
+
+In the 2010s, various non-parametric and semi-parametric approaches were proposed in the literature, where no parametric assumption on the functional form of production relationship is made.
+

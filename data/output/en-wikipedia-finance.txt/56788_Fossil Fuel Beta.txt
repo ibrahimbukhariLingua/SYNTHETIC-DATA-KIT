@@ -1,0 +1,75 @@
+Fossil Fuel Beta
+
+
+# Fossil Fuel Beta
+
+
+
+**Fossil Fuel Beta** (**FFß**) measures the percent change in excess (market-adjusted) stock returns for every 1 percent increase in fossil fuel prices.
+For example, if a company (or industry) has an FFß of –0.20, then a 1 percent increase in fossil fuel prices should produce, on average, a 0.2% decline in the firm's stock price over and above the impact arising from fossil fuel price swing on the stock market as a whole. (Conversely, a 1 percent decrease in fossil fuel prices should produce, on average, an equivalent increase in stock price.)
+
+Converting the FFß into a hypothetical ‘Earnings per share-equivalent’ based on a fixed percent change in fossil fuel prices, it is possible to compare earnings-at-risk for individual companies with their competitors, or even industries with each other.
+
+
+## Rationale
+
+Three common fossil fuels — coal, petroleum and natural gas — produce more than four-fifths of all carbon dioxide (CO₂) emissions. Achieving meaningful reductions in greenhouse gas (GHG) emissions requires abating CO₂ emissions.
+
+In countries such as the US, companies are the largest emitters of CO₂. By linking earnings-per-share (EPS) to fossil fuel price volatility, FFß highlights a potential economic payoff for reducing or hedging the use of fossil fuels, and hence CO₂ emissions. FFß can also underscore adverse economic consequences to companies that fail to manage carbon footprints.
+
+
+## History
+
+The FFß was created by Professor Anant Sundaram of the Tuck School of Business at Dartmouth College, with support from the Allwin Initiative for Corporate Citizenship Archived 2009-10-11 at the Wayback Machine.
+
+*CFO Magazine* (a division of the *Economist*) published the first FFß scorecard in its December 2008 issue. The scorecard was computed for 135 S&P 500 firms in ten industries, using a simple market model in which a firm's excess returns are calculated by subtracting aggregate market returns from the firm's returns. A slightly more sophisticated analysis calculates the firm's excess returns by subtracting returns predicted by an asset pricing model such as the Capital Asset Pricing Model, or CAPM. This latter analysis, for all the firms in the S&P500 can be found here.
+
+
+## Calculation
+
+Calculating market value and EPS impact of fossil fuel price changes uses publicly available data on stock returns, analyst earnings estimates, and fossil fuel producer prices. Steps are:
+
+* Calculate excess stock market returns for the company. Excess returns are defined as raw returns minus the returns predicted by an asset pricing model such as the market model or the CAPM;
+* Calculate FFß. This is the coefficient in a statistical regression analysis in which the company's excess returns is the dependent variable and percentage change in fossil fuel prices (call it ∆FF Price) is the independent variable. The regression equation is Excess Return = α + FFß×(∆FF Price) + ε
+* Calculate the change in market value (∆Market Val) associated with, say, a 10% increase in fossil fuel prices. ∆Market Val = (Market Val)×(FFß)×(10)
+* Calculate the impact on forecasted EPS for the forthcoming year (∆EPS) as
+ ∆EPS = (∆Market Val) ÷ ((# Shares Outstanding) × (PE Ratio)) where the PE Ratio is from consensus analyst estimates.
+
+## Implications for climate change
+
+If we expect that fossil fuel prices will rise over time and that there will be a meaningful price on GHG emissions from a carbon tax or cap and trade system, energy-consuming businesses will generally want to reduce their dependence on GHG-producing fossil fuels. In that context, a firm that is focused on its underlying product-market and competitive strategy (rather than extraneous variables such as energy prices) might attempt to decouple itself from cash flow and return effects of fossil fuel price changes. Over the long run, such a firm would seek to gravitate to a zero FFß. Actions it might take include implementing operational strategies such as achieving greater fuel efficiency and shifting to renewable energy sources, or financial strategies such as hedging fossil fuel purchases.
+
+Success in decoupling stock returns from fossil fuel price changes will have implications for statistical significance of the coefficient in the regression to calculate the FFß: the regression coefficient will not be significantly different from zero for companies that have successfully gravitated to a zero-FFß. (Of course, the normal tests of statistical significance of difference from zero will apply for betas that are inferred to be positive or negative).
+
+
+## FFßs for energy consumers vs. energy producers
+
+
+### Energy consumers
+
+Energy-consuming companies should generally have neutral-to-negative FFßs.
+Energy is not only an input cost, but higher energy prices also increase the price of other raw materials. If a company cannot pass through in its pricing the effects of energy and raw material price increases, its profit margin will decline. There is also a substitution effect. Because consumers pay more for energy use when fossil fuel prices rise, they have less to spend on the firm's products, thus negatively impacting profits and margins. The combination of these two effects for energy-consuming firms produces a decline in stock price when energy prices rise.
+
+Some energy-consuming firms could be insulated from these impacts, and may have neutral (or even positive) FFßs. They may have hedged their cash flow exposure to price increases via financial hedges or by operational hedges to reduce dependence on fossil fuel use. Their market power might be higher, or the price elasticity of demand for their products might be so low as to enable them to pass on the effect of cost increases. It is also possible that a company's business model benefits from the macroeconomic effects of an energy price increase: for instance, a company with lower-priced product offerings might find demand increasing in harder economic times as consumers switch from higher-priced alternatives.
+
+
+### Energy producers
+
+Energy-producing companies, on the other hand, should generally have neutral-to-positive betas. If the fossil fuel price increase is the result of an increase in demand for energy, higher prices will lead to higher profits. Price elasticity of demand may be lower than average in energy-producing industries since it is a widely used (and essential) good with no short-term substitutes.
+
+Some energy producers, e.g., electric utilities, may have margins protected by regulation that allows them to price on a ‘cost-plus’ basis. Such factors allow energy producers to pass on cost increases to consumers. Energy-producing industries also generally tend to be capital intensive. This capital-intensity could create entry barriers, giving them greater pricing power. For all these reasons, the net impact of fossil fuel price increases on energy producers is to maintain or increase margins, and thereby, their stock prices. Finally, many energy producers own fossil fuel reserves. Higher fossil fuel prices will have a direct positive impact on their share prices by increasing the market value of reserve assets.
+
+
+## FFß scorecard example
+
+Here is an example showing two companies in the retailing sector as it appeared in the CFO scorecard. It shows the hypothetical EPS impact of a 10% increase in fossil fuel prices.
+
+Given likely high dependence on fossil fuels because of reliance on transportation and storage, as well as heating or cooling commercial buildings, firms in the retailing sector would be expected to have a negative FFß, on average. Yet, there is considerable variance within the industry. Some firms in the industry – e.g., Wal-mart – even have non-negative FFßs.
+
+| Company Name | FFβ | Market Value [000] | ∆ Market Value [000] | Forward P/E | ∆EPS |
+| --- | --- | --- | --- | --- | --- |
+| Nordstrom | -0.4953 | $ 8,524,482 | -$422,260 | 11.73 | -$0.16 |
+| Wal-Mart Stores | 0.0228 | $190,348,567 | $434,270 | 13.82 | $0.01 |
+
+As the scorecard shows, petroleum producers and electric utilities have generally positive FFßs. On the other hand, heavy energy-consuming industries such as heavy manufacturing, retailing, aerospace/defense, and airlines have negative FFßs, while industries such as food/beverages and drugs with their neutral FFßs, seem relatively immune to fossil fuel price changes.
+

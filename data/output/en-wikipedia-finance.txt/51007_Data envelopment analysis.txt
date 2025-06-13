@@ -1,0 +1,115 @@
+Data envelopment analysis
+
+
+# Data envelopment analysis
+
+
+
+**Data envelopment analysis** (**DEA**) is a nonparametric method in operations research and economics for the estimation of production frontiers. DEA has been applied in a large range of fields including international banking, economic sustainability, police department operations, and logistical applications Additionally, DEA has been used to assess the performance of natural language processing models, and it has found other applications within machine learning.
+
+
+## Description
+
+DEA is used to empirically measure productive efficiency of decision-making units (DMUs). Although DEA has a strong link to production theory in economics, the method is also used for benchmarking in operations management, whereby a set of measures is selected to benchmark the performance of manufacturing and service operations. In benchmarking, the efficient DMUs, as defined by DEA, may not necessarily form a “production frontier”, but rather lead to a “best-practice frontier.”²⁴³–²⁸⁵
+
+In contrast to parametric methods that require the *ex-ante* specification of a production- or cost-function, non-parametric approaches compare feasible input and output combinations based on the available data only. DEA, one of the most commonly used non-parametric methods, owes its name to its enveloping property of the dataset's efficient DMUs, where the empirically observed, most efficient DMUs constitute the production frontier against which all DMUs are compared. DEA's popularity stems from its relative lack of assumptions, the ability to benchmark multi-dimensional inputs and outputs as well as its computational ease owing to it being expressable as a linear program, despite its task to calculate efficiency ratios.
+
+
+## History
+
+Building on the ideas of Farrell, the 1978 work "Measuring the efficiency of decision-making units" by Charnes, Cooper & Rhodes applied linear programming to estimate, for the first time, an empirical, production-technology frontier. In Germany, the procedure had earlier been used to estimate the marginal productivity of R&D and other factors of production. Since then, there have been a large number of books and journal articles written on DEA or about applying DEA to various sets of problems.
+
+Starting with the CCR model, named after Charnes, Cooper, and Rhodes, many extensions to DEA have been proposed in the literature. They range from adapting implicit model assumptions such as input and output orientation, distinguishing technical and allocative efficiency, adding limited disposability
+of inputs/outputs or varying returns-to-scale to techniques that utilize DEA results and extend them for more sophisticated analyses, such as stochastic DEA or cross-efficiency analysis.
+
+
+## Techniques
+
+In a one-input, one-output scenario, efficiency is merely the ratio of output over input that can be produced, while comparing several entities/DMUs based on it is trivial. However, when adding more inputs or outputs the efficiency computation becomes more complex. Charnes, Cooper, and Rhodes (1978) in their basic DEA model (the CCR) define the objective function to find {\displaystyle DMU\_{j}'s} efficiency {\displaystyle (\theta \_{j})} as:
+
+where the {\displaystyle DMU\_{j}'s} known {\displaystyle M} outputs {\displaystyle y\_{1}^{j},...,y\_{m}^{j}} are multiplied by their respective weights {\displaystyle u\_{1}^{j},...,u\_{m}^{j}} and divided by the {\displaystyle N} inputs {\displaystyle x\_{1}^{j},...,x\_{n}^{j}} multiplied by their respective weights {\displaystyle v\_{1}^{j},...,v\_{n}^{j}}.
+
+The efficiency score {\displaystyle \theta \_{j}} is sought to be maximized, under the constraints that using those weights on each {\displaystyle DMU\_{k}\quad k=1,...,K}, no efficiency score exceeds one:
+
+and all inputs, outputs and weights have to be non-negative. To allow for linear optimization, one typically constrains either the sum of outputs or the sum of inputs to equal a fixed value (typically 1. See later for an example).
+
+Because this optimization problem's dimensionality is equal to the sum of its inputs and outputs, selecting the smallest number of inputs/outputs that collectively, accurately capture the process one attempts to characterize is crucial. And because the production frontier envelopment is done empirically, several guidelines exist on the minimum required number of DMUs for good discriminatory power of the analysis, given homogeneity of the sample. This minimum number of DMUs varies between twice the sum of inputs and outputs ({\displaystyle 2(M+N)}) and twice the product of inputs and outputs ({\displaystyle 2MN}).
+
+Some advantages of the DEA approach are:
+
+* no need to explicitly specify a mathematical form for the production function
+* capable of handling multiple inputs and outputs
+* capable of being used with any input-output measurement, although ordinal variables remain tricky
+* the sources of inefficiency can be analysed and quantified for every evaluated unit
+* using the dual of the optimization problem identifies which DMU is evaluating itself against which other DMUs
+
+Some of the disadvantages of DEA are:
+
+* results are sensitive to the selection of inputs and outputs
+* high-efficiency values can be obtained by being truly efficient or having a niche combination of inputs/outputs
+* the number of efficient firms on the frontier increases with the number of inputs and output variables
+* a DMU's efficiency scores may be obtained by using non-unique combinations of weights on the input and/or output factors
+
+## Example
+
+Assume that we have the following data:
+
+* Unit 1 produces 100 items per day, and the inputs per item are 10 dollars for materials and 2 labour-hours
+* Unit 2 produces 80 items per day, and the inputs are 8 dollars for materials and 4 labour-hours
+* Unit 3 produces 120 items per day, and the inputs are 12 dollars for materials and 1.5 labour-hours
+
+To calculate the efficiency of unit 1, we define the objective function (OF) as
+
+* {\displaystyle MaxEfficiency:(100u\_{1})/(10v\_{1}+2v\_{2})}
+
+which is subject to (ST) all efficiency of other units (efficiency cannot be larger than 1):
+
+* Efficiency of unit 1: {\displaystyle (100u\_{1})/(10v\_{1}+2v\_{2})\leq 1}
+* Efficiency of unit 2: {\displaystyle (80u\_{1})/(8v\_{1}+4v\_{2})\leq 1}
+* Efficiency of unit 3: {\displaystyle (120u\_{1})/(12v\_{1}+1.5v\_{2})\leq 1}
+
+and non-negativity:
+
+* {\displaystyle u,v\geq 0}
+
+A fraction with decision variables in the numerator and denominator is nonlinear. Since we are using a linear programming technique, we need to linearize the formulation, such that the denominator of the objective function is constant (in this case 1), then maximize the numerator.
+
+The new formulation would be:
+
+* OF
+ + {\displaystyle MaxEfficiency:100u\_{1}}
+* ST
+ + Efficiency of unit 1: {\displaystyle 100u\_{1}-(10v\_{1}+2v\_{2})\leq 0}
+ + Efficiency of unit 2: 
+ 80
+ u
+ 1
+ 
+ 
+ −
+ (
+ 8
+ v
+ 1
+ 
+ 
+ +
+ 4
+ v
+ 2
+ 
+ 
+ )
+ ≤
+ 0
+ 
+ 
+ {\textstyle 80u\_{1}-(8v\_{1}+4v\_{2})\leq 0}
+ + Efficiency of unit 3: {\displaystyle 120u\_{1}-(12v\_{1}+1.5v\_{2})\leq 0}
+ + Denominator of nonlinear OF*:* {\displaystyle 10v\_{1}+2v\_{2}=1}
+ + Non-negativity: {\displaystyle u,v\geq 0}
+
+## Extensions
+
+A desire to improve upon DEA by reducing its disadvantages or strengthening its advantages has been a major cause for discoveries in the recent literature. The currently most often DEA-based method to obtain unique efficiency rankings is called "cross-efficiency." Originally developed by Sexton et al. in 1986, it found widespread application ever since Doyle and Green's 1994 publication. Cross-efficiency is based on the original DEA results, but implements a secondary objective where each DMU peer-appraises all other DMU's with its own factor weights. The average of these peer-appraisal scores is then used to calculate a DMU's cross-efficiency score. This approach avoids DEA's disadvantages of having multiple efficient DMUs and potentially non-unique weights. Another approach to remedy some of DEA's drawbacks is Stochastic DEA, which synthesizes DEA and Stochastic Frontier Analysis (SFA).
+

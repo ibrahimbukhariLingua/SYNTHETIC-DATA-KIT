@@ -1,0 +1,24 @@
+Skewness risk
+
+
+# Skewness risk
+
+
+
+**Skewness risk** in forecasting models utilized in the financial field is the risk that results when observations are not spread symmetrically around an average value, but instead have a skewed distribution. As a result, the mean and the median can be different. Skewness risk can arise in any quantitative model that assumes a symmetric distribution (such as the normal distribution) but is applied to skewed data.
+
+Ignoring skewness risk, by assuming that variables are symmetrically distributed when they are not, will cause any model to understate the risk of variables with high skewness.
+
+Skewness risk plays an important role in hypothesis testing. The analysis of variance, one of the most common tests used in hypothesis testing, assumes that the data is normally distributed. If the variables tested are not normally distributed because they are too skewed, the test cannot be used. Instead, nonparametric tests can be used, such as the Mann–Whitney test for unpaired situation or the sign test for paired situation.
+
+Skewness risk and kurtosis risk also have technical implications in calculation of value at risk. If either are ignored, the Value at Risk calculations will be flawed.
+
+Benoît Mandelbrot, a French mathematician, extensively researched this issue. He feels that the extensive reliance on the normal distribution for much of the body of modern finance and investment theory is a serious flaw of any related models (including the Black–Scholes model and CAPM). He explained his views and alternative finance theory in a book: *The (Mis)Behavior of Markets: A Fractal View of Risk, Ruin and Reward*.
+
+In options markets, the difference in implied volatility at different strike prices represents the market's view of skew, and is called volatility skew. (In pure Black–Scholes, implied volatility is constant with respect to strike and time to maturity.)
+
+
+## Skewness for bonds
+
+Bonds have a skewed return. A bond will either pay the full amount on time (very likely to much less likely depending on quality), or less than that. A normal bond does not ever pay *more* than the "good" case.
+

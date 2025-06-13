@@ -1,0 +1,119 @@
+Vickrey–Clarke–Groves auction
+
+
+# Vickrey–Clarke–Groves auction
+
+
+
+| Part of a series on |
+| --- |
+| Auctions |
+| Types |
+| * All-pay + Chinese + Bidding fee + Dollar * Amsterdam * Anglo-Dutch * Barter double * Best/not best * Brazilian * Calcutta * Candle * Click-box bidding * Combinatorial * Common value * Deferred-acceptance * Discriminatory price * Double * Dutch * English * Forward * French * Generalized first-price * Generalized second-price * Japanese * Knapsack * Multi-attribute * Multiunit * No-reserve * Rank * Reverse * Scottish * Sealed first-price * Simultaneous ascending * Single-price * Traffic light * Uniform price * Unique bid * Value of revenues * Vickrey * Vickrey–Clarke–Groves * Walrasian * Yankee |
+| Bidding |
+| * Shading * Calor licitantis * Cancellation hunt * Jump * Rigging * Sniping * Suicide * Tacit collusion |
+| Contexts |
+| * Algorithms * Autos * Art * Charity * Children * Players * Domain names * Flowers * Loans * Scam * Slaves * Spectrum * Stamps * Virginity * Wine * Wives |
+| Theory |
+| * Digital goods * Price of anarchy * Revenue equivalence * Winner's curse |
+| Online |
+| * Ebidding * Private electronic market * Software |
+| * v * t * e |
+
+A **Vickrey–Clarke–Groves (VCG) auction** is a type of sealed-bid auction of multiple items. Bidders submit bids that report their valuations for the items, without knowing the bids of the other bidders. The auction system assigns the items in a socially optimal manner: it charges each individual the harm they cause to other bidders. It gives bidders an incentive to bid their true valuations, by ensuring that the optimal strategy for each bidder is to bid their true valuations of the items; it can be undermined by bidder collusion and in particular in some circumstances by a single bidder making multiple bids under different names. It is a generalization of a Vickrey auction for multiple items.
+
+The auction is named after William Vickrey, Edward H. Clarke, and Theodore Groves for their papers that successively generalized the idea.
+
+The VCG auction is a specific use of the more general VCG mechanism. While the VCG auction tries to make a socially optimal allocation of items, VCG mechanisms allow for the selection of a socially optimal outcome out of a set of possible outcomes. If collusion is likely to occur among bidders, the VCG outperforms the generalized second-price auction for both revenues produced for the seller and allocative efficiency.
+
+
+## Intuitive description
+
+Consider an auction where a set of identical products are being sold. Bidders can take part in the auction by announcing the maximum price they are willing to pay to receive N products. Each buyer is allowed to declare more than one bid, since its willingness-to-pay per unit might be different depending on the total number of units it receives. Bidders cannot see other people's bids at any moment since they are sealed (only visible to the auction system). Once all the bids are made, the auction is closed.
+
+All the possible combinations of bids are then considered by the auction system, and the one maximizing the total sum of bids is kept, with the condition that it does not exceed the total amount of products available and that at most one bid from each bidder can be used. Bidders who have made a successful bid then receive the product quantity specified in their bid. The price they pay in exchange, however, is not the amount they had bid initially but only the marginal harm their bid has caused to other bidders (which is at most as high as their original bid).
+
+This marginal harm caused to other participants (i.e. the final price paid by each individual with a successful bid) can be calculated as: (sum of bids of the auction from the best combination of bids *excluding the participant under consideration*) − (what other *winning* bidders have bid in the current (best) combination of bids). If the sum of bids of the second best combination of bids is the same as that of the best combination, then the price paid by the buyers will be the same as their initial bid. In all other cases, the price paid by the buyers will be lower.
+
+At the end of the auction, the total utility has been maximized since all the goods have been attributed to the people with the highest combined willingness-to-pay. If agents are fully rational and in the absence of collusion, we can assume that the willingness to pay have been reported truthfully since only the marginal harm to other bidders will be charged to each participant, making truthful reporting a weakly-dominant strategy. This type of auction, however, will not maximize the seller's revenue unless the sum of bids of the second best combination of bids is equal to the sum of bids of the best combination of bids.
+
+
+## Formal description
+
+
+### Notation
+
+For any set of auctioned items {\displaystyle M=\{t\_{1},\ldots ,t\_{m}\}} and any set of bidders {\displaystyle N=\{b\_{1},\ldots ,b\_{n}\}}, let {\displaystyle V\_{N}^{M}} be the social value of the VCG auction for a given bid-combination. That is, how much each person values the items they've just won, added up across everyone. The value of the item is zero if they do not win. For a bidder {\displaystyle b\_{i}} and item {\displaystyle t\_{j}}, let the bidder's bid for the item be {\displaystyle v\_{i}(t\_{j})}. The notation {\displaystyle A\setminus B} means the set of elements of A which are not elements of B.
+
+
+### Assignment
+
+A bidder {\displaystyle b\_{i}} whose bid for an item {\displaystyle t\_{j}} is an "overbid", namely {\displaystyle v\_{i}(t\_{j})}, wins the item, but pays {\displaystyle V\_{N\setminus \{b\_{i}\}}^{M}-V\_{N\setminus \{b\_{i}\}}^{M\setminus \{t\_{j}\}}}, which is the social cost of their winning that is incurred by the rest of the agents.
+
+
+### Explanation
+
+Indeed, the set of bidders other than {\displaystyle b\_{i}} is {\displaystyle N\setminus \{b\_{i}\}}. When item {\displaystyle t\_{j}} is available, they could attain welfare {\displaystyle V\_{N\setminus \{b\_{i}\}}^{M}.} The winning of the item by {\displaystyle b\_{i}} reduces the set of available items to {\displaystyle M\setminus \{t\_{j}\}}, so the attainable welfare is now {\displaystyle V\_{N\setminus \{b\_{i}\}}^{M\setminus \{t\_{j}\}}}. The difference between the two levels of welfare is therefore the loss in attainable welfare suffered by the rest of the bidders, as predicted, **given** the winner {\displaystyle b\_{i}} got the item {\displaystyle t\_{j}}. This quantity depends on the offers of the rest of the agents and is unknown to agent {\displaystyle b\_{i}}.
+
+
+### Winner's utility
+
+*The winning bidder whose bid is the true value {\displaystyle A} for the item {\displaystyle t\_{j}}, {\displaystyle v\_{i}(t\_{j})=A,} derives maximum utility {\displaystyle A-\left(V\_{N\setminus \{b\_{i}\}}^{M}-V\_{N\setminus \{b\_{i}\}}^{M\setminus \{t\_{j}\}}\right).}*
+
+
+## Examples
+
+
+### Two items, three bidders
+
+Suppose two apples are being auctioned among three bidders.
+
+* Bidder A wants one apple and is willing to pay $5 for that apple.
+* Bidder B wants one apple and is willing to pay $2 for it.
+* Bidder C wants two apples and is willing to pay $6 to have both of them but is uninterested in buying only one without the other.
+
+First, the outcome of the auction is determined by maximizing bids: the apples go to bidder A and bidder B, since their combined bid of $5 + $2 = $7 is greater than the bid for two apples by bidder C who is willing to pay only $6. Thus, after the auction, the value achieved by bidder A is $5, by bidder B is $2, and by bidder C is $0 (since bidder C gets nothing). Note that the determination of winners is essentially a knapsack problem.
+
+Next, the formula for deciding payments gives:
+
+* For bidder **A**: The payment for winning required of A is determined as follows: First, in an auction that excludes bidder A, the social-welfare maximizing outcome would assign both apples to bidder C for a total social value of $6. Next, the total social value of the original auction *excluding A's value* is computed as $7 − $5 = $2. Finally, subtract the second value from the first value. Thus, the payment required of A is $6 − $2 = $4.
+* For bidder **B**: Similar to the above, the best outcome for an auction that excludes bidder B assigns both apples to bidder C for $6. The total social value of the original auction *minus B's portion* is $5. Thus, the payment required of B is $6 − $5 = $1.
+* Finally, the payment for bidder C is (($5 + $2) − ($5 + $2)) = $0.
+
+After the auction, A is $1 better off than before (paying $4 to gain $5 of utility), B is $1 better off than before (paying $1 to gain $2 of utility), and C is neutral (having not won anything).
+
+
+### Two bidders
+
+Assume that there are two bidders, {\displaystyle b\_{1}} and {\displaystyle b\_{2}}, two items, {\displaystyle t\_{1}} and {\displaystyle t\_{2}}, and each bidder is allowed to obtain one item. We let {\displaystyle v\_{i,j}} be bidder {\displaystyle b\_{i}}'s valuation for item {\displaystyle t\_{j}}. Assume {\displaystyle v\_{1,1}=10}, {\displaystyle v\_{1,2}=5}, {\displaystyle v\_{2,1}=5}, and {\displaystyle v\_{2,2}=3}. We see that both {\displaystyle b\_{1}} and {\displaystyle b\_{2}} would prefer to receive item {\displaystyle t\_{1}}; however, the socially optimal assignment gives item {\displaystyle t\_{1}} to bidder {\displaystyle b\_{1}} (so their achieved value is {\displaystyle 10}) and item {\displaystyle t\_{2}} to bidder {\displaystyle b\_{2}} (so their achieved value is {\displaystyle 3}). Hence, the total achieved value is {\displaystyle 13}, which is optimal.
+
+If person {\displaystyle b\_{2}} were not in the auction, person {\displaystyle b\_{1}} would still be assigned to {\displaystyle t\_{1}}, and hence person {\displaystyle b\_{1}} can gain nothing more. The current outcome is {\displaystyle 10}; hence {\displaystyle b\_{2}} is charged {\displaystyle 10-10=0}.
+
+If person {\displaystyle b\_{1}} were not in the auction, {\displaystyle t\_{1}} would be assigned to {\displaystyle b\_{2}}, and would have valuation {\displaystyle 5}. The current outcome is 3; hence {\displaystyle b\_{1}} is charged {\displaystyle 5-3=2}.
+
+
+### Example #3
+
+Consider an auction of {\displaystyle n} houses to {\displaystyle n} bidders, who are to each receive a house. {\displaystyle {\tilde {v}}\_{ij}}, represents the value player {\displaystyle i} has for house {\displaystyle j}. Possible outcomes are characterized by bipartite matchings pairing houses with people.
+If we know the values, then maximizing social welfare reduces to computing a maximum weight bipartite matching.
+
+If we do not know the values, then we instead solicit bids {\displaystyle {\tilde {b}}\_{ij}}, asking each player {\displaystyle i} how much they would wish to bid for house {\displaystyle j}.
+Define {\displaystyle b\_{i}(a)={\tilde {b}}\_{ik}} if bidder {\displaystyle i} receives house {\displaystyle k} in the matching {\displaystyle a}. Now compute {\displaystyle a^{\*}}, a maximum weight
+bipartite matching with respect to the bids, and compute
+
+The first term is another max weight bipartite matching, and the second term can be computed easily from {\displaystyle a^{\*}}.
+
+
+## Optimality of truthful bidding
+
+The following is a proof that bidding one's true valuations for the auctioned items is optimal.
+
+For each bidder {\displaystyle b\_{i}}, let {\displaystyle v\_{i}} be their true valuation of an item {\displaystyle t\_{i}}, and suppose (without loss of generality) that {\displaystyle b\_{i}} wins {\displaystyle t\_{i}} upon submitting their true valuations.
+Then the net utility {\displaystyle U\_{i}} attained by {\displaystyle b\_{i}} is given by their own valuation of the item they've won, minus the price they've paid:
+
+As {\displaystyle V\_{N\setminus \{b\_{i}\}}^{M}} is independent of {\displaystyle v\_{i}}, the maximization of net utility is pursued by the mechanism along with the maximization of corporate gross utility {\displaystyle \sum \_{j}v\_{j}} for the declared bid {\displaystyle v\_{i}}.
+
+To make it clearer, let us form the difference {\displaystyle U\_{i}-U\_{j}=\left[v\_{i}+V\_{N\setminus \{b\_{i}\}}^{M\setminus \{t\_{i}\}}\right]-\left[v\_{j}+V\_{N\setminus \{b\_{i}\}}^{M\setminus \{t\_{j}\}}\right]} between net utility {\displaystyle U\_{i}} of {\displaystyle b\_{i}} under truthful bidding {\displaystyle v\_{i}} gotten item {\displaystyle t\_{i}}, and net utility {\displaystyle U\_{j}} of bidder {\displaystyle b\_{i}} under non-truthful bidding {\displaystyle v'\_{i}} for item {\displaystyle t\_{i}} gotten item {\displaystyle t\_{j}} on true utility {\displaystyle v\_{j}}.
+
+{\displaystyle \left[v\_{j}+V\_{N\setminus \{b\_{i}\}}^{M\setminus \{t\_{j}\}}\right]} is the corporate gross utility obtained with the non-truthful bidding. But the allocation assigning {\displaystyle t\_{j}} to {\displaystyle b\_{i}} is different from the allocation assigning {\displaystyle t\_{i}} to {\displaystyle b\_{i}} which gets maximum (true) gross corporate utility. Hence {\displaystyle \left[v\_{i}+V\_{N\setminus \{b\_{i}\}}^{M\setminus \{t\_{i}\}}\right]-\left[v\_{j}+V\_{N\setminus \{b\_{i}\}}^{M\setminus \{t\_{j}\}}\right]\geq 0} and {\displaystyle U\_{i}\geq U\_{j}} q.e.d.
+

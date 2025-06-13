@@ -1,0 +1,31 @@
+Enterprise information integration
+
+
+# Enterprise information integration
+
+
+
+**Enterprise information integration** (**EII**) is the ability to support a unified view of data and information for an entire organization. In a data virtualization application of EII, a process of information integration, using data abstraction to provide a unified interface (known as uniform data access) for viewing all the data within an organization, and a single set of structures and naming conventions (known as uniform information representation) to represent this data; the goal of EII is to get a large set of heterogeneous data sources to appear to a user or system as a single, homogeneous data source.
+
+
+## Overview
+
+Data within an enterprise can be stored in heterogeneous formats, including relational databases (which themselves come in a large number of varieties), text files, XML files, spreadsheets and a variety of proprietary storage methods, each with their own indexing and data access methods.
+
+Standardized data access APIs have emerged that offer a specific set of commands to retrieve and modify data from a generic data source. Many applications exist that implement these APIs' commands across various data sources, most notably relational databases. Such APIs include ODBC, JDBC, XQJ, OLE DB, and more recently ADO.NET.
+
+There are also standard formats for representing data within a file that are very important to information integration. The best-known of these is XML, which has emerged as a standard universal representation format. There are also more specific XML "grammars" defined for specific types of data such as Geography Markup Language for expressing geographical features and Directory Service Markup Language for holding directory-style information. In addition, non-XML standard formats exist such as iCalendar for representing calendar information and vCard for business card information.
+
+Enterprise Information Integration (EII) applies data integration commercially. Despite the theoretical problems described above, the private sector shows more concern with the problems of data integration as a viable product.
+EII emphasizes neither on correctness nor tractability, but speed and simplicity.
+
+
+## Applications
+
+EII products enable loose coupling between homogeneous-data consuming client applications and services and heterogeneous-data stores. Such client applications and services include Desktop Productivity Tools (spreadsheets, word processors, presentation software, etc.), development environments and frameworks (Java EE, .NET, Mono, SOAP or RESTful Web services, etc.), business intelligence (BI), business activity monitoring (BAM) software, enterprise resource planning (ERP), Customer relationship management (CRM), business process management (BPM and/or BPEL) Software, and web content management (CMS).
+
+
+## Data access technologies
+
+* Service Data Objects (SDO) for Java, C++ and .Net clients and any type of data source
+* XQuery and XQuery API for Java

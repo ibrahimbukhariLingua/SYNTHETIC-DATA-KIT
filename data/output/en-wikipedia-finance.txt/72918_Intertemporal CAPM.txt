@@ -1,0 +1,61 @@
+Intertemporal CAPM
+
+
+# Intertemporal CAPM
+
+
+
+Within mathematical finance, the **intertemporal capital asset pricing model**, or **ICAPM**, is an alternative to the CAPM provided by Robert Merton. It is a linear factor model with wealth as state variable that forecasts changes in the distribution of future returns or income.
+
+In the ICAPM investors are solving lifetime consumption decisions when faced with more than one uncertainty. The main difference between ICAPM and standard CAPM is the additional state variables that acknowledge the fact that investors hedge against shortfalls in consumption or against changes in the future investment opportunity set.
+
+
+## Continuous time version
+
+Merton considers a continuous time market in equilibrium.
+The state variable (X) follows a Brownian motion:
+
+The investor maximizes his Von Neumann–Morgenstern utility:
+
+where T is the time horizon and B[W(T),T] the utility from wealth (W).
+
+The investor has the following constraint on wealth (W).
+Let {\displaystyle w\_{i}} be the weight invested in the asset i. Then:
+
+where {\displaystyle r\_{i}} is the return on asset i.
+The change in wealth is:
+
+We can use dynamic programming to solve the problem. For instance, if we consider a series of discrete time problems:
+
+Then, a Taylor expansion gives:
+
+where {\displaystyle t^{\*}} is a value between t and t+dt.
+
+Assuming that returns follow a Brownian motion:
+
+with:
+
+Then canceling out terms of second and higher order:
+
+Using Bellman equation, we can restate the problem:
+
+subject to the wealth constraint previously stated.
+
+Using Ito's lemma we can rewrite:
+
+and the expected value:
+
+After some algebra
+, we have the following objective function:
+
+where {\displaystyle r\_{f}} is the risk-free return.
+First order conditions are:
+
+In matrix form, we have:
+
+where {\displaystyle \alpha } is the vector of expected returns, {\displaystyle \Omega } the covariance matrix of returns, {\displaystyle {\mathbf {1} }} a unity vector {\displaystyle cov\_{rX}} the covariance between returns and the state variable. The optimal weights are:
+
+Notice that the intertemporal model provides the same weights of the CAPM. Expected returns can be expressed as follows:
+
+where m is the market portfolio and h a portfolio to hedge the state variable.
+

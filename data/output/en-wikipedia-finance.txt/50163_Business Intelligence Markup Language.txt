@@ -1,0 +1,106 @@
+Business Intelligence Markup Language
+
+
+# Business Intelligence Markup Language
+
+
+
+**Business** **Intelligence Markup Language** (BIML) is a domain-specific XML dialect for defining business intelligence (BI) assets. Biml-authored BI assets can currently be used by the BIDS Helper add-on for Microsoft SQL Server Business Intelligence Development Studio (BIDS) and the Varigence Mist (now called BimlStudio) integrated development environment; both tools translate Biml metadata into SQL Server Integration Services (SSIS) and SQL Server Analysis Services (SSAS) assets for the Microsoft SQL Server platform; however, emitters can be created to compile Biml for any desired BI platform.
+
+While Biml’s declarative design is sufficient to author BI assets, BimlScript extends the language by enabling authors to embed C# or VB.NET code within Biml, similar to how ASP.NET includes .NET code within static HTML markup. BimlScript is used to merge changes into existing Biml assets, automatically generate Biml code, and apply changes across multiple Biml files during compilation.
+
+
+## History
+
+
+### Mist
+
+Mist is an IDE for authoring Biml code and building BI assets. Mist leverages visual design capabilities and debugging features to simultaneously edit entire business intelligence models, including relational tables, SSIS packages, and cubes. Mist also incorporates modern programming IDE features, including text editors with syntax highlighting, Intelliprompt and quick-info displays, source control integration, and multi-monitor support.
+
+
+### BIDS Helper
+
+As Biml’s popularity has grown, key portions of the Biml engine, including dynamic package generation, have been contributed to the BIDS Helper open source project hosted on CodePlex.
+
+
+### BimlScript community
+
+BimlScript.com is a community website for developing and sharing Biml solutions to BI problems, and contributing Biml content to share with others. Along with tutorials, walkthroughs, and videos, the site provides an online Biml editor.
+
+
+## Syntax
+
+Biml has a syntax that’s common to all XML languages. Tags begin and end with < and >, respectively. Furthermore, tags can have attributes and nested elements.
+
+
+### Biml
+
+
+#### Declaration
+
+Biml documents begin with a common declaration
+
+
+#### Root types
+
+Biml has a well-defined set of root types, indicating the various kinds of BI assets that can be created:
+
+* Connections
+* Databases
+* Schemas
+* Tables
+* Dimensions
+* Facts
+* Packages
+* File Formats
+* Script Projects
+* Cubes
+* Principals
+
+#### Example
+
+This is an example of the AdventureWorks DimCurrency table, authored in Biml:
+
+
+### BimlScript
+
+All BimlScript tags begin and end with <# and #> delimiters, respectively. Special types of BimlScript tags use augmented versions of these delimiters, to indicate specific usages.
+
+
+#### Directives
+
+A Biml file, with BimlScript, begins with at least one directive. Directives provide instructions to the Biml engine, regarding how to process the BimlScript and generate its Biml. Directives are single tags that begin with <#@. Each directive begins with a single term, followed by attributes that supply required values.
+
+The two most common directives are template and import.
+
+
+##### Template
+
+This directive indicates that the file's BimlScript uses the C# programming language.
+
+
+##### Import
+
+This directive specifies .NET namespaces that should be imported for the file. It is functionally equivalent to the C# using statement or VB.NET Imports statement.
+
+
+#### Delimiters
+
+When authoring BimlScript, additional delimiters may be used. These delimiters match the behavior of T4 template delimiters.
+
+| Delimiter | Description |
+| --- | --- |
+| <# | Defines statements, in .NET code, that provide control flow in a Biml file. |
+| <#= | Evaluates .NET code, converts it to a string, and then embeds it in the Biml file. |
+| <#+ | Defines properties, methods, and files that are excluded from the Biml file but may be accessed by other BimlScript code nuggets. |
+
+
+#### Example
+
+This BimlScript example imports a database's assets via a connection, declared in a separate file, named "AdventureWorksLT". Each schema and table from the imported database is then embedded directly within the Schemas and Tables collections, respectively.
+
+This example shows how developers can use Biml and BimlScript to:
+
+1. Import schemas and tables directly from a database, and use them without needing to manually copy their structure.
+2. Have any changes to the assets be automatically reflected the next time this code is run.
+3. Import the assets and convert them to Biml using only two simple lines of code.

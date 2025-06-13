@@ -1,0 +1,48 @@
+RATS (software)
+
+
+# RATS (software)
+
+
+
+**RATS**, an abbreviation of **Regression Analysis of Time Series**, is a statistical package for time series analysis and econometrics. RATS is developed and sold by Estima, Inc., located in Evanston, IL.
+
+
+## History
+
+The forerunner of RATS was a FORTRAN program called SPECTRE, written by economist Christopher A. Sims. SPECTRE was designed to overcome some limitations of existing software that affected Sims' research in the 1970s, by providing spectral analysis and also the ability to run long unrestricted distributed lags. The program was then expanded by Tom Doan, then of the Federal Reserve Bank of Minneapolis, who added ARIMA and VAR capabilities and went on to found the consulting firm that owns and distributes RATS software. In its early incarnations, RATS was designed primarily for time series analysis, but as it evolved, it acquired other capabilities. With the advent of personal computers in 1984, RATS went from being a specialty mainframe program to an econometrics package sold to a much broader market.
+
+
+## Features
+
+RATS is a powerful program, which can perform a range of econometric and statistical operations. The following is a list of the major procedures in econometrics and time series analysis that can be implemented in RATS. All these methods can be used in order to forecast, as well as to conduct data analysis. In addition, RATS can handle cross-sectional and panel data:
+
+* Linear regression, including stepwise.
+* Regressions with heteroscedasticity and serial-correlation correction.
+* Non-linear least squares.
+* Two-stage least squares, three-stage least squares, and seemingly unrelated regressions.
+* Non-linear systems estimation.
+* Generalized Method of Moments.
+* Maximum likelihood estimation.
+* Simultaneous equation systems, large econometric models.
+* ARIMA (autoregressive, integrated moving average) and transfer function models.
+* Spectral analysis.
+* Kalman filter and State Space models.
+* Neural networks.
+* Regressions with discrete dependent variables, such as logistic regressions.
+* ARCH and GARCH models.
+* Vector autoregressions.
+
+RATS can read data from a variety of file formats and database sources, including Excel files, text files, Stata files, and most databases that support SQL and ODBC. It can handle virtually any data frequency, including daily, weekly, intra-day, and panel data.
+
+RATS has extensive graphics capabilities. It can generate high-resolution time series graphs, high-resolution X-Y scatter plots, dual-scale graphs, and can export graphs to many formats, including PostScript and Windows Metafile.
+
+
+## Mode of operation
+
+RATS can be run interactively, or in batch mode. In the interactive mode, the user can run existing programs, or perform new tasks either by using menu-driven "wizards" or by typing in commands directly (or a combination of both approaches). The menu-driven wizards automatically generate the corresponding commands, allowing users to interactively construct complete programs that can be saved and re-run later.
+
+New users often prefer the interactive mode, while experienced users will often prefer to run batch jobs. After an interactive session, the code can be saved, and converted to a batch format. One advantage of RATS, as opposed to automated forecasting software, is that it is an actual programming language, which enables the user to design custom models, and change specifications.
+
+Recent versions have added report-generation tools designed to facilitate accurate exporting of results for use in papers and other documents.
+

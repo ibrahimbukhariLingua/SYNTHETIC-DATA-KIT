@@ -1,0 +1,25 @@
+Piecewise-constant valuation
+
+
+# Piecewise-constant valuation
+
+
+
+A **piecewise-constant valuation** is a kind of a function that represents the utility of an agent over a continuous resource, such as land. It occurs when the resource can be partitioned into a finite number of regions, and in each region, the value-density of the agent is constant. A **piecewise-uniform valuation** is a piecewise-constant valuation in which the constant is the same in all regions.
+
+Piecewise-constant and piecewise-uniform valuations are particularly useful in algorithms for fair cake-cutting.
+
+
+## Formal definition
+
+There is a *resource* represented by a set *C.* There is a *valuation* over the resource, defined as a continuous measure {\displaystyle V:2^{C}\to \mathbb {R} }. The measure *V* can be represented by a *value-density function* {\displaystyle v:C\to \mathbb {R} }. The value-density function assigns, to each point of the resource, a real value. The measure *V* of each subset *X* of *C* is the integral of *v* over *X*.
+
+A valuation *V* is called **piecewise-constant**, if the corresponding value-density function *v* is a piecewise-constant function. In other words: there is a partition of the resource *C* into finitely many regions, *C*₁,...,*Cₖ*, such that for each *j* in 1,...,*k*, the function *v* inside *Cⱼ* equals some constant *Uⱼ*.
+
+A valuation *V* is called **piecewise-uniform** if the constant is the same for all regions, that is, for each *j* in 1,...,*k*, the function *v* inside *Cⱼ* equals some constant *U*.
+
+
+## Generalization
+
+A **piecewise-linear valuation** is a generalization of piecewise-constant valuation in which the value-density in each region *j* is a linear function, *aⱼx*+*bⱼ* (piecewise-constant corresponds to the special case in which *aⱼ*=0 for all *j*).
+

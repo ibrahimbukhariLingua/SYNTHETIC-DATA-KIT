@@ -1,0 +1,28 @@
+Timer Call
+
+
+# Timer Call
+
+
+
+The **Timer Call** is an Exotic option, that allows buyers to specify the level of volatility used to price the instrument.
+
+As with many leading ideas, the principle of the timer call is remarkably simple: instead of a dealer needing to use an implied volatility to use in pricing the option, the volatility is fixed, and the maturity is left floating. As a result of this, the Timer Call allows the pricing of call and put options on underlyings for which ordinary options are not priced; dealers in a normal option are exposed to the difference between the volatility they estimate and the realised volatility, whereas in a Timer Call, this risk is much diminished.
+
+
+## History
+
+It appears that the idea was first published in the literature in April 1995 in Management Science by Avi Bick. This paper contained the same idea (including the derivation of the relevant formula) that has since been popularised.
+In 2007, Société Générale Corporate and Investment Banking (SG CIB) started to market this idea, apparently oblivious of Bick's earlier work in the area. Indisputably, SG CIB popularised it.
+Since then, most dealers have put in place the technology to offer this sort of option. Assuming the interest rate is zero, Carr and Lee (2010) investigated the pricing and hedging of options on continuous semi-martingales. Li (2008) gave an explicit formula for pricing timer options under the Heston (1993) stochastic volatility model. His result is a natural generalization of Black-Scholes-Merton formula for pricing European options and reconciles with the zero interest rate case in Carr and Lee (2010). An efficient numerical technique is proposed by Bernard and Cui (2011). Li (2008) provides some insight of using the Bessel process with constant drift, which was studied in Linetsky (2004), with drift to characterize the distribution of the so-called volatility clock under the celebrated Heston (1993) stochastic volatility model.
+
+
+## Benefits
+
+* Suppression of implied volatility’s extra cost in call options: Call prices depend on the implied volatility level, usually higher than realised volatility, representing the risk premium, seen as an extra cost of call prices. The Timer Call avoids this extra cost.
+* Systematic market timing: The Timer Call systematically optimizes market timing. If volatility increases, the call terminates earlier, with the investor realising a profit. If the vol doesn’t rise, the call simply takes more time to reach maturity. In other words, time becomes extractable as an investible asset class (like volatility became an asset class with the invention of the vol swap).
+
+## Technical Details
+
+There seems to be little in the public to describe the technical details of pricing and hedging. There are papers by Li (2008) and by Bernard and Cui (2011).
+

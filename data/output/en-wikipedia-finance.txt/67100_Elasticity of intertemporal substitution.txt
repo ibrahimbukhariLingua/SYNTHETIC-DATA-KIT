@@ -1,0 +1,92 @@
+Elasticity of intertemporal substitution
+
+
+# Elasticity of intertemporal substitution
+
+
+
+In economics, **elasticity of intertemporal substitution** (or **intertemporal elasticity of substitution, EIS, IES**) is a measure of responsiveness of the growth rate of consumption to the real interest rate. If the real interest rate rises, current consumption may decrease due to increased return on savings; but current consumption may also increase as the household decides to consume more immediately, as it is feeling richer. The net effect on current consumption is the elasticity of intertemporal substitution.
+
+
+## Mathematical definition
+
+There are in general two ways to define the EIS. The first way is to define it abstractly as a function derived from the utility function, then interpret it as an elasticity. The second way is to explicitly derive it as an elasticity. The two ways generally yield the same definition.
+
+
+### Abstract definition
+
+Given a utility function {\displaystyle u(c)}, where {\displaystyle c} denotes consumption level, the EIS is defined as{\displaystyle \sigma (c)=-{\frac {u'(c)}{cu''(c)}}}Notice that this definition is the inverse of relative risk aversion.
+
+We can define a family of utility functions, which may be understood as inverse CRRA utility:{\displaystyle u\_{\sigma }(c)={\begin{cases}{\frac {\sigma }{\sigma -1}}(c^{\frac {\sigma -1}{\sigma }}-1){\text{ if }}\sigma \neq 1\\\ln c\quad {\text{if }}\sigma =1\end{cases}}}
+
+For each {\displaystyle \sigma \neq 0}, the utility function {\displaystyle u\_{\sigma }} has constant EIS {\displaystyle \sigma }. In usual economic applications, there is restriction {\displaystyle \sigma >0}, since agents are assumed to not be risk-loving.
+
+In the diagram, one can see that as {\displaystyle \sigma \to \infty }, the utility curve becomes more linear, indicating that the agent does not attempt to smooth consumption over time, similar to how a risk-neutral agent does not prefer gambles with smoother outcomes.
+
+
+### Derived definition
+
+The derivation differs for discrete and continuous time. We will see that for CRRA utility, the two approaches yield the same answer. The below functional forms assume that utility from consumption is time additively separable.
+
+
+### Discrete time
+
+Total lifetime utility is given by
+
+In this setting, the gross real interest rate {\displaystyle R} will be given by the following condition:
+
+A quantity of money {\displaystyle Q} invested today costs {\displaystyle Qu'(c\_{t})} units of utility, and so must yield exactly that number of units of utility in the future when saved at the prevailing gross interest rate {\displaystyle R=1+r}, where {\displaystyle r} is the net interest rate (if it yielded more, then the agent could make himself better off by saving more).
+
+Solving for the gross interest rate, we see that
+
+In logs, we have
+
+Since {\displaystyle \ln(1+r)\approx r} for small {\displaystyle r} (logs are very close to percentage changes) we have
+
+The elasticity of intertemporal substitution is defined as the percent change in consumption growth per percent increase in the net interest rate:
+
+By substituting in our log equation above, we can see that this definition is equivalent to the elasticity of consumption growth with respect to marginal utility growth:
+
+Either definition is correct, however, assuming that the agent is optimizing and has time separable utility.
+
+
+### Example
+
+Let utility of consumption in period {\displaystyle t} be given by
+
+Since this utility function belongs to the family of CRRA utility functions we have {\displaystyle u'(c\_{t})=c\_{t}^{-\sigma }.}
+Thus,
+
+This can be rewritten as
+
+Hence, applying the above derived formula
+
+
+### Continuous time
+
+Let total lifetime utility be given by
+
+{\displaystyle U=\int \_{0}^{T}e^{-\rho t}u(c\_{t})dt}
+
+where {\displaystyle c\_{t}} is shorthand for {\displaystyle c(t)}, {\displaystyle u(c(t))} is the utility of consumption in (instant) time t, and {\displaystyle \rho } is the time discount rate. First define the measure of relative risk aversion (this is useful even if the model has no uncertainty or risk) as,
+
+then the elasticity of intertemporal substitution is defined as
+
+{\displaystyle EIS=-{\frac {\partial ({\dot {c}}\_{t}/c\_{t})}{\partial ({\dot {u}}'(c\_{t})/u'(c\_{t}))}}=-{\frac {\partial ({\dot {c}}\_{t}/c\_{t})}{\partial (u''(c\_{t}){\dot {c}}\_{t}/u'(c\_{t}))}}={\frac {\partial ({\dot {c}}\_{t}/c\_{t})}{\partial (RRA\cdot ({\dot {c}}\_{t}/c\_{t}))}}={\frac {1}{RRA}}=-{\frac {u'(c\_{t})}{u''(c\_{t})\cdot c\_{t}}}}
+
+If the utility function {\displaystyle u(c)} is of the CRRA type:
+
+{\displaystyle u(c)={\frac {c^{1-\theta }-1}{1-\theta }}} (with special case of {\displaystyle \theta =1} being {\displaystyle u(c)=\ln(c)})
+
+then the intertemporal elasticity of substitution is given by {\displaystyle {\frac {1}{\theta }}}. In general, a low value of theta (high intertemporal elasticity) means that consumption growth is very sensitive to changes in the real interest rate. For theta equal to 1, the growth rate of consumption responds one for one to changes in the real interest rate. A high theta implies an insensitive consumption growth.
+
+
+## Ramsey Growth model
+
+In the Ramsey growth model, the elasticity of intertemporal substitution determines the speed of adjustment to the steady state and the behavior of the saving rate during the transition. If the elasticity is high, then large changes in consumption are not very costly to consumers and, as a result, if the real interest rate is high, they will save a large portion of their income. If the elasticity is low, the consumption smoothing motive is very strong and because of this consumers will save a little and consume a lot if the real interest rate is high.
+
+
+## Estimates
+
+Empirical estimates of the elasticity vary. Part of the difficulty stems from the fact that microeconomic studies come to different conclusions than macroeconomic studies, which use aggregate data. A meta-analysis of 169 published studies reports a mean elasticity of 0.5, but also substantial differences across countries.
+

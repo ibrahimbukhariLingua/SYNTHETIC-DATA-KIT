@@ -1,0 +1,56 @@
+Margrabe's formula
+
+
+# Margrabe's formula
+
+
+
+In mathematical finance, **Margrabe's formula** is an option pricing formula applicable to an option to exchange one risky asset for another risky asset at maturity. It was derived by William Margrabe (PhD Chicago) in 1978. Margrabe's paper has been cited by over 2000 subsequent articles.
+
+
+## Formula
+
+Suppose *S₁(t)* and *S₂(t)* are the prices of two risky assets at time *t*, and that each has a constant continuous dividend yield *qᵢ*. The option, *C*, that we wish to price gives the buyer the right, but not the obligation, to exchange the second asset for the first at the time of maturity *T*. In other words, its payoff, *C(T)*, is max(0, *S₁(T) - S₂(T))*.
+
+If the volatilities of *Sᵢ*'s are *σᵢ*, then {\displaystyle \textstyle \sigma ={\sqrt {\sigma \_{1}^{2}+\sigma \_{2}^{2}-2\sigma \_{1}\sigma \_{2}\rho }}}, where *ρ* is the Pearson's correlation coefficient of the Brownian motions of the *Sᵢ* 's.
+
+Margrabe's formula states that the fair price for the option at time 0 is:
+
+
+## Derivation
+
+Margrabe's model of the market assumes only the existence of the two risky assets, whose prices, as usual, are assumed to follow a geometric Brownian motion. The volatilities of these Brownian motions do not need to be constant, but it is important that the volatility of *S₁/S₂*, *σ*, is constant. In particular, the model does not assume the existence of a riskless asset (such as a zero-coupon bond) or any kind of interest rate. The model does not require an equivalent risk-neutral probability measure, but an equivalent measure under S₂.
+
+The formula is quickly proven by reducing the situation to one where we can apply the Black-Scholes formula.
+
+* First, consider both assets as priced in units of *S₂* (this is called 'using *S₂* as numeraire'); this means that a unit of the first asset now is worth *S₁/S₂* units of the second asset, and a unit of the second asset is worth 1.
+* Under this change of numeraire pricing, the second asset is now a riskless asset and its dividend rate *q₂* is the interest rate. The payoff of the option, repriced under this change of numeraire, is max(0, *S₁(T)/S₂(T) - 1)*.
+* So the original option has become a call option on the first asset (with its numeraire pricing) with a strike of 1 unit of the riskless asset. Note the dividend rate *q₁* of the first asset remains the same even with change of pricing.
+* Applying the Black-Scholes formula with these values as the appropriate inputs, e.g. initial asset value *S₁(0)/S₂(0)*, interest rate *q₂*, volatility *σ*, etc., gives us the price of the option under numeraire pricing.
+* Since the resulting option price is in units of *S₂*, multiplying through by *S₂(0)* will undo our change of numeraire, and give us the price in our original currency, which is the formula above. Alternatively, one can show it by the Girsanov theorem.
+
+## External links and references
+
+**Notes**
+
+**Primary reference**
+
+* William Margrabe, "The Value of an Option to Exchange One Asset for Another", Journal of Finance, Vol. 33, No. 1, (March 1978), pp. 177-186.
+
+**Discussion**
+
+* Mark Davis, Imperial College London, Multi-Asset Options
+* Rolf Poulsen, University of Gothenburg, The Margrabe Formula
+
+| * v * t * e Derivatives market | |
+| --- | --- |
+| Derivative (finance) | |
+| Options | | Terms | * Delta neutral * Exercise * Expiration * Moneyness * Open interest * Pin risk * Risk-free interest rate * Strike price * Synthetic position * the Greeks * Volatility | | --- | --- | | Vanillas | * American * Bond option * Call * Employee stock option * European * Fixed income * FX * Option styles * Put * Warrants | | Exotics | * Asian * Barrier * Basket * Binary * Callable bull/bear contract * Chooser * Cliquet * Commodore * Compound * Forward start * Interest rate * Lookback * Mountain range * Rainbow * Spread * Swaption | | Strategies | * Backspread * Box spread * Butterfly * Calendar spread * Collar * Condor * Covered option * Credit spread * Debit spread * Diagonal spread * Fence * Intermarket spread * Iron butterfly * Iron condor * Jelly roll * Ladder * Naked option * Straddle * Strangle * Protective option * Ratio spread * Risk reversal * Vertical spread (Bear, Bull) | | Valuation | * Bachelier * Binomial * Black * Black–Scholes (equation) * Finite difference * Garman–Kohlhagen * Heston * Lattices * Margrabe * Put–call parity * MC Simulation * Real options * Trinomial * Vanna–Volga | |
+| Swaps | * Amortising * Asset * Basis * Commodity * Conditional variance * Constant maturity * Correlation * Credit default * Currency * Dividend * Equity * Forex * Forward Rate Agreement * Inflation * Interest rate * Overnight indexed * Total return * Variance * Volatility * Year-on-year inflation-indexed * Zero Coupon * Zero-coupon inflation-indexed |
+| * Forwards * Futures | * Contango * Commodities future * Currency future * Dividend future * Forward market * Forward price * Forwards pricing * Forward rate * Futures pricing * Interest rate future * Margin * Normal backwardation * Perpetual futures * Single-stock futures * Slippage * Stock market index future |
+| Exotic derivatives | * Commodity derivative * Energy derivative * Freight derivative * Inflation derivative * Property derivative * Weather derivative |
+| Other derivatives | * Collateralized debt obligation (CDO) * Constant proportion portfolio insurance * Contract for difference * Credit-linked note (CLN) * Credit default option * Credit derivative * Equity-linked note (ELN) * Equity derivative * Foreign exchange derivative * Fund derivative * Fund of funds * Interest rate derivative * Mortgage-backed security * Power reverse dual-currency note (PRDC) |
+| Market issues | * Consumer debt * Corporate debt * Government debt * Great Recession * Municipal debt * Tax policy |
+| * Business portal | |
+
+

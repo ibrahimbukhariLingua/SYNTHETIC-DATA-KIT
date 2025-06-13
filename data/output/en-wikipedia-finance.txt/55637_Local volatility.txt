@@ -1,0 +1,139 @@
+Local volatility
+
+
+# Local volatility
+
+
+
+A **local volatility** model, in mathematical finance and financial engineering, is an option pricing model that treats volatility as a function of both the current asset level {\displaystyle S\_{t}} and of time {\displaystyle t}. As such, it is a generalisation of the Black–Scholes model, where the volatility is a constant (i.e. a trivial function of {\displaystyle S\_{t}} and {\displaystyle t}). Local volatility models are often compared with stochastic volatility models, where the instantaneous volatility is not just a function of the asset level {\displaystyle S\_{t}} but depends also on a new "global" randomness coming from an additional random component.
+
+
+## Formulation
+
+In mathematical finance, the asset *S*ₜ that underlies a financial derivative is typically assumed to follow a stochastic differential equation of the form
+
+under the risk neutral measure, where {\displaystyle r\_{t}} is the instantaneous risk free rate, giving an average local direction to the dynamics, and {\displaystyle W\_{t}} is a Wiener process, representing the inflow of randomness into the dynamics. The amplitude of this randomness is measured by the instant volatility {\displaystyle \sigma \_{t}}. In the simplest model i.e. the Black–Scholes model, {\displaystyle \sigma \_{t}} is assumed to be constant, or at most a deterministic function of time; in reality, the realised volatility of an underlying actually varies with time and with the underlying itself.
+
+When such volatility has a randomness of its own—often described by a different equation driven by a different *W*—the model above is called a stochastic volatility model. And when such volatility is merely a function of the current underlying asset level *S*ₜ and of time *t*, we have a local volatility model. The local volatility model is a useful simplification of the stochastic volatility model.
+
+"Local volatility" is thus a term used in quantitative finance to denote the set of diffusion coefficients, {\displaystyle \sigma \_{t}=\sigma (S\_{t},t)}, that are consistent with market prices for all options on a given underlying, yielding an asset price model of the type
+
+This model is used to calculate exotic option valuations which are consistent with observed prices of vanilla options.
+
+
+## Development
+
+The concept of a local volatility fully consistent with option markets was developed when Bruno Dupire and Emanuel Derman and Iraj Kani
+noted that there is a unique diffusion process consistent with the risk neutral densities derived from the market prices of European options.
+
+Derman and Kani described and implemented a local volatility function to model instantaneous volatility. They used this function at each node in a binomial options pricing model. The tree successfully produced option valuations consistent with all market prices across strikes and expirations. The Derman-Kani model was thus formulated with **discrete** time and stock-price steps. (Derman and Kani produced what is called an "implied binomial tree"; with Neil Chriss they extended this to an implied trinomial tree. The implied binomial tree fitting process was numerically unstable.)
+
+The key **continuous**-time equations used in local volatility models were developed by Bruno Dupire in 1994. Dupire's equation states
+
+In order to compute the partial derivatives, there exist few known parameterizations of the implied volatility surface based on the Heston model: Schönbucher, SVI and gSVI. Other techniques include mixture of lognormal distribution and stochastic collocation.
+
+
+### Derivation
+
+Given the price of the asset {\displaystyle S\_{t}} governed by the risk neutral SDE
+
+The transition probability {\displaystyle p(t,S\_{t})} conditional to {\displaystyle S\_{0}} satisfies the forward Kolmogorov equation (also known as Fokker–Planck equation)
+
+where, for brevity, the notation {\displaystyle f\_{x}} denotes the partial derivative of the function f with respect to x and where the notation {\displaystyle f\_{xx}} denotes the second order partial derivative of the function f with respect to x. Thus, {\displaystyle p\_{t}} is the partial derivative of the density {\displaystyle p(t,S)} with respect to t and for example
+{\displaystyle [(\sigma s)^{2}p]\_{ss}} is the second derivative of
+{\displaystyle (\sigma (t,S)S)^{2}p(t,S)} with respect to S. p will denote {\displaystyle p(t,S)}, and inside the integral {\displaystyle p(t,s)}.
+
+Because of the Martingale pricing theorem, the price of a call option with maturity {\displaystyle T} and strike {\displaystyle K} is
+
+Differentiating the price of a call option with respect to {\displaystyle K}
+
+and replacing in the formula for the price of a call option and rearranging terms
+
+Differentiating the price of a call option with respect to {\displaystyle K} twice
+
+Differentiating the price of a call option with respect to {\displaystyle T} yields
+
+using the Forward Kolmogorov equation
+
+integrating by parts the first integral once and the second integral twice
+
+using the formulas derived differentiating the price of a call option with respect to {\displaystyle K}
+
+
+## Parametric local volatility models
+
+Dupire's approach is non-parametric. It requires to pre-interpolate the data to obtain a continuum of traded prices and the choice of a type of interpolation. As an alternative, one can formulate parametric local volatility models. A few examples are presented below.
+
+
+### Bachelier model
+
+The Bachelier model has been inspired by Louis Bachelier's work in 1900. This model, at least for assets with zero drift, e.g. forward prices or forward interest rates under their forward measure, can be seen as a local volatility model
+
+In the Bachelier model the diffusion coefficient is a constant {\displaystyle v}, so we have {\displaystyle \sigma (F\_{t},t)F\_{t}=v}, implying {\displaystyle \sigma (F\_{t},t)=v/F\_{t}}. As interest rates turned negative in many economies, the Bachelier model became of interest, as it can model negative forward rates F through its Gaussian distribution.
+
+
+### Displaced diffusion model
+
+This model was introduced by Mark Rubinstein.
+For a stock price, it follows the dynamics
+
+where for simplicity we assume zero dividend yield.
+The model can be obtained with a change of variable from a standard Black-Scholes model as follows. By setting {\displaystyle Y\_{t}=S\_{t}-\beta e^{rt}} it is immediate to see that Y follows a standard Black-Scholes model
+
+As the SDE for {\displaystyle Y} is a geometric Brownian motion, it has a lognormal distribution, and given that {\displaystyle S\_{t}=Y\_{t}+\beta e^{rt}} the S model is also called a shifted lognormal model, the shift at time t being {\displaystyle \beta e^{rt}}.
+To price a call option with strike K on S one simply writes the payoff
+{\displaystyle (S\_{T}-K)^{+}=(Y\_{T}+\beta e^{rT}-K)^{+}=(Y\_{T}-H)^{+}}
+where H is the new strike {\displaystyle H=K-\beta e^{rT}}. As Y follows a Black Scholes model, the price of the option becomes a Black Scholes price with modified strike and is easy to obtain. The model produces a monotonic volatility smile curve, whose pattern is decreasing for negative {\displaystyle \beta }. Furthermore, for negative {\displaystyle \beta }, from {\displaystyle S\_{t}=Y\_{t}+\beta e^{rt}} it follows that the asset S is allowed to take negative values with positive probability. This is useful for example in interest rate modelling, where negative rates have been affecting several economies.
+
+
+### CEV model
+
+The constant elasticity of variance model (CEV) is a local volatility model where the stock dynamics is, under the risk neutral measure and assuming no dividends,
+
+for a constant interest rate r, a positive constant {\displaystyle \sigma >0} and an exponent {\displaystyle \gamma \geq 0,} so that in this case
+
+The model is at times classified as a stochastic volatility model, although according to the definition given here, it is a local volatility model, as there is no new randomness in the diffusion coefficient. This model and related references are shown in detail in the related page.
+
+
+### The lognormal mixture dynamics model
+
+This model has been developed from 1998 to 2021 in several versions by Damiano Brigo, Fabio Mercurio and co-authors. Carol Alexander studied the short and long term smile effects.
+The starting point is the basic Black Scholes formula, coming from the risk neutral dynamics {\displaystyle dS\_{t}=rS\_{t}dt+\sigma S\_{t}dW\_{t},} with constant deterministic volatility {\displaystyle \sigma } and with lognormal probability density function denoted by {\displaystyle p\_{t,\sigma }^{lognormal}}. In the Black Scholes model the price of a European non-path-dependent option is obtained by integration of the option payoff against this lognormal density at maturity.
+The basic idea of the lognormal mixture dynamics model is to consider lognormal densities, as in the Black Scholes model, but for a number {\displaystyle N} of possible constant deterministic volatilities {\displaystyle \sigma \_{1},\ldots ,\sigma \_{N}}, where we call {\displaystyle p\_{i,t}=p\_{t,\sigma \_{i}}^{lognormal}}, the lognormal density of a Black Scholes model with volatility {\displaystyle \sigma \_{i}}.
+When modelling a stock price, Brigo and Mercurio build a local volatility model
+
+where {\displaystyle \sigma \_{mix}(t,S\_{t})} is defined in a way that makes the risk neutral distribution of {\displaystyle S\_{t}} the required mixture of the lognormal densities {\displaystyle p\_{i,t}}, so that the density of the resulting stock price is
+{\displaystyle p\_{S\_{t}}(y)=:p\_{t}(y)=\sum \_{i=1}^{N}\lambda \_{i}p\_{i,t}(y)=\sum \_{i=1}^{N}\lambda \_{i}p\_{t,\sigma \_{i}}^{lognormal}(y)}
+where {\displaystyle \lambda \_{i}\in (0,1)} and {\displaystyle \sum \_{i=1}^{N}\lambda \_{i}=1}. The {\displaystyle \lambda \_{i}}'s are the weights of the different densities {\displaystyle p\_{i,t}} included in the mixture.
+The instantaneous volatility is defined as
+
+for {\displaystyle (t,y)>(0,0)}; {\displaystyle \sigma \_{mix}(t,y)=\sigma \_{0}} for
+{\displaystyle (t,y)=(0,s\_{0}).} The original model has a regularization of the diffusion coefficient in a small initial time interval {\displaystyle [0,\epsilon ]}. With this adjustment, the SDE with {\displaystyle \sigma \_{mix}} has a unique strong solution whose
+marginal density is the desired mixture {\displaystyle p\_{S\_{t}}=\sum \_{i}\lambda \_{i}p\_{i,t}.}
+One can further write {\displaystyle \sigma \_{mix}^{2}(t,y)=\sum \_{i=1}^{N}\Lambda \_{i}(t,y)\sigma \_{i}^{2},}
+where {\displaystyle \Lambda \_{i}(t,y)\in (0,1)} and {\displaystyle \sum \_{i=1}^{N}\Lambda \_{i}(t,y)=1}.
+This shows that {\displaystyle \sigma \_{mix}^{2}(t,y)} is a ``weighted average" of the {\displaystyle \sigma \_{i}^{2}}'s with weights
+
+An option price in this model is very simple to calculate. If {\displaystyle \mathbb {E} ^{Q}} denotes the risk neutral expectation, by the martingale pricing theorem a call option price on S with strike K and maturity T is given by
+{\displaystyle V\_{mix}^{Call}(K,T)=e^{-rT}\mathbb {E} ^{Q}\left\{(S\_{T}-K)^{+}\right\}}
+{\displaystyle =e^{-rT}\int \_{0}^{+\infty }(y-K)^{+}p\_{S\_{T}}(y)dy=e^{-rT}\int \_{0}^{+\infty }(y-K)^{+}\sum \_{i=1}^{N}\lambda \_{i}p\_{i,T}(y)dy}
+{\displaystyle =\sum \_{i=1}^{N}\lambda \_{i}e^{-rT}\int (y-K)^{+}p\_{i,T}(y)dy=\sum \_{{i=1}^{N}}{\lambda \_{i}}V\_{BS}^{Call}(K,T,{\sigma \_{i}})}
+where {\displaystyle V\_{BS}^{Call}(K,T,{\sigma \_{i}})} is the corresponding call price in a Black Scholes model with volatility {\displaystyle \sigma \_{i}}.
+The price of the option is given by a closed form formula and it is a linear convex combination of Black Scholes prices of call options with volatilities {\displaystyle \sigma \_{1},\ldots ,\sigma \_{N}} weighted by {\displaystyle \lambda \_{1},\ldots ,\lambda \_{N}}. The same holds for put options and all other simple contingent claims. The same convex combination applies also to several option
+greeks like Delta, Gamma, Rho and Theta.
+The mixture dynamics is a flexible model, as one can select the number of components {\displaystyle N} according to the complexity of the smile. Optimizing the parameters {\displaystyle \sigma \_{i}} and {\displaystyle \lambda \_{i}}, and a possible shift parameter, allows one to reproduce most market smiles. The model has been used successfully in the equity, FX, and interest-rate markets.
+
+In the mixture dynamics model, one can show that the resulting volatility smile curve will have a minimum for K equal to the at-the-money-forward price {\displaystyle S\_{0}e^{rT}}. This can be avoided, and the smile allowed to be more general, by combining the mixture dynamics and displaced diffusion ideas, leading to the shifted lognormal mixture dynamics.
+
+The model has also been applied with volatilities {\displaystyle \sigma \_{i}}'s in the mixture components that are time dependent, so as to calibrate the smile term structure. An extension of the model where the different mixture densities have different means has been studied, while preserving the final no arbitrage drift in the dynamics. A further extension has been the application to the multivariate case, where a multivariate model has been formulated that is consistent with a mixture of multivariate lognormal densities, possibly with shifts, and where the single assets are also distributed as mixtures, reconciling modelling of single assets smile with the smile on an index of these assets. A second application of the multivariate version has been triangulation of FX volatility smiles.
+Finally, the model is linked to an uncertain volatility model where, roughly speaking, the volatility is a random variable taking the values {\displaystyle \sigma \_{1},\ldots ,\sigma \_{N}} with probabilities {\displaystyle \lambda \_{1},\ldots ,\lambda \_{N}}.
+Technically, it can be shown that the local volatility lognormal mixture dynamics is the Markovian projection of the uncertain volatility model.
+
+
+## Use
+
+Local volatility models are useful in any options market in which the underlying's volatility is predominantly a function of the level of the underlying, interest-rate derivatives for example. Time-invariant local volatilities are supposedly inconsistent with the dynamics of the equity index implied volatility surface, but see Crepey (2004), who claims that such models provide the best average hedge for equity index options, and note that models like the mixture dynamics allow for time dependent local volatilities, calibrating also the term structure of the smile. Local volatility models are also useful in the formulation of stochastic volatility models.
+
+Local volatility models have a number of attractive features. Because the only source of randomness is the stock price, local volatility models are easy to calibrate. Numerous calibration methods are developed to deal with the McKean-Vlasov processes including the most used particle and bin approach. Also, they lead to complete markets where hedging can be based only on the underlying asset. As hinted above, the general non-parametric approach by Dupire is problematic, as one needs to arbitrarily pre-interpolate the input implied volatility surface before applying the method. Alternative parametric approaches with a rich and sound parametrization, as the above tractable mixture dynamical local volatility models, can be an alternative.
+Since in local volatility models the volatility is a deterministic function of the random stock price, local volatility models are not very well used to price cliquet options or forward start options, whose values depend specifically on the random nature of volatility itself. In such cases, stochastic volatility models are preferred.
+

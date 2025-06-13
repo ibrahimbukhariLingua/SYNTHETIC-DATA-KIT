@@ -1,0 +1,23 @@
+Constant elasticity of variance model
+
+
+# Constant elasticity of variance model
+
+
+
+In mathematical finance, the **CEV** or **constant elasticity of variance model** is a stochastic volatility model, although technically it would be classed more precisely as a local volatility model, that attempts to capture stochastic volatility and the leverage effect. The model is widely used by practitioners in the financial industry, especially for modelling equities and commodities. It was developed by John Cox in 1975.
+
+
+## Dynamic
+
+The CEV model describes a process which evolves according to the following stochastic differential equation:
+
+in which *S* is the spot price, *t* is time, and *μ* is a parameter characterising the drift, *σ* and *γ* are volatility parameters, and *W* is a Brownian motion.
+In terms of general notation for a local volatility model, written as
+
+we can write the price return volatility as
+
+The constant parameters {\displaystyle \sigma ,\;\gamma } satisfy the conditions {\displaystyle \sigma \geq 0,\;\gamma \geq 0}.
+
+The parameter {\displaystyle \gamma } controls the relationship between volatility and price, and is the central feature of the model. When {\displaystyle \gamma <1} we see an effect, commonly observed in equity markets, where the volatility of a stock increases as its price falls and the leverage ratio increases. Conversely, in commodity markets, we often observe {\displaystyle \gamma >1}, whereby the volatility of the price of a commodity tends to increase as its price increases and leverage ratio decreases. If we observe {\displaystyle \gamma =1} this model becomes a geometric Brownian motion as in the Black-Scholes model, whereas if {\displaystyle \gamma =0} and either {\displaystyle \mu =0} or the drift {\displaystyle \mu S} is replaced by {\displaystyle \mu }, this model becomes an arithmetic Brownian motion, the model which was proposed by Louis Bachelier in his PhD Thesis "The Theory of Speculation", known as Bachelier model.
+

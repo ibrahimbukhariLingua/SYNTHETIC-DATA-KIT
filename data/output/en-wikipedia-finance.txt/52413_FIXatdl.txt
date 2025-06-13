@@ -1,0 +1,89 @@
+FIXatdl
+
+
+# FIXatdl
+
+
+
+**FIX Algorithmic Trading Definition Language**, better known as **FIXatdl**, is a standard for the exchange of meta-information required to enable algorithmic trading activity within the financial markets. It works in tandem with the Financial Information eXchange (FIX) protocol which is the lingua franca of electronic trading in the securities market.
+
+
+## Background
+
+Prior to the mid-nineties, virtually all trading of securities was transacted over the phone, but with the advent of FIX, trading moved steadily over to electronic means. The FIX protocol is used to communicate between sell-side and the buy-side Order Management Systems (OMS) to exchange orders and order execution information without human intervention, using standardised messages and workflows that are defined by the protocol.
+Initially, sell-side firms only provided access to their 'trading desks' via FIX, which meant that once an order arrived at the sell-side broker, it was handled by a human trader, at least at the start of its lifecycle. Subsequently, sell-side firms started to offer direct access via FIX to the exchanges/markets they were members of; this is known as direct market access (DMA). At this time, many sell-side firms had their own proprietary systems to trade automatically in the market, using algorithmic trading strategies, and over time they began to see that offering access to these trading strategies to the buy-side was a way to attract business and increase revenue.
+
+Whilst FIX is an extensible protocol, there were two challenges that arose as a result of sell-side firms offering access to their algorithmic trading strategies via FIX. The first was that each sell-side strategy had its own parameters that had to be included as part of the order, so every firm ended up requiring a different set of fields (known in FIX as "tags") to be included in the FIX message. This made life very difficult for the buy-side, and more particularly for their suppliers as adding new algorithms to their trading systems and managing all the different combinations of tags became a significant overhead for their development operations.
+
+The second issue for the market was that each sell-side firm had a specific way they wanted their algorithms to be displayed on the buy-side OMS, with controls in the user interface arranged logically for easy order entry. Again, this proved a challenge for the buy-side systems vendors, as each new screen for each sell-side broker required dedicated development and testing effort.
+
+
+## History
+
+To tackle these issues, FIX Protocol Limited established the Algorithmic Trading Working Group in Q3 2004. The initial focus of the group was to solve the first of these issues, which it did by defining a new group of fields, the StrategyParametersGrp, made up of FIX tags 957 through 960 – these tags were formally introduced with the release of FIX 5.0 in Q4 2006. By allowing sell-side firms to include their proprietary fields in a repeating name-value pair structure, there was no requirement for OMS vendors to define specific FIX message structures for each sell-side trading destination.
+
+This solution was not broadly adopted, in part because of the limited penetration of FIX 5.0 and in part due to the fact that firms already had working implementations in the market place that they were unwilling to change without good cause. Perhaps more importantly, it failed to solve what was the more substantial issue for the market, the complexity for the buy-side vendors resulting from lack of standardisation.
+
+The idea of using an XML structure to describe the presentation of algorithm user interfaces and their accompanying parameters was firstly suggested within the working group by Daniel Clayden, then of JP Morgan Chase in a 2005 forum posting. Members of the working group developed this idea during 2006 and in January 2007 invited broader industry participation at a workshop to review their ideas. A specification was eventually produced and this began beta testing in July 2007. This specification became FIXatdl 1.0 which was approved by the FPL Global Technical Committee (GTC) on March 28, 2008.
+
+Despite some initial enthusiasm, overall Version 1.0 had a lacklustre reception by the marketplace. Some vendors saw an opportunity to provide services around the standard, such as ULLINK (now part of Itiviti) with their algorithm publication and management and tool UL AMS but whilst the major OMS vendors were irritated by the overhead of implementing new broker algorithms, they had grown to enjoy the revenue that they could command from both their customers and from brokers keen to get their algorithms onto buy-side desks.
+
+Although Version 1.0 was a major step forward, it had some significant limitations. In particular, the definition of the data to be transmitted and its presentation on the user interface were tightly bound together, limiting the flexibility sell-side brokers had in defining their algorithms. The 1.0 specification also afforded insufficient control in terms of user interface layouts.
+The working group set out to address these limitations in what was to become Version 1.1 on the specification. The first major change was to split the definition of the data content from the presentation, defining what is referred to as a separate "Data Contract" made up of the algorithm parameters, their data types and supporting information such as minimum and maximum values. A separate section of the XML document is then concerned with the layout of the user interface, what controls to use for each parameter and where to place them on the screen. An XSD schema is provided to ensure that FIXatdl files are valid and well-formed.
+
+FIXatdl Version 1.1 was preliminarily approved by the GTC on February 9, 2010, when it entered a public comment period, and then finally approved on March 3, 2010. The specification was formally introduced to the market at the FPL’s Europe Middle East and Africa conference on March 23, 2010.
+
+Some early work was undertaken on a Version 1.2 of the standard, but lack of industry interest in accommodating further changes meant the standard remained at Version 1.1.
+
+
+## Document structure
+
+A FIXatdl document can contain one or more strategy definitions. Within a strategy definition, there are four main sections as follows:
+
+* Meta-data section defining which geographical regions, markets (exchanges) and asset classes the strategy is applicable to
+* Parameters section, listing out each of the parameters used by the strategy, their data types, constraints (e.g., minimum and maximum values) and how they should be represented in the resulting FIX message
+* StrategyLayout section which defines the user interface controls to be used for this strategy, how they should be laid out on the screen and how they map to the parameters described in the previous section of the document
+* StrategyEdit section which describes the validation rules to be applied – typically these will be cross field validations
+
+FIXatdl documents should validate against the set of XSD schema provided by FPL. These schema are organised into the following four categories:
+
+* Core (defines data content, data types, constraints, etc.)
+* Layout (defines the controls that can be used and how they are laid out)
+* Validation (self-explanatory)
+* Flow (allows controls to be enabled/disabled, hidden/shown and updated, depending on the state or content of other controls)
+
+## User interface capabilities
+
+Version 1.1 supports 14 different user interface controls, which can be grouped as follows:
+
+* Labels
+* Text entry fields (often referred to as text boxes)
+* Checkboxes and radio buttons, both singly and in lists
+* Listboxes, both single and multi-selection
+* Dropdown lists, both editable and non-editable
+* Clock controls, for date/time entry
+* Sliders, for selecting one of a small number of settings
+* Numeric spinners, both single and double for integers and floating point numbers respectively
+
+Controls are laid out using a hierarchy of panels (referred to as StrategyPanels), each of which can be horizontal or vertical in orientation. The picture on the right shows how the XML elements refer to the individual panels within a given layout.
+
+
+## Adoption
+
+Unlike the previous version, Version 1.1 was widely accepted and adopted by the securities industry. Even at the end of 2009, there were already firms using the 1.1 standard, despite its pre-release status. Examples of firms supporting the FIXatdl standard include:
+
+* RealTick Execution Management System, by Eze Software Group
+* SimCorp Dimension's Order Manager Module
+* Itiviti, with their Algorithm Management System, UL AMS
+* The Portware Execution Management System
+* RapidAddition, with their FIXatdl editor
+* Assimilate Technology, with their Visual FIX product
+* Cornerstone Technology, with their FIXatdl Jump-Start packaged consulting service, public FIXatdl training workshops and free FIXatdl validation service, AtdlTools
+
+There are also open source Java and .NET implementations, atdl4j and Atdl4net respectively, which are both Version 1.1 compliant.
+
+
+## Other user interface standards
+
+The question has often been asked, why doesn’t FIXatdl use an off-the-shelf user interface standard, such as Mozilla’s XUL, Microsoft’s Windows Presentation Foundation or Apache Flex? This is a valid question, but it seems that the authors of the specification wanted to maintain complete platform independence and adopting any one platform would risk damaging this proposition. Whilst lacking the degree of sophistication of some of these platforms, the current specification provides an acceptable degree of control in terms of user interface layout without being unduly restrictive. It remains to be seen how this design choice will pan out, and it does seem likely that further refinement of this part of the specification will be needed as adoption grows.
+

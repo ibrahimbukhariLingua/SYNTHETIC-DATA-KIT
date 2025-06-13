@@ -1,0 +1,166 @@
+Tail value at risk
+
+
+# Tail value at risk
+
+
+
+In financial mathematics, **tail value at risk** (**TVaR**), also known as **tail conditional expectation** (**TCE**) or **conditional tail expectation** (**CTE**), is a risk measure associated with the more general value at risk. It quantifies the expected value of the loss given that an event outside a given probability level has occurred.
+
+
+## Background
+
+There are a number of related, but subtly different, formulations for TVaR in the literature. A common case in literature is to define TVaR and average value at risk as the same measure. Under some formulations, it is only equivalent to expected shortfall when the underlying distribution function is continuous at {\displaystyle \operatorname {VaR} \_{\alpha }(X)}, the value at risk of level {\displaystyle \alpha }. Under some other settings, TVaR is the conditional expectation of loss above a given value, whereas the expected shortfall is the product of this value with the probability of it occurring. The former definition may not be a coherent risk measure in general, however it is coherent if the underlying distribution is continuous. The latter definition is a coherent risk measure. TVaR accounts for the severity of the failure, not only the chance of failure. The TVaR is a measure of the expectation only in the tail of the distribution.
+
+
+## Mathematical definition
+
+The canonical tail value at risk is the left-tail (large negative values) in some disciplines and the right-tail (large positive values) in other, such as actuarial science. This is usually due to the differing conventions of treating losses as large negative or positive values. Using the negative value convention, Artzner and others define the tail value at risk as:
+
+Given a random variable {\displaystyle X} which is the payoff of a portfolio at some future time and given a parameter {\displaystyle 0<\alpha <1} then the tail value at risk is defined by
+{\displaystyle \operatorname {TVaR} \_{\alpha }(X)=\operatorname {E} [-X|X\leq -\operatorname {VaR} \_{\alpha }(X)]=\operatorname {E} [-X|X\leq x^{\alpha }],}
+where {\displaystyle x^{\alpha }} is the upper {\displaystyle \alpha }-quantile given by {\displaystyle x^{\alpha }=\inf\{x\in \mathbb {R} :\Pr(X\leq x)>\alpha \}}. Typically the payoff random variable {\displaystyle X} is in some Lᵖ-space where {\displaystyle p\geq 1} to guarantee the existence of the expectation. The typical values for {\displaystyle \alpha } are 5% and 1%.
+
+
+## Formulas for continuous probability distributions
+
+Closed-form formulas exist for calculating TVaR when the payoff of a portfolio {\displaystyle X} or a corresponding loss {\displaystyle L=-X} follows a specific continuous distribution. If {\displaystyle X} follows some probability distribution with the probability density function (p.d.f.) {\displaystyle f} and the cumulative distribution function (c.d.f.) {\displaystyle F}, the left-tail TVaR can be represented as
+
+{\displaystyle \operatorname {TVaR} \_{\alpha }(X)=\operatorname {E} [-X|X\leq -\operatorname {VaR} \_{\alpha }(X)]={\frac {1}{\alpha }}\int \_{0}^{\alpha }\operatorname {VaR} \_{\gamma }(X)d\gamma =-{\frac {1}{\alpha }}\int \_{-\infty }^{F^{-1}(\alpha )}xf(x)dx.}
+
+For engineering or actuarial applications it is more common to consider the distribution of losses {\displaystyle L=-X}, in this case the right-tail TVaR is considered (typically for {\displaystyle \alpha } 95% or 99%):
+
+{\displaystyle \operatorname {TVaR} \_{\alpha }^{\text{right}}(L)=E[L\mid L\geq \operatorname {VaR} \_{\alpha }(L)]={\frac {1}{1-\alpha }}\int \_{\alpha }^{1}\operatorname {VaR} \_{\gamma }(L)d\gamma ={\frac {1}{1-\alpha }}\int \_{F^{-1}(\alpha )}^{+\infty }yf(y)dy.}
+
+Since some formulas below were derived for the left-tail case and some for the right-tail case, the following reconciliations can be useful:
+
+{\displaystyle \operatorname {TVaR} \_{\alpha }(X)=-{\frac {1}{\alpha }}E[X]+{\frac {1-\alpha }{\alpha }}\operatorname {TVaR} \_{\alpha }^{\text{right}}(L)} and {\displaystyle \operatorname {TVaR} \_{\alpha }^{\text{right}}(L)={\frac {1}{1-\alpha }}E[L]+{\frac {\alpha }{1-\alpha }}\operatorname {TVaR} \_{\alpha }(X).}
+
+
+### Normal distribution
+
+If the payoff of a portfolio {\displaystyle X} follows normal (Gaussian) distribution with the p.d.f. {\displaystyle f(x)={\frac {1}{{\sqrt {2\pi }}\sigma }}e^{-{\frac {(x-\mu )^{2}}{2\sigma ^{2}}}}} then the left-tail TVaR is equal to {\displaystyle \operatorname {TVaR} \_{\alpha }(X)=-\mu +\sigma {\frac {\phi (\Phi ^{-1}(\alpha ))}{\alpha }},} where 
+ϕ
+(
+x
+)
+=
+1
+2
+π
+
+
+
+e
+−
+x
+2
+
+
+
+/
+
+2
+
+
+
+
+
+{\textstyle \phi (x)={\frac {1}{\sqrt {2\pi }}}e^{-{x^{2}}/{2}}}
+
+ is the standard normal p.d.f., {\displaystyle \Phi (x)} is the standard normal c.d.f., so {\displaystyle \Phi ^{-1}(\alpha )} is the standard normal quantile.
+
+If the loss of a portfolio {\displaystyle L} follows normal distribution, the right-tail TVaR is equal to {\displaystyle \operatorname {TVaR} \_{\alpha }^{\text{right}}(L)=\mu +\sigma {\frac {\phi (\Phi ^{-1}(\alpha ))}{1-\alpha }}.}
+
+
+### Generalized Student's t-distribution
+
+If the payoff of a portfolio {\displaystyle X} follows generalized Student's t-distribution with the p.d.f. {\displaystyle f(x)={\frac {\Gamma \left({\frac {\nu +1}{2}}\right)}{\Gamma \left({\frac {\nu }{2}}\right){\sqrt {\pi \nu }}\sigma }}\left(1+{\frac {1}{\nu }}\left({\frac {x-\mu }{\sigma }}\right)^{2}\right)^{-{\frac {\nu +1}{2}}}} then the left-tail TVaR is equal to {\displaystyle \operatorname {TVaR} \_{\alpha }(X)=-\mu +\sigma {\frac {\nu +(\mathrm {T} ^{-1}(\alpha ))^{2}}{\nu -1}}{\frac {\tau (\mathrm {T} ^{-1}(\alpha ))}{\alpha }},} where {\displaystyle \tau (x)={\frac {\Gamma \left({\frac {\nu +1}{2}}\right)}{\Gamma \left({\frac {\nu }{2}}\right){\sqrt {\pi \nu }}}}\left(1+{\frac {x^{2}}{\nu }}\right)^{-{\frac {\nu +1}{2}}}} is the standard t-distribution p.d.f., {\displaystyle \mathrm {T} (x)} is the standard t-distribution c.d.f., so {\displaystyle \mathrm {T} ^{-1}(\alpha )} is the standard t-distribution quantile.
+
+If the loss of a portfolio {\displaystyle L} follows generalized Student's t-distribution, the right-tail TVaR is equal to {\displaystyle \operatorname {TVaR} \_{\alpha }^{\text{right}}(L)=\mu +\sigma {\frac {\nu +(\mathrm {T} ^{-1}(\alpha ))^{2}}{\nu -1}}{\frac {\tau (\mathrm {T} ^{-1}(\alpha ))}{1-\alpha }}.}
+
+
+### Laplace distribution
+
+If the payoff of a portfolio {\displaystyle X} follows Laplace distribution with the p.d.f. {\displaystyle f(x)={\frac {1}{2b}}e^{-{\frac {|x-\mu |}{b}}}} and the c.d.f. {\displaystyle F(x)={\begin{cases}1-{\frac {1}{2}}e^{-{\frac {x-\mu }{b}}}&{\text{if }}x\geq \mu ,\\{\frac {1}{2}}e^{\frac {x-\mu }{b}}&{\text{if }}x<\mu .\end{cases}}} then the left-tail TVaR is equal to {\displaystyle \operatorname {TVaR} \_{\alpha }(X)=-\mu +b(1-\ln 2\alpha )} for {\displaystyle \alpha \leq 0.5}.
+
+If the loss of a portfolio {\displaystyle L} follows Laplace distribution, the right-tail TVaR is equal to {\displaystyle \operatorname {TVaR} \_{\alpha }^{\text{right}}(L)={\begin{cases}\mu +b{\frac {\alpha }{1-\alpha }}(1-\ln 2\alpha )&{\text{if }}\alpha <0.5,\\[1ex]\mu +b[1-\ln(2(1-\alpha ))]&{\text{if }}\alpha \geq 0.5.\end{cases}}}
+
+
+### Logistic distribution
+
+If the payoff of a portfolio {\displaystyle X} follows logistic distribution with the p.d.f. {\displaystyle f(x)={\frac {1}{s}}e^{-{\frac {x-\mu }{s}}}\left(1+e^{-{\frac {x-\mu }{s}}}\right)^{-2}} and the c.d.f. {\displaystyle F(x)=\left(1+e^{-{\frac {x-\mu }{s}}}\right)^{-1}} then the left-tail TVaR is equal to {\displaystyle \operatorname {TVaR} \_{\alpha }(X)=-\mu +s\ln {\frac {(1-\alpha )^{1-{\frac {1}{\alpha }}}}{\alpha }}.}
+
+If the loss of a portfolio {\displaystyle L} follows logistic distribution, the right-tail TVaR is equal to {\displaystyle \operatorname {TVaR} \_{\alpha }^{\text{right}}(L)=\mu +s{\frac {-\alpha \ln \alpha -(1-\alpha )\ln(1-\alpha )}{1-\alpha }}.}
+
+
+### Exponential distribution
+
+If the loss of a portfolio {\displaystyle L} follows exponential distribution with the p.d.f. {\displaystyle f(x)={\begin{cases}\lambda e^{-\lambda x}&{\text{if }}x\geq 0,\\0&{\text{if }}x<0.\end{cases}}} and the c.d.f. {\displaystyle F(x)={\begin{cases}1-e^{-\lambda x}&{\text{if }}x\geq 0,\\0&{\text{if }}x<0.\end{cases}}} then the right-tail TVaR is equal to {\displaystyle \operatorname {TVaR} \_{\alpha }^{\text{right}}(L)={\frac {-\ln(1-\alpha )+1}{\lambda }}.}
+
+
+### Pareto distribution
+
+If the loss of a portfolio {\displaystyle L} follows Pareto distribution with the p.d.f. {\displaystyle f(x)={\begin{cases}{\frac {ax\_{m}^{a}}{x^{a+1}}}&{\text{if }}x\geq x\_{m},\\0&{\text{if }}x<x\_{m}.\end{cases}}} and the c.d.f. {\displaystyle F(x)={\begin{cases}1-(x\_{m}/x)^{a}&{\text{if }}x\geq x\_{m},\\0&{\text{if }}x<x\_{m}.\end{cases}}} then the right-tail TVaR is equal to {\displaystyle \operatorname {TVaR} \_{\alpha }^{\text{right}}(L)={\frac {x\_{m}a}{(1-\alpha )^{1/a}(a-1)}}.}
+
+
+### Generalized Pareto distribution (GPD)
+
+If the loss of a portfolio {\displaystyle L} follows GPD with the p.d.f. {\displaystyle f(x)={\frac {1}{s}}\left(1+{\frac {\xi (x-\mu )}{s}}\right)^{\left(-{\frac {1}{\xi }}-1\right)}} and the c.d.f. {\displaystyle F(x)={\begin{cases}1-\left(1+{\frac {\xi (x-\mu )}{s}}\right)^{-{\frac {1}{\xi }}}&{\text{if }}\xi \neq 0,\\1-\exp \left(-{\frac {x-\mu }{s}}\right)&{\text{if }}\xi =0.\end{cases}}} then the right-tail TVaR is equal to {\displaystyle \operatorname {TVaR} \_{\alpha }^{\text{right}}(L)={\begin{cases}\mu +s\left[{\frac {(1-\alpha )^{-\xi }}{1-\xi }}+{\frac {(1-\alpha )^{-\xi }-1}{\xi }}\right]&{\text{if }}\xi \neq 0,\\\mu +s[1-\ln(1-\alpha )]&{\text{if }}\xi =0.\end{cases}}} and the VaR is equal to {\displaystyle \mathrm {VaR} \_{\alpha }(L)={\begin{cases}\mu +s{\frac {(1-\alpha )^{-\xi }-1}{\xi }}&{\text{if }}\xi \neq 0,\\\mu -s\ln(1-\alpha )&{\text{if }}\xi =0.\end{cases}}}
+
+
+### Weibull distribution
+
+If the loss of a portfolio {\displaystyle L} follows Weibull distribution with the p.d.f. {\displaystyle f(x)={\begin{cases}{\frac {k}{\lambda }}\left({\frac {x}{\lambda }}\right)^{k-1}e^{-(x/\lambda )^{k}}&{\text{if }}x\geq 0,\\0&{\text{if }}x<0.\end{cases}}} and the c.d.f. {\displaystyle F(x)={\begin{cases}1-e^{-(x/\lambda )^{k}}&{\text{if }}x\geq 0,\\0&{\text{if }}x<0.\end{cases}}} then the right-tail TVaR is equal to {\displaystyle \operatorname {TVaR} \_{\alpha }^{\text{right}}(L)={\frac {\lambda }{1-\alpha }}\Gamma \left(1+{\frac {1}{k}},-\ln(1-\alpha )\right),} where {\displaystyle \Gamma (s,x)} is the upper incomplete gamma function.
+
+
+### Generalized extreme value distribution (GEV)
+
+If the payoff of a portfolio {\displaystyle X} follows GEV with the p.d.f. {\displaystyle f(x)={\begin{cases}{\frac {1}{\sigma }}\left(1+\xi {\frac {x-\mu }{\sigma }}\right)^{-{\frac {1}{\xi }}-1}\exp \left[-\left(1+\xi {\frac {x-\mu }{\sigma }}\right)^{-{\frac {1}{\xi }}}\right]&{\text{if }}\xi \neq 0,\\{\frac {1}{\sigma }}e^{-{\frac {x-\mu }{\sigma }}}e^{-e^{-{\frac {x-\mu }{\sigma }}}}&{\text{if }}\xi =0.\end{cases}}} and the c.d.f. {\displaystyle F(x)={\begin{cases}\exp \left(-\left(1+\xi {\frac {x-\mu }{\sigma }}\right)^{-{\frac {1}{\xi }}}\right)&{\text{if }}\xi \neq 0,\\\exp \left(-e^{-{\frac {x-\mu }{\sigma }}}\right)&{\text{if }}\xi =0.\end{cases}}} then the left-tail TVaR is equal to {\displaystyle \operatorname {TVaR} \_{\alpha }(X)={\begin{cases}-\mu -{\frac {\sigma }{\alpha \xi }}\left[\Gamma (1-\xi ,-\ln \alpha )-\alpha \right]&{\text{if }}\xi \neq 0,\\-\mu -{\frac {\sigma }{\alpha }}\left[{\text{li}}(\alpha )-\alpha \ln(-\ln \alpha )\right]&{\text{if }}\xi =0.\end{cases}}} and the VaR is equal to {\displaystyle \mathrm {VaR} \_{\alpha }(X)={\begin{cases}-\mu -{\frac {\sigma }{\xi }}\left[(-\ln \alpha )^{-\xi }-1\right]&{\text{if }}\xi \neq 0,\\-\mu +\sigma \ln(-\ln \alpha )&{\text{if }}\xi =0.\end{cases}}} where {\displaystyle \Gamma (s,x)} is the upper incomplete gamma function, {\displaystyle {\text{li}}(x)=\int {\frac {dx}{\ln x}}} is the logarithmic integral function.
+
+If the loss of a portfolio {\displaystyle L} follows GEV, then the right-tail TVaR is equal to {\displaystyle \operatorname {TVaR} \_{\alpha }(X)={\begin{cases}\mu +{\frac {\sigma }{(1-\alpha )\xi }}\left[\gamma (1-\xi ,-\ln \alpha )-(1-\alpha )\right]&{\text{if }}\xi \neq 0,\\\mu +{\frac {\sigma }{1-\alpha }}\left[y-{\text{li}}(\alpha )+\alpha \ln(-\ln \alpha )\right]&{\text{if }}\xi =0.\end{cases}}} where {\displaystyle \gamma (s,x)} is the lower incomplete gamma function, {\displaystyle y} is the Euler-Mascheroni constant.
+
+
+### Generalized hyperbolic secant (GHS) distribution
+
+If the payoff of a portfolio {\displaystyle X} follows GHS distribution with the p.d.f. {\displaystyle f(x)={\frac {1}{2\sigma }}\operatorname {sech} \left({\frac {\pi }{2}}{\frac {x-\mu }{\sigma }}\right)}and the c.d.f. {\displaystyle F(x)={\frac {2}{\pi }}\arctan \left[\exp \left({\frac {\pi }{2}}{\frac {x-\mu }{\sigma }}\right)\right]} then the left-tail TVaR is equal to {\displaystyle \operatorname {TVaR} \_{\alpha }(X)=-\mu -{\frac {2\sigma }{\pi }}\ln \left(\tan {\frac {\pi \alpha }{2}}\right)-{\frac {2\sigma }{\pi ^{2}\alpha }}i\left[{\text{Li}}\_{2}\left(-i\tan {\frac {\pi \alpha }{2}}\right)-{\text{Li}}\_{2}\left(i\tan {\frac {\pi \alpha }{2}}\right)\right],} where {\displaystyle {\text{Li}}\_{2}} is the dilogarithm and {\displaystyle i={\sqrt {-1}}} is the imaginary unit.
+
+
+### Johnson's SU-distribution
+
+If the payoff of a portfolio {\displaystyle X} follows Johnson's SU-distribution with the c.d.f. {\displaystyle F(x)=\Phi \left[\gamma +\delta \sinh ^{-1}\left({\frac {x-\xi }{\lambda }}\right)\right]} then the left-tail TVaR is equal to {\displaystyle \operatorname {TVaR} \_{\alpha }(X)=-\xi -{\frac {\lambda }{2\alpha }}\left[\exp \left({\frac {1-2\gamma \delta }{2\delta ^{2}}}\right)\Phi \left(\Phi ^{-1}(\alpha )-{\frac {1}{\delta }}\right)-\exp \left({\frac {1+2\gamma \delta }{2\delta ^{2}}}\right)\Phi \left(\Phi ^{-1}(\alpha )+{\frac {1}{\delta }}\right)\right],} where {\displaystyle \Phi } is the c.d.f. of the standard normal distribution.
+
+
+### Burr type XII distribution
+
+If the payoff of a portfolio {\displaystyle X} follows the Burr type XII distribution with the p.d.f. {\displaystyle f(x)={\frac {ck}{\beta }}\left({\frac {x-\gamma }{\beta }}\right)^{c-1}\left[1+\left({\frac {x-\gamma }{\beta }}\right)^{c}\right]^{-k-1}} and the c.d.f. {\displaystyle F(x)=1-\left[1+\left({\frac {x-\gamma }{\beta }}\right)^{c}\right]^{-k},} the left-tail TVaR is equal to {\displaystyle \operatorname {TVaR} \_{\alpha }(X)=-\gamma -{\frac {\beta }{\alpha }}\left((1-\alpha )^{-1/k}-1\right)^{1/c}\left[\alpha -1+{\_{2}F\_{1}}\left({\frac {1}{c}},k;1+{\frac {1}{c}};1-(1-\alpha )^{-1/k}\right)\right],} where {\displaystyle \_{2}F\_{1}} is the hypergeometric function. Alternatively, {\displaystyle \operatorname {TVaR} \_{\alpha }(X)=-\gamma -{\frac {\beta }{\alpha }}{\frac {ck}{c+1}}\left((1-\alpha )^{-1/k}-1\right)^{1+{\frac {1}{c}}}{\_{2}F\_{1}}\left(1+{\frac {1}{c}},k+1;2+{\frac {1}{c}};1-(1-\alpha )^{-1/k}\right).}
+
+
+### Dagum distribution
+
+If the payoff of a portfolio {\displaystyle X} follows the Dagum distribution with the p.d.f. {\displaystyle f(x)={\frac {ck}{\beta }}\left({\frac {x-\gamma }{\beta }}\right)^{ck-1}\left[1+\left({\frac {x-\gamma }{\beta }}\right)^{c}\right]^{-k-1}} and the c.d.f. {\displaystyle F(x)=\left[1+\left({\frac {x-\gamma }{\beta }}\right)^{-c}\right]^{-k},} the left-tail TVaR is equal to {\displaystyle \operatorname {TVaR} \_{\alpha }(X)=-\gamma -{\frac {\beta }{\alpha }}{\frac {ck}{ck+1}}\left(\alpha ^{-1/k}-1\right)^{-k-{\frac {1}{c}}}{\_{2}F\_{1}}\left(k+1,k+{\frac {1}{c}};k+1+{\frac {1}{c}};-{\frac {1}{\alpha ^{-1/k}-1}}\right),} where {\displaystyle \_{2}F\_{1}} is the hypergeometric function.
+
+
+### Lognormal distribution
+
+If the payoff of a portfolio {\displaystyle X} follows lognormal distribution, i.e. the random variable {\displaystyle \ln(1+X)} follows normal distribution with the p.d.f. {\displaystyle f(x)={\frac {1}{{\sqrt {2\pi }}\sigma }}e^{-{\frac {(x-\mu )^{2}}{2\sigma ^{2}}}},} then the left-tail TVaR is equal to {\displaystyle \operatorname {TVaR} \_{\alpha }(X)=1-\exp \left(\mu +{\frac {\sigma ^{2}}{2}}\right){\frac {\Phi (\Phi ^{-1}(\alpha )-\sigma )}{\alpha }},} where {\displaystyle \Phi (x)} is the standard normal c.d.f., so {\displaystyle \Phi ^{-1}(\alpha )} is the standard normal quantile.
+
+
+### Log-logistic distribution
+
+If the payoff of a portfolio {\displaystyle X} follows log-logistic distribution, i.e. the random variable {\displaystyle \ln(1+X)} follows logistic distribution with the p.d.f. {\displaystyle f(x)={\frac {1}{s}}e^{-{\frac {x-\mu }{s}}}\left(1+e^{-{\frac {x-\mu }{s}}}\right)^{-2},} then the left-tail TVaR is equal to {\displaystyle \operatorname {TVaR} \_{\alpha }(X)=1-{\frac {e^{\mu }}{\alpha }}I\_{\alpha }(1+s,1-s){\frac {\pi s}{\sin \pi s}},} where {\displaystyle I\_{\alpha }} is the regularized incomplete beta function, {\displaystyle I\_{\alpha }(a,b)={\frac {\mathrm {B} \_{\alpha }(a,b)}{\mathrm {B} (a,b)}}}.
+
+As the incomplete beta function is defined only for positive arguments, for a more generic case the left-tail TVaR can be expressed with the hypergeometric function: {\displaystyle \operatorname {TVaR} \_{\alpha }(X)=1-{\frac {e^{\mu }\alpha ^{s}}{s+1}}{\_{2}F\_{1}}(s,s+1;s+2;\alpha ).}
+
+If the loss of a portfolio {\displaystyle L} follows log-logistic distribution with p.d.f. {\displaystyle f(x)={\frac {{\frac {b}{a}}(x/a)^{b-1}}{(1+(x/a)^{b})^{2}}}} and c.d.f. {\displaystyle F(x)={\frac {1}{1+(x/a)^{-b}}},} then the right-tail TVaR is equal to {\displaystyle \operatorname {TVaR} \_{\alpha }^{\text{right}}(L)={\frac {a}{1-\alpha }}\left[{\frac {\pi }{b}}\csc \left({\frac {\pi }{b}}\right)-\mathrm {B} \_{\alpha }\left({\frac {1}{b}}+1,1-{\frac {1}{b}}\right)\right],} where {\displaystyle B\_{\alpha }} is the incomplete beta function.
+
+
+### Log-Laplace distribution
+
+If the payoff of a portfolio {\displaystyle X} follows log-Laplace distribution, i.e. the random variable {\displaystyle \ln(1+X)} follows Laplace distribution the p.d.f. {\displaystyle f(x)={\frac {1}{2b}}e^{-{\frac {|x-\mu |}{b}}},} then the left-tail TVaR is equal to {\displaystyle \operatorname {TVaR} \_{\alpha }(X)={\begin{cases}1-{\frac {e^{\mu }(2\alpha )^{b}}{b+1}}&{\text{if }}\alpha \leq 0.5,\\1-{\frac {e^{\mu }2^{-b}}{\alpha (b-1)}}\left[(1-\alpha )^{(1-b)}-1\right]&{\text{if }}\alpha >0.5.\end{cases}}}
+
+
+### Log-generalized hyperbolic secant (log-GHS) distribution
+
+If the payoff of a portfolio {\displaystyle X} follows log-GHS distribution, i.e. the random variable {\displaystyle \ln(1+X)} follows GHS distribution with the p.d.f. {\displaystyle f(x)={\frac {1}{2\sigma }}\operatorname {sech} \left({\frac {\pi }{2}}{\frac {x-\mu }{\sigma }}\right),} then the left-tail TVaR is equal to {\displaystyle \operatorname {TVaR} \_{\alpha }(X)=1-{\frac {1}{\alpha (\sigma +{\pi /2})}}\left(\tan {\frac {\pi \alpha }{2}}\exp {\frac {\pi \mu }{2\sigma }}\right)^{2\sigma /\pi }\tan {\frac {\pi \alpha }{2}}{\_{2}F\_{1}}\left(1,{\frac {1}{2}}+{\frac {\sigma }{\pi }};{\frac {3}{2}}+{\frac {\sigma }{\pi }};-\tan \left({\frac {\pi \alpha }{2}}\right)^{2}\right),} where {\displaystyle \_{2}F\_{1}} is the hypergeometric function.
+

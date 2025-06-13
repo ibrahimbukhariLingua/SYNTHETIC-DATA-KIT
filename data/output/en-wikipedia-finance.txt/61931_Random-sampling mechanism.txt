@@ -1,0 +1,109 @@
+Random-sampling mechanism
+
+
+# Random-sampling mechanism
+
+
+
+A **random-sampling mechanism (RSM)** is a truthful mechanism that uses sampling in order to achieve approximately-optimal gain in prior-free mechanisms and prior-independent mechanisms.
+
+Suppose we want to sell some items in an auction and achieve maximum profit. The crucial difficulty is that we do not know how much each buyer is willing to pay for an item. If we know, at least, that the valuations of the buyers are random variables with some known probability distribution, then we can use a Bayesian-optimal mechanism. But often we do not know the distribution. In this case, **random-sampling mechanisms** provide an alternative solution.
+
+
+## RSM in large markets
+
+
+### Market-halving scheme
+
+When the market is large, the following general scheme can be used:³⁴¹–³⁴⁴
+
+1. The buyers are asked to reveal their valuations.
+2. The buyers are split to two sub-markets, {\displaystyle M\_{L}} ("left") and {\displaystyle M\_{R}} ("right"), using simple random sampling: each buyer goes to one of the sides by tossing a fair coin.
+3. In each sub-market {\displaystyle M\_{s}}, an empirical distribution function {\displaystyle F\_{s}} is calculated.
+4. The Bayesian-optimal mechanism (Myerson's mechanism) is applied in sub-market {\displaystyle M\_{R}} with distribution {\displaystyle F\_{L}}, and in {\displaystyle M\_{L}} with {\displaystyle F\_{R}}.
+
+This scheme is called "Random-Sampling Empirical Myerson" (RSEM).
+
+The declaration of each buyer has no effect on the price he has to pay; the price is determined by the buyers in the other sub-market. Hence, it is a dominant strategy for the buyers to reveal their true valuation. In other words, this is a truthful mechanism.
+
+Intuitively, by the law of large numbers, if the market is sufficiently large then the empirical distributions are sufficiently similar to the real distributions, so we expect the RSEM to attain near-optimal profit. However, this is not necessarily true in all cases. It has been proved to be true in some special cases.
+
+The simplest case is digital goods auction. There, step 4 is simple and consists only of calculating the optimal price in each sub-market. The optimal price in {\displaystyle M\_{L}} is applied to {\displaystyle M\_{R}} and vice versa. Hence, the mechanism is called "Random-Sampling Optimal Price" (RSOP). This case is simple because it always calculates feasible allocations. I.e, it is always possible to apply the price calculated in one side to the other side. This is not necessarily the case with physical goods.
+
+Even in a digital goods auction, RSOP does not necessarily converge to the optimal profit. It converges only under the *bounded valuations* assumption: for each buyer, the valuation of the item is between 1 and {\displaystyle h}, where {\displaystyle h} is some constant. The convergence rate of RSOP to optimality depends on {\displaystyle h}. The convergence rate also depends on the number of possible "offers" considered by the mechanism.
+
+To understand what an "offer" is, consider a digital goods auction in which the valuations of the buyers, in dollars, are known to be bounded in {\displaystyle [1,h]}. If the mechanism uses only whole dollar prices, then there are only {\displaystyle h} possible offers.
+
+In general, the optimization problem may involve much more than just a single price. For example, we may want to sell several different digital goods, each of which may have a different price. So instead of a "price", we talk on an "offer". We assume that there is a global set {\displaystyle G} of possible offers. For every offer {\displaystyle g\in G} and agent {\displaystyle i}, {\displaystyle g(i)} is the amount that agent {\displaystyle i} pays when presented with the offer {\displaystyle g}. In the digital-goods example, {\displaystyle G} is the set of possible prices. For every possible price {\displaystyle p}, there is a function {\displaystyle g\_{p}} such that {\displaystyle g\_{p}(i)} is either 0 (if {\displaystyle v\_{i}<p}) or {\displaystyle p} (if {\displaystyle v\_{i}\geq p}).
+
+For every set {\displaystyle S} of agents, the profit of the mechanism from presenting the offer {\displaystyle g} to the agents in {\displaystyle S} is:
+
+and the optimal profit of the mechanism is:
+
+The RSM calculates, for each sub-market {\displaystyle M\_{s}}, an optimal offer {\displaystyle g\_{s}}, calculated as follows:
+
+The offer {\displaystyle g\_{L}} is applied to the buyers in {\displaystyle M\_{R}}, i.e.: each buyer {\displaystyle i\in M\_{R}} who said that {\displaystyle g\_{L}(i)>0} receives the offered allocation and pays {\displaystyle g\_{L}(i)}; each buyer in {\displaystyle M\_{R}} who said that {\displaystyle g\_{L}(i)=0} do not receive and do not pay anything. The offer {\displaystyle g\_{R}} is applied to the buyers in {\displaystyle M\_{L}} in a similar way.
+
+
+### Profit-oracle scheme
+
+*Profit oracle* is another RSM scheme that can be used in large markets. It is useful when we do not have direct access to agents' valuations (e.g. due to privacy reasons). All we can do is run an auction and watch its expected profit. In a single-item auction, where there are {\displaystyle n} bidders, and for each bidder there are at most {\displaystyle K} possible values (selected at random with unknown probabilities), the maximum-revenue auction can be learned using:
+
+calls to the oracle-profit.
+
+
+## RSM in small markets
+
+RSMs were also studied in a worst-case scenario in which the market is small. In such cases, we want to get an absolute, multiplicative approximation factor, that does not depend on the size of the market.
+
+
+### Market-halving, digital goods
+
+The first research in this setting was for a digital goods auction with Single-parameter utility.
+
+For the Random-Sampling Optimal-Price mechanism, several increasingly better approximations have been calculated:
+
+* By, the mechanism profit is at least 1/7600 of the optimal.
+* By, the mechanism profit is at least 1/15 of the optimal.
+* By, the mechanism profit is at least 1/4.68 of the optimal, and in most cases 1/4 of the optimal, which is tight.
+
+### Single-sample, physical goods
+
+When the agents' valuations satisfy some technical regularity condition (called monotone hazard rate), it is possible to attain a constant-factor approximation to the maximum-profit auction using the following mechanism:
+
+* Sample a single random agent and query his value (the agents are assumed to have single-parameter utility).
+* On the other agents, run a VCG auction with reserve-price determined by the sampled agent.
+
+The profit of this mechanism is at least {\displaystyle {n-1 \over 4n}}, where {\displaystyle n} is the number of agents. This is 1/8 when there are two agents, and grows towards 1/4 as the number of agents grows. This scheme can be generalized to handle constraints on the subsets of agents that can win simultaneously (e.g., there is only a finite number of items). It can also handle agents with different attributes (e.g. young vs. old bidders).
+
+
+## Sample complexity
+
+The sample complexity of a random-sampling mechanism is the number of agents it needs to sample in order to attain a reasonable approximation of the optimal welfare.
+
+The results in imply several bounds on the sample-complexity of revenue-maximization of single-item auctions:
+
+* For a {\displaystyle 1/4}-approximation of the optimal expected revenue, the sample-complexity is {\displaystyle 1} - a single sample suffices. This is true even when the bidders are not i.i.d.
+* For a {\displaystyle 1-\epsilon }-approximation of the optimal expected revenue, when the bidders are i.i.d OR when there is an unlimited supply of items (digital goods), the sample-complexity is {\displaystyle O(1/\epsilon ^{2})} when the agents' distributions have monotone hazard rate, and {\displaystyle O(1/\epsilon ^{3})} when the agents' distributions are regular but do not have monotone-hazard-rate.
+
+The situation becomes more complicated when the agents are not i.i.d (each agent's value is drawn from a different regular distribution) and the goods have limited supply. When the agents come from {\displaystyle k} different distributions, the sample complexity of {\displaystyle 1-\epsilon }-approximation of the optimal expected revenue in single-item auctions is:
+
+* at most {\displaystyle O({k^{10} \over \epsilon ^{7}}\ln ^{3}{k \over \epsilon })} - using a variant of the empirical Myerson auction.
+* at least {\displaystyle \Omega ({k \over {\sqrt {\epsilon \ln k}}})} (for monotone-hazard-rate regular valuations) and at least {\displaystyle \Omega ({k \over \epsilon })} (for arbitrary regular valuations).
+
+discuss arbitrary auctions with single-parameter utility agents (not only single-item auctions), and arbitrary auction-mechanisms (not only specific auctions). Based on known results about sample complexity, they show that the number of samples required to approximate the maximum-revenue auction from a given class of auctions is:
+
+where:
+
+* the agents' valuations are bounded in {\displaystyle [1,H]},
+* the pseudo-VC dimension of the class of auctions is at most {\displaystyle D},
+* the required approximation factor is {\displaystyle 1-\epsilon },
+* the required success probability is {\displaystyle 1-\delta }.
+
+In particular, they consider a class of simple auctions called *{\displaystyle t}-level* auctions: auctions with {\displaystyle t} reserve prices (a Vickrey auction with a single reserve price is a 1-level auction). They prove that the pseudo-VC-dimension of this class is {\displaystyle O(nt\ln(nt))}, which immediately translates to a bound on their generalization error and sample-complexity. They also prove bounds on the representation error of this class of auctions.
+
+
+## Envy
+
+A disadvantage of the random-sampling mechanism is that it is not envy-free. E.g., if the optimal prices in the two sub-markets {\displaystyle M\_{L}} and {\displaystyle M\_{R}} are different, then buyers in each sub-market are offered a different price. In other words, there is price discrimination. This is inevitable in the following sense: there is no single-price strategyproof auction that approximates the optimal profit.
+

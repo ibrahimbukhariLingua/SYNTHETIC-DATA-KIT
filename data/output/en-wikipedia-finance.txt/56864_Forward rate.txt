@@ -1,0 +1,58 @@
+Forward rate
+
+
+# Forward rate
+
+
+
+The **forward rate** is the future yield on a bond. It is calculated using the yield curve. For example, the yield on a three-month Treasury bill six months from now is a *forward rate*.
+
+
+## Forward rate calculation
+
+To extract the forward rate, we need the zero-coupon yield curve.
+
+We are trying to find the future interest rate {\displaystyle r\_{1,2}} for time period {\displaystyle (t\_{1},t\_{2})}, {\displaystyle t\_{1}} and {\displaystyle t\_{2}} expressed in **years**, given the rate {\displaystyle r\_{1}} for time period {\displaystyle (0,t\_{1})} and rate {\displaystyle r\_{2}} for time period {\displaystyle (0,t\_{2})}. To do this, we use the property that the proceeds from investing at rate {\displaystyle r\_{1}} for time period {\displaystyle (0,t\_{1})} and then **reinvesting** those proceeds at rate {\displaystyle r\_{1,2}} for time period {\displaystyle (t\_{1},t\_{2})} is equal to the proceeds from investing at rate {\displaystyle r\_{2}} for time period {\displaystyle (0,t\_{2})}.
+
+{\displaystyle r\_{1,2}} depends on the rate calculation mode (**simple**, **yearly compounded** or **continuously compounded**), which yields three different results.
+
+Mathematically it reads as follows:
+
+
+### Simple rate
+
+Solving for {\displaystyle r\_{1,2}} yields:
+
+Thus {\displaystyle r\_{1,2}={\frac {1}{t\_{2}-t\_{1}}}\left({\frac {1+r\_{2}t\_{2}}{1+r\_{1}t\_{1}}}-1\right)}
+
+The discount factor formula for period (0, t) {\displaystyle \Delta \_{t}} expressed in years, and rate {\displaystyle r\_{t}} for this period being
+{\displaystyle DF(0,t)={\frac {1}{(1+r\_{t}\,\Delta \_{t})}}},
+the forward rate can be expressed in terms of discount factors:
+{\displaystyle r\_{1,2}={\frac {1}{t\_{2}-t\_{1}}}\left({\frac {DF(0,t\_{1})}{DF(0,t\_{2})}}-1\right)}
+
+
+### Yearly compounded rate
+
+Solving for {\displaystyle r\_{1,2}} yields :
+
+The discount factor formula for period (0,*t*) {\displaystyle \Delta \_{t}} expressed in years, and rate {\displaystyle r\_{t}} for this period being
+{\displaystyle DF(0,t)={\frac {1}{(1+r\_{t})^{\Delta \_{t}}}}}, the forward rate can be expressed in terms of discount factors:
+
+
+### Continuously compounded rate
+
+Solving for {\displaystyle r\_{1,2}} yields:
+
+The discount factor formula for period (0,*t*) {\displaystyle \Delta \_{t}} expressed in years, and rate {\displaystyle r\_{t}} for this period being
+{\displaystyle DF(0,t)=e^{-r\_{t}\,\Delta \_{t}}},
+the forward rate can be expressed in terms of discount factors:
+
+{\displaystyle r\_{1,2}} is the forward rate between time {\displaystyle t\_{1}} and time {\displaystyle t\_{2}},
+
+{\displaystyle r\_{k}} is the zero-coupon yield for the time period {\displaystyle (0,t\_{k})}, (*k* = 1,2).
+
+
+## Related instruments
+
+* Forward rate agreement
+* Floating rate note

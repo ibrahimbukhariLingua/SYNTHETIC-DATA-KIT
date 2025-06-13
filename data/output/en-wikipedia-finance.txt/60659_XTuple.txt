@@ -1,0 +1,58 @@
+XTuple
+
+
+# XTuple
+
+
+
+**xTuple** is an enterprise software company that develops and markets software under the brand name *xTuple ERP*.
+
+The company was originally formed in 2001 as *OpenMFG* and rebranded as *xTuple* in 2007. The company is privately held.
+
+
+## History
+
+xTuple began under the name *OpenMFG*, developing its product of the same name beginning in the year 2001. Jeffrey Lyon, the original developer cofounded OpenMFG with Ned Lilly in October 2001.
+
+OpenMFG was a commercially licensed ERP system targeted toward small to midsize manufacturers. The company adopted a "community code" model, meaning customers who purchase or subscribe to licenses for the product have access to view and modify the source code. Unlike open source software, however, the code was not made publicly available.
+
+OpenMFG spent several years building its product, and settled into a release cycle of roughly one major release every twelve months. Version 2.0 of OpenMFG released in 2006, adding Master Production Schedule, multi-currency, and CRM functionalities.
+
+Jeffrey Lyon departed OpenMFG in 2004, and eventually founded ERP company SabeSoft.
+
+The project was originally to be released under the "xTuple License," a derivative of the Mozilla Public License, but xTuple was quickly criticized for introducing "yet another" open source license variant. However, at that very same conference SocialText announced the release of the new Open Source Initiative approved Common Public Attribution License (CPAL). Two days later xTuple switched PostBooks to CPAL and became the second company to adopt this license.
+
+In an announcement made by xTuple's CEO, xTuple has discontinued offering any products under an open source license and, now, distributes its products under a commercial software license, unique in that it claims full rights over any modifications made to xTuple products by its customers.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+In July 2022, xTuple was purchased by CAI Software, LLC, a software company based in Lincoln, Rhode Island. CAI Software is majority-owned by Symphony Technology Group (STG), a private equity firm based in Palo Alto, California.
+
+
+## Products
+
+The Distribution, Manufacturing, and Enterprise Editions of xTuple are commercially licensed Enterprise resource planning solutions. All three products are built on the same Open source technology foundation, and share the same code base.
+
+
+## Technology
+
+xTuple ERP provides multiple interface options including a locally installable GUI client application, a web client, and a web services API for third-party application integration.
+
+
+### GUI Client
+
+The GUI client is written in Qt, a C++ toolkit for application development. It lets application developers target all major operating systems (Windows, Linux/Unix, Mac) with a single application source code. Qt provides a platform-independent API to all central platform functionality: GUI, database access, networking, file handling, etc. The Qt library encapsulates the different APIs of different operating systems, providing the application programmer with a single, common API for all operating systems. The native C APIs are encapsulated in a set of object-oriented C++ classes.
+
+
+### Web Client
+
+The browser-based web client introduced in version was deprecated in v4.10.0 and removed in v5.0.0. The web client was built entirely in JavaScript using the Enyo framework for presentation and Backbone.js for model handling.
+
+
+### Web Services
+
+The web client application is served by a NodeJS server, which also provides a REST based web services API that can be used for third party integration.
+
+
+### Database
+
+xTuple uses the PostgreSQL database exclusively for storing and managing data. The GUI client relies heavily on PostgreSQL's native procedural language (PL/pgSQL) functions to process business logic, while the web client and node layers leverage additional capability made possible by the integration of Google's V8 JavaScript engine into the database using an extension. xTuple has written an Object-relational mapping system embedded in the database using JavaScript that processes all reads and transaction requests made via the NodeJS server.
+

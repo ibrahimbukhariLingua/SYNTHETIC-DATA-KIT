@@ -1,0 +1,181 @@
+Revenue equivalence
+
+
+# Revenue equivalence
+
+
+
+| Part of a series on |
+| --- |
+| Auctions |
+| Types |
+| * All-pay + Chinese + Bidding fee + Dollar * Amsterdam * Anglo-Dutch * Barter double * Best/not best * Brazilian * Calcutta * Candle * Click-box bidding * Combinatorial * Common value * Deferred-acceptance * Discriminatory price * Double * Dutch * English * Forward * French * Generalized first-price * Generalized second-price * Japanese * Knapsack * Multi-attribute * Multiunit * No-reserve * Rank * Reverse * Scottish * Sealed first-price * Simultaneous ascending * Single-price * Traffic light * Uniform price * Unique bid * Value of revenues * Vickrey * Vickrey–Clarke–Groves * Walrasian * Yankee |
+| Bidding |
+| * Shading * Calor licitantis * Cancellation hunt * Jump * Rigging * Sniping * Suicide * Tacit collusion |
+| Contexts |
+| * Algorithms * Autos * Art * Charity * Children * Players * Domain names * Flowers * Loans * Scam * Slaves * Spectrum * Stamps * Virginity * Wine * Wives |
+| Theory |
+| * Digital goods * Price of anarchy * Revenue equivalence * Winner's curse |
+| Online |
+| * Ebidding * Private electronic market * Software |
+| * v * t * e |
+
+**Revenue equivalence** is a concept in auction theory that states that given certain conditions, any mechanism that results in the same outcomes (i.e. allocates items to the same bidders) also has the same expected revenue.
+
+
+## Notation
+
+There is a set {\displaystyle X} of possible outcomes.
+
+There are {\displaystyle n} agents which have different valuations for each outcome. The valuation of agent {\displaystyle i} (also called its "type") is represented as a function:
+
+which expresses the value it has for each alternative, in monetary terms.
+
+The agents have quasilinear utility functions; this means that, if the outcome is {\displaystyle x} and in addition the agent receives a payment {\displaystyle p\_{i}} (positive or negative), then the total utility of agent {\displaystyle i} is:
+
+The vector of all value-functions is denoted by {\displaystyle v}.
+
+For every agent {\displaystyle i}, the vector of all value-functions of the *other* agents is denoted by {\displaystyle v\_{-i}}. So {\displaystyle v\equiv (v\_{i},v\_{-i})}.
+
+A *mechanism* is a pair of functions:
+
+* An {\displaystyle Outcome} function, that takes as input the value-vector {\displaystyle v} and returns an outcome {\displaystyle x\in X} (it is also called a social choice function);
+* A {\displaystyle Payment} function, that takes as input the value-vector {\displaystyle v} and returns a vector of payments, {\displaystyle (p\_{1},\dots ,p\_{n})}, determining how much each player should receive (a negative payment means that the player should pay a positive amount).
+
+The agents' types are independent identically-distributed random variables. Thus, a mechanism induces a Bayesian game in which a player's strategy is his reported type as a function of his true type. A mechanism is said to be Bayesian-Nash incentive compatible if there is a Bayesian Nash equilibrium in which all players report their true type.
+
+
+## Statement
+
+Under these assumptions, the **revenue equivalence theorem** then says the following.²³⁶–²³⁷
+
+For any two Bayesian-Nash incentive compatible mechanisms, if:
+
+* The {\displaystyle Outcome} function is the same in both mechanisms, and:
+* For some type {\displaystyle v\_{i}^{0}}, the expected payment of player {\displaystyle i} (averaged on the types of the other players) is the same in both mechanisms;
+* The valuation of each player is drawn from a path-connected set,
+
+then:
+
+* The expected payments of *all* types are the same in both mechanisms, and hence:
+* The expected revenue (- sum of payments) is the same in both mechanisms.
+
+## Example
+
+A classic example is the pair of auction mechanisms: first price auction and second price auction. First-price auction has a variant which is Bayesian-Nash incentive compatible; second-price auction is dominant-strategy-incentive-compatible, which is even stronger than Bayesian-Nash incentive compatible. The two mechanisms fulfill the conditions of the theorem because:
+
+* The {\displaystyle Outcome} function is the same in both mechanisms - the highest bidder wins the item; and:
+* A player who values the item as 0 always pays 0 in both mechanisms.
+
+Indeed, the expected payment for each player is the same in both auctions, and the auctioneer's revenue is the same; see the page on first-price sealed-bid auction for details.
+
+
+## Equivalence of auction mechanisms in single item auctions
+
+In fact, we can use revenue equivalence to prove that many types of auctions are revenue equivalent. For example, the first price auction, second price auction, and the all-pay auction are all revenue equivalent when the bidders are symmetric (that is, their valuations are independent and identically distributed).
+
+
+### Second price auction
+
+Consider the second price single item auction, in which the player with the highest bid pays the second highest bid. It is optimal for each player {\displaystyle i} to bid its own value {\displaystyle b\_{i}=v\_{i}}.
+
+Suppose {\displaystyle i} wins the auction, and pays the second highest bid, or {\displaystyle \max \_{j\neq i}b\_{j}}. The revenue from this auction is simply {\displaystyle \max \_{j\neq i}b\_{j}}.
+
+
+### First price auction
+
+In the first price auction, where the player with the highest bid simply pays its bid, if all players bid using a bidding function {\displaystyle b(v)=E(\max \_{j\neq i}v\_{j}~|~v\_{j}\leq v~\forall ~j),} this is a Nash equilibrium.
+
+In other words, if each player bids such that they bid the expected value of second highest bid, assuming that theirs was the highest, then no player has any incentive to deviate. If this were true, then it is easy to see that the expected revenue from this auction is also {\displaystyle \max \_{j\neq i}b\_{j}} if {\displaystyle i} wins the auction.
+
+
+#### Proof
+
+To prove this, suppose that a player 1 bids {\displaystyle b(z)} where {\displaystyle z<v}, effectively bluffing that its value is {\displaystyle z} rather than {\displaystyle v}. We want to find a value of {\displaystyle z} such that the player's expected payoff is maximized.
+
+The probability of winning is then {\displaystyle Pr(\max \_{i>1}v\_{i}<z)}. The expected cost of this bid is {\displaystyle E(\max \_{i>1}v\_{i}~|~v\_{i}<z~\forall ~i)}. Then a player's expected payoff is
+
+Let {\displaystyle X=\max \_{i>1}v\_{i}}, a random variable. Then we can rewrite the above as
+
+Using the general fact that {\displaystyle E(X~|~X\leq z)\cdot Pr(X<z)=\int \_{0}^{z}Pr(X<z)-Pr(X<y)dy}, we can rewrite the above as
+
+Taking derivatives with respect to {\displaystyle z}, we obtain
+
+Thus bidding with your value {\displaystyle v} maximizes the player's expected payoff. Since {\displaystyle Pr(X<z)} is monotone increasing, we verify that this is indeed a maximum point.
+
+
+### English auction
+
+In the open ascending price auction (aka English auction), a buyer's dominant strategy is to remain in the auction until the asking price is equal to his value. Then, if he is the last one remaining in the arena, he wins and pays the second-highest bid.
+
+Consider the case of two buyers, each with a value that is an independent draw from a distribution with support [0,1], cumulative distribution function F(v) and probability density function f(v). If buyers behave according to their dominant strategies, then a buyer with value v wins if his opponent's value x is lower. Thus his win probability is
+
+and his expected payment is
+
+The expected payment conditional upon winning is therefore
+
+Multiplying both sides by F(v) and differentiating by v yields the following differential equation for e(v).
+
+Rearranging this equation,
+
+Let B(v) be the equilibrium bid function in the sealed first-price auction. We establish revenue equivalence by showing that B(v)=e(v), that is, the equilibrium payment by the winner in one auction is equal to the equilibrium expected payment by the winner in the other.
+
+Suppose that a buyer has value v and bids b. His opponent bids according to the equilibrium bidding strategy. The support of the opponent's bid distribution is [0,B(1)]. Thus any bid of at least B(1) wins with probability 1. Therefore, the best bid b lies in the interval [0,B(1)] and so we can write this bid as b = B(x) where x lies in [0,1]. If the opponent has value y he bids B(y). Therefore, the win probability is
+
+The buyer's expected payoff is his win probability times his net gain if he wins, that is,
+
+Differentiating, the necessary condition for a maximum is
+
+That is if B(x) is the buyer's best response it must satisfy this first order condition. Finally we note that for B(v) to be the equilibrium bid function, the buyer's best response must be B(v). Thus x=v.
+Substituting for x in the necessary condition,
+
+Note that this differential equation is identical to that for e(v). Since e(0)=B(0)=0 it follows that {\displaystyle B(v)=e(v)}.
+
+
+## Using revenue equivalence to predict bidding functions
+
+We can use revenue equivalence to predict the bidding function of a player in a game. Consider the two player version of the second price auction and the first price auction, where each player's value is drawn uniformly from {\displaystyle [0,1]}.
+
+
+### Second price auction
+
+The expected payment of the first player in the second price auction can be computed as follows:
+
+Since players bid truthfully in a second price auction, we can replace all prices with players' values. If player 1 wins, he pays what player 2 bids, or {\displaystyle p\_{2}=v\_{2}}. Player 1 himself bids {\displaystyle p\_{1}=v\_{1}}. Since payment is zero when player 1 loses, the above is
+
+Since {\displaystyle v\_{1},v\_{2}} come from a uniform distribution, we can simplify this to
+
+
+### First price auction
+
+We can use revenue equivalence to generate the correct symmetric bidding function in the first price auction. Suppose that in the first price auction, each player has the bidding function {\displaystyle b(v)}, where this function is unknown at this point.
+
+The expected payment of player 1 in this game is then
+
+Now, a player simply pays what the player bids, and let's assume that players with higher values still win, so that the probability of winning is simply a player's value, as in the second price auction. We will later show that this assumption was correct. Again, a player pays nothing if he loses the auction. We then obtain
+
+By the Revenue Equivalence principle, we can equate this expression to the revenue of the second-price auction that we calculated above:
+
+From this, we can infer the bidding function:
+
+Note that with this bidding function, the player with the higher value still wins. We can show that this is the correct equilibrium bidding function in an additional way, by thinking about how a player should maximize his bid given that all other players are bidding using this bidding function. See the page on first-price sealed-bid auction.
+
+
+### All-pay auctions
+
+Similarly, we know that the expected payment of player 1 in the second price auction is {\displaystyle {\frac {v\_{1}^{2}}{2}}}, and this must be equal to the expected payment in the all-pay auction, i.e.
+
+Thus, the bidding function for each player in the all-pay auction is {\displaystyle {\frac {v^{2}}{2}}}
+
+
+## Implications
+
+An important implication of the theorem is that any single-item auction which unconditionally gives the item to the highest bidder is going to have the same expected revenue. This means that, if we want to increase the auctioneer's revenue, the outcome function must be changed. One way to do this is to set a Reservation price on the item. This changes the Outcome function since now the item is not always given to the highest bidder. By carefully selecting the reservation price, an auctioneer can get a substantially higher expected revenue.²³⁷
+
+
+## Limitations
+
+The revenue-equivalence theorem breaks in some important cases:²³⁸–²³⁹
+
+* When the players are risk-averse rather than risk-neutral as assumed above. In this case, it is known that first-price auctions generate more revenue than second-price auctions.
+* When the players' valuations are inter-dependent, e.g., if the valuations depend on some state of the world that is only partially known to the bidders (this is related to the Winner's curse). In this scenario, English auction generates more revenue than second-price auction, as it lets the bidders learn information from the bids of other players.

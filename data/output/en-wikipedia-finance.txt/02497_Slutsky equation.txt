@@ -1,0 +1,101 @@
+Slutsky equation
+
+
+# Slutsky equation
+
+
+
+In microeconomics, the **Slutsky equation** (or **Slutsky identity**), named after Eugen Slutsky, relates changes in Marshallian (uncompensated) demand to changes in Hicksian (compensated) demand, which is known as such since it compensates to maintain a fixed level of utility.
+
+There are two parts of the Slutsky equation, namely the substitution effect and income effect. In general, the substitution effect is negative. Slutsky derived this formula to explore a consumer's response as the price of a commodity changes. When the price increases, the budget set moves inward, which also causes the quantity demanded to decrease. In contrast, if the price decreases, the budget set moves outward, which leads to an increase in the quantity demanded. The substitution effect is due to the effect of the relative price change, while the income effect is due to the effect of income being freed up. The equation demonstrates that the change in the demand for a good caused by a price change is the result of two effects:
+
+* a substitution effect: when the price of a good change, as it becomes relatively cheaper, consumer consumption could hypothetically remain unchanged. If so, income would be freed up, and money could be spent on one or more goods.
+* an income effect: the purchasing power of a consumer increases as a result of a price decrease, so the consumer can now purchase other products or more of the same product, depending on whether the product(s) is a normal good or an inferior good.
+
+The Slutsky equation decomposes the change in demand for good *i* in response to a change in the price of good *j*:
+
+where {\displaystyle h(\mathbf {p} ,u)} is the Hicksian demand and {\displaystyle x(\mathbf {p} ,w)} is the Marshallian demand, at the vector of price levels {\displaystyle \mathbf {p} }, wealth level (or income level) {\displaystyle w}, and fixed utility level {\displaystyle u} given by maximizing utility at the original price and income, formally presented by the indirect utility function {\displaystyle v(\mathbf {p} ,w)}. The right-hand side of the equation equals the change in demand for good *i* holding utility fixed at *u* minus the quantity of good *j* demanded, multiplied by the change in demand for good *i* when wealth changes.
+
+The first term on the right-hand side represents the substitution effect, and the second term represents the income effect. Note that since utility is not observable, the substitution effect is not directly observable. Still, it can be calculated by referencing the other two observable terms in the Slutsky equation. This process is sometimes known as the Hicks decomposition of a demand change.
+
+The equation can be rewritten in terms of elasticity:
+
+where **εₚ** is the (uncompensated) price elasticity, **εₚʰ** is the compensated price elasticity, **εw,ᵢ** the income elasticity of good **i**, and **bⱼ** the budget share of good **j**.
+
+Overall, the Slutsky equation states that the total change in demand consists of an income effect and a substitution effect, and both effects must collectively equal the total change in demand.
+
+The equation above is helpful because it demonstrates that changes in demand indicate different types of goods. The substitution effect is negative, as indifference curves always slope downward. However, the same does not apply to the income effect, which depends on how income affects the consumption of a good.
+
+The income effect on a normal good is negative, so if its price decreases, the consumer's purchasing power or income increases. The reverse holds when the price increases and purchasing power or income decreases.
+
+An example of inferior goods is instant noodles. When consumers run low on money for food, they purchase instant noodles; however, the product is not generally considered something people would normally consume daily. This is due to money constraints; as wealth increases, consumption decreases. In this case, the substitution effect is negative, but the income effect is also negative.
+
+In any case, the substitution effect or income effect are positive or negative when prices increase depending on the type of goods:
+
+| Total Effect | Substitution Effect | Income Effect |
+| --- | --- | --- |
+| + | Substitute goods | Substitute goods | Inferior goods |
+| - | Complementary goods | Complementary goods | Normal goods |
+
+However, it is impossible to tell whether the total effect will always be negative if inferior complementary goods are mentioned. For instance, the substitution effect and the income effect pull in opposite directions. The total effect will depend on which effect is ultimately stronger.
+
+
+## Derivation
+
+While there are several ways to derive the Slutsky equation, the following method is likely the simplest. Begin by noting the identity {\displaystyle h\_{i}(\mathbf {p} ,u)=x\_{i}(\mathbf {p} ,e(\mathbf {p} ,u))} where {\displaystyle e(\mathbf {p} ,u)} is the expenditure function, and *u* is the utility obtained by maximizing utility given **p** and *w*. Totally differentiating with respect to *pⱼ* yields as the following:
+
+Making use of the fact that {\displaystyle {\frac {\partial e(\mathbf {p} ,u)}{\partial p\_{j}}}=h\_{j}(\mathbf {p} ,u)} by Shephard's lemma and that at optimum,
+
+one can substitute and rewrite the derivation above as the Slutsky equation.
+
+
+## The Slutsky matrix
+
+The Slutsky equation can be rewritten in matrix form:
+
+where **Dₚ** is the derivative operator with respect to prices and **Dw** is the derivative operator with respect to wealth.
+
+The matrix {\displaystyle \mathbf {D\_{p}h} (\mathbf {p} ,u)} is known as the **Hicksian substitution matrix** and is formally defined as:
+
+The **Slutsky matrix** is given by:
+
+When {\displaystyle u} is the maximum utility the consumer achieves at prices {\displaystyle \mathbf {p} } and income {\displaystyle w}, that is, {\displaystyle u=v(\mathbf {p} ,w)}, the Slutsky equation implies that each element of the Slutsky matrix {\displaystyle S(\mathbf {p} ,w)} is exactly equal to the corresponding component of the Hicksian substitution matrix {\displaystyle \sigma (\mathbf {p} ,u)}. The Slutsky matrix is symmetric, and given that the expenditure function {\displaystyle e(\mathbf {p} ,u)} is concave, the Slutsky matrix is also negative semi-definite.
+
+
+## Example
+
+A Cobb-Douglas utility function (see Cobb-Douglas production function) with two goods and income {\displaystyle w} generates Marshallian demand for goods 1 and 2 of {\displaystyle x\_{1}=.7w/p\_{1}} and {\displaystyle x\_{2}=.3w/p\_{2}.}
+Rearrange the Slutsky equation to put the Hicksian derivative on the left-hand-side yields the substitution effect:
+
+Going back to the original Slutsky equation shows how the substitution and income effects add up to give the total effect of the price rise on quantity demanded:
+
+Thus, of the total decline of {\displaystyle .7w/p\_{1}^{2}} in quantity demanded when {\displaystyle p\_{1}} rises, 21/70 is from the substitution effect and 49/70 from the income effect. The good one is the good this consumer spends most of his income on ({\displaystyle p\_{1}q\_{1}=.7w}), which is why the income effect is so large.
+
+One can check that the answer from the Slutsky equation is the same as from directly differentiating the Hicksian demand function, which here is
+
+where {\displaystyle u} is utility. The derivative is
+
+so since the Cobb-Douglas indirect utility function is {\displaystyle v=wp\_{1}^{-.7}p\_{2}^{-.3},} and {\displaystyle u=v} when the consumer uses the specified demand functions, the derivative is:
+
+which is indeed the Slutsky equation's answer.
+
+The Slutsky equation also can be applied to compute the cross-price substitution effect. One might think it was zero here because when {\displaystyle p\_{2}} rises, the Marshallian quantity demanded of good 1, {\displaystyle x\_{1}(p\_{1},p\_{2},w),} is unaffected ({\displaystyle \partial x\_{1}/\partial p\_{2}=0}), but that is wrong. Again rearranging the Slutsky equation, the cross-price substitution effect is:
+
+This says that when {\displaystyle p\_{2}} rises, there is a substitution effect of {\displaystyle -.21w/(p\_{1}p\_{2})} towards good 1. At the same time, the rise in {\displaystyle p\_{2}} has a negative income effect on good 1's demand, an opposite effect of the same size as the substitution effect, so the net effect is zero. This is a special property of the Cobb-Douglas function.
+
+
+## Changes in multiple prices at once
+
+When there are two goods, the Slutsky equation in matrix form is:
+
+Although strictly speaking, the Slutsky equation only applies to infinitesimal price changes, a linear approximation for finite changes is standardly used. If the prices of the two goods change by {\displaystyle \Delta p\_{1}} and {\displaystyle \Delta p\_{2}}, the effect on the demands for the two goods are:
+
+Multiplying out the matrices, the effect on good 1, for example, would be
+
+The first term is the substitution effect. The second term is the income effect, which is composed of the consumer's response to income loss multiplied by the size of the income loss from each price increase.
+
+
+## Giffen goods
+
+A Giffen good is a product in greater demand when the price increases, which is also a special case of inferior goods. In the extreme case of income inferiority, the size of the income effect overpowers the size of the substitution effect, leading to a positive overall change in demand responding to an increase in the price. Slutsky's decomposition of the change in demand into a pure substitution effect and income effect explains why the law of demand doesn't hold for Giffen goods.
+

@@ -1,0 +1,88 @@
+Life Insurance Corporation
+
+
+# Life Insurance Corporation
+
+
+
+The **Life Insurance Corporation of India** (**LIC**) is an Indian multinational public sector life insurance company headquartered in Mumbai. It is India's largest insurance company as well as the largest institutional investor with total assets under management worth ₹52.52 trillion (US$610 billion) as of March 2024. It is under the ownership of Government of India and administrative control of the Ministry of Finance.
+
+The Life Insurance Corporation of India was established on 1 September 1956, when the Parliament of India passed the Life Insurance of India Act, nationalising the insurance industry in India. Over 245 insurance companies and provident societies were merged.
+
+LIC reported 290 million policyholders as of 2019, a total life fund of ₹28.3 trillion, and a total value of sold policies in the year 2018–19 of ₹21.4 million. The company also reported having settled 26 million claims in 2018–19. It ranked 98th on the 2022 Fortune Global 500 list with a revenue of ₹775,283 crore (equivalent to ₹8.2 trillion or US$95 billion in 2023) and a profit of ₹4,415 crore (equivalent to ₹47 billion or US$540 million in 2023).
+
+
+## History
+
+
+### Founding organisations
+
+The Oriental Life Insurance Company, the first company in India to offer life insurance coverage, was established in Kolkata in 1818 by Bipin Das Gupta. Its primary target market was India.
+
+Surendranath Tagore had founded Hindustan Insurance Society around the same time, which later became the Life Insurance Corporation.
+
+The Bombay Mutual Life Assurance Society was formed in 1870, almost half a century later. It was the first native insurance provider of Western India. Other insurance companies established in the pre-independence era include:
+
+* Postal Life Insurance (PLI) was introduced on 1 February 1884
+* Bharat Insurance Company (1896)
+* United India (1906)
+* National Indian (1906)
+* National Insurance (1906)
+* Co-operative Assurance (1906)
+* Hindustan Co-operatives (1907)
+* The New India Assurance Co Ltd (1919)
+* Indian Mercantile
+* General Assurance
+* Swadeshi Life (later Bombay Life)
+* Sahyadri Insurance (Merged into LIC, 1986)
+
+These companies were established when India was marked mostly by turbulent economic and political conditions including the Indian rebellion of 1857, World War I and World War II. The effect of these events led to a high liquidation rate of life insurance companies in India and adversely affected the faith of the general public in the value of obtaining life insurance.
+
+
+### Nationalization in 1956
+
+In 1956, parliamentarian Feroze Gandhi raised the matter of insurance fraud via owners of private insurance agencies. In the ensuing investigations, one of India's wealthiest businessmen, Times of India owner Seth Ramkrishna Dalmia, was sent to prison for two years.
+
+
+### Initial public offering
+
+Finance Minister Nirmala Sitharaman announced a proposal for an initial public offering (IPO) for the Life Insurance Corporation of India (LIC) in the 2021 Union budget of India. The IPO was expected to occur in 2022, and the Government of India planned to remain the majority shareholder post-listing, with 10% of shares proposed to be allotted to existing LIC policyholders. In 2021, the Indian government also proposed to enhance LIC's authorized capital to ₹250 billion (US$3.1 billion) to facilitate its public listing.
+
+The LIC IPO opened to the public on 4 May 2022, and concluded on 9 May 2022. The Government of India aimed to raise ₹21,000 crore through the IPO, which was significantly lower than the initially expected ₹65,000 to ₹70,000 crore by diluting a 5% equity stake. Instead, the IPO offered a 3.5% stake, valuing the company at approximately ₹6 lakh crore.
+
+Since the IPO, LIC's market value has seen substantial growth. As of 2024, LIC's shares have reached record highs, with the company's market value increasing by $30 billion over two years.
+
+
+## Security Vulnerability Incidents
+
+In October 2024, a security vulnerability was discovered in the "esales" portal of LIC. The vulnerability, identified by a prospect customer, was that by modifying the proposal URL in the browser, one could access insurance form proposals of other customers without any authentication. In violation of the prevalent OWASP Top-Ten and CERT-In guidelines, the document IDs were sequentially numbered, allowing enumeration by incrementing the number in the URL with no OTP or password verification.
+
+The exposed data included mobile number, email address, family details, date of birth, residential address, PAN card, Aadhaar or other identity documents, Bank account information, Income Tax Returns, medical history etc. The issue was reported to LIC via multiple channels and after a CPGRAMS complaint it was fixed in seven days using UUID V4 instead of the numerical document ID.
+
+Four more vulnerabilities were found by the same user with a similar severity in December 2024. The root cause was found to be encrypting the same sequential document and proposal IDs and exposing the decryption key in the front-end JavaScript code. Highlighting the lack of proper authorization, the JSON Web Token claims were not validated properly and a long-lived dummy JWT was allowed to access all documents. With the help of CERT-In, the vulnerabilities were resolved in 2-3 weeks.
+
+
+## Structure
+
+The Central Office of LIC is based out of Mumbai. There are a total of 8 zonal offices, located in Delhi, Chennai, Mumbai, Hyderabad, Kanpur, Kolkata, Bhopal and Patna.
+
+
+### Liberalisation post 2000s
+
+In August 2000, the Indian Government embarked on a program to liberalise the insurance sector and opened it up to the private sector. The LIC benefited from this process and in 2013 reported that the first year premium compound annual growth rate (CAGR) was 24.53% while total life premium CAGR was 19.28%, matching the growth of the life insurance industry and outperforming general economic growth.
+
+
+## Golden Jubilee Foundation
+
+The LIC Golden Jubilee Foundation was established in 2006 as a charity organization. The entity has the aim of promoting education, alleviating poverty, and providing better living conditions for the underprivileged. The Golden Jubilee Scholarship award is one of the best known parts of the foundation. Each year, this award is given to the meritorious students in the 12th standard who wish to continue their studies, and have a parental income less than ₹200,000 (US$2,300).
+
+
+## Bima Sakhi Yojana
+
+The "LIC's Bima Sakhi Yojana" scheme is a significant program introduced by the Life Insurance Corporation of India (LIC) under the guidance of the Government of India. The scheme was officially inaugurated by Prime Minister Narendra Modi on December 9, 2024, in Panipat, Haryana. The program aims to empower women by providing them with a platform to act as insurance facilitators while promoting financial inclusion in underserved and rural areas.
+
+
+## Holdings
+
+The LIC invests in sectors such as banks, cement, chemicals and fertilizers, electricity and transmission, electrical and electronics, engineering, construction and infrastructure, fast-moving consumer goods, finance and investments, healthcare, hotels, information technology, metals and mining, motor vehicles, and ancillaries, oil and natural resources, retail, textiles, transportation, and logistics.
+

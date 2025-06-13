@@ -1,0 +1,24 @@
+Upside potential ratio
+
+
+# Upside potential ratio
+
+
+
+The **upside-potential ratio** is a measure of a return of an investment asset relative to the minimal acceptable return. The measurement allows a firm or individual to choose investments which have had relatively good upside performance, per unit of downside risk.
+
+where the returns {\displaystyle R\_{r}} have been put into increasing order. Here {\displaystyle P\_{r}} is the probability of the return {\displaystyle R\_{r}} and {\displaystyle R\_{\min }} which occurs at {\displaystyle r=\min } is the minimal acceptable return. In the secondary formula {\displaystyle (X)\_{+}={\begin{cases}X&{\text{if }}X\geq 0\\0&{\text{else}}\end{cases}}} and {\displaystyle (X)\_{-}=(-X)\_{+}}.
+
+The upside-potential ratio may also be expressed as a ratio of partial moments since {\displaystyle \mathbb {E} [(R\_{r}-R\_{\min })\_{+}]} is the first upper moment and {\displaystyle \mathbb {E} [(R\_{r}-R\_{\min })\_{-}^{2}]} is the second lower partial moment.
+
+The measure was developed by Frank A. Sortino.
+
+
+## Discussion
+
+The upside-potential ratio is a measure of risk-adjusted returns. All such measures are dependent on some measure of risk. In practice, standard deviation is often used, perhaps because it is mathematically easy to manipulate. However, standard deviation treats deviations above the mean (which are desirable, from the investor's perspective) exactly the same as it treats deviations below the mean (which are less desirable, at the very least). In practice, rational investors have a preference for good returns (e.g., deviations above the mean) and an aversion to bad returns (e.g., deviations below the mean).
+
+Sortino further found that investors are (or, at least, should be) averse not to deviations below the mean, but to deviations below some "minimal acceptable return" (MAR), which is meaningful to them specifically. Thus, this measure uses deviations above the MAR in the numerator, rewarding performance above the MAR. In the denominator, it has deviations below the MAR, thus penalizing performance below the MAR.
+
+Thus, by rewarding desirable results in the numerator and penalizing undesirable results in the denominator, this measure attempts to serve as a pragmatic measure of the goodness of an investment portfolio's returns in a sense that is not just mathematically simple (a primary reason to use standard deviation as a risk measure), but one that considers the realities of investor psychology and behavior.
+

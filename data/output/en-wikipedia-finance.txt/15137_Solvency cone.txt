@@ -1,0 +1,54 @@
+Solvency cone
+
+
+# Solvency cone
+
+
+
+The **solvency cone** is a concept used in financial mathematics which models the possible trades in the financial market. This is of particular interest to markets with transaction costs. Specifically, it is the convex cone of portfolios that can be exchanged to portfolios of non-negative components (including paying of any transaction costs).
+
+
+## Mathematical basis
+
+If given a bid-ask matrix {\displaystyle \Pi } for {\displaystyle d} assets such that {\displaystyle \Pi =\left(\pi ^{ij}\right)\_{1\leq i,j\leq d}} and {\displaystyle m\leq d} is the number of assets which with any non-negative quantity of them can be "discarded" (traditionally {\displaystyle m=d}), then the solvency cone {\displaystyle K(\Pi )\subset \mathbb {R} ^{d}} is the convex cone spanned by the unit vectors {\displaystyle e^{i},1\leq i\leq m} and the vectors {\displaystyle \pi ^{ij}e^{i}-e^{j},1\leq i,j\leq d}.
+
+
+### Definition
+
+A solvency cone {\displaystyle K} is any closed convex cone such that {\displaystyle K\subseteq \mathbb {R} ^{d}} and {\displaystyle K\supseteq \mathbb {R} \_{+}^{d}}.
+
+
+## Uses
+
+A process of (random) solvency cones {\displaystyle \left\{K\_{t}(\omega )\right\}\_{t=0}^{T}} is a model of a financial market. This is sometimes called a **market process**.
+
+The negative of a solvency cone is the set of portfolios that can be obtained starting from the zero portfolio. This is intimately related to self-financing portfolios.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+The dual cone of the solvency cone ({\displaystyle K^{+}=\left\{w\in \mathbb {R} ^{d}:\forall v\in K:0\leq w^{T}v\right\}}) are the set of prices which would define a friction-less pricing system for the assets that is consistent with the market. This is also called a consistent pricing system.
+
+
+## Examples
+
+Assume there are 2 assets, A and M with 1 to 1 exchange possible.
+
+
+### Frictionless market
+
+In a frictionless market, we can obviously make (1A,-1M) and (-1A,1M) into non-negative portfolios, therefore {\displaystyle K=\{x\in \mathbb {R} ^{2}:(1,1)x\geq 0\}}. Note that (1,1) is the "price vector."
+
+
+### With transaction costs
+
+Assume further that there is 50% transaction costs for each deal. This means that (1A,-1M) and (-1A,1M) cannot be exchanged into non-negative portfolios. But, (2A,-1M) and (-1A,2M) can be traded into non-negative portfolios. It can be seen that {\displaystyle K=\{x\in \mathbb {R} ^{2}:(2,1)x\geq 0,(1,2)x\geq 0\}}.
+
+The dual cone of prices is thus easiest to see in terms of prices of A in terms of M (and similarly done for price of M in terms of A):
+
+* someone offers 1A for tM: {\displaystyle (0,t)\rightarrow (1,0)\rightarrow (0,{\frac {1}{2}})} therefore there is arbitrage if {\displaystyle t<{\frac {1}{2}}}
+* someone offers tM for 1A: {\displaystyle (1,0)\rightarrow (0,t)\rightarrow ({\frac {t}{2}},0)} therefore there is arbitrage if {\displaystyle t>2}
+
+## Properties
+
+If a solvency cone {\displaystyle K}:
+
+* contains a line, then there is an exchange possible without transaction costs.
+* {\displaystyle K=\mathbb {R} \_{+}^{d}}, then there is no possible exchange, i.e. the market is completely illiquid.

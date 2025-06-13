@@ -1,0 +1,77 @@
+Variance gamma process
+
+
+# Variance gamma process
+
+
+
+In the theory of stochastic processes, a part of the mathematical theory of probability, the **variance gamma** (**VG**) **process**, also known as **Laplace motion**, is a Lévy process determined by a random time change. The process has finite moments, distinguishing it from many Lévy processes. There is no diffusion component in the VG process and it is thus a pure jump process. The increments are independent and follow a variance-gamma distribution, which is a generalization of the Laplace distribution.
+
+There are several representations of the VG process that relate it to other processes. It can for example be written as a Brownian motion {\displaystyle W(t)} with drift {\displaystyle \theta t} subjected to a random time change which follows a gamma process {\displaystyle \Gamma (t;1,\nu )} (equivalently one finds in literature the notation {\displaystyle \Gamma (t;\gamma =1/\nu ,\lambda =1/\nu )}):
+
+An alternative way of stating this is that the variance gamma process is a Brownian motion subordinated to a gamma subordinator.
+
+Since the VG process is of finite variation it can be written as the difference of two independent gamma processes:
+
+where
+
+Alternatively it can be approximated by a compound Poisson process that leads to a representation with explicitly given (independent) jumps and their locations. This last characterization gives an understanding of the structure of the sample path with location and sizes of jumps.
+
+On the early history of the variance-gamma process see Seneta (2000).
+
+
+## Moments
+
+The mean of a variance gamma process is independent of {\displaystyle \sigma } and {\displaystyle \nu } and is given by
+
+The variance is given as
+
+The 3rd central moment is
+
+The 4th central moment is
+
+
+## Option pricing
+
+The VG process can be advantageous to use when pricing options since it allows for a wider modeling of skewness and kurtosis than the Brownian motion does. As such the variance gamma model allows to consistently price options with different strikes and maturities using a single set of parameters. Madan and Seneta present a symmetric version of the variance gamma process. Madan, Carr and Chang extend the model to allow for an asymmetric form and present a formula to price European options under the variance gamma process.
+
+Hirsa and Madan show how to price American options under variance gamma. Fiorani presents numerical solutions for European and American barrier options under variance gamma process. He also provides computer code to price vanilla and barrier European and American barrier options under variance gamma process.
+
+Lemmens et al. construct bounds for arithmetic Asian options for several Lévy models including the variance gamma model.
+
+
+## Applications to credit risk modeling
+
+The variance gamma process has been successfully applied in the modeling of credit risk in structural models. The pure jump nature of the process and the possibility to control skewness and kurtosis of the distribution allow the model to price correctly the risk of default of securities having a short maturity, something that is generally not possible with structural models in which the underlying assets follow a Brownian motion. Fiorani, Luciano and Semeraro model credit default swaps under variance gamma. In an extensive empirical test they show the overperformance of the pricing under variance gamma, compared to alternative models presented in literature.
+
+
+## Simulation
+
+Monte Carlo methods for the variance gamma process are described by Fu (2000).
+Algorithms are presented by Korn et al. (2010).
+
+
+### Simulating VG as gamma time-changed Brownian motion
+
+* **Input:** VG parameters {\displaystyle \theta ,\sigma ,\nu } and time increments {\displaystyle \Delta t\_{1},\dots ,\Delta t\_{N}}, where {\displaystyle \sum \_{i=1}^{N}\Delta t\_{i}=T.}
+* **Initialization:** Set *X*(0) = 0.
+* **Loop:** For *i* = 1 to *N*:
+
+1. Generate independent gamma {\displaystyle \Delta \,G\_{i}\,\sim \Gamma (\Delta t\_{i}/\nu ,\nu )}, and normal {\displaystyle Z\_{i}\sim {\mathcal {N}}(0,1)} variates, independently of past random variates.
+2. Return {\displaystyle X(t\_{i})=X(t\_{i-1})+\theta \,\Delta G\_{i}+\sigma {\sqrt {\Delta G\_{i}}}Z\_{i}.}
+
+### Simulating VG as difference of gammas
+
+This approach is based on the difference of gamma representation {\displaystyle X^{VG}(t;\sigma ,\nu ,\theta )\;=\;\Gamma (t;\mu \_{p},\mu \_{p}^{2}\,\nu )-\Gamma (t;\mu \_{q},\mu \_{q}^{2}\,\nu )}, where {\displaystyle \mu \_{p},\mu \_{q},\nu } are defined as above.
+
+* **Input:** VG parameters [{\displaystyle \theta ,\sigma ,\nu ,\mu \_{p},\mu \_{q}}] and time increments {\displaystyle \Delta t\_{1},\dots ,\Delta t\_{N}}, where {\displaystyle \sum \_{i=1}^{N}\Delta t\_{i}=T.}
+* **Initialization:** Set *X*(0) = 0.
+* **Loop:** For *i* = 1 to *N*:
+
+1. Generate independent gamma variates {\displaystyle \gamma \_{i}^{-}\,\sim \,\Gamma (\Delta t\_{i}/\nu ,\nu \mu \_{q}),\quad \gamma \_{i}^{+}\,\sim \,\Gamma (\Delta t\_{i}/\nu ,\nu \mu \_{p}),} independently of past random variates.
+2. Return {\displaystyle X(t\_{i})=X(t\_{i-1})+\Gamma \_{i}^{+}(t)-\Gamma \_{i}^{-}(t).}
+
+### Variance gamma as 2-EPT distribution
+
+Under the restriction that {\displaystyle {\frac {1}{\nu }}} is integer the variance gamma distribution can be represented as a 2-EPT probability density function. Under this assumption it is possible to derive closed form vanilla option prices and their associated Greeks. For a comprehensive description see.
+

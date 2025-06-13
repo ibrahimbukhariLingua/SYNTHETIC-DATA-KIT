@@ -1,0 +1,81 @@
+Heteroskedasticity-consistent standard errors
+
+
+# Heteroskedasticity-consistent standard errors
+
+
+
+The topic of **heteroskedasticity-consistent** (**HC**) **standard errors** arises in statistics and econometrics in the context of linear regression and time series analysis. These are also known as **heteroskedasticity-robust standard errors** (or simply **robust standard errors**), **Eicker–Huber–White standard errors** (also **Huber–White standard errors** or **White standard errors**), to recognize the contributions of Friedhelm Eicker, Peter J. Huber, and Halbert White.
+
+In regression and time-series modelling, basic forms of models make use of the assumption that the errors or disturbances *u*ᵢ have the same variance across all observation points. When this is not the case, the errors are said to be heteroskedastic, or to have heteroskedasticity, and this behaviour will be reflected in the residuals 
+u
+^
+
+
+
+i
+
+
+
+
+{\textstyle {\widehat {u}}\_{i}}
+
+ estimated from a fitted model. Heteroskedasticity-consistent standard errors are used to allow the fitting of a model that does contain heteroskedastic residuals. The first such approach was proposed by Huber (1967), and further improved procedures have been produced since for cross-sectional data, time-series data and GARCH estimation.
+
+Heteroskedasticity-consistent standard errors that differ from classical standard errors may indicate model misspecification. Substituting heteroskedasticity-consistent standard errors does not resolve this misspecification, which may lead to bias in the coefficients. In most situations, the problem should be found and fixed. Other types of standard error adjustments, such as clustered standard errors or HAC standard errors, may be considered as extensions to HC standard errors.
+
+
+## History
+
+Heteroskedasticity-consistent standard errors are introduced by Friedhelm Eicker, and popularized in econometrics by Halbert White.
+
+
+## Problem
+
+Consider the linear regression model for the scalar {\displaystyle y}.
+
+where {\displaystyle \mathbf {x} } is a *k* x 1 column vector of explanatory variables (features), {\displaystyle {\boldsymbol {\beta }}} is a *k* × 1 column vector of parameters to be estimated, and {\displaystyle \varepsilon } is the residual error.
+
+The ordinary least squares (OLS) estimator is
+
+where {\displaystyle \mathbf {y} } is a vector of observations {\displaystyle y\_{i}}, and {\displaystyle \mathbf {X} } denotes the matrix of stacked {\displaystyle \mathbf {x} \_{i}} values observed in the data.
+
+If the sample errors have equal variance {\displaystyle \sigma ^{2}} and are uncorrelated, then the least-squares estimate of {\displaystyle {\boldsymbol {\beta }}} is BLUE (best linear unbiased estimator), and its variance is estimated with
+
+where {\displaystyle {\widehat {\varepsilon }}\_{i}=y\_{i}-\mathbf {x} \_{i}^{\top }{\widehat {\boldsymbol {\beta }}}\_{\mathrm {OLS} }} are the regression residuals.
+
+When the error terms do not have constant variance (i.e., the assumption of {\displaystyle \mathbb {E} [\mathbf {u} \mathbf {u} ^{\top }]=\sigma ^{2}\mathbf {I} \_{n}} is untrue), the OLS estimator loses its desirable properties. The formula for variance now cannot be simplified:
+
+where {\displaystyle \mathbf {\Sigma } =\mathbb {V} [\mathbf {u} ].}
+
+While the OLS point estimator remains unbiased, it is not "best" in the sense of having minimum mean square error, and the OLS variance estimator {\displaystyle {\hat {\mathbb {V} }}\left[{\widehat {\boldsymbol {\beta }}}\_{\mathrm {OLS} }\right]} does not provide a consistent estimate of the variance of the OLS estimates.
+
+For any non-linear model (for instance logit and probit models), however, heteroskedasticity has more severe consequences: the maximum likelihood estimates of the parameters will be biased (in an unknown direction), as well as inconsistent (unless the likelihood function is modified to correctly take into account the precise form of heteroskedasticity). As pointed out by Greene, “simply computing a robust covariance matrix for an otherwise inconsistent estimator does not give it redemption.”
+
+
+## Solution
+
+If the regression errors {\displaystyle \varepsilon \_{i}} are independent, but have distinct variances {\displaystyle \sigma \_{i}^{2}}, then {\displaystyle \mathbf {\Sigma } =\operatorname {diag} (\sigma \_{1}^{2},\ldots ,\sigma \_{n}^{2})} which can be estimated with {\displaystyle {\widehat {\sigma }}\_{i}^{2}={\widehat {\varepsilon }}\_{i}^{2}}. This provides White's (1980) estimator, often referred to as *HCE* (heteroskedasticity-consistent estimator):
+
+where as above {\displaystyle \mathbf {X} } denotes the matrix of stacked {\displaystyle \mathbf {x} \_{i}^{\top }} values from the data. The estimator can be derived in terms of the generalized method of moments (GMM).
+
+Also often discussed in the literature (including White's paper) is the covariance matrix {\displaystyle {\widehat {\mathbf {\Omega } }}\_{n}} of the {\displaystyle {\sqrt {n}}}-consistent limiting distribution:
+
+where
+
+and
+
+Thus,
+
+and
+
+Precisely which covariance matrix is of concern is a matter of context.
+
+Alternative estimators have been proposed in MacKinnon & White (1985) that correct for unequal variances of regression residuals due to different leverage. Unlike the asymptotic White's estimator, their estimators are unbiased when the data are homoscedastic.
+
+Of the four widely available different options, often denoted as HC0-HC3, the HC3 specification appears to work best, with tests relying on the HC3 estimator featuring better power and closer proximity to the targeted size, especially in small samples. The larger the sample, the smaller the difference between the different estimators.
+
+An alternative to explicitly modelling the heteroskedasticity is using a resampling method such as the wild bootstrap. Given that the studentized bootstrap, which standardizes the resampled statistic by its standard error, yields an asymptotic refinement, heteroskedasticity-robust standard errors remain nevertheless useful.
+
+Instead of accounting for the heteroskedastic errors, most linear models can be transformed to feature homoskedastic error terms (unless the error term is heteroskedastic by construction, e.g. in a linear probability model). One way to do this is using weighted least squares, which also features improved efficiency properties.
+

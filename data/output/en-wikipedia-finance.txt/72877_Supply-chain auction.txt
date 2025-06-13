@@ -1,0 +1,62 @@
+Supply-chain auction
+
+
+# Supply-chain auction
+
+
+
+A **supply-chain auction** is an auction for coordinating trade among various suppliers and consumers in a supply chain. It is a generalization of a double auction. In a double auction, each deal involves two agents - a buyer and a seller, so the "supply-chain" contains only a single link. In a general supply-chain auction, each deal may involve many different agents, for example: a seller, a mediator, a transporter and a buyer.
+
+
+## Auction for a linear supply-chain
+
+Babaioff and Nisan present an auction for the case in which the supply-chain is linear - each node in the chain consumes the output of the previous node and produces input for the next node. There is one class of *initial suppliers*, several classes of *converters*, and one class of *end consumers*.
+
+Their running example is a lemonade market, in which there are three kinds of agents: *pickers*, *squeezers* and *drinkers*:
+
+* Each *picker* picks a single lemon from a nearby tree, for a fixed cost;
+* Each *squeezer* takes a single lemon and squeezes it into a glass of lemonade, for a fixed cost;
+* Each *drinker* wants to drink a single glass of lemonade, and has a fixed positive value for this glass.
+
+In this market, each deal involves three agents - one of each kind. The costs/values of different agents of the same kind might differ, so it is desirable to arrange the trade using a truthful mechanism. Babaioff and Nisan suggest to conduct three different double auctions - one for each kind of agents:
+
+* A *lemon auction* - where the sellers are the pickers, and there are "virtual buyers" whose value is the value of a drinker minus the cost of a squeezer;
+* A *squeezing auction* - where the sellers are the squeezers, and there are "virtual buyers" whose value is the value of a drinker minus the cost of a picker;
+* A *juice auction* - where the buyers are the drinkers, and there are "virtual sellers" whose cost is the cost of a picker plus the cost of a squeezer;
+
+For each double auction there are several options, for example: a VCG auction (which is truthful and efficient but has a deficit), or a *trade-reduction auction* (which is truthful and has no deficit but is only approximately-efficient).
+
+They suggest two protocols for combining the different double-auctions into a single outcome:
+
+* **Symmetric Protocol** - each market conducts a separate double-auction - there is no central market. To ensure material balance, the double-auction rule used in the markets should be *consistent*, i.e., conduct the same number of deals. Since the number of optimal deals is the same in all markets, the VCG auction (which always does all the optimal deals) is consistent. Similarly, the trade-reduction rule (which does all optimal deals minus one) is consistent. But McAfee's rule (which does either all optimal deals, are all but one, depending on the values) is not consistent.
+* **Pivot Protocol** - one of the markets (e.g. that of the end consumer) conducts a double auction, and sends the results to the other markets before/after in the chain, and they use the information to conduct their own double-auctions. To ensure that there is no deficit, the double-auction rule used in the markets should have no deficit, and moreover, it should satisfy a stronger condition - the price paid by a buyer must be at least as large as the lowest cost of a non-trading seller. This condition holds for the trade-reduction rule, but not necessarily for McAfee's rule.
+
+### Example
+
+Suppose there are three pickers with values -3, -6, -7 (negative values denote costs); three squeezers with values -1, -3, -6; and three consumers with values +12, +11, +7. The following table presents the three double-auctions (the boldfaced values denote the actual traders; the non-boldfaced values are the virtual traders calculated as sum/difference of other traders' values.
+
+| Lemon market | Squeezing market | Juice market | Combined |
+| --- | --- | --- | --- |
+| Buyers' values: | +11,+8,+1 | +9,+5,+0 | **+12,+11,+7** |
+| Sellers' values: | **-3,-6,-7** | **-1,-3,-6** | -4,-9,-13 |
+| Symmetric protocol, VCG auction (truthful and efficient) | Two sellers (pickers) sell for -7 = max(-8,-7). | Two sellers (squeezers) sell for -5 = max(-5,-6). | Two buyers (drinkers) buy for +9 = max(+9,+7). | Two pickers pick for -7; Two squeezers squeeze for -5; Two drinkers drink for +9; Social welfare 12+11-1-3-3-6 = **+10**; Deficit -3 per unit = **-6**. |
+| Symmetric protocol, Trade-reduction auction (truthful and has no deficit) | One seller (picker) sells for -6; | One seller (squeezer) sells for -3; | One buyer (drinker) buys for +11; | One picker picks for -6; One squeezer squeezes for -3; One drinker drinks for +11; Social welfare 12-1-3 = **+8**; Surplus +2 per unit = **+2**. |
+| Symmetric protocol, Market-equilibrium outcome (efficient and budget-balanced) | Two sellers (pickers) sell for -6; | Two sellers (squeezers) sell for -3; | Two buyers (drinkers) buy for +9; | Two pickers pick for -6; Two squeezers squeeze for -3; Two drinkers drink for +9; Social welfare 12+11-1-3-3-6 = **+10**; Budget is balanced. |
+| Pivot protocol (starting at juice market), VCG auction (truthful and efficient) | The trade-size is 2, so two sellers (pickers) sell; their price is max(-8, -7)=-7. | The trade-size is 2, so two sellers (squeezers) sell; their price is max(-11--6,-6)=-5. Send to previous market the trade-size (2) and the seller price (-11--3=-8) | Two buyers (drinkers) buy for +9; Two sellers (virtual) sell for -11 = max(-11,-13); Send to previous market the trade-size (2) and the seller price (-11). | Two pickers pick for -7; Two squeezers squeeze for -5; Two drinkers drink for +9; Social welfare 12+11-1-3-3-6 = **+10**; Deficit -3 per unit = **-6**. |
+
+
+## Auction for a directed acyclic graph
+
+Babaioff and Walsh extend the above work to the case in which the supply-chain can be any acyclic graph. As an example, they consider the following market with six agent kinds:
+
+* *Lemon pickers* - each picks 1 kg of lemons, for a fixed cost;
+* *Sugar makers* - each produces 0.5 kg of sugar, for a fixed cost;
+* *Juice squeezers -* each converts 1 kg of lemons into 0.5 gallons of juice, for a fixed cost;
+* *Lemonade producers* - each converts 1 kg of sugar plus 0.5 gallons of juice into 1 gallon of lemonade, for a fixed cost;
+* *Juice buyers* - each wants 0.5 gallon of juice, and has a fixed value for it;
+* *Lemonade buyers* - each wants 1 gallon of lemonade, and has a fixed value for it.
+
+## Procurement auction
+
+Chen, Roundy, Zhang and Janakiraman study a different setting in which there is a single buyer and single item-kind, but there are different producers in different supply-locations. The buyer needs a different quantity of the item in different demand-locations. The buyer conducts a reverse auction. The buyer has to pay, in addition to the cost of production, also the cost of transportation from the supply-locations to the demand-locations. They present three different mechanisms: the first is truthful and efficient in terms of supply, but ignores the transportation costs; the second is truthful and efficient in terms of supply and transportation, but may be worse for the buyer; the third is truthful only for the producers but not for the buyer.
+

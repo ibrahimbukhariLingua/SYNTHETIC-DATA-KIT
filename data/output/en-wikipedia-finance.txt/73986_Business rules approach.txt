@@ -1,0 +1,62 @@
+Business rules approach
+
+
+# Business rules approach
+
+
+
+Business rules are abstractions of the policies and practices of a business organization. In computer software development, the **business rules approach** is a development methodology where rules are in a form that is used by, but does not have to be embedded in, business process management systems.
+
+The business rules approach formalizes an enterprise's critical business rules in a language that managers and technologists understand. Business rules create an unambiguous statement of what a business does with information to decide a proposition. The formal specification becomes information for process and rules engines to run.
+
+
+## Advantages
+
+The adoption of business rules adds another tier to systems that automate business processes. Compared to traditional systems, this approach has the following major advantages,
+
+* lowers the cost incurred in the modification of business logic
+* shortens development time
+* rules are externalized and easily shared among multiple applications
+* changes can be made faster and with less risk
+
+### Business process automation
+
+Business rules represent a natural step in the application of computer technology aimed at enhancing productivity in the workplace. Automated business processes that have business logic embedded inside often take substantial time to change, and such changes can be prone to errors. And in a world where the life cycle of business models has greatly shortened, it has become increasingly critical to be able to adapt to changes in external environments promptly. These needs are addressed by a business rules approach.
+
+
+### Business agility
+
+Business rules enhance business agility. And the manageability of business processes also increases as rules become more accessible.
+
+
+## Technical details
+
+The programs designed specifically to run business rules are called rule engines. More complete systems that support the writing, deployment and management of business rules are called business rules management systems (BRMSs).
+
+Many commercial rule engines provide the Rete algorithm, a proprietary algorithm that embodies many of the principles of Rete. However, there are other execution algorithms such as the sequential algorithm (ILOG and Blaze Advisor terminology), algorithms for evaluating decision tables/trees, and algorithms tuned for hierarchical XML. The Rete algorithm is a stateful pattern matching algorithm designed to minimize the evaluation of repetitive tests across many objects/attributes and many rules. Different fields of usage are best for Rete-based and non-Rete-based execution algorithms. For simple stateless applications with minimal sharing of conditions across rules, a non-Rete-based execution algorithm (such as the sequential algorithm) may be preferable. For evaluating decision tables and trees, an algorithm that exploits the hierarchical relationships between the rule conditions may perform better than a simple Rete or sequential algorithm tuned for discrete rules.
+
+Business rules can be expressed in conventional programming languages or natural languages. In some commercial BRMSs rules can also be expressed in user-friendly rule forms such as decision tables and decision trees. Provided with a suitable interface to design or edit decision tables or trees, it is possible for business users to check or change rules directly, with minimal IT involvement.
+
+When rules are expressed in natural language, it is necessary to first define a vocabulary that contains words and expressions corresponding to business objects and conditions and the operations involving them. To make the rules executable by a rule engine, it is also necessary to implement the operations and conditions in a programming language. With a defined and implemented vocabulary, it is relatively easy to write rules in a BRMS. Changes can also be made quickly as long as they can be expressed in the existing vocabulary. If not, the vocabulary must be expanded accordingly.
+
+Separating the vocabulary from the logic makes it possible for business rules to be modeled, with the business user mapping their business logic and with IT integrating data and the generated code into the target application.
+Business rules are also key to the enterprise decision management approach to decision automation.
+
+Increasingly, business rules are also viewed as a critical component of business process management solutions because of the need to ensure flexibility.
+
+
+## Relation to database management
+
+As argued by Christopher J. Date, business rules translate into data integrity constraints when one thinks in terms of the relational model of database management. Thus, a true RDBMS could be thought of in terms of a declarative business rules engine with added data management capability.
+
+However, business rules need not only be regarded as constraints. They can also be used to specify constructive business policies, such as "preferred clients get a discount of 10%". Used in this way, business rules are like SQL queries, rather than data integrity constraints.
+
+
+## Relation to business process management
+
+Some analysts believe the combination of business rules technology with business process management offers an agile approach to workflow and enterprise integration. BPM and BR software support business goals by managing and running business processes and business rules in separate yet complementary ways. A business process is often a complex map of flow controls. It might have many subprocesses, decisions and while loops. Wherever a decision or while loop appears, business rules can evaluate the data provided by the process and control the basis for change in flows.
+
+Often there are separate reasons for updates to processes or rules. New regulations or business strategies may affect the rules without changing core business processes. New applications or procedures might change the business process. In either case, a composite approach to rules and processes can be very flexible.
+
+As more and more BPM vendors either add business rules engines to their BPM engines or OEM business rules management systems, business rules seems to be becoming a subset of BPM.
+

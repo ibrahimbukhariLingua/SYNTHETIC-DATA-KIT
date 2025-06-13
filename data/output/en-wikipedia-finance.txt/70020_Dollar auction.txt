@@ -1,0 +1,38 @@
+Dollar auction
+
+
+# Dollar auction
+
+
+
+| Part of a series on |
+| --- |
+| Auctions |
+| Types |
+| * All-pay + Chinese + Bidding fee + Dollar * Amsterdam * Anglo-Dutch * Barter double * Best/not best * Brazilian * Calcutta * Candle * Click-box bidding * Combinatorial * Common value * Deferred-acceptance * Discriminatory price * Double * Dutch * English * Forward * French * Generalized first-price * Generalized second-price * Japanese * Knapsack * Multi-attribute * Multiunit * No-reserve * Rank * Reverse * Scottish * Sealed first-price * Simultaneous ascending * Single-price * Traffic light * Uniform price * Unique bid * Value of revenues * Vickrey * Vickrey–Clarke–Groves * Walrasian * Yankee |
+| Bidding |
+| * Shading * Calor licitantis * Cancellation hunt * Jump * Rigging * Sniping * Suicide * Tacit collusion |
+| Contexts |
+| * Algorithms * Autos * Art * Charity * Children * Players * Domain names * Flowers * Loans * Scam * Slaves * Spectrum * Stamps * Virginity * Wine * Wives |
+| Theory |
+| * Digital goods * Price of anarchy * Revenue equivalence * Winner's curse |
+| Online |
+| * Ebidding * Private electronic market * Software |
+| * v * t * e |
+
+The **dollar auction** is a non-zero sum sequential game explored by economist Martin Shubik to illustrate how a short-sighted approach to rational choice can lead to decisions that are, in the long-run, irrational.
+
+
+## Play
+
+The setup involves an auctioneer who volunteers to auction off a dollar bill with the following rule: the bill goes to the winner; however, the second-highest bidder also loses the amount that they bid, making them the biggest loser in the auction. The winner can get a dollar for a mere 5 cents (the minimum bid), but only if no one else enters into the bidding war.
+
+However, entering the auction with a low bid may result in a problematic outcome. For instance, a player might begin by bidding 5 cents, hoping to make a 95-cent profit. They can be outbid by another player bidding 10 cents, as a 90-cent profit is still desirable. Similarly, another bidder may bid 15 cents, making an 85-cent profit. Meanwhile, the second bidder may attempt to convert their loss of 10 cents into a gain of 80 cents by bidding 20 cents, and so on. Every player has a choice of either paying for nothing or bidding 5 cents more on the dollar.
+
+A series of short-term rational bids will reach and ultimately surpass one dollar as the bidders seek to minimize their losses. If the first bidder bids 95 cents, and the second bidder bids one dollar (for no net gain or loss), the first bidder stands to lose 95 cents unless they bid $1.05, in which case bidding more than the value of the dollar would reduce their losses to only 5 cents. Bidding continues with the second highest bidder always losing more than the highest bidder and therefore always trying to become the high bidder. Once the highest bid reaches one dollar, only the auctioneer will profit in the end.
+
+
+## Analysis
+
+The game is a type of bidding fee auction which is a discrete version of the war of attrition. Like these games, the dollar auction has a symmetric mixed strategy equilibrium (there are also asymmetric pure equilibria). Suppose we start with two players; player 1 moves in odd periods, while player 2 moves in even periods. When a player is behind, they are indifferent between raising and dropping out. If the opponent drops out with probability {\displaystyle p}, raising gives the player an expected payoff of {\displaystyle p\times 1+(1-p)\times 0-0.05.} On the other hand, dropping out yields zero, so indifference requires that the opponent drops out with 5% probability each period. Notice that this probability is independent of how high the bids currently are; this follows from the fact that past bids are a sunk cost. The maximum bid follows a binomial distribution with mean 0.5 (recall the bidders make zero profits each, on average).ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+

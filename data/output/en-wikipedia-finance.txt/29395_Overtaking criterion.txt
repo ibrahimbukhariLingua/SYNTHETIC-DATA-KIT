@@ -1,0 +1,69 @@
+Overtaking criterion
+
+
+# Overtaking criterion
+
+
+
+In economics, the **overtaking criterion** is used to compare infinite streams of outcomes. Mathematically, it is used to properly define a notion of optimality for a problem of optimal control on an unbounded time interval.
+
+Often, the decisions of a policy-maker may have influences that extend to the far future. Economic decisions made today may influence the economic growth of a nation for an unknown number of years into the future. In such cases, it is often convenient to model the future outcomes as an infinite stream. Then, it may be required to compare two infinite streams and decide which one of them is better (for example, in order to decide on a policy). The overtaking criterion is one option to do this comparison.
+
+
+## Notation
+
+{\displaystyle X} is the set of possible outcomes. E.g., it may be the set of positive real numbers, representing the possible annual gross domestic product. It is normalized
+
+{\displaystyle X^{\infty }} is the set of infinite sequences of possible outcomes. Each element in {\displaystyle X^{\infty }} is of the form: {\displaystyle x=(x\_{1},x\_{2},\ldots )}.
+
+{\displaystyle \preceq } is a partial order. Given two infinite sequences {\displaystyle x,y}, it is possible that {\displaystyle x} is weakly better ({\displaystyle x\succeq y}) or that {\displaystyle y} is weakly better ({\displaystyle y\succeq x}) or that they are incomparable.
+
+{\displaystyle \prec } is the strict variant of {\displaystyle \preceq }, i.e., {\displaystyle x\prec y} if {\displaystyle x\preceq y} and not {\displaystyle y\preceq x}.
+
+
+## Cardinal definition
+
+{\displaystyle \prec } is called the "overtaking criterion" if there is an infinite sequence of real-valued functions {\displaystyle u\_{1},u\_{2},\ldots :X\to \mathbb {R} } such that:
+
+An alternative condition is:
+
+Examples:
+
+1. In the following example, {\displaystyle x\prec y}:
+
+This shows that a difference in a single time period may affect the entire sequence.
+
+2. In the following example, {\displaystyle x} and {\displaystyle y} are incomparable:
+
+The partial sums of {\displaystyle x} are larger, then smaller, then equal to the partial sums of {\displaystyle y}, so none of these sequences "overtakes" the other.
+
+This also shows that the overtaking criterion cannot be represented by a single cardinal utility function. I.e, there is no real-valued function {\displaystyle U} such that {\displaystyle x\prec y} iff {\displaystyle U(x)<U(y)}. One way to see this is: for every {\displaystyle a,b\in \mathbb {R} } and {\displaystyle a<b}:
+
+Hence, there is a set of disjoint nonempty segments in {\displaystyle (X,\prec )} with a cardinality like the cardinality of {\displaystyle \mathbb {R} }. In contrast, every set of disjoint nonempty segments in {\displaystyle (\mathbb {R} ,\prec )} must be a countable set.
+
+
+## Ordinal definition
+
+Define {\displaystyle X\_{T}} as the subset of {\displaystyle X^{\infty }} in which only the first *T* elements are nonzero. Each element of {\displaystyle X\_{T}} is of the form {\displaystyle (x\_{1},\ldots ,x\_{T},0,0,0,\ldots )}.
+
+{\displaystyle \prec } is called the "overtaking criterion" if it satisfies the following axioms:
+
+1. For every {\displaystyle T}, {\displaystyle \preceq } is a complete order on {\displaystyle X\_{T}}
+
+2. For every {\displaystyle T}, {\displaystyle \preceq } is a continuous relation in the obvious topology on {\displaystyle X\_{T}}.
+
+3. For each {\displaystyle T>1}, {\displaystyle X\_{T}} is preferentially-independent (see Debreu theorems#Additivity of ordinal utility function for a definition). Also, for every {\displaystyle T\geq 3}, at least three of the factors in {\displaystyle X\_{T}} are essential (have an effect on the preferences).
+
+4. {\displaystyle x\prec y} iff {\displaystyle \exists T\_{0}:\forall T>T\_{0}:(x\_{1},\ldots ,x\_{T},0,0,0,\ldots )\prec (y\_{1},\ldots ,y\_{T},0,0,0,\ldots )}
+
+Every partial order that satisfies these axioms, also satisfies the first cardinal definition.
+
+As explained above, some sequences may be incomparable by the overtaking criterion. This is why the overtaking criterion is defined as a *partial* ordering on {\displaystyle X^{\infty }}, and a complete ordering only on {\displaystyle X\_{T}}.
+
+
+## Applications
+
+The overtaking criterion is used in economic growth theory.
+
+It is also used in repeated games theory, as an alternative to the limit-of-means criterion and the discounted-sum criterion. See Folk theorem (game theory)#Overtaking.
+

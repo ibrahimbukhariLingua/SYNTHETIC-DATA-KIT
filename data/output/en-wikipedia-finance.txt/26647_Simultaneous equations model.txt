@@ -1,0 +1,123 @@
+Simultaneous equations model
+
+
+# Simultaneous equations model
+
+
+
+**Simultaneous equations models** are a type of statistical model in which the dependent variables are functions of other dependent variables, rather than just independent variables. This means some of the explanatory variables are jointly determined with the dependent variable, which in economics usually is the consequence of some underlying equilibrium mechanism. Take the typical supply and demand model: whilst typically one would determine the quantity supplied and demanded to be a function of the price set by the market, it is also possible for the reverse to be true, where producers observe the quantity that consumers demand *and then* set the price.
+
+Simultaneity poses challenges for the estimation of the statistical parameters of interest, because the Gauss–Markov assumption of strict exogeneity of the regressors is violated. And while it would be natural to estimate all simultaneous equations at once, this often leads to a computationally costly non-linear optimization problem even for the simplest system of linear equations. This situation prompted the development, spearheaded by the Cowles Commission in the 1940s and 1950s, of various techniques that estimate each equation in the model seriatim, most notably limited information maximum likelihood and two-stage least squares.
+
+
+## Structural and reduced form
+
+Suppose there are *m* regression equations of the form
+
+where *i* is the equation number, and *t* = 1, ..., *T* is the observation index. In these equations *xᵢₜ* is the *kᵢ×*1 vector of exogenous variables, *yᵢₜ* is the dependent variable, *y−ᵢ,ₜ* is the *nᵢ×*1 vector of all other endogenous variables which enter the *i*ᵗʰ equation on the right-hand side, and *uᵢₜ* are the error terms. The “−*i*” notation indicates that the vector *y−ᵢ,ₜ* may contain any of the *y*’s except for *yᵢₜ* (since it is already present on the left-hand side). The regression coefficients *βᵢ* and *γᵢ* are of dimensions *kᵢ×*1 and *nᵢ×*1 correspondingly. Vertically stacking the *T* observations corresponding to the *i*ᵗʰ equation, we can write each equation in vector form as
+
+where *yᵢ* and *uᵢ* are *T×*1 vectors, *Xᵢ* is a *T×kᵢ* matrix of exogenous regressors, and *Y−ᵢ* is a *T×nᵢ* matrix of endogenous regressors on the right-hand side of the *i*ᵗʰ equation. Finally, we can move all endogenous variables to the left-hand side and write the *m* equations jointly in vector form as
+
+This representation is known as the **structural form**. In this equation *Y* = [*y*₁ *y*₂ ... *yₘ*] is the *T×m* matrix of dependent variables. Each of the matrices *Y−ᵢ* is in fact an *nᵢ*-columned submatrix of this *Y*. The *m×m* matrix Γ, which describes the relation between the dependent variables, has a complicated structure. It has ones on the diagonal, and all other elements of each column *i* are either the components of the vector *−γᵢ* or zeros, depending on which columns of *Y* were included in the matrix *Y−ᵢ*. The *T×k* matrix *X* contains all exogenous regressors from all equations, but without repetitions (that is, matrix *X* should be of full rank). Thus, each *Xᵢ* is a *kᵢ*-columned submatrix of *X*. Matrix Β has size *k×m*, and each of its columns consists of the components of vectors *βᵢ* and zeros, depending on which of the regressors from *X* were included or excluded from *Xᵢ*. Finally, *U* = [*u*₁ *u*₂ ... *uₘ*] is a *T×m* matrix of the error terms.
+
+Postmultiplying the structural equation by Γ −¹, the system can be written in the **reduced form** as
+
+This is already a simple general linear model, and it can be estimated for example by ordinary least squares. Unfortunately, the task of decomposing the estimated matrix {\displaystyle \scriptstyle {\hat {\Pi }}} into the individual factors Β and Γ −¹ is quite complicated, and therefore the reduced form is more suitable for prediction but not inference.
+
+
+### Assumptions
+
+Firstly, the rank of the matrix *X* of exogenous regressors must be equal to *k*, both in finite samples and in the limit as *T* → ∞ (this later requirement means that in the limit the expression {\displaystyle \scriptstyle {\frac {1}{T}}X'\!X} should converge to a nondegenerate *k×k* matrix). Matrix Γ is also assumed to be non-degenerate.
+
+Secondly, error terms are assumed to be serially independent and identically distributed. That is, if the *t*ᵗʰ row of matrix *U* is denoted by *u*(ₜ), then the sequence of vectors {*u*(ₜ)} should be iid, with zero mean and some covariance matrix Σ (which is unknown). In particular, this implies that E[*U*] = 0, and E[*U′U*] = *T* Σ.
+
+Lastly, assumptions are required for identification.
+
+
+## Identification
+
+The identification conditions require that the system of linear equations be solvable for the unknown parameters.
+
+More specifically, the *order condition*, a necessary condition for identification, is that for each equation *kᵢ + nᵢ ≤ k*, which can be phrased as “the number of excluded exogenous variables is greater or equal to the number of included endogenous variables”.
+
+The *rank condition*, a stronger condition which is necessary and sufficient, is that the rank of Πᵢ₀ equals *nᵢ*, where Πᵢ₀ is a (*k − kᵢ*)×*nᵢ* matrix which is obtained from *Π* by crossing out those columns which correspond to the excluded endogenous variables, and those rows which correspond to the included exogenous variables.
+
+
+### Using cross-equation restrictions to achieve identification
+
+In simultaneous equations models, the most common method to achieve identification is by imposing within-equation parameter restrictions. Yet, identification is also possible using cross equation restrictions.
+
+To illustrate how cross equation restrictions can be used for identification, consider the following example from Wooldridge
+
+where z's are uncorrelated with u's and y's are endogenous variables. Without further restrictions, the first equation is not identified because there is no excluded exogenous variable. The second equation is just identified if *δ*₁₃≠0, which is assumed to be true for the rest of discussion.
+
+Now we impose the cross equation restriction of *δ*₁₂=*δ*₂₂. Since the second equation is identified, we can treat *δ*₁₂ as known for the purpose of identification. Then, the first equation becomes:
+
+Then, we can use (*z*₁, *z*₂, *z*₃) as instruments to estimate the coefficients in the above equation since there are one endogenous variable (*y*₂) and one excluded exogenous variable (*z*₂) on the right hand side. Therefore, cross equation restrictions in place of within-equation restrictions can achieve identification.
+
+
+## Estimation
+
+
+### Two-stage least squares (2SLS)
+
+The simplest and the most common estimation method for the simultaneous equations model is the so-called two-stage least squares method, developed independently by Theil (1953) and Basmann (1957). It is an equation-by-equation technique, where the endogenous regressors on the right-hand side of each equation are being instrumented with the regressors *X* from all other equations. The method is called “two-stage” because it conducts estimation in two steps:
+
+If the *i*ᵗʰ equation in the model is written as
+
+where *Zᵢ* is a *T×*(*nᵢ + kᵢ*) matrix of both endogenous and exogenous regressors in the *i*ᵗʰ equation, and *δᵢ* is an (*nᵢ + kᵢ*)-dimensional vector of regression coefficients, then the 2SLS estimator of *δᵢ* will be given by
+
+where *P* = *X* (*X* ′*X*)−¹*X* ′ is the projection matrix onto the linear space spanned by the exogenous regressors *X*.
+
+
+### Indirect least squares
+
+Indirect least squares is an approach in econometrics where the coefficients in a simultaneous equations model are estimated from the reduced form model using ordinary least squares. For this, the structural system of equations is transformed into the reduced form first. Once the coefficients are estimated the model is put back into the structural form.
+
+
+### Limited information maximum likelihood (LIML)
+
+The “limited information” maximum likelihood method was suggested by M. A. Girshick in 1947, and formalized by T. W. Anderson and H. Rubin in 1949. It is used when one is interested in estimating a single structural equation at a time (hence its name of limited information), say for observation i:
+
+The structural equations for the remaining endogenous variables Y−ᵢ are not specified, and they are given in their reduced form:
+
+Notation in this context is different than for the simple IV case. One has:
+
+* {\displaystyle Y\_{-i}}: The endogenous variable(s).
+* {\displaystyle X\_{-i}}: The exogenous variable(s)
+* {\displaystyle X}: The instrument(s) (often denoted {\displaystyle Z})
+
+The explicit formula for the LIML is:
+
+where *M* = *I − X* (*X* ′*X*)−¹*X* ′, and *λ* is the smallest characteristic root of the matrix:
+
+where, in a similar way, *Mᵢ* = *I − Xᵢ* (*Xᵢ*′*Xᵢ*)−¹*Xᵢ*′.
+
+In other words, *λ* is the smallest solution of the generalized eigenvalue problem, see Theil (1971, p. 503):
+
+
+#### K class estimators
+
+The LIML is a special case of the K-class estimators:
+
+with:
+
+* {\displaystyle \delta ={\begin{bmatrix}\beta \_{i}&\gamma \_{i}\end{bmatrix}}}
+* {\displaystyle Z={\begin{bmatrix}X\_{i}&Y\_{-i}\end{bmatrix}}}
+
+Several estimators belong to this class:
+
+* κ=0: OLS
+* κ=1: 2SLS. Note indeed that in this case, {\displaystyle I-\kappa M=I-M=P} the usual projection matrix of the 2SLS
+* κ=λ: LIML
+* κ=λ - α / (n-K): Fuller (1977) estimator. Here K represents the number of instruments, n the sample size, and α a positive constant to specify. A value of α=1 will yield an estimator that is approximately unbiased.
+
+### Three-stage least squares (3SLS)
+
+The three-stage least squares estimator was introduced by Zellner & Theil (1962). It can be seen as a special case of multi-equation GMM where the set of instrumental variables is common to all equations. If all regressors are in fact predetermined, then 3SLS reduces to seemingly unrelated regressions (SUR). Thus it may also be seen as a combination of two-stage least squares (2SLS) with SUR.
+
+
+## Applications in social science
+
+Across fields and disciplines simultaneous equation models are applied to various observational phenomena. These equations are applied when phenomena are assumed to be reciprocally causal. The classic example is supply and demand in economics. In other disciplines there are examples such as candidate evaluations and party identification or public opinion and social policy in political science; road investment and travel demand in geography; and educational attainment and parenthood entry in sociology or demography. The simultaneous equation model requires a theory of reciprocal causality that includes special features if the causal effects are to be estimated as simultaneous feedback as opposed to one-sided 'blocks' of an equation where a researcher is interested in the causal effect of X on Y while holding the causal effect of Y on X constant, or when the researcher knows the exact amount of time it takes for each causal effect to take place, i.e., the length of the causal lags. Instead of lagged effects, simultaneous feedback means estimating the simultaneous and perpetual impact of X and Y on each other. This requires a theory that causal effects are simultaneous in time, or so complex that they appear to behave simultaneously; a common example are the moods of roommates. To estimate simultaneous feedback models a theory of equilibrium is also necessary – that X and Y are in relatively steady states or are part of a system (society, market, classroom) that is in a relatively stable state.
+

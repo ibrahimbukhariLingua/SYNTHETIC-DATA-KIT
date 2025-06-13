@@ -1,0 +1,86 @@
+Cost database
+
+
+# Cost database
+
+
+
+A **cost database** is a computerized database of cost estimating information, which is normally used with construction estimating software to support the formation of cost estimates. A cost database may also simply be an electronic reference of cost data.
+
+
+## Overview
+
+A cost database includes the electronic equivalent of a cost book, or cost reference book, a tool used by estimators for many years. Cost books may be internal records at a particular company or agency, or they may be commercially published books on the open market. AEC teams and federal agencies can and often do collect internally sourced data from their own specialists, vendors, and partners. This is valuable personalized cost data that is captured but often doesn't cover the same range that commercial cost book data can. Internally sourced data is difficult to maintain and do not have the same level of developed user interface or functionalities as a commercial product.
+
+The cost database may be stored in relational database management system, which may be in either an open or proprietary format, serving the data to the cost estimating software. The cost database may be hosted in the cloud. Estimators use a cost database to store data in structured way which is easy to manage and retrieve.
+
+
+## Details
+
+
+### Costing data
+
+The most basic element of a cost estimate and therefore the cost database is the estimate line item or work item. An example is "Concrete, 4000 psi (30 MPa)," which is the description of the item. In the cost database, an item is a row or record in a table (of items) and the description is a column or field for that record. Concrete may also be considered to be a material resource. In some systems, estimate line items and resources are the same, in other systems, various resources may be included with a line item. Other examples of resources are labor resources, such as carpenters, and equipment resources, such as cranes. Labor and equipment resources can be combined into a crew, which is then the assumed crew which will install the item or perform the work. Resources and crews can be stored as data in the cost database and can also be related to work items.
+
+Examples of cost database line items:
+
+| Identifier | Description | Unit of Measure | Crew | Production Rate | Material Price |
+| --- | --- | --- | --- | --- | --- |
+| 1 | Concrete, 4000 psi (30 mpa) | cy | CP-01 | 3.00 cy/hr | 112.00 |
+| 4023 | Water closet, wall hung | ea | PB | 2.50 hr/ea | 620.00 |
+| 6119 | Motor starter, magnetic, FVNR, 10 hp size 1 | ea | EL | 3.50 hr/ea | 262.00 |
+
+Examples of cost database labor resources:
+
+| Identifier | Description | Unit of Measure | Base Price | Benefits | Insurances | Payroll Taxes |
+| --- | --- | --- | --- | --- | --- | --- |
+| CA | Carpenter | hour | 37.32 | 12.95 | 5.01 | 4.56 |
+| CM | Cement Mason | hour | 32.51 | 8.23 | 2.11 | 3.90 |
+| LA | Laborer | hour | 26.46 | 5.16 | 5.72 | 3.89 |
+
+Examples of cost database equipment resources:
+
+| Identifier | Description | Unit of Measure | Base Price | Fuel | Filters, Oil, Grease |
+| --- | --- | --- | --- | --- | --- |
+| cv1 | Concrete vibrator | hour | 0.72 | 0.21 | 0.02 |
+| ex2 | Excavator, track-mounted, 1-1/2 cy (1.1 m3) | hour | 42.00 | 48.25 | 6.12 |
+| cr100 | Crane, track-mounted, lattice boom, 100 ton (90 t) | hour | 82.50 | 59.16 | 8.27 |
+
+Examples of cost database crews:
+
+| Identifier | Description | Unit of Measure | Resource 1 | Quantity 1 | Resource 2 | Quantity 2 | Resource 3 | Quantity 3 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| CP-01 | Concrete placement | hour | CA | 1 | LA | 3 | cv1 | 1 |
+| EX-01 | General excavation | hour | OP | 1 | LA | 2 | ex2 | 1 |
+
+
+### Factor and adjustment data
+
+Various factors and adjustments may be useful in the estimating process. Some examples include:
+
+* Factors to adjust costs from one location to another
+* Factors to adjust costs from one time to another
+* Currency conversion factors
+* Sales and use tax rates
+* Other tax, insurance, and bond rates
+* Overhead factors
+
+### Organizational data
+
+Data which may be used to organize a cost estimate into groups and levels, and to summarize the cost details can also be part of a cost database. A popular coding system which can be applied to construction cost estimates is MasterFormat. Another coding method is Uniformat. Also, various types of work breakdown structures or WBS may be used. It may also be useful to assign the costs to a chart of accounts or COA (a.k.a. Code of Accounts). Other organizational needs include:
+
+* Grouping by job cost account
+* Grouping by subcontractor or vendor
+* Grouping by material class or type
+* Grouping by facility, floor, level, location, area, etc.
+* Grouping by system
+* Grouping by project phase or stage
+* Grouping by inside or outside battery limits
+
+All of these represent organizational data which can be stored in the cost database and used to support the cost estimate.
+
+
+### Calculational data
+
+Data which can be used to calculate quantities and costs can also be part of a cost database. For example, there are various formulas for calculating the area of shapes, the volume of solids or spaces, and the weight of materials. There are defined unit properties of materials also. Materials each have certain densities or unit weights. Reinforcing bars are produced in certain sizes, with certain unit weights. Additionally, data which helps calculate the selection or specification of estimate contents can be included.
+

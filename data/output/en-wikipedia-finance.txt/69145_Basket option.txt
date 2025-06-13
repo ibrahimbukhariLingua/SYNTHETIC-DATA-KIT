@@ -1,0 +1,25 @@
+Basket option
+
+
+# Basket option
+
+
+
+A **basket option** is a financial derivative, more specifically an exotic option, whose underlying is a weighted sum or average of different assets that have been grouped together in a basket. A basket option is similar to an index option, where a number of stocks have been grouped together in an index and the option is based on the price of the index, but differs in that the members and weightings of an index can change over time while those in a basket option do not.
+
+Unlike a rainbow option which considers a group of assets but ultimately pays out on the level of one, a basket option is written on a basket of underlying assets but will pay out on a weighted average gain of the basket as a whole.
+
+Like rainbow options basket options are most commonly written on a basket of equity indices, though they are frequently written on a basket of individual equities as well. For example, a call option could be written on a basket of ten healthcare stocks, where the basket was composed of ten stocks in weighted proportions.
+
+The strike price Xbₐₛₖₑₜ is usually set at the current value of the basket (at-the-money), and the payoff profile will be *max*(Sbₐₛₖₑₜ − Xbₐₛₖₑₜ, 0) where Sbₐₛₖₑₜ is a weighted average of n asset prices at maturity, and each weight represents the percentage of total investment in that asset.
+
+
+## Pricing and valuation
+
+Basket options are usually priced using an appropriate industry-standard model (such as Black–Scholes) for each individual basket component, and a matrix of correlation coefficients applied to the underlying stochastic drivers for the various models. While there are some closed-form solutions for simpler cases (e.g. two-color European rainbows), semi-analytic solutions, analytical approximations, and numerical quadrature integrations, the general case must be approached with Monte Carlo or binomial lattice methods.
+
+
+## Lognormality
+
+Problems in hedging basket options can be of some significance when dealing with markets that exhibit a strong skew. Many operators price basket options as if the underlying basket were a single commodity following its own stochastic process with its volatility derived from its own time series. This however conflicts with a fact that an average (or any linear combination) of assets with lognormal distribution does not follow lognormal distribution. This problem arises in swaps and Eurodollar strips (baskets of Eurodollar options) but in equities and fixed income it is mitigated by the fact that when correlation between assets is high, the sum would come closer to a lognormally distributed asset.
+

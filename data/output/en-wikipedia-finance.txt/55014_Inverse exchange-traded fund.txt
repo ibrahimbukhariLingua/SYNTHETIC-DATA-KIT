@@ -1,0 +1,128 @@
+Inverse exchange-traded fund
+
+
+# Inverse exchange-traded fund
+
+
+
+An **inverse exchange-traded fund** is an exchange-traded fund (ETF), traded on a public stock market, which is designed to perform as the *inverse* of whatever index or benchmark it is designed to track. These funds work by using short selling, trading derivatives such as futures contracts, and other leveraged investment techniques.
+
+By providing over short investing horizons and excluding the impact of fees and other costs, performance opposite to their benchmark, inverse ETFs give a result similar to short selling the stocks in the index. An inverse S&P 500 ETF, for example, seeks a daily percentage movement opposite that of the S&P. If the S&P 500 rises by 1%, the inverse ETF is designed to fall by 1%; and if the S&P falls by 1%, the inverse ETF should rise by 1%. Because their value rises in a declining market environment, they are popular investments in bear markets.
+
+Short sales have the potential to expose an investor to unlimited losses, whether or not the sale involves a stock or ETF. An inverse ETF, on the other hand, provides many of the same benefits as shorting, yet it exposes an investor only to the loss of the purchase price. Another advantage of inverse ETFs is that they may be held in IRA accounts, while short sales are not permitted in these accounts.
+
+
+## Systemic impact
+
+Because inverse ETFs and leveraged ETFs must change their notional every day to replicate daily returns (discussed below), their use generates trading, which is generally done at the end of the day, in the last hour of trading. Some have claimed that this trading causes increased volatility (Cheng & Madhavan 2009), while others argue that the activity is not significant. In 2015 the three U.S. listing exchanges—the New York Stock Exchange, NASDAQ and BATS Global Markets—resolved to cease accepting stop-loss orders on any traded securities.
+
+
+## Fees and other issues
+
+
+### Fees
+
+Inverse and leveraged inverse ETFs tend to have higher expense ratios than standard index ETFs, since the funds are by their nature actively managed; these costs can eat away at performance.
+
+
+### Short-terms vs. long-term
+
+In a market with a long-term upward bias, profit-making opportunities via inverse funds are limited in long time spans. In addition, a flat or rising market means these funds might struggle to make money. Inverse ETFs are designed to be used for relatively short-term investing as part of a market timing strategy.⁶–⁸
+
+
+### Volatility loss
+
+An inverse ETF, like any leveraged ETF, needs to buy when the market rises and sell when it falls in order to maintain a fixed leverage ratio. This results in a volatility loss proportional to the market variance. Compared to a short position with identical initial exposure, the inverse ETF will therefore usually deliver inferior returns. The exception is if the market declines significantly on low volatility so that the capital gain outweighs the volatility loss. Such large declines benefit the inverse ETF because the relative exposure of the short position drops as the market fall.
+
+Since the risk of the inverse ETF and a fixed short position will differ significantly as the index drifts away from its initial value, differences in realized payoff have no clear interpretation. It may therefore be better to evaluate the performance assuming the index returns to the initial level. In that case an inverse ETF will always incur a volatility loss relative to the short position.
+
+As with synthetic options, leveraged ETFs need to be frequently rebalanced. In financial mathematics terms, they are not Delta One products: they have Gamma.⁸⁷–⁹¹
+
+The volatility loss is also sometimes referred to as a compounding error.
+
+
+#### Hypothetical examples
+
+If one invests $100 in an inverse ETF position in an asset worth $100, and the asset's value changes the first day to $80, and the following day to $60, then the value of the inverse ETF position will increase by 20% (because the asset decreased by 20% from 100 to 80) and then increase by 25% (because the asset decreased by 25% from 80 to 60). So the ETF's value will be $100\*1.20\*1.25=$150. The gain of an equivalent short position will however be $100–$60=$40, and so we see that the capital gain of the ETF outweighs the volatility loss relative to the short position. However, if the market swings back to $100 again, then the net profit of the short position is zero. However, since the value of the asset increased by 67% (from $60 to $100), the inverse ETF must lose 67%, meaning it will lose $100. Thus the investment in shorts went from $100 to $140 and back to $100. The investment in the inverse ETF, however, went from $100 to $150 to $50.
+
+An investor in an inverse ETF may correctly predict the collapse of an asset and still suffer heavy losses. For example, if one invests $100 in an inverse ETF position in an asset worth $100, and the asset's value drops 99% (to $1) the next day, the inverse asset will gain 99% (to $199) on that day. If the asset then climbs from $1 to $2 on the following day (100% intra-day gain), the inverse ETF position would drop 100% that day, and the investment would be completely lost, despite the underlying asset still being 98% below its initial value. This particular scenario requires both abrupt and profound volatility – by contrast, the S&P 500 index has never increased by more than 12% in one day.
+
+
+#### Historical example
+
+For instance, between the close of November 28, 2008 and December 5, 2008, the iShares Dow Jones US Financial (NYSE: IYF) moved from 44.98 to 45.35 (essentially flat, properly an increase of 0.8%), so a double short would have lost 1.6% over that time. However, it varied greatly during the week (dropping to a low of 37.92 on December 1, a daily drop of 15.7%, before recovering over the week), and thus the ProShares UltraShort Financials (NYSE: SKF), which is a double-short ETF of the IYF moved from 135.05 to 117.18, a loss of 13.2%.
+
+Furthermore, the BetaShares BEAR fund gained 16.9% in March 2020, compared to a fall of 20.7% in the S&P/ASX 200. For the March 2020 quarter, BEAR was up by 20.1%, versus a 23.1% slump in the index. BBOZ, the BetaShares geared Australian short fund, did even better; it was up by 33% in March 2020, compared to the 20.7% fall in the S&P/ASX 200; for the March quarter, BBOZ rose by 40.6%, against the 23.1% fall in the index. Finally, BBUS, the BetaShares leveraged US fund, surged by 22.6% in March, compared to its benchmark index, the S&P 500 Total Return Index (which includes dividends), in US$. For the March quarter, BBUS gained 47.8%, versus a fall of 19.7% for the index.
+
+
+#### Expected loss
+
+Given that the index follows a geometric Brownian motion and that a fraction {\displaystyle x} of the fund {\displaystyle A\_{t}} is invested in the index {\displaystyle S\_{t}}, the volatility gain of the log return can be seen from the following relation.
+
+{\displaystyle \Delta \ln(A\_{t})=x\Delta \ln(S\_{t})+(x-x^{2})\sigma ^{2}{\frac {\Delta t}{2}}}
+
+where {\displaystyle \sigma ^{2}} is the variance of the index process and the last term on the right hand side constitutes the volatility gain. We see that if {\displaystyle x<0} or {\displaystyle x>1}, as is the case with leveraged ETFs, the return of the fund will be less than {\displaystyle x} times the index return (the first term on the right hand side).³⁹⁴
+
+
+## List of funds
+
+Some inverse ETFs are:
+
+AdvisorShares
+
+* AdvisorShares Ranger Equity Bear – NYSE Arca: HDGE
+
+BetaShares Exchange-Traded Funds
+
+* BetaShares Australian Equities Bear Hedge Fund – ASX: BEAR
+* BetaShares Australian Equities Strong Bear Hedge Fund – ASX: BBOZ
+* BetaShares U.S. Equities Strong Bear Hedge Fund Currency Hedged – ASX: BBUS
+
+Boost ETP
+
+* Boost 3X Short Gold – LSE: 3GOS
+* Boost 3X Short Silver – LSE: 3SIS
+* Boost 3X Short Nat Gas – LSE: 3NGS
+* Boost 3X Short Copper – LSE: 3HCS
+* Boost 3X Short WTI – LSE: 3OIS
+* Boost 3X Short FTSE100 – LSE: 3UKS
+* Boost 3X Short S&P 500 – LSE: 3USS
+* Boost 3X Short Nasdaq 100 – LSE: QQQS
+* Boost 3X Short Dax – LSE: 3DES
+* Boost 3X Short Eurostoxx50 – LSE: 3EUS
+
+Direxion
+
+* Direxion Financial Bear 3X – NYSE Arca: FAZ
+* Direxion Russell 2000 Bear 3x – NYSE Arca: TZA
+
+ProShares
+
+* ProShares Short Dow 30 – NYSE Arca: DOG
+* ProShares Short S&P 500 – NYSE Arca: SH
+* ProShares Short S&P MidCap 400 – NYSE Arca: MYY
+* ProShares Short S&P SmallCap 600 – NYSE Arca: SBB
+* ProShares Short Nasdaq 100 – NYSE Arca: PSQ
+* ProShares Short Russell 2000 – NYSE Arca: RWM
+* ProShares S&P 500 Bear 3x – NYSE Arca: SPXU
+
+Horizons BetaPro
+
+* HBP S&P/TSX 60 Bear Plus ETF – TSX: HXD
+* HBP S&P/TSX Capped Energy Bear Plus ETF – TSX: HED
+* HBP S&P/TSX Capped Financials Bear Plus ETF – TSX: HFD
+* HBP S&P/TSX Global Gold Bear Plus ETF – TSX: HGD
+* HBP S&P/TSX Global Mining ETF – TSX: HMD
+* HBP NYMEX Crude Oil Bear Plus ETF – TSX: HOD
+* HBP NYMEX Natural Gas Bear Plus ETF – TSX: HND
+* HBP COMEX Gold Bullion Bear Plus ETF – TSX: HBD
+* HBP S&P500 Bear Plus ETF – TSX: HSD
+* HBP NASDAQ-100 Bear Plus ETF – TSX: HQD
+* HBP U.S. Dollar Bear Plus ETF – TSX: HDD
+* HBP MSCI Emerging Markets Bear Plus ETF – TSX: HJD
+* HBP DJ-AIG Agricultural Grains Bear Plus ETF – TSX: HAD
+* HBP U.S. 30yr Bond Bear Plus ETF – TSX: HTD
+
+Tuttle
+
+* Tuttle Capital Short Innovation ETF – Nasdaq: SARK

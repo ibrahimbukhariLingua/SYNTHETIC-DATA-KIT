@@ -1,0 +1,46 @@
+State prices
+
+
+# State prices
+
+
+
+In financial economics, a **state-price security**, also called an **Arrow–Debreu security** (from its origins in the Arrow–Debreu model), a **pure security**, or a **primitive security** is a contract that agrees to pay one unit of a numeraire (a currency or a commodity) if a particular state occurs at a particular time in the future and pays zero numeraire in all the other states.
+The price of this security is the **state price** of this particular state of the world. The state price vector is the vector of state prices for all states.
+See Financial economics § State prices.
+
+An **Arrow security** is an instrument with a fixed payout of one unit in a specified state and no payout in other states. It is a type of hypothetical asset used in the Arrow market structure model. In contrast to the Arrow-Debreu market structure model, an Arrow market is a market in which the individual agents engage in trading assets at every time period t. In an Arrow-Debreu model, trading occurs only once at the beginning of time. An Arrow Security is an asset traded in an Arrow market structure model which encompasses a complete market.
+
+The Arrow–Debreu model (also referred to as the Arrow–Debreu–McKenzie model or ADM model) is the central model in general equilibrium theory and uses state prices in the process of proving the existence of a unique general equilibrium.
+State prices may relatedly be applied in derivatives pricing and hedging: a contract whose settlement value is a function of an underlying asset whose value is uncertain at contract date, can be decomposed as a linear combination of its Arrow–Debreu securities, and thus as a weighted sum of its state prices;
+see Contingent claim analysis.
+Breeden and Litzenberger's work in 1978 established the latter, more general use of state prices in finance.
+
+
+## Example
+
+Imagine a world where two states are possible tomorrow: peace (P) and war (W). Denote the random variable which represents the state as ω; denote tomorrow's random variable as ω₁. Thus, ω₁ can take two values: ω₁=P and ω₁=W.
+
+Let's imagine that:
+
+* There is a security that pays off £1 if tomorrow's state is "P" and nothing if the state is "W". The price of this security is qP
+* There is a security that pays off £1 if tomorrow's state is "W" and nothing if the state is "P". The price of this security is qW
+
+The prices qP and qW are the state prices.
+
+The factors that affect these state prices are:
+
+* "Time preferences for consumption and the productivity of capital". That is to say that the time value of money affects the state prices.
+* The *probabilities* of ω₁=P and ω₁=W. The more likely a move to W is, the higher the price qW gets, since qW insures the agent against the occurrence of state W. The seller of this insurance would demand a higher premium (if the economy is efficient).
+* The *preferences* of the agent. Suppose the agent has a standard concave utility function which depends on the state of the world. Assume that the agent loses an equal amount if the state is "W" as he would gain if the state was "P". Now, even if you assume that the above-mentioned probabilities ω₁=P and ω₁=W are equal, the changes in utility for the agent are not: Due to his decreasing marginal utility, the utility gain from a "peace dividend" tomorrow would be lower than the utility lost from the "war" state. If our agent were rational, he would pay more to insure against the down state than his net gain from the up state would be.
+
+## Application to financial assets
+
+If the agent buys both qP and qW, he has secured £1 for tomorrow. He has purchased a riskless bond. The price of the bond is b₀ = qP + qW.
+
+Now consider a security with state-dependent payouts (e.g. an equity security, an option, a risky bond etc.). It pays cₖ if ω₁=k ,k=p or w.-- i.e. it pays cP in peacetime and cW in wartime). The price of this security is c₀ = qPcP + qWcW.
+
+Generally, the usefulness of state prices arises from their linearity: Any security can be valued as the sum over all possible states of state price times payoff in that state:
+
+Analogously, for a continuous random variable indicating a continuum of possible states, the value is found by integrating over the state price density.
+

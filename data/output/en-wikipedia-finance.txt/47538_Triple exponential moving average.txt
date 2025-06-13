@@ -1,0 +1,23 @@
+Triple exponential moving average
+
+
+# Triple exponential moving average
+
+
+
+The **Triple Exponential Moving Average** (TEMA) is a technical indicator in technical analysis that attempts to remove the inherent lag associated with moving averages by placing more weight on recent values. The name suggests this is achieved by applying a triple exponential smoothing which is not the case. The name triple comes from the fact that the value of an EMA (Exponential Moving Average) is triple.
+
+
+## History
+
+The indicator was introduced in January 1994 by Patrick G. Mulloy, in an article in the *Technical Analysis of Stocks & Commodities* magazine: "Smoothing Data with Faster Moving Averages" The same article also introduced another EMA related indicator: Double exponential moving average (DEMA).
+
+
+## Formula
+
+To keep it in line with the actual data and to remove the lag the value "*EMA of EMA*" is subtracted 3 times from the previously tripled ema. Finally "*EMA of EMA of EMA*" is added.
+
+The formula is:
+
+Because EMA(EMA(EMA)) is used in the calculation, TEMA needs *3 × period - 2* samples to start producing values in contrast to the *period* samples needed by a regular EMA.
+

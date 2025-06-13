@@ -1,0 +1,37 @@
+ModelOps
+
+
+# ModelOps
+
+
+
+**ModelOps** (model operations or model operationalization), as defined by Gartner, "is focused primarily on the governance and lifecycle management of a wide range of operationalized artificial intelligence (AI) and decision models, including machine learning, knowledge graphs, rules, optimization, linguistic and agent-based models" in Multi-Agent Systems. "ModelOps lies at the heart of any enterprise AI strategy". It orchestrates the model lifecycles of all models in production across the entire enterprise, from putting a model into production, then evaluating and updating the resulting application according to a set of governance rules, including both technical and business key performance indicators (KPI's). It grants business domain experts the capability to evaluate AI models in production, independent of data scientists.
+
+A Forbes article promoted ModelOps: "As enterprises scale up their AI initiatives to become a true Enterprise AI organization, having full operationalized analytics capability puts ModelOps in the center, connecting both DataOps and DevOps."
+
+
+## History
+
+In a 2018 Gartner survey, 37% of respondents reported that they had deployed AI in some form; however, Gartner pointed out that enterprises were still far from implementing AI, citing deployment challenges. Enterprises were accumulating undeployed, unused, and unrefreshed models, and manually deployed, often at a business unit level, increasing the risk exposure of the entire enterprise. Independent analyst firm Forrester also covered this topic in a 2018 report on machine learning and predictive analytics vendors: “Data scientists regularly complain that their models are only sometimes or never deployed. A big part of the problem is organizational chaos in understanding how to apply and design models into applications. But another big part of the problem is technology. Models aren’t like software code because they need model management.”
+
+In December 2018, Waldemar Hummer and Vinod Muthusamy of IBM Research AI, proposed ModelOps as "a programming model for reusable, platform-independent, and composable AI workflows" on IBM Programming Languages Day. In their presentation, they noted the difference between the application development lifecycle, represented by DevOps, and the AI application lifecycle.
+
+The goal for developing ModelOps was to address the gap between model deployment and model governance, ensuring that all models were running in production with strong governance, aligned with technical and business KPI's, while managing the risk. In their presentation, Hummer and Muthusamy described a programmatic solution for AI-aware staged deployment and reusable components that would enable model versions to match business apps, and which would include AI model concepts such as model monitoring, drift detection, and active learning. The solution would also address the tension between model performance and business KPI's, application and model logs, and model proxies and evolving policies. Various cloud platforms were part of the proposal. In June 2019, Hummer, Muthusamy, Thomas Rausch, Parijat Dube, and Kaoutar El Maghraoui presented a paper at the 2019 IEEE International Conference on Cloud Engineering (IC2E). The paper expanded on their 2018 presentation, proposing ModelOps as a cloud-based framework and platform for end-to-end development and lifecycle management of artificial intelligence (AI) applications. In the abstract, they stated that the framework would show how it is possible to extend the principles of software lifecycle management to enable automation, trust, reliability, traceability, quality control, and reproducibility of AI model pipelines. In March 2020, ModelOp, Inc. published the first comprehensive guide to ModelOps methodology. The objective of this publication was to provide an overview of the capabilities of ModelOps, as well as the technical and organizational requirements for implementing ModelOps practices.
+
+
+## Use cases
+
+One typical use case for ModelOps is in the financial services sector, where hundreds of time-series models are used to focus on strict rules for bias and auditability. In these cases, model fairness and robustness are critical, meaning the models have to be fair and accurate, and they have to run reliably. ModelOps automates the model lifecycle of models in production. Such automation includes designing the model lifecycle, inclusive of technical, business and compliance KPI's and thresholds, to govern and monitor the model as it runs, monitoring the models for bias and other technical and business anomalies, and updating the model as needed without disrupting the applications. ModelOps is the dispatcher that keeps all of the trains running on time and on the right track, ensuring risk control, compliance and business performance.
+
+Another use case is the monitoring of a diabetic's blood sugar levels based on a patient's real-time data. The model that can predict hypoglycemia must be constantly refreshed with the current data, business KPI's and anomalies should be continuously monitored and must be available in a distributed environment, so the information is available on a mobile device as well as reporting to a larger system. The orchestration, governance, retraining, monitoring, and refreshing is done with ModelOps.
+
+
+## The ModelOps process
+
+The ModelOps process focuses on automating the governance, management and monitoring of models in production across the enterprise, enabling AI and application developers to easily plug in lifecycle capabilities (such as bias-detection, robustness and reliability, drift detection, technical, business and compliance KPI's, regulatory constraints and approval flows) for putting AI models into production as business applications. The process starts with a standard representation of candidate models for production that includes a metamodel (the model specification) with all of the component and dependent pieces that go into building the model, such as the data, the hardware and software environments, the classifiers, and code plug-ins, and most importantly, the business and compliance/risk KPI's.
+
+
+## ModelOps: An evolution of MLOps
+
+MLOps (machine learning operations) is a discipline that enables data scientists and IT professionals to collaborate and communicate while automating machine learning algorithms. It extends and expands on the principles of DevOps to support the automation of developing and deploying machine learning models and applications. As a practice, MLOps involves routine machine learning (ML) models. However, the variety and uses of models have changed to include decision optimization models, optimization models, and transformational models that are added to applications. ModelOps is an evolution of MLOps that expands its principles to include not just the routine deployment of machine learning models but also the continuous retraining, automated updating, and synchronized development and deployment of more complex machine learning models. ModelOps refers to the operationalization of all AI models, including the machine learning models with which MLOps is concerned.
+

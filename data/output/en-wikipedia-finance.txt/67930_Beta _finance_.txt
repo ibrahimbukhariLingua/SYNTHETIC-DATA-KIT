@@ -1,0 +1,103 @@
+Beta (finance)
+
+
+# Beta (finance)
+
+
+
+In finance, the **beta** (β or **market beta** or **beta coefficient**) is a statistic that measures the expected increase or decrease of an individual stock price in proportion to movements of the stock market as a whole. Beta can be used to indicate the contribution of an individual asset to the market risk of a portfolio when it is added in small quantity. It refers to an asset's non-diversifiable risk, systematic risk, or market risk. Beta is not a measure of idiosyncratic risk.
+
+Beta is the hedge ratio of an investment with respect to the stock market. For example, to hedge out the market-risk of a stock with a market beta of 2.0, an investor would short $2,000 in the stock market for every $1,000 invested in the stock. Thus insured, movements of the overall stock market no longer influence the combined position on average. Beta measures the contribution of an individual investment to the risk of the market portfolio that was not reduced by diversification. It does not measure the risk when an investment is held on a stand-alone basis.
+
+The beta of an asset is compared to the market as a whole, usually the S&P 500. By definition, the value-weighted average of all market-betas of all investable assets with respect to the value-weighted market index is 1. If an asset has a beta above 1, it indicates that its return moves more than 1-to-1 with the return of the market-portfolio, on average; that is, it is more volatile than the market. In practice, few stocks have negative betas (tending to go up when the market goes down). Most stocks have betas between 0 and 3.
+
+Most fixed income instruments and commodities tend to have low or zero betas; call options tend to have high betas; and put options and short positions and some inverse ETFs tend to have negative betas.
+
+
+## Technical aspects
+
+
+### Mathematical definition
+
+The market beta {\displaystyle \beta \_{i}} of an asset {\displaystyle i}, observed on {\displaystyle t} occasions, is defined by (and best obtained via) a linear regression of the rate of return {\displaystyle r\_{i,t}} of asset {\displaystyle i} on the rate of return {\displaystyle r\_{m,t}} of the (typically value-weighted) stock-market index {\displaystyle m}:
+
+where {\displaystyle \varepsilon \_{t}} is an unbiased error term whose squared error should be minimized. The coefficient {\displaystyle \alpha \_{i}} is often referred to as the alpha.
+
+The ordinary least squares solution is:
+
+where {\displaystyle \operatorname {Cov} } and {\displaystyle \operatorname {Var} } are the covariance and variance operators. Betas with respect to different market indexes are not comparable.
+
+
+### Relationship between own risk and beta risk
+
+By using the relationship between standard deviation and variance, {\displaystyle \sigma \equiv {\sqrt {\operatorname {Var} (r)}}} and the definition of correlation {\displaystyle \rho \_{a,b}\equiv {\frac {\operatorname {Cov} (r\_{a},r\_{b})}{\sqrt {\operatorname {Var} (r\_{a})\operatorname {Var} (r\_{b})}}}}, market beta can also be written as
+
+where {\displaystyle \rho \_{i,m}} is the correlation of the two returns, and {\displaystyle \sigma \_{i}}, {\displaystyle \sigma \_{m}} are the respective volatilities. This equation shows that the idiosyncratic risk ({\displaystyle \sigma \_{i}}) is related to but often very different to market beta. If the idiosyncratic risk is 0 (i.e., the stock returns do not move), so is the market-beta. The reverse is not the case: A coin toss bet has a zero beta but not zero risk.
+
+Attempts have been made to estimate the three ingredient components separately, but this has not led to better estimates of market-betas.
+
+
+### Adding an asset to the market portfolio
+
+Suppose an investor has all his money in the market {\displaystyle m} and wishes to move a small amount into asset class {\displaystyle i}. The new portfolio is defined by
+
+The variance can be computed as
+
+For small values of {\displaystyle \delta }, the terms in {\displaystyle \delta ^{2}} can be ignored,
+
+Using the definition of {\displaystyle \beta \_{i}=\operatorname {Cov} (r\_{m},r\_{i})/\operatorname {Var} (r\_{m}),} this is
+
+This suggests that an asset with {\displaystyle \beta } greater than 1 increases the portfolio variance, while an asset with {\displaystyle \beta } less than 1 decreases it *if* added in a small amount.
+
+
+### Beta as a linear operator
+
+Market-beta can be weighted, averaged, added, etc. That is, if a portfolio consists of 80% asset A and 20% asset B, then the beta of the portfolio is 80% times the beta of asset A and 20% times the beta of asset B.
+
+
+## Financial analysis
+
+In practice, the choice of index makes relatively little difference in the market betas of individual assets, because broad value-weighted market indexes tend to move closely together. Academics tend to prefer to work with a value-weighted market portfolio due to its attractive aggregation properties and its close link with the capital asset pricing model (CAPM). Practitioners tend to prefer to work with the S&P 500 due to its easy in-time availability and availability to hedge with stock index futures.
+
+In the idealized CAPM, beta risk is the only kind of risk for which investors should receive an expected return higher than the risk-free rate of interest. When used within the context of the CAPM, beta becomes a measure of the appropriate expected rate of return. Due to the fact that the overall rate of return on the firm is weighted rate of return on its debt and its equity, the market-beta of the overall unlevered firm is the weighted average of the firm's debt beta (often close to 0) and its levered equity beta.
+
+In fund management, adjusting for exposure to the market separates out the component that fund managers should have received given that they had their specific exposure to the market. For example, if the stock market went up by 20% in a given year, and a manager had a portfolio with a market-beta of 2.0, this portfolio should have returned 40% in the absence of specific stock picking skills. This is measured by the alpha in the market-model, holding beta constant.
+
+Occasionally, other betas than market-betas are used. The arbitrage pricing theory (APT) has multiple factors in its model and thus requires multiple betas. (The CAPM has only one risk factor, namely the overall market, and thus works only with the plain beta.) For example, a beta with respect to oil price changes would sometimes be called an "oil-beta" rather than "market-beta" to clarify the difference.
+
+Betas commonly quoted in mutual fund analyses often measure the exposure to a specific fund benchmark, rather than to the overall stock market. Such a beta would measure the risk from adding a specific fund to a holder of the mutual fund benchmark portfolio, rather than the risk of adding the fund to a portfolio of the market.
+
+
+### Special cases
+
+Utility stocks commonly show up as examples of low beta. These have some similarity to bonds, in that they tend to pay consistent dividends, and their prospects are not strongly dependent on economic cycles. They are still stocks, so the market price will be affected by overall stock market trends, even if this does not make sense.
+
+Foreign stocks may provide some diversification. World benchmarks such as S&P Global 100 have slightly lower betas than comparable US-only benchmarks such as S&P 100. However, this effect is not as good as it used to be; the various markets are now fairly correlated, especially the US and Western Europe.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+Derivatives are examples of non-linear assets. Whereas Beta relies on a linear model, an out of the money option will have a distinctly non-linear payoff. In these cases, then, the change in price of an option relative to the change in the price of its underlying asset is not constant. (True also - but here, far less pronounced - for volatility, time to expiration, and other factors.) Thus "beta" here, calculated traditionally, would vary constantly as the price of the underlying changed.
+
+Accommodating this, mathematical finance defines a specific **volatility beta**.
+Here, analogous to the above, this beta represents the covariance between the derivative's return and changes in the value of the underlying asset, with, additionally, a correction for instantaneous underlying changes.
+See volatility (finance), volatility risk, Greeks (finance) § Vega.
+
+
+## Empirical estimation
+
+A true beta (which defines the true expected relationship between the rate of return on assets and the market) differs from a realized beta that is based on historical rates of returns and represents just one specific history out of the set of possible stock return realizations. The true market-beta is essentially the average outcome if infinitely many draws could be observed. On average, the best forecast of the realized market-beta is also the best forecast of the true market-beta.
+
+Estimators of market-beta have to wrestle with two important problems. First, the underlying market betas are known to move over time. Second, investors are interested in the best forecast of the true prevailing beta most indicative of the most likely *future beta* realization and not in the *historical market-beta*.
+
+Despite these problems, a historical beta estimator remains an obvious benchmark predictor. It is obtained as the slope of the fitted line from the linear least-squares estimator. The OLS regression can be estimated on 1–5 years worth of daily, weekly or monthly stock returns. The choice depends on the trade off between accuracy of beta measurement (longer periodic measurement times and more years give more accurate results) and historic firm beta changes over time (for example, due to changing sales products or clients).
+
+
+### Improved estimators
+
+Other beta estimators reflect the tendency of betas (like rates of return) for regression toward the mean, induced not only by measurement error but also by underlying changes in the true beta and/or historical randomness. (Intuitively, one would not suggest a company with high return [e.g., a drug discovery] last year also to have as high a return next year.) Such estimators include the Blume/Bloomberg beta (used prominently on many financial websites), the Vasicek beta, the Scholes–Williams beta, the Dimson beta, and the Welch beta.
+
+* The *Blume beta* shrinks the estimated OLS beta towards a mean of 1, calculating the weighted average of 2/3 times the historical OLS beta plus 1/3. A version based on monthly rates of return is widely distributed by Capital IQ and quoted on all financial websites. It predicts future market-beta poorly.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+* The *Vasicek beta* varies the weight between the historical OLS beta and the number 1 (or the average market beta if the portfolio is not value-weighted) by the volatility of the stock and the heterogeneity of betas in the overall market. It can be viewed either as an optimal Bayesian estimator under the (violated) assumption that the underlying market-beta does not move. It is modestly difficult to implement. It performs modestly better than the OLS beta.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+* The *Scholes–Williams and Dimson betas* are estimators that account for infrequent trading causing non-synchronously quoted prices. They are rarely useful when stock prices are quoted at day's end and easily available to analysts (as they are in the US), because they incur an efficiency loss when trades are reasonably synchronous. However, they can be very useful in cases in which frequent trades are not observed (e.g., as in private equity) or in markets with rare trading activity.
+* The *Welch beta* is a slope-winsorized beta estimator that bounds daily stock returns within the range of −2 and 4 times the contemporaneous daily market return. The slope-winsorized daily return of a stock follows {\displaystyle {\text{rsw}}\_{i,d}\in (-2\cdot r\_{m,d},4\cdot r\_{m,d})}, effectively restricts beta estimates to be between −2 and 4. The beta is estimated with the weighted least squares (WLS) estimation on slope-winsorized daily stock returns and the market returns. It outperforms OLS beta, Blume beta, Vasicek beta, and Dimson betas in forecasting the future realizations of market betas and hedging.
+
+These estimators attempt to uncover the instant prevailing market-beta. When long-term market-betas are required, further regression toward the mean over long horizons should be considered.
+

@@ -1,0 +1,64 @@
+Butterfly (options)
+
+
+# Butterfly (options)
+
+
+
+In finance, a **butterfly** (or simply **fly**) is a limited risk, non-directional options strategy that is designed to have a high probability of earning a limited profit when the future volatility of the underlying asset is expected to be lower (when long the butterfly) or less lower (when short the butterfly) than that asset's current implied volatility.
+
+
+## Long butterfly
+
+A long butterfly position will make profit if the future volatility is lower than the implied volatility.
+
+A long butterfly options strategy consists of the following options:
+
+* Long 1 call with a strike price of (X − a)
+* Short 2 calls with a strike price of X
+* Long 1 call with a strike price of (X + a)
+
+where X = the spot price (i.e. current market price of underlying) and a > 0.
+
+Using put–call parity a long butterfly can also be created as follows:
+
+* Long 1 put with a strike price of (X + a)
+* Short 2 puts with a strike price of X
+* Long 1 put with a strike price of (X − a)
+
+where X = the spot price and a > 0.
+
+All the options have the same expiration date.
+
+At expiration the value (but not the profit) of the butterfly will be:
+
+* zero if the price of the underlying is below (X − a) or above (X + a)
+* positive if the price of the underlying is between (X - a) and (X + a)
+
+The maximum value occurs at X (see diagram).
+
+
+## Short butterfly
+
+A short butterfly position will make profit if the future volatility is higher than the implied volatility.
+
+A short butterfly options strategy consists of the same options as a long butterfly. However now the middle strike option position is a long position and the upper and lower strike option positions are short.
+
+
+## Margin requirements
+
+In the United States, margin requirements for all options positions, including a butterfly, are governed by what is known as Regulation T. However brokers are permitted to apply more stringent margin requirements than the regulations.
+
+
+## Use in calculating implied distributions
+
+The price of a butterfly centered around some strike price can be used to estimate the implied probability of the underlying being at that strike price at expiry. This means the set of market prices for butterflies centered around different strike prices can be used to infer the market's belief about the probability distribution for the underlying price at expiry. This implied distribution may be different from the lognormal distribution assumed in the popular Black-Scholes model, and studying it can reveal ways in which real-world assets differ from the idealized assets described by Black-Scholes.
+
+
+## Butterfly variations
+
+1. The double option position in the middle is called the body, while the two other positions are called the wings.
+2. In case the distance between middle strike price and strikes above and below is unequal, such position is referred to as "broken wings" butterfly (or "broken fly" for short).
+3. An iron butterfly recreates the payoff diagram of a butterfly, but with a combination of two calls and two puts.
+4. The option strategy where the middle options (the body) have different strike prices is known as a Condor.
+5. A Christmas tree butterfly (not to be confused with the unrelated option combination also called a Christmas tree) consists of six options used to create a payoff diagram similar to a butterfly but slightly bearish or bullish instead of directionally neutral.

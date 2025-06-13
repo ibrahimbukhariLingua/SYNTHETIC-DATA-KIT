@@ -1,0 +1,85 @@
+Bond convexity
+
+
+# Bond convexity
+
+
+
+| Part of a series on |
+| --- |
+| Financial markets |
+| * Public market * Exchange **·** Securities |
+| Bond market |
+| * Bond valuation * Corporate bond * Fixed income * Government bond * High-yield debt * Municipal bond * Securitization |
+| Stock market |
+| * Common stock * Growth stock * Preferred stock * Registered share * Shareholder * Stock * Stockbroker * Stock certificate * Stock exchange * Watered stock |
+| Other markets |
+| Derivatives * (Credit derivative * Futures exchange * Hybrid security) Foreign exchange * (Currency * Exchange rate) * Commodity * ETF * Money * Mutual fund * Option * Real estate * Reinsurance * Structured product * Swap (finance) |
+| Over-the-counter (off-exchange) |
+| * Forwards * Options * Spot market * Swaps |
+| Trading |
+| * Participants * Regulation * Clearing |
+| Related areas |
+| * Alternative investment * Angel investor * Asset (economics) * Asset pricing * Banks and banking * Bull * Climate finance * Diversification (finance) * Eco-investing * Environmental finance * ESG * Financial + analysis + analyst + asset + betting + corporate + crime + forecast + personal + public + services * Fintech * Greenwashing * Growth investing * Impact investing * Investment management * Market risk * Market trend * Speculative attack * Sustainable development goals * Sustainable finance |
+| * v * t * e |
+
+In finance, **bond convexity** is a measure of the non-linear relationship of bond prices to changes in interest rates, and is defined as the second derivative of the price of the bond with respect to interest rates (duration is the first derivative). In general, the higher the duration, the more sensitive the bond price is to the change in interest rates. Bond convexity is one of the most basic and widely used forms of convexity in finance. Convexity was based on the work of Hon-Fei Lai and popularized by Stanley Diller.
+
+
+## Calculation of convexity
+
+Duration is a linear measure or 1st derivative of how the price of a bond changes in response to interest rate changes. As interest rates change, the price is not likely to change linearly, but instead it would change over some curved function of interest rates. The more curved the price function of the bond is, the more inaccurate duration is as a measure of the interest rate sensitivity.
+
+Convexity is a measure of the curvature or 2nd derivative of how the price of a bond varies with interest rate, i.e. how the duration of a bond changes as the interest rate changes. Specifically, one assumes that the interest rate is constant across the life of the bond and that changes in interest rates occur evenly. Using these assumptions, duration can be formulated as the first derivative of the price function of the bond with respect to the interest rate in question. Then the convexity would be the second derivative of the price function with respect to the interest rate.
+
+Convexity does not assume the relationship between Bond value and interest rates to be linear. In actual markets, the assumption of constant interest rates and even changes is not correct, and more complex models are needed to actually price bonds. However, these simplifying assumptions allow one to quickly and easily calculate factors which describe the sensitivity of the bond prices to interest rate changes.
+
+
+## Why bond convexities may differ
+
+The price sensitivity to parallel changes in the term structure of interest rates is highest with a zero-coupon bond and lowest with an amortizing bond (where the payments are front-loaded). Although the amortizing bond and the zero-coupon bond have different sensitivities at the same maturity, if their final maturities differ so that they have identical bond durations then they will have identical sensitivities. That is, their prices will be affected equally by small, first-order, (and parallel) yield curve shifts. They will, however, start to change by different amounts with each *further* incremental parallel rate shift due to their differing payment dates and amounts.
+
+For two bonds with the same par value, coupon, and maturity, convexity may differ depending on what point on the price yield curve they are located.
+
+
+## Mathematical definition
+
+If the *flat* floating interest rate is *r* and the bond price is *B*, then the **convexity** ***C*** is defined as
+
+Another way of expressing *C* is in terms of the modified duration *D*:
+
+Therefore,
+
+leaving
+
+Where *D* is a Modified Duration
+
+
+### How bond duration changes with a changing interest rate
+
+Return to the standard definition of modified duration:
+
+where *P*(*i*) is the present value of coupon *i*, and *t*(*i*) is the future payment date.
+
+As the interest rate increases, the present value of longer-dated payments declines in relation to earlier coupons (by the discount factor between the early and late payments). However, bond price also declines when interest rate increases, but changes in the present value of sum of each coupons times timing (the numerator in the summation) are larger than changes in the bond price (the denominator in the summation). Therefore, increases in *r* must decrease the duration (or, in the case of zero-coupon bonds, leave the unmodified duration constant). Note that the modified duration *D* differs from the regular duration by the factor one over *1 + r* (shown above), which also decreases as *r* is increased.
+
+Given the relation between convexity and duration above, conventional bond convexities must always be positive.
+
+The positivity of convexity can also be proven analytically for basic interest rate securities. For example, under the assumption of a flat yield curve one can write the value of a coupon-bearing bond as {\displaystyle B(r)=\sum \_{i=1}^{n}c\_{i}e^{-rt\_{i}}}, where *Cᵢ* stands for the coupon paid at time *tᵢ*. Then it is easy to see that
+
+Note that this conversely implies the negativity of the derivative of duration by differentiating {\displaystyle dB/dr=-DB}.
+
+
+## Application of convexity
+
+1. Convexity is a risk management figure, used similarly to the way 'gamma' is used in derivatives risks management; it is a number used to manage the market risk a bond portfolio is exposed to. If the combined convexity and duration of a trading book is high, so is the risk. However, if the combined convexity and duration are low, the book is hedged, and little money will be lost even if fairly substantial interest movements occur. (Parallel in the yield curve)
+2. The second-order approximation of bond price movements due to rate changes uses the convexity:
+
+## Effective convexity
+
+For a bond with an embedded option, a yield to maturity based calculation of convexity (and of duration) does not consider how changes in the yield curve will alter the cash flows due to option exercise. To address this, an **effective convexity** must be calculated numerically. Effective convexity is a discrete approximation of the second derivative of the bond's value as a function of the interest rate:
+
+where {\displaystyle V} is the bond value as calculated using an option pricing model, {\displaystyle \Delta y} is the amount that yield changes, and {\displaystyle V\_{-\Delta y}{\text{ and }}V\_{+\Delta y}} are the values that the bond will take if the yield falls by *{\displaystyle y}* or rises by *{\displaystyle y}*, respectively (a parallel shift).
+
+These values are typically found using a tree-based model, built for the *entire* yield curve, and therefore capturing exercise behavior at each point in the option's life as a function of both time and interest rates; see Lattice model (finance) § Interest rate derivatives.
+

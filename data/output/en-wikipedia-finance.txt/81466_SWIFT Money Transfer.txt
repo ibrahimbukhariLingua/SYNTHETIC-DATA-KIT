@@ -1,0 +1,54 @@
+SWIFT Money Transfer
+
+
+# SWIFT Money Transfer
+
+
+
+**MT102** or **MT103** (Message Type 102 or 103) are specific SWIFT message types (or formats) used on the Society for Worldwide Interbank Financial Telecommunication (SWIFT) payment system to send for cross border/international wire transfer messages between financial institutions for customer cash transfers.
+
+Difference between the two is MT103 is used for transfer to single customer, while MT102 used for multiple payments.
+
+
+## MT102/MT103 fields
+
+Below are the fields of an MT103 message. These fields are referred to as *tags*.
+
+| Tag | Name |
+| --- | --- |
+| 20 | Transaction reference number (sender's reference) |
+| 13C | Time Indication |
+| 23B | Bank operation code |
+| 23E | Instruction Code |
+| 26T | Transaction Type Code |
+| 32A | Value date / currency / interbank settled amount |
+| 33B | Currency / original instructed amount |
+| 36 | Exchange Rate |
+| 50A, F or K | Ordering customer (payer) or address of the remitter. |
+| 51A | Sending Institution |
+| 52A or D | Ordering Institution (payer's bank) |
+| 53A, B or D | Sender's Correspondent (bank) |
+| 54A, B or D | Receiver's Correspondent (bank) |
+| 55A, B or D | Third Reimbursement Institution (bank) |
+| 56A, C or D | Intermediary Institution (bank) |
+| 57A, B, C or D | Account With Institution (beneficiary's bank) |
+| 59 or 59A | Beneficiary Customer 4x35 |
+| 70 | Remittance Information |
+| 71A | Details of charges (OUR/SHA/BEN) |
+| 71F | Sender's Charges |
+| 71G | Receiver's Charges |
+| 72 | Sender to receiver information |
+| 77B | Regulatory reporting |
+
+In the above table, tags 52, 53, 54, 55, 56, and 57 preferably contain ISO 9362 Business Identifier Codes (BICs), whereas tags 50 and 59 preferably contain an account number or a BIC(Business Identifier Codes).
+
+As per SWIFT standards, the account number is to be in IBAN (International Bank Account Number) format or in BBAN format (for domestic payments).
+
+
+## Details of charges (71A)
+
+This field specifies which party will pay the fees for the transfer(s) of funds.
+
+* **BEN** (Beneficiary)**:** All transaction fees are paid by the beneficiary (receiver).
+* **SHA** (Shared charges)**:** All transaction fees are paid by the beneficiary (receiver) except fees charged by the sender's financial institution.
+* **OUR** (Our customer charged)**:** All transaction fees are paid by the sender.

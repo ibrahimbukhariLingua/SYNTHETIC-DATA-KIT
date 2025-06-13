@@ -1,0 +1,85 @@
+Solidity
+
+
+# Solidity
+
+
+
+**Solidity** is a programming language for implementing smart contracts on various blockchain platforms, most notably, Ethereum. Solidity is licensed under GNU General Public License v3.0. Solidity was designed by Gavin Woodⁿᵒⁿ-ᵖʳⁱᵐᵃʳʸ ˢᵒᵘʳᶜᵉ ⁿᵉᵉᵈᵉᵈ and developed by Christian Reitwiessner, Alex Beregszaszi, and several former Ethereum core contributors. Programs in Solidity run on Ethereum Virtual Machine or on compatible virtual machines.
+
+
+## History
+
+Solidity was proposed in August 2014 by Gavin Woodⁿᵒⁿ-ᵖʳⁱᵐᵃʳʸ ˢᵒᵘʳᶜᵉ ⁿᵉᵉᵈᵉᵈ The language was later developed by the Ethereum project's Solidity team, led by Christian Reitwiessner.
+
+Solidity is the primary language used to develop smart contracts for Ethereum as well as other private blockchains, such as the enterprise-oriented Hyperledger Fabric blockchain. SWIFT deployed a proof of concept using Solidity running on Hyperledger Fabric.
+
+
+## Description
+
+Solidity is a statically typed programming language designed for developing smart contracts that run on the Ethereum Virtual Machine (EVM) or compatible virtual machines.
+
+Solidity uses ECMAScript-like syntax which makes it familiar for existing web developers; however unlike ECMAScript it has static typing and variadic return types. Solidity is different from other EVM-targeting languages such as Serpent and Mutan in some important ways. It supports complex member variables for smart contracts, including arbitrarily hierarchical mappings and structs. Solidity smart contract support inheritance, including multiple inheritance with C3 linearization. Solidity introduces an application binary interface (ABI) that facilitates multiple type-safe functions within a single smart contract (this was also later supported by Serpent). The Solidity proposal also includes "Natural Language Specification", a documentation system for specifying user-centric descriptions of the ramifications of method-calls.ⁿᵒⁿ-ᵖʳⁱᵐᵃʳʸ ˢᵒᵘʳᶜᵉ ⁿᵉᵉᵈᵉᵈ
+
+Example of a Solidity program:
+
+
+## Development IDEs
+
+* Microsoft Visual Studio Code
+* JetBrains IntelliJ
+* Remix Online Editor
+* EthFiddle Online Editor
+
+## Editor extensions
+
+* Solidity Support for Visual Studio Code
+* Solidity Support For IntelliJ
+
+## Blockchain platforms
+
+Solidity is available on:
+
+* Avalanche C-Chain
+* Binance Smart Chain
+* Counterparty (which runs on Bitcoin)
+* Ethereum
+* Ethereum Classic
+* Tron
+* Hedera Hashgraph
+* Polygon
+* Metis
+* Arbitrum
+* Optimism
+
+## Criticism
+
+Many security properties of smart contracts are inherently difficult to reason about directly, and the Turing-completeness of Solidity means that verification of arbitrary properties cannot be decidably automated. Current automated solutions for smart contract security analysis can miss critical violations, produce false positives, and fail to achieve sufficient code coverage on realistic contracts. Solidity has been blamed for the error-prone implementation of Ethereum smart contracts due to its counterintuitive nature, its lack of constructs to deal with blockchain domain-specific aspects, and its lack of centralized documentation of known vulnerabilities.
+
+In 2016, a Cornell University researcher stated that Solidity was partially to blame for The DAO hack that took place that year. He stated: "this was actually not a flaw or exploit in the DAO contract itself: technically the Ethereum Virtual Machine (EVM) was operating as intended, but Solidity was introducing security flaws into contracts that were not only missed by the community, but missed by the designers of the language themselves."
+
+The developers community often cites Solidity requiring much of third party interfaces and APIs, and its inability to create critical information intensive smart contracts.
+
+
+## Comparison with other smart contract languages
+
+
+### Solidity vs. Rust
+
+Solidity is the primary programming language for developing smart contracts on the Ethereum Virtual Machine (EVM). However, Rust has emerged as a strong alternative in the blockchain ecosystem, especially for blockchains that support WebAssembly (Wasm), such as Polkadot, Klever and Solana.
+
+
+#### Memory safety
+
+Rust offers built-in memory safety features that prevent common programming errors, such as null pointer dereferencing and buffer overflows, which are not as rigorously enforced in Solidity. This makes Rust contracts potentially less prone to security vulnerabilities that could be exploited in smart contract environments.
+
+
+#### Concurrency
+
+Rust supports concurrent programming, which allows developers to write highly performant code that can handle multiple tasks simultaneously. This is particularly beneficial for high-performance blockchains like Solana, which need to process thousands of transactions per second. Solidity, on the other hand, does not natively support concurrency, which can limit its performance in certain applications.
+
+
+#### Ecosystem integration
+
+While Solidity is deeply integrated with the Ethereum ecosystem and its numerous development tools, Rust is versatile and can be used across various blockchain platforms that leverage Wasm. Rust’s growing popularity is reflected in its adoption by new blockchain projects that prioritize performance and security.
+

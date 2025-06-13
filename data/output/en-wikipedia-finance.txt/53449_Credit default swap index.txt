@@ -1,0 +1,114 @@
+Credit default swap index
+
+
+# Credit default swap index
+
+
+
+| Part of a series on |
+| --- |
+| Financial markets |
+| * Public market * Exchange **·** Securities |
+| Bond market |
+| * Bond valuation * Corporate bond * Fixed income * Government bond * High-yield debt * Municipal bond * Securitization |
+| Stock market |
+| * Common stock * Growth stock * Preferred stock * Registered share * Stock * Stockbroker * Stock certificate * Stock exchange * Watered stock |
+| Other markets |
+| Derivatives * (Credit derivative * Futures exchange * Hybrid security) Foreign exchange * (Currency * Exchange rate) * Commodity * ETF * Money * Mutual fund * Option * Real estate * Reinsurance * Structured product * Swap (finance) |
+| Over-the-counter (off-exchange) |
+| * Forwards * Options * Spot market * Swaps |
+| Trading |
+| * Participants * Regulation * Clearing |
+| Related areas |
+| * Alternative investment * Angel investor * Asset (economics) * Asset pricing * Banks and banking * Bull * Climate finance * Diversification (finance) * Eco-investing * Environmental finance * ESG * Financial + analysis + analyst + asset + betting + corporate + crime + forecast + personal + public + services * Fintech * Greenwashing * Growth investing * Impact investing * Investment management * Market risk * Market trend * Speculative attack * Sustainable development goals * Sustainable finance |
+| * v * t * e |
+
+A **credit default swap index** is a credit derivative used to hedge credit risk or to take a position on a basket of credit entities. Unlike a credit default swap, which is an over the counter credit derivative, a credit default swap index is a completely standardized credit security and may therefore be more liquid and trade at a smaller bid–offer spread. This means that it can be cheaper to hedge a portfolio of credit default swaps or bonds with a CDS index than it would be to buy many single name CDS to achieve a similar effect. Credit-default swap indexes are benchmarks for protecting investors owning bonds against default, and traders use them to speculate on changes in credit quality.
+
+
+## Issuance
+
+There are currently two main families of corporate CDS indices: CDX and iTraxx. CDX indices contain North American and Emerging Market companies and are administered by CDS Index Company (CDSIndexCo) and marketed by Markit Group Limited, and iTraxx indices contain companies from the rest of the world and are managed by the International Index Company (IIC), also owned by Markit.
+
+A new series of CDS indices is issued every six months by Markit. Running up to the announcement of each series a group of investment banks is polled to determine the credit entities that will form the constituents of the new issue. This process is intended to ensure that the index does not become "cluttered" with instruments that no longer exist, or which are illiquid. On the day of issue a fixed coupon is decided for the whole index based on the credit spread of the entities in the index. This coupon is set usually to 100bps (1% p.a.) for predominantly Investment Grade indices and 500bps for predominantly speculative grade indices to follow the convention of Standard North American Corporates (SNAC). Prior to SNAC (i.e. CDX.NA.IG Series 3 through 11) the coupons were set to approximate the average weighted spread of the names in that index. Once this has been decided the index constituents and the fixed coupon are published, and the indices can be actively traded.
+
+
+## Quotation and cashflows
+
+Most indices will be quoted at a theoretical traded spread in basis points. This represents the fraction of the protected notional that would be paid yearly. The standardization of indices means that instead of paying the theoretical spread, the fixed (or running) spread (as defined in the index documentation) is paid. It also means that coupon payments are not at fixed intervals starting from the trade date - payment dates are fixed on 20 March, June, September, and December. This means that the first coupon period may be a different length to the others. To offset the difference between traded spread and running spread, and the accrual from the first coupon period, an upfront fee is paid.
+
+CDX.NA.HY and CDX.EM indices are generally quoted slightly differently. In the same manner as high yield single name CDSs, they are quoted as a price - i.e. the percentage of the notional that is paid as an upfront fee.
+
+
+## e-Trading
+
+Credit indices trade OTC usually. Prior to 2011 the most common form of trading was through voice (phone) or a chat such as on a Bloomberg terminal. In 2011 e-trading screens started to become popular accounting for more than 50% of the index volumes by the end of 2011. By migrating to screens the transparency of trading is greatly enhanced as market volumes per market-maker are available. Market-makers can see the total amount of index trading daily and where they rank against their peer group. From October 2013, certain trades under the USA's jurisdiction are mandated to be traded on a particular type of e-trading platform called a Swaps Execution Facility (SEF).
+
+Although single name CDS volumes have been in sharp decline with the fall in activity of the structured credit desks, credit indices have remained popular as liquidity in the on-the-run indices remains good and the indices have moved to trading screens to trade more like equity indices.
+
+
+## Credit events
+
+Upon the declaration of a credit event by the ISDA Determinations Committee, the index will be reversioned, and trading in the new index version will commence. The initial issuance is version 1 (e.g. iTraxx Europe Series 19 Version 1), and the version is incremented for each name in the index that has defaulted.¹²
+
+In the event of a "Failure to Pay", or a "Bankruptcy" credit event, the protection seller makes a payment to the protection buyer on the credit event settlement date. The size of the payment is equal to that which would be paid if protection had been bought on a single name CDS with a notional scaled down by the constituent's weighting in the index.
+
+In the event of a "Restructuring" credit event, the index is still reversioned. Instead of simply being settled, however, a single name CDS is spun off which can then undergo the usual single name optional triggering process.
+
+
+## Clearing
+
+Historically, CDS indices have always been traded as a bilateral contracts directly between parties. This brings with it the additional risk of counterparty default - where one party to a trade fails to meet its obligations under the trade. To mitigate this risk, clearing through Central CounterParties (CCPs) was introduced. In this model, both parties to the trade face the CCP, and all members of the CCP pay into a fund to cover costs in the event that one member defaults.
+
+Indices are currently cleared through several CCPs, with ICE Clear Credit (formerly ICE Trust) and ICE Clear Europe, and Chicago Mercantile Exchange (CME) launching in 2009, and LCH.Clearnet in 2012.
+
+From March 2013, certain indices under the USA's CFTC's jurisdiction became mandated to clear on trade date.
+
+
+## iTraxx indices
+
+There are different families of iTraxx credit default swap index broken down by geographical region consisting of Europe, Asia and a Sterling denominated index.
+
+| Family | Type | Index name | Number of entities | Description |
+| --- | --- | --- | --- | --- |
+| Europe | Benchmark Indices | iTraxx Europe | 125 | Most actively traded names in the six months prior to the index roll |
+| iTraxx Europe HiVol | 30 | Highest spread (riskiest) non-financial names from iTraxx Europe index |
+| iTraxx Europe Crossover | 75 | Sub-investment grade names |
+| iTraxx LEVX | 40 | European 1st Lien Loan CDS |
+| Sector Indices | iTraxx Non-Financials | 100 | Non-financial names |
+| iTraxx Financials Senior | 25 | Senior subordination financial names |
+| iTraxx Financials Sub | 25 | Junior subordination financial names |
+| iTraxx TMT | 20 | Telecommunications, media and technology |
+| iTraxx Industrials | 20 | Industrial names |
+| iTraxx Energy | 20 | Energy industry names |
+| iTraxx Consumers | 30 | Manufacturers of consumer products |
+| iTraxx Autos | 10 | Automobile industry names |
+| Asia | iTraxx Asia | 50 | Asia ex-Japan Investment Grade |
+| iTraxx Asia HY | 20 | Asia ex-Japan High Yield |
+| iTraxx Japan | 50 | Japan |
+| iTraxx Australia | 25 | Australia |
+| Sovereign | iTraxx SOVX West Europe | 15 | Sovereign West Europe CDS |
+| iTraxx SOVX CEEMEA | 15 | Sovereign Central/East Europe, Middle East & Africa |
+| iTraxx SOVX Asia Pacific | 10 | Sovereign Asia Pacific |
+| iTraxx SOVX Latin America | 8 | Sovereign Latin America |
+| iTraxx SOVX IG | Sovereign Global Liquid Investment Grade |
+| iTraxx SOVX G7 | Sovereign G7 |
+| iTraxx SOVX BRIC | Sovereign Brazil, Russia, India, China |
+
+
+## CDX indices
+
+| Index Name | Number of entities | Description |
+| --- | --- | --- |
+| CDX.NA.IG | 125 | Investment grade CDSs |
+| CDX.NA.IG.HVOL | 30 | High Volatility investment grade CDSs |
+| CDX.NA.HY | 100 | High Yield CDSs |
+| CDX.NA.HY.BB | 37 | Index of high yield CDSs with a BB rating |
+| CDX.NA.HY.B | 46 | Index of high yield CDSs with a B rating |
+| CDX.NA.XO | 35 | CDSs that are at the crossover point between investment grade and junk |
+| CDX.EM | 14 | Emerging market CDSs |
+| CDX.EM Diversified | 40 | Emerging market CDSs |
+| LCDX | 100 | NA First Lien Leverage Loans CDSs |
+
+On 14 November 2007, Markit acquired International Index Company and agreed to acquire CDS IndexCo.
+

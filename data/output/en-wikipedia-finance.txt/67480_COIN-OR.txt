@@ -1,0 +1,55 @@
+COIN-OR
+
+
+# COIN-OR
+
+
+
+**Computational Infrastructure for Operations Research** (**COIN-OR**), is a project that aims to "create for mathematical software what the open literature is for mathematical theory." The open literature (e.g., a research journal) provides the operations research (OR) community with a peer-review process and an archive. Papers in operations research journals on mathematical theory often contain supporting numerical results from computational studies. The software implementations, models, and data used to produce the numerical results are typically not published. The status quo impeded researchers needing to reproduce computational results, make fair comparisons, and extend the state of the art.
+
+The success of Linux, Apache, and other projects popularized the open-source model of software development and distribution. A group at IBM Research proposed open source as an analogous yet viable means to *publish* software, models, and data. COIN-OR was conceived as an initiative to promote open source in the computational operations research community and to provide the on-line resources and hosting services required to enable others to run their own open-source software projects.
+
+The COIN-OR website was launched as an experiment in 2000, in conjunction with 17th International Symposium on Math Programming in Atlanta, Georgia. In 2007, COIN-OR had 25 application projects, including tools for linear programming (e.g., COIN-OR CLP), nonlinear programming (e.g., IPOPT), integer programming (e.g., CBC, Bcp and COIN-OR SYMPHONY), algebraic modeling languages (e.g., Coopr) and more. By 2011, this had grown to 48 projects. COIN-OR is hosted by the Institute for Operations Research and the Management Sciences, INFORMS, and run by the educational, non-profit COIN-OR Foundation.
+
+
+## Projects
+
+
+### CLP
+
+COIN-OR LP (CLP or Clp) is an open-source linear programming solver written in C++. It is published under the Common Public License so it can be used in proprietary software with none of the restrictions of the GNU General Public License. CLP is primarily meant to be used as a callable library, although a stand-alone executable version can be built. It is designed to be as reliable as any commercial solver, although several times slower, and to be able to tackle very large problems.
+
+CLP is designed to solve linear programming problems such as :
+
+* subject to **problem constraints** of the following form
+
+* and **non-negative variables**
+
+with up to millions of variables and/or constraints. Its main algorithm is the simplex algorithm.
+
+CLP is used in other COIN-OR projects such as SYMPHONY, Branch Cut and Price (BCP), COIN-OR Branch and Cut (CBC), and others.
+
+
+### CBC
+
+COIN-OR branch and cut (CBC or Cbc) is an open-source mixed integer programming solver written in C++. It can be used as both a stand-alone executable and as a callable library (through *A Mathematical Programming Language* (AMPL) [natively], *General Algebraic Modeling System* (GAMS) [using the links provided by the *COIN-OR Optimization Services* (OS) and *GAMSlinks* projects], MPL [through the *CoinMP* project], AIMMS [through the *AIMMSlinks* project], PuLP, CMPL, OpenSolver for Excel, JuMP, or MiniZinc). Although it has been a popular choice of open source MIP solver for many years, its performance is now significantly inferior to HiGHS.
+
+
+### SYMPHONY
+
+Single- or multi-process optimization over networks (SYMPHONY) is an open source branch and cut framework for solving mixed integer programs (MIPs) over heterogeneous networks. It can use CLP, CPLEX, XPRESS or other linear programming solvers to solve the underlying linear programs.
+
+SYMPHONY is a callable library which implements both sequential and parallel versions of branch, cut and price to solve MILPs. A branch, cut and price algorithm is similar to a branch and bound algorithm but additionally includes cutting-plane methods and pricing algorithms. The user of the library can customize the algorithm in any number of ways by supplying application-specific subroutines for reading in custom data files, generating application-specific cutting planes, or applying custom branching rules, resulting in a customized branch and cut algorithm. Most components of the algorithm, e.g., search tree management, management of linear programming solution, cut pool management, and communication management, are internal to the library and need not be touched by the user. The executables can be built in any number of configurations ranging from completely sequential to fully parallel with independently functioning cut generators, cut pools, and LP solvers. The distributed version currently runs in any environment supported by the PVM message passing protocol. The same source code can also be compiled for shared-memory architectures using any OpenMP compliant compiler.
+
+SYMPHONY reads MPS (through the COIN-OR MPS reader) and GNU MathProg files. SYMPHONY does not have an LP-Solver of its own, but can be used with solvers like Clp, Cplex, Xpress through the Osi-interface. Cuts are generated using COIN's cut generation library: CGL. SYMPHONY also has structure specific implementations for problems like the traveling salesman problem, vehicle routing problem, set partitioning problem, mixed postman problem, etc. SYMPHONY also has an interactive shell where the user can enter commands to execute and control the program.
+
+
+### PuLP
+
+PuLP is an LP/IP modeler written in Python. It can generate MPS or LP files and call GLPK, CLP/CBC, and CPLEX, to solve linear problems. PuLP is the default optimization tool in SolverStudio for Excel.
+
+
+### SMI
+
+SMI is a stochastic programming modeler and solver written in C++. It can read Stochastic MPS and offers direct interfaces for constructing stochastic programs. It generates the deterministic equivalent linear program, solves it, and provides interfaces to access the scenario solutions.
+

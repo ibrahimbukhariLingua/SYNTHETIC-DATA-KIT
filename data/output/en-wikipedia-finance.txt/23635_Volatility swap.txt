@@ -1,0 +1,87 @@
+Volatility swap
+
+
+# Volatility swap
+
+
+
+In finance, a **volatility swap** is a forward contract on the future realised volatility of a given underlying asset. Volatility swaps allow investors to trade the volatility of an asset directly, much as they would trade a price index. Its payoff at expiration is equal to
+
+where:
+
+* {\displaystyle \sigma \_{\text{realised}}} is the annualised realised volatility,
+* {\displaystyle K\_{\text{vol}}} is the volatility strike, and
+* {\displaystyle N\_{\text{vol}}} is a preagreed notional amount.
+
+that is, the holder of a volatility swap receives {\displaystyle N\_{\text{vol}}} for every point by which the underlying's annualised realised volatility {\displaystyle \sigma \_{\text{realised}}} exceeded the delivery price of {\displaystyle K\_{\text{vol}}}, and conversely, pays {\displaystyle N\_{\text{vol}}} for every point the realised volatility falls short of the strike.
+
+The underlying is usually a financial instrument with an active or liquid options market, such as foreign exchange, stock indices, or single stocks.
+Unlike an investment in options, whose volatility exposure is contaminated by its price dependence, these swaps provide pure exposure to volatility alone. This is truly the case only for forward starting volatility swaps. However, once the swap has its asset fixings its mark-to-market value also depends on the current asset price. One can use these instruments to speculate on future volatility levels, to trade the spread between realized and implied volatility, or to hedge the volatility exposure of other positions or businesses.
+
+Volatility swaps are more commonly quoted and traded than the very similar but simpler variance swaps, which can be replicated with a linear combination of options and a dynamic position in futures. The difference between the two is convexity: The payoff of a variance swap is linear with variance but convex with volatility.
+That means, inevitably, a static replication (a buy-and-hold strategy) of a volatility swap is impossible. However, using the variance swap ({\displaystyle \Sigma \_{T}^{2}}) as a hedging instrument and targeting volatility ({\displaystyle \Sigma \_{T}}), volatility can be written as a function of variance:
+
+and {\displaystyle a} and {\displaystyle b} chosen to minimise the expect expected squared deviation of the two sides:
+
+then, if the probability of negative realised volatilities is negligible, future volatilities could be assumed to be normal with mean {\displaystyle {\bar {\Sigma }}} and standard deviation {\displaystyle \sigma \_{\Sigma }}:
+
+then the hedging coefficients are:
+
+
+## Definition of the realized volatility
+
+Definition of the annualized realized volatility depends on traders viewpoint on the underlying price observation, which could be either discretely or continuously in time. For the former one, with the analogous construction to that of the variance swap, if there are {\displaystyle n+1} sampling points of the observed underlying prices, says, {\displaystyle S\_{t\_{0}},S\_{t\_{1}},...,S\_{t\_{n}}}
+where {\displaystyle 0\leq t\_{i-1}<t\_{i}\leq T}
+for {\displaystyle i=1} to {\displaystyle n}. Define {\displaystyle R\_{i}=\ln(S\_{t\_{i}}/S\_{t\_{i-1}}),} the natural log returns.
+Then the discrete-sampling annualized realized volatility is defined by
+
+* {\displaystyle \sigma \_{\text{realised}}:={\sqrt {{\frac {A}{n}}\sum \_{i=1}^{n}R\_{i}^{2}}},}
+
+which basically is the square root of annualized realized variance. Here, {\displaystyle A} denotes an annualized factor which commonly selected to be the number of the observed price in a year i.e. {\displaystyle A=252} if the price is monitored daily or {\displaystyle A=52} if it is done weekly. {\displaystyle T} is the expiry date of the volatility swap defined by {\displaystyle n/A}.
+
+The continuous version of the annualized realized volatility is defined by means of the square root of quadratic variation of the underlying price log-return:
+
+* {\displaystyle {\tilde {\sigma }}\_{\text{realized}}:={\sqrt {{\frac {1}{T}}\int \_{0}^{T}\sigma ^{2}(s)ds}},}
+
+where {\displaystyle \sigma (s)} is the instantaneous volatility of the underlying asset.
+Once the number of price's observation increase to infinity, one can find that {\displaystyle \sigma \_{\text{realised}}} converges in probability to {\displaystyle {\tilde {\sigma }}\_{\text{realized}}} i.e.
+
+{\displaystyle \lim \_{n\to \infty }{\sqrt {{\frac {A}{n}}\sum \_{i=1}^{n}R\_{i}^{2}}}={\sqrt {{\frac {1}{T}}\int \_{0}^{T}\sigma ^{2}(s)ds}},}
+
+representing the interconnection and consistency between the two approaches.
+
+
+## Pricing and valuation
+
+In general, for a specified underlying asset, the main aim of pricing swaps is to find a fair strike price since there is no cost to enter the contract. One of the most popular approaches to such fairness is exploiting the Martingale pricing method, which is the method to find the expected present value of given derivative security with respect to some risk-neutral probability measure (or Martingale measure). And how such a measure is chosen depends on the model used to describe the price evolution.
+
+Mathematically speaking, if we suppose that the price process {\displaystyle S=(S\_{t})\_{0\leq t\leq T}} follows the Black-Scholes model under the martingale measure {\displaystyle \mathbb {Q} }, then it solves the following SDE:
+
+{\displaystyle {\frac {dS\_{t}}{S\_{t}}}=r(t)dt+\sigma (t)dW\_{t},\;\;S\_{0}>0}
+
+where:
+
+* {\displaystyle T} represents the swap contract expiry date,
+* {\displaystyle r(t)\in \mathbb {R} } is (time-dependent) risk-free interest rate,
+* {\displaystyle \sigma (t)>0} is (time-dependent) price volatility, and
+* {\displaystyle W=(W\_{t})\_{0\leq t\leq T}} is a Brownian motion under the filtered probability space {\displaystyle (\Omega ,{\mathcal {F}},\mathbb {F} ,\mathbb {Q} )} where {\displaystyle \mathbb {F} =({\mathcal {F}}\_{t})\_{0\leq t\leq T}} is the natural filtration of {\displaystyle W}.
+
+Since we know that {\displaystyle (\sigma \_{\text{realised}}-K\_{\text{vol}})\times N\_{\text{vol}}} is the volatility swap payoff at expiry in the discretely sampled case (which is switched to {\displaystyle {\tilde {\sigma }}\_{\text{realized}}} for the continuous case), then its expected value at time {\displaystyle t\_{0}}, denoted by {\displaystyle V\_{t\_{0}}} is
+
+{\displaystyle V\_{t\_{0}}=e^{\int \_{t\_{0}}^{T}r(s)ds}\mathbb {E} ^{\mathbb {Q} }[\sigma \_{\text{realised}}-K\_{\text{vol}}|{\mathcal {F}}\_{t\_{0}}]\times N\_{\text{vol}},}
+
+which gives
+
+{\displaystyle K\_{\text{vol}}=\mathbb {E} ^{\mathbb {Q} }[\sigma \_{\text{realised}}|{\mathcal {F}}\_{t\_{0}}]}
+
+due to the zero price of the swap, defining the value of a fair volatility strike. The solution can be discovered in various ways. For instance, we obtain the closed-form pricing formula once the probability distribution function of {\displaystyle \sigma }\_{\text{realized}} or {\displaystyle {\tilde {\sigma }}\_{\text{realized}}} is known, or compute it numerically by means of the Monte Carlo method. Alternatively, Upon certain restrictions, one can utilize the value of the European options to approximate the solution.
+
+
+### Pricing volatility swap with continuous-sampling
+
+Regarding the argument of Carr and Lee (2009), in the case of the continuous- sampling realized volatility if we assumes that the contract begins at time {\displaystyle t\_{0}=0}, {\displaystyle r(t)} is deterministic and {\displaystyle \sigma (t)} is arbitrary (deterministic or a stochastic process) but independent of the price's movement i.e. there is no correlation between {\displaystyle \sigma (t)} and {\displaystyle S\_{t}}, and denotes by {\displaystyle C\_{t}(K,T)} the Black-Scholes formula for European call option written on {\displaystyle S\_{t}} with the strike price {\displaystyle K} at time {\displaystyle t,\;0\leq t\leq T} with expiry date {\displaystyle T}, then by the auxilarity of the call option chosen to be at-the-money i.e. {\displaystyle K=S\_{0}}, the volatility strike {\displaystyle K\_{\text{vol}}} can be approximated by the function
+
+{\displaystyle K\_{\text{vol}}=\mathbb {E} ^{\mathbb {Q} }[{\tilde {\sigma }}\_{\text{realised}}|{\mathcal {F}}\_{t\_{0}}]\approx {\sqrt {\frac {2\pi }{T}}}{\frac {C\_{0}(S\_{0},T)}{S\_{0}}}-2r(T)}
+
+which is resulted from applying Taylor's series on the normal distribution parts of the Black-Scholes formula.
+

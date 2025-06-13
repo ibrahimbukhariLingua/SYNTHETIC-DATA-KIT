@@ -1,0 +1,131 @@
+Linear utility
+
+
+# Linear utility
+
+
+
+In economics and consumer theory, a **linear utility function** is a function of the form:
+
+or, in vector form:
+
+where:
+
+* {\displaystyle m} is the number of different goods in the economy.
+* {\displaystyle {\overrightarrow {x}}} is a vector of size {\displaystyle m} that represents a bundle. The element {\displaystyle x\_{i}} represents the amount of good {\displaystyle i} in the bundle.
+* {\displaystyle {\overrightarrow {w}}} is a vector of size {\displaystyle m} that represents the subjective preferences of the consumer. The element {\displaystyle w\_{i}} represents the relative value that the consumer assigns to good {\displaystyle i}. If {\displaystyle w\_{i}=0}, this means that the consumer thinks that product {\displaystyle i} is totally worthless. The higher {\displaystyle w\_{i}} is, the more valuable a unit of this product is for the consumer.
+
+A consumer with a linear utility function has the following properties:
+
+* The preferences are strictly monotone: having a larger quantity of even a single good strictly increases the utility.
+* The preferences are weakly convex, but not strictly convex: a mix of two equivalent bundles is equivalent to the original bundles, but not better than it.
+* The marginal rate of substitution of all goods is constant. For every two goods {\displaystyle i,j}:
+
+* The indifference curves are straight lines (when there are two goods) or hyperplanes (when there are more goods).
+* Each demand curve (demand as a function of price) is a step function: the consumer wants to buy zero units of a good whose utility/price ratio is below the maximum, and wants to buy as many units as possible of a good whose utility/price ratio is maximum.
+* The consumer regards the goods as perfect substitute goods.
+
+## Economy with linear utilities
+
+Define a *linear economy* as an exchange economy in which all agents have linear utility functions. A linear economy has several properties.
+
+Assume that each agent {\displaystyle A} has an initial endowment {\displaystyle {\overrightarrow {e\_{A}}}}. This is a vector of size {\displaystyle m} in which the element {\displaystyle e\_{A,i}} represents the amount of good {\displaystyle i} that is initially owned by agent {\displaystyle A}. Then, the initial utility of this agent is {\displaystyle {\overrightarrow {w\_{A}}}\cdot {\overrightarrow {e\_{A}}}}.
+
+Suppose that the market prices are represented by a vector {\displaystyle {\overrightarrow {p}}} - a vector of size {\displaystyle m} in which the element{\displaystyle p\_{i}} is the price of good {\displaystyle i}. Then, the *budget* of agent {\displaystyle A} is {\displaystyle {\overrightarrow {p}}\cdot {\overrightarrow {e\_{A}}}}. While this price vector is in effect, the agent can afford all and only the bundles {\displaystyle {\overrightarrow {x}}} that satisfy the budget constraint: {\displaystyle {\overrightarrow {p}}\cdot {\overrightarrow {x}}\leq {\overrightarrow {p}}\cdot {\overrightarrow {e\_{A}}}}.
+
+
+## Competitive equilibrium
+
+A competitive equilibrium is a price vector and an allocation in which the demands of all agents are satisfied (the demand of each good equals its supply). In a linear economy, it consists of a price vector {\displaystyle {\overrightarrow {p}}} and an allocation {\displaystyle X}, giving each agent a bundle {\displaystyle {\overrightarrow {x\_{A}}}} such that:
+
+* {\displaystyle \sum \_{A}{\overrightarrow {x\_{A}}}=\sum \_{A}{\overrightarrow {e\_{A}}}} (the total amount of all goods is the same as in the initial allocation; no goods are produced or destroyed).
+* For every agent {\displaystyle A}, its allocation {\displaystyle {\overrightarrow {x\_{A}}}} maximizes the utility of the agent, {\displaystyle {\overrightarrow {w\_{A}}}\cdot {\overrightarrow {x}}}, subject to the budget constraint {\displaystyle {\overrightarrow {p}}\cdot {\overrightarrow {x}}\leq {\overrightarrow {p}}\cdot {\overrightarrow {e\_{A}}}}.
+
+In equilibrium, each agent holds only goods for which his utility/price ratio is weakly maximal. I.e, if agent {\displaystyle A} holds good {\displaystyle i} in equilibrium, then for every other good {\displaystyle j}:
+
+(otherwise, the agent would want to exchange some quantity of good {\displaystyle i} with good {\displaystyle j}, thus breaking the equilibrium).
+
+Without loss of generality, it is possible to assume that every good is desired by at least one agent (otherwise, this good can be ignored for all practical purposes). Under this assumption, an equilibrium price of a good must be strictly positive (otherwise the demand would be infinite).
+
+
+## Existence of competitive equilibrium
+
+David Gale proved necessary and sufficient conditions for the existence of a competitive equilibrium in a linear economy. He also proved several other properties of linear economies.
+
+A set {\displaystyle S} of agents is called *self-sufficient* if all members of {\displaystyle S} assign a positive value only for goods that are owned exclusively by members of {\displaystyle S} (in other words, they assign value {\displaystyle w\_{i}=0} to any product {\displaystyle i} which is owned by members outside {\displaystyle S}). The set {\displaystyle S} is called *super-self-sufficient* if someone in {\displaystyle S} owns a good which is not valued by any member of {\displaystyle S} (including himself). Gale's existence theorem says that:
+
+*Proof of "only if" direction*: Suppose the economy is in equilibrium with price {\displaystyle {\overrightarrow {p}}} and allocation {\displaystyle x}. Suppose {\displaystyle S} is a self-sufficient set of agents. Then, all members of {\displaystyle S} trade only with each other, because the goods owned by other agents are worthless for them. Hence, the equilibrium allocation satisfies:
+
+Every equilibrium allocation is Pareto efficient. This means that, in the equilibrium allocation {\displaystyle x}, every good is held only by an agent which assigns positive value to that good. By the equality just mentioned, for each good {\displaystyle i}, the total amount of {\displaystyle i} held by members of {\displaystyle S} in the equilibrium allocation {\displaystyle x} equals the total amount of {\displaystyle i} held by members of {\displaystyle S} in the initial allocation {\displaystyle e}. Hence, in the initial allocation {\displaystyle e}, every good is held by a member of {\displaystyle S}, only if it is valuable to one or more members of {\displaystyle S}. Hence, {\displaystyle S} is not super-self-sufficient.
+
+
+## Competitive equilibrium with equal incomes
+
+**Competitive equilibrium with equal incomes (CEEI)** is a special kind of competitive equilibrium, in which the budget of all agents is the same. I.e, for every two agents {\displaystyle A} and {\displaystyle B}:
+
+The CEEI allocation is important because it is guaranteed to be envy-free: the bundle {\displaystyle x\_{A}} gives agent {\displaystyle A} a maximum utility among of all the bundles with the same price, so in particular it gives him at least as much utility as the bundle {\displaystyle x\_{B}}.
+
+One way to achieve a CEEI is to give all agents the same initial endowment, i.e., for every {\displaystyle A} and {\displaystyle B}:
+
+(if there are {\displaystyle n} agents then every agent receives exactly {\displaystyle 1/n} of the quantity of every good). In such an allocation, no subsets of agents are self-sufficient. Hence, as a corollary of Gale's theorem:
+
+
+### Examples
+
+In all examples below, there are two agents - Alice and George, and two goods - apples (x) and guavas (y).
+
+A. **Unique equilibrium**: the utility functions are:
+
+The total endowment is {\displaystyle T=(6,6)}. Without loss of generality, we can normalize the price vector such that {\displaystyle P\_{x}=1}. What values can {\displaystyle P\_{y}} have in CE? If {\displaystyle P\_{y}>3/2}, then both agents want to give all their y for x; if {\displaystyle P\_{y}<2/3}, then both agents want to give all their x for y; hence, in CE {\displaystyle 2/3\leq P\_{y}\leq 3/2}. If {\displaystyle P\_{y}=2/3}, then Alice is indifferent between x and y, while George wants only y. Similarly, if {\displaystyle P\_{y}=3/2}, then George is indifferent while Alice wants only x. If {\displaystyle 2/3<P\_{y}<3/2}, then Alice wants only x while George wants only y. Hence, the CE allocation must be [(6,0);(0,6)]. The price vector depends on the initial allocation. E.g., if the initial allocation is equal, [(3,3);(3,3)], then both agents have the same budget in CE, so {\displaystyle P\_{y}=P\_{x}=1}. This CE is essentially unique: the price vector may be multiplied by a constant factor, but the CE equilibrium will not change.
+
+B. **No equilibrium**: Suppose Alice holds apples and guavas but wants only apples. George holds only guavas but wants both apples and guavas. The set {Alice} is self-sufficient, because Alice thinks that all goods held by George are worthless. Moreover, the set {Alice} is super-self-sufficient, because Alice holds guavas which are worthless to her. Indeed, a competitive equilibrium does not exist: regardless of the price, Alice would like to give all her guavas for apples, but George has no apples so her demand will remain unfulfilled.
+
+C. **Many equilibria**: Suppose there are two goods and two agents, both agents assign the same value to both goods (e.g. for both of them, {\displaystyle w\_{apples}=w\_{guavas}=1}). Then, in equilibrium, the agents may exchange some apples for an equal number of guavas, and the result will still be an equilibrium. For example, if there is an equilibrium in which Alice holds 4 apples and 2 guavas and George holds 5 apples and 3 guavas, then the situation in which Alice holds 5 apples and 1 guava and George 4 apples and 4 guavas is also an equilibrium.
+
+But, in both these equilibria, the total utilities of both agents are the same: Alice has utility 6 in both equilibria, and George has utility 8 in both equilibria. This is not a coincidence, as shown in the following section.
+
+
+## Uniqueness of utilities in competitive equilibrium
+
+Gale proved that:
+
+*Proof.* The proof is by induction on the number of traders. When there is only a single trader, the claim is obvious. Suppose there are two or more traders and consider two equilibria: equilibrium X with price vector {\displaystyle {\overrightarrow {p}}} and allocation {\displaystyle x}, and equilibrium Y with price vector {\displaystyle {\overrightarrow {q}}} and allocation {\displaystyle y}. There are two cases to consider:
+
+a. The price vectors are the same up to multiplicative constant: {\displaystyle {\overrightarrow {p}}=C\cdot {\overrightarrow {q}}} for some constant {\displaystyle C}. This means that in both equilibria, all agents have exactly the same budget set (they can afford exactly the same bundles). In equilibrium, the utility of every agent is the maximum utility of a bundle in the budget set; if the budget set is the same, then so is the maximum utility in that set.
+
+b. The price vectors are not proportional. This means that the price of some goods changed more than others. Define the *highest price-rise* as:
+
+and define the *highest price-rise goods* as those good/s that experienced the maximum price change (this must be a proper subset of all goods since the price-vectors are not proportional):
+
+and define the *highest price-rise holders* as those trader/s that hold one or more of those maximum-price-change-goods in Equilibrium Y:
+
+In equilibrium, agents hold only goods whose utility/price ratio is weakly maximal. So for all agents in {\displaystyle S}, the utility/price ratio of all goods in {\displaystyle H} is weakly maximal under the price vector {\displaystyle {\overrightarrow {q}}}. Since the goods in {\displaystyle H} experienced the highest price-rise, when the price vector is {\displaystyle {\overrightarrow {p}}} their utility/price ratio is strongly maximal. Hence, in Equilibrium X, all agents in {\displaystyle S} hold *only* goods from {\displaystyle H}. In equilibrium X, someone must hold goods that are not in {\displaystyle H}; hence, {\displaystyle S} must be a proper subset of the agents.
+
+So in equilibrium X, the {\displaystyle S}-agents hold *only* {\displaystyle H}-goods, and in equilibrium Y, {\displaystyle S}-agents hold *all* the {\displaystyle H}-goods. This allows us to do some budget calculations:
+
+On one hand, in equilibrium X with price {\displaystyle {\overrightarrow {p}}}, the {\displaystyle S}-agents spend all their budget on {\displaystyle H}-goods, so:
+
+(where {\displaystyle {\overrightarrow {e\_{i}}}} is the total initial endowment from good {\displaystyle i}).
+
+On the other hand, in equilibrium Y with price {\displaystyle {\overrightarrow {q}}}, the {\displaystyle S}-agents can afford all the {\displaystyle H}-goods, so:
+
+Combining these equations leads to the conclusion that, in both equilibria, the {\displaystyle S}-agents only trade with each other:
+
+Hence, the agents not in {\displaystyle S} also only trade with each other. This means that equilibrium X is composed of two equilibria: one that involves only {\displaystyle S}-agents and {\displaystyle H}-goods, and the other that involves only non-{\displaystyle S}-agents and non-{\displaystyle H}-goods. The same is true for agent Y. Since {\displaystyle S} is a proper subset of the agents, the induction assumption can be invoked and the theorem is proved.
+
+
+## Calculating competitive equilibrium
+
+Eaves presented an algorithm for finding a competitive equilibrium in a finite number of steps, when such an equilibrium exists.
+
+
+## Related concepts
+
+Linear utilities functions are a small subset of Quasilinear utility functions.
+
+Goods with linear utilities are a special case of substitute goods.
+
+Suppose the set of goods is not finite but continuous. E.g., the commodity is a heterogeneous resource, such as land. Then, the utility functions are not functions of a finite number of variables, but rather set functions defined on Borel subsets of the land. The natural generalization of a linear utility function to that model is an additive set function. This is the common case in the theory of fair cake-cutting. An extension of Gale's result to this setting is given by Weller's theorem.
+
+Under certain conditions, an ordinal preference relation can be represented by a linear and continuous utility function.
+

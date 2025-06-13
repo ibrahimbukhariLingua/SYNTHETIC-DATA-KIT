@@ -1,0 +1,36 @@
+Domain inventory pattern
+
+
+# Domain inventory pattern
+
+
+
+**Domain Inventory** is a design pattern, applied within the service-orientation design paradigm, whose application enables creating pools of services, which correspond to different segments of the enterprise, instead of creating a single enterprise-wide pool of services. This design pattern is usually applied when it is not possible to create a single inventory of services for whole of the enterprise by following the same design standards across the different segments of the enterprise. The Domain Inventory Design pattern by Thomas Erl asks, "How can services be delivered to maximize recomposition when enterprise-wide standardization is not possible?" and is discussed as part of this podcast.
+
+
+## Rationale
+
+As per the guidelines of the Enterprise Inventory design pattern, it is beneficial to create a single inventory that spans the whole of the enterprise as it results in services that are more standardized, interoperable and easily composable. However, there may be situations when a single enterprise-wide inventory cannot be created. This could be because of a number of reasons including:
+
+* management issues e.g. who will own the services and who will be responsible for their maintenance?
+* the organization is spread across different geographic locations.
+* different segments of the organization are supported by different IT departments and the technologies used are not the same.
+* some segments of the organization might not be ready for transition towards service-orientation.
+* a pilot project needs to be undertaken just to ascertain the effectiveness of SOA.
+* as per the guidelines of the Standardized Service Contract, it may be very difficult to create standardized data models across the enterprise.
+* cultural issues, e.g. IT managers not willing to give up control they have over the way different projects are developed.
+
+Considering the above-mentioned factors, it is rather more practical to build smaller groups of services whereby the scope of a group relates to a well-defined domain boundary within the enterprise. This is exactly what is advocated by the Domain Inventory design pattern. By limiting the scope of a service inventory, it becomes easier to develop and manage a group of related services.
+
+
+## Usage
+
+In order to apply this design pattern, a well-defined boundary needs to be established inside the enterprise that would usually correspond to a particular business area of the enterprise. For example, sales department, customer services department, etc. It is important that any domains created relate to the business domains as it helps to keep the service inventory in sync with the business models as they evolve over time. Having established a well-defined boundary, the next step is to create a set of design standards that would regulate the extent to which the service-orientation design principles would be applied and any other related conventions, rules and restrictions e.g. how to create the data models, how to name the service functions, etc. By having these design standards in place, standardized set of services can be developed that are specifically attuned to work within the limitations of the respective organizational segment. As the services are standardized, they can be easily composed without the requirement of any bridging mechanisms.
+
+
+## Considerations
+
+If the established boundary of a domain does not correspond to an actual business domain then it might prove difficult to maintain such an inventory of services because of the managerial cross-over. Each domain inventory now corresponds to a specific set of standards that may be different from rest of the domain inventories. As a result, when it comes to composing a solution out of services that belong to different domain inventories, some sort of transformation mechanisms may be required in order for the messages to be sent between different service inventories. For example, services within domain inventory A may be using XML schemas that are less granular as compared to the schemas used by the services belonging to domain inventory B. Design patterns like the Data Model Transformation, the Data Format Transformation and the Protocol Bridging design patterns can be applied in order to address the different transformation requirements.
+
+Another important factor is that as different domain inventories are being built by different project teams, there is a higher chance of developing services with duplicate functionality as each team is unaware of the requirements of the other business processes that are being automated.
+

@@ -1,0 +1,29 @@
+Enterprise appliance transaction module
+
+
+# Enterprise appliance transaction module
+
+
+
+An **enterprise appliance transaction module** (EATM) is a device, typically used in the manufacturing automation marketplace, for the transfer of plant floor equipment and product status to manufacturing execution systems (MES), enterprise resource planning (ERP) systems and the like.
+
+Solutions that deliver manufacturing floor integration have evolved over time. Initially they took the form of custom integrated systems, designed and delivered by system integrators. These solutions were largely based on separate commercial off-the-shelf (COTS) products integrated into a custom system.
+Modern EATM products might not needing any software development or custom integration.
+
+
+## Components
+
+**Hardware platform –** embedded computer, computer appliance
+
+**Device communications software –** Support for the automation protocols from which data will be extracted. Device communications software typically operates through polled or change based protocols that are vendor specific. Data to be extracted is typically organized into related items, and transferred based on a machine status such as Cycle Complete, Job Start, System Downtime Event, Operator Change, etc.
+
+Typical protocols; Rockwell Automation CIP, ControlLogix backplane, EtherNet/IP, Siemens Industrial Ethernet, Modbus TCP. There are hundreds of automation device protocols and EATM solutions are typically targeting certain market segments and will be based on automation vendor relationships.
+
+**Enterprise communications software –** Software that will enable communications to enterprise systems. Communications at this level are typically transaction oriented and require data transactions to be sent and acknowledged to ensure the data integrity. Examples include; Relational Database Adapters, Java Message Services (JMS), Oracle Database Interfaces and proprietary interfaces to specific products.
+
+**Transaction application –** Software that is configured to watch and collect device variables, formats them into required transactions, and transfer the results securely and reliably to other systems. The transaction application resides between the device communications and enterprise communications.
+
+Overall, a manufacturing environment is portrayed as a three layer manufacturing pyramid. At the base, device control Systems – Programmable Logic Controller (PLC) and Supervisory Control and Data Acquisition systems (SCADA) perform the process automation functions. A layer above that encompasses Plant Execution Systems that deliver the functions of; Asset Management, Genealogy, statistical process control (SPC]) MES, order tracking, quality assurance and scheduling. At the top most level, enterprise resource planning (ERP) systems offer final control over the enterprise and track overall enterprise performance.
+
+It is the job of EATM to act as a bi-directional bridge between field devices and the supervisory control systems. These field devices could be located in a work cell or an assembly or process line. They could be very simple devices, or programmable controllers, machine controls, or PLCs. The upstream business systems could be ANDON and Kanban systems for that line, manufacturing execution systems (MES), and archival quality databases.
+

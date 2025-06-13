@@ -1,0 +1,116 @@
+Bertrand competition
+
+
+# Bertrand competition
+
+
+
+**Bertrand competition** is a model of competition used in economics, named after Joseph Louis François Bertrand (1822–1900). It describes interactions among firms (sellers) that set prices and their customers (buyers) that choose quantities at the prices set. The model was formulated in 1883 by Bertrand in a review of Antoine Augustin Cournot's book *Recherches sur les Principes Mathématiques de la Théorie des Richesses* (1838) in which Cournot had put forward the Cournot model. Cournot's model argued that each firm should maximise its profit by selecting a quantity level and then adjusting price level to sell that quantity. The outcome of the model equilibrium involved firms pricing above marginal cost; hence, the competitive price. In his review, Bertrand argued that each firm should instead maximise its profits by selecting a price level that undercuts its competitors' prices, when their prices exceed marginal cost. The model was not formalized by Bertrand; however, the idea was developed into a mathematical model by Francis Ysidro Edgeworth in 1889.
+
+
+## Underlying assumptions of Bertrand competition
+
+Considering the simple framework, the underlying assumptions of the Bertrand model are as follows:
+
+* there are {\displaystyle n} firms ({\displaystyle i=1,2,...}) competing in the market that produce homogenous goods; that is, identical products;
+* the market demand function {\displaystyle Q=D(p)}, where *Q* is the summation of quantity produced by firms {\displaystyle Q=\sum \_{i=1}^{n}}{\displaystyle Q\_{i}}, is continuous and downward sloping with {\displaystyle D'(p)<0}*;*
+* the marginal cost is symmetric, {\displaystyle c\_{1}=c\_{2}=...=c} *;*
+* firms don't have a capacity constraint; that is, each firm has the capability to produce enough goods to meet market demand.
+* firms simultaneously set price, without knowing the other firm's decision, and there is no cost of search for the consumer: consumers are able to observe both firms' prices.
+
+Furthermore, it is intuitively deducible, when considering the law of demand of firms' competition in the market:
+
+* the firm that sets the lowest price will acquire the whole market; since, product is homogenous and there is no cost of switching for the customers; and
+* if the price set by the firms is the same, {\displaystyle p\_{1}=p\_{2}=...=p}*,* they will serve the market equally, {\displaystyle {\frac {p}{n}}}.
+
+## The Bertrand duopoly equilibrium
+
+In the Bertrand model, the competitive price serves as a Nash equilibrium for strategic pricing decisions. If both firms establish a competitive price at the marginal cost (unit cost), neither firm obtains profits. If one firm aligns its price with the marginal cost while the other raises its price above the unit cost, the latter earns nothing, as consumers opt for the competitively priced option. No other pricing scenario reaches equilibrium. Setting identical prices above unit cost leads to a destabilizing incentive for each firm to undercut the other, aiming to capture the entire market and significantly boost profits. This lack of equilibrium arises from the firms competing in a market with substitute goods, where consumers favor the cheaper product due to identical preferences. Additionally, equilibrium is not achieved when firms set different prices; the higher-priced firm earns nothing, prompting it to lower prices to undercut the competitor. Therefore, the sole equilibrium in the Bertrand model emerges when both firms establish a price equal to unit cost, known as the competitive price.
+
+It is to highlight that the Bertrand equilibrium is a *weak* Nash-equilibrium. The firms lose nothing by deviating from the competitive price: it is an equilibrium simply because each firm can earn no more than zero profits given that the other firm sets the competitive price and is willing to meet all demand at that price.
+
+
+## Classic modelling of the Bertrand competition
+
+The Bertrand model of price competition in a duopoly market producing homogenous goods has the following characteristics:
+
+* Players: Two firms {\displaystyle i=1,2} with constant marginal cost {\displaystyle c,\ (c\_{1}=c\_{2})};
+* Strategic Variables: Firm's select the price level (i.e., {\displaystyle p\_{i}=p\_{1}});
+* Timing: Simultaneous move game;
+* Firm Payoffs: Profit; and
+* Information: Complete.
+
+Firm {\displaystyle i}’s individual demand function is downward sloping and a function of the price set by each firm:
+
+{\displaystyle D(p\_{i},p\_{j})={\begin{cases}D(p\_{i}),&{\text{if }}p\_{i}<p\_{j}\\{\frac {D(p\_{i})}{2}},&{\text{if }}p\_{i}=p\_{j}\\0,&{\text{otherwise}}\end{cases}}}
+
+Important to note, in this case, the market demand is continuous; however, the firm's demand is discontinuous, as seen in the above function statement. This means the firm's profit function is also discontinuous. Therefore, firm {\displaystyle i} aims to maximise its profit, as stated below, taking {\displaystyle p\_{j}} as given:
+
+{\displaystyle \pi \_{i}=(p\_{i}-c)D(p\_{i})}
+
+In order to derive the best response for firm {\displaystyle i}, let {\displaystyle p\_{m}} be the monopoly price that maximises total industry profit, where {\displaystyle p\_{m}=argmax\_{p}(p-c)D(p)}. This highlights the incentive for firms to 'undercut' rival firms. As if the rival sets the price at {\displaystyle p\_{m}} firm {\displaystyle i} can reduce its price by the smallest currency unit, {\displaystyle \epsilon }, to capture the entire market demand, {\displaystyle D(p)}. Therefore, firm {\displaystyle i} ’s best response is:
+
+{\displaystyle R\_{i}(p\_{j})={\begin{cases}p\_{m},&{\text{if }}p\_{j}\geq p\_{m}\\p\_{j}-\epsilon ,&{\text{if }}c<p\_{j}<p\_{m}\\c,&{\text{if }}p\_{j}\leq c\end{cases}}}
+
+Diagram 1 illustrates firm 1's best response function, {\displaystyle P\_{1}''(P\_{2})}, given the price set by firm 2. Note, {\displaystyle MC} in the diagram stands for marginal cost, {\displaystyle c}. The Nash Equilibrium ({\displaystyle N}) in the Bertrand model is the mutual best response; an equilibrium where neither firm has an incentive to deviate from it. As illustrated in the Diagram 2, the Bertrand-Nash equilibrium occurs when the best response function for both firm's intersects at the point, where {\displaystyle P\_{1}^{N}=P\_{2}^{N}=MC}. This means both firms make zero economic profits.
+
+Therefore, if rival prices below marginal cost, firm ends up making losses attracting extra demand and is better of setting price level to marginal cost. Important to note, Bertrand's model of price competition leads to a perfect competitive outcome. This is known as the Bertrand paradox; as two competitors in a market are sufficient to generate competitive pricing; however, this result is not consistent in many real world industries.
+
+If one firm has lower average cost (a superior production technology), it will charge the highest price that is lower than the average cost of the other one (i.e. a price *just* below the lowest price the other firm can manage) and take all the business. This is known as "limit pricing".
+
+
+## Critical analysis of the Bertrand model
+
+The Bertrand model rests on some very extreme assumptions. For example, it assumes that consumers want to buy from the lowest priced firm. There are various reasons why this may not hold in many markets: non-price competition and product differentiation, transport and search costs. For example, would someone travel twice as far to save 1% on the price of their vegetables? The Bertrand model can be extended to include product or location differentiation but then the main result – that price is driven down to marginal cost – no longer holds. With search costs, there may be other equilibria apart from the competitive price – the monopoly price or even price dispersion may be equilibria as in the classic "Bargains and Rip-offs" model.
+
+The model also ignores capacity constraints. If a single firm does not have the capacity to supply the whole market then the "price equals marginal cost" result may not hold. The analysis of this case was started by Francis Ysidro Edgeworth and has become known as the Bertrand–Edgeworth model. With capacity constraints, there may not exist any pure strategy Nash equilibrium, the so-called Edgeworth paradox. However, in general there will exist a mixed-strategy Nash equilibrium as shown by Huw Dixon.
+
+Moreover, some economists have criticized the model as leading to impractical outcomes in situations, where firms have fixed cost {\displaystyle F} and, as mentioned previously, constant marginal cost, {\displaystyle c}. Hence, the total cost, {\displaystyle TC}, of producing {\displaystyle Q} units is, {\displaystyle TC=F+cQ}. As described in the classic model, prices eventually are driven down to marginal cost, where firms are making zero economic profit and earn no margins on inframarginal units. Thus, firms are not able to recoup any fixed costs. However, if firms have an upward-sloping marginal cost curve, they can earn marginal on infra-marginal sales, which contributes to recouping fixed costs.
+
+There is a big incentive to cooperate in the Bertrand model; colluding to charge the monopoly price, {\displaystyle p\_{m}}, and sharing the market equally, {\displaystyle {\frac {p\_{m}}{n}}}, where {\displaystyle n} is the number of firms in the market. However, not colluding and charging marginal cost is the non-cooperative outcome and the only Nash equilibrium of this model. Therefore, moving from a simultaneous move game to a repeated game with infinite horizon, then collusion is possible because of the Folk Theorem.
+
+
+## Bertrand competition versus Cournot competition
+
+The Bertrand and Cournot model focus on different aspects of the competitive process, which has led to the model identifying different set of mechanisms that vary the characteristics of the market demand that are exhibited by the firms. Cournot model assumes that the market allocates sales equal to whatever any given firm quantity produced, but at the price level determined by the market. Whereas the Bertrand model assumes that the firm with the lowest price acquires all the sales in the market.
+
+When comparing the models, the oligopoly theory suggest that the Bertrand industries are more competitive than Cournot industries. This is because quantities in the Cournot model are considered as strategic substitutes; that is, the increase in quantity level produced by a firm is accommodated by the rival, producing less. Whereas the prices in the Bertrand model are strategic complements; a firm aggressively counters an increase in price level by reducing its price below the rivals.
+
+Moreover, both models are criticised based on the assumptions that are made in comparison to the real-world scenario. However, the results from the classic models can be reconciled in a manner of thinking, as presented below. Considering the models appropriate application in the market:
+
+* Cournot model is applicable in markets where the firm must make production decision in advance and must be committed to selling that quantity level; thus, unlikely to react to fluctuations in rival's quantity produced.
+* Bertrand model is applicable in markets where capacity is sufficiently flexible and firms are capable to meet any market demand that arises at price level, which they set.
+
+Neither model is necessarily "better" than the other. The accuracy of the predictions of each model will vary from industry to industry, depending on the closeness of each model to the industry situation. If capacity and output can be easily changed, Bertrand is generally a better model of duopoly competition. If output and capacity are difficult to adjust, then Cournot is generally a better model.
+
+Under some conditions the Cournot model can be recast as a two-stage model, wherein the first stage firms choose capacities, and in the second they compete in Bertrand fashion.
+
+
+## Bertrand Competition in Real Life
+
+
+### Bertrand Competition with Asymmetric Marginal Costs
+
+In Bertrand Competition, we have made several assumptions, for instance, each firm produces identical goods and cost. However, this is not the case in the real world because there are a lot of factors that lead the cost of different firms to become slightly different like the cost of renting and the larger scale of the firm can enjoy economies of scale. Thus, different researchers tried to investigate the result of Bertrand Competition with asymmetric marginal cost. According to the experiment from “Bertrand competition with asymmetric costs: Experimental evidence”, the author found that there is a negative relationship between the level of asymmetry in the cost and the price set by the firms (J Boone, et al., 2012). It means that firms have different incentives to set their prices.
+
+Thomas Demuynck et al. (2019) conducted research to find out a solution in pure strategies in Bertrand competition with asymmetric costs. Ha has defined the Myopic Stable Set (MSS)for Normal-form games. Suppose there are two firms, we use **C** for the marginal cost, **C1** stands for the marginal cost of firm 1 and **C2** stands for the marginal cost of firm 2. From the result, there are two cases:
+
+* **C1 = C2 = C**
+
+This is the case of the basic Bertrand Competition which both firms have the same marginal cost. From the figure, MSS has illustrated that there is only one unique point that both firms are going to set their price. It is the pure strategy of Nash equilibrium.
+
+* **C1 < C2**
+
+It means that the marginal cost of Firm 2 is higher than the marginal cost of Firm 1. Under this situation, firm 2 can only set their price equal to their marginal cost. On the other hand, Firm 1 can choose its price between its marginal cost and Firm 2's marginal cost. Thus, there are a lot of points for Firm 1 to set its price.
+
+As you can see, Firms may not set their price equal to their marginal cost under asymmetric costs, unlike the standard Bertrand Competition Model. From the situation, firms with the lower marginal cost can choose whatever they want within the range between their marginal cost and other firms’ marginal costs. There is no absolute answer to which price they should set, it is just based on different factors, for example, the current market situation.
+
+At the same time, Subhasish Dugar et al. (2009) conducted research about the relationship between the size of cost asymmetry and Bertrand Competition. They found that there is no huge difference when the cost asymmetry is small as there is relatively little impact on competition. However, the lower-cost firm will undercut the price and capture a large market share when the size of cost asymmetry is large.
+
+
+### Bertrand Competition with Network effects
+
+Also, the standard Bertrand Competition also assumes that all consumers will choose the product from the firm with a lower price and the firm can only set their price based on their marginal costs. However, it is not perfectly correct as the theory did not mention the network effects. Consumers will buy a product based on the number of other consumers using it. It is very rational, like when you purchase sports shoes, most of us will prefer Nike and Adidas. As they are relatively huge brands and both of them have a strong customer network, we will have a certain confidence guarantee with many people are using their products.
+
+However, Christian and Irina (2008)found a different result if the market has a network effects. Firms will prefer to set their price aggressively in order to attract more customers and increase the company network. Masaki (2018) also mentioned firms can gain a larger customer base by setting their prices aggressively and they will attract more and more customers through network effects. It creates a positive feedback loop. As you can see, firms are not only setting their price blindly but also willing to gain a larger customer network.
+

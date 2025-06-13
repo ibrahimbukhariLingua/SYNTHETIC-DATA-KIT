@@ -1,0 +1,34 @@
+Manufacturing supermarket
+
+
+# Manufacturing supermarket
+
+
+
+A **manufacturing supermarket** (or market location) is, for a factory process, what a retail supermarket is for the customer. The customers draw products from the 'shelves' as needed and this can be detected by the supplier who then initiates a replenishment of that item. It was the observation that this 'way of working' could be transferred from retail to manufacturing that is one of the cornerstones of the Toyota Production System (TPS).
+
+
+## History
+
+In the 1950s Toyota sent teams to the United States to learn how they achieved mass-production. However, the Toyota Delegation first got inspiration for their production system at an American Supermarket (a Piggly Wiggly, to be precise). They saw the virtue in the supermarket only reordering and restocking goods once they’d been bought by customers.
+
+In a supermarket (like the TPS) customers (processes) buy what they need when they need it. Since the system is self-service the sales effort (materials management) is reduced. The shelves are refilled as products are sold (parts withdrawn) on the assumption that what has sold will sell again which makes it easy to see how much has been used and to avoid overstocking. The most important feature of a supermarket system is that stocking is triggered by actual demand. In the TPS this signal triggers the 'pull' system of production.
+
+
+## Implementation
+
+Market locations are appropriate where there is a desire to communicate customer pull up the supply chain. The aim of the 'market' is to send single unit consumption signals back up the supply chain so that a demand leveling effect occurs. Just as in a supermarket it is possible for someone to decide to cater for a party of 300 from the supermarket so it is possible to decide to suddenly fill ten trucks and send massively distorting signals up those same pathways. Thus the 'market location' can be used as a sort of isolator between actual demand and how supply would like demand to be, an isolator between batch demand spikes and the up upstream supply process.
+
+For example, if the market were positioned at the loading bay, then it will receive 'spikes' of demand whenever a truck comes in to be loaded. Since, in general, one knows in advance when trucks will arrive and what they will require to be loaded onto them, it is possible to spread that demand spike over a chosen period before the truck actually arrives. It is possible to do this by designating a location, say a marked floor area, to be the 'virtual' truck and moving items from the market to the 'virtual truck' smoothly over the chosen period prior to the load onto the actual truck commencing. Smoothly here means that for each item its 'loading' is evenly spread across the period. For regular shipments this period might start the moment the last shipment in that schedule departs the loading bay. This has four key impacts:
+
+1. *Loading movements rise*, which is the reason often given for not doing this 'virtual' truck loading;
+2. *Demand evenness (Mura) increases* which allows stock reductions and exposes new issues to be resolved;
+3. *Any last minute searching for items to load is eliminated* since before the real truck need to be loaded the 'virtual' truck will have completed its loading;
+4. *Any potential shortages that may affect the shipment can be exposed earlier* by the 'stockout' in the market location. This is true because the 'virtual' truck loading sequence will be constructed to fit with the supply process tempo.
+
+This logic can, obviously, be applied upstream of any batch process and not just deliveries to another plant. It is a workaround for the fact that the batch process hasn't been made to flow yet. It therefore has some costs but the benefits in terms of reducing the three wastes should outweigh these.
+
+Toyota use this technique and demand it of their suppliers in order to generate focus on the supply issues it uncovers. They then demand the preparation of loads for more frequent 'virtual' trucks than will actually appear in order to raise this pressure (see Frequent deliveries).
+
+At low stocking levels for some items the 'market location' can require Just in Sequence supply rather than Just in Time.
+

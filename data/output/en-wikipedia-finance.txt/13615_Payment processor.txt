@@ -1,0 +1,49 @@
+Payment processor
+
+
+# Payment processor
+
+
+
+A **payment processor** is a system that enables financial transactions, commonly employed by a merchant, to handle transactions with customers from various channels such as credit cards and debit cards or bank accounts. They are usually broken down into two types: front-end and back-end.
+
+Front-end processors have connections to various card associations and supply authorization and settlement services to the merchant banks' merchants. Back-end processors accept settlements from front-end processors and, via the Federal Reserve Bank for example, move the money from the issuing bank to the merchant bank.
+
+In an operation that will usually take a few seconds, the payment processor will both check the details received by forwarding them to the respective card's issuing bank or card association for verification, and also carry out a series of anti-fraud measures against the transaction.
+
+Additional parameters, including the card's country of issue and its previous payment history, are also used to gauge the probability of the transaction being approved.
+
+Once the payment processor has received confirmation that the credit card details have been verified, the information is relayed back via the payment gateway to the merchant, who will then complete the payment transaction. If verification is denied by the card association, the payment processor will relay the information to the merchant, who will then decline the transaction.
+
+
+## Evolution of payment technology
+
+After centuries of using metal coins, paper currency made its first appearance in China during the Tang dynasty (around the 10th century AD) and was later introduced to the West in the 17th century. Also in the 17th century, people began to use checks as a payment method, which grew in popularity from the 1800s to the early 1900s. To help streamline and centralize the multiple types of currency, the U.S. Congress passed the Federal Reserve Act in 1913.
+
+The first payment card was created in 1950 by Ralph Schneider and Frank McNamara to allow members to use charge cards at their Diners’ Club, and consumers were required to pay their bill in full each month. In 1959, American Express created the first credit card that allowed users to carry a balance from month to month.
+
+The ATM emerged in the 1960s and 1970s as part of the growing movement toward “self-service” technology. ATMs provided the first technology-enabled banking option that allowed consumers to conveniently deposit and withdraw cash, without being restricted to a particular bank location or business hours.
+
+In 1972, the first Automated Clearinghouse (ACH) association was formed in California in response to bank industry concerns that widespread check usage would outpace the technology needed to process them. ACH became the primary method of electronic funds transfer (EFT) for agencies, businesses, and individuals to pay or collect money online, and is still commonly used today.
+
+Over the following decades, the evolution of payment technology accelerated. The first digital currency is attributed to an algorithm developed by David Chaum in 1983. Although modern folklore suggests the possibility of early internet purchases – specifically, online marijuana sales between MIT and Stanford students in 1971 and 1972, a 1974 pizza order by Donald Sherman, and a 1984 grocery purchase by Jane Snowball – the first legitimately recognized online purchase was most likely a CD sold by Dan Kohn in 1994 using a website he developed called NetMarket.
+
+The first online payment processing company was founded in 1998, first under the name Confinity, which was later changed to X.com, changing again to its current name, PayPal, in 2001. The market continued to expand over the following two decades, branching out into a full payment processing ecosystem that includes card companies, digital wallets and apps, cryptocurrencies, payments software platforms and gateways, eCommerce partnerships, and peer-to-peer payments. Other technologies that are vital to the payment ecosystem are data security systems and processes, automated functionality, and customer engagement tools.
+
+The future of the payment processing industry is being driven by an increase in vertical-specific processors, the accelerated adoption of contactless payment methods (in response to COVID-19-related limitations on contact and in-person interactions), and the trend toward customer choice and autonomy, particularly in western cultures.
+
+
+## Modern implementations
+
+Due to the many regulatory requirements levied on businesses, the modern payment processor is usually partnered with merchants through a concept known as software-as-a-service (SaaS). SaaS payment processors offer a single, regulatory-compliant electronic portal that enables a merchant to scan checks (often called remote deposit capture or RDC), process single and recurring credit card payments (without the merchant storing the card data at the merchant site), process single and recurring ACH and cash transactions, process remittances and Web payments. These cloud-based features occur regardless of origination through the payment processor's integrated receivables management platform. This results in cost reductions, accelerated time-to-market, and improved transaction processing quality.
+
+
+### Transaction processing quality
+
+Electronic payments are highly susceptible to fraud and abuse. Liability for misuse of credit card data can expose the merchant to significant financial loss if they were to attempt to manage such risks on their own. One way to lower this cost and liability exposure is to segment the transaction of the sale from the payment of the amount due. Many merchants offer subscription services, which require payment from a customer every month. SaaS payment processors relieve the responsibility of the management of recurring payments from the merchant and maintain safe and secure the payment information, passing back to the merchant a payment "token" or unique placeholder for the card data.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ Through Tokenization, merchants are able to use this token to process charges, perform refunds, or void transactions without ever storing the payment card data, which can help to make the merchant system PCI-compliant. Tokenization can be either local (on the merchant's system) or remote (on the service provider's system); the latter provides a higher level of security against a breach. Another method of protecting payment card data is Point to Point Encryption, which encrypts cardholder data so that clear text payment information is not accessible within the merchant's system in the event of a data breach. Some payment processors also specialize in high-risk processing for industries that are subject to frequent chargebacks, such as adult video distribution.
+
+
+### Network architecture
+
+The typical network architecture for modern online payment systems is a chain of service providers, each providing unique value to the payment transaction, and each adding cost to the transaction: merchant, point-of-sale (PoS) software as a service (SaaS), aggregator, credit card network, and bank. The merchant can be a brick-and-mortar outlet or an online outlet. The PoS SaaS provider is usually a smaller company that provides customer support to the merchant and is the receiver of the merchant's transactions. The PoS provider represents the aggregator to merchants.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ The PoS provider transaction volumes are small compared to the aggregator transaction volumes, so a direct connection to the major credit card networks is not warranted, because of the low traffic. Additionally, the merchant does not handle enough traffic to warrant a direct connection to the aggregator. In this way, scope and responsibilities are divided among the various business partners to easily manage the technical issues that arise.
+

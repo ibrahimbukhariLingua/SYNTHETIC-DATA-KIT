@@ -1,0 +1,92 @@
+Sharpe ratio
+
+
+# Sharpe ratio
+
+
+
+In finance, the **Sharpe ratio** (also known as the **Sharpe index**, the **Sharpe measure**, and the **reward-to-variability ratio**) measures the performance of an investment such as a security or portfolio compared to a risk-free asset, after adjusting for its risk. It is defined as the difference between the returns of the investment and the risk-free return, divided by the standard deviation of the investment returns. It represents the additional amount of return that an investor receives per unit of increase in risk.
+
+It was named after William F. Sharpe, who developed it in 1966.
+
+
+## Definition
+
+Since its revision by the original author, William Sharpe, in 1994, the *ex-ante* Sharpe ratio is defined as:
+
+where {\displaystyle R\_{a}} is the asset return, {\displaystyle R\_{b}} is the risk-free return (such as a U.S. Treasury security). {\displaystyle E[R\_{a}-R\_{b}]} is the expected value of the excess of the asset return over the benchmark return, and {\displaystyle {\sigma \_{a}}} is the standard deviation of the asset excess return. The t-statistic will equal the Sharpe Ratio times the square root of T (the number of returns used for the calculation).
+
+The *ex-post* Sharpe ratio uses the same equation as the one above but with realized returns of the asset and benchmark rather than expected returns; see the second example below.
+
+The information ratio is a generalization of the Sharpe ratio that uses as benchmark some other, typically risky index rather than using risk-free returns.
+
+
+## Use in finance
+
+The Sharpe ratio seeks to characterize how well the return of an asset compensates the investor for the risk taken. When comparing two assets, the one with a higher Sharpe ratio appears to provide better return for the same risk, which is usually attractive to investors.
+
+However, financial assets are often not normally distributed, so that standard deviation does not capture all aspects of risk. Ponzi schemes, for example, will have a high empirical Sharpe ratio until they fail. Similarly, a fund that sells low-strike put options will have a high empirical Sharpe ratio until one of those puts is exercised, creating a large loss. In both cases, the empirical standard deviation before failure gives no real indication of the size of the risk being run.
+
+Even in less extreme cases, a reliable empirical estimate of Sharpe ratio still requires the collection of return data over sufficient period for all aspects of the strategy returns to be observed. For example, data must be taken over decades if the algorithm sells an insurance that involves a high liability payout once every 5–10 years, and a high-frequency trading algorithm may only require a week of data if each trade occurs every 50 milliseconds, with care taken toward risk from unexpected but rare results that such testing did not capture (see flash crash).
+
+Additionally, when examining the investment performance of assets with smoothing of returns (such as with-profits funds), the Sharpe ratio should be derived from the performance of the underlying assets rather than the fund returns (Such a model would invalidate the aforementioned Ponzi scheme, as desired).
+
+Sharpe ratios, along with Treynor ratios and Jensen's alphas, are often used to rank the performance of portfolio or mutual fund managers. Berkshire Hathaway had a Sharpe ratio of 0.79 for the period 1976 to 2017, higher than any other stock or mutual fund with a history of more than 30 years. The stock marketˢᵖᵉᶜⁱᶠʸ had a Sharpe ratio of 0.49 for the same period.
+
+
+## Tests
+
+Several statistical tests of the Sharpe ratio have been proposed. These include those proposed by Jobson & Korkie and Gibbons, Ross & Shanken.
+
+
+## History
+
+In 1952, Andrew D. Roy suggested maximizing the ratio "(m-d)/σ", where m is expected gross return, d is some "disaster level" (a.k.a., minimum acceptable return, or MAR) and σ is standard deviation of returns. This ratio is just the Sharpe ratio, only using minimum acceptable return instead of the risk-free rate in the numerator, and using standard deviation of returns instead of standard deviation of excess returns in the denominator. Roy's ratio is also related to the Sortino ratio, which also uses MAR in the numerator, but uses a different standard deviation (semi/downside deviation) in the denominator.
+
+In 1966, William F. Sharpe developed what is now known as the Sharpe ratio. Sharpe originally called it the "reward-to-variability" ratio before it began being called the Sharpe ratio by later academics and financial operators. The definition was:
+
+Sharpe's 1994 revision acknowledged that the basis of comparison should be an applicable benchmark, which changes with time. After this revision, the definition is:
+
+Note, if {\displaystyle R\_{f}} is a constant risk-free return throughout the period,
+
+The (original) Sharpe ratio has often been challenged with regard to its appropriateness as a fund performance measure during periods of declining markets.
+
+
+## Examples
+
+**Example 1**
+
+Suppose the asset has an expected return of 15% in excess of the risk free rate. We typically do not know if the asset will have this return. We estimate the risk of the asset, defined as standard deviation of the asset's excess return, as 10%. The risk-free return is constant. Then the Sharpe ratio using the old definition is {\displaystyle {\frac {R\_{a}-R\_{f}}{\sigma \_{a}}}={\frac {0.15}{0.10}}=1.5}
+
+**Example 2**
+
+An investor has a portfolio with an expected return of 12% and a standard deviation of 10%. The rate of interest is 5%, and is risk-free.
+
+The Sharpe ratio is: {\displaystyle {\frac {0.12-0.05}{0.1}}=0.7}
+
+
+## Strengths and weaknesses
+
+A negative Sharpe ratio means the portfolio has underperformed its benchmark. All other things being equal, an investor typically prefers a higher positive Sharpe ratio as it has either higher returns or lower volatility. However, a negative Sharpe ratio can be made higher by either increasing returns (a good thing) or increasing volatility (a bad thing). Thus, for negative values the Sharpe ratio does not correspond well to typical investor utility functions.
+
+The Sharpe ratio is convenient because it can be calculated purely from any observed series of returns without need for additional information surrounding the source of profitability. However, this makes it vulnerable to manipulation if opportunities exist for smoothing or discretionary pricing of illiquid assets. Statistics such as the bias ratio and first order autocorrelation are sometimes used to indicate the potential presence of these problems.
+
+While the Treynor ratio considers only the systematic risk of a portfolio, the Sharpe ratio considers both systematic and idiosyncratic risks. Which one is more relevant will depend on the portfolio context.
+
+The returns measured can be of any frequency (i.e. daily, weekly, monthly or annually), as long as they are normally distributed, as the returns can always be annualized. Herein lies the underlying weakness of the ratio – asset returns are not normally distributed. Abnormalities like kurtosis, fatter tails and higher peaks, or skewness on the distribution can be problematic for the ratio, as standard deviation doesn't have the same effectiveness when these problems exist.
+
+For Brownian walk, Sharpe ratio {\displaystyle \mu /\sigma } is a **dimensional quantity** and has units {\displaystyle 1/{\sqrt {T}}}, because the excess return {\displaystyle \mu } and the volatility {\displaystyle \sigma } are proportional to {\displaystyle 1/{\sqrt {T}}} and {\displaystyle 1/T} correspondingly. Kelly criterion is a **dimensionless quantity**, and, indeed, Kelly fraction {\displaystyle \mu /\sigma ^{2}} is the numerical fraction of wealth suggested for the investment.
+
+In some settings, the Kelly criterion can be used to convert the Sharpe ratio into a rate of return. The Kelly criterion gives the ideal size of the investment, which when adjusted by the period and expected rate of return per unit, gives a rate of return.
+
+The accuracy of Sharpe ratio estimators hinges on the statistical properties of returns, and these properties can vary considerably among strategies, portfolios, and over time.
+
+
+### Drawback as fund selection criteria
+
+Bailey and López de Prado (2012) show that Sharpe ratios tend to be overstated in the case of hedge funds with short track records. These authors propose a probabilistic version of the Sharpe ratio that takes into account the asymmetry and fat-tails of the returns' distribution. With regards to the selection of portfolio managers on the basis of their Sharpe ratios, these authors have proposed a *Sharpe ratio indifference curve* This curve illustrates the fact that it is efficient to hire portfolio managers with low and even negative Sharpe ratios, as long as their correlation to the other portfolio managers is sufficiently low.
+
+Goetzmann, Ingersoll, Spiegel, and Welch (2002) determined that the best strategy to maximize a portfolio's Sharpe ratio, when both securities and options contracts on these securities are available for investment, is a portfolio of selling one out-of-the-money call and selling one out-of-the-money put. This portfolio generates an immediate positive payoff, has a large probability of generating modestly high returns, and has a small probability of generating huge losses. Shah (2014) observed that such a portfolio is not suitable for many investors, but fund sponsors who select fund managers primarily based on the Sharpe ratio will give incentives for fund managers to adopt such a strategy.
+
+In recent years, many financial websites have promoted the idea that a Sharpe Ratio "greater than 1 is considered acceptable; a ratio higher than 2.0 is considered very good; and a ratio above 3.0 is excellent." While it is unclear where this rubric originated online, it makes little sense since the magnitude of the Sharpe ratio is sensitive to the time period over which the underlying returns are measured. This is because the nominator of the ratio (returns) scales in proportion to time; while the denominator of the ratio (standard deviation) scales in proportion to the square root of time. Most diversified indexes of equities, bonds, mortgages or commodities have annualized Sharpe ratios below 1, which suggests that a Sharpe ratio consistently above 2.0 or 3.0 is unrealistic.
+

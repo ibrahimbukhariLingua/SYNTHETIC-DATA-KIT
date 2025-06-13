@@ -1,0 +1,54 @@
+Thawte
+
+
+# Thawte
+
+
+
+**Thawte Consulting** (pronounced "thought"ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ) is a certificate authority (CA) for X.509 certificates. Thawte was founded in 1995 by Mark Shuttleworth in South Africa. As of December 30, 2016, its then-parent company, Symantec Group, was collectively the third largest public CA on the Internet with 17.2% market share.
+
+
+## History
+
+Thawte was originally run from Mark Shuttleworth's parents' garage. Shuttleworth aimed to produce a secure server not fettered by the restrictions on the export of cryptography which had been imposed by the United States. The server, Sioux, was a fork of the Apache HTTP server; it was later integrated with the Stronghold web server as Thawte began to concentrate more on their certification activities.
+
+In 1999, Verisign acquired Thawte in a stock purchase from Shuttleworth for US $575 million. Both Verisign and Thawte had certificates in the first Netscape browsers, and were thus "grandfathered" into all other web browsers. Before Verisign's purchase, they each had about 50% of the market. Verisign's certificate rollover was due to take place on 1 January 2000—an unfortunate choice considering the imminent Y2K bug. (Thawte had a similar rollover in July 1998.) The purchase of Thawte ensured there would be no business loss over Y2K.
+
+Proceeds from the sale enabled Shuttleworth to become the second space tourist and to found the Ubuntu project through the creation of Canonical.
+
+In August 2010, Symantec acquired Verisign's security business, including Thawte.
+
+Thawte is now part of DigiCert with its acquisition of Symantec's web security assets in 2017.
+
+
+## Root certificate untrust
+
+Following Thawte's improper issuance of certificates and a dispute with Google, the GeoTrust Root Certificate became untrusted. This led to the sale of Symantec's certificate business which included Thawte in August 2017 to Thoma Bravo LLC for $1 billion with the intention of merging it with DigiCert.
+
+From 1 December 2017, Thawte started to issue all new certificates under the DigiCert Trusted Root TLS Certificate.
+
+
+## Web of Trust
+
+The Thawte Web of Trust was discontinued on 16 November 2009. Thawte used to issue free email certificates and the Thawte Web of Trust was the optional identity verification mechanism for it. To obtain a free Thawte email certificate, a person needed to sign up for a Thawte FreeMail account which allowed a person to create as many certificates as they wanted. Although each certificate was associated with exactly one email address, multiple email addresses could have been associated with a single Thawte FreeMail account. So if a person had more than one email address, they could have created a different certificate for each of them through the same account.
+
+Associating the Thawte FreeMail account with the real identity of the person owning was based on a Web of trust model. The person's identity was assured by meeting face-to-face with one or more "Thawte Notaries" who needed to see identification and keep a copy of it (for at least five years). Points were assigned by the notaries. The number of points a notary could have assigned ranges from 10 to 35. In general, the more experienced a notary was the more points they could have assigned (see table below). Notaries who were directly verified by Thawte, through events Thawte attended or held, automatically could have issued 35 points without needing to gain experience.
+
+The number of points determined what that person's account can do. With fewer than 50 points, the certificates issued had "Thawte Freemail Member" in the name field. With 50 or more points, the certificates had the person's name in it. The presence of the person's real name in the certificate can be useful for identifying the certificate (e.g., when stored in a key store) and to help the recipient to recognise and trust the certificate. For the purposes of signing and encrypting both types of certificates could be used in the same way, because both types of certificates had the person's email address in it.
+
+With 100 or more points, a person became a Thawte Notary. When a person becomes a notary, they were initially listed underneath their country. They could then change that location and add text to advertise the services they offer. Changes to the advertising text were approved by Thawte and the notary was placed in a pending state while it waits approval. The approval process could take several weeks, during which the person's advertisement was not published and the system did not let them access it as a notary. Cross notarisation was not allowed: a notary could not notarise a person who had notarised them.
+
+| Assertions made by the notary | Maximum points that the notary may award |
+| --- | --- |
+| 0 | 10 |
+| 5 | 15 |
+| 10 | 20 |
+| 15 | 25 |
+| 25 | 30 |
+| 35 | 35 |
+
+
+### After end of life
+
+Thawte Notaries have been submitting minimal information to the Gossamer Spider Web of Trust ("GSWoT"; a grass-roots OpenPGP PKI) for safe-keeping in hopes to increase the longevity of their earned trust points. The collaborative effort aims to bind Thawte Notary names and email addresses to their now-existing entry on Thawte's Web of Trust Notary Map. Thawte Notaries from within and without GSWoT are performing the validations. The initiative will bear no fruit if Thawte Notaries fail to find or create a WoT that will recognise their former status as a Thawte Web of Trust Notary. The Thawte WoT Notaries List on GSWoT was maintained until 16 November 2010. CAcert, the free certification authority, took over a large part of the participants of the Thawte Web of Trust through a special programme.
+

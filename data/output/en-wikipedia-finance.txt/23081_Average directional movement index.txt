@@ -1,0 +1,33 @@
+Average directional movement index
+
+
+# Average directional movement index
+
+
+
+The **average directional movement index** (**ADX**) was developed in 1978 by J. Welles Wilder as an indicator of trend strength in a series of prices of a financial instrument. ADX has become a widely used indicator for technical analysts, and is provided as a standard in collections of indicators offered by various trading platforms.
+
+
+## Calculations
+
+The ADX is a combination of two other indicators developed by Wilder, the positive directional indicator (abbreviated +DI) and negative directional indicator (-DI).
+The ADX combines them and smooths the result with a smoothed moving average.
+
+To calculate +DI and -DI, one needs price data consisting of high, low, and closing prices each period (typically each day). One first calculates the directional movement (+DM and -DM):
+
+After selecting the number of periods (Wilder used 14 days originally), +DI and -DI are:
+
+The smoothed moving average is calculated over the number of periods selected, and the average true range is a smoothed average of the true ranges. Then:
+
+Variations of this calculation typically involve using different types of moving averages, such as an exponential moving average, a weighted moving average or an adaptive moving average.
+
+
+## Interpretation
+
+The ADX does not indicate trend direction or momentum, only trend strength. It is a lagging indicator; that is, a trend must have established itself before the ADX will generate a signal that a trend is under way. ADX will range between 0 and 100. Generally, ADX readings below 20 indicate trend weakness, and readings above 40 indicate trend strength. An extremely strong trend is indicated by readings above 50. Alternative interpretations have also been proposed and accepted among technical analysts. For example it has been shown how ADX is a reliable coincident indicator of classical chart pattern development, whereby ADX readings below 20 occur just prior to pattern breakouts. The value of the ADX is proportional to the slope of the trend. The slope of the ADX line is proportional to the acceleration of the price movement (changing trend slope). If the trend is a constant slope then the ADX value tends to flatten out.
+
+
+## Timing
+
+Various market timing methods have been devised using ADX. One of these methods is discussed by Alexander Elder in his book Trading for a Living. One of the best buy signals is when ADX turns up when below both Directional Lines and +DI is above -DI. You would sell when ADX turns back down.
+

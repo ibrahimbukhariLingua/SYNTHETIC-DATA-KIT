@@ -1,0 +1,61 @@
+Arrow–Debreu exchange market
+
+
+# Arrow–Debreu exchange market
+
+
+
+In theoretical economics, an **Arrow–Debreu exchange market** is a special case of the Arrow–Debreu model in which there is no production - there is only an exchange of already-existing goods. An Arrow–Debreu exchange market has the following ingredients:
+
+* A set of {\displaystyle m} divisible products.
+* A set of {\displaystyle n} agents.
+* Each agent {\displaystyle i=1,\dots ,n}, has an *endowment* {\displaystyle e\_{i}}, which is a set of products.
+
+Each product {\displaystyle j} has a price {\displaystyle p\_{j}}; the prices are determined by methods described below. The price of a *bundle* of products is the sum of the prices of the products in the bundle. A bundle is represented by a vector {\displaystyle x=x\_{1},\dots ,x\_{m}}, where {\displaystyle x\_{j}} is the quantity of product {\displaystyle j}. So the price of a bundle {\displaystyle x} is {\displaystyle p\cdot x=\sum \_{j=1}^{m}p\_{j}\cdot x\_{j}}.
+
+Given a price-vector, the *budget* of an agent is the total price of his endowment, {\displaystyle p\cdot e\_{i}}.
+
+A bundle is *affordable* for a buyer if the price of that bundle is at most the buyer's budget. I.e, a bundle {\displaystyle x} is affordable for buyer {\displaystyle i} if {\displaystyle p\cdot x\leq p\cdot e\_{i}}.
+
+Each buyer has a preference relation over bundles, which can be represented by a utility function. The utility function of buyer {\displaystyle i} is denoted by {\displaystyle u\_{i}}. The *demand set* of a buyer is the set of affordable bundles that maximize the buyer's utility among all affordable bundles, i.e.:
+
+{\displaystyle {\text{Demand}}\_{i}(p):=\arg \max \_{p\cdot x\leq p\cdot e\_{i}}u\_{i}(x)}.
+
+A **competitive equilibrium** (CE) is a price-vector {\displaystyle p\_{1},\dots ,p\_{m}}in which it is possible to allocate, to each agent, a bundle from his demand-set, such that the total allocation exactly equals the supply of products. The corresponding prices are called *market-clearing prices*. A CE always exists, even in the more general Arrow–Debreu model. The main challenge is to find a CE.
+
+
+## Computing an equilibrium
+
+
+### Approximate CE
+
+Kakade, Kearns and Ortiz gave algorithms for approximate CE in a generalized Arrow-Debreu market in which agents are located on a graph and trade may occur only between neighboring agents. They considered non-linear utilities.
+
+
+### Exact CE
+
+Jain presented the first polynomial-time algorithm for computing an exact CE when all agents have linear utilities. His algorithm is based on solving a convex program using the ellipsoid method and simultaneous diophantine approximation. He also proved that the set of assignments at equilibrium is convex, and the equilibrium prices themselves are log-convex.
+
+Based on Jain's algorithm, Ye developed a more practical interior-point method for finding a CE.
+
+Devanur and Kannan gave algorithms for exchange markets with concave utility functions, where all resources are goods (the utilities are positive):
+
+* When the utilities are SPLC (Separable Piecewise-Linear Concave) and either *n* or *m* is a constant, their algorithm is polynomial in the other parameter. The technique is decomposing the space of possible prices into *cells* using a constant number of hyperplanes, so that in each cell, each buyer’s threshold marginal utility is known. When both *n* and *m* are variable, it was left open whether a polytime algorithm exists. Later, Chen, Dai, Du and Teng proved that, with SPLC utilities, computing a CE is PPAD-hard. Their proof shows also that this market-equilibrium problem does not have an FPTAS unless PPAD is contained in P.
+* When the utilities are PLC (Piecewise-Linear Concave, but not necessarily separable) and *m* is constant, their algorithm is polynomial in *n*. But when both *m* and *n* are variable, finding a CE is PPAD-hard even for Leontief utilities, which are a special case of PLC utilities (when *n* is constant but *m* is variable, it was left open whether a polytime algorithm exists).
+
+Codenotti, McCune, Penumatcha and Varadarajan gave an algorithm for Arrow-Debreu markes with CES utilities where the elasticity of substitution is at least 1/2.
+
+Chaudhury, Garg, McGlaughlin and Mehta prove that, when the products are bads, computing an equilibrium is PPAD-hard even when utilities are linear, and even under a certain condition that guarantees CE existence.
+
+
+### CE for markets with production
+
+Newman and Primak studied two variants of the ellipsoid method for finding an approximate CE in an Arrow-Debreu market *with production*, when all agents have linear utilities. They proved that the inscribed ellipsoid method is more computationally efficient than the circumscribed ellipsoid method.
+
+
+## Related models
+
+A Fisher market is a simpler market in which agents are only buyers - not sellers. Each agent comes with a pre-specified budget, and can use it to buy goods at the given price.
+
+In a Fisher market, increasing prices always decreases the agents' demand, as they can buy less with their fixed budget. However, in an Arrow-Debreu exchange market, increasing prices also increases the agents' budgets, which means that the demand is not a monotone function of the prices. This makes computing a CE in an Arrow-Debreu exchange market much more challenging.
+

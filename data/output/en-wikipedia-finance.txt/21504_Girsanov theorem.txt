@@ -1,0 +1,108 @@
+Girsanov theorem
+
+
+# Girsanov theorem
+
+
+
+In probability theory, **Girsanov's theorem** or the **Cameron-Martin-Girsanov theorem** explains how stochastic processes change under changes in measure. The theorem is especially important in the theory of financial mathematics as it explains how to convert from the physical measure, which describes the probability that an underlying instrument (such as a share price or interest rate) will take a particular value or values, to the risk-neutral measure which is a very useful tool for evaluating the value of derivatives on the underlying.
+
+
+## History
+
+Results of this type were first proved by Cameron-Martin in the 1940s and by Igor Girsanov in 1960. They have been subsequently extended to more general classes of process culminating in the general form of Lenglart (1977).
+
+
+## Significance
+
+Girsanov's theorem is important in the general theory of stochastic processes since it enables the key result that if *Q* is a measure that is absolutely continuous with respect to *P* then every *P*-semimartingale is a *Q*-semimartingale.
+
+
+## Statement of theorem
+
+We state the theorem first for the special case when the underlying stochastic process is a Wiener process. This special case is sufficient for risk-neutral pricing in the Black–Scholes model.
+
+Let {\displaystyle \{W\_{t}\}} be a Wiener process on the Wiener probability space {\displaystyle \{\Omega ,{\mathcal {F}},P\}}. Let {\displaystyle X\_{t}} be a measurable process adapted to the natural filtration of the Wiener process {\displaystyle \{{\mathcal {F}}\_{t}^{W}\}}; we assume that the usual conditions have been satisfied.
+
+Given an adapted process {\displaystyle X\_{t}} define
+
+where {\displaystyle {\mathcal {E}}(X)} is the stochastic exponential of *X* with respect to *W*, i.e.
+
+and {\displaystyle [X]\_{t}} denotes the quadratic variation of the process *X*.
+
+If {\displaystyle Z\_{t}} is a martingale then a probability
+measure *Q* can be defined on {\displaystyle \{\Omega ,{\mathcal {F}}\}} such that Radon–Nikodym derivative
+
+Then for each *t* the measure *Q* restricted to the unaugmented sigma fields {\displaystyle {\mathcal {F}}\_{t}^{o}} is equivalent to *P* restricted to
+
+Furthermore, if {\displaystyle Y\_{t}} is a local martingale under *P* then the process
+
+is a *Q* local martingale on the filtered probability space {\displaystyle \{\Omega ,F,Q,\{{\mathcal {F}}\_{t}^{W}\}\}}.
+
+
+## Corollary
+
+If *X* is a continuous process and *W* is a Brownian motion under measure *P* then
+
+is a Brownian motion under *Q*.
+
+The fact that {\displaystyle {\tilde {W}}\_{t}} is continuous is trivial; by Girsanov's theorem it is a *Q* local martingale, and by computing
+
+it follows by Levy's characterization of Brownian motion that this is a *Q* Brownian
+motion.
+
+
+### Comments
+
+In many common applications, the process *X* is defined by
+
+For *X* of this form then a necessary and sufficient condition for {\displaystyle {\mathcal {E}}(X)} to be a martingale is Novikov's condition which requires that
+
+The stochastic exponential {\displaystyle {\mathcal {E}}(X)} is the process *Z* which solves the stochastic differential equation
+
+The measure *Q* constructed above is not equivalent to *P* on {\displaystyle {\mathcal {F}}\_{\infty }} as this would only be the case if the Radon–Nikodym derivative were a uniformly integrable martingale, which the exponential martingale described above is not. On the other hand, as long as Novikov's condition is satisfied the measures are equivalent on {\displaystyle {\mathcal {F}}\_{T}}.
+
+Additionally, then combining this above observation in this case, we see that the process
+
+{\displaystyle {\tilde {W}}\_{t}=W\_{t}-\int \_{0}^{t}Y\_{s}ds}
+
+for {\displaystyle t\in [0,T]} is a Q Brownian motion. This was Igor Girsanov's original formulation of the above theorem.
+
+
+## Application to finance
+
+This theorem can be used to show in the Black–Scholes model the unique risk-neutral measure, i.e. the measure in which the fair value of a derivative is the discounted expected value, Q, is specified by
+
+
+## Application to Langevin equations
+
+Another application of this theorem, also given in the original paper of Igor Girsanov, is for stochastic differential equations. Specifically, let us consider the equation
+
+{\displaystyle dX\_{t}=\mu (t,X\_{t})dt+dW\_{t},}
+
+where {\displaystyle W\_{t}} denotes a Brownian motion. Here {\displaystyle \mu } and {\displaystyle \sigma } are fixed deterministic functions. We assume that this equation has a unique strong solution on {\displaystyle [0,T]}. In this case Girsanov's theorem may be used to compute functionals of {\displaystyle X\_{t}} directly in terms a related functional for Brownian motion. More specifically, we have for any bounded functional {\displaystyle \Phi } on continuous functions {\displaystyle C([0,T])} that
+
+{\displaystyle E\Phi (X)=E\left[\Phi (W)\exp \left(\int \_{0}^{T}\mu (s,W\_{s})dW\_{s}-{\frac {1}{2}}\int \_{0}^{T}\mu (s,W\_{s})^{2}ds\right)\right].}
+
+This follows by applying Girsanov's theorem, and the above observation, to the martingale process
+
+{\displaystyle Y\_{t}=\int \_{0}^{t}\mu (s,W\_{s})dW\_{s}.}
+
+In particular, with the notation above, the process
+
+{\displaystyle {\tilde {W}}\_{t}=W\_{t}-\int \_{0}^{t}\mu (s,W\_{s})ds}
+
+is a Q Brownian motion. Rewriting this in differential form as
+
+{\displaystyle dW\_{t}=d{\tilde {W}}\_{t}+\mu (t,W\_{t})dt,}
+
+we see that the law of {\displaystyle W\_{t}} under Q solves the equation defining {\displaystyle X\_{t}}, as {\displaystyle {\tilde {W}}\_{t}} is a Q Brownian motion. In particular, we see that the right-hand side may be written as {\displaystyle E\_{Q}[\Phi (W)]}, where Q is the measure taken with respect to the process Y, so the result now is just the statement of Girsanov's theorem.
+
+A more general form of this application is that if both
+
+{\displaystyle dX\_{t}=\mu (X\_{t},t)dt+\sigma (X\_{t},t)dW\_{t},} {\displaystyle dY\_{t}=(\mu (Y\_{t},t)+\nu (Y\_{t},t))dt+\sigma (Y\_{t},t)dW\_{t},}
+
+admit unique strong solutions on {\displaystyle [0,T]}, then for any bounded functional on {\displaystyle C([0,T])}, we have that
+
+{\displaystyle E\Phi (X)=E\left[\Phi (Y)\exp \left(-\int \_{0}^{T}{\frac {\nu (Y\_{s},s)}{\sigma (Y\_{s},s)}}dW\_{s}-{\frac {1}{2}}\int \_{0}^{T}{\frac {\nu (Y\_{s},s)^{2}}{\sigma (Y\_{s},s)^{2}}}ds\right)\right].}
+

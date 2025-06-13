@@ -1,0 +1,125 @@
+Year loss table
+
+
+# Year loss table
+
+
+
+A **year loss table** (**YLT**) is a table that lists historical or simulated years, with financial losses for each year. YLTs are widely used in catastrophe modeling as a way to record and communicate historical or simulated losses from catastrophes. The use of lists of years with historical or simulated financial losses is discussed in many references on catastrophe modelling and disaster risk management, but it is only more recently that the term *YLT* has been standardized.
+
+
+## Overview
+
+
+### Year of interest
+
+In a simulated YLT, each year of simulated loss is considered a possible loss outcome for a single year, defined as the *year of interest*, which is usually in the future. In insurance industry catastrophe modelling, the year of interest is often this year or next, due to the annual nature of many insurance contracts.
+
+
+### Events
+
+Many YLTs are event based; that is, they are constructed from historical or simulated catastrophe events, each of which has an associated loss. Each event is allocated to one or more years in the YLT and there may be multiple events in a year. The events may have an associated frequency model, that specifies the distribution for the number of different types of events per year, and an associated severity distribution, that specifies the distribution of loss for each event.
+
+
+### Use in insurance
+
+YLTs are widely used in the insurance industry, as they are a flexible way to store samples from a distribution of possible losses. Two properties make them particularly useful:
+
+* The number of events within a year can be distributed according to any probability distribution and is not restricted to the Poisson distribution
+* Two YLTs, each with an arbitrary number of years, can be combined, year by year, to create a new YLT with the same number of years
+
+## Examples of YLTs
+
+YLTs are often stored in either long-form or short-form.
+
+
+### Long-form YLTs
+
+In a long-form YLT, each row corresponds to a different loss-causing event. For each event, the YLT records the year, the event, the loss, and any other relevant information about the event.
+
+| Year | Event IDs | Event loss |
+| --- | --- | --- |
+| 1 | 965 | $100,000 |
+| 1 | 7 | $1,000,000 |
+| 2 | 432 | $400,000 |
+| 3 | - | - |
+| ... | ... | ... |
+| 100,000 | 7 | $1,000,000 |
+| 100,000 | 300,001 | $2,000,000 |
+| 100,000 | 2 | $3,000,000 |
+
+In this example:
+
+* The Events IDs refer to a separate database that defines the characteristics of the events, known as an event loss table (ELT)
+* Year 1 contains two events: events 965 and 7, with losses of $100,000 and $1,000,000, giving a total loss in year 1 of $1,100,000
+* Year 2 only contains one event
+* Year 3 contains no events
+* Event 7 occurs (at least) twice, in years 1 and 100,000
+* Year 100,000 contains 3 events, with a total loss of $6,000,000
+
+### Short-form YLTs
+
+In a short-form YLT, each row of the YLT corresponds to a different year. For each event, the YLT records the year, the loss, and any other relevant information about that year.
+
+The same YLT above, condensed to a short form, would look like:
+
+| Year | Annual Total Loss |
+| --- | --- |
+| 1 | $1,100,000 |
+| 2 | $400,000 |
+| 3 | $0 |
+| ... | ... |
+| 100,000 | $6,000,000 |
+
+
+## Frequency models
+
+The most commonly used frequency model for the events in a YLT is the Poisson distribution with constant parameters. An alternative frequency model is the mixed Poisson distribution, which allows for the temporal and spatial clustering of events.
+
+
+## Stochastic parameter YLTs
+
+When YLTs are generated from parametrized mathematical models, they may use the same parameter values in each year (fixed parameter YLTs), or different parameter values in each year (stochastic parameter YLTs).
+
+As an example, the annual frequency of hurricanes hitting the United States might be modelled as a Poisson distribution with an estimated mean of 1.67 hurricanes per year. The estimation uncertainty around the estimate of the mean might considered to be a gamma distribution. In a fixed parameter YLT, the number of hurricanes every year would be simulated using a Poisson distribution with a mean of 1.67 hurricanes per year, and the distribution of estimation uncertainty would be ignored. In a stochastic parameter YLT, the number of hurricanes in each year would be simulated by first simulating the mean number of hurricanes for that year from the gamma distribution, and then simulating the number of hurricanes itself from a Poisson distribution with the simulated mean.
+
+In the fixed parameter YLT the mean of the Poisson distribution used to model the frequency of hurricanes, by year, would be:
+
+| Year | Poisson mean |
+| --- | --- |
+| 1 | 1.67 |
+| 2 | 1.67 |
+| 3 | 1.67 |
+| ... | ... |
+| 100,000 | 1.67 |
+
+In the stochastic parameter YLT the mean of the Poisson distribution used to model the frequency of hurricanes, by year, might be:
+
+| Year | Poisson mean |
+| --- | --- |
+| 1 | 1.70 |
+| 2 | 1.62 |
+| 3 | 1.81 |
+| ... | ... |
+| 100,000 | 1.68 |
+
+
+## Adjusting YLTs and WYLTs
+
+It is often of interest to adjust YLTs, perform sensitivity tests, or make adjustments for climate change. Adjustments can be made in several different ways. If a YLT has been created by simulating from a list of events with given frequencies, then one simple way to adjust the YLT is to resimulate but with different frequencies. Resimulation with different frequencies can be made much more accurate by using the incremental simulation approach.
+
+YLTs can be adjusted by applying weights to the years, which converts a YLT to a WYLT. An example would be adjusting weather and climate risk YLTs to account for the effects of climate variability and change.
+
+A general and principled method for applying weights to YLTs is importance sampling, in which the weight on the year {\displaystyle i} is given by the ratio of the probability of year {\displaystyle i} in the adjusted model to the probability of year {\displaystyle i} in the unadjusted model. Importance sampling can be applied to both fixed parameter YLTs and stochastic parameter YLTs.
+
+WYLTs are less flexible in some ways than YLTs. For instance, two WYLTs with different weights, cannot easily be combined to create a new WYLT. For this reason, it may be useful to convert WYLTs to YLTs. This can be done using the method of repeat-and-delete, in which years with high weights are repeated one or more times and years with low weights are deleted.
+
+
+## Calculating metrics from YLTs and WYLTs
+
+Standard risk metrics can be calculated straightforwardly from YLTs and WYLTs. Some examples are:
+
+* The average annual loss
+* The event exceedance frequencies
+* The distribution of annual total losses
+* The distribution of annual maximum losses

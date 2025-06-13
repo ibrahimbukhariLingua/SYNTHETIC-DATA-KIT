@@ -1,0 +1,94 @@
+Wealth Lab
+
+
+# Wealth Lab
+
+
+
+**Wealth Lab** is a technical analysis and electronic trading platform previously owned by Fidelity Investments. The original software was developed by Dion Kurczek and released in 2000. The software was acquired by Fidelity Investments in 2004 and released to their customers as "Wealth Lab Pro". Fidelity decommissioned Wealth Lab Pro in July 2020. Shortly thereafter, the original Wealth Lab team rewrote the code base and independently released version 7. Currently, the client is at version 8 and runs on Microsoft Windows .NET 8. Users with subscriptions can program, backtest, and automate trading strategies for various financial markets, including stocks, futures, forex, options, and cryptocurrencies.
+
+
+## Software
+
+Wealth-Lab has an integrated programming environment based on C# syntax with added versatility derived from using its own pascal-like programming language, Wealthscript. Although it is geared toward programmers, it has a drag & drop feature that allows non-programmers to create their own trading strategies based on technical analysis without the necessity to edit or even view any source code. This ability to custom build trading strategies by dragging & dropping basic entry and exit modes and their indicators, not only allows non-programmers to create and use strategy scripts, it expedites the process of programming for both experienced and novice developers.
+
+Wealth-Lab requires Market data in order to perform the majority of its operations. In its standard installation, several market data sources are provided such as Yahoo! Finance's free End Of Day data. Users can also lease real-time market data from reputable sources such as Commodity System Inc.
+
+Displaying the market data in meaningful ways, i.e. charting, is one of the user's primary activity. Wealth-Lab displays market data in all the typical formats, namely, candlesticks, line, and OHLC; and even the non-typical formats such as kagi chart, Renko, equicandle to name a few. It also allows users to simply drag & drop one or more indicators, from its vast library, right onto a chart subsequently creating panels and annotations for each indicator. In addition to standard technical analysis indicators, users will also find a substantial amount of fundamental analysis indicators to apply to their charts.
+
+Backtesting strategies is at the heart of Wealth-Lab. User can either "Explore & Backtest" or "Build & Backtest". ´Build´ refers to the drag & drop method of strategy creation where as ´Explore´ refers to prebuilt strategies that are pre-installed or can be downloaded from the support website, Wealth-Lab.com managed by WL Systems, Inc.. The advantage of the prebuilt strategies is the ability to optimize the parameters. The installation comes with two optimization methods: exhaustive or Monte Carlo which uses a unique method of employing random numbers to create simulations. There are many more Wealth-Lab optimizers that can be installed from Wealth-Lab's extension manager.
+
+Developers can also program and share their own indicators, optimizers and strategy scripts, and it has been this open platform philosophy that has contributed to the establishment of a supportive developer's community.
+
+
+## Client availability
+
+Wealth-Lab 8 is available by subscription to customers worldwide without exception, including U.S. and Canada.
+
+Version 6
+Prior to August 2020, two legacy versions of Wealth-Lab existed. Wealth-Lab "Pro" was available to Fidelity premium account holders in the US (only). Consumers outside of the US (and Canada), however, could obtain a version of the software known as Wealth-Lab "Developer" via the support website. The difference between the two versions resided in their use of market data streams, custom software extensions, and technical support.
+
+In August 2020, Fidelity discontinued the "Pro" version and transitioned customers to use Wealth-Lab Developer 6 and in March 2021 Wealth-Lab 7 was launched, supporting customers worldwide.
+
+
+## Technical support
+
+All Wealth-Lab software users can get supplemental help designing and debugging their strategies via the developers community which is accessible via the forums and wiki found on the support website.
+Supplemental programming help for creating strategies or extensions is also available at cost by creating a Concierge support request.
+
+
+## Extensions
+
+Wealth-Lab 8 is noted for its extensibility, allowing seamless integration of broker and historical/realtime data providers, optimizers, position sizing methods, compiled strategies, reusable method libraries, performance visualizers, chart drawing tools, Building Block Strategy rules, and more.
+
+* **Brokers/Data:** Interactive Brokers, Tradier, Alpaca, and multiple via Medved Trader
+* **Crypto brokers/Data:** Binance, Kraken, KuCoin,
+* **Data providers:** IQFeed, EODHD, CSI, CBOE, FinancialModelingPrep, Morningstar, Nasdaq, QuoteMedia, Stooq, Tiingo, TwelveData, MetaTrader, , Norgate Data, CryptoCompare, and more
+* **Indicator libraries:** TASC Magazine Indicators, Ichimoku Cloud, Advanced Smoothers, Community Library, Power Pack Indicators (and Position Sizers)
+* **Power Pack Visualizers:** Analysis Series, Contribution, Metacorrelation, Streaks, Position Metrics
+* Candlestick Genetic Evolver, Candlestick Pattern detection
+* **Optimizers:** Genetic Optimizer, Particle Swarm Optimizer,
+* **Analysis Tools:** Neuro-Lab, Monte Carlo-Lab, Indicator Profiler, and others by \*\*finantic\*\*.
+
+## Past versions
+
+Versions previous to 6.0 were freely available for purchase to US and Canadian citizens up until Fidelity bought the rights from Wealthlab, Inc.
+
+Starting with Version 6.0, Wealthlab is only available to US and Canadian citizens if they open an account with Fidelity.
+
+*Wealth-Lab Version 6.0*
+Included native integration of legacy add-on product, Index-Lab, 64-bit compatibility, and a "Multi-Condition" rules dimension.
+
+*Wealth-Lab Version 6.1*
+Primarily a maintenance release with minor enhancements and behind-the-scenes improvements (API and other transparent changes).
+
+*Wealth-Lab Version 6.2*
+Combination Strategies and Regular Expressions for the Symbol Info Manager.
+
+*Wealth-Lab Version 6.3*
+Prepared for Wealth-Lab Pro streaming provider integration for the Strategy Monitor tool
+
+*Wealth-Lab Version 6.4*
+Completed Wealth-Lab Pro streaming provider integration with the Fidelity back end data center to feed the Strategy Monitor for much more responsive and reliable intraday operations. Also provided the ability to save strategies on a network drive.
+
+*Wealth-Lab Version 6.5*
+Introduced the WealthSignals Trader tool, which downloads trading signals from Wealth-Lab.com's WealthSignals service to your Wealth-Lab desktop client. This version is built on the .NET 4.0 framework.
+
+*Wealth-Lab Version 6.6*
+Released in late November 2013, added an integrated tool for Walk-Forward Optimization backtest and analysis.
+
+*Wealth-Lab Version 6.8*
+Released in late 2014, it is a maintenance release fixing known issues. This version is built on the .NET 4.5 framework and for this reason is incompatible with older operating systems i.e. Windows XP and Vista.
+
+*Wealth-Lab Version 6.9*
+Released in late 2015, version 6.9 brings ability to backtest synthetic option contracts. Includes other usability enhancements and minor fixes.
+
+*Wealth-Lab Version 7*
+Released on 9 March 2021, Version 7 improved on Version 6's Strategy Builder for non-programmers. The new drag-and-drop interface for *Building Block Strategies* make it more versatile to use all indicators, events data, candlestick patterns, and other condition qualifiers. The backtesting engine was overhauled to process bar-by-bar, which allows strategies to dynamically access and interact with the equity curve and other simulation aspects. Automated strategy trading is possible by installing extensions for one or more brokerages. Although many of the core tools have the same functions as in prior versions, two unique tools are also available as extensions: the Candlestick Genetic Evolver and Indicator Profiler.
+
+
+## Current version
+
+*Wealth-Lab Version 8*
+On 10 April 2022 Wealth-Lab migrated to the .NET 6 framework by releasing Version 8, which was the first version of Wealth-Lab to include a user-selectable dark theme. More currently, Wealth-Lab began targeting .NET 8 with compiler support for C# 12 as of Version 8 Build 77 (2/9/2024). Frequent updates indicate an active project that include bug fixes and new features for backtesting and live trading, including options.
+

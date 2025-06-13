@@ -1,0 +1,74 @@
+Delivery reliability
+
+
+# Delivery reliability
+
+
+
+**Delivery reliability** is one of the five attributes in supply-chain management according to SCOR-model, developed by the management consulting firm PRTM, now part of PricewaterhouseCoopers LLP (PwC) and endorsed by the Supply-Chain Council (SCC) as the cross-industry de facto standard diagnostic tool for supply chain management, SCOR measures the supplier’s ability to predictably complete processes as promised. It is measured by perfect order fulfillment and demonstrates the degree to which a supplier is able to serve its customers within the promised delivery time.
+
+Following the nomenclature of the DR-DP-Matrix, three main approaches to measure DR can be distinguished:
+
+* {\displaystyle DR\_{T}^{V}} (=CLIP)
+* {\displaystyle DR\_{D}^{S}}
+* {\displaystyle DR\_{T}^{S}}
+
+
+## Volume/on time (=CLIP)
+
+
+### Formula
+
+If ({\displaystyle Demand\_{p,c}+Backlog\_{p-1,c}>0})
+
+Note: In the case that supplier notifies the appropriate partner in the supply chain that a promised delivery date/quantity cannot be met which is called delivery early warning (DEW), the sum of DEW issued to reduce the commit for a certain week is added in the denominator.
+
+Else
+
+Demand: Suppliers confirmed quantity; c: Product identifier; p: Time period e.g. a day, a week, a month ...
+
+The cumulation over a period and a group of product identifiers c is done as follows:
+
+whereas p is determined by demand period
+
+
+## Singular/delivery and singular/on Time
+
+
+### Singular case definition
+
+To fit to the needs of the environment, the granularity of a singular case ({\displaystyle DR\_{\*}^{S}}) has to be defined. In general a singular case is described by an n-Tuple consisting of a set of the following order and delivery details:
+
+* order number
+* customer identifier
+* product identifier
+* wish date of customer
+* confirmed date of supplier
+* ship to information
+* delivery date
+* delivery note number
+
+
+### Formula
+
+1) **{\displaystyle DR\_{D}^{S}}**
+
+arrival date = delivery date + transit time
+
+By cumulating the results of singular cases over a certain period p and, if necessary, additional criteria c (e.g. customer, product, ...) the delivery reliability is calculated as follows:
+
+whereas p is determined by the arrival date
+
+2) **{\displaystyle DR\_{T}^{S}}**
+
+arrival date = delivery date + transit time
+
+By cumulating the results of singular cases over a certain period p and, if necessary, additional criteria c (e.g. customer, product, ...) the delivery reliability is calculated as follows:
+
+whereas p is determined by the first confirmed date
+
+
+## Result
+
+0%≤{\displaystyle DR\_{T/D}^{S/V}}≤100%
+

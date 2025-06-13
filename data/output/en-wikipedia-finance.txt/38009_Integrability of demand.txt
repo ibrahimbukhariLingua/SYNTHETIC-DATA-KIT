@@ -1,0 +1,42 @@
+Integrability of demand
+
+
+# Integrability of demand
+
+
+
+In microeconomic theory, the problem of the **integrability of demand functions** deals with recovering a utility function (that is, consumer preferences) from a given walrasian demand function. The "integrability" in the name comes from the fact that demand functions can be shown to satisfy a system of partial differential equations in prices, and solving (integrating) this system is a crucial step in recovering the underlying utility function generating demand.
+
+The problem was considered by Paul Samuelson in his book Foundations of Economic Analysis, and conditions for its solution were given by him in a 1950 article. More general conditions for a solution were later given by Leonid Hurwicz and Hirofumi Uzawa.
+
+
+## Mathematical formulation
+
+Given consumption space {\displaystyle X} and a known walrasian demand function {\displaystyle x:\mathbb {R} \_{++}^{L}\times \mathbb {R} \_{+}\rightarrow X}, solving the problem of integrability of demand consists in finding a utility function {\displaystyle u:X\rightarrow \mathbb {R} } such that
+
+That is, it is essentially "reversing" the consumer's utility maximization problem.
+
+
+## Sufficient conditions for solution
+
+There are essentially two steps in solving the integrability problem for a demand function. First, one recovers an expenditure function {\displaystyle e(p,u)} for the consumer. Then, with the properties of expenditure functions, one can construct an at-least-as-good set
+
+which is equivalent to finding a utility function {\displaystyle u(x)}.
+
+If the demand function {\displaystyle x(p,w)} is homogenous of degree zero, satisfies Walras' Law, and has a negative semi-definite substitution matrix {\displaystyle S(p,w)}, then it is possible to follow those steps to find a utility function {\displaystyle u(x)} that generates demand {\displaystyle x(p,w)}.
+
+**Proof**: if the first two conditions (homogeneity of degree zero and Walras' Law) are met, then duality between the expenditure minimization problem and the utility maximization problem tells us that
+
+where {\displaystyle v(p,w)=u(x(p,w))} is the consumers' indirect utility function and {\displaystyle h(p,u)} is the consumers' hicksian demand function. Fix a utility level {\displaystyle u\_{0}=v(p,w)} . From Shephard's lemma, and with the identity above we have
+
+| {\displaystyle {\frac {\partial e(p)}{\partial p}}=x(p,e(p))} | **(1)** |
+| --- | --- |
+
+where we omit the fixed utility level {\displaystyle u\_{0}} for conciseness. (**1**) is a system of PDEs in the prices vector {\displaystyle p}, and Frobenius' theorem can be used to show that if the matrix
+
+is symmetric, then it has a solution. Notice that the matrix above is simply the substitution matrix {\displaystyle S(p,w)}, which we assumed to be symmetric firsthand. So (**1**) has a solution, and it is (at least theoretically) possible to find an expenditure function {\displaystyle e(p)} such that {\displaystyle p\cdot x(p,e(p))=e(p)}.
+
+For the second step, by definition,
+
+where {\displaystyle V\_{u\_{0}}=\{x\in \mathbb {R} \_{+}^{L}:u(x)\geq u\_{0}\}}. By the properties of {\displaystyle e(p,u)}, it is not too hard to show that {\displaystyle V\_{u\_{0}}=\{x\in \mathbb {R} \_{+}^{L}:p\cdot x\geq e(p,u\_{0})\}}. Doing some algebraic manipulation with the inequality {\displaystyle p\cdot x\geq e(p,u\_{0})}, one can reconstruct {\displaystyle V\_{u\_{0}}} in its original form with {\displaystyle u(x)\geq u\_{0}}. If that is done, one has found a utility function {\displaystyle u:X\rightarrow \mathbb {R} } that generates consumer demand {\displaystyle x(p,w)}.
+

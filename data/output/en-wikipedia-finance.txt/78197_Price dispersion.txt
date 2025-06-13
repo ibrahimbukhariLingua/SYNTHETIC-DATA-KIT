@@ -1,0 +1,60 @@
+Price dispersion
+
+
+# Price dispersion
+
+
+
+In economics, **price dispersion** is variation in prices across sellers of the same item, holding fixed the item's characteristics. Price dispersion can be viewed as a measure of trading frictions (or, tautologically, as a violation of the law of one price). It is often attributed to consumer search costs or unmeasured attributes (such as the reputation) of the retailing outlets involved. There is a difference between price dispersion and price discrimination. The latter concept involves a single provider charging different prices to different customers for an identical good. Price dispersion, on the other hand, is best thought of as the outcome of many firms potentially charging different prices, where customers of one firm find it difficult to patronize (or are perhaps unaware of) other firms due to the existence of search costs.
+
+Price dispersion measures include the range of prices, the percentage difference of highest and lowest price, the standard deviation of the price distribution, the variance of the price distribution, and the coefficient of variation of the price distribution.
+
+In most theoretical literature, price dispersion is argued as result from spatial difference and the existence of significant search cost. With the development of internet and shopping agent programs, conventional wisdom tells that price dispersion should be alleviated and may eventually disappear in the online market due to the reduced search cost for both price and product features. However, recent studies found a surprisingly high level of price dispersion online, even for standardized items such as books, CDs and DVDs. There is some evidence of a shrinking of this online price dispersion, but it remains significant. Recently, work has also been done in the area of e-commerce, specifically the Semantic Web, and its effects on price dispersion.
+
+Hal Varian, an economist at U. C. Berkeley, argued in a 1980 article that price dispersion may be an intentional marketing technique to encourage shoppers to explore their options.
+
+A related concept is that of wage dispersion.
+
+
+## Consumer search and price dispersion
+
+
+### Search alone is insufficient
+
+Even when consumers search, price dispersion is not guaranteed. Consumers may search, yet firms set the same price, negating the mere fact of searching. This is referred to as Diamond's paradox.
+
+Assume that many firms provide a homogeneous good. Consumers will randomly sample only one firm if they expect that all firms charge the same price. Consequently, each firm has an equal share of consumers. Since consumers disregard the competitions, each firm acts as a monopoly on its share of consumers. Firms choose a price that maximizes profit: the monopoly price.
+
+
+### A necessary condition
+
+A recurrent observation is that some consumers must sample one firm and only one, while the remaining consumers must sample at least two firms.
+
+If all of them sample only one firm, then the market faces Diamond's Paradox. Firms would ask the same price, and so there would be no price dispersion.
+
+On the contrary, if all consumers sample at least two firms. The most expensive firm will not get any consumer, because consumers know at least another firm that is cheaper. As a result, prices must be as low as possible: equal to marginal costs of production, as in a Bertrand economy.
+
+
+### Price dispersion in a non-sequential search model
+
+A non-sequential search strategy consists in choosing a number of prices to compare. If consumers follow a non-sequential search strategy, as long as some consumers sample only one firm, then an equilibrium in price dispersion exists.
+
+There is an equilibrium in price dispersion if some consumers search once, and the remaining consumers search more than one firm. Moreover, the distribution of prices has a closed form if consumers search at most two firms:
+
+{\displaystyle F\left(x\right)={\begin{cases}0,&{\text{if }}p<{\underline {p}}\left(q\right)\\1-\left({\frac {p^{\*}-p}{p-r}}\right)\left({\frac {q}{2\left(1-q\right)}}\right),&{\text{if }}{\underline {p}}\left(q\right)<p\leq p^{\*}\\1,&{\text{if }}p>p^{\*}\end{cases}}}
+
+where {\displaystyle {\underline {p}}\left(q\right)=\left(p^{\*}-p\right){\frac {q}{2\left(1-q\right)}}+r}; with {\displaystyle q} the share of consumer who sample only one firm, {\displaystyle p^{\*}} consumers' reservation price, and {\displaystyle r} firms' marginal costs of production.
+
+Such an equilibrium in price dispersion occurs when consumers minimize {\displaystyle \mathbb {E} \left[p\_{n}\right]-cn}, with {\displaystyle n} the sample size, {\displaystyle c} a search cost, and {\displaystyle p\_{n}} the smallest price sampled.
+
+
+### Price dispersion in a sequential search model
+
+A sequential search strategy consists in sampling prices one by one, and stop after identifying a sufficiently low price. In sequential search models, the existence of perfectly informed consumers guarantees the equilibrium in price dispersion if the remaining consumers search once and only one. There is a continuous relationship between the share of informed consumers and the type of competition: from Bertrand competition to Diamond competition as fewer and fewer consumers are initially perfectly informed.
+
+The distribution of price has a closed form:
+
+{\displaystyle F\left(p\right)=1-\left[\left({\frac {1-\mu }{N\mu }}\right)\left({\frac {R\left(P\_{r}\right)}{R\left(p\right)}}-1\right)\right]^{\frac {1}{N-1}}}
+
+on support {\displaystyle \left[0,P\_{r}\right]}; where {\displaystyle \mu } the share of perfectly informed consumers, {\displaystyle N} the number of firms, {\displaystyle R\left(.\right)} the revenue function that attains its maximum in {\displaystyle {\hat {p}}}, {\displaystyle r} consumers' reservation price, and {\displaystyle P\_{r}=\min \left\lbrace r,{\hat {p}}\right\rbrace }
+

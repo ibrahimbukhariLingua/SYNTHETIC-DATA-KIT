@@ -1,0 +1,113 @@
+Bayesian-optimal pricing
+
+
+# Bayesian-optimal pricing
+
+
+
+**Bayesian-optimal pricing** (BO pricing) is a kind of algorithmic pricing in which a seller determines the sell-prices based on probabilistic assumptions on the valuations of the buyers. It is a simple kind of a Bayesian-optimal mechanism, in which the price is determined in advance without collecting actual buyers' bids.
+
+
+## Single item and single buyer
+
+In the simplest setting, the seller has a single item to sell (with zero cost), and there is a single potential buyer. The highest price that the buyer is willing to pay for the item is called the *valuation* of the buyer. The seller would like to set the price exactly at the buyer's valuation. Unfortunately, the seller does not know the buyer's valuation. In the Bayesian model, it is assumed that the buyer's valuation is a random variable drawn from a known probability distribution.
+
+Suppose the cumulative distribution function of the buyer is {\displaystyle F(v)}, defined as the probability that the seller's valuation is less than {\displaystyle v}. Then, if the price is set to {\displaystyle p}, the expected value of the seller's revenue is:
+
+because the probability that the buyer will want to buy the item is {\displaystyle 1-F(p)}, and if this happens, the seller's revenue will be {\displaystyle p}.
+
+The seller would like to find the price that maximizes {\displaystyle Rev(p)}. The first-order condition, that the optimal price {\displaystyle p^{\*}} should satisfy, is:
+
+where {\displaystyle f(p)=F'(p)=} the probability density function.
+
+For example, if the probability distribution of the buyer's valuation is uniform in {\displaystyle [a,a+d]}, then {\displaystyle F(v)=(v-a)/d} and {\displaystyle f(v)=1/d} (in {\displaystyle [a,a+d]}). The first-order condition is {\displaystyle p^{\*}=(a+d-p^{\*})} which implies {\displaystyle p^{\*}=(a+d)/2}. This is the optimal price only if it is in the range {\displaystyle [a,a+d]} (i.e., when {\displaystyle a\leq d}).
+Otherwise (when {\displaystyle a\geq d}), the optimal price is {\displaystyle p^{\*}=a}.
+
+This optimal price has an alternative interpretation: it is the solution to the equation:
+
+where {\displaystyle w} is the virtual valuation of the agent. So in this case, BO pricing is equivalent to the Bayesian-optimal mechanism, which is an auction with reserve-price {\displaystyle p^{\*}}.
+
+
+## Single item and many buyers
+
+In this setting, the seller has a single item to sell (with zero cost), and there are multiple potential buyers whose valuations are a random vector drawn from some known probability distribution. Here, different pricing methods come to mind:
+
+* *Symmetric prices*: the seller sets a single price for the item. If one or more buyers accept this price, then one of them is selected arbitrarily.
+* *discriminatory prices*: the seller sets a different price for each buyer. If one or more buyers accept this price, then the buyer who accepted the highest price is selected. Discriminatory pricing can be implemented sequentially by ordering the prices in decreasing order and giving the item to the first buyer who accepts the price offered to him.
+
+In the multiple-buyer setting, BO pricing is no longer equivalent to BO auction: in pricing, the seller has to determine the price/s in advance, while in auction, the seller can determine the price based on the agents' bids. The competition between the buyers may enable the auctioneer to raise the price. Hence, in theory, the seller can obtain a higher revenue in an auction.
+
+**Example.** There are two buyers whose valuations are distributed uniformly in the range {\displaystyle [\$100,\$200]}.
+
+* The BO auction is the Vickrey auction with reserve price $100 (= the inverse-virtual-valuation of 0). Its expected revenue is $133.
+* The BO discriminatory pricing scheme is to offer one agent a price of $150 and the other agent a price of $100. Its expected revenue is 0.5\*150 + 0.5\*100 = $125.
+
+In practice, however, an auction is more complicated for the buyers since it requires them to declare their valuation in advance. The complexity of the auction process might deter buyers and ultimately lead to loss of revenue. Therefore, it is interesting to compare the optimal pricing revenue to the optimal auction revenue, to see how much revenue the seller loses by using the simpler mechanism.
+
+
+### Buyers with independent and identical valuations
+
+Blumrosen and Holenstein study the special case in which the buyers' valuations are random variables drawn independently from the same probability distribution. They show that, when the distribution of the buyers' valuations has *bounded support*, BO-pricing and BO-auction converge to the same revenue. The convergence rate is asymptotically the same when discriminatory prices are allowed, and slower by a logarithmic factor when symmetric prices must be used. For example, when the distribution is uniform in [0,1] and there are {\displaystyle n} potential buyers:
+
+* the revenue of the BO auction (a Vickrey auction with reserve price determined by the probability distribution) is {\displaystyle 1-2/n};
+* the revenue of BO discriminatory pricing is {\displaystyle 1-4/n};
+* the revenue of BO symmetric pricing is {\displaystyle 1-\log(n)/n}.
+
+In contrast, when the distribution of the buyers' valuations has *unbounded support*, the BO-pricing and the BO-auction might not converge to the same revenue. E.g., when the cdf is {\displaystyle F(x)=1-1/x^{2}}:
+
+* the revenue of the BO auction is {\displaystyle .88{\sqrt {n}}};
+* the revenue of BO discriminatory pricing is {\displaystyle .7{\sqrt {n}}};
+* the revenue of BO symmetric pricing is {\displaystyle .64{\sqrt {n}}}.
+
+### Buyers with independent and different valuations
+
+Chawla and Hartline and Malec and Sivan study the setting in which the buyers' valuations are random variables drawn independently from different probability distributions. Moreover, there are constraints on the set of agents that can be served together (for example: there is a limited number of units). They consider two kinds of discriminatory pricing schemes:
+
+* In an **order-oblivious pricing mechanism** (OPM), the mechanism-designer determines a price for each agent. The agents come in an arbitrary order. The mechanism guarantees are for worst-case (adversarial) order of the agents, determined after the agents' valuations are drawn.
+* In a **sequential pricing mechanism** (SPM), the mechanism-designer determines both a price for each agent, and an ordering on the agents. The mechanism loops over the agents in the pre-determined order. If the current agent can be served together with the previously-served agents (according to the constraints), then his personal price is offered to him, and he can either take it or leave it.
+
+Their general scheme for calculating the prices is:
+
+* For each agent {\displaystyle j}, calculate the probability {\displaystyle q\_{j}} with which the BO mechanism (Myerson's mechanism) serves agent {\displaystyle j}. This can be calculated either analytically or by simulations.
+* The price for agent {\displaystyle j} is {\displaystyle p\_{j}:=F\_{j}^{-1}(1-C\cdot q\_{j})}, where {\displaystyle C} is a constant (either 1 or 1/2 or 1/3, depending on the setting). In other words, the price {\displaystyle p\_{j}} satisfies the following condition:
+
+If {\displaystyle C=1} then the marginal-probability that an agent is served by the SPM is equal to the marginal-probability that it is served by the BO auction.
+
+
+## Different items and one unit-demand buyer
+
+In this setting, the seller has several different items for sale (e.g. cars of different models). There is one potential buyer, that is interested in a single item (e.g. a single car). The buyer has a different valuation for each item-type (i.e., he has a valuation-vector). Given the posted prices, the buyer buys the item that gives him the highest net utility (valuation minus price).
+
+The buyer's valuation-vector is a random-vector from a multi-dimensional probability distribution. The seller wants to compute the price-vector (a price per item) that gives him the highest expected revenue.
+
+Chawla and Hartline and Kleinberg study the case in which the buyer's valuations to the different items are independent random variables. They show that:
+
+* The revenue of the BO unit-demand pricing when there are {\displaystyle n} item-types is at most the revenue of the BO single-item auction when there are {\displaystyle n} potential buyers.
+* When the buyer's valuations to the different items are independent draws from the *same* distribution, the BO unit-demand pricing that uses the *same* price to all items attains at least 1/2.17 of the revenue of the BO single-item auction.
+* When the buyer's valuations are independent draws from different distributions, the BO unit-demand pricing that uses the same *virtual-price* (based on virtual valuations) attains at least 1/3 of the revenue of the BO single-item auction.
+
+They also consider the computational task of calculating the optimal price. The main challenge is to calculate {\displaystyle w^{-1}}, the inverse of the virtual valuation function.
+
+* For *discrete and regular* valuation distribution, there is a polynomial-time 3-approximation.
+* For *continuous and regular* valuation distribution (available via an oracle) there is a polynomial-time (3+ε)-approximation with high probability, and a faster (6+ε)-approximation with probability 1.
+
+## Different items and many unit-demand buyers
+
+In this setting, there are different types of items. Each buyer has different valuations for different items, and each buyer wants at most one item. Moreover, there are pre-specified constraints on the set of buyer-item pairs that can be allocated together (for example: each item can be allocated to at most one buyer; each buyer can get at most one item; etc).
+
+Chawla and Hartline and Malec and Sivan study two kinds of discriminatory pricing schemes:
+
+* In a **sequential pricing mechanism** (SPM), the mechanism-designer determines a price for each buyer-item pair, and an ordering on the buyer-item pairs. The mechanism loops over the buyer-item pairs in the pre-determined order. If the current buyer-item pair is feasible, then the buyer is offered the item in the pre-determined price, and he can either take it or leave it.
+* In an **order-oblivious pricing mechanism** (OPM), the mechanism-designer determines a price for each buyer-item pair. The buyers come in an arbitrary order, which may be adversarially determined after the agents' valuations are drawn.
+
+A sequential-pricing mechanism is, in general, not a truthful mechanism, since an agent may decide to decline a good offer in hopes of getting a better offer later. It is truthful only when, for every buyer, the buyer-item pairs for that buyer are ordered in decreasing order of net-utility. Then, it is always best for the buyer to accept the first offer (if its net utility is positive). A special case of that situation is the *single-parameter setting*: for every buyer, there is only a single buyer-item pair (e.g, there is a single item for sale).
+
+To every multi-parameter setting corresponds a single-parameter setting in which each buyer-item pair is considered an independent agent. In the single-parameter setting, there is more competition (since the agents that come from the same buyer compete with each other). Therefore, the BO revenue in the single-parameter setting is an upper bound on the BO revenue in the multi-parameter setting. Therefore, if an OPM is an *r*-approximation to the optimal mechanism for a single-parameter setting, then it is also an *r*-approximation to the corresponding multi-parameter setting. See above for approximation factors of OPMs in various settings.
+
+See Chapter 7 "Multi-dimensional Approximation" in ¹²⁴ for more details.
+
+
+### Many unit-demand buyers and sellers
+
+Recently, the SPM scheme has been extended to a double auction setting, where there are both buyers and sellers. The extended mechanism is called 2SPM. It is parametrized by an order on the buyers, an order on the sellers, and a matrix of prices - a price for each buyer-seller pair. The prices are offered to in order to buyers and sellers who may either accept or reject the offer. The approximation ratio is between 3 and 16, depending on the setting.
+

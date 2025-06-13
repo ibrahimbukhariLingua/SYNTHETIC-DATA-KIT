@@ -1,0 +1,145 @@
+Enterprise modelling
+
+
+# Enterprise modelling
+
+
+
+**Enterprise modelling** is the abstract representation, description and definition of the structure, processes, information and resources of an identifiable business, government body, or other large organization.
+
+It deals with the process of understanding an organization and improving its performance through creation and analysis of enterprise models. This includes the modelling of the relevant business domain (usually relatively stable), business processes (usually more volatile), and uses of information technology within the business domain and its processes.
+
+
+## Overview
+
+Enterprise modelling is the process of building models of whole or part of an enterprise with process models, data models, resource models and/or new ontologies etc. It is based on knowledge about the enterprise, previous models and/or reference models as well as domain ontologies using model representation languages. An enterprise in general is a unit of economic organization or activity. These activities are required to develop and deliver products and/or services to a customer. An enterprise includes a number of functions and operations such as purchasing, manufacturing, marketing, finance, engineering, and research and development. The enterprise of interest are those corporate functions and operations necessary to manufacture current and potential future variants of a product.
+
+The term "enterprise model" is used in industry to represent differing enterprise representations, with no real standardized definition. Due to the complexity of enterprise organizations, a vast number of differing enterprise modelling approaches have been pursued across industry and academia. Enterprise modelling constructs can focus upon manufacturing operations and/or business operations; however, a common thread in enterprise modelling is an inclusion of assessment of information technology. For example, the use of networked computers to trigger and receive replacement orders along a material supply chain is an example of how information technology is used to coordinate manufacturing operations within an enterprise.
+
+The basic idea of enterprise modelling according to Ulrich Frank is "to offer different views on an enterprise, thereby providing a medium to foster dialogues between various stakeholders - both in academia and in practice. For this purpose they include abstractions suitable for strategic planning, organisational (re-) design and software engineering. The views should complement each other and thereby foster a better understanding of complex systems by systematic abstractions. The views should be generic in the sense that they can be applied to any enterprise. At the same time they should offer abstractions that help with designing information systems which are well integrated with a company's long term strategy and its organisation. Hence, enterprise models can be regarded as the conceptual infrastructure that support a high level of integration."
+
+
+## History
+
+Enterprise modelling has its roots in systems modelling and especially information systems modelling. One of the earliest pioneering works in modelling information systems was done by Young and Kent (1958), who argued for "a precise and abstract way of specifying the informational and time characteristics of a data processing problem". They wanted to create "a notation that should enable the analyst to organize the problem around any piece of hardware". Their work was a first effort to create an abstract specification and invariant basis for designing different alternative implementations using different hardware components. A next step in IS modelling was taken by CODASYL, an IT industry consortium formed in 1959, who essentially aimed at the same thing as Young and Kent: the development of "a proper structure for machine independent problem definition language, at the system level of data processing". This led to the development of a specific IS information algebra.
+
+The first methods dealing with enterprise modelling emerged in the 1970s. They were the entity-relationship approach of Peter Chen (1976) and SADT of Douglas T. Ross (1977), the one concentrate on the information view and the other on the function view of business entities. These first methods have been followed end 1970s by numerous methods for software engineering, such as SSADM, Structured Design, Structured Analysis and others. Specific methods for enterprise modelling in the context of Computer Integrated Manufacturing appeared in the early 1980s. They include the IDEF family of methods (ICAM, 1981) and the GRAI method by Guy Doumeingts in 1984 followed by GRAI/GIM by Doumeingts and others in 1992.
+
+These second generation of methods were activity-based methods which have been surpassed on the one hand by process-centred modelling methods developed in the 1990s such as Architecture of Integrated Information Systems (ARIS), CIMOSA and Integrated Enterprise Modeling (IEM). And on the other hand by object-oriented methods, such as Object-oriented analysis (OOA) and Object-modelling technique (OMT).
+
+
+## Enterprise modelling basics
+
+
+### Enterprise model
+
+An enterprise model is a representation of the structure, activities, processes, information, resources, people, behavior, goals, and constraints of a business, government, or other enterprises. Thomas Naylor (1970) defined a (simulation) model as "an attempt to describe the interrelationships among a corporation's financial, marketing, and production activities in terms of a set of mathematical and logical relationships which are programmed into the computer." These interrelationships should according to Gershefski (1971) represent in detail all aspects of the firm including "the physical operations of the company, the accounting and financial practices followed, and the response to investment in key areas" Programming the modelled relationships into the computer is not always necessary: enterprise models, under different names, have existed for centuries and were described, for example, by Adam Smith, Walter Bagehot, and many others.
+
+According to Fox and Gruninger (1998) from "a design perspective, an enterprise model should provide the language used to explicitly define an enterprise... From an operations perspective, the enterprise model must be able to represent what is planned, what might happen, and what has happened. It must supply the information and knowledge necessary to support the operations of the enterprise, whether they be performed by hand or machine."
+
+In a two-volume set entitled *The Managerial Cybernetics of Organization* Stafford Beer introduced a model of the enterprise, the Viable System Model (VSM). Volume 2, *The Heart of Enterprise,* analyzed the VSM as a recursive organization of five systems: System One (S1) through System Five (S5). Beer's model differs from others in that the VSM is recursive, not hierarchical: "In a recursive organizational structure, any viable system contains, and is contained in, a viable system."
+
+
+### Function modelling
+
+Function modelling in systems engineering is a structured representation of the functions, activities or processes within the modelled system or subject area.
+
+A function model, also called an activity model or process model, is a graphical representation of an enterprise's function within a defined scope. The purposes of the function model are: to describe the functions and processes, assist with discovery of information needs, help identify opportunities, and establish a basis for determining product and service costs. A function model is created with a functional modelling perspective. A functional perspectives is one or more perspectives possible in process modelling. Other perspectives possible are for example behavioural, organisational or informational.
+
+A functional modelling perspective concentrates on describing the dynamic process. The main concept in this modelling perspective is the process, this could be a function, transformation, activity, action, task etc. A well-known example of a modelling language employing this perspective is data flow diagrams. The perspective uses four symbols to describe a process, these being:
+
+* Process: Illustrates transformation from input to output.
+* Store: Data-collection or some sort of material.
+* Flow: Movement of data or material in the process.
+* External Entity: External to the modelled system, but interacts with it.
+
+Now, with these symbols, a process can be represented as a network of these symbols. This decomposed process is a DFD, data flow diagram. In Dynamic Enterprise Modeling, for example, a division is made in the Control model, Function Model, Process model and Organizational model.
+
+
+### Data modelling
+
+Data modelling is the process of creating a data model by applying formal data model descriptions using data modelling techniques. Data modelling is a technique for defining business requirements for a database. It is sometimes called *database modelling* because a data model is eventually implemented in a database.
+
+The figure illustrates the way data models are developed and used today. A conceptual data model is developed based on the data requirements for the application that is being developed, perhaps in the context of an activity model. The data model will normally consist of entity types, attributes, relationships, integrity rules, and the definitions of those objects. This is then used as the start point for interface or database design.
+
+
+### Business process modelling
+
+Business process modelling, not to be confused with the wider Business Process Management (BPM) discipline, is the activity of representing processes of an enterprise, so that the current ("as is") process may be analyzed and improved in future ("to be"). Business process modelling is typically performed by business analysts and managers who are seeking to improve process efficiency and quality. The process improvements identified by business process modelling may or may not require Information Technology involvement, although that is a common driver for the need to model a business process, by creating a process master.
+
+Change management programs are typically involved to put the improved business processes into practice. With advances in technology from large platform vendors, the vision of business process modelling models becoming fully executable (and capable of simulations and round-trip engineering) is coming closer to reality every day.
+
+
+### Systems architecture
+
+The RM-ODP reference model identifies enterprise modelling as providing one of the five viewpoints of an open distributed system. Note that such a system need not be a modern-day IT system: a banking clearing house in the 19th century may be used as an example ().
+
+
+## Enterprise modelling techniques
+
+There are several techniques for modelling the enterprise such as
+
+* Active Knowledge Modeling,
+* Design & Engineering Methodology for Organizations (DEMO)
+* Dynamic Enterprise Modeling
+* Enterprise Modelling Methodology/Open Distributed Processing (EMM/ODP)
+* Extended Enterprise Modeling Language
+* Multi-Perspective Enterprise Modelling (MEMO),
+* Process modelling such as BPMN, CIMOSA, DYA, IDEF3, LOVEM, PERA, etc.
+* Integrated Enterprise Modeling (IEM), and
+* Modelling the enterprise with multi-agent systems.
+
+More enterprise modelling techniques are developed into Enterprise Architecture framework such as:
+
+* ARIS - ARchitecture of Integrated Information Systems
+* DoDAF - the US Department of Defense Architecture Framework
+* RM-ODP - Reference Model of Open Distributed Processing
+* TOGAF - The Open Group Architecture Framework
+* Zachman Framework - an architecture framework, based on the work of John Zachman at IBM in the 1980s
+* Service-oriented modeling framework (SOMF), based on the work of Michael Bell
+
+And metamodelling frameworks such as:
+
+* Generalised Enterprise Reference Architecture and Methodology
+
+## Enterprise engineering
+
+Enterprise engineering is the discipline concerning the design and the engineering of enterprises, regarding both their business and organization. In theory and practice two types of enterprise engineering has emerged. A more general connected to engineering and the management of enterprises, and a more specific related to software engineering, enterprise modelling and enterprise architecture.
+
+In the field of engineering a more general enterprise engineering emerged, defined as the application of engineering principals to the management of enterprises. It encompasses the application of knowledge, principles, and disciplines related to the analysis, design, implementation and operation of all elements associated with an enterprise. In essence this is an interdisciplinary field which combines systems engineering and strategic management as it seeks to engineer the entire enterprise in terms of the products, processes and business operations. The view is one of continuous improvement and continued adaptation as firms, processes and markets develop along their life cycles. This total systems approach encompasses the traditional areas of research and development, product design, operations and manufacturing as well as information systems and strategic management. This fields is related to engineering management, operations management, service management and systems engineering.
+
+In the context of software development a specific field of enterprise engineering has emerged, which deals with the modelling and integration of various organizational and technical parts of business processes. In the context of information systems development it has been the area of activity in the organization of the systems analysis, and an extension of the scope of Information Modelling. It can also be viewed as the extension and generalization of the systems analysis and systems design phases of the software development process. Here Enterprise modelling can be part of the early, middle and late information system development life cycle. Explicit representation of the organizational and technical system infrastructure is being created in order to understand the orderly transformations of existing work practices. This field is also called Enterprise architecture, or defined with Enterprise Ontology as being two major parts of Enterprise architecture.
+
+
+## Related fields
+
+
+### Business reference modelling
+
+Business reference modelling is the development of reference models concentrating on the functional and organizational aspects of the core business of an enterprise, service organization or government agency. In enterprise engineering a business reference model is part of an enterprise architecture framework. This framework defines in a series of reference models, how to organize the structure and views associated with an Enterprise Architecture.
+
+A reference model in general is a model of something that embodies the basic goal or idea of something and can then be looked at as a reference for various purposes. A business reference model is a means to describe the business operations of an organization, independent of the organizational structure that perform them. Other types of business reference model can also depict the relationship between the business processes, business functions, and the business area’s business reference model. These reference model can be constructed in layers, and offer a foundation for the analysis of service components, technology, data, and performance.
+
+
+### Economic modelling
+
+Economic modelling is the theoretical representation of economic processes by a set of variables and a set of logical and/or quantitative relationships between them. The economic model is a simplified framework designed to illustrate complex processes, often but not always using mathematical techniques. Frequently, economic models use structural parameters. Structural parameters are underlying parameters in a model or class of models. A model may have various parameters and those parameters may change to create various properties.
+
+In general terms, economic models have two functions: first as a simplification of and abstraction from observed data, and second as a means of selection of data based on a paradigm of econometric study. The simplification is particularly important for economics given the enormous complexity of economic processes. This complexity can be attributed to the diversity of factors that determine economic activity; these factors include: individual and cooperative decision processes, resource limitations, environmental and geographical constraints, institutional and legal requirements and purely random fluctuations. Economists therefore must make a reasoned choice of which variables and which relationships between these variables are relevant and which ways of analyzing and presenting this information are useful.
+
+
+### Ontology engineering
+
+Ontology engineering or *ontology building* is a subfield of knowledge engineering that studies the methods and methodologies for building ontologies. In the domain of enterprise architecture, an ontology is an outline or a schema used to structure objects, their attributes and relationships in a consistent manner. As in enterprise modelling, an ontology can be composed of other ontologies. The purpose of ontologies in enterprise modelling is to formalize and establish the sharability, re-usability, assimilation and dissemination of information across all organizations and departments within an enterprise. Thus, an ontology enables integration of the various functions and processes which take place in an enterprise.
+
+One common language with well articulated structure and vocabulary would enable the company to be more efficient in its operations. A common ontology will allow for effective communication, understanding and thus coordination among the various divisions of an enterprise. There are various kinds of ontologies used in numerous environments. While the language example given earlier dealt with the area of information systems and design, other ontologies may be defined for processes, methods, activities, etc., within an enterprise.
+
+Using ontologies in enterprise modelling offers several advantages. Ontologies ensure clarity, consistency, and structure to a model. They promote efficient model definition and analysis. Generic enterprise ontologies allow for reusability of and automation of components. Because ontologies are schemata or outlines, the use of ontologies does not ensure proper enterprise model definition, analysis, or clarity. Ontologies are limited by how they are defined and implemented. An ontology may or may not include the potential or capability to capture all of the aspects of what is being modelled.
+
+
+### Systems thinking
+
+The modelling of the enterprise and its environment could facilitate the creation of enhanced understanding of the business domain and processes of the extended enterprise, and especially of the relations—both those that "hold the enterprise together" and those that extend across the boundaries of the enterprise. Since enterprise is a system, concepts used in system thinking can be successfully reused in modelling enterprises.
+
+This way a fast understanding can be achieved throughout the enterprise about how business functions are working and how they depend upon other functions in the organization.
+

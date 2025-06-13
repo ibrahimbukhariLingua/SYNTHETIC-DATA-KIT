@@ -1,0 +1,24 @@
+Architecture domain
+
+
+# Architecture domain
+
+
+
+An **architecture domain** in enterprise architecture is a broad view of an enterprise or system. It is a partial representation of a whole system that addresses several concerns of several stakeholders. It is a description that hides other views or facets of the system described. Business, data, application and technology architectures are recognized as the core domains in the most of proposed concepts concerned with the definition of enterprise architecture.
+
+
+## Overview
+
+Since Stephen Spewak's book called enterprise architecture planning (EAP) in 1993, and perhaps before then, it has been normal to recognise four types of architecture domain. The British Computer Society's "Reference Model for Enterprise and Solution Architecture" also follows this subdivision but additionally mentions the (single) application architecture level just below the application*s* architecture as well as the domains of information architecture, information systems architecture, or security architecture (a cross-cutting concern):
+
+* Business architecture: The structure and behaviour of a business system (not necessarily related to computers). Covers business goals, business functions or capabilities, business processes and roles etc. Business functions and business processes are often mapped to the applications and data they need.
+* Data architecture: The data structures used by a business and/or its applications. Descriptions of data in storage and data in motion. Descriptions of data stores, data groups and data items. Mappings of those data artifacts to data qualities, applications, locations etc.
+* Applications architecture: The structure and behaviour of applications used in a business, focused on how they interact with each other and with users. Focused on the data consumed and produced by applications rather than their internal structure. In application portfolio management, the applications are usually mapped to business functions and to application platform technologies.
+ Application (or Component) architecture: The internal structure, the modularisation of software, within an application. This is software architecture at the lowest level of granularity. It is usually below the level of modularisation that solution architects define. However, *there is no rigid dividing line*.
+* Technology architecture or infrastructure architecture: The structure and behaviour of the IT infrastructure. Covers the client and server nodes of the hardware configuration, the infrastructure applications that run on them, the infrastructure services they offer to applications, the protocols and networks that connect applications and nodes.
+
+Note that the applications architecture is about the application portfolio, not the internal architecture of a single application - which is often called the application architecture.
+
+Many EA frameworks combine data and application domains into a single layer, sitting below the business (usually a human activity system; that is a notational system expressing a purposeful human activity in a theoretical way using intellectual constructs and not descriptions of actual real-world activity) and above the technology (the platform IT infrastructure). There are many variations on this theme.
+

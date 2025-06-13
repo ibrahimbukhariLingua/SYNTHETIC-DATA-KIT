@@ -1,0 +1,67 @@
+Bollinger Bands
+
+
+# Bollinger Bands
+
+
+
+**Bollinger Bands** (/ˈbɒlɪndʒər/) are a type of statistical chart characterizing the prices and volatility over time of a financial instrument or commodity, using a formulaic method propounded by John Bollinger in the 1980s. Financial traders employ these charts as a methodical tool to inform trading decisions, control automated trading systems, or as a component of technical analysis. Bollinger Bands display a graphical band (the envelope maximum and minimum of moving averages, similar to Keltner or Donchian channels) and volatility (expressed by the width of the envelope) in one two-dimensional chart.
+
+Two input parameters chosen independently by the user govern how a given chart summarizes the known historical price data, allowing the user to vary the response of the chart to the magnitude and frequency of price changes, similar to parametric equations in signal processing or control systems. Bollinger Bands consist of an *N*-period moving average (MA), an upper band at *K* times an *N*-period standard deviation above the moving average (MA + *Kσ*), and a lower band at *K* times an *N*-period standard deviation below the moving average (MA − *Kσ*). The chart thus expresses arbitrary choices or assumptions of the user, and is not strictly about the price data alone.
+
+Typical values for *N* and *K* are 20 days and 2, respectively. The default choice for the average is a simple moving average, but other types of averages can be employed as needed. Exponential moving averages are a common second choice. Usually the same period is used for both the middle band and the calculation of standard deviation.
+
+Bollinger registered the words "Bollinger Bands" as a U.S. trademark in 2011.
+
+
+## Purpose
+
+The purpose of Bollinger Bands is to provide a relative definition of high and low prices of a market. By definition, prices are high at the upper band and low at the lower band. This definition can aid in rigorous pattern recognition and is useful in comparing price action to the action of indicators to arrive at systematic trading decisions.
+
+
+## Indicators derived from Bollinger Bands
+
+*BBImpulse* measures price change as a function of the bands; *percent bandwidth* (%b) normalizes the width of the bands over time; and *bandwidth delta* quantifies the changing width of the bands.
+
+*%b* (pronounced "percent b") is derived from the formula for stochastics and shows where price is in relation to the bands. %*b* equals 1 at the upper band and 0 at the lower band. Writing *upperBB* for the upper Bollinger Band, *lowerBB* for the lower Bollinger Band, and *last* for the last (price) value:
+
+*Bandwidth* tells how wide the Bollinger Bands are on a normalized basis. Writing the same symbols as before, and *middleBB* for the moving average, or middle Bollinger Band:
+
+Using the default parameters of a 20-period look back and plus/minus two standard deviations, *bandwidth* is equal to four times the 20-period coefficient of variation.
+
+Uses for %*b* include system building and pattern recognition. Uses for *bandwidth* include identification of opportunities arising from relative extremes in volatility and trend identification.
+
+
+## Interpretation
+
+The use of Bollinger Bands varies widely among traders. Some traders buy when price touches the lower Bollinger Band and exit when price touches the moving average in the center of the bands. Other traders buy when price breaks above the upper Bollinger Band or sell when price falls below the lower Bollinger Band. Moreover, the use of Bollinger Bands is not confined to stock traders; options traders, most notably implied volatility traders, often sell options when Bollinger Bands are historically far apart or buy options when the Bollinger Bands are historically close together, in both instances, expecting volatility to revert towards the average historical volatility level for the stock.
+
+When the bands lie close together, a period of low volatility is indicated. Conversely, as the bands expand, an increase in price action/market volatility is indicated. When the bands have only a slight slope and track approximately parallel for an extended time, the price will generally be found to oscillate between the bands as though in a channel.
+
+Traders are often inclined to use Bollinger Bands with other indicators to confirm price action. In particular, the use of oscillator-like Bollinger Bands will often be coupled with a non-oscillator indicator-like chart patterns or a trendline. If these indicators confirm the recommendation of the Bollinger Bands, the trader will have greater conviction that the bands are predicting correct price action in relation to market volatility.
+
+
+## Effectiveness
+
+Various studies of the effectiveness of the Bollinger Band strategy have been performed with mixed results. In 2007, Lento *et al.* published an analysis using a variety of formats (different moving average timescales, and standard deviation ranges) and markets (e.g., Dow Jones and Forex). Analysis of the trades, spanning a decade from 1995 onwards, found no evidence of consistent performance over the standard "buy and hold" approach. The authors did, however, find that a simple reversal of the strategy ("contrarian Bollinger Band") produced positive returns in a variety of markets.
+
+Similar results were found in another study, which concluded that Bollinger Band trading strategies may be effective in the Chinese marketplace, stating: "we find significant positive returns on buy trades generated by the contrarian version of the moving-average crossover rule, the channel breakout rule, and the Bollinger Band trading rule, after accounting for transaction costs of 0.50 percent." (By "the contrarian version", they mean buying when the conventional rule mandates selling, and vice versa.) A recent study examined the application of Bollinger Band trading strategies combined with the ADX for Equity Market indices with similar results.
+
+In 2012, Butler *et al.* published an approach to fitting the parameters of Bollinger Bands using particle swarm optimization method. Their results indicated that by tuning the parameters to a particular asset for a particular market environment, the out-of-sample trading signals were improved compared to the default parameters.
+
+
+## Statistical properties
+
+Security price returns have no known statistical distribution, normal or otherwise; they are known to have fat tails, compared to a normal distribution. The sample size typically used, 20, is too small for conclusions derived from statistical techniques like the central limit theorem to be reliable. Such techniques usually require the sample to be independent and identically distributed, which is not the case for a time series like security prices. Just the opposite is true; it is well recognized by practitioners that such price series are very commonly serially correlatedᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ—that is, each price will be closely related to its ancestor "most of the time". Adjusting for serial correlation is the purpose of moving standard deviations, which use deviations from the moving average, but the possibility remains of high order price autocorrelation not accounted for by simple differencing from the moving average.
+
+For such reasons, it is incorrect to assume that the long-term percentage of the data that will be observed in the future outside the Bollinger Bands range will always be constrained to a certain amount. Instead of finding about 95% of the data inside the bands, as would be the expectation with the default parameters if the data were normally distributed, studies have found that only about 88% of security prices (85–90%) remain within the bands. For an individual security, one can always find factors for which certain percentages of data are contained by the factor defined bands for a certain period of time. Practitioners may also use related measures such as the Keltner channels, or the related Stoller average range channels, which base their band widths on different measures of price volatility, such as the difference between daily high and low prices, rather than on standard deviation.
+
+
+## Bollinger bands outside of finance
+
+Bollinger bands have been applied to manufacturing data to detect defects (anomalies) in patterned fabrics. In this application, the upper and lower bands of Bollinger Bands are sensitive to subtle changes in the input data obtained from samples.
+
+The International Civil Aviation Organization is using Bollinger bands to measure the accident rate as a safety indicator to measure efficacy of global safety initiatives. %b and bandwidth are also used in this analysis.
+
+Bollinger bands have been applied to a "Method to Identify the Start and End of the Winter Surge in Demand for Pediatric Intensive Care in Real-Time."
+

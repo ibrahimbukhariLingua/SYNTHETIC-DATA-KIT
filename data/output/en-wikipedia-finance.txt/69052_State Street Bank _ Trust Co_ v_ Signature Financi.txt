@@ -1,0 +1,84 @@
+State Street Bank & Trust Co. v. Signature Financial Group, Inc.
+
+
+# State Street Bank & Trust Co. v. Signature Financial Group, Inc.
+
+
+
+***State Street Bank and Trust Company v. Signature Financial Group, Inc.***, 149 F.3d 1368 (Fed. Cir. 1998), also referred to as ***State Street*** or ***State Street Bank***, was a 1998 decision of the United States Court of Appeals for the Federal Circuit concerning the patentability of business methods. *State Street* for a time established the principle that a claimed invention was eligible for protection by a patent in the United States if it involved some practical application and, in the words of the *State Street* opinion, "it produces a useful, concrete and tangible result."
+
+With the 2008 Federal Circuit decision *In re Bilski*, however, the useful-concrete-tangible test was jettisoned. According to the Federal Circuit's *Bilski* opinion, the "'useful, concrete and tangible result inquiry' is inadequate," and the portions of the *State Street* decision relying on this inquiry are no longer of any effect under US patent law. The Supreme Court affirmed the judgment of the Federal Circuit in *Bilski v. Kappos*.
+
+
+## Background
+
+On March 9, 1993, Signature Financial Group, Inc. was granted U.S. Patent 5,193,056 entitled "Data Processing System for Hub and Spoke Financial Services Configuration". The "spokes" were mutual funds that pool their assets in a central "hub". When this is done in connection with certain daily accounting procedures in accordance with Internal Revenue Service (IRS) regulations, the profits are passed through to the shareholders for tax purposes, without being first subject to corporate income tax, as they otherwise would be. The procedures are so complex that they could not be performed, in the time interval IRS regulations allow, without using a programmed digital computer.
+
+It has been pointed out that the patent claim comprises means for performing steps that are the requirements specified in an Internal Revenue Service regulation for avoiding taxes on a partnership. This chart illustrates how the wording of the patent claim corresponds to the US tax statute and regulations. The patent is thus, in effect, one on compliance with US tax law.
+
+How the claim elements of the patent correspond to the provisions of US tax law applicable to Hub & Spokes tax systems
+| Patent | Tax Law |
+| --- | --- |
+| 1. A data processing system for managing a financial services configuration of a portfolio established as a partnership, each partner being one of a plurality of funds, comprising: (a) computer processor means for processing data; (b) storage means for storing data on a storage medium; (c) first means for initializing the storage medium; | [This part of claim 1 is directed to setting up a computer system for processing data and having access to a source of storage data to be processed in the computer.] |
+| [These IRC provisions establish a framework for treatment of partnership income qualifying it for flowthrough treatment. The terms in italics are relevant to subsequent provisions and to corresponding claim language.] | 26 U.S.C. § 706(d)(2)(A): [I]f during and taxable year of the partnership there is a change in any partners's interest in the partnership, ... each partner's distributive share of any allocable cash basis shall be determined—(i) by assigning the appropriate portion of such item *to each day* in the period to which it is attributable, and (ii) by allocating the portion assigned to any such day among the partners in proportion to their interests in the partnership at *the close of such* day. I Reg. 1,704-1(b)(2)(iv): (a): Except as otherwise provided in paragraph (b)(2)(ii)(i) of this section, and allocation of income, gain, loss, or deduction will not have economic effect under paragraph (b)(2)(ii)(i) of this section and will not be deemed to be in accordance with a partner's interest in the partnership under paragraph (b)(4) of this section *[i.e., qualify for partnership flow-through treatment]*, unless the capital accounts of the partners are determined and maintained throughout the full term of the partnership *[i.e., daily]* in accordance with the capital accounting rules of this paragraph (b)(2)(iv). |
+| (d) second means for processing data regarding assets in the portfolio and each of the funds from a previous day and data regarding increases or decreases in each of the funds, assets and for allocating the percentage share that each fund holds in the portfolio; | ...(b)(2)(iv): [T]he partners' capital accounts will be considered to be determined and maintained in accordance with the rules of this paragraph (b)(2)(iv) if, and only if, each partner's capital account: ... is increased by (1) the amount of money contributed by him to the partnership...and is decrease by (4) the amount of money distributed to him by the partnership |
+| (e) third means for processing data regarding daily incremental income, expenses, and net realized gain or loss for the portfolio and for allocating such data among each fund; | is increased by (3) allocations to hum partnership income and gain...and is decreased by (6) allocations to him of expenditures of the partnership...and (7) allocations of partnership loss |
+| (f) fourth means for processing data regarding daily net unrealized gain or loss for the portfolio and for allocating such data among each fund; and | IRS Reg. 1.704-1(f): A partnership agreement may, upon the occurrence of certain events, increase or decrease the capital accounts of the partners to reflect a revaluation of partnership property... Capital accounts so adjusted will not be considered to be determined and maintained in accordance with the rules if this paragraph (b)(2)(iv) unless—... (2) The adjustments reflect the manner in which the unrealized income, gain, loss, deduction inherent in such property (that has not been reflected in the capital accounts previously) would be allocated among the partners if there were a taxable disposition of such property for such fair market value on that date. |
+| (g) fifth means for processing data regarding aggregate year-end income, expenses, and capital gain or loss for the portfolio and each of the funds. | 26 U.S.C § 706(d)(1): [I]f during any taxable year of the partners there is a change in any partner's interest in the partnership, each partner's distributive share of any item of income, gain, loss, deduction, or credit of the partnership for such taxable year shall be determined by the use of any method prescribed by the Secretary by regulations which takes into account the varying interests of the partners in the partnership during such taxable year. |
+
+
+## Federal Circuit opinion
+
+The district court held the patent invalid as directed to nonstatutory subject matter. The Federal Circuit reversed, however, in an opinion that was followed by a large increase in the issuance of business-method and software patents. The Federal Circuit stated:
+
+> [T]he transformation of data, representing discrete dollar amounts, by a machine through a series of mathematical calculations into a final share price, constitutes a practical application of a mathematical algorithm, formula, or calculation, because it produces "a useful, concrete and tangible result"—a final share price momentarily fixed for recording and reporting purposes and even accepted and relied upon by regulatory authorities and in subsequent trades.
+
+At the time and during the following decade, this ruling was considered by many to be significant because previously "methods of doing business" had been widely thought not to be eligible for patent grants. For example, in *Hotel Security Checking Co. v. Lorraine Co.*, the Second Circuit held that a bookkeeping system to prevent waiters from stealing customer payments for meals could not be patented. In *Joseph E. Seagram & Sons v. Marzell*, the D.C. Circuit held that a patent on "blind testing" whiskey blends for consumer preferences would be "a serious restraint upon the advance of science and industry" and therefore should be refused.
+
+The Federal Circuit rejected this view in its *State Street Bank* opinion:
+
+> The business method exception has never been invoked by this court, or the CCPA, to deem an invention unpatentable. Application of this particular exception has always been preceded by a ruling based on some clearer concept of Title 35 or, more commonly, application of the abstract idea exception based on finding a mathematical algorithm.
+
+The Federal Circuit found it inappropriate to carve out a further exception to the principle that "anything under the sun made by man is patentable." Accordingly, the Federal Circuit applied that principle to all business methods that "produce a useful, concrete and tangible result."
+
+
+## Aftermath
+
+The *State Street Bank* opinion led to a great increase in business method and software patents. In 1991, software related patents represented about 20 percent of the yearly total; by 2011 they accounted for about 50 percent. The absolute number of software patents rose from about 25,000 per year to 125,000 per year in this period. An accompanying graph shows a GAO analysis of such data.
+
+
+### Judicial criticism
+
+In May 2006, Justice Kennedy of the US Supreme Court commented in a concurring opinion in the *eBay* case that a "burgeoning number" of business-method patents were of "potential vagueness and suspect validity." He was joined by Justices Stevens, Souter, and Breyer.
+
+In June 2006, the Court dismissed *certiorari* in *LabCorp v. Metabolite, Inc.*. The Federal Circuit had decided the case on the basis of the *State Street* precedent. Three Justices (Breyer, J., joined by Stevens and Souter, JJ.) dissented from the dismissal, arguing that the Federal Circuit had decided the *LabCorp* case on the erroneous "useful, concrete, and tangible result" legal test enunciated in the *State Street* case. This was a legal test, the dissent argued, under which patents that the Supreme Court had held patent ineligible would be held patent eligible, citing as examples *O'Reilly v. Morse*, *Gottschalk v. Benson*, and *Parker v. Flook*. The Court should therefore decide the case, the dissenting Justices maintained, in order to "diminish legal uncertainty in the area, affecting a substantial number of patent claims."
+
+
+### *Bilski*
+
+In 2008, in *In re Bilski*, the Federal Circuit decided to reconsider *State Street* *en banc*. In its order, the court listed as one of the questions to be briefed by the applicant, the PTO, and the *amici curiae* was "Whether the court should reconsider *State Street Bank & Trust Co. v. Signature Financial Group, Inc.*, 149 F.3d 1368 (Fed. Cir. 1998) . . . in which the court had held that business methods could be patented, and whether th[at] case[ ] should be overruled in any respect."
+
+In the *en banc* opinion the court later issued, it jettisoned the "useful-concrete-tangible result" (UCTR) test stated in *State Street*, but it did not explicitly overrule *State Street* in its entirety. The court said that the UCTR test "is insufficient to determine whether a claim is patent-eligible under § 101," and "is inadequate," and it reaffirmed that "the machine-or-transformation test outlined by the Supreme Court is *the* proper test to apply" instead. As to *State Street*, the court said, "those portions of our opinions in *State Street*, relying on a 'useful, concrete and tangible result' analysis should not longer be relied on."
+
+The Federal Circuit's majority opinion did not hold that business methods are categorically patent ineligible. Judges Mayer and Dyk agreed with the majority that the Bilski patent application should be denied, but argued that the proper basis of decision was that business methods could not be patented under a proper interpretation of the law.
+
+In his separate opinion in *In re Bilski*, Federal Circuit Judge Mayer stated, "Not surprisingly, *State Street* and its progeny have generated a thundering chorus of criticism," and he collected citations to supporting authorities. He quoted one source for the statement, "The Federal Circuit's recent endorsement of patent protection for methods of doing business marks so sweeping a departure from precedent as to invite a search for its justification" and another for this: "To call [the situation following *State Street*] distressing is an understatement. The consensus . . . appears to be that patents should not be issuing for new business methods."
+
+The Supreme Court affirmed the judgment of patent ineligibility in *Bilski v. Kappos*. It did not endorse the use of the machine-or-transformation test as the sole test, but said it was only a "useful clue" to making the determination. The Court's majority also declined to hold business methods categorically patent ineligible. Four Justices, however—Justice Stevens, concurring, joined by Justices Breyer, Ginsburg, and Sotomayor—would have held all business methods patent ineligible, on the basis of the historical background of the patent clause of the Constitution. In a separate concurring opinion by Justice Breyer, he listed points on which the Court unanimously agreed. One point was that the *State Street Bank* case was not a correct statement of the law.
+
+
+### *Mayo* and *Alice*
+
+The Supreme Court's subsequent decisions in *Mayo v. Prometheus* and Alice v. CLS Bank further expanded on *Bilski* and substantially obliterated *State Street*. These decisions established a two-step inquiry in which, first, the court is to look to whether the claimed invention is directed to an abstract idea or natural principle; if it is, a second step follows in which the court must determine whether the claimed invention implements the abstract idea inventively or instead in a merely routine or conventional manner. Unless the implementation or application of the abstract idea embodies an "inventive concept," the claimed invention is patent ineligible. (These concepts are explained further in the articles on the Mayo and Alice cases.) Under this test the *State Street* patent would be invalid.
+
+*Alice* specifically holds that a generic computer implementation of an abstract idea is patent ineligible. In *Alice*, the Supreme Court held that a software-related invention on an existing business procedure could not be saved from patent ineligibility and be made patent eligible simply by saying, "Do it with a computer." Instead, it would be necessary to implement the procedure in an inventive manner. This decision appears to have overruled *State Street* *sub silentio*, as called for in the *eBay* dissent.
+
+
+### Developments after *Alice* decision
+
+After the *Alice* decision, many of the business method patents that had issued as a result of the *State Street* decision were invalidated. One commentator tabulated statistics through June 2015. He found that the Federal Circuit held more than 90 percent invalid, while district courts invalidated more than 70 percent.
+
+In one of these district court decisions, Federal Circuit Judge Bryson, sitting by designation as a district judge, spoke of these business method patents as uninventive and mere "aspirational" recitations of "methods for performing a commonplace business function" without any description of "any novel manner of performing that function" other than saying "do it with a computer":
+
+> In short, such patents, although frequently dressed up in the argot of invention, simply describe a problem, announce purely functional steps that purport to solve the problem, and recite standard computer operations to perform some of those steps. The principal flaw in these patents is that they do not contain an "inventive concept" that solves practical problems and ensures that the patent is directed to something "significantly more than" the ineligible abstract idea itself. As such, they represent little more than functional descriptions of objectives, rather than inventive solutions. In addition, because they describe the claimed methods in functional terms, they preempt any subsequent specific solutions to the problem at issue.
+

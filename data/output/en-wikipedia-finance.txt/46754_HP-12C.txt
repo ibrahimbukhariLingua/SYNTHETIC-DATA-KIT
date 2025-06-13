@@ -1,0 +1,60 @@
+HP-12C
+
+
+# HP-12C
+
+
+
+The **HP-12C** is a financial calculator made by Hewlett-Packard (HP) and its successor HP Inc. as part of the HP Voyager series, introduced in 1981. It is HP's longest and best-selling product and is considered the *de facto standard* among financial professionals. There have been multiple revisions over the years, with newer revisions moving to an ARM processor running a software emulator of the original Nut processor. Critics claim that its 1980s technology is antiquated, but proponents point out that it is still the de facto and de jure standard in finance.
+
+
+## Functionality
+
+The HP-12C is HP's longest and best-selling product, in continual production since its introduction in 1981. Due to its simple operation for key financial calculations, the calculator long ago became the *de facto standard* among financial professionals. Its popularity has endured despite the fact that a relatively simple but iterative process such as amortizing the interest over the life of a loan, a calculation that modern spreadsheets can complete almost instantly, can take over a minute with the HP-12C. The 1977 October edition of the *HP Journal* contains an article by Roy Martin, the inventor of the simple method of operation used in HP financial calculators, which describes, in detail, the mathematics and functionality built by William Kahan and Roy Martin that is still used today.
+
+
+## Models
+
+
+### HP-12C
+
+There were at least nine hardware revisions of the HP-12C since 1981 (including one special issue). Over its lifespan, the proprietary bulk CMOS HP Nut (originally the 1LF5, then 1LM2) processor's technology has been redesigned to integrate all the circuitry into a single chip (first the 1LQ9, then 1RR2) and to refresh the manufacturing process (as the foundry could no longer manufacture the necessary chips, having moved on to making higher-density chips). However, HP's market research found in the late 1980s that users did not trust results obtained too quickly and so the CPU speed was never improved from the original 884 kHz, but the speed could be increased by a user modification. In 2001 (from serial number CN11500001), the CPU was changed to a 3 V process (Agilent 2AF1-0001, later a Marvell 2AF1-0002) and the battery was therefore changed to a single CR2032 cell replacing the three LR44 cells previously used (F1637A).
+
+In 2008, HP modified the design to use an Atmel AT91SAM7L128 processor with ARM7TDMI core running a software emulator of the previous Nut processor, written by Cyrille de Brébisson, in order to execute an image of the former Nut-based firmware in it. This has brought advanced possibilities such as flashing new firmware, not previously possible. HP also released a software development kit (SDK), making it possible to make new and custom operating systems. The calculator ran 60–90 times faster on most benchmark operations. This version (F2230A) was colloquially known as the "*HP-12C+*", although HP did not market it as a different product. In contrast to the preceding revision, it supported two parallel CR2032 cells, of which only one was necessary to run the calculator.
+
+Based on the same processor, a limited *HP 12c 30th Anniversary Edition* (NW258AA) was introduced in 2011. Only 40,000 of this model were made.
+
+The internal hardware of the HP-12C changed again in 2015, when the design switched to use an Atmel ATSAM4LC2CA-AU processor with ARM Cortex-M4 core. The calculator's part number and physical appearance didn't change except for a "Rev 2" plate on the bottom side. It continues to use two parallel CR2032 cells. The firmware reports a 2015 build date. Serial numbers starting with "PHA", "9CJ", "7CD", or "3CD" rule out the older model variant. The 2×3-pin flash port now uses the USB protocol instead of a TTL serial protocol; in addition to this, the calculator's circuit board features an unpopulated mount for a Micro-USB connector.
+In 2022, the HP Development Company, L.P.'s licensees Moravia Consulting spol. s r.o. and Royal Consumer Information Products, Inc. released a minor revision of the HP 12C without "Hewlett-Packard" on the frontplate and with a screw added to the battery compartment cover.
+
+The HP-12C is one of only four calculators permissible in the Chartered Financial Analyst exams, the others being its sister, the HP 12c Platinum, and the Texas Instruments BA II Plus and BA II Plus Professional.
+
+Often referred to as a tool for "Old-ie Time-ies," critics of the HP-12C claim its early 1980s technology and style are antiquated. Proponents, however, are quick to note that the HP-12C continues to be both the *de jure* and *de facto* standard of high finance.
+
+
+### HP 12c Platinum / Prestige
+
+The *HP 12c Platinum* is similar in appearance and functionality to the 12C, and is designed to mimic the 12C whilst extending its capabilities in various aspects. The calculator was introduced in 2003, is visibly distinguished by its silver-colored upper half as opposed to the gold-colored plate on the original 12c. There are six variants of the HP 12c Platinum (including two special issues).
+
+The first release of the 12c Platinum used a faster processor than the revision of the original HP-12C which was available at that time. (However, the subsequent revisions of the original 12C which switched to ARM-based processors have reversed that speed gap.) It was equipped with a Sunplus SPLB20D2 with a 6502 core, larger memory (for up to 30 CFj registers and 400 program steps) and more built-in functions. It allows input to be entered in algebraic mode as well as in 4-level classical RPN. The calculator's particular implementation of RPN exhibits an unusual behaviour of the `CHS` key different from that of the 12C and other classical RPN calculators.
+
+The first HP 12c Platinum version (F2231A) did not have parentheses, which often led to awkward key sequences to solve problems in algebraic mode. Since 2005, newer versions (F2232A) of the HP 12c Platinum have parentheses on the blue-shifted functions of the STO and RCL keys. They also support undo and backspace and provide memory for up to 80 CFj registers. The firmware changes increased the ROM size beyond the capabilities of the original processor, so it was replaced by the Generalplus GPLB31A (still with 6502 core), which is also faster. It was manufactured by Kinpo Electronics.
+
+In 2006, Hewlett-Packard released a limited edition of the 12c Platinum to commemorate the 25th anniversary of the original 12C's introduction. The *HP 12c Platinum 25th Anniversary Edition* also has the parentheses feature and features the GPLB31A processor as well.
+
+The latest hardware revision of the 12c Platinum was introduced in 2007 (F2231AA). As in the later revisions of the 12C, it features two parallel rather than only one CR2032 cells, but it continues to be based on the GPLB31A processor. In 2008, the *HP 12c Prestige* (F2233A) was released. It features a gold-colored plate like the original 12C, but is otherwise like the fourth HP 12c Platinum model (F2231AA). In 2022, alongside the latest revision of the original 12C, Moravia and Royal also released a mostly cosmetic update of the 12c Platinum, with the words "Hewlett-Packard" removed from the frontplate, subtle adjustments to the layout and contact information on the rearplate, and a screw added to the battery compartment.
+
+
+## Bugs and problems
+
+By design, the HP-12C rounds up the number of payments to the next integer, which produces meaningless results when calculating fractional periods. Consequently, solving for *n* returns a value that is mathematically incorrect when compared to the standard annuity formula and different from the value returned by other financial calculators, Excel, etc.
+
+
+## Clones
+
+The *Aurora FN1000* calculator in clamshell design was closely inspired by the HP-12C in 2003. Capitalizing on the limited availability of the HP 12c Platinum 25th Anniversary Edition, Victor Technology released the *Victor V12* in 2007 which was a budget priced clone of the HP 12c Platinum edition. It is also available as *BrtC FC-12* in Brazil. The 2010 *Compucessory CCS28956* aka *Compucessory 28956*, a clamshell design, is another clone of the HP 12c Platinum, but with added margin calculation functions (COST, SELL, MGN). It is also available as *Procalc FN 1200C* in Brazil. The *Truly SC123* in 2015 closely resembles the HP 12c Platinum as well, but in a vertical case layout.
+
+In 2012, SwissMicros (aka RPN-Calc) introduced a miniature clone named *DM-12CC* approximating the size of an ID-1 credit card (88 mm × 59 mm × 7 mm). It closely emulates the functionality of the original HP-12C by running the original ROM image in an emulator on an ARM Cortex-M0-based NXP LPC1114 processor. Newer *DM12* models since 2013 feature a better keyboard and more RAM (LPC1115). A *DM12 Silver Edition* in a titanium case is available as well.
+In February 2016, SwissMicros introduced the DM12L, a version of the calculator about the same size as the original HP-12C.
+Deviating from the HP original, these calculators feature a dot-matrix display, switchable fonts and clock speeds, and, based on a Silicon Labs CP2102 converter chip, they come with a USB (Mini-B) serial interface to exchange data with a PC etc. for backup purposes (and possibly to communicate with applications like PC-based HP-12C emulators) or to update the firmware. Powering via USB is not supported.
+

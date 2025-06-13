@@ -1,0 +1,57 @@
+In-database processing
+
+
+# In-database processing
+
+
+
+**In-database processing**, sometimes referred to as **in-database analytics**, refers to the integration of data analytics into data warehousing functionality. Today, many large databases, such as those used for credit card fraud detection and investment bank risk management, use this technology because it provides significant performance improvements over traditional methods.
+
+
+## History
+
+Traditional approaches to data analysis require data to be moved out of the database into a separate analytics environment for processing, and then back to the database. (SPSS from IBM are examples of tools that still do this today). Doing the analysis in the database, where the data resides, eliminates the costs, time and security issues associated with the old approach by doing the processing in the data warehouse itself.
+
+Though in-database capabilities were first commercially offered in the mid-1990s, as object-related database systems from vendors including IBM, Illustra/Informix (now IBM) and Oracle, the technology did not begin to catch on until the mid-2000s. The concept of migrating analytics from the analytical workstation and into the Enterprise Data Warehouse was first introduced by Thomas Tileston in his presentation entitled, “Have Your Cake & Eat It Too! Accelerate Data Mining Combining SAS & Teradata” at the Teradata Partners 2005 "Experience the Possibilities" conference in Orlando, FL, September 18–22, 2005. Mr. Tileston later presented this technique globally in 2006, 2007 and 2008.
+
+At that point, the need for in-database processing had become more pressing as the amount of data available to collect and analyze continues to grow exponentially (due largely to the rise of the Internet), from megabytes to gigabytes, terabytes and petabytes. This “big data” is one of the primary reasons it has become important to collect, process and analyze data efficiently and accurately.
+
+Also, the speed of business has accelerated to the point where a performance gain of nanoseconds can make a difference in some industries. Additionally, as more people and industries use data to answer important questions, the questions they ask become more complex, demanding more sophisticated tools and more precise results.
+
+All of these factors in combination have created the need for in-database processing. The introduction of the column-oriented database, specifically designed for analytics, data warehousing and reporting, has helped make the technology possible.
+
+
+## Types
+
+There are three main types of in-database processing: translating a model into SQL code, loading C or C++ libraries into the database process space as a built-in user-defined function (UDF), and out-of-process libraries typically written in C, C++ or Java and registering them in the database as a built-in UDFs in a SQL statement.
+
+
+### Translating models into SQL code
+
+In this type of in-database processing, a predictive model is converted from its source language into SQL that can run in the database usually in a stored procedure. Many analytic model-building tools have the ability to export their models in either SQL or PMML (Predictive Modeling Markup Language). Once the SQL is loaded into a stored procedure, values can be passed in through parameters and the model is executed natively in the database. Tools that can use this approach include SAS, SPSS, R and KXEN.
+
+
+### Loading C or C++ libraries into the database process space
+
+With C or C++ UDF libraries that run in process, the functions are typically registered as built-in functions within the database server and called like any other built-in function in a SQL statement. Running in process allows the function to have full access to the database server's memory, parallelism and processing management capabilities. Because of this, the functions must be well-behaved so as not to negatively impact the database or the engine. This type of UDF gives the highest performance out of any method for OLAP, mathematical, statistical, univariate distributions and data mining algorithms.
+
+
+### Out-of-process
+
+Out-of-process UDFs are typically written in C, C++ or Java. By running out of process, they do not run the same risk to the database or the engine as they run in their own process space with their own resources. Here, they wouldn't be expected to have the same performance as an in-process UDF. They are still typically registered in the database engine and called through standard SQL, usually in a stored procedure. Out-of-process UDFs are a safe way to extend the capabilities of a database server and are an ideal way to add custom data mining libraries.
+
+
+## Uses
+
+In-database processing makes data analysis more accessible and relevant for high-throughput, real-time applications including fraud detection, credit scoring, risk management, transaction processing, pricing and margin analysis, usage-based micro-segmenting, behavioral ad targeting and recommendation engines, such as those used by customer service organizations to determine next-best actions.
+
+
+## Vendors
+
+In-database processing is performed and promoted as a feature by many of the major data warehousing vendors, including Teradata (and Aster Data Systems, which it acquired), IBM (with its Netezza, PureData Systems, and Db2 Warehouse products), IEMC Greenplum, Sybase, ParAccel, SAS, and EXASOL. Some of the products offered by these vendors, such as CWI's MonetDB or IBM's Db2 Warehouse, offer users the means to write their own functions (UDFs) or extensions (UDXs) to enhance the products' capabilities. Fuzzy Logix offers libraries of in-database models used for mathematical, statistical, data mining, simulation, and classification modelling, as well as financial models for equity, fixed income, interest rate, and portfolio optimization. In-DataBase Pioneers collaborates with marketing and IT teams to institutionalize data mining and analytic processes inside the data warehouse for fast, reliable, and customizable consumer-behavior and predictive analytics.
+
+
+## Related Technologies
+
+In-database processing is one of several technologies focused on improving data warehousing performance. Others include parallel computing, shared everything architectures, shared nothing architectures and massive parallel processing. It is an important step towards improving predictive analytics capabilities.
+

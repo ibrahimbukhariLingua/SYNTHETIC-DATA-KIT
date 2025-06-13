@@ -1,0 +1,48 @@
+Walk forward optimization
+
+
+# Walk forward optimization
+
+
+
+**Walk forward optimization** is a method used in finance to determine the optimal parameters for a trading strategy and to determine the robustness of the strategy. Walk Forward Analysis was created by Robert E. Pardo in 1992 and expanded in the second edition. Walk Forward Analysis is now widely considered the "gold standard" in trading strategy validation. The trading strategy is optimized with in-sample data for a time window in a data series. The remaining data is reserved for out of sample testing. A small portion of the reserved data following the in-sample data is tested and the results are recorded. The in-sample time window is shifted forward by the period covered by the out of sample test, and the process repeated. Lastly, all of the recorded results are used to assess the trading strategy.
+
+After the most suitable parameters are found, the system is run using another segment of data. The two segments of data do not overlap each other. This is what it means to do one walk-forward or out-of-sample test. It is the culmination of the following methods and aids in creation of robust systems.
+
+Past data is used for ***Backtesting*** of a trading system. It refers to applying a trading system to historical data to verify how a system would have performed during the specified time period and is useful if a system was not profitable in the past.
+
+***Forward testing*** (also known as ***Walk forward testing***) is the simulation of the real markets' data on paper only. One moves along the markets live and is not using real money, but virtually trading in the markets to understand their movements better. Hence, it is also called ***Paper Trading***. Forward performance testing is a simulation of actual trading and involves following the system's logic in a live market.
+
+
+## Overview
+
+One of the biggest issues with system development is that many systems do not hold up into the future. There are several reasons for this. The first is that the system is not based on a valid premise. Another is that the testing is not sound for reasons such as:
+
+* Lack of robustness in a system due to improper parameters. A system is considered robust if it runs well in any market conditions.
+* Inconsistent rules and improper testing of the system using 'out-of-sample' and 'in-sample' data.
+
+***Walk Forward Analysis*** does optimization on a training set; test on a period after the set and then rolls it all forward and repeats the process. We have multiple out-of-sample periods and look at these results combined. Walk forward analysis was first presented by Robert E. Pardo in the first version of his book *Design, Testing and Optimization of Trading Systems* in 1992.. The first accurate software implementation of Walk Forward Analysis was in Pardo Corporation's pioneering application *Advanced Trade*r and then in increasingly advanced versions in other applications such as *Blast* and *XT*. Walking forward can keep a trading model a step ahead. Walk forward is so called, as we have multiple walk training and testing periods is less likely to suffer from over-fitting. This article was originally published in Futures (defunct) presented Walk Forward Analysis in nascent form.
+
+*Walk forward testing allows us to develop a trading system while maintaining a reasonable 'degree of freedom'*. Walk-forward testing carries the idea of 'out-of-sample' testing to the next level. It is a specific application of a technique known as Cross-validation. It means to take a segment of your data to optimize a system, and another segment of data to validate. Hence, here you optimize a window of data say past 1000 bars, and then test it on next 200 bars. Then roll the whole thing forward 200 bars and repeat the process. This gives you a large out of sample period and allows you to see how stable the system is over time.
+
+Suppose you consider a strategy around a moving average. You take the first 3 months of data, and find that for that period a 20-minute moving average was optimal (using tick data). You then validate this rule by assessing its performance for the 4th month (i.e. profit, reward/risk or any other statistic of interest). Next, you repeat the optimization using data from month 2–4, and validate using month 5, and keep repeating this until you've reached the end of the data. The performance you get for the validation months (4-13) are your out-of-sample performance.
+
+
+### The basics behind the data used
+
+Before doing the back-testing or optimization, one needs to set up the data required which is the historical data of a specific time period. This historical data segment is divided into the following two types:
+
+* ***In-Sample Data***: It is a past segment of market data (historical data) reserved for testing purposes. This data is used for the initial testing and any optimization and is the original parameters of a system under test.
+* ***Out-of-Sample Data***: It is the reserved data set (historical data) which is not a part of the in-sample data. It is important as this ensures that the system is tested on another period of historical data not earlier thus removing any bias or influences in the checking of the system's performance.
+
+A complete Walk-Forward Analysis process consists of finding the optimal parameters for the trading system using in-sample data and then apply the out-of-sample data to the system. This process is repeated through the full historical test period.
+
+
+### Conclusion
+
+For a better understanding, please see the example here.
+
+In order to evaluate any system, one should check out its performance when using the "Out-of-Sample Data" (test data) and not the "In-Sample Data" (data used for optimization of the system). Thus, walk forward test determines the optimized system performance by compiling the performance statistics of all of the out-of-sample windows.:This is the Walk-Forward Analysis performance summary
+
+* Is it *robust*? The trading strategy is considered to be robust if it produces a positive performance summary. A robust strategy is one that is expected to produce real-time trading performance that is in-line with its development profile. The evaluation of the trading strategy as a tradable asset is an entirely different process. See opt cited 2, pages 263-280.
+* *Is it over-fit?* This is a complex area. In general, strategies that are over-fit will fail in a walk-forward analysis. However, suffice to say, that a strategy can be robust and can also exhibit some symptoms of over-fitting, For example, as a strategy is refined by adding different components and filters, this can lead to some degree of over-fitting. If the trader detects this, depending on the extent of it, it might prove sensible to discard such changes. For a detailed discussion of this, see opt cited 2, pages 281-300.

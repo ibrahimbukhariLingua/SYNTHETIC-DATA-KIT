@@ -1,0 +1,226 @@
+Profit model
+
+
+# Profit model
+
+
+
+The **profit model** is the linear, deterministic algebraic model used implicitly by most cost accountants. Starting with, profit equals sales minus costs, it provides a structure for modeling cost elements such as materials, losses, multi-products, learning, depreciation etc. It provides a mutable conceptual base for spreadsheet modelers. This enables them to run deterministic simulations or 'what if' modelling to see the impact of price, cost or quantity changes on profitability.
+
+
+## Basic model
+
+where:
+
+For an expansion of the model see below.
+
+
+## Background
+
+The justification for wanting to express profit as an algebraic model is given by Mattessich in 1961:
+
+Most of the definitions in cost accounting are in an unclear narrative form, not readily associated with other definitions of accounting calculations. For example, preparing a comparison of fixed cost variances in stock under different stock valuation methods can be confusing. Another example is modelling labour variances with learning curve corrections and stock level changes. With the absence of a basic profit model in an algebraic form, confident development of such models is difficult.
+
+The development of spreadsheets has led to a decentralisation of financial modelling. This has often resulted in model builders lacking training in model construction. Before any professional model is built it is usually considered wise to start by developing a mathematical model for analysis. The profit model provides a general framework plus some specific examples of how such an a priori profit model might be constructed.
+
+The presentation of a profit model in an algebraic form is not new. Mattessich's model, while large, does not include many costing techniques such as learning curves and different stock valuation methods. Also, it was not presented in a form that most accountants were willing or able to read. This paper presents a more extended model analysing profit but it does not, unlike Mattessich, extend to the balance sheet model. Its form, of starting with the basic definition of profit and becoming more elaborate, may make it more accessible to accountants.
+
+Most cost accounting textbooks explain basic Cost Volume Profit modeling in an algebraic form, but then revert to an 'illustrative' approach. This 'illustrative' approach uses examples or narrative to explain management accounting procedures. This format, though useful when communicating with humans, can be difficult to translate into an algebraic form, suitable for computer model building. Mepham extended the algebraic, or deductive, approach to cost accounting to cover many more techniques. He develops his model to integrate with the optimizing models in operations research. The profit model comes out of Mephams work, extending it but only in a descriptive, linear form.
+
+
+## Model extensions
+
+The basic profit model is sales minus costs. Sales are made up of quantity sold multiplied by their price. Costs are usually divided between Fixed costs and variable costs.
+
+Using:
+
+* Sales revenue = *pq* = price × quantity sold
+* Cost of sales = *wq* = unit cost × quantity sold
+* Administration, selling, engineers, personnel etc. = *Fn* = fixed post-manufacturing overheads
+* Profit = *π*
+
+Thus the profit can be calculated from:
+
+Notice that *w* (average unit production cost) includes the fixed and variable costs.
+The square brackets contain the cost of goods sold, *wq* not cost of good made *wx* where *x* = cost of good sold.
+
+To show cost of good sold, the opening and closing finished goods stocks need to be included
+The profit model would then be:
+
+* Opening stock = *g*ₒ *w* = opening stock quantity × unit cost
+* Cost of stock = *g*₁ *w* = closing stock quantity × unit cost
+* Cost of production = *wx* = unit production cost × quantity made:
+
+Presenting the profit calculation in this form immediately demands that some of the costs be more carefully defined.
+
+
+### Production costs
+
+The unit production costs (*w*) can be separated into fixed and variable costs:
+
+where
+
+* *F*ₘ = manufacturing fixed costs;
+* *v* = variable costs per unit;
+* *x* = production quantity.
+
+The introduction of this separation of *w* allows for consideration of the behaviour of costs for different levels of production. A linear cost curve is assumed here, divided between the constant (*F*) and its slope (*v*). If the modeller has access to the details of non-linear cost curves then *w* will need to be defined by the appropriate function.
+
+Replacing *wx* in (equation 2) and making *F* = *F*ₙ + *F*ₘ:
+
+
+### Variable-cost elements
+
+Moving on to other extensions of the basic model, the cost elements such as direct materials, direct labour and variable overheads can be included. If a non-linear function is available and thought useful such functions can be substituted for the functions used here.
+
+The material cost of sales = m \* μ \* q, where
+
+m is the amount of material in one unit of finished goods.
+
+μ is the cost per unit of the raw material.
+
+The labour cost of sales = *l λ q*, where
+
+* *l* is the amount of labour hours required to make one unit of finished goods
+* *λ* is the labour cost (rate) per hour.
+
+The variable overhead cost of sales = *nq* where *n* is the variable overhead cost per unit.
+
+This is not here subdivided between quantity per finished goods units and cost per unit.
+
+Thus the variable cost v \* q can now be elaborated into:
+
+If the production quantity is required the finished goods stock will need to be added.
+
+In a simple case two materials can be accommodated in the model by simply adding another m \* μ. In more realistic situations a matrix and a vector will be necessary (see later).
+
+If material cost of purchases is to be used rather than material cost of production it will be necessary to adjust for material stocks. That is,
+
+where
+
+* d = material stock quantity,
+* 0 = opening, 1 = closing,
+* b = quantity of material purchased
+* m = the amount of material in one unit of finished goods
+* x = quantity used in production
+
+### Depreciation
+
+All depreciation rules can be stated as equations representing their curve over time. The reducing balance method provides one of the more interesting examples.
+
+Using c = cost, t = time, L = life, s = scrap value, Fd = time based depreciation:
+
+This equation is better known as the rule: Depreciation per year = Last year's written down value multiplied by a constant %
+
+The limits are 0 < t < L, and the scrap value has to be greater than zero. (For zero use 0.1).
+
+Remembering that time-based depreciation is a fixed cost and usage-based depreciation can be a variable cost, depreciation can easily be added into the model (equation 5).
+
+Thus, the profit model becomes:
+
+where, nd = usage (as q) based depreciation and π = annual profit.
+
+
+### Stock valuation
+
+In the above, the value of the unit finished goods cost ‘w' was left undefined. There are numerous alternatives to how stock (w) is valued but only two will be compared here.
+
+The marginal versus absorption costing debate, includes the question of the valuation of stock (w).
+
+Should w = v or as (3) w = (Fm + v x)/x.
+
+(i) Under marginal costing: w = v. Inserting in (4),
+
+Becomes
+
+This can be simplified by taking v out and noting, opening stock quantity + production - closing stock quantity = sales quantity (q) so,
+
+Note, v q = variable cost of goods sold.
+
+(ii) Using full (absorption) costing
+Using (equation 3), where xp = planned production, x1 = period production
+w = (Fm + v xp)/xp = Fm/xp + v.
+This can be shown to result in:
+
+Note the strange presence of 'x' in the model.
+Notice also that the absorption model (equation 10) is the same as the marginal costing model (equation 9) except for the end part:
+
+This part represents the fixed costs in stock. This is better seen by remem¬bering q — x= go—g1 so it could be written
+
+The model form with 'q' and 'x' in place of' g₀ and g₁ allows profits to be calculated when only the sales and production figures are known.
+
+A spreadsheet could be prepared for a company with increasing then decreasing levels of sales and constant production. It could have another column showing profit under increasing sales and constant production. Thus the effects of carrying fixed costs in stock can be simulated. Such modelling thus provides a very useful tool in the marginal versus full costing debate.
+
+
+### Modelling for losses
+
+One way of modeling for losses is to use:
+
+* Fixed losses, (quantity) = δf,
+* Variable losses (%) = δv,
+* Material losses = mδ,
+* Production losses = pδ
+
+The model, with all these losses together will look like,
+
+Note that labour and variable overhead losses could also have been included.
+
+
+### Multi-products
+
+So far the model has assumed very few products and/or cost elements. As many firms are multi-product the model they use must be able to handle this problem. Whilst the mathematics here is straightforward the accounting problems introduced are enormous: the cost allocation problem being a good example. Other examples include calculation of break-even points, productivity measures and the optimisation of limited resources. Here only the mechanics of building a multi-dimension model will be outlined.
+
+If a firm sells two products (a and b) then the profit model (equation 9),
+
+All fixed costs have been combined in F
+
+Therefore, for multiple products
+
+Where Σ = the sum of. Which can be drafted as a vector or matrix in a spreadsheet
+
+or
+
+
+### Variances
+
+The profit model may represent actual data (c), planned data (p)or standard data (s) which is the actual sales quantities at the planned costs.
+
+The actual data model will be (using equation 8):
+
+The planned data model will be (using equation 8):
+
+The standard data model will be (using equation 8):
+
+Operating variances are obtained by subtracting the actual model from the standard model.
+
+
+### Learning Curve Model
+
+It is possible to add non linear cost curves to the Profit model. For example, if with learning, the labour time per unit will decrease exponentially over time as more product is made, then the time per unit is:
+
+where
+r = average time.
+b = learning rate.
+q = quantity.
+
+Inserting into equation 8
+
+This equation is best solved by trial and error, the Newton Raphson method or graphing. Like depreciation within the model, the adjustment for learning does provide a form of non-linear sub-modelling.
+
+
+### Percentage Change Model
+
+Rather than the variable be absolute amounts, they might be percentage changes. This represents a major change in approach from the model above. The model is often used in the 'now that ... (say) the cost of labour has gone up by 10%' format. If a model can be developed that only uses such percentage changes then the cost of collecting absolute quantities will be saved.
+
+The notation used below is of attaching a % sign to variables to indicate the change of that variable, for example, p% = 0.10 if the selling price is assumed to change by 10%,
+
+Let x = q and C = contribution
+
+Starting with the absolute form of the contribution model (equation (9) rearranged):
+
+The increase in the contribution which results from an increase in p, v and/or q can be calculated thus:
+
+rearranging and using α = (p — v)/p,
+
+This model might look messy but it is very powerful. It makes very few demands on data, especially if some of the variables do not change. It is possible to develop most of the models presented above in this percentage change format.
+

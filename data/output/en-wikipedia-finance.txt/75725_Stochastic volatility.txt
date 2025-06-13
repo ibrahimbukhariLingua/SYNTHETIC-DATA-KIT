@@ -1,0 +1,104 @@
+Stochastic volatility
+
+
+# Stochastic volatility
+
+
+
+In statistics, **stochastic volatility** models are those in which the variance of a stochastic process is itself randomly distributed. They are used in the field of mathematical finance to evaluate derivative securities, such as options. The name derives from the models' treatment of the underlying security's volatility as a random process, governed by state variables such as the price level of the underlying security, the tendency of volatility to revert to some long-run mean value, and the variance of the volatility process itself, among others.
+
+Stochastic volatility models are one approach to resolve a shortcoming of the Black–Scholes model. In particular, models based on Black-Scholes assume that the underlying volatility is constant over the life of the derivative, and unaffected by the changes in the price level of the underlying security. However, these models cannot explain long-observed features of the implied volatility surface such as volatility smile and skew, which indicate that implied volatility does tend to vary with respect to strike price and expiry. By assuming that the volatility of the underlying price is a stochastic process rather than a constant, it becomes possible to model derivatives more accurately.
+
+A middle ground between the bare Black-Scholes model and stochastic volatility models is covered by local volatility models. In these models the underlying volatility does not feature any new randomness but it isn't a constant either. In local volatility models the volatility is a non-trivial function of the underlying asset, without any extra randomness. According to this definition, models like constant elasticity of variance would be local volatility models, although they are sometimes classified as stochastic volatility models. The classification can be a little ambiguous in some cases.
+
+The early history of stochastic volatility has multiple roots (i.e. stochastic process, option pricing and econometrics), it is reviewed in Chapter 1 of Neil Shephard (2005) "Stochastic Volatility," Oxford University Press.
+
+
+## Basic model
+
+Starting from a constant volatility approach, assume that the derivative's underlying asset price follows a standard model for geometric Brownian motion:
+
+where {\displaystyle \mu \,} is the constant drift (i.e. expected return) of the security price {\displaystyle S\_{t}\,}, {\displaystyle \sigma \,} is the constant volatility, and {\displaystyle dW\_{t}\,} is a standard Wiener process with zero mean and unit rate of variance. The explicit solution of this stochastic differential equation is
+
+The maximum likelihood estimator to estimate the constant volatility {\displaystyle \sigma \,} for given stock prices {\displaystyle S\_{t}\,} at different times {\displaystyle t\_{i}\,} is
+
+its expected value is {\displaystyle \operatorname {E} \left[{\widehat {\sigma }}^{2}\right]={\frac {n-1}{n}}\sigma ^{2}.}
+
+This basic model with constant volatility {\displaystyle \sigma \,} is the starting point for non-stochastic volatility models such as Black–Scholes model and Cox–Ross–Rubinstein model.
+
+For a stochastic volatility model, replace the constant volatility {\displaystyle \sigma } with a function {\displaystyle \nu \_{t}} that models the variance of {\displaystyle S\_{t}}. This variance function is also modeled as Brownian motion, and the form of {\displaystyle \nu \_{t}} depends on the particular SV model under study.
+
+where {\displaystyle \alpha \_{\nu ,t}} and {\displaystyle \beta \_{\nu ,t}} are some functions of {\displaystyle \nu }, and {\displaystyle dB\_{t}} is another standard gaussian that is correlated with {\displaystyle dW\_{t}} with constant correlation factor {\displaystyle \rho }.
+
+
+### Heston model
+
+The popular Heston model is a commonly used SV model, in which the randomness of the variance process varies as the square root of variance. In this case, the differential equation for variance takes the form:
+
+where {\displaystyle \omega } is the mean long-term variance, {\displaystyle \theta } is the rate at which the variance reverts toward its long-term mean, {\displaystyle \xi } is the volatility of the variance process, and {\displaystyle dB\_{t}} is, like {\displaystyle dW\_{t}}, a gaussian with zero mean and {\displaystyle dt} variance. However, {\displaystyle dW\_{t}} and {\displaystyle dB\_{t}} are correlated with the constant correlation value {\displaystyle \rho }.
+
+In other words, the Heston SV model assumes that the variance is a random process that
+
+1. exhibits a tendency to revert towards a long-term mean {\displaystyle \omega } at a rate {\displaystyle \theta },
+2. exhibits a volatility proportional to the square root of its level
+3. and whose source of randomness is correlated (with correlation {\displaystyle \rho }) with the randomness of the underlying's price processes.
+
+Some parametrisation of the volatility surface, such as 'SVI', are based on the Heston model.
+
+
+### CEV model
+
+The **CEV** model describes the relationship between volatility and price, introducing stochastic volatility:
+
+Conceptually, in some markets volatility rises when prices rise (e.g. commodities), so {\displaystyle \gamma >1}. In other markets, volatility tends to rise as prices fall, modelled with {\displaystyle \gamma <1}.
+
+Some argue that because the CEV model does not incorporate its own stochastic process for volatility, it is not truly a stochastic volatility model. Instead, they call it a local volatility model.
+
+
+### SABR volatility model
+
+The **SABR** model (Stochastic Alpha, Beta, Rho), introduced by Hagan et al. describes a single forward {\displaystyle F} (related to any asset e.g. an index, interest rate, bond, currency or equity) under stochastic volatility {\displaystyle \sigma }:
+
+The initial values {\displaystyle F\_{0}} and {\displaystyle \sigma \_{0}} are the current forward price and volatility, whereas {\displaystyle W\_{t}} and {\displaystyle Z\_{t}} are two correlated Wiener processes (i.e. Brownian motions) with correlation coefficient {\displaystyle -1<\rho <1}. The constant parameters {\displaystyle \beta ,\;\alpha } are such that {\displaystyle 0\leq \beta \leq 1,\;\alpha \geq 0}.
+
+The main feature of the SABR model is to be able to reproduce the smile effect of the volatility smile.
+
+
+### GARCH model
+
+The Generalized Autoregressive Conditional Heteroskedasticity (GARCH) model is another popular model for estimating stochastic volatility. It assumes that the randomness of the variance process varies with the variance, as opposed to the square root of the variance as in the Heston model. The standard GARCH(1,1) model has the following form for the continuous variance differential:
+
+The GARCH model has been extended via numerous variants, including the NGARCH, TGARCH, IGARCH, LGARCH, EGARCH, GJR-GARCH, Power GARCH, Component GARCH, etc. Strictly, however, the conditional volatilities from GARCH models are not stochastic since at time *t* the volatility is completely pre-determined (deterministic) given previous values.
+
+
+### 3/2 model
+
+The 3/2 model is similar to the Heston model, but assumes that the randomness of the variance process varies with {\displaystyle \nu \_{t}^{3/2}}. The form of the variance differential is:
+
+However the meaning of the parameters is different from Heston model. In this model, both mean reverting and volatility of variance parameters are stochastic quantities given by {\displaystyle \theta \nu \_{t}} and {\displaystyle \xi \nu \_{t}} respectively.
+
+
+### Rough volatility models
+
+Using estimation of volatility from high frequency data, smoothness of the volatility process has been questioned.
+It has been found that log-volatility behaves as a fractional Brownian motion with Hurst exponent of order {\displaystyle H=0.1}, at any reasonable timescale. This led to adopting a fractional stochastic volatility (FSV) model, leading to an overall Rough FSV (RFSV) where "rough" is to highlight that {\displaystyle H<1/2}. The RFSV model is consistent with time series data, allowing for improved forecasts of realized volatility.
+
+
+## Calibration and estimation
+
+Once a particular SV model is chosen, it must be calibrated against existing market data. Calibration is the process of identifying the set of model parameters that are most likely given the observed data. One popular technique is to use maximum likelihood estimation (MLE). For instance, in the Heston model, the set of model parameters {\displaystyle \Psi \_{0}=\{\omega ,\theta ,\xi ,\rho \}\,} can be estimated applying an MLE algorithm such as the Powell Directed Set method to observations of historic underlying security prices.
+
+In this case, you start with an estimate for {\displaystyle \Psi \_{0}\,}, compute the residual errors when applying the historic price data to the resulting model, and then adjust {\displaystyle \Psi \,} to try to minimize these errors. Once the calibration has been performed, it is standard practice to re-calibrate the model periodically.
+
+An alternative to calibration is statistical estimation, thereby accounting for parameter uncertainty. Many frequentist and Bayesian methods have been proposed and implemented, typically for a subset of the abovementioned models. The following list contains extension packages for the open source statistical software R that have been specifically designed for heteroskedasticity estimation. The first three cater for GARCH-type models with deterministic volatilities; the fourth deals with stochastic volatility estimation.
+
+* rugarch: ARFIMA, in-mean, external regressors and various GARCH flavors, with methods for fit, forecast, simulation, inference and plotting.
+* fGarch: Part of the Rmetrics environment for teaching "Financial Engineering and Computational Finance".
+* bayesGARCH: Bayesian estimation of the GARCH(1,1) model with Student's t innovations.
+* stochvol: Efficient algorithms for fully Bayesian estimation of stochastic volatility (SV) models via Markov chain Monte Carlo (MCMC) methods.
+
+Many numerical methods have been developed over time and have solved pricing financial assets such as options with stochastic volatility models. A recent developed application is the local stochastic volatility model. This local stochastic volatility model gives better results in pricing new financial assets such as forex options.
+
+There are also alternate statistical estimation libraries in other languages such as Python:
+
+* PyFlux Includes Bayesian and classical inference support for GARCH and beta-t-EGARCH models.

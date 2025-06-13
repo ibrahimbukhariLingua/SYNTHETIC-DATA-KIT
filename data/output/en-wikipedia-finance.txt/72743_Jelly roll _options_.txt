@@ -1,0 +1,32 @@
+Jelly roll (options)
+
+
+# Jelly roll (options)
+
+
+
+A **jelly roll**, or simply a **roll**, is an options trading strategy that captures the cost of carry of the underlying asset while remaining otherwise neutral. It is often used to take a position on dividends or interest rates, or to profit from mispriced calendar spreads.
+
+A jelly roll consists of a long call and a short put with one expiry date, and a long put and a short call with a different expiry date, all at the same strike price. In other words, a trader combines a synthetic long position at one expiry date with a synthetic short position at another expiry date. Equivalently, the trade can be seen as a combination of a long time spread and a short time spread, one with puts and one with calls, at the same strike price.
+
+The value of a call time spread (composed of a long call option and a short call option at the same strike price but with different expiry dates) and the corresponding put time spread should be related by put-call parity, with the difference in price explained by the effect of interest rates and dividends. If this expected relationship does not hold, a trader can profit from the difference either by buying the call spread and selling the put spread (a **long jelly roll**) or by selling the call spread and buying the put spread (a **short jelly roll**). Where this arbitrage opportunity exists, it is typically small, and retail traders are unlikely to be able to profit from it due to transaction costs.
+
+All four options must be for the same underlying at the same strike price. For example, a position composed of options on futures is not a true jelly roll if the underlying futures have different expiry dates.
+
+The jelly roll is a neutral position with no delta, gamma, theta, or vega. However, it is sensitive to interest rates and dividends.
+
+
+## Value
+
+Disregarding interest on dividends, the theoretical value of a jelly roll on European options is given by the formula:
+
+where {\displaystyle JR} is the value of the jelly roll, {\displaystyle K} is the strike price, {\displaystyle D} is the value of any dividends, {\displaystyle t\_{1}} and {\displaystyle t\_{2}} are the times to expiry, and {\displaystyle r\_{1}} and {\displaystyle r\_{2}} are the effective interest rates to time {\displaystyle t\_{1}} and {\displaystyle t\_{2}} respectively.
+
+Assuming a constant interest rate, this formula can be approximated by
+
+This theoretical value {\displaystyle JR} should be equal to the difference between the price of the call time spread ({\displaystyle CTS}) and the price of the put time spread ({\displaystyle PTS}):
+
+If that equality does not hold for prices in the market, a trader may be able to profit from the mismatch.
+
+Typically the interest component outweighs the dividend component, and as a result the long jelly roll has a positive value (and the value of the call time spread is greater than the value of the put time spread). However, it is possible for the dividend component to outweigh the interest component, in which case the long jelly roll has a negative value, meaning that the value of the put time spread is greater than the value of the call time spread.
+

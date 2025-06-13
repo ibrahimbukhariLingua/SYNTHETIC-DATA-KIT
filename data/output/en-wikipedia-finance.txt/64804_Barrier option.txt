@@ -1,0 +1,67 @@
+Barrier option
+
+
+# Barrier option
+
+
+
+A **barrier option** is an option whose payoff is conditional upon the underlying asset's price breaching a barrier level during the option's lifetime.
+
+
+## Types
+
+Barrier options are path-dependent exotics that are similar in some ways to ordinary options. You can call or put in American, Bermudan, or European exercise style. But they become activated (or extinguished) only if the underlying breaches a predetermined level (the barrier).
+
+"In" options only become active in the event that a predetermined knock-in barrier price is breached:
+
+1. If the barrier price is far from being breached, the knock-in option will be worth slightly more than zero.
+2. If the barrier price is close to being breached, the knock-in option will be worth slightly less than the corresponding vanilla option.
+3. If the barrier price has been breached, the knock-in option will trade at the exact same value as the corresponding vanilla option.
+
+"Out" options start their lives active and become null and void in the event that a certain knock-out barrier price is breached:
+
+1. If the barrier price is far from being breached, the knock-out option will be slightly less than the corresponding vanilla option.
+2. If the barrier price is close to being breached, the knock-out option will be worth slightly more than zero.
+3. If the barrier price has been breached, the knock-out option will trade at the exact value of zero.
+
+Some variants of "Out" options compensate the owner for the knock-out by paying a cash fraction of the premium at the time of the breach.
+
+The four main types of barrier options are:
+
+* **Up-and-out**: spot price starts below the barrier level and has to move up for the option to be knocked out.
+* **Down-and-out**: spot price starts above the barrier level and has to move down for the option to become null and void.
+* **Up-and-in**: spot price starts below the barrier level and has to move up for the option to become activated.
+* **Down-and-in**: spot price starts above the barrier level and has to move down for the option to become activated.
+
+For example, a European call option may be written on an underlying with spot price of $100 and a knockout barrier of $120. This option behaves in every way like a vanilla European call, except if the spot price ever moves above $120, the option "knocks out" and the contract is null and void. Note that the option does not reactivate if the spot price falls below $120 again.
+
+By in-out parity, we mean that the combination of one "in" and one "out" barrier option with the same strikes and expirations yields the price of the corresponding vanilla option: {\displaystyle C=C\_{in}+C\_{out}}. Note that before the knock-in/out event, both options have positive value, and hence both are strictly valued below the corresponding vanilla option. After the knock-in/out event, the knock-out option is worthless and the knock-in option's value coincides with that of the corresponding vanilla option. At maturity, exactly one of the two will pay off identically to the corresponding vanilla option, which of the two that depends on whether the knock-in/out event has occurred before maturity.
+
+
+## Barrier events
+
+A *barrier event* occurs when the underlying crosses the barrier level. While it seems straightforward to define a barrier event as "underlying trades at or above a given level," in reality it's not so simple. What if the underlying only trades at the level for a single trade? How big would that trade have to be? Would it have to be on an exchange or could it be between private parties? When barrier options were first introduced to options markets, many banks had legal trouble resulting from a mismatched understanding with their counterparties regarding exactly what constituted a barrier event.
+
+
+## Variations
+
+Barrier options are sometimes accompanied by a *rebate*, which is a payoff to the option holder in case of a barrier event. Rebates can either be paid at the time of the event or at expiration.
+
+* A *discrete barrier* is one for which the barrier event is considered at discrete times, rather than the normal *continuous barrier* case.
+* A *Parisian option* is a barrier option where the barrier condition applies only once the price of the underlying instrument has spent at least a given period of time on the wrong side of the barrier.
+* A *turbo warrant* is a barrier option namely a knock out call that is initially in the money and with the barrier at the same level as the strike.
+
+Barrier options can have either American, Bermudan or European exercise style.
+
+
+## Valuation
+
+The valuation of barrier options can be tricky, because unlike other simpler options they are path-dependent – that is, the value of the option at any time depends not just on the underlying at that point, but also on the *path* taken by the underlying (since, if it has crossed the barrier, a barrier event has occurred). Although the classical Black–Scholes approach does not directly apply, several more complex methods can be used:
+
+* The simplest way to value barrier options is to use a static replicating portfolio of vanilla options (which can be valued with Black–Scholes), chosen so as to mimic the value of the barrier at expiry and at selected discrete points in time along the barrier. This approach was pioneered by Peter Carr and gives closed form prices and replication strategies for all types of barrier options, but usually only by assuming that the Black-Scholes model is correct. This method is therefore inappropriate when there is a volatility smile. For a more general but similar approach that uses numerical methods, see Derman's "Static Options Replication."
+
+* Another approach is to study the law of the maximum (or minimum) of the underlying. This approach gives explicit (closed form) prices to barrier options.
+* Yet another method is the partial differential equation (PDE) approach. The PDE satisfied by an *out* barrier options is the same one satisfied by a vanilla option under Black and Scholes assumptions, with extra boundary conditions demanding that the option become worthless when the underlying touches the barrier.
+* When an exact formula is difficult to obtain, barrier options can be priced with the Monte Carlo option model. However, computing the Greeks (sensitivities) using this approach is numerically unstable.
+* A faster approach is to use Finite difference methods for option pricing to diffuse the PDE backwards from the boundary condition (which is the terminal payoff at expiry, plus the condition that the value along the barrier is always 0 at any time). Both explicit finite-differencing methods and the Crank–Nicolson scheme have their advantages.
+* A simple approach of binomial tree option pricing also applies.

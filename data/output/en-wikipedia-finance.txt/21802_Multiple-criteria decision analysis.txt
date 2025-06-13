@@ -1,0 +1,228 @@
+Multiple-criteria decision analysis
+
+
+# Multiple-criteria decision analysis
+
+
+
+**Multiple-criteria decision-making** (**MCDM**) or **multiple-criteria decision analysis** (**MCDA**) is a sub-discipline of operations research that explicitly evaluates multiple conflicting criteria in decision making (both in daily life and in settings such as business, government and medicine). It is also known as **multiple attribute utility theory**, **multiple attribute value theory**, **multiple attribute preference theory**, and **multi-objective decision analysis**.
+
+Conflicting criteria are typical in evaluating options: cost or price is usually one of the main criteria, and some measure of quality is typically another criterion, easily in conflict with the cost. In purchasing a car, cost, comfort, safety, and fuel economy may be some of the main criteria we consider – it is unusual that the cheapest car is the most comfortable and the safest one. In portfolio management, managers are interested in getting high returns while simultaneously reducing risks; however, the stocks that have the potential of bringing high returns typically carry high risk of losing money. In a service industry, customer satisfaction and the cost of providing service are fundamental conflicting criteria.
+
+In their daily lives, people usually weigh multiple criteria implicitly and may be comfortable with the consequences of such decisions that are made based on only intuition. On the other hand, when stakes are high, it is important to properly structure the problem and explicitly evaluate multiple criteria. In making the decision of whether to build a nuclear power plant or not, and where to build it, there are not only very complex issues involving multiple criteria, but there are also multiple parties who are deeply affected by the consequences.
+
+Structuring complex problems well and considering multiple criteria explicitly leads to more informed and better decisions. There have been important advances in this field since the start of the modern multiple-criteria decision-making discipline in the early 1960s. A variety of approaches and methods, many implemented by specialized decision-making software, have been developed for their application in an array of disciplines, ranging from politics and business to the environment and energy.
+
+
+## Foundations, concepts, definitions
+
+MCDM or MCDA are acronyms for *multiple-criteria decision-making* and *multiple-criteria decision analysis*. Stanley Zionts helped popularizing the acronym with his 1979 article "MCDM – If not a Roman Numeral, then What?", intended for an entrepreneurial audience.
+
+MCDM is concerned with structuring and solving decision and planning problems involving multiple criteria. The purpose is to support decision-makers facing such problems. Typically, there does not exist a unique optimal solution for such problems and it is necessary to use decision-makers' preferences to differentiate between solutions.
+
+"Solving" can be interpreted in different ways. It could correspond to choosing the "best" alternative from a set of available alternatives (where "best" can be interpreted as "the most preferred alternative" of a decision-maker). Another interpretation of "solving" could be choosing a small set of good alternatives, or grouping alternatives into different preference sets. An extreme interpretation could be to find all "efficient" or "nondominated" alternatives (which we will define shortly).
+
+The difficulty of the problem originates from the presence of more than one criterion. There is no longer a unique optimal solution to an MCDM problem that can be obtained without incorporating preference information. The concept of an optimal solution is often replaced by the set of nondominated solutions. A solution is called nondominated if it is not possible to improve it in any criterion without sacrificing it in another. Therefore, it makes sense for the decision-maker to choose a solution from the nondominated set. Otherwise, they could do better in terms of some or all of the criteria, and not do worse in any of them. Generally, however, the set of nondominated solutions is too large to be presented to the decision-maker for the final choice. Hence we need tools that help the decision-maker focus on the preferred solutions (or alternatives). Normally one has to "tradeoff" certain criteria for others.
+
+MCDM has been an active area of research since the 1970s. There are several MCDM-related organizations including the International Society on Multi-criteria Decision Making, Euro Working Group on MCDA, and INFORMS Section on MCDM. For a history see: Köksalan, Wallenius and Zionts (2011).
+MCDM draws upon knowledge in many fields including:
+
+* Mathematics
+* Decision analysis
+* Economics
+* Computer technology
+* Software engineering
+* Information systems
+
+### A typology
+
+There are different classifications of MCDM problems and methods. A major distinction between MCDM problems is based on whether the solutions are explicitly or implicitly defined.
+
+* *Multiple-criteria evaluation problems*: These problems consist of a finite number of alternatives, explicitly known in the beginning of the solution process. Each alternative is represented by its performance in multiple criteria. The problem may be defined as finding the best alternative for a decision-maker (DM), or finding a set of good alternatives. One may also be interested in "sorting" or "classifying" alternatives. Sorting refers to placing alternatives in a set of preference-ordered classes (such as assigning credit-ratings to countries), and classifying refers to assigning alternatives to non-ordered sets (such as diagnosing patients based on their symptoms). Some of the MCDM methods in this category have been studied in a comparative manner in the book by Triantaphyllou on this subject, 2000.
+* *Multiple-criteria design problems (multiple objective mathematical programming problems)*: In these problems, the alternatives are not explicitly known. An alternative (solution) can be found by solving a mathematical model. The number of alternatives is either finite or infinite (countable or not countable), but typically exponentially large (in the number of variables ranging over finite domains.)
+
+Whether it is an evaluation problem or a design problem, preference information of DMs is required in order to differentiate between solutions. The solution methods for MCDM problems are commonly classified based on the timing of preference information obtained from the DM.
+
+There are methods that require the DM's preference information at the start of the process, transforming the problem into essentially a single criterion problem. These methods are said to operate by "prior articulation of preferences". Methods based on estimating a value function or using the concept of "outranking relations", analytical hierarchy process, and some rule-based decision methods try to solve multiple criteria evaluation problems utilizing prior articulation of preferences. Similarly, there are methods developed to solve multiple-criteria design problems using prior articulation of preferences by constructing a value function. Perhaps the most well-known of these methods is goal programming. Once the value function is constructed, the resulting single objective mathematical program is solved to obtain a preferred solution.
+
+Some methods require preference information from the DM throughout the solution process. These are referred to as interactive methods or methods that require "progressive articulation of preferences". These methods have been well-developed for both the multiple criteria evaluation (see for example, Geoffrion, Dyer and Feinberg, 1972, and Köksalan and Sagala, 1995 ) and design problems (see Steuer, 1986).
+
+Multiple-criteria design problems typically require the solution of a series of mathematical programming models in order to reveal implicitly defined solutions. For these problems, a representation or approximation of "efficient solutions" may also be of interest. This category is referred to as "posterior articulation of preferences", implying that the DM's involvement starts posterior to the explicit revelation of "interesting" solutions (see for example Karasakal and Köksalan, 2009).
+
+When the mathematical programming models contain integer variables, the design problems become harder to solve. Multiobjective Combinatorial Optimization (MOCO) constitutes a special category of such problems posing substantial computational difficulty (see Ehrgott and Gandibleux, 2002, for a review).
+
+
+### Representations and definitions
+
+The MCDM problem can be represented in the criterion space or the decision space. Alternatively, if different criteria are combined by a weighted linear function, it is also possible to represent the problem in the weight space. Below are the demonstrations of the criterion and weight spaces as well as some formal definitions.
+
+
+#### Criterion space representation
+
+Let us assume that we evaluate solutions in a specific problem situation using several criteria. Let us further assume that more is better in each criterion. Then, among all possible solutions, we are ideally interested in those solutions that perform well in all considered criteria. However, it is unlikely to have a single solution that performs well in all considered criteria. Typically, some solutions perform well in some criteria and some perform well in others. Finding a way of trading off between criteria is one of the main endeavors in the MCDM literature.
+
+Mathematically, the MCDM problem corresponding to the above arguments can be represented as
+
+where **q** is the vector of *k* criterion functions (objective functions) and **Q** is the feasible set, **Q** ⊆ **R**ᵏ.
+
+If **Q** is defined explicitly (by a set of alternatives), the resulting problem is called a multiple-criteria evaluation problem.
+
+If **Q** is defined implicitly (by a set of constraints), the resulting problem is called a multiple-criteria design problem.
+
+The quotation marks are used to indicate that the maximization of a vector is not a well-defined mathematical operation. This corresponds to the argument that we will have to find a way to resolve the trade-off between criteria (typically based on the preferences of a decision maker) when a solution that performs well in all criteria does not exist.
+
+
+#### Decision space representation
+
+The decision space corresponds to the set of possible decisions that are available to us. The criteria values will be consequences of the decisions we make. Hence, we can define a corresponding problem in the decision space. For example, in designing a product, we decide on the design parameters (decision variables) each of which affects the performance measures (criteria) with which we evaluate our product.
+
+Mathematically, a multiple-criteria design problem can be represented in the decision space as follows:
+
+where **X** is the feasible set and **x** is the decision variable vector of size n.
+
+A well-developed special case is obtained when **X** is a polyhedron defined by linear inequalities and equalities. If all the objective functions are linear in terms of the decision variables, this variation leads to multiple objective linear programming (MOLP), an important subclass of MCDM problems.
+
+There are several definitions that are central in MCDM. Two closely related definitions are those of nondominance (defined based on the criterion space representation) and efficiency (defined based on the decision variable representation).
+
+*Definition 1.* **q\*** ∈ **Q** is nondominated if there does not exist another **q** ∈ **Q** such that **q** ≥ **q\*** and **q** ≠ **q\***.
+
+Roughly speaking, a solution is nondominated so long as it is not inferior to any other available solution in all the considered criteria.
+
+*Definition 2.* **x\*** ∈ **X** is efficient if there does not exist another **x** ∈ **X** such that **f**(**x**) ≥ **f**(**x**\*) and **f**(**x**) ≠ **f**(**x**\*).
+
+If an MCDM problem represents a decision situation well, then the most preferred solution of a DM has to be an efficient solution in the decision space, and its image is a nondominated point in the criterion space. Following definitions are also important.
+
+*Definition 3.* **q\*** ∈ **Q** is weakly nondominated if there does not exist another **q** ∈ **Q** such that **q** > **q\***.
+
+*Definition 4.* **x\*** ∈ **X** is weakly efficient if there does not exist another **x** ∈ **X** such that **f**(**x**) > **f**(**x**\*).
+
+Weakly nondominated points include all nondominated points and some special dominated points. The importance of these special dominated points comes from the fact that they commonly appear in practice and special care is necessary to distinguish them from nondominated points. If, for example, we maximize a single objective, we may end up with a weakly nondominated point that is dominated. The dominated points of the weakly nondominated set are located either on vertical or horizontal planes (hyperplanes) in the criterion space.
+
+*Ideal point*: (in criterion space) represents the best (the maximum for maximization problems and the minimum for minimization problems) of each objective function and typically corresponds to an infeasible solution.
+
+*Nadir point*: (in criterion space) represents the worst (the minimum for maximization problems and the maximum for minimization problems) of each objective function among the points in the nondominated set and is typically a dominated point.
+
+The ideal point and the nadir point are useful to the DM to get the "feel" of the range of solutions (although it is not straightforward to find the nadir point for design problems having more than two criteria).
+
+
+#### Illustrations of the decision and criterion spaces
+
+The following two-variable MOLP problem in the decision variable space will help demonstrate some of the key concepts graphically.
+
+In Figure 1, the extreme points "e" and "b" maximize the first and second objectives, respectively. The red boundary between those two extreme points represents the efficient set. It can be seen from the figure that, for any feasible solution outside the efficient set, it is possible to improve both objectives by some points on the efficient set. Conversely, for any point on the efficient set, it is not possible to improve both objectives by moving to any other feasible solution. At these solutions, one has to sacrifice from one of the objectives in order to improve the other objective.
+
+Due to its simplicity, the above problem can be represented in criterion space by replacing the x's with the f 's as follows:
+
+We present the criterion space graphically in Figure 2. It is easier to detect the nondominated points (corresponding to efficient solutions in the decision space) in the criterion space. The north-east region of the feasible space constitutes the set of nondominated points (for maximization problems).
+
+
+### Generating nondominated solutions
+
+There are several ways to generate nondominated solutions. We will discuss two of these. The first approach can generate a special class of nondominated solutions whereas the second approach can generate any nondominated solution.
+
+* *Weighted sums* (Gass & Saaty, 1955)
+
+If we combine the multiple criteria into a single criterion by multiplying each criterion with a positive weight and summing up the weighted criteria, then the solution to the resulting single criterion problem is a special efficient solution. These special efficient solutions appear at corner points of the set of available solutions. Efficient solutions that are not at corner points have special characteristics and this method is not capable of finding such points. Mathematically, we can represent this situation as
+
+By varying the weights, weighted sums can be used for generating efficient extreme point solutions for design problems, and supported (convex nondominated) points for evaluation problems.
+
+* *Achievement scalarizing function* (Wierzbicki, 1980)
+
+Achievement scalarizing functions also combine multiple criteria into a single criterion by weighting them in a very special way. They create rectangular contours going away from a reference point towards the available efficient solutions. This special structure empower achievement scalarizing functions to reach any efficient solution. This is a powerful property that makes these functions very useful for MCDM problems.
+
+Mathematically, we can represent the corresponding problem as
+
+The achievement scalarizing function can be used to project any point (feasible or infeasible) on the efficient frontier. Any point (supported or not) can be reached. The second term in the objective function is required to avoid generating inefficient solutions. Figure 3 demonstrates how a feasible point, **g**₁, and an infeasible point, **g**₂, are projected onto the nondominated points, **q**₁ and **q**₂, respectively, along the direction **w** using an achievement scalarizing function. The dashed and solid contours correspond to the objective function contours with and without the second term of the objective function, respectively.
+
+
+### Solving MCDM problems
+
+Different schools of thought have developed for solving MCDM problems (both of the design and evaluation type). For a bibliometric study showing their development over time, see Bragge, Korhonen, H. Wallenius and J. Wallenius [2010].
+
+***Multiple objective mathematical programming school***
+
+(1) *Vector maximization*: The purpose of vector maximization is to approximate the nondominated set; originally developed for Multiple Objective Linear Programming problems (Evans and Steuer, 1973; Yu and Zeleny, 1975).
+
+(2) *Interactive programming*: Phases of computation alternate with phases of decision-making (Benayoun et al., 1971; Geoffrion, Dyer and Feinberg, 1972; Zionts and Wallenius, 1976; Korhonen and Wallenius, 1988). No explicit knowledge of the DM's value function is assumed.
+
+***Goal programming school***
+
+The purpose is to set apriori target values for goals, and to minimize weighted deviations from these goals. Both importance weights as well as lexicographic pre-emptive weights have been used (Charnes and Cooper, 1961).
+
+***Fuzzy-set theorists***
+
+Fuzzy sets were introduced by Zadeh (1965) as an extension of the classical notion of sets. This idea is used in many MCDM algorithms to model and solve fuzzy problems.
+
+***Ordinal data based methods***
+
+Ordinal data has a wide application in real-world situations. In this regard, some MCDM methods were designed to handle ordinal data as input data. For example, Ordinal Priority Approach and Qualiflex method.
+
+***Multi-attribute utility theorists***
+
+Multi-attribute utility or value functions are elicited and used to identify the most preferred alternative or to rank order the alternatives. Elaborate interview techniques, which exist for eliciting linear additive utility functions and multiplicative nonlinear utility functions, may be used (Keeney and Raiffa, 1976). Another approach is to elicit value functions indirectly by asking the decision-maker a series of pairwise ranking questions involving choosing between hypothetical alternatives (PAPRIKA method; Hansen and Ombler, 2008).
+
+***French school***
+
+The French school focuses on decision aiding, in particular the ELECTRE family of outranking methods that originated in France during the mid-1960s. The method was first proposed by Bernard Roy (Roy, 1968).
+
+***Evolutionary multiobjective optimization school (EMO)***
+
+EMO algorithms start with an initial population, and update it by using processes designed to mimic natural survival-of-the-fittest principles and genetic variation operators to improve the average population from one generation to the next. The goal is to converge to a population of solutions which represent the nondominated set (Schaffer, 1984; Srinivas and Deb, 1994). More recently, there are efforts to incorporate preference information into the solution process of EMO algorithms (see Deb and Köksalan, 2010).
+
+***Grey system theory based methods***
+
+In the 1980s, Deng Julong proposed Grey System Theory (GST) and its first multiple-attribute decision-making model, called Deng's Grey relational analysis (GRA) model. Later, the grey systems scholars proposed many GST based methods like Liu Sifeng's Absolute GRA model, Grey Target Decision Making (GTDM) and Grey Absolute Decision Analysis (GADA).
+
+***Analytic hierarchy process (AHP)***
+
+The AHP first decomposes the decision problem into a hierarchy of subproblems. Then the decision-maker evaluates the relative importance of its various elements by pairwise comparisons. The AHP converts these evaluations to numerical values (weights or priorities), which are used to calculate a score for each alternative (Saaty, 1980). A consistency index measures the extent to which the decision-maker has been consistent in her responses. AHP is one of the more controversial techniques listed here, with some researchers in the MCDA community believing it to be flawed.
+
+Several papers reviewed the application of MCDM techniques in various disciplines such as fuzzy MCDM, classic MCDM, sustainable and renewable energy, VIKOR technique, transportation systems, service quality, TOPSIS method, energy management problems, e-learning, tourism and hospitality, SWARA and WASPAS methods.
+
+
+### MCDM methods
+
+The following MCDM methods are available, many of which are implemented by specialized decision-making software:
+
+* Aggregated Indices Randomization Method (AIRM)
+* Analytic hierarchy process (AHP)
+* Analytic network process (ANP)
+* Balance Beam process
+* Best worst method (BWM)
+* Brown–Gibson model
+* Characteristic Objects METhod (COMET)
+* Choosing By Advantages (CBA)
+* Conjoint Value Hierarchy (CVA)
+* Data envelopment analysis
+* Decision EXpert (DEX)
+* Disaggregation – Aggregation Approaches (UTA\*, UTAII, UTADIS)
+* Rough set (Rough set approach)
+* Dominance-based rough set approach (DRSA)
+* ELECTRE (Outranking)
+* Evaluation Based on Distance from Average Solution (EDAS)
+* Evidential reasoning approach (ER)
+* FITradeoff (www.fitradeoff.org)
+* Goal programming (GP)
+* Grey relational analysis (GRA)
+* Inner product of vectors (IPV)
+* Measuring Attractiveness by a categorical Based Evaluation Technique (MACBETH)
+* Multi-Attribute Global Inference of Quality (MAGIQ)
+* Multi-attribute utility theory (MAUT)
+* Multi-attribute value theory (MAVT)
+* Markovian Multi Criteria Decision Making
+* New Approach to Appraisal (NATA)
+* Nonstructural Fuzzy Decision Support System (NSFDSS)
+* Ordinal Priority Approach (OPA)
+* Potentially All Pairwise RanKings of all possible Alternatives (PAPRIKA)
+* PROMETHEE (Outranking)
+* Simple Multi-Attribute Rating Technique (SMART)
+* Stratified Multi Criteria Decision Making (SMCDM)
+* Stochastic Multicriteria Acceptability Analysis (SMAA)
+* Superiority and inferiority ranking method (SIR method)
+* System Redesigning to Creating Shared Value (SYRCS)
+* Technique for the Order of Prioritisation by Similarity to Ideal Solution (TOPSIS)
+* Value analysis (VA)
+* Value engineering (VE)
+* VIKOR method
+* Weighted product model (WPM)
+* Weighted sum model (WSM)

@@ -1,0 +1,21 @@
+Financial Instruments Reference Database System
+
+
+# Financial Instruments Reference Database System
+
+
+
+The **Financial Instruments Reference Database System** (FIRDS) is published by the European Securities and Markets Authority (ESMA) and lists meta-information to all financial instruments included in the scope of MiFID II. This reference data is necessary to find metadata on a given financial instrument, uniquely identified by a so-called International Securities Identification Number (ISIN).
+
+
+## Regulation
+
+The Article 4(1)(20) of Directive 2014/65/EU (MiFID II) considers "investment firms dealing on own account when executing client orders over the counter (OTC) on an organised, frequent, systematic and substantial basis" *systematic internaliser* and requires them to report their trades. From this data, ESMA computes on a best effort basis, the total volume and number of transactions executed within the EU.
+
+
+## Technical details
+
+According to the technical specification, new entries are published on a daily basis, every morning by 09:00 CET as XML-file. It contains the ISIN and the Market Identifier Code (MIC) as well as e.g. the Classification of Financial Instruments (CFI)-code and other information of the instrument.
+
+The Legal Entity Identifier (LEI) code is conveyed by the ISSR. In the following example record in JSON format, the ISSR is represented by `"Issr" : "851WYGNLUQLFZBSYGB56"`. This LEI code can be looked up using the website search. The LEI code corresponds to Commerzbank Aktiengesellschaft (Frankfurt) according to the LEI Registration Exception.
+

@@ -1,0 +1,27 @@
+Semi-integrated POS
+
+
+# Semi-integrated POS
+
+
+
+**Semi-Integrated Point-of-Sale** is a checkout method used by retailers which integrates payment processing and POS software in a secure & streamlined network configuration. Semi-Integration allows retailers to accept Chip/EMV credit card and debit card payments, as well account for inventory changes, returns, voided transactions and other payment functions.
+
+
+## Overview
+
+Semi-integration is a measure that ensures payment terminals are connected with retail point-of-sale software, while maintaining separation between payment information transmission and other systems. In order for retailers to become PCI compliant without extensive investment into fully integrated compliant systems, semi-integration offers a cost-effective, compliant resolution.
+
+
+## Benefits
+
+Semi-Integration offers the following benefits:
+
+* One to many integration - Solutions that offer semi-integration are often supported with several different processors meaning ISVs develop to one semi-integrated specification and can support multiple processors with the single integration
+* No costly EMV certifications - EMV certifications are already completed by the processor; the most that is usually required is a simple device integration script or unit testing
+* PCI PA-DSS Reduced Scope - No sensitive card account data is sent to the POS application that drives the semi-integrated terminal
+* Customer facing device; merchant should never touch the card
+* All receipt data is returned from the device to the POS application
+* Multiple Connectivity Methods - Some devices may allow TCP/IP (wired or WiFi), Serial, USB, Bluetooth or Web Services type connections between the device and POS Application
+* P2PE - Some processors may offer Point-to-Point Encryption (Note: P2PE is mainly needed when sensitive data like a credit card number traverses an insecure network like a POS PC or tablet. Most Semi-Integrations ensure that no sensitive data touches an insecure network and which makes P2PE a moot point)
+* Dial Backup - If supported by the device, dial backup is usually automatic if the IP connection fails

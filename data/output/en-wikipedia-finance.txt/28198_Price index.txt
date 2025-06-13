@@ -1,0 +1,171 @@
+Price index
+
+
+# Price index
+
+
+
+A **price index** (*plural*: "price indices" or "price indexes") is a normalized average (typically a weighted average) of price relatives for a given class of goods or services in a given region, during a given interval of time. It is a statistic designed to help to compare how these price relatives, taken as a whole, differ between time periods or geographical locations.
+
+Price indices have several potential uses. For particularly broad indices, the index can be said to measure the economy's general price level or cost of living. More narrow price indices can help producers with business plans and pricing. Sometimes, they can be useful in helping to guide investment.
+
+Some notable price indices include:
+
+* Consumer price index
+* Producer price index
+* Wholesale price index
+* Employment cost index
+* Export price index
+* Import price index
+* GDP deflator
+
+## History of early price indices
+
+No clear consensus has emerged on who created the first price index. The earliest reported research in this area came from Welshman Rice Vaughan, who examined price level change in his 1675 book A Discourse of Coin and Coinage. Vaughan wanted to separate the inflationary impact of the influx of precious metals brought by Spain from the New World from the effect due to currency debasement. Vaughan compared labor statutes from his own time to similar statutes dating back to Edward III. These statutes set wages for certain tasks and provided a good record of the change in wage levels. Vaughan reasoned that the market for basic labor did not fluctuate much with time and that a basic laborer's salary would probably buy the same amount of goods in different time periods, so that a laborer's salary acted as a basket of goods. Vaughan's analysis indicated that price levels in England had risen six- to eight-fold over the preceding century.
+
+While Vaughan can be considered a forerunner of price index research, his analysis did not actually involve calculating an index. In 1707, Englishman William Fleetwood created perhaps the first true price index. An Oxford student asked Fleetwood to help show how prices had changed. The student stood to lose his fellowship since a 15th-century stipulation barred students with annual incomes over five pounds from receiving a fellowship. Fleetwood, who already had an interest in price change, had collected a large amount of price data going back hundreds of years. Fleetwood proposed an index consisting of averaged price relatives and used his methods to show that the value of five pounds had changed greatly over the course of 260 years. He argued on behalf of the Oxford students and published his findings anonymously in a volume entitled *Chronicon Preciosum*.
+
+
+## Formal calculation
+
+Given a set {\displaystyle C} of goods and services, the total market value of transactions in {\displaystyle C} in some period {\displaystyle t} would be
+
+where
+
+If, across two periods {\displaystyle t\_{0}} and {\displaystyle t\_{n}}, the same quantities of each good or service were sold, but under different prices, then
+
+and
+
+would be a reasonable measure of the price of the set in one period relative to that in the other, and would provide an index measuring relative prices overall, weighted by quantities sold.
+
+Of course, for any practical purpose, quantities purchased are rarely if ever identical across any two periods. As such, this is not a very practical index formula.
+
+One might be tempted to modify the formula slightly to
+
+This new index, however, does not do anything to distinguish growth or reduction in quantities sold from price changes. To see that this is so, consider what happens if all the prices double between {\displaystyle t\_{0}} and {\displaystyle t\_{n}}, while quantities stay the same: {\displaystyle P} will double. Now consider what happens if all the *quantities* double between {\displaystyle t\_{0}} and {\displaystyle t\_{n}} while all the *prices* stay the same: {\displaystyle P} will double. In either case, the change in {\displaystyle P} is identical. As such, {\displaystyle P} is as much a *quantity* index as it is a *price* index.
+
+Various indices have been constructed in an attempt to compensate for this difficulty.
+
+
+### Paasche and Laspeyres price indices
+
+The two most basic formulae used to calculate price indices are the **Paasche index** (after the economist Hermann Paasche [ˈpaːʃɛ]) and the **Laspeyres index** (after the economist Etienne Laspeyres [lasˈpejres]).
+
+The Paasche index is computed as
+
+while the Laspeyres index is computed as
+
+where {\displaystyle P} is the relative index of the price levels in two periods, {\displaystyle t\_{0}} is the base period (usually the first year), and {\displaystyle t\_{n}} the period for which the index is computed.
+
+Note that the only difference in the formulas is that the former uses period n quantities, whereas the latter uses base period (period 0) quantities. A helpful mnemonic device to remember which index uses which period is that L comes before P in the alphabet so the Laspeyres index uses the earlier base quantities and the Paasche index the final quantities.
+
+When applied to bundles of individual consumers, a Laspeyres index of 1 would state that an agent in the current period can afford to buy the same bundle as she consumed in the previous period, given that income has not changed; a Paasche index of 1 would state that an agent could have consumed the same bundle in the base period as she is consuming in the current period, given that income has not changed.
+
+Hence, one may think of the Paasche index as one where the numeraire is the bundle of goods using current year prices and current year quantities. Similarly, the Laspeyres index can be thought of as a price index taking the bundle of goods using current prices and base period quantities as the numeraire.
+
+The Laspeyres index tends to overstate inflation (in a cost of living framework), while the Paasche index tends to understate it, because the indices do not account for the fact that consumers typically react to price changes by changing the quantities that they buy. For example, if prices go up for good {\displaystyle c} then, *ceteris paribus*, quantities demanded of that good should go down.
+
+
+### Lowe indices
+
+Many price indices are calculated with the **Lowe index** procedure. In a Lowe price index, the expenditure or quantity weights associated with each item are not drawn from each indexed period. Usually they are inherited from an earlier period, which is sometimes called the expenditure base period. Generally, the expenditure weights are updated occasionally, but the prices are updated in every period. Prices are drawn from the time period the index is supposed to summarize." Lowe indexes are named for economist Joseph Lowe. Most CPIs and employment cost indices from Statistics Canada, the U.S. Bureau of Labor Statistics, and many other national statistics offices are Lowe indices. Lowe indexes are sometimes called a "modified Laspeyres index", where the principal modification is to draw quantity weights less frequently than every period. For a consumer price index, the weights on various kinds of expenditure are generally computed from surveys of households asking about their budgets, and such surveys are less frequent than price data collection is. Another phrasings is that Laspeyres and Paasche indexes are special cases of Lowe indexes in which all price and quantity data are updated every period.
+
+Comparisons of output between countries often use Lowe quantity indexes. The Geary-Khamis method used in the World Bank's International Comparison Program is of this type. Here the quantity data are updated each period from each of multiple countries, whereas the prices incorporated are kept the same for some period of time, e.g. the "average prices for the group of countries".
+
+
+### Fisher index and Marshall–Edgeworth index
+
+The **Marshall–Edgeworth index** (named for economists Alfred Marshall and Francis Ysidro Edgeworth), tries to overcome the problems of over- and understatement by the Laspeyres and Paasche indexes by using the arithmetic means of the quantities:
+
+The **Fisher index**, named for economist Irving Fisher), also known as the **Fisher ideal index**, is calculated as the geometric mean of {\displaystyle P\_{P}} and {\displaystyle P\_{L}}:
+
+All these indices provide some overall measurement of relative prices between time periods or locations.
+
+
+### Practical measurement considerations
+
+
+#### Normalizing index numbers
+
+Price indices are represented as index numbers, number values that indicate relative change but not absolute values (i.e. one price index value can be compared to another or a base, but the number alone has no meaning). Price indices generally select a base year and make that index value equal to 100. Every other year is expressed as a percentage of that base year. In this example, let 2000 be the base year:
+
+* 2000: original index value was $2.50; $2.50/$2.50 = 100%, so new index value is 100
+* 2001: original index value was $2.60; $2.60/$2.50 = 104%, so new index value is 104
+* 2002: original index value was $2.70; $2.70/$2.50 = 108%, so new index value is 108
+* 2003: original index value was $2.80; $2.80/$2.50 = 112%, so new index value is 112
+
+When an index has been normalized in this manner, the meaning of the number 112, for instance, is that the total cost for the basket of goods is 4% more in 2001 than in the base year (in this case, year 2000), 8% more in 2002, and 12% more in 2003.
+
+
+#### Relative ease of calculating the Laspeyres index
+
+As can be seen from the definitions above, if one already has price and quantity data (or, alternatively, price and expenditure data) for the base period, then calculating the Laspeyres index for a new period requires only new price data. In contrast, calculating many other indices (e.g., the Paasche index) for a new period requires both new price data and new quantity data (or alternatively, both new price data and new expenditure data) for each new period. Collecting only new price data is often easier than collecting both new price data and new quantity data, so calculating the Laspeyres index for a new period tends to require less time and effort than calculating these other indices for a new period.
+
+In practice, price indices regularly compiled and released by national statistical agencies are of the Laspeyres type, due to the above-mentioned difficulties in obtaining current-period quantity or expenditure data.
+
+
+#### Calculating indices from expenditure data
+
+Sometimes, especially for aggregate data, expenditure data are more readily available than quantity data. For these cases, the indices can be formulated in terms of relative prices and base year expenditures, rather than quantities.
+
+Here is a reformulation for the Laspeyres index:
+
+Let {\displaystyle E\_{c,t\_{0}}} be the total expenditure on good c in the base period, then (by definition) we have
+{\displaystyle E\_{c,t\_{0}}=p\_{c,t\_{0}}\cdot q\_{c,t\_{0}}}
+and therefore also
+{\displaystyle {\frac {E\_{c,t\_{0}}}{p\_{c,t\_{0}}}}=q\_{c,t\_{0}}}.
+We can substitute these values into our Laspeyres formula as follows:
+
+A similar transformation can be made for any index.
+
+
+### Chained vs unchained calculations
+
+The above price indices were calculated relative to a fixed base period. An alternative is to take the base period for each time period to be the immediately preceding time period. This can be done with any of the above indices. Here is an example with the Laspeyres index, where {\displaystyle t\_{n}} is the period for which we wish to calculate the index and {\displaystyle t\_{0}} is a reference period that anchors the value of the series:
+
+Each term
+
+answers the question "by what factor have prices increased between period {\displaystyle t\_{n-1}} and period {\displaystyle t\_{n}}". These are multiplied together to answer the question "by what factor have prices increased since period {\displaystyle t\_{0}}". The index is then the result of these multiplications, and gives the price relative to period {\displaystyle t\_{0}} prices.
+
+Chaining is defined for a quantity index just as it is for a price index.
+
+
+## Index number theory
+
+Price index formulas can be evaluated based on their relation to economic concepts (like cost of living) or on their mathematical properties. Several different tests of such properties have been proposed in index number theory literature. W.E. Diewert summarized past research in a list of nine such tests for a price index {\displaystyle I(P\_{t\_{0}},P\_{t\_{m}},Q\_{t\_{0}},Q\_{t\_{m}})}, where {\displaystyle P\_{t\_{0}}} and {\displaystyle P\_{t\_{m}}} are vectors giving prices for a base period and a reference period while {\displaystyle Q\_{t\_{0}}} and {\displaystyle Q\_{t\_{m}}} give quantities for these periods.
+
+1. Identity test:
+ {\displaystyle I(p\_{t\_{m}},p\_{t\_{n}},\alpha \cdot q\_{t\_{m}},\beta \cdot q\_{t\_{n}})=1~~\forall (\alpha ,\beta )\in (0,\infty )^{2}}
+ The identity test basically means that if prices remain the same and quantities remain in the same proportion to each other (each quantity of an item is multiplied by the same factor of either {\displaystyle \alpha }, for the first period, or {\displaystyle \beta }, for the later period) then the index value will be one.
+2. Proportionality test:
+ {\displaystyle I(p\_{t\_{m}},\alpha \cdot p\_{t\_{n}},q\_{t\_{m}},q\_{t\_{n}})=\alpha \cdot I(p\_{t\_{m}},p\_{t\_{n}},q\_{t\_{m}},q\_{t\_{n}})}
+ If each price in the original period increases by a factor α then the index should increase by the factor α.
+3. Invariance to changes in scale test:
+ {\displaystyle I(\alpha \cdot p\_{t\_{m}},\alpha \cdot p\_{t\_{n}},\beta \cdot q\_{t\_{m}},\gamma \cdot q\_{t\_{n}})=I(p\_{t\_{m}},p\_{t\_{n}},q\_{t\_{m}},q\_{t\_{n}})~~\forall (\alpha ,\beta ,\gamma )\in (0,\infty )^{3}}
+ The price index should not change if the prices in both periods are increased by a factor and the quantities in both periods are increased by another factor. In other words, the magnitude of the values of quantities and prices should not affect the price index.
+4. Commensurability test:
+ The index should not be affected by the choice of units used to measure prices and quantities.
+5. Symmetric treatment of time (or, in parity measures, symmetric treatment of place):
+ {\displaystyle I(p\_{t\_{n}},p\_{t\_{m}},q\_{t\_{n}},q\_{t\_{m}})={\frac {1}{I(p\_{t\_{m}},p\_{t\_{n}},q\_{t\_{m}},q\_{t\_{n}})}}}
+ Reversing the order of the time periods should produce a reciprocal index value. If the index is calculated from the most recent time period to the earlier time period, it should be the reciprocal of the index found going from the earlier period to the more recent.
+6. Symmetric treatment of commodities:
+ All commodities should have a symmetric effect on the index. Different permutations of the same set of vectors should not change the index.
+7. Monotonicity test:
+ {\displaystyle I(p\_{t\_{m}},p\_{t\_{n}},q\_{t\_{m}},q\_{t\_{n}})\leq I(p\_{t\_{m}},p\_{t\_{r}},q\_{t\_{m}},q\_{t\_{r}})~~\Leftarrow ~~p\_{t\_{n}}\leq p\_{t\_{r}}}
+ A price index for lower later prices should be lower than a price index with higher later period prices.
+8. Mean value test:
+ The overall price relative implied by the price index should be between the smallest and largest price relatives for all commodities.
+9. Circularity test:
+ {\displaystyle I(p\_{t\_{m}},p\_{t\_{n}},q\_{t\_{m}},q\_{t\_{n}})\cdot I(p\_{t\_{n}},p\_{t\_{r}},q\_{t\_{n}},q\_{t\_{r}})=I(p\_{t\_{m}},p\_{t\_{r}},q\_{t\_{m}},q\_{t\_{r}})~~\Leftarrow ~~t\_{m}\leq t\_{n}\leq t\_{r}}
+ Given three ordered periods {\displaystyle t\_{m}}, {\displaystyle t\_{n}}, {\displaystyle t\_{r}}, the price index for periods {\displaystyle t\_{m}} and {\displaystyle t\_{n}} times the price index for periods {\displaystyle t\_{n}} and {\displaystyle t\_{r}} should be equivalent to the price index for periods {\displaystyle t\_{m}} and {\displaystyle t\_{r}}.
+
+## Quality change
+
+Price indices often capture changes in price and quantities for goods and services, but they often fail to account for variation in the quality of goods and services. This could be overcome if the principal method for relating price and quality, namely hedonic regression, could be reversed. Then quality change could be calculated from the price. Instead, statistical agencies generally use *matched-model* price indices, where one model of a particular good is priced at the same store at regular time intervals. The matched-model method becomes problematic when statistical agencies try to use this method on goods and services with rapid turnover in quality features. For instance, computers rapidly improve and a specific model may quickly become obsolete. Statisticians constructing matched-model price indices must decide how to compare the price of the obsolete item originally used in the index with the new and improved item that replaces it. Statistical agencies use several different methods to make such price comparisons.
+
+The problem discussed above can be represented as attempting to bridge the gap between the price for the old item at time t, {\displaystyle P(M)\_{t}}, with the price of the new item at the later time period, {\displaystyle P(N)\_{t+1}}.
+
+* The *overlap method* uses prices collected for both items in both time periods, t and t+1. The price relative {\displaystyle {P(N)\_{t+1}}}/{\displaystyle {P(N)\_{t}}} is used.
+* The *direct comparison method* assumes that the difference in the price of the two items is not due to quality change, so the entire price difference is used in the index. {\displaystyle P(N)\_{t+1}}/{\displaystyle P(M)\_{t}} is used as the price relative.
+* The *link-to-show-no-change* assumes the opposite of the direct comparison method; it assumes that the entire difference between the two items is due to the change in quality. The price relative based on link-to-show-no-change is 1.
+* The *deletion method* simply leaves the price relative for the changing item out of the price index. This is equivalent to using the average of other price relatives in the index as the price relative for the changing item. Similarly, *class mean* imputation uses the average price relative for items with similar characteristics (physical, geographic, economic, etc.) to M and N.

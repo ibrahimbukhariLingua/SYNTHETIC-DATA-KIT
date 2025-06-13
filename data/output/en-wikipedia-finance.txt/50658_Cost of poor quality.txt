@@ -1,0 +1,64 @@
+Cost of poor quality
+
+
+# Cost of poor quality
+
+
+
+**Cost of poor quality** (**COPQ**) or **poor quality costs** (**PQC**) or **cost of nonquality**, are costs that would disappear if systems, processes, and products were perfect.
+
+COPQ was popularized by IBM quality expert H. James Harrington in his 1987 book *Poor-Quality Cost*.
+COPQ is a refinement of the concept of quality costs. In the 1960s, IBM undertook an effort to study its own quality costs and tailored the concept for its own use. While Feigenbaum's term "quality costs" is technically accurate, it's easy for the uninitiated to jump to the conclusion that better quality products cost more to produce. Harrington adopted the name "poor quality costs" to emphasize the belief that investment in detection and prevention of product failures is more than offset by the savings in reductions in product failures.
+
+Harrington breaks down COPQ into the following elements:
+
+| Cost | Description |
+| --- | --- |
+| Direct poor-quality costs * Controllable poor-quality cost + Prevention cost + Appraisal cost * Resultant poor-quality cost + Internal error cost + External error cost * Equipment poor-quality cost | Direct COPQ can be directly derived from entries in the company ledger. * Controllable COPQ is directly controllable costs to ensure that only acceptable products and services reach the customer. * Resultant COPQ are costs incurred because unacceptable products and services were delivered to the customer, resulting from earlier decisions about how much to invest in controllable COPQ. * Equipment COPQ are costs to invest in equipment to measure, accept, or control a product or service. It is treated separately from controllable costs to accommodate the effects of depreciation. |
+| Indirect poor-quality costs * Customer-incurred cost * Customer-dissatisfaction cost * Loss-of-reputation cost | Indirect COPQ is difficult to measure because it is a delayed result of time, effort, and financial costs incurred by the customer. These customer costs add up to lost sales and therefore do not appear in the company's ledger. |
+
+
+## Examples
+
+| Cost element | | | Examples |
+| --- | --- | --- | --- |
+| Direct poor-quality costs | Controllable poor-quality cost | Prevention cost | * Quality planning (for test, inspection, audits, process control) * Education and training * Performing capability analyses * Conducting design reviews |
+| Appraisal cost | * Test and inspection * Supplier acceptance sampling * Auditing processes |
+| Resultant poor-quality cost | Internal error cost | * In-process scrap and rework * Troubleshooting and repairing * Design changes * Additional inventory required to support poor process yields and rejected lots * Reinspection and retest of reworked items * Downgrading |
+| External error cost | * Sales returns and allowances * Service level agreement penalties * Complaint handling * Field service labor and parts costs incurred due to warranty obligations |
+| Equipment poor-quality cost | | Micrometers, voltmeters, automated test equipment (but **not** equipment used to make the product) |
+| Indirect poor-quality costs | Customer-incurred cost | | * Loss of productivity due to product or service downtime * Travel costs and time spent to return defective product * Repair costs after warranty period * Backup product or service to cover failure periods |
+| Customer-dissatisfaction cost | | Dissatisfaction shared by word of mouth |
+| Loss-of-reputation cost | | Customer perception of firm |
+
+
+## White collar COPQ
+
+Harrington noted that expanding cost analyses to management and clerical workers could also make a significant dent in waste. He defined the following costs by functional area:
+
+| Functional area | Controllable COPQ | Resultant COPQ |
+| --- | --- | --- |
+| Controller COPQ | * Timecard reviews * Capital equipment reviews * Invoicing reviews | * Billing errors * Incorrect accounting entries * Payroll errors |
+| Software COPQ | * Design reviews * Code reviews | * Crashes * Deadlocks * Incorrect outputs |
+| Plant administration COPQ | * Security * Facility inspection and testing * Machine maintenance training | * Disclosure of trade secrets * Facilities redesign * Overstaffing/understaffing * Equipment downtime/idle time |
+| Purchasing COPQ | * Vendor reviews * Periodic vendor surveys * Follow-up on delivery dates * Strike built-in costs | * Line-down cost * Excessive inventory due to suppliers * Premium freight cost |
+| Marketing COPQ | * Sales material review * Marketing forecast * Customer surveys * Sales training | * Overstock * Loss of market share * Incorrect order entry |
+| Personnel COPQ | * Prescreening applications * Appraisal reviews * Exit interviews * Attendance tracking | * Absenteeism * Turnover * Grievances |
+| Industrial engineering COPQ | * Packaging evaluations * Layout reviews * OSHA reports * Inspection of contract work | * OSHA fines * Shipping damage * Redoing layout * Paying contractors for poor work |
+
+
+## Cost of poor quality by inception point
+
+The damages of poor quality augment as the inception point is further down the supply chain:
+TCFP [Total Cost of Faulty Part] =
+Direct Cost (manufacturing cost)
+➔ failure at supplier's site (bad)
++ Labor Cost (assembly and testing)
++ Overhead Cost (Inventory, handling, shipping costs)
++ Scrapping Cost (of part and attached parts assemblies: Sometimes assemblies cannot be disassembled and have to be scrapped altogether)
++ Rework (applying a new part instead)
+➔ failure at manufacturer's site (worse)
++ Repair / Recall Costs (these are costs associated with repairing or replacing a new part / assembly under warranty)
++ Product Liability Costs (These are costs resulting from damages caused by the faulty part to 3rd parties)
+➔ failure at customers' site (worst)
+

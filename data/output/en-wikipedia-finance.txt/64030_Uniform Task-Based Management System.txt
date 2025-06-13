@@ -1,0 +1,452 @@
+Uniform Task-Based Management System
+
+
+# Uniform Task-Based Management System
+
+
+
+The **Uniform Task-Based Management System** (**UTBMS**) is a set of codes designed to standardize categorization and facilitate the analysis of legal work and expenses. UTBMS was produced through a collaborative effort among the American Bar Association Section of Litigation, the American Corporate Counsel Association, and a group of major corporate clients and law firms coordinated and supported by Price Waterhouse LLP (now PricewaterhouseCoopers). UTBMS codes are now maintained and developed by the Legal Electronic Data Exchange Standard (LEDES) Oversight Committee.
+
+
+## Background
+
+UTBMS coding is reflected in legal bills sent from a law firm to its corporate clients. Law firms will usually use coding on time and expenses only for those clients who explicitly request it. Most clients who use UTBMS also require electronic billing, usually with an invoice in a LEDES e-billing format.
+
+Fees, which are attorney and legal assistant time charges, are coded with task and activity codes. There are five sets of task codes: Litigation, Intellectual Property, Counseling, Project and Bankruptcy. The set used for a given matter (i.e., case or transaction) depends upon the nature of that matter. Tasks may be summarized into phases. Tasks are often reported without reporting the phase, as this can be deduced from the task. The phase/task hierarchy is uniform in the Litigation, Intellectual Property and Bankruptcy task code sets. In the Project set, only the second phase contains multiple tasks. The Counseling set has only a single level. (In such situations, a code may be considered both a phase and a task, and it may be necessary to program the time and billing software this way.) There is a single set of activity codes, which is used in conjunction with each of the four task code sets. There is also a single set of expense codes, which are independent of phase, task and activity codes.
+
+The codes themselves are composed of a letter (the first letter of the task code set), followed by a three-digit number. Tasks sharing the same letter and first digit belong to the same phase.
+
+From time-to-time, the LEDES Oversight Committee (LOC), the administrative body that oversees these codes, adds and changes codes. In 2007, a set of Intellectual Property codes (for patents and trademarks) were finalized and ratified. In 2011, a set of "eDiscovery" codes were ratified. In 2015, the LOC ratified a set of Governance, Risk and Compliance codes based on the Open Compliance & Ethics Group (OCEG) GRC Capability Model.
+
+
+## Lists of the Codes
+
+
+### Litigation Code Set
+
+* L100 Case Assessment, Development and Administration
+ + L110 Fact Investigation/Development
+ + L120 Analysis/Strategy
+ + L130 Experts/Consultants
+ + L140 Document/File Management
+ + L150 Budgeting
+ + L160 Settlement/Non-Binding ADR
+ + L190 Other Case Assessment, Development and Administration
+* L200 Pre-Trial Pleadings and Motions
+ + L210 Pleadings
+ + L220 Preliminary Injunctions/Provisional Remedies
+ + L230 Court Mandated Conferences
+ + L240 Dispositive Motions
+ + L250 Other Written Motions and Submissions
+ + L260 Class Action Certification and Notice
+* L300 Discovery
+ + L310 Written Discovery
+ + L320 Document Production
+ + L330 Depositions
+ + L340 Expert Discovery
+ + L350 Discovery Motions
+ + L390 Other Discovery
+* L400 Trial Preparation and Trial
+ + L410 Fact Witnesses
+ + L420 Expert Witnesses
+ + L430 Written Motions and Submissions
+ + L440 Other Trial Preparation and Support
+ + L450 Trial and Hearing Attendance
+ + L460 Post-Trial Motions and Submissions
+ + L470 Enforcement
+* L500 Appeal
+ + L510 Appellate Motions and Submissions
+ + L520 Appellate Briefs
+ + L530 Oral Argument
+
+### eDiscovery Code Set
+
+* L600 Identification
+ + L601 Discovery planning
+ + L602 Interviews
+ + L609 Quality assurance and control
+* L610 Preservation
+ + L611 Preservation order
+ + L612 Legal hold
+ + L619 Quality assurance and control
+* L620 Collection
+ + L621 Collection/Recovery
+ + L622 Media costs
+ + L623 Media/ESI Transfer, Receipt, Inventory
+ + L629 Quality assurance and control
+* L630 Processing
+ + L631 ESI stage, preparation and process
+ + L632 Scanning - Hard Copy
+ + L633 Foreign language translation
+ + L634 Exception handling
+ + L639 Quality assurance and control
+* L650 Review
+ + L651 Hosting costs
+ + L693 Review Planning & Training
+ + L652 Objective and Subjective coding
+ + L653 First pass document review
+ + L654 Second pass document review
+ + L655 Privilege review
+ + L656 Redaction
+ + L659 Quality assurance and control
+* L660 Analysis
+* L670 Production
+ + L671 Conversion of ESI to production format
+ + L679 Quality assurance and control
+* L680 Presentation
+* L690 Project Management
+
+### Counseling Code Set
+
+* C100 Fact Gathering
+* C200 Researching Law
+* C300 Analysis and Advice
+* C400 Third Party Communication
+
+### Project Code Set
+
+* P100 Project Administration
+* P200 Fact Gathering/Due Diligence
+ + P210 Corporate Review
+ + P220 Tax
+ + P230 Environmental
+ + P240 Real and Personal Property
+ + P250 Employee/Labor
+ + P260 Intellectual Property
+ + P270 Regulatory Reviews
+ + P280 Other
+* P300 Structure/Strategy/Analysis
+* P400 Initial Document Preparation/Filing
+* P500 Negotiation/Revision/Responses
+* P600 Completion/Closing
+* P700 Post-Completion/Post-Closing
+* P800 Maintenance and Renewal
+
+### Bankruptcy Code Set
+
+* B100 Administration
+ + B110 Case Administration
+ + B120 Asset Analysis and Recovery
+ + B130 Asset Disposition
+ + B140 Relief from Stay/Adequate Protection Proceedings
+ + B150 Meetings of and Communications with Creditors
+ + B160 Fee/Employment Applications
+ + B170 Fee/Employment Objections
+ + B180 Avoidance Action Analysis
+ + B185 Assumption/Rejection of Leases and Contracts
+ + B190 Other Contested Matters (excluding assumption/rejection motions)
+ + B195 Non-Working Travel
+* B200 Operations
+ + B210 Business Operations
+ + B220 Employee Benefits/Pensions
+ + B230 Financing/Cash Collections
+ + B240 Tax Issues
+ + B250 Real Estate
+ + B260 Board of Directors Matters
+* B300 Claims and Plan
+ + B310 Claims Administration and Objections
+ + B320 Plan and Disclosure Statement (including Business Plan
+* B400 Bankruptcy-Related Advice
+ + B410 General Bankruptcy Advice/Opinions
+ + B420 Restructurings
+
+### Patent Code Set
+
+* PA100 Assessment, Development, and Administration
+ + PA110 Fact Investigation and Development
+ + PA120 Analysis/Strategy
+ + PA130 Document/File Management
+ + PA140 Budgeting
+ + PA199 Other Assessment, Development, or Administration
+* PA200 Patent Investigation and Analysis
+ + PA210 State-of-the-Art Investigation
+ + PA220 Patentability Investigation
+ + PA230 Clearance Investigation
+ + PA240 Validity Investigation
+ + PA250 Publication Watches
+ + PA260 Infringement Investigation
+ + PA270 Status Investigation
+ + PA299 Other Patent Investigation and Analysis
+* PA300 Domestic Patent Preparation
+ + PA310 Provisional Application Preparation - Domestic
+ + PA320 Non-Provisional Application Preparation - Domestic
+ + PA330 Design Application Preparation - Domestic
+ + PA340 Plant Patent Preparation - Domestic
+ + PA350 Continuing Application Preparation - Domestic
+ + PA360 Validation Patent Application Preparation - Domestic
+ + PA399 Other Patent Application Preparation - Domestic
+* PA400 Domestic Patent Prosecution
+ + PA450 Post-Issuance Remedial Action - Domestic
+ + PA560 Validation Patent Application Preparation - International
+ + PA650 Post-Issuance Remedial Action - International
+ + PA410 Information Disclosure Statement - Domestic
+ + PA420 Preliminary Amendment - Domestic
+ + PA430 Official Communication - Domestic
+ + PA440 Quasi-Judicial Administrative Proceedings - Domestic
+ + PA499 Other Patent Prosecution - Domestic
+* PA500 International Patent Preparation
+ + PA510 Provisional Application Preparation - International
+ + PA520 Non-Provisional Application Preparation - International
+ + PA530 Design Application Preparation - International
+ + PA540 Plant Patent Preparation - International
+ + PA550 Continuing Application Preparation - International
+ + PA599 Other Patent Application Preparation - International
+* PA600 International Patent Prosecution
+ + PA610 Information Disclosure Statement - International
+ + PA620 Preliminary Amendment - International
+ + PA630 Official Communication - International
+ + PA640 Quasi-Judicial Administrative Proceedings - International
+ + PA699 Other Patent Prosecution - International
+* PA700 Other Patent-Related Tasks
+ + PA710 Opinion Preparation
+ + PA720 Portfolio Analysis and Management
+ + PA730 Assignments and Security Interests
+ + PA740 Licensing
+
+### Trademark Code Set
+
+* TR100 Assessment, Development, and Administration
+ + TR110 Fact Investigation and Development
+ + TR120 Analysis/Strategy
+ + TR130 Document/File Management
+ + TR140 Budgeting
+ + TR199 Other Assessment, Development, or Administration
+* TR200 Trademark Investigation and Analysis
+ + TR220 Registerability Investigation
+ + TR230 Clearance Investigation
+ + TR240 Opposition Investigation
+ + TR250 Publication Watches
+ + TR260 Enforcement Investigation
+ + TR270 Status Investigation
+ + TR299 Other Trademark Investigation and Analysis
+* TR300 Domestic Trademark Application Preparation
+ + TR310 Application Preparation and Filing - Domestic
+ + TR399 Other Domestic Trademark Application Preparation and Filing
+* TR400 Domestic Trademark Prosecution and Renewal
+ + TR410 Aff., Pet., Ext., Decl. and Other Filings - Domestic
+ + TR420 Preliminary Amendment - Domestic
+ + TR430 Official Communication - Domestic
+ + TR440 Quasi-Judicial Administrative Proceedings - Domestic
+ + TR499 Other Trademark Prosecution - Domestic
+* TR500 International Trademark Application Preparation and Renewals
+ + TR510 Application Preparation and Filing - International
+ + TR599 Other International Trademark Application Prep. and Filing
+* TR600 International Trademark Prosecution and Renewal
+ + TR610 Aff., Pet., Ext., Decl. and Other Filings - International
+ + TR620 Preliminary Amendment - International
+ + TR630 Official Communication - International
+ + TR640 Quasi-Judicial Administrative Proceedings - International
+ + TR699 Other Trademark Prosecution - International
+* TR700 Other Trademark Related Tasks
+ + TR710 Opinion Preparation
+ + TR720 Portfolio Analysis and Management
+ + TR730 Assignments and Security Interests
+ + TR740 Licensing
+ + TR750 Domain Names - gTLDs
+ + TR760 Domain Names - ccTLDs
+ + TR770 Quasi-Judicial Administrative Proceedings - Domain Names
+ + TR799 Other Trademark Prosecution
+
+### Activity Codes
+
+* A100 Activities
+ + A101 Plan and prepare for
+ + A102 Research
+ + A103 Draft/revise
+ + A104 Review/analyze
+ + A105 Communicate (in firm)
+ + A106 Communicate (with client)
+ + A107 Communicate (other outside counsel)
+ + A108 Communicate (other external)
+ + A109 Appear for/attend
+ + A110 Manage data/files
+ + A111 Other
+ + A112 Travel
+
+In late 2013, the Activity Code set was updated and ratified.
+
+* A101 Plan and prepare for
+* A102 Research
+* A103 Draft/Revise
+* A104 Review/Analyze
+* A105 Communicate (within legal team)
+* A106 Communicate (with client)
+* A107 Communicate (opponents/other outside counsel)
+* A113 Communicate (witnesses)
+* A114 Communicate (experts)
+* A108 Communicate (other external)
+* A109 Appear For/Attend
+* A110 Manage Data/Files/Documentation
+* A112 Billable Travel Time
+* A115 Medical Record and Medical Bill Management
+* A116 Training
+* A117 Special Handling Copying/Scanning/Imaging (Internal)
+* A118 Collection-Forensic
+* A119 Culling & Filtering
+* A120 Processing
+* A121 Review and Analysis
+* A122 Quality Assurance and Control
+* A123 Search Creation and Execution
+* A124 Privilege Review Culling and Log Creation
+* A125 Document Production Creation and Preparation
+* A126 Evidence/Exhibit Creation and Preparation
+* A127 Project Management
+* A128 Collection Closing Activities
+* A111 Other
+
+### Expense Codes
+
+* E100 Expenses
+ + E101 Copying
+ + E102 Outside printing
+ + E103 Word processing
+ + E104 Facsimile
+ + E105 Telephone
+ + E106 Online research
+ + E107 Delivery services/messengers
+ + E108 Postage
+ + E109 Local travel
+ + E110 Out-of-town travel
+ + E111 Meals
+ + E112 Court fees
+ + E113 Subpoena fees
+ + E114 Witness fees
+ + E115 Deposition transcripts
+ + E116 Trial transcripts
+ + E117 Trial exhibits
+ + E118 Litigation support vendors
+ + E119 Experts
+ + E120 Private investigators
+ + E121 Arbitrators/mediators
+ + E122 Local counsel
+ + E123 Other professionals
+ + E124 Other
+
+In late 2013, the Expense Code set was reworked and ratified.
+
+* X100 Expenses
+ + X101 Copies/Blowbacks/Printing-Black & White (Internal)
+ + X102 Copies/Blowbacks/Printing-Color (Internal)
+ + X103 Copy Service (External)
+ + X104 Special Handling Copying/Scanning/Imaging (Internal)
+ + X105 Word Processing
+ + X106 Facsimile
+ + X107 Telephone-Local
+ + X108 Telephone-Long Distance
+ + X109 Telephone-Mobile
+ + X110 Conference Call/Video Call/Webinar Charges
+ + X111 Online Legal Research
+ + X112 Delivery Services/Messengers
+ + X113 Postage
+ + X114 Local Travel
+ + X115 Out-of-Town Travel
+ + X116 Meals
+ + X117 Court and Governmental Agency Fees
+ + X118 Eviction Costs
+ + X119 Foreclosure Costs
+ + X120 Title Insurance Costs
+ + X121 Immigration Costs
+ + X122 Late Fees
+ + X123 Publication Costs
+ + X124 Publications/Books/Treatises
+ + X125 ATE Premiums/Insurance
+ + X126 Witness Fees
+ + X127 Deposition Transcripts
+ + X128 Trial Transcripts
+ + X129 Trial Exhibits
+ + X130 Medical Records Costs
+ + X131 Medical Records Analysis
+ + X132 Medical Record Service Provider Fees
+ + X133 Private Investigators, Investigative Reports and Investigation Fees
+ + X134 Arbitrators/Mediators
+ + X135 Local Counsel
+ + X136 Appraiser/Appraisal Fees
+ + X137 Experts, Consultants, Other Vendors and Professionals
+ + X138 Litigation Support Vendors
+ + X139 Translation
+ + X140 Special Purpose Location/Office Rental
+ + X141 Special Purpose Moving and Storage Fees
+ + X142 Settlement Costs
+ + X143 Bank Fees
+ + X200 Drawings
+ + X201 Patent and Trademark Records
+ + X202 Patent and Trademark Searching and Monitoring
+ + X203 Patent and Trademark Prosecution Application Official Fees, Excluding Prosecution Post-Issuance and Opposition Fees
+ + X204 Patent and Trademark Prosecution Post-Issuance (Patent Maintenance and Trademark Renewal) Fees, Excluding Prosecution Application and Opposition Fees
+ + X205 Official Fees, Patent and Trademark Opposition Fees, Excluding Prosecution (Application or Post-Issuance) Fees
+ + X206 IP Annuity Payments
+ + X207 IP Holdbacks
+ + X300 Discovery/eDiscovery Collection-Forensic
+ + X301 Discovery/eDiscovery Collection-Third Party
+ + X302 Discovery/eDiscovery Culling & Filtering
+ + X303 Bates Stamping/ Control Numbers
+ + X304 Discovery/eDiscovery Review and Analysis
+ + X305 Discovery/eDiscovery Privilege Review Culling and Log Creation
+ + X306 Discovery/eDiscovery Document Production Creation and Preparation
+ + X309 Discovery/eDiscovery Evidence/Exhibit Creation and Preparation
+ + X307 Electronic Media Cost
+ + X308 Discovery/eDiscovery Technical Services-Other
+ + X400 Software License/User Access Fee
+ + X401 Subscription Fee
+ + X402 Transaction Fee
+ + X403 Hardware Costs
+ + X404 Hosting Fees- Internal
+ + X405 Data Storage Fees- Internal
+ + X999 Other
+
+### Civil Litigation J-Code Set (England & Wales)
+
+* JA00 Funding
+ + JA10 Funding
+* JB00 Budgeting incl. costs estimates
+ + JB10 Budgeting - own side's costs
+ + JB20 Budgeting - Precedent H
+ + JB30 Budgeting - between the parties
+* JC00 Initial and Pre-Action Protocol Work
+ + JC10 Factual investigation
+ + JC20 Legal investigation
+ + JC30 Pre-action protocol (or similar) work
+* JD00 ADR / Settlement
+ + JD10 Mediation
+ + JD20 Other Settlement Matters
+* JE00 Issue / Statements of Case
+ + JE10 Issue and Serve Proceedings and Preparation of Statement(s) of Case
+ + JE20 Review of Other Party(s)' Statements of Case
+ + JE30 Requests for Further Information
+ + JE40 Amendment of Statements of Case
+* JF00 Disclosure
+ + JF10 Preparation of the disclosure report and the disclosure proposal
+ + JF20 Obtaining and reviewing documents
+ + JF30 Preparing and serving disclosure lists
+ + JF40 Inspection and review of the other side's disclosure for work undertaken after exchange of disclosure lists.
+* JG00 Witness statements
+ + JG10 Taking, preparing and finalising witness statement(s)
+ + JG20 Reviewing Other Party(s)' witness statement(s)
+* JH00 Expert reports
+ + JH10 Own expert evidence
+ + JH20 Other Party(s)' expert evidence
+ + JH30 Joint expert evidence
+* JI00 Case and Costs Management Hearings
+ + JI10 Case Management Conference
+ + JI20 Pre Trial Review
+ + JI30 Costs Management Conference
+* JJ00 Interim Applications and Hearings (Interlocutory Applications)
+ + JJ10 Applications relating to originating process or Statement of Case or for default or summary judgment
+ + JJ20 Applications for an injunction or committal
+ + JJ30 Applications for disclosure or Further Information
+ + JJ40 Applications concerning evidence
+ + JJ50 Applications relating to Costs alone
+ + JJ60 Permission applications
+ + JJ70 Other applications
+* JK00 Trial preparation
+ + JK10 Preparation of trial bundles
+ + JK20 General work regarding preparation for trial
+* JL00 Trial
+ + JL10 Advocacy
+ + JL20 Support of advocates
+ + JL30 Judgment and post-trial activity
+* JM00 Costs Assessment
+ + JM10 Preparing costs claim
+ + JM20 Points of dispute, Replies and Negotiations
+ + JM30 Hearings
+ + JM40 Post Assessment Work (excluding Hearings)

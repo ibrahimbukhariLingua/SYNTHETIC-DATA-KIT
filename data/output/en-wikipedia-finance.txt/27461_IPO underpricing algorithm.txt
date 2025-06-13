@@ -1,0 +1,50 @@
+IPO underpricing algorithm
+
+
+# IPO underpricing algorithm
+
+
+
+**IPO underpricing** is the increase in stock value from the initial offering price to the first-day closing price. Many believe that underpriced IPOs leave money on the table for corporations, but some believe that underpricing is inevitable. Investors state that underpricing signals high interest to the market which increases the demand. On the other hand, overpriced stocks will drop long-term as the price stabilizes so underpricing may keep the issuers safe from investor litigation.
+
+
+## IPO underpricing algorithms
+
+Underwriters and investors and corporations going for an initial public offering (IPO), issuers, are interested in their market value. There is always tension that results since the underwriters want to keep the price low while the companies want a high IPO price.
+
+Underpricing may also be caused by investor over-reaction causing spikes on the initial days of trading. The IPO pricing process is similar to pricing new and unique products where there is sparse data on market demand, product acceptance, or competitive response. Thus it is difficult to determine a clear price which is compounded by the different goals issuers and investors have.
+
+The problem with developing algorithms to determine underpricing is dealing with noisy, complex, and unordered data sets. Additionally, people, environment, and various environmental conditions introduce irregularities in the data. To resolve these issues, researchers have found various techniques from artificial intelligence that normalizes the data.
+
+
+## Evolutionary models
+
+Evolutionary programming is often paired with other algorithms e.g. artificial neural networks to improve the robustness, reliability, and adaptability. Evolutionary models reduce error rates by allowing the numerical values to change within the fixed structure of the program. Designers provide their algorithms the variables, they then provide training data to help the program generate rules defined in the input space that make a prediction in the output variable space.
+
+In this approach, the solution is made an individual and the population is made of alternatives. However, the outliers cause the individuals to act unexpectedly as they try to create rules to explain the whole set.
+
+
+### Rule-based system
+
+For example, Quintana first abstracts a model with 7 major variables. The rules evolved from the Evolutionary Computation system developed at Michigan and Pittsburgh:
+
+* Underwriter prestige – Is the underwriter prestigious in role of lead manager? 1 for true, 0 otherwise.
+* Price range width – The width of the non-binding reference price range offered to potential customers during the roadshow. This width can be interpreted as a sign of uncertainty regarding the real value of the company and a therefore, as a factor that could influence the initial return.
+* Price adjustment – The difference between the final offer price and the price range width. It can be viewed as uncertainty if the adjustment is outside the previous price range.
+* Offering price – The final offer price of the IPO
+* Retained stock – Ratio of number of shares sold at the IPO divided by post-offering number of shares minus the number of shares sold at the IPO.
+* Offering size – Logarithm of the offering size in millions of dollars excluding the over-allotment option
+* Technology – Is this a technology company? 1 for true, 0 otherwise.
+
+Quintana uses these factors as signals that investors focus on. The algorithm his team explains shows how a prediction with a high-degree of confidence is possible with just a subset of the data.
+
+
+### Two-layered evolutionary forecasting
+
+Luque approaches the problem with outliers by performing linear regressions over the set of data points (input, output). The algorithm deals with the data by allocating regions for noisy data. The scheme has the advantage of isolating noisy patterns which reduces the effect outliers have on the rule-generation system. The algorithm can come back later to understand if the isolated data sets influence the general data. Finally, the worst results from the algorithm outperformed all other algorithms' predictive abilities.
+
+
+## Agent-based modelling
+
+Currently, many of the algorithms assume homogeneous and rational behavior among investors. However, there's an approach alternative to financial modeling, and it's called agent-based modelling (ABM). ABM uses different autonomous agents whose behavior evolves endogenously which lead to complicated system dynamics that are sometimes impossible to predict from the properties of individual agents. ABM is starting to be applied to computational finance. Though, for ABM to be more accurate, better models for rule-generation need to be developed.
+

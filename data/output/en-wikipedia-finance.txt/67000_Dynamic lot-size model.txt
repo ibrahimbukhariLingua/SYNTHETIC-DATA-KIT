@@ -1,0 +1,48 @@
+Dynamic lot-size model
+
+
+# Dynamic lot-size model
+
+
+
+The **dynamic lot-size model** in inventory theory, is a generalization of the economic order quantity model that takes into account that demand for the product varies over time. The model was introduced by Harvey M. Wagner and Thomson M. Whitin in 1958.
+
+
+## Problem setup
+
+We have available a forecast of product demand
+dₜ over a relevant time horizon t=1,2,...,N (for example we might know how many widgets will be needed each week for the next 52 weeks). There is a setup cost sₜ incurred for each order and there is an inventory holding cost iₜ per item per period (sₜ and iₜ can also vary with time if desired). The problem is how many units xₜ to order now to minimize the sum of setup cost and inventory cost. Let us denote inventory:
+
+{\displaystyle I=I\_{0}+\sum \_{j=1}^{t-1}x\_{j}-\sum \_{j=1}^{t-1}d\_{j}\geq 0}
+
+The functional equation representing minimal cost policy is:
+
+{\displaystyle f\_{t}(I)={\underset {x\_{t}\geq 0 \atop I+x\_{t}\geq d\_{t}}{\min }}\left[i\_{t-1}I+H(x\_{t})s\_{t}+f\_{t+1}\left(I+x\_{t}-d\_{t}\right)\right]}
+
+Where H() is the Heaviside step function. Wagner and Whitin proved the following four theorems:
+
+* There exists an optimal program such that Ixₜ=0; ∀t
+* There exists an optimal program such that ∀t: either xₜ=0 or {\displaystyle x\_{t}=\textstyle \sum \_{j=t}^{k}d\_{j}} for some k (t≤k≤N)
+* There exists an optimal program such that if dₜ\* is satisfied by some xₜ\*\*, t\*\*<t\*, then dₜ, t=t\*\*+1,...,t\*-1, is also satisfied by xₜ\*\*
+* Given that I = 0 for period t, it is optimal to consider periods 1 through t - 1 by themselves
+
+## Planning Horizon Theorem
+
+The precedent theorems are used in the proof of the Planning Horizon Theorem. Let
+
+{\displaystyle F(t)=\min \left[{{\underset {1\leq j<t}{\min }}\left[s\_{j}+\sum \_{h=j}^{t-1}\sum \_{k=h+1}^{t}i\_{h}d\_{k}+F(j-1)\right] \atop s\_{t}+F(t-1)}\right]}
+
+denote the minimal cost program for periods 1 to t. If at period t\* the minimum in F(t) occurs for j = t\*\* ≤ t\*, then in periods t > t\* it is sufficient to consider only t\*\* ≤ j ≤ t. In particular, if t\* = t\*\*, then it is sufficient to consider programs such that xₜ\* > 0.
+
+
+## The algorithm
+
+Wagner and Whitin gave an algorithm for finding the optimal solution by dynamic programming. Start with t\*=1:
+
+1. Consider the policies of ordering at period t\*\*, t\*\* = 1, 2, ... , t\*, and filling demands dₜ , t = t\*\*, t\*\* + 1, ... , t\*, by this order
+2. Add H(xₜ\*\*)sₜ\*\*+iₜ\*\*Iₜ\*\* to the costs of acting optimally for periods 1 to t\*\*-1 determined in the previous iteration of the algorithm
+3. From these t\* alternatives, select the minimum cost policy for periods 1 through t\*
+4. Proceed to period t\*+1 (or stop if t\*=N)
+
+Because this method was perceived by some as too complex, a number of authors also developed approximate heuristics (e.g., the Silver-Meal heuristic) for the problem.
+

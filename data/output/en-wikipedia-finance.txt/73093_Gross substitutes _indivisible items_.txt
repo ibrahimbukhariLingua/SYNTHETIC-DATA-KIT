@@ -1,0 +1,127 @@
+Gross substitutes (indivisible items)
+
+
+# Gross substitutes (indivisible items)
+
+
+
+In economics, **gross substitutes (GS)** is a class of utility functions on indivisible goods. An agent is said to *have a GS valuation* if, whenever the prices of some items increase and the prices of other items remain constant, the agent's demand for the items whose price remain constant weakly increases.
+
+| Bundle | Alice's valuation (GS) | Bob's valuation (not GS) |
+| --- | --- | --- |
+| {\displaystyle \emptyset } | $0 | $0 |
+| apple | $5 | $5 |
+| bread | $7 | $7 |
+| apple+bread | $9 | $15 |
+
+An example is shown on the right. The table shows the valuations (in dollars) of Alice and Bob to the four possible subsets of the set of two items: {apple, bread}. Alice's valuation is GS, but Bob's valuation is not GS. To see this, suppose that initially both apple and bread are priced at $6. Bob's optimal bundle is apple+bread, since it gives him a net value of $3. Now, the price of bread increases to $10. Now, Bob's optimal bundle is the empty bundle, since all other bundles give him negative net value. So Bob's demand to apple has decreased, although only the price of bread has increased.
+
+The GS condition was introduced by Kelso and Crawford in 1982
+and was greatly publicized by Gul and Stacchetti.
+Since then it has found many applications, mainly in auction theory and competitive equilibrium theory.
+
+
+## Definitions
+
+The GS condition has many equivalent definitions.
+
+
+### Gross Substitutes (GS)
+
+The original GS definition is based on a *price vector* and a *demand set*.
+
+* A price vector {\displaystyle p} is a vector containing a price for each item.
+* Given a utility function {\displaystyle u} and a price vector {\displaystyle p}, a set {\displaystyle X} is called a *demand* if it maximizes the net utility of the agent: {\displaystyle u(X)-p\cdot X}.
+* The *demand set* {\displaystyle D(u,p)} is the set of all demands.
+
+The GS property means that when the price of some items increases, the demand for other items does not decrease. Formally, for any two price vectors {\displaystyle q} and {\displaystyle p} such that {\displaystyle q\geq p}, and any {\displaystyle X\in D(u,p)}, there is a {\displaystyle Y\in D(u,q)} such that {\displaystyle Y\supseteq \{x\in X|p\_{x}=q\_{x}\}} (Y contains all items in X whose price remained constant).
+
+
+### Single Improvement (SI)
+
+The SI condition says that a non-optimal set can be improved by adding, removing or substituting a single item. Formally, for any price vector {\displaystyle p} and bundle {\displaystyle X\notin D(u,p)}, there exists a bundle {\displaystyle Y} such that {\displaystyle u(Y)-p\cdot Y>u(X)-p\cdot X}, {\displaystyle |X\setminus Y|\leq 1} and {\displaystyle |Y\setminus X|\leq 1}.
+
+
+### No Complementaries (NC)
+
+The NC condition says that every subset of a demanded bundle has a substitute. Formally: for any price vector {\displaystyle p} and demanded bundles {\displaystyle X,Y\in D(u,p)}, and for every subset {\displaystyle X'\subseteq X}, there is a subset {\displaystyle Y'\subseteq Y} such that: {\displaystyle X\setminus X'\cup Y'\in D(u,p)}
+
+If the valuation function is monotone, then GS implies SI and SI implies NC and NC implies GS,¹¹⁷–¹²⁰ so these three conditions are equivalent.
+
+
+### M Concave (MX)
+
+The M-condition comes from convex analysis (the symbol is the "natural" symbol similar to its use in music). It says that for all sets {\displaystyle X,Y} and for every item {\displaystyle x\in X}, at least one of the following must be true:
+
+* {\displaystyle u(X)+u(Y)\leq u(X\setminus \{x\})+u(Y\cup \{x\})}, or
+* there exists an item {\displaystyle y\in Y} such that {\displaystyle u(X)+u(Y)\leq u(X\setminus \{x\}\cup \{y\})+u(Y\setminus \{y\}\cup \{x\})}.
+
+The M-concavity property is also called **M-exchange** property. It has the following interpretation. Suppose Alice and Bob both have utility function {\displaystyle u}, and are endowed with bundles {\displaystyle X} and {\displaystyle Y} respectively. For every item that Alice hands Bob, Bob can hand at most one item to Alice, such that their total utility after the exchange is preserved or increased.
+
+SI implies MX and MX implies SI, so they are equivalent.
+
+
+### Strong No Complementaries (SNC)
+
+The SNC condition says that, for all sets {\displaystyle X} and {\displaystyle Y} and for every subset {\displaystyle X'\subseteq X}, there is a subset {\displaystyle Y'\subseteq Y} such that:
+
+The SNC property is also called **M-multiple-exchange** property. It has the following interpretation. Suppose Alice and Bob both have utility function {\displaystyle u}, and are endowed with bundles {\displaystyle X} and {\displaystyle Y} respectively. For every subset {\displaystyle X'} that Alice hands Bob, there is an equivalent subset {\displaystyle Y'} that Bob can handle Alice, such that their total utility after the exchange is preserved or increased. Note that it is very similar to the MC condition - the only difference is that in MC, Alice hands Bob exactly one item and Bob returns Alice at most one item.
+
+Note: to check whether *u* has SNC, it is sufficient to consider the cases in which
+{\displaystyle X'\subseteq X\setminus Y}. And it is sufficient to check the non-trivial subsets, i.e., the cases in which {\displaystyle X'\neq \emptyset } and {\displaystyle X'\neq X\setminus Y}. And for these cases, we only need to search among bundles {\displaystyle Y'\subseteq Y\setminus X}.
+
+Kazuo Murota proved that MX implies SNC.
+
+It is obvious that SNC implies NC. *Proof:* Fix an SNC utility function {\displaystyle u} and a price-vector {\displaystyle p}. Let {\displaystyle A,B} be two bundles in the demand-set {\displaystyle D(u,p)}. This means that they have the same net-utility, E.g., {\displaystyle U\_{p}:=u\_{p}(A)=u\_{p}(B)}, and all other bundles have a net-utility of at most {\displaystyle U\_{p}}. By the SNC condition, for every {\displaystyle A'\subset A}, there exists {\displaystyle B'\subseteq B} such that {\displaystyle u\_{p}(A\setminus A'\cup B)+u\_{p}(B\setminus B'\cup A)\geq u\_{p}(A)+u\_{p}(B)=2\cdot U\_{p}}. But {\displaystyle u\_{p}(A\setminus A'\cup B)} and {\displaystyle u\_{p}(B\setminus B'\cup A)} are both at most {\displaystyle U\_{p}}. Hence, both must be exactly {\displaystyle U\_{p}}. Hence, both are also in {\displaystyle D(u,p)}.
+
+We already said that NC implies GS which implies SI, and that SI implies MX. This closes the loop and shows that all these properties are equivalent (there is also a direct proof that SNC implies MX).
+
+
+### Downward Demand Flow (DDF)
+
+The DDF condition is related to changes in the price-vector. If we order the items by an ascending order of their price-increase, then the demand of a GS agents flows only downwards – from items whose price increased more to items whose price increased less, or from items whose price increased to items whose price decreased, or from items whose price decreased less to items whose price decreased more.
+
+Formally, let {\displaystyle p,q} be two price-vectors and let {\displaystyle \Delta :=q-p} be the price-increase vector. If an item {\displaystyle x} is demanded under {\displaystyle p} and not demanded under {\displaystyle q}, then there is another item {\displaystyle y} with {\displaystyle \Delta \_{y}<\Delta \_{x}} that is not demanded under {\displaystyle p} and is demanded under {\displaystyle q}.
+
+It is easy to see that DDF implies GS (GS is a special case of DDF in which {\displaystyle \Delta } has only zero or positive values). prove that MX implies DDF, so these conditions are all equivalent.
+
+
+## Preservation
+
+The GS condition is preserved under price-changes. I.e, a utility function {\displaystyle u} has GS, if-and-only-if for every price-vector {\displaystyle p}, the net-utility function {\displaystyle u-p} also has GS. This is easiest to see through the MC or SNC conditions, since it is evident that these conditions are invariant to price.
+
+
+## Properties
+
+
+### Submodularity
+
+Submodular which is not GS
+| Bundle | Value ($) |
+| --- | --- |
+| {\displaystyle \emptyset } | 0 |
+| x | 40 |
+| y | 40 |
+| z | 66 |
+| x,y | 80 |
+| x,z | 75 |
+| y,z | 75 |
+| x,y,z | 80 |
+
+Every GS valuation is a submodular set function.
+
+The converse is not necessarily true. This is shown by the example on the right. The utility is submodular since it satisfies the decreasing-marginal-utility property: the marginal-utility of an item is 40–66 when added to an empty set, 9--40 when added to a single item and 0--5 when added to a pair of items. But it violates the equivalent conditions of the GS family:
+
+* MX is violated by the sets {x,y} and {z}. Suppose Alice holds {x,y} and Bob holds {z}, so their common utility is 146. Alice gives x to Bob. Then, whether Bob returns z or returns nothing, their common utility drops to 115.
+* NC is violated with prices {\displaystyle p\_{x}=p\_{y}=10} and {\displaystyle p\_{z}=6}, since there are two demanded bundles: {x,y} and {z} (both have net utility 60). But, if y is taken from the first set, there is nothing from the second set that can substitute it ({x} has net utility 30 and {x,z} has net utility 59 - none of them is a demand).
+* GS is violated with prices {\displaystyle p\_{x}=p\_{y}=p\_{z}=10}, since the demanded bundle is then {x,y}, but when {\displaystyle p\_{x}} increases to e.g. 200 (such that x is no longer demanded), the new demanded bundle is {z}. The increase in {\displaystyle p\_{x}} decreased the demand for item y.
+* SI is violated with prices {\displaystyle p\_{x}=p\_{y}=p\_{z}=10}, since the bundle {z} is not optimal but the only way to improve it is to change it to {x,y}, which requires to add two items.
+
+Submodularity does imply GS in the special case in which there is a single item-type, so that the value of a bundle depends only on the number of items in the bundle. This is easiest to see using the SNC characterization, which in this case translates to:
+
+Indeed, if {\displaystyle k\_{x}'\leq k\_{y}} then we can take {\displaystyle k\_{y}'=k\_{x}'} which makes the two sides identical; if {\displaystyle k\_{x}'>k\_{y}} we can take {\displaystyle k\_{y}'=k\_{y}} which makes the inequality:
+
+which is equivalent to:
+
+This follows from submodularity because {\displaystyle k\_{x}'>k\_{y}}.
+

@@ -1,0 +1,62 @@
+Iron butterfly (options strategy)
+
+
+# Iron butterfly (options strategy)
+
+
+
+In finance an **iron butterfly,** also known as the ironfly, is the name of an advanced, neutral-outlook, options trading strategy that involves buying and holding four different options at three different strike prices. It is a limited-risk, limited-profit trading strategy that is structured for a larger probability of earning smaller limited profit when the underlying stock is perceived to have a low volatility.
+
+{\displaystyle {\mbox{ironfly}}=\Delta ({\mbox{butterfly strike price}})\times (1+rt)-{\mbox{butterfly}}}
+
+It is known as an iron butterfly because it replicates the characteristics of a butterfly with a different combination of options (compare iron condor).
+
+
+## Short iron butterfly
+
+A short iron butterfly option strategy will attain maximum profit when the price of the underlying asset at expiration is equal to the strike price at which the call and put options are sold. The trader will then receive the net credit of entering the trade when the options all expire worthless.
+
+A short iron butterfly option strategy consists of the following options:
+
+* Long one out-of-the-money put: strike price of X − a
+* Short one at-the-money put: strike price of X
+* Short one at-the-money call: strike price of X
+* Long one out-of-the-money call: strike price of X + a
+
+where X = the spot price (i.e. current market price of underlying) and a > 0.
+
+
+## Limited risk
+
+A long iron butterfly will attain maximum losses when the stock price falls at or below the lower strike price of the put or rises above or equal to the higher strike of the call purchased. The difference in strike price between the calls or puts subtracted by the premium received when entering the trade is the maximum loss accepted.
+
+The formula for calculating maximum loss is given below:
+
+* Max Loss = Strike Price of Long Call − Strike Price of Short Call − Premium
+* Max Loss Occurs When Price of Underlying >= Strike Price of Long Call OR Price of Underlying <= Strike Price of Long Put
+
+## Break even points
+
+Two break even points are produced with the iron butterfly strategy.
+
+Using the following formulas, the break even points can be calculated:
+
+* Upper Breakeven Point = Strike Price of Short Call + Net Premium Received
+* Lower Breakeven Point = Strike Price of Short Put − Net Premium Received
+
+## Example of strategy
+
+* Buy XYZ 140 Put for $2.00
+* Sell XYZ 145 Put for $4.00
+* Sell XYZ 145 Call for $4.00
+* Buy XYZ 150 Call for $3.00
+* Max. Profit = Net Credit = $4.00 + $4.00 − $2.00 − $3.00 = $3.00
+* Max. Risk = Margin = Difference in Strikes − Net Credit = $5.00 − $3.00 = $2.00
+* Upper Break Even = Short Call Strike + Net Credit = $145 + $3.00 = $148.00
+* Lower Break Even = Short Put Strike − Net Credit = $145 − $3.00 = $142.00
+* Max. Return = Net Credit ÷ Margin = $3.00 ÷ $2.00 = 150% (If XYZ is trading at $145 on expiration).
+
+## Long iron butterfly (reverse iron butterfly)
+
+A long iron butterfly option strategy will attain maximum profit when the price of the underlying asset at expiration is greater than the strike price set by the out-of-the-money put and less than the strike price set by the out-of-the-money call. The trader will then receive the difference between the options that expire in the money, while paying the premium on the options that expire out of the money.
+

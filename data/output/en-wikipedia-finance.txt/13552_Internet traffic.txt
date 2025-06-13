@@ -1,0 +1,147 @@
+Internet traffic
+
+
+# Internet traffic
+
+
+
+**Internet traffic** is the flow of data within the entire Internet, or in certain network links of its constituent networks. Common traffic measurements are total volume, in units of multiples of the byte, or as transmission rates in bytes per certain time units.
+
+As the topology of the Internet is not hierarchical, no single point of measurement is possible for total Internet traffic. Traffic data may be obtained from the Tier 1 network providers' peering points for indications of volume and growth. However, Such data excludes traffic that remains within a single service provider's network and traffic that crosses private peering points.
+
+As of December 2022 almost half (48%) of mobile Internet traffic is in India and China, while North America and Europe have about a quarter. However, mobile traffic remains a minority of total internet traffic.
+
+
+## Traffic sources
+
+File sharing constitutes a fraction of Internet traffic. The prevalent technology for file sharing is the BitTorrent protocol, which is a peer-to-peer (P2P) system mediated through indexing sites that provide resource directories. According to a Sandvine Research in 2013, Bit Torrent’s share of Internet traffic decreased by 20% to 7.4% overall, reduced from 31% in 2008.
+
+As of 2023, roughly 65% of all internet traffic came from video sites, up from 51% in 2016.
+
+
+## Traffic management
+
+Internet traffic management, also known as application traffic management.
+The Internet does not employ any formally centralized facilities for traffic management. Its progenitor networks, especially the ARPANET established an early backbone infrastructure which carried traffic between major interchange centers for traffic, resulting in a tiered, hierarchical system of internet service providers (ISPs) within which the tier 1 networks provided traffic exchange through settlement-free peering and routing of traffic to lower-level tiers of ISPs. The dynamic growth of the worldwide network resulted in ever-increasing interconnections at all peering levels of the Internet, so a robust system was developed that could mediate link failures, bottlenecks, and other congestion at many levels.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+Economic traffic management (ETM) is the term that is sometimes used to point out the opportunities for seeding as a practice that caters to contribution within peer-to-peer file sharing and the distribution of content in the digital world in general.
+
+
+## Internet use tax
+
+A planned tax on Internet use in Hungary introduced a 150-forint (US$0.62, €0.47) tax per gigabyte of data traffic, in a move intended to reduce Internet traffic and also assist companies to offset corporate income tax against the new levy. Hungary achieved 1.15 billion gigabytes in 2013 and another 18 million gigabytes accumulated by mobile devices. This would have resulted in extra revenue of 175 billion forints under the new tax based on the consultancy firm eNet.
+
+According to Yahoo News, economy minister Mihály Varga defended the move saying "the tax was fair as it reflected a shift by consumers to the Internet away from phone lines" and that "150 forints on each transferred gigabyte of data – was needed to plug holes in the 2015 budget of one of the EU’s most indebted nations".
+
+Some people argue that the new plan on Internet tax would prove disadvantageous to the country’s economic development, limit access to information and hinder the freedom of expression. Approximately 36,000 people have signed up to take part in an event on Facebook to be held outside the Economy Ministry to protest against the possible tax.
+
+In 1998, the United States enacted the Internet Tax Freedom Act (ITFA) to prevent the imposition of direct taxes on internet usage and online activities such as emails, internet access, bit tax, and bandwidth tax. Initially, this law placed a 10-year moratorium on such taxes, which was later extended multiple times and made permanent in 2016. The ITFA's goal was to protect consumers and support the growth of internet traffic by prohibiting recurring and discriminatory taxes that could hinder internet adoption and usage. As a result, ITFA has played a crucial role in promoting the digital economy and safeguarding consumer interests. According to Pew Research Center, as of 2024, approximately 93% of Americans use the internet, with platforms like YouTube and Facebook being highly popular. Additionally, 90% of U.S. households subscribed to high-speed internet services by 2021. Although the ITFA provides protection against direct internet taxes, ongoing debates about internet regulation and governance continue to shape the landscape of internet traffic and usage in the United States.
+
+
+## Traffic classification
+
+Traffic classification describes the methods of classifying traffic by observing features passively in the traffic and line with particular classification goals. There might be some that only have a vulgar classification goal. For example, whether it is bulk transfer, peer-to-peer file-sharing, or transaction-orientated. Some others will set a finer-grained classification goal, for instance, the exact number of applications represented by the traffic. Traffic features included port number, application payload, temporal, packet size, and the characteristic of the traffic. There is a vast range of methods to allocate Internet traffic including exact traffic, for instance, port (computer networking) number, payload, heuristic, or statistical machine learning.
+
+Accurate network traffic classification is elementary to quite a few Internet activities, from security monitoring to accounting and from the quality of service to providing operators with useful forecasts for long-term provisioning. Yet, classification schemes are extremely complex to operate accurately due to the shortage of available knowledge of the network. For example, the packet header-related information is always insufficient to allow for a precise methodology.
+
+
+### Bayesian analysis techniques
+
+Work involving supervised machine learning to classify network traffic. Data are hand-classified (based upon flow content) to one of a number of categories. A combination of data set (hand-assigned) category and descriptions of the classified flows (such as flow length, port numbers, time between consecutive flows) are used to train the classifier. To give a better insight of the technique itself, initial assumptions are made as well as applying two other techniques in reality. One is to improve the quality and separation of the input of information leading to an increase in accuracy of the Naive Bayes classifier technique.
+
+The basis of categorizing work is to classify the type of Internet traffic; this is done by putting common groups of applications into different categories, e.g., "normal" versus "malicious", or more complex definitions, e.g., the identification of specific applications or specific Transmission Control Protocol (TCP) implementations. Adapted from Logg et al.
+
+
+### Survey
+
+Traffic classification is a major component of automated intrusion detection systems. They are used to identify patterns as well as an indication of network resources for priority customers, or to identify customer use of network resources that in some way contravenes the operator’s terms of service.
+Generally deployed Internet Protocol (IP) traffic classification techniques are based approximately on a direct inspection of each packet’s contents at some point on the network. Source address, port and destination address are included in successive IP packets with similar if not the same 5-tuple of protocol type. ort are considered to belong to a flow whose controlling application we wish to determine. Simple classification infers the controlling application’s identity by assuming that most applications consistently use well-known TCP or UDP port numbers. Even though, many candidates are increasingly using unpredictable port numbers. As a result, more sophisticated classification techniques infer application types by looking for application-specific data within the TCP or User Datagram Protocol (UDP) payloads.
+
+
+## Global Internet traffic
+
+Aggregating from multiple sources and applying usage and bitrate assumptions, Cisco, a major network systems company, has published the following historical Internet Protocol (IP) and Internet traffic figures:
+
+Global Internet traffic by year
+| Year | IP traffic (PB/month) | Fixed Internet traffic (PB/month) | Mobile Internet traffic (PB/month) |
+| --- | --- | --- | --- |
+| 1990 | 0.001 | 0.001 | n/a |
+| 1991 | 0.002 | 0.002 | n/a |
+| 1992 | 0.005 | 0.004 | n/a |
+| 1993 | 0.01 | 0.01 | n/a |
+| 1994 | 0.02 | 0.02 | n/a |
+| 1995 | 0.18 | 0.17 | n/a |
+| 1996 | 1.9 | 1.8 | n/a |
+| 1997 | 5.4 | 5.0 | n/a |
+| 1998 | 12 | 11 | n/a |
+| 1999 | 28 | 26 | n/a |
+| 2000 | 84 | 75 | n/a |
+| 2001 | 197 | 175 | n/a |
+| 2002 | 405 | 356 | n/a |
+| 2003 | 784 | 681 | n/a |
+| 2004 | 1,477 | 1,267 | n/a |
+| 2005 | 2,426 | 2,055 | 0.9 |
+| 2006 | 3,992 | 3,339 | 4 |
+| 2007 | 6,430 | 5,219 | 15 |
+| 2008 | 10,174 | 8,140 | 33 |
+| 2009 | 14,686 | 10,942 | 91 |
+| 2010 | 20,151 | 14,955 | 237 |
+| 2011 | 30,734 | 23,288 | 597 |
+| 2012 | 43,570 | 31,339 | 885 |
+| 2013 | 51,168 | 34,952 | 1,480 |
+| 2014 | 59,848 | 39,909 | 2,514 |
+| 2015 | 72,521 | 49,494 | 3,685 |
+| 2016 | 96,054 | 65,942 | 7,201 |
+| 2017 | 122,000 | 85,000 | 12,000 |
+
+"Fixed Internet traffic" refers perhaps to traffic from residential and commercial subscribers to ISPs, cable companies, and other service providers. "Mobile Internet traffic" refers perhaps to backhaul traffic from cellphone towers and providers. The overall "Internet traffic" figures, which can be 30% higher than the sum of the other two, perhaps factors in traffic in the core of the national backbone, whereas the other figures seem to be derived principally from the network periphery.
+
+Cisco also publishes 5-year projections.
+
+Predicted global Internet traffic by year
+| Year | Fixed Internet traffic (EB/month) | Mobile Internet traffic (EB/month) |
+| --- | --- | --- |
+| 2018 | 107 | 19 |
+| 2019 | 137 | 29 |
+| 2020 | 174 | 41 |
+| 2021 | 219 | 57 |
+| 2022 | 273 | 77 |
+
+
+## Internet backbone traffic in the United States
+
+The following data for the Internet backbone in the US comes from the Minnesota Internet Traffic Studies (MINTS):
+
+US Internet backbone traffic by year
+| Year | Data (TB/month) |
+| --- | --- |
+| 1990 | 1 |
+| 1991 | 2 |
+| 1992 | 4 |
+| 1993 | 8 |
+| 1994 | 16 |
+| 1995 | n/a |
+| 1996 | 1,500 |
+| 1997 | 2,500–4,000 |
+| 1998 | 5,000–8,000 |
+| 1999 | 10,000–16,000 |
+| 2000 | 20,000–35,000 |
+| 2001 | 40,000–70,000 |
+| 2002 | 80,000–140,000 |
+| 2003 | n/a |
+| 2004 | n/a |
+| 2005 | n/a |
+| 2006 | 450,000–800,000 |
+| 2007 | 750,000–1,250,000 |
+| 2008 | 1,200,000–1,800,000 |
+| 2009 | 1,900,000–2,400,000 |
+| 2010 | 2,600,000–3,100,000 |
+| 2011 | 3,400,000–4,100,000 |
+
+The Cisco data can be seven times higher than the Minnesota Internet Traffic Studies (MINTS) data not only because the Cisco figures are estimates for the global—not just the domestic US—Internet, but also because Cisco counts "general IP traffic (thus including closed networks that are not truly part of the Internet, but use IP, the Internet Protocol, such as the IPTV services of various telecom firms)". The MINTS estimate of US national backbone traffic for 2004, which may be interpolated as 200 petabytes/month, is a plausible three-fold multiple of the traffic of the US's largest backbone carrier, Level(3) Inc., which claims an average traffic level of 60 petabytes/month.
+
+
+## Edholm's law
+
+In the past Internet bandwidth in telecommunications networks doubled every 18 months, an observation expressed as Edholm's law. This follows the advances in semiconductor technology, such as metal-oxide-silicon (MOS) scaling, exemplified by the MOSFET transistor, which has shown similar scaling described by Moore's law. In the 1980s, fiber-optical technology using laser light as information carriers accelerated the transmission speed and bandwidth of telecommunication circuits. This has led to the bandwidths of communication networks achieving terabit per second transmission speeds.
+

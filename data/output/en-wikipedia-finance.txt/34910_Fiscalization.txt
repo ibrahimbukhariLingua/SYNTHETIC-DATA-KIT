@@ -1,0 +1,327 @@
+Fiscalization
+
+
+# Fiscalization
+
+
+
+**Fiscalization** is a system designed to avoid retailer fraud in the retail sector. It involves using special cash registers or software to accurately report sales, helping prevent tax evasion. Fiscalization laws about cash registers have been introduced in various countries to control the grey economy by ensuring that all retail transactions are properly recorded and taxed, thereby reducing the possibility of fraud.
+
+Fiscalization law mostly covers:
+
+* how the electronic cash register should work (functions),
+* how the related retail processes should be designed,
+* which data should be saved and how,
+* which reports for the authorities should be created,
+* how and when should reporting be done
+
+Fiscalization is, in many cases, linked to other laws, such as laws related to accounting, taxation, consumer protection, data protection and privacy.
+
+It's common for fiscalization law to be confused with fiscal law. Fiscal law and fiscalization are different things in finance and taxes. Fiscal law is about the rules a government makes for handling its money and taxes. This includes how to collect taxes and manage spending. Fiscalization is more specific, focusing on how to stop tax evasion, especially in retail.
+
+
+## Basic philosophy
+
+In case of fiscalization laws, every government is basically following the same philosophy:
+
+* the tax-related data of every transaction should be stored safely in a manner in which data manipulation is not possible after the transaction is closed
+* reporting to the tax authority about stored tax related data should be possible any time and without any data manipulation
+
+Based on this philosophy, different governments are defining different regulations that must be implemented in the different areas of the retailer's environment.
+
+For example, fiscal law in Portugal is specifying that VAT-related data are regularly sent to the authority. Based on the data most implementations are done in the ERP system of the retailer (in the Back Office/Accounting). On the other side countries like Serbia have fiscal laws which force the usage of the fiscal printer. The fiscal printer stores the VAT-related data and sends it to the fiscal authority via an included special network device. This kind of fiscalization is mostly implemented in the cash register application.
+
+In some other countries (e.g. Austria), the transaction data must be signed by a special signature device and the data has to be saved in a special journal database. Typically, these kind of fiscal laws are implemented in the POS application and in the back office.
+
+
+## History
+
+Fiscalization, along with VAT, was introduced to fight against the grey economy. The first country to introduce fiscal law in regards to the use of specific fiscal devices was Italy, and second one was Greece. Italy introduced this fiscal law in 1983. Introducing fiscal law—particularly about cash registers—came from the need to avoid retailer's frauds. According to fiscal law, an appropriate fiscal receipt has to be printed and given to the customer.
+
+
+## Challenges of modern retailing in the fiscal context
+
+Different aspects of fiscalization are creating big challenges
+
+The implementation of the fiscal laws in a particular country is already by itself a complex issue. But if we put it in the context of the modern retailing then it becomes an even more demanding and challenging topic.
+
+As of today, modern retailing means that:
+
+* Retail concepts are mixed. One retailer has several different store formats. Every format has some or even many different retail processes and every retail process can be influenced by the fiscal law
+* Many different payment methods are used (e.g. paper money, credit cards, vouchers), each of which are usually treated differently by the fiscal law.
+* Multichannel retailing is all around. Transactions can be created anytime, anywhere and mostly with different systems (e.g. POS systems, retailer websites, mobile apps).
+* Marketing campaigns are very complex. To attract the customer, retailers are getting very creative. They are creating complex promotions with complex discounts. They are, in many cases, strongly influenced by the fiscal law.
+* Retailers are becoming more international. At the same time, they are unifying their processes and technology. Yet the fiscal law by country is forcing the usage of certain technologies.
+
+## Technical approaches of fiscalization
+
+The technical implementation of the fiscal law always follows one or more of the following technical aspects:
+
+* hardware-based fiscal implementation
+* software-based fiscal implementation
+* special fiscal requirements with different implementations
+
+In addition, the technical implementation itself is also forced by the fiscal law.
+
+
+### Hardware-based fiscal implementation
+
+Some fiscal laws define the use of special hardware devices.
+
+These are usually:
+
+* fiscal printers – receipt printers with special fiscal memory where fiscal data is stored
+* fiscal communication modules – devices that are used to send fiscal data to the fiscal authority
+* fiscal memory boards – circuit boards that can be included in or connected to the POS, ECR, or printer
+* signature devices – devices that produce digital signatures which are used to secure the fiscal transaction
+
+Most of the fiscal countries in the world today are following the path of hardware-based implementation.
+
+
+### Software-based fiscal implementation
+
+This can be a more modern way of implementing the law.
+
+The background is that the law defines how something has to be done but not which device should be used. This model is more liberal, and it can be expected that in the near future more countries will follow this approach.
+
+Today, there are several different scenarios:
+
+* send each transaction to the fiscal authority in real-time, to get a digital signature from the authority and to include it in the transaction.
+* store every transaction in the database where every entry has a sequence number and a digital signature
+* save data in a special format in special fiscal journal (database)
+* digitally sign every transaction by a special algorithm
+
+### Special fiscal requirements
+
+In some cases, in addition to these technical implementations, there are some additional technical approaches. They are mostly related to:
+
+* data security and protection
+* archiving
+* reporting
+* special business processes (mostly in specialized retailing e.g. petrol stations)
+
+## Sources of information
+
+All legal systems deal with the same basic issues, but jurisdictions categorize and identify their legal topics in different ways. This means that legal systems differ between countries. Not every country has fiscal laws, and not all countries are fiscal.
+
+Tax law involves regulations that concern value-added tax, corporate tax, and income tax. For example, tax laws in some countries may contain fiscal requirements. It depends on the specific country laws, the organization of the countries, and the distribution of responsibilities.
+
+Fiscalization is mandatory in fiscal countries and every company that works with fiscal devices (retailers, suppliers of POS software) is obliged to fiscalize due to the impact on business elements (sales transactions, sales of diplomats, invoice, discounts, payment correction ...).
+
+Fiscal laws change sometimes, so oversight is needed, which is hard because sources vary from country to country. Different institutions are in charge of fiscalization and how the procedure will look like. Problems with obtaining information often are:
+
+* Different languages and speech areas that can create misunderstandings,
+* A culture that is nurtured and differs from country to country,
+* Not knowing where to look and who is a responsible person, because authorities in each country have differently distributed responsibilities.
+
+Some of the sources that may help are Tax administration offices of the specific countries, different Ministries responsible for fiscalization aspects in-country, consulting fiscal companies, local layers, or some other relevant sources of information (such as fiscal portal).
+
+
+## Fiscalization law by country
+
+Every country has its own laws, so it is the same as fiscal laws. The main challenge is to find a source of information and official documents.
+
+| Country | Type | Description |
+| --- | --- | --- |
+| Albania | Software | The new fiscal law is in force since 2019. The usage of a certified software solution that supports real-time communication with the tax authorities is mandatory. Receipts must be issued to the customers and they must include the mandatory elements, as prescribed by the law. |
+| Austria | Hardware/Software | At the beginning of 2016, Austria which introduced a new fiscal law introduced the use of a Fiscal Journal (FJ). A Fiscal Journal should be saved at each POS system, in a central database, or in the cloud. The Fiscal Journal, according to Austrian fiscal law has to be written in real-time (at the same time when receipt is created). In 2017 an obligation to use a security device to digitally sign every transaction was added. |
+| Bosnia and Herzegovina | Hardware | According to the fiscal law of the country, each retail store is obliged to record every single transaction over fiscal devices. Communication with the tax Authority occurs via GPRS. |
+| Bulgaria | Hardware | In 2018, new fiscal law has been presented, introducing new regulation related to the fiscal devices. Some of the important new requirements are: USN number generated by POS software at the beginning of the transaction, use of QR code on the receipt layout, special voucher handling, special rules for e-shops, etc. There are also some important issues related to the certification process itself. |
+| Croatia | Software | fiscalization which includes the stipulation that fiscally relevant transactions have to be sent to the fiscal authority through the internet for authorization. |
+| Czech Republic | Non-fiscal | The fiscalization in Czech Republic used to be software-based and included those fiscal relevant transactions had to be sent to the fiscal authority through the Internet to be authorized. This system entered into force in December 2016, was later suspended in 2020 due to pandemic, and was finally cancelled in 2023. |
+| France | Software | POS software used by retailers is subject to certification. There are some legally defined requirements when it comes to important functionalities of the cash register system. There are four basic conditions as the main goals of the set requirements which are: inalterability, security, storage, archiving. The certification is done by accredited certification bodies and there is also an option of self-certification. |
+| Germany | Hardware/Software | The introduction of the fiscalization system started in 2016, while the system took its current shape at the beginning of 2020. |
+| Hungary | Hardware | Fiscal regulation is conceptualized on fiscal device usage. However, the whole fiscal solution including the fiscal printer and the POS application must be certified by the authorities. Strict handling of integration of the POS software with the printer (error handling, mandatory functionalities) is also included in the requirements defined by the law. |
+| Italy | Hardware | Fiscal Law in Italy is introduced to prevent any fraud by data changing and for automatic delivery of fiscal data. The usage of RT printer or RT server is mandatory and RT printer and RT server communicates with Tax authority. |
+| Montenegro | Software | The new fiscal law is in force since 2019. The usage of an electronic cash register (ENU) that enables real-time communication with the tax authorities, through the fiscal server, is mandatory. This fiscalization system requires several registration processes to be conducted. |
+| Poland | Hardware | From 2019, Poland is introducing a new type of fiscalization which implies that fiscal relevant transactions have to be sent to the fiscal authority through Internet for authorization. Accordingly, major novelty is the introduction of the on-line cash registers. |
+| Portugal | Software | The fiscalization system in Portugal is software-based systems, there are no predefined types of hardware components. Some kind of a printer should always be available for operation. The POS application used by the taxpayer must be certified by the General Directorate for Taxation of Portugal and the communication with the authorities is a must in Portugal. |
+| Romania | Hardware | The last change of the Fiscal law regulation dates from November 2017. According to the fiscal legislative, communication and data exchange with ANAF, done by fiscal printer, is even more specifically defined. At the moment, in practise, there is still no automatic communication with ANAF. |
+| Serbia | Software | The new fiscal law is in force since 2022. The usage of a certified software solution that supports real-time communication with the tax authorities is mandatory. The use of four main fiscalization elements (ESIR, PFR, BE, SUF) is required. |
+| Slovakia | Hardware | New fiscal law in Slovak Republic, as a concept of an online subtype of fiscalization, Has been introduced in 2019. The new type of fiscalization system introduced the obligation for every cash register to be connected to the tax authority. |
+| Slovenia | Software | According to fiscal law, it is required to communicate all transactions paid with cash or cash-like payment media with the Tax Authority via the internet. Slovenia adopted this type of fiscal law at the beginning of 2016, and it is very similar to Croatian law. |
+
+
+### Albania
+
+In 2019, Albania introduced a new fiscalization system by enacting Law No. 87/2019 on the Invoice and Circulation Monitoring System, also known as the Law on Fiscalization. This fiscalization system is software-based and requires certification of the software solution used by the subjects of fiscalization, as opposed to the hardware-based type of fiscalization that has been in place in the country since 2004.
+Certified software solutions in Albania need to enable the real-time transfer of transaction data to the central tax administration for authorization. In addition, they also need to be able to generate receipts, invoices and accompanying invoices which elements meet the legal requirements. Various software functionalities must be included in the POS application in order for it to pass the certification process. These functionalities and the certification procedure itself vary based on the type of software solution being certified (i.e., is it transferable, non-transferable, or a vending machine).
+
+
+### Austria
+
+Austrian parliament approved a new fiscalization model which came into force January 1, 2016. This was the first part of fiscalization, which includes the creation of a Fiscal Journal (FJ) which has to be saved at each POS, central database or in the cloud. The second part of the new fiscal law is the digital signature of every cash receipt, which was implemented on April 1, 2017. Austrian fiscal regulation is based on two concepts. The first concept relates to the usage of a digital signature device for every issued receipt and the second relates to a "closed system" in which an independent audit of company processes and organization is needed. "Closed system" refers to the company that has more than 30 cash registers. But there is one difference between these two concepts - usage of a digital signature device and registration of each POS at a fiscal authority is not mandatory in a "closed system". Advantages of a "closed system" are therefore: signature device, digital certificate and POS registration at the Authority, are not needed. Furthermore, fiscal law in Austria requires that every POS has a unique identification number, and every POS has to keep transaction total counters (created by Adding up every cash turnover to the previous one and encoding that data with AES 256 algorithm). Based on tax relevant information from transaction, the POS has to create a barcode, QR Code or OCR code on the receipt. At the end of each year, the special fiscal receipt has to be printed, saved and sent to the authority and every retailer has to keep it for seven years.
+
+
+### Bosnia and Herzegovina
+
+Fiscal law which was implemented at the end of 2010 in Bosnia and Herzegovina implies recording every single transaction of fiscal devices. Communication with the tax administration is done via GPRS. Currently the main elements of the fiscal system include fiscal printer or fiscal cash register (ECR), the terminal for communication with server of Tax Authority and a fiscal driver.
+
+
+### Bulgaria
+
+The changes to the fiscal law in Bulgaria, based on fiscal device from 2006, have been done in September 2018. They brought with them new regulations to the fiscal devices that previously did not exist:
+
+1. The data exchange with the TA (NRA) and certain problematic situations that may occur and in which the FD has to automatically perform certain actions
+2. USN that has to be supported not only by the POS SW but also the FD
+3. QR codes that have to be printed on all fiscal receipts so the fiscal device must support printing of QR codes
+
+All devices have to comply to the new regulation and therefore go through a new Homologation process. Bulgarian Metrology Institute is the place where the producers and distributors submit their devices in order to get approval for devices that will be present on the Bulgarian market. Initially the deadline for introducing new FD was planned for the 01.04.2019.but it was extended. The new deadline for the introduction of complying FD (that works with POS SW) was the end of September 2019.
+
+
+### Croatia
+
+The fiscalization system requires that all transactions paid with cash or cash-like payment media have to be sent to the Tax Authority via the internet for authorization. There is two-way real-time communication between the taxpayer and the tax authority.
+
+The fiscal law in the Republic of Croatia, as a concept of controlling businesses and their turnover, became a reality on January 1, 2013. Although Italy was the first country to introduce a law for the use of specific fiscal devices fiscal devices (which happened in 1983), Croatia is one of the first countries in the world with a type of fiscalization that requires fiscal-relevant transactions to be sent to the Fiscal Authority, that is, Tax Authority, via the Internet for authorization. Implementation of the new type of fiscalization in Croatia was done in a very short period of time. The technical specification was prepared in October 2012, and the new law was implemented only three months later. Software manufacturers were not very optimistic about this new fiscalization concept, especially because of the short period of time for implementation. Regardless, the new fiscal law was officially implemented on January 1, 2013.
+
+According to the law:
+
+1. Each receipt has to be printed;
+2. Each receipt has to be sent to the Tax Authority;
+3. Communication is done via an Internet connection;
+4. The tax authority server returns data such as amounts, income taxes, unique cashier number (OIB), and payment information.
+
+### Czech Republic
+
+The fiscalization system in Czech Republic used to require that all transactions paid with cash or cash-like payment media be sent to the Tax Authority via the internet for authorization. This system was introduced in December 2016 but was alter suspended in 2020 due to pandemic. During this suspension period, Czech government concluded that this system in no longer serving its purpose, and thus decided to cancel it in 2023. Therefore, from January 1, 2023, taxpayers are no longer obliged to send sales data to tax Authority for authorization. Moreover, the EET Portal is completely abolished.
+
+
+### France
+
+Fiscal law in France is introduced to prevent any kind of fraud, for example changing the data and software modification. The fiscalization requirements are centered around the certification process, signing and sequencing of transaction data, keeping transaction totals, fiscal reports and specific storing and backup of transaction data. There are 2 certification models:
+
+1. Certification by two agencies authorized for certification by the tax authority: Infocert and LNE
+2. self-certification
+
+While self-certification is cheaper and does not rely on external factor, certification by accredited agencies provides a higher level of confidence in fulfillment of legal requirements with detailed instructions and support for retailers and POS providers.
+
+Furthermore, all transactions, such as receipts, invoices, orders, daily, monthly and annual reports, as well as, technical event log (JET) must be signed with electronic signature. That means that it is really hard to make some changes of transactions. To change one transaction, you would have to change previous one, and one before that and so on. All transactions are sequenced and chained per transaction type which creates 6 distinct transaction chains. As a result, specific system functions and operations – operations such as log in, log out, reset, error that must be recorded in technical event log – JET, if implemented.
+
+Transactions are saved, signed, chained and logged in the technical event log in real time. Also, there are periodical reports – daily, monthly and yearly with grand totals. For example, the grand perpetual total is never reset and it starts incrementing transaction values from the moment the POS is used for the first time. It saves transaction values in two increments absolute and total value.
+
+The transaction data saved in the system has to be archived on external memory at least once a year.
+
+
+### Germany
+
+The initial step towards ensuring the stability of the cash register data was the law on the protection against manipulation of digital basic records (so-called "*Kassengesetz*"), which was introduced at the end of 2016. Subsequently, several changes in the law, which additionally regulate the complete fiscal environment, followed:
+
+1. regulation from 01.01.2017. - all transaction data have to be saved complete, in chronological order, unchanged (original values) and in such a way that later manipulation of the data is not possible,
+2. new audit rules from 01.01.2018.
+3. rule to use a 'Technical Security System' (in German: *Technische Sicherheitseinrichtung, TSE*). Usage of a TSS is mandatory for every retailer from 31.12.2022.
+
+All fiscalization regulation adopted since 2016 played a role in shaping the current fiscalization system, and retailers have to abide by them.
+
+On January 1, 2020, a rule that every POS system has to be integrated with a TSS was introduced, with gradual integration period. Every POS and accompanying TSS have to be registered with the tax authority. The structure, functions, and security attributes of a TSS were defined by the Federal Office for Information Security (BSI). The TSS consists of:
+
+1. Security module
+2. Secured memory
+3. Interface (SE API)
+
+The main functionality of the TSS is the signing of transaction data in order to prevent any subsequent manipulation of the data. Each transaction and each signature must be numbered in unbroken sequence. For verification purposes, the signature is to be included in each receipt (the signature can be printed on the receipt or incorporated into a QR code). All signatures are also stored and have to be made available to tax auditors.
+
+
+### Hungary
+
+The general principle of the fiscalization system in Hungary includes the whole solution which is used in the store for creating and issuing of receipts.
+The authorities have set up the requirements standard which absolutely minimizes the possibilities for different types of tax fraud which can happen in the cash register environment.
+Practically, the system implies the following:
+
+1. Certification of the entire fiscal solution which includes the POS software and the fiscal printer with the customer display as a whole,
+2. Tests and the certification procedure demand interaction with fiscal entities in the country,
+3. All-inclusive documentation must be provided to the authorities for certification purposes between which the documentation describing all functions, methods of usage and layouts of fiscal and non-fiscal documents must be provided on Hungarian language,
+4. Strict handling of integration of the POS software with the printer in regards to e.g. error handling and mandatory functionalities,
+5. Transaction data are communicated with authorities in real time, automatically, by a communication module which is attached to the printer, via GSM network.
+
+During the recording of sales itself, there are several procedures which must be conducted, such as the following:
+
+1. before beginning of each document, existence of pairing between the POS application and the fiscal printer must be checked,
+2. it must be possible to read the status of the communication module called AEE by the POS application before start of each transaction and at every item scanning,
+3. the printer must record every POS turn ON and OFF event,
+4. as a built-in function in the POS application there must be a function for querying and presenting the used version of the POS application on the operator display, at all times.
+
+Important to notice is the obligation to support 4 modes regarding currencies which are related to the transition process of switching gradually from mandatory and optional accepting of the domestic currency called Forint to the Euro.
+Furthermore, one more example of a strict requirement is the fact that deposit handling for bottles has to be implemented in a predefined way, no matter the nature of the retailer.
+
+
+### Italy
+
+The fisalization system in Italy is a hardware-based-fiscal device that is used. We can use 2 fiscal devices: an RT printer and an RT server. One of the major fiscalization requirements of the Italian fiscalization is sending fiscal data to the Tax Authority from daily sales, and it is done at the end of the day. The benefits of RT fiscal printer in Italy are reducing controls by tax authorities, reducing the time frame for keeping mandatory documentation, and simplifying delivery of data to the Tax Authority. When using the "Registratore Telematico"-fiscal printer, fiscal data is automatically submitted to the Tax Authority every day via the Telematico device integrated into the RT fiscal printer. That data can not be manipulated (due to fiscal memory) and the data about daily sales is sent once a day with complete information. The RT server represents a data collector, used in the case of at least one connected POS per store, and performs fiscalization requirements.
+
+
+### Montenegro
+
+A software-based fiscalization system has been introduced in Montenegro in 2019, with the Law on Fiscalization in the Turnover of Goods and Services.
+After a generous grace period, the project of a real-time electronic fiscalization system went into full effect on June 1, 2021, requiring all subjects of fiscalization to issue receipts through an electronic cash register (ENU) that:
+
+* Has installed software that supports creating and exchanging messages that include fiscal data from the issued receipts with the tax authorities, which is done through the fiscal server.
+* Enables real-time communication with the tax authorities
+
+The Montenegrin fiscalization system requires mandatory registration of various subjects and fiscalization-related components.
+
+
+### Poland
+
+Fiscalization was firstly introduced in Poland in 1993. As a hardware type of fiscalization, it was based on usage of two types of fiscal devices (fiscal printer and electronic cash registers). Both electronic and paper journals were allowed.
+
+The latest fiscalization changes have happened during the first half of 2018. One of the major novelties is the introduction of the on-line cash registers - devices that send data on registered sales to the information system maintained by the National Tax Administration. As in other online fiscalization systems, the characteristic of communication with the authorities is required for analytical and control purposes needed to the state. However, with the law changes, currently available fiscal printers, as the main fiscal devices, still won't go to history. The plan is to gradually withdraw them from the market and from practice in general.
+The introduction of the online cash registers itself does not automatically impose an obligation of replacement of the old devices to the new ones. At least, not for now, and not for all taxpayers in the same moment.
+The set timeframes for particular industries are the following (there have been postponements of the deadlines because of the COVID-19 crisis):
+
+1. January 1, 2020-fuel sales, vehicle repair, vulcanization services
+2. January 1, 2021-catering industry, short-term accommodation services, coal sales, food-related services
+3. July 1, 2021-for the construction industry, hairdressing services; medical care services provided by doctors and dentists; and legal services.
+
+Besides the online registration of sales, there are also a couple of adjustments referring to the layout of the receipts. For example, the header is going to have a defined and structured layout; the QR code must be printable for every fiscal receipt; the list of payment media possible to be recorded by the printer has been expanded, etc. Also, virtual cash registers (in the form of software) have been introduced in Poland.
+
+
+### Portugal
+
+Portugal has the software-based fiscalization system, which means that it is mainly focused on the characteristics of the POS application and demands regarding functions of the POS program such as security mechanisms, inalterability standards for the created fiscal data and so on. There are no predefined types of hardware components which would be obligatory for usage and e-receipts are possible, but there must be a possibility to print fiscal receipts. This system includes some formal check-ups of the software. The POS application used by the taxpayer must be certified by the General Directorate for Taxation of Portugal. The certification procedure can include conformity tests, but it is recognized in practice that it is usually not a complex and long procedure.
+There are 3 ways in which it is possible to provide fiscal data to the authorities, as the communication with the authorities is a must in Portugal.
+
+Obligatory elements of a receipt:
+
+1. A code which must be always included in the content of particular transactions (combined of 3 parts, where the first one is an extract of the digital signature of the concrete transaction in question)
+
+### Romania
+
+Romania is fiscal country since 1999. Type of fiscalization is hardware based, and main novelties related to the latest law changes from 2017 are:
+
+1. Communication and data exchange with ANAF
+2. Electronic journal (no paper journal from then on)
+3. Data backup
+4. New data on receipt layout
+5. More item information
+6. Fiscalized invoice with customer data and customer tax ID (CIF) called simplified invoice
+7. Additional VAT rates
+8. Additional payment types
+
+This means introduction of new specification for the communication and data exchange between ANAF (National Agency for Fiscal Administration) and fiscal printer. The new fiscal device include 2 additional VAT rates (G and H) but currently they are not used in practice. Whole solution in Romania must go through very complex certification process before usage in stores. The fiscal certification in Romania includes two steps:
+
+1. Obtaining the Technical certification in ICI
+2. Obtaining the Approval for distribution from Ministry of Finance.
+
+### Serbia
+
+Switching from a 2004 hardware-based fiscalization system that required no certification of the software application, Serbia introduced a new software-based fiscalization system by enforcing the new Law on Fiscalization in January 2022. The new fiscalization system requires all transactions to be delivered to the tax authorities in real-time, via a certified software solution. It also introduces four main elements of the fiscalization system that are integral to capturing transaction data, fiscalizing and signing the receipts, verifying the fiscal data, and issuing the receipts to the customers.
+
+The certification process is quite complex, requiring a significant number of:
+
+* Documents to be gathered
+* Software functionalities to be fulfilled (through a self-assessment questionnaire)
+* Mandatory elements to be included on a receipt
+
+### Slovakia
+
+New fiscal law in Slovak Republic was introduced in 2019. One of the main obligations envisaged by the Law was that every cash register has to be connected to the Tax Authority via internet connection. In other words, all cash registers must have access to the Internet, enabling all transactions immediately to be transmitted to the financial administration and every issued receipt to be recorded in the central database.
+Furthermore, transactions have to be saved in the protected data storage or PDS – a repository that provides one-time and permanent data entry. The PDS saves, in addition to cash receipts, void receipts, deposits and withdrawals, other documents that have been printed or sent via the cash register (e.g. orders, delivery notes, prepaid accounts etc.). The transition period form the old to the new system lasted from April 1 to July 1, 2019.
+
+To fascilitate the changes brought up by the new system, Slovakian tax authority introduced an online portal called eKasa, which serves as both the central database for all transactions and as a hub for retailers to fulfill their fiscalization requirements. Every cash register system needs to be registered on the eKasa system before first use.
+
+
+### Slovenia
+
+At the beginning of 2016, in Slovenia, a fiscal law was introduced which includes the stipulation that every transaction has to be sent to the fiscal authorities for authorization via the Internet. The core of Slovenian Fiscal Law is the online authorization of every fiscally relevant transaction created at a POS system. That means that business subjects that are obliged to operate according to the Fiscal Law are not required to have any pre-defined hardware equipment or to use some special fiscal devices due to the fact that fiscalization is based on online authorization. Just like in the case of the Croatian fiscal system, in Slovenia, there is two-way real-time communication between taxpayers and the tax authority.
+

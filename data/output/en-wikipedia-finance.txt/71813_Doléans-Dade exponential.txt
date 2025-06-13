@@ -1,0 +1,49 @@
+Doléans-Dade exponential
+
+
+# Doléans-Dade exponential
+
+
+
+In stochastic calculus, the **Doléans-Dade exponential** or **stochastic exponential** of a semimartingale *X* is the unique strong solution of the stochastic differential equation {\displaystyle dY\_{t}=Y\_{t-}\,dX\_{t},\quad \quad Y\_{0}=1,}where {\displaystyle Y\_{-}} denotes the process of left limits, i.e., {\displaystyle Y\_{t-}=\lim \_{s\uparrow t}Y\_{s}}.
+
+The concept is named after Catherine Doléans-Dade. Stochastic exponential plays an important role in the formulation of Girsanov's theorem and arises naturally in all applications where relative changes are important since {\displaystyle X} measures the cumulative percentage change in {\displaystyle Y}.
+
+
+## Notation and terminology
+
+Process {\displaystyle Y} obtained above is commonly denoted by {\displaystyle {\mathcal {E}}(X)}. The terminology "stochastic exponential" arises from the similarity of {\displaystyle {\mathcal {E}}(X)=Y} to the natural exponential of {\displaystyle X}: If *X* is absolutely continuous with respect to time, then *Y* solves, path-by-path, the differential equation {\displaystyle dY\_{t}/\mathrm {d} t=Y\_{t}dX\_{t}/dt}, whose solution is {\displaystyle Y=\exp(X-X\_{0})}.
+
+
+## General formula and special cases
+
+* Without any assumptions on the semimartingale {\displaystyle X}, one has {\displaystyle {\mathcal {E}}(X)\_{t}=\exp {\Bigl (}X\_{t}-X\_{0}-{\frac {1}{2}}[X]\_{t}^{c}{\Bigr )}\prod \_{s\leq t}(1+\Delta X\_{s})\exp(-\Delta X\_{s}),\qquad t\geq 0,}where {\displaystyle [X]^{c}} is the continuous part of quadratic variation of {\displaystyle X} and the product extends over the (countably many) jumps of *X* up to time *t*.
+* If {\displaystyle X} is continuous, then {\displaystyle {\mathcal {E}}(X)=\exp {\Bigl (}X-X\_{0}-{\frac {1}{2}}[X]{\Bigr )}.}In particular, if {\displaystyle X} is a Brownian motion, then the Doléans-Dade exponential is a geometric Brownian motion.
+* If {\displaystyle X} is continuous and of finite variation, then {\displaystyle {\mathcal {E}}(X)=\exp(X-X\_{0}).}Here {\displaystyle X} need not be differentiable with respect to time; for example, {\displaystyle X} can be the Cantor function.
+
+## Properties
+
+* Stochastic exponential cannot go to zero continuously, it can only jump to zero. Hence, the stochastic exponential of a continuous semimartingale is always strictly positive.
+* Once {\displaystyle {\mathcal {E}}(X)} has jumped to zero, it is absorbed in zero. The first time it jumps to zero is precisely the first time when {\displaystyle \Delta X=-1}.
+* Unlike the natural exponential {\displaystyle \exp(X\_{t})}, which depends only of the value of {\displaystyle X} at time {\displaystyle t}, the stochastic exponential {\displaystyle {\mathcal {E}}(X)\_{t}} depends not only on {\displaystyle X\_{t}} but on the whole history of {\displaystyle X} in the time interval {\displaystyle [0,t]}. For this reason one must write {\displaystyle {\mathcal {E}}(X)\_{t}} and not {\displaystyle {\mathcal {E}}(X\_{t})}.
+* Natural exponential of a semimartingale can always be written as a stochastic exponential of another semimartingale but not the other way around.
+* Stochastic exponential of a local martingale is again a local martingale.
+* All the formulae and properties above apply also to stochastic exponential of a complex-valued {\displaystyle X}. This has application in the theory of conformal martingales and in the calculation of characteristic functions.
+
+## Useful identities
+
+Yor's formula: for any two semimartingales {\displaystyle U} and {\displaystyle V} one has {\displaystyle {\mathcal {E}}(U){\mathcal {E}}(V)={\mathcal {E}}(U+V+[U,V])}
+
+
+## Applications
+
+* Stochastic exponential of a local martingale appears in the statement of Girsanov theorem. Criteria to ensure that the stochastic exponential {\displaystyle {\mathcal {E}}(X)} of a continuous local martingale {\displaystyle X} is a martingale are given by Kazamaki's condition, Novikov's condition, and Beneš's condition.
+
+## Derivation of the explicit formula for continuous semimartingales
+
+For any continuous semimartingale *X*, take for granted that {\displaystyle Y} is continuous and strictly positive. Then applying Itō's formula with *ƒ*(*Y*) = log(*Y*) gives
+
+Exponentiating with {\displaystyle Y\_{0}=1} gives the solution
+
+This differs from what might be expected by comparison with the case where *X* has finite variation due to the existence of the quadratic variation term [*X*] in the solution.
+

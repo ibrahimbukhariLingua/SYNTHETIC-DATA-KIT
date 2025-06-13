@@ -1,0 +1,39 @@
+Digital invoice customs exchange
+
+
+# Digital invoice customs exchange
+
+
+
+The **Digital Invoice Customs Exchange (DICE)** is a revenue protection idea developed to prevent tax evasion methods such as sales suppression in domestic trade and missing trader fraud, transfer pricing in cross-border trade. As such, the implementation of this idea enables Revenue Authority to have advance notice of every commercial transaction.
+
+Definition of the term "DICE" is:
+
+> A technology-intensive tax compliance regimen for VAT/GST that utilizes invoice encryption to safeguard transactional data exchanged between seller and buyer in both domestic and import/export contexts while simultaneously notifying concerned jurisdictions of the transaction details.
+
+
+## How it works
+
+A seller produces digital invoice containing minimum requirements as follows:
+
+* Name of the seller with unique Taxpayer Identification Number;
+* Name of the purchaser with unique Taxpayer Identification Number;
+* Description of good/service;
+* Unit price;
+* Quantity;
+* Tax rate;
+* Total price with tax.
+
+Such prepared invoice, along with proper authentication of the seller, is uploaded to the Revenue Authority server (seller's jurisdiction) using DICE protocol for safekeeping and signature processing. Based on the information provided by the seller, system will apply verifiable electronic signature and send it back in the same manner as it was received. Seller will include electronic signature received in return to finalize invoice before dispatching it to customer who may verify the content of the invoice at any time by checking the signature using Revenue Authority's or DICE's web portal.
+
+In case customer is registered outside of the seller's jurisdiction, before signing the invoice Revenue Authority will provide notice to the other jurisdiction announcing the customer's identity and content of the invoice using DICE protocol. Given the fact that DICE is being used in another jurisdiction (meaning there is an agreement between two jurisdictions to use DICE protocol and exchange digital keys for the purpose of secure communication), the received information will be processed to acknowledge positively that customer is registered in accordance with the applicable Laws, thus the transaction is considered legal. If customer is not registered in the database of the receiving jurisdiction, invoice will not be completed with valid electronic signature.
+
+
+## Benefits
+
+* DICE platform is based on open standard;
+* Secure communication between jurisdictions;
+* Transparency in trade between legal entities;
+* Disabling tax refund based on invalid documents;
+* Verification of original invoice content available at any time;
+* Taxpayer's audit trail is available at the Revenue Authority.

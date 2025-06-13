@@ -1,0 +1,30 @@
+Microsoft Merchant Server
+
+
+# Microsoft Merchant Server
+
+
+
+**Microsoft Merchant Server**, released in October 1996, was Microsoft's initial foray into e-commerce software, during the boom of Internet business-to-consumer transactions in the 1990s related to the dot-com bubble. Only one version was shipped, then its technology was folded into Microsoft Site Server 2.0, Commerce Edition.
+
+
+## Technology
+
+The technology at the heart of Merchant Server originated at a company named eShop Inc., which Microsoft acquired in June 1996. It was primarily built using Python, with additional C++ code to plug into IIS and to run the primary server code as an NT Service.
+
+Microsoft's Active Server Pages was shipped in December 1996, two months **after** Merchant Server's release, so Merchant Server was unable to use that for page generation. Instead, it incorporated its own custom templating system, similar to the EZT templating system.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+The custom templating system was thrown out, and the core technology of Merchant Server was converted into COM Objects to be used by Active Server Pages. This revamp of the system appeared in Site Server 2.0 in early 1997.
+
+
+## Naming
+
+Microsoft chose the name "Merchant Server" because, at that time, Netscape was shipping a product named Commerce Server. To avoid trademark issues, Microsoft needed a different name. When Merchant Server was folded into Site Server, they were able to use the term "Commerce" as a subtitle to the trademarkable "Site Server" name.
+
+In later years, after Netscape's product was no longer in the market, Microsoft was able to return to their original desire and call it Microsoft Commerce Server.
+
+
+## Related Technologies
+
+Merchant Server required the Windows NT 3.51 or Windows NT 4.0 operating system with Internet Information Services (IIS). It was also dependent on an ODBC-compliant SQL database, such as Microsoft SQL Server or Oracle.
+

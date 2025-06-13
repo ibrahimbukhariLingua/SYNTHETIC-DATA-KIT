@@ -1,0 +1,40 @@
+Tracking error
+
+
+# Tracking error
+
+
+
+In finance, **tracking error** or **active risk** is a measure of the risk in an investment portfolio that is due to active management decisions made by the portfolio manager; it indicates how closely a portfolio follows the index to which it is benchmarked. The best measure is the standard deviation of the difference between the portfolio and index returns.
+
+Many portfolios are managed to a benchmark, typically an index. Some portfolios, notably index funds, are expected to replicate, before trading and other costs, the returns of an index exactly, while others 'actively manage' the portfolio by deviating from the index in order to generate active returns. Tracking error measures the deviation from the benchmark: an index fund has a near-zero tracking error, while an actively managed portfolio would normally have a higher tracking error. Thus the tracking error does not include any risk (return) that is merely a function of the market's movement. In addition to risk (return) from specific stock selection or industry and factor "betas", it can also include risk (return) from market timing decisions.
+
+Dividing portfolio active return by portfolio tracking error gives the information ratio, which is a risk adjusted performance measure.
+
+
+## Definition
+
+If tracking error is measured historically, it is called 'realized' or 'ex post' tracking error. If a model is used to predict tracking error, it is called 'ex ante' tracking error. Ex-post tracking error is more useful for reporting performance, whereas ex-ante tracking error is generally used by portfolio managers to control risk. Various types of ex-ante tracking error models exist, from simple equity models which use beta as a primary determinant to more complicated multi-factor fixed income models. In a factor model of a portfolio, the non-systematic risk (i.e., the standard deviation of the residuals) is called "tracking error" in the investment field. The latter way to compute the tracking error complements the formulas below but results can vary (sometimes by a factor of 2).
+
+
+### Formulas
+
+The ex-post tracking error formula is the standard deviation of the active returns, given by:
+
+where {\displaystyle r\_{p}-r\_{b}} is the active return, i.e., the difference between the portfolio return and the benchmark return and {\displaystyle (w\_{p}-w\_{b})} is the vector of active portfolio weights relative to the benchmark. The optimization problem of maximizing the return, subject to tracking error and linear constraints, may be solved using second-order cone programming:{\displaystyle \max \_{w}\;\mu ^{T}(w-w\_{b}),\quad {\text{s.t.}}\;(w-w\_{b})^{T}\Sigma (w-w\_{b})\leq \omega ^{2},\;Ax\leq b,\;Cx=d}
+
+
+### Interpretation
+
+Under the assumption of normality of returns, an active risk of x per cent would mean that approximately 2/3 of the portfolio's active returns (one standard deviation from the mean) can be expected to fall between +x and -x per cent of the mean excess return and about 95% of the portfolio's active returns (two standard deviations from the mean) can be expected to fall between +2x and -2x per cent of the mean excess return.
+
+
+## Examples
+
+* Index funds are expected to have minimal tracking errors.
+* Inverse exchange-traded funds are designed to perform as the *inverse* of an index or other benchmark, and thus reflect tracking errors relative to short positions in the underlying index or benchmark.
+
+### Index fund creation
+
+Index funds are expected to minimize the tracking error with respect to the index they are attempting to replicate, and this problem may be solved using standard optimization techniques. To begin, define {\displaystyle \omega ^{2}} to be:{\displaystyle \omega ^{2}=(w-w\_{b})^{T}\Sigma (w-w\_{b})}where {\displaystyle w-w\_{b}} is the vector of active weights for each asset relative to the benchmark index and {\displaystyle \Sigma } is the covariance matrix for the assets in the index. While creating an index fund could involve holding all {\displaystyle N} investable assets in the index, it is sometimes better practice to only invest in a subset {\displaystyle K} of the assets. These considerations lead to the following mixed-integer quadratic programming (MIQP) problem:{\displaystyle {\begin{aligned}\min \_{w}&\quad \omega ^{2}\\{\text{s.t.}}&\quad w\_{j}\leq y\_{j},\quad \sum \_{j=1}^{N}y\_{j}\leq K\\&\quad \ell \_{j}y\_{j}\leq w\_{j}\leq u\_{j}y\_{j},\quad y\_{j}\in \{0,1\},\quad \ell \_{j},\;u\_{j}\geq 0\end{aligned}}}where {\displaystyle y\_{j}} is the logical condition of whether or not an asset is included in the index fund, and is defined as:{\displaystyle y\_{j}={\begin{cases}1,\quad &w\_{j}>0\\0,\quad &{\text{otherwise}}\end{cases}}}
+

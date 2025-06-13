@@ -1,0 +1,121 @@
+Electronic cash
+
+
+# Electronic cash
+
+
+
+**Electronic cash** was, until 2007, the debit card system of the German Banking Industry Committee, the association that represents the top German financial interest groups. Usually paired with a transaction account or current account, cards with an Electronic Cash logo were only handed out by proper credit institutions. An electronic card payment was generally made by the card owner entering their PIN (Personal Identification Number) at a so-called EFT-POS-terminal (Electronic-Funds-Transfer-Terminal). The name "EC" originally comes from the unified European checking system Eurocheque. Comparable debit card systems are Maestro and Visa Electron. Banks and credit institutions who issued these cards often paired EC debit cards with Maestro functionality. These combined cards, recognizable by an additional Maestro logo, were referred to as "EC/Maestro cards".
+
+
+## Providers
+
+All of Germany's providers registered with the Central Credit Committee are connected in the working group *Arbeitskreis der electronic cash-Netzbetreiber*. According to the Federal Cartel Office of Germany, the following providers have considerable market shares:
+
+* Ingenico Payment Services GmbH (before 2014 – easycash), Ratingen, with a market share of 40% (as recorded in 2007)
+* TeleCash GmbH & Co. KG, Stuttgart, with a market share of more than 20%
+* B+S – B+S Card Service GmbH, Frankfurt am Main, with a market share of 10 to 15%
+* WEAT – WEAT Electronic Datenservice GmbH, Düsseldorf, with a market share of less than 10%
+* montrada – montrada GmbH, Bad Vilbel, with a market share of less than 10% (as recorded in 2006); in 2010 they claimed they were now Germany's third most important provider
+* InterCard – InterCard AG, Taufkirchen b. München, with a market share of less than 10%
+
+In 2006, the following companies had market shares of less than 3% each:
+DVB Processing, CardProcess, Tyco/ADT, Bank-Verlag, CardTech, CCV Allcash, EKS, Alphyra, Experian, Paycom, Lavego, Telekurs.
+
+In 2010, only CardTech and Lavego remain from the 2006 list (as well as the six top companies), with AGES, BCB Processing, CardProcess, Deutsche Bahn, Deutsche BP, Douglas Informatik & Service, Elavon, ESSO Deutschland, ICP International Cash Processing GmbH, Postbank, and Shell also offering services now.
+
+
+## Acceptance marks
+
+Currently there are two valid acceptance marks for electronic cash: the electronic cash PIN-Pad and girocard pictograms. The *Technical attachment to the eligibility requirements for participation in the electronic cash system of the German credit services sector (retailing requirements)* includes the retailer's obligation to accept both of these acceptance marks at newly set up points of sale for the time being. Furthermore, the acceptance marks are printed on the debit cards of German financial institutions.
+
+The trademarks on these two acceptance marks are held for the Central Credit Committee by the *EURO Kartensysteme GmbH.*
+
+For a transitional period another pictogram, the ec electronic cash pictogram, is still to be found as an acceptance mark on debit cards issued by the German credit services sector and on POS terminals. This mark was used during the transition from Eurocheque (payment via certified cheque) to payment via ec-card (card based payment with PIN). After the abolition of the Eurocheque, the allocation of ec-cards by the German credit services sector was suspended and the trademarks for Eurocheque were sold to MasterCard.
+
+The German banking sector no longer uses the ec electronic cash sign as an official acceptance mark for electronic cash. Instead, newly issued debit cards show the two current acceptance marks described above. However, the old ec electronic cash sign can still be found on some debit cards in circulation. These cards, which were issued before the new pictograms were introduced, remain valid, but will gradually be replaced by the new cards as they expire. Newly installed electronic cash POS terminals also bear the new pictograms.
+
+
+## Hardware and software
+
+A card terminal, also called EFT-POS terminal, consists of hardware and software components. The main hardware components are the security module, the PIN pad, the printer, the display, the magnetic card reader, the chip-card reader, the communication module and the power supply.
+
+The software mainly consists of the operating system, the communication software, the software of the security module and various software modules for OPT (Online-Personalization of Terminals), EMV as well as additional applications such as prepayment, customer loyalty systems and remote administration. The most important element is the so-called security module, without which the terminal can only be used for electronic direct debit (EDD) transactions.
+
+All card terminals working with the electronic cash system have to be certified by the ZKA (the German Central Credit Committee) in order to take part in cashless payment transactions. Terminals working exclusively with EDD do not require a ZKA certificate. Operating a card terminal requires a *provider contract* with the network operator. The data collected by the terminal is processed by the provider. For the time the terminal is in use the user (for example, the retailer) can contact the service provider. He can call a hotline and is guaranteed on-site technical support by a technician. He has a contact person who helps with questions about the account, transaction control, managing the contract, etc.
+
+
+## Chip card vs magnetic stripe card
+
+Most ec-cards are equipped with a magnetic stripe. This magnetic stripe is read-only and thus only contains static information. In addition, since the year 2000, more and more banks have started to add the EMV chip to newly issued cards. By 2008, 70% of the cards issued had that chip. The new chip is capable of processing data like a small computer and can respond to requests without the entire contents being read. In contrast to magnetic stripes, the chips cannot be copied easily. To maintain downward compatibility, especially with the Maestro card, which is most often integrated, most cards are still equipped with magnetic stripes. However, usually the chip as the more secure option is chosen wherever both means of communication are technically possible.
+
+The magnetic stripe on a card has three paths. Until 30 September 2009, path 3 of the magnetic stripe was read for payments in Germany. Since then, the international standard path 2 is being read.
+
+
+## Payment authorization
+
+
+### Electronic cash with a magnetic stripe card
+
+Paying at a POS terminal (point of sale) works as follows: Online authorization validates the card against the list of blocked account numbers and checks the given PIN. Next, it verifies whether the amount due is covered by the account balance (balance plus overdraft facility minus pending debits). Payment is rejected if any of the criteria listed above are not met. The authorization as well as the validation regarding sufficient funds and the daily limit is carried out by the headquarters of the institute from which the card is issued.
+General procedure for electronic cash payment using the magnetic stripe:
+
+1. Amount is entered.
+2. Card is asked for in order to be read by a card reader.
+3. Security module is activated and requires the input of the PIN.
+4. The communication module connects to the provider and logs in for the exchange of data.
+5. The exchange of data operates the plausibility check.
+6. The online connection to the bank verifies that:
+ * the card is not blocked
+ * the PIN is correct
+ * sufficient funds are available
+ The payment is rejected if any of the criteria listed above is not fulfilled.
+7. The communication module logs out of the system and terminates the connection.
+8. The printer issues a record of the payment or the rejection, which can be viewed on the screen. The result "Successful payment" guarantees the retailer payment (if submitted on time).
+
+
+### Electronic cash with chip, chip offline
+
+The general procedure for electronic cash payment using a chip is as follows:
+
+1. The amount is entered.
+2. The card is requested, and is read with the help of the chip reader.
+3. The security module is activated, and requests the PIN.
+4. The accuracy of the PIN is checked in the chip. If the PIN is entered correctly, the wrong entry counter is set to zero. If the PIN given is incorrect, the wrong entry count increases to one, and if it is entered incorrectly three times, the bank can block the card. The bank can unlock the card with the help of special bank terminals (BSFT).
+5. The request for payment is sent to the card chip. If there is enough money and/or credit on the card, the amount will be deducted and the credit limit updated on the chip. Go to step 11.
+6. The communications module establishes the connection to the provider and logs the data exchange.
+7. Data exchanges are carried out via the communications link and plausibility checks.
+8. Via the online connection the bank verifies that the card is not on the blacklist, and that the amount requested is not more than the available amount.
+9. If one of these criteria is not met, payment will be rejected.
+10. A payment approval (authorization) is transmitted to the chip and stored there.
+11. The following information may, for example, be saved: "Further payments to the total of 500 euros before the end of the month are allowed."
+12. The communication module logs off at the provider and terminates the connection.
+13. The printer creates a record of payment or rejection, which is shown on the screen. The confirmation of payment guarantees the retailer payment (if submitted on time).
+
+Steps 3 to 6 are not applicable if the credit limit has not been reached, thus resulting in no transaction costs. Additionally, the payment process is often accelerated because no online connection needs to be established. The bank thereby grants the customer additional credit.
+
+
+#### Example
+
+* You make a first withdrawal of 30 euros. The terminal sends a request to the bank and subsequently saves the payment authorisation. Further withdrawals up to a total amount of 500 euros are possible until the end of the month.
+* In a nearby shop, you pay another 70 euros using electronic cash. Another request to the bank is unnecessary as the payment permission is already stored on the chip. A credit line of 430 euros is now left on the chip.
+* The next day of the same month you want to pay 419 euros using electronic cash. Again, a request to the bank is unnecessary since the payment permission is already on the chip. A credit line of 11 euros is now left on the card.
+* The last day of this month you want to make a payment of another 12 euros in another shop. The available credit on the chip is now too low. A connection to the bank is established. The bank states that 12 euros are immediately available and that the credit line is being raised by another 500 euros until the end of the next month.
+
+### Costs
+
+The charge made for an electronic cash transaction depends on the amount of the payment. It is 0.3% of the amount with a minimum of 8 cents. In the oil industry the basic charge is 0.2% of the amount but with a minimum of 4 cents.
+
+Depending on the provider, further charges, e.g. for technical deployment, may be incurred.
+
+According to retailers' terms and conditions, shops have to accept electronic cash payments on the same conditions and at the same prices as with cash. Thus, they have to pay the charges and are not allowed to set a minimum sales amount.
+
+
+## Modes of payment with electronic cash debit cards
+
+Many retailers provide the option of paying by card or electronic cash, as both payment systems include a guarantee of payment. The electronic direct debit (EDD) system offers no such guarantee and thus exposes the retailer to a default risk.
+
+* In 2005, 13.1% of all payments in Germany were made using electronic cash (payments included the entering of the PIN). In 2009, the percentage of payments using electronic cash went up to 19.4%; payments amounted to 71 billion euros.
+* The electronic purse card or *Geldkarte* can also be used for payments. With an annual turnover of 0.1 billion euros its market share amounts to less than 0.04%.
+* ELV (*Elektronisches Lastschriftverfahren*, electronic debit advice procedure) online or offline. 12% of 2005 turnover in commerce was processed using this method. The market share in 2009 was 12.2%, or 45 billion euros. The technology was introduced in 1984. When using *ELV online* (also called OLV) every online payment is checked against a credit rating score and a nationwide blacklist. When ELV takes place offline, there is no telephone line and no checking. It is the most inexpensive method for retailers. All procedures read only the account number, the bank code and the card number from the magnetic stripe or the chip. In contrast to the electronic cash method the customer authorises a direct withdrawal with his signature.
+* POZ (*Point of Sale ohne Zahlungsgarantie*, point of sale without payment guarantee). Unlike OLV and ELV, which are procedures used in retail, POZ was a procedure used by the ZKA (*Zentraler Kreditausschuss*, the German Central Credit Committee) from its introduction in 1994 up to its abolition on December 31, 2006.

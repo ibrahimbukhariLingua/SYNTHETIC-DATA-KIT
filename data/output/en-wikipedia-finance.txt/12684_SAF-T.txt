@@ -1,0 +1,45 @@
+SAF-T
+
+
+# SAF-T
+
+
+
+**SAF-T** (Standard Audit File for Tax) is an international standard for electronic exchange of reliable accounting data from organizations to a national tax authority or external auditors. The standard is defined by the Organisation for Economic Co-operation and Development (OECD). The file requirements are expressed using XML, but the OECD does not impose any particular file format, recommending that (para 6.28) "It is entirely a matter for revenue bodies to develop their policies for implementation of SAF-T, including its representation in XML. However, revenue bodies should consider data formats that permit audit automation today while minimising potential costs to all stakeholders when moving to new global open standards for business and financial data such as XBRL, and XBRL\_GL in particular."
+
+The standard is now increasingly adopted within European countries as a means to file tax returns electronicallyᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ.
+
+The standard was adopted in 2008 by Portugal and has since spread to other European countries, e.g. Luxembourg, Austria, Germany and France. From 1 January 2022 SAF-T is also rolled out in Romania, where large Romanian-resident companies and certain foreign companies.
+
+Although SAF-T is formally standardized, both with respect to syntax (format) and semantics (meaning) to allow for and fulfill automatic data interchange and tools support, e.g. across country borders or common computerized systems, it does include some room for revenue bodies (tax administrations) to add individual elements, e.g. to cover special needs in a taxation or audit system. For example, in Portugal the SAF-T (PT) v1.04\_01 standard – based on SAF-T v1.0 – includes some special elements and types relevant to the standard in Portugal.
+
+
+## Standards
+
+In May 2005, the OECD Committee on Fiscal Affairs (CFA) published the first version of the SAF-T guidance. Version 1.0 was based on entries as found in a General Ledger Chart of Accounts, together with master file data for customers and suppliers and details of invoices, orders, payments, and adjustments. The standard describes a set of messages for data exchange between accounting software and national tax authorities or auditors. The syntax is proprietary and based on XML. There are multiple localized versions available which are compatible with the general v1.0 standard. Schema was originally defined in old DTD format – a precursor to today's XML Schema.
+
+The revised version (2.0) extended the standard to include information on Inventory and Fixed Assets. The opportunity was also taken to enhance the original SAF-T specification to take account of suggestions from OECD member countries and others. Schema is changed to XML Schema format and new information covering Inventory and Fixed Assets added. The schema is not fully backward compatible with v1.0.
+
+| Version | Introduced | XML Schema | Annotated | File Package |
+| --- | --- | --- | --- | --- |
+| v1.0 | May 2005 | SAF-T.xsd | SAF-T-map.html | SAF-T v1.0 package |
+| v2.0 | April 2010 | SAF-T\_Schema\_v\_2.00.xsd | Annotated SAF-T Schema v2.pdf |
+
+
+## Country adoptions
+
+The following countries/organizations have laws adopting SAF-T:
+
+| Country | Name | Latest XML Schema version | Date | Based on SAF-T version | Organization | Comments |
+| --- | --- | --- | --- | --- | --- | --- |
+| Austria | SAF-T AT | 1.01 | January 31, 2009 | SAF-T v1.0 | Bundesministerium für Finanzen | Decree of March 20, 2009 BMF-010102/0002-IV/2/2009. |
+| Denmark | SAF-T (DK) | 1.0 | November 26, 2022 | SAF-T v2.00 | Danish Business Authority (Erhvervsstyrelsen) | Information in Danish |
+| France | FEC | ? | January 1, 2014 | N/A | French Ministry of Finance | FEC FR adopted December 5, 2012 making it obligatory pr. January 1, 2014 for companies to supply file covering years 2011, 2012 and 2013. However, France's usage of the term "Standard Audit File for Taxation" has been adapted for a file format not based on the OECD SAF-T; their écriture compatible is proprietary. |
+| Lithuania | SAF-T | 2.01 | March 6, 2019 | SAF-T v2.0 | State Tax Inspectorate / Valstybinė mokesčių inspekcija | Article 16 of the Law on Accounting. Resolution No 699 of 1 July 2015 of the Government of the Republic of Lithuania. Order No VA-49 of 21 July 2015 of the Head of the State Tax Inspectorate under the Ministry of Finance. |
+| Luxembourg | FAIA | 2.01 | March 13, 2013 | SAF-T v2.0 | Luxembourg Tax Administration / Administration de l'enregistrement et des domaines | Law rule (memo) A-206 of December 24, 2008. |
+| Norway | Norwegian SAF-T Financial | 1.00 | January 1, 2020 | SAF-T v2.0 | Skatteetaten | The Ministry of Finance has amended the Bookkeeping Regulation so the requirement to provide accounting data for bookkeepers who have the bookkeeping available electronically must disclose accounting data in a given standard format. The new section 7-8 comes into force the first period with financial reporting starting 1 January 2020 or later. |
+| Poland | JPK | 2.3 | July 1, 2016 | SAF-T v2.0 | Ministerstwo Finansów | The new requirement came into place on 1 July 2016 for large companies. Small and medium-sized businesses (less than 250 employees) were required to implement the requirement by 1 July 2018. |
+| Portugal | SAF-T (PT) | 1.04\_01 | December 2, 2016 | SAF-T v1.0 | Portuguese Tax Authority / Autoridade Tributária e Aduaneira |
+| Romania | SAF-T | 2.4.6 | January 1, 2022 | SAF-T v2.0 | National Agency for Fiscal Administration (ANAF) | Article 59¹ of the Law 207/2015 on the Fiscal Procedural Code; Order 1783/2021 of the President of National Agency for Fiscal Administration. D406 (Saf-t for Romania variant) started officially at 1 January 2022 with large tax payers as a first stage. D406 will be mandatory for medium tax-payers after 1 January 2023 as a next stage. D406.XML contains all important accounting and VAT journals (TVA in Romania) like General accounting registry entries, Purchasing and Sales journal, Cash and Bank registers, Accounting statements (balance sheet). In subsidiary by request ANAF may ask by request a monthly Inventory Statements (similar with ERp Stock value as of date both QTY+values)+ all inventory movement transactions (QTY+values) and only once per year Fixed Asset journals. The declaration D406 core is based on XML type transporting file (D406.XML) between financial/accounting application or Erp and ANAF servers. The first level of validation for D406.XML is made locally on the accountant's windows PC via JAVA application called [DUKIntegrator.jar] using special validation class [D406Validator.jar] |
+| Ukraine | SAF-T UA | ? | ? | ? | ? |
+

@@ -1,0 +1,90 @@
+HCL Commerce
+
+
+# HCL Commerce
+
+
+
+**HCL Commerce Cloud** (formerly known as **WebSphere Commerce** and WCS (WebSphere Commerce Suite)) is a proven e-commerce solution designed to support extremely high transaction and site traffic volumes on a single deployed instance and supports all business models including B2C, B2B, B2B2C, D2C and MarketPlaces. HCL Commerce Cloud is built on the Java - Java EE platform using open standards, such as XML, and Web services. Formerly a product of IBM, the product was sold to HCL Technologies in July 2019.
+
+
+## Versions
+
+The first version of the platform was introduced in 1996, during the emergence of e-commerce with a product called Net.Commerce (V1.0 and subsequently V2.0, V3.1, and V3.2) that was first deployed to sell event tickets and merchandise for the 1996 Olympic Games. In 2001, Net.Commerce was renamed to WebSphere Commerce Suite, releasing versions V4.1 and V5.1. In 2002, WebSphere Commerce V5.4 was released, followed by V5.5 in 2003, V5.6 in 2004 and V5.6.1 in 2005. The latest major release versions are:
+
+* **Version 6.0** (2006)
+* **Version 7.0** (2009)
+* **Version 8.0** (2015)
+* **Version 9.0** (2018)
+* **Version 9.1** (2020)
+
+There are three editions of WebSphere Commerce software. Each edition provides an increasing set of functionality in comparison:
+
+* **Express** (Note: With the announcement of Version 8.0 the platform variants offered were simplified to Professional and Enterprise editions only.)
+* **Professional**
+* **Enterprise** (Note: Enterprise edition was previously known as Business Edition prior to Version 6.0)
+
+IBM provides an integrated development environment that is used to build and test customizations. The developer platform is called IBM WebSphere Commerce Developer for which there are also 3 editions that pair with their runtime environments (i.e. WebSphere Commerce Developer Express, WebSphere Commerce Developer Professional, and WebSphere Commerce Developer Enterprise).
+
+The WebSphere Commerce Developer toolkit runs within IBM Rational Application Developer for WebSphere Software (RAD) as the foundation Java IDE, and RAD extends the Eclipse environment with visual and other development features.
+
+A specific WebSphere Commerce version uses a specific version of RAD, for example:
+
+* WebSphere Commerce Developer V6 is based on RAD V6
+* WebSphere Commerce Developer V7 is based on either IBM Rational Software Architect (RSA) or RAD V7.5
+* WebSphere Commerce Developer V8 is based on either RSA or RAD V9.5.
+
+## Primary components of the software platform
+
+WebSphere Commerce consists of 4 main components:
+
+* a database
+* an application server
+* a search server (within another application server)
+* a web server
+
+Databases which are supported with WebSphere Commerce V9.1 are:
+
+* IBM Db2 on various platforms (i.e. Windows, AIX, Solaris, Linux, IBM i), provided with the product
+* Oracle
+* PostgreSQL (or use with the Approval server only from 9.1.12+).
+
+Application servers which are supported with WebSphere Commerce are IBM WebSphere Application Server and IBM WebSphere Liberty, are also provided with the product.
+
+Supported Web server IBM HTTP Server, is provided with the product.
+
+HCL Commerce Search uses Apache Lucene as the basis of its Search framework. Lucene powers the Apache Solr search engine and the Elasticsearch search engine.
+
+
+## Operating systems
+
+Only Linux is supported by HCL Commerce v9.1 where as the developer version is supported on Microsoft Windows 10
+
+The following operating systems were supported for WebSphere Commerce V7:
+
+* IBM AIX Version 7.1 (64–bit), IBM AIX Version 6.1 (64–bit), IBM AIX Version 5.3 (64–bit)
+* Linux on IBM Power Systems, Linux on System x and other Intel-based processor systems, Linux on System z
+ + Red Hat Enterprise Linux
+ + SUSE Linux Enterprise Server
+* (Oracle) Solaris 10 for SPARC
+* Microsoft Windows Server 2008 (32 and 64–bit operating system), Microsoft Windows Server 2003 (32 and 64–bit operating system)
+* IBM i V7.1 and IBM i V6.1
+
+WebSphere Commerce Developer V7 supported operating systems:
+
+* Windows 7 (since Fix Pack 7.0.0.2), Windows Vista, Windows XP, Windows Server 2003, Windows Server 2008
+
+WebSphere Commerce Developer v9 is limited to Windows. Tools such as Accelerator, Org Admin Console and WCS Admin Console still require Internet Explorer.
+
+HCL Commerce is shipped with below products as well which is part of the bundle.
+
+* WebSphere Application Server and WebSphere Application Server V8.5.5 Liberty
+* IBM HTTP Server
+* IBM SDK
+* Apache ZooKeeper
+* Redis
+* Elasticsearch
+* Apache NiFi
+* Apache Kafka
+* Reddison
+* CoreNLP

@@ -1,0 +1,23 @@
+Proxy bid
+
+
+# Proxy bid
+
+
+
+**Proxy bidding** is an implementation of an English second-price auction used on eBay, in which the winning bidder pays the price of the second-highest bid plus a defined increment. It differs from a Vickrey auction in that bids are not sealed; the "current highest bid" (defined as second-highest bid plus bid increment) is always displayed.
+
+
+## Description and use
+
+eBay uses the term *proxy bidding* to refer to their implementation of an English second-price auction, in which the winning bidder pays the price of the second-highest bid, in addition to a defined increment. Though similar to a Vickrey auction, the bids are not sealed. The "current highest bid" (defined as second-highest bid plus bid increment) is always displayed.
+
+
+## Comparison and analysis
+
+In a standard English auction, the winner pays the amount of their bid—regardless of competitors' bids—and it is therefore desirable to place a bid that exceeds the current highest bid by the smallest possible increment.
+
+Conversely, under proxy bidding, the price paid is determined only by competitors' bids and not by the amount of the new bid; this eliminates the economically rational incentive to place a bid below the amount one is willing to pay or to place multiple increasing bids. An "economically rational" bidder will therefore bid the maximum amount they are willing to pay on their first bid, and never raise their bid.
+
+eBay's approach, however, reveals the bidder's limit to rival bidders early in the auction, which can sometimes artificially inflate the price of the item higher than its actual intrinsic value, and ultimately encourages the practice of auction sniping.
+

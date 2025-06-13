@@ -1,0 +1,71 @@
+RCA open-source application
+
+
+# RCA open-source application
+
+
+
+**RCA Open-Source Application** (**ROSA**) is an open-source management accounting application that aims to provide decision-support information to managers. Resource consumption accounting (RCA) is a principle-based approach to management accounting that combines German management accounting techniques known as Grenzplankostenrechnung (GPK) with a disciplined form of activity-based costing.
+
+ROSA uses resource consumption accounting (RCA) which is internationally recognized as the most robust form of cost management measurement for providing marginal cost analytics.
+
+ROSA is classified as a non-web open-source application, bringing many of the key modeling techniques of the RCA model to life. It provides a hands-on approach, allowing the user complete interactive modeling capabilities. The application uses Microsoft Excel as its primary interface, thus the learning curve is greatly accelerated due to the familiarity factor. All the necessary files (e.g., databases, applications, manuals, storyboards), as outlined in the bullet points below, have been assembled into one compressed downloadable zip folder.
+
+
+## Purpose of ROSA project
+
+In 2009, it was determined that a hands-on RCA model would be an effective way to demonstrate how RCA works. The ROSA application answers this need, and was designed as an interactive tool to aid in better understanding the principles and costing approach of resource consumption accounting. ROSA should be viewed as a *cost planning and analysis tool* and not as a *pricing/profitability application*.
+
+The ROSA open-source package contains:
+
+* *ROSA manual* – To start the installation process, double-click Autorun (Application) in the ROSA\_USB compressed zip folder.
+* *Palo For Excel installation file*
+* *ROSA base model database* (pre-configured model)
+* *ROSA sample database* (blank model)
+* *Excel application file*
+* *Visual Storyboard*
+
+Note: The Palo BI Suite support material should be used in conjunction with the ROSA Manual where necessary, particularly in areas concerning Palo installation, set-up and operation.
+
+
+## Features
+
+ROSA uses the business intelligence (BI) application called Palo. Palo allows the ROSA base model database to be pre-configured so that the user can explore the look and feel of how a RCA model functions.
+
+Some of the primary features of the RCA open-source application are:
+
+* RCA modeling
+ + cost objects in an RCA model
+ + planning a cost object's output and primary costs
+ + relationships in an RCA model
+ + storyboard of a pharmaceutical company
+* Analysis of
+ + product costs
+ + resource pools and business processes
+ + fixed and proportional rates
+* Maintaining
+ + resource pools and business processes
+ + products
+ + primary costs
+ + secondary costs (internal consumption)
+ + capacity
+ + rate calculation
+* Configuring
+ + importing of master data and planning data values
+
+## Limitations
+
+There are certain cost modeling limitations inherent in the ROSA application. These limitations are specific to Version 1.0 of the ROSA application and should not be viewed as static. In other cases, customized versions of ROSA have been developed to fulfill client-specific requests addressing their firm's costing requirements.
+
+* *No ‘actual’ costs* – ROSA is a stand-alone application and does not have integrated links to import data. It supports the construction of an RCA model for cost planning and analysis. ROSA does not currently support the comparison of actual to plan within the application. The planning aspect allows for the definition of consumption relationships with operational resource quantities, valuing the resource quantities with dollars, and calculating product and service costs.
+* *Excess/idle capacity* – There is a limited ability to isolate excess/idle capacity in the application. The application currently deals only with planned information and is therefore not able to provide information on actual excess/idle capacity.
+* *Model size limitation* – The ROSA model was designed for optimum use for businesses with limited-size RCA applications. However, the underlying database and technology used in this model are extremely scalable.
+* *No profitability reporting* – Rosa Version 1.0 is solely for cost modeling. Customer or product revenue cannot be accommodated in this Version 1.0 of the application, and reports on customer or product profitability are not provided.
+
+To experience the full benefits that Resource Consumption Accounting has to offer as a dynamic, fully integrated, principle-based approach, a more robust and integrated software application must be used. The most widely used software applications for RCA are SAP AG ERP system and macs Controlling.
+
+
+## Architecture
+
+This application uses an open-source Business intelligence software engine called Palo (OLAP database), published by Jedox AG. Palo has been designed as an Add-in to spreadsheet software (i.e., Microsoft Excel).
+

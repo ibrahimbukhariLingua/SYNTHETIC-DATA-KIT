@@ -1,0 +1,132 @@
+Financial Instrument Global Identifier
+
+
+# Financial Instrument Global Identifier
+
+
+
+The **Financial Instrument Global Identifier** (FIGI) (formerly **Bloomberg Global Identifier** (BBGID)) is an open standard, unique identifier of financial instruments that can be assigned to instruments including common stock, options, derivatives, futures, corporate and government bonds, municipals, currencies, and mortgage products. Also see: Open Data
+
+
+## History
+
+In 2009, Bloomberg released Bloomberg’s Open Symbology ("BSYM"), a system for identifying financial instruments across asset classes.
+
+As of 2014 the name and identifier called 'Bloomberg Global Identifier' (BBGID) was replaced in full and adopted by the Object Management Group and Bloomberg with the standard renamed as the 'Financial Instrument Global Identifier' (FIGI).
+
+The Financial Instrument Global Identifier (FIGI) standard was given "approved status" by the Object Management Group (OMG) Architecture Board as of September 2015.
+
+
+### Adoption
+
+FIGIs have been adopted in the market data feeds of the following exchanges:
+
+* Ace Commodity Exchange (ACE)
+* Banja Luka Stock Exchange
+* Bermuda Stock Exchange
+* Bucharest Stock Exchange
+* Canadian Securities Exchange (CSE), formerly the Canadian National Stock Exchange (CNSX)
+* Euro-TLX
+* Financial Industry Regulatory Authority (FINRA)
+* FTSE Real-Time Index (FTSE)
+* Hi-MTF Multilateral Trading Facilities (Hi-MTF)
+* Indonesia Commodity and Derivatives Exchange (ICDX)
+* Kazakhstan Stock Exchange (KASE)
+* Mercari
+* Multi Commodity Exchange of India (MCX)
+* National Stock Exchange of Australia (NSX)
+* National Stock Exchange of India (NSE)
+* New York Stock Exchange (NYSE)
+* OneChicago - ONE Chicago Stock Exchange
+* Osaka Securities Exchange (OSE)
+* PURE Canadian Stock Exchange
+* Quote MTF
+* SIM Venture Securities Exchange (SIM VSE)
+* The Stock Exchange of Mauritius
+
+FIGIs have been adopted for use by the following regulators and/or been included in related Regulatory Technical Standards:
+
+* Financial Industry Regulatory Authority (FINRA)
+* Solvency II
+* AIFMD
+
+### Additional notable adoption
+
+* March 19, 2010: NYSE Euronext. April 2010 distribution of BBGIDs along with their own proprietary security identifiers on all of their data products globally.
+* March 21, 2010: Financial Industry Regulatory Authority (FINRA). BBGIDs accepted to uniquely identify securities reported to its U.S. Securities and Exchange Commission (SEC) mandated Trade Reporting And Compliance Engine (TRACE) program.
+* June 27, 2011: ACE Commodity Exchange in India. Became the first exchange in Asia to adopt the identifiers.
+* April 18, 2012: Indonesia Commodity and Derivatives Exchange (ICDX)
+* September 15–19, 2014: Object Management Group. Adopted a new standard Financial Instrument Global Identifier developed from the BBGID specification and is fully compatible with all existing issued BBGIDs.
+* November 14, 2014: SIX Financial Information's Valordata Feed (VDF) and Market Data Feed (MDF)
+* May 14, 2014: Nasdaq OMX Group's Nasdaq Last Sale Plus ("NLS Plus"). NLS Plus provides real-time, intraday last sale data for all securities traded on The Nasdaq Stock Market Nasdaq OMX BXSM, NASDAQ OMX PSXSM and the FINRA/NASDAQ Trade Reporting Facility.
+* 10 Dec 2014: RIMES adopts FIGI
+* October 9, 2014: Financial Instrument Global Identifier (FIGI) standard adopted by OMG.
+* May 2020: FIGI approved by Brazil Association of Technical Standards organization (ABNT)
+* December 2020: OMG accepts Kaiko as second certified provider of FIGI.
+* July 2021: FIGI standard approved by X9 as US standard.
+* October 2021: Kaiko issues first series of FIGIs covering crypto assets; coverage added to OpenFIGI.com.
+* June 2022: SEC Adopts Amendments Form 13F; allows FIGI to be included in 13F reporting.
+* August 2024: United States FSOC Agencies publish proposed rule to include FIGI as an open standard for regulatory reporting complying with the Financial Data Transparency Act (FDTA) of 2022
+
+## Description
+
+The FIGI structure is defined and copyrighted by the Object Management Group. Bloomberg L.P. is the Registration Authority and Certified Provider of the standard. FIGI have been created for more than 300 million unique securities, representing most asset classes of the financial markets. The FIGI is a 12-character alpha-numerical code that does not contain information characterizing financial instruments, but serves for uniform unique global identification. Once issued, a FIGI is never reused and represents the same instrument in perpetuity.
+
+Unique FIGIs identify securities as well as individual exchanges on which they trade. Composite FIGIs are also issued to represent unique securities across related exchanges. For instance, Apple Inc. common stock trades on 14 exchanges in the United States. There exists a unique FIGI to identify the common stock on each individual exchange, but also a composite FIGI to represent the company's common stock traded on United States exchanges.
+
+
+### Equity Levels of Assignment
+
+* Global Share Class Level
+* Country Composite Level
+* Exchange/Venue Level
+
+### FIGI Structure
+
+| B | B | G | 0 | 0 | 0 | B | L | N | N | V | 0 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 |
+
+A FIGI consists of three parts: A two-character prefix, a 'G' as the third character; an eight character alpha-numeric code which does not contain English vowels "A", "E", "I", "O", or "U"; and a single check digit.
+
+In total, the encoding supports more than 852 billion potential values, under the initial BBG prefix. In total, there are over 330 trillion potential available identifiers.
+
+
+### Structural Rules
+
+The permissible characters for use within a FIGI are a subset of ISO 8859-1 as follows:
+
+* All upper case ISO 8859-1 consonant (including Y).
+* The single-digit integers 0 – 9.
+
+While the string itself is semantically meaningless, there is a specific structure that is used. The syntax rules for the
+twelve characters are as follows:
+
+* Characters 1 and 2:
+
+The purpose of the restriction is to reduce the chances that the resulting identifier may be identical to an ISIN string. (Strictly speaking, a duplicate is not a problem as the strings designate different things, but care has been taken to reduce ambiguity.) The way that ISIN is constructed is that the first two characters correspond to the country of issuance. The third character, depending on the issuing organization, is typically a numeral. However, in the case of the United Kingdom, the letter "G" is assigned. As we are using the letter "G" as our third character (see below), the only combinations that may come up within ISIN that only incorporates consonants are BSG (Bahamas), BMG (Bermuda), GGG (Guernsey), GBG (United Kingdom) and VGG (British Virgin Islands). The reason for this is that the United Kingdom issues ISIN numbers for entities within its broader jurisdiction.
+
+* Character 3:
+
+* Characters 4 – 11:
+
+* Character 12:
+
+Letters are converted to integers using a letter to integer look-up table provided in section 7.2.1 of the specification. Using the first 11 characters and beginning at the last character, map the character to its specific integer value from the look-up table, if the character is already a digit, use that value. Then, working right to left, multiply every second integer by two. Next, separate numbers greater than 10 into two separate digits (e.g., 57 becomes 5 and 7) add up all the integer values, each less than 10 now. Finally, subtract that summed value from the next higher integer ending in zero (e.g., If the summed value is 72, then 80 is the next higher integer ending in 0, and the check digit is 8). If the summed value of the digits is a number ending in zero, then the check digit is also zero.
+
+This process is similar to other financial instrument identifier check digit calculations but specifically chosen to reduce the chances of other schemes from validating versus this FIGI scheme.
+
+
+### Issuance
+
+Unique FIGIs are published by Bloomberg L.P. and datasets are both searchable and available for download via the Bloomberg OpenFIGI website. FIGIs are never reused and once issued, represent an instrument in perpetuity. An instrument's FIGI never changes as a result of any corporate action. Any interested parties may request access to the bulk and individual lookup facilities, regardless of any existing relationship with Bloomberg L.P. or lack thereof.
+
+FIGIs are assigned to unique financial instruments on a proactive basis. Where a FIGI has not been assigned for any reason, a request can be submitted to have an identifier assigned, as long as the request is in line with the standard and stated assignment rules.
+
+FIGIs can often be mapped to other unique identifiers, such as equity and index option ticker symbols.
+
+
+## License
+
+FIGIs and the associated metadata defined in the standard are released free into the public domain with no commercial terms or restrictions on usage. The OMG standard is governed through the Open Source MIT License.
+

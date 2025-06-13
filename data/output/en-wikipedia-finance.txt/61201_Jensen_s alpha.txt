@@ -1,0 +1,41 @@
+Jensen's alpha
+
+
+# Jensen's alpha
+
+
+
+In finance, **Jensen's alpha** (or **Jensen's Performance Index**, **ex-post alpha**) is used to determine the abnormal return of a security or portfolio of securities over the theoretical expected return. It is a version of the standard alpha based on a theoretical performance instead of a market index.
+
+The security could be any asset, such as stocks, bonds, or derivatives. The theoretical return is predicted by a market model, most commonly the capital asset pricing model (CAPM). The market model uses statistical methods to predict the appropriate risk-adjusted return of an asset. The CAPM for instance uses beta as a multiplier.
+
+
+## History
+
+Jensen's alpha was first used as a measure in the evaluation of mutual fund managers by Michael Jensen in 1968. The CAPM return is supposed to be 'risk adjusted', which means it takes account of the relative riskiness of the asset.
+
+This is based on the concept that riskier assets should have higher expected returns than less risky assets. If an asset's return is even higher than the risk adjusted return, that asset is said to have "positive alpha" or "abnormal returns". Investors are constantly seeking investments that have higher alpha.
+
+Since Eugene Fama, many academics believe financial markets are too efficient to allow for repeatedly earning positive Alpha, unless by chance.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ Nevertheless, Alpha is still widely used to evaluate mutual fund and portfolio manager performance, often in conjunction with the Sharpe ratio and the Treynor ratio.
+
+
+## Calculation
+
+In the context of CAPM, calculating alpha requires the following inputs:
+
+* {\displaystyle R\_{i}}: the realized return (on the portfolio),
+* {\displaystyle R\_{M}}: the market return,
+* {\displaystyle R\_{f}}: the risk-free rate of return, and
+* {\displaystyle \beta \_{iM}}: the beta of the portfolio.
+
+An additional way of understanding the definition can be obtained by rewriting it as:
+
+If we define the excess return of the fund (market) over the risk free return as {\displaystyle \Delta \_{R}\equiv (R\_{i}-R\_{f})} and {\displaystyle \Delta \_{M}\equiv (R\_{M}-R\_{f})} then Jensen's alpha can be expressed as:
+
+
+## Use in quantitative finance
+
+Jensen's alpha is a statistic that is commonly used in empirical finance to assess the marginal return associated with unit exposure to a given strategy. Generalizing the above definition to the multifactor setting, Jensen's alpha is a measure of the marginal return associated with an additional strategy that is not explained by existing factors.
+
+We obtain the CAPM alpha if we consider excess market returns as the only factor. If we add in the Fama-French factors (of size and value), we obtain the 3-factor alpha. If additional factors were to be added (such as momentum) one could ascertain a 4-factor alpha, and so on. If Jensen's alpha is significant and positive, then the strategy being considered has a history of generating returns on top of what would be expected based on other factors alone. For example, in the 3-factor case, we may regress momentum factor returns on 3-factor returns to find that momentum generates a significant premium on top of size, value, and market returns.
+

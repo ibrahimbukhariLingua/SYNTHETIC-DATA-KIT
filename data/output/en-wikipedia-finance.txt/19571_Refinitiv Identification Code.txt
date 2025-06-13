@@ -1,0 +1,59 @@
+Refinitiv Identification Code
+
+
+# Refinitiv Identification Code
+
+
+
+A **Refinitiv Instrument Code**, previously **Reuters Instrument Code** (**RIC**), is a ticker-like code used by Refinitiv to identify financial instruments and indices. The codes are used for looking up information on various Refinitiv financial information networks (such as Refinitiv Real Time) and appear to have developed from the Quotron service purchased in the 1980s.
+
+
+## Description
+
+The Reuters Instrument Code (RIC) was originally defined by Herbie Skeete, the Reuters Executive who wrote the original product specifications for the first products on Reuters' Integrated Data Network (IDN). RICs as originally defined by Skeete were meant to be logical and intuitive.
+
+For equities the codes were composed of a RIC Root (one to four characters – A through Z), followed by a period sign, then a one- or two-character (A through Z) code denoting the exchange on which the instrument is traded. Each company was meant to have a unique RIC root. Thus the RIC Root for International Business Machines would be IBM irrespective of the exchange on which International Business Machines was traded.
+
+Glen Renfrew, the CEO at that time, was persuaded to veto the idea of unique RIC Roots. Also vetoed was Skeete’s intention of making RICs freely available and becoming an ISO standard. Much of Skeete’s original work is still contained within today’s RIC structure, but some key elements have changed over the years.
+
+RICs were originally proprietary but following an EU investigation, their use was opened up. See § Antitrust issues.
+
+The RIC is made up primarily of the security's ticker symbol, optionally followed by a period and exchange code based on the name of the stock exchange using that ticker. For instance, **IBM.N** is a valid RIC, referring to IBM being traded on the New York Stock Exchange. **IBM.L** refers to the same stock trading on the London Stock Exchange. The exchange code used in the RIC is proprietary to Refinitiv. Exchange codes have an ISO standard, ISO 10383, which is not used by the Refinitiv Instrument Code, but is in common use elsewhere. Ticker symbols are often reused on different exchanges, so in many cases the same ticker symbol references different securities.
+
+RIC codes use "artificial" tickers for common indexes and money market instruments. For instance, the US 10-year money market bond is assigned the ticker **US10YT**, the "T" at the end referring to "Treasury". Commodities are similarly assigned tickers, for instance crude oil is **CL**. Indexes have a leading period, for instance **.DJI** is the Dow Jones Industrial Average.
+
+Confusingly the "dot notation" is also used for a number of other purposes. Units are signified with a ".UN", and a particular exchange like NASDAQ by ".OQ". This confusion seems to be the result of Refinitiv attempting to merge the standards used by the wide variety of services they purchased in the 1980s and 90s.
+
+Other examples:
+
+* WMT.N means shares of Wal-Mart traded at the New York Stock Exchange (N)
+
+Examples of indices:
+
+* .DJI Dow Jones Industrial Average
+* .IXIC NASDAQ Composite Index
+* .SPX S&P 500
+
+Examples of commodity futures:
+
+* CL crude, light oil
+* GC gold
+* HU unleaded gasoline
+* HO heating oil
+
+| **Delivery Month Codes** | | | | | | | |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 1st quarter | | 2nd quarter | | 3rd quarter | | 4th quarter | |
+| January | F | April | J | July | N | October | V |
+| February | G | May | K | August | Q | November | X |
+| March | H | June | M | September | U | December | Z |
+
+| **Delivery Quarter Codes** | | | | | | | |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 1st | H | 2nd | M | 3rd | U | 4th | Z |
+
+
+## Antitrust issues
+
+In November 2009, The European Commission opened formal antitrust proceedings against Thomson Reuters to investigate whether Thomson Reuters could be abusing its dominant position in the market for consolidated real-time datafeeds through its RIC licensing practices, in breach of EU antitrust rules. In December 2012, the European Commission accepted Thomson Reuters proposal to remedy those concerns. The EC’s announcement brought the matter to a close, with no finding of liability. In summary, the proposal involves Thomson Reuters agreeing to offer its customers specific licence rights to continue to use its RICs in applications with data from an alternative real time consolidated data feed provider to which they have moved.
+

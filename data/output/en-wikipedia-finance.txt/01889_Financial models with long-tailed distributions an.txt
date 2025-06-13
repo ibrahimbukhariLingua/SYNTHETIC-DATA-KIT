@@ -1,0 +1,94 @@
+Financial models with long-tailed distributions and volatility clustering
+
+
+# Financial models with long-tailed distributions and volatility clustering
+
+
+
+**Financial models with long-tailed distributions and volatility clustering** have been introduced to overcome problems with the realism of classical financial models. These classical models of financial time series typically assume homoskedasticity and normality and as such cannot explain stylized phenomena such as skewness, heavy tails, and volatility clustering of the empirical asset returns in finance. In 1963, Benoit Mandelbrot first used the stable (or {\displaystyle \alpha }-stable) distribution to model the empirical distributions which have the skewness and heavy-tail property. Since {\displaystyle \alpha }-stable distributions have infinite {\displaystyle p}-th moments for all {\displaystyle p>\alpha }, the tempered stable processes have been proposed for overcoming this limitation of the stable distribution.
+
+On the other hand, GARCH models have been developed to explain the volatility clustering. In the GARCH model, the innovation (or residual) distributions are assumed to be a standard normal distribution, despite the fact that this assumption is often rejected empirically. For this reason, GARCH models with non-normal innovation distribution have been developed.
+
+Many financial models with stable and tempered stable distributions together with volatility clustering have been developed and applied to risk management, option pricing, and portfolio selection.
+
+
+## Infinitely divisible distributions
+
+A random variable {\displaystyle Y} is called *infinitely divisible* if,
+for each {\displaystyle n=1,2,\dots }, there are independent and identically-distributed random variables
+
+such that
+
+where {\displaystyle {\stackrel {\mathrm {d} }{=}}} denotes equality in distribution.
+
+A Borel measure {\displaystyle \nu } on {\displaystyle \mathbb {R} } is called a Lévy measure if {\displaystyle \nu ({0})=0} and
+
+If {\displaystyle Y} is infinitely divisible, then the characteristic function
+{\displaystyle \phi \_{Y}(u)=E[e^{iuY}]} is given by
+
+where {\displaystyle \sigma \geq 0}, {\displaystyle \gamma \in \mathbb {R} } and {\displaystyle \nu } is a Lévy measure.
+Here the triple {\displaystyle (\sigma ^{2},\nu ,\gamma )} is called a *Lévy triplet of* {\displaystyle Y}. This triplet is unique. Conversely, for any choice {\displaystyle (\sigma ^{2},\nu ,\gamma )} satisfying the conditions above, there exists an infinitely divisible random variable {\displaystyle Y} whose characteristic function is given as {\displaystyle \phi \_{Y}}.
+
+
+## *α*-Stable distributions
+
+A real-valued random variable {\displaystyle X} is said to have an
+*{\displaystyle \alpha }-stable distribution* if for any {\displaystyle n\geq 2}, there
+are a positive number {\displaystyle C\_{n}} and a real number {\displaystyle D\_{n}} such that
+
+where {\displaystyle X\_{1},X\_{2},\dots ,X\_{n}} are independent and have the same
+distribution as that of {\displaystyle X}. All stable random variables are infinitely divisible. It is known that {\displaystyle C\_{n}=n^{1/\alpha }} for some {\displaystyle 0<\alpha \leq 2}. A stable random
+variable {\displaystyle X} with index {\displaystyle \alpha } is called an
+*{\displaystyle \alpha }-stable random variable*.
+
+Let {\displaystyle X} be an {\displaystyle \alpha }-stable random variable. Then the
+characteristic function {\displaystyle \phi \_{X}} of {\displaystyle X} is given by
+
+for some {\displaystyle \mu \in \mathbb {R} }, {\displaystyle \sigma >0} and {\displaystyle \beta \in [-1,1]}.
+
+
+## Tempered stable distributions
+
+An infinitely divisible distribution is called a *classical tempered stable (CTS) distribution* with parameter
+{\displaystyle (C\_{1},C\_{2},\lambda \_{+},\lambda \_{-},\alpha )},
+if its Lévy triplet {\displaystyle (\sigma ^{2},\nu ,\gamma )} is given by
+{\displaystyle \sigma =0}, {\displaystyle \gamma \in \mathbb {R} } and
+
+where {\displaystyle C\_{1},C\_{2},\lambda \_{+},\lambda \_{-}>0} and {\displaystyle \alpha <2}.
+
+This distribution was first introduced by under
+the name of *Truncated Lévy Flights* and 'exponentially truncated stable distribution'. It was subsequently called the *tempered stable* or the *KoBoL* distribution. In particular, if
+{\displaystyle C\_{1}=C\_{2}=C>0}, then this distribution is called the CGMY
+distribution.
+
+The characteristic function {\displaystyle \phi \_{CTS}} for a tempered stable
+distribution is given by
+
+for some {\displaystyle \mu \in \mathbb {R} }. Moreover, {\displaystyle \phi \_{CTS}} can be extended to the
+region {\displaystyle \{z\in \mathbb {C} :\operatorname {Im} (z)\in (-\lambda \_{-},\lambda \_{+})\}}.
+
+Rosiński generalized the CTS distribution under the name of the
+*tempered stable distribution*. The KR distribution, which is a subclass of the Rosiński's generalized tempered stable distributions, is used in finance.
+
+An infinitely divisible distribution is called a *modified tempered stable (MTS) distribution* with parameter {\displaystyle (C,\lambda \_{+},\lambda \_{-},\alpha )},
+if its Lévy triplet {\displaystyle (\sigma ^{2},\nu ,\gamma )} is given by
+{\displaystyle \sigma =0}, {\displaystyle \gamma \in \mathbb {R} } and
+
+where {\displaystyle C,\lambda \_{+},\lambda \_{-}>0,\alpha <2} and
+
+Here {\displaystyle K\_{p}(x)} is the modified Bessel function of the second kind.
+The MTS distribution is not included in the class of Rosiński's generalized tempered stable distributions.
+
+
+## Volatility clustering with stable and tempered stable innovation
+
+In order to describe the volatility clustering effect of the return process of an asset, the GARCH model can be used. In the GARCH model, innovation ({\displaystyle ~\epsilon \_{t}~}) is assumed that {\displaystyle ~\epsilon \_{t}=\sigma \_{t}z\_{t}~}, where
+{\displaystyle z\_{t}\sim iid~N(0,1)} and where
+the series {\displaystyle \sigma \_{t}^{2}} are modeled by
+
+and where {\displaystyle ~\alpha \_{0}>0~} and {\displaystyle \alpha \_{i}\geq 0,~i>0}.
+
+However, the assumption of {\displaystyle z\_{t}\sim iid~N(0,1)} is often rejected empirically. For that reason, new GARCH models with stable or tempered stable distributed innovation have been developed. GARCH models with {\displaystyle \alpha }-stable innovations have been introduced. Subsequently, GARCH Models with tempered stable innovations have been developed.
+
+Objections against the use of stable distributions in Financial models are given in
+

@@ -1,0 +1,45 @@
+Adaxa Suite
+
+
+# Adaxa Suite
+
+
+
+**Adaxa Suite** is a fully integratedᵛᵃᵍᵘᵉ open-source Enterprise Resource Planning (ERP) Suite.
+
+
+## Business Model
+
+Adaxa Suite has a General Public License GPL/GPL2 license and code are contributed back to the open-source community.
+
+
+## Integration
+
+The core of the Adaxa Suite are iDempiere or ADempiere (for the old, maintained version), an Open Source ERP & CRM tool that handles core business processes:
+
+* Financials - General Ledger, receivables and payables, multi-company, multi-currency, bank reconciliation, complex banking, financial reporting
+* Sales - Quotes, Order entry, sales reporting, purchase orders, vendor reporting
+* CRM - Contact management, sales pipeline, campaign management
+* Inventory - Multiple facilities, multiple locations, customizable rules engine, shipment consolidation
+* Manufacturing - MRP, scheduling, infinite BOM, demand management, production control, job costing
+* Asset Management - Tracking, barcoding, fixed asset register, depreciation
+* Reporting - Built-in reporting tools, customized and standard reports, exportable reports
+
+OpenLDAP provides a central login system that manages user logins for the entire enterprise.
+
+Drupal is the platform for the Adaxa [eCommerce] web solution (eGility) and is fully integrated with the complete Adaxa Suite.
+
+Asterisk PBX manages all inbound calls (VOIP or trunk lines).
+
+PostgreSQL database provides central data storage and maintenance of data and data protection through data replication and complex Failover capabilities in local and hosted environments.
+
+
+## Architecture
+
+The system is based on a J2EE architecture. It is written in Java and uses Postgres as the default database. Oracle is also supported by special requests. The GUI is ZKwebUI. Adaxa Suite runs on Linux and supports intelligent phone and tablet browsing.
+
+
+## Industries
+
+The following business areas are addressed by the Adaxa Suite Application:
+

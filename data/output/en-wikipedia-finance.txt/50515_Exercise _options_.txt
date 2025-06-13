@@ -1,0 +1,48 @@
+Exercise (options)
+
+
+# Exercise (options)
+
+
+
+The owner of an option contract has the right to **exercise** it, and thus require that the financial transaction specified by the contract is to be carried out immediately between the two parties, whereupon the option contract is terminated. When exercising a call option, the owner of the option purchases the underlying shares (or commodities, fixed interest securities, etc.) at the strike price from the option seller, while for a put option, the owner of the option sells the underlying to the option seller, again at the strike price.
+
+
+## Styles
+
+The option style, as specified in the contract, determines when, how, and under what circumstances, the option holder may exercise it. It is at the discretion of the owner whether (and in some circumstances when) to exercise it.
+
+* **European** – European-style option contracts may only be exercised at the option's expiration date. Thus they can never be worth more than an American-style option with the same underlying strike price and expiration date.
+* **American** – American-style option contracts can be exercised at any time up to the option's expiration. Under certain circumstances (see below) early exercise may be advantageous to the option holder.
+* **Bermudan** – Bermudan-style options contracts may only be exercised on specified dates. Bermudan-style options are common in the interest rate options and swaps markets.
+
+## Settlement
+
+The option contract specifies the manner in which the contract is to be settled.
+
+* **Physical settlement** – Physically settled options require the actual delivery of the underlying security. An example of a physically settled contract is U.S.-listed exchange-traded equity options. Delivery settles in two business days. It is the most common form of settlement. Physically settled options are mostly American style.
+* **Cash settlement** – Cash-settled options do not require the actual delivery of the underlier. Instead, the market value, at the exercise date, of the underlier is compared to the strike price, and the difference (if in a favourable direction) is paid by the option seller to the owner of the option. An example of a cash-settled contract is most U.S.-listed exchange-traded index options. This settlement occurs the next business day following the trade.
+
+## Considerations
+
+The following guidelines determine whether and when to exercise an option:
+
+1. An option should only be exercised if it is in the money by at least as much as the fees associated with the underlying transaction (e.g. the fee for subsequently selling an underlying which has been physically delivered). The exercise usually costs money as well.
+2. In most cases, options should not be exercised before expiration because doing so gives away inherent value. Selling them would almost invariably yield more.
+3. For an American-style call option, **early exercise** is a possibility whenever the benefits of being long the underlier outweigh the cost of surrendering the option early. For instance, on the day before an ex-dividend date, it may make sense to exercise an equity call option early in order to collect the dividend. In general, equity call options should only be exercised early on the day before an ex-dividend date, and then only for deep in-the-money options.
+4. For an American-style put option, **early exercise** is a possibility for deep in-the-money options. In this case, it may make sense to exercise the option early in order to obtain the intrinsic value (K-S) earlier so that it can start to earn interest immediately. This is somewhat more likely to be worthwhile if there is no ex-dividend date (which would probably cause the price of the underlying to fall further) between now and the expiry date.
+
+### Early exercise strategy
+
+A common strategy among professional option traders is to sell large quantities of in-the-money calls just prior to an ex-dividend date. Quite often, non-professional option traders may not understand the benefit of exercising a call option early,ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ and therefore may unintentionally forgo the value of the dividend. The professional trader may only be 'assigned' on a portion of the calls, and therefore profits by receiving a dividend on the stock used to hedge the calls that are not exercised.
+
+
+## Assignment and clearing
+
+Assignment occurs when an option holder exercises his option by notifying his broker, who then notifies the Options Clearing Corporation (OCC). The OCC fulfills the contract, then selects, randomly, a member firm who was short the same option contract. The OCC then notifies the firm. The firm then carries out its obligation, and then selects a customer, either randomly, first-in, first-out, or some other equitable method who was short the option, for assignment. That customer is assigned the exercise requiring him to fulfill the obligation that he agreed to when he wrote the option.
+
+
+## Exercise by exception
+
+In the U.S., for the convenience of brokers, who would otherwise have to request exercise of all in the money options, the Options Clearing Corporation will automatically exercise any option that is set to expire in the money by 1 cent or more. This is called "exercise by exception". A broker or holder of such options may request that they not be exercised by exception. The price of the underlying security used to determine the need for exercise by exception is the price of the regular-hours trade reported last to the OCC at or before 4:01:30 pm ET on the day before expiration. This trade will have occurred during normal trading hours, i.e., before 4:00 pm. It can be any size and come from any participating exchange. The OCC reports this price tentatively at 4:15 pm, but, to allow time for exchanges to correct errors the OCC does not make the price official until 5:30 pm.
+

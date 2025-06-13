@@ -1,0 +1,60 @@
+Production set
+
+
+# Production set
+
+
+
+In economics the **production set** is a construct representing the possible inputs and outputs to a production process.
+
+A **production vector** represents a process as a vector containing an entry for every commodity in the economy. Outputs are represented by positive entries giving the quantities produced and inputs by negative entries giving the quantities consumed.
+
+If the commodities in the economy are (*labour*, *corn*, *flour*, *bread*) and a mill uses one unit of labour to produce 8 units of flour from 10 units of corn, then its production vector is (–1,–10,8,0). If it needs the same amount of labour to run at half capacity then the production vector (–1,–5,4,0) would also be operationally possible. The set of all operationally possible production vectors is the mill's production set.
+
+If ***y*** is a production vector and ***p*** is the economy's price vector, then ***p***·***y*** is the value of net output. The mill's owner will normally choose ***y*** from the production set to maximise this quantity. ***p***·***y*** is defined as the 'profit' of the vector ***y***, and the mill-owner's behaviour is described as 'profit-maximising'.
+
+
+## Properties of production sets
+
+The following properties may be predicated of production sets.
+
+* *Non-emptiness.* The producer has at least one possible course of action. Always holds.
+* *Closure.* The production set includes its own boundary. This is a technical property which always holds in practice.
+* *Separability.* A production set is separable into inputs and outputs if every field is either non-negative in all elements or non-positive in all elements. This normally holds for individual enterprises but not, for instance, for a national economy.
+* *No free lunch.* It is impossible to produce something from nothing. Mathematically there is no vector in the production set with at least one positive entry and no negative entries. Always holds.
+* *Possibility of inaction.* The zero vector belongs to the production set; in other words, it is possible to produce nothing by consuming nothing. This property almost never holds exactly: resources will be needed either to wind up a concern or to maintain it while dormant. The property may be a useful approximation.
+* *Free disposal.* If ***y*** is an element of production set *Y*, then so is any vector which consumes more of a given input or produces less of a given output. Mathematically, if ***e*** is a vector none of whose entries is negative, and if ***y*** ∈ *Y*, then ***y*** – ***e*** ∈ *Y*. This too may be a useful approximation.
+* *Single output*. Production is often based on units (e.g. flour mills) which produce a single output from more than one input. A separable production set has a single output if exactly one field contains a positive entry.
+* *Labour consumption*. Labour is usually an input to all elements of a production set which have any positive output.
+* *Irreversibility*. If ***y*** ∈ *Y* and ***y***≠0 then (–***y***) ∉ *Y*. Always holds in practice.
+* *Convexity.* If two vectors lie within the production set, then so do all intermediate points. This often holds as an approximation but cannot apply exactly if inputs or outputs comprise discrete units.
+* *Additivity* (or *free entry*). This property is relevant to the production set of an industry or of an economy but not for instance to a single flour mill. It means that if production vector ***y*** is possible, and so is ***y'***, then so too is ***y***+***y'***. So if a mill can be built with a view to running in one way, and another mill can be built with a view to running in another way, then both can be built to produce the sum of intended outputs from the sum of intended inputs. Free entry is a postulate of perfect competition.
+* *Returns to scale* and *economies of scale*. See below.
+
+## The production function
+
+If a production set is separable and has a single output, then a function *F*(***y***) can be constructed whose value is the maximum quantity of output obtainable for given inputs, and whose domain is the set of input subvectors represented in the production set. This is known as the production function.
+
+If a production set is separable then we may define a "production value function" *f*ₚ(*x*) in terms of a price vector ***p***. If *x* is a monetary quantity, then *f*ₚ(*x*) is the maximum monetary value of output obtainable in *Y* from inputs whose cost is *x*.
+
+
+## Returns to scale
+
+*Constant returns to scale* mean that if ***y*** is in the production set, then so too is λ***y*** for any positive λ. Returns might be constant over a region; for instance, so long as λ is not too far from 1 for a given ***y***. There is no entirely satisfactory way to define increasing or decreasing returns to scale for general production sets.
+
+If the production set *Y* can be represented by a production function *F* whose argument is the input subvector of a production vector, then *increasing returns to scale* are available if *F*(λ***y***) > λ*F*(***y***) for all λ > 1 and *F*(λ***y***) < λ*F*(***y***) for all λ<1. A converse condition can be stated for *decreasing returns to scale*.
+
+
+## Economies of scale
+
+If *Y* is a separable production set with a production value function *f*ₚ, then (positive) economies of scale are present if *f*ₚ(λ*x*) > λ*f*ₚ(*x*) for all λ > 1 and *f*ₚ(λ*x*) < λ*f*ₚ(*x*) for all λ < 1. The opposite condition may be referred to as negative economies (or diseconomies) of scale.
+
+If *Y* has a single output and prices are positive, then positive economies of scale are equivalent to increasing returns to scale.
+
+As with returns to scale, economies of scale may apply over a region. If a mill is operating below capacity then it will offer positive economies of scale, but as it approaches capacity the economies will become negative. Economies of scale for the firm are important in influencing an industry's tendency to concentrate in the direction of monopoly or disaggregate in the direction of perfect competition.
+
+
+## Limitation
+
+The components of a production vector are conventionally portrayed as *flows* (see Stock and flow), whereas more general treatments regard production as combining stocks (e.g. land) and flows (e.g. labour) (see Factors of production). Accordingly, the simple definition of 'profit' as the net value of output does not correspond to its meaning elsewhere in economics (see Profit (economics)).
+

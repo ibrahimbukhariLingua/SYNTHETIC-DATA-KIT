@@ -1,0 +1,40 @@
+Implied open
+
+
+# Implied open
+
+
+
+**Implied open** attempts to predict the prices at which various stock indexes will open, at 9:30am New York time. It is frequently shown on various cable television channels prior to the start of the next business day.
+
+After the markets close at 4pm New York time, implied open prices of the Dow Jones Industrial Average, S&P 500 Index, and NASDAQ, which fluctuate from minute to minute, can be calculated.
+
+
+## Underlying Data
+
+
+### Futures price
+
+Considering the DJIA as an example, the basis of calculating implied open is the price of a "DJX index option futures contract". This is *not* the price of the DJIA itself but rather the current ticker price of an option issued by the Chicago Board Options Exchange.
+
+
+### Fair Value
+
+The theoretical valuation of owning the option versus outright owning all the stocks in the index. It considers the option price, dividends paid on the underlying stocks in the index, days to the expiration of the option (next end-of-quarter), and current interest rates.
+
+
+### Prior-day closing price
+
+A simple number, widely reported in the press.
+
+
+## Calculation
+
+Prior Day Closing + (Futures Value - Fair Value)= Implied Open
+
+Examples:
+
+* Prior 10,000. Future Value +7. Fair Value +5.
+ + So, 10,000 + (7 - 5) = 10,002 ( the Implied Open)
+* Prior 10,000. Future Value +7. Fair Value -5.
+ + So, 10,000 + [7 - (-5)] = 10,000 + 12 = 10,012 (the Implied Open)

@@ -1,0 +1,140 @@
+Application portfolio management
+
+
+# Application portfolio management
+
+
+
+IT **Application Portfolio Management** (**APM**) is a practice that has emerged in mid to large-size information technology (IT) organizations since the mid-1990s. Application Portfolio Management attempts to use the lessons of financial portfolio management to justify and measure the financial benefits of each application in comparison to the costs of the application's maintenance and operations.
+
+
+## Evolution of the practice
+
+Likely the earliest mention of the Applications Portfolio was in Cyrus Gibson and Richard Nolan's HBR article "Managing the Four Stages of EDP Growth" in 1974.
+
+Gibson and Nolan posited that businesses' understanding and successful use of IT "grows" in predictable stages and a given business' progress through the stages can be measured by observing the Applications Portfolio, User Awareness, IT Management Practices, and IT Resources within the context of an analysis of overall IT spending.
+
+Nolan, Norton & Co. pioneered the use of these concepts in practice with studies at DuPont, Deere, Union Carbide, IBM and Merrill Lynch among others. In these "Stage Assessments" they measured the degree to which each application supported or "covered" each business function or process, spending on the application, functional qualities, and technical qualities. These measures provided a comprehensive view of the application of IT to the business, the strengths and weaknesses, and a road map to improvement.
+
+APM was widely adopted in the late 1980s and through the 1990s as organizations began to address the threat of application failure when the date changed to the year 2000 (a threat that became known as Year 2000 or Y2K). During this time, tens of thousands of IT organizations around the world developed a comprehensive list of their applications, with information about each application.
+
+In many organizations, the value of developing this list was challenged by business leaders concerned about the cost of addressing the Y2K risk. In some organizations, the notion of managing the portfolio was presented to the business people in charge of the Information Technology budget as a benefit of performing the work, above and beyond managing the risk of ***application failure**.*
+
+There are two main categories of application portfolio management solutions, generally referred to as 'Top Down' and 'Bottom Up' approaches. The first need in any organization is to understand what applications exist and their main characteristics (such as flexibility, maintainability, owner, etc.), typically referred to as the 'Inventory'. Another approach to APM is to gain a detailed understanding of the applications in the portfolio by parsing the application source code and its related components into a repository database (i.e. 'Bottom Up'). Application mining tools, now marketed as APM tools, support this approach.
+
+Hundreds of tools are available to support the 'Top Down' approach. This is not surprising, because the majority of the task is to collect the right information; the actual maintenance and storage of the information can be implemented relatively easily. For that reason, many organizations bypass using commercial tools and use Microsoft Excel to store inventory data. However, if the inventory becomes complex, Excel can become cumbersome to maintain. Automatically updating the data is not well supported by an Excel-based solution. Finally, such an Inventory solution is completely separate from the 'Bottom Up' understanding needs.
+
+
+## Business case for APM
+
+According to Forrester Research, "For IT operating budgets, enterprises spend two-thirds or more on ongoing operations and maintenance.".
+
+It is common to find organizations that have multiple systems that perform the same function. Many reasons may exist for this duplication, including the former prominence of departmental computing, the application silos of the 1970s and 1980s, the proliferation of corporate mergers and acquisitions, and abortive attempts to adopt new tools. Regardless of the duplication, each application is separately maintained and periodically upgraded, and the redundancy increases complexity and cost.
+
+With a large majority of expenses going to manage the existing IT applications, the transparency of the current inventory of applications and resource consumption is a primary goal of Application Portfolio Management. This enables firms to: 1) identify and eliminate partially and wholly redundant applications, 2) quantify the condition of applications in terms of stability, quality, and maintainability, 3) quantify the business value/impact of applications and the relative importance of each application to the business, 4) allocate resources according to the applications' condition and importance in the context of business priorities.
+
+Transparency also aids strategic planning efforts and diffuses business / IT conflict, because when business leaders understand how applications support their key business functions, and the impact of outages and poor quality, conversations turn away from blaming IT for excessive costs and toward how to best spend precious resources to support corporate priorities.
+
+
+## Portfolio
+
+Taking ideas from investment portfolio management, APM practitioners gather information about each application in use in a business or organization, including the cost to build and maintain the application, the business value produced, the quality of the application, and the expected lifespan. Using this information, the portfolio manager is able to provide detailed reports on the performance of the IT infrastructure in relation to the cost to own and the business value delivered.
+
+
+## Definition of an application
+
+In application portfolio management, the definition of an application is a critical component. Many service providers help organizations create their own definition, due to the often contentious results that come from these definitions.
+
+* *Application software* — An executable software component or tightly coupled set of executable software components (one or more), deployed together, that deliver some or all of a series of steps needed to create, update, manage, calculate or display information for a specific business purpose. In order to be counted, each component must not be a member of another application.
+* *Software component* — An executable set of computer instructions contained in a single deployment container in such a way that it cannot be broken apart further. Examples include a Dynamic Link Library, an ASP web page, and a command line "EXE" application. A zip file may contain more than one software component because it is easy to break them down further (by unpacking the ZIP archive).
+
+*Software application* and *software component* are technical terms used to describe a specific instance of the class of application software for the purposes of IT portfolio management. See application software for a definition for non-practitioners of IT Management or Enterprise Architecture.
+
+Software application portfolio management requires a fairly detailed and specific definition of an application in order to create a catalog of applications installed in an organization.
+
+
+## The requirements of a definition for an application
+
+The definition of an application has the following needs in the context of application portfolio management:
+
+* It must be simple for business team members to explain, understand, and apply.
+* It must make sense to development, operations, and project management in the IT groups.
+* It must be useful as an input to a complex function whose output is the overall cost of the portfolio. In other words, there are many factors that lead to the overall cost of an IT portfolio. The sheer number of applications is one of those factors. Therefore, the definition of an application must be useful in that calculation.
+* It must be useful for the members of the Enterprise Architecture team who are attempting to judge a project with respect to their objectives for portfolio optimization and simplification.
+* It must clearly define the boundaries of an application so that a person working on a measurable 'portfolio simplification' activity cannot simply redefine the boundaries of two existing applications in such a way as to call them a single application.
+
+Many organizations will readdress the definition of an application within the context of their IT portfolio management and governance practices. For that reason, this definition should be considered as a working start.
+
+
+## Examples
+
+The definition of an application can be difficult to convey clearly. In an IT organization, there might be subtle differences in the definition among teams and even within one IT team. It helps to illustrate the definition by providing examples. The section below offers some examples of things that are applications, things that are not applications, and things that comprise two or more applications.
+
+
+### Inclusions
+
+By this definition, the following are applications:
+
+* A web service endpoint that presents three web services: InvoiceCreate, InvoiceSearch, and InvoiceDetailGet
+* A service-oriented business application (SOBA) that presents a user interface for creating invoices, and that turns around and calls the *InvoiceCreate* service. (note that the service itself is a different application).
+* A mobile application that is published to an enterprise application store and thus deployed to employee-owned or operated portable devices enabling authenticated access to data and services.
+* A legacy system composed of a rich client, a server-based middle tier, and a database, all of which are tightly coupled. (e.g. changes in one are very likely to trigger changes in another).
+* A website publishing system that pulls data from a database and publishes it to an HTML format as a sub-site on a public URL.
+* A database that presents data to a Microsoft Excel workbook that queries the information for layout and calculations. This is interesting in that the database itself is an application unless the database is already included in another application (like a legacy system).
+* An Excel spreadsheet that contains a coherent set of reusable macros that deliver business value. The spreadsheet itself constitutes a deployment container for the application (like a TAR or CAB file).
+* A set of ASP or PHP web pages that work in conjunction with one another to deliver the experience and logic of a web application. It is entirely possible that a sub-site would qualify as a separate application under this definition if the coupling is loose.
+* A web service end point established for machine-to-machine communication (not for human interaction), but which can be rationally understood to represent one or more useful steps in a business process.
+
+### Exclusions
+
+The following are not applications:
+
+* An HTML website.
+* A database that contains data but is not part of any series of steps to deliver business value using that data.
+* A web service that is structurally incapable of being part of a set of steps that provides value. For example, a web service that requires incoming data that breaks shared schema.
+* A standalone batch script that compares the contents of two databases by making calls to each and then sends e-mail to a monitoring alias if data anomalies are noticed. In this case, the batch script is very likely to be tightly coupled with at least one of the two databases, and therefore should be included in the application boundary that contains the database that it is most tightly coupled with.
+
+### Composites
+
+The following are many applications:
+
+* A composite SOA application composed of a set of reusable services and a user interface that leverages those services. There are at least two applications here (the user interface and one or more service components). Each service is not counted as an application.
+* A legacy client-server app that writes to a database to store data and an Excel spreadsheet that uses macros to read data from the database to present a report. There are TWO apps in this example. The database clearly belongs to the legacy app because it was developed with it, delivered with it, and is tightly coupled to it. This is true even if the legacy system uses the same stored procedures as the Excel spreadsheet.
+
+## Methods and measures for evaluating applications
+
+There are many popular financial measures, and even more metrics of different (non-financial or complex) types that are used for evaluating applications or information systems.
+
+
+### Return on investment (ROI)
+
+Return on Investment is one of the most popular performance measurement and evaluation metrics used in business analysis. ROI analysis (when applied correctly) is a powerful tool for evaluating existing information systems and making informed decisions on software acquisitions and other projects. However, ROI is a metric designed for a certain purpose – to evaluate profitability or financial efficiency. It cannot reliably substitute for many other financial metrics in providing an overall economic picture of the information solution. The attempts at using ROI as the sole or principal metric for decision making regarding in-formation systems cannot be productive. It may be appropriate in a very limited number of cases/projects. ROI is a financial measure and does not provide information about efficiency or effectiveness of the information systems.
+
+
+### Economic value added (EVA)
+
+A measure of a company's financial performance based on the residual wealth calculated by deducting cost of capital from its operating profit (adjusted for taxes on a cash basis). (Also referred to as "economic profit".)
+
+Formula = Net Operating Profit After Taxes (NOPAT) - (Capital \* Cost of Capital)
+
+
+### Total cost of ownership (TCO)
+
+Total Cost of Ownership is a way to calculate what the application will cost over a defined period of time. In a TCO model, costs for hardware, software, and labor are captured and organized into the various application life cycle stages. An in depth TCO model helps management understand the true cost of the application as it attempts to measure build, run/support, and indirect costs. Many large consulting firms have defined strategies for building a complete TCO model.
+
+
+### Total economic impact (TEI)
+
+TEI was developed by Forrester Research Inc. Forrester claims TEI systematically looks at the potential effects of technology investments across four dimensions: cost — impact on IT; benefits — impact on business; flexibility — future options created by the investment; risk — uncertainty.
+
+
+### Business value of IT (ITBV)
+
+ITBV program was developed by Intel Corporation in 2002.
+The program uses a set of financial measurements of business value that are called Business Value Dials (Indicators). It is a multidimensional program, including a business component, and is relatively easy to implement.
+
+
+### Applied information economics (AIE)
+
+AIE is a decision analysis method developed by Hubbard Decision Research. AIE claims to be "the first truly scientific and theoretically sound method" that builds on several methods from decision theory and risk analysis including the use of Monte Carlo methods. AIE is not used often because of its complexity.
+

@@ -1,0 +1,39 @@
+Zcash
+
+
+# Zcash
+
+
+
+**Zcash** is a privacy-focused cryptocurrency which is based on Bitcoin's codebase. It shares many similarities, such as a fixed total supply of 21 million units.
+
+Transactions can be transparent, similar to bitcoin transactions, or they can be shielded transactions which use a type of zero-knowledge proof to provide anonymity in transactions. Zcash coins are either in a transparent pool or a shielded pool.
+
+Zcash offers private transactors the option of "selective disclosure", allowing a user to prove payment for auditing purposes. One such reason is to make it easier for private transactors to comply with anti-money laundering laws and tax regulations.
+
+
+## Use
+
+Zcash transactions can be transparent, similar to bitcoin transactions, in which case they are controlled by a "t-addr", or they can be shielded and are controlled by a "z-addr". A shielded transaction uses a type of zero-knowledge proof, specifically a non-interactive zero-knowledge proof, called "zk-SNARK", which provides anonymity to the coin holders in the transaction. Zcash coins are either in a transparent pool or a shielded pool. As of December 2017 only around 4% of Zcash coins were in the shielded pool and at that time most cryptocurrency wallet programs did not support z-addrs and no web-based wallets supported them. The shielded pool of Zcash coins were further analyzed for security and it was found that the anonymity set can be shrunk considerably by heuristics-based identifiable patterns of usage.
+
+While miners receive 80% of a block reward, 20% is given to the "Zcash development fund": 8% to Zcash Open Major Grants, 7% to Electric Coin Co., and 5% to The Zcash Foundation.
+
+
+## History
+
+Development work on Zcash began in 2013 by Johns Hopkins University professor Matthew Green and some of his graduate students. The development was completed by the for-profit Zcash Company, led by Zooko Wilcox, a Colorado based computer security specialist and cypherpunk. In October 2016, The Zcash Company raised over $3 million from Silicon Valley venture capitalists to complete the development of Zcash.
+
+Zcash was first mined in late October 2016. The initial demand was high, and within a week Zcash coins were trading for five thousand dollars a piece. Ten percent of all coins mined for the first four years were to be allotted to the Zcash Company, its employees, the investors, and the non-profit Zcash Foundation.
+
+The setup of Zcash required the careful execution of a trusted setup procedure, something that subsequently became known as "**The Ceremony**". to create the Zcash private key. In order to ensure privacy, a truly random enormous number needed to be generated to be used as the private key, while also ensuring that no person or computer retains a copy of the key, or could subsequently regenerate the key. If the private key were available, counterfeit Zcash coins could be generated. The Ceremony was a two-day process, executed simultaneously during a short window of time in six different locations globally, by persons who did not know in advance who else was going to be participating in the event. The private key was generated, and used to instantiate Zcash, and the computers used in the process were reportedly destroyed. In 2022, Edward Snowden claimed to have participated in The Ceremony under a pseudonym.
+
+On February 21, 2019, the "Zcash Company" announced a re-branding as the Electric Coin Company (ECC).
+
+On May 19, 2020, a paper titled "Alt-Coin Traceability" investigated the privacy of Zcash and another cryptocurrency Monero. This paper concluded that "more academic research is needed in Zcash overall" and that the privacy guarantees of Zcash are "questionable". The paper claimed that, since the current heuristics from a 2018 Usenix Security Symposium paper entitled "An Empirical Analysis of Anonymity in Zcash" still continue today, the result is making Zcash less anonymous and more traceable.
+
+On June 8, 2020, Chainalysis added support for Zcash to their Chainalysis Reactor and "Know Your Transaction" (KYT) products. They noted that less than 1% of ZEC transactions were completely shielded, with the sender, receiver and amount all hidden, enabling Chainalysis to provide partial information for over 99% of ZEC activity.ⁿᵒⁿ-ᵖʳⁱᵐᵃʳʸ ˢᵒᵘʳᶜᵉ ⁿᵉᵉᵈᵉᵈ Chainalysis also cites a research report by the RAND corporation which revealed that less than 0.2% of the cryptocurrency addresses mentioned on the dark web were Zcash or Dash addresses.
+
+On October 12, 2020, the Electronic Coin Company announced a new non-profit 501(c)3 organization called the Bootstrap Project (Bootstrap) in a company blog post titled "ECC’s owners to donate ECC". A majority of the investors and owners of Zerocoin Electric Coin Company LLC (ECC) have agreed to donate the ECC company as the wholly owned property of Bootstrap. ECC's blog post claims that nothing will change within the company other than the ownership including the Board of Directors. On October 27, 2020, ECC announced that its shareholders have officially voted in favor of donating 100 percent of the company's shares to Bootstrap. On March 30, 2021, the company's transparency report said that it is "now a wholly owned entity of the 501(c)3 Bootstrap".
+
+In September 2023, a mining pool named ViaBTC had seized control of over half the hashing power on Zcash. This 51% dominance raised worries about an attack a 51% attack where they could potentially manipulate transactions and harm the network. To shield users from the potential fallout, Coinbase swiftly enacted a series of defensive measures, including placing Zcash markets into "limit-only" mode, effectively quelling significant price swings while the situation unfolded.
+

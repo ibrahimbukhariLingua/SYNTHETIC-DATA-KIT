@@ -1,0 +1,94 @@
+AT&T Corp. v. Excel Communications, Inc.
+
+
+# AT&T Corp. v. Excel Communications, Inc.
+
+
+
+***AT&T Corp. v. Excel Communications, Inc.***, 172 F.3d 1352 (Fed. Cir. 1999) was a case in which the United States Court of Appeals for the Federal Circuit reversed the decision of the United States District Court for the District of Delaware, which had granted summary judgment to Excel Communications, Inc. and decided that AT&T Corp. had failed to claim statutory subject matter with U.S. Patent No. 5,333,184 (the '184 patent) under 35 U.S.C. § 101. The United States Court of Appeals for the Federal Circuit remanded the case for further proceedings.
+
+Along with *State Street Bank v. Signature Financial Group*, this case was the most referred case on business method patent with a "useful, concrete and tangible result" test by U.S. courts until *Bilski v. Kappos* authoritatively overruled it.
+
+
+## Background
+
+
+### The Two Sides
+
+**AT&T Corp.**, originally the American Telephone & Telegraph, is an American telecommunications company that provides voice, video, data, and Internet telecommunications and professional services to businesses, consumers, and government agencies. This company is a subsidiary of AT&T Inc. and its subsidiary AT&T Communications still provides long-distance service across the United States.
+
+**Excel Communications** was founded in 1988 by Dallas entrepreneur Kenny Troutt as a long-distance reseller in the US telecom sector at the birth of telecom deregulation. It started its business by selling franchises through the business model of network marketing or multi-level marketing (MLM).
+
+
+### Event History
+
+In 1992, the '184 patent was filed and in 1994, the patent status was granted by the U.S. Patent and Trademark Office (USPTO).
+
+In 1996, AT&T filed a patent infringement suit against Excel, including some specific method or process claims related to the step of "generating a message record for an interexchange call between an originating subscriber and a terminating subscriber," and the use of primary interexchange carrier (PIC) indicator in the message record.
+
+On March 27, 1998, the District Court of Delaware concluded
+that the invention was not patentable subject matter because the claims implicitly recite a mathematical algorithm. The trial court, on summary judgment, held all of the method claims at issue invalid for failure to qualify as statutory subject matter.
+
+On April 14, 1999, the U.S. Court of Appeals for the Federal Circuit found that the claimed subject matter was properly within the statutory scope of 35 U.S.C. § 101, and reversed the district court's judgment of invalidity on this ground and remanded the case for further proceedings.
+
+
+#### Summary of the U.S. Patent No. 5,333,184
+
+The U.S. Patent No. 5,333,184 (or the '184 patent), entitled 'Message Recording for Telephone Systems', described a method to take advantage of adding more data into a message record in order to provide appropriate billing for subscribers, based on whether or not the subscriber and call recipient subscribe to the same long-distance carrier. This data is called Primary interexchange carrier indicator (PIC).
+
+If the caller (subscriber) belongs to the carrier's (AT&T's) "family" the value of the PIC is 1. Otherwise it would be 0. If the call recipient also belongs to the AT&T family, its PIC is 1. Otherwise it is 0. In the billing process, the logical product of the two PICs is taken—this process is also known as ANDing. Since the time of George Boole it has been well known that if 
+p
+=
+1
+
+
+{\textstyle p=1}
+
+ and 
+q
+=
+1
+
+
+{\textstyle q=1}
+
+, then their logical product 
+p
+q
+=
+1
+
+
+{\textstyle pq=1}
+
+; and if one or both is 0, 
+p
+q
+=
+0
+
+
+{\textstyle pq=0}
+
+. Under this patent, when the logical product of the PICs is 1, the call is billed at a discounted ("family plan") rate; if the product is 0, the undiscounted rate applies. Therefore, if and only if the caller and called person belong to the carrier's family, the discounted rate applies.
+
+In a direct-dialed long-distance call, a call-related data and message record, named "automatic message account" (AMA), was generated. It includes further information, such as the originating and terminating telephone numbers, and the length of time of the call. The records with AMAs are stored in an electronic format that can be transmitted between computers and reformatted for processing and billing, which later comes to customer in form of hard copy via mails.
+
+
+## Opinion of the Federal Circuit Court
+
+In their analysis, the Federal Court first refers to the definition of patentable invention in the language of 35 U.S.C. § 101, and found that AT&T's business method fell in the "process" category and the patent claims fell within the judicially created "mathematical algorithm" exception to statutory subject matter. In addition, because the system takes data representing discrete dollar amounts through a series of mathematical calculations to determine a final share price – a useful, concrete, and tangible result, the Court affirmed that the processing system proposed by AT&T was patentable subject matter and should be protected.
+
+*Process* is defined in 35 U.S.C. § 100(b) as: "a process, art or method, and includes a new use of a known process, machine, manufacture, composition of matter, or any new and useful improvement thereof." However, the courts consider the scope of 35 U.S.C. § 101 to be the same regardless of the form – machine or process - in which a particular claim is drafted.
+
+Excel then argued that "method claims containing mathematical algorithms are patentable subject matter only if there is a "physical transformation" or conversion of subject matter from one state into another." In response, the Court explained that physical transformation can be considered as long as it results in a "useful, concrete and tangible outcome/application". The court relied on the Supreme Court's opinion in *Diamond v. Diehr*, which said:
+
+> (...)"when a claim containing a mathematical formula implements or applies that formula in a structure or process which, when considered as a whole, is performing a function which the patent laws were designed to protect (e. g., transforming or reducing an article to a different state or thing), then the claim satisfies the requirements of 101."
+
+Although the District Court of Delaware held the patent invalid under the "mathematical algorithm" exception, the Federal Circuit referred to several now limited or overruled cases including *In re Alappat* and *State Street Bank v. Signature Financial Group*, and reversed the District Court's opinion, stating that "at the time of the trial court, the District court did not know these referred cases of the mathematical algorithm issue."ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+
+## Impact
+
+As a result of the decisions of the Supreme Court in the *Bilski*, *Mayo*, and *Alice* cases, the *AT&T v. Excel* decision is substantially overruled. The ideas of giving loyal customers a discount and that the logical product of (i.e., ANDing) p and q is 1 when both p and q are 1 but is otherwise 0 are well known for many years, and there is no suggestion of anything but a conventional computer circuitry implementation. Therefore, under the *Mayo* and *Alice* "two-step" tests, this process is patent ineligible.
+

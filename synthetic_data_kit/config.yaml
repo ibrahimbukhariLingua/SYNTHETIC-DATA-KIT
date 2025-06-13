@@ -10,6 +10,7 @@ paths:
     docx: "data/docx"
     ppt: "data/ppt"
     txt: "data/txt"
+    jsonl: "data/jsonl"
   
   # Output locations
   output:
@@ -17,12 +18,29 @@ paths:
     generated: "data/generated" # Where generated content is saved
     cleaned: "data/cleaned"     # Where cleaned content is saved
     final: "data/final"         # Where final formatted content is saved
+    translated: "data/translated" # Where transalations is saved
+    add_citations: "data/cited" # Where Cited Data is saved
+    add_cot_to_citation: "data/cot_cited" # Where CoT Cited Data is saved
+    cited_with_reasoning: "data/cited_w_reasoning"
+    reasoning_distil: "data/reasoning_distil" # Where filtered citations are saved
+    postprocess: "data/postprocess_citations" # Where post-processed data is saved
+    preprocess: "data/preprocess_citations" # Where preprocessed data is saved
 
-# VLLM server configuration
+# VLLM and external server configuration
 vllm:
-  api_base: "http://localhost:8000/v1" # Base URL for VLLM API
+  # api_base: "http://10.123.0.100:8008/v1" # Base URL for VLLM API
+  # api_key: "token"
+  # model: "Qwen/Qwen3-30B-A3B-FP8"
+
+  # api_base: "https://api.groq.com/openai/v1" # Groq API
+  # api_key: "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"
+  # model: "deepseek-r1-distill-llama-70b"
+
+  api_base: "https://api.sambanova.ai/v1" # SambaNova API
+  api_key: "dce2a552-101e-4531-83e8-f74c4b874a09"
+  model: "Meta-Llama-3.1-8B-Instruct"
+  
   port: 8000                           # Port for VLLM server
-  model: "meta-llama/Llama-3.3-70B-Instruct" # Default model to use
   max_retries: 3                       # Number of retries for API calls
   retry_delay: 1.0                     # Initial delay between retries (seconds)
 
@@ -36,8 +54,10 @@ generation:
   temperature: 0.7   # Higher = more creative, lower = more deterministic
   top_p: 0.95        # Nucleus sampling parameter
   chunk_size: 4000   # Size of text chunks for processing
+  # chunk_size: 6000
   overlap: 200       # Overlap between chunks to maintain context
   max_tokens: 4096   # Maximum tokens in LLM responses
+  # max_tokens: 8096
   num_pairs: 25      # Default number of QA pairs to generate
   batch_size: 32     # Number of requests to batch together (for create)
 
@@ -60,31 +80,10 @@ prompts:
   summary: |
     Summarize this document in 3-5 sentences, focusing on the main topic and key concepts.
   
-  # QA pair generation prompt
-  qa_generation: |
-    Create {num_pairs} question-answer pairs from this text for LLM training.
-    
-    Rules:
-    1. Questions must be about important facts in the text
-    2. Answers must be directly supported by the text
-    3. Return JSON format only:
-    
-    [
-      {{
-        "question": "Question 1?",
-        "answer": "Answer 1."
-      }},
-      {{
-        "question": "Question 2?",
-        "answer": "Answer 2."
-      }}
-    ]
-    
-    Text:
-    {text}
-  
   # QA pair rating prompt
   qa_rating: |
+    You will be given a question-answer pair with a supporting passage 
+
     Rate each question-answer pair on a scale from 1-10, based on:
     - Accuracy (0-3): factual correctness
     - Relevance (0-2): relevance to content
@@ -160,3 +159,473 @@ prompts:
     
     Original conversations:
     {conversations}
+
+  # Translation prompt
+  translation: |
+    You are a professional translator. Translate the following text to {target_lang}.
+    Maintain the original meaning, tone, and formatting.
+    Only output the translated text, nothing else.
+    
+    Text to translate:
+    ---
+    {text}
+    ---
+
+  #------------------------ Pipeline 1 --------------------------#
+
+  # QA pair generation prompt
+  qa_generation: | 
+    Create {num_pairs} question-answer pairs from this text for LLM training.
+    
+    Rules:
+    1. Questions must be about important facts in the text
+    2. Answers must be directly supported by the text
+    3. Return JSON format only:
+    
+    [
+      {{
+        "question": "Question 1?",
+        "answer": "Answer 1."
+      }},
+      {{
+        "question": "Question 2?",
+        "answer": "Answer 2."
+      }}
+    ]
+    
+    Text:
+    {text}
+
+  # Adding Citations prompt
+  add_citations: |
+    You will receive a passage and a question–answer pair. Your task is to identify the sentences of the passage (i.e. [S1] <sentence 1> [S2] <sentence 2> [S3] . .  etc.) that support the key points in the answer. Then, add sentence markers (e.g., " [S1][S3]") at relevant points in the answer to indicate which passage sentence supports which part.
+
+    You will enclose each sentence of the answer within the <statement></statement> tags and whenever you want to cite some part of the passage you will do so within the <cite></cite> tags.
+    If a statement does not have a citations you will leave the tags empty
+
+    Return your response as this JSON object with the following structure:
+    {{
+      "question": "<original question>",
+      "answer": "<answer with inline citations like [S1][S3]>",
+    }}
+
+    Here are some examples:
+    <statement>Based on (…) in Canada is: <cite></cite></statement> (…) <statement> The Ontario Water Resources Act (…) related to water.<cite>[S3]</cite></statement>
+
+    Now process the following and return the response in a JSON format only.
+
+    [Passage Start]
+    {chunk}
+    [Passage End]
+
+    [Question]
+    {question}
+
+    [Answer]
+    {answer}
+  
+  # Chain of Thought Citations enhancement prompt
+  cot_citation_enhancement: |
+    You are an expert reasoning assistant. Your task is to enhance the given question-answer pair by adding chain-of-thought reasoning.
+    
+    For each question and answer a passage is also provided. Add detailed step-by-step reasoning to explain why the cited sentences have been used to answer the question.
+    
+    Add reasoning to simple responses as well. The chain-of-thought reasoning should include the reason behind each cited citation.
+
+    If the cited citation does not support the answer to the question, then return "NONE"
+    
+    Return the enhanced conversations as a JSON array matching this format If the citations supports answer to the question:
+    {{ 'reasoning': <chain-of-thought reasoning> }}
+
+    Return the enhanced conversations as a JSON array matching this format If the citations does NOT support answer to the question:
+    {{ 'reasoning': 'NONE' }}
+    
+    [Passage Start]
+    {chunk}
+    [Passage End]
+
+    [Question]
+    {question}
+
+    [Answer]
+    {answer}
+
+  # CLEANING: QA pair rating prompt pair by pair with reasoning before rating
+  qa_rating_w_reasoning: |
+    [Supporting Context]
+    {chunk}
+
+    [Question]
+    {question}
+
+    [Answer]
+    {answer}
+    
+    From the question-answer pair and the Supporting Context given above, Rate each question-answer pair on a scale from 1-10, based on:
+        - Accuracy (0-4): factual correctness with support of the passage
+        - Relevance (0-3): relevance to content. Check if both the question and answer are relevant or not
+        - Clarity (0-3): clear language
+
+    You will follow these steps:
+    1. understand and analyse the score rubric
+    2. Rate Accuracy
+    3. Rate Relevance
+    4. Rate Clarity
+    5. Sum up all the Ratings into a final rating
+
+    YOU MUST RETURN A VALID JSON OBJECT WITH THIS EXACT SCHEMA:
+    {{ "rating": <final rating> }}
+
+  # CLEANING: QA pair prompt to filter out qa pairs which can be generated without the context
+  qa_filtering: |
+    You will be given two sentences to compare. Your task is to evaluate whether the two sentences express the same information. If they are factually and semantically similar, return 1. If they are meaningfully or factually different, return 0. Follow these steps and use the rubric to guide your classification:
+
+    1. Factual Similarity (0-1): Do both sentences express the same factual claim? Minor rewordings or paraphrasing are acceptable. Contradictions or differing facts result in a score of 0.
+
+    2. Semantic Similarity (0-1): Do both sentences convey the same meaning or idea, even if the wording is different? Synonyms, passive/active changes, or reordering are allowed if the core meaning stays intact.
+
+    3. Decision Rule: If both Factual Similarity and Semantic Similarity are rated as 1 → return 1 (similar) Else → return 0 (dissimilar)
+
+
+    YOU MUST RETURN A VALID JSON OBJECT WITH THIS EXACT SCHEMA:
+    {{ "label": "<0 or 1>" }}
+
+
+    [sentence 1]
+    {sentence_1}
+
+    [sentence 2]
+    {sentence_2}
+
+  # Adding Citations with Reasoning: Answer comparision prompt
+  reasoning_judge: |
+    You are an answer checking system. You will be provided with:
+      - Question
+      - Correct Answer
+      - Our Answer
+
+    Your task is to evaluate "Our Answer" against the "Correct Answer" and assign a total score out of 10 based on the following detailed rubric:
+    Scoring Rubric (Total: 10 points)
+
+      1. Factual Accuracy (4 points):
+        - 4: All facts are correct and match the correct answer, even if paraphrased.
+        - 3: Mostly correct with minor factual deviation.
+        - 2: Some factual errors or omissions.
+        - 1: Major factual errors.
+        - 0: Entirely incorrect.
+
+      2. Coverage of Key Points (3 points):
+        - 3: Covers all essential components of the correct answer.
+        - 2: Covers most components.
+        - 1: Covers only a few components.
+        - 0: Omits most key ideas.
+
+      3. Logical Consistency (2 points):
+        - 2: Reasoning is sound and coherent.
+        - 1: Somewhat consistent but vague or loosely reasoned.
+        - 0: Illogical, contradictory, or confusing reasoning.
+
+      4. Relevance and Clarity (1 point):
+        - 1: The answer is directly relevant and clearly articulated.
+        - 0: The answer is off-topic or confusing.
+
+
+    Sum the points from all categories (maximum 10).
+    If the total score is greater than or equal to 8, return the JSON:
+      {{"label": 1}}
+    otherwise:
+      {{"label": 0}}
+
+
+    QUESTION:
+    {question}
+
+    CORRECT ANSWER:
+    {gold_answer}
+
+    OUR ANSWER:
+    {our_answer}
+
+  # Adding Citations with Reasoning: Answer generation prompt
+  asking_w_reason: |
+    You are a Question Answering system who is given a Passage  and a question. You must answer the questions and provide citations of the sentence number. You must follow the format provided. Remember you must answer as correctly as you can.
+
+    Response Format:
+
+    <statement> This is a sample sentence 1 which doesn't have any citations.<cite></cite></statement> <statement>This is a sample sentence 2 which has 2 citations.<cite>[S3][S8]</cite></statement>
+
+    Important note:
+    Each Sentence is inside the <statement> tags. At the end of each Sentence there are <cite> tags which contains all the citations linked to that sentence. If some sentence doesn't have a citation then leave the citation tag empty.
+
+    Question:
+    {question}
+
+    Supporting Context:
+    {chunk}
+
+
+  #------------------------ Pipeline 2 --------------------------#
+
+  # QA pair generation medium to hard prompt
+  qa_generation_detailed: |
+    Summary:
+    {summary}
+  
+    Source Context:
+    {text}
+
+    Summary has been provided to give you an idea about the Source context. Generate exactly {num_pairs} question-answer pairs using only the information provided in the Source context above. Ensure that:
+    1. Each question must be constructed using all the passages passed in Source Context — not just a single passage — and must require synthesizing or reasoning across multiple parts when possible.
+    2. The question must not rely on any external knowledge beyond what is included in the Source Context.
+    3. The answer must be explicitly derived from the Source Context and not inferred or assumed.
+    4. The difficulty level of each question should range from medium to hard and test deep understanding, not surface recall.
+
+    Output format:
+    ```json
+    [
+      {{
+        "question": "Your well-formed question created from ALL the passages present and which requires synthesis of the context.",
+        "answer": "Your accurate answer, quoting context."
+      }},
+      ...
+    ]
+    ```
+    
+  # Filter citations prompt
+  filter_citations: |
+    You are a citation quality evaluator. Your task is to assess if the citations in the answer properly support the claims and are correctly formatted.
+    You will be given a passage which has a sentence marker in the form of [S*] at the start of each sentence. You will also be given a question and an answer which has inline citation in the form of <cite>...</cite> tags.
+
+    You will Rate the QA pair on a scale from 1-10 based on these criteria:
+
+    1. Citation Accuracy (0-4 points):
+       - 4: Citations perfectly support all claims with direct evidence
+       - 3: Citations mostly support claims with minor gaps
+       - 2: Citations partially support claims with significant gaps
+       - 1: Citations weakly support claims or are incorrect
+       - 0: Citations do not support claims at all
+
+    2. Citation Format (0-2 points):
+       - 2: Perfect use of <statement> and <cite> tags with proper sentence markers [S1], [S2], etc.
+       - 1: Minor formatting issues but citations are still clear
+       - 0: Major formatting issues or missing tags
+
+    3. Citation Relevance (0-2 points):
+       - 2: All citations are highly relevant to the specific claims they support
+       - 1: Citations are somewhat relevant but could be more precise
+       - 0: Citations are irrelevant or too general
+
+    4. Answer Completeness (0-2 points):
+       - 2: Answer includes all necessary citations for its claims
+       - 1: Answer is missing some helpful citations
+       - 0: Answer is missing critical citations
+
+
+    [Passage Start]
+    {chunk}
+    [Passage End]
+
+    [Question]
+    {question}
+
+    [Answer]
+    {answer}
+
+
+    Scoring Rules:
+    1. Each claim in the answer must be supported by appropriate citations
+    2. Citations must come from the provided passage
+    3. Citations must use proper format: <statement>claim<cite>[S1]</cite></statement>
+    4. Citations must be relevant to the specific claim they support
+    5. If Accuracy score is 0 or 1, total score cannot exceed 5
+
+    Return ONLY a JSON object with this schema:
+    {{"rating": <final score>}}
+
+# -------------------------- Citations --------------------------#
+
+  combine_citations: |
+    Given a QA pair, your job is to combine consecutive <statement>...</statement> sentences that reference the same citations into a single <statement> block. Merge their content inside a single <statement> tag and place the shared <cite> tag only once at the end. 
+
+    Only merge <statement> tags if:
+    1. Their <cite> content is **exactly the same**
+    2. They are adjacent to each other
+
+    Do NOT change or reword the statements. Just merge and keep the original phrasing intact.
+
+    Format rules:
+    - Keep all answers inside <statement>...</statement> blocks.
+    - Use <cite>...</cite> at the end of each <statement> block.
+    - Ensure every statement ends with its citation.
+    - If a statement has no citations, leave the <cite> tag empty.
+
+    Return only the final answer inside JSON like:
+    {{"answer": "<merged answer>"}}
+
+    Here is the input:
+
+    Example 1 - Merge statements with same citations:
+      Input: "<statement>The policy created new jobs.<cite>[S3]</cite></statement><statement>It also boosted small businesses.<cite>[S3]</cite></statement>"
+      Output: {{"answer": "<statement>The policy created new jobs. It also boosted small businesses.<cite>[S3]</cite></statement>"}}
+
+    Example 2 - Do not merge statements with different citations:
+      Input: "<statement>The first study showed an increase.<cite>[S1]</cite></statement><statement>The second study showed no change.<cite>[S2]</cite></statement>"
+      Output: {{"answer": "<statement>The first study showed an increase.<cite>[S1]</cite></statement><statement>The second study showed no change.<cite>[S2]</cite></statement>"}}
+    
+    Example 3 - Merge multiple statements with same citations:
+      Input: "<statement>First, the policy improved education.<cite>[S1]</cite></statement><statement>Second, it increased healthcare access.<cite>[S1]</cite></statement><statement>Finally, it boosted the economy.<cite>[S1]</cite></statement>"
+      Output: {{"answer": "<statement>First, the policy improved education. Second, it increased healthcare access. Finally, it boosted the economy.<cite>[S1]</cite></statement>"}}
+
+    Now get ready to merge the following answer:
+
+    Input: {answer}
+
+  citation_recall: |
+    You are an expert in evaluating text quality. Your task is to assess how well a statement from an AI assistant’s response is supported by a given snippet from a long document, in the context of a user’s question.
+    You will be provided with:
+    - A user question (indicating the information being sought),
+    - A statement from the assistant’s answer,
+    - A snippet of text that the assistant cited in support of that statement.
+
+    Since the full document is too long to display, your judgment must rely solely on the provided snippet. Do not use any external knowledge.
+
+
+    SCORING RUBRIC
+    You must assign one of the following scores based on the degree of support the snippet provides for the statement:
+
+    - Fully Supported (**1.0**):
+        - The majority of the statement’s information (≥ 90%) is directly and clearly found in the snippet.
+        - The statement is factually accurate with respect to the snippet.
+        - Key facts, numbers, and logical claims match the snippet exactly or are strong paraphrases.
+
+    - Partially Supported (**0.5**):
+        - Some key information is supported (≈ 50–89%), but:
+              - One or more important details are **missing**, **ambiguous**, or **only weakly implied**.
+              - There may be **a small discrepancy**, **minor generalization**, or **inference** that is not explicit in the snippet.
+        - Example: The snippet supports one part of a compound statement, but not all parts.
+
+    - No Support (**0.0**)
+        - The snippet **does not mention** or **contradicts** the core information in the statement.
+        - The relationship is unclear, indirect, or based purely on unstated assumptions.
+
+
+    OUTPUT FORMAT
+    Please return your evaluation as a JSON object using the format:
+
+    ```json
+    {
+      "score": 1.0,
+    }
+    ```
+
+    INPUT
+
+    <question>  
+    {input1}  
+    </question>
+
+    <statement>  
+    {input2}  
+    </statement>
+
+    <snippet>  
+    {input3}  
+    </snippet>
+
+  no_citation_recall: |
+    You are given a user question, a full model-generated answer, and one statement from that answer. The statement has no supporting citations. Your job is to determine whether this omission is acceptable. Please evaluate the statement according to the following scoring rubric and return your result in JSON format:
+
+    Scoring Rubric:
+    - Score: 1 (No citation needed)
+        Assign this score if the statement is functional in nature. These include:
+        * Introduction or framing statements (e.g., “Let’s explore this question…” or “Here’s a summary of the key points…”)
+        * Transitions or discourse markers (e.g., “However,” “On the other hand,” “In conclusion…”)
+        * Simple restatements or rephrasings of the question
+        * Common knowledge facts (e.g., “The Earth revolves around the Sun”) that are widely accepted and uncontroversial
+        * Statements clearly attributed to the model's reasoning or interpretation (e.g., “This suggests that…” or “One possible explanation is…”), **as long as they are not making external factual claims**
+
+    - Score: 0 (Citation needed)
+        Assign this score if the statement contains or implies any of the following:
+        * Factual claims that go beyond general knowledge or common sense (e.g., “In 2022, the unemployment rate dropped by 2%”)
+        * Analytical or evaluative claims that depend on data, evidence, or external sources (e.g., “Studies have shown…” or “This approach is more effective than…”)
+        * Numerical data, historical facts, technical descriptions, or research findings** that require verification
+        * Implicit references to authoritative sources without explicitly citing them (e.g., “Experts agree that…” or “It is well established that…”)
+
+
+    Respond in this format:
+
+    ```json
+    {
+      "score": 1
+    }
+    ```
+
+    or
+
+    ```json
+    {
+      "score": 0
+    }
+    ```
+
+
+    User Question:
+    {input1}
+
+    Full Answer: 
+    {input2}
+
+    Isolated Statement:
+    {input3}
+
+    Determine the score based on the rubric.
+
+  citation_precision: |
+    You are given a user question, a model-generated statement that cites some evidence, and one individual supporting snippet (a gold answer passage).
+
+    Your task is to judge whether this snippet is relevant to the statement, using the scoring rubric provided below.
+
+    Scoring Rubric:
+
+    - Score: 1 (Relevant)
+        Assign a score of 1 if the snippet supports, confirms, or provides evidence for any key point made in the statement. This includes:
+        * Direct support: The snippet explicitly affirms a factual claim in the statement.
+        * Indirect support: The snippet provides context or background information that aligns with or justifies a key point in the statement.
+        * Paraphrased or synonymous phrasing: The snippet expresses the same idea using different words but confirms the claim made.
+        * Partial support: The snippet supports at least one meaningful portion of the statement, even if it does not address the entire statement.
+
+    - Score: 0 (Irrelevant)
+        Assign a score of 0 if the snippet:
+        * Does not address any part of the statement.
+        * Contradicts the statement.
+        * Is on the same topic but does not provide evidence for any specific claim in the statement.
+        * Contains only generic information or background that is not tied to any point made in the statement.
+      
+    
+    Respond in this format:
+
+    ```json
+    {
+      "score": 1
+    }
+    ```
+
+    or
+
+    ```json
+    {
+      "score": 0
+    }
+    ```
+
+    Input Variables:
+
+    User Question: 
+    {input1}
+
+    Statement: 
+    {input2}
+
+    Individual Snippet:
+    {input3}
+

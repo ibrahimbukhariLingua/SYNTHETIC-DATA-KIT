@@ -1,0 +1,28 @@
+Stochastic discount factor
+
+
+# Stochastic discount factor
+
+
+
+The concept of the **stochastic discount factor (SDF)** is used in financial economics and mathematical finance. The name derives from the price of an asset being computable by "discounting" the future cash flow {\displaystyle {\tilde {x}}\_{i}} by the stochastic factor {\displaystyle {\tilde {m}}}, and then taking the expectation. This definition is of fundamental importance in asset pricing.
+
+If there are *n* assets with initial prices {\displaystyle p\_{1},\ldots ,p\_{n}} at the beginning of a period and payoffs {\displaystyle {\tilde {x}}\_{1},\ldots ,{\tilde {x}}\_{n}} at the end of the period (all *x*s are random (stochastic) variables), then SDF is any random variable {\displaystyle {\tilde {m}}} satisfying
+
+The stochastic discount factor is sometimes referred to as the **pricing kernel** as, if the expectation {\displaystyle E({\tilde {m}}\,{\tilde {x}}\_{i})} is written as an integral, then {\displaystyle {\tilde {m}}} can be interpreted as the kernel function in an integral transform. Other names sometimes used for the SDF are the "marginal rate of substitution" (the ratio of utility of states, when utility is separable and additive, though discounted by the risk-neutral rate), a "change of measure", "state-price deflator" or a "**state-price density**".
+
+
+## Properties
+
+The existence of an SDF is equivalent to the law of one price; similarly, the existence of a strictly positive SDF is equivalent to the absence of arbitrage opportunities (see Fundamental theorem of asset pricing). This being the case, then if {\displaystyle p\_{i}} is positive, by using {\displaystyle {\tilde {R}}\_{i}={\tilde {x}}\_{i}/p\_{i}} to denote the return, we can rewrite the definition as
+
+and this implies
+
+Also, if there is a portfolio made up of the assets, then the SDF satisfies
+
+By a simple standard identity on covariances, we have
+
+Suppose there is a risk-free asset. Then {\displaystyle {\tilde {R}}=R\_{f}} implies {\displaystyle E({\tilde {m}})=1/R\_{f}}. Substituting this into the last expression and rearranging gives the following formula for the risk premium of any asset or portfolio with return {\displaystyle {\tilde {R}}}:
+
+This shows that risk premiums are determined by covariances with any SDF.
+

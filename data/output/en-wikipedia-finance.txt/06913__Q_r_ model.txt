@@ -1,0 +1,122 @@
+(Q,r) model
+
+
+# (Q,r) model
+
+
+
+In inventory theory, the **(Q,r) model** is used to determine optimal ordering policies. It is a class of inventory control models that generalize and combine elements of both the Economic Order Quantity (EOQ) model and the base stock model. The (Q,r) model addresses the question of *when* and *how much* to order, aiming to minimize total inventory costs, which typically include ordering costs, holding costs, and shortage costs. It specifies that an order of size *Q* should be placed when the inventory level reaches a reorder point *r*. The (Q,r) model is widely applied in various industries to manage inventory effectively and efficiently.
+
+
+## Overview
+
+
+### Assumptions
+
+1. Products can be analyzed individually
+2. Demands occur one at a time (no batch orders)
+3. Unfilled demand is back-ordered (no lost sales)
+4. Replenishment lead times are fixed and known
+5. Replenishments are ordered one at a time
+6. Demand is modeled by a continuous probability distribution
+7. There is a fixed cost associated with a replenishment order
+8. There is a constraint on the number of replenishment orders per year
+
+### Variables
+
+* {\displaystyle D} = Expected demand per year
+* {\displaystyle \ell } = Replenishment lead time
+* {\displaystyle X} = Demand during replenishment lead time
+* {\displaystyle g(x)} = probability density function of demand during lead time
+* {\displaystyle G(x)} = cumulative distribution function of demand during lead time
+* {\displaystyle \theta } = mean demand during lead time
+* {\displaystyle A} = setup or purchase order cost per replenishment
+* {\displaystyle c} = unit production cost
+* {\displaystyle h} = annual unit holding cost
+* {\displaystyle k} = cost per stockout
+* {\displaystyle b} = annual unit backorder cost
+* {\displaystyle Q} = replenishment quantity
+* {\displaystyle r} = reorder point
+* {\displaystyle SS=r-\theta }, safety stock level
+* {\displaystyle F(Q,r)} = order frequency
+* {\displaystyle S(Q,r)} = fill rate
+* {\displaystyle B(Q,r)} = average number of outstanding back-orders
+* {\displaystyle I(Q,r)} = average on-hand inventory level
+
+### Costs
+
+The number of orders per year can be computed as {\displaystyle F(Q,r)={\frac {D}{Q}}}, the annual fixed order cost is F(Q,r)A. The fill rate is given by:
+
+{\displaystyle S(Q,r)={\frac {1}{Q}}\int \_{r}^{r+Q}G(x)dx}
+
+The annual stockout cost is proportional to D[1 - S(Q,r)], with the fill rate beying:
+
+{\displaystyle S(Q,r)={\frac {1}{Q}}\int \_{r}^{r+Q}G(x)dx=1-{\frac {1}{Q}}[B(r))-B(r+Q)]}
+
+Inventory holding cost is {\displaystyle hI(Q,r)}, average inventory being:
+
+{\displaystyle I(Q,r)={\frac {Q+1}{2}}+r-\theta +B(Q,r)}
+
+
+#### Backorder cost approach
+
+The annual backorder cost is proportional to backorder level:
+
+{\displaystyle B(Q,r)={\frac {1}{Q}}\int \_{r}^{r+Q}B(x+1)dx}
+
+
+##### Total cost function and optimal reorder point
+
+The total cost is given by the sum of setup costs, purchase order cost, backorders cost and inventory carrying cost:
+
+{\displaystyle Y(Q,r)={\frac {D}{Q}}A+bB(Q,r)+hI(Q,r)}
+
+The optimal reorder quantity and optimal reorder point are given by:
+
+| Proof |
+| --- |
+| To minimize set the partial derivatives of Y equal to zero: {\displaystyle {\frac {\partial Y}{\partial Q}}=-{\frac {DA}{Q^{2}}}+{\frac {h}{2}}=0} {\displaystyle {\frac {\partial Y}{\partial r}}=h+(b+h){\frac {dB}{dr}}=0} {\displaystyle {\frac {dB}{dr}}={\frac {d}{dr}}\int \_{r}^{+\infty }(x-r)g(x)dx=-\int \_{r}^{+\infty }g(x)dx=-[1-G(r)]} {\displaystyle {\frac {\partial Y}{\partial r}}=h-(b+h)[1-G(r)]=0} And solve for G(r) and Q. |
+
+
+
+##### Normal distribution
+
+In the case lead-time demand is normally distributed:
+
+{\displaystyle r^{\*}=\theta +z\sigma }
+
+
+#### Stockout cost approach
+
+The total cost is given by the sum of setup costs, purchase order cost, stockout cost and inventory carrying cost:
+
+{\displaystyle Y(Q,r)={\frac {D}{Q}}A+kD[1-S(Q,r)]+hI(Q,r)}
+
+What changes with this approach is the computation of the optimal reorder point:
+
+
+### Lead-Time Variability
+
+X is the random demand during replenishment lead time:
+
+{\displaystyle X=\sum \_{t=1}^{L}D\_{t}}
+
+In expectation:
+
+{\displaystyle \operatorname {E} [X]=\operatorname {E} [L]\operatorname {E} [D\_{t}]=\ell d=\theta }
+
+Variance of demand is given by:
+
+{\displaystyle \operatorname {Var} (x)=\operatorname {E} [L]\operatorname {Var} (D\_{t})+\operatorname {E} [D\_{t}]^{2}\operatorname {Var} (L)=\ell \sigma \_{D}^{2}+d^{2}\sigma \_{L}^{2}}
+
+Hence standard deviation is:
+
+{\displaystyle \sigma ={\sqrt {\operatorname {Var} (X)}}={\sqrt {\ell \sigma \_{D}^{2}+d^{2}\sigma \_{L}^{2}}}}
+
+
+#### Poisson distribution
+
+if demand is Poisson distributed:
+
+{\displaystyle \sigma ={\sqrt {\ell \sigma \_{D}^{2}+d^{2}\sigma \_{L}^{2}}}={\sqrt {\theta +d^{2}\sigma \_{L}^{2}}}}
+

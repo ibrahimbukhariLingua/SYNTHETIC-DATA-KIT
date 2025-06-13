@@ -1,0 +1,178 @@
+Cost-sharing mechanism
+
+
+# Cost-sharing mechanism
+
+
+
+In economics and mechanism design, a **cost-sharing mechanism** is a process by which several agents decide on the scope of a public product or service, and how much each agent should pay for it. Cost-sharing is easy when the marginal cost is constant: in this case, each agent who wants the service just pays its marginal cost. Cost-sharing becomes more interesting when the marginal cost is not constant. With increasing marginal costs, the agents impose a negative externality on each other; with decreasing marginal costs, the agents impose a positive externality on each other (see example below). The goal of a cost-sharing mechanism is to divide this externality among the agents.
+
+There are various cost-sharing mechanisms, depending on the type of product/service and the type of cost-function.
+
+
+## Divisible product, increasing marginal costs
+
+In this setting, several agents share a production technology. They have to decide how much to produce and how to share the cost of production.
+The technology has *increasing marginal cost* - the more is produced, the harder it becomes to produce more units (i.e., the cost is a convex function of the demand).
+
+An example cost-function is:
+
+* $1 per unit for the first 10 units;
+* $10 per unit for each additional unit.
+
+So if there are three agents whose demands are 3 and 6 and 10, then the total cost is $100.
+
+
+### Definitions
+
+A cost-sharing problem is defined by the following functions, where *i* is an agent and *Q* is a quantity of the product:
+
+* Demand(*i*) = the amount that agent *i* wants to receive.
+* Cost(*Q*) = the cost of producing *Q* units of the product.
+
+A solution to a cost-sharing problem is defined by a payment {\displaystyle {\text{Pay}}(i)} for every agent who is served, such that the total payment equals the total cost:
+
+where D is the total demand:
+
+Several cost-sharing solutions have been proposed.
+
+
+### Average cost-sharing
+
+In the literature on cost pricing of a regulated monopoly, it is common to assume that each agent should pay its average cost, i.e.:
+
+In the above example, the payments are 15.8 (for demand 3), 31.6 (for demand 6) and 52.6 (for demand 10).
+
+This cost-sharing method has several advantages:
+
+* It is not affected by manipulations in which two agents openly merge their demand into a single super-agent, or one agent openly splits its demand into two sub-agents. Indeed, it is the *only* method immune to such manipulations.
+* It is not affected by manipulations in which two agents secretly transfer costs and products between each other.
+* Each agent pays at least its *stand-alone cost* - the cost he would have paid without the existence of other agents. This is a measure of solidarity: no agent should make a profit from a negative externality.
+
+However, it has a disadvantage:
+
+* An agent might pay more than its *unanimous cost* - the cost he would have paid if all other agents had the same demand.
+
+This is a measure of fairness: no agent should suffer too much from the negative externality. In the above example, the agent with demand 3 can claim that, if all other agents were as modest as he is, there would have been no negative externality and each agent would have paid only $1 per unit, so he should not have to pay more than this.
+
+
+### Marginal cost-sharing
+
+In marginal cost-sharing, the payment of each agent depends on his demand and on the marginal cost in the current production-state:
+
+In the above example, the payments are 0 (for demand 3), 30 (for demand 6) and 70 (for demand 10).
+
+This method guarantees that an agents pays at most its *unanimous cost* - the cost he would have paid if all other agents had the same demand.
+
+However, an agent might pay less than its *stand-alone cost*. In the above example, the agent with demand 3 pays nothing (in some cases it is even possible that an agent pays negative value).
+
+
+### Serial cost-sharing
+
+Serial cost-sharing can be described as the result of the following process.
+
+* At time 0, all agents enter a room.
+* The machine starts producing one unit per minute.
+* The produced unit and its cost are divided equally among all agents in the room.
+* Whenever an agent feels that his demand is satisfied, he exits the room.
+
+So, if the agents are ordered in ascending order of demand:
+
+* Agent 1 (with the lowest demand) pays:
+
+* Agent 2 pays:
+
+and so on.
+
+This method guarantees that each agent pays at least its *stand-alone cost* and at most its *unanimous cost*.
+
+However, it is not immune to splitting or merging of agents, or to transfer of input and output between agents. Hence, it makes sense only when such transfers are impossible (for example, with cable TV or telephone services).
+
+
+## Binary service, decreasing marginal costs
+
+In this setting,
+there is a binary service - each agent is either served or is not served. The cost of the service is higher when more agents are served, but the marginal cost is smaller than when serving each agent individually (i.e., the cost is a submodular set function).
+As a typical example, consider two agents, Alice and George, who live near a water-source, with the following distances:
+
+* Source-Alice: 8 km
+* Source-George: 7 km
+* Alice-George: 2 km
+
+Suppose that each kilometer of water-pipe costs $1000. We have the following options:
+
+* Nobody is connected; the cost is 0.
+* Only George is connected; the cost is $7000.
+* Only Alice is connected; the cost is $8000.
+* Both Alice and George are connected; the cost is $9000, since the pipe can go from Source to George and then to Alice. Note that it is much cheaper than the sum of the costs of George and Alice.
+
+The choice between these four options should depend on the *valuations* of the agents - how much each of them is willing to pay for being connected to the water-source.
+
+The goal is to find a truthful mechanism that will induce the agents to reveal their true willingness-to-pay.
+
+
+### Definitions
+
+A cost-sharing problem is defined by the following functions, where *i* is an agent and *S* is a subset of agents:
+
+* Value(*i*) = the amount that agent *i* is willing to pay in order to enjoy the service.
+* Cost(*S*) = the cost of serving all and only the agents in *S*. E.g., in the above example Cost({Alice,George})=9000.
+
+A solution to a cost-sharing problem is defined by:
+
+* A subset *S* of agents who should be served;
+* A payment {\displaystyle {\text{Pay}}(i)} for every agent who is served.
+
+A solution can be characterized by:
+
+* The **budget surplus** of a solution is the total payment minus the total cost: {\displaystyle Surplus:=\sum \_{i\in S}{\text{Pay}}(i)-{\text{Cost}}(S)}. We would like to have *budget balance*, which means that the surplus should be exactly 0.
+* The **social welfare** of a solution is the total utility minus the total cost: {\displaystyle Welfare:=\sum \_{i\in S}{\text{Value}}(i)-{\text{Cost}}(S)}. We would like to have *efficiency*, which means that the social welfare is maximized.
+
+It is impossible to attain truthfulness, budget-balance and efficiency simultaneously; therefore, there are two classes of truthful mechanisms:
+
+
+### Tatonement mechanisms - budget-balanced but not efficient
+
+A budget-balanced cost-sharing mechanism can be defined by a function **Payment(*i*,*S*)** - the payment that agent *i* has to pay when the subset of served agents is *S*. This function should satisfy the following two properties:
+
+* budget-balance: the total payment by any subset equals the total cost of serving this subset: {\displaystyle \forall S:\sum \_{i\in S}{\text{Payment}}(i,S)={\text{Cost}}(S)}. So if a single agent is served, he must pay all his cost, but if two or more agents are served, each of them may pay less than his individual cost because of the submodularity.
+* population monotonicity: the payment of an agent weakly increases when the subset of served agents shrinks: {\displaystyle T\supseteq S\implies {\text{Payment}}(i,T)\leq {\text{Payment}}(i,S)}.
+
+For any such function, a cost-sharing problem with submodular costs can be solved by the following tatonnement process:
+
+1. Initially, let *S* be the set of all agents.
+2. Tell each agent *i* that he should pay Payment(*i*,*S*).
+3. Each agent who is not willing to pay his price, leaves *S*.
+4. If any agent has left *S*, return to step 2.
+5. Otherwise, finish and server the agents that remain in *S*.
+
+Note that, by the population-monotonicity property, the price always increases when people leave *S*. Therefore, an agent will never want to return to *S*, so the mechanism is truthful (the process is similar to an English auction). In addition to truthfulness, the mechanism has the following merits:
+
+* *Group strategyproofness* - no group of agents can gain by reporting untruthfully.
+* *No positive transfers* - no agent is paid money in order to be served.
+* *Individual rationality* - no agent loses value from participation (in particular, a non-served agent pays nothing and a served agent pays at most his valuation).
+* *Consumer sovereignty* - every agent can choose to get service, if his willingness-to-pay is sufficiently large.
+
+Moreover, *any* mechanism satisfying budget-balance, no-positive-transfers, individual-rationality, consumer-sovereignty and group-strategyproofness can be derived in this way using an appropriate Payment function.Pʳᵒᵖᵒˢⁱᵗⁱᵒⁿ ¹
+
+The mechanism can select the Payment function in order to attain such goals as fairness or efficiency. When agents have equal apriori rights, some reasonable payment functions are:
+
+* The Shapley value, e.g., for two agents, the payments when both agents are served are: Payment(Alice,Both) = [Cost(Both)+Cost(Alice)-Cost(George)]/2, Payment(George,Both) = [Cost(Both)+Cost(George)-Cost(Alice)]/2.
+* The egalitarian solution, e.g. Payment(Alice,Both) = median[Cost(Alice), Cost(Both)/2, Cost(Both)-Cost(George)], Payment(George,Both) = median[Cost(George), Cost(Both)/2, Cost(Both)-Cost(Alice)].
+* When agents have different rights (e.g. some agents are more senior than others), it is possible to charge the most senior agent only his marginal cost, e.g. if George is more senior, then for every subset S which does not contain George: Payment(George,S+George) = Cost(S+George)−Cost(S). Similarly, the next-most-senior agent can pay his marginal remaining cost, and so on.
+
+The above cost-sharing mechanisms are not efficient - they do not always select the allocation with the highest social welfare. But, when the payment function is selected to be the Shapley value, the loss of welfare is minimized.Pʳᵒᵖᵒˢⁱᵗⁱᵒⁿ ²
+
+
+### VCG mechanisms - efficient but not budget-balanced
+
+A different class of cost-sharing mechanisms are the VCG mechanisms. A VCG mechanism always selects the socially-optimal allocation - the allocation that maximizes the total utility of the served agents minus the cost of serving them. Then, each agent receives the welfare of the other agents, and pays an amount that depends only on the valuations of the other agents. Moreover, all VCG mechanisms satisfy the consumer-sovereignty property.
+
+There is a single VCG mechanism which also satisfies the requirements of no-positive-transfers and individual-rationality - it is the **Marginal Cost Pricing** mechanism.Pʳᵒᵖᵒˢⁱᵗⁱᵒⁿ ³ This is a special VCG mechanism in which each non-served agent pays nothing, and each served agent pays:
+
+I.e, each agent pays his value, but gets back the welfare that is added by his presence. Thus, the interests of the agent are aligned with the interests of society (maximizing the social welfare) so the mechanism is truthful.
+
+The problem with this mechanism is that it is not budget-balanced - it runs a deficit. Consider the above water-pipe example, and suppose both Alice and George value the service as $10000. When only Alice is served, the welfare is 10000-8000=2000; when only George is served; the welfare is 10000-7000=3000; when both are served, the welfare is 10000+10000-9000=11000. Therefore, the Marginal Cost Pricing mechanism selects to serve both agents. George pays 10000-(11000-2000)=1000 and Alice pays 10000-(11000-3000)=2000. The total payment is only 3000, which is less than the total cost of 9000.
+
+Moreover, the VCG mechanism is not group-strategyproof: an agent can help other agents by raising his valuation, without harming himself.
+

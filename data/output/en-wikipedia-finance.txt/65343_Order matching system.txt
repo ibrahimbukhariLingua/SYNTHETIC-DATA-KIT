@@ -1,0 +1,44 @@
+Order matching system
+
+
+# Order matching system
+
+
+
+An **order matching system** or simply **matching system** is an electronic system that matches buy and sell orders for a stock market, commodity market or other financial exchanges. The order matching system is the core of all electronic exchanges and are used to execute orders from participants in the exchange.
+
+Orders are usually entered by members of an exchange and executed by a central system that belongs to the exchange. The algorithm that is used to match orders varies from system to system and often involves rules around best execution.
+
+The order matching system and implied order system or Implication engine is often part of a larger electronic trading system which will usually include a settlement system and a central securities depository that are accessed by electronic trading platforms. These services may or may not be provided by the organisation that provides the order matching system.
+
+The matching algorithms decide the efficiency and robustness of the order matching system. There are two states for a market: continuous trading where orders are matched immediately or auction where matching is done at fixed intervals. A common example when a matching system is used in auction state is at the market open when a number of orders have built up.
+
+
+## History
+
+Electronic order matching was introduced in the early 1980s in the United States to supplement open outcry trading. For example the then Mid West Stock Exchange (now the Chicago Stock Exchange) launched the "MAX system, becoming one of the first stock exchanges to provide fully automated order execution" in 1982.
+
+
+## Algorithms
+
+There are a variety of algorithms for auction trading, which is used before the market opens, on market close etc. However, most of the time, continuous trading is performed.
+
+The trading mechanism on electronic exchanges is an important component that has a great impact on the efficiency and liquidity of financial markets. The choice of matching algorithm is an important part of the trading mechanism. The most common matching algorithms are the *Pro-Rata* and *Price/Time* algorithms.
+
+Comparison of Price/Time and Pro-Rata Following are few basic remarks about the two basic algorithms and their comparison.
+
+
+### Price/Time algorithm (or First-in-First-out)
+
+* Motivates to narrow the spread, since by narrowing the spread the limit order is the first in the order queue.
+* Discourages other orders to join the queue since a limit order that joins the queue is the last.
+* Might be computationally more demanding than Pro-Rata. The reason is that market participants might want to place more small orders in different positions in the order queue, and also tend to "flood" the market, i.e., place limit order in the depth of the market in order to stay in the queue.
+
+### Pro-Rata algorithm
+
+* Motivates other orders to join the queue with large limit orders. As a consequence, the cumulative quoted volume at the best price is relatively large.
+
+## Efficiency
+
+Large limit orders can be "front-run" by "penny jumping". For example, if a buy limit order for 100,000 shares for $1.00 is announced to the market, many traders may seek to buy for $1.01. If the market price increases after their purchases, they will get the full amount of the price increase. However, if the market price decreases, they will likely be able to sell to the limit order trader, for only a one cent loss. This type of trading is probably not illegal, and in any case, a law against it would be very difficult to enforce.
+

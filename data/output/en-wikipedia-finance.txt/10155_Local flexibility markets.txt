@@ -1,0 +1,155 @@
+Local flexibility markets
+
+
+# Local flexibility markets
+
+
+
+Still in the stage of development, **local flexibility markets** for electricity will enable distributed energy resources (short DER, e.g. storage operators, demand response actors, electric vehicles, end users, (renewable) power plants) to provide their flexibility in electricity demand or production/feed-in for the system operator or another counterparty at a local level. As there are different purposes for the use of this flexibility (market oriented, system oriented, grid oriented, see "flexibility triangle"), there exist a variety of different market designs, comprising different actors and role models. Several local market models aim to efficiently tackle the widespread issue of grid congestion and fairness.
+
+
+## Background, problems, and challenges (Northern Germany)
+
+The already rapid expansion of Renewable Energies accelerated in recent years. This is particularly the case in Germany, and even more so in its Northern regions. Nearly 50GW of installed wind capacity generated over a third of Germany's electricity demand in 2017. As an example, the Land of Schleswig-Holstein was able to cover 95% of its electricity demand by wind-generated energy (onshore).
+
+
+### Slow grid expansion causes congestion
+
+For transportation to the consumer via the electricity grid, these strong amounts of energy require accordingly developed grid capacities. But while the expansion of wind energy happened very fast, mainly due to the EEG-incentives, the expansion of the grid happened much slower, since the regulation behind grid expansion requires extensive bureaucratic efforts. This fact causes a sophisticated problem: in times of strong wind energy generation, the amount of electricity is too high to get properly feed in and distributed through the grid. The limited grid capacities are simply not constructed to transport such high amounts of energy at once, the result is congestions:
+
+
+### Solving congestions through feed-in management
+
+Today, system operators are given only one possible tool to encounter this problem and to secure grid stability: in times of strong wind, certain wind turbines are shut down. This is called Feed-In Management. But stopping wind turbines when their energy output is at its highest, comes at very high cost: both ecologically and economically:
+
+Ecologically, because for every curtailed kWh of wind energy, another power plant must be activated to offset the now missing volumes, since they have already been traded in the market. Because the supplementing power plant must be ramped up rather quickly and precisely, the first and only choice are combined cycle gas turbines (CCGTs). This practice of balancing energy generation by activating certain power plants on the one hand, and shutting down certain generation capacities on the other is called system redispatch.
+
+Feed-in management comes at very high economic costs for two reasons: first, the redispatched CCGT must be remunerated. Second, the wind turbine operator or owner must also be remunerated (by EEG-law) for every kWh he would otherwise have produced. These costs are not paid directly by the system operator. The system operator is entitled to pass on the costs to the end consumer, meaning that at the end, society pays. Annual costs for feed-in management in Germany were €373m in 2016, €550m in 2017, and are likely to increase up to €5bn until 2025.
+
+
+## Technical description and principles
+
+In recent years, a variety of concepts regarding the roles and actors in local markets were developed. This article highlights the following concept, which refers to a flexibility market used by Transmission and Distribution System Operators (TSOs and DSOs) mainly for the purpose of alleviating grid congestions in a market based manner. It was developed within the EU H2020 project Smartnet. It is operated by an independent and neutral third party.
+
+
+### Key roles in this model
+
+* **System Operator:** (Transmission and Distribution System Operators) act as single buyer of energy volumes and are therefore counterpart in every trade. The execution of every trade therefore remains subject to the System Operator. The System Operator is also responsible for the financial remuneration of the flexibility providers.
+* **Market Operator**: a neutral third party that operates the market, including pre-defined profile exchange (meaning the examination of the physical impact of a DER), operation of order books, and potentially clearing activities.
+* **Flexible resource owner**: offers its flexibility to the system operator. Either downward flexibility (decrease of generation) or upward flexibility (increase of consumption) can be offered. Potential flexibility providers are: storage system owners, electric vehicles, traditional power plant operators (downward flexibility), owners of demand response capacities (e.g. factories), owners of sector coupling facilities. An often used term for resources that can participate in a local market is "DER", referring to Distributed Energy Resource it simply means every resource that consumes or produces energy.
+* **Aggregator**: aggregates several smaller flexibility providers (that are too small to make viable bids) in one portfolio which participates in the market as one player. E.g. electric vehicles would not participate directly, but via an aggregator in the local market.
+
+## Classification of different market design approaches
+
+Over the past years, different approaches towards the design of local markets occurred. Their main objective (trade energy locally) is always common, yet there are many different secondary objectives and ways of filling the roles. The following table classifies these different approaches by distinguishing criteria.
+
+Classification of Concepts for Local Markets
+| Option 1 | Option 2 | Option 3 |
+| --- | --- | --- |
+| Timeframe | (close to) real time | intraday / day ahead | more than one day ahead |
+| Operator | Neutral Third Party | System Operator (DSO or TSO) | Energy Utility |
+| Trading parties | System Operator with Flexibility Providers | Flexibility Providers with Flexibility Providers | all with all |
+| Market procedure | Free Market | Quotation Model | No Market, only defined incentives for participants |
+| Secondary Objective | Alleviate Local Congestions | Enable Peer-2-Peer trading and portfolio optimization |
+| Technology | Blockchain | Without Blockchain (centralized, traditional server architecture) | Mix |
+
+
+## Benefits
+
+
+### For the system operator
+
+The benefit of a Local Flexibility Market from a system operators point of view is mainly financial. As stated above, the system operator does not come up for the feed-in management costs as he passes them over to the consumers. This situation is secured by actual German law. However, within the next five years, European law is going to change this situation by passing the so called "Clean Energy for all Europeans" Package, a central bill of law (see "Regulatory Framework)). In the modified, new regulatory framework, system operators will be incentivized to use flexibility and shall avoid measures like feed-in management. Hence, using a Local Flexibility Market to solve congestions will be financially fortunate for a System Operator.
+
+
+### For the flexibility provider
+
+Within current European electricity markets, very limited options to market flexibility are given to flexibility providers. Furthermore, these options (e.g. the German balancing market "Regelenergiemarkt") only reward the adoption of consumption/generation in time (for example ramping up a power plant during peak demand times), regardless of geographic location of the provider. Hence, there is no existing possibility for flexibility providers to financially profit from their location, even though the location could often be very advantageous regarding local congestions (for example: if a large factory with flexible energy demand is located near a wind farm, it potentially has a positive impact on the grid situation). By enabling flexibility providers to trade flexibility locally, Local Flexibility Markets enable them to participate in alleviating grid congestions and avoid expensive grid extension measures. For adapting their demand or production, they can be remunerated by the system operator in two ways: first, with either a surplus for selling or a discount when buying more energy, second by getting a higher price for their electricity compared to the spot market price.
+
+
+### Macro-economic benefits
+
+As stated above, the annual societal costs for feed-in management measures are likely to increase up to €5bn until 2025. These costs could partly be mitigated by local markets. But Local markets also bring another advantage: by enabling the use of flexibility, they decrease or at least delay the occurrence of additional costs relating to grid extension. Grid extension amounts for €50bn until 2030 only on transmission level (Germany). By mitigating the required grid extension measures, local markets can extensively contribute to decrease the societal costs of the German Energy Transition.
+
+Furthermore, local markets support more accurate prices of electricity: within current market structures, the electricity prices in a country (zone) at a given time are even. The geographic location of a customer do not at all affect the price he pays for its electricity and significant price differences in between a price zone are not possible. This fact completely neglects the reality: due to local grid extension and transport of electricity, there are severe price differences within a country (for example, electricity in Northern Germany is way cheaper (theoretically) than in Southern Germany because it does not have to be transported as far). These price differences are not represented by current markets. local markets can determine and adjust prices according to real occurring costs at each node or location in the grid via transparent, market based procedures. This leads to prices that are more accurate than the current ones. More accurate prices maximize the social welfare and therefore display a macro-economic benefit.
+
+
+## Drawbacks and challenges
+
+
+### Regional circumstances
+
+Within Europe and certain other countries, we face a variety of different regional circumstances regarding facts like installed renewable energy capacities, load density and flexibility potential, that strongly impact the suitability of local markets. Different regional circumstances require different Local Market Designs, hence there is no unified "one-size-fits -all" approach possible. This creates a need for the development and operation of several market designs, resulting in higher costs for the general public.
+
+
+### Nodal/Zonal discussion
+
+The advantageousness of the point "macro-economic benefits" remains subject to further discussion: politically, it makes indeed sense to unify the price for electricity within one country in order to avoid economic discrimination of certain regions. Yet, local markets would do exactly this: by pricing electricity according to local conditions, energy costs more in some regions than it does in others. Regional pricing of energy refers to the so called "nodal pricing model" or "nodal markets" (currently reality in the US) and is a step away of the current zonal pricing model. This may be seen as a disadvantage of local markets. Nowadays, developments in the direction of a nodal market can be observed in the EU (see Poland).
+
+Yet, it can be argued that Local Markets are a way to avoid going nodal, as they combine the advantages of both approaches: when used only for the purpose of alleviating congestions, the volumes that are traded in Local Markets are relatively small (compared to the national consumption), hence an effect for end-customers will not occur. Even though, regional price differences are taken into account and may affect more economically viable decisions: for example, a storage provider can place its system at the best possible location for providing flexibility, given that he can access the necessary information.
+
+
+## Regulatory framework
+
+As of now, regulation regarding Local Electricity Markets, or electricity markets in general, is split over a variety of different acts, rather than being centralized. Therefore, to analyze the regulatory framework, different acts must be taken into account. The key role in most Local Flexibility Market concepts plays the system operator. Therefore, the following outlook into the regulatory framework strongly refers to a system operator point of view, as all important regulations derive from rules for system operators. The system operator of an electricity grid is always a monopolist, as there is only one electricity grid in each area. Hence, to ensure proper business activities, system operators are amongst the most strictly regulated companies around the world. This also means that new business activities (like trading in Local Markets would be one), remain subject to legislative changes. As changes in regulation always take their time, system operators are not incentivized currently to use Local Flexibility Markets as a measure for congestion management by now. Current regulation therefore hampers the use of flexibility, as stated in the graphic below:
+
+
+### EU level
+
+Entering into force 2020, the Clean Energy Package 4 (CEP 4)is the most important legislative act regarding the future role of system operators and the whole energy market, as it includes nearly all regulations regarding the EU energy sector. Among many other objectives, CEP pushes certainly in the direction of flexibility use rather than traditional curtailment measures. Due to its high-level nature, it only points out and administrate the general direction of this development, rather than formulating specific detailed regulations. Specific law amendments are later on subject to federal administration. CEP 4 reflects the current developments in the system operators business very well and fosters these even further, especially regarding the employment of smart technology, digitalization, active grids and flexibility.
+
+The main impacts of CEP 4 on system operator and market side are:
+
+* System operators shall procure ancillary services such as balancing and flexibility through transparent market based procedures
+* Distribution system operators shall now be responsible for congestion management and balancing in their respective grid area (formerly, this was subject to the TSO)
+* DSO-TSO cooperation shall be fostered, in particular regarding to shared flexibility resources and associated data management
+* System Operators shall not limit effective participation of market participants connected to their grid to the retail, wholesale and balancing markets (grid must be appropriately reinforced), market procedures must be transparent
+
+### Germany
+
+On a national level, system operators in Germany face a variety of different law acts regulating their business activities. The selection below lists the most important ones including the key points of each:
+
+
+#### Energy industry law ("Energiewirtschaftsgesetz")
+
+* Contains main regulations for energy utility companies, for example it
+* Regulates mandatory ancillary services to be carried out by SOs
+* Defines mandatory tasks and obligations of SOs
+* Regulates unbundling
+
+#### Incentive Regulation Act ("Anreizregulierungsverordnung")
+
+* Regulates revenue caps, network charges, innovation incentives
+* Innovation incentive: 50% of costs for federal R&D projects are compensated
+* Enables appropriate innovation: 10 of 10 interviewed DSOs could finance the necessary measures of the integration of RES in the latest legislative period (including traditional grid expenses as well as smart technology investments)
+* **Criticism**: smart-technology investments usually have high share of OPEX, which is less remunerated in ARegV, hence leads to lower incentives for invest in smart technology
+
+#### Electricity market law ("Strommarktgesetz")
+
+* Increase of flexibility via load management measures
+* Implementation of RES in balancing energy market
+* Faster development of charging infrastructure for EV
+* Implementation of reserves outside the market
+
+### Current research projects
+
+
+#### European level
+
+Projects funded by the Horizon 2020 initiative:
+
+* CoordiNet project (until 2022): Demonstrate how TSO-DSO shall act in a coordinated manner to procure grid services in the most reliable and efficient way
+
+#### National level
+
+
+##### Germany
+
+The most important German public funding initiative in the field of new solutions in the energy sector is the "SINTEG program". Under this program, 5 different projects in 5 German regions receive public funding:
+
+* enera: in cooperation with the German DSO EWE Netz, EWE Netz AG, the DSO Avacon Netz and the TSO TenneT, the European Power Exchange EPEX SPOT is developing a local market platform for flexibility sources
+
+##### Sweden
+
+The concept of local flexibility markets has been tried out in Sweden as pilots in Coordinet as well as the project sthlmflex. Where sthlmflex was special with the Swedish setup of two layers of DSOs, the project included TSO-DSO-DSO coordination.
+

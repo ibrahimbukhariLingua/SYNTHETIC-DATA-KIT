@@ -1,0 +1,27 @@
+Black's approximation
+
+
+# Black's approximation
+
+
+
+In finance, **Black's approximation** is an approximate method for computing the value of an American call option on a stock paying a single dividend. It was described by Fischer Black in 1975.
+
+The Black–Scholes formula (hereinafter, "BS Formula") provides an explicit equation for the value of a call option on a non-dividend paying stock. In case the stock pays one or more discrete dividend(s) no closed formula is known, but several approximations can be used, or else the Black–Scholes PDE will have to be solved numerically. One such approximation is described here. See also Black–Scholes model#American options.
+
+The method essentially entails using the BS formula to compute the value of two European call options:
+(1) A European call with the same maturity as the American call being valued, but with the stock price reduced by the present value of the dividend, and
+(2) A European call that expires on the day before the dividend is to be paid.
+The largest of (1) and (2) is taken as the approximate value for the American call. See example aside. The resulting value is sometimes called the "pseudo American" value of the call.
+
+
+## Application
+
+Consider an American call option with ex-dividend dates in 3 months and 5 months, and has an expiration date of 6 months. The dividend on each ex-dividend date is expected to payout $0.70. Additional information is presented below. Find the value of the American call option.
+
+First, we need to calculate based on the two methods provided above in the methods section. Here we will calculate both of the parts:
+
+**(2)** This is the second method calculation, which states:
+
+Recalling method (1) price of {\displaystyle \$3.54>\$3.50} from method (2), we see that the price of the American call option, as per Fisher Black's approximation, is the greater of the two methods, therefore, the price of the option = {\displaystyle \$3.54}.
+

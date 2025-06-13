@@ -1,0 +1,108 @@
+Shadow system
+
+
+# Shadow system
+
+
+
+**Shadow system** is a term used in information services for any application relied upon for business processes that is not under the jurisdiction of a centralized information systems department. That is, the information systems department did not create it, was not aware of it, and does not support it.
+
+
+## Overview
+
+Shadow systems (a.k.a. shadow data systems, data shadow systems, shadow information technology, shadow accounting systems or in short: Shadow IT) consist of small scale databases and/or spreadsheets developed for and used by end users, outside the direct control of an organization's IT department.
+
+The design and development process for these systems tends to fall into one of two categories. In the first case, these systems are developed on an adhoc basis rather than as part of a formal project and are not tested, documented or secured with the same rigor as more formally engineered reporting solutions. This makes them comparatively quick and cheap to develop, but unsuitable in most cases for long term use. In the second case, the systems are developed by experienced software developers that are not part of the organization's information systems department. These systems may be off-the-shelf software products or custom solutions developed by contract programmers. Depending on the expertise of the developers, these solutions may exceed the reliability of those created by the organization's information systems department.
+
+The term can also refer to legitimate, managed replicas of operational databases that are isolated from the user base of the main system. These sub-systems can be used to track illegitimate changes to the primary data-store by 'back doors' exploited by expert but un-authorized users.
+
+As stated in Price Waterhouse Coopers report on Spreadsheet Risk Management "The Use of Spreadsheets:
+Considerations for Section 404 of the Sarbanes-Oxley Act" :
+
+"Many companies rely on spreadsheets as a key component in their financial reporting and operational processes. However, it is clear that the flexibility of spreadsheets has sometimes come at a cost.
+It is important that management identify where control breakdowns could lead to potential material misstatements and that controls for significant spreadsheets be documented, evaluated and tested.
+And, perhaps more importantly, management should evaluate whether it is possible to implement adequate controls over significant spreadsheets to sufficiently mitigate this risk, or if spreadsheets related to significant accounts or with higher complexity should be migrated to an application system with a more formalized information technology control environment."
+
+
+## Cause
+
+An organization that has a centralized Information Services department usually requires rigorous guidelines for developing a new system or application. Simultaneously, with the rise of powerful desktop applications that give savvy end-users the ability to author sophisticated tools on their own, a business group often finds it more expedient to create the application themselves.
+
+
+### Pressure to analyze information in new ways
+
+Any organization faces a multitude of pressures to change and respond to new government regulations, customer demands and action by competitors. In order to respond to these changes, organizations need to be able to understand all aspects of their business and often ask questions of itself that have never been asked before.
+
+Ongoing pressure for change creates an ongoing pressure to analyze data in new ways and get information quickly into the hands of people who need it. Only through creative and flexible reporting are businesses able to spot new trends and identify new opportunities rapidly enough to take full advantage of them.
+
+The type of data analysis that most frequently necessitates the development or purchase of Shadow Systems usually comes from the needs of the user. Since the centralized information systems department usually reports to the organization’s CFO or COO, the systems that they develop are designed for their needs. The needs of departmental managers are often quite different, requiring more detailed analysis that incorporate variables not contained in the solution designed by the central information systems department.
+
+
+### Increased power of personal computer hardware and software
+
+The greatly increased power of personal computer hardware and software analysis tools has meant that individual users now have all of the computing power they need right in front of them. Large databases containing all of an organization's customer, supplier, or accounting information; the kind that could once only be stored on a central corporate mainframe, can now be contained easily on a single laptop.
+
+
+### Rigorous controls and the breadth of required skills leads to unresponsive information technology or IT departments
+
+Quite properly, when a reporting system is put together by IT professionals, they need to consider all aspects of how the system will be used. In addition to just putting the information together they need to consider the following:
+
+* How can it be ensured that the data produced is accurate?
+* Who is authorized to see this information? How can security be enforced?
+* How is the system to be backed up/replicated in case of failure?
+* User documentation must be written so that the system can be given to new users.
+* Technical documentation must be produced so that support staff can maintain it.
+* The load that any new tool places on existing systems needs to be managed and minimized.
+
+The various skills that are required to achieve all of this means that inevitably a number of different people will all be involved in the task of creating the new report. This increases the amount of time and effort it takes to put a rigorously engineered solution in place. Shadow Systems typically ignore this kind of rigor, making them much faster to implement, but less reliable and more difficult to maintain.
+
+
+## Problems
+
+When Shadow Data Systems are created by end users whose main area of expertise is something other than software engineering, they are subject to the following problems:
+
+
+### Poorly designed
+
+Shadow Data Systems often suffer from poor design. Errors may be hard to find, modifications may be difficult, and long-term support may be troublesome.
+
+
+### Not scalable
+
+Typically, Shadow Data Systems are only used by one or two people. Unless they are developed by experienced programmers, it may be difficult to scale them up to support tens or hundreds of users.
+
+
+### Poorly documented
+
+Shadow Data Systems are often lack adequate documentation. Knowledge about the system is passed by word-of-mouth and can be confined to a very small number of people. This knowledge is then lost completely if one or two staff members leave.
+
+
+### Untested
+
+Around two thirds of the effort involved in professional software development is expended in testing. Shadow Data Systems undergo much more cursory testing and may have latent errors that only become apparent after a long period of production use.
+
+
+### May allow unauthorized access to sensitive information
+
+Shadow Data Systems hold substantial chunks of company data and can include confidential information about customers, suppliers or staff. The access control processes for these systems are often much more lax than for a centralized company database and may not even exist at all. Physically locating sensitive data on desktop or laptop computers can leave an organization very exposed if the computer is stolen.
+
+
+### Easy to introduce errors
+
+Data in local databases and spreadsheets can very easily be modified, either intentionally or otherwise. Once changed it can be hard to track what changes have been made and what the original data looked like. Where the system manipulates the data it can introduce more subtle errors that remain completely undetected for long periods.
+
+
+### Back up
+
+Shadow systems existing on a single computer are often not regularly backed up. It is best to have these systems on a computer that is regularly backed up or on a server.
+
+
+### Several versions of the truth
+
+There may be many different shadow systems within an organization reporting against the same data. Each one may add filters and manipulate the data in different ways. This can lead to apparent inconsistencies in their output. Where two shadow systems disagree, either or both of them may be wrong.
+
+
+## Advantages
+
+When Shadow Data Systems are created by an experienced programmer or software engineer with significant input from departmental management, the resulting solution frequently exceeds the capability of those created by the organizations centralized information systems department. The experience of the programmer / software engineer easily removes most of the previously stated problems. And, when combined with input of departmental management, the resulting product actually meets the needs of the end user.
+

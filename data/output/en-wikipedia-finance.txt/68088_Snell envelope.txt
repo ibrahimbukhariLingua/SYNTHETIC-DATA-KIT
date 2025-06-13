@@ -1,0 +1,28 @@
+Snell envelope
+
+
+# Snell envelope
+
+
+
+The **Snell envelope**, used in stochastics and mathematical finance, is the smallest supermartingale dominating a stochastic process. The Snell envelope is named after James Laurie Snell.
+
+
+## Definition
+
+Given a filtered probability space {\displaystyle (\Omega ,{\mathcal {F}},({\mathcal {F}}\_{t})\_{t\in [0,T]},\mathbb {P} )} and an absolutely continuous probability measure {\displaystyle \mathbb {Q} \ll \mathbb {P} } then an adapted process {\displaystyle U=(U\_{t})\_{t\in [0,T]}} is the Snell envelope with respect to {\displaystyle \mathbb {Q} } of the process {\displaystyle X=(X\_{t})\_{t\in [0,T]}} if
+
+1. {\displaystyle U} is a {\displaystyle \mathbb {Q} }-supermartingale
+2. {\displaystyle U} dominates {\displaystyle X}, i.e. {\displaystyle U\_{t}\geq X\_{t}} {\displaystyle \mathbb {Q} }-almost surely for all times {\displaystyle t\in [0,T]}
+3. If {\displaystyle V=(V\_{t})\_{t\in [0,T]}} is a {\displaystyle \mathbb {Q} }-supermartingale which dominates {\displaystyle X}, then {\displaystyle V} dominates {\displaystyle U}.
+
+## Construction
+
+Given a (discrete) filtered probability space {\displaystyle (\Omega ,{\mathcal {F}},({\mathcal {F}}\_{n})\_{n=0}^{N},\mathbb {P} )} and an absolutely continuous probability measure {\displaystyle \mathbb {Q} \ll \mathbb {P} } then the Snell envelope {\displaystyle (U\_{n})\_{n=0}^{N}} with respect to {\displaystyle \mathbb {Q} } of the process {\displaystyle (X\_{n})\_{n=0}^{N}} is given by the recursive scheme
+
+where {\displaystyle \lor } is the join (in this case equal to the maximum of the two random variables).
+
+
+## Application
+
+* If {\displaystyle X} is a discounted American option payoff with Snell envelope {\displaystyle U} then {\displaystyle U\_{t}} is the minimal capital requirement to hedge {\displaystyle X} from time {\displaystyle t} to the expiration date.

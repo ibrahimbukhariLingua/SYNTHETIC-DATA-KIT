@@ -1,0 +1,40 @@
+Tracking signal
+
+
+# Tracking signal
+
+
+
+In statistics and management science, a **tracking signal** monitors any forecasts that have been made in comparison with actuals, and warns when there are unexpected departures of the outcomes from the forecasts. Forecasts can relate to sales, inventory, or anything pertaining to an organization's future demand.
+
+The tracking signal is a simple indicator that forecast bias is present in the forecast model. It is most often used when the validity of the forecasting model might be in doubt.
+
+
+## Definition
+
+One form of tracking signal is the ratio of the cumulative sum of forecast errors (the deviations between the estimated forecasts and the actual values) to the mean absolute deviation. The formula for this tracking signal is:
+
+{\displaystyle {\text{Tracking signal}}={\frac {\Sigma (a\_{t}-f\_{t})}{\text{MAD}}}}
+
+where *aₜ* is the actual value of the quantity being forecast, and *fₜ* is the forecast. MAD is the mean absolute deviation. The formula for the MAD is:
+
+{\displaystyle {\text{MAD}}={\frac {\Sigma \left|a\_{t}-f\_{t}\right|}{n}}}
+
+where *n* is the number of periods. Plugging this in, the entire formula for tracking signal is:
+
+{\displaystyle {\text{Tracking signal}}={\frac {\Sigma (a\_{t}-f\_{t})}{{\frac {1}{n}}\Sigma \left|a\_{t}-f\_{t}\right|}}}
+
+Another proposed tracking signal was developed by Trigg (1964). In this model, eₜ is the observed error in period *t* and |*eₜ*| is the absolute value of the observed error. The smoothed values of the error and the absolute error are given by:
+
+{\displaystyle E\_{t}=\beta e\_{t}+(1-\beta )E\_{t-1}}
+
+{\displaystyle M\_{t}=\beta |e\_{t}|+(1-\beta )M\_{t-1}}
+
+Then the tracking signal is the ratio:
+
+{\displaystyle T\_{t}=\left|{\frac {E\_{t}}{M\_{t}}}\right|}
+
+If no significant bias is present in the forecast, then the smoothed error *Eₜ* should be small compared to the smoothed absolute error *Mₜ*. Therefore, a large tracking signal value indicates a bias in the forecast. For example, with a *β* of 0.1, a value of *Tₜ* greater than .51 indicates nonrandom errors. The tracking signal also can be used directly as a variable smoothing constant.
+
+There have also been proposed methods for adjusting the smoothing constants used in forecasting methods based on some measure of prior performance of the forecasting model. One such approach is suggested by Trigg and Leach (1967), which requires the calculation of the tracking signal. The tracking signal is then used as the value of the smoothing constant for the next forecast. The idea is that when the tracking signal is large, it suggests that the time series has undergone a shift; a larger value of the smoothing constant should be more responsive to a sudden shift in the underlying signal.
+

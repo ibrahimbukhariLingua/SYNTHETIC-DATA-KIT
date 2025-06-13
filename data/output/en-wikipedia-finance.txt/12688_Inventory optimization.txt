@@ -1,0 +1,56 @@
+Inventory optimization
+
+
+# Inventory optimization
+
+
+
+**Inventory optimization** refers to the techniques used by businesses to improve their oversight, control and management of inventory size and location across their extended supply network. It has been observed within operations research that "every company has the challenge of matching its supply volume to customer demand. How well the company manages this challenge has a major impact on its profitability."
+
+
+## Inventory management challenges
+
+In contrast to the traditional "binge and purge" inventory cycle in which companies over-purchase product to prepare for possible demand spikes and then discard extra product, inventory optimization seeks to more efficiently match supply to expected customer demand. American Productivity and Quality Center (APQC) Open Standards data shows that the median company carries an inventory of 10.6 percent of annual revenues as of 2011ᵘᵖᵈᵃᵗᵉ. The typical cost of carrying inventory is at least 10.0 percent of the inventory value. So the median company spends over 1 percent of revenues carrying inventory, although for some companies the number is much higher.
+
+Also, the amount of inventory held has a major impact on available cash. With working capital at a premium, it is important for companies to keep inventory levels as low as possible and to sell inventory as quickly as possible. When Wall Street analysts look at a company's performance to make earnings forecasts and buy and sell recommendations, inventory is always one of the top factors they consider. Studies have shown a 77% correlation between overall manufacturing profitability and inventory turns.
+
+The challenge of managing inventory is increased by the "Long Tail" phenomenon which is causing a greater percentage of total sales for many companies to come from a large number of products, each with low sales frequency. Shorter and more frequent product cycles which are required to meet the needs of more sophisticated markets create the need to manage supply chains containing more products and parts. Hence, businesses need to understand how this affects their inventory and how they can seize the opportunities presented by such products.
+
+At the same time, planning frequencies and time-buckets are moving from monthly/weekly to daily and the number of managed stocking locations from dozens in distribution centers to hundreds or thousands at the points of sale (POS). This leads to a large number of time series with a high level of demand volatility. This explains one of the main challenges in managing modern supply chains, the so-called "bullwhip effect", which often causes small changes in actual demand to cause a much larger change in perceived demand, which in turn can mislead companies to make bigger changes in inventory than are really necessary.
+
+
+## Non-optimized approach
+
+Without inventory optimization, companies commonly set inventory targets using rules of thumb or single stage calculations. Rules of thumb normally involve setting a number of days of supply as a coverage target. Single stage calculations look at a single item in a single location and calculate the amount of inventory required to meet demand.
+
+
+## Deterministic vs. stochastic
+
+Inventory optimization models can be either deterministic—with every set of variable states uniquely determined by the parameters in the model – or stochastic—with variable states described by probability distributions. Stochastic optimization takes supply uncertainty into account that, for example, 6 percent of orders from an overseas supplier are 1–3 days late, 1 percent are 4–6 days late, 5 percent are 7–14 days late and 8 percent are more than 14 days late.
+
+Stochastic optimization also accounts for demand volatility which is a top priority among the challenges faced by supply chain professionals. For example, management predicts a 65 percent probability of selling 500 units, a 20 percent probability of selling 400 units and a 15 percent probability of selling 600 units. High service levels can be achieved with cost overruns, excessive inventory and firefighting, but higher profitability can be achieved by understanding the sources of volatility and planning appropriately. The result is a better understanding of the inventory requirements than with a deterministic approach.
+
+
+## Single vs. multi-echelon
+
+Single-echelon location problems are single-type problems such that either the material flow coming out or the material flow entering the facilities to be located is negligible. In multiple-echelon problems, both inbound and outbound commodities are relevant. This is the case, for example, when distribution centers (DCs) have to be located taking into account both the transportation cost from plants to DCs and the transportation cost from DCs to customers. In multiple-echelon problems, constraints aiming at balancing inbound and outbound flows have to be considered.
+
+A sequential single-echelon approach forecasts demand and determines required inventory for each echelon separately. Multi-echelon inventory optimization determines the correct levels of inventory across the network based on demand variability at the various nodes and the performance (lead time, delays, service level) at the higher echelons.
+
+Multi-echelon inventory optimization looks at inventory levels holistically across the supply chain while taking into account the impact of inventories at any given level or echelon on other echelons. For example, if the product sold in a retailer's outlet is received from one of its distribution centers, the distribution center represents one echelon of the supply chain and the outlet another one. It should be clear that the amount of stock needed at the outlets is a function of the service received from the distribution center. The better the service that is provided upstream, the smaller the protection that is needed downstream. The goal of multi-echelon inventory optimization is to continually update and optimize safety stock levels across all of these echelons.
+
+Multi-echelon inventory optimization represents a "state of the art" approach to optimize inventory across the end to end supply chain. Modeling multiple stages allows other types of inventory, including cycle stock and prebuild along with safety stock due to time phased demands, to be more accurately predicted. As part of inventory optimization, supplier performance, customer service and internal asset metrics should be continuously monitored to enable continuous improvement.
+
+
+## Inventory optimization engines
+
+Scheuffele and Kulshreshtha refer to inventory optimization engines or IO engines, whose function is to analyze inventory data using a holistic approach across the supply network. They note growing interest in their use and application in specific inventory fields, such as plant operations, assembly lines, and within transportation.⁴–⁷
+
+
+## Benefits
+
+Companies have achieved financial benefits by employing inventory optimization. A study by IDC Manufacturing Insights found that many organizations that utilized inventory optimization reduced inventory levels by up to 25 percent in one year and enjoyed a discounted cash flow above 50 percent in less than two years. For example:
+
+* Electrocomponents, a United Kingdom-based world's largest distributor of electronics and maintenance products, increased profits by £36 million by using inventory optimization to achieve higher service levels while reducing inventory.
+* Castrol has used inventory optimization to reduce finished goods inventory by an average of 35 percent in two years while increasing service levels (defined as line fill rates) by 9 percent.
+* Smiths Medical, a division of Smiths Group, used inventory optimization to better address demand volatility and supply variability, thus reducing the risk of both understocks and overstocks while smoothing out manufacturing cycles.

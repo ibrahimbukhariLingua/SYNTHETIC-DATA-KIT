@@ -1,0 +1,123 @@
+Uplift modelling
+
+
+# Uplift modelling
+
+
+
+**Uplift modelling**, also known as **incremental modelling**, **true lift modelling**, or **net modelling** is a predictive modelling technique that directly models the incremental impact of a treatment (such as a direct marketing action) on an individual's behaviour.
+
+Uplift modelling has applications in customer relationship management for up-sell, cross-sell and retention modelling. It has also been applied to political election and personalised medicine. Unlike the related Differential Prediction concept in psychology, Uplift Modelling assumes an active agent.
+
+
+## Introduction
+
+Uplift modelling uses a randomised scientific control not only to measure the effectiveness of an action but also to build a predictive model that predicts the incremental response to the action. The response could be a binary variable (for example, a website visit) or a continuous variable (for example, customer revenue). Uplift modelling is a data mining technique that has been applied predominantly in the financial services, telecommunications and retail direct marketing industries to up-sell, cross-sell, churn and retention activities.
+
+
+## Measuring uplift
+
+The uplift of a marketing campaign is usually defined as the difference in response rate between a *treated* group and a randomized *control* group. This allows a marketing team to isolate the effect of a marketing action and measure the effectiveness or otherwise of that individual marketing action. Honest marketing teams will only take credit for the incremental effect of their campaign.
+
+However, many marketers define lift (rather than uplift) as the difference in response rate between treatment and control, so uplift modeling can be defined as improving (upping) lift through predictive modeling.
+
+The table below shows the details of a campaign showing the number of responses and calculated response rate for a hypothetical marketing campaign. This campaign would be defined as having a response rate uplift of 5%. It has created 50,000 incremental responses (100,000 - 50,000).
+
+| Group | Number of Customers | Responses | Response Rate |
+| --- | --- | --- | --- |
+| Treated | 1,000,000 | 100,000 | 10% |
+| Control | 1,000,000 | 50,000 | 5% |
+
+
+## Traditional response modelling
+
+Traditional response modelling typically takes a group of *treated* customers and attempts to build a predictive model that separates the likely responders from the non-responders through the use of one of a number of predictive modelling techniques. Typically this would use decision trees or regression analysis.
+
+This model would only use the treated customers to build the model.
+
+In contrast uplift modeling uses both the treated and control customers to build a predictive model that focuses on the incremental response. To understand this type of model it is proposed that there is a fundamental segmentation that separates customers into the following groups (their names were suggested by N. Radcliffe and explained in )
+
+* *The Persuadables* : customers who only respond to the marketing action because they were targeted
+* *The Sure Things* : customers who would have responded whether they were targeted or not
+* *The Lost Causes* : customers who will not respond irrespective of whether or not they are targeted
+* *The Do Not Disturbs or Sleeping Dogs* : customers who are less likely to respond because they were targeted
+
+The only segment that provides true incremental responses is the *Persuadables*.
+
+Uplift modelling provides a scoring technique that can separate customers into the groups described above.
+
+Traditional response modelling often targets the *Sure Things* being unable to distinguish them from the *Persuadables*.
+
+
+## Return on investment
+
+Because uplift modelling focuses on incremental responses only, it provides very strong return on investment cases when applied to traditional demand generation and retention activities. For example, by only targeting the persuadable customers in an outbound marketing campaign, the contact costs and hence the return per unit spend can be dramatically improved.
+
+
+## Removal of negative effects
+
+One of the most effective uses of uplift modelling is in the removal of negative effects from retention campaigns. Both in the telecommunications and financial services industries often retention campaigns can trigger customers to cancel a contract or policy. Uplift modelling allows these customers, the Do Not Disturbs, to be removed from the campaign.
+
+
+## Application to A/B and multivariate testing
+
+It is rarely the case that there is a single treatment and control group. Often the "treatment" can be a variety of simple variations of a message or a multi-stage contact strategy that is classed as a single treatment. In the case of A/B or multivariate testing, uplift modelling can help in understanding whether the variations in tests provide any significant uplift compared to other targeting criteria such as behavioural or demographic indicators.
+
+
+## History of uplift modelling
+
+The first appearance of *true response modelling* appears to be in the work of Radcliffe and Surry.
+
+Victor Lo also published on this topic in *The True Lift Model* (2002), and later Radcliffe again with *Using Control Groups to Target on Predicted Lift: Building and Assessing Uplift Models* (2007).
+
+Radcliffe also provides a very useful frequently asked questions (FAQ) section on his web site, Scientific Marketer. Lo (2008) provides a more general framework, from program design to predictive modeling to optimization, along with future research areas.
+
+Independently uplift modelling has been studied by Piotr Rzepakowski. Together with Szymon Jaroszewicz he adapted information theory to build multi-class uplift decision trees and published the paper in 2010. And later in 2011 they extended the algorithm to multiple treatment case.
+
+Similar approaches have been explored in personalised medicine. Szymon Jaroszewicz and Piotr Rzepakowski (2014) designed uplift methodology for survival analysis and applied it to randomized controlled trial analysis. Yong (2015) combined a mathematical optimization algorithm via dynamic programming with machine learning methods to optimally stratify patients.
+
+Uplift modelling is a special case of the older psychology concept of Differential Prediction. In contrast to differential prediction, uplift modelling assumes an active agent, and uses the uplift measure as an optimization metric.
+
+Uplift modeling has been recently extended and incorporated into diverse machine learning algorithms, like Inductive Logic Programming, Bayesian Network, Statistical relational learning, Support Vector Machines, Survival Analysis and Ensemble learning.
+
+Even though uplift modeling is widely applied in marketing practice (along with political elections), it has rarely appeared in marketing literature. Kane, Lo and Zheng (2014) published a thorough analysis of three data sets using multiple methods in a marketing journal and provided evidence that a newer approach (known as the Four Quadrant Method) worked quite well in practice. Lo and Pachamanova (2015) extended uplift modeling to prescriptive analytics for multiple treatment situations and proposed algorithms to solve large deterministic optimization problems and complex stochastic optimization problems where estimates are not exact.
+
+Recent research analyses the performance of various state-of-the-art uplift models in benchmark studies using large data amounts.
+
+A detailed description of uplift modeling, its history, the way uplift models are built, differences to classical model building as well as uplift-specific evaluation techniques, a comparison of various software solutions and an explanation of different economical scenarios can be found here.
+
+
+## Implementations
+
+
+### In Python
+
+* CausalML, implementation of algorithms related to causal inference and machine learning and aims to bridge the gap between theoretical work on methodology and practical applications
+* DoubleML, implements Chernozhukov et al.'s double/debased machine learning framework
+* EconML, estimating heterogeneous treatment effects from observational data via machine learning, built as a part of Microsoft Research's Automated Learning and Intelligence for Causation and Economics (ALICE) project
+* UpliftML, provides scalable unconstrained and constrained uplift modeling from experimental data
+* PyLift (was archived on GitHub on Nov 29, 2022)
+* scikit-uplift, provides fast sklearn-style models implementation, evaluation metrics and visualization tools
+
+### In R
+
+* DoubleML, implements Chernozhukov et al.'s double/debased machine learning framework
+* uplift package (was removed from CRAN on February 19, 2022)
+
+### Other languages
+
+* JMP by SAS
+* Portrait Uplift by Pitney Bowes
+* Uplift node for KNIME by Dymatrix
+* Uplift Modelling in Miró by Stochastic Solutions
+
+## Datasets
+
+* Hillstrom Email Marketing dataset
+* Criteo Uplift Prediction dataset
+* Lenta Uplift Modeling Dataset
+* X5 RetailHero Uplift Modeling Dataset
+* MegaFon Uplift Competition Dataset
+
+## Notes and references
+

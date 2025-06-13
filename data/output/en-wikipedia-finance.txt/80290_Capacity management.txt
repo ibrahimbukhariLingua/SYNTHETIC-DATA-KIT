@@ -1,0 +1,84 @@
+Capacity management
+
+
+# Capacity management
+
+
+
+| Business administration |
+| --- |
+| Management of a business |
+| Accounting * Management accounting * Financial accounting * Audit |
+| Business entity (list) * Corporate group * Corporation sole * Company * Conglomerate * Holding company * Cooperative * Corporation * Joint-stock company * Limited liability company * Partnership * Privately held company * Sole proprietorship * State-owned enterprise |
+| Corporate governance * Annual general meeting * Board of directors * Supervisory board * Advisory board * Audit committee |
+| Corporate law * Commercial law * Constitutional documents * Contract * Corporate crime * Corporate liability * Insolvency law * International trade law * Mergers and acquisitions |
+| Corporate title * Chairman * Chief business officer/Chief brand officer * Chief executive officer/Chief operating officer * Chief financial officer * Chief human resources officer * Chief information officer/Chief marketing officer * Chief product officer/Chief technology officer |
+| Economics * Commodity * Public economics * Labour economics * Development economics * International economics * Mixed economy * Planned economy * Econometrics * Environmental economics * Open economy * Market economy * Knowledge economy * Microeconomics * Macroeconomics * Economic development * Economic statistics |
+| Finance * Financial statement * Insurance * Factoring * Cash conversion cycle * Insider dealing * Capital budgeting * Commercial bank * Derivative * Financial statement analysis * Financial risk * Public finance * Corporate finance * Managerial finance * International finance * Liquidation * Stock market * Financial market * Tax * Financial institution * Capital management * Venture capital |
+| Types of management * Asset * Brand * Business intelligence * Business development * Capacity * Capability * Change + innovation * Commercial + Marketing * Communications * Configuration * Conflict * Content * Customer relationship * Distributed * Earned value * Electronic business * Enterprise resource planning + management information system * Financial * Human resource + development * Incident * Knowledge * Legal * Materials * Network + administrator * Office * Operations + services * Performance * Power * Process * Product life-cycle * Product * Project * Property * Quality * Records * Resource * Risk + crisis * Sales * Security * Service * Strategic * Supply chain * Systems + administrator * Talent * Technology |
+| Organization * Architecture * Behavior * Communication * Culture * Conflict * Development * Engineering * Hierarchy * Patterns * Space * Structure |
+| Trade * Business analysis * Business ethics * Business plan * Business judgment rule * Consumer behaviour * Business operations * International business * Business model * International trade + Trade route * Business process * Business statistics |
+| * Business and economics portal |
+| * v * t * e |
+
+**Capacity management's** goal is to ensure that information technology resources are sufficient to meet upcoming business requirements cost-effectively. One common interpretation of capacity management is described in the ITIL framework. ITIL version 3 views capacity management as comprising three sub-processes: business capacity management, service capacity management, and component capacity management.
+
+As the usage of IT services change and functionality evolves, the amount of central processing units (CPUs), memory and storage to a physical or virtual server etc. also changes. If there are spikes in, for example, processing power at a particular time of the day, it proposes analyzing what is happening at that time and making changes to maximize the existing IT infrastructure; for example, tuning the application, or moving a batch cycle to a quieter period. This capacity planning identifies any potential capacity related issues likely to arise, and justifies any necessary investment decisions - for example, the server requirements to accommodate future IT resource demand, or a data center consolidation.
+
+These activities are intended to optimize performance and efficiency, and to plan for and justify financial investments. Capacity management is concerned with:
+
+* Monitoring the performance and throughput or load on a server, server farm, or property
+* Performance analysis of measurement data, including analysis of the impact of new releases on capacity
+* Performance tuning of activities to ensure the most efficient use of existing infrastructure
+* Understanding the demands on the service and future plans for workload growth (or shrinkage)
+* Influences on demand for computing resources
+* Capacity planning of storage, computer hardware, software and connection infrastructure resources required over some future period of time.
+
+Capacity management interacts with the discipline of Performance Engineering, both during the requirements and design activities of building a system, and when using performance monitoring.
+
+
+## Factors affecting network performance
+
+Not all networks are the same. As data is broken into component parts (often known frames, packets, or segments) for transmission, several factors can affect their delivery.
+
+* Delay: It can take a long time for a packet to be delivered across intervening networks. In reliable protocols where a receiver acknowledges delivery of each chunk of data, it is possible to measure this as round-trip time.
+* Jitter: This is the variability of delay. Low jitter is desirable, as it ensures a steady stream of packets being delivered. If this varies above 200ms, buffers may get starved and not have data to process.
+* Reception Order: Some real-time protocols like voice and video require packets to arrive in the correct sequence order to be processed. If packets arrive out-of-order or out-of-sequence, they may have to be dropped because they cannot be inserted into the stream that has already been played.
+* Packet loss: In some cases, intermediate devices in a network will lose packets. This may be due to errors, to overloading of the intermediate network, or to the intentional discarding of traffic in order to enforce a particular service level.
+* Retransmission: When packets are lost in a reliable network, they are retransmitted. This incurs two delays: First, the delay from re-sending the data; and second, the delay resulting from waiting until the data is received in the correct order before forwarding it up the protocol stack.
+* Throughput: The amount of traffic a network can carry is measured as throughput, usually in terms such as kilobits per second. Throughput is analogous to the number of lanes on a highway, whereas latency is analogous to its speed limit.
+
+These factors, and others (such as the performance of the network signaling on the end nodes, compression, encryption, concurrency, and so on) all affect the effective performance of a network. In some cases, the network may not work at all; in others, it may be slow or unusable. And because applications run over these networks, application performance suffers. Various intelligent solutions are available to ensure that traffic over the network is effectively managed to optimize performance for all users. See Traffic Shaping
+
+
+## The performance management discipline
+
+Network performance management (NPM) consists of measuring, modeling, planning, and optimizing networks to ensure that they carry traffic with the speed, reliability, and capacity that is appropriate for the nature of the application and the cost constraints of the organization.
+Different applications warrant different blends of capacity, latency, and reliability. For example:
+
+* Streaming video or voice can be unreliable (brief moments of static) but needs to have very low latency so that lags don't occur
+* Bulk file transfer or e-mail must be reliable and have high capacity, but doesn't need to be instantaneous
+* Instant messaging doesn't consume much bandwidth, but should be fast and reliable
+
+## Network performance management tasks and classes of tools
+
+Network Performance management is a core component of the FCAPS ISO telecommunications framework (the 'P' stands for Performance in this acronym). It enables the network engineers to proactively prepare for degradations in their IT infrastructure and ultimately help the end-user experience.
+
+Network managers perform many tasks; these include performance measurement, forensic analysis, capacity planning, and load-testing or load generation. They also work closely with application developers and IT departments who rely on them to deliver underlying network services.
+
+* For *performance measurement*, operators typically measure the performance of their networks at different levels. They either use per-port metrics (how much traffic on port 80 flowed between a client and a server and how long did it take) or they rely on end-user metrics (how fast did the login page load for Bob.)
+ + Per-port metrics are collected using flow-based monitoring and protocols such as NetFlow (now standardized as IPFIX) or RMON.
+ + End-user metrics are collected through web logs, synthetic monitoring, or real user monitoring. An example is ART (application response time) which provides end to end statistics that measure Quality of Experience.
+* For *forensic analysis*, operators often rely on sniffers that break down the transactions by their protocols and can locate problems such as retransmissions or protocol negotiations.
+* For *capacity planning*, modeling tools such as Aria Networks, OPNET, PacketTrap, NetSim, NetFlow and sFlow Analyzer, or NetQoS that project the impact of new applications or increased usage are invaluable. According to Gartner, through 2018 more than 30% of enterprises will use capacity management tools for their critical IT infrastructures, up from less than 5% in 2014. These capacity management tools help infrastructure and *operations management* teams plan and optimize IT infrastructures and tools, and balance the use of external and *cloud computing* service providers.
+* For *load generation* that helps to understand the breaking point, operators may use software or appliances that generate scripted traffic. Some hosted service providers also offer pay-as-you-go traffic generation for sites that face the public Internet.
+
+### Next generation NPM tools
+
+Next-generation NPM tools are those that improve network management by automating the collection of network data, including capacity issues, and automatically interpreting it. Terry Slattery, editor at NoJitter.com, compares three such tools, VMWare's vRealize Network Insight, PathSolutions TotalView, and Kemp Flowmon, in the article *The Future of Network Performance Management*, June 10, 2021.
+
+
+## The future of NPM
+
+The future of network management is a radically expanding area of development, according to Terry Slattery on June 10, 2021: "We're starting to see more analytics of network data at levels that weren’t possible 10-15 years ago, due to limitations that no longer exist in computing, memory, storage, and algorithms. New approaches to network management promise to help us detect and resolve network problems... It’s certainly an interesting and evolving field."
+

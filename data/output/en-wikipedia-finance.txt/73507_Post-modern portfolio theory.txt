@@ -1,0 +1,127 @@
+Post-modern portfolio theory
+
+
+# Post-modern portfolio theory
+
+
+
+Simply stated, **post-modern portfolio theory** (**PMPT**) is an extension of the traditional modern portfolio theory (MPT) of Markowitz and Sharpe. Both theories provide analytical methods for rational investors to use diversification to optimize their investment portfolios. The essential difference between PMPT and MPT is that PMPT emphasizes the return that *must* be earned on an investment in order to meet future, specified obligations, MPT is concerned only with the absolute return vis-a-vis the risk-free rate.
+
+
+## History
+
+The earliest published literature under the PMPT rubric was published by the principals of software developer Investment Technologies, LLC, Brian M. Rom and Kathleen W. Ferguson, in the Winter, 1993 and Fall, 1994 editions of *The Journal of Investing.*
+
+However, while the software tools resulting from the application of PMPT were innovations for practitioners, many of the ideas and concepts embodied in these applications had long and distinguished provenance in academic and research institutions worldwide.
+
+Empirical investigations began in 1981 at the Pension Research Institute (PRI) at San Francisco State University. Dr. Hal Forsey and Dr. Frank Sortino were trying to apply Peter Fishburn's theory published in 1977 to Pension Fund Management. The result was an asset allocation model that PRI licensed Brian Rom to market in 1988. Mr. Rom coined the term PMPT and began using it to market portfolio optimization and performance measurement software developed by his company. These systems were built on the PRI downside- risk algorithms. Sortino and Steven Satchell at Cambridge University co-authored the first book on PMPT. This was intended as a graduate seminar text in portfolio management. A more recent book by Sortino was written for practitioners. The first publication in a major journal was co-authored by Sortino and Dr. Robert van der Meer, then at Shell Oil Netherlands. These concepts were popularized by articles and conference presentations by Sortino, Rom and others, including members of the now-defunct Salomon Bros. **Skunk Works.**
+
+Sortino claims the major contributors to the underlying theory are:
+
+* Peter Fishburn at the University of Pennsylvania who developed the mathematical equations for calculating downside risk and provided proofs that the Markowitz model was a subset of a richer framework.
+* Atchison & Brown at Cambridge University who developed the three parameter lognormal distribution which was a more robust model of the pattern of returns than the bell shaped distribution of MPT.
+* Bradley Efron, Stanford University, who developed the bootstrap procedure for better describing the nature of uncertainty in financial markets.
+* William Sharpe at Stanford University who developed returns-based style analysis that allowed more accurate estimates of risk and return.
+* Daniel Kahneman at Princeton & Amos Tversky at Stanford who pioneered the field of behavioral finance which contests many of the findings of MPT.
+
+## Discussion
+
+Harry Markowitz laid the foundations of MPT, the greatest contribution of which isᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ the establishment of a formal risk/return framework for investment decision-making; see Markowitz model.
+By defining investment risk in quantitative terms, Markowitz gave investors a mathematical approach to asset-selection and portfolio management.
+But there are important limitations to the original MPT formulation.
+
+Two major limitations of MPT are its assumptions that:
+
+1. the variance of portfolio returns is the correct measure of investment risk, and
+2. the investment returns of all securities and portfolios can be adequately represented by a joint elliptical distribution, such as the normal distribution.
+
+Stated another way, MPT is limited by measures of risk and return that do not always represent the realities of the investment markets.
+
+The assumption of a normal distribution is a major practical limitation, because it is symmetrical. Using the variance (or its square root, the standard deviation) implies that uncertainty about better-than-expected returns is equally averred as uncertainty about returns that are worse than expected. Furthermore, using the normal distribution to model the pattern of investment returns makes investment results with more upside than downside returns appear more risky than they really are. The converse distortion applies to distributions with a predominance of downside returns. The result is that using traditional MPT techniques for measuring investment portfolio construction and evaluation frequently does not accurately model investment reality.
+
+It has long been recognized that investors typically do not view as risky those returns *above* the minimum they must earn in order to achieve their investment objectives. They believe that risk has to do with the bad outcomes (i.e., returns below a required target), not the good outcomes (i.e., returns in excess of the target) and that losses weigh more heavily than gains. This view has been noted by researchers in finance, economics and psychology, including Sharpe (1964). "Under certain conditions the MVA can be shown to lead to unsatisfactory predictions of (investor) behavior. Markowitz suggests that a model based on the semivariance would be preferable; in light of the formidable computational problems, however, he bases his (MV) analysis on the mean and the standard deviation."
+
+Recent advances in portfolio and financial theory, coupled with increased computing power, have also contributed to overcoming these limitations.
+
+
+## Applications
+
+In 1987, the Pension Research Institute at San Francisco State University developed the practical mathematical algorithms of PMPT that are in use today. These methods provide a framework that recognizes investors' preferences for upside over downside volatility. At the same time, a more robust model for the pattern of investment returns, the three-parameter lognormal distribution, was introduced.
+
+
+### Downside risk
+
+Downside risk (DR) is measured by target semi-deviation (the square root of target semivariance) and is termed downside deviation. It is expressed in percentages and therefore allows for rankings in the same way as standard deviation.
+
+An intuitive way to view downside risk is the annualized standard deviation of returns below the target. Another is the square root of the probability-weighted squared below-target returns. The squaring of the below-target returns has the effect of penalizing failures quadratically. This is consistent with observations made on the behavior of individual decision-making under
+
+where
+
+*d* = downside deviation (commonly known in the financial community as 'downside risk'). Note: By extension, *d*² = downside variance.
+
+*t* = the annual target return, originally termed the minimum acceptable return, or MAR.
+
+*r* = the random variable representing the return for the distribution of annual returns *f*(*r*),
+
+*f*(*r*) = the distribution for the annual returns, e.g. the three-parameter lognormal distribution
+
+For the reasons provided below, this *continuous* formula is preferred over a simpler *discrete* version that determines the standard deviation of below-target periodic returns taken from the return series.
+
+1. The continuous form permits all subsequent calculations to be made using annual returns which is the natural way for investors to specify their investment goals. The discrete form requires monthly returns for there to be sufficient data points to make a meaningful calculation, which in turn requires converting the annual target into a monthly target. This significantly affects the amount of risk that is identified. For example, a goal of earning 1% in every month of one year results in a greater risk than the seemingly equivalent goal of earning 12% in one year.
+
+2. A second reason for strongly preferring the continuous form to the discrete form has been proposed by Sortino & Forsey (1996):
+
+> "Before we make an investment, we don't know what the outcome will be... After the investment is made, and we want to measure its performance, all we know is what the outcome was, not what it could have been. To cope with this uncertainty, we assume that a reasonable estimate of the range of possible returns, as well as the probabilities associated with estimation of those returns...In statistical terms, the shape of [this] uncertainty is called a probability distribution. In other words, looking at just the discrete monthly or annual values does not tell the whole story."
+
+Using the observed points to create a distribution is a staple of conventional performance measurement. For example, monthly returns are used to calculate a fund's mean and standard deviation. Using these values and the properties of the normal distribution, we can make statements such as the likelihood of losing money (even though no negative returns may actually have been observed), or the range within which two-thirds of all returns lies (even though the specific returns identifying this range have not necessarily occurred). Our ability to make these statements comes from the process of assuming the continuous form of the normal distribution and certain of its well-known properties.
+
+In PMPT an analogous process is followed:
+
+1. Observe the monthly returns,
+2. Fit a distribution that permits asymmetry to the observations,
+3. Bootrap these returns to a large number of pseudo-annualized returns
+4. Use this large number of returns to empirically generate the various PMPT statistics.
+
+### Sortino Ratio
+
+The Sortino ratio, developed in 1993 by Rom's company, Investment Technologies, LLC, was the first new element in the PMPT rubric. It is defined as:
+
+where
+
+*r* = the annualized rate of return,
+
+*t* = the target return,
+
+*d* = downside risk.
+
+The following table shows that this ratio is demonstrably superior to the traditional Sharpe ratio as a means for ranking investment results. The table shows risk-adjusted ratios for several major indexes using both Sortino and Sharpe ratios. The data cover the five years 1992-1996 and are based on monthly total returns. The Sortino ratio is calculated against a 9.0% target.
+
+| Index | Sortino ratio | Sharpe ratio |
+| --- | --- | --- |
+| 90-day T-bill | -1.00 | 0.00 |
+| Lehman Aggregate | -0.29 | 0.63 |
+| MSCI EAFE | -0.05 | 0.30 |
+| Russell 2000 | 0.55 | 0.93 |
+| S&P 500 | 0.84 | 1.25 |
+
+As an example of the different conclusions that can be drawn using these two ratios, notice how the Lehman Aggregate and MSCI EAFE compare - the Lehman ranks higher using the Sharpe ratio whereas EAFE ranks higher using the Sortino ratio. In many cases, manager or index rankings will be different, depending on the risk-adjusted measure used. These patterns will change again for different values of t. For example, when t is close to the risk-free rate, the Sortino Ratio for T-Bill's will be higher than that for the S&P 500, while the Sharpe ratio remains unchanged.
+
+In March 2008, researchers at the Queensland Investment Corporation and Queensland University of Technology showed that for skewed return distributions, the Sortino ratio is superior to the Sharpe ratio as a measure of portfolio risk.
+
+
+### Volatility skewness
+
+Volatility skewness is the second portfolio-analysis statistic introduced by Rom and Ferguson under the PMPT rubric. It measures the ratio of a distribution's percentage of total variance from returns above the mean, to the percentage of the distribution's total variance from returns below the mean. Thus, if a distribution is symmetrical ( as in the normal case, as is assumed under MPT), it has a volatility skewness of 1.00. Values greater than 1.00 indicate positive skewness; values less than 1.00 indicate negative skewness. While closely correlated with the traditional statistical measure of skewness (viz., the third moment of a distribution), the authors of PMPT argue that their volatility skewness measure has the advantage of being intuitively more understandable to non-statisticians who are the primary practical users of these tools.
+
+The importance of skewness lies in the fact that the more non-normal (i.e., skewed) a return series is, the more its true risk will be distorted by traditional MPT measures such as the Sharpe ratio. Thus, with the recent advent of hedging and derivative strategies, which are asymmetrical by design, MPT measures are essentially useless, while PMPT is able to capture significantly more of the true information contained in the returns under consideration. Many of the common market indices and the returns of stock and bond mutual funds cannot themselves always be assumed to be accurately represented by the normal distribution.
+
+| Index | Upside volatility (%) | Downside volatility (%) | Volatility skewness |
+| --- | --- | --- | --- |
+| Lehman Aggregate | 32.35 | 67.65 | 0.48 |
+| Russell 2000 | 37.19 | 62.81 | 0.59 |
+| S&P 500 | 38.63 | 61.37 | 0.63 |
+| 90-day T-Bill | 48.26 | 51.74 | 0.93 |
+| MSCI EAFE | 54.67 | 45.33 | 1.21 |
+
+Data: Monthly returns, January, 1991 through December, 1996.
+

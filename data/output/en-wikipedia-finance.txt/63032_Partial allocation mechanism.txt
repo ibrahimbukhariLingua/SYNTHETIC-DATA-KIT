@@ -1,0 +1,57 @@
+Partial allocation mechanism
+
+
+# Partial allocation mechanism
+
+
+
+The **Partial Allocation Mechanism** **(PAM)** is a mechanism for truthful resource allocation. It is based on the *max-product allocation* - the allocation maximizing the product of agents' utilities (also known as the Nash-optimal allocation or the Proportionally-Fair solution; in many cases it is equivalent to the competitive equilibrium from equal incomes). It guarantees to each agent at least 0.368 of his/her utility in the max-product allocation. It was designed by Cole, Gkatzelis and Goel.
+
+
+## Setting
+
+There are *m* resources that are assumed to be *homogeneous* and *divisible*.
+
+There are *n* agents, each of whom has a personal function that attributes a numeric value to each "bundle" (combination of resources). The valuations are assumed to be homogeneous functions.
+
+The goal is to decide what "bundle" to give to each agent, where a bundle may contain a fractional amount of each resource.
+
+Crucially, some resources may have to be discarded, i.e., free disposal is assumed.
+
+Monetary payments are not allowed.
+
+
+## Algorithm
+
+PAM works in the following way.
+
+* Calculate the max-product allocation; denote it by **z**.
+* For each agent *i*:
+ + Calculate the max-product allocation when *i* is not present*.*
+ + Let *fᵢ* = (the product of the other agents in **z**) / (the max-product of the other agents when *i* is not present).
+ + Give to agent *i* a fraction *fᵢ* of each resource he gets in **z**.
+
+## Properties
+
+PAM has the following properties.
+
+* It is a truthful mechanism - each agent's utility is maximized by revealing his/her true valuations.
+* For each agent *i*, the utility of *i* is at least 1/*e* ≈ 0.368 of his/her utility in the max-product allocation.
+* When the agents have additive linear valuations, the allocation is envy-free.
+
+## PA vs VCG
+
+The PA mechanism, which does not use payments, is analogous to the VCG mechanism, which uses monetary payments. VCG starts by selecting the *max-sum* allocation, and then for each agent *i* it calculates the max-sum allocation when *i* is not present, and pays *i* the *difference* (max-sum when *i* is present)-(max-sum when *i* is not present). Since the agents are quasilinear, the utility of *i* is reduced by an *additive* factor.
+
+In contrast, PA does not use monetary payments, and the agents' utilities are reduced by a *multiplicative* factor, by taking away some of their resources.
+
+
+## Optimality
+
+It is not known whether the fraction of 0.368 is optimal. However, there is provably no truthful mechanism that can guarantee to each agent more than 0.5 of the max-product utility.
+
+
+## Extensions
+
+The PAM has been used as a subroutine in a truthful cardinal mechanism for one-sided matching.
+

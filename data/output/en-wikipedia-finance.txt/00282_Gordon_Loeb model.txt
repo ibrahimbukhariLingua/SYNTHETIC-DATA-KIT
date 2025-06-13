@@ -1,0 +1,35 @@
+Gordon–Loeb model
+
+
+# Gordon–Loeb model
+
+
+
+The **Gordon–Loeb model** is an economic model that analyzes the optimal level of investment in information security.
+
+The benefits of investing in cybersecurity stem from reducing the costs associated with cyber breaches. The Gordon-Loeb model provides a framework for determining how much to invest in cybersecurity, using a cost-benefit approach.
+
+The model includes the following key components:
+
+* Organizational data vulnerable to cyber-attacks, with vulnerability denoted by v (0 ≤ *v* ≤ 1), representing the probability of a breach occurring under current conditions.
+
+* The potential loss from a breach, represented by L, which can be expressed in monetary terms. The expected loss is calculated as vL before additional cybersecurity investments.
+
+* Investment in cybersecurity, denoted as z, reduces v based on the effectiveness of the security measures, known as the security breach probability function.
+
+Gordon and Loeb demonstrated that the optimal level of security investment, z\*, does not exceed 37% of the expected loss from a breach. Specifically, *z\** (*v*) ≤ (1/*e*) *vL*.
+
+
+## Overview
+
+> **Example**:
+> Consider a data value of €1,000,000, with an attack probability of 15% and an 80% chance of a successful breach. The potential loss is €1,000,000 × 0.15 × 0.8 = €120,000. Based on the Gordon-Loeb model, the company’s security investment should not exceed €120,000 × 0.37 = €44,000.
+
+The model was first introduced by Lawrence A. Gordon and Martin P. Loeb in a 2002 paper published in *ACM Transactions on Information and System Security*, titled "The Economics of Information Security Investment". It was reprinted in the 2004 book *Economics of Information Security*. Both authors are professors at the University of Maryland's Robert H. Smith School of Business.
+
+The model is widely regarded as one of the leading analytical tools in cybersecurity economics. It has been extensively referenced in academic and industry literature. It has also been tested in various contexts by researchers such as Marc Lelarge and Yuliy Baryshnikov.
+
+The model has also been covered by mainstream media, including *The Wall Street Journal* and *The Financial Times*.
+
+Subsequent research has critiqued the model's assumptions, suggesting that some security breach functions may require fixing no less than 1/2 the expected loss, challenging the universality of the 1/e factor. Alternative formulations even propose that some loss functions may justify investment at the full estimated loss.
+

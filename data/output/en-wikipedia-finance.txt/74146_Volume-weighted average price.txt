@@ -1,0 +1,33 @@
+Volume-weighted average price
+
+
+# Volume-weighted average price
+
+
+
+In finance, **volume-weighted average price** (**VWAP**) is the ratio of the value of a security or financial asset traded to the total volume of transactions during a trading session. It is a measure of the average trading price for the period.
+
+Typically, the indicator is computed for one day, but it can be measured between any two points in time.
+
+VWAP is often used as a trading benchmark by investors who aim to be as passive as possible in their execution. Many pension funds, and some mutual funds, fall into this category. The aim of using a VWAP trading target is to ensure that the trader executing the order does so in line with the volume on the market. It is sometimes argued that such execution reduces transaction costs by minimizing market impact costs (the additional cost due to the market impact, i.e. the adverse effect of a trader's activities on the price of a security).
+
+VWAP is often used in algorithmic trading. A broker may guarantee the execution of an order at the VWAP and have a computer program enter the orders into the market to earn the trader's commission and create P&L. This is called a guaranteed VWAP execution. The broker can also trade in a best effort way and answer the client with the realized price. This is called a VWAP target execution; it incurs more dispersion in the answered price compared to the VWAP price for the client but a lower received/paid commission. Trading algorithms that use VWAP as a target belong to a class of algorithms known as *volume participation algorithms*.
+
+The first execution based on the VWAP was in 1984 for the Ford Motor Company by James Elkins, then head trader at Abel Noser.
+
+
+## Formula
+
+VWAP is calculated using the following formula:
+
+where:
+
+
+## Using the VWAP
+
+The VWAP can be used similar to moving averages, where prices above the VWAP reflect a bullish sentiment and prices below the VWAP reflect a bearish sentiment. Traders may initiate short positions as a stock price moves below VWAP for a given time period or initiate long positions as the price moves above VWAP.
+
+Institutional buyers and algorithms often use VWAP to plan entries and initiate larger positions without disturbing the stock price.
+
+VWAP slippage refers to the difference between the intended and executed prices, and is a common measure of broker performance. Many Buy-side firms now use an algo wheel to algorithmically direct their flow to the best broker.
+

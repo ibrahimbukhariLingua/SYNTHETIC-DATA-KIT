@@ -1,0 +1,178 @@
+Stock option return
+
+
+# Stock option return
+
+
+
+**Stock option return** calculations provide investors with an easy metric for comparing stock option positions. For example, for two stock option positions which appear identical, the potential stock option return may be useful for determining which position has the highest relative potential return.
+
+
+## Covered call return
+
+A covered call position is a neutral-to-bullish investment strategy and consists of purchasing a stock and selling a call option against the stock. Two useful return calculations for covered calls are the **%If Unchanged Return** and the **%If Assigned Return**. The %If Unchanged Return calculation determines the potential return assuming a covered call position's stock price at option expiration is the same as at initial purchase. The %If Assigned Return calculation assumes the price of the stock is equal to or greater than the strike price of the sold call option. For in-the-money (see moneyness) covered calls, the calculations for %If Unchanged Return and the %If Assigned Return will be equal. Example calculations for %If Unchanged potential return and %If Assigned Return for covered calls are shown below:
+
+**Covered Call Cash Flow In-The-Money**
+
+| Activity | Cash Flow |
+| --- | --- |
+| Purchase XYZ Stock | $(51.00) |
+| Sell call option XYZOPT strike price $50 | $ 3.00 |
+| Assuming stock price is greater than $50 at expiration and stock is called away | $50.00 |
+| ----------- |
+| Sum | $ 2.00 |
+
+**Covered Call %If Unchanged Potential Return Calculation**
+
+%If Unchanged Potential Return = Option premium / (Stock price - Option price)
+
+%If Unchanged Potential Return = 2/(51-3) = 4.17%
+
+%If Assigned Potential Return = (Option premium + Profit/loss on stock)/(Stock price - Option price)
+
+%If Assigned Potential Return = (2 + 0)/(51-3) = 4.17%
+
+**Covered Call Cash Flow Out-Of-The-Money**
+
+| Activity | Cash Flow |
+| --- | --- |
+| Purchase XYZ Stock | $(49.00) |
+| Sell call option XYZOPT strike price $50 | $ 2.00 |
+| Assuming stock price greater than $50 at expiration and stock is called away | $50.00 |
+| ----------- |
+| Sum | $ 3.00 |
+
+%If Assigned Potential Return = (2 + 1)/(49-2) = 6.38%
+
+
+## Bull put credit spread return
+
+The Bull Put Credit Spread (see bull spread) is a bullish strategy and consists of selling a put option and purchasing a put option for the same stock or index at differing strike prices for the same expiration. The purchased put option is entered at a strike price lower than the strike price of the sold put option. The return calculation for the Bull-Put Credit Spread position assuming price of the stock or index at expiration is greater than the sold put is shown below:
+
+Bull Put Credit Spread Potential Return = (sold put price - purchased put price)/(sold put strike price - purchased put strike price - initial credit)
+
+For example, suppose a put option with a strike price of $100 for ABC stock is sold at $1.00 and a put option for ABC with a strike price of $90 is purchased for $0.50, and at the option's expiration the price of the stock or index is greater than the short put strike price of $100, then the return generated for this position is:
+
+ABC Bull Put Credit Spread Return = (1 - 0.5)/[100-90-(1-0.5)] = 5.26%.
+
+
+## Bear call credit spread return
+
+The Bear Call Credit Spread (see bear spread) is a bearish strategy and consists of selling a call option and purchasing a call option for the same stock or index at differing strike prices for the same expiration. The purchased call option is entered at a strike price higher than the strike price of the sold call option. The return calculation for the Bear Call Credit Spread position assuming price of the stock or index at expiration is less than the sold call is shown below:
+
+Bear Call Credit Spread Potential Return = (sold call price - purchased call price)/(purchased call strike price - sold call strike price - initial credit)
+
+For example, suppose a call option with a strike price of $100 for DEF stock is sold at $1.00 and a call option for DEF with a strike price of $110 is purchased for $0.50, and at the option's expiration the price of the stock or index is less than the short call strike price of $100, then the return generated for this position is:
+
+DEF Bear Call Credit Spread Return = (1 - 0.5)/[110-100-(1-0.5)] = 5.26%.
+
+
+## Iron condor return
+
+The iron condor is a neutral strategy and consists of a combination of a bull put credit spread and a bear call credit spread (see above). Ideally, the margin for the Iron Condor is the maximum of the bull put and bear call spreads, but some brokers require a cumulative margin for the bull put and the bear call. The return calculation for the Iron Condor position using the maximum margin of the bull put credit spread and the bear call credit spread and assuming price of the stock or index at expiration is greater than the sold put option and less than the sold call option is shown below:
+
+Iron Condor Potential Return = (bull put net credit + bear call net credit)/{max[(purchased call strike price - sold call strike price), (sold put strike price - purchased put strike price)] - initial credits}
+
+For example, for the bear put portion of the iron condor a put option with a strike price of $90 for GHI stock is sold at $1.00 and a put option for GHI with a strike price of $80 is purchased for $0.50. And, suppose for the bear call portion of the iron condor a call option with a strike price of $100 for GHI stock is sold at $1.00 and a call option for GHI with a strike price of $110 is purchased for $0.50, and at the option's expiration the price of the stock or index is greater than the short put strike price of $90 and less than the short call strike price of $100. The return generated for this position is:
+
+GHI Iron Condor Return = [(1 - 0.5)+(1 - 0.5)]/{max(110-100,90-80) - [(1 - 0.5)+(1 - 0.5)]} = 11.1%.
+
+
+## Collar return
+
+The collar (finance) is a neutral-to-bullish strategy and consists of a combination of a covered call (see above) and a long put option for protection. The protective put provides insurance to guarantee a floor on the potential loss, but the protective put option also reduces the amount of potential return. The collar is useful for reducing or delaying taxes for large stock positions which otherwise would need to be sold in order to diversify, reduce risk, etc. The following calculation assumes the sold call option and the purchased put option are both out-of-the-money and the price of the stock at expiration is the same as at entry:
+
+%If Unchanged Potential Return = (call option price - put option price) / [stock price - (call option price - put option price)]
+
+For example, for stock JKH purchased at $52.5, a call option sold for $2.00 with a strike price of $55 and a put option purchased for $0.50 with a strike price of $50, the %If Unchanged Return for the collar would be:
+
+%If Unchanged Potential Return = (2-0.5)/[52.5-(2-0.5)]= 2.9%
+
+The break-even point is the stock purchase price minus the net of the call option price and the put option price.
+
+Break-even = $52.5 - ($2.00 - $0.50) = $51.00
+
+As long as the price of the JKH stock is greater than $51 at stock option expiration, the position will be profitable.
+
+The percent maximum loss is the difference between the break-even price and the strike price of the purchased put option divided by the net investment, for example for JKH:
+
+%Max loss = (51 - 50)/[52.5-(2-0.5)] = 2%
+
+
+## Naked put return
+
+The naked put is a neutral-to-bullish strategy and consists of selling a put option against a stock. The naked put profit/loss profile is similar to the covered call (see above) profit/loss profile. The naked put generally requires less in brokerage fees and commissions than the covered call. The following return calculation assumes the sold put option is out-of-the-money and the price of the stock at expiration is greater than the put strike price at option expiration:
+
+Naked Put Potential Return = (put option price) / (stock strike price - put option price)
+
+For example, for a put option sold for $2 with a strike price of $50 against stock LMN the potential return for the naked put would be:
+
+Naked Put Potential Return = 2/(50.0-2)= 4.2%
+
+The break-even point is the stock strike price minus the put option price.
+
+Break-even = $50 – $2.00 = $48.00
+
+As long as the price of the LMN stock is greater than $48 at stock option expiration, the position will be profitable. Below a LMN stock price of $48, the position is unprofitable.
+
+
+## Calendar call return
+
+The calendar call spread (see calendar spread) is a bullish strategy and consists of selling a call option with a shorter expiration against a purchased call option with an expiration further out in time. The calendar call spread is basically a leveraged version of the covered call (see above), but purchasing long call options instead of purchasing stock.
+
+% Assigned Return = (long call value - net debit) / (net debit)
+
+% Unchanged Return = [long call value (at short-term exp. w/ current stock price) - net debit] / (net debit)
+
+For example, consider stock OPQ at $49.31 per share. Buy JAN 1 Year Out 40 strike call for $13.70 and write (Sell) the Near Month 55 strike call for $0.80
+
+Net debit = $13.70 - $0.80 = $12.90
+
+% Assigned Return = (17.90 - 12.90) / (13.70 - 0.80) = 5.00 / 12.90 = 38.8%
+
+% Unchanged Return = [13.02 - 12.90] / 12.90 = .68 / 12.90 = 1.0%
+
+
+## Long straddle return
+
+The long straddle (see straddle) is a bullish and a bearish strategy and consists of purchasing a put option and a call option with the same strike prices and expiration. The long straddle is profitable if the underlying stock or index makes a movement upward or downward offsetting the initial combined purchase price of the options. A long straddle becomes profitable if the stock or index moves more than the combined purchase prices of the options away from the strike price of the options.
+
+% Return = ( |stock price @ expiration - strike price| - (long call price + long put price)] / (long call price + long put price)
+
+For example, for stock RST and a long straddle consisting of a purchased call option with a price of $1.50 and a purchased put option with a price of $2.00 with a strike price of $50. Assume the initial price of RST is $50, and at option expiration, the price of RST is $55.
+
+% Return = [|55-50| - (1.5+2.0)]/(1.5+2.0) = 42.9%
+
+
+## Iron butterfly return
+
+The iron butterfly is a neutral strategy and consists of a combination of a bull put credit spread and a bear call credit spread (see above). The iron butterfly is a special case of an iron condor (see above) where the strike price for the bull put credit spread and the bear call credit spread are the same. Ideally, the margin for the iron butterfly is the maximum of the bull put and bear call spreads, but some brokers require a cumulative margin for the bull put and the bear call. The maximum return generated for the iron butterfly is when the stock price is the same as when the position was entered. The return calculation for the iron butterfly position using the maximum margin of the bull put credit spread and the bear call credit spread and assuming price of the stock or index at expiration is the same as when the position was entered is shown below:
+
+Iron Butterfly Potential Return = (bull put net credit + bear call net credit)/{max[(purchased call strike price - sold call strike price), (sold put strike price - purchased put strike price)] - initial credits}
+
+For example, for UVW stock with a stock price of $100, and for the bear put portion of the iron butterfly a put option with a strike price of $100 is sold at $3.00 and a put option for UVW with a strike price of $90 is purchased for $1.00. And, suppose for the bear call portion of the iron butterfly a call option with a strike price of $100 for GHI stock is sold at $3.00 and a call option for UVW with a strike price of $110 is purchased for $1.00, and at the option's expiration the price of the stock or index is the same as when entered. The return generated for this position is:
+
+GHI Iron Butterfly Return = [(3 - 1)+(3 - 1)]/{max(110-100,100-90) - [(3 - 1)+(3 - 1)]} = 66.7%.
+
+Iron Butterflies have higher returns than iron condors, but the stock price range where the iron butterfly position is profitable is much less than for the iron condor.
+
+
+## Married put return
+
+The married put (also known as a protective put) is a bullish strategy and consists of the purchase of a long stock and a long put option. The married put has limited downside risk provided by the purchased put option and a potential return which is infinite.
+
+Calculations for the Married Put Strategy are:
+
+Net Debit = Stock Price + Put Ask Price
+Break Even = Net Debit
+Maximum Risk = Net Debit - Put Strike Price
+% Max Risk = Maximum Risk / Net Debit
+Maximum Profit = Unlimited
+Example 1: Stock XYZ at $49.90 per share
+Buy 100 shares stock XYZ at $49.90
+Buy 1 contract 55 strike Put (ITM) for $6.10
+Net Debit = $49.90 + $6.10 = $56.00
+Break Even = $56.00
+Maximum Risk = $56.00 - $55.00 = $1.00
+% Max Risk = $1.00 / $56.00 = 1.8%
+

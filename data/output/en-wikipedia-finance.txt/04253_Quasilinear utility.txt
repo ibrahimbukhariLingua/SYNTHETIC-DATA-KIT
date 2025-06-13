@@ -1,0 +1,55 @@
+Quasilinear utility
+
+
+# Quasilinear utility
+
+
+
+In economics and consumer theory, **quasilinear utility** functions are linear in one argument, generally the numeraire. Quasilinear preferences can be represented by the utility function {\displaystyle u(x,y\_{1},..,y\_{n})=x+\theta \_{1}(y\_{1})+..+\theta \_{n}(y\_{n})} where {\displaystyle \theta \_{i}} is strictly increasing and concave.¹⁶⁴ A useful property of the quasilinear utility function is that the Marshallian/Walrasian demand for {\displaystyle y\_{1},\ldots ,y\_{n}} does not depend on wealth and is thus not subject to a wealth effect;¹⁶⁵–¹⁶⁶ The absence of a wealth effect simplifies analysis²²² and makes quasilinear utility functions a common choice for modelling. Furthermore, when utility is quasilinear, compensating variation (CV), equivalent variation (EV), and consumer surplus are algebraically equivalent.¹⁶³ In mechanism design, quasilinear utility ensures that agents can compensate each other with side payments.
+
+
+## Definition in terms of preferences
+
+A preference relation {\displaystyle \succsim } is quasilinear with respect to commodity 1 (called, in this case, the *numeraire* commodity) if:
+
+* All the indifference sets are parallel displacements of each other along the axis of commodity 1. That is, if a bundle "x" is indifferent to a bundle "y" (x~y), then {\displaystyle \left(x+\alpha e\_{1}\right)\sim \left(y+\alpha e\_{1}\right),\forall \alpha \in \mathbb {R} ,e\_{1}=\left(1,0,...,0\right)}
+* Good 1 is desirable; that is, {\displaystyle \left(x+\alpha e\_{1}\right)\succ \left(x\right),\forall \alpha >0}
+
+In other words: a preference relation is quasilinear if there is one commodity, called the numeraire, which shifts the indifference curves outward as consumption of it increases, without changing their slope.
+
+In the two dimensional case, the indifference curves are parallel. This is useful because it allows the entire utility function to be determined from a single indifference curve.
+
+
+## Definition in terms of utility functions
+
+A utility function is quasilinear in commodity x if it is in the form
+
+where {\displaystyle \theta \_{i}} is an arbitrary function. In the case of two goods this function could be, for example, {\displaystyle u\left(x,y\right)=x+{\sqrt {y}}.}
+
+The quasilinear form is special in that the demand functions for all but one of the consumption goods depend only on the relation between the good and the numeraire good (x) and *not* on the income.
+
+Example:
+
+then, maximizing utility subject to the budget constraint
+
+{\displaystyle p\_{x}x+\sum \_{i=1}^{n}p\_{i}y\_{i}\leq I}
+
+yields the first order conditions for internal solution:
+
+{\displaystyle {\frac {d\theta \_{i}(y\_{i})}{d\ y\_{i}}}={\frac {p\_{i}}{p\_{x}}}}.
+
+Therefore, the demand function for good i is
+
+{\displaystyle y\_{i}(p\_{i},I)={\frac {(\theta \_{i}^{\prime })^{-1}p\_{x}}{p\_{i}}}}
+
+which is independent of the income *I*. Also, note that the good i is a substitute to good x. That is, the demand for good i increases in response to an increase in the price of good x.
+
+The indirect utility function in this case is
+
+which is a special case of the Gorman polar form.¹⁵⁴,¹⁶⁹
+
+
+## Equivalence of definitions
+
+The cardinal and ordinal definitions are equivalent in the case of a convex consumption set with continuous preferences that are locally non-satiated in the first argument.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+

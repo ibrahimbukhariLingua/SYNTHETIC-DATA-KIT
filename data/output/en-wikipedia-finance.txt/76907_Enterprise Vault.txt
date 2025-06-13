@@ -1,0 +1,65 @@
+Enterprise Vault
+
+
+# Enterprise Vault
+
+
+
+**Veritas Enterprise Vault** (EV) is an enterprise information archive platform developed by Veritas Technologies. It is part of the company's "Information Governance" suite. Enterprise Vault has the ability to archive from various sources such as Microsoft Exchange (2016, 2013, 2010, 2007, 2003), SMTP (any), IBM Domino (latest release), Microsoft SharePoint and various File Systems (Windows NTFS and Linux/Unix file systems) with the ability to store on a multiple of storage platforms, such as NTFS, NetApp, Centera, SMB and WORM. The data archived is indexed, classified, de-duplicated and securely stored.
+
+
+## History
+
+Enterprise Vault was originally developed at Digital Equipment Corporation (DEC) by a group of developers who had previously been the engineering team for Digital's VMS based ALL-IN-1 office and messaging system. After DEC was acquired by Compaq Computer Corporation the Enterprise Vault team was terminated just after Version 1 of the product was shipped.
+
+Technical Director Nigel Dutt approached Edward Forwood of broker Durlacher with a proposal to start a company to develop and sell the product. They consequently acquired the rights to the product and formed kVault Software Limited in late 1999 with initial funding from Durlacher. The four years from 2000–2004 saw greatly improved sales and eventual acquisition by VERITAS Software in 2004. Veritas was subsequently acquired by Symantec in 2005 for $13.5B. However, on February 1, 2016, Symantec completed its sale of Veritas to the Carlyle group for $7.4B and Enterprise Vault again reverted to being a Veritas product.
+
+Enterprise Vault was originally part of Symantec's "Enterprise Messaging Management" group (created after Symantec acquired VERITAS in 2005). Much of the original KVS Engineering team of Development and QA still work on Enterprise Vault, based in Reading (UK) and Pune (India).ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+As of June 2018 all Enterprise Vault engineers in the UK were made redundant.
+
+
+### Release timeline
+
+Last updated 24 February 2022.
+
+| Version | GA date | Significant changes |
+| --- | --- | --- |
+| 7.0 | 2006-11-30 | - |
+| 8.0 | 2008-12-01 | - |
+| 8.0 SP5 | 2010-10-20 | - |
+| 9.0.0 | 2010-08-30 | Added support for Microsoft Exchange 2010 and Microsoft SharePoint 2010 |
+| 9.0 SP1 | 2010-11-26 | Added support for Outlook 2010 |
+| 9.0 SP2 | 2011-03-23 | - |
+| 9.0 SP3 | 2011-11-28 | Added support for IPv6 and FIPS 140-2 Compliance |
+| 9.0.1 | 2010-12-01 | - |
+| 9.0.2 | 2011-03-23 | - |
+| 9.0.3 | 2011-11-28 | - |
+| 9.0.4 | 2012-06-20 | - |
+| 9.0.5 | 2013-08-28 | - |
+| 10.0 | 2011-08-01 | Added an enhanced and greatly scalable 64-bit indexing engine |
+| 10.0 SP1 | 2012-03-28 | - |
+| 10.0 SP2 | 2012-09-26 | - |
+| 10.0 SP3 | 2013-01-18 | Added support for Microsoft Exchange 2013, Outlook 2013, SharePoint 2013 and Windows 8 |
+| 10.0 SP4 | 2013-07-12 | Added support for Domino 9 and Kerberos support for Mac client on Outlook 2011 |
+| 10.0.1 | 2012-03-28 | - |
+| 10.0.2 | 2012-09-28 | - |
+| 10.0.3 | 2013-01-18 | - |
+| 10.0.4 | 2013-07-17 | - |
+| 11.0.0 | 2014-05-05 | Added support for IMAP access to archived data, an enhanced EV Search capability (EVS), PST Migration Enhancements, and additional SCOM packs |
+| 11.0.1 | 2015-01-05 | Added native SMTP archiving support, EVS Mobile search, and additional SCOM packs |
+| 12.0 | 2016-02-01 | Rebranded as a Veritas release. Added integrated classification, simplified Supervision, EVS enhancements, Export optimization & SQL Always on Support |
+| 12.1 | 2016-11-07 | - |
+| 12.2 | 2017-08-07 | - |
+| 12.3 | 2018-03-30 | - |
+| 12.4 | 2018-12-03 | - |
+| 12.5 | 2019-10-21 | - |
+| 14.0 | 2020-11-04 | 14.0.1 on 2021-03-10 Support for Amazon Web Services (AWS) Cloud Support for Microsoft Azure Cloud Veritas Advanced Supervision 3.0 Expiry report Convert EML to MSG for export Enhancements to include attachments in Advanced Search Updated version of the Veritas Information Classifier Enhancements in Discovery Accelerator |
+| 14.1 | 2021-03-16 | 14.1.1 on 2021-06-29, 14.1.2 on 2021-10-12, 14.1.3 on 2022-02-16 Support for Amazon Web Services (AWS) Cloud Support for S3-compliant storage devices Single Sign-On using SAML 2.0 Enterprise Vault Indexing Dashboard NSF Rollover in Compliance Accelerator and Discovery Accelerator Enhancements in Domino archiving New features in Veritas Advanced Supervision Updated version of the Veritas Information Classifier |
+| 14.2 | 2021-12-01 | 14.2.1 on 2022-03-22, 14.2.2 on 2022-07-06, 14.3.3 on 2022-10-03 Elasticsearch indexing Microsoft Teams content collection WORM support for S3 compliant storage New PowerShell cmdlets New features in Enterprise Vault Dashboard New features in Veritas Advanced Supervision New features in Compliance Accelerator Updated version of the Veritas Information Classifier Support for Sentiment Analysis using Veritas Information Classifier |
+| 14.3 | 2022-08-22 | 14.3.1 on 2022-12-07, 14.3.2 on 2023-03-22 Support for Proximity Search operators Client Access Provisioning Task enhancement Support for SharePoint 2019 Role Based Access (RBA) enhancements PowerShell cmdlet for creating new archives Support for AWS PrivateLink Multi-Factor Authentication (MFA) support for Enterprise Vault Search (Desktop) application Ability to configure the Microsoft Teams importer service account with a user account other than the Vault Service account Support for Microsoft Teams target monitoring in SCOM Microsoft Teams archiving performance improvements Support for Google Cloud Storage (S3) as Primary Storage Discovery Accelerator enhancements to include journal envelope while exporting SMTP journal emails Email sensitivity Store identifier Indexing enhancements Simplified audit entries Updated version of Veritas Information Classifier |
+| 14.4 | 2023-02-22 | 14.4.1 on 2023-06-23, 14.4.2 on 2023-09-18 Support decryption of MPIP-protected emails Enhanced export workflow in Discovery Accelerator to export MPIP-protected emails Enhanced Auditing in Discovery Accelerator Elasticsearch Index Snapshot Retention Management Optimized search performance Support for AWS S3 Glacier Instant Retrieval for primary and secondary partition Analytics connector enhancements Merge1 7.x integration Updated version of Veritas Information Classifier |
+| 14.5 | 2023-08-31 | 14.5.1 on 2023-12-13, 14.5.2 on 2024-03-20 Addition of the new 'View-only Administrator' RBA role for Enterprise Vault Administration Console Support for migration of indexes Microsoft SharePoint Subscription edition Support for Microsoft 365 Outlook on the Enterprise Vault server Support for Microsoft Edge for Enterprise Vault Search in the Outlook Integrated mode Support for Microsoft Edge for the Enterprise Vault XML-based reports Indexing of large size item’s metadata Updated version of Veritas Information Classifier |
+| 15.0 | 2024-02-29 | 15.0.1 on 2024-06-19 Support for Elasticsearch Multi Data Path Support for Privilege Account Management (PAM) Support for Domino TOTP Support for Non-Interactive Service Account Addition of Enterprise Vault License Usage Report Auditing Enhancements in Discovery Accelerator Labels in Veritas Surveillance Updated version of Veritas Information Classifier |
+| 15.1 | 2024-08-15 | Journal Report, Support for Azure Blob Immutable Storage, Support for Azure Blob Storage Replication, Elasticsearch Enhancements, Enterprise Vault Usage Analyzer (EVUA), Microsoft OLE DB Driver 19 for SQL Server, Enterprise Vault Extended Attribute (EVEA) Removal Tool, Veritas Surveillance Enhancements, Updated version of Veritas Information Classifier, Compiled HTML Help Files (CHM) format has been replaced with HTML (Astro) Help for Enterprise Vault |
+

@@ -1,0 +1,137 @@
+Growth and underinvestment
+
+
+# Growth and underinvestment
+
+
+
+The **growth and underinvestment** archetype is one of the common system archetype patterns defined as part of the system dynamics discipline.
+
+System dynamics is an approach which strives to understand, describe and optimize nonlinear behaviors of complex systems over time, using tools such as feedback loops in order to find a leverage point of the system. As part of this discipline, several commonly found patterns of system behavior were found, named and described in detail. The Growth and Underinvestment Archetype is one of such patterns.
+
+
+## Elements
+
+The system described in the Growth and Underinvestment Archetype consists of three feedback loops. Each feedback loop can be one of two types:
+
+
+### Reinforcing loop
+
+The reinforcing loop consists of a growing action, such as units of a specific product shipped to a customer, and a current state, such as current demand for a specific product. The growing action causes a positive increase in the current state. The increase of the current state then in turn causes a positive increase of the growing action, thereby creating the reinforcing characteristic of the loop.
+
+As discussed above, this reinforcing loop would have exponential behavior in time, if its growth wouldn’t be bound by the combination of the two balancing loops present in the system.
+
+
+### First balancing loop
+
+The first balancing loop is directly connected to the reinforcing loop via the current state variable. The first balancing loop consists of a current state and a slowing action (for example exceeding capacity limits). The growth of the current state causes the growth of the slowing action. The growth of the slowing action in turn reduces the current state, thereby creating a balancing loop.
+
+One example of this balancing loop is a situation where a number of units manufactured is increasing (current state), which causes the manufacturing utilization to increase (end eventually exceed capacity). This will make each additional unit of manufacturing more expensive, reducing the growth in units manufacture. One can note that a rubber-banding effect occurs, since the more units are manufactured, the more expensive the manufacturing is. This loop taken in isolation would eventually find a stable state, independently of its beginning state.
+
+
+### Second balancing loop
+
+The second balancing loop is what differentiates the Growth and Underinvestment Archetype from other archetypes. It is directly connected to the first balancing loop via the slowing action variable. The balancing loop consists of several elements:
+
+* A slowing action
+* A performance standard – represents a pressure on upholding a certain standard of the system's output (e.g. the manufactured product)
+* A perceived need for investment – the first step toward an actual investment
+* An investment
+* A delay in investment – represents the time needed for the system to go from a perception of an investment need to actually making the investment. In the real world this element is often caused by hesitation of management to invest in additional capacity.
+
+First, the growth of the slowing action causes growth of the perceived need for investment (e.g. building additional manufacturing capacity). Another factor that can positively contribute to the perceived need to invest is the failure to uphold the performance standard (for example manufacturing error rate). The perceived need to invest positively translates into actually making the investment. The investment made then negatively influences the slowing action (e.g. removal of capacity limits).
+
+The last element of the second balancing loop is the delay in investment, which happens for a variety of reasons, for example hesitation of management to invest in additional capacity.
+
+
+### Behavior of Archetype
+
+The key to understanding the Growth and Underinvestment Archetype is in the delay in investment. This delay causes the second balancing loop to have longer cycle times than the first balancing loop. That in turn has the following effect:
+
+Since the second balancing loop has a shorter loop cycle, it causes the current state to be reduced, which in turn decreases the slowing action. This happens before an investment is made, in effect reducing the perceived need for investment.
+
+In effect, the first and second reinforcing loop act together as a reinforcing loop to restrict growth.
+
+If it were not for the delay, the whole system would work optimally thanks to timely investments.
+
+
+#### Difficulties Identifying Archetype
+
+At least two factors can contribute to the difficulty of identifying the Growth and Underinvestment Archetype in real-world complex systems.
+
+First, the archetype can be temporarily covered up by shifting the burden, that is, by trying to solve the underlying problem by a symptomatic solution, instead of a fundamental one. This leads to further delaying the investment decision, narrowing the window for effective and timely investment or missing it entirely.
+
+Second, in order to recognize the archetype, a holistic view of the system is required. This can be difficult, since the Growth and Underinvestment Archetype can create many issues that management must attend to, in effect preventing them from stepping back and seeing the bigger picture.
+
+
+### Optimizing the System
+
+When discussing how to optimize the system, it can be beneficial to discuss what a leverage point is.
+
+The leverage point in the system is a place where structural changes can lead to significant and lasting improvements to the system. There are two kinds of leverage points:
+
+* **Low leverage point** – These points are usually the places in the system where the stress is greatest. However, solving problems at these points usually doesn’t lead to a lasting improvement
+* **High leverage point** – These points are often hidden in the system, but even smaller changes in these components can lead to significant and lasting improvements in the system as a whole
+
+When dealing with this archetype, several generic strategies can be considered in order to solve the problem the archetype presents.
+
+
+#### Reduction of Investment Delay
+
+The first strategy to consider is whether it is possible to shorten the delay between the perceived need to invest and actually making an investment.
+
+One tool one can utilize in order to shorten the delay is Business Process Management, a field of study focusing on improving the efficiency of business processes. With its help, we might be able to identify the excessive delays in the investment process and shorten the delays or eliminate the parts of process that cause it entirely.
+
+
+#### Plan Ahead, Identify Growth Potential
+
+When the reduction of investment delay is not possible, consider having a plan in advance. This includes monitoring the right key performance indicators (some KPIs such as utilization rate might act as an inhibitor for investment, since they frown upon unused capacity) and have an investment plan prepared in advance.
+
+Such plan can also include a stop-gap solution that can temporarily weaken the growth inhibitor, such as hiring outside help in the form of contractors or lending additional capacity. But beware to not let the stop-gap solution become a permanent one, which could become a Shifting the Burden archetype.
+
+
+## Examples
+
+
+### Home Delivery Pizza
+
+A new home delivery-focused pizzeria opens up in the neighborhood. At first, the demand is low, but the pizza’s quality is excellent, as well as the delivery times. After a while, the pizzeria gets noticed and is featured in a local online food blog. As a result, the demand for the pizza rises sharply. But the pizzeria owners are reluctant to purchase more delivery capacity (pizza delivery vehicles and personnel) along with higher pizza production capacity (additional pizza ovens). That results in higher delivery times and a larger percentage of undercooked pizzas, in turn lowering the number of returning customers. As a result, the pressure for additional investment in both delivery and production capacity is eliminated. The pizzeria owners are happy that they held off on the additional investment.
+
+Such an example clearly represents a missed opportunity for further growth. It could have been avoided in two ways:
+
+* **Reduction of the delay in investment.** If the owners would react quicker, they could have seized the opportunity and convert more of the opportune customers into recurring ones, creating a sustained growth.
+* **Having a plan in advance.** This might include having a trigger for when a certain amount of pizza is delivered, that will act as an indicator that an investment is needed. Such a trigger needs to be triggered with minimal delay based on the growth variable. Also having a simulation prepared might be helpful, in order to predict the demand in the future based on the current trend, which can be used as a tool to justify the investment, shortening the time needed to make an investment decision.
+
+### Startup Company
+
+The application of the Growth and Underinvestment Archetype can be especially crucial for startup businesses, which need to grow fast or might have to face failure to raise additional funds. For them, the growing concern is a going concern.
+
+A new startup company focused on developing mobile gaming experiences has recently released its first game after successfully completing the first round of raising capital from investors. The game is initially priced at $5.99 in the Store. After the initial release, the game starts gaining a little bit of traction, but not enough to be considered a success. The company operates as usual, adding more content into the game and fixing bugs. Also, the game has an online component that is sized well for the current audience.
+
+After several weeks, the company comes to a major decision. It will re-release the game as free, instead focusing on selling additional content on the form in in-app purchases. The strategy works and many new users start playing the game. This has two effects:
+
+* The online component of the game becomes overloaded. It becomes clear that an investment is needed to rearchitect the component in order to scale it up without friction
+* The company is making little money from in-app purchases, since it doesn’t have a lot of premium content built for the game yet
+
+Shortly after the free version of the game comes out, the influx of players starts to affect the online component, which occasionally crashes and disconnects users, causing them to save progress they have made in the game. The company redeploys its resources and tries to mitigate the situation by incrementally improving the online component. It is clear, however, that a complete rewrite of the online component is needed on order to eliminate the problem entirely. Therefore the company contacts its investors in order to raise additional funds to rebuild the online component.
+
+Meanwhile, the number of active players dwindles. In response to this fact, as well as the weak cash flow generated by the game, the investor decides to take time to make the investment decision. Unfortunately, the cash flow from the game is not improving, since the remaining user base purchased the content they were interested in and new content is delayed, since most of the developers have been reassigned to solving the online component woes. In response to this, the investor sees the ever-flattening sales and dwindling user base and decides not to invest further resources into the company. A few weeks later, the company runs out of funds and declares bankruptcy.
+
+How such a situation could be prevented:
+
+* The company clearly didn’t calculate with growing quickly and haven’t prepared its infrastructure for it. If it set out to build an architecture that scales out well from the outset, it would diminish the power of the slowing action significantly.
+* Instead of redeploying resources when the system was under stress, it might have introduced a stop-gap solution, such as restricting the number of players online in order to keep the standard for the users that got online. Meanwhile, it would produce new content to prove to its investors, that the in-app purchase model will work in the longer-term
+
+## Modification with a Drifting Standard
+
+The Growth and Underinvestment with a Drifting Standard is a special case of the archetype.
+
+It adds an additional relationship between the slowing action and the performance standard. When the slowing action is growing (e.g. the backlog of order is increasing in size), it has a negative effect on the performance standard (e.g. raising the maximum permitted time it takes to deliver an order). The rest of the system behaves in the same way as the original archetype.
+
+This additional relationship can have severe consequences, since in some cases the performance standard can have major contribution to pressure exerted on individuals deciding whether to make the investment. With the slowing action actively undermining the performance standard, it can be harder to find the incentive to invest into additional resources.
+
+
+## Related archetypes
+
+The Growth and Underinvestment Archetype can be considered to be an elaboration of the Limits to Success archetype. It adds another feedback loop which effectively elaborates the Limiting State part of the Limits to Success archetype.
+

@@ -1,0 +1,69 @@
+Freightos Baltic Index
+
+
+# Freightos Baltic Index
+
+
+
+The **Freightos Baltic Index** (**FBX**) (also sometimes known as the **Freightos Baltic Daily Index** or **Freightos Baltic Global Container Index**) is a daily freight container index issued by the Baltic Exchange and Freightos. The index measures global container freight rates by calculating spot rates for 40-foot containers on 12 global tradelanes. It is reported around the world as a proxy for shipping stocks, and is a general shipping market bellwether. The FBX is currently one of the most widely used freight rate indices.
+
+
+## History
+
+The Freightos International Freight Index was first launched as a weekly freight index in early 2017. The Freightos Baltic Index has been in wide use since 2018. It is currently the only freight rate index that is issued daily, and is also the only IOSCO-compliant freight index that is currently regulated by the EU (in particular, the European Securities and Markets Authority). The index is calculated from real-time anonymized data. As of February 2020, 50 to 70 million price points were collected by the FBX each month. The FBX was converted into a daily index in February 2021.
+
+
+## Calculation
+
+12 regional tradelane indices are first calculated. The weighted average of these 12 indices is then usd to obtain the FBX Global Container Index (FBX). The formulas given below are in use as of October 2020. Note that the FBX calculating formula is updated periodically, with the last update issued in mid-2021.
+
+
+### Tradelane index
+
+The FBX tradelanes are calculated using the median port to port all-in freight rate. This median price (freight rate) is calculated for standard 40-foot containers that are not refrigerated.
+
+The tradelane index is calculated as follows.
+
+{\displaystyle {\frac {\sum \_{i=1}^{n}({median}(L,C\_{i})\times V\_{i})}{\sum \_{i=1}^{n}(V\_{i})}}}
+
+Where:
+
+* {\displaystyle L} = tradelane value (rounded to the nearest integer)
+* {\displaystyle C\_{1},C\_{2},\cdots ,C\_{n}} = carriers
+* {\displaystyle V\_{1},V\_{2},\cdots ,V\_{n}} = carrier volumes on the tradelane
+* {\displaystyle {median}(L,C\_{i},\cdots ,C\_{j})} = the median price for carriers {\displaystyle C\_{i},\cdots ,C\_{j}} on the tradelane {\displaystyle L}
+
+For reference, a list of the 12 tradelanes used in the index calculations is also provided in the section below.
+
+
+#### List of tradelanes
+
+| Ticker | Short Name | Long Name | Weight in FBX |
+| --- | --- | --- | --- |
+| FBX01 | China/East Asia - USA West Coast 40' (CEA-NAW) | Freightos Baltic China/East Asia to North America West Coast 40' container index | 20.30% |
+| FBX02 | USA West Coast - China/East Asia 40' (NAW-CEA) | Freightos Baltic North America West Coast to China/East Asia 40' container index | 9.76% |
+| FBX03 | China/East Asia - USA East Coast 40' (CEA-NAE) | Freightos Baltic China/East Asia to North America East Coast 40' container index | 10.46% |
+| FBX04 | USA East Coast - China/East Asia 40' (NAE-CEA) | Freightos Baltic North America East Coast to China/East Asia 40' container index | 5.03% |
+| FBX11 | China/East Asia - North Europe 40' (CEA-EUR) | Freightos Baltic China/East Asia to North Europe 40' container index | 17.26% |
+| FBX12 | North Europe - China/East Asia 40' (EUR-CEA) | Freightos Baltic North Europe to China/East Asia 40' container index | 10.16% |
+| FBX13 | China/East Asia - Mediterranean 40' (CEA-EUR) | Freightos Baltic China/East Asia to Mediterranean 40' container index | 9.02% |
+| FBX14 | Mediterranean - China/East Asia 40' (EUR-CEA) | Freightos Baltic Mediterranean to China/East Asia 40' container index | 5.31% |
+| FBX21 | USA East Coast - Europe 40' (NAE-EUR) | Freightos Baltic North America East Coast to Europe 40' container index | 2.67% |
+| FBX22 | Europe - USA East Coast 40' (EUR-NAE) | Freightos Baltic Europe to North America East Coast 40' container index | 5.50% |
+| FBX24 | Europe - South American East Coast 40' (EUR-SAE) | Freightos Baltic Europe to South America East Coast 40' container index | 1.77% |
+| FBX26 | Europe – South American West Coast 40’ (EUR-SAW) | Freightos Baltic Europe to South America West Coast 40' container index | 2.76% |
+
+
+### FBX Global Container Index
+
+The FBX Global Container Index (FBX) is a weighted average of 12 regional tradelane indices. It is calculated as follows.
+
+{\displaystyle {\frac {\sum \_{i=1}^{12}(I\_{i}\times V\_{i})}{\sum \_{i=1}^{12}(V\_{i})}}}
+
+Where:
+
+* {\displaystyle I\_{1},I\_{2},\cdots ,I\_{12}} = the 12 regional tradelanes indices
+* {\displaystyle V\_{1},V\_{2},\cdots ,V\_{12}} = respectives volumes of the 12 regional tradelanes indices
+
+The FBX prices used are rolling short-term Freight All Kind (FAK) spot tariffs and related surcharges between carriers, freight forwarders, and high-volume shippers.
+

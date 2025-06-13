@@ -1,0 +1,55 @@
+Prais–Winsten estimation
+
+
+# Prais–Winsten estimation
+
+
+
+In econometrics, **Prais–Winsten estimation** is a procedure meant to take care of the serial correlation of type AR(1) in a linear model. Conceived by Sigbert Prais and Christopher Winsten in 1954, it is a modification of Cochrane–Orcutt estimation in the sense that it does not lose the first observation, which leads to more efficiency as a result and makes it a special case of feasible generalized least squares.
+
+
+## Theory
+
+Consider the model
+
+where {\displaystyle y\_{t}} is the time series of interest at time *t*, {\displaystyle \beta } is a vector of coefficients, {\displaystyle X\_{t}} is a matrix of explanatory variables, and {\displaystyle \varepsilon \_{t}} is the error term. The error term can be serially correlated over time: {\displaystyle \varepsilon \_{t}=\rho \varepsilon \_{t-1}+e\_{t},\ |\rho |<1} and {\displaystyle e\_{t}} is white noise. In addition to the Cochrane–Orcutt transformation, which is
+
+for *t* = 2,3,...,*T*, the Prais-Winsten procedure makes a reasonable transformation for *t* = 1 in the following form:
+
+Then the usual least squares estimation is done.
+
+
+## Estimation procedure
+
+First notice that
+
+{\displaystyle \mathrm {var} (\varepsilon \_{t})=\mathrm {var} (\rho \varepsilon \_{t-1}+e\_{it})=\rho ^{2}\mathrm {var} (\varepsilon \_{t-1})+\mathrm {var} (e\_{it})}
+
+Noting that for a stationary process, variance is constant over time,
+
+{\displaystyle (1-\rho ^{2})\mathrm {var} (\varepsilon \_{t})=\mathrm {var} (e\_{it})}
+
+and thus,
+
+{\displaystyle \mathrm {var} (\varepsilon \_{t})={\frac {\mathrm {var} (e\_{it})}{(1-\rho ^{2})}}}
+
+Without loss of generality suppose the variance of the white noise is 1. To do the estimation in a compact way one must look at the autocovariance function of the error term considered in the model blow:
+
+It is easy to see that the variance–covariance matrix, {\displaystyle \mathbf {\Omega } }, of the model is
+
+Having {\displaystyle \rho } (or an estimate of it), we see that,
+
+where {\displaystyle \mathbf {Z} } is a matrix of observations on the independent variable (*X*ₜ, *t* = 1, 2, ..., *T*) including a vector of ones, {\displaystyle \mathbf {Y} } is a vector stacking the observations on the dependent variable (*y*ₜ, *t* = 1, 2, ..., *T*) and {\displaystyle {\hat {\Theta }}} includes the model parameters.
+
+
+## Note
+
+To see why the initial observation assumption stated by Prais–Winsten (1954) is reasonable, considering the mechanics of generalized least square estimation procedure sketched above is helpful. The inverse of {\displaystyle \mathbf {\Omega } } can be decomposed as {\displaystyle \mathbf {\Omega } ^{-1}=\mathbf {G} ^{\mathsf {T}}\mathbf {G} } with
+
+A pre-multiplication of model in a matrix notation with this matrix gives the transformed model of Prais–Winsten.
+
+
+## Restrictions
+
+The error term is still restricted to be of an AR(1) type. If {\displaystyle \rho } is not known, a recursive procedure (Cochrane–Orcutt estimation) or grid-search (Hildreth–Lu estimation) may be used to make the estimation feasible. Alternatively, a full information maximum likelihood procedure that estimates all parameters simultaneously has been suggested by Beach and MacKinnon.
+

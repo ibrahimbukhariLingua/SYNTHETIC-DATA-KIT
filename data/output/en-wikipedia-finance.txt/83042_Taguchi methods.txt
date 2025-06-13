@@ -1,0 +1,113 @@
+Taguchi methods
+
+
+# Taguchi methods
+
+
+
+**Taguchi methods** (Japanese: タグチメソッド) are statistical methods, sometimes called robust design methods, developed by Genichi Taguchi to improve the quality of manufactured goods, and more recently also applied to engineering, biotechnology, marketing and advertising. Professional statisticians have welcomed the goals and improvements brought about by Taguchi methods,ᵉᵈⁱᵗᵒʳⁱᵃˡⁱᶻⁱⁿᵍ particularly by Taguchi's development of designs for studying variation, but have criticized the inefficiency of some of Taguchi's proposals.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+Taguchi's work includes three principal contributions to statistics:
+
+* A specific loss function
+* The philosophy of *off-line quality control*; and
+* Innovations in the design of experiments.
+
+## Loss functions
+
+
+### Loss functions in the statistical theory
+
+Traditionally, statistical methods have relied on mean-unbiased estimators of treatment effects: Under the conditions of the Gauss–Markov theorem, least squares estimators have minimum variance among all mean-unbiased linear estimators. The emphasis on comparisons of means also draws (limiting) comfort from the law of large numbers, according to which the sample means converge to the true mean. Fisher's textbook on the design of experiments emphasized comparisons of treatment means.
+
+However, loss functions were avoided by Ronald A. Fisherᶜˡᵃʳⁱᶠⁱᶜᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ- ˡᵒˢˢ ᶠᵘⁿᶜᵗⁱᵒⁿˢ ʷᵉʳᵉⁿ'ᵗ ᵉˣᵖˡⁱᶜⁱᵗˡʸ ᵐᵉⁿᵗⁱᵒⁿᵉᵈ ʸᵉᵗ.
+
+
+### Taguchi's use of loss functions
+
+Taguchi knew statistical theory mainly from the followers of Ronald A. Fisher, who also avoided loss functions.
+Reacting to Fisher's methods in the design of experiments, Taguchi interpreted Fisher's methods as being adapted for seeking to improve the mean outcome of a process. Indeed, Fisher's work had been largely motivated by programmes to compare agricultural yields under different treatments and blocks, and such experiments were done as part of a long-term programme to improve harvests.
+
+However, Taguchi realised that in much industrial production, there is a need to produce an outcome *on target*, for example, to machine a hole to a specified diameter, or to manufacture a cell to produce a given voltage. He also realised, as had Walter A. Shewhart and others before him, that excessive variation lay at the root of poor manufactured quality and that reacting to individual items inside and outside specification was counterproductive.
+
+He therefore argued that quality engineering should start with an understanding of quality costs in various situations. In much conventional industrial engineering, the quality costs are simply represented by the number of items outside specification multiplied by the cost of rework or scrap. However, Taguchi insisted that manufacturers broaden their horizons to consider *cost to society*. Though the short-term costs may simply be those of non-conformance, any item manufactured away from nominal would result in some loss to the customer or the wider community through early wear-out; difficulties in interfacing with other parts, themselves probably wide of nominal; or the need to build in safety margins. These losses are externalities and are usually ignored by manufacturers, which are more interested in their private costs than social costs. Such externalities prevent markets from operating efficiently, according to analyses of public economics. Taguchi argued that such losses would inevitably find their way back to the originating corporation (in an effect similar to the tragedy of the commons), and that by working to minimise them, manufacturers would enhance brand reputation, win markets and generate profits.
+
+Such losses are, of course, very small when an item is near to negligible. Donald J. Wheeler characterised the region within specification limits as where we *deny that losses exist*. As we diverge from nominal, losses grow until the point where *losses are too great to deny* and the specification limit is drawn. All these losses are, as W. Edwards Deming would describe them, *unknown and unknowable*, but Taguchi wanted to find a useful way of representing them statistically. Taguchi specified three situations:
+
+1. Larger the better (for example, agricultural yield);
+2. Smaller the better (for example, carbon dioxide emissions); and
+3. On-target, minimum-variation (for example, a mating part in an assembly).
+
+The first two cases are represented by simple monotonic loss functions. In the third case, Taguchi adopted a squared-error loss function for several reasons:
+
+* It is the first "symmetric" term in the Taylor series expansion of real analytic loss-functions.
+* Total loss is measured by the variance. For uncorrelated random variables, as variance is additive the total loss is an additive measurement of cost.
+* The squared-error loss function is widely used in statistics, following Gauss's use of the squared-error loss function in justifying the method of least squares.
+
+### Reception of Taguchi's ideas by statisticians
+
+Though many of Taguchi's concerns and conclusions are welcomed by statisticians and economists, some ideas have been especially criticized. For example, Taguchi's recommendation that industrial experiments maximise some *signal-to-noise ratio* (representing the magnitude of the mean of a process compared to its variation) has been criticized.
+
+
+## Off-line quality control
+
+
+### Taguchi's rule for manufacturing
+
+Taguchi realized that the best opportunity to eliminate variation of the final product quality is during the design of a product and its manufacturing process. Consequently, he developed a strategy for quality engineering that can be used in both contexts. The process has three stages:
+
+* System design
+* Parameter (measure) design
+* Tolerance design
+
+#### System design
+
+This is design at the conceptual level, involving creativity and innovation.
+
+
+#### Parameter design
+
+Once the concept is established, the nominal values of the various dimensions and design parameters need to be set, the detail design phase of conventional engineering. Taguchi's radical insight was that the exact choice of values required is under-specified by the performance requirements of the system. In many circumstances, this allows the parameters to be chosen so as to minimize the effects on performance arising from variation in manufacture, environment and cumulative damage. This is sometimes called robustification.
+
+Robust parameter designs consider controllable and uncontrollable noise variables; they seek to exploit relationships and optimize settings that minimize the effects of the noise variables.
+
+
+#### Tolerance design
+
+With a successfully completed *parameter design*, and an understanding of the effect that the various parameters have on performance, resources can be focused on reducing and controlling variation in the critical few dimensions.
+
+
+## Design of experiments
+
+Taguchi developed his experimental theories independently. Taguchi read works following R. A. Fisher only in 1954.
+
+
+### Outer arrays
+
+Taguchi's designs aimed to allow greater understanding of variation than did many of the traditional designs from the analysis of variance (following Fisher). Taguchi contended that conventional sampling is inadequate here as there is no way of obtaining a random sample of future conditions. In Fisher's design of experiments and analysis of variance, experiments aim to reduce the influence of nuisance factors to allow comparisons of the mean treatment-effects. Variation becomes even more central in Taguchi's thinking.
+
+Taguchi proposed extending each experiment with an "outer array" (possibly an orthogonal array); the "outer array" should simulate the random environment in which the product would function. This is an example of judgmental sampling. Many quality specialists have been using "outer arrays".
+
+Later innovations in outer arrays resulted in "compounded noise." This involves combining a few noise factors to create two levels in the outer array: First, noise factors that drive output lower, and second, noise factors that drive output higher. "Compounded noise" simulates the extremes of noise variation but uses fewer experimental runs than would previous Taguchi designs.
+
+
+### Management of interactions
+
+
+#### Interactions, as treated by Taguchi
+
+Many of the orthogonal arrays that Taguchi has advocated are saturated arrays, allowing no scope for estimation of interactions. This is a continuing topic of controversy. However, this is only true for "control factors" or factors in the "inner array". By combining an inner array of control factors with an outer array of "noise factors", Taguchi's approach provides "full information" on control-by-noise interactions, it is claimed. Taguchi argues that such interactions have the greatest importance in achieving a design that is robust to noise factor variation. The Taguchi approach provides more complete interaction information than typical fractional factorial designs, its adherents claim.
+
+* Followers of Taguchi argue that the designs offer rapid results and that interactions can be eliminated by proper choice of quality characteristics. That notwithstanding, a "confirmation experiment" offers protection against any residual interactions. If the quality characteristic represents the energy transformation of the system, then the "likelihood" of control factor-by-control factor interactions is greatly reduced, since "energy" is "additive".
+
+#### Inefficiencies of Taguchi's designs
+
+* Interactions are part of the real world. In Taguchi's arrays, interactions are confounded and difficult to resolve.
+
+Statisticians in response surface methodology (RSM) advocate the "sequential assembly" of designs: In the RSM approach, a screening design is followed by a "follow-up design" that resolves only the confounded interactions judged worth resolution. A second follow-up design may be added (time and resources allowing) to explore possible high-order univariate effects of the remaining variables, as high-order univariate effects are less likely in variables already eliminated for having no linear effect. With the economy of screening designs and the flexibility of follow-up designs, sequential designs have great statistical efficiency. The sequential designs of response surface methodology require far fewer experimental runs than would a sequence of Taguchi's designs.
+
+
+## Assessment
+
+Genichi Taguchi has made valuable contributions to statistics and engineering. His emphasis on *loss to society*, techniques for investigating variation in experiments, and his overall strategy of system, parameter and tolerance design have been influential in improving manufactured quality worldwide.
+

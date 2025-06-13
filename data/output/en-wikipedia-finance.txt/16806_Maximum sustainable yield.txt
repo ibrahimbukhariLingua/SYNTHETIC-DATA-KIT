@@ -1,0 +1,123 @@
+Maximum sustainable yield
+
+
+# Maximum sustainable yield
+
+
+
+In population ecology and economics, **maximum sustainable yield** (**MSY**) is theoretically, the largest yield (or catch) that can be taken from a species' stock over an indefinite period. Fundamental to the notion of sustainable harvest, the concept of MSY aims to maintain the population size at the point of maximum growth rate by harvesting the individuals that would normally be added to the population, allowing the population to continue to be productive indefinitely. Under the assumption of logistic growth, resource limitation does not constrain individuals' reproductive rates when populations are small, but because there are few individuals, the overall yield is small. At intermediate population densities, also represented by half the carrying capacity, individuals are able to breed to their maximum rate. At this point, called the maximum sustainable yield, there is a surplus of individuals that can be harvested because growth of the population is at its maximum point due to the large number of reproducing individuals. Above this point, density dependent factors increasingly limit breeding until the population reaches carrying capacity. At this point, there are no surplus individuals to be harvested and yield drops to zero. The maximum sustainable yield is usually higher than the optimum sustainable yield and maximum economic yield.
+
+MSY is extensively used for fisheries management. Unlike the logistic (Schaefer) model, MSY has been refined in most modern fisheries models and occurs at around 30% of the unexploited population size. This fraction differs among populations depending on the life history of the species and the age-specific selectivity of the fishing method.
+
+
+## History
+
+The concept of MSY as a fisheries management strategy developed in Belmar, New Jersey, in the early 1930s. It increased in popularity in the 1950s with the advent of surplus-production models with explicitly estimate MSY. As an apparently simple and logical management goal, combined with the lack of other simple management goals of the time, MSY was adopted as the primary management goal by several international organizations (e.g., IWC, IATTC, ICCAT, ICNAF), and individual countries.
+
+Between 1949 and 1955, the U.S. maneuvered to have MSY declared the goal of international fisheries management (Johnson 2007). The international MSY treaty that was eventually adopted in 1955 gave foreign fleets the right to fish off any coast. Nations that wanted to exclude foreign boats had to first prove that its fish were overfished.
+
+As experience was gained with the model, it became apparent to some researchers that it lacked the capability to deal with the real world operational complexities and the influence of trophic and other interactions. In 1977, Peter Larkin wrote its epitaph, challenging the goal of maximum sustained yield on several grounds: It put populations at too much risk; it did not account for spatial variability in productivity; it did not account for species other than the focus of the fishery; it considered only the benefits, not the costs, of fishing; and it was sensitive to political pressure. In fact, none of these criticisms was aimed at sustainability as a goal. The first one noted that seeking the absolute MSY with uncertain parameters was risky. The rest point out that the goal of MSY was not holistic; it left out too many relevant features.
+
+Some managers began to use more conservative quota recommendations, but the influence of the MSY model for fisheries management still prevailed. Even while the scientific community was beginning to question the appropriateness and effectiveness of MSY as a management goal, it was incorporated into the 1982 United Nations Convention for the Law of the Sea, thus ensuring its integration into national and international fisheries acts and laws. According to Walters and Maguire, an ‘‘institutional juggernaut had been set in motion’’, climaxing in the early 1990s with the collapse of northern cod.
+
+
+## Modelling MSY
+
+
+### Population growth
+
+The key assumption behind all sustainable harvesting models such as MSY is that populations of organisms grow and replace themselves – that is, they are renewable resources. Additionally it is assumed that because the growth rates, survival rates, and reproductive rates increase when harvesting reduces population density, they produce a surplus of biomass that can be harvested. Otherwise, sustainable harvest would not be possible.
+
+Another assumption of renewable resource harvesting is that populations of organisms do not continue to grow indefinitely; they reach an equilibrium population size, which occurs when the number of individuals matches the resources available to the population (i.e., assume classic logistic growth). At this equilibrium population size, called the carrying capacity, the population remains at a stable size.
+
+The logistic model (or logistic function) is a function that is used to describe bounded population growth under the previous two assumptions. The logistic function is bounded at both extremes: when there are not individuals to reproduce, and when there is an equilibrium number of individuals (i.e., at carrying capacity). Under the logistic model, population growth rate between these two limits is most often assumed to be sigmoidal (Figure 1). There is scientific evidence that some populations do grow in a logistic fashion towards a stable equilibrium – a commonly cited example is the logistic growth of yeast.
+
+The equation describing logistic growth is:
+
+The parameter values are:
+
+From the logistic function, the population size at any point can be calculated as long as {\displaystyle r}, {\displaystyle K}, and {\displaystyle N\_{0}} are known.
+
+Differentiating equation 1.1 give an expression for how the rate of population increases as N increases. At first, the population growth rate is fast, but it begins to slow as the population grows until it levels off to the maximum growth rate, after which it begins to decrease (figure 2).
+
+The equation for figure 2 is the differential of equation 1.1 (Verhulst's 1838 growth model):
+
+{\displaystyle {\frac {dN}{dt}}} can be understood as the change in population (N) with respect to a change in time (t). Equation 1.2 is the usual way in which logistic growth is represented mathematically and has several important features. First, at very low population sizes, the value of {\displaystyle {\frac {N}{K}}} is small, so the population growth rate is approximately equal to {\displaystyle rN}, meaning the population is growing exponentially at a rate r (the intrinsic rate of population increase). Despite this, the population growth rate is very low (low values on the y-axis of figure 2) because, even though each individual is reproducing at a high rate, there are few reproducing individuals present. Conversely, when the population is large the value of {\displaystyle {\frac {N}{K}}} approaches 1 effectively reducing the terms inside the brackets of equation 1.2 to zero. The effect is that the population growth rate is again very low, because either each individual is hardly reproducing or mortality rates are high. As a result of these two extremes, the population growth rate is maximum at an intermediate population or half the carrying capacity ({\displaystyle N={\frac {K}{2}}}).
+
+
+### MSY model
+
+The simplest way to model harvesting is to modify the logistic equation so that a certain number of individuals is continuously removed:
+
+Where H represents the number of individuals being removed from the population – that is, the harvesting rate. When H is constant, the population will be at equilibrium when the number of individuals being removed is equal to the population growth rate (figure 3). The equilibrium population size under a particular harvesting regime can be found when the population is not growing – that is, when {\displaystyle {\frac {dN}{dt}}=0}. This occurs when the population growth rate is the same as the harvest rate:
+
+Figure 3 shows how growth rate varies with population density. For low densities (far from carrying capacity), there is little addition (or "recruitment") to the population, simply because there are few organisms to give birth. At high densities, though, there is intense competition for resources, and growth rate is again low because the death rate is high. In between these two extremes, the population growth rate rises to a maximum value ({\displaystyle N\_{MSY}}). This maximum point represents the maximum number of individuals that can be added to a population by natural processes. If more individuals than this are removed from the population, the population is at risk for decline to extinction. The maximum number that can be harvested in a sustainable manner, called the maximum sustainable yield, is given by this maximum point.
+
+Figure 3 also shows several possible values for the harvesting rate, H. At {\displaystyle H\_{1}}, there are two possible population equilibrium points: a low population size ({\displaystyle N\_{a}}) and a high one ({\displaystyle N\_{b}}). At {\displaystyle H\_{2}}, a slightly higher harvest rate, however there is only one equilibrium point (at {\displaystyle N\_{MSY}}), which is the population size that produces the maximum growth rate. With logistic growth, this point, called the maximum sustainable yield, is where the population size is half the carrying capacity (or {\displaystyle N={\frac {K}{2}}}). The maximum sustainable yield is the largest yield that can be taken from a population at equilibrium.
+In figure 3, if {\displaystyle H} is higher than {\displaystyle H\_{2}}, the harvesting would exceed the population's capacity to replace itself at any population size ({\displaystyle H\_{3}} in figure 3). Because harvesting rate is higher than the population growth rate at all values of {\displaystyle N}, this rate of harvesting is not sustainable.
+
+An important feature of the MSY model is how harvested populations respond to environmental fluctuations or illegal offtake. Consider a population at {\displaystyle N\_{b}} harvested at a constant harvest level {\displaystyle H\_{1}}. If the population falls (due to a bad winter or illegal harvest) this will ease density-dependent population regulation and increase yield, moving the population back to {\displaystyle N\_{b}}, a stable equilibrium. In this case, a negative feedback loop creates stability. The lower equilibrium point for the constant harvest level {\displaystyle H\_{1}} is not stable however; a population crash or illegal harvesting will decrease population yield farther below the current harvest level, creating a positive feedback loop leading to extinction. Harvesting at {\displaystyle N\_{MSY}} is also potentially unstable. A small decrease in the population can lead to a positive feedback loop and extinction if the harvesting regime ({\displaystyle H\_{2}}) is not reduced. Thus, some consider harvesting at MSY to be unsafe on ecological and economic grounds. The MSY model itself can be modified to harvest a certain percentage of the population or with constant effort constraints rather than an actual number, thereby avoiding some of its instabilities.
+
+The MSY equilibrium point is semi-stable – a small increase in population size is compensated for, a small decrease to extinction if H is not decreased. Harvesting at MSY is therefore dangerous because it is on a knife-edge – any small population decline leads to a positive feedback, with the population declining rapidly to extinction if the number of harvested stays the same.
+
+The formula for maximum sustained harvest ({\displaystyle H}) is one-fourth the maximum population or carrying capacity ({\displaystyle K}) times the intrinsic rate of growth ({\displaystyle r}).
+
+{\displaystyle H={\frac {Kr}{4}}}
+
+
+### For demographically structured populations
+
+The principle of MSY often holds for age-structured populations as well. The calculations can be more complicated, and the results often depend on whether density dependence occurs in the larval stage (often modeled as density dependent reproduction) and/or other life stages. It has been shown that if density dependence only acts on larva, then there is an optimal life stage (size or age class) to harvest, with no harvest of all other life stages. Hence the optimal strategy is to harvest this most valuable life-stage at MSY. However, in age and stage-structured models, a constant MSY does not always exist. In such cases, cyclic harvest is optimal where the yield and resource fluctuate in size, through time. In addition, environmental stochasticity interacts with demographically structured populations in fundamentally different ways than for unstructured populations when determining optimal harvest. In fact, the optimal biomass to be left in the ocean, when fished at MSY, can be either higher or lower than in analogous deterministic models, depending on the details of the density dependent recruitment function, if stage-structure is also included in the model.
+
+
+### Implications of MSY model
+
+Starting to harvest a previously unharvested population will always lead to a decrease in the population size. That is, it is impossible for a harvested population to remain at its original carrying capacity. Instead, the population will either stabilize at a new lower equilibrium size or, if the harvesting rate is too high, decline to zero.
+
+The reason why populations can be sustainably harvested is that they exhibit a density-dependent response. This means that at any population size below K, the population is producing a surplus yield that is available for harvesting without reducing population size. Density dependence is the regulator process that allows the population to return to equilibrium after a perturbation. The logistic equation assumes that density dependence takes the form of negative feedback.
+
+If a constant number of individuals is harvested from a population at a level greater than the MSY, the population will decline to extinction. Harvesting below the MSY level leads to a stable equilibrium population if the starting population is above the unstable equilibrium population size.
+
+
+### Uses of MSY
+
+MSY has been especially influential in the management of renewable biological resources such as commercially important fish and wildlife. In fisheries terms, **maximum sustainable yield** (MSY) is the largest average catch that can be captured from a stock under existing environmental conditions. MSY aims at a balance between too much and too little harvest to keep the population at some intermediate abundance with a maximum replacement rate.
+
+Relating to MSY, the maximum economic yield (MEY) is the level of catch that provides the maximum net economic benefits or profits to society. Like optimum sustainable yield, MEY is usually less than MSY.
+
+
+### Limitations of MSY approach
+
+Although it is widely practiced by state and federal government agencies regulating wildlife, forests, and fishing, MSY has come under heavy criticism by ecologists and others from both theoretical and practical reasons. The concept of maximum sustainable yield is not always easy to apply in practice. Estimation problems arise due to poor assumptions in some models and lack of reliability of the data. Biologists, for example, do not always have enough data to make a clear determination of the population's size and growth rate. Calculating the point at which a population begins to slow from competition is also very difficult. The concept of MSY also tends to treat all individuals in the population as identical, thereby ignoring all aspects of population structure such as size or age classes and their differential rates of growth, survival, and reproduction.
+
+As a management goal, the static interpretation of MSY (i.e., MSY as a fixed catch that can be taken year after year) is generally not appropriate because it ignores the fact that fish populations undergo natural fluctuations (i.e., MSY treats the environment as unvarying) in abundance and will usually ultimately become severely depleted under a constant-catch strategy. Thus, most fisheries scientists now interpret MSY in a more dynamic sense as the maximum average yield (MAY) obtained by applying a specific harvesting strategy to a fluctuating resource. Or as an optimal "escapement strategy", where escapement means the amount of fish that must remain in the ocean [rather than the amount of fish that can be harvested]. An escapement strategy is often the optimal strategy for maximizing expected yield of a harvested, stochastically fluctuating population.
+
+However, the limitations of MSY, does not mean it performs worse than humans using their best intuitive judgment. Experiments using students in natural resource management classes suggest that people using their past experience, intuition, and best judgement to manage a fishery generate far less long term yield compared to a computer using an MSY calculation, even when that calculation comes from incorrect population dynamic models.
+
+For a more contemporary description of MSY and its calculation see
+
+
+#### Orange roughy
+
+An example of errors in estimating the population dynamics of a species occurred within the New Zealand Orange roughy fishery. Early quotas were based on an assumption that the orange roughy had a fairly short lifespan and bred relatively quickly. However, it was later discovered that the orange roughy lived a long time and had bred slowly (~30 years). By this stage stocks had been largely depleted.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+
+## Criticism
+
+The approach has been widely criticized as ignoring several key factors involved in fisheries management and has led to the devastating collapse of many fisheries. Among conservation biologists it is widely regarded as dangerous and misused.
+
+
+## Overfishing
+
+Across the world there is a crisis in the world's fisheries. In recent years an accelerating decline has been observed in the productivity of many important fisheries. Fisheries which have been devastated in recent times include (but are not limited to) the great whale fisheries, the Grand Bank fisheries of the western Atlantic, and the Peruvian anchovy fishery. Recent assessments by the United Nations Food and Agriculture Organization (FAO) of the state of the world's fisheries indicate a levelling off of landings in the 1990s, at about 100 million tons.
+
+In addition, the composition of global catches has changed. As fishers deplete larger, long-lived predatory fish species such as cod, tuna, shark, and snapper, they move down to the next level – to species that tend to be smaller, shorter-lived, and less valuable.
+
+Overfishing is a classic example of the tragedy of the commons.
+
+
+## Optimum sustainable yield
+
+In population ecology and economics, **optimum sustainable yield** is the level of effort (LOE) that maximizes the difference between total revenue and total cost. Or, where marginal revenue equals marginal cost. This level of effort maximizes the economic profit, or rent, of the resource being utilized. It usually corresponds to an effort level lower than that of maximum sustainable yield.
+In environmental science, **optimum sustainable yield** is the largest economical yield of a renewable resource achievable over a long time period without decreasing the ability of the population or its environment to support the continuation of this level of yield.
+

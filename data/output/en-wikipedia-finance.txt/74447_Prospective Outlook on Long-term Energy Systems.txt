@@ -1,0 +1,83 @@
+Prospective Outlook on Long-term Energy Systems
+
+
+# Prospective Outlook on Long-term Energy Systems
+
+
+
+**Prospective Outlook on Long-term Energy Systems** (**POLES**) is a world simulation model for the energy sector that runs on the Vensim software. It is a techno-economic model with endogenous projection of energy prices, a complete accounting of energy demand and supply of numerous energy vectors and associated technologies, and a carbon dioxide and other greenhouse gases emissions module.
+
+
+## History
+
+POLES was initially developed in the early 1990s in the Institute of Energy Policy and Economics IEPE (now EDDEN-CNRS) in Grenoble, France. It was conceived on the basis of research issues related to global energy supply and climate change and the long-term impact of energy policies. It was initially developed through a detailed description of sectoral energy demand, electricity capacity planning and fossil fuel exploration and production in the different world regions. Along its development it incorporated theoretical and practical expertise in many fields such as mathematics, economics, engineering, energy analysis, international trade and technical change.
+
+The initial development of POLES was financed by the JOULE II and III programmes of the European Commission’s Third and Fourth Framework Programmes (FP) for Research and Technological Development (1990-1994 and 1994-1998) as well as by the French CNRS. Since then, the model has been developed extensively through several projects, some partly financed by FP5, FP6 and FP7, and in collaboration between the EDDEN-CNRS, the consulting company Enerdata and the European Joint Research Centre IPTS.
+
+With a history spanning twenty years, it is one of the few energy models worldwide that benefits from a continuous development process and expertise over such an extended time period.
+
+
+## Structure
+
+The model provides a complete system for the simulation and economic analysis of the world’s energy sector up to 2050. POLES is a partial equilibrium model with a yearly recursive simulation process with a combination of price-induced behavioural equations and a cost- and performance-based system for a large number of energy or energy-related technologies. Contrary to several other energy sector models, international energy prices are endogenous. The main exogenous variables are the gross domestic product and population for each country or region.
+
+The model’s structure corresponds to a system of interconnected modules and articulates three levels of analysis: international energy markets, regional energy balances, and national energy demand (which includes new technologies, electricity production, primary energy production systems and sectoral greenhouse gas emissions).
+
+POLES breaks down the world into 66 regions, of which 54 correspond to countries (including the 28 countries of the European Union) and 12 correspond to countries aggregates; for each of these regions, a full energy balance is modelled. The model covers 15 energy demand sectors in each region.
+
+
+### Demand sectors
+
+Each demand sector is described with a high degree of detail, including activity indicators, short- and long-term energy prices and associated elasticities and technological evolution trends (thus including the dynamic cumulative processes associated with technological learning curves). This allows a strong economic consistency in the adjustment of supply and demand by region, as relative price changes at a sectoral level impact all key component of a region’s sector. Sectoral value added is simulated.
+
+Energy demand for each fuel in a sector follows a market share-based competition driven by energy prices and factors related to policy or development assumptions.
+
+The model is composed of the following demand sectors:
+
+* **Residential and Tertiary**: two sectors.
+* **Industry**:
+ + Energy uses in industry: four sectors, allowing for a detailed modelling of such energy-intensive industries such as the steel industry, the chemicals industry and the non-metallic minerals industry (cement, glass).
+ + Non-energy uses in industry: two sectors, for the transformation sectors such as plastics production and chemical feedstock production.
+* **Transport**: four sectors (air, rail, road and other). Road transport modelling comprises several vehicle types (passenger cars, merchandise heavy trucks) and allows the study of inter-technology competition with the penetration of alternative vehicles (hybrids, electric or fuel cell vehicles).
+* **International bunkers**: two sectors.
+* **Agriculture**: one sector.
+
+### Oil and gas supply
+
+There are 88 oil and gas production regions with inter-regional trade; these producing regions supply the international energy markets, which in turn feed the demand of the 66 aforementioned world regions. Fossil fuel supply modelisation includes a technological improvement in the oil recovery rate, a linkage between new discoveries and cumulative drilling and a feedback of the reserves/production ratio on the oil price. OPEC and non-OPEC production is differentiated. The model includes non-conventional oil resources such as oil shales and tar sands.
+
+
+### Power Generation
+
+There are 30 electricity generation technologies, among which several technologies that are still marginal or planned, such as thermal production with carbon capture and storage or new nuclear designs. Price-induced diffusion tools such as feed-in tariffs can be included as drivers for projecting the future development of new energy technologies.
+
+The model distinguishes four typical daily load curves in a year, with two-hour steps. The load curves are met by a generation mix given by a merit order that is based on marginal costs of operation, maintenance and annualized capital costs. Expected power demand over the year influences investment decisions for new capacity planning in the next step.
+
+
+### Emissions and carbon price
+
+The model includes accounting of greenhouse gas (GHG) emissions and allows visualising GHG flows on sectoral, regional and global levels. POLES covers fuel combustion-related emissions in all demand sectors, thus covering over half of global GHG emissions. The six Kyoto Protocol GHGs are covered (carbon dioxide, methane, nitrous oxide, sulphur hexafluoride, hydrofluorocarbons and perfluorocarbons).
+
+The model can be used to test the sensibility of the energy sector to the carbon price as applied to the price of fossil fuels on a regional level, as envisaged or experimented by cap and trade systems like the EU’s Emissions Trading Scheme.
+
+
+### Databases
+
+The model’s databases have been developed by IPTS, EDDEN and Enerdata. Data on technological costs and performances were provided by the TECHPOL database. The data for historical energy demand, consumption and prices are compiled and provided by Enerdata.
+
+
+## Uses
+
+The POLES model can be used to study or test the effect of different energy resources assumptions or energy policies and assess the importance of various driving variables behind energy demand and the penetration rates of certain electricity generation or end-use technologies. POLES does not directly provide the macro-economic impact of mitigation solutions as envisaged by the Stern Review, however it allows a detailed assessment of the costs associated with the development of low- or zero-carbon technologies.
+
+Linked with GHG emissions profiles, the model can produce marginal abatement cost curves (MACCs) for each region and sector at a desired time; these can be used to quantify the costs related to GHG emissions reduction or as an analysis tool for strategic areas for emissions control policies and emissions trading systems under different market configurations and trading rules.
+
+Studies including POLES simulations have been commissioned by international bodies such as several Directorates-General of the European Commission, national energy, environment, industry and transport agencies or private actors in the energy sector.
+
+
+## Criticism
+
+POLES can model changes in sectoral value added and shifts of activity between sectors. However POLES is not a macroeconomic model in the sense that it uses the gross domestic product as an input and includes no feedback on it that could result from the evolution of the energy system: carbon pricing, falling oil production and its effect on transport and mobility, or growth induced by technological innovation (such as the IT boom of the 1990s). As such, it does not provide the total impact on society of, e.g., climate adaptation or mitigation (it does however quantify the total cost to the energy sector, including investment necessary in the development of low-carbon technologies).
+
+The model does not cover all greenhouse gases emissions, notably those related to agriculture (in part), land use, land-use change and forestry. As such, the climate component of the model does not allow to fully project GHG stocks, concentrations and associated temperature rises from anthropogenic climate change.
+

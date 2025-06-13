@@ -1,0 +1,58 @@
+Dynamic financial analysis
+
+
+# Dynamic financial analysis
+
+
+
+**Dynamic financial analysis** (DFA) is method for assessing the risks of an insurance company using a holistic model as opposed to traditional actuarial analysis, which analyzes risks individually. Specifically, DFA reveals the dependencies of hazards and their impacts on the insurance company's financial well being as a whole such as business mix, reinsurance, asset allocation, profitability, solvency, and compliance.
+
+In addition to projecting stochastic future economic scenarios through using scenario generators such as *interest rate risk*, *underwriting cycle* and *jurisdictional risk* models, DFA also links the scenarios with the *financial models of the targeted insurance company* that is being analyzed. Such models not only reveal the operation and the business structure of the company, but also uncover the dependencies among its business practices. Because DFA tries to account for every aspect of the company, it produces a vast amount of data. As a result, analyzing and presenting the outputs effectively is of great importance.
+
+
+## Objectives
+
+DFA is used primarily used by financial practitioners to manage profitability and financial stability (the risk control function of DFA) Not only do DFA users seek to maximize shareholder values, but they also try to maintain customer values. Furthermore, outputs from DFA could help managers identify strengths and weaknesses of the following areas.
+
+* *Business mix*: estimates relative and absolute value of each line of business (e.g. premium and commission level).
+* *Reinsurance*: uncovers the structure of the company's line of businesses types, interrelations, and cost of reinsurance.
+* *Asset allocation*: determines whether a company's asset allocation is taking on too much investment risk.
+* *Profitability*: measures the profitability of each line of business in the company.
+* *Solvency*: reveals liquidity problems, mismatches of cash flows to meet financial obligations.
+* *Compliance*: assesses the likelihood of change in regulations or deteriorating business operations.
+* *Sensitivity*: assess the company's resilience to a change in strategies and economic conditions.
+* *Dependency*: uncovers dependencies of all kinds of risks that are hard to understand without a holistic modeling.
+
+## Elements
+
+DFA consists of the following 3 parts:
+
+* *Scenarios*, generating expected and extreme economic scenarios to assess the company's reaction to changes
+* *Business Models*, quantifying the company's business models and uncovering the dependencies among them
+* *Analysis Presentation*, presenting the analysis to the executives who make strategic decisions
+
+Careful calibration is required to ensure the accuracy of the scenarios and the correlations among business models.
+
+
+## Interest rate generator
+
+The interest rate generator is the core fundamental of DFA. Many sophisticated interest rate models were created in the effort to best imitate the real world interest rate behavior. Although none of the existing models are perfect, they have their own advantages and disadvantages. The following is a simple interest rate model used in a publicly access DFA model.
+
+
+### Cox, Ingersoll, and Ross (CIR) interest rate generator
+
+The CIR interest rate model characterizes the short-term interest rate as a mean-reverting stochastic forecast. Although CIR was first used to project continuous changes in the interest rates, it is also possible to use it to project discrete changes from one time period to another. Below is the formula.
+
+{\displaystyle dr\_{t}=a(b-r\_{t})\,dt+\sigma {\sqrt {r\_{t}}}\,dW\_{t}}
+
+where
+
+* **b** = the long-run mean to which the interest rate reverts; the expected interest rate in the long run
+* **a** = the speed of reversion of the interest rate to its long-run mean (e.g., a = 2 means the interest is expected to return to its long-term mean within half a year, and a = 1/5 means it would take 5 years).
+* **{\displaystyle r\_{t}}** = the current short-term interest rate
+* {\displaystyle \sigma \,} = the volatility of the interest rate process expressed as the standard deviation of historical or projected interest rate changes.
+
+The CIR model has two components: a deterministic {\displaystyle a(b-r\_{t})} and a stochastic part{\displaystyle \sigma {\sqrt {r\_{t}}}\,}. The deterministic part will go in the reverse direction of where the current short term rate is heading. In other words, the further the current interest rate is from the long term expected rate, the harder the deterministic part tries to reverse it back to the long term mean.
+
+The stochastic part is purely random; it can either help the current interest rate deviate from its long term mean or the reverse. Because this part is multiplied by the square root of the current interest rate, when the current interest rate is low, its impact is minimum, thus leading to the unlikelihood of the interest rate going below zero, and the interest rate cannot be negative. However, the reverse is true if the current rate is high.
+

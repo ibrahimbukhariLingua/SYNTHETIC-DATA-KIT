@@ -1,0 +1,66 @@
+Methodology of econometrics
+
+
+# Methodology of econometrics
+
+
+
+The **methodology of econometrics** is the study of the range of differing approaches to undertaking econometric analysis.
+
+The econometric approaches can be broadly classified into nonstructural and structural. The **nonstructural models** are based primarily on statistics (although not necessarily on formal statistical models), their reliance on economics is limited (usually the economic models are used only to distinguish the inputs (observable "explanatory" or "exogenous" variables, sometimes designated as x) and outputs (observable "endogenous" variables, y). Nonstructural methods have a long history (cf. Ernst Engel, 1857). **Structural models** use mathematical equations derived from economic models and thus the statistical analysis can estimate also *unobservable* variables, like elasticity of demand. Structural models allow to perform calculations for the situations that are not covered in the data being analyzed, so called **counterfactual analysis** (for example, the analysis of a monopolistic market to accommodate a hypothetical case of the second entrant).
+
+
+## Examples
+
+Commonly distinguished differing approaches that have been identified and studied include:
+
+* the Cowles Commission approach
+* the vector autoregression (VAR) approach
+* the LSE approach to econometrics - originated with Denis Sargan now associated with David Hendry (and his general-to-specific modeling). Also associated this approach is the work on integrated and cointegrated systems originating on the work of Engle and Granger and Johansen and Juselius (Juselius 1999)
+* the use of calibration - Finn Kydland and Edward Prescott
+* the *experimentalist* or difference in differences approach - Joshua Angrist and Jörn-Steffen Pischke.
+
+In addition to these more clearly defined approaches, Hoover identifies a range of *heterogeneous* or *textbook approaches* that those less, or even un-, concerned with methodology, tend to follow.
+
+
+## Methods
+
+Econometrics may use standard statistical models to study economic questions, but most often they are with observational data, rather than in controlled experiments. In this, the design of observational studies in econometrics is similar to the design of studies in other observational disciplines, such as astronomy, epidemiology, sociology and political science. Analysis of data from an observational study is guided by the study protocol, although exploratory data analysis may by useful for generating new hypotheses. Economics often analyzes systems of equations and inequalities, such as supply and demand hypothesized to be in equilibrium. Consequently, the field of econometrics has developed methods for identification and estimation of simultaneous-equation models. These methods are analogous to methods used in other areas of science, such as the field of system identification in systems analysis and control theory. Such methods may allow researchers to estimate models and investigate their empirical consequences, without directly manipulating the system.
+
+One of the fundamental statistical methods used by econometricians is regression analysis. Regression methods are important in econometrics because economists typically cannot use controlled experiments. Econometricians often seek illuminating natural experiments in the absence of evidence from controlled experiments. Observational data may be subject to omitted-variable bias and a list of other problems that must be addressed using causal analysis of simultaneous-equation models.
+
+
+### Experimental economics
+
+In recent decades, econometricians have increasingly turned to use of experiments to evaluate the often-contradictory conclusions of observational studies. Here, controlled and randomized experiments provide statistical inferences that may yield better empirical performance than do purely observational studies.
+
+
+### Data
+
+Data sets to which econometric analyses are applied can be classified as time-series data, cross-sectional data, panel data, and multidimensional panel data. Time-series data sets contain observations over time; for example, inflation over the course of several years. Cross-sectional data sets contain observations at a single point in time; for example, many individuals' incomes in a given year. Panel data sets contain both time-series and cross-sectional observations. Multi-dimensional panel data sets contain observations across time, cross-sectionally, and across some third dimension. For example, the Survey of Professional Forecasters contains forecasts for many forecasters (cross-sectional observations), at many points in time (time series observations), and at multiple forecast horizons (a third dimension).
+
+
+### Instrumental variables
+
+In many econometric contexts, the commonly used ordinary least squares method may not recover the theoretical relation desired or may produce estimates with poor statistical properties, because the assumptions for valid use of the method are violated. One widely used remedy is the method of instrumental variables (IV). For an economic model described by more than one equation, simultaneous-equation methods may be used to remedy similar problems, including two IV variants, Two-Stage Least Squares (2SLS), and Three-Stage Least Squares (3SLS).
+
+
+### Computational methods
+
+Computational concerns are important for evaluating econometric methods and for use in decision making. Such concerns include mathematical well-posedness: the existence, uniqueness, and stability of any solutions to econometric equations. Another concern is the numerical efficiency and accuracy of software. A third concern is also the usability of econometric software.
+
+
+### Structural econometrics
+
+Structural econometrics extends the ability of researchers to analyze data by using economic models as the lens through which to view the data. The benefit of this approach is that, provided that counter-factual analyses take an agent's re-optimization into account, any policy recommendations will not be subject to the Lucas critique. Structural econometric analyses begin with an economic model that captures the salient features of the agents under investigation. The researcher then searches for parameters of the model that match the outputs of the model to the data.
+
+One example is dynamic discrete choice, where there are two common ways of doing this. The first requires the researcher to completely solve the model and then use maximum likelihood. The second bypasses the full solution of the model and estimates models in two stages, allowing the researcher to consider more complicated models with strategic interactions and multiple equilibria.
+
+Another example of structural econometrics is in the estimation of first-price sealed-bid auctions with independent private values. The key difficulty with bidding data from these auctions is that bids only partially reveal information on the underlying valuations, bids shade the underlying valuations. One would like to estimate these valuations in order to understand the magnitude of profits each bidder makes. More importantly, it is necessary to have the valuation distribution in hand to engage in mechanism design. In a first price sealed bid auction the expected payoff of a bidder is given by:
+
+where v is the bidder valuation, b is the bid. The optimal bid {\displaystyle b^{\*}} solves a first order condition:
+
+which can be re-arranged to yield the following equation for {\displaystyle v}
+
+Notice that the probability that a bid wins an auction can be estimated from a data set of completed auctions, where all bids are observed. This can be done using simple nonparametric estimators, such as kernel regression. If all bids are observed, it is then possible to use the above relation and the estimated probability function and its derivative to point wise estimate the underlying valuation. This will then allow the investigator to estimate the valuation distribution.
+

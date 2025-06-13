@@ -1,0 +1,61 @@
+Foreign exchange date conventions
+
+
+# Foreign exchange date conventions
+
+
+
+The **Foreign exchange Options date convention** is the timeframe between a currency options trade on the foreign exchange market and when the two parties will exchange the currencies to settle the option. The number of days will depend on the option agreement, the currency pair and the banking hours of the underlying currencies. The convention helps the counterparties to understand when payments will be made for each trade.
+
+For the convention, there are four key dates to consider when trading a particular currency pair:
+
+* Horizon - the date on which the trade originates (usually today)
+* Spot - the date on which the initial transfer of funds takes place
+* Expiry - the date on which the instrument expires
+* Delivery - the date on which the final transfer of funds generated from the maturity of the instrument takes place
+
+These dates can be summarised on the following timeline:
+
+
+## Calculating spot dates
+
+The spot date is always calculated from the horizon date (T). There are two possible cases:
+
+1. The spot date is day T+1 if the currency pair is USD/CAD, USD/TRY, USD/PHP or USD/RUB. In this case, T+1 must be a business day and not a US holiday. If an unacceptable day is encountered, move forward one day and test again until an acceptable date is found.
+2. The spot date is day T+2 otherwise. The calculation of T+2 must be done by considering separately each currency within the currency pair. For USD, there must be one clear working day between the horizon date and the spot date. For all other currencies, there must be two clear working days between the horizon date and the spot date.
+3. The exception to above rule is for LatAM currencies (MXN/CLP/ARS/BRL/COP/PEN). For these three currencies, there must be two clear US working days between the horizon date and the spot date.
+
+Also, the spot date cannot fall on a US holiday for any USD currency pair. However, foreign exchange trades can settle on this day (e.g. GBP/JPY on 4 July) but are considered FX outrights.
+
+
+## Calculating expiry and delivery dates
+
+Time to expiry is usually quoted either as "overnight" or in terms of a number of days, weeks, months or years. In general, the expiry date can be any weekday, even if it is a holiday in one, or both of the currencies, except 1 January. There are differing conventions depending on the period involved.
+
+
+### Overnight
+
+For overnight trades, the expiry date is the next week-day after the horizon date, and the delivery date is calculated from the expiry date in the same way as spot is calculated from the horizon date. This will result in an expiry date that is before the spot date.
+
+
+### Days and weeks
+
+For a trade with a time to expiry of v days, the expiry date is the day v days ahead of the horizon date (unless it is a weekend or 1 January, in which case the date is rolled forward to a weekday) and for a trade with time to expiry of x weeks, the expiry date is the day 7x days ahead of the horizon date (with the same conditions as above). The delivery date is then calculated from the expiry date in the same way as the spot date is calculated from the horizon date.
+
+
+### Months
+
+For a trade with time to expiry of y months, the expiry date is found by first calculating the spot date, then moving forward y months from the spot date to the delivery date. If the delivery date is a non-business day or a US holiday, move forward until an acceptable delivery date is found. Finally, calculate the expiry date using an "inverse spot" operation; e.g., find the expiry date for which the delivery date would be its spot. When finding the expiry date from the delivery date, there must be one clear business day and one weekday (not including 1 January) in any applicable non-USD/non-CAD, non-USD/non-TRY, non-USD/non-PHP, non-USD/non-RUB, non-USD/non-KZT and non-USD/non-PKR currency. If one leg of the currency pair is a non-deliverable currency, the expiry date must be a business day of that currency.
+
+
+### Years
+
+For a trade with time to expiry of z years, the expiry date is found by first calculating the spot date, then moving forward z years from the spot date to the delivery date. If the delivery date is a non-business day or a US holiday, move forward until an acceptable delivery date is found. Finally, calculate the expiry date using an "inverse spot" operation; e.g., find the expiry date for which the delivery date would be its spot. When finding the expiry date from the delivery date, there must be one clear business day and one weekday (not including 1 January) in any applicable non-USD/non-CAD, non-USD/non-TRY, non-USD/non-PHP, non-USD/non-RUB, non-USD/non-KZT and non-USD/non-PKR currency. If one leg of the currency pair is a non-deliverable currency, the expiry date must be a business day of that currency.
+
+
+### Special cases
+
+There are two special cases involving trades that take place around the end of the month and we are trading in month multiples. One defines "target month" to lie x months forward from spot if time to expiry is x months; e.g., if in February, and the time to expiry is three months, the target month is May.
+
+1. If the spot date falls on the last business day of the month in the currency pair then the delivery date is defined by convention to be the last business day of the target month e.g. assuming all days are business days: if spot is at 30 April, a one-month time to expiry will make the delivery date 31 May. This is described as trading "end-end".
+2. If the spot date falls before the end of the month but the resultant delivery date is beyond the end of the target month then the delivery date is defined by convention to be the last business day of the target month. For example, assuming all days are business days: if the spot date is 30 January, a one-month time to expiry implies delivery date 30 February—however, this doesn’t exist and the delivery date becomes 28 February (in a non-leap year).

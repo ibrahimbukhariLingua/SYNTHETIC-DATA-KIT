@@ -1,0 +1,125 @@
+American Megatrends
+
+
+# American Megatrends
+
+
+
+**American Megatrends Inc.**, doing business as **AMI**, is an international hardware and software company, specializing in PC hardware and firmware. The company was founded in 1985 by Pat Sarma and Subramonian Shankar. It is headquartered in Building 800 at 3095 Satellite Boulevard in unincorporated Gwinnett County, Georgia, United States, near the city of Duluth, and in the Atlanta metropolitan area.
+
+The company started as a manufacturer of complete motherboards, positioning itself in the high-end segment. Its first customer was PC's, later known as Dell.
+
+As hardware activity moved progressively to Taiwan-based ODMs, AMI continued to develop BIOS firmware for major motherboard manufacturers. The company produced BIOS software for motherboards (1986), server motherboards (1992), storage controllers (1995) and remote management cards (1998).
+
+In 1993, AMI produced MegaRAID, a storage controller card. AMI sold its RAID assets to LSI in 2001, with only one employee from the RAID-division remaining with the AMI core team.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+AMI continued to focus on OEM and ODM business and technology. Its product line includes or has previously included AMIBIOS (a BIOS), Aptio (a successor to AMIBIOS8 based on the UEFI standard), diagnostic software, AMI EC (embedded controller firmware), MG-Series SGPIO backplane controllers (for SATA, SAS and NVMe storage devices), driver/firmware development, and MegaRAC (BMC firmware).
+
+
+## Founding
+
+American Megatrends Inc. (AMI) was founded in 1985 by Subramonian Shankar and Pat Sarma with funds from a previous consulting venture, Access Methods Inc. (AMI). Access Methods was a company run by Pat Sarma and his partner. After Access Methods successfully launched the AMIBIOS, there were legal issues among the owners of the company, resulting in Sarma buying out his partners. Access Methods still owned the rights to the AMIBIOS. Sarma had already started a company called Quintessential Consultants Inc. (QCI), and later set up an equal partnership with Shankar.
+
+By this time the AMIBIOS had become established and there was a need to keep the initials AMI. The partners renamed QCI as American Megatrends, with the same initials as Access Methods; the renamed company then purchased AMIBIOS from Access Methods. Shankar became the president and Sarma the executive vice-president of this company. This partnership continued until 2001, when LSI Logic purchased the RAID Division of American Megatrends; American Megatrends then purchased all shares of the company owned by Sarma, making Shankar the majority owner.
+
+
+## Products
+
+
+### AMIDiag
+
+AMIDiag is a family of PC diagnostic utilities sold to OEMs only. The AMIDiag suite was introduced in 1991 and made available for MS-DOS, Microsoft Windows and UEFI platforms. It includes both the Windows and DOS PC diagnostics programs. Later versions of AMIDiag support UEFI, which allows diagnostics to be performed directly on the hardware components, without having to use operating system drivers or facilities.
+
+
+### Aptio
+
+AMI's UEFI firmware solutions. Aptio V is AMI's current main UEFI firmware product. Aptio Community Edition is an open source UEFI firmware product. Aptio 4 is a now-discontinued previous version that has been succeeded by Aptio V.
+
+
+### MegaRAC
+
+MegaRAC is a product line of BMC firmware packages and formerly service processors providing out-of-band, or lights-out remote management of computer systems. These BMCs running MegaRAC firmware packages or service processors operate independently of the operating system status or location, to manage and troubleshoot computers.
+
+
+## Former products
+
+
+### AMIBIOS
+
+Table of diagnostic beep codes compiled by AMI BIOS during power-on self test
+| Number of beeps | Meaning |
+| --- | --- |
+| 1 | Power-on self test successful |
+| 2 | Parity error in the first 64 KB of RAM |
+| 3 | Memory failure in the first 64 KB of RAM |
+| 4 | Same as 3, but also including a non-functional timer 1 |
+| 5 | CPU error |
+| 6 | Error in the A20 line on the 8042 keyboard controller chip |
+| 7 | Generation of a CPU virtual mode exception signifying an error |
+| 8 | Read/write error when accessing system video RAM |
+| 9 | Mismatch between the calculated checksum of the ROM firmware and the expected value hardcoded into the firmware. |
+| 10 | Read/write error for the CMOS NVRAM shutdown register |
+| 11 | A fault in the L2 cache |
+
+AMIBIOS is the IBM PC-compatible BIOS that was formerly developed and sold by American Megatrends since 1986. In 1994, the company claimed that 75% of PC clones used AMIBIOS. It is used on motherboards made by AMI and by other companies.
+
+American Megatrends had a strict OEM business model for AMIBIOS: it sold source code to motherboard manufacturers or customized AMIBIOS for each OEM individually, whichever business model they require. AMI does not sell to end users, and itself produces no end-user documentation or technical support for its BIOS firmware, leaving that to licensees. However, the company published two books on its BIOS in 1993 and 1994, written by its engineers.
+
+During powerup, the BIOS firmware displays an ID string in the lower-left-hand corner of the screen. This ID string comprises various pieces of information about the firmware, including when it was compiled, what configuration options were selected, the OEM license code, and the targeted chipset and motherboard. There are 3 ID string formats, the first for older AMIBIOS, and the second and third for the newer AMI Hi-Flex ("high flexibility") BIOS. These latter are displayed when the Insert key is pressed during power-on self-test.
+
+The original AMI BIOS did not encrypt the machine startup password, which it stored in non-volatile RAM. Therefore, any utility capable of reading a PC's NVRAM was able to read and to alter the password. The AMI WinBIOS encrypts the stored password, using a simple substitution cipher.
+
+By pressing the Delete key during power-on self-test when a prompt is displayed, the BIOS setup utility program is invoked. Some earlier AMIBIOS versions also included a cut-down version of the AMIDIAG utility that AMI also sold separately, but most later AMI BIOSes do not include this program as the BIOS DMI already incorporates detailed diagnostics.
+
+AMIBIOS was formerly sold through distributors, not directly available from the manufacturer or from eSupport.
+
+AMI supplies both DOS and Windows firmware upgrade utilities for its own motherboards. eSupport only supplies a Windows upgrade utility.
+
+
+### StorTrends/ManageTrends
+
+The StorTrends family of network-based backup and storage management software and hardware includes several NAS and iSCSI-based SAN servers with 4, 12, or 16 drive bays.
+
+AMI couples off-the-shelf hardware with the StorTrends iTX storage management firmware platform. StorTrends offers synchronous, asynchronous and snap-assisted replication, thin provisioning, high-availability grouping and advanced caching.
+
+Reliability and performance is the key for any storage server. StorTrends iTX 2.8 is designed to support Storage Bridge Bay specification that provide Auto-Failover capability to ensure that any interruption is handled without affecting data. It supports High-availability cluster, redundancy, scalability, replication, disaster recovery and multiple site backups.
+
+
+### DuOS-M
+
+*DuOS-M* was commercial software developed by American Megatrends for Intel x86-based computers using the Microsoft Windows operating system to provide a "dual operating system" environment in which the user can simultaneously deploy the Android operating system in tandem with Microsoft Windows.
+
+Because DuOS-M has the capability to run both Windows and Android simultaneously, the user can switch between the two operating systems without having to dual boot or suspend operation of one operating system in order to utilize the other.
+
+DuOS-M supports key hardware peripherals in Windows including cameras, audio, microphone and sensors such as ambient light sensor, accelerometer, gyrometer, compass and orientation sensors. It also supports various screen sizes, resolutions, and screen orientation (portrait and landscape) along with 3D acceleration and HD video playback.
+
+The first version of DuOS-M was released in June 2014. The software is available for download for a free 30-day trial, and is available for purchase for a complete license.
+
+On March 7, 2018, American Megatrends officially announced that it ceased development of DuOS-M. No further updates were being released at this time, including bug fixes and security patches.
+
+
+## Technical problems
+
+On November 13, 1993, some PCs with AMIBIOS firmware began bootup playing the tune to "Happy Birthday". The PC would remain halted, and the song would continue playing until a key was pressed, after which bootup would resume. The problem was caused by a virus-free Trojan, which was later resolved with firmware updates.
+
+The AMI WinBIOS was a 1994 update to AMIBIOS, with a GUI setup screen that mimicked the appearance of Windows 3.1 and supported mouse navigation, unusual at the time. WinBIOS was viewed favorably by Anand Lal Shimpi at AnandTech, but described by Thomas Pabst at Tom's Hardware as a "big disappointment", in part because of problems with distributing IRQ signals to every PCI and ISA expansion slot.
+
+In July 2008 Linux developers discovered issues with ACPI tables on certain AMIBIOS BIOSes supplied by Foxconn, ASUS, and MSI. The problem was related to the ACPI \_OSI method, which is used by ACPI to determine the OS version (in case an ACPI patch only applies to one specific OS). In some cases, the OSI method caused problems on Linux systems, skipping code that was only executed on Windows systems. Foxconn and AMI worked together to develop a solution, which was included in later revisions of AMIBIOS. The issue affected motherboards with Intel Socket 775. Actual system behavior differed based on BIOS version, system hardware and Linux distribution.
+
+In October 2021 an issue was discovered where some Baseboard Management Controllers were shipped with a license/royalty sticker that had the company name misspelled as "American Megatrands".
+
+
+## Worldwide offices
+
+* United States
+ + Headquarters: Duluth, Georgia
+ + Field offices: San Jose, California; Austin, Texas
+* Beijing, People's Republic of China
+* Kunshan, Jiangsu, People's Republic of China
+* Shenzhen, Guangdong, People's Republic of China
+* Taipei, Taiwan
+* Munich, Germany
+* Chennai, Tamil Nadu, India
+* Chiyoda, Tokyo, Japan
+* Seoul, South Korea
+* Formerly had an office in DuPont, Washington, United States

@@ -1,0 +1,48 @@
+2015–2016 SWIFT banking hack
+
+
+# 2015–2016 SWIFT banking hack
+
+
+
+In 2015 and 2016, a series of cyberattacks using the SWIFT banking network were reported, resulting in the successful theft of millions of dollars. The attacks were perpetrated by a hacker group known as APT 38 whose tactics, techniques and procedure overlap with the infamous Lazarus Group who are believed to be behind the Sony attacks. Experts agree that APT 38 was formed following the March 2013 sanctions and the first known operations connected to this group occurred in February 2014. If the attribution to North Korea is accurate, it would be the first known incident of a state actor using cyberattacks to steal funds.
+
+The attacks exploited vulnerabilities in the systems of member banks, allowing the attackers to gain control of the banks' legitimate SWIFT credentials. The thieves then used those credentials to send SWIFT funds transfer requests to other banks, which, trusting the messages to be legitimate, then sent the funds to accounts controlled by the attackers.
+
+
+## First reports
+
+The first public reports of these attacks came from thefts from Bangladesh central bank and a bank in Vietnam.
+
+A $101 million theft from the Bangladesh central bank via its account at the New York Federal Reserve Bank was traced to cyber criminals exploiting software vulnerabilities in SWIFT's Alliance Accessᵇʳᵒᵏᵉⁿ ᵃⁿᶜʰᵒʳ software, according to a *New York Times* report. It was not the first such attempt, the society acknowledged, and the security of the transfer system was undergoing new examination accordingly.
+
+Soon after the reports of the theft from the Bangladesh central bank, a second, apparently related, attack was reported to have occurred on a commercial bank in Vietnam.
+
+Both attacks involved malware written to both issue unauthorized SWIFT messages and to conceal that the messages had been sent. After the malware sent the SWIFT messages that stole the funds, it deleted the database record of the transfers then took further steps to prevent confirmation messages from revealing the theft. In the Bangladeshi case, the confirmation messages would have appeared on a paper report; the malware altered the paper reports when they were sent to the printer. In the second case, the bank used a PDF report; the malware altered the PDF viewer to hide the transfers.
+
+Furthermore, news agency Reuters reported on 20 May 2016 that there had already been a similar case in Ecuador in early 2015 when Banco del Austro funds were transferred to bank accounts in Hong Kong. Neither Banco del Austro nor Wells Fargo, who were asked to conduct the transactions, initially reported the movements to SWIFT as suspicious; implications that the actions actually were a theft only emerged during a BDA lawsuit filed against Wells Fargo.
+
+
+## Expanded scope and suspicions of North Korea
+
+After the initial two reports, two security firms reported that the attacks involved malware similar to that used in the 2014 Sony Pictures Entertainment hack and impacted as many at 12 banks in Southeast Asia. Both attacks are attributed to a hacker group nicknamed Lazarus Group by researchers. Symantec has linked the group with North Korea. If North Korea's involvement is true, it would be the first known incident of a state actor using cyberattacks to steal funds.
+
+
+## Ramifications
+
+
+### International relations
+
+If the attack did originate in North Korea, the thefts would have profound implications for international relations. It would be the first known instance of a state actor using cyber attacks to steal funds.
+
+The thefts may also have implications for the regime of international sanctions that aim to isolate North Korea's economy. The theft may represent a significant percentage of North Korea's current GDP.
+
+
+### SWIFT system
+
+Trust in the SWIFT system has been an important element in international banking for decades. Banks consider SWIFT messages trustworthy, and can thus follow the transmitted instructions immediately. In addition, the thefts themselves can threaten the solvency of the member banks. "This is a big deal, and it gets to the heart of banking," said SWIFT's CEO, Gottfried Leibbrandt, who added, "Banks that are compromised like this can be put out of business."
+
+Following the attacks, SWIFT announced a new regime of mandatory controls required of all banks using the system. SWIFT will inspect member banks for compliance, and inform regulators and other banks of noncompliance.
+
+SWIFT officials have made repeated remarks that attacks on the system are expected to continue. In September 2016, SWIFT announced that three additional banks had been attacked. In two of the cases, the hackers succeeded in sending fraudulent SWIFT orders, but the receiving banks found them to be suspicious and discovered the fraud. According to SWIFT officials, in the third case, a patch to the SWIFT software allowed the attacked bank to detect the hackers before messages were sent.
+

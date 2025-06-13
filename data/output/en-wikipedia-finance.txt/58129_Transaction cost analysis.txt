@@ -1,0 +1,48 @@
+Transaction cost analysis
+
+
+# Transaction cost analysis
+
+
+
+**Transaction cost analysis** (**TCA**), as used by institutional investors, is defined by the *Financial Times* as "the study of trade prices to determine whether the trades were arranged at favourable prices – low prices for purchases and high prices for sales". It is often split into two parts – pre-trade and post-trade. Recent regulations, such as the European Markets in Financial Instruments Directive, have required institutions to achieve best execution.
+
+
+## Pre-trade
+
+Pre-trade analysis is the process of taking known parameters of a planned trade and determining an execution strategy that will minimize the cost of transacting for a given level of acceptable risk. It is not possible to reduce both projected risk and cost past a certain efficient frontier, since reducing risk tolerance requires limiting market exposure and thus trading faster. In this situation, market impact cost is much greater than for trades that accept greater risk and are executed more slowly.
+
+
+### Effect on Financial Markets
+
+Robert Almgren and Neil Chriss wrote their seminal paper on "Optimal execution of portfolio transactions", modelling the effect of transaction costs on the liquidation of an optimal portfolio. Robert Almgren and Tianhui Li subsequently expanded this to a paper on "Option Hedging with Smooth Market Impact", extending the original analysis to derivative markets.
+
+
+## Post-trade
+
+The post-trade process involves first recording the data from previous trading periods, including trade timing, arrival price, average execution price, and relevant details about market movement. These data are then measured and compared to several benchmarks, such as the volume-weighted average price (VWAP), time-weighted average price (TWAP), participation-weighted average price (PWP), or a variety of other measures. Implementation shortfall is a commonly targeted benchmark, which is the sum of all explicit and implicit costs. Sometimes, an opportunity cost of not transacting is factored in. After measurement, costs must be attributed to their underlying causes. Finally, this analysis is used to evaluate performance and monitor future transactions.
+
+
+### Record
+
+Transaction cost analysis aims to improve trading at the level of individual decisions. This requires accurately recording the timing and content for every event in an order's life cycle. Financial Information eXchange (FIX) messages usually provide a consistent and highly accurate source of information for interactions between traders and brokers.
+
+Data drawn from an order management system (OMS) or execution management system (EMS), however, are not as granular or as uniform as data from FIX, potentially leading to flawed conclusions unless significant effort is made to address this concern. All gaps must be filled in by supplementing FIX or OMS/EMS messages by communicating with brokers, traders, and portfolio managers.
+
+
+### Measure
+
+A variety of measures and benchmarks are used in transaction cost analysis. The multitude of definitions for best execution and the dangers inherent in placing too much emphasis on a single statistic necessitate the ability to compare agents to a diverse set of benchmarks. These comparisons allow costs to be split into several categories, including explicit cost, implicit cost, delay cost, and opportunity cost. The accurate measurement of each of these costs is necessary to facilitate decision management. For example, if the combination of explicit and implicit costs, which represent the realized cost of transacting, is greater than the opportunity cost of not transacting, it suggests that trades may have been executed too quickly. If the reverse is true, it suggests the need to execute more quickly.
+
+
+### Attribute
+
+Reliable measurements allow decisions to be matched with observed outcomes. In the attribution phase, the four cost categories are broken down further, turning previously confusing statistics into intuitive measures representing specific aspects of a trade. For example, application of a transaction cost model helps split Implementation Shortfall into the parts resulting from the size of the order, volatility, or paying to cover the spread. Proper attribution must also distinguish the influence of market factors (i.e. Sector, Region, Market capitalization, and Momentum) from that of human skill.
+
+It is at this stage that problems that can arise if data is not supplemented with communication become clearly evident. For example, an incorrect determination of the time a trader gained control of an order could result in an unfair impact on the performance reported for that trader, when in reality the problem may have resulted from a delay between the portfolio manager and the desk.
+
+
+### Evaluate and monitor
+
+The final stage of transaction cost analysis involves combining the results of the measurement and attribution to evaluate each agent. This is often done through periodic reports detailing important statistics as well as graphics to help visualize trends in the data. Transaction cost analysis providers will often include regular consulting to help draw conclusions from the data, establish goals to improve performance, and monitor future trading to determine the impact of any changes.
+

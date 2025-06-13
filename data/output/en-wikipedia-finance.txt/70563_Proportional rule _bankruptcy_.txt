@@ -1,0 +1,64 @@
+Proportional rule (bankruptcy)
+
+
+# Proportional rule (bankruptcy)
+
+
+
+The **proportional rule** is a division rule for solving bankruptcy problems. According to this rule, each claimant should receive an amount proportional to their claim. In the context of taxation, it corresponds to a proportional tax.
+
+
+## Formal definition
+
+There is a certain amount of money to divide, denoted by *{\displaystyle E}* (=Estate or Endowment). There are *n* *claimants*. Each claimant *i* has a claim denoted by *{\displaystyle c\_{i}}*. Usually, {\displaystyle \sum \_{i=1}^{n}c\_{i}>E}, that is, the estate is insufficient to satisfy all the claims.
+
+The **proportional** rule says that each claimant *i* should receive {\displaystyle r\cdot c\_{i}}, where *r* is a constant chosen such that {\displaystyle \sum \_{i=1}^{n}r\cdot c\_{i}=E}. In other words, each agent gets {\displaystyle {\frac {c\_{i}}{\sum \_{j=1}^{n}c\_{j}}}\cdot E}.
+
+
+## Examples
+
+Examples with two claimants:
+
+* {\displaystyle PROP(60,90;100)=(40,60)}. That is: if the estate is worth 100 and the claims are 60 and 90, then {\displaystyle r=2/3}, so the first claimant gets 40 and the second claimant gets 60.
+* {\displaystyle PROP(50,100;100)=(33.333,66.667)}, and similarly {\displaystyle PROP(40,80;100)=(33.333,66.667)}.
+
+Examples with three claimants:
+
+* {\displaystyle PROP(100,200,300;100)=(16.667,33.333,50)}.
+* {\displaystyle PROP(100,200,300;200)=(33.333,66.667,100)}.
+* {\displaystyle PROP(100,200,300;300)=(50,100,150)}.
+
+## Characterizations
+
+The proportional rule has several characterizations. It is the only rule satisfying the following sets of axioms:
+
+* Self-duality and composition-up;
+* Self-duality and composition-down;
+* No advantageous transfer;
+* Resource linearity;
+* No advantageous merging and no advantageous splitting.
+
+## Truncated-proportional rule
+
+There is a variant called **truncated-claims proportional rule**, in which each claim larger than *E* is truncated to *E*, and then the proportional rule is activated. That is, it equals {\displaystyle PROP(c\_{1}',\ldots ,c\_{n}',E)}, where {\displaystyle c'\_{i}:=\min(c\_{i},E)}. The results are the same for the two-claimant problems above, but for the three-claimant problems we get:
+
+* {\displaystyle TPROP(100,200,300;100)=(33.333,33.333,33.333)}, since all claims are truncated to 100;
+* {\displaystyle TPROP(100,200,300;200)=(40,80,80)}, since the claims vector is truncated to (100,200,200).
+* {\displaystyle TPROP(100,200,300;300)=(50,100,150)}, since here the claims are not truncated.
+
+## Adjusted-proportional rule
+
+The **adjusted proportional rule** first gives, to each agent *i*, their *minimal right*, which is the amount not claimed by the other agents. Formally, {\displaystyle m\_{i}:=\max(0,E-\sum \_{j\neq i}c\_{j})}. Note that {\displaystyle \sum \_{i=1}^{n}c\_{i}\geq E} implies {\displaystyle m\_{i}\leq c\_{i}}.
+
+Then, it revises the claim of agent *i* to {\displaystyle c'\_{i}:=c\_{i}-m\_{i}}, and the estate to {\displaystyle E':=E-\sum \_{i}m\_{i}}. Note that that {\displaystyle E'\geq 0}.
+
+Finally, it activates the truncated-claims proportional rule, that is, it returns {\displaystyle TPROP(c\_{1},\ldots ,c\_{n},E')=PROP(c\_{1}'',\ldots ,c\_{n}'',E')}, where {\displaystyle c''\_{i}:=\min(c'\_{i},E')}.
+
+With two claimants, the revised claims are always equal, so the remainder is divided equally. Examples:
+
+* {\displaystyle APROP(60,90;100)=(35,65)}. The minimal rights are {\displaystyle (m\_{1},m\_{2})=(10,40)}. The remaining claims are {\displaystyle (c\_{1}',c\_{2}')=(50,50)} and the remaining estate is {\displaystyle E'=50}; it is divided equally among the claimants.
+* {\displaystyle APROP(50,100;100)=(25,75)}. The minimal rights are {\displaystyle (m\_{1},m\_{2})=(0,50)}. The remaining claims are {\displaystyle (c\_{1}',c\_{2}')=(50,50)} and the remaining estate is {\displaystyle E'=50}.
+* {\displaystyle APROP(40,80;100)=(30,70)}. The minimal rights are {\displaystyle (m\_{1},m\_{2})=(20,60)}. The remaining claims are {\displaystyle (c\_{1}',c\_{2}')=(20,20)} and the remaining estate is {\displaystyle E'=20}.
+
+With three or more claimants, the revised claims may be different. In all the above three-claimant examples, the minimal rights are {\displaystyle (0,0,0)} and thus the outcome is equal to TPROP, for example, {\displaystyle APROP(100,200,300;200)=TPROP(100,200,300;200)=(20,40,40)}.
+

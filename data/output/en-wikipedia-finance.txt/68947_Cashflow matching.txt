@@ -1,0 +1,14 @@
+Cashflow matching
+
+
+# Cashflow matching
+
+
+
+**Cash flow matching** is a process of hedging in which a company or other entity matches its cash outflows (i.e., financial obligations) with its cash inflows over a given time horizon. It is a subset of immunization strategies in finance. Cash flow matching is of particular importance to defined benefit pension plans.
+
+
+## Solution with linear programming
+
+It is possible to solve the simple cash flow matching problem using linear programming. Suppose that we have a choice of {\displaystyle j=1,...,n} bonds with which to receive cash flows over {\displaystyle t=1,...,T} time periods in order to cover liabilities {\displaystyle L\_{1},...,L\_{T}} for each time period. The {\displaystyle j}th bond in time period {\displaystyle t} is assumed to have known cash flows {\displaystyle F\_{tj}} and initial price {\displaystyle p\_{j}}. It possible to buy {\displaystyle x\_{j}} bonds and to run a surplus {\displaystyle s\_{t}} in a given time period, both of which must be non-negative, and leads to the set of constraints:{\displaystyle {\begin{aligned}\sum \_{j=1}^{n}F\_{1j}x\_{j}-s\_{1}&=L\_{1}\\\sum \_{j=1}^{n}F\_{tj}x\_{j}+s\_{t-1}-s\_{t}&=L\_{t},\quad t=2,...,T\end{aligned}}}Our goal is to minimize the initial cost of purchasing bonds to meet the liabilities in each time period, given by {\displaystyle p^{T}x}. Together, these requirements give rise to the associated linear programming problem:{\displaystyle \min \_{x,s}\;p^{T}x,\quad {\text{s.t.}}\;Fx+Rs=L,\;x,s\geq 0}where {\displaystyle F\in \mathbb {R} ^{T\times n}} and {\displaystyle R\in \mathbb {R} ^{T\times T}}, with entries:{\displaystyle R\_{t,t}=-1,\quad R\_{t+1,t}=1}In the instance when fixed income instruments (not necessarily bonds) are used to provide the dedicated cash flows, it is unlikely to be the case that fractional components are available for purchase. Therefore, a more realistic approach to cash flow matching is to employ mixed-integer linear programming to select a discrete number of instruments with which to match liabilities.
+

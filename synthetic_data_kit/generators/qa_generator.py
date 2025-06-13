@@ -19,8 +19,8 @@ from synthetic_data_kit.utils.config import load_config, get_generation_config, 
 
 class QAGenerator:
     def __init__(self, 
-                 client: LLMClient,
-                 config_path: Optional[Path] = None):
+                client: LLMClient,
+                config_path: Optional[Path] = None):
         """Initialize the QA Generator with an LLM client and optional config"""
         self.client = client
         
@@ -55,57 +55,48 @@ class QAGenerator:
         return summary
     
     def generate_qa_pairs(self, 
-                        document_text: str, 
-                        summary: str, 
-                        num_pairs: int = 25) -> List[Dict[str, str]]:
-        """Generate QA pairs from the document using batched processing"""
+                      document_text: str, 
+                      summary: str, 
+                      num_pairs: int = 25) -> List[Dict[str, str]]:
+        """Generate QA pairs from the document using batched processing, and return the chunk used."""
         verbose = os.environ.get('SDK_VERBOSE', 'false').lower() == 'true'
         
-        # Get generation config
         chunk_size = self.generation_config.get("chunk_size", 4000)
         temperature = self.generation_config.get("temperature", 0.7)
         overlap = self.generation_config.get("overlap", 200)
         batch_size = self.generation_config.get("batch_size", 32)
         
-        # Split text into chunks
-        chunks = split_into_chunks(
-            document_text, 
-            chunk_size=chunk_size, 
-            overlap=overlap
-        )
-        
+        # Split into chunks
+        chunks = split_into_chunks(document_text, chunk_size=chunk_size, overlap=overlap)
+
         if verbose:
             print(f"Generating QA pairs...")
             print(f"Document split into {len(chunks)} chunks")
             print(f"Using batch size of {batch_size}")
-        
+
         all_qa_pairs = []
         pairs_per_chunk = max(1, round(num_pairs / len(chunks)))
-        
-        # Get QA generation prompt template
         qa_prompt_template = get_prompt(self.config, "qa_generation")
-        
-        # Prepare all message batches
+
+        # Prepare all message batches along with chunk references
         all_messages = []
+        chunk_refs = []  # <-- New: Store chunk text
         for i, chunk in enumerate(chunks):
-            # Format the prompt with summary and text
             qa_prompt = qa_prompt_template.format(
                 num_pairs=pairs_per_chunk,
                 summary=summary[:100],
                 text=chunk
             )
-            
-            messages = [
-                {"role": "system", "content": qa_prompt}
-            ]
+            messages = [{"role": "system", "content": qa_prompt}]
             all_messages.append(messages)
-        
+            chunk_refs.append(chunk)  # <-- New: Keep track of which chunk each message corresponds to
+
         print(f"Processing {len(chunks)} chunks to generate QA pairs...")
-        
-        # Set up progress tracking based on verbose mode
+
+        progress_ctx = None
+        generate_task = None
         if verbose:
             from rich.progress import Progress, BarColumn, TextColumn, TimeElapsedColumn, TimeRemainingColumn
-            
             progress_columns = [
                 TextColumn("[progress.description]{task.description}"),
                 BarColumn(),
@@ -113,71 +104,65 @@ class QAGenerator:
                 TimeElapsedColumn(),
                 TimeRemainingColumn(),
             ]
-            
             progress_ctx = Progress(*progress_columns)
             generate_task = progress_ctx.add_task(f"Generating QA pairs", total=len(chunks))
             progress_ctx.start()
-        else:
-            progress_ctx = None
-            generate_task = None
-        
-        # Process in batches
+
         for batch_start in range(0, len(chunks), batch_size):
             batch_end = min(batch_start + batch_size, len(chunks))
             batch_messages = all_messages[batch_start:batch_end]
+            batch_chunks = chunk_refs[batch_start:batch_end]  # <-- New
+
             current_batch_size = len(batch_messages)
-            
-            batch_num = batch_start//batch_size + 1
-            total_batches = (len(chunks) + batch_size - 1)//batch_size
-            
-            # Simple progress indicator for non-verbose mode
+            batch_num = batch_start // batch_size + 1
+            total_batches = (len(chunks) + batch_size - 1) // batch_size
+
             if not verbose:
                 print(f"Processing batch {batch_num}/{total_batches}...", end="\r")
             else:
                 print(f"Processing batch {batch_num}/{total_batches} with {current_batch_size} chunks")
-            
+
             try:
-                # Process the batch
                 batch_responses = self.client.batch_completion(
                     batch_messages,
                     temperature=temperature,
                     batch_size=batch_size
                 )
-                
-                # Process each response in the batch
+
                 for j, response in enumerate(batch_responses):
                     chunk_index = batch_start + j
+                    chunk_text = batch_chunks[j]  # <-- New
                     chunk_pairs = parse_qa_pairs(response)
-                    all_qa_pairs.extend(chunk_pairs)
                     
+                    # Add the chunk text to each QA pair
+                    for pair in chunk_pairs:
+                        pair["chunk"] = chunk_text  # <-- New addition
+
+                    all_qa_pairs.extend(chunk_pairs)
+
                     if verbose:
                         print(f"  Generated {len(chunk_pairs)} pairs from chunk {chunk_index+1}")
-                
-                # Update progress bar if in verbose mode
+
                 if progress_ctx and generate_task:
                     progress_ctx.update(generate_task, advance=current_batch_size)
-                
+
             except Exception as e:
                 if verbose:
                     print(f"  Error processing batch {batch_num}: {str(e)}")
-                
-                # Update progress bar if in verbose mode
+
                 if progress_ctx and generate_task:
                     progress_ctx.update(generate_task, advance=current_batch_size)
-        
-        # Stop progress bar if in verbose mode
+
         if progress_ctx:
             progress_ctx.stop()
-        
-        # Clear the progress line in non-verbose mode
+
         if not verbose:
             print(" " * 80, end="\r")
             print("Batch processing complete.")
-        
-        # Always print summary information, even in non-verbose mode
+
         print(f"Generated {len(all_qa_pairs)} QA pairs total")
         return all_qa_pairs
-    
+
     def rate_qa_pairs(self, 
                     qa_pairs: List[Dict[str, str]], 
                     summary: str, 

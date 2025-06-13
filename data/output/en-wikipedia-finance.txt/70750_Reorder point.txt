@@ -1,0 +1,48 @@
+Reorder point
+
+
+# Reorder point
+
+
+
+The **reorder point** (**ROP**), also **reorder level** (ROL) or "optimal re-order level", is the level of inventory which triggers an action to replenish that particular inventory. It is a minimum amount of an item which a firm holds in stock, such that, when stock falls to this amount, the item must be reordered. It is normally calculated as the forecast usage during the replenishment lead time plus safety stock. In the EOQ (Economic Order Quantity) model, it was assumed that there is no time lag between ordering and receipt of materials.
+
+
+## Continuous review system
+
+The reorder point for replenishment of stock occurs when the level of inventory drops down to zero. In a model with instantaneous replenishment of stock the level of inventory jumps to the original level from zero level. In real life situations there is never a zero lead time: there is always a time lag from the date of placing an order for material to the date on which materials are received. As a result, the reorder point is always higher than zero, and if the firm places the order when the inventory reaches the reorder point, the new goods will arrive before the firm runs out of goods to sell. The decision on how much stock to hold is generally referred to as the order point problem, that is, how low should the inventory be depleted before it is reordered.
+
+The two factors that determine the appropriate order point are the delivery time stock, which is the inventory needed during the lead time (i.e., the difference between the order date and the receipt of the inventory ordered), and the safety stock, which is the minimum level of inventory that is held as a protection against shortages due to fluctuations in demand.
+
+Therefore:
+
+> Reorder Point = Normal consumption during lead-time + Safety Stock .
+
+Several factors determine how much delivery time stock and safety stock should be held. In summary, the efficiency of a replenishment system affects how much delivery time is needed. Since the delivery time stock is the expected inventory usage between ordering and receiving inventory, efficient replenishment of inventory would reduce the need for delivery time stock. And the determination of level of safety stock involves a basic trade-off between the risk of stockout, resulting in possible customer dissatisfaction and lost sales, and the increased costs associated with carrying additional inventory.
+
+Another method of calculating reorder level involves the calculation of usage rate per day, lead time which is the amount of time between placing an order and receiving the goods and the safety stock level expressed in terms of several days' sales.
+
+> Reorder level = Average daily usage rate × lead-time in days .
+
+From the above formula it can be easily deduced that an order for replenishment of materials be made when the level of inventory is just adequate to meet the needs of production during lead-time.
+
+
+### Example
+
+If the average daily usage rate of a material is 50 units and the lead-time is seven days, then:
+
+> Reorder level = Average daily usage rate × Lead time in days = 50 units per day × 7 days = 350 units.
+
+When the inventory level reaches 350 units an order should be placed for material. By the time the inventory level reaches zero towards the end of the seventh day from placing the order materials will reach and there is no cause for concern.
+
+Reorder point = Average Lead Time\*Average Demand + Service Level\*√Avg. Lead Time\*Standard Deviation of Demand² + Avg. Demand²\*Standard Deviation of Lead Time²
+
+Reorder point = S × L + J (S × R × L) where
+
+* S = Usage in units per day
+* L = Lead time in days
+* R = Average number of units per order
+* J = Stock out acceptance factor
+
+The stock-out acceptance factor, 'J', depends on the stock-out percentage rate specified and the probability distribution of usage (which is assumed to follow a Poisson distribution).
+

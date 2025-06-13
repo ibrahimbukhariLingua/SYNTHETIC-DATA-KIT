@@ -1,0 +1,27 @@
+Quantum money
+
+
+# Quantum money
+
+
+
+A **quantum money** scheme is a quantum cryptographic protocol that creates and verifies banknotes that are resistant to forgery. It is based on the principle that quantum states cannot be perfectly duplicated (the no-cloning theorem), making it impossible to forge quantum money by including quantum systems in its design.
+
+The concept was first proposed by Stephen Wiesner circa 1970 (though it remained unpublished until 1983), and later influenced the development of quantum key distribution protocols used in quantum cryptography.
+
+
+## Wiesner's quantum money scheme
+
+Wiesner's quantum money scheme was first published in 1983. A formal proof of security, using techniques from semidefinite programming, was given in 2013.
+
+In addition to a unique serial number on each bank note (these notes are actually more like cheques, since a verification step with the bank is required for each transaction), there is a series of isolated two-state quantum systems. For example, photons in one of four polarizations could be used: at 0°, 45°, 90° and 135° to some axis, which is referred to as the vertical. Each of these is a two-state system in one of two bases: the horizontal basis has states with polarizations at 0° and 90° to the vertical, and the diagonal basis has states at 45° and 135° to the vertical.
+
+At the bank, there is a record of all the polarizations and the corresponding serial numbers. On the bank note, the serial number is printed, but the polarizations are kept secret. Thus, whilst the bank can always verify the polarizations by measuring the polarization of each photon in the correct basis without introducing any disturbance, a would-be counterfeiter ignorant of the bases cannot create a copy of the photon polarization states, since even if he knows the two bases, if he chooses the wrong one to measure a photon, it will change the polarization of the photon in the trap, and the forged banknote created will be with this wrong polarization.
+
+For each photon, the would-be counterfeiter has a probability {\displaystyle 3/4} of success in duplicating it correctly. If the total number of photons on the bank note is {\displaystyle N}, a duplicate will have probability {\displaystyle (3/4)^{N}} of passing the bank's verification test. If {\displaystyle N} is large, this probability becomes exponentially small. The fact that a quantum state cannot be copied is ultimately guaranteed by its proof by the no-cloning theorem, which underlies the security of this system.
+
+
+## Practical implementations
+
+At this time, quantum money is not practical to implement with current technology because the quantum bank notes require to store the quantum states in a quantum memory. Quantum memories can currently store quantum states only for a very short time.
+

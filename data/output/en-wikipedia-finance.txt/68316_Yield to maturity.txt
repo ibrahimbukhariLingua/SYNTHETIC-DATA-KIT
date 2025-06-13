@@ -1,0 +1,112 @@
+Yield to maturity
+
+
+# Yield to maturity
+
+
+
+| Part of a series on |
+| --- |
+| Financial markets |
+| * Public market * Exchange **·** Securities |
+| Bond market |
+| * Bond valuation * Corporate bond * Fixed income * Government bond * High-yield debt * Municipal bond * Securitization |
+| Stock market |
+| * Common stock * Growth stock * Preferred stock * Registered share * Stock * Stockbroker * Stock certificate * Stock exchange * Watered stock |
+| Other markets |
+| Derivatives * (Credit derivative * Futures exchange * Hybrid security) Foreign exchange * (Currency * Exchange rate) * Commodity * ETF * Money * Mutual fund * Option * Real estate * Reinsurance * Structured product * Swap (finance) |
+| Over-the-counter (off-exchange) |
+| * Forwards * Options * Spot market * Swaps |
+| Trading |
+| * Participants * Regulation * Clearing |
+| Related areas |
+| * Alternative investment * Angel investor * Asset (economics) * Asset pricing * Banks and banking * Bull * Climate finance * Diversification (finance) * Eco-investing * Environmental finance * ESG * Financial + analysis + analyst + asset + betting + corporate + crime + forecast + personal + public + services * Fintech * Greenwashing * Growth investing * Impact investing * Investment management * Market risk * Market trend * Speculative attack * Sustainable development goals * Sustainable finance |
+| * v * t * e |
+
+The **yield to maturity** (**YTM**), **book yield** or **redemption yield** of a fixed-interest security is an estimate of the total rate of return anticipated to be earned by an investor who buys it at a given market price, holds it to maturity, and receives all interest payments and the capital redemption on schedule.
+
+It is the theoretical internal rate of return, or the overall interest rate, of a bond — the discount rate at which the present value of all future cash flows from the bond is equal to the current price of the bond. The YTM is often given in terms of annual percentage rate (APR), but more often market convention is followed. In a number of major markets, the convention is to quote annualized yields with semi-annual compounding.
+
+
+## Main assumptions
+
+The YTM calculation formulates certain stability conditions of the security, its owner, and the market going forward:
+
+* The owner holds the security to maturity.
+* The issuer makes all interest and principal payments on time and in full.
+* The owner reinvests all interest payments rather than spending them, to gain the benefit of compounded returns.
+* The market provides consistent reinvestment opportunity at the YTM rate throughout the future, with no cost to transact.
+
+The YTM calculation accounts for the effect of the current market price on the yield going forward, but omits the possible effects of contingent events. Hence it is not an *expected*, or *risk-adjusted* rate. The YTM will be realized only if the above assumptions are met, and factors such as default risk or reinvestment risk do not occur. The total return realized at maturity is likely to differ from the YTM calculated at the time of purchase, perhaps considerably.
+
+In practice, the rates that will actually be earned on reinvested interest payments are a critical component of a bond's investment return. Yet they are unknown at the time of purchase. The owner takes on reinvestment risk, which is the possibility that the future reinvestment rates will differ from the yield to maturity at the time the security is purchased. Reinvestment is not a factor for buyers, who intend to spend rather than reinvest the coupon payments, such as those practicing asset/liability matching strategies.
+
+Some literature claims that earning the yield to maturity does not require the investor reinvest the coupon payments, and that assuming reinvestment is a common mistake in financial literature.
+
+
+## Taxes and transaction costs
+
+The yield is usually quoted without making any allowance for tax paid by the investor on the return, and is then known as "gross redemption yield". It also does not make any allowance for the dealing costs incurred by the purchaser (or seller).
+
+
+## Coupon rate vs. YTM and parity
+
+* If a bond's coupon rate is less than its YTM, then the bond is selling at a discount.
+* If a bond's coupon rate is more than its YTM, then the bond is selling at a premium.
+* If a bond's coupon rate is equal to its YTM, then the bond is selling at par.
+
+## Variants of yield to maturity
+
+As some bonds have different characteristics, there are some variants of YTM:
+
+* Yield to call (YTC): when a bond is callable (can be repurchased by the issuer at pre-determined date before the maturity), the market looks also to the Yield to call, which is the same calculation of the YTM, but assumes that the bond will be called, so the cashflow is shortened.
+* Yield to put (YTP): same as yield to call, but when the bond holder has the option to sell the bond back to the issuer at a fixed price on specified date.
+* Yield to worst (YTW): when a bond is callable, puttable, exchangeable, or has other features, the yield to worst is the lowest yield of yield to maturity, yield to call, yield to put, and others.
+
+## Consequences
+
+When the YTM is less than the (expected) yield of another investment, one might be tempted to swap the investments. Care should be taken to subtract any transaction costs, or taxes.
+
+
+## Calculations
+
+
+### Formula for yield to maturity for zero-coupon bonds
+
+{\displaystyle {\text{Yield to maturity(YTM)}}={\sqrt[{\text{Time period}}]{\dfrac {\text{Face value}}{\text{Present value}}}}-1}
+
+
+#### Example 1
+
+Consider a 30-year zero-coupon bond with a face value of $100. If the bond is priced at an annual YTM of 10%, it will cost $5.73 today (the present value of this cash flow, 100/(1.1)³⁰ = 5.73). Over the coming 30 years, the price will advance to $100, and the annualized return will be 10%.
+
+What happens in the meantime? Suppose that over the first 10 years of the holding period, interest rates decline, and the yield-to-maturity on the bond falls to 7%. With 20 years remaining to maturity, the price of the bond will be 100/1.07²⁰, or $25.84. Even though the yield-to-maturity for the remaining life of the bond is just 7%, and the yield-to-maturity bargained for when the bond was purchased was only 10%, the annualized return earned over the first 10 years is 16.25%. This can be found by evaluating (1+i) from the equation (1+i)¹⁰ = (25.84/5.73), giving 0.1625.
+
+Over the remaining 20 years of the bond, the annual rate earned is not 16.25%, but rather 7%. This can be found by evaluating (1+i) from the equation (1+i)²⁰ = 100/25.84, giving 1.07. Over the entire 30 year holding period, the original $5.73 invested increased to $100, so 10% per annum was earned, irrespective of any interest rate changes in between.
+
+
+#### Example 2
+
+An ABCXYZ Company bond that matures in one year, has a 5% yearly interest rate (coupon), and has a par value of $100. To sell to a new investor the bond must be priced for a current yield of 5.56%.
+
+The annual bond coupon should increase from $5 to $5.56 but the coupon can't change as only the bond price can change. So the bond is priced approximately at $100 - $0.56 or $99.44 .
+
+If the bond is held until maturity, the bond will pay $5 as interest and $100 par value for the matured bond. For the $99.44 investment, the bond investor will receive $105 and therefore the yield to maturity is 5.56 / 99.44 for 5.59% in the one year time period. Then continuing by trial and error, a bond gain of 5.53 divided by a bond price of 99.47 produces a yield to maturity of 5.56%. Also, the bond gain and the bond price add up to 105.
+
+Finally, a one-year zero-coupon bond of $105 and with a yield to maturity of 5.56%, calculates at a price of 105 / 1.0556^1 or 99.47.
+
+
+### Coupon-bearing Bonds
+
+For bonds with multiple coupons, it is not generally possible to solve for yield in terms of price algebraically. A numerical root-finding technique such as Newton's method must be used to approximate the yield, which renders the present value of future cash flows equal to the bond price.
+
+
+### Varying coupon
+
+With varying coupons the general discounting rule should be applied.
+
+
+## Subscriber Yield
+
+A term used in Japan, this is simply the Yield to Maturity at time of issue: in other words the Yield to Maturity enjoyed by the buyer (subscriber) in the primary market.
+

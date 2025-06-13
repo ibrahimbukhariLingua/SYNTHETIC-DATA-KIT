@@ -1,0 +1,176 @@
+Competitive equilibrium
+
+
+# Competitive equilibrium
+
+
+
+**Competitive equilibrium** (also called: **Walrasian equilibrium**) is a concept of economic equilibrium, introduced by Kenneth Arrow and Gérard Debreu in 1951, appropriate for the analysis of commodity markets with flexible prices and many traders, and serving as the benchmark of efficiency in economic analysis. It relies crucially on the assumption of a competitive environment where each trader decides upon a quantity that is so small compared to the total quantity traded in the market that their individual transactions have no influence on the prices. Competitive markets are an ideal standard by which other market structures are evaluated.
+
+
+## Definitions
+
+A competitive equilibrium (CE) consists of two elements:
+
+* A price function {\displaystyle P}. It takes as argument a vector representing a bundle of commodities, and returns a positive real number that represents its price. Usually the price function is linear - it is represented as a vector of prices, a price for each commodity type.
+* An allocation matrix {\displaystyle X}. For every {\displaystyle i\in 1,\dots ,n}, {\displaystyle X\_{i}} is the vector of commodities allotted to agent {\displaystyle i}.
+
+These elements should satisfy the following requirement:
+
+* **Satisfaction** (**market-envy-freeness**): Every agent weakly prefers his bundle to any other affordable bundle:
+
+Often, there is an initial endowment matrix {\displaystyle E}: for every {\displaystyle i\in 1,\dots ,n}, {\displaystyle E\_{i}} is the initial endowment of agent {\displaystyle i}. Then, a CE should satisfy some additional requirements:
+
+* **Market Clearance**: the demand equals the supply, no items are created or destroyed:
+
+* **Individual Rationality**: all agents are better-off after the trade than before the trade:
+
+* **Budget Balance**: all agents can afford their allocation given their endowment:
+
+### Definition 2
+
+This definition explicitly allows for the possibility that there may be multiple commodity arrays that are equally appealing. Also for zero prices. An alternative definition relies on the concept of a *demand-set*. Given a price function P and an agent with a utility function U, a certain bundle of goods x is in the demand-set of the agent if: {\displaystyle U(x)-P(x)\geq U(y)-P(y)} for every other bundle y. A *competitive equilibrium* is a price function P and an allocation matrix X such that:
+
+* The bundle allocated by X to each agent is in that agent's demand-set for the price-vector P;
+* Every good which has a positive price is fully allocated (i.e. every unallocated item has price 0).
+
+### Approximate equilibrium
+
+In some cases it is useful to define an equilibrium in which the rationality condition is relaxed. Given a positive value {\displaystyle \epsilon } (measured in monetary units, e.g., dollars), a price vector {\displaystyle P} and a bundle {\displaystyle x}, define {\displaystyle P\_{\epsilon }^{x}} as a price vector in which all items in x have the same price they have in P, and all items not in x are priced {\displaystyle \epsilon } more than their price in P.
+
+In a *{\displaystyle \epsilon }-competitive-equilibrium*, the bundle x allocated to an agent should be in that agent's demand-set for the *modified* price vector, {\displaystyle P\_{\epsilon }^{x}}.
+
+This approximation is realistic when there are buy/sell commissions. For example, suppose that an agent has to pay {\displaystyle \epsilon } dollars for buying a unit of an item, in addition to that item's price. That agent will keep his current bundle as long as it is in the demand-set for price vector {\displaystyle P\_{\epsilon }^{x}}. This makes the equilibrium more stable.
+
+
+## Examples
+
+The following examples involve an exchange economy with two agents, Jane and Kelvin, two goods e.g. bananas (x) and apples (y), and no money.
+
+1. **Graphical example**: Suppose that the initial allocation is at point X, where Jane has more apples than Kelvin does and Kelvin has more bananas than Jane does.
+
+By looking at their indifference curves {\displaystyle J\_{1}} of Jane and {\displaystyle K\_{1}} of Kelvin, we can see that this is not an equilibrium - both agents are willing to trade with each other at the prices {\displaystyle P\_{x}} and {\displaystyle P\_{y}}. After trading, both Jane and Kelvin move to an indifference curve which depicts a higher level of utility, {\displaystyle J\_{2}} and {\displaystyle K\_{2}}. The new indifference curves intersect at point E. The slope of the tangent of both curves equals -{\displaystyle P\_{x}/P\_{y}}.
+
+And the {\displaystyle MRS\_{Jane}=P\_{x}/P\_{y}};
+{\displaystyle MRS\_{Kelvin}=P\_{x}/P\_{y}}.
+The marginal rate of substitution (MRS) of Jane equals that of Kelvin. Therefore, the 2 individuals society reaches Pareto efficiency, where there is no way to make Jane or Kelvin better off without making the other worse off.
+
+2. **Arithmetic example:**³²²–³²³ suppose that both agents have Cobb–Douglas utilities:
+
+where {\displaystyle a,b} are constants.
+
+Suppose the initial endowment is {\displaystyle E=[(1,0),(0,1)]}.
+
+The demand function of Jane for x is:
+
+The demand function of Kelvin for x is:
+
+The market clearance condition for x is:
+
+This equation yields the equilibrium price ratio:
+
+We could do a similar calculation for y, but this is not needed, since Walras' law guarantees that the results will be the same. Note that in CE, only relative prices are determined; we can normalize the prices, e.g, by requiring that {\displaystyle p\_{x}+p\_{y}=1}. Then we get {\displaystyle p\_{x}={\frac {b}{1+b-a}},p\_{y}={\frac {1-a}{1+b-a}}}. But any other normalization will also work.
+
+3. **Non-existence example:** Suppose the agents' utilities are:
+
+and the initial endowment is [(2,1),(2,1)].
+In CE, every agent must have either only x or only y (the other product does not contribute anything to the utility so the agent would like to exchange it away). Hence, the only possible CE allocations are [(4,0),(0,2)] and [(0,2),(4,0)]. Since the agents have the same income, necessarily {\displaystyle p\_{y}=2p\_{x}}. But then, the agent holding 2 units of y will want to exchange them for 4 units of x.
+
+4. For existence and non-existence examples involving linear utilities, see Linear utility#Examples.
+
+
+### Indivisible items
+
+When there are indivisible items in the economy, it is common to assume that there is also money, which is divisible. The agents have quasilinear utility functions: their utility is the amount of money they have plus the utility from the bundle of items they hold.
+
+**A. Single item:** Alice has a car which she values as 10. Bob has no car, and he values Alice's car as 20. A possible CE is: the price of the car is 15, Bob gets the car and pays 15 to Alice. This is an equilibrium because the market is cleared and both agents prefer their final bundle to their initial bundle. In fact, every price between 10 and 20 will be a CE price, with the same allocation. The same situation holds when the car is not initially held by Alice but rather in an auction in which both Alice and Bob are buyers: the car will go to Bob and the price will be anywhere between 10 and 20.
+
+On the other hand, any price below 10 is not an equilibrium price because there is an **excess demand** (both Alice and Bob want the car at that price), and any price above 20 is not an equilibrium price because there is an **excess supply** (neither Alice nor Bob want the car at that price).
+
+This example is a special case of a double auction.
+
+**B. Substitutes:** A car and a horse are sold in an auction. Alice only cares about transportation, so for her these are perfect substitutes: she gets utility 8 from the horse, 9 from the car, and if she has both of them then she uses only the car so her utility is 9. Bob gets a utility of 5 from the horse and 7 from the car, but if he has both of them then his utility is 11 since he also likes the horse as a pet. In this case it is more difficult to find an equilibrium (see below). A possible equilibrium is that Alice buys the horse for 5 and Bob buys the car for 7. This is an equilibrium since Bob wouldn't like to pay 5 for the horse which will give him only 4 additional utility, and Alice wouldn't like to pay 7 for the car which will give her only 1 additional utility.
+
+**C. Complements**: A horse and a carriage are sold in an auction. There are two potential buyers: AND and XOR. AND wants only the horse and the carriage together - they receive a utility of {\displaystyle v\_{and}} from holding both of them but a utility of 0 for holding only one of them. XOR wants either the horse or the carriage but doesn't need both - they receive a utility of {\displaystyle v\_{xor}} from holding one of them and the same utility for holding both of them. Here, when {\displaystyle v\_{and}<2v\_{xor}}, a competitive equilibrium does NOT exist, i.e, no price will clear the market. *Proof*: consider the following options for the sum of the prices (horse-price + carriage-price):
+
+* The sum is less than {\displaystyle v\_{and}}. Then, AND wants both items. Since the price of at least one item is less than {\displaystyle v\_{xor}}, XOR wants that item, so there is excess demand.
+* The sum is exactly {\displaystyle v\_{and}}. Then, AND is indifferent between buying both items and not buying any item. But XOR still wants exactly one item, so there is either excess demand or excess supply.
+* The sum is more than {\displaystyle v\_{and}}. Then, AND wants no item and XOR still wants at most a single item, so there is excess supply.
+
+**D. Unit-demand consumers:** There are *n* consumers. Each consumer has an index {\displaystyle i=1,...,n}. There is a single type of good. Each consumer {\displaystyle i} wants at most a single unit of the good, which gives him a utility of {\displaystyle u(i)}. The consumers are ordered such that {\displaystyle u} is a weakly increasing function of {\displaystyle i}. If the supply is {\displaystyle k\leq n} units, then any price {\displaystyle p} satisfying {\displaystyle u(n-k)\leq p\leq u(n-k+1)} is an equilibrium price, since there are *k* consumers that either want to buy the product or indifferent between buying and not buying it. Note that an increase in supply causes a decrease in price.
+
+
+## Existence of a competitive equilibrium
+
+
+### Divisible resources
+
+The Arrow–Debreu model shows that a CE exists in every exchange economy with divisible goods satisfying the following conditions:
+
+* All agents have strictly convex preferences;
+* All goods are desirable. This means that, if any good {\displaystyle j} is given for free ({\displaystyle p\_{j}=0}), then all agents want as much as possible from that good.
+
+The proof proceeds in several steps.³¹⁹–³²²
+
+A. For concreteness, assume that there are {\displaystyle n} agents and {\displaystyle k} divisible goods. Normalize the prices such that their sum is 1, i.e. {\displaystyle \sum \_{j=1}^{k}p\_{j}=1}. Then the space of all possible prices is the {\displaystyle k-1}-dimensional unit simplex in {\displaystyle \mathbb {R} ^{k}}. We call this simplex the *price simplex*.
+
+B. Let {\displaystyle z} be the excess demand function. This is a function of the price vector {\displaystyle p} when the initial endowment {\displaystyle E} is kept constant:
+
+It is known that, when the agents have strictly convex preferences, the Marshallian demand function is continuous. Hence, {\displaystyle z} is also a continuous function of {\displaystyle p}.
+
+C. Define the following function from the price simplex to itself:
+
+This is a continuous function, so by the Brouwer fixed-point theorem there is a price vector {\displaystyle p^{\*}} such that:
+
+so,
+
+D. Using Walras' law and some algebra, it is possible to show that for this price vector, there is no excess demand in any product, i.e:
+
+E. The desirability assumption implies that all products have strictly positive prices:
+
+By Walras' law, {\displaystyle p^{\*}\cdot z(p^{\*})=0}. But this implies that the inequality above must be an equality:
+
+This means that {\displaystyle p^{\*}} is a price vector of a competitive equilibrium.
+
+Note that Linear utilities are only weakly convex, so they do not qualify for the Arrow–Debreu model. However, David Gale proved that a CE exists in every linear exchange economy satisfying certain conditions. For details see Linear utilities#Existence of competitive equilibrium.
+
+Algorithms for computing the market equilibrium are described in market equilibrium computation.
+
+
+### Indivisible items
+
+In the examples above, a competitive equilibrium existed when the items were substitutes but not when the items were complements. This is not a coincidence.
+
+Given a utility function on two goods *X* and *Y*, say that the goods are **weakly gross-substitute** (GS) if they are either independent goods or gross substitute goods, but *not* complementary goods. This means that {\displaystyle {\frac {\Delta {\text{demand}}(X)}{\Delta {\text{price}}(Y)}}\geq 0}. I.e., if the price of *Y* increases, then the demand for *X* either remains constant or increases, but does *not* decrease. If the price of *Y* decreases, then the demand for *X* either remains constant or decreases.
+
+A utility function is called GS if, according to this utility function, all pairs of different goods are GS. With a GS utility function, if an agent has a demand set at a given price vector, and the prices of some items increase, then the agent has a demand set which includes all the items whose price remained constant. He may decide that he doesn't want an item which has become more expensive; he may also decide that he wants another item instead (a substitute); but he may not decide that he doesn't want a third item whose price hasn't changed.
+
+**When the utility functions of all agents are GS, a competitive equilibrium always exists.**
+
+Moreover, the set of GS valuations is the largest set containing unit demand valuations for which the existence of competitive equilibrium is guaranteed: for any non-GS valuation, there exist unit-demand valuations such that a competitive equilibrium does not exist for these unit-demand valuations coupled with the given non-GS valuation.
+
+For the computational problem of finding a competitive equilibrium in a special kind of a market, see Fisher market#indivisible.
+
+
+### The competitive equilibrium and allocative efficiency
+
+By the fundamental theorems of welfare economics, any CE allocation is Pareto efficient, and any efficient allocation can be sustainable by a competitive equilibrium. Furthermore, by Varian's theorems, a CE allocation in which all agents have the same income is also envy-free.
+
+At the competitive equilibrium, the value society places on a good is equivalent to the value of the resources given up to produce it (marginal benefit equals marginal cost). This ensures allocative efficiency: the additional value society places on another unit of the good is equal to what society must give up in resources to produce it.
+
+Note that microeconomic analysis does not assume additive utility, nor does it assume any interpersonal utility tradeoffs. Efficiency, therefore, refers to the absence of Pareto improvements. It does not in any way opine on the fairness of the allocation (in the sense of distributive justice or equity). An efficient equilibrium could be one where one player has all the goods and other players have none (in an extreme example), which is efficient in the sense that one may not be able to find a Pareto improvement - which makes all players (including the one with everything in this case) better off (for a strict Pareto improvement), or not worse off.
+
+
+### Welfare theorems for indivisible item assignment
+
+In the case of indivisible items, we have the following strong versions of the two welfare theorems:
+
+1. Any competitive equilibrium maximizes the social welfare (the sum of utilities), not only over all realistic assignments of items, but also over all *fractional* assignments of items. I.e., even if we could assign fractions of an item to different people, we couldn't do better than a competitive equilibrium in which only whole items are assigned.
+2. If there is an integral assignment (with no fractional assignments) that maximizes the social welfare, then there is a competitive equilibrium with that assignment.
+
+## Finding an equilibrium
+
+In the case of indivisible item assignment, when the utility functions of all agents are GS (and thus an equilibrium exists), it is possible to find a competitive equilibrium using an *ascending auction*. In an ascending auction, the auctioneer publishes a price vector, initially zero, and the buyers declare their favorite bundle under these prices. In case each item is desired by at most a single bidder, the items are divided and the auction is over. In case there is an excess demand on one or more items, the auctioneer increases the price of an over-demanded item by a small amount (e.g. a dollar), and the buyers bid again.
+
+Several different ascending-auction mechanisms have been suggested in the literature. Such mechanisms are often called Walrasian auction, *Walrasian tâtonnement* or English auction.
+

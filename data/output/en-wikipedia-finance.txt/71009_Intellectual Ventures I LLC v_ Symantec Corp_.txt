@@ -1,0 +1,126 @@
+Intellectual Ventures I LLC v. Symantec Corp.
+
+
+# Intellectual Ventures I LLC v. Symantec Corp.
+
+
+
+***Intellectual Ventures I LLC v. Symantec Corp.***, 838 F.3d 1307 (Fed. Cir. 2016), is a 2016 Federal Circuit decision concerning the patent eligibility of a computer-software claimed invention. In a split decision, a three-member panel of the court discussed the current legal status of such patents. The court held all three patents invalid as patent ineligible under 35 U.S.C. § 101.
+
+
+## Background
+
+Intellectual Ventures I LLC ("IV"), a non-practicing entity, owned U.S. Patent Nos. 6,460,050 ("the '050 patent"), 6,073,142 ("the '142 patent"), and 5,987,610 ("the '610 patent"). IV sued Symantec Corp. and Trend Micro Inc. for infringement of various claims of the three patents by selling anti-malware and anti-spam software.
+
+The '050 patent is directed to methods of screening emails and other data files for unwanted content such as spam. The '142 patent is directed to methods of routing e-mail messages based on specified criteria (i.e., rules). The '610 patent is directed to using computer virus screening in the telephone network. All of the patents operate by use of computer software.
+
+
+## Majority opinion of Federal Circuit
+
+Judge Timothy Dyk delivered the majority opinion for the court. Judge Haldane Robert Mayer concurred, but wrote separately. Judge Kara Farnandez Stoll concurred as to two of the patents but considered the third one to be patent eligible.
+
+
+### The '050 patent
+
+A representative claim of the '050 patent is claim 9, which provides:
+
+According to IV, "this method of filtering emails is used to address the problems of spam e-mail and the use of e-mail to deliver computer viruses." The court began by applying the first step of the two-step analysis prescribed in *Alice Corp. v. CLS Bank Int'l*, and *Mayo Collaborative Services v. Prometheus Labs., Inc.*, the so-called *Mayo/Alice* methodology, which is to determine whether the claim is based on an abstract idea. The court stated: "We agree with the district court that receiving e-mail (and other data file) identifiers, characterizing e-mail based on the identifiers, and communicating the characterization—in other words, filtering files/e-mail—is an abstract idea" because "it was [a] long-prevalent practice for people receiving paper mail to look at an envelope and discard certain letters, without opening them, from sources from which they did not wish to receive mail based on characteristics of the mail," and "[c]haracterizing e-mail based on a known list of identifiers is no less abstract." In the *Alice* case, the Supreme Court had held that "fundamental . . . practice[s] long prevalent" are abstract ideas. The Federal Circuit therefore proceeded to the second step of the *Alice* methodology, which is to determine whether the patent adds anything inventive to implement the abstract idea. The court held the claimed steps "routine and conventional," despite IV's argument that because the prior art did not disclose "determining . . . whether each received content identifier matches a characteristic" or "outputting . . . an indication of the characteristic of the data file," the implementation must not be routine and conventional. The court responded that the idea of "determining" and "outputting" is abstract and noninventive in computer programs, even though applying them in the context of the patent claim was not in the prior art, so that the claimed implementation was routine and conventional. The fact that the "particular prior art references do not disclose all the limitations of or render obvious the asserted claims does not resolve the question of whether the claims embody an inventive concept at the second step of [the] *Mayo/Alice*" analysis. This was a case in which the claimed method steps just "use generic computers to perform generic computer functions." Therefore, the claimed method is patent ineligible.
+
+
+### The '142 patent
+
+A representative claim of the '142 patent was claim 1, which provides:
+
+The patent describes the claimed invention as a "system . . . for automatic deferral and review of e-mail messages and other data objects in a networked computer system, by applying business rules to the messages as they are processed by post offices." The court said this was just what a brick-and-mortar post office or a mailroom does. Mailrooms "receive correspondence, keep business rules defining actions to be taken regarding correspondence based on attributes of the correspondence, apply those business rules to correspondence, and take certain actions based on the application of business rules." Those actions include "gating the message for further review, as in claim 1, and also releasing, deleting, returning, or forwarding the message, as described elsewhere" in the patent. In the language of the *Alice* case, this claimed system consists of using procedures that are "fundamental . . . practice[s] long prevalent in our system" and "method[s] of organizing human activity." "[W]ith the exception of generic computer-implemented steps, there is nothing in the claims themselves that foreclose them from being performed by a human, mentally or with pen and paper." Therefore, the "patent is directed to a conventional business practice—the screening of messages by corporate organizations—in the context of electronic communications." The patent states that claimed system operates with conventional computer equipment and conventional computer operating systems such as Windows. Thus the implementation is conventional. Here, as in the ;*Alice* case, "each step does no more than require a generic computer to perform generic computer functions." Therefore, the patent is invalid under § 101.
+
+
+### The '610 patent
+
+Claim 7 was the only asserted claim of the '610 patent. Claim 7 depends from claim 1, which provides:
+
+Claim 7 adds to that the further limitation of "the step of determining that virus screening is to be applied to the call based upon at least one of an identification code of the calling party and an identification code of the called party."
+
+Unlike the other patents in the case, this one "involves an idea that originated in the computer era—computer virus screening." Nonetheless, "the idea of virus screening was nonetheless well known when the '610 patent was filed. Performing virus screening was a long prevalent practice in the field of computers, and, as the patent admits, performed by many computer users." The idea of the patent is thus, by itself, "well-known and constitutes an abstract idea." Turning to *Mayo/Alice* step two, the court found the implementation conventional. Since the patent added nothing inventive to the abstract idea, the claimed method was patent ineligible. Placing the method in the environment of a "telephone network," did not impart patent eligibility. It "merely provides a 'generic environment' in which to carry out the well-known and abstract idea of virus screening." The court stated: "For the role of a computer in a computer-implemented invention to be deemed meaningful in the context of this analysis, it must involve more than performance of 'well understood, routine, [and] conventional activities previously known to the industry.' " Therefore, claim 7 was patent ineligible.
+
+
+## Concurring opinion
+
+Judge Mayer agreed that all claims were patent ineligible, but wrote separately "to make two points: (1) patents constricting the essential channels of online communication run afoul of the First Amendment; and (2) claims directed to software implemented on a generic computer are categorically not eligible for patent."
+
+On the first point, Judge Mayer insisted:
+
+> Suppression of free speech is no less pernicious because it occurs in the digital, rather than the physical, realm. Whatever the challenges of applying the Constitution to ever-advancing technology, the basic principles of freedom of speech and the press, like the First Amendment's command, do not vary when a new and different medium for communication appears. Essential First Amendment freedoms are abridged when the Patent and Trademark Office ("PTO") is permitted to balkanize the Internet, granting patent owners the right to exact heavy taxes on widely-used conduits for online expression.
+
+On the second point, Judge Mayer argued:
+
+> Most of the First Amendment concerns associated with patent protection could be avoided if this court were willing to acknowledge that *Alice* sounded the death knell for software patents. The claims at issue in *Alice* were directed to a computer-implemented system for mitigating settlement risk. . . . Given that an "idea" is not patentable, and a generic computer is "beside the point" in the eligibility analysis, all software implemented on a standard computer should be deemed categorically outside the bounds of section 101. . . . In the section 101 calculus, adding software (which is as abstract as language) to a conventional computer (which rightfully resides in the public domain) results in a patent eligibility score of zero.
+
+Mayer argued that "[f]rom an eligibility perspective, software claims suffer from at least four insurmountable problems":
+
+> 1. "First, their scope is generally vastly disproportionate to their technological disclosure" for they "typically do not include any actual code developed by the patentee, but instead describe, in intentionally vague and broad language, a particular goal or objective."
+> 2. "Because they are typically obtained at the 'idea' stage, before any real inventive work has been done, such patents are incapable of effectively incentivizing meaningful advances in science and technology." This "has created a perverse incentive scheme. Under our current regime, those who scamper to the PTO early, often equipped with little more than vague notions about using computers to automate well-known business and social practices, can reap hefty financial dividends" at the expense of those who actually develop "useful computer-centric products." The latter "are rewarded with mammoth potential infringement liability."
+> 3. "Given the vast number of software patents—most of which are replete with broad, functional claims—it is virtually impossible to innovate in any technological field without being ensnared by the patent thicket. . . . Software patents impose a deadweight loss on the nation's economy, erecting often insurmountable barriers to innovation and forcing companies to expend exorbitant sums defending against meritless infringement suits."
+> 4. "In short, because directing that software should be applied via standard computer elements is little different than stating that it should be written down using pen and paper, generically-implemented software lacks the concrete contours required by section 101."
+
+Mayer concluded: "Eliminating generically-implemented software patents would clear the patent thicket, ensuring that patent protection promotes, rather than impedes, 'the onward march of science,' and allowing technological innovation to proceed apace."
+
+
+## Dissenting opinion
+
+Judge Stoll dissented in part. She considered claim 7 of the '610 patent to be patent eligible be it embodied "a fundamental architectural shift from prior-art virus screening, which occurred locally on an end user's computer rather than centrally as in the invention," thereby "thwarting the ability of viruses to reach and exploit end users" and permitting "end users [to] communicate over a network without concern of receiving various predetermined computer viruses."
+
+
+## Petition for rehearing
+
+IV filed for a rehearing *en banc* on November 16, 2016. IV's petition argues that rehearing *en banc* is warranted because Judge Mayer's concurring opinion "openly revolts against the more careful efforts of this Court to prevent Section 101 from swallowing all software patents."
+
+
+## Commentary
+
+● The *Patent Docs* blog said that "this Federal Circuit case is already making waves." It observed: "[T]he real attention-grabber is Judge Mayer's concurrence. Therein, he argued that claims such as those under review were at odds with the First Amendment, and then reiterated his position that software is not patent eligible." The blog described his concurring opinion in these terms:
+
+> Notably, he concluded that "[e]ssential First Amendment freedoms are abridged when the Patent and Trademark Office ("PTO") is permitted to balkanize the Internet, granting patent owners the right to exact heavy taxes on widely-used conduits for online expression." According to Judge Mayer, the judicial exceptions to 35 U.S.C. § 101 "create[] a 'patent-free zone' and place[] within it the indispensable instruments of social, economic, and scientific endeavor." Thus, the Judge advocated that "Section 101, if properly applied, can preserve the Internet's open architecture and weed out those patents that chill political expression and impermissibly obstruct the marketplace of ideas.
+
+The blog criticized Mayer's opinion as indulging in
+
+> a robustly overgeneralized statement – 'patents constricting essential channels of online communications run afoul of the First Amendment' – and moves on to other topics." The commentary concludes that Judge Mayer's "unnerving" First Amendment comments are "results-oriented judicial vagueness [that] is a form of dangerous reasoning – especially when it implicates, but does not acknowledge, the intricacies of navigating the case law surrounding such a fundamental constitutional right.
+
+● Dennis Crouch, in *Patently-O*, focused on the same aspect of the case:
+
+> The big news from *Intellectual Ventures v. Symantec* (Fed. Cir. 2016) is not that the court found IV's content identification system patents invalid as claiming ineligible subject matter. (Although that did happen). Rather, the big event is Judge Mayer's concurring opinion that makes "make two points: (1) patents constricting the essential channels of online communication run afoul of the First Amendment; and (2) claims directed to software implemented on a generic computer are categorically not eligible for patent.
+
+● The *JDSupra* blog also found that
+
+> what is most notable about the case is Judge Mayer' concurrence, where he makes two points:
+> 
+> 1) patents constricting the essential channels of online communication run afoul of the First Amendment; and
+> 
+> 2) claims directed to software implemented on a generic computer are categorically not eligible for patent.
+
+The blog goes on to explain the reasoning underlying Mayer's position:
+
+> Mayer comments that although the claims at issue here disclose no new technology, they have the potential to disrupt, or even derail, large swaths of online communication. He further suggests that essential First Amendment freedoms are abridged when the Patent and Trademark Office is permitted to balkanize the Internet, granting patent owners the right to exact heavy taxes on widely-used conduits for online expression.
+> 
+> Mayer points to the distinction between idea and expression in copyright law as providing a balance between the First Amendment and the Copyright Act by permitting free communication of facts while still protecting an author's expression. Mayer further points to fair use [in copyright law] that even permits the use of the author's expression. He concludes that restrictions on patent eligibility and subject matter eligibility can be used to keep patent protection within constitutional bounds. He states that: "Section 101 creates a "patent-free zone" and places within it the indispensable instruments of social, economic, and scientific endeavor."
+> 
+> He believes that Section 101, if properly applied, can preserve the Internet's open architecture and weed out those patents that chill political expression and impermissibly obstruct the marketplace of ideas.
+> 
+> . . . [Mayer] concludes that all software implemented on a standard computer should be deemed categorically outside the bounds of section 101. This is justified in Mayer's mind because computers are indispensable and are a basic tool of modern life, and are thus not subject to the patent monopoly. . . . He concludes that eliminating generically-implemented software patents would clear the patent thicket, ensuring that patent protection promotes, rather than impedes, "the onward march of science," and allowing technological innovation to proceed apace.
+
+● *Fortune* weighed in to say:
+
+> The end may be in sight for software patents—which have long been highly controversial in the tech industry—in the wake of a remarkable appeals court ruling that described such patents as a "deadweight loss on the nation's economy" and a threat to the First Amendment's free speech protections.
+> The most important part of the decision, which has created a stir among the patent bar, is a concurrence by Circuit Judge Haldane Mayer. In striking down a key claim from U.S. Patent 5987610, which claims a monopoly on using anti-virus tools within a phone network, Mayer says it is time to acknowledge that a famous Supreme Court 2014 decision known as *Alice* basically ended software patents altogether.
+
+*Fortune* also quotes Mayer as saying that the "complex and expensive patent system is a terrible fit for the fast moving software industry," and asserts that his statement "is consistent with a larger skepticism on the part of courts towards software patents, and could lead more judges to reject them outright."
+
+*Fortune* opines that "the end of software patents" would make the business of "patent trolling" less lucrative and therefore less of a burden "at the expense of companies who actually make products."
+
+● The *Software Intellectual Property Report* sees the case as illustrating "the reality that patent-eligibility determinations are subjective and/or subject to different standards," so that different judicial panels "will reach different results" on the same patent. Nonetheless, the blog opines, "Judge Dyk's baby-splitting approach, while far from unanimous, does seem to represent the conventional approach."
+
+Turning to Judge Mayer's arguments, the blog observes:
+
+> It is totally fair to have a policy debate about the purpose of our patent laws, what they should protect, and how the patent laws coexist with the Constitution, and with other laws, including copyright law. But setting aside whether you agree or disagree with Judge Mayer's policy prescription, I see the biggest problem as this: I have not yet seen a plausibly practical suggestion for how "software" could be deemed patent-ineligible, while other kinds of computer inventions, including firmware, control systems, and combinations of software and hardware, could still be protected. Above all, what I would like to see is more certain law on which I could rely to counsel my clients. If the *Mayo/Alice* test, at least for computer inventions, could be articulated in a way so as to draw a bright line, I would be all for taking a serious look.
+
+● *Techdirt* marvels at the "unexpected surprise" of Judge Mayer's opinion (a "born again . . . conversion"), because it regards him as one of the Federal Circuit judges responsible in the 1990s for "the notoriously awful Court of Appeals for the Federal Circuit" opinions when that very court "was at its worst" in "upend[ing] things nearly two decades ago [by] declaring software much more broadly patentable than anyone believed." *Techdirt* says that this Federal Circuit ruling "may now be the nail in the coffin on software patents in the US." It sees Judge Mayer as declaring that "it's time to face facts: *Alice* killed software patents." *Techdirt* concludes by asking what the next step in this case will be: "It will be interesting to see if Intellectual Ventures tries to kick this up a level to the Supreme Court, where it might risk SCOTUS actually agreeing with Judge Mayer."
+

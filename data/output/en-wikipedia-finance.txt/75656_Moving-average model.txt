@@ -1,0 +1,38 @@
+Moving-average model
+
+
+# Moving-average model
+
+
+
+In time series analysis, the **moving-average model** (**MA model**), also known as **moving-average process**, is a common approach for modeling univariate time series. The moving-average model specifies that the output variable is cross-correlated with a non-identical to itself random-variable.
+
+Together with the autoregressive (AR) model, the moving-average model is a special case and key component of the more general ARMA and ARIMA models of time series, which have a more complicated stochastic structure. Contrary to the AR model, the finite MA model is always stationary.
+
+The moving-average model should not be confused with the moving average, a distinct concept despite some similarities.
+
+
+## Definition
+
+The notation MA(*q*) refers to the moving average model of order *q*:
+
+where {\displaystyle \mu } is the mean of the series, the {\displaystyle \theta \_{1},...,\theta \_{q}} are the coefficients of the modelᵉˣᵃᵐᵖˡᵉ ⁿᵉᵉᵈᵉᵈ and {\displaystyle \varepsilon \_{t},\varepsilon \_{t-1},...,\varepsilon \_{t-q}} are the error terms. The value of *q* is called the order of the MA model. This can be equivalently written in terms of the backshift operator *B* as
+
+Thus, a moving-average model is conceptually a linear regression of the current value of the series against current and previous (observed) white noise error terms or random shocks. The random shocks at each point are assumed to be mutually independent and to come from the same distribution, typically a normal distribution, with location at zero and constant scale.
+
+
+## Interpretation
+
+The moving-average model is essentially a finite impulse response filter applied to white noise, with some additional interpretation placed on it.ᶜˡᵃʳⁱᶠⁱᶜᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ The role of the random shocks in the MA model differs from their role in the autoregressive (AR) model in two ways. First, they are propagated to future values of the time series directly: for example, {\displaystyle \varepsilon \_{t-1}} appears directly on the right side of the equation for {\displaystyle X\_{t}}. In contrast, in an AR model {\displaystyle \varepsilon \_{t-1}} does not appear on the right side of the {\displaystyle X\_{t}} equation, but it does appear on the right side of the {\displaystyle X\_{t-1}} equation, and {\displaystyle X\_{t-1}} appears on the right side of the {\displaystyle X\_{t}} equation, giving only an indirect effect of {\displaystyle \varepsilon \_{t-1}} on {\displaystyle X\_{t}}. Second, in the MA model a shock affects {\displaystyle X} values only for the current period and *q* periods into the future; in contrast, in the AR model a shock affects {\displaystyle X} values infinitely far into the future, because {\displaystyle \varepsilon \_{t}} affects {\displaystyle X\_{t}}, which affects {\displaystyle X\_{t+1}}, which affects {\displaystyle X\_{t+2}}, and so on forever (see Impulse response).
+
+
+## Fitting the model
+
+Fitting a moving-average model is generally more complicated than fitting an autoregressive model. This is because the lagged error terms are not observable. This means that iterative non-linear fitting procedures need to be used in place of linear least squares. Moving average models are linear combinations of past white noise terms, while autoregressive models are linear combinations of past time series values. ARMA models are more complicated than pure AR and MA models, as they combine both autoregressive and moving average components.
+
+The autocorrelation function (ACF) of an MA(*q*) process is zero at lag *q* + 1 and greater. Therefore, we determine the appropriate maximum lag for the estimation by examining the sample autocorrelation function to see where it becomes insignificantly different from zero for all lags beyond a certain lag, which is designated as the maximum lag *q*.
+
+Sometimes the ACF and partial autocorrelation function (PACF) will suggest that an MA model would be a better model choice and sometimes both AR and MA terms should be used in the same model (see Box–Jenkins method).
+
+Autoregressive Integrated Moving Average (ARIMA) models are an alternative to segmented regression that can also be used for fitting a moving-average model.
+

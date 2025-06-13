@@ -1,0 +1,72 @@
+KST oscillator
+
+
+# KST oscillator
+
+
+
+In financial technical analysis, the **know sure thing (KST) oscillator** is a complex, smoothed price velocity indicator developed by Martin J. Pring.
+
+A rate of change (ROC) indicator is the foundation of KST indicator. KST indicator is useful to identify major stock market cycle junctures because its formula is weighed to be more greatly influenced by the longer and more dominant time spans, in order to better reflect the primary swings of stock market cycle. The concept behind the oscillator is that price trends are determined by the interaction of many different time cycles and that important trend reversals take place when a number of price trends are simultaneously changing direction.
+
+
+## Formula
+
+Four different rates of change are calculated, smoothed, multiplied by weights and then summed to form one indicator.
+
+http://search.cpan.org/~kmx/Finance-TA-v0.4.1/TA.pod#TA\_ROC\_(Rate\_of\_change\_:\_((price/prevPrice)-1)\*100)
+
+Where price refers to current closing price and price(X1) refers to the closing price X1 bars ago.
+
+Where MOV(ROC1,AVG1) refers to the AVG1 day moving average for ROC1
+
+For short-term trends, Martin J Pring suggests the following parameters:
+
+The formula is built into, or can be included in, various technical analysis software packages such as MetaStock or OmniTrader.
+
+
+## Implications
+
+
+### Entry rules KST Indicator
+
+When KST crosses below its 9-day exponential average, short at the next day opening price.
+
+
+### Exit rules KST indicator
+
+When KST crosses above its 9-day exponential average, close short position at the next day opening.
+
+
+## Variations
+
+It can be calculated on **daily** or **long term** basis.
+
+The dominant time frame in the (KST)'s construction is a 24-month period, which is half of the 4-year business cycle. This means that the KST will work best when the security in question is experiencing a primary up- and downtrend based on the business cycle.
+
+
+## KST interpretation
+
+KST can be interpreted in the ways mentioned below.
+
+The dominant time frame in the Know Sure Thing (KST)'s construction is a 24-month period, which is half of the 4-year business cycle. This means that the Know Sure Thing (KST) will work best when the security in question is experiencing a primary up- and downtrend based on the business cycle.
+
+
+### Directional changes and moving average crossovers
+
+The average to use is a simple 10-day moving average. It is possible to anticipate a moving average crossover if the KST has already turned and the price violates a trendline. The KST started to reverse to the downside before the up trendline was violated. Since either a reversal or a trading range follow a valid trendline violation, it's evident that upside momentum has temporarily dissipated, causing the KST to cross below its moving average.
+
+Traditionally, the MACD gives buy and sell signals when it crosses above and below its exponential moving average, known as the “signal line”. This approach isn't perfect; the ellipses on the chart highlight all the whipsaws. As said earlier, the KST can also give false or misleading signals, as you can see from the April 2005 buy signal. It comes close to a couple of whipsaws, but by and large, it's more accurate, even though the MACD often turns faster than the KST.
+
+
+### Overbought/oversold and divergences
+
+The concept is that when the indicator crosses above and below the overbought/oversold zones, momentum buy and sell signals are triggered. Even so, you must wait for some kind of trend reversal signal in the price, such as a price pattern completion, trendline violation, or similar.
+
+The KST often diverges positively and negatively with the price.
+
+
+### Trendline violations and price pattern completions
+
+It is possible to construct a trendline on the KST and see when it's been violated, but not very often. When it does though, it usually results in a powerful signal.
+

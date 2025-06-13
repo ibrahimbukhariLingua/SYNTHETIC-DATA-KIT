@@ -1,0 +1,32 @@
+Discrete valuation
+
+
+# Discrete valuation
+
+
+
+In mathematics, a **discrete valuation** is an integer valuation on a field *K*; that is, a function:
+
+satisfying the conditions:
+
+for all {\displaystyle x,y\in K}.
+
+Note that often the trivial valuation which takes on only the values {\displaystyle 0,\infty } is explicitly excluded.
+
+A field with a non-trivial discrete valuation is called a **discrete valuation field**.
+
+
+## Discrete valuation rings and valuations on fields
+
+To every field {\displaystyle K} with discrete valuation {\displaystyle \nu } we can associate the subring
+
+of {\displaystyle K}, which is a discrete valuation ring. Conversely, the valuation {\displaystyle \nu :A\rightarrow \mathbb {Z} \cup \{\infty \}} on a discrete valuation ring {\displaystyle A} can be extended in a unique way to a discrete valuation on the quotient field {\displaystyle K={\text{Quot}}(A)}; the associated discrete valuation ring {\displaystyle {\mathcal {O}}\_{K}} is just {\displaystyle A}.
+
+
+## Examples
+
+* For a fixed prime {\displaystyle p} and for any element {\displaystyle x\in \mathbb {Q} } different from zero write {\displaystyle x=p^{j}{\frac {a}{b}}} with {\displaystyle j,a,b\in \mathbb {Z} } such that {\displaystyle p} does not divide {\displaystyle a,b}. Then {\displaystyle \nu (x)=j} is a discrete valuation on {\displaystyle \mathbb {Q} }, called the p-adic valuation.
+* Given a Riemann surface {\displaystyle X}, we can consider the field {\displaystyle K=M(X)} of meromorphic functions {\displaystyle X\to \mathbb {C} \cup \{\infty \}}. For a fixed point {\displaystyle p\in X}, we define a discrete valuation on {\displaystyle K} as follows: {\displaystyle \nu (f)=j} if and only if {\displaystyle j} is the largest integer such that the function {\displaystyle f(z)/(z-p)^{j}} can be extended to a holomorphic function at {\displaystyle p}. This means: if {\displaystyle \nu (f)=j>0} then {\displaystyle f} has a root of order {\displaystyle j} at the point {\displaystyle p}; if {\displaystyle \nu (f)=j<0} then {\displaystyle f} has a pole of order {\displaystyle -j} at {\displaystyle p}. In a similar manner, one also defines a discrete valuation on the function field of an algebraic curve for every regular point {\displaystyle p} on the curve.
+
+More examples can be found in the article on discrete valuation rings.
+

@@ -1,0 +1,66 @@
+Business logic
+
+
+# Business logic
+
+
+
+In computer software, **business logic** or **domain logic** is the part of the program that encodes the real-world business rules that determine how data can be created, stored, and changed. It is contrasted with the remainder of the software that might be concerned with lower-level details of managing a database or displaying the user interface, system infrastructure, or generally connecting various parts of the program.
+
+
+## Details and example
+
+Business logic:
+
+* Prescribes how business objects interact with one another
+* Enforces the routes and the methods by which business objects are accessed and updated
+
+Business rules:
+
+* Model real-life business objects (such as accounts, loans, itineraries, and inventories)
+
+Business logic comprises:
+
+* Workflows that are the ordered tasks of passing documents or data from one participant (a person or a software system) to another.
+
+Business logic should be distinguished from business rules. Business logic is the portion of an enterprise system which determines how data is transformed or calculated, and how it is routed to people or software (workflow). Business rules are formal expressions of business policy. Anything that is a process or procedure is business logic, and anything that is neither a process nor a procedure is a business rule. Welcoming a new visitor is a process (workflow) consisting of steps to be taken, whereas saying every new visitor must be welcomed is a business rule. Further, business logic is procedural whereas business rules are declarative.
+
+For example, an e-commerce website might allow visitors to add items to a shopping cart, specify a shipping address, and supply payment information. The business logic of the website might include a workflow such as:
+
+* The sequence of events that happens during checkout, for example a multi-page form which first asks for the shipping address, then for the billing address, next page will contain the payment method, and last page will show congratulations.
+
+There will also be business rules of the website:
+
+* Adding an item more than once from the item description page increments the quantity for that item.
+* Specific formats that the visitor's address, email address, and credit card information must follow.
+* A specific communication protocol for talking to the credit card network
+
+The web site software also contains other code which is not considered part of business logic nor business rules:
+
+* Peripheral content not related to the core business data, such as the HTML that defines the colors, appearance, background image, and navigational structure of the site
+* Generic error-handling code (e.g., which displays the HTTP Error Code 500 page)
+* Initialization code that runs when the web server starts up the site, which sets up the system
+* Monitoring infrastructure to make sure all the parts of the site are working properly (e.g., the billing system is available)
+* Generic code for making network connections, transmitting objects to the database, parsing user input via HTTP POST events, etc.
+
+## Business logic and tiers/layers
+
+Business logic could be anywhere in a program. For example, given a certain format for an address, a database table could be created which has columns that correspond exactly to the fields specified in the business logic, and type checks added to make sure that no invalid data is added.
+
+Business logic often changes. For example, the set of allowable address formats might change when an online retailer starts shipping products to a new country. Thus it is often seen as desirable to make the code that implements the business logic relatively isolated, or loosely coupled. This makes it more likely that changes to business logic will require a small set of code changes, in only one part of the code. Distant but strongly coupled code also creates more of a risk that the programmer will only make some of the necessary changes and miss part of the system, leading to incorrect operation.
+
+A multitier architecture formalizes this decoupling by creating a **business logic layer** which is separate from other tiers or layers, such as the data access layer or service layer. Each layer "knows" only a minimal amount about the code in the other layers—just enough to accomplish necessary tasks. For example, in a model–view–controller paradigm, the controller and view layers might be made as small as possible, with all the business logic concentrated in the model. In the e-commerce example, the controller determines the sequence of web pages in the checkout sequence, and is also responsible for validating that email, address, and payment information satisfy the business rules (rather than leaving any of that up to the database itself or lower-level database access code).
+
+Alternative paradigms are possible. For example, with relatively simple business entities, a generic view and controller could access database objects which themselves contain all the relevant business logic about what formats they accept and what changes are possible (known as the database model).
+
+Some tiered schemes use either a distinct application layer or a service layer, or consider the business logic layer to be the same as one of those.
+
+
+## Tools and techniques
+
+Business logic can be extracted from procedural code using a business rule management system (BRMS).
+
+The business rules approach of software development uses BRMSs and enforces a very strong separation of business logic from other code. User interface management systems are another technology used to enforce a strong separation between business logic and other code. The magic pushbutton is considered an "anti-pattern": a technique that in this case creates undesirable constraints which make it difficult to code business logic in an easy-to-maintain way.
+
+A domain model is an abstract representation of the data storage types required by business rules.
+

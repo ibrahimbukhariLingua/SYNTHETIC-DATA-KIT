@@ -1,0 +1,107 @@
+Enfish, LLC v. Microsoft Corp.
+
+
+# Enfish, LLC v. Microsoft Corp.
+
+
+
+***Enfish, LLC v. Microsoft Corp.***, 822 F.3d 1327 (Fed. Cir. 2016), is a 2016 decision of the United States Court of Appeals for the Federal Circuit in which the court, for the second time since the United States Supreme Court decision in *Alice Corp. v. CLS Bank* upheld the patent–eligibility of software patent claims. The Federal Circuit reversed the district court's summary judgment ruling that all claims were patent–ineligible abstract ideas under *Alice*. Instead, the claims were directed to a specific improvement to the way computers operate, embodied in the claimed "self-referential table" for a database, which the relevant prior art did not contain.
+
+
+## Background
+
+Enfish, LLC and Microsoft Corp. develop and sell software database products. Enfish received U.S. Patents 6,151,604 ('604 patent) and 6,163,775 ('775 patent) in late 2000, which both claim a logical model for a computer database. A logical model is a system for a computer database that explains how the various elements of information in the database are related to one another. Contrary to conventional logical models, Enfish's logical model includes all data entities in a single table, with column definitions provided by rows in that same table. The patents describe this as the "self-referential" property of the database. In a standard, conventional relational database, each entity (i.e., each type of thing) that is modeled is provided in a separate table. For instance, a relational model for a corporate file repository might include the following tables: document table, person table, and company table. The document table might contain information about stored documents, the person table might contain information about authors of the documents, and the company table might contain information about the companies that employ the persons. In contrast, Enfish's patents describe a table structure that allows the information that would normally appear in several different tables to be stored in a single table. The columns are defined by rows in the same table.
+
+Enfish's patents assert that the self-referential arrangement has several advantages: faster look-ups, more efficient storage of data other than structured text, no requirement to model each thing in the database as a separate table, and thus the ability to be "configured on-the-fly." A representative claim 17 of the '604 patent claims:
+
+> A data storage and retrieval system for a computer memory, comprising:
+> 
+> means for configuring said memory according to a logical table, said logical table including:
+> a plurality of logical rows, each said logical row including an object identification number (OID) to identify each said logical row, each said logical row corresponding to a record of information;
+> a plurality of logical columns intersecting said plurality of logical rows to define a plurality of logical cells, each said logical column including an OID to identify each said logical column; and
+> means for indexing data stored in said table.
+
+
+## Ruling of district court
+
+The district court (Pfaelzer, J.) held that the fact that the patents claim a "logical table" demonstrated abstractness, since '[t]he term 'logical table' refers to a logical data structure, as opposed to a physical data structure." Thus the court's claim construction order had stated that a logical table has "a data structure that is logical as opposed to physical, and therefore does not need to be stored contiguously in memory." Therefore:
+
+> In essence, the claims capture the concept of organizing information using tabular formats. As such, the claims preempt a basic way of organizing information, without regard to the physical data structure. There can be little argument that a patent on this concept, without more, would greatly impede progress.
+
+> Given these observations, the Court determines that the claims are addressed to the abstract purpose of storing, organizing, and retrieving memory in a logical table. This abstract purpose does not become tangible because it is necessarily limited to the technological environment of computers. . . . When a claim recites a computer generically, the Court should ignore this element in defining the claim's purpose.
+
+The court then proceeded to the second step of the *Alice* analysis, which is to determine whether "the claims contain additional limitations that amount to an inventive concept." The court concluded: "The claims do not. Instead, the claims recite conventional elements. These elements, when viewed individually or in a combination, do not sufficiently cabin the claims' scope." Accordingly, the court granted summary judgment invalidating the patents.
+
+
+## Ruling of Federal Circuit
+
+The Federal Circuit (Hughes, J.) interpreted the first step of the *Alice* analysis as asking "whether the focus of the claims is on the specific asserted improvement in computer capabilities (i.e., the self-referential table for a computer database) or, instead, on a process that qualifies as an 'abstract idea' for which computers are invoked merely as a tool." But claim 17, for example, is focused on "an improvement to computer functionality itself, not on economic or other tasks for which a computer is used in its ordinary capacity." Accordingly, "we find that the claims at issue in this appeal are not directed to an abstract idea within the meaning of *Alice*. Rather, they are directed to a specific improvement to the way computers operate, embodied in the self-referential table." Therefore, the court does not need to proceed to step two of the *Alice* analysis.
+
+The Federal Circuit rejected the conclusion of district court Judge Pfaelzer that the claims were abstract, and rejected the argument that the claims are directed to "the concepts of organizing data into a logical table with identified columns and rows where one or more rows are used to store an index or information defining columns." Instead, the court insisted, "describing the claims at such a high level of abstraction and untethered from the language of the claims all but ensures that the exceptions to § 101 swallow the rule." The Federal Circuit said that "the district court oversimplified the self-referential component of the claims and downplayed the invention's benefits." The court explained that its "conclusion that the claims are directed to an improvement of an existing technology is bolstered by the specification's teachings that the claimed invention achieves other benefits over conventional databases, such as increased flexibility, faster search times, and smaller memory requirements."
+
+While the claims at issue in other cases such as *Alice* merely added "conventional computer components to well-known business practices," Enfish's claims "are directed to a specific improvement to computer functionality." Thus:
+
+> In sum, the self-referential table recited in the claims on appeal is a specific type of data structure designed to improve the way a computer stores and retrieves data in memory. The specification's disparagement of conventional data structures, combined with language describing the "present invention" as including the features that make up a self-referential table, confirm that our characterization of the "invention" for purposes of the § 101 analysis has not been deceived by the "draftsman's art." . . . Rather, the claims are directed to a specific implementation of a solution to a problem in the software arts. Accordingly, we find the claims at issue are not directed to an abstract idea.
+
+That ended the § 101 analysis:
+
+> Because the claims are not directed to an abstract idea under step one of the Alice analysis, we do not need to proceed to step two of that analysis. . . . [W]e think it is clear for the reasons stated that the claims are not directed to an abstract idea, and so we stop at step one. We conclude that the claims are patent-eligible.
+
+
+## Subsequent developments
+
+In *TLI Communications LLC v. AV Automotive, L.L.C.*, five days later, a different panel, including Judge Hughes who authored the *Enfish* decision and then *TLI*, invalidated software claims for failure to meet the *Alice* test. In *TLI* the court held that a patent on a method and system for taking, transmitting, and organizing digital images was patent–ineligible because it "claims no more than the abstract idea of classifying and storing digital images in an organized manner."
+
+Several district courts have reacted to *Enfish* already, in cases in which they had granted summary judgment motions on grounds of lack of patent eligibility under *Alice*. In *Mobile Telecommunications Technologies v. Blackberry Corp.* in the Northern District of Texas, the court requested supplemental briefs on the *Enfish* decision. In *Activision Publishing Inc. v. xTV Networks, Ltd.* in the Central District of California, the court requested technology tutorials on the effect of *Enfish.*
+
+
+## Commentary
+
+● In *Patent Docs*, blogger Michael Borella comments on the *Enfish* case.
+He emphasizes the Federal Circuit panel's statement that "describing the claims at such a high level of abstraction and untethered from the language of the claims all but ensures that the exceptions to § 101 swallow the rule." He also emphasizes the court's nod to "the importance of software and the potential for innovation therewith", pointing to the opinion's statement:
+
+> Much of the advancement made in computer technology consists of improvements to software that, by their very nature, may not be defined by particular physical features but rather by logical structures and processes . . . [w]e do not see in *Bilski* or *Alice*, or our cases, an exclusion to patenting this large field of technological progress.
+
+Borella sees the case as telling drafters of patents (and perhaps patent claims) to describe 'how an invention improves over the prior art, especially if it improves the operation of a computer." He cautions, however, that "for purposes of avoiding estoppel, one should be careful when pointing out the deficiencies of what came before."
+
+Finally, he hails the opinion as downplaying the need for recitation of hardware in claims, in order to salvage patent eligibility:
+
+> Additionally, the Court made it clear that whether such an improvement resides in hardware or software is not material. Since *Bilski*, there has been a knee-jerk reaction to add a hardware component to at least one element of each independent claim. Perhaps that is no longer necessary when the innovation is in software.
+
+● In a second blog posting in *Patent Docs*, Borella compares *Enfish* with *TLI*.
+He disagrees with those who find the two opinions inconsistent:
+
+> Already, some are contending that *Enfish* and *TLI* cannot be reconciled with one another. This is not true. *Enfish* stands for the notion that an improvement to computing technology, whether software or hardware, is not in and of itself abstract. *TLI*, on the other hand, reaffirms that merely using generic computer technology to carry out a procedure does not add patentable weight to a claimed invention. In one case, the claims recite the invention of new technology, and in the other case, the claims recite the use of old technology. A clear line has been drawn.
+
+Borella reluctantly concludes that many "new and useful . . . inventions are at risk in a post-*Alice* world," but advises:
+
+> Nonetheless, if we accept that we have to live in the world of *Alice* at least for now, the distinction between Enfish and TLI is critical to understand, as it provides a roadmap to patent-eligibility for a great many software inventions.
+
+● Michael Mireles, in *The IP Kat*, counts judicial noses on the patent eligibility of computer-implemented inventions. He tabulates them:
+
+> Even though Judge Hughes wrote both *Enfish* and *TLI*, the composition of the panels is quite different. The *Enfish* panel included Judges Moore and Taranto. The TLI panel included Judges Dyk and Schall. The *DDR Holdings v. Hotels.com* decision finding a computer-implemented invention patent eligible was authored by Judge Chen and joined by Judge Wallach. Judge Mayer dissented. There are now five Federal Circuit judges who appear to lean toward favoring patentability of computer-implemented inventions: Hughes, Moore, Taranto, Chen and Wallach. If *Enfish* is heard *en banc*, it may be a close decision. Importantly, *Enfish* provides important guidance for step one analysis under *Alice* and a general attitude supporting patent eligibility for computer-implemented inventions.
+
+● Steve Marshall found the Federal Circuit's efforts at harmonization a failure and saw the two opinions as addressing similar technologies but treating them disparately:
+
+> Despite the attempted harmonizing discussion of *Enfish* in *TLI*, the latter exposes several inconsistencies between the opinions as well as potential flaws in the reasoning of *Enfish*. As an initial matter, the Federal Circuit's descriptions of the claimed technologies in each of the opinions share similarities in areas that impacted the legal analysis. Each involved a database implementation on a commodity computer. Also, the benefits of each purport to include increased search speed and dynamic configuration of data files. Additionally, the disclosure of each was largely functional with little to no emphasis on new physical components.
+
+Yet, he argues, "The court's treatment of these apparent factual similarities could not have been more different." In *Enfish*, "the performance benefit is attributable to the algorithm," and the court found that "the self-referential model indeed provided an 'improvement in computer capabilities' " that was patent eligible even though the underlying computer received no improvement in its physical operation. "In contrast, the *TLI* court lambasted the claimed image database using classification data for failing to improve the recited telephone unit or server." Furthermore, both patents claimed similar benefits such as faster search times, but the Federal Circuit gave Enfish's device credit for this and denied TLI's device such credit. Enfish's patent described an old computer but the *TLI* court criticized the TLI patent's disclosure for failing to provide technical details about physical features or describing "a new server," and instead focusing on "purely functional terms." Marshall asserts, "[H]ad the Federal Circuit applied the same analysis from *TLI* in the *Enfish* case, the Enfish patents should not have been found subject matter eligible."
+
+He concludes that these cases "fail the public" in performing the needed "notice function of software patent claims," for "[b]etween the endpoints of firmware that makes a machine functional and software that does little more than use a computer as a calculator lay applications that, based on *Enfish* and *TLI*, may or may not be patent eligible."
+
+● Gene Quinn in the *IPWatchdog* applauds the *Enfish* decision as restoring the legitimacy of software patents:
+
+> The Federal Circuit also explicitly put a nail in the coffin of the ridiculous argument that software shouldn't be patent eligible if it could run on a general-purpose computer. The Federal Circuit explained: "We are not persuaded that the invention's ability to run on a general-purpose computer dooms the claims." Some jurists have long claimed that if software can run on a general-purpose computer it cannot be patented, which is utterly asinine given that software is most useful when it can run regardless of the platform selected. This statement, as correct as it is profound, will no doubt lead those in the anti-patent community to fly into an apoplectic fit.
+
+He predicts, however, that this case is not over yet:
+
+> If I had to guess I'd say I expect Microsoft with file a petition for *en banc* rehearing, and ultimately will probably file a petition for *certiorari* to the United States Supreme Court. In the meantime, however, this case will bring cheer to the heart of those who have been long frustrated by what had seemingly become a *de facto* rule that software was not patent eligible in the United States.
+
+● Brian Mudge and Christopher Gresalfi examine the impact of *Enfish* on Covered Business Method proceedings within the PTO in the *IPR Blog*. They analyze the different results in two post-*Enfish* decisions of the PTO—*Informatica Corp. v. Protegrity Corp.* and *Apple, Inc. v. Mirror World Techs., LLC.*
+
+In the *Informatica* case, the PTO considered claims to a system and method for protecting data against unauthorized access. An O-DB data base stored data element values and an IAM-DB database contained a data protection catalogue that stored so-called protection attributes for data element types associated with data element values. The claimed method granted access to a requested data element value only if rules associated with a data element type associated with the relevant data element value were satisfied. The PTO found the claimed invention was directed to the abstract idea of "rule based data access." The patentee Protegrity argued that the *DDR Holdings* case supported patent eligibility because the invention provided a solution rooted in method technology because it protected data in a first database by rules stored in a second data base. The PTO said that *Enfish* did not help Protegrity because the patent claims were not directed to a specific improvement in the way computers operate; instead, the databases and access rules performed their normal functions and they achieved the usual, expected results—storing rules in a separate database merely changes the location of the rules, not the expected operation of the rules or the database. Under *Alice* step 2, there was no inventive concept because everything operated in a conventional manner. Therefore, the patent claimed a patent-ineligible abstract idea.
+
+In the *Mirror World* case, the patent claimed a method and apparatus for organizing "data units" (i.e., documents) into "streams" and "substreams." This was said to organize, locate, summarize, and monitor incoming data. Apple argued that this just meant that data was being organized, say, in chronological order—and that was just an abstract idea. Apple said this was not a computer problem, particularly, and paper documents could be organized the same way. Anyway, the operation could be performed conventionally on a conventional computer. In response, Mirror World argued that streams and substreams were computer concepts not found in the pre-computer world of paper documents. This argument impressed the PTO. The PTO considered that the streams and substreams were manipulated by a computer electronically in a way that did not duplicate prior art paper shuffling, and that improved computer functionality as in *Enfish*. Therefore, the claims were patent eligible.
+
+The authors assert that both decisions turned on the PTO's determination "whether the patent claimed generic computer functionality carrying out conventional activity, or a specific technical solution to a technical problem occurring only in the realm of computer processes." In *Informatica* the PTO found that the patent just claimed well-known computer elements carrying out routine steps. In *Mirror World* the PTO concluded that the claimed invention was directed to solving problems specifically arising in computer technology, which the specification emphasized—apparently in a way that the specification in the *Informatica* case did not do.
+

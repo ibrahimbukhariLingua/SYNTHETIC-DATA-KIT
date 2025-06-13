@@ -1,0 +1,35 @@
+Mean log deviation
+
+
+# Mean log deviation
+
+
+
+In statistics and econometrics, the **mean log deviation (MLD)** is a measure of income inequality. The MLD is zero when everyone has the same income, and takes larger positive values as incomes become more unequal, especially at the high end.
+
+
+## Definition
+
+The MLD of household income has been defined as
+
+where N is the number of households, {\displaystyle x\_{i}} is the income of household *i*, and {\displaystyle {\overline {x}}} is the mean of {\displaystyle x\_{i}}. Naturally the same formula can be used for positive variables other than income and for units of observation other than households.
+
+Equivalent definitions are
+
+where {\displaystyle {\overline {\ln x}}} is the mean of ln(*x*). The last definition shows that MLD is nonnegative, since {\displaystyle \ln {\overline {x}}\geq {\overline {\ln x}}} by Jensen's inequality.
+
+MLD has been called "the standard deviation of ln(*x*)", (SDL) but this is not correct. The SDL is
+
+and this is not equal to the MLD.
+
+In particular, if a random variable {\displaystyle X} follows a log-normal distribution with mean and standard deviation of {\displaystyle \log(X)} being {\displaystyle \mu } and {\displaystyle \sigma }, respectively, then
+
+Thus, asymptotically, MLD converges to:
+
+For the standard log-normal, SDL converges to 1 while MLD converges to 1/2.
+
+
+## Related statistics
+
+The MLD is a special case of the generalized entropy index. Specifically, the MLD is the generalized entropy index with α=0.
+

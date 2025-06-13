@@ -1,0 +1,38 @@
+Bromium
+
+
+# Bromium
+
+
+
+**Bromium, Inc.**, was a venture capital–backed startup based in Cupertino, California that worked with virtualization technology. Bromium focused on virtual hardware claiming to reduce or eliminate endpoint computer threats like viruses, malware, and adware. HP Inc. acquired the company in September 2019.
+
+
+## History
+
+Bromium, Inc., was founded in 2010 by Gaurav Banga, who was later joined by former Citrix and XenSource executives Simon Crosby and Ian Pratt.
+
+By 2013, the company had raised a total of $75.7 million in three rounds of venture funding. The rounds raised $9.2 million, $26.5 million, and $40 million respectively with venture firms such as Andreessen Horowitz, Ignition Partners, Lightspeed Venture Partners, Highland Capital Partners, Intel Capital, and Meritech Capital Partners. Bromium shipped its first product, vSentry 1.0, in September 2012. Notable early clients included the New York Stock Exchange and ADP.
+
+In February 2014, the company published information about bypassing several key defenses in Microsoft's Enhanced Mitigation Experience Toolkit (EMET) by taking advantage of the inherent weakness of its reliance on known vectors of return-oriented programming (ROP) attack methods. In February 2017, HP and Bromium announced a partnership to build and ship a laptop with micro-virtualization technology built in, starting with the HP EliteBook x360.
+
+In September 2019, HP announced it had acquired Bromium for an undisclosed sum.
+
+
+## Technology
+
+Bromium's technology is called micro-virtualization, which is designed to protect computers from malicious code execution initiated by the end user, including rogue web links, email attachments and downloaded files. Its virtualization technology relies on hardware isolation for protection.
+
+It is implemented by a late-load hypervisor called a Microvisor, which is based on the open-source Xen hypervisor. The Microvisor is similar in concept to a traditional hypervisor installed on a server or desktop computer's operating system. Traditional virtual machines are full versions of an operating system, but the Microvisor uses the hardware virtualization features present in modern desktop processors to create specialized virtual machines tailored to support specific tasks called micro-VMs. When a new application is opened, a link is clicked on, or an email attachment is downloaded, the Microvisor creates a micro-VM tailored to that specific task allowing access to only those resources required to execute. By placing all vulnerable tasks inside micro-VMs that are tied to the hardware, there is no way for malware to escape through a sandbox layer and attack the host environment (i.e. the operating system in which micro-VMs are executed). Each process gets its own micro-VM, and that virtual machine is disposed of when the process stops, destroying any malware with it.
+
+The Microvisor enforces the principle of least privilege by isolating all applications and operating system functions within a micro-VM from interacting with any other micro-VM, the protected desktop system, or the network the protected desktop is embedded in.
+
+The architecture specifically relies on x86 virtualization to guarantee that task-specific mandatory access control (MAC) policies will be executed whenever a micro-VM attempts to access key Windows services. Since Micro-VMs are hardware-isolated from each other and from the protected operating system, trusted and untrusted tasks can coexist on a single system with mutual isolation.
+
+The Microvisor’s attack surface is extremely narrow making exploits prohibitively expensive to execute.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ A report from NSS Labs detailed penetration testing of the Bromium architecture, which achieved a perfect score in defeating all malware and expert human attempts at penetration.
+
+
+## Products
+
+vSentry 1.0 was available for Windows 7. vSentry requires an Intel processor with VT-x and EPT. vSentry 2.0 became available in June 2013 and added a feature that protects users when exchanging documents. Bromium Live Attack Visualization and Analysis (LAVA) was released in 2014 and provided the ability to collect attack data detected within a micro-VM for analysis and supported Structured Threat Information eXpression (STIX), an emerging XML standard for threat information at that time. vSentry 3.0 became available in December 2015 and included support for behavioral analysis of executable code. The product is now called HP SureClick.
+

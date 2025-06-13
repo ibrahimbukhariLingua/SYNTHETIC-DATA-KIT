@@ -1,0 +1,23 @@
+Multidimensional panel data
+
+
+# Multidimensional panel data
+
+
+
+In econometrics, a **multidimensional panel data** is data of a phenomenon observed over three or more dimensions. This comes in contrast with panel data, observed over two dimensions (typically, time and cross-sections). An example is a data set containing forecasts of one or multiple macroeconomic variables produced by multiple individuals (the first dimension), in multiple series (the second dimension) at multiple times periods (the third dimension) and for multiple horizons (the fourth dimension).
+
+
+## Analysis of multidimensional panel data
+
+A multidimensional panel with four dimensions can have the form
+
+where *i* is the individual dimension, *s* is the series dimension, *t* is the time dimension, and *h* is the horizon dimension. A general multidimensional panel data regression model is written as
+
+Complex assumptions can be made on the precise structure of the correlations among errors in this model. For example, serial correlation (error terms correlated across time) has multiple distinct meanings. Error terms can be correlated across time for the same series, individual, and horizon. They can be correlated across time and across series for the same individual and horizon, etc. Similarly, heteroskedasticity can be defined across individuals for the same series, time, and horizon, across individuals and different series for the same time and horizon, etc.
+
+
+## Data sets which have a multidimensional panel design
+
+* Blue Chip Survey of Professional Forecasters
+* Survey of Professional Forecasters (ASA-NBER)

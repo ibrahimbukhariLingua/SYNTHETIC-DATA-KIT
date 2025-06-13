@@ -1,0 +1,145 @@
+Asian option
+
+
+# Asian option
+
+
+
+An **Asian option** (or *average value* option) is a special type of option contract. For Asian options, the payoff is determined by the average underlying price over some pre-set period of time. This is different from the case of the usual European option and American option, where the payoff of the option contract depends on the price of the underlying instrument at exercise; Asian options are thus one of the basic forms of exotic options.
+
+There are two types of Asian options: **Average Price Option** (fixed strike), where the strike price is predetermined and the averaging price of the underlying asset is used for payoff calculation; and **Average Strike Option** (floating strike), where the averaging price of the underlying asset over the duration becomes the strike price.
+
+One advantage of Asian options is that these reduce the risk of market manipulation of the underlying instrument at maturity. Another advantage of Asian options involves the relative cost of Asian options compared to European or American options. Because of the averaging feature, Asian options reduce the volatility inherent in the option; therefore, Asian options are typically cheaper than European or American options. This can be an advantage for corporations that are subject to the Financial Accounting Standards Board revised Statement No. 123, which required that corporations expense employee stock options.
+
+
+## Etymology
+
+In the 1980s Mark Standish was with the London-based Bankers Trust working on fixed income derivatives and proprietary arbitrage trading. David Spaughton worked as a systems analyst in the financial markets with Bankers Trust since 1984 when the Bank of England first gave licences for banks to do foreign exchange options in the London market. In 1987 Standish and Spaughton were in Tokyo on business when "they developed the first commercially used pricing formula for options linked to the average price of crude oil." They called this exotic option the Asian option because they were in Asia.
+
+
+## Permutations of Asian option
+
+There are numerous permutations of Asian option; the most basic are listed below:
+
+* **Fixed strike** (or average rate) Asian call payout
+
+* **Floating strike** (or floating rate) Asian call option payout
+
+## Types of averaging
+
+The Average {\displaystyle A} may be obtained in many ways. Conventionally, this means an arithmetic average. In the *continuous* case, this is obtained by
+
+For the case of *discrete monitoring* (with monitoring at the times {\displaystyle 0=t\_{0},t\_{1},t\_{2},\dots ,t\_{n}=T} and {\displaystyle t\_{i}=i\cdot {\frac {T}{n}}}) we have the average given by
+
+There also exist Asian options with geometric average; in the continuous case, this is given by
+
+
+## Pricing of Asian options
+
+A discussion of the problem of pricing Asian options with Monte Carlo methods is given in a paper by Kemna and Vorst.
+
+In the path integral approach to option pricing, the problem for geometric average can be solved via the Effective Classical potential of Feynman and Kleinert.
+
+Rogers and Shi solve the pricing problem with a PDE approach.
+
+A Variance Gamma model can be efficiently implemented when pricing Asian-style options. Then, using the Bondesson series representation to generate the variance gamma process can increase the computational performance of the Asian option pricer.
+
+Within jump diffusions and stochastic volatility models, the pricing problem for geometric Asian options can still be solved. For the arithmetic Asian option in Lévy models, one can rely on numerical methods or on analytic bounds.
+
+
+### European Asian call and put options with geometric averaging
+
+We are able to derive a closed-form solution for the geometric Asian option; when used in conjunction with control variates in Monte Carlo simulations, the formula is useful for deriving fair values for the arithmetic Asian option.
+
+Define the continuous-time geometric mean {\displaystyle G\_{T}} as:{\displaystyle G\_{T}=\exp \left[{1 \over {T}}\int \_{0}^{T}\log S(t)dt\right]}where the underlying {\displaystyle S(t)} follows a standard geometric Brownian motion. It is straightforward from here to calculate that:{\displaystyle G\_{T}=S\_{0}e^{{1 \over {2}}\left(r-{1 \over {2}}\sigma ^{2}\right)T}e^{{\sigma \over {T}}\int \_{0}^{T}(T-t)dW\_{t}}}To derive the stochastic integral, which was originally 
+σ
+T
+
+
+
+∫
+0
+
+T
+
+
+W
+t
+
+
+d
+t
+
+
+{\textstyle {\sigma \over {T}}\int \_{0}^{T}W\_{t}dt}
+
+, note that:{\displaystyle d[(T-t)W\_{t}]=(T-t)dW\_{t}-W\_{t}dt}This may be confirmed by Itô's lemma. Integrating this expression and using the fact that {\displaystyle W\_{0}=0}, we find that the integrals are equivalent - this will be useful later on in the derivation. Using martingale pricing, the value of the European Asian call with geometric averaging {\displaystyle C\_{G}} is given by:{\displaystyle C\_{G}=e^{-rT}\mathbb {E} \left[(G\_{T}-K)\_{+}\right]={e^{-rT} \over {\sqrt {2\pi }}}\int \_{\ell }^{\infty }\left(G\_{T}-K\right)e^{-x^{2}/2}dx}In order to find {\displaystyle \ell }, we must find {\displaystyle x} such that:{\displaystyle G\_{T}\geq K\implies S\_{0}e^{{1 \over {2}}\left(r-{1 \over {2}}\sigma ^{2}\right)T}e^{{\sigma \over {T}}\int \_{0}^{T}(T-t)dW\_{t}}\geq K}After some algebra, we find that:{\displaystyle {\sigma \over {T}}\int \_{0}^{T}(T-t)dW\_{t}\geq \log {K \over {S\_{0}}}-{1 \over {2}}\left(r-{1 \over {2}}\sigma ^{2}\right)T}At this point the stochastic integral is the sticking point for finding a solution to this problem. However, it is easy to verify with Itô isometry that the integral is normally distributed as:{\displaystyle {\sigma \over {T}}\int \_{0}^{T}(T-t)dW\_{t}\sim {\mathcal {N}}\left(0,\sigma ^{2}{T \over {3}}\right)}This is equivalent to saying that 
+σ
+T
+
+
+
+∫
+0
+
+T
+
+
+(
+T
+−
+t
+)
+d
+W
+t
+
+
+=
+σ
+T
+3
+
+
+
+
+x
+
+
+{\textstyle {\sigma \over {T}}\int \_{0}^{T}(T-t)dW\_{t}=\sigma {\sqrt {T \over {3}}}x}
+
+ with 
+x
+∼
+N
+
+
+(
+0
+,
+1
+)
+
+
+{\textstyle x\sim {\mathcal {N}}(0,1)}
+
+. Therefore, we have that:{\displaystyle x\geq {\log {K \over {S\_{0}}}-{1 \over {2}}\left(r-{1 \over {2}}\sigma ^{2}\right)T \over {\sigma {\sqrt {T/3}}}}\equiv \ell }Now it is possible the calculate the value of the European Asian call with geometric averaging! At this point, it is useful to define:{\displaystyle b={1 \over {2}}\left(r-{1 \over {2}}\sigma \_{G}^{2}\right),\;\sigma \_{G}={\sigma \over {\sqrt {3}}},\;d\_{1}={\log {S\_{0} \over {K}}+\left(b+{1 \over {2}}\sigma \_{G}^{2}\right)T \over {\sigma \_{G}{\sqrt {T}}}},\;d\_{2}=d\_{1}-\sigma \_{G}{\sqrt {T}}}Going through the same process as is done with the Black-Scholes model, we are able to find that:{\displaystyle C\_{G}=S\_{0}e^{(b-r)T}\Phi (d\_{1})-Ke^{-rT}\Phi (d\_{2})}In fact, going through the same arguments for the European Asian put with geometric averaging 
+P
+G
+
+
+
+
+{\textstyle P\_{G}}
+
+, we find that:{\displaystyle P\_{G}=Ke^{-rT}\Phi (-d\_{2})-S\_{0}e^{(b-r)T}\Phi (-d\_{1})}This implies that there exists a version of put-call parity for European Asian options with geometric averaging:{\displaystyle C\_{G}-P\_{G}=S\_{0}e^{(b-r)T}-Ke^{-rT}}
+
+
+## Variations of Asian option
+
+There are some variations that are sold in the over-the-counter market. For example, BNP Paribas introduced a variation, termed conditional Asian option, where the average underlying price is based on observations of prices over a pre-specified threshold. A conditional Asian put option has the payoff
+
+{\displaystyle \max \left(K-{\frac {\int \_{0}^{T}S(t)I\_{\{S(t)>b\}}dt}{\int \_{0}^{T}I\_{\{S(t)>b\}}dt}},0\right),}
+
+where {\displaystyle b>0} is the threshold and {\displaystyle I\_{A}} is an indicator function which equals {\displaystyle 1} if {\displaystyle A} is true and equals zero otherwise. Such an option offers a cheaper alternative than the classic Asian put option, as the limitation on the range of observations reduces the volatility of average price. It is typically sold at the money and last for up to five years. The pricing of conditional Asian option is discussed by Feng and Volkmer.
+

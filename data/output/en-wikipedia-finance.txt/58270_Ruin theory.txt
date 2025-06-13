@@ -1,0 +1,92 @@
+Ruin theory
+
+
+# Ruin theory
+
+
+
+In actuarial science and applied probability, **ruin theory** (sometimes **risk theory** or **collective risk theory**) uses mathematical models to describe an insurer's vulnerability to insolvency/ruin. In such models key quantities of interest are the probability of ruin, distribution of surplus immediately prior to ruin and deficit at time of ruin.
+
+
+## Classical model
+
+The theoretical foundation of ruin theory, known as the Cramér–Lundberg model (or classical compound-Poisson risk model, classical risk process or Poisson risk process) was introduced in 1903 by the Swedish actuary Filip Lundberg. Lundberg's work was republished in the 1930s by Harald Cramér.
+
+The model describes an insurance company who experiences two opposing cash flows: incoming cash premiums and outgoing claims. Premiums arrive a constant rate *c
+>
+0
+
+
+{\textstyle c>0}* from customers and claims arrive according to a Poisson process {\displaystyle N\_{t}} with intensity 
+λ
+
+
+{\textstyle \lambda }
+
+ and are independent and identically distributed non-negative random variables {\displaystyle \xi \_{i}} with distribution 
+F
+
+
+{\textstyle F}
+
+ and mean *μ
+
+
+{\textstyle \mu }* (they form a compound Poisson process). So for an insurer who starts with initial surplus *x
+
+
+{\textstyle x}*, the aggregate assets {\displaystyle X\_{t}} are given by:
+
+The central object of the model is to investigate the probability that the insurer's surplus level eventually falls below zero (making the firm bankrupt). This quantity, called the probability of ultimate ruin, is defined as
+
+where the time of ruin is {\displaystyle \tau =\inf\{t>0\,:\,X(t)<0\}} with the convention that {\displaystyle \inf \varnothing =\infty }. This can be computed exactly using the Pollaczek–Khinchine formula as (the ruin function here is equivalent to the tail function of the stationary distribution of waiting time in an M/G/1 queue)
+
+where {\displaystyle F\_{l}} is the transform of the tail distribution of {\displaystyle F},
+
+and {\displaystyle \cdot ^{\ast n}} denotes the {\displaystyle n}-fold convolution.
+In the case where the claim sizes are exponentially distributed, this simplifies to
+
+
+## Sparre Andersen model
+
+E. Sparre Andersen extended the classical model in 1957 by allowing claim inter-arrival times to have arbitrary distribution functions.
+
+where the claim number process {\displaystyle (N\_{t})\_{t\geq 0}} is a renewal process and {\displaystyle (\xi \_{i})\_{i\in \mathbb {N} }} are independent and identically distributed random variables.
+The model furthermore assumes that {\displaystyle \xi \_{i}>0} almost surely and that {\displaystyle (N\_{t})\_{t\geq 0}} and {\displaystyle (\xi \_{i})\_{i\in \mathbb {N} }} are independent. The model is also known as the renewal risk model.
+
+
+## Expected discounted penalty function
+
+Michael R. Powers and Gerber and Shiu analyzed the behavior of the insurer's surplus through the **expected discounted penalty function**, which is commonly referred to as Gerber-Shiu function in the ruin literature and named after actuarial scientists Elias S.W. Shiu and Hans-Ulrich Gerber. It is arguable whether the function should have been called Powers-Gerber-Shiu function due to the contribution of Powers.
+
+In Powers' notation, this is defined as
+
+where {\displaystyle \delta } is the discounting force of interest, {\displaystyle K\_{\tau }} is a general penalty function reflecting the economic costs to the insurer at the time of ruin, and the expectation {\displaystyle \mathbb {E} ^{x}} corresponds to the probability measure {\displaystyle \mathbb {P} ^{x}}. The function is called expected discounted cost of insolvency by Powers.
+
+In Gerber and Shiu's notation, it is given as
+
+where {\displaystyle \delta } is the discounting force of interest and {\displaystyle w(X\_{\tau -},X\_{\tau })} is a penalty function capturing the economic costs to the insurer at the time of ruin (assumed to depend on the surplus prior to ruin {\displaystyle X\_{\tau -}} and the deficit at ruin {\displaystyle X\_{\tau }}), and the expectation {\displaystyle \mathbb {E} ^{x}} corresponds to the probability measure {\displaystyle \mathbb {P} ^{x}}. Here the indicator function {\displaystyle \mathbb {I} (\tau <\infty )} emphasizes that the penalty is exercised only when ruin occurs.
+
+It is quite intuitive to interpret the expected discounted penalty function. Since the function measures the actuarial present value of the penalty that occurs at {\displaystyle \tau }, the penalty function is multiplied by the discounting factor {\displaystyle e^{-\delta \tau }}, and then averaged over the probability distribution of the waiting time to {\displaystyle \tau }. While Gerber and Shiu applied this function to the classical compound-Poisson model, Powers argued that an insurer's surplus is better modeled by a family of diffusion processes.
+
+There are a great variety of ruin-related quantities that fall into the category of the expected discounted penalty function.
+
+| Special case | Mathematical representation | Choice of penalty function |
+| --- | --- | --- |
+| Probability of ultimate ruin | {\displaystyle \mathbb {P} ^{x}\{\tau <\infty \}} | {\displaystyle \delta =0,w(x\_{1},x\_{2})=1} |
+| Joint (defective) distribution of surplus and deficit | {\displaystyle \mathbb {P} ^{x}\{X\_{\tau -}<x,X\_{\tau }<y\}} | {\displaystyle \delta =0,w(x\_{1},x\_{2})=\mathbb {I} (x\_{1}<x,x\_{2}<y)} |
+| Defective distribution of claim causing ruin | {\displaystyle \mathbb {P} ^{x}\{X\_{\tau -}-X\_{\tau }<z\}} | {\displaystyle \delta =0,w(x\_{1},x\_{2})=\mathbb {I} (x\_{1}+x\_{2}<z)} |
+| Trivariate Laplace transform of time, surplus and deficit | {\displaystyle \mathbb {E} ^{x}[e^{-\delta \tau -sX\_{\tau -}-zX\_{\tau }}]} | {\displaystyle w(x\_{1},x\_{2})=e^{-sx\_{1}-zx\_{2}}} |
+| Joint moments of surplus and deficit | {\displaystyle \mathbb {E} ^{x}[X\_{\tau -}^{j}X\_{\tau }^{k}]} | {\displaystyle \delta =0,w(x\_{1},x\_{2})=x\_{1}^{j}x\_{2}^{k}} |
+
+Other finance-related quantities belonging to the class of the expected discounted penalty function include the perpetual American put option, the contingent claim at optimal exercise time, and more.
+
+
+## Recent developments
+
+* Compound-Poisson risk model with constant interest
+* Compound-Poisson risk model with stochastic interest
+* Brownian-motion risk model
+* General diffusion-process model
+* Markov-modulated risk model
+* Accident probability factor (APF) calculator – risk analysis model (@SBH)

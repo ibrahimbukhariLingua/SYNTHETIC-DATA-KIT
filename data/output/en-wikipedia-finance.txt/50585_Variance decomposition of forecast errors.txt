@@ -1,0 +1,30 @@
+Variance decomposition of forecast errors
+
+
+# Variance decomposition of forecast errors
+
+
+
+In econometrics and other applications of multivariate time series analysis, a **variance decomposition** or **forecast error variance decomposition** (**FEVD**) is used to aid in the interpretation of a vector autoregression (VAR) model once it has been fitted. The variance decomposition indicates the amount of information each variable contributes to the other variables in the autoregression. It determines how much of the forecast error variance of each of the variables can be explained by exogenous shocks to the other variables.
+
+
+## Calculating the forecast error variance
+
+For the VAR (p) of form
+
+This can be changed to a VAR(1) structure by writing it in companion form (see general matrix notation of a VAR(p))
+
+where {\displaystyle y\_{t}}, {\displaystyle \nu } and {\displaystyle u} are {\displaystyle k} dimensional column vectors, {\displaystyle A} is {\displaystyle kp} by {\displaystyle kp} dimensional matrix and {\displaystyle Y}, {\displaystyle V} and {\displaystyle U} are {\displaystyle kp} dimensional column vectors.
+
+The mean squared error of the h-step forecast of variable {\displaystyle j} is
+
+and where
+
+* {\displaystyle e\_{j}} is the jᵗʰ column of {\displaystyle I\_{k}} and the subscript {\displaystyle jj} refers to that element of the matrix
+
+* {\displaystyle \Theta \_{i}=\Phi \_{i}P,} where {\displaystyle P} is a lower triangular matrix obtained by a Cholesky decomposition of {\displaystyle \Sigma \_{u}} such that {\displaystyle \Sigma \_{u}=PP'}, where {\displaystyle \Sigma \_{u}} is the covariance matrix of the errors {\displaystyle u\_{t}}
+
+* {\displaystyle \Phi \_{i}=JA^{i}J',} where {\displaystyle J={\begin{bmatrix}\mathbf {I} \_{k}&0&\dots &0\end{bmatrix}},} so that {\displaystyle J} is a {\displaystyle k} by {\displaystyle kp} dimensional matrix.
+
+The amount of forecast error variance of variable {\displaystyle j} accounted for by exogenous shocks to variable {\displaystyle l} is given by {\displaystyle \omega \_{jl,h},}
+

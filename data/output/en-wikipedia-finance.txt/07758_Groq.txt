@@ -1,0 +1,60 @@
+Groq
+
+
+# Groq
+
+
+
+**Groq, Inc.** is an American artificial intelligence (AI) company that builds an AI accelerator application-specific integrated circuit (ASIC) that they call the Language Processing Unit (LPU) and related hardware to accelerate the inference performance of AI workloads.
+
+Examples of the types AI workloads that run on Groq's LPU are: large language models (LLMs), image classification, anomaly detection, and predictive analysis.
+
+Groq is headquartered in Mountain View, CA, and has offices in San Jose, CA, Liberty Lake, WA, Toronto, Canada, London, U.K. and remote employees throughout North America and Europe.
+
+
+## History
+
+Groq was founded in 2016 by a group of former Google engineers, led by Jonathan Ross, one of the designers of the Tensor Processing Unit (TPU), an AI accelerator ASIC, and Douglas Wightman, an entrepreneur and former engineer at Google X (known as X Development), who served as the company’s first CEO.
+
+Groq received seed funding from Social Capital's Chamath Palihapitiya, with a $10 million investment in 2017 and soon after secured additional funding.
+
+In April 2021, Groq raised $300 million in a series C round led by Tiger Global Management and D1 Capital Partners. Current investors include: The Spruce House Partnership, Addition, GCM Grosvenor, Xⁿ, Firebolt Ventures, General Global Capital, and Tru Arrow Partners, as well as follow-on investments from TDK Ventures, XTX Ventures, Boardman Bay Capital Management, and Infinitum Partners. After Groq’s series C funding round, it was valued at over $1 billion, making the startup a unicorn.
+
+On March 1, 2022, Groq acquired Maxeler Technologies, a company known for its dataflow systems technologies.
+
+On August 16, 2023, Groq selected Samsung Electronics foundry in Taylor, Texas to manufacture its next generation chips, on Samsung's 4-nanometer (nm) process node. This was the first order at this new Samsung chip factory.
+
+On February 19, 2024, Groq soft launched a developer platform, GroqCloud, to attract developers into using the Groq API and rent access to their chips. On March 1, 2024 Groq acquired Definitive Intelligence, a startup known for offering a range of business-oriented AI solutions, to help with its cloud platform.
+
+Groq raised $640 million in a series D round led by BlackRock Private Equity Partners in August 2024, valuing the company at $2.8 billion.
+
+A recent update by Groq on its website is that they have secured 1.5 Billion in funding from the KSA (Kingdom of Saudi Arabia) to expand its infrastructure.
+
+
+## Language Processing Unit
+
+Groq's initial name for their ASIC was the Tensor Streaming Processor (TSP), but later rebranded the TSP as the Language Processing Unit (LPU).
+
+The LPU features a functionally sliced microarchitecture, where memory units are interleaved with vector and matrix computation units. This design facilitates the exploitation of dataflow locality in AI compute graphs, improving execution performance and efficiency. The LPU was designed off of two key observations:
+
+1. AI workloads exhibit substantial data parallelism, which can be mapped onto purpose built hardware, leading to performance gains.
+2. A deterministic processor design, coupled with a producer-consumer programming model, allows for precise control and reasoning over hardware components, allowing for optimized performance and energy efficiency.
+
+In addition to its functionally sliced microarchitecture, the LPU can also be characterized by its single core, deterministic architecture. The LPU is able to achieve deterministic execution by avoiding the use of traditional reactive hardware components (branch predictors, arbiters, reordering buffers, caches) and by having all execution explicitly controlled by the compiler thereby guaranteeing determinism in execution of an LPU program.
+
+The first generation of the LPU (LPU v1) yields a computational density of more than 1TeraOp/s per square mm of silicon for its 25×29 mm 14nm chip operating at a nominal clock frequency of 900 MHz. The second generation of the LPU (LPU v2) will be manufactured on Samsung's 4nm process node.
+
+
+### Performance
+
+Groq emerged as the first API provider to break the 100 tokens per second generation rate while running Meta’s Llama2-70B parameter model.
+
+Groq currently hosts a variety of open-source large language models running on its LPUs for public access. Access to these demos are available through Groq's website. The LPU's performance while running these open source LLMs has been independently benchmarked by ArtificialAnalysis.ai, in comparison with other LLM providers. The LPU's measured performance is shown in the table below:
+
+Language Processing Unit LLM Performance
+| Model Name | Tokens/second (T/s) | Latency (seconds) |
+| --- | --- | --- |
+| **Llama2-70B** | 253 T/s | 0.3s |
+| **Mixtral** | 473 T/s | 0.3s |
+| **Gemma** | 826 T/s | 0.3s |
+

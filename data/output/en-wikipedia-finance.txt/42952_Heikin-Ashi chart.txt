@@ -1,0 +1,40 @@
+Heikin-Ashi chart
+
+
+# Heikin-Ashi chart
+
+
+
+**Heikin-Ashi** is a Japanese trading indicator and financial chart that means "average bar". Heikin-Ashi charts resemble candlestick charts, but have a smoother appearance as they track a range of price movements, rather than tracking every price movement as with candlesticks. Heikin-Ashi was created in the 1700s by Munehisa Homma, who also created the candlestick chart. These charts are used by traders and investors to help determine and predict price movements.
+
+
+## Description
+
+Like standard candlesticks, a Heikin-Ashi candle has a body and a wick, however, they do not have the same purpose as on a candlestick chart. The last price of a Heikin-Ashi candle is calculated by the average price of the current bar or timeframe (e.g., a daily timeframe would have each bar represent the price movements of that specific day). The formula for the last price of the Heikin-Ashi bar or candle is calculated by: (open + high + low + close) {\displaystyle \div } 4. The open of a Heikin-Ashi starts at the midpoint of the previous candle; it is calculated by: (the open of previous bar + the close of the previous bar) {\displaystyle \div } 2. The highest and lowest price points are represented by wicks similarly to candlesticks.
+
+To calculate the highest and lowest price of a period:
+
+Heikin-Ashi High=Max value of (High-0, Open-0, and Close-0)
+
+Heikin-Ashi Low=Min value (Low-0, Open-0, and Close-0)
+
+(where -0 indicates that values are being taken from the current bar or period).
+
+The main purpose of a Heikin-Ashi chart is to show the general trend of the price (direction of price) and the strength of each trend; these are represented by the wicks: small lines that extend from the main body of the candle. A series of candles rising with no lower wick signifies a strong uptrend, and vice versa with candles falling with no upper wick. A doji signifies a possible change in the price trend.
+
+Heikin-Ashi is normally paired with other indicators to indicate long (buy) and short (sell) positions.
+
+
+## Advantages of using Heikin Ashi charts
+
+Heikin Ashi charts have been shown to have a lower mean entropy than candlestick charts, and thus a lower level of uncertainty/disorder when displaying market data. This study was conducted over one year of the historical prices from 10 different stocks. The results showed a mean entropy of 4.2675 for Heikin Ashi charts and a mean entropy of 5.001 using raw market data. These studies also indicate that Heikin Ashi charts display a much higher probability of success when predicting the next move in a market. The results from this test show a 72.3% chance of predicting the next day of the market, this is in contrast to using raw market data which only gives a 49.1% chance of a successful prediction of the next day. The study conducts a hypothesis test with significance level of 0.05, the result of this hypothesis test confirms that using Heikin Ashi, with a confidence of 95% we can predict the next move of the market with up to 75% accuracy. This is in reference to predicting the nature of the next candle (bullish or bearish) that will form in the market and so thus in conclusion it is more reliable to establish a trend in Heikin Ashi charts compared with using just raw market data and candlestick charts.
+
+Detailed backtesting of the Heikin-Ashi trading methodology using 12 years of data on each security in the Dow Jones Industrial Average index confirmed the approach's efficacy. 66% of the equities tested outperformed the underlying index over the 12 years.
+
+
+## Limitations of Heikin Ashi charts
+
+Heikin Ashi charts use average data values and so the actual opening and closing prices of the bars in a set period are not shown, therefore, traders looking for exact prices e.g. in some price action based systems should not rely on the averaged prices shown on these charts.
+
+As the nature of Heikin Ashi charts is to filter out market noise and reduce the frequency of false signals being shown, some important **price gaps** (areas where no trading has taken place and so the market has jumped in price) will also be missed from these charts. Candlestick charts will however show price gaps.
+

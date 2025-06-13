@@ -1,0 +1,147 @@
+Monotone comparative statics
+
+
+# Monotone comparative statics
+
+
+
+**Monotone comparative statics** is a sub-field of comparative statics that focuses on the conditions under which endogenous variables undergo monotone changes (that is, either increasing or decreasing) when there is a change in the exogenous parameters. Traditionally, comparative results in economics are obtained using the Implicit Function Theorem, an approach that requires the concavity and differentiability of the objective function as well as the interiority and uniqueness of the optimal solution. The methods of monotone comparative statics typically dispense with these assumptions. It focuses on the main property underpinning monotone comparative statics, which is a form of complementarity between the endogenous variable and exogenous parameter. Roughly speaking, a maximization problem displays complementarity if a higher value of the exogenous parameter increases the marginal return of the endogenous variable. This guarantees that the set of solutions to the optimization problem is increasing with respect to the exogenous parameter.
+
+
+## Basic results
+
+
+### Motivation
+
+Let {\displaystyle X\subseteq \mathbb {R} } and let {\displaystyle f(\cdot ;s):X\rightarrow \mathbb {R} } be a family of functions parameterized by {\displaystyle s\in S}, where {\displaystyle (S,\geq \_{S})} is a partially ordered set (or poset, for short). How does the correspondence {\displaystyle \arg \max \limits \_{x\in X}f(x;s)} vary with {\displaystyle s}?
+
+**Standard comparative statics approach:** Assume that set {\displaystyle X} is a compact interval and {\displaystyle f(\cdot ;s)} is a continuously differentiable, strictly quasiconcave function of {\displaystyle x}. If {\displaystyle {\bar {x}}(s)} is the unique maximizer of {\displaystyle f(\cdot ;s)}, it suffices to show that {\displaystyle f'({\bar {x}}(s);s')\geq 0} for any {\displaystyle s'>s}, which guarantees that {\displaystyle {\bar {x}}(s)} is increasing in {\displaystyle s}. This guarantees that the optimum has shifted to the right, i.e., {\displaystyle {\bar {x}}(s')\geq {\bar {x}}(s)}. This approach makes various assumptions, most notably the quasiconcavity of {\displaystyle f(\cdot ;s)}.
+
+
+### One-dimensional optimization problems
+
+While it is clear what it means for a unique optimal solution to be increasing, it is not immediately clear what it means for the correspondence {\displaystyle \arg \max \_{x\in X}f(x;s)} to be increasing in {\displaystyle s}. The standard definition adopted by the literature is the following.
+
+**Definition (strong set order):** Let {\displaystyle Y} and {\displaystyle Y'} be subsets of {\displaystyle \mathbb {R} }. Set {\displaystyle Y'} dominates {\displaystyle Y} in the *strong set order* ({\displaystyle Y'\geq \_{SSO}Y}) if for any {\displaystyle x'} in {\displaystyle Y'} and {\displaystyle x} in {\displaystyle Y}, we have {\displaystyle \max\{x',x\}} in {\displaystyle Y'} and {\displaystyle \min\{x',x\}} in {\displaystyle Y}.
+
+In particular, if {\displaystyle Y:=\{x\}} and {\displaystyle Y':=\{x'\}}, then {\displaystyle Y'\geq \_{SSO}Y} if and only if {\displaystyle x'\geq x}. The correspondence {\displaystyle \arg \max \_{x\in X}f(x;s)} is said to be increasing if {\displaystyle \arg \max \_{x\in X}f(x;s')\geq \_{SSO}\arg \max \_{x\in X}f(x;s)} whenever {\displaystyle s'>\_{S}s}.
+
+The notion of complementarity between exogenous and endogenous variables is formally captured by single crossing differences.
+
+**Definition (single crossing function):** Let {\displaystyle \phi :S\rightarrow \mathbb {R} }. Then {\displaystyle \phi } is a *single crossing function* if for any {\displaystyle s'\geq \_{S}s} we have {\displaystyle \phi (s)\geq (>)\ 0\ \Rightarrow \ \phi (s')\geq (>)\ 0}.
+
+**Definition (single crossing differences):** The family of functions {\displaystyle \{f(\cdot ;s)\}\_{s\in S}}, {\displaystyle f:X\times S\to \mathbb {R} }, obey *single crossing differences* (or satisfy the single *crossing property*) if for all {\displaystyle x'\geq x}, function {\displaystyle \Delta (s)=f(x';s)-f(x;s)} is a single crossing function.
+
+Obviously, an increasing function is a single crossing function and, if {\displaystyle \Delta (s)} is increasing in {\displaystyle s} (in the above definition, for any {\displaystyle x'>x}), we say that {\displaystyle \{f(\cdot ;s)\}\_{s\in S}} obey *increasing differences*. Unlike increasing differences, single crossing differences is an *ordinal property*, i.e., if {\displaystyle \{f(\cdot ;s)\}\_{s\in S}} obey single crossing differences, then so do {\displaystyle \{g(\cdot ;s)\}\_{s\in S}}, where {\displaystyle g(x;s)=H(f(x;s);s)} for some function {\displaystyle H(\cdot ;s)} that is strictly increasing in {\displaystyle x}.
+
+**Theorem 1:** Define {\displaystyle F\_{Y}(s):=\arg \max \_{x\in Y}f(x;s)}. The family {\displaystyle \{f(\cdot ;s)\}\_{s\in S}} obey single crossing differences if and only if for all {\displaystyle Y\subseteq X}, we have {\displaystyle F\_{Y}(s')\geq \_{SSO}F\_{Y}(s)} for any {\displaystyle s'\geq \_{S}s}.
+
+**Application (monopoly output and changes in costs):** A monopolist chooses {\displaystyle x\in X\subseteq \mathbb {R} \_{+}} to maximise its profit {\displaystyle \Pi (x;-c)=xP(x)-cx}, where {\displaystyle P:\mathbb {R} \_{+}\to \mathbb {R} \_{+}} is the inverse demand function and {\displaystyle c\geq 0} is the constant marginal cost. Note that {\displaystyle \{\Pi (\cdot ,-c)\}\_{(-c)\in \mathbb {R} \_{-}}} obey single crossing differences. Indeed, take any {\displaystyle x'\geq x} and assume that {\displaystyle x'P(x')-cx'\geq (>)\ xP(x)-cx}; for any {\displaystyle c'} such that {\displaystyle (-c')\geq (-c)}, we obtain {\displaystyle x'P(x')-c'x'\geq (>)\ xP(x)-c'x}. By Theorem 1, the profit-maximizing output decreases as the marginal cost of output increases, i.e., as {\displaystyle (-c)} decreases.
+
+
+### Interval dominance order
+
+Single crossing differences is not a necessary condition for the optimal solution to be increasing with respect to a parameter. In fact, the condition is necessary only for {\displaystyle \arg \max \_{x\in Y}f(x;s)} to be increasing in {\displaystyle s} for *any* {\displaystyle Y\subset X}. Once the sets are restricted to a narrower class of subsets of {\displaystyle X}, the single crossing differences condition is no longer necessary.
+
+**Definition (Interval):** Let {\displaystyle X\subseteq \mathbb {R} }. A set {\displaystyle Y\subseteq X} is an *interval* of {\displaystyle X} if, whenever {\displaystyle x^{\*}} and {\displaystyle x^{\*\*}} are in {\displaystyle Y}, then any {\displaystyle x\in X} such that {\displaystyle x^{\*}\leq x\leq x^{\*\*}} is also in {\displaystyle Y}.
+
+For example, if {\displaystyle X=\mathbb {N} }, then {\displaystyle \{1,2,3,4\}} is an interval of {\displaystyle X} but not {\displaystyle \{1,2,4\}}. Denote {\displaystyle [x^{\*},x^{\*\*}]=\{x\in X\ |\ x^{\*}\leq x\leq x^{\*\*}\}}.
+
+**Definition (Interval Dominance Order):** The family {\displaystyle \{f(\cdot ;s)\}\_{s\in S}} obey the *interval dominance order* (IDO) if for any {\displaystyle x''>x'} and {\displaystyle s'\geq \_{S}s}, such that {\displaystyle f(x'';s)\geq f(x;s)}, for all {\displaystyle x\in [x',x'']}, we have {\displaystyle f(x'';s)\geq (>)\ f(x';s)\ \Rightarrow \ f(x'';s')\geq (>)\ f(x';s')}.
+
+Like single crossing differences, the interval dominance order (IDO) is an ordinal property. An example of an IDO family is a family of quasiconcave functions {\displaystyle \{f(\cdot ;s)\}\_{s\in S}} where {\displaystyle \arg \max \_{x\in X}f(x,s)} increasing in {\displaystyle s}. Such a family need not obey single crossing differences.
+
+A function {\displaystyle f:X\times S\to \mathbb {R} } is *regular* if {\displaystyle \arg \max \_{x\in [x^{\*},x^{\*\*}]}f(x;s)} is non-empty for any {\displaystyle x^{\*\*}\geq x^{\*}}, where {\displaystyle [x^{\*},x^{\*\*}]} denotes the interval {\displaystyle \{x\in X\ |\ x^{\*}\leq x\leq x^{\*\*}\}}.
+
+**Theorem 2:** Denote {\displaystyle F\_{Y}(s):=\arg \max \_{x\in Y}f(x;s)}. A family of regular functions {\displaystyle \{f(\cdot ;s)\}\_{s\in S}} obeys the interval dominance order if and only if {\displaystyle F\_{Y}(s)} is increasing in {\displaystyle s} for all intervals {\displaystyle Y\subseteq X}.
+
+The next result gives useful sufficient conditions for single crossing differences and IDO.
+
+**Proposition 1:** Let {\displaystyle X} be an interval of {\displaystyle \mathbb {R} } and {\displaystyle \{f(\cdot ;s)\}\_{s\in S}} be a family of continuously differentiable functions. (i) If, for any {\displaystyle s'\geq \_{S}s}, there exists a number {\displaystyle \alpha >0} such that {\displaystyle f'(x;s')\geq \alpha f'(x;s)} for all {\displaystyle x\in X}, then {\displaystyle \{f(\cdot ;s)\}\_{s\in S}} obey single crossing differences. (ii) If, for any {\displaystyle s'\geq \_{S}s}, there exists a nondecreasing, strictly positive function {\displaystyle \alpha :X\rightarrow \mathbb {R} } such that {\displaystyle f'(x;s')\geq \alpha (x)f'(x;s)} for all {\displaystyle x\in X}, then {\displaystyle \{f(\cdot ;s)\}\_{s\in S}} obey IDO.
+
+**Application (Optimal stopping problem):** At each moment in time, agent gains profit of {\displaystyle \pi (t)}, which can be positive or negative. If agent decides to stop at time {\displaystyle x}, the present value of his accumulated profit is
+
+where {\displaystyle r>0} is the discount rate. Since {\displaystyle V'(x;-r)=e^{-rx}\pi (x)}, the function {\displaystyle V} has many turning points and they do not vary with the discount rate. We claim that the optimal stopping time is decreasing in {\displaystyle r}, i.e., if {\displaystyle r'>r>0} then {\displaystyle \arg \max \_{x\geq 0}V(x;-r)\geq \_{SSO}\arg \max \_{x\geq 0}V(x;-r')}. Take any {\displaystyle r'<r}. Then, {\displaystyle V'(x;-r)=e^{-rx}\pi (x)=e^{(r'-r)x}V'(x;-r').} Since {\displaystyle \alpha (x)=e^{(r'-r)x}} is positive and increasing, Proposition 1 says that {\displaystyle \{V(\cdot ;-r)\}\_{(-r)<0}} obey IDO and, by Theorem 2, the set of optimal stopping times is decreasing.
+
+
+### Multi-dimensional optimization problems
+
+The above results can be extended to a multi-dimensional setting. Let {\displaystyle (X,\geq \_{X})} be a lattice. For any two {\displaystyle x}, {\displaystyle x'} in {\displaystyle X}, we denote their supremum (or *least upper bound*, or join) by {\displaystyle x'\vee x} and their infimum (or *greatest lower bound*, or meet) by {\displaystyle x'\wedge x}.
+
+**Definition (Strong Set Order):** Let {\displaystyle (X,\geq \_{X})} be a lattice and {\displaystyle Y}, {\displaystyle Y'} be subsets of {\displaystyle X}. We say that {\displaystyle Y'} dominates {\displaystyle Y} in the *strong set order* ({\displaystyle Y'\geq \_{SSO}Y} ) if for any {\displaystyle x'} in {\displaystyle Y'} and {\displaystyle x} in {\displaystyle Y}, we have {\displaystyle x\vee x'} in {\displaystyle Y'} and {\displaystyle x\wedge x'} in {\displaystyle Y}.
+
+Examples of the strong set order in higher dimensions.
+
+* Let {\displaystyle X=\mathbb {R} } and {\displaystyle Y:=[a,b]}, {\displaystyle Y':=[a',b']} be some closed intervals in {\displaystyle X}. Clearly {\displaystyle (X,\geq )}, where {\displaystyle \geq } is the standard ordering on {\displaystyle \mathbb {R} }, is a lattice. Therefore, as it was shown in the previous section {\displaystyle Y'\geq \_{SSO}Y} if and only if {\displaystyle a'\geq a} and {\displaystyle b'\geq b};
+* Let {\displaystyle X=\mathbb {R} ^{n}} and {\displaystyle Y}, {\displaystyle Y'\subset X} be some hyperrectangles. That is, there exist some vectors {\displaystyle a}, {\displaystyle b}, {\displaystyle a'}, {\displaystyle b'} in {\displaystyle X} such that {\displaystyle Y:=\{x\in X\ |\ a\leq x\leq b\}} and {\displaystyle Y':=\{x\in X\ |\ a'\leq x\leq b'\}}, where {\displaystyle \geq } is the natural, coordinate-wise ordering on {\displaystyle \mathbb {R} ^{n}}. Note that {\displaystyle (X,\geq )} is a lattice. Moreover, {\displaystyle Y'\geq \_{SSO}Y} if and only if {\displaystyle a'\geq a} and {\displaystyle b'\geq b};
+* Let {\displaystyle (X,\geq \_{X})} be a space of all probability distributions with support being a subset of {\displaystyle \mathbb {R} }, endowed with the first order stochastic dominance order {\displaystyle \geq \_{X}}. Note that {\displaystyle (X,\geq \_{X})} is a lattice. Let {\displaystyle Y:=\Delta ([a,b])}, {\displaystyle Y':=\Delta ([a',b'])} denote sets of probability distributions with support {\displaystyle [a,b]} and {\displaystyle [a',b']} respectively. Then, {\displaystyle Y'\geq \_{SSO}Y} with respect to {\displaystyle \geq \_{X}} if and only if {\displaystyle a'\geq a} and {\displaystyle b'\geq b}.
+
+**Definition (Quasisupermodular function):** Let {\displaystyle (X,\geq \_{X})} be a lattice. The function {\displaystyle f:X\to \mathbb {R} } is *quasisupermodular* (QSM) if
+
+{\displaystyle f(x)\geq (>)\ f(x\wedge x')\ \Rightarrow \ f(x\vee x')\geq (>)\ f(x').}
+
+The function {\displaystyle f} is said to be a supermodular function if {\displaystyle f(x\vee x')-f(x')\geq f(x)-f(x\wedge x').} Every supermodular function is quasisupermodular. As in the case of single crossing differences, and unlike supermodularity, quasisupermodularity is an ordinal property. That is, if function {\displaystyle f} is quasisupermodular, then so is function {\displaystyle g:=H\circ f}, where {\displaystyle H} is some strictly increasing function.
+
+**Theorem 3:** Let {\displaystyle (X,\geq \_{X})} is a lattice, {\displaystyle (S,\geq \_{S})} a partially ordered set, and {\displaystyle Y}, {\displaystyle Y'} subsets of {\displaystyle X}. Given {\displaystyle f:X\times S\to \mathbb {R} }, we denote {\displaystyle \arg \max \_{x\in Y}f(x;s)} by {\displaystyle F\_{Y}(s)}. Then {\displaystyle F\_{Y'}(s')\geq \_{SSO}F\_{Y}(s)} for any {\displaystyle s'\geq \_{S}s} and {\displaystyle Y'\geq \_{SSO}Y}
+
+**Application (Production with multiple goods):** Let {\displaystyle x} denote the vector of inputs (drawn from a sublattice {\displaystyle X} of {\displaystyle \mathbb {R} \_{+}^{l}}) of a profit-maximizing firm, {\displaystyle p\in \mathbb {R} \_{++}^{l}} be the vector of input prices, and {\displaystyle V} the revenue function mapping input vector {\displaystyle x} to revenue (in {\displaystyle \mathbb {R} }). The firm's profit is {\displaystyle \Pi (x;p)=V(x)-p\cdot x}. For any {\displaystyle x'}, {\displaystyle x\in X}, {\displaystyle x'\geq x}, {\displaystyle V(x')-V(x)+(-p)(x'-x)} is increasing in {\displaystyle (-p)}. Hence, {\displaystyle \{\Pi (\cdot ;p)\}\_{p\in \mathbb {R} \_{++}^{l}}} has increasing differences (and so it obeys single crossing differences). Moreover, if {\displaystyle V} is supermodular, then so is {\displaystyle \Pi (\cdot ;p)}. Therefore, it is quasisupermodular and by Theorem 3, {\displaystyle \arg \max \_{x\in X}\Pi (x;p)\geq \_{SSO}\arg \max \_{x\in X}\Pi (x;p')} for {\displaystyle p'\geq p}.
+
+
+## Constrained optimization problems
+
+In some important economic applications, the relevant change in the constraint set cannot be easily understood as an increase with respect to the strong set order and so Theorem 3 cannot be easily applied. For example, consider a consumer who maximizes a utility function {\displaystyle u:X\to \mathbb {R} } subject to a budget constraint. At price {\displaystyle p} in {\displaystyle \mathbb {R} \_{++}^{n}} and wealth {\displaystyle w>0}, his budget set is {\displaystyle B(p,w)=\{x\in X\ |\ p\cdot x\leq w\}} and his demand set at {\displaystyle (p,w)} is (by definition) {\displaystyle D(p,w)=\arg \max \_{x\in B(p,w)}u(x)}. A basic property of consumer demand is normality, which means (in the case where demand is unique) that the demand of each good is increasing in wealth. Theorem 3 cannot be straightforwardly applied to obtain conditions for normality, because {\displaystyle B(p,w')\not \geq \_{SSO}B(p,w)} if {\displaystyle w'>w} (when {\displaystyle \geq \_{SSO}} is derived from the Euclidean order). In this case, the following result holds.
+
+**Theorem 4:** Suppose {\displaystyle u:\mathbb {R} \_{++}^{n}\rightarrow \mathbb {R} } is supermodular and concave. Then the demand correspondence is normal in the following sense: suppose {\displaystyle w''>w'}, {\displaystyle x''\in D(p,w'')} and {\displaystyle x'\in D(p,w')}; then there is {\displaystyle z''\in D(p,w'')} and {\displaystyle z'\in D(p,w')} such that {\displaystyle z''\geq x'} and {\displaystyle x''\geq z'}.
+
+The supermodularity of {\displaystyle u} alone guarantees that, for any {\displaystyle x} and {\displaystyle y}, {\displaystyle u(x\wedge y)-u(y)\geq u(x)-u(x\vee y)}. Note that the four points {\displaystyle x}, {\displaystyle y}, {\displaystyle x\wedge y}, and {\displaystyle x\vee y} form a rectangle in Euclidean space (in the sense that {\displaystyle x\wedge y-x=y-x\vee y}, {\displaystyle x-x\vee y=x\wedge y-y}, and {\displaystyle x\wedge y-x} and {\displaystyle x-x\vee y} are orthogonal). On the other hand, supermodularity and concavity together guarantee that
+{\displaystyle u(x\vee y-\lambda v)-u(y)\geq u(x)-u(x\wedge y+\lambda v).}
+for any {\displaystyle \lambda \in [0,1]}, where {\displaystyle v=y-x\wedge y=x\vee y-x}. In this case, crucially, the four points {\displaystyle x}, {\displaystyle y}, {\displaystyle x\vee y-\lambda v}, and {\displaystyle x\wedge y+\lambda v} form a backward-leaning parallelogram in Euclidean space.
+
+
+## Monotone comparative statics under uncertainty
+
+Let {\displaystyle X\subset \mathbb {R} }, and {\displaystyle \{f(\cdot ;s)\}\_{s\in S}} be a family of real-valued functions defined on {\displaystyle X} that obey single crossing differences or the interval dominance order. Theorem 1 and 3 tell us that {\displaystyle \arg \max \_{x\in X}f(x,;s)} is increasing in {\displaystyle s}. Interpreting {\displaystyle s} to be the state of the world, this says that the optimal action is increasing in the state if the state is known. Suppose, however, that the action {\displaystyle x} is taken before {\displaystyle s} is realized; then it seems reasonable that the optimal action should increase with the likelihood of higher states. To capture this notion formally, let {\displaystyle \{\lambda (\cdot ;t)\}\_{t\in T}} be a family of density functions parameterized by {\displaystyle t} in the poset {\displaystyle (T,\geq \_{T})}, where higher {\displaystyle t} is associated with a higher likelihood of higher states, either in the sense of first order stochastic dominance or the monotone likelihood ratio property. Choosing under uncertainty, the agent maximizes
+
+For {\displaystyle \arg \max \_{x\in X}F(x;t)} to be increasing in {\displaystyle t}, it suffices (by Theorems 1 and 2) that family {\displaystyle \{F(\cdot ;t)\}\_{t\in T}} obey single crossing differences or the interval dominance order. The results in this section give condition under which this holds.
+
+**Theorem 5:** Suppose {\displaystyle \{f(\cdot ;s)\}\_{s\in S}} {\displaystyle (S\subseteq \mathbb {R} )} obeys increasing differences. If {\displaystyle \{\lambda (\cdot ;t)\}\_{t\in T}} is ordered with respect to first order stochastic dominance, then {\displaystyle \{F(\cdot ;t)\}\_{t\in T}} obeys increasing differences.
+
+In the following theorem, **X** can be either ``single crossing differences" or ``the interval dominance order".
+
+**Theorem 6:** Suppose {\displaystyle \{f(\cdot ;s)\}\_{s\in S}} (for {\displaystyle S\subseteq \mathbb {R} }) obeys **X**. Then the family {\displaystyle \{F(\cdot ;t)\}\_{t\in T}} obeys **X** if {\displaystyle \{\lambda (\cdot ;t)\}\_{t\in T}} is ordered with respect to the monotone likelihood ratio property.
+
+The monotone likelihood ratio condition in this theorem cannot be weakened, as the next result demonstrates.
+
+**Proposition 2:** Let {\displaystyle \lambda (\cdot ;t')} and {\displaystyle \lambda (\cdot ;t)} be two probability mass functions defined on {\displaystyle S:=\{1,2,\ldots ,N\}} and suppose {\displaystyle \lambda (\cdot ;t'')} is does not dominate {\displaystyle \lambda (\cdot ;t')} with respect to the monotone likelihood ratio property. Then there is a family of functions {\displaystyle \{f(\cdot ;s)\}\_{s\in S}}, defined on {\displaystyle X\subset \mathbb {R} }, that obey single crossing differences, such that {\displaystyle \arg \max \_{x\in X}F(x;t'')<\arg \max \_{x\in X}F(x;t')}, where {\displaystyle F(x;t)=\sum \_{s\in S}\lambda (s,t)f(x,s)} (for {\displaystyle t=t',\,t''}).
+
+**Application (Optimal portfolio problem):** An agent maximizes expected utility with the strictly increasing Bernoulli utility function {\displaystyle u:\mathbb {R} \_{+}\to \mathbb {R} }. (Concavity is not assumed, so we allow the agent to be risk loving.) The wealth of the agent, {\displaystyle w>0}, can be invested in a safe or risky asset. The prices of the two assets are normalized at 1. The safe asset gives a constant return {\displaystyle R\geq 0}, while the return of the risky asset {\displaystyle s} is governed by the
+probability distribution {\displaystyle \lambda (s;t)}. Let {\displaystyle x} denote the agent's investment in the risky asset. Then the wealth of the agent in state {\displaystyle s} is {\displaystyle (w-x)R+xs}. The agent chooses {\displaystyle x} to maximize
+
+Note that {\displaystyle \{{\hat {u}}(\cdot ;s)\}\_{s\in S}}, where {\displaystyle {\hat {u}}(x;s):=u(wR+x(s-R))}, obeys single crossing (though
+not necessarily increasing) differences. By Theorem 6, {\displaystyle \{V(\cdot ;t)\}\_{t\in T}} obeys single crossing differences, and hence {\displaystyle \arg \max \_{x\geq 0}V(x;t)} is increasing in {\displaystyle t}, if {\displaystyle \lambda (\cdot ;t)\}\_{t\in T}} is ordered with
+respect to the monotone likelihood ratio property.
+
+
+## Aggregation of the single crossing property
+
+While the sum of increasing functions is also increasing, it is clear that the single crossing property need not be preserved by aggregation. For the sum of single crossing functions to have the same property requires that the functions be related to each other in a particular manner.
+
+**Definition (monotone signed-ratio):** Let {\displaystyle (S,\geq \_{S})} be a poset. Two functions {\displaystyle f,g:S\to \mathbb {R} } obey *signed{ -}ratio monotonicity* if, for any {\displaystyle s'\geq s}, the following holds:
+
+* if {\displaystyle f(s)>0} and {\displaystyle g(s)<0}, then
+
+* if {\displaystyle f(s)<0} and {\displaystyle g(s)>0}, then
+
+**Proposition 3:** Let {\displaystyle f} and {\displaystyle g} be two single crossing functions. Then {\displaystyle \alpha f+\beta g} is a single crossing function for any non{-}negative scalars {\displaystyle \alpha } and {\displaystyle \beta } if and only if {\displaystyle f} and {\displaystyle g} obey signed-ratio monotonicity.
+
+This result can be generalized to infinite sums in the following sense.
+
+**Theorem 7:** Let {\displaystyle (T,{\mathcal {T}},\mu )} be a finite measure space and suppose that, for each {\displaystyle s\in S}, {\displaystyle f(s;t)} is a bounded and measurable function of {\displaystyle t\in T}. Then {\displaystyle F(s)=\int \_{T}f(s;t)d\mu (t)} is a single crossing function if, for all {\displaystyle t}, {\displaystyle t'\in T}, the pair of functions {\displaystyle f(s;t)} and {\displaystyle f(s;t')} of {\displaystyle s\in S} satisfy signed-ratio monotonicity. This condition is also necessary if {\displaystyle {\mathcal {T}}} contains all singleton sets and {\displaystyle F} is required to be a single crossing function for any finite measure {\displaystyle \mu }.
+
+**Application (Monopoly problem under uncertainty):** A firm faces uncertainty over the demand for its output {\displaystyle x} and the profit at state {\displaystyle t\in T\subset \mathbb {R} } is given
+by {\displaystyle \Pi (x;-c,t)=xP(x;t)-cx}, where {\displaystyle c} is the marginal cost and {\displaystyle P(x,t)} is the inverse demand function in state {\displaystyle t}. The firm maximizes
+
+where {\displaystyle \lambda } is the probability of state {\displaystyle t} and {\displaystyle u:\mathbb {R} \to \mathbb {R} } is the Bernoulli utility function representing the firm’s attitude towards uncertainty. By Theorem 1, {\displaystyle \arg \max \_{x\geq 0}V(x;-c)} is increasing in {\displaystyle -c} (i.e., output falls with marginal cost) if the family {\displaystyle \{V(x;-c)\}\_{c\in \mathbb {R} \_{+}}} obeys single crossing differences. By definition, the latter says that, for any {\displaystyle x'\geq x}, the function
+
+is a single crossing function. For each {\displaystyle t}, {\displaystyle \delta (-c,t)=u(\Pi (x';-c,t))-u(\Pi (x;-c,t))} is s single crossing function of {\displaystyle -c}. However, unless {\displaystyle u} is linear, {\displaystyle \delta } will not, in general, be increasing in {\displaystyle -c}. Applying Theorem 6, {\displaystyle \Delta } is a single crossing function if, for any {\displaystyle t',t\in T}, the functions {\displaystyle \delta (-c,t)} and {\displaystyle \delta (-c,t')} (of {\displaystyle -c}) obey signed-ratio monotonicity. This is guaranteed when (i) {\displaystyle P} is decreasing in {\displaystyle x} and increasing in {\displaystyle t} and {\displaystyle \{\log(P(\cdot ,t))\}\_{t\in T}} obeys increasing differences; and (ii) {\displaystyle u:\mathbb {R} \to \mathbb {R} } is twice differentiable, with {\displaystyle u'>0}, and obeys decreasing absolute risk aversion (DARA).
+

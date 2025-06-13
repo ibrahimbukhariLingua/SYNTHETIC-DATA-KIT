@@ -1,0 +1,38 @@
+Devaux's Index of Project Performance
+
+
+# Devaux's Index of Project Performance
+
+
+
+**Devaux's Index of Project Performance** (usually known as the **DIPP**) is a project management performance metric formulated by Stephen Devaux as part of the total project control (TPC) approach to project and program value analysis. It is an index that integrates the three variables of a project (scope, time and cost) into a single value-based index where:
+
+* Scope is monetized as the value the project is expected to generate if it is completed on a certain date;
+* Time is a plus or minus monetary value if the completion is earlier or later than the target date; and
+* Cost is the cost estimate-to-complete (Cost ETC) of the project, the monetary units that will be needed for resources to complete the project (i.e., factoring out sunk cost).
+
+## As an index for project go/no go decisions
+
+The DIPP was originally proposed as a value-based metric that quantified the key variables in the decision of whether to continue funding or terminate an ongoing project. It was introduced in the Sep/Oct 1992 issue of *Project Management Journal* and reprinted as a chapter in the 1999 book *Essentials of Project Control*. It was intended to lessen the emotions surrounding such a critical decision by reducing the value/cost aspects to a formula that removed sunk costs from consideration while focusing on opportunity cost, salvage value, and project termination costs. The formula is:
+
+
+## As a project progress tracking index
+
+In 1999, a simplified form of the DIPP was introduced as a technique for monetizing and integrating all three variables of the traditional project "Iron Triangle" into a single value-based baseline for measuring what the project's expected return is scheduled to be at any given future progress reporting date. The Tracking DIPP baseline formula is:
+
+* EMV is a quantification of the scope reflecting the expected monetary value if the designated scope is delivered as of the target date. Changes in scope should be reflected by changes in the value breakdown structure (VBS) that would increase or decrease the EMV.
+* acceleration or delay is the premium or cost due to change in the delivery date, which will usually impact the value of the scope (EMV). (In the rare cases where it won't, that fact is important information for the management team.) At the start, the project is usually scheduled to finish on its target date, so the $acceleration or delay is usually zero in the baseline DIPP.
+* Cost is the planned cost estimate-to-complete (Cost ETC) of the project. This can usually be derived from earned value management planning by using the complement of the planned value (PV) (i.e., budgeted cost of work performed, or BCWS), which estimates what the sunk cost will be at key reporting points during the project. By subtracting the PV from budget, the expected sunk cost at any point during project execution is factored out.
+
+As project work is performed and sunk costs accrue, the Cost ETC is expected to decrease at a planned rate. Since the planned Cost ETC is the denominator of the DIPP formula, the DIPP can be plotted to rise steadily during project execution, reflecting the fact that as a project nears completion, the return on the remaining investment becomes greater and greater (thus usually making it unwise to kill an ongoing project unless its Actual DIPP approaches 1.0 or less).
+
+As the project is executed, the DIPP provides an integrated metric, reflecting the project's investment value, against which any changes in the three variables of scope, time and cost can be measured. Any changes in the expected value of the scope, any acceleration or delay in schedule, and any change in the planned Cost ETC can be reflected in the Actual DIPP. This can be measured against the Planned DIPP to produce the DIPP Progress Index (DPI), an extension to the project's expected business value of the earned value indices the schedule performance index (SPI) and the cost performance index (CPI). The DIPP Progress Index formula is:
+
+The DIPP baseline presents the project team with a planned metric against which to manage, and provides guidance for individual team members who seek opportunities to enhance the project's overall business value and expected project profit (EPP) by generating a DPI of greater than 1.0. This can generally be accomplished most easily through identifying schedule acceleration opportunities identified through critical path drag and drag cost computation.
+
+
+## Optimizing project portfolio selection
+
+Changes in an organization's portfolio of projects often stretch limited resources and result in project-level delays or pruning of scope, both of which would be reflected in lower DIPPs for each impacted project and sometimes of the entire portfolio. The DIPPs of each project in the portfolio can be used to generate a portfolio-level DIPP. The portfolio-level DIPP is then tracked and maximized, and used to target resources to the project where they will add the greatest value. Additionally, no new project should be added to the portfolio without first measuring the impact on existing projects of any resource bottlenecks created by the new project's schedule.
+Tomoichi Sato of JGC Corporation and Tokyo University has proposed the use of an "Extended DIPP" for setting project priorities, where the Extended DIPP is equal to the risk-based project value (RPV) divided by the Cost ETC. The contributed value of a task to the project is derived as the RPV increase between the start and finish of a task, thus enabling a risk- and value-based computation for earned value analysis for product development projects.
+

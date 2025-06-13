@@ -1,0 +1,40 @@
+Increased limit factor
+
+
+# Increased limit factor
+
+
+
+**Increased limit factors** or **ILFs** are multiplicative factors that are applied to premiums for "basic" limits of coverage to determine premiums for higher limits of coverage. They are commonly used in casualty insurance pricing.
+
+
+## Overview
+
+Often, limited data is available to determine appropriate charges for high limits of insurance. In order to price policies with high limits of insurance adequately, actuaries may first determine a "basic limit" premium and then apply increased limits factors. The basic limit is a lower limit of liability under which there is a more credible amount of data.
+
+For example, basic limit loss costs or rates may be calculated for many territories and classes of business. At a relatively low limit of liability, such as $100,000, there may be a high volume of data that can be used to derive those rates. For higher limits, there may be a credible volume of data at the countrywide level but not much data available for individual territories or classes. Increased limit factors can be derived at the countrywide level (or some other broad grouping) and then applied to the basic limit rates to arrive at rates for higher limits of liability.
+
+
+## Formula
+
+An increased limit factor (ILF) at limit L relative to basic limit B can be defined as
+
+{\displaystyle ILF(L)={\dfrac {Expected\ indemnity\ cost(L)+ALAE(L)+ULAE(L)+RL(L)}{Expected\ indemnity\ cost(B)+ALAE(B)+ULAE(B)+RL(B)}}}
+
+where ALAE is the allocated loss adjustment expense provision, ULAE is the unallocated loss adjustment expense provision, and RL is the risk load provision.
+
+An indemnity-only ILF can be expressed as
+
+{\displaystyle ILF(L)={\dfrac {Expected\ indemnity\ cost(L)}{Expected\ indemnity\ cost(B)}}={\dfrac {Expected\ frequency(L)\*Expected\ severity(L)}{Expected\ frequency(B)\*Expected\ severity(B)}}}
+
+Often, frequency is assumed to be independent of the policy limit, in which case the formula can be simplified to
+
+{\displaystyle ILF(L)={\dfrac {Expected\ severity(L)}{Expected\ severity(B)}}}
+
+The expected severity at each limit is often referred to as "limited average severity," or LAS.
+
+
+## Examples
+
+In the United States, many insurers use ILFs published by the Insurance Services Office, a division of Verisk.
+

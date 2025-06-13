@@ -1,0 +1,72 @@
+Martingale (betting system)
+
+
+# Martingale (betting system)
+
+
+
+A **martingale** is a class of betting strategies that originated from and were popular in 18th-century France. The simplest of these strategies was designed for a game in which the gambler wins the stake if a coin comes up heads and loses if it comes up tails. The strategy had the gambler double the bet after every loss, so that the first win would recover all previous losses plus win a profit equal to the original stake. Thus the strategy is an instantiation of the St. Petersburg paradox.
+
+Since a gambler will almost surely eventually flip heads, the martingale betting strategy is certain to make money for the gambler provided they have infinite wealth and there is no limit on money earned in a single bet. However, no gambler has infinite wealth, and the exponential growth of the bets can bankrupt unlucky gamblers who choose to use the martingale, causing a catastrophic loss. Despite the fact that the gambler usually wins a small net reward, thus appearing to have a sound strategy, the gambler's expected value remains zero because the small probability that the gambler will suffer a catastrophic loss exactly balances with the expected gain. In a casino, the expected value is negative, due to the house's edge. Additionally, as the likelihood of a string of consecutive losses is higher than common intuition suggests, martingale strategies can bankrupt a gambler quickly.
+
+The martingale strategy has also been applied to roulette, as the probability of hitting either red or black is close to 50%.
+
+
+## Intuitive analysis
+
+The fundamental reason why all martingale-type betting systems fail is that no amount of information about the results of past bets can be used to predict the results of a future bet with accuracy better than chance. In mathematical terminology, this corresponds to the assumption that the win–loss outcomes of each bet are independent and identically distributed random variables, an assumption which is valid in many realistic situations. It follows from this assumption that the expected value of a series of bets is equal to the sum, over all bets that could potentially occur in the series, of the expected value of a potential bet times the probability that the player will make that bet. In most casino games, the expected value of any individual bet is negative, so the sum of many negative numbers will also always be negative.
+
+The martingale strategy fails even with unbounded stopping time, as long as there is a limit on earnings or on the bets (which is also true in practice). It is only with unbounded wealth, bets *and* time that it could be argued that the martingale becomes a winning strategy.
+
+
+## Mathematical analysis
+
+The impossibility of winning over the long run, given a limit of the size of bets or a limit in the size of one's bankroll or line of credit, is proven by the optional stopping theorem.
+
+However, without these limits, the martingale betting strategy is certain to make money for the gambler because the chance of at least one coin flip coming up heads approaches one as the number of coin flips approaches infinity.
+
+
+## Mathematical analysis of a single round
+
+Let one round be defined as a sequence of consecutive losses followed by either a win, or bankruptcy of the gambler. After a win, the gambler "resets" and is considered to have started a new round. A continuous sequence of martingale bets can thus be partitioned into a sequence of independent rounds. Following is an analysis of the expected value of one round.
+
+Let *q* be the probability of losing (e.g. for American double-zero roulette, it is 20/38 for a bet on black or red). Let *B* be the amount of the initial bet. Let *n* be the finite number of bets the gambler can afford to lose.
+
+The probability that the gambler will lose all *n* bets is *q*ⁿ. When all bets lose, the total loss is
+
+The probability the gambler does not lose all *n* bets is 1 − *q*ⁿ. In all other cases, the gambler wins the initial bet (*B*.) Thus, the expected profit per round is
+
+Whenever *q* > 1/2, the expression 1 − (2*q*)ⁿ < 0 for all *n* > 0. Thus, for all games where a gambler is more likely to lose than to win any given bet, that gambler is expected to lose money, on average, each round. Increasing the size of wager for each round per the martingale system only serves to increase the average loss.
+
+Suppose a gambler has a 63-unit gambling bankroll. The gambler might bet 1 unit on the first spin. On each loss, the bet is doubled. Thus, taking *k* as the number of preceding consecutive losses, the player will always bet 2ᵏ units.
+
+With a win on any given spin, the gambler will net 1 unit over the total amount wagered to that point. Once this win is achieved, the gambler restarts the system with a 1 unit bet.
+
+With losses on all of the first six spins, the gambler loses a total of 63 units. This exhausts the bankroll and the martingale cannot be continued.
+
+In this example, the probability of losing the entire bankroll and being unable to continue the martingale is equal to the probability of 6 consecutive losses: (10/19)⁶ = 2.1256%. The probability of winning is equal to 1 minus the probability of losing 6 times: 1 − (10/19)⁶ = 97.8744%.
+
+The expected amount won is (1 × 0.978744) = 0.978744.
+The expected amount lost is (63 × 0.021256)= 1.339118.
+Thus, the total expected value for each application of the betting system is (0.978744 − 1.339118) = −0.360374 .
+
+In a unique circumstance, this strategy can make sense. Suppose the gambler possesses exactly 63 units but desperately needs a total of 64. Assuming *q* > 1/2 (it is a real casino) and he may only place bets at even odds, his best strategy is **bold play**: at each spin, he should bet the smallest amount such that if he wins he reaches his target immediately, and if he does not have enough for this, he should simply bet everything. Eventually he either goes bust or reaches his target. This strategy gives him a probability of 97.8744% of achieving the goal of winning one unit vs. a 2.1256% chance of losing all 63 units, and that is the best probability possible in this circumstance. However, bold play is not always the optimal strategy for having the biggest possible chance to increase an initial capital to some desired higher amount. If the gambler can bet arbitrarily small amounts at arbitrarily long odds (but still with the same expected loss of 10/19 of the stake at each bet), and can only place one bet at each spin, then there are strategies with above 98% chance of attaining his goal, and these use very timid play unless the gambler is close to losing all his capital, in which case he does switch to extremely bold play.
+
+
+## Alternative mathematical analysis
+
+The previous analysis calculates *expected value*, but we can ask another question: what is the chance that one can play a casino game using the martingale strategy, and avoid the losing streak long enough to double one's bankroll?
+
+As before, this depends on the likelihood of losing 6 roulette spins in a row assuming we are betting red/black or even/odd. Many gamblers believe that the chances of losing 6 in a row are remote, and that with a patient adherence to the strategy they will slowly increase their bankroll.
+
+In reality, the odds of a streak of 6 losses in a row are much higher than many people intuitively believe. Psychological studies have shown that since people know that the odds of losing 6 times in a row out of 6 plays are low, they incorrectly assume that in a longer string of plays the odds are also very low. In fact, while the chance of losing 6 times in a row in 6 plays is a relatively low 1.8% on a single-zero wheel, the probability of losing 6 times in a row (i.e. encountering a streak of 6 losses) *at some point* during a string of 200 plays is approximately 84%. Even if the gambler can tolerate betting ~1,000 times their original bet, a streak of 10 losses in a row has an ~11% chance of occurring in a string of 200 plays. Such a loss streak would likely wipe out the bettor, as 10 consecutive losses using the martingale strategy means a loss of 1,023x the original bet.
+
+These unintuitively risky probabilities raise the bankroll requirement for "safe" long-term martingale betting to infeasibly high numbers. To have an under 10% chance of failing to survive a long loss streak during 5,000 plays, the bettor must have enough to double their bets for 15 losses. This means the bettor must have over 65,500 (2^15-1 for their 15 losses and 2^15 for their 16th streak-ending winning bet) times their original bet size. Thus, a player making 10 unit bets would want to have over 655,000 units in their bankroll (and still have a ~5.5% chance of losing it all during 5,000 plays).
+
+When people are asked to invent data representing 200 coin tosses, they often do not add streaks of more than 5 because they believe that these streaks are very unlikely. This intuitive belief is sometimes referred to as the representativeness heuristic.
+
+
+## Anti-martingale
+
+In a classic martingale betting style, gamblers increase bets after each loss in hopes that an eventual win will recover all previous losses. The anti-martingale approach, also known as the reverse martingale, instead increases bets after wins, while reducing them after a loss. The perception is that the gambler will benefit from a winning streak or a "hot hand", while reducing losses while "cold" or otherwise having a losing streak. As the single bets are independent from each other (and from the gambler's expectations), the concept of winning "streaks" is merely an example of gambler's fallacy, and the anti-martingale strategy fails to make any money.
+

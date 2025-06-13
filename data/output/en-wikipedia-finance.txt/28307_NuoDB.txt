@@ -1,0 +1,54 @@
+NuoDB
+
+
+# NuoDB
+
+
+
+**NuoDB** is a cloud-native distributed SQL database company based in Cambridge, Massachusetts. Founded in 2008 and incorporated in 2010, NuoDB technology has been used by Dassault Systèmes, as well as FinTech and financial industry entities including UAE Exchange, Temenos, and Santander Bank.
+
+
+## History
+
+In 2008, the firm was founded by Barry S. Morris and Jim Starkey, with Morris serving as CEO until 2015. Originally called **NimbusDB**, the company name was changed to NuoDB in 2011. Based in Cambridge, Massachusetts, NuoDB patented its "*elastically scalable database*", filing in March 2011 and receiving approval only 15 months later (July 2012). In 2012, the firm raised $12 million in venture capital funds.
+
+In 2013, Gartner listed NuoDB as a niche player in its Magic Quadrant for Operational Database Management Systems. Boston Business Journal and Mass High Tech named NuoDB as one of their 2014 Innovation All Stars.
+In February 2014, NuoDB announced an extension to its Series B funding round led by Dassault Systèmes. The round added $14.2 million to the company's funding. Morgenthaler Ventures, Hummer Winblad Venture Partners and Longworth Venture Partners participated in the round.
+
+In 2015, Gartner again listed NuoDB, this time as a Visionary in its Magic Quadrant for Operational Database Management Systems. Morris, the company's founding CEO, became executive chairman in July 2015. Bob Walmsley, previously executive vice president of sales and services, was promoted to CEO. NuoDB raised a $17 million financing round in 2016 from existing investors including Dassault Systèmes, Hummer Winblad Venture Partners, Longworth Venture Partners and Morgenthaler Ventures. At that time, the company had raised a total of $59.7 million in funding. In 2017, CauseSquare announced its partnership with NuoDB, selecting NuoDB as the official database for the mobile social engagement platform designed for the non-profit sector.
+
+In 2018, NuoDB became available on the Red Hat OpenShift Container Platform. One year later, NuoDB added Kubernetes availability in pursuit of a cloud-native, cloud-agnostic, multi-cloud strategy. In 2019, Temenos AG partnered with NuoDB, promoting scalability and IT service continuity.
+
+NuoDB was acquired by Dassault Systèmes in December 2020.
+
+
+## Technology
+
+SQL compliant, NuoDB's database technology is classified as "NewSQL". It has a distributed object architecture that works in the cloud, which means that when a new server is added in order to scale-out the database, the database runs faster. The database scales out without sharding. The database distributes tasks amongst several processors to avoid bottlenecks of data. It uses peer-to-peer messaging to route tasks to nodes, and it is ACID compliant.
+
+The database uses a "tiered approach — comprising multiple, redundant tiers of transaction engines (TE) and storage managers (SM)." This approach helps scale the data predictably in the cloud. NuoDB domains consist of several redundant TEs and SMs that can run on the same platform. Adding database capacity can be done by adding more TEs or SMs. The NuoDB 2.6 release added support for active-active database deployments across multiple Amazon Web Services (AWS) availability zones. Unlike other database systems, NuoDB makes it possible to expand its databases by adding more servers rather than simply replacing hardware.
+
+The system was designed to align with – and expand upon – IBM computer scientist Edgar F. Codd's 12 rules for relational databases. It adds the ability to run anywhere; elastic scalability; nonstop availability; a single, logical database; and distributed security. It is available in a free developer version ("Community Edition") and an enterprise version. The Community Edition was expanded on January 31, 2017 to enable scale-out across multiple hosts.
+
+With the release of version 3.0 (2017), NuoDB expanded its ecosystem beyond Amazon Web Services, adding Google Cloud, Microsoft Azure, and Red Hat environments and expanded multi-availability zone deployment for hybrid or multi-cloud environments. *NuoDB Operator* achieved *Red Hat OpenShift Operator Certification* in 2019. Support for Kubernetes Operators, public clouds (Google Cloud, Microsoft Azure), and cloud-native and cloud-agnostic capabilities was introduced in version 4.0 (2019), along with a new feature for assessing database health and performance.
+
+
+## Release history
+
+| Date | Release | Notes |
+| --- | --- | --- |
+| April 2012 | beta 8 database | allowed platform support for Solaris. |
+| November 2012 | Candidate 1 |
+| January 2013 | 1.0 |
+| May 2013 | 1.1 | included migration assistant to move databases from Windows SQL Server onto NuoDB |
+| August 2013 | 1.2 |
+| October 2013 | 2.0, Blackbirds | extended geographical support |
+| November 2014 | 2.1, Swifts | including low-latency HTAP capabilities |
+| December 2015 | 2.4, Cranes | ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ |
+| September 2016 | 2.5 | added SQL enhancements |
+| January 2017 | 2.6 | added table partitions, storage groups, and active-active support for Amazon Web Services Inc. functionality |
+| September 2017 | 3.0 | active-active across a hybrid or multi-cloud |
+| April 2018 | 3.1 | added graphical dashboard of database and system metrics |
+| October 2018 | 3.3 | added container-native features and availability for Red Hat OpenShift Container Platform |
+| July 2019 | 4.0 | added expanded cloud-native and cloud-agnostic capabilities with support for Kubernetes Operators and public clouds (Google Cloud, Microsoft Azure) |
+

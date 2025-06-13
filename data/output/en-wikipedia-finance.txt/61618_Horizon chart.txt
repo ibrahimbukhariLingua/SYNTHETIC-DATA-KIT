@@ -1,0 +1,35 @@
+Horizon chart
+
+
+# Horizon chart
+
+
+
+A **horizon chart** or **horizon graph** is a 2-dimensional data visualization displaying a quantitative data over a continuous interval, most commonly a time period. The horizon chart is valuable for enabling readers to identify trends and extreme values within large datasets. Similar to sparklines and ridgeline plot, horizon chart may not be the most suitable visualization for precisely pinpointing specific values. Instead, its strength lies in providing an overview and highlighting patterns and outliers in the data.
+
+
+## History
+
+The technique of constructing the horizon chart from an area chart was first developed by Takafumi Saito et al. at the Tokyo University of Agriculture and Technology in 2005. This technique was referred to as *two-tone pseudo coloring*. Subsequently, Panopticon Software independently commercialized the procedure and referred to the resulting visualizations as horizon charts.
+
+
+## Overview
+
+The horizon chart is a variation of the area chart. Having established a horizontal axis, negative values are mirrored over the horizontal axis, while positive values retain their position. As an alternative approach, rather than reflecting negative values, they can be shifted so that the smaller value aligns with the horizontal axis. Layers are formed by dividing the areas into equal horizontal intervals and overlaying the resulting bands.
+
+Color is an essential visual element in horizon charts. It serves to differentiate positive values from negative values, and its intensity corresponds to the magnitude of the values. Typically, the color of each area in the horizon chart is obtained by overlaying multiple transparent bands, with more intense colors indicating larger values and less intense colors representing smaller values.
+
+Horizon charts facilitate a reduction in vertical space, resulting in a more compact chart that resembles a heat map. This enables the consolidation of a substantial volume of data into a single visualization. The compact nature of the horizon chart enables easy comparison of different data series within a single visualization. It also lends itself well to the creation of small multiples, where multiple horizon charts can be displayed side by side to analyze and compare various datasets simultaneously. This compact design enhances the efficiency and effectiveness of data analysis and interpretation.
+
+
+## Chart construction
+
+When creating a horizon chart, the selection of the origin for the vertical axis, which determines the placement of the horizontal axis, is crucial. In most cases, the origin is set to zero. However, this characteristic of the horizon chart can be leveraged to emphasize trends based on an arbitrary value. By selecting a different origin point, such as a specific threshold or benchmark, trends and comparisons can be highlighted in relation to that value. This flexibility allows for the visualization to be tailored to specific analytical needs or to draw attention to particular trends or deviations from a chosen reference point. Once the origin of the vertical axis is determined, the quantitative variable is assigned to the vertical axis, while the continuous variable is assigned to the horizontal axis. The band layering process in a horizon chart involves dividing the range of values for a dataset into equal horizontal intervals and overlaying these bands to create the final chart. This is the main feature of an horizon chart, enabling its compact visualization. The small size of the final visualization, allows the comparison of multiple sets of data in a given series.
+
+Regarding the color scheme in a horizon chart, it is common to utilize a diverging color scheme, like red and blue. Red is typically used to represent negative values or values with a negative meaning, while blue is employed to indicate positive values or values with a positive meaning. This color scheme helps visually distinguish between positive and negative values, aiding in the interpretation and understanding of the chart. In their 2005 article, Saito et al. proposed a different approach to color usage in horizon charts. They utilized the concept of discrete coloring, where the range of the function is divided into multiple sequential intervals, and a distinct color is assigned to each interval. This allows for the precise reading of values based on color. Unlike divergent colors (such as red and blue), the focus is on using a continuously changing scale of colors to represent the data accurately. By employing this method, the horizon chart enables readers to interpret specific values based on the assigned colors within the chart.
+
+
+## Implementation
+
+Horizon charts can be created using various open-source tools. These tools provide the necessary functionalities to generate horizon charts from data. Some popular open-source options for creating horizon charts include D3.js, R and RAWgraphs among others.
+

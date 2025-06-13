@@ -1,0 +1,30 @@
+Treynor–Black model
+
+
+# Treynor–Black model
+
+
+
+In finance the **Treynor–Black model** is a mathematical model for security selection published by Fischer Black and Jack Treynor in 1973. The model assumes an investor who considers that most securities are priced efficiently, but who believes they have information that can be used to predict the abnormal performance (Alpha) of a few of them; the model finds the optimum portfolio to hold under such conditions.
+
+In essence the optimal portfolio consists of two parts: a passively invested index fund containing all securities in proportion to their market value and an 'active portfolio' containing the securities for which the investor has made a prediction about alpha. In the active portfolio the weight of each stock is proportional to the alpha value divided by the variance of the residual risk.
+
+
+## Model
+
+Assume that the risk-free rate is *RF* and the expected market return is *RM* with standard deviation {\displaystyle \sigma \_{M}}. There are *N* securities that have been analyzed and are thought to be mispriced, with expected returns given by:
+
+where the random terms {\displaystyle \epsilon \_{i}} are normally distributed with mean 0, standard deviation {\displaystyle \sigma \_{i}}, and are mutually uncorrelated. (This is the so-called Diagonal Model of Stock Returns, or Single-index model due to William F. Sharpe).
+
+Then it was shown by Treynor and Black that the active portfolio *A* is constructed using the weights
+
+(Note that if an alpha is negative the corresponding portfolio weight will also be negative, i.e. the active portfolio is in general a long–short portfolio).
+
+The alpha, beta and residual risk of the constructed active portfolio are found using the previously computed weights *wᵢ*:
+
+The overall risky portfolio for the investor consists of a fraction *wA* invested in the active portfolio and the remainder invested in the market portfolio. This active fraction is found as follows:
+
+And corrected for the beta exposure of the active portfolio:
+
+The model is not bounded 0 ≤ *wA* ≤ 1 and 0 ≤ *wM* ≤ 1 i.e short positions in the market portfolio or active portfolio could be initiated to leverage a position in the other portfolio. This is often regarded as the major flaw of the model, as it often yields an unrealistic weight in the active portfolio. Imposing lower and upper bounds for *wA* is a measure to counter this.
+

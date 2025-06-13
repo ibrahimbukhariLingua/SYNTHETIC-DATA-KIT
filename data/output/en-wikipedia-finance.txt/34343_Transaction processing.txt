@@ -1,0 +1,28 @@
+Transaction processing
+
+
+# Transaction processing
+
+
+
+In computer science, **transaction processing** is information processing that is divided into individual, indivisible operations called *transactions*. Each transaction must succeed or fail as a complete unit; it can never be only partially complete.
+
+For example, when you purchase a book from an online bookstore, you exchange money (in the form of credit) for a book. If your credit is good, a series of related operations ensures that you get the book and the bookstore gets your money. However, if a single operation in the series fails during the exchange, the entire exchange fails. You do not get the book and the bookstore does not get your money. The technology responsible for making the exchange balanced and predictable is called *transaction processing*. Transactions ensure that data-oriented resources are not permanently updated unless all operations within the transactional unit complete successfully. By combining a set of related operations into a unit that either completely succeeds or completely fails, one can simplify error recovery and make one's application more reliable.
+
+Transaction processing systems consist of computer hardware and software hosting a transaction-oriented application that performs the routine transactions necessary to conduct business. Examples include systems that manage sales order entry, airline reservations, payroll, employee records, manufacturing, and shipping.
+
+Since most, though not necessarily all, transaction processing today is interactive, the term is often treated as synonymous with *online transaction processing*.
+
+
+## Description
+
+Transaction processing is designed to maintain a system's Integrity (typically a database or some modern filesystems) in a known, consistent state, by ensuring that interdependent operations on the system are either all completed successfully or all canceled successfully.
+
+For example, consider a typical banking transaction that involves moving $700 from a customer's savings account to a customer's checking account. This transaction involves at least two separate operations in computer terms: debiting the savings account by $700, and crediting the checking account by $700. If one operation succeeds but the other does not, the books of the bank will not balance at the end of the day. There must, therefore, be a way to ensure that either both operations succeed or both fail so that there is never any inconsistency in the bank's database as a whole.
+
+Transaction processing links multiple individual operations in a single, indivisible transaction, and ensures that either all operations in a transaction are completed without error, or none of them are. If some of the operations are completed but errors occur when the others are attempted, the transaction-processing system "rolls back" *all* of the operations of the transaction (including the successful ones), thereby erasing all traces of the transaction and restoring the system to the consistent, known state that it was in before processing of the transaction began. If all operations of a transaction are completed successfully, the transaction is committed by the system, and all changes to the database are made permanent; the transaction cannot be rolled back once this is done.
+
+Transaction processing guards against hardware and software errors that might leave a transaction partially completed. If the computer system crashes in the middle of a transaction, the transaction processing system guarantees that all operations in any uncommitted transactions are cancelled.
+
+Generally, transactions are issued concurrently. If they overlap (i.e. need to touch the same portion of the database), this can create conflicts. For example, if the customer mentioned in the example above has $150 in his savings account and attempts to transfer $100 to a different person while at the same time moving $100 to the checking account, only one of them can succeed. However, forcing transactions to be processed sequentially is inefficient. Therefore, concurrent implementations of transaction processing is programmed to guarantee that the end result reflects a conflict-free outcome, the same as could be reached if executing the transactions sequentially in any order (a property called serializability). In our example, this means that no matter which transaction was issued first, either the transfer to a different person or the move to the checking account succeeds, while the other one fails.
+

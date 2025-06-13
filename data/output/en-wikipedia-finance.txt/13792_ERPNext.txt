@@ -1,0 +1,98 @@
+ERPNext
+
+
+# ERPNext
+
+
+
+**ERPNext** is a free and open-source integrated Enterprise resource planning (ERP) software developed by an Indian software company Frappe Technologies Pvt. Ltd. It is built on the MariaDB database system using Frappe, a Python based server-side framework.
+
+ERPNext is a generic ERP software used by manufacturers, distributors and services companies. It includes modules like accounting, CRM, sales, purchasing, website, e-commerce, point of sale, manufacturing, warehouse, project management, inventory, and services. Also, it has domain specific modules like schools, healthcare, agriculture, and non-profit.
+
+ERPNext is an alternative to NetSuite and QAD, and similar in function to Odoo (formerly OpenERP), Tryton and Openbravo. ERPNext was included in the ERP FrontRunners List by Gartner as a Pacesetters.
+
+
+## Core modules
+
+ERPNext contains these modules:
+
+* Accounting
+* Asset management
+* Customer relationship management (CRM)
+* Human resource management (HRM)
+* Payroll
+* Project management
+* Purchasing
+* Sales management
+* Warehouse management system
+* Website
+
+## Industry modules
+
+* Manufacturing - Manufacturing
+* Point of sale (POS) - Retail
+* Student Information system - Education
+* Hospital Information system - Healthcare
+* Agriculture Management - Agriculture
+* Nonprofit Organization - Non Profit
+
+## Software license
+
+ERPNext is released under the GPL-3.0-only license. Consequently, ERPNext does not require license fees as opposed to proprietary ERP vendors. In addition, as long as the terms of the licenses are adhered to, modification of the program is possible.
+
+
+## Architecture
+
+ERPNext has a Model-View-Controller architecture with metadata modeling tools that add flexibility for users to adapt the software to unique purposes without the need for programming. Some attributes of the architecture are:
+
+* All objects in the ERP are DocTypes (not to be confused with HTML DocTypes) and the Views are generated directly in the browser.
+* Client interacts with the server via JSON data objects on a JSON RPC supporting server.
+* There is ability to plug-in (event driven) code on the client and server side.
+
+The underlying web app framework is called "Frappe Framework" and is maintained as a separate open source project. Frappe started as a web based metadata framework inspired from Protégé though it has evolved differently.
+
+This architecture allows rapid application development (RAD).
+
+
+## Source code and documentation
+
+ERPNext source code is hosted on GitHub, using the Git revision control system, and the contributions are also handled using GitHub.
+
+A complete user manual is available at the project website.
+
+
+## Software as a service
+
+ERPNext is available both on user hosting and as a Software as a service (SaaS) from their website. The product also received a funding of INR 10 crore ($1.3Million) from Zerodha and Rainmatter in June 2022.
+
+
+## Investment
+
+In November 2020, Rainmatter incubator invested ₹10 crore ($1.3M) in Frappe Technologies PL, to support development of ERPNext, other open source products, and scaling plans.
+
+
+## Release History
+
+| Version | Release Date/Month | Significant changes | Software license |
+| --- | --- | --- | --- |
+| 1.0 | June 2010 | First release. ERPNext source code was (then) published on Google Code. | GNU GPL |
+| 2.0 | July 2012 | GNU GPL |
+| 3.0 | April 2013 | GNU GPL |
+| 4.0 | February 2014 | Introduced app architecture in Frappe Framework. | GNU GPL |
+| 5.0 | 19 May 2015 | Improved UI, Item Variants, Print Format Builder, Sharing, Starring, Document Timelines, Multi-Currency accounting, Party model | GNU GPL |
+| 6.0 | 2 September 2015 | ERPNext Schools, Calendar View for transactions, Doctype exports | GNU GPL |
+| 7.0 | 22 July 2016 | Online/Offline POS, Asset Depreciation, Payment Entry, Timesheets, Dashboards, Editable grid, Quick Entry view, Smarter Lists | GNU GPL |
+| 8.0 | 30 March 2017 | Global Search, Kanban View, Document Versioning, Delete and Restore, Email Inbox, Employee Loan, Enhanced POS, Multiple UOMs in Selling, Accrual system in Payroll, Custom Permissions, Customer Feedback, School Assessment Module | GNU GPL |
+| 9.0 | 26 September 2017 | Healthcare Domain, Subscription, School Fees Management, New Setup Wizard | GNU GPL |
+| 10.0 | 29 December 2017 | Agriculture Domain, Non-profit Domain, Data Import upgrades, Employee Advance, Item Variant Enhancements | GNU GPL |
+| 11.0 | 10 December 2018 | Multi-company consolidated financial statement, Payroll per Tax Declaration, Employee On-boarding and Off-boarding, Finance Book, CWIP Accounting, Staffing Plan, Inter-company Journal Entry, Exchange Rate Revaluation, Leave Policy, Conditional Workflows, Payroll and Accounting Period, Serialised Assets, Tax Withholding, Shift Plan, Budgeting in Material Request | GNU GPL |
+| 12.0 | 22 July 2019 | Graphical Dashboard, Custom Report with Chart Builder, Postgres Support, Multi-select Field, Enhanced Website and Portal, Improved Pricing Rule, Accounting Dimensions, Invoice Discounting, BOM Explorer, Auto Attendance, Leave Ledger, Promotional Scheme, SLA, Email Campaign, Learning Management System, Quality Management System, Production Planning Enhancements, Project Template, New Desktop, Keyboard Navigation, Link Preview, Assignment Rule, Exotel Call Integration, Milestones, Auto Repeat, Document Follow, Energy Points, Google Contacts, PDF Encryption, Raw Printing, Web Form Refactor, Custom columns in report | GNU GPL |
+| 13.0 | 2020 | Custom Desk, SLA on custom documents, Bootstrapped Dashboards for each module, In-patient module in Healthcare, Module Onboarding, Event streaming, Perpetual accounting for Services, Cancelling downstream transactions on single click, POS Invoicing, Production Forecast, Social Media post from ERPNext, India PF and PT calculation, Conditional Mandatory field, BOM and JV template, India GST reports | GNU GPL |
+| 14.0 | 1 August 2022 | Customizable Workspaces, New Print Format Builder, new Subcontracting flow, Organisational Chart, Tab View in forms, Warehouse Management & Inventory Dimensions, Scrap management, Payment Ledger, KSA and Tanzania accounting, Asset Grouping and Splitting, Asset Capitalisation, Bulk Transaction Processing, better handling of multi-currency transactions | GNU GPL |
+| 15.0 | 10 September 2023 | Multi-level BOM creator, Auto Currency Exchange Re-valuation, POS stock update in run-time, Financial Ratios report, Accounting Dimension Balancing, Asset Activity Tracking, Print Format Designer, Advance Payment in a separate Liability Account, PWA Mobile app for HR module, Stock reservation against Sales Order, Frappe Builder | GNU GPL |
+
+
+## FOSS United
+
+FOSS United (formerly ERPNext Open Source Software Foundation) is a non-for-profit organization. The goal of the foundation is to provide a platform for the FOSS community of India to come together and build open source applications. Foundation also organises various events like conference and code sprints.
+

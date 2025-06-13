@@ -1,0 +1,47 @@
+MT4 ECN Bridge
+
+
+# MT4 ECN Bridge
+
+
+
+**MT4 ECN Bridge** is a technology that allows a user to access the interbank foreign exchange market through the MetaTrader 4 (MT4) electronic trading platform. MT4 was designed to allow trading between a broker and its clients, so it did not provide for passing orders through to wholesale forex market via electronic communication networks (ECNs). In response, a number of third-party software companies developed Straight-through processing bridging software to allow the MT4 server to pass orders placed by clients directly to an ECN and feed trade confirmations back automatically.
+
+
+## Background
+
+Retail foreign exchange brokers in general are divided into two categories:
+
+* Dealing desk brokers or market makers that execute orders and keep the position in that broker's inner liquidity pool. A DD broker is a specific broker who employs dealers that may either accept or reject orders from retail traders (re-quotes) depending on whether or not the broker is interested in accepting the specific order or not.
+* Non-Dealing Desk (NDD) brokers or direct market access where the broker simply passes the order to the interbank foreign exchange market.
+
+The MetaTrader4 trading platform was designed for dealing desk brokers, but the popularity of the trading platform meant that retail forex traders as well as brokers wanted to provide a way to trade directly on the interbank foreign exchange market via MT4.
+
+
+## Bridge software
+
+A number of software companies attempted to develop bridging technology that allowed the broker to connect the MT4 server to an ECN. The first practical solution to **bridging MT4 and ECN** appeared in 2006. There are two main types of bridge technology which effects the way orders are processed: the STP and ECN models. The table below shows the main differences.
+
+| MT4 ECN bridge | MT4 STP bridge |
+| --- | --- |
+| Client's orders go directly to the marketplace and are displayed there as they are | Yes | No |
+| Clients can see and use market depth (Level 2) | Yes | No |
+| Partial execution is implemented | Yes | No |
+
+ECN means direct access to the market where you can trade with other traders. Your orders are actually displayed in the market and are seen by others, who in turn can introduce their own orders and if the prices match, a deal is complete.
+
+
+### Main benefits
+
+* True ECN execution – clients trade with other traders, orders are displayed and seen by others on the market;
+* Tight spreads – there is only a difference between best bid and offer prices, if a client places an order with a better price, it changes the spread;
+* Relatively fast execution – orders are typically executed within 0.3 sec on the server side;
+* Possibility of partial execution – in case of insufficient liquidity the order can be partially executed while the rest will be displayed and seen on the marketplace;
+* Market depth can be provided via a special add-in module to show the depth of the market also known as *Level 2* – a measure of the size of volume available for transaction purposes for a particular instrument at a particular point of time. The best Offer (ASK) and the best bid are displayed in a table with the size available to buy or sell. Market depth displays orders that are currently in the market. When two orders match (buy and sell orders at the same price), they are filled and disappear from the market depth and the deal is registered in the trade history.
+
+### Difficulties of true ECN trading for retail traders
+
+* Price volatility can be greater in comparison to quotes of market makers who may use fluctuations filtering while the NDD model provides direct access to the interbank foreign exchange market.
+* Market makers' quotes are not related to the volume, i.e. orders may be filled at the offered price without any relation to the deal volume. While using the ECN the market presents the liquidity that is currently available, i.e. orders will be executed in the volume available at this certain price.
+* Bid–offer spread can vary significantly with market conditions reflecting actual interbank market prices which can cause problems with stops. Market Makers will typically hold spreads at a fixed level to avoid confusion for retail traders and avoid stops and limits being hit when prices are unstable.
+* Additional order execution latency is introduced due to the necessity of executing the trade with a liquidity provider.

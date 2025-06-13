@@ -1,0 +1,193 @@
+Data center security
+
+
+# Data center security
+
+
+
+**Data center security** is the set of policies, precautions and practices adopted at a data center to avoid unauthorized access and manipulation of its resources. The data center houses the enterprise applications and data, hence why providing a proper security system is critical. Denial of service (DoS), theft of confidential information, data alteration, and data loss are some of the common security problems afflicting data center environments.
+
+Data security issues can be harmful to many companies sometimes, so it is very important to know what are the issues and find useful solutions for them. The purpose of data security is to protect digital information from unauthorized access. It is also important to note that data security is different from data privacy. There are many situations where data center security would be threatened on, especially for cloud-based data.
+
+
+## Overview
+
+According to the *Cost of a Data Breach Survey*, in which 49 U.S. companies in 14 different industry sectors participated, they noticed that:
+
+* 39% of companies say negligence was the primary cause of data breaches
+* Malicious or criminal attacks account for 37 percent of total breaches.
+* The average cost of a breach is $5.5 million.
+
+Many big companies nowadays are using the cloud to store their and their customers' data, but the risks of saving data in the cloud can be enormous. Cyber attacks can be very harmful to many companies. There were 64% of companies worldwide that had troubles with cyber attacks in the year 2020 alone. Some cyber attacks targeted personal information such as identity theft can hurt someone's credits with life-changing influences.
+
+
+## The need for a secure data center
+
+Physical security is needed to protect the value of the hardware therein.
+
+
+### Data protection
+
+The cost of a breach of security can have severe consequences on both the company managing the data center and on the customers whose data are copied. The 2012 breach at Global Payments, a processing vendor for Visa, where 1.5 million credit card numbers were stolen, highlights the risks of storing and managing valuable and confidential data. As a result, Global Payments' partnership with Visa was terminated; it was estimated that they lost over $100 million.
+
+
+#### Insider attacks
+
+Defenses against exploitable software vulnerabilities are often built on the assumption that "insiders" can be trusted. Studies show that internal attacks tend to be more damaging because of the variety and amount of information available inside organizations.
+
+
+## Vulnerabilities and common attacks
+
+The quantity of data stored in data centers has increased, partly due to the concentrations created by cloud-computing
+
+
+### Threats
+
+Some of the most common threats to data centers:
+
+* DoS (Denial of Service)
+* Data theft or alteration
+* Unauthorized use of computing resources
+* Identity theft
+
+### Vulnerabilities
+
+Common vulnerabilities include:
+
+* *Implementation*: Software design and protocol flaws, coding errors, and incomplete testing
+* *Configuration*: Use of defaults, elements inappropriately configured
+
+#### Exploitation of out-of-date software
+
+Many "worm" attacks on data centers exploited well-known vulnerabilities:
+
+* CodeRed
+* Nimda and
+* SQL Slammer
+
+#### Exploitation of software defaults
+
+Many systems are shipped with default accounts and passwords, which are exploited for unauthorized access and theft of information.
+
+
+### Common attacks
+
+Common attacks include:
+
+* *Scanning or probing*: One example of a probe- or scan-based attack is a *port scan* - whereby "requests to a range of server port addresses on a host" are used, to find "an active port" and then cause harm via "a known vulnerability of that service.". This reconnaissance activity often precedes an attack; its goal is to gain access by discovering information about a system or network.
+* *DoS (Denial of service)*: A denial-of-service attack occurs when legitimate users are unable to access information systems, devices, or other network resources due to the actions of a malicious cyber threat actor. This type of attack generates a large volume of data to deliberately consume limited resources such as bandwidth, CPU cycles, and memory blocks.
+* *Distributed Denial of Service (DDoS)*: This kind of attack is a particular case of DoS where a large number of systems are compromised and used as source or traffic on a synchronized attack. In this kind of attack, the hacker does not use only one IP address but thousands of them.
+* *Unauthorized access*: When someone other than an account owner uses privileges associated to a compromised account to access to restricted resources using a valid account or a backdoor.
+* *Eavesdropping*: Etymologically, *Eavesdropping* means Secretly listen to a conversation. In the networking field, it is an unauthorized interception of information (usernames, passwords) that travels on the network. User logons are the most common signals sought.
+* *Viruses and worms*: These are malicious code that, when executed produce undesired results. Worms are self-replicating malware, whereas viruses, which also can replicate, need some kind of human action to cause damage.
+* *Internet infrastructure attacks*: This kind of attack targets the critical components of the Internet infrastructure rather than individual systems or networks.
+* *Trust exploitation*: These attacks exploit the trust relationships that computer systems have to communicate.
+* *Session hijacking* also known as *cookie hijacking*: Consists of stealing a legitimate session established between a target and a trusted host. The attacker intercepts the session and makes the target believe it is communicating with the trusted host.
+* *Buffer overflow attacks*: When a program allocates memory buffer space beyond what it had reserved, it results in memory corruption affecting the data stored in the memory areas that were overflowed.
+* *Layer 2 attacks*: This type of attack exploit the vulnerabilities of data link layer protocols and their implementations on layer 2 switching platforms.
+* *SQL injection*: Also known as code injection, this is where input to a data-entry form's, due to incomplete data validation, allows entering harmful input that causes harmful instructions to be executed.
+
+## Network security infrastructure
+
+The network security infrastructure includes the security tools used in data centers to enforce security policies. The tools include packet-filtering technologies such as ACLs, firewalls and intrusion detection systems (IDSs) both network-based and host-based.
+
+
+### ACLs (Access Control List)
+
+**ACLs** are filtering mechanisms explicitly defined based on packet header information to permit or deny traffic on specific interfaces. ACLs are used in multiple locations within the Data Center such as the Internet Edge and the intranet server farm. The following describes standard and extended access lists:
+
+Standard ACLs: the simplest type of ACL filtering traffic solely based on source IP addresses. Standard ACLs are typically deployed to control access to network devices for network management or remote access. For example, one can configure a standard ACL in a router to specify which systems are allowed to Telnet to it. Standard ACLs are not recommended option for traffic filtering due to their lack of granularity. Standard ACLSs are configured with a number between 1 and 99 in Cisco routers.
+
+Extended ACLs:
+Extended ACL filtering decisions are based on the source and destination IP addresses, Layer 4 protocols, Layer 4 ports, ICMP message type and code, type of service, and precedence. In Cisco routers, one can define extended ACLs by name or by a number in the 100 to 199 range.
+
+
+### Firewalls
+
+A firewall is a sophisticated filtering device that separates LAN segments, giving each segment a different security level and establishing a security perimeter that controls the traffic flow between segments. Firewalls are most commonly deployed at the Internet Edge where they act as boundary to the internal networks. They are expected to have the following characteristics:
+
+Performance: the main goal of a firewall is to separate the secured and the unsecured areas of a network. Firewalls are then post in the primary traffic path potentially exposed to large volumes of data. Hence, performance becomes a natural design factor to ensure that the firewall meets the particular requirements.
+
+Application support: Another important aspect is the ability of a firewall to control and protect a particular application or protocol, such as Telnet, FTP, and HTTP. The firewall is expected to understand application-level packet exchanges to determine whether packets do follow the application behavior and, if they do not, do deny the traffic.
+
+There are different types of firewalls based on their packet-processing capabilities and their awareness of application-level information:
+
+1. Packet-filtering firewalls
+2. Proxy firewalls
+3. Stateful firewalls
+4. Hybrid firewalls
+
+### IDSs
+
+IDSs are real-time systems that can detect intruders and suspicious activities and report them to a monitoring system. They are configured to block or mitigate intrusions in progress and eventually immunize the systems from future attacks. They have two fundamental components:
+
+* Sensors: Appliances and software agents that analyze the traffic on the network or the resource usage on end systems to identify intrusions and suspicious activities.
+* IDS management: Single- or multi-device system used to configure and administer sensors and to additionally collect all the alarm information generated by the sensors. The sensors are equivalent to surveillance tools, and IDS management is the control center watching the information produced by the surveillance tools.
+
+## Layer 2 security
+
+Cisco Layer 2 switches provide tools to prevent the common Layer 2 attacks (Scanning or Probing, DoS, DDoS, etc.). The following are some security features covered by the **Layer 2 Security**:
+
+* Port Security
+* ARP Inspection
+* Private VLANs
+* Private VLANs and Firewalls
+
+## Security measures
+
+The process of securing a data center requires both a comprehensive system-analysis approach and an ongoing process that improves the security levels as the Data Center evolves. The data center is constantly evolving as new applications or services become available. Attacks are becoming more sophisticated and more frequent. These trends require a steady evaluation of security readiness.
+
+A key component of the security-readiness evaluation is the policies that govern the application of security in the network including the data center. The application includes both the design best practices and the implementation details. As a result, security is often considered as a key component of the main infrastructure requirement. Since a key responsibility of the data centers is to make sure of the availability of the services, data center management systems often consider how its security affects traffic flows, failures, and scalability. Due to the fact that security measures may vary depending on the data center design, the use of unique features, compliance requirements or the company's business goals, there is no set of specific measures that cover all possible scenarios.
+
+There exist in general two types of data center security: physical security and virtual security.
+
+
+### Physical security
+
+The physical security of a data center is the set of protocol built-in within the data center facilities in order to prevent any physical damage to the machines storing the data. Those protocols should be able to handle everything ranging from natural disasters to corporate espionage to terrorist attacks.
+
+To prevent physical attacks, data centers use techniques such as:
+
+* CCTV security network: locations and access points with 90-day video retention.
+* 24×7
+ + on-site security guards,
+ + Network operations center (NOC) Services and technical team
+* Anti-tailgating/Anti-pass-back turnstile gate. Only permits one person to pass through after authentication.
+* Single entry point into co-location facility.
+* Minimization of traffic through dedicated data halls, suites, and cages.
+* Further access restriction to private cages
+* Three-factor authentication
+* SSAE 16 compliant facilities.
+* Checking the provenance and design of hardware in use
+* Reducing insider risk by monitoring activities and keeping their credentials safe
+* Monitoring of temperature and humidity
+* Fire prevention with zoned dry-pipe sprinkler
+* Natural disaster risk-free locations
+
+### Virtual security
+
+Virtual security is security measures put in place by the data centers to prevent remote unauthorized access that will affect the integrity, availability or confidentiality of data stored on servers.
+
+Virtual or network security is a hard task to handle as there exist many ways it could be attacked. The worst part of it is that it is evolving years after years. For instance, an attacker could decide to use a malware (or similar exploits) in order to bypass the various firewalls to access the data. Old systems may as well put security at risk as they do not contain modern methods of data security.
+
+Virtual attacks can be prevented with techniques such as
+
+* Heavy data encryption during transfer or not: 256-bit SSL encryption for web applications.1024-bit RSA public keys for data transfers. AES 256-bit encryption for files and databases.
+* Logs auditing activities of all users.
+* Secured usernames and passwords: Encrypted via 256-bit SSL, requirements for complex passwords, set up of scheduled expirations, prevention of password reuse.
+* Access based on the level of clearance.
+* AD/LDAP integration.
+* Control based on IP addresses.
+* Encryption of session ID cookies in order to identify each unique user.
+* Two-factor authentication availability.
+* Third party penetration testing performed annually
+* Malware prevention through firewalls and automated scanner
+
+### Company security
+
+Some possible strategies on how to upgrade data security in a company:
+
+1. Determine the risks. Find all the tools that may store the data such as computers and databases, and make sure everything is stored in a compliant manner.
+2. Review current data security systems. Check for any updates in the current data security system if there are one. Sometimes, the stale data should be removed and it is also helpful to have cleanup software installed to help the company delete the unused or unneeded data.
+3. Gather a data security team. Build a professional internal security team that can help the company to secure its data and save money on hiring other security teams. The security team must have a recovery plan just in case something unexpected may happen.
+4. Update data security approach. Make sure only the authorized people can access the system. Encryption software is needed because it can protect the data from people who decrypt the system. If the proper key was not provided, the software can make the data seem useless to other people. Data masking software is another software that is helpful since it can hide some sensitive information from being seen. The last software is risk assessment software, which is a tool that helps users to monitor and check their network securities.

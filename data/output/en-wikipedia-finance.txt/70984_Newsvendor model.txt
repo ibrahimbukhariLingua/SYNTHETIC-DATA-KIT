@@ -1,0 +1,127 @@
+Newsvendor model
+
+
+# Newsvendor model
+
+
+
+The **newsvendor** (or **newsboy** or **single-period** or **salvageable**) **model** is a mathematical model in operations management and applied economics used to determine optimal inventory levels. It is (typically) characterized by fixed prices and uncertain demand for a perishable product. If the inventory level is {\displaystyle q}, each unit of demand above {\displaystyle q} is lost in potential sales. This model is also known as the *newsvendor problem* or *newsboy problem* by analogy with the situation faced by a newspaper vendor who must decide how many copies of the day's paper to stock in the face of uncertain demand and knowing that unsold copies will be worthless at the end of the day.
+
+
+## History
+
+The mathematical problem appears to date from 1888 where Edgeworth used the central limit theorem to determine the optimal cash reserves to satisfy random withdrawals from depositors.
+According to Chen, Cheng, Choi and Wang (2016), the term "newsboy" was first mentioned in an example of the Morse and Kimball (1951)'s book. The problem was termed the "Christmas tree problem" and "newsboy problem" in the 1960s and 1970s, and beginning in the 1980s gender neutral vocabulary like "newsperson" began to be used. According to Evan Porteus, Matt Sobel coined the term "newsvendor problem".
+
+The modern formulation relates to a paper in *Econometrica* by Kenneth Arrow, T. Harris, and Jacob Marshak.
+
+More recent research on the classic newsvendor problem in particular focused on behavioral aspects: when trying to solve the problem in messy real-world contexts, to what extent do decision makers systematically vary from the optimum? Experimental and empirical research has shown that decision makers tend to be biased towards ordering too close to the expected demand (pull-to-center effect) and too close to the realisation from the previous period (demand chasing).
+
+
+## Overview
+
+This model can also be applied to period review systems.
+
+
+### Assumptions
+
+1. Products are separable
+2. Planning is done for a single period
+3. Demand is random
+4. Deliveries are made in advance of demand
+5. Costs of overage or underage are linear
+
+### Profit function and the critical fractile formula
+
+The standard newsvendor profit function is
+
+where {\displaystyle D} is a random variable with probability distribution {\displaystyle F} representing demand, each unit is sold for price {\displaystyle p} and purchased for price {\displaystyle c}, {\displaystyle q} is the number of units stocked, and {\displaystyle E} is the expectation operator. The solution to the optimal stocking quantity of the newsvendor which maximizes expected profit is:
+
+where {\displaystyle F^{-1}} denotes the generalized inverse cumulative distribution function of {\displaystyle D}.
+
+Intuitively, this ratio, referred to as the **critical fractile**, balances the cost of being understocked (a lost sale worth {\displaystyle (p-c)}) and the total costs of being either overstocked or understocked (where the cost of being overstocked is the inventory cost, or {\displaystyle c} so total cost is simply {\displaystyle p}).
+
+The critical fractile formula is known as Littlewood's rule in the yield management literature.
+
+
+#### Numerical examples
+
+In the following cases, assume that the retail price, {\displaystyle p}, is $7 per unit and the purchase price is {\displaystyle c}, is $5 per unit. This gives a critical fractile of {\displaystyle {\frac {p-c}{p}}={\frac {7-5}{7}}={\frac {2}{7}}}
+
+
+##### Uniform distribution
+
+Let demand, {\displaystyle D}, follow a uniform distribution (continuous) between {\displaystyle D\_{\min }=50} and {\displaystyle D\_{\max }=80}.
+
+Therefore, the optimal inventory level is approximately 59 units.
+
+
+##### Normal distribution
+
+Let demand, {\displaystyle D}, follow a normal distribution with a mean, {\displaystyle \mu }, demand of 50 and a standard deviation, {\displaystyle \sigma }, of 20.
+
+Therefore, optimal inventory level is approximately 39 units.
+
+
+##### Lognormal distribution
+
+Let demand, {\displaystyle D}, follow a lognormal distribution with a mean demand of 50, {\displaystyle \mu }, and a standard deviation, {\displaystyle \sigma }, of 0.2.
+
+Therefore, optimal inventory level is approximately 45 units.
+
+
+##### Extreme situation
+
+If {\displaystyle p<c} (i.e. the retail price is less than the purchase price), the numerator becomes negative. In this situation, the optimal purchase quantity is zero to avoid a marginal loss.
+
+
+### Derivation of optimal inventory level
+
+
+#### Critical fractile formula
+
+To derive the critical fractile formula, start with {\displaystyle \operatorname {E} \left[{\min\{q,D\}}\right]} and condition on the event {\displaystyle D\leq q}:
+
+Now use
+
+where {\displaystyle f(x)=F'(x)}. The denominator of this expression is {\displaystyle F(q)}, so now we can write:
+
+So {\displaystyle \operatorname {E} [{\text{profit}}]=p\int \limits \_{x\leq q}xf(x)\,dx+pq[1-F(q)]-cq}
+
+Take the derivative with respect to {\displaystyle q}:
+
+Now optimize: {\displaystyle p\left[1-F(q^{\*})\right]-c=0\Rightarrow 1-F(q^{\*})={\frac {c}{p}}\Rightarrow F(q^{\*})={\frac {p-c}{p}}\Rightarrow q^{\*}=F^{-1}\left({\frac {p-c}{p}}\right)}
+
+Technically, we should also check for convexity: {\displaystyle {\frac {\partial ^{2}}{\partial q^{2}}}\operatorname {E} [{\text{profit}}]=p[-F'(q)]}
+
+Since {\displaystyle F} is monotone non-decreasing, this second derivative is always non-positive, so the critical point determined above is a global maximum.
+
+
+#### Alternative formulation
+
+The problem above is cast as one of maximizing profit, although it can be cast slightly differently, with the same result. If the demand D exceeds the provided quantity q, then an opportunity cost of {\displaystyle (D-q)(p-c)} represents lost revenue not realized because of a shortage of inventory. On the other hand, if {\displaystyle D\leq q}, then (because the items being sold are perishable), there is an overage cost of {\displaystyle (q-D)c}. This problem can also be posed as one of minimizing the expectation of the sum of the opportunity cost and the overage cost, keeping in mind that only one of these is ever incurred for any particular realization of {\displaystyle D}. The derivation of this is as follows:
+
+The derivative of this expression, with respect to {\displaystyle q}, is
+
+This is obviously the negative of the derivative arrived at above, and this is a minimization instead of a maximization formulation, so the critical point will be the same.
+
+
+#### Cost based optimization of inventory level
+
+Assume that the 'newsvendor' is in fact a small company that wants to produce goods to an uncertain market. In this more general situation the cost function of the newsvendor (company) can be formulated in the following manner:
+
+where the individual parameters are the following:
+
+* {\displaystyle c\_{f}} – fixed cost. This cost always exists when the production of a series is started. [$/production]
+* {\displaystyle c\_{v}} – variable cost. This cost type expresses the production cost of one product. [$/product]
+* {\displaystyle q} – the product quantity in the inventory. The decision of the inventory control policy concerns the product quantity in the inventory after the product decision. This parameter includes the initial inventory as well. If nothing is produced, then this quantity is equal to the initial quantity, i.e. concerning the existing inventory.
+* {\displaystyle x} – initial inventory level. We assume that the supplier possesses {\displaystyle x} products in the inventory at the beginning of the demand of the delivery period.
+* {\displaystyle p} – penalty cost (or back order cost). If there is less raw material in the inventory than needed to satisfy the demands, this is the penalty cost of the unsatisfied orders. [$/product]
+* {\displaystyle D} – a random variable with cumulative distribution function {\displaystyle F} representing uncertain customer demand. [unit]
+* {\displaystyle E[D]} – expected value of random variable {\displaystyle D}.
+* {\displaystyle h} – inventory and stock holding cost. [$ / product]
+
+In {\displaystyle K(q)}, the *first order loss function* {\displaystyle E\left[\max(D-q,0)\right]} captures the expected shortage quantity; its complement, {\displaystyle E\left[\max(q-D,0)\right]}, denotes the expected product quantity in stock at the end of the period.
+
+On the basis of this cost function the determination of the optimal inventory level is a minimization problem. So in the long run the amount of cost-optimal end-product can be calculated on the basis of the following relation:
+

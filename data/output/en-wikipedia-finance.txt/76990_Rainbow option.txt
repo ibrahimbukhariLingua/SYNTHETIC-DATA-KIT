@@ -1,0 +1,57 @@
+Rainbow option
+
+
+# Rainbow option
+
+
+
+**Rainbow option** is a derivative exposed to two or more sources of uncertainty, as opposed to a simple option that is exposed to one source of uncertainty, such as the price of underlying asset.
+
+The name of *rainbow* comes from Rubinstein (1991), who emphasises that this option was based on a combination of various assets like a rainbow is a combination of various colors. More generally, rainbow options are multiasset options, also referred to as correlation options, or basket options. Rainbow can take various other forms but the combining idea is to have a payoff that is depending on the assets sorted by their performance at maturity. When the rainbow only pays the best (or worst) performing asset of the basket, it is also called *best-of* (or *worst-of*). Other popular options that can be reformulated as a rainbow option are spread and exchange options.
+
+
+## Overview
+
+Rainbow options are usually calls or puts on the best or worst of *n* underlying assets. Like the basket option, which is written on a group of assets and pays out on a weighted-average gain on the basket as a whole, a rainbow option also considers a group of assets, but usually pays out on the level of one of them.
+
+A simple example is a call rainbow option written on FTSE 100, Nikkei and S&P 500 which will pay out the difference between the strike price and the level of the index that has risen by the largest amount of the three.
+
+Another example is an option that includes more than one strike on more than one underlying asset with a payoff equivalent to largest in-the-money portion of any of the strike prices.
+
+Alternatively, in a more complex scenario, the assets are sorted by their performance at maturity, for instance, a rainbow call with weights 50%, 30%, 20%, with a basket including FTSE 100, Nikkei and S&P 500 pays 50% of the best return (at maturity) between the three indices, 30% of the second best and 20% of the third best.
+
+The options are often considered a correlation trade since the value of the option is sensitive to the correlation between the various basket components.
+
+Rainbow options are used, for example, to value natural resources deposits. Such assets are exposed to two uncertainties—price and quantity.
+
+Some simple options can be transformed into more complex instruments if the underlying risk model that the option reflected does not match a future reality. In particular, derivatives in the currency and mortgage markets have been subject to liquidity risk that was not reflected in the pricing of the option when sold.
+
+
+## Payoff
+
+Rainbow options refer to all options whose payoff depends on more than one underlying risky asset; each asset is referred to as a color of the rainbow.
+
+Examples of these include:
+
+* *Best of assets or cash* option, delivering the maximum of two risky assets and cash at expiry
+* *Call on max* option, giving the holder the right to purchase the maximum asset at the strike price at expiry
+* *Call on min* option, giving the holder the right to purchase the minimum asset at the strike price at expiry
+* *Put on max* option, giving the holder the right to sell the maximum of the risky assets at the strike price at expiry
+* *Put on min* option, giving the holder the right to sell the minimum of the risky assets at the strike at expiry
+* *Put 2 and call 1*, an exchange option to put a predefined risky asset and call the other risky asset. Thus, asset 1 is called with the 'strike' being asset 2.
+
+Thus, the payoffs at expiry for rainbow European options are:
+
+* Best of assets or cash: {\displaystyle \max(S\_{1},S\_{2},...,S\_{n},K)}
+* Call on max: {\displaystyle \max(\max(S\_{1},S\_{2},...,S\_{n})-K,0)}
+* Call on min: {\displaystyle \max(\min(S\_{1},S\_{2},...,S\_{n})-K,0)}
+* Put on max: {\displaystyle \max(K-\max(S\_{1},S\_{2},...,S\_{n}),0)}
+* Put on min: {\displaystyle \max(K-\min(S\_{1},S\_{2},...,S\_{n}),0)}
+* Put 2 and Call 1: {\displaystyle \max(S\_{1}-S\_{2},0)}
+
+## Pricing and valuation
+
+Rainbow options are usually priced using an appropriate industry-standard model (such as Black–Scholes) for each individual basket component, and a matrix of correlation coefficients applied to the underlying stochastic drivers for the various models.
+
+While there are some closed-form solutions for simpler cases (e.g. two-color European rainbows), semi-analytic solutions, and analytical approximations, the general case must be approached with Monte Carlo or binomial lattice methods. For bibliography see Lyden (1996).
+

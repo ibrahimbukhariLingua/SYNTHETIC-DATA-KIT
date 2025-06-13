@@ -1,0 +1,95 @@
+VIX
+
+
+# VIX
+
+
+
+**VIX** is the ticker symbol and the popular name for the Chicago Board Options Exchange's **CBOE Volatility Index**, a popular measure of the stock market's expectation of volatility based on S&P 500 index options. It is calculated and disseminated on a real-time basis by the CBOE, and is often referred to as the *fear index* or *fear gauge.*
+
+The VIX traces its origin to the financial economics research of Menachem Brenner and Dan Galai. In a series of papers beginning in 1989, Brenner and Galai proposed the creation of a series of volatility indices, beginning with an index on stock market volatility, and moving to interest rate and foreign exchange rate volatility.
+
+In their papers, Brenner and Galai proposed, "[the] volatility index, to be named 'Sigma Index', would be updated frequently and used as the underlying asset for futures and options. ... A volatility index would play the same role as the market index plays for options and futures on the index." In 1992, the CBOE hired consultant Bob Whaley to calculate values for stock market volatility based on this theoretical work.
+
+The resulting VIX index formulation provides a measure of market volatility on which expectations of further stock market volatility in the near future might be based. The current VIX index value quotes the expected annualized change in the S&P 500 index over the following 30 days, as computed from options-based theory and current options-market data.
+
+To summarize, VIX is a volatility index derived from S&P 500 options for the 30 days following the measurement date, with the price of each option representing the market's expectation of 30-day forward-looking volatility. The resulting VIX index formulation provides a measure of expected market volatility on which expectations of further stock market volatility in the near future might be based.
+
+Like conventional indexes, the VIX Index calculation employs rules for selecting component options and a formula to calculate index values. Unlike other market products, VIX cannot be bought or sold directly. Instead, VIX is traded and exchanged via derivative contract, derived ETFs, and ETNs which most commonly track VIX futures indexes.
+
+In addition to VIX, CBOE uses the same methodology to compute the following related products:
+
+* CBOE ShortTerm Volatility Index (VIX9DSM), which reflects 9-day expected volatility of the S&P 500 Index
+* CBOE S&P 500 3-Month Volatility Index (VIX3MSM)
+* CBOE S&P 500 6-Month Volatility Index (VIX6MSM)
+* CBOE S&P 500 1-Year Volatility Index (VIX1YSM)
+* CBOE 1-Day Volatility Index (VIX1D)
+
+CBOE also calculates the Nasdaq-100 Volatility Index (VXNSM), CBOE DJIA Volatility Index (VXDSM) and the CBOE Russell 2000 Volatility Index (RVXSM). There is even a VIX on VIX (VVIX) which is a volatility of volatility measure in that it represents the expected volatility of the 30-day forward price of the CBOE Volatility Index (the VIX).
+
+
+## Specifications
+
+The concept of computing implied volatility or an implied volatility index dates to the publication of the Black and Scholes' 1973 paper, "The Pricing of Options and Corporate Liabilities," published in the *Journal of Political Economy,* which introduced the seminal Black–Scholes model for valuing options. Just as a bond's implied yield to maturity can be computed by equating a bond's market price to its valuation formula, an option-implied volatility of a financial or physical asset can be computed by equating the asset option's market price to its valuation formula. In the case of VIX, the option prices used are the S&P 500 index option prices.
+
+The VIX takes as inputs the market prices of the call and put options on the S&P 500 index for near-term options with more than 23 days until expiration, next-term options with less than 37 days until expiration, and risk-free U.S. treasury bill interest rates. Options are ignored if their bid prices are zero or where their strike prices are outside the level where two consecutive bid prices are zero.ᵖᵃᵍᵉⁿᵉᵉᵈᵉᵈ The goal is to estimate the implied volatility of S&P 500 index options at an average expiration of 30 days.
+
+Given that it is possible to create a hedging position equivalent to a variance swap using only vanilla puts and calls (also called "static replication"), the VIX can also be seen as the square root of the implied volatility of a variance swap – and not that of a volatility swap, volatility being the square root of variance, or standard deviation.
+
+The VIX is the square root of the risk-neutral expectation of the S&P 500 variance over the next 30 calendar days and is quoted as an annualized standard deviation.
+
+The VIX is calculated and disseminated in real-time by the Chicago Board Options Exchange.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ On March 26, 2004, trading in futures on the VIX began on CBOE Futures Exchange (CFE).
+
+On February 24, 2006, it became possible to trade options on the VIX. Several exchange-traded funds hold mixtures of VIX futures that attempt to enable stock-like trading in those futures. The correlation between these ETFs and the actual VIX index is very poor, especially when the VIX is moving.
+
+
+## VIX Formula
+
+The VIX is the 30-day expected volatility of the SP500 index, more precisely the square root of a 30-day expected realized variance of the index. It is calculated as a weighted average of out-of-the-money call and put options on the S&P 500:
+
+{\displaystyle VIX={\sqrt {{\frac {2e^{r\,\!\tau }}{\tau }}\left(\int \_{0}^{F}{\frac {P(K)}{K^{2}}}dK+\int \_{F}^{\infty }{\frac {C(K)}{K^{2}}}dK\right)}}}
+
+where {\displaystyle {\tau }} is the number of average days in a month (30 days), {\displaystyle r} is the risk-free rate, {\displaystyle F} is the 30-day forward price on the S&P 500, and {\displaystyle P(K)} and {\displaystyle C(K)} are prices for puts and calls with strike {\displaystyle K} and 30 days to maturity.
+
+
+## History
+
+The following is a timeline of key events in the history of the VIX Index:ᵃᶜᶜᵒʳᵈⁱⁿᵍ ᵗᵒ ʷʰᵒᵐ?
+
+* 1987 – The Sigma Index was introduced in an academic paper by Brenner and Galai, published in Financial Analysts Journal, July/August 1989. Brenner and Galai wrote, "Our volatility index, to be named Sigma Index, would be updated frequently and used as the underlying asset for futures and options... A volatility index would play the same role as the market index play for options and futures on the index."
+* 1989 – Brenner and Galai's paper is published in Financial Analysts Journal. Brenner and Galai develop their research further in graduate symposia at The Hebrew University of Jerusalemᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ and at the Leonard M. Stern School of Business at New York University.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+* 1992 – The American Stock Exchange announced it is conducting a feasibility study on a volatility index, proposed as the "Sigma Index."
+* 1993 – On January 19, 1993, the Chicago Board Options Exchange held a press conference to announce the launch of real-time reporting of the CBOE Market Volatility Index or VIX. The formula that determines the VIX is tailored to the CBOE S&P 100 Index (OEX) option prices, and was developed by Professor Robert E. Whaley of Duke University (now at Vanderbilt University), whom the CBOE had commissioned. This index, now known as the VXO, is a measure of implied volatility calculated using 30-day S&P 100 index at-the-money options.
+* 1993 – Professors Brenner and Galai develop their 1989 proposal for a series of volatility index in their paper, "Hedging Volatility in Foreign Currencies," published in The Journal of Derivatives in the fall of 1993.ᶠᵘˡˡ ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+* 2003 – The CBOE introduces a new methodology for the VIX. Working with Goldman Sachs, the CBOE developed further computational methodologies, and changed the underlying index the CBOE S&P 100 Index (OEX) to the CBOE S&P 500 Index (SPX). The old methodology was renamed the VXO.ᵛᵉʳⁱᶠⁱᶜᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+* 2004 – On March 26, 2004, the first-ever trading in futures on the VIX Index began on the CBOE Futures Exchange (CFE). VIX is now proposedᶜˡᵃʳⁱᶠⁱᶜᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ on different trading platforms, like XTB.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+* 2006 – VIX options were launched in February of this year.
+* 2008 – On October 24, 2008, the VIX reached an intraday high of 89.53.
+* 2008 – On November 21, 2008, the VIX closed at a record 80.74.
+* 2018 – On February 5, 2018, the VIX closed 37.32 (up 103.99% from previous close).
+* 2020 – On March 9, 2020, the VIX hit 62.12, the highest level since the 2008 financial crisis due to a combination of the 2020 Russia–Saudi Arabia oil price war and the COVID-19 pandemic.
+* 2020 – During the COVID-19 pandemic, on March 12, 2020, the VIX hit and closed at 75.47, exceeding the previous Black Monday value, as a travel ban to the US from Europe was announced by President Trump.
+* 2020 – On March 16, the VIX closed at 82.69, the highest level since its inception in 1990.
+* 2021 – The U.S. Securities and Exchange Commission fined the S&P Dow Jones Indices for halting data on February 5, 2018.
+
+## Interpretation
+
+VIX is sometimes criticized as a prediction of future volatility. Instead it is described as a measure of the current price of index options.ᵃᶜᶜᵒʳᵈⁱⁿᵍ ᵗᵒ ʷʰᵒᵐ?ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+Critics claim that, despite a sophisticated formulation, the predictive power of most volatility forecasting models is similar to that of plain-vanilla measures, such as simple past volatility. However, other works have countered that these critiques failed to correctly implement the more complicated models.
+
+Some practitioners and portfolio managers have questioned the depth of our understanding of the fundamental concept of volatility, itself. For example, Daniel Goldstein and Nassim Taleb famously titled one of their research articles, *We Don't Quite Know What We are Talking About When We Talk About Volatility*. Relatedly,ᵛᵉʳⁱᶠⁱᶜᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ Emanuel Derman has expressed disillusion with empirical models that are unsupported by theory.ᶜˡᵃʳⁱᶠⁱᶜᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈᵖᵃᵍᵉⁿᵉᵉᵈᵉᵈ He argues that, while "theories are attempts to uncover the hidden principles underpinning the world around us... [we should remember that] models are metaphors—analogies that describe one thing relative to another."ᵖᵃᵍᵉⁿᵉᵉᵈᵉᵈ
+
+Michael Harris, the trader, programmer, price pattern theorist, and author, has argued that VIX just tracks the inverse of price and has no predictive power.ᵇᵉᵗᵗᵉʳˢᵒᵘʳᶜᵉⁿᵉᵉᵈᵉᵈ
+
+According to some,ʷʰᵒ? VIX should have predictive power as long as the prices computed by the Black–Scholes equation are valid assumptions about the volatility predicted for the future lead time (the remaining time to maturity).ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ Robert J. Shiller has argued that it would be circular reasoning to consider VIX to be proof of Black–Scholes, because they both express the same implied volatility, and has found that calculating VIX retrospectively in 1929 did not predict the surpassing volatility of the Great Depression—suggesting that in the case of anomalous conditions, VIX cannot even weakly predict future severe events.
+
+An academic study from the University of Texas at Austin and Ohio State University examined potential methods of VIX manipulation. On February 12, 2018, a letter was sent to the Commodity Futures Trading Commission and Securities and Exchange Commission by a law firm representing an anonymous whistleblower alleging manipulation of the VIX.
+
+
+## Volatility of volatility
+
+In 2012, the CBOE introduced the "VVIX index" (also referred to as "vol of vol"), a measure of the VIX's expected volatility. VVIX is calculated using the same methodology as VIX, except the inputs are market prices for VIX options instead of stock market options.
+
+The VIX can be thought of as the velocity of investor fear. The VVIX measures how much the VIX changes and hence can be thought of as the acceleration of investor fear.
+

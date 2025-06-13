@@ -1,0 +1,61 @@
+EIO-LCA
+
+
+# EIO-LCA
+
+
+
+An **economic input-output life-cycle assessment**, or **EIO-LCA** involves the use of aggregate sector-level data to quantify the amount of environmental impact that can be directly attributed to each sector of the economy and how much each sector purchases from other sectors in producing its output. Combining such data sets can enable accounting for long chains (for example, building an automobile requires energy, but producing energy requires vehicles, and building those vehicles requires energy, etc.), which somewhat alleviates the scoping problem of traditional life-cycle assessments. EIO-LCA analysis traces out the various economic transactions, resource requirements and environmental emissions (including all the various manufacturing, transportation, mining and related requirements) required for producing a particular product or service.
+
+EIO-LCA relies on sector-level averages that may or may not be representative of the specific subset of the sector relevant to a particular product. To the extent that the good or service of interest is representative of a sector, EIO-LCA can provide very fast estimates of full supply chain implications for that good or service.
+
+
+## Background
+
+Economic input-output analysis was developed by the Nobel Prize-winning economist Wassily Leontief. It quantifies the interrelationships among sectors of an economic system, enabling identification of direct and indirect economic inputs of purchases. This concept was extended by including data about environmental and energy analysis from each sector to account for supply chain environmental implications of economic activity.
+
+
+## Theory
+
+Input-output transactions tables, which track flows of purchases between sectors, are collected by the federal government in the United States. EIO works as follows: If {\displaystyle X\_{ij}} represents the amount that sector {\displaystyle j} purchased from sector {\displaystyle i} in a given year and {\displaystyle y\_{i}} is the "final demand" for output from sector {\displaystyle i} (i.e., the amount of output purchased for consumption, as opposed to purchased by other businesses as supplies for more production), then the total output {\displaystyle x\_{i}} from sector {\displaystyle i} includes output to consumers plus output sold to other sectors:
+
+{\displaystyle x\_{i}=y\_{i}+\sum \_{j}X\_{ij}}
+
+If we define {\displaystyle A\_{ij}} as the normalized production for each sector, so that {\displaystyle A\_{ij}=X\_{ij}/x\_{j}}, then
+
+{\displaystyle x\_{i}=y\_{i}+\sum \_{j}A\_{ij}x\_{j}}
+
+In vector notation
+
+{\displaystyle \mathbf {x} =\mathbf {y} +\mathbf {Ax} }
+
+{\displaystyle \mathbf {y} =(\mathbf {I-A} )\mathbf {x} }
+
+{\displaystyle \mathbf {x} =(\mathbf {I-A} )^{-1}\mathbf {y} }
+
+This result indicates that knowing only the final demand from each sector {\displaystyle \mathbf {y} } and the normalized IO matrix {\displaystyle \mathbf {A} }, one can calculate the total implied production {\displaystyle \mathbf {x} } from each sector of the economy. If data are available on a particular emissions release (or other attribute of interest) from each sector of the economy, then a matrix {\displaystyle \mathbf {R} } can be compiled to represent various releases (columns) per $ output from each sector (rows). Total additional emissions {\displaystyle \Delta \mathbf {b} } associated with additional final demand of {\displaystyle \Delta \mathbf {y} } can then be calculated as:
+
+{\displaystyle \Delta \mathbf {b} =\mathbf {R} ^{T}\Delta \mathbf {x} =\mathbf {R} ^{T}(\mathbf {I-A} )^{-1}\Delta \mathbf {y} }
+
+This simple result enables very quick analysis, taking into account releases associated with the entire supply chain requirements needed to provide a specific final demand, on average. The equations are based on average data in the current economy, but they can be used to make predictions for marginal changes in output (such as one more unit of a particular product) if
+
+1. average output and marginal output are assumed to be sufficiently close (i.e., the impact of *one more unit* = the impact of *the average unit*), and
+2. the marginal change in final output {\displaystyle \Delta \mathbf {y} } is representative of the product of interest (ex: if the product will use electricity from wind energy exclusively, then using the electricity sector, which is dominated by coal, would yield a poor estimate).
+
+Finally, if the researcher has estimates for valuation of externality costs associated with each item in {\displaystyle \mathbf {b} } (or, alternatively, if weighting coefficients are available that represent the relative importance of each item in {\displaystyle \mathbf {b} }, using ecological indicators, for example) then the externality costs (or weights) per unit of releases could be compiled into a vector {\displaystyle \mathbf {m} } in order to calculate the scalar "environmental impact metric" {\displaystyle m}:
+
+{\displaystyle \Delta m=\mathbf {m} ^{T}\Delta \mathbf {b} =\mathbf {m} ^{T}\mathbf {R} ^{T}\Delta \mathbf {x} =\mathbf {m} ^{T}\mathbf {R} ^{T}(\mathbf {I-A} )^{-1}\Delta \mathbf {y} }
+
+Generally there is wide uncertainty associated with estimates of {\displaystyle \mathbf {m} }, so such aggregation should be done only with care, including sensitivity analysis. Typically, researchers examine specific elements of {\displaystyle \mathbf {b} } rather than attempting to aggregate.
+
+The big picture result is that by collecting data on average economic sector transactions {\displaystyle \mathbf {A} } and average sector emissions {\displaystyle \mathbf {R} }, it is possible to make quick predictions about the full supply chain emissions associated with a product of interest by representing the product as marginal changes in production from relevant sectors {\displaystyle \mathbf {y} }.
+
+
+## Software
+
+Researchers at the Green Design Institute of Carnegie Mellon University began developing a web-based tool for performing an EIO-LCA in the 1990s. The underlying software traces out the various economic transactions, resource requirements and environmental emissions associated with the production of a particular product or service. The model captures all the various manufacturing, transportation, mining and related requirements to produce a product or service. For example, one might wish to trace out the implications of purchasing $ 46,000 of reinforcing steel and $ 104,000 of concrete for a kilometer of roadway pavement. Environmental implications of these purchases can be estimated using EIO-LCA. The current (2002) model is based upon the Department of Commerce's 428 sector industry input-output model of the US economy.
+
+In 2018, VitalMetrics Group, an environmental consultancy, developed a web-based Spend Analysis Tool for quantifying the environmental impacts associated with an organization’s entire upstream supply chain. It is compliant with the approach for quantifying spend-based impacts defined in the Greenhouse Gas Protocol Corporate Value Chain Accounting and Reporting Standard. The tool utilizes the Comprehensive Environmental Data Archive (CEDA), a peer-reviewed EIO-LCA database with a base year of 2014. CEDA represents 389 industrial sectors, the commodities and the linkages between them, and over 2,700 environmental exchanges arising from them, including extraction of various natural resources, water consumption, land use, and emissions to air, water and soil.
+
+*This article uses text from Design Decisions Wiki under the GFDL.*
+

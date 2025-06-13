@@ -1,0 +1,81 @@
+Technical debt
+
+
+# Technical debt
+
+
+
+In software development and other information technology fields, **technical debt** (also known as **design debt** or **code debt**) refers to the implied cost of additional work in the future resulting from choosing an expedient solution over a more robust one. While technical debt can accelerate development in the short term, it may increase future costs and complexity if left unresolved.
+
+Analogous to monetary debt, technical debt can accumulate "interest" over time, making future changes more difficult and costly. Properly managing this debt is essential for maintaining software quality and long-term sustainability. In some cases, taking on technical debt can be a strategic choice to meet immediate goals, such as delivering a proof-of-concept or a quick release. However, failure to prioritize and address the debt can result in reduced maintainability, increased development costs, and risks to production systems.
+
+Technical debt encompasses various design and implementation decisions that may optimize for the short term at the expense of future adaptability and maintainability. It has been defined as "a collection of design or implementation constructs that make future changes more costly or impossible," primarily impacting internal system qualities such as maintainability and evolvability.
+
+
+## Origins
+
+The concept of “technical debt” was first coined by Ward Cunningham in 1992. After reading Metaphors We Live By, Ward devised this "debt metaphor" to explain to his boss the need to refactor the financial product they were working on. He wrote that:
+
+> "Shipping first time code is like going into debt. A little debt speeds development so long as it is paid back promptly with a rewrite... The danger occurs when the debt is not repaid. Every minute spent on not-quite-right code counts as interest on that debt. Entire engineering organizations can be brought to a stand-still under the debt load of an unconsolidated implementation, object-oriented or otherwise."
+> 
+> — Ward Cunningham
+
+Similar concepts had existed before this. In 1980, Manny Lehman had published a similar law using an "architectural metaphor" for the deteriorating nature of software. *Manny's Law* states that:
+
+> "As an evolving program is continually changed, its complexity, reflecting deteriorating structure, increases unless work is done to maintain or reduce it."
+> 
+> — Meir Manny Lehman
+
+It's important to understand that software architecture has been contrasted with civil engineering since the 1960s.
+
+
+## Causes
+
+The most common causes of technical debt tends to be:
+
+1. **Business pressures and planning:** includes pressures to release sooner, last-minute specification changes, and changes that are insufficiently documented or tested.⁴²²
+
+2. **Knowledge and skill gaps:** refer to a lack of process understanding, insufficient knowledge, poor technological leadership, and inadequate mentoring or knowledge sharing practices.¹⁷
+
+3. **Development process issues:** include sub-optimal solutions, insufficient requirements (from process inefficiencies), conflicting requirements on parallel branches, deferred refactoring, and delaying upstream contributions.²⁹
+
+4. **Lack of best practices:** covers insufficient software documentation, poor collaboration practices, lack of ownership, rewrites for outsourced software, inadequate attention to code quality, tightly coupled components, lack of a test suite, and lack of alignment to standards (including ignoring industry standard frameworks).⁷
+
+
+## Consequences
+
+The main risks and consequences of technical debt tend to be:
+
+1. **Maintenance burden and timeline risks:** Technical debt increases the cost of ongoing maintenance, making it harder to predict release schedules. "Interest payments" result from incomplete work and escalating integration costs due to changes in the upstream project. As uncompleted work grows, it becomes increasingly difficult to estimate effort, leading to missed deadlines and delays.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+2. **Production risks and long-term cost:** Carrying technical debt into production increases the risk of outages, financial losses, and potential legal issues due to breached service-level agreements (SLA). Future refactoring becomes riskier and costlier, with modifications to production code introducing greater chances of disruption.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+3. **Development slowdown and workforce impact:** Failing to address technical debt leads to declining productivity and slower feature delivery. As complexity grows, it becomes difficult to accurately estimate work, causing project delays. This also increases stress on engineering teams, which can result in higher staff turnover, compounding the problem.
+
+4. **System design and user experience:** The cumulative effects of technical debt result in increasingly fragile systems, making bold improvements difficult. Incremental changes dominate, and critical refactoring is delayed. This leads to stressed systems with inconsistent design, causing users to suffer from degraded performance and limited functionality, while developers struggle to maintain quality.
+
+
+## Debt Planning
+
+Kenny Rubin uses the following categories to help manage technical debt:
+
+* Happened-upon technical debt—debt that the development team was unaware existed until it was exposed during the normal course of performing work on the product. For example, the team is adding a new feature to the product and in doing so it realizes that a work-around had been built into the code years before by someone who has long since departed.
+* Known technical debt—debt that is known to the development team and has been made visible using one of many approaches.
+* Targeted technical debt—debt that is known and has been targeted for servicing by the development team.
+
+## Limitations
+
+The concept of technical debt assumes that an expedient design saves present costs at the expense of higher future costs. While often valid, this premise relies on key assumptions that may not always hold:
+
+* **Product longevity** – The product must survive long enough for the deferred work to matter.
+* **Design relevance** – Future events or advancements may render both the expedient and "long-term" designs obsolete.
+* **Future rework costs** – New tools and techniques might reduce the cost of future rework, challenging current debt assumptions.
+
+Given the uncertainty of the future, what appears to be technical debt today may ultimately prove to be a savings. Furthermore, traditional calculations of technical debt tend to focus only on development time, overlooking broader costs such as:
+
+* **Training and onboarding** when debt affects code readability.
+* **Licensing, tools, and infrastructure** needed to manage or resolve the debt.
+* **Opportunity costs** related to delayed features or lost market opportunities.
+
+Without accounting for these factors, technical debt assessments risk oversimplifying complex trade-offs, leading to suboptimal decisions.
+

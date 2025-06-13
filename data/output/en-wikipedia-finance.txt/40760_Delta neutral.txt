@@ -1,0 +1,39 @@
+Delta neutral
+
+
+# Delta neutral
+
+
+
+In finance, **delta neutral** describes a portfolio of related financial securities, in which the portfolio value remains unchanged when small changes occur in the value of the underlying security (having zero delta). Such a portfolio typically contains options and their corresponding underlying securities such that positive and negative delta components offset, resulting in the portfolio's value being relatively insensitive to changes in the value of the underlying security.
+
+A related term, **delta hedging**, is the process of setting or keeping a portfolio as close to delta-neutral as possible. In practice, maintaining a zero delta is very complex because there are risks associated with re-hedging on large movements in the underlying stock's price, and research indicates portfolios tend to have lower cash flows if re-hedged too frequently. Delta hedging may be accomplished by trading underlying securities of the portfolio. See Rational pricing § Delta hedging for details.
+
+
+## Mathematical interpretation
+
+Delta measures the sensitivity of the value of an option to changes in the price of the underlying stock assuming all other variables remain unchanged.
+
+Mathematically, delta is represented as partial derivative {\displaystyle {\tfrac {\partial V}{\partial S}}}
+of the option's fair value with respect to the spot price of the underlying security.
+
+Delta is a function of S, strike price, and time to expiry. Therefore, if a position is delta neutral (or, instantaneously delta-hedged) its instantaneous change in value, for an infinitesimal change in the value of the underlying security, will be zero; see Hedge (finance). Since Delta measures the exposure of a derivative to changes in the value of the underlying, a portfolio that is delta neutral is effectively hedged, in the sense that its overall value will not change for small changes in the price of its underlying instrument.
+
+
+## Techniques
+
+Options market makers, or others, may form a delta neutral portfolio using related options instead of the underlying. The portfolio's delta (assuming the same underlier) is then the sum of all the individual options' deltas. This method can also be used when the underlier is difficult to trade, for instance when an underlying stock is hard to borrow and therefore cannot be sold short.
+
+For example, in the portfolio {\displaystyle \Pi =-V+kS}, an option has the value *V*, and the stock has a value *S*. If we assume *V* is linear, then we can assume {\displaystyle S{\frac {\delta V}{\delta S}}\approx V}, therefore letting {\displaystyle k={\frac {\delta V}{\delta S}}} means that the value of {\displaystyle \Pi } is approximately *0*.
+
+
+## Theory
+
+The existence of a delta neutral portfolio was shown as part of the original proof of the Black–Scholes model, the first comprehensive model to produce correct prices for some classes of options. See Black-Scholes: Derivation.
+
+From the Taylor expansion of the value of an option, we get the change in the value of an option, {\displaystyle C(s)\,}, for a change in the value of the underlier {\displaystyle (\epsilon \,)}:
+
+For any small change in the underlier, we can ignore the second-order term and use the quantity {\displaystyle \Delta \,} to determine how much of the underlier to buy or sell to create a hedged portfolio. However, when the change in the value of the underlier is not small, the second-order term, {\displaystyle \Gamma \,}, cannot be ignored: see Convexity (finance).
+
+In practice, maintaining a delta neutral portfolio requires continuous recalculation of the position's Greeks and rebalancing of the underlier's position. Typically, this rebalancing is performed daily or weekly.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+

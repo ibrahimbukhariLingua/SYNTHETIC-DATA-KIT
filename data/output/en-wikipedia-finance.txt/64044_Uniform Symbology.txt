@@ -1,0 +1,90 @@
+Uniform Symbology
+
+
+# Uniform Symbology
+
+
+
+**Uniform Symbology** (also known as **UMTF**), in the context of European financial markets, refers to a common scheme to refer to securities ("symbols"), adopted by European markets in 2008. The original announcement reads as follows:
+
+> In order to facilitate orderly and efficient trading of securities across multiple markets, the founders of the Committee on Uniform Symbology (BATS Europe, Chi-X Europe - now Cboe Europe - and
+> NASDAQ OMX Europe) agreed to create and adopt a common securities symbology to uniformly identify securities traded across Europe. A committee was formed for the purpose of
+> which was to create, maintain and modify as necessary the uniform methodology for securities symbology (Uniform Symbology) to be applied to the securities and to develop and use the Uniform Symbology in furtherance of the committee’s aims and objectives. Since the founding of the Committee on Uniform Symbology other members have joined including: Turquoise, NYSE Euronext and QUOTE MTF.
+
+(See links to some of the market's press releases in the External links section below.)
+
+
+## Symbology Algorithm
+
+The Uniform Symbology Algorithm is designed to be human readable, fit into 6 characters, have no symbol clashes and where possible, be derivable from another, freely available code.
+
+It will consist of a stock code followed by a single, lower case letter designating the primary listing exchange.
+
+The stock code will be derived from the “local code” published by the primary exchange. These will be truncated where necessary.
+
+If the local code contains a single letter class designator of A through Z (e.g. “STE A”) then the single letter class designator shall be retained and the code will be truncated to a maximum of 4 characters, plus the single letter class (A through Z) designator. For some Nordic stocks the share designator will be prefixed with “SDB” (e.g. “SDBA”). In this case the “SDB” should be removed and the single letter class (A through Z) designator will be retained.
+
+Any codes containing spaces, periods, underscores or second words (other than the single letter class (A through Z) described above) will be truncated at the space, period, etc.
+
+All remaining non-alphanumeric characters should be removed.
+
+
+### Stock Code Truncation Examples
+
+| Local Code | Truncated Local Code | Notes |
+| --- | --- | --- |
+| VGAS SDB | VGAS | “ SDB” Removed. |
+| NDA SEK | NDA | “ SEK” Removed. |
+| MAERSK B | MAERB | “MAERSK” Truncated to “MAER”, “B” retained. |
+| ASSA B | ASSAB | “ ” removed, “B” retained. |
+| ATCO A | ATCOA | “ ” removed, “A” retained. |
+| ATCO B | ATCOB | A/B share distinction retained. |
+| BP. | BP | “.” Removed. |
+| BT.A | BT | “.A” Truncated. |
+| F&C | FC | “&” removed |
+| Y&Z B | YZB | “&” removed, “ “ removed, “B” retained |
+| TWW SDBB | TWWB | “ “ removed, “SDB” removed, “B” retained |
+
+
+### Market codes by market centre (including examples)
+
+Note that in some cases a market code suffix is shared by multiple listing markets. For example, the letter "y" is used for stocks listed on the Athens, Cyprus and Malta exchanges.
+
+| Market Centre | MIC | Market Code | Sample Local Code | Sample Uniform Symbology Code | Sample Company Name | RIC Suffix |
+| --- | --- | --- | --- | --- | --- | --- |
+| Copenhagen Stock Exchange | XCSE | c | DANSK | DANSKc | Danske Bank Ord | CO |
+| Deutsche Borse/Germany | XETR | d | EXS1 | EXS1d | iShares DAX ETF | DE |
+| Euronext Amsterdam | XAMS | a | HEIA | HEIAa | Heineken | AS |
+| Euronext Brussels | XBRU | b | INB | INBb | INBEV | BR |
+| Euronext Paris | XPAR | p | RNO | RNOp | Renault | PA |
+| Euronext Lisbon/Portugal | XLIS | u | ALTR | ALTRu | ALTRI SGPS | LS |
+| Bucharest Stock Exchange | XBSE | f | AMO | AMOf | Amonil SA |
+| Bulgaria Stock Exchange | XBUL | f | 5BT | 5BTf | Vivacom |
+| NASDAQ OMX Vilnius/Lithuania | XLIT | f | AGP1L | AGP1Lf | Alita Group AB |
+| NASDAQ OMX Riga/Latvia | XRIS | f | GRZ1R | GRZ1Rf | Grobina |
+| NASDAQ OMX Tallinn/Estonia | XTAL | f | PRF1T | PRF1Tf | Premia Foods AS |
+| Helsinki Stock Exchange | XHEL | h | NOK1V | NOK1Vh | Nokia | HE |
+| Irish Stock Exchange | XDUB | i | GNC | GNCi | Greencore Group plc | I |
+| Johannesburg Stock Exchange | XJSE | j | AGL | AGLj | Anglo American plc | J |
+| Prague Stock Exchange | XPRA | k | BOREY | BOREY | Borealis Exploration |
+| London Stock Exchange | XLON | l | VOD | VODl | Vodafone Group Ord | L |
+| Bolsa de Madrid | XMAD | e | COL | COLe | Inmobiliaria Colonial | MC |
+| Borsa Italiana/Milan | XMIL | m | SPM | SPMm | Saipem | MI |
+| USA Securities/New York | n | QQQQ | QQQQn | Powershares QQQ |
+| Oslo Stock Exchange | XOSL | o | NHY | NHYo | Norsk Hydro | OL |
+| PLUS-SX Stock Exchange/London | XPLU | q | AFC | AFCq | Arsenal Holdings plc |
+| Reykjavik, Iceland | XICE | r | OSSR | OSSRr | Ossur Ord |
+| Stockholm Stock Exchange | XSTO | s | VOLB | VOLBs | Volvo B Ord | ST |
+| Budapest Stock Exchange | XBUD | t | OTP | OTPt | OTP Bank PLC |
+| Ljubljana Stock Exchange/Slovenia | XLJU | t | ABKN | ABKNt | Abanka Vipa DD |
+| Bratislava Stock Exchange/Slovakia | XBRA | t | 1SEA01AE | 1SEA0t | Semat AS |
+| Vienna Stock Exchange | XWBO | v | VIG | VIGv | Vienna Insurance Group | VI |
+| Warsaw Stock Exchange | XWAR | w | TPE | TPEw | TAURON PE | WA |
+| Cboe Europe | CHIX | x | IEEM | IEEMx | iShares MSCI Emerging Markets ETF | CHI |
+| Luxembourg Stock Exchange | XLUX | x | BIP | BIPx | BIP Investment Partners |
+| Athens Stock Exchange | XATH | y | INTET | INTETy | Intertech SA |
+| Cyprus Stock Exchange | XCYS | y | SEAS | SEASy | Sea Star Capital |
+| Malta Stock Exchange | XMAL | y | HSB | HSBy | HSBC Bank Malta PLC |
+| Swiss Exchange/Zurich(blue chip) | XVTX | z | UBSN | UBSNz | UBS N Ord | VX |
+| Swiss Exchange/Zurich(non-blue chip) | XSWX | z | ACIN | ACINz | Acino Holding AG | S |
+

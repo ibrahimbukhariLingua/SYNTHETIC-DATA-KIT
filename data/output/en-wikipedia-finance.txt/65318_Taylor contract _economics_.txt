@@ -1,0 +1,67 @@
+Taylor contract (economics)
+
+
+# Taylor contract (economics)
+
+
+
+The **Taylor contract** or **staggered contract** was first formulated by John B. Taylor in his two articles, in 1979 "Staggered wage setting in a macro model". and in 1980 "Aggregate Dynamics and Staggered Contracts". In its simplest form, one can think of two equal sized unions who set wages in an industry. Each period, one of the unions sets the nominal wage for two periods (i.e. it is constant over the two periods). This means that in any one period, only one of the unions (representing half of the labor in the industry) can reset its wage and react to events that have just happened. When the union sets its wage, it sets it for a known and fixed period of time (two periods). Whilst it will know what is happening in the first period when it sets the new wage, it will have to form expectations about the factors in the second period that determine the optimal wage to set. Although the model was first used to model wage setting, in new Keynesian models that followed it was also used to model price-setting by firms.
+
+The importance of the Taylor contract is that it introduces nominal rigidity into the economy. In macroeconomics if all wages and prices are perfectly flexible, then money is neutral and the classical dichotomy holds. In previous Keynesian models, such as the IS–LM model it had simply been assumed that wages and/or prices were fixed in the short-run so that money could affect GDP and employment. John Taylor saw that by introducing staggered or overlapping contracts, he could allow some wages to respond to current shocks immediately, but the fact that some were set one period ago was enough to introduce a dynamics into wages (and prices). Even if there was a one off shock to the money supply, with Taylor contracts it will set off a process of wage adjustment that will take time to react during which output (GDP) and employment can differ from the long-run equilibrium.
+
+
+## Historical importance
+
+The Taylor contract came as a response to results of new classical macroeconomics, in particular the policy-ineffectiveness proposition proposed in 1975 by Thomas J. Sargent and Neil Wallace based upon the theory of rational expectations, which posits that monetary policy cannot systematically manage the levels of output and employment in the economy and that monetary shocks can only give rise to transitory deviations of output from equilibrium. The policy-ineffectiveness proposition relied on flexible wages and prices. With the Taylor overlapping contract approach, even with rational expectations, monetary shocks can have a sustained effect on output and employment.
+
+
+## Evaluation
+
+Taylor contracts have not become the standard way of modelling nominal rigidity in new Keynesian DSGE models, which have favoured the Calvo model of nominal rigidity. The main reason for this is that Taylor models do not generate enough nominal rigidity to fit the data on the persistence of output shocks. Calvo models appear to do this with more persistence that the comparable Taylor models
+
+
+## Development of the concept
+
+The notion that contracts just last for two periods can of course be generalized to any number. For example, if you believe that wages are set for periods of one-year and you have a quarterly model, then the length of the contract will be 4 periods (4 quarters). There would then be 4 unions, each representing 25% of the market. Each period, one of the unions resets its wage for four periods: i.e. 25% or wages change in a given period. In general, if contracts last for i periods, there are i unions and 1 resets wages (prices) each period. So, if contracts last 10 periods, there are 10 unions and 1 resets every period.
+
+However, Taylor realized that in practice, there is much heterogeneity in the length of wage contract across the economy.
+
+> "There is a great deal of heterogeneity in wage and price setting. In fact, the data suggest that there is as much a difference between the average lengths of different types of price setting arrangements, or between the average lengths of different types of wage setting arrangements, as there is between wage setting and price setting. Grocery prices change much more frequently than magazine prices – frozen orange juice prices change every two weeks, while magazine prices change every three years! Wages in some industries change once per year on average, while others change per quarter and others once every two years. One might hope that a model with homogenous representative price or wage setting would be a good approximation to this more complex world, but most likely some degree of heterogeneity will be required to describe reality accurately."
+
+In his 1991 book *Macroeconomic Policy in a World Economy*, Taylor developed a model of the US economy in which there a variety of contract lengths, from 1 to 8 quarters inclusive. The approach of having several sectors with different contract lengths is known as a *Generalized Taylor Economy* and has been used in several new Keynesian studies.
+
+
+## Mathematical example
+
+We will take a simple macro model to illustrate the mechanics of the two period Taylor contract taken from Romer (2011) pp. 322–328. We express this in terms of wages, but the same algebra would apply to a Taylor model of prices. For the derivation of the Taylor model under a variety of assumptions, see the survey by Guido Ascari. The variables are expressed in log-linear form, i.e. as proportional deviations for some steady state.
+
+The economy is divided into two sectors of equal size: in each sector there are unions which set nominal wages for two periods. The sectors reset their wages in alternate periods (hence the overlapping or staggered nature of contracts). The reset wage in period t is denoted {\displaystyle x\_{t}}. Nominal prices are a markup on the wages in each sector, so that the price can be expressed as a markup on the prevailing wages: the reset wage for this period and wage in the other sector which was set in the previous period:
+
+We can define the optimal flex-wage {\displaystyle x\_{t}^{\*}}as the wage the union would like to set if it were free to reset the wage every period. This is usually assumed to take the form:
+
+where {\displaystyle Y\_{t}} is GDP and {\displaystyle \gamma >0} is a coefficient which captures the sensitivity of wages to demand. If {\displaystyle \gamma =0}, then the optimal flex wage depends only on prices and is insensitive to the level of demand (in effect, we have real rigidity). Larger values of {\displaystyle \gamma >0} indicate that the nominal wage responds to demand: more output means a higher real wage. The microfoundations for the optimal flex-wage or price can be found in Walsh (2011) chapter 5 and Woodford (2003) chapter 3.
+
+In the Taylor model, the union has to set the same nominal wage for two periods. The reset wage is thus the expected average of the optimal flex wage over the next two periods:
+
+where {\displaystyle x\_{t}E\_{t}x\_{t+1}^{\*}} is the expectation of {\displaystyle x\_{t+1}^{\*}} conditional on information at t.
+
+To close the model we need a simple model of output determination. For simplicity, we can assume the simple Quantity Theory (QT) model with a constant velocity. Letting {\displaystyle M\_{t}} be the money supply:
+
+Using the optimal flex wage equation we can substitute {\displaystyle x\_{t}^{\*}} in terms of output and price (current and expected) to give the reset wage:
+
+Using the QT equation, we can then eliminate {\displaystyle Y\_{t}} in terms of the money supply and price:
+
+Using the markup equation, we can express the price in each period in terms of the reset wages, to give us the second order stochastic difference equation in {\displaystyle x\_{t}}
+
+where {\displaystyle A={\frac {1}{2}}{\frac {1-\gamma }{1+\gamma }}}.
+
+Lastly, we need to assume something about the stochastic process driving the money supply. The simplest case to consider is a random walk:
+
+where {\displaystyle \epsilon \_{t}} is a monetary shock with mean zero mean and no serial correlation (so called white noise). In this case, the solution for the nominal reset wage can be shown to be:
+
+where {\displaystyle \lambda ^{\*}} is the stable eigenvalue:
+
+If {\displaystyle \lambda ^{\*}=1} there is perfect nominal rigidity and the reset wage this period is the same as the reset wage last period. wages and price remain fixed in both real and nominal terms. For {\displaystyle \lambda ^{\*}<1} nominal prices adjust to the new steady state. Since money follows a random walk, the monetary shock lasts forever and the new steady state price and wage are equal to {\displaystyle M\_{t}}. The wage will adjust towards the new steady state more quickly the smaller {\displaystyle \lambda ^{\*}} is. We can rewrite the above solution as:
+
+The left hand side expresses the gap between the current reset wage and the new steady-state: this is a proportion {\displaystyle \lambda ^{\*}} of the preceding gap. Thus a smaller {\displaystyle \lambda ^{\*}} implies that the gap will shrink more rapidly. The value of {\displaystyle \lambda ^{\*}}thus determines how rapidly the nominal wage adjusts to its new steady-state value.
+

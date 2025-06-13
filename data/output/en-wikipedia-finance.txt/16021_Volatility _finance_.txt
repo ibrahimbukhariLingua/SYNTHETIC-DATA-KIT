@@ -1,0 +1,135 @@
+Volatility (finance)
+
+
+# Volatility (finance)
+
+
+
+In finance, **volatility** (usually denoted by "σ") is the degree of variation of a trading price series over time, usually measured by the standard deviation of logarithmic returns.
+
+Historic volatility measures a time series of past market prices. Implied volatility looks forward in time, being derived from the market price of a market-traded derivative (in particular, an option).
+
+
+## Volatility terminology
+
+Volatility as described here refers to the **actual volatility**, more specifically:
+
+* **actual current volatility** of a financial instrument for a specified period (for example 30 days or 90 days), based on historical prices over the specified period with the last observation the most recent price.
+* **actual historical volatility** which refers to the volatility of a financial instrument over a specified period but with the last observation on a date in the past
+ + near synonymous is **realized volatility**, the square root of the realized variance, in turn calculated using the sum of squared returns divided by the number of observations.
+* **actual future volatility** which refers to the volatility of a financial instrument over a specified period starting at the current time and ending at a future date (normally the expiry date of an option)
+
+Now turning to implied volatility, we have:
+
+* **historical implied volatility** which refers to the implied volatility observed from historical prices of the financial instrument (normally options)
+* **current implied volatility** which refers to the implied volatility observed from current prices of the financial instrument
+* **future implied volatility** which refers to the implied volatility observed from future prices of the financial instrument
+
+For a financial instrument whose price follows a Gaussian random walk, or Wiener process, the width of the distribution increases as time increases. This is because there is an increasing probability that the instrument's price will be farther away from the initial price as time increases. However, rather than increase linearly, the volatility increases with the square-root of time as time increases, because some fluctuations are expected to cancel each other out, so the most likely deviation after twice the time will not be twice the distance from zero.
+
+Since observed price changes do not follow Gaussian distributions, others such as the Lévy distribution are often used. These can capture attributes such as "fat tails".
+Volatility is a statistical measure of dispersion around the average of any random variable such as market parameters etc.
+
+
+## Mathematical definition
+
+For any fund that evolves randomly with time, volatility is defined as the standard deviation of a sequence of random variables, each of which is the return of the fund over some corresponding sequence of (equally sized) times.
+
+Thus, "annualized" volatility *σ*ₐₙₙᵤₐₗₗy is the standard deviation of an instrument's yearly logarithmic returns.
+
+The generalized volatility *σ*T for time horizon *T* in years is expressed as:
+
+Therefore, if the daily logarithmic returns of a stock have a standard deviation of *σ*dₐᵢₗy and the time period of returns is *P* in trading days, the annualized volatility is
+
+so
+
+A common assumption is that *P* = 252 trading days in any given year. Then, if *σ*dₐᵢₗy = 0.01, the annualized volatility is
+
+The monthly volatility (i.e. {\displaystyle T={\tfrac {1}{12}}} of a year) is
+
+The formulas used above to convert returns or volatility measures from one time period to another assume a particular underlying model or process. These formulas are accurate extrapolations of a random walk, or Wiener process, whose steps have finite variance. However, more generally, for natural stochastic processes, the precise relationship between volatility measures for different time periods is more complicated. Some use the Lévy stability exponent *α* to extrapolate natural processes:
+
+If *α* = 2 the Wiener process scaling relation is obtained, but some people believe *α* < 2 for financial activities such as stocks, indexes and so on. This was discovered by Benoît Mandelbrot, who looked at cotton prices and found that they followed a Lévy alpha-stable distribution with *α* = 1.7. (See New Scientist, 19 April 1997.)
+
+
+## Volatility origin
+
+Much research has been devoted to modeling and forecasting the volatility of financial returns, and yet few theoretical models explain how volatility comes to exist in the first place.
+
+Roll (1984) shows that volatility is affected by market microstructure. Glosten and Milgrom (1985) shows that at least one source of volatility can be explained by the liquidity provision process. When market makers infer the possibility of adverse selection, they adjust their trading ranges, which in turn increases the band of price oscillation.
+
+In September 2019, JPMorgan Chase determined the effect of US President Donald Trump's tweets, and called it the Volfefe index combining volatility and the covfefe meme.
+
+
+## Volatility for investors
+
+Volatility matters to investors for at least eight reasons,ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ several of which are alternative statements of the same feature or are directly consequent on each other:
+
+1. The wider the swings in an investment's price, the harder emotionally it is to not worry;
+2. Price volatility of a trading instrument can help to determine position sizing in a portfolio;
+3. When cash flows from selling a security are needed at a specific future date to meet a known fixed liability, higher volatility means a greater chance of a shortfall;
+4. Higher volatility of returns while saving for retirement results in a wider distribution of possible final portfolio values;
+5. Higher volatility of returns after retirement may result in withdrawals having a larger permanent impact on the portfolio's value;
+6. Price volatility presents opportunities to anyone with inside information to buy assets cheaply and sell when overpriced;
+7. Volatility affects pricing of options, being a parameter of the Black–Scholes model.
+
+## Volatility versus direction
+
+Volatility does not measure the direction of price changes, merely their dispersion. This is because when calculating standard deviation (or variance), all differences are squared, so that negative and positive differences are combined into one quantity. Two instruments with different volatilities may have the same expected return, but the instrument with higher volatility will have larger swings in values over a given period of time.
+
+For example, a lower volatility stock may have an expected (average) return of 7%, with annual volatility of 5%. Ignoring compounding effects, this would indicate returns from approximately negative 3% to positive 17% most of the time (19 times out of 20, or 95% via a two standard deviation rule). A higher volatility stock, with the same expected return of 7% but with annual volatility of 20%, would indicate returns from approximately negative 33% to positive 47% most of the time (19 times out of 20, or 95%). These estimates assume a normal distribution; in reality stock price movements are found to be leptokurtotic (fat-tailed).
+
+
+## Volatility over time
+
+Although the Black-Scholes equation assumes predictable constant volatility, this is not observed in real markets. Amongst more realistic models are Emanuel Derman and Iraj Kani's and Bruno Dupire's local volatility, Poisson process where volatility jumps to new levels with a predictable frequency, and the increasingly popular Heston model of stochastic volatility.[link broken]
+
+It is common knowledge that many types of assets experience periods of high and low volatility. That is, during some periods, prices go up and down quickly, while during other times they barely move at all. In foreign exchange market, price changes are seasonally heteroskedastic with periods of one day and one week.
+
+Periods when prices fall quickly (a crash) are often followed by prices going down even more, or going up by an unusual amount. Also, a time when prices rise quickly (a possible bubble) may often be followed by prices going up even more, or going down by an unusual amount.
+
+Most typically, extreme movements do not appear 'out of nowhere'; they are presaged by larger movements than usual or by known uncertainty in specific future events. This is termed autoregressive conditional heteroskedasticity. Whether such large movements have the same direction, or the opposite, is more difficult to say. And an increase in volatility does not always presage a further increase—the volatility may simply go back down again.
+
+Measures of volatility depend not only on the period over which it is measured, but also on the selected time resolution, as the information flow between short-term and long-term traders is asymmetric.ᶜˡᵃʳⁱᶠⁱᶜᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ As a result, volatility measured with high resolution contains information that is not covered by low resolution volatility and vice versa.
+
+The risk parity weighted volatility of the three assets Gold, Treasury bonds and Nasdaq acting as proxy for the Marketportfolioᶜˡᵃʳⁱᶠⁱᶜᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ seems to have a low point at 4% after turning upwards for the 8th time since 1974 at this reading in the summer of 2014.ᶜˡᵃʳⁱᶠⁱᶜᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+
+## Alternative measures of volatility
+
+Some authors point out that realized volatility and implied volatility are backward and forward looking measures, and do not reflect current volatility. To address that issue an alternative, ensemble measures of volatility were suggested. One of the measures is defined as the standard deviation of ensemble returns instead of time series of returns. Another considers the regular sequence of directional-changes as the proxy for the instantaneous volatility.
+
+
+### Volatility as it Relates to Options Trading
+
+One method of measuring Volatility, often used by quant option trading firms, divides up volatility into two components. Clean volatility - the amount of volatility caused standard events like daily transactions and general noise - and dirty vol, the amount caused by specific events like earnings or policy announcements. For instance, a company like Microsoft would have clean volatility caused by people buying and selling on a daily basis but dirty (or event vol) events like quarterly earnings or a possibly anti-trust announcement.
+
+Breaking down volatility into two components is useful in order to accurately price how much an option is worth, especially when identifying what events may contribute to a swing. The job of fundamental analysts at market makers and option trading boutique firms typically entails trying to assign numeric values to these numbers.
+
+
+## Crude volatility estimation
+
+Using a simplification of the above formula it is possible to estimate annualized volatility based solely on approximate observations. Suppose you notice that a market price index, which has a current value near 10,000, has moved about 100 points a day, on average, for many days. This would constitute a 1% daily movement, up or down.
+
+To annualize this, you can use the "rule of 16", that is, multiply by 16 to get 16% as the annual volatility. The rationale for this is that 16 is the square root of 256, which is approximately the number of trading days in a year (252). This also uses the fact that the standard deviation of the sum of *n* independent variables (with equal standard deviations) is √n times the standard deviation of the individual variables.
+
+However importantly this does not capture (or in some cases may give excessive weight to) occasional large movements in market price which occur less frequently than once a year.
+
+The average magnitude of the observations is merely an approximation of the standard deviation of the market index. Assuming that the market index daily changes are normally distributed with mean zero and standard deviation *σ*, the expected value of the magnitude of the observations is √(2/π)*σ* = 0.798*σ*. The net effect is that this crude approach underestimates the true volatility by about 20%.
+
+
+## Estimate of compound annual growth rate (CAGR)
+
+Consider the Taylor series:
+
+Taking only the first two terms one has:
+
+Volatility thus mathematically represents a drag on the CAGR (formalized as the "volatility tax"). Realistically, most financial assets have negative skewness and leptokurtosis, so this formula tends to be over-optimistic. Some people use the formula:
+
+for a rough estimate, where *k* is an empirical factor (typically five to ten).ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+
+## Criticisms of volatility forecasting models
+
+Despite the sophisticated composition of most volatility forecasting models, critics claim that their predictive power is similar to that of plain-vanilla measures, such as simple past volatility especially out-of-sample, where different data are used to estimate the models and to test them. Other works have agreed, but claim critics failed to correctly implement the more complicated models. Some practitioners and portfolio managers seem to completely ignore or dismiss volatility forecasting models. For example, Nassim Taleb famously titled one of his *Journal of Portfolio Management* papers "We Don't Quite Know What We are Talking About When We Talk About Volatility". In a similar note, Emanuel Derman expressed his disillusion with the enormous supply of empirical models unsupported by theory. He argues that, while "theories are attempts to uncover the hidden principles underpinning the world around us, as Albert Einstein did with his theory of relativity", we should remember that "models are metaphors – analogies that describe one thing relative to another".
+

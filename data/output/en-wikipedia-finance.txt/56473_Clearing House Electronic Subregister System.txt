@@ -1,0 +1,29 @@
+Clearing House Electronic Subregister System
+
+
+# Clearing House Electronic Subregister System
+
+
+
+The Australian **Clearing House Electronic Subregister System** (commonly abbreviated to **CHESS**) is an electronic book entry register of holdings of approved securities that facilitates the transfer and settlement of share market transactions between CHESS participants (including stockbrokers on behalf of their clients, and large institutional investors on their own behalf) as well as speed up the registration of the transfer of securities. CHESS was developed by the Australian Securities Exchange (ASX) and is managed by the ASX Settlement and Transfer Corporation (ASTC), a wholly owned subsidiary of ASX.
+
+Under Australian corporate law, every company must maintain registers of security holders. Australian listed companies enter into a contractual arrangement with ASTC for ASTC to maintain a CHESS subregister, as agent for the issuer. The CHESS subregister is one of two subregisters that together make up the issuer’s register. Australian companies listed on the ASX are obliged to establish a CHESS subregister, and all equity securities are held through CHESS.
+
+
+## How the system works
+
+The parties who are permitted to access CHESS are referred to as *participants*, who are either members of ASX (e.g., brokers) or are otherwise approved non-brokers. Each participant is allocated a unique *participant code*. A security holder on CHESS must be either a CHESS participant or be sponsored by one (e.g., a client of a broker). Sponsored uncertificated security holders are allocated a unique holder identifying code (HIN) in CHESS, which together with the participant's code provides the authority under which CHESS will allow a transfer of securities.
+
+Only the designated *controlling participant* can initiate transactions on CHESS in relation to a holding. It is a criminal offence to effect an unauthorised transaction, whether the client suffers a loss or not; and a broker's client is entitled to compensation for loss suffered as a result of an unauthorised transaction. Failing to obtain compensation from the broker, the client is covered by the National Guarantee Fund for losses arising from any unauthorised transfer of shares by a broker.
+
+Security holders who have uncertificated CHESS holdings, through a sponsorship agreement with a CHESS participant, will receive periodic holding statements directly from ASX Settlement Administration, while those who have Issuer Sponsored holdings will receive similar statements from the company registry. These statements provide a record of transfers, allotments, etc. for uncertificated holdings. Share certificates are not produced.
+
+
+## Transactions
+
+When a trade takes place, settlement takes place two trading days (T+2) after the trade. On settlement day, the controlling participant initiates ASX Settlement transaction, and ASX Settlement invokes the Society for Worldwide Interbank Financial Telecommunication's SWIFT FIN service, the service which sends financial information from one financial institution to another, to send an interbank request to the Reserve Bank Information and Transfer System (RITS). The message is regulated by Australian Payments Clearing Association (APCA) under the Regulations for High Value Clearing System Framework (CS4).
+
+Based on the information provided by SWIFT FIN, RITS makes a final and irrevocable settlement by the simultaneous crediting and debiting the participants’ Exchange Settlement Accounts (ESAs) held at the Reserve Bank.
+
+RITS notifies ASX Settlement of the transfer of the gross amount across ESAs, and ASX Settlement messages CHESS, which finalises the transaction at the participant level by recording the transfer of the shareholding on the CHESS subregister from one security holder to the other. It is then the responsibility of the issuing company to complete the administrative aspects of the transaction, such as notifying both parties of the change of shareholding, as well to ensure it has the details of the new security holder, such as bank details, address for communications, tax file number, etc.
+

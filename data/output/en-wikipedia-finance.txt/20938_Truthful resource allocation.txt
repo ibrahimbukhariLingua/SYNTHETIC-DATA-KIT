@@ -1,0 +1,92 @@
+Truthful resource allocation
+
+
+# Truthful resource allocation
+
+
+
+**Truthful resource allocation** is the problem of allocating resources among agents with different valuations over the resources, such that agents are incentivized to reveal their true valuations over the resources.
+
+
+## Model
+
+There are *m* resources that are assumed to be *homogeneous* and *divisible*. Examples are:
+
+* Materials, such as wood or metal;
+* Virtual resources, such as CPU time or computer memory;
+* Financial resources, such as shares in firms.
+
+There are *n* agents. Each agent has a function that attributes a numeric value to each "bundle" (combination of resources).
+
+It is often assumed that the agents' value functions are *linear*, so that if the agent receives a fraction *rⱼ* of each resource *j*, then his/her value is the sum of *rⱼ* ∗*vⱼ* .
+
+
+## Design goals
+
+The goal is to design a truthful mechanism, that will induce the agents to reveal their true value functions, and then calculate an allocation that satisfies some fairness and efficiency objectives. The common efficiency objectives are:
+
+* *Pareto efficiency* (PE);
+* *Utilitarian social welfare* — defined as the sum of agents' utilities. An allocation maximizing this sum is called *utilitarian* or *max-sum*; it is always PE.
+* *Nash social welfare* — defined as the product of agents' utilities. An allocation maximizing this product is called *Nash-optimal* or *max-product* or *proportionally-fair*; it is always PE. When agents have additive utilities, it is equivalent to the *competitive equilibrium from equal incomes*.
+
+The most common fairness objectives are:
+
+* Equal treatment of equals (ETE) — if two agents have exactly the same utility function, then they should get exactly the same utility.
+* Envy-freeness — no agent should envy another agent. It implies ETE.
+
+Egalitarian in lieu of *equitable* markets are analogous to laissez-faire early-stage capitalism, which form the basis of common marketplaces bearing fair trade policies in world markets' market evaluation; financiers can capitalise on financial controls and financial leverage and the concomitant exchange.
+
+
+## Trivial algorithms
+
+Two trivial truthful algorithms are:
+
+* The **equal split** algorithm — which gives each agent exactly 1/*n* of each resource. This allocation is envy-free (and obviously ETE), but usually it is very inefficient.
+* The **serial dictatorship** algorithm — which orders the agents arbitrarily, and lets each agent in turn take all resources that he wants, from among the remaining ones. This allocation is PE, but usually it is unfair.
+
+It is possible to mix these two mechanisms, and get a truthful mechanism that is partly-fair and partly-efficient. But the ideal mechanism would satisfy all three properties simultaneously: truthfulness, efficiency and fairness.
+
+
+## At most one object per agent
+
+In a variant of the resource allocation problem, sometimes called **one-sided matching** or **assignment**, the total amount of objects allocated to each agent must be at most 1.
+
+When there are 2 agents and 2 objects, the following mechanism satisfies all three properties: if each agent prefers a different object, give each agent his preferred object; if both agents prefer the same object, give each agent 1/2 of each object (It is PE due to the capacity constraints). However, when there are 3 or more agents, it may be impossible to attain all three properties.
+
+Zhou proved that, when there are 3 or more agents, each agent must get at most 1 object, and each object must be given to at most 1 agent, no truthful mechanism satisfies both PE and ETE.
+
+* When there are multiple units of each object (but each agent must still get at most 1 object), there is a weaker impossibility result: no PE and ETE mechanism satisfies Group strategyproofness.
+* He leaves open the more general resource allocation setting, in which each agent may get more than one object.
+
+There are analogous impossibility results for agents with ordinal utilities:
+
+* For agents with *strict ordinal* utilities, Bogomolnaia and Moulin prove that no mechanism satisfies possible-PE, necessary-truthfulness, and ETE.
+* For agents with *weak ordinal* utilities, Katta and Sethuraman prove that no mechanism satisfies possible-PE, possible-truthfulness, and necessary-envy-freeness.
+
+See also: Truthful one-sided matching.
+
+
+## Approximation Algorithms
+
+There are several truthful algorithms that find a constant-factor approximation of the maximum utilitarian or Nash welfare.
+
+Guo and Conitzer studied the special case of *n*=2 agents. For the case of *m*=2 resources, they showed a truthful mechanism attaining 0.828 of the maximum utilitarian welfare, and showed an upper bound of 0.841. For the case of many resources, they showed that all truthful mechanisms of the same kind approach 0.5 of the maximum utilitarian welfare. Their mechanisms are complete - they allocate all the resources.
+
+Cole, Gkatzelis and Goel studied mechanisms of a different kind - based on the max-product allocation. For *many agents*, with valuations that are homogeneous functions, they show a truthful mechanism called Partial Allocation that guarantees to each agent at least 1/*e* ≈ 0.368 of his/her utility in the max-product allocation. Their mechanism is envy-free when the valuations are additive linear functions. They show that no truthful mechanism can guarantee to all agents more than 0.5 of their max-product utility.
+
+For the special case of *n*=2 *agents*, they show a truthful mechanism that attains at least 0.622 of the utilitarian welfare. They also show that the mechanism running the *equal-split* mechanism and the *partial-allocation* mechanism, and choosing the outcome with the highest social welfare, is still truthful, since both agents always prefer the *same* outcome. Moreover, it attains at least 2/3 of the optimal welfare. They also show an {\displaystyle O(m\log m)} algorithm for computing the max-product allocation, and show that the Nash-optimal allocation itself attains at least 0.933 of the utilitarian welfare.
+
+They also show a mechanism called Strong Demand Matching, which is tailored for a setting with many agents and few resources (such as the privatization auction in the Czech republic). The mechanism guarantees to each agent at least *p*/(*p*+1) of the max-product utility, when *p* is the smallest equilibrium price of a resource when each agent has a unit budget. When there are many more agents than resources, the price of each resource is usually high, so the approximation factor approaches 1. In particular, when there are two resources, this fraction is at least *n*/(*n*+1). This mechanism assigns to each agent a fraction of a single resource.
+
+Cheung improved the competitive ratios of previous works:
+
+* The ratio for two agents and two resources improved from 0.828 to 5/6 ≈ 0.833 with a complete-allocation mechanism, and strictly more than 5/6 with a partial-allocation mechanism. The upper bound improved from 0.841 to 5/6+*ε*; for a complete-allocation mechanism, and to 0.8644 for a partial mechanism.
+* The ratio for two agents and many resources improved from 2/3 to 0.67776, by using a weighted average of two mechanisms: partial-allocation, and max (partial-allocation, equal-split).
+
+## Related problems
+
+* Truthful cake-cutting - a variant of the problem in which there is a single heterogeneous resource ("cake"), and each agent has a personal value-measure over the resource.
+* Strategic fair division - the study of equilibria of fair division games when the agents act strategically rather than sincerely.
+* Truthful allocation of two kinds of resources - plentiful and scarce.
+* Truthful fair division of indivisible items.
+* Relation between truthful fair division and wagering strategies.

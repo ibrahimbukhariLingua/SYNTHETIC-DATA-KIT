@@ -1,0 +1,142 @@
+Currency swap
+
+
+# Currency swap
+
+
+
+| Foreign exchange |
+| --- |
+| Exchange rates |
+| * Currency band * Exchange rate * Exchange rate regime * Exchange-rate flexibility * Dollarization * Fixed exchange rate * Floating exchange rate * Linked exchange rate * Managed float regime * Dual exchange rate |
+| Markets |
+| * Foreign exchange market * Futures exchange * Retail foreign exchange trading |
+| Assets |
+| * Currency * Currency future * Currency forward * Non-deliverable forward * Foreign exchange swap * Currency swap * Foreign exchange option |
+| Historical agreements |
+| * Bretton Woods Conference * Smithsonian Agreement * Plaza Accord * Louvre Accord |
+| See also |
+| * Bureau de change * Hard currency * Currency pair * Foreign exchange fraud * Currency intervention |
+| * v * t * e |
+
+In finance, a **currency swap** (more typically termed a **cross-currency swap, XCS**) is an interest rate derivative (IRD). In particular it is a linear IRD, and one of the most liquid benchmark products spanning multiple currencies simultaneously. It has pricing associations with interest rate swaps (IRSs), foreign exchange (FX) rates, and FX swaps (FXSs).
+
+
+## General description
+
+A cross-currency swap's (XCS's) effective description is a derivative contract, agreed between two counterparties, which specifies the nature of an exchange of payments benchmarked against two interest rate indexes denominated in two different currencies. It also specifies an initial exchange of notional currency in each different currency and the terms of that repayment of notional currency over the life of the swap.
+
+The most common XCS, and that traded in interbank markets, is a mark-to-market (MTM) XCS, whereby notional exchanges are regularly made throughout the life of the swap according to FX rate fluctuations. This is done to maintain a swap whose MTM value remains neutral and does not become either a large asset or liability (due to FX rate fluctuations) throughout its life.
+
+The more unconventional, but simpler to define, non-MTM XCS includes an upfront notional exchange of currencies with a re-exchange of that same notional at maturity of the XCS.
+
+The floating indexes are commonly the 3-month tenor EURIBOR, and compounded overnight rates.
+
+Each series of payments (either denominated in the first currency or the second) is termed a 'leg', so a typical XCS has two legs, composed separately of interest payments and notional exchanges. To completely determine any XCS a number of parameters must be specified for each leg; the notional principal amount (or varying notional schedule including exchanges), the start and end dates and date scheduling, the chosen floating interest rate indexes and tenors, and day count conventions for interest calculations.
+
+The pricing element of a XCS is what is known as the **basis spread**, which is the agreed amount chosen to be added (or reduced in the case of a negative spread) to one leg of the swap. Usually this is the domestic leg, or non-USD leg. For example a EUR/USD XCS would have the basis spread attached to the EUR denominated leg.
+
+XCSs are over-the-counter (OTC) derivatives.
+
+|
+| |
+
+
+### Extended description
+
+As OTC instruments, cross-currency swaps (XCSs) can be customised in a number of ways and can be structured to meet the specific needs of the counterparties. For example; payment dates could be irregular, the notional of the swap could be amortized over time, reset dates (or fixing dates) of the floating rate could be irregular, mandatory break clauses may be inserted into the contract, FX notional payments and FX rates may be manually specified etc.
+
+Additionally it is not a requirement for swaps to have two floating legs. This leads to the naming convention of different types of XCS:
+
+1. **(Floating v Floating) Cross-Currency Swaps**: are the normal, interbank traded products. These are over-the-counter (OTC) products and commonly referred to as basis swaps.
+2. **(Fixed v Floating) Cross-Currency Swaps**: are a common customization of the benchmark product, often synthesized or hedged by market-makers by trading a float v float XCS and a standard interest rate swap (IRS) to convert the floating leg to a fixed leg.
+3. **(Fixed v Fixed) Cross-Currency Swaps**: a less common customization, again synthesized by market makers trading two IRSs in each currency and a float v float XCS.
+4. **Mark-to-Market or Non Mark-to-Market**: the MTM element and notional exchanges are usually standard (in interbank markets) but the customization to exclude this is available.
+5. **Non-deliverable Cross-Currency Swap (NDXCS or NDS)**: similar to a regular XCS, except that payments in one of the currencies are settled in another currency using the prevailing FX spot rate. NDS are usually used in emerging markets where the currency is illiquid, subject to exchange restrictions, or even non-convertible. This associates with quantos.
+6. **Embedded options**: exotic customization options exist potentially with FX options at the maturity of the trade, or swaptions.
+
+## Uses
+
+Currency swaps have many uses, some are itemized:
+
+* To secure cheaper debt (by borrowing at the best available rate regardless of currency and then swapping for debt in desired currency using a back-to-back-loan).
+* To hedge against (reduce exposure to) forward exchange rate fluctuations.
+* To defend against financial turmoil by allowing a country beset by a liquidity crisis to borrow money from others with its own currency, see Central bank liquidity swap.
+
+Cross-currency swaps are an integral component in modern financial markets as they are the bridge needed for assessment of yields on a standardised USD basis. For this reason they are also used as the construction tool in creating collateralized discount curves for valuing a future cashflow in a given currency but collateralized with another currency. Given the importance of collateral to the financial system at large, cross-currency swaps are important as a hedging instrument to insure against material collateral mismatches and devaluation.
+
+
+### Hedging example one
+
+For instance, a US-based company needing to borrow Swiss francs, and a Swiss-based company needing to borrow a similar present value in US dollars, could both reduce their exposure to exchange rate fluctuations by arranging either of the following:
+
+* If the companies have already borrowed in the currencies each needs the principal in, then exposure is reduced by swapping cash flows only, so that each company's finance cost is in that company's domestic currency.
+* Alternatively, the companies could borrow in their own domestic currencies (and may well each have comparative advantage when doing so), and then get the principal in the currency they desire with a principal-only swap.
+
+### Hedging example two
+
+Suppose the British Petroleum Company plans to issue five-year bonds worth £100 million at 7.5% interest, but actually needs an equivalent amount in dollars, US$150 million (current $/£ rate is $1.50 /£), to finance its new refining facility in the U.S. Also, suppose that the Piper Shoe Company, a U. S. company, plans to issue US$150 million in bonds at 10%, with a maturity of five years, but it really needs £100 million to set up its distribution center in London. To meet each other's needs, suppose that both companies go to a swap bank that sets up the following agreements:
+
+* Agreement 1:
+
+The British Petroleum Company will issue 5-year £100 million bonds paying 7.5% interest. It will then deliver the £100 million to the swap bank who will pass it on to the U.S. Piper Company to finance the construction of its British distribution center.
+The Piper Company will issue 5-year US$150 million bonds paying 10% interest. The Piper Company will then pass the $150 million to swap bank that will pass it on to the British Petroleum Company who will use the funds to finance the construction of its U.S. refinery.
+
+* Agreement 2:
+
+The British company, with its U.S. asset (refinery), will pay the 10% interest on US$150 million (US$15 million) to the swap bank who will pass it on to the American company so it can pay its U.S. bondholders.
+The American company, with its British asset (distribution center), will pay the 7.5% interest on £100 million (.075 × £100m = £7.5), to the swap bank who will pass it on to the British company so it can pay its British bondholders.
+
+* Agreement 3:
+
+At maturity, the British company will pay US$150 million to the swap bank who will pass it on to the American company so it can pay its U.S. bondholders.
+At maturity, the American company will pay £100 million to the swap bank who will pass it on to the British company so it can pay its British bondholders.
+
+
+## Valuation and pricing
+
+It is well recognized that traditional "textbook" theory does not price cross currency (basis) swaps correctly, because it assumes the funding cost in each currency to be equal to its floating rate, thus always giving a zero cross currency spread. This is clearly contrary to what is observed in the market. In reality, market participants have different levels of access to funds in different currencies and therefore their funding costs are not always equal to LIBOR.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+An approach to work around this is to select one currency as the funding currency (e.g. USD), and select one curve in this currency as the discount curve (e.g. USD interest rate swap curve against 3M LIBOR). Cashflows in the funding currency are discounted on this curve. Cashflows in any other currency are first swapped into the funding currency via a cross currency swap and then discounted.
+
+
+## Risks
+
+XCSs expose users to many different types of financial risk.
+
+Predominantly they expose the user to market risks. The value of a XCS will change as market interest rates, FX rates, and XCS rates rise and fall. In market terminology this is often referred to as delta and basis risks. Other specific types of market risk that interest rate swaps have exposure to are single currency basis risks (where various IBOR tenor indexes can deviate from one another) and reset risks (where the publication of specific tenor IBOR indexes are subject to daily fluctuation). XCSs also exhibit gamma risk whereby their delta risk, basis risks or FX exposures, increase or decrease as market interest rates fluctuate.
+
+Uncollateralised XCSs (that are those executed bilaterally without a credit support annex (CSA) in place) expose the trading counterparties to funding risks and credit risks. Funding risks because the value of the swap might deviate to become so negative that it is unaffordable and cannot be funded. Credit risks because the respective counterparty, for whom the value of the swap is positive, will be concerned about the opposing counterparty defaulting on its obligations.
+
+Collateralised XCSs expose the users to collateral risks. Depending upon the terms of the CSA, the type of posted collateral that is permitted might become more or less expensive due to other extraneous market movements. Credit and funding risks still exist for collateralised trades but to a much lesser extent.
+
+Due to regulations set out in the Basel III Regulatory Frameworks trading interest rate derivatives commands a capital usage. Dependent upon their specific nature XCSs might command more capital usage and this can deviate with market movements. Thus capital risks are another concern for users.
+
+Reputation risks also exist. The mis-selling of swaps, over-exposure of municipalities to derivative contracts, and IBOR manipulation are examples of high-profile cases where trading interest rate swaps has led to a loss of reputation and fines by regulators.
+
+Hedging XCSs can be complicated and relies on numerical processes of well designed risk models to suggest reliable benchmark trades that mitigate all market risks. The other, aforementioned risks must be hedged using other systematic processes.
+
+
+## Market-making
+
+The market-making of XCSs is an involved process involving multiple tasks; curve construction with reference to interbank markets, individual derivative contract pricing, risk management of credit, cash and capital. The cross disciplines required include quantitative analysis and mathematical expertise, disciplined and organized approach towards profits and losses, and coherent psychological and subjective assessment of financial market information and price-taker analysis. The time sensitive nature of markets also creates a pressurized environment. Many tools and techniques have been designed to improve efficiency of market-making in a drive to efficiency and consistency.
+
+
+## Historical facts
+
+In the 1990s Goldman Sachs and other US banks offered Mexico, currency swaps and loans using Mexican oil reserves as collateral and as a means of payment. The collateral of Mexican oil was valued at US$23.00 per barrel.
+
+In May 2011, Charles Munger of Berkshire Hathaway Inc. accused international investment banks of facilitating market abuse by national governments. For example, "Goldman Sachs helped Greece raise US$1 billion of off- balance-sheet funding in 2002 through a currency swap, allowing the government to hide debt." Greece had previously succeeded in getting clearance to join the euro on 1 January 2001, in time for the physical launch in 2002, by faking its deficit figures.
+
+Currency swaps were originally conceived in the 1970s to circumvent foreign exchange controls in the United Kingdom. At that time, UK companies had to pay a premium to borrow in US Dollars. To avoid this, UK companies set up back-to-back loan agreements with US companies wishing to borrow Sterling. While such restrictions on currency exchange have since become rare, savings are still available from back-to-back loans due to comparative advantage.
+
+The first formal currency swap, as opposed to the then used parallel loans structure, was transacted by Citicorp International Bank for a US$100,000,000 10 year US Dollar Sterling swap between Mobil Oil Corporation and General Electric Corporation Ltd (UK). The concept of the interest rate swap was developed by the Citicorp International Services unit in 1980 but cross-currency interest rate swaps were introduced by the World Bank in 1981 to obtain Swiss francs and German marks by exchanging cash flows with IBM. This deal was brokered by Salomon Brothers with a notional amount of US$210 million and a term of over ten years.
+
+During the 2007–2008 financial crisis, the currency swap transaction structure was used by the United States Federal Reserve System to establish central bank liquidity swaps. In these, the Federal Reserve and the central bank of a developed or stable emerging economy agree to exchange domestic currencies at the current prevailing market exchange rate & agree to reverse the swap at the same exchange rate at a fixed future date. The aim of central bank liquidity swaps is "to provide liquidity in U.S. dollars to overseas markets". While central bank liquidity swaps and currency swaps are structurally the same, currency swaps are commercial transactions driven by comparative advantage, while central bank liquidity swaps are emergency loans of US Dollars to overseas markets, and it is currently unknown whether or not they will be beneficial for the Dollar or the US in the long-term.
+
+The People's Republic of China has multiple year currency swap agreements of the Renminbi with Argentina, Belarus, Brazil, Hong Kong, Iceland, Indonesia, Malaysia, Russia, Singapore, South Korea, United Kingdom and Uzbekistan that perform a similar function to central bank liquidity swaps.
+
+South Korea and Indonesia signed a won-rupiah currency swap deal worth US$10 billion in October, 2013. The two nations can exchange up to 10.7 trillion won or 115 trillion rupiah for three years. The three-year currency swap could be renewed if both sides agree at the time of expiration. It is anticipated to promote bilateral trade and strengthen financial cooperation for the economic development of the two countries. The arrangement also ensures the settlement of trade in local currency between the two countries even in times of financial stress to support regional financial stability. As of 2013, South Korea imported goods worth US$13.2 billion from Indonesia, while its exports reached US$11.6 billion. In August 2018, Qatar and Turkey's central banks signed a currency swap agreement to provide liquidity and support for financial stability.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+Japan and India signed a currency swap agreement worth US$75 billion in October, 2018, which has been one of the largest bilateral currency swap agreements.
+

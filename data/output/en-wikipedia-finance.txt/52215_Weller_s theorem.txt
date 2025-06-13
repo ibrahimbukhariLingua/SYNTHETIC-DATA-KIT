@@ -1,0 +1,165 @@
+Weller's theorem
+
+
+# Weller's theorem
+
+
+
+**Weller's theorem** is a theorem in economics. It says that a heterogeneous resource ("cake") can be divided among *n* partners with different valuations in a way that is both Pareto-efficient (PE) and envy-free (EF). Thus, it is possible to divide a cake fairly without compromising on economic efficiency.
+
+Moreover, Weller's theorem says that there exists a price such that the allocation and the price are a competitive equilibrium (CE) with equal incomes (EI). Thus, it connects two research fields which were previously unrelated: fair cake-cutting and general equilibrium.
+
+
+## Background
+
+Fair cake-cutting has been studied since the 1940s. There is a heterogeneous divisible resource, such as a cake or a land-estate. There are *n* partners, each of whom has a personal value-density function over the cake. The value of a piece to a partner is the integral of his value-density over that piece (this means that the value is a nonatomic measure over the cake). The envy-free cake-cutting problem is to partition the cake to *n* disjoint pieces, one piece per agent, such for each agent, the value of his piece is weakly larger than the values of all other pieces (so no agent envies another agent's share).
+
+A corollary of the Dubins–Spanier convexity theorem (1961) is that there always exists a "consensus partition" – a partition of the cake to *n* pieces such that every agent values every piece as exactly {\displaystyle 1/n}. A consensus partition is of course EF, but it is not PE. Moreover, another corollary of the Dubins–Spanier convexity theorem is that, when at least two agents have different value measures, there exists a division that gives each agent strictly more than {\displaystyle 1/n}. This means that the consensus partition is not even weakly PE.
+
+Envy-freeness, as a criterion for fair allocation, were introduced into economics in the 1960s and studied intensively during the 1970s. Varian's theorems study it in the context of dividing homogeneous goods. Under mild restrictions on the agents' utility functions, there exist allocations which are both PE and EF. The proof uses a previous result on the existence of a competitive equilibrium from equal incomes (CEEI). David Gale proved a similar existence result for agents with linear utilities.
+
+Cake-cutting is more challenging than homogeneous good allocation, since a cake is heterogeneous. In a sense, a cake is a continuum of goods: each point in the cake is a different good. This is the topic of Weller's theorem.
+
+
+## Notation
+
+The cake is denoted by {\displaystyle C}. The number of partners is denoted by {\displaystyle n}.
+
+A *cake partition*, denoted by {\displaystyle X}, is an *n*-tuple {\displaystyle X\_{1},\dots ,X\_{n}} of subsets of {\displaystyle C}; {\displaystyle X\_{i}} is the piece given to partner {\displaystyle i}.
+
+A partition is called *PEEF* if it satisfies the following two conditions:
+
+* Pareto efficiency: no other division is weakly better for all partners and strictly better for at least one partner.
+* Envy-freeness: no partner strictly prefers a piece allocated to another agent.
+
+A partition {\displaystyle X} and a price-measure {\displaystyle P} on {\displaystyle C} are called *CEEI* if they satisfy the following two conditions (where {\displaystyle V\_{i}} is agent {\displaystyle i}'s value measure and {\displaystyle P} is the price measure):
+
+* Competitive equilibrium: For every agent *i*, every positive slice {\displaystyle Z\_{i}\subseteq X\_{i}}, and every positive slice {\displaystyle Z\subseteq C}: {\displaystyle V\_{i}(Z\_{i})/P(Z\_{i})\geq V\_{i}(Z)/P(Z)}.
+* Equal incomes: For every agent i: {\displaystyle P(X\_{i})=1}.
+
+CEEI is much stronger than PEEF: every CEEI allocation is PEEF, but there are many PEEF allocations which are not CEEI.
+
+Weller's theorem proves the existence of a CEEI allocation, which implies the existence of a PEEF allocation.
+
+
+## Proof sketch
+
+The presentation below is based on Weller's paper and partly on ³⁴¹–³⁵¹.
+
+Weller's proof relies on weighted-utilitarian-maximal (WUM) cake divisions. A WUM division is a division maximizing a function of the following form:
+
+where {\displaystyle i} is an index of an agent, {\displaystyle V\_{i}} is agent {\displaystyle i}'s value measure, {\displaystyle X\_{i}} is the piece given to {\displaystyle i}, and {\displaystyle w\_{i}} is a positive weight.
+
+A corollary of the Dubins–Spanier compactness theorem is that, for every weight-vector {\displaystyle w}, WUM allocations exist. Intuitively, each tiny piece of cake {\displaystyle Z} should be given to the person {\displaystyle i} for whom {\displaystyle {V\_{i}(Z) \over w\_{i}}} is largest. If there are two or more people for whom this value is the same, then every arbitrary division of that piece between them results in a WUM division (WUM allocations can also be defined using the Radon–Nikodym set. Each weight-vector {\displaystyle w}, as a point on the {\displaystyle (n-1)}-dimensional unit simplex, defines a partition of that simplex. This partition induces an allocation of the Radon–Nikodym set of the cake, which induces one or more allocations of the cake).
+
+Every WUM division is obviously PE. However, a WUM division can be very unfair; for example, if {\displaystyle w\_{i}} is very large, then agent {\displaystyle i} might get only a small fraction of the cake (the weight-vector {\displaystyle w} is very close to agent {\displaystyle i}'s vertex of the unit-simplex, which means that {\displaystyle i} will get only points of the Radon–Nikodym set that are very near its vertex). In contrast, if {\displaystyle w\_{i}} is very small, then agent {\displaystyle i} might get the entire cake.
+
+Weller proves that there exists a vector of weights for which the WUM division is also EF. This is done by defining several functions:
+
+1. The function {\displaystyle \operatorname {Par} }: for every positive weight vector {\displaystyle w=[w\_{1},\dots ,w\_{n}]}, {\displaystyle \operatorname {Par} (w)} is the set of WUM partitions with weights {\displaystyle w}. The function {\displaystyle \operatorname {Par} } is a set-valued function from the unit-simplex-interior into the space of sets of PE cake-partitions.
+
+2. The function {\displaystyle \operatorname {Val} }: for every partition {\displaystyle X=X\_{1},\dots ,X\_{n}}, {\displaystyle \operatorname {Val} (X)} is a vector proportional to the values of the partners: {\displaystyle \operatorname {Val} (X)={\frac {[V\_{1}(X\_{1}),\dots ,V\_{n}(X\_{n})]}{V\_{1}(X\_{1})+\cdots +V\_{n}(X\_{n})}}}. The function {\displaystyle \operatorname {Val} } maps the space of cake-partitions into the unit-simplex.
+
+3. The function {\displaystyle \operatorname {Wel} =\operatorname {Val} \circ \operatorname {Par} }: for every positive weight-vector {\displaystyle w}, {\displaystyle \operatorname {Wel} (w)} is a set of new weight-vectors. This is a set-valued function from the interior of the unit-simplex into the set of subsets of the unit-simplex. The vectors in {\displaystyle \operatorname {Wel} (w)} are, in a sense, opposite to {\displaystyle w}: if {\displaystyle w\_{i}} is small, then the partitions in {\displaystyle \operatorname {Par} (w)} give agent {\displaystyle i} a large value and its weight in {\displaystyle \operatorname {Wel} (w)} is large. In contrast, if {\displaystyle w\_{i}} is large then the partitions in {\displaystyle \operatorname {Par} (w)} give agent {\displaystyle i} a small value and its weight in {\displaystyle \operatorname {Wel} (w)} is large. This hints that, if {\displaystyle \operatorname {Wel} } has a fixed-point, then this fixed-point corresponds to the PEEF partition that we look for.
+
+To prove that the function {\displaystyle \operatorname {Wel} } has a fixed-point, we would like to use the Kakutani fixed-point theorem. However, there is a technical issue that should be handled: the function {\displaystyle \operatorname {Wel} } is defined only on the interior of the unit-simplex, while its range is the entire unit-simplex. Fortunately, it is possible to extend {\displaystyle \operatorname {Wel} } to the boundary of the unit-simplex, in a way that will guarantee that any fixed-point will NOT be on the boundary.³⁴³–³⁴⁴ The extended function, {\displaystyle \operatorname {Wel} '}, is indeed a function from the unit-simplex to subsets of the unit-simplex. {\displaystyle \operatorname {Wel} '} satisfies the requirements of Kakutani' fixed-point theorem, since:³⁴⁵–³⁴⁹
+
+* It is a point-to-set mapping of the unit-simplex, which is a compact and convex subset of the Euclidean space;
+* It is upper semi-continuous;
+* For every {\displaystyle w} in the unit-simplex, {\displaystyle \operatorname {Wel} '(w)} is non-empty and closed and convex;
+
+Therefore, {\displaystyle \operatorname {Wel} '} has a fixed-point – a vector {\displaystyle W} in the unit-simplex such that {\displaystyle W\in \operatorname {Wel} '(W)}. By the construction of {\displaystyle \operatorname {Wel} '}, it is possible to show that the fixed-point {\displaystyle W} must be in the unit-simplex-interior, where {\displaystyle \operatorname {Wel} '\equiv \operatorname {Wel} }. Hence:
+
+By definition of {\displaystyle \operatorname {Wel} }, {\displaystyle W\in \operatorname {Val} (\operatorname {Par} (W))}, so there exists a partition {\displaystyle X} such that:
+
+* {\displaystyle X\in \operatorname {Par} (W)}
+* {\displaystyle W=\operatorname {Val} (X)}
+
+{\displaystyle X} is clearly PE since it is WUM (with weight-vector W). It is also EF, since:
+
+* {\displaystyle X\in \operatorname {Par} (W)} implies that X maximizes the weighted-sum with weights {\displaystyle W=[W\_{1},\dots ,W\_{n}]}. This means that every cake-fraction is given to an agent for whom the weighted value-density is maximal. Hence, for every two agents {\displaystyle i,j}:
+
+* {\displaystyle W=\operatorname {Val} (X)} implies that the ratio between the values of every two agents {\displaystyle i,j} is equal to the ratio of their weights:
+
+Combining the last two inequalities gives, for every two agents {\displaystyle i,j}:
+
+which is exactly the definition of envy-freeness.
+
+
+### Calculating the price measure
+
+Once we have a PEEF allocation {\displaystyle X}, a price measure {\displaystyle P} can be calculated as follows:
+
+* For every piece {\displaystyle Z\_{i}} that is held entirely by agent {\displaystyle i}, {\displaystyle P(Z\_{i})=V\_{i}(Z\_{i})/V\_{i}(X\_{i})}
+* For every piece divided among several agent, the price is the sum of prices of its subsets held by these agents.
+
+It is possible to prove that the pair {\displaystyle X,P} satisfy the conditions of competitive equilibrium with equal incomes (CEEI). Specifically, the income of every agent, under the price measure {\displaystyle P}, is exactly 1, since
+
+
+## Example
+
+As an illustration, consider a cake with two parts: chocolate and vanilla, and two partners: Alice and George, with the following valuations:
+
+| Partner | Chocolate | Vanilla |
+| --- | --- | --- |
+| Alice | 9 | 1 |
+| George | 6 | 4 |
+
+Since there are two agents, the vector {\displaystyle w} can be represented by a single number – the ratio of the weight of Alice to the weight of George:
+
+* If the ratio is less than 1:4, then a WUM division should give the entire cake to Alice. The ratio of values enjoyed by the people will be infinite (or 1:0), so of course no fixed point will be found in this range.
+* If the ratio is exactly 1:4, then the entire chocolate should be given to Alice, but the vanilla can be divided arbitrarily between Alice and George. The ratio of values of the WUM divisions ranges between 1:0 and 9:4. This range does not contain the ratio 1:4, hence the fixed point is not here.
+* If the ratio is between 1:4 and 9:6, then the entire vanilla should be given to George and the entire chocolate should be given to Alice. The ratio of values is 9:4, which is not in the range, so the fixed point is not found yet.
+* If the ratio is exactly 9:6, then the entire vanilla should be given to George but the chocolate can be divided arbitrarily between Alice and George. The ratio of values of the WUM divisions ranges between 9:4 and 0:1. We see that 9:6 is in the range so we have a fixed point. It can be achieved by giving to George the entire vanilla and 1/6 of the chocolate (for a total value of 5) and giving to Alice the remaining 5/6 of the chocolate (for a total value of 7.5). This division is PEEF.
+
+## Generalizations and extensions
+
+Berliant, Thomson and Dunz introduced the criterion of group envy-freeness, which generalizes both Pareto-efficiency and envy-freeness. They proved the existence of group-envy-free allocations with additive utilities. Later, Berliant and Dunz studied some natural non-additive utility functions, motivated by the problem of land division. When utilities are not additive, a CEEI allocation is no longer guaranteed to exist, but it does exist under certain restrictions.
+
+More related results can be found in Efficient cake-cutting and Utilitarian cake-cutting.
+
+
+## Algorithms
+
+Weller's theorem is purely existential. Some later works studied the algorithmic aspects of finding a CEEI partition. These works usually assume that the value measures are *piecewise-constant*, i.e, the cake can divided to homogeneous regions in which the value-density of each agent is uniform.
+
+The first algorithm for finding a CEEI partition in this case was developed by Reijnierse and Potters.
+
+A more computationally-efficient algorithm was developed by Aziz and Ye.
+
+In fact, every CEEI cake-partition maximizes the product of utilities, and vice versa – every partition that maximizes the product of utilities is a CEEI. Therefore, a CEEI can be found by solving a convex program maximizing the sum of the logarithms of utilities.
+
+For two agents, the adjusted winner procedure can be used to find a PEEF allocation that is also equitable (but not necessarily a CEEI).
+
+All the above algorithms can be generalized to value-measures that are Lipschitz continuous. Since such functions can be approximated as piecewise-constant functions "as close as we like", the above algorithms can also approximate a PEEF allocation "as close as we like".
+
+
+## Limitations
+
+In the CEEI partition guaranteed by Weller, the piece allocated to each partner may be disconnected. Instead of a single contiguous piece, each partner may receive a pile of "crumbs". Indeed, when the pieces must be connected, CEEI partitions might not exist. Consider the following piecewise-constant valuations:
+
+| Alice | 2 | 2 | 2 | 2 | 2 | 2 |
+| --- | --- | --- | --- | --- | --- | --- |
+| George | 1 | 1 | 4 | 4 | 1 | 1 |
+
+The CE condition implies that all peripheral slices must have the same price (say, *p*) and both central slices must have the same price (say *q*). The EI condition implies that the total cake-price should be 2, so {\displaystyle q+2p=1}. The EI condition again implies that, in any connected CEEI division, the cake is cut in the middle. Both Alice and George receive two peripheral slices and one central slice. The CE condition for Alice implies that {\displaystyle q=p} but the CE condition on George implies that {\displaystyle q=4p}, which is a contradiction.
+
+While the CEEI condition may be unattainable with connected pieces, the weaker PEEF condition is always attainable when there are two partners. This is because with two partners, envy-freeness is equivalent to proportionality, and proportionality is preserved under Pareto-improvements. However, when there are three or more partners, even the weaker PEEF condition may be unattainable. Consider the following piecewise-constant valuations:Eˣᵃᵐᵖˡᵉ ⁵.¹
+
+| Alice | 2 | 0 | 3 | 0 | 2 | 0 | 0 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Bob | 0 | 0 | 0 | 0 | 0 | 7 | 0 |
+| Carl | 0 | 2 | 0 | 2 | 0 | 0 | 3 |
+
+EF implies that Bob receives at least some of his 7-valued slice (PE then implies that he receives all of it).
+
+By connectivity, there are three options:
+
+* Carl's piece is to the right of Bob's piece. So Carl gets the rightmost slice and his value his 3. PE then implies that Alice gets all five slices to the left of Bob's piece, which are worth 4 to Carl. So Carl envies Alice.
+* Carl's piece is to the left of Bob's piece, and he gets his two 2-valued pieces. Then, Alice's value is at most 2, and Carl's piece is worth 3 to Alice. So Alice envies Carl.
+* Carl's piece is to the left of Bob's piece, and he gets at most one 2-valued piece. Then, the allocation is not PE, since Carl can increase his value to 3 by moving to the right of Bob without harming anyone.
+
+Hence, no allocation is PEEF.
+
+In the above example, if we consider the cake to be a "pie" (i.e, if a piece is allowed to go around the cake boundary to the other boundary), then a PEEF allocation exists; however, Stromquist showed a more sophisticated example where a PEEF allocation does not exist even in a pie.
+

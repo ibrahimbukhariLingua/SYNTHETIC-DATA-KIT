@@ -1,0 +1,55 @@
+Regular distribution (economics)
+
+
+# Regular distribution (economics)
+
+
+
+**Regularity**, sometimes called **Myerson's regularity**, is a property of probability distributions used in auction theory and revenue management. Examples of distributions that satisfy this condition include Gaussian, uniform, and exponential; some power law distributions also satisfy regularity.
+Distributions that satisfy the regularity condition are often referred to as "regular distributions".
+
+
+## Definitions
+
+Two equivalent definitions of regularity appear in the literature.
+Both are defined for continuous distributions, although analogs for discrete distributions have also been considered.
+
+
+### Concavity of revenue in quantile space
+
+Consider a seller auctioning a single item to a buyer with random value {\displaystyle v}. For any price {\displaystyle p} set by the seller, the buyer will buy the item if {\displaystyle v\geq p}. The seller's expected revenue is {\displaystyle p\cdot \Pr[v\geq p]}. We define the revenue function {\displaystyle R:[0,1]\rightarrow \mathbb {R} } as follows:
+{\displaystyle R(q)} is the expected revenue the seller would obtain by choosing {\displaystyle p} such that {\displaystyle \Pr[v\geq p]=q}.
+In other words, {\displaystyle R(q)} is the revenue that can be obtained by selling the item with (ex-ante) probability {\displaystyle q}.
+Finally, we say that a distribution is regular if {\displaystyle R} is a concave function.
+
+
+### Monotone virtual valuation
+
+For a cumulative distribution function {\displaystyle F(v)} and corresponding probability density function {\displaystyle f(v):=F'(v)}, the virtual valuation of the agent is defined as
+
+The valuation distribution is said to be regular if {\displaystyle w} is a monotone non-decreasing function.
+
+
+## Applications
+
+
+### Myerson's auction
+
+An important special case considered by Myerson (1981) is the problem of a seller auctioning a single item to one or more buyers whose valuations for the item are drawn from independent distributions.
+Myerson showed that the problem of the seller truthfully maximizing her profit is equivalent to maximizing the "virtual social welfare", i.e. the expected virtual valuation of the bidder who receives the item.
+
+When the bidders valuations distributions are regular, the virtual valuations are monotone in the real valuations, which implies that the transformation to virtual valuations is incentive compatible.
+Thus a Vickrey auction can be used to maximize the virtual social welfare (with additional reserve prices to guarantee non-negative virtual valuations).
+When the distributions are irregular, a more complicated ironing procedure is used to transform them into regular distributions.
+
+
+### Prior-independent mechanism design
+
+Myerson's auction mentioned above is optimal if the seller has an accurate prior, i.e. a good estimate of the distribution of valuations that bidders can have for the item.
+Obtaining such a good prior may be highly non-trivial, or even impossible.
+Prior-independent mechanism design seeks to design mechanisms for sellers (and agents in general) who do not have access to such a prior.
+
+Regular distributions are a common assumption in prior-independent mechanism design.
+For example, the seminal Bulow & Klemperer (1996) proved that if bidders valuations for a single item are regular and i.i.d. (or identical and affiliated),
+the revenue obtained from selling with an English auction to {\displaystyle n+1} bidders dominates the revenue obtained from selling with any mechanism (in particular, Myerson's optimal mechanism) to {\displaystyle n} bidders.
+

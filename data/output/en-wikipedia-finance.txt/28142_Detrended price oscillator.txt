@@ -1,0 +1,39 @@
+Detrended price oscillator
+
+
+# Detrended price oscillator
+
+
+
+The **detrended price oscillator** (**DPO**) is an indicator in technical analysis that attempts to eliminate the long-term trends in prices by using a displaced moving average so it does not react to the most current price action. This allows the indicator to show intermediate overbought and oversold levels effectively.
+
+The detrended price oscillator is a form of price oscillator, like the "percentage price oscillator" (PPO) and the "absolute price oscillator" (APO) both of which are forms of Gerald Appel's moving average convergence/divergence indicator (MACD). The APO is an equivalent to the MACD indicator while the PPO is an improved alternative to the APO or the MACD for use when a stock's price change has been large, or when comparing the oscillator behavior for different stocks which have significantly different prices.
+
+Although these are not so commonly used with the DPO, for the other price oscillators, as for the MACD, a signal line is frequently generated for the price oscillators by taking an exponential moving average (EMA) of the price oscillator values and plotting the two lines together. A histogram can also be generated for the price oscillators, if desired, just as is done for the MACD indicator.
+
+The DPO was developed by William Blau in 1991.
+
+
+## Formula and calculation
+
+The DPO is calculated by subtracting the simple moving average over an *n* day period and shifted *(n / 2 + 1)* days back from the price.
+
+To calculate the detrended price oscillator:
+
+1. Decide on the time frame that you wish to analyze. Set *n* as half of that cycle period.
+2. Calculate a simple moving average for *n* periods.
+3. Calculate *(n / 2 + 1)*.
+4. Subtract the moving average, from *(n / 2 + 1)* periods ago, from the closing price:
+
+{\displaystyle {\textit {DPO}}={\textit {SMA}}\_{n}{\text{ of }}({n \over 2}+1){\text{ periods ago}}}
+
+
+## Interpretation
+
+As its formula suggests, the detrended price oscillator compares the current price with the average price that was some time ago. When the DPO crosses the zero level, it means that the current price is the same as it was some time ago. Depending on whether the cross is from below or from above, the change of trend can be assessed. A divergence between the price and the DPO can thus be interpreted as the current trend being weaker than the trend of the SMA.
+
+
+## Usage
+
+The detrended price oscillator can be used to assess cycles in the asset's price, their typical high and low values, as well as their duration. The DPO can be used on all spot and futures markets, but is not applicable to option price analysis.
+

@@ -1,0 +1,42 @@
+Simple Dietz method
+
+
+# Simple Dietz method
+
+
+
+The **simple Dietz method** is a means of measuring historical investment portfolio performance, compensating for external flows into/out of the portfolio during the period. The formula for the simple Dietz return is as follows:
+
+where
+
+It is based on the assumption that all external flows occur at the half-way point in time within the evaluation period (or are spread evenly across the period, and so the flows occur on average at the middle of the period).
+
+
+## Fees
+
+To measure returns net of fees, allow the value of the portfolio to be reduced by the amount of the fees. To calculate returns gross of fees, compensate for them by treating them as an external flow, and exclude accrued fees from valuations, i.e. do not reduce the portfolio market value by the fee amount accrued.
+
+
+## Discussion
+
+1. The simple Dietz method is a variation upon the simple rate of return, which assumes that external flows occur either at the beginning or at the end of the period. The simple Dietz method is somewhat more computationally tractable than the internal rate of return (IRR) method.
+2. A refinement of the simple Dietz method is the modified Dietz method, which takes available information on the actual timing of external flows into consideration.
+3. Like the modified Dietz method, the simple Dietz method is based on the assumption of a simple rate of return principle, unlike the internal rate of return method, which applies a compounding principle.
+4. Also like the modified Dietz method, it is a money-weighted returns method (as opposed to a time-weighted returns method). In particular, if the simple Dietz returns on two portfolios over the same period are {\displaystyle R\_{1}} and {\displaystyle R\_{2}}, then the simple Dietz return on the combined portfolio containing the two portfolios is the weighted average of the simple Dietz return on the two individual portfolios: {\displaystyle R=w\_{1}\times R\_{1}+w\_{2}\times R\_{2}}. The weights {\displaystyle w\_{1}} and {\displaystyle w\_{2}} are given by: {\displaystyle w\_{i}={\frac {A\_{i}+{\frac {C\_{i}}{2}}}{A\_{1}+A\_{2}+{\frac {C\_{1}+C\_{2}}{2}}}}}.
+
+## Derivation
+
+The method is named after Peter O. Dietz. According to his book *Pension Funds: Measuring Investment Performance*,
+
+Using {\displaystyle M\_{1}} and {\displaystyle M\_{2}} for beginning and ending market value respectively, he then uses the following relation:
+
+to transform
+
+into
+
+hence
+
+He goes on to rearrange this into:
+
+This formula
+

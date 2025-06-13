@@ -1,0 +1,202 @@
+Itô's lemma
+
+
+# Itô's lemma
+
+
+
+In mathematics, **Itô's lemma** or **Itô's formula** is an identity used in Itô calculus to find the differential of a time-dependent function of a stochastic process. It serves as the stochastic calculus counterpart of the chain rule. It can be heuristically derived by forming the Taylor series expansion of the function up to its second derivatives and retaining terms up to first order in the time increment and second order in the Wiener process increment. The lemma is widely employed in mathematical finance, and its best known application is in the derivation of the Black–Scholes equation for option values.
+
+This result was discovered by Japanese mathematician Kiyoshi Itô in 1951.
+
+
+## Motivation
+
+Suppose we are given the stochastic differential equation
+{\displaystyle dX\_{t}=\mu \_{t}\ dt+\sigma \_{t}\ dB\_{t},}
+where *B*ₜ is a Wiener process and the functions {\displaystyle \mu \_{t},\sigma \_{t}} are deterministic (not stochastic) functions of time. In general, it's not possible to write a solution {\displaystyle X\_{t}} directly in terms of {\displaystyle B\_{t}.} However, we can formally write an integral solution
+{\displaystyle X\_{t}=\int \_{0}^{t}\mu \_{s}\ ds+\int \_{0}^{t}\sigma \_{s}\ dB\_{s}.}
+
+This expression lets us easily read off the mean and variance of {\displaystyle X\_{t}} (which has no higher moments). First, notice that every {\displaystyle \mathrm {d} B\_{t}} individually has mean 0, so the expected value of {\displaystyle X\_{t}} is simply the integral of the drift function:
+{\displaystyle \mathrm {E} [X\_{t}]=\int \_{0}^{t}\mu \_{s}\ ds.}
+
+Similarly, because the {\displaystyle dB} terms have variance 1 and no correlation with one another, the variance of {\displaystyle X\_{t}} is simply the integral of the variance of each infinitesimal step in the random walk:
+{\displaystyle \mathrm {Var} [X\_{t}]=\int \_{0}^{t}\sigma \_{s}^{2}\ ds.}
+
+However, sometimes we are faced with a stochastic differential equation for a more complex process {\displaystyle Y\_{t},} in which the process appears on both sides of the differential equation. That is, say
+{\displaystyle dY\_{t}=a\_{1}(Y\_{t},t)\ dt+a\_{2}(Y\_{t},t)\ dB\_{t},}
+for some functions {\displaystyle a\_{1}} and {\displaystyle a\_{2}.} In this case, we cannot immediately write a formal solution as we did for the simpler case above. Instead, we hope to write the process {\displaystyle Y\_{t}} as a function of a simpler process {\displaystyle X\_{t}} taking the form above. That is, we want to identify three functions {\displaystyle f(t,x),\mu \_{t},} and {\displaystyle \sigma \_{t},} such that {\displaystyle Y\_{t}=f(t,X\_{t})} and {\displaystyle dX\_{t}=\mu \_{t}\ dt+\sigma \_{t}\ dB\_{t}.} In practice, Ito's lemma is used in order to find this transformation. Finally, once we have transformed the problem into the simpler type of problem, we can determine the mean and higher moments of the process.
+
+
+## Derivation
+
+We derive Itô's lemma by expanding a Taylor series and applying the rules of stochastic calculus.
+
+Suppose {\displaystyle X\_{t}} is an Itô drift-diffusion process that satisfies the stochastic differential equation
+
+where *B*ₜ is a Wiener process.
+
+If *f*(*t*,*x*) is a twice-differentiable scalar function, its expansion in a Taylor series is
+
+Then use the total derivative and the definition of the partial derivative {\displaystyle f\_{y}=\lim \_{dy\to 0}{\frac {\Delta f(y)}{dy}}}:
+
+Substituting {\displaystyle x=X\_{t}} and therefore {\displaystyle dx=dX\_{t}=\mu \_{t}\,dt+\sigma \_{t}\,dB\_{t}}, we get
+
+In the limit {\displaystyle dt\to 0}, the terms {\displaystyle (dt)^{2}} and {\displaystyle dt\,dB\_{t}} tend to zero faster than {\displaystyle dt}. {\displaystyle (dB\_{t})^{2}} is {\displaystyle O(dt)} (due to the quadratic variation of a Wiener process which says {\displaystyle B\_{t}^{2}=O(t)}), so setting {\displaystyle (dt)^{2},dt\,dB\_{t}} and {\displaystyle (dx)^{3}} terms to zero and substituting {\displaystyle dt} for {\displaystyle (dB\_{t})^{2}}, and then collecting the {\displaystyle dt} terms, we obtain
+
+as required.
+
+Alternatively,
+
+
+## Geometric intuition
+
+Suppose we know that {\displaystyle X\_{t},X\_{t+dt}} are two jointly-Gaussian distributed random variables, and {\displaystyle f} is nonlinear but has continuous second derivative, then in general, neither of {\displaystyle f(X\_{t}),f(X\_{t+dt})} is Gaussian, and their joint distribution is also not Gaussian. However, since {\displaystyle X\_{t+dt}\mid X\_{t}} is Gaussian, we might still find {\displaystyle f(X\_{t+dt})\mid f(X\_{t})} is Gaussian. This is not true when {\displaystyle dt} is finite, but when {\displaystyle dt} becomes infinitesimal, this becomes true.
+
+The key idea is that {\displaystyle X\_{t+dt}=X\_{t}+\mu \_{t}\,dt+dW\_{t}} has a deterministic part and a noisy part. When {\displaystyle f} is nonlinear, the noisy part has a deterministic contribution. If {\displaystyle f} is convex, then the deterministic contribution is positive (by Jensen's inequality).
+
+To find out how large the contribution is, we write {\displaystyle X\_{t+dt}=X\_{t}+\mu \_{t}\,dt+\sigma \_{t}{\sqrt {dt}}\,z}, where {\displaystyle z} is a standard Gaussian, then perform Taylor expansion. {\displaystyle {\begin{aligned}f(X\_{t+dt})&=f(X\_{t})+f'(X\_{t})\mu \_{t}\,dt+f'(X\_{t})\sigma \_{t}{\sqrt {dt}}\,z+{\frac {1}{2}}f''(X\_{t})(\sigma \_{t}^{2}z^{2}\,dt+2\mu \_{t}\sigma \_{t}z\,dt^{3/2}+\mu \_{t}^{2}dt^{2})+o(dt)\\&=\left(f(X\_{t})+f'(X\_{t})\mu \_{t}\,dt+{\frac {1}{2}}f''(X\_{t})\sigma \_{t}^{2}\,dt+o(dt)\right)+\left(f'(X\_{t})\sigma \_{t}{\sqrt {dt}}\,z+{\frac {1}{2}}f''(X\_{t})\sigma \_{t}^{2}(z^{2}-1)\,dt+o(dt)\right)\end{aligned}}}We have split it into two parts, a deterministic part, and a random part with mean zero. The random part is non-Gaussian, but the non-Gaussian parts decay faster than the Gaussian part, and at the {\displaystyle dt\to 0} limit, only the Gaussian part remains. The deterministic part has the expected {\displaystyle f(X\_{t})+f'(X\_{t})\mu \_{t}\,dt}, but also a part contributed by the convexity: {\displaystyle {\frac {1}{2}}f''(X\_{t})\sigma \_{t}^{2}\,dt}.
+
+To understand why there should be a contribution due to convexity, consider the simplest case of geometric Brownian walk (of the stock market): {\displaystyle S\_{t+dt}=S\_{t}(1+dB\_{t})}. In other words, {\displaystyle d(\ln S\_{t})=dB\_{t}}. Let {\displaystyle X\_{t}=\ln S\_{t}}, then {\displaystyle S\_{t}=e^{X\_{t}}}, and {\displaystyle X\_{t}} is a Brownian walk. However, although the expectation of {\displaystyle X\_{t}} remains constant, the expectation of {\displaystyle S\_{t}} grows. Intuitively it is because the downside is limited at zero, but the upside is unlimited. That is, while {\displaystyle X\_{t}} is normally distributed, {\displaystyle S\_{t}} is log-normally distributed.
+
+
+## Mathematical formulation of Itô's lemma
+
+In the following subsections we discuss versions of Itô's lemma for different types of stochastic processes.
+
+
+### Itô drift-diffusion processes (due to: Kunita–Watanabe)
+
+In its simplest form, Itô's lemma states the following: for an Itô drift-diffusion process
+
+and any twice differentiable scalar function *f*(*t*,*x*) of two real variables *t* and *x*, one has
+
+This immediately implies that *f*(*t*,*X*ₜ) is itself an Itô drift-diffusion process.
+
+In higher dimensions, if {\displaystyle \mathbf {X} \_{t}=(X\_{t}^{1},X\_{t}^{2},\ldots ,X\_{t}^{n})^{T}} is a vector of Itô processes such that
+
+for a vector {\displaystyle {\boldsymbol {\mu }}\_{t}} and matrix {\displaystyle \mathbf {G} \_{t}}, Itô's lemma then states that
+
+where {\displaystyle \nabla \_{\mathbf {X} }f} is the gradient of *f* w.r.t. *X*, *H*X *f* is the Hessian matrix of *f* w.r.t. *X*, and Tr is the trace operator.
+
+
+### Poisson jump processes
+
+We may also define functions on discontinuous stochastic processes.
+
+Let h be the jump intensity. The Poisson process model for jumps is that the probability of one jump in the interval [*t*, *t* + Δ*t*] is *h*Δ*t* plus higher order terms. h could be a constant, a deterministic function of time, or a stochastic process. The survival probability *pₛ*(*t*) is the probability that no jump has occurred in the interval [0, *t*]. The change in the survival probability is
+
+So
+
+Let *S*(*t*) be a discontinuous stochastic process. Write {\displaystyle S(t^{-})} for the value of *S* as we approach *t* from the left. Write {\displaystyle d\_{j}S(t)} for the non-infinitesimal change in *S*(*t*) as a result of a jump. Then
+
+Let *z* be the magnitude of the jump and let {\displaystyle \eta (S(t^{-}),z)} be the distribution of *z*. The expected magnitude of the jump is
+
+Define {\displaystyle dJ\_{S}(t)}, a compensated process and martingale, as
+
+Then
+
+Consider a function {\displaystyle g(S(t),t)} of the jump process *dS*(*t*). If *S*(*t*) jumps by Δ*s* then *g*(*t*) jumps by Δ*g*. Δ*g* is drawn from distribution {\displaystyle \eta \_{g}()} which may depend on {\displaystyle g(t^{-})}, *dg* and {\displaystyle S(t^{-})}. The jump part of {\displaystyle g} is
+
+If {\displaystyle S} contains drift, diffusion and jump parts, then Itô's Lemma for {\displaystyle g(S(t),t)} is
+
+Itô's lemma for a process which is the sum of a drift-diffusion process and a jump process is just the sum of the Itô's lemma for the individual parts.
+
+
+### Non-continuous semimartingales
+
+Itô's lemma can also be applied to general d-dimensional semimartingales, which need not be continuous. In general, a semimartingale is a càdlàg process, and an additional term needs to be added to the formula to ensure that the jumps of the process are correctly given by Itô's lemma.
+For any cadlag process *Yₜ*, the left limit in t is denoted by *Yₜ−*, which is a left-continuous process. The jumps are written as Δ*Yₜ* = *Yₜ* − *Yₜ−*. Then, Itô's lemma states that if *X* = (*X*¹, *X*², ..., *Xᵈ*) is a d-dimensional semimartingale and *f* is a twice continuously differentiable real valued function on **R**ᵈ then *f*(*X*) is a semimartingale, and
+
+This differs from the formula for continuous semi-martingales by the additional term summing over the jumps of *X*, which ensures that the jump of the right hand side at time t is Δ*f*(*Xₜ*).
+
+
+#### Multiple non-continuous jump processes
+
+ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈThere is also a version of this for a twice-continuously differentiable in space once in time function f evaluated at (potentially different) non-continuous semi-martingales which may be written as follows:
+
+where {\displaystyle X^{c,i}} denotes the continuous part of the *i*th semi-martingale.
+
+
+## Examples
+
+
+### Geometric Brownian motion
+
+A process S is said to follow a geometric Brownian motion with constant volatility *σ* and constant drift *μ* if it satisfies the stochastic differential equation {\displaystyle dS\_{t}=\sigma S\_{t}\,dB\_{t}+\mu S\_{t}\,dt}, for a Brownian motion *B*. Applying Itô's lemma with {\displaystyle f(S\_{t})=\log(S\_{t})} gives
+
+It follows that
+
+exponentiating gives the expression for *S*,
+
+The correction term of − ⁠*σ*²/2⁠ corresponds to the difference between the median and mean of the log-normal distribution, or equivalently for this distribution, the geometric mean and arithmetic mean, with the median (geometric mean) being lower. This is due to the AM–GM inequality, and corresponds to the logarithm being concave (or convex upwards), so the correction term can accordingly be interpreted as a convexity correction. This is an infinitesimal version of the fact that the annualized return is less than the average return, with the difference proportional to the variance. See geometric moments of the log-normal distributionᵇʳᵒᵏᵉⁿ ᵃⁿᶜʰᵒʳ for further discussion.
+
+The same factor of ⁠*σ*²/2⁠ appears in the *d*₁ and *d*₂ auxiliary variables of the Black–Scholes formula, and can be interpreted as a consequence of Itô's lemma.
+
+
+### Doléans-Dade exponential
+
+The Doléans-Dade exponential (or stochastic exponential) of a continuous semimartingale *X* can be defined as the solution to the SDE *dY* = *Y dX* with initial condition *Y*₀ = 1. It is sometimes denoted by Ɛ(*X*).
+Applying Itô's lemma with *f*(*Y*) = log(*Y*) gives
+
+Exponentiating gives the solution
+
+
+### Black–Scholes formula
+
+Itô's lemma can be used to derive the Black–Scholes equation for an option. Suppose a stock price follows a geometric Brownian motion given by the stochastic differential equation *dS* = *S*(*σdB* + *μ dt*). Then, if the value of an option at time t is *f*(*t*, *Sₜ*), Itô's lemma gives
+
+The term ⁠∂*f*/∂*S*⁠ *dS* represents the change in value in time *dt* of the trading strategy consisting of holding an amount ⁠∂ *f*/∂*S*⁠ of the stock. If this trading strategy is followed, and any cash held is assumed to grow at the risk free rate *r*, then the total value *V* of this portfolio satisfies the SDE
+
+This strategy replicates the option if *V* = *f*(*t*,*S*). Combining these equations gives the celebrated Black–Scholes equation
+
+
+### Product rule for Itô processes
+
+Let {\displaystyle \mathbf {X} \_{t}} be a two-dimensional Ito process with SDE:
+
+Then we can use the multi-dimensional form of Ito's lemma to find an expression for {\displaystyle d(X\_{t}^{1}X\_{t}^{2})}.
+
+We have {\displaystyle \mu \_{t}={\begin{pmatrix}\mu \_{t}^{1}\\\mu \_{t}^{2}\end{pmatrix}}} and {\displaystyle \mathbf {G} ={\begin{pmatrix}\sigma \_{t}^{1}\\\sigma \_{t}^{2}\end{pmatrix}}}.
+
+We set {\displaystyle f(t,\mathbf {X} \_{t})=X\_{t}^{1}X\_{t}^{2}} and observe that {\displaystyle {\frac {\partial f}{\partial t}}=0,\ (\nabla \_{\mathbf {X} }f)^{T}=(X\_{t}^{2}\ \ X\_{t}^{1})} and {\displaystyle H\_{\mathbf {X} }f={\begin{pmatrix}0&1\\1&0\end{pmatrix}}}
+
+Substituting these values in the multi-dimensional version of the lemma gives us:
+
+This is a generalisation of Leibniz's product rule to Ito processes, which are non-differentiable.
+
+Further, using the second form of the multidimensional version above gives us
+
+so we see that the product {\displaystyle X\_{t}^{1}X\_{t}^{2}} is itself an Itô drift-diffusion process.
+
+
+## Itô's formula for functions with finite quadratic variation
+
+Hans Föllmer provided a non-probabilistic proof of the Itô formula and showed that it holds for all functions with finite quadratic variation.
+
+Let {\displaystyle f\in C^{2}} be a real-valued function and {\displaystyle x:[0,\infty ]\to \mathbb {R} } a right-continuous function with left limits and finite quadratic variation {\displaystyle [x]}. Then
+
+where the quadratic variation of $x$ is defined as a limit along a sequence of partitions {\displaystyle D\_{n}} of {\displaystyle [0,t]} with step decreasing to zero:
+
+{\displaystyle [x](t)=\lim \_{n\to \infty }\sum \_{t\_{k}^{n}\in D\_{n}}\left(x\_{t\_{k+1}^{n}}-x\_{t\_{k}^{n}}\right)^{2}.}
+
+
+## Higher-order Itô formula
+
+Rama Cont and Nicholas Perkowski extended the Ito formula to functions with finite p-th variation:. For a continuous function with finite p-th variation
+
+{\displaystyle [x]^{p}(t)=\lim \_{n\to \infty }\sum \_{t\_{k}^{n}\in D\_{n}}\left(x\_{t\_{k+1}^{n}}-x\_{t\_{k}^{n}}\right)^{p}}
+
+the change of variable formula is:
+
+{\displaystyle {\begin{aligned}f(x\_{t})={}&f(x\_{0})+\int \_{0}^{t}\nabla \_{p-1}f(x\_{s-})\,\mathrm {d} x\_{s}+{\frac {1}{p!}}\int \_{]0,t]}f^{p}(x\_{s-})\,d[x]\_{s}^{p}\end{aligned}}}
+
+where the first integral is defined as a limit of compensated left Riemann sums along a sequence of partitions {\displaystyle D\_{n}}:
+
+{\displaystyle {\begin{aligned}\int \_{0}^{t}\nabla \_{p-1}f(x\_{s-})\,\mathrm {d} x\_{s}:={}&\sum \_{t\_{k}^{n}\in D\_{n}}\sum \_{k=1}^{p-1}{\frac {f^{k}(x\_{t\_{k}^{n}})}{k!}}\left(x\_{t\_{k+1}^{n}}-x\_{t\_{k}^{n}}\right)^{k}.\end{aligned}}}
+
+
+## Infinite-dimensional formulas
+
+There exist a couple of extensions to infinite-dimensional spaces (e.g. Pardoux, Gyöngy-Krylov, Brzezniak-van Neerven-Veraar-Weis).
+

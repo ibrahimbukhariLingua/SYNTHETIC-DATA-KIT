@@ -1,0 +1,161 @@
+Makridakis Competitions
+
+
+# Makridakis Competitions
+
+
+
+The **Makridakis Competitions** (also known as the **M Competitions** or **M-Competitions**) are a series of open competitions to evaluate and compare the accuracy of different time series forecasting methods. They are organized by teams led by forecasting researcher Spyros Makridakis and were first held in 1982.
+
+
+## Competitions
+
+
+### Summary
+
+| No. | Informal name for competition | Year of publication of results | Number of time series used | Number of methods tested | Other features |
+| --- | --- | --- | --- | --- | --- |
+| 1 | M Competition | 1982 | 1001 (used a subsample of 111 for the methods where it was too difficult to run all 1001) | 15 (plus 9 variations) | Not real-time |
+| 2 | M2 Competition | 1993 | 29 (23 from collaborating companies, 6 from macroeconomic indicators) | 16 (including 5 human forecasters and 11 automatic trend-based methods) plus 2 combined forecasts and 1 overall average | Real-time, many collaborating organizations, competition announced in advance |
+| 3 | M3 Competition | 2000 | 3003 | 24 |
+| 4 | M4 Competition | 2020 | 100,000 | All major ML and statistical methods have been tested | First winner Slawek Smyl, Uber Technologies |
+| 5 | M5 Competition | Initial results 2021, Final 2022 | Around 42,000 hierarchical timeseries provided by Walmart | All major forecasting methods, including Machine and Deep Learning, and Statistical ones will be tested | First winner Accuracy Challenge: YeonJun In. First winners uncertainty Challenge: Russ Wolfinger and David Lander |
+| 6 | M6 Competition | Initial results 2022, Final 2024 | Real time financial forecasting competition consisting of 50 S&P500 US stocks and of 50 international ETFs | All major forecasting methods, including Machine and Deep Learning, and Statistical ones will be tested |
+
+
+### First competition in 1982
+
+The first Makridakis Competition, held in 1982, and known in the forecasting literature as the **M-Competition**, used 1001 time series and 15 forecasting methods (with another nine variations of those methods included). According to a later paper by the authors, the following were the main conclusions of the M-Competition:
+
+1. Statistically sophisticated or complex methods do not necessarily provide more accurate forecasts than simpler ones.
+2. The relative ranking of the performance of the various methods varies according to the accuracy measure being used.
+3. The accuracy when various methods are combined outperforms, on average, the individual methods being combined and does very well in comparison to other methods.
+4. The accuracy of the various methods depends on the length of the forecasting horizon involved.
+
+The findings of the study have been verified and replicated through the use of new methods by other researchers.
+
+According Rob J. Hyndman "... anyone could submit forecasts, making this the first true forecasting competition as far as I am aware.
+
+Newbold (1983) was critical of the M-competition, and argued against the general idea of using a single competition to attempt to settle the complex issue.
+
+Before the first M-Competition, Makridakis and Hibon published in the Journal of the Royal Statistical Society (JRSS) an article showing that simple methods perform well in comparison to the more complex and statistically sophisticated ones. Statisticians at that time criticized the results claiming that they were not possible. Their criticism motivated the subsequent M, M2 and M3 Competitions that proved the thesis of the Makridakis and Hibon Study.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+
+### Second competition, published in 1993
+
+The second competition, called the M-2 Competition or M2-Competition, was conducted on a larger scale. A call to participate was published in the *International Journal of Forecasting*, announcements were made in the International Symposium of Forecasting, and a written invitation was sent to all known experts on the various time series methods. The M2-Competition was organized in collaboration with four companies and included six macroeconomic series, and was conducted on a real-time basis. Data was from the United States. The results of the competition were published in a 1993 paper. The results were claimed to be statistically identical to those of the M-Competition.
+
+The M2-Competition used much fewer time series than the original M-competition. Whereas the original M-competition had used 1001 time series, the M2-Competition used only 29, including 23 from the four collaborating companies and 6 macroeconomic series. Data from the companies was obfuscated through the use of a constant multiplier in order to preserve proprietary privacy. The purpose of the M2-Competition was to simulate real-world forecasting better in the following respects:
+
+* Allow forecasters to combine their trend-based forecasting method with personal judgment.
+* Allow forecasters to ask additional questions requesting data from the companies involved in order to make better forecasts.
+* Allow forecasters to learn from one forecasting exercise and revise their forecasts for the next forecasting exercise based on the feedback.
+
+The competition was organized as follows:
+
+* The first batch of data was sent to participating forecasters in summer 1987.
+* Forecasters had the option of contacting the companies involved via an intermediary in order to gather additional information they considered relevant to making forecasts.
+* In October 1987, forecasters were sent updated data.
+* Forecasters were required to send in their forecasts by the end of November 1987.
+* A year later, forecasters were sent an analysis of their forecasts and asked to submit their next forecast in November 1988.
+* The final analysis and evaluation of the forecasts was done starting April 1991 when the actual, final values of the data including December 1990 were known to the collaborating companies.
+
+In addition to the published results, many of the participants wrote short articles describing their experience participating in the competition and their reflections on what the competition demonstrated. Chris Chatfield praised the design of the competition, but said that despite the organizers' best efforts, he felt that forecasters still did not have enough access to the companies from the inside as he felt people would have in real-world forecasting.
+Fildes and Makridakis (1995) argue that despite the evidence produced by these competitions, the implications continued to be ignored by theoretical statisticians.
+
+
+### Third competition, published in 2000
+
+The third competition, called the M-3 Competition or M3-Competition, was intended to both replicate *and* extend the features of the M-competition and M2-Competition, through the inclusion of more methods and researchers (particularly researchers in the area of neural networks) and more time series. A total of 3003 time series was used. The paper documenting the results of the competition was published in the *International Journal of Forecasting* in 2000 and the raw data was also made available on the International Institute of Forecasters website. According to the authors, the conclusions from the M3-Competition were similar to those from the earlier competitions.
+
+The time series included yearly, quarterly, monthly, daily, and other time series. In order to ensure that enough data was available to develop an accurate forecasting model, minimum thresholds were set for the number of observations: 14 for yearly series, 16 for quarterly series, 48 for monthly series, and 60 for other series.
+
+Time series were in the following domains: micro, industry, macro, finance, demographic, and other. Below is the number of time series based on the time interval and the domain:
+
+| Time interval between successive observations | Micro | Industry | Macro | Finance | Demographic | Other | Total |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Yearly | 146 | 102 | 83 | 58 | 245 | 11 | 645 |
+| Quarterly | 204 | 83 | 336 | 76 | 57 | 0 | 756 |
+| Monthly | 474 | 334 | 312 | 145 | 111 | 52 | 1428 |
+| Other | 4 | 0 | 0 | 29 | 0 | 141 | 174 |
+| Total | 828 | 519 | 731 | 308 | 413 | 204 | 3003 |
+
+The five measures used to evaluate the accuracy of different forecasts were: symmetric mean absolute percentage error (also known as symmetric MAPE), average ranking, median symmetric absolute percentage error (also known as median symmetric APE), percentage better, and median RAE.
+
+A number of other papers have been published with different analyses of the data set from the M3-Competition. According to Rob J. Hyndman, Editor-in-Chief of the International Journal of Forecasting (IJF), "The M3 data have continued to be used since 2000 for testing new time series forecasting methods. In fact, unless a proposed forecasting method is competitive against the original M3 participating methods, it is difficult to get published in the IJF."
+
+
+### Fourth competition (2018)
+
+The fourth competition, M4, was announced in November 2017. The competition started on January 1, 2018 and ended on May 31, 2018. Initial results were published in the International Journal of Forecasting on June 21, 2018.
+
+The M4 extended and replicated the results of the previous three competitions, using an extended and diverse set of time series to identify the most accurate forecasting method(s) for different types of predictions. It aimed to get answers on how to improve forecasting accuracy and identify the most appropriate methods for each case. To get precise and compelling answers, the M4 Competition utilized 100,000 real-life series, and incorporates all major forecasting methods, including those based on Artificial Intelligence (Machine Learning, ML), as well as traditional statistical ones.
+
+In his blog, Rob J. Hyndman said about M4: "The "M" competitions organized by Spyros Makridakis have had an enormous influence on the field of forecasting. They focused attention on what models produced good forecasts, rather than on the mathematical properties of those models. For that, Spyros deserves congratulations for changing the landscape of forecasting research through this series of competitions."
+
+Below is the number of time series based on the time interval and the domain:
+
+| Time interval between successive observations | Micro | Industry | Macro | Finance | Demographic | Other | Total |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Yearly | 6538 | 3716 | 3903 | 6519 | 1088 | 1236 | 23000 |
+| Quarterly | 6020 | 4637 | 5315 | 5305 | 1858 | 865 | 24000 |
+| Monthly | 10975 | 10017 | 10016 | 10987 | 5728 | 277 | 48000 |
+| Weekly | 112 | 6 | 41 | 164 | 24 | 12 | 359 |
+| Daily | 1476 | 422 | 127 | 1559 | 10 | 633 | 4227 |
+| Hourly | 0 | 0 | 0 | 0 | 0 | 414 | 414 |
+| Total | 25121 | 18798 | 19402 | 24534 | 8708 | 3437 | 100000 |
+
+In order to ensure that enough data are available to develop an accurate forecasting model, minimum thresholds were set for the number of observations: 13 for yearly, 16 for quarterly, 42 for monthly, 80 for weekly, 93 for daily and 700 for hourly series.
+
+One of its major objectives was to compare the accuracy of ML methods versus that of statistical ones and empirically verify the claims of the superior performance of ML methods.
+
+**Below is a short description of the M4 Competition and its major findings and conclusion:**
+
+The M4 Competition ended on May 31, 2018 and in addition to point forecasts, it included specifying Prediction Intervals (PI) too. M4 was an Open one, with its most important objective (the same with that of the previous three M Competitions): "to learn to improve forecasting accuracy and advance the field as much as possible".
+
+**The five major findings and the conclusion of M4:**
+
+Below we outline what we consider to be the five major findings of the M4 Competition and advance a logical conclusion from these findings.
+
+1. The combination of methods was the king of the M4. Out of the 17 most accurate methods, 12 were "combinations" of mostly statistical approaches.
+2. The biggest surprise, however, was a "hybrid" approach utilizing both Statistical and ML features. This method, produced the most accurate forecasts as well as the most precise PIs and was submitted by Slawek Smyl, Data Scientist at Uber Technologies. According to sMAPE, it was close to 10% (a huge improvement) more accurate than the Combination (Comb) benchmark of the Competition (see below). It is noted that in the M3 Competition (Makridakis & Hibon, 2000) the best method was 4% more accurate than the same Combination.
+3. The second most accurate method was a combination of seven statistical methods and one ML one, with the weights for the averaging being calculated by a ML algorithm, trained to minimize forecasting error through holdout tests. This method was jointly submitted by Spain's University of A Coruña and Australia's Monash University.
+4. The first and the second most accurate methods also achieved an amazing success in specifying correctly the 95% PIs. These are the first methods we know that have done so and do not underestimate uncertainty considerably.
+5. The six pure ML methods submitted in the M4 performed poorly, none of them being more accurate than Comb and only one being more accurate than Naïve2. These results are in agreement with those of a recent study we published in PLoS One (Makridakis, et al., 2018).
+
+The conclusion from the above findings is that the accuracy of individual statistical or ML methods is low and that hybrid approaches and combination of methods is the way forward in order to improve forecasting accuracy and make forecasting more valuable.
+
+
+### Fifth competition (2020)
+
+M5 commenced on March 3 2020, and the results were declared on July 1, 2020. It used real-life data from Walmart and was conducted on Kaggle's Platform. It offered substantial prizes totaling US$100,000 to the winners. The data was provided by Walmart and consisted of around 42,000 hierarchical daily time series, starting at the level of SKUs and ending with the total demand of some large geographical area. In addition to the sales data, there was also information about prices, advertising/promotional activity and inventory levels as well as the day of the week the data refers to.
+
+There were several major prizes for the first, second and third winners in the categories of
+
+* Most accurate forecasts for the Walmart data
+* Most precise estimation of the uncertainty for the Walmart data
+
+There were also student and company prizes. There were no limit to the number of prizes that can be won by a single participant or team.
+
+The focus of the M5 was mainly on practitioners rather than academics. The M5 Competition attracted close to 6,000 participants and teams, receiving considerable interest.
+
+
+#### Findings and Conclusions
+
+This competition was of the "M" competitions to feature primarily machine learning methods at the top of its leaderboard. All of the top-performing were, "pure ML approaches and better than all statistical benchmarks and their combinations." The LightGBM model, as well as deep neural networks, featured prominently in top submissions. Consistent with the M4 Competition, the three best performers each employed ensembles, or combinations, of separately-trained and tuned models, where each model had a different training procedure and training dataset.
+
+
+## Offshoots
+
+
+### NN3-Competition
+
+Although the organizers of the M3-Competition did contact researchers in the area of artificial neural networks (ANN) to seek their participation in the competition, only one researcher participated, and that researcher's forecasts fared poorly. The reluctance of most ANN researchers to participate at the time was due to the computationally intensive nature of ANN-based forecasting and the huge time series used for the competition. In 2005, Crone, Nikolopoulos and Hibon organized the NN-3 Competition, using 111 of the time series from the M3-Competition (not the same data, because it was shifted in time, but the same sources). The NN-3 Competition found that the best ANN-based forecasts performed comparably with the best known forecasting methods, but were far more computationally intensive. It was also noted that many ANN-based techniques fared considerably worse than simple forecasting methods, despite greater *theoretical* potential for good performance.
+
+
+## Reception
+
+Nassim Nicholas Taleb, in his book *The Black Swan*, references the Makridakis Competitions as follows: "The most interesting test of how academic methods fare in the real world was provided by Spyros Makridakis, who spent part of his career managing competitions between forecasters who practice a "scientific method" called econometrics—an approach that combines economic theory with statistical measurements. Simply put, he made people forecast *in real life* and then he judged their accuracy. This led to a series of "M-Competitions" he ran, with assistance from Michele Hibon, of which M3 was the third and most recent one, completed in 1999. Makridakis and Hibon reached the sad conclusion that "statistically sophisticated and complex methods do not necessarily provide more accurate forecasts than simpler ones.""
+
+In the book *Everything is Obvious*, Duncan Watts cites the work of Makridakis and Hibon as showing that "simple models are about as good as complex models in forecasting economic time series."
+

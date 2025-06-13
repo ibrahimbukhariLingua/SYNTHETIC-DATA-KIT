@@ -1,0 +1,23 @@
+Fugit
+
+
+# Fugit
+
+
+
+| **Calculation of fugit:** For Fugit — where n is the number of time-steps in the tree; t is the time to option expiry; and i is the current time-step — the calculation is as follows:; ˢᵉᵉ ᵃˡˢᵒ (1) set the fugit of all nodes at the end of the tree equal to i = n (2) work backwards recursively: * if the option should be exercised at a node, set the fugit at that node equal to its period * if the option should not be exercised at a node, set the fugit to the risk-neutral expected fugit over the next period. (3) the number calculated in this fashion at the beginning of the first period (i=0) is the current fugit. Finally, to annualize the fugit, multiply the resulting value by t / n. |
+| --- |
+
+In mathematical finance, **fugit** is the expected (or optimal) date to exercise an American- or Bermudan option. It is useful for hedging purposes here; see Greeks (finance) and Optimal stopping § Option trading. The term was first introduced by Mark Garman in an article "Semper tempus fugit" published in 1989. The Latin term "tempus fugit" means "time flies" and Garman suggested the name because "time flies especially when you're having fun managing your book of American options".
+
+
+## Details
+
+Fugit provides an estimate of when an option would be exercised, which is then a useful indication for the maturity to use when hedging American or Bermudan products with European options. Fugit is thus used for the hedging of convertible bonds, equity linked convertible notes, and any putable or callable exotic coupon notes. Although see and for qualifications here. Fugit is also useful in estimating "the (risk-neutral) expected life of the option" for Employee stock options (note the brackets).
+
+Fugit is calculated as "the expected time to exercise of American options", and is also described as the "risk-neutral expected life of the option" The computation requires a binomial tree — although a Finite difference approach would also apply — where, a second quantity, additional to option price, is required at each node of the tree; see methodology aside. Note that fugit is not always a unique value.
+
+Nassim Taleb proposes a "rho fudge", as a “shortcut method... to find the right duration (i.e., expected time to termination) for an American option”. Taleb terms this result “Omega” as opposed to fugit. The formula is
+
+Here, Rho2 refers to sensitivity to dividends or the foreign interest rate, as opposed to the more usual rho which measures sensitivity to (local) interest rates; the latter is sometimes used, however. Taleb notes that this approach was widely applied, already in the 1980s, preceding Garman.
+

@@ -1,0 +1,39 @@
+IBM Planning Analytics
+
+
+# IBM Planning Analytics
+
+
+
+**IBM Planning Analytics powered by TM1** (formerly IBM Cognos TM1, formerly Applix TM1, formerly Sinper TM/1) is a business performance management software suite designed to implement collaborative planning, budgeting and forecasting solutions, interactive "what-if" analyses, as well as analytical and reporting applications.
+
+The database server component of the software platform retains its historical name TM1. Data is stored in in-memory multidimensional OLAP cubes, generally at the "leaf" level, and consolidated on demand. In addition to data, cubes can include encoded rules which define any on-demand calculations. By design, computations (typically aggregation along dimensional hierarchies using weighted summation) on the data are performed in near real-time, without the need to precalculate, due to a highly performant database design and calculation engine. These properties also allow the data to be updated frequently and by multiple users.
+
+TM1 is an example of a class of software products which implement the principles of the functional database model. The IBM Planning Analytics platform, in addition to the TM1 database server, includes an ETL tool, server management and monitoring tools and a number of user front ends which provide capabilities designed for common business planning and budgeting requirements, including workflow, adjustments, commentary, etc.
+
+The vendor currently offers the software both as a standalone on-premises product and in the SaaS model on the cloud.
+
+
+## History
+
+While working at Exxon, Lilly Whaley suggested developing a planning system using the IBM mainframe time sharing option (TSO) to replace the previous IMS based planning system and thereby significantly reduce running costs. Manuel "Manny" Perez, who had been in IT for most of his career, took it upon himself to develop a prototype. Right away he realized that in order to provide the multidimensionality and interactivity necessary it would be necessary to keep the data structures in computer memory rather than on disk.
+
+The business potential of the planning system Perez had developed became apparent to him and he began to explore the possibilities of commercializing it. Back in early 1981, the IBM personal computer had not yet been announced and the Apple II® was not in significant use at corporations, so initially, Perez looked to implement on a public mainframe timesharing system. Just in time, the IBM personal computer was announced. It provided a low cost development environment which Manny was quick to take advantage of.
+
+When Visicalc was released, Perez became convinced that it was the ideal user interface for his visionary product: the Functional Database. With his friend Jose Sinai formed the Sinper Corporation in early 1983 and released his initial product, TM/1 (the "TM" in TM1 stands for "Table Manager"). Sinper was purchased by Applix in 1996, which was purchased by Cognos in late 2007, which was in itself acquired mere months later by IBM.
+
+With its flagship TM1 product line, Applix was the purest OLAP vendor among publicly traded independent BI vendors prior to OLAP industry consolidation in 2007, and had the greatest growth rate.
+
+On December 16, 2016 IBM released a rebranded and expanded version of the software (IBM Planning Analytics Local 2.0 'powered by' IBM TM1) with a 'restarted' version numbering. The data server component is still referred to as TM1 and retains numbering continued from prior versions, so Planning Analytics version 2.x includes TM1 version 11.x.
+
+
+## Current Components
+
+* TM1 Server
+* Planning Analytics Workspace (a.k.a. PAW) - main web front end and development environment
+* Planning Analytics for Microsoft Excel (a.k.a. PAfE, formerly PAx) - main Excel front end
+* TM1 Web - legacy web front end
+* TM1 Applications - legacy web front end
+* TM1 Perspectives - legacy Excel front end
+* TM1 Architect - legacy standalone Windows front end and development environment
+* TM1 Performance Modeler - legacy development environment

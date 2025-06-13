@@ -1,0 +1,208 @@
+Deep backward stochastic differential equation method
+
+
+# Deep backward stochastic differential equation method
+
+
+
+**Deep backward stochastic differential equation method** is a numerical method that combines deep learning with Backward stochastic differential equation (BSDE). This method is particularly useful for solving high-dimensional problems in financial derivatives pricing and risk management. By leveraging the powerful function approximation capabilities of deep neural networks, deep BSDE addresses the computational challenges faced by traditional numerical methods in high-dimensional settings.
+
+
+## History
+
+
+### Backwards stochastic differential equations
+
+BSDEs were first introduced by Pardoux and Peng in 1990 and have since become essential tools in stochastic control and financial mathematics. In the 1990s, Étienne Pardoux and Shige Peng established the existence and uniqueness theory for BSDE solutions, applying BSDEs to financial mathematics and control theory. For instance, BSDEs have been widely used in option pricing, risk measurement, and dynamic hedging.
+
+
+### Deep learning
+
+Deep Learning is a machine learning method based on multilayer neural networks. Its core concept can be traced back to the neural computing models of the 1940s. In the 1980s, the proposal of the backpropagation algorithm made the training of multilayer neural networks possible. In 2006, the Deep Belief Networks proposed by Geoffrey Hinton and others rekindled interest in deep learning. Since then, deep learning has made groundbreaking advancements in image processing, speech recognition, natural language processing, and other fields.
+
+
+### Limitations of traditional numerical methods
+
+Traditional numerical methods for solving stochastic differential equations include the Euler–Maruyama method, Milstein method, Runge–Kutta method (SDE) and methods based on different representations of iterated stochastic integrals.
+
+But as financial problems become more complex, traditional numerical methods for BSDEs (such as the Monte Carlo method, finite difference method, etc.) have shown limitations such as high computational complexity and the curse of dimensionality.
+
+1. In high-dimensional scenarios, the Monte Carlo method requires numerous simulation paths to ensure accuracy, resulting in lengthy computation times. In particular, for nonlinear BSDEs, the convergence rate is slow, making it challenging to handle complex financial derivative pricing problems.
+2. The finite difference method, on the other hand, experiences exponential growth in the number of computation grids with increasing dimensions, leading to significant computational and storage demands. This method is generally suitable for simple boundary conditions and low-dimensional BSDEs, but it is less effective in complex situations.
+
+### Deep BSDE method
+
+The combination of deep learning with BSDEs, known as deep BSDE, was proposed by Han, Jentzen, and E in 2018 as a solution to the high-dimensional challenges faced by traditional numerical methods. The Deep BSDE approach leverages the powerful nonlinear fitting capabilities of deep learning, approximating the solution of BSDEs by constructing neural networks. The specific idea is to represent the solution of a BSDE as the output of a neural network and train the network to approximate the solution.
+
+
+## Model
+
+
+### Mathematical method
+
+Backward Stochastic Differential Equations (BSDEs) represent a powerful mathematical tool extensively applied in fields such as stochastic control, financial mathematics, and beyond. Unlike traditional Stochastic differential equations (SDEs), which are solved forward in time, BSDEs are solved backward, starting from a future time and moving backwards to the present. This unique characteristic makes BSDEs particularly suitable for problems involving terminal conditions and uncertainties.
+
+| Differential equations |
+| --- |
+| Scope |
+| Fields | * Natural sciences * Engineering | | --- | | * Astronomy * Physics * Chemistry * Biology * Geology | | Applied mathematics | | * Continuum mechanics * Chaos theory * Dynamical systems | | Social sciences | | * Economics * Population dynamics | List of named differential equations |
+| Classification |
+| Types | * Ordinary * Partial * Differential-algebraic * Integro-differential * Fractional * Linear * Non-linear | | --- | | By variable type | | * Dependent and independent variables * Autonomous * Coupled / Decoupled * Exact * Homogeneous / Nonhomogeneous | | Features | | * Order * Operator * Notation | |
+| Relation to processes * Difference (discrete analogue) * Stochastic + Stochastic partial * Delay |
+| Solution |
+| Existence and uniqueness * Picard–Lindelöf theorem * Peano existence theorem * Carathéodory's existence theorem * Cauchy–Kowalevski theorem |
+| General topics * Initial conditions * Boundary values + Dirichlet + Neumann + Robin + Cauchy problem * Wronskian * Phase portrait * Lyapunov / Asymptotic / Exponential stability * Rate of convergence * Series / Integral solutions * Numerical integration * Dirac delta function |
+| Solution methods * Inspection * Method of characteristics * Euler * Exponential response formula * Finite difference (Crank–Nicolson) * Finite element + Infinite element * Finite volume * Galerkin + Petrov–Galerkin * Green's function * Integrating factor * Integral transforms * Perturbation theory * Runge–Kutta * Separation of variables * Undetermined coefficients * Variation of parameters |
+| People |
+| List * Isaac Newton * Gottfried Leibniz * Jacob Bernoulli * Leonhard Euler * Joseph-Louis Lagrange * Józef Maria Hoene-Wroński * Joseph Fourier * Augustin-Louis Cauchy * George Green * Carl David Tolmé Runge * Martin Kutta * Rudolf Lipschitz * Ernst Lindelöf * Émile Picard * Phyllis Nicolson * John Crank |
+| * v * t * e |
+
+A backward stochastic differential equation (BSDE) can be formulated as:
+
+In this equation:
+
+* {\displaystyle \xi } is the terminal condition specified at time {\displaystyle T}.
+* {\displaystyle f:[0,T]\times \mathbb {R} \times \mathbb {R} \to \mathbb {R} } is called the generator of the BSDE
+* {\displaystyle (Y\_{t},Z\_{t})\_{t\in [0,T]}} is the solution consists of stochastic processes {\displaystyle (Y\_{t})\_{t\in [0,T]}} and {\displaystyle (Z\_{t})\_{t\in [0,T]}} which are adapted to the filtration {\displaystyle ({\mathcal {F}}\_{t})\_{t\in [0,T]}}
+* {\displaystyle W\_{s}} is a standard Brownian motion.
+
+The goal is to find adapted processes {\displaystyle Y\_{t}} and {\displaystyle Z\_{t}} that satisfy this equation. Traditional numerical methods struggle with BSDEs due to the curse of dimensionality, which makes computations in high-dimensional spaces extremely challenging.
+
+
+### Methodology overview
+
+Source:
+
+
+#### 1. Semilinear parabolic PDEs
+
+We consider a general class of PDEs represented by
+{\displaystyle {\frac {\partial u}{\partial t}}(t,x)+{\frac {1}{2}}{\text{Tr}}\left(\sigma \sigma ^{T}(t,x)\left({\text{Hess}}\_{x}u(t,x)\right)\right)+\nabla u(t,x)\cdot \mu (t,x)+f\left(t,x,u(t,x),\sigma ^{T}(t,x)\nabla u(t,x)\right)=0}
+
+In this equation:
+
+* {\displaystyle u(T,x)=g(x)} is the terminal condition specified at time {\displaystyle T}.
+* {\displaystyle t} and {\displaystyle x} represent the time and {\displaystyle d}-dimensional space variable, respectively.
+* {\displaystyle \sigma } is a known vector-valued function, {\displaystyle \sigma ^{T}} denotes the transpose associated to {\displaystyle \sigma }, and {\displaystyle {\text{Hess}}\_{x}u} denotes the Hessian of function {\displaystyle u} with respect to {\displaystyle x}.
+* {\displaystyle \mu } is a known vector-valued function, and {\displaystyle f} is a known nonlinear function.
+
+#### 2. Stochastic process representation
+
+Let {\displaystyle \{W\_{t}\}\_{t\geq 0}} be a {\displaystyle d}-dimensional Brownian motion and {\displaystyle \{X\_{t}\}\_{t\geq 0}} be a {\displaystyle d}-dimensional stochastic process which satisfies
+
+{\displaystyle X\_{t}=\xi +\int \_{0}^{t}\mu (s,X\_{s})\,ds+\int \_{0}^{t}\sigma (s,X\_{s})\,dW\_{s}}
+
+
+#### 3. Backward stochastic differential equation (BSDE)
+
+Then the solution of the PDE satisfies the following BSDE:
+
+{\displaystyle u(t,X\_{t})-u(0,X\_{0})}
+
+
+#### 4. Temporal discretization
+
+Discretize the time interval {\displaystyle [0,T]} into steps {\displaystyle 0=t\_{0}<t\_{1}<\cdots <t\_{N}=T}:
+
+{\displaystyle X\_{t\_{n+1}}-X\_{t\_{n}}\approx \mu (t\_{n},X\_{t\_{n}})\Delta t\_{n}+\sigma (t\_{n},X\_{t\_{n}})\Delta W\_{n}}
+
+{\displaystyle u(t\_{n},X\_{t\_{n+1}})-u(t\_{n},X\_{t\_{n}})}
+
+where {\displaystyle \Delta t\_{n}=t\_{n+1}-t\_{n}} and {\displaystyle \Delta W\_{n}=W\_{t\_{n+1}}-W\_{n}}.
+
+
+#### 5. Neural network approximation
+
+Use a multilayer feedforward neural network to approximate:
+
+{\displaystyle \sigma ^{T}(t\_{n},X\_{n})\nabla u(t\_{n},X\_{n})\approx (\sigma ^{T}\nabla u)(t\_{n},X\_{n};\theta \_{n})}
+
+for {\displaystyle n=1,\ldots ,N}, where {\displaystyle \theta \_{n}} are parameters of the neural network approximating {\displaystyle x\mapsto \sigma ^{T}(t,x)\nabla u(t,x)} at {\displaystyle t=t\_{n}}.
+
+
+#### 6. Training the neural network
+
+Stack all sub-networks in the approximation step to form a deep neural network. Train the network using paths {\displaystyle \{X\_{t\_{n}}\}\_{0\leq n\leq N}} and {\displaystyle \{W\_{t\_{n}}\}\_{0\leq n\leq N}} as input data, minimizing the loss function:
+
+{\displaystyle l(\theta )=\mathbb {E} \left|g(X\_{t\_{N}})-{\hat {u}}\left(\{X\_{t\_{n}}\}\_{0\leq n\leq N},\{W\_{t\_{n}}\}\_{0\leq n\leq N};\theta \right)\right|^{2}}
+
+where {\displaystyle {\hat {u}}} is the approximation of {\displaystyle u(t,X\_{t})}.
+
+
+### Neural network architecture
+
+Source:
+
+| Part of a series on |
+| --- |
+| Artificial intelligence |
+| Major goals * Artificial general intelligence * Intelligent agent * Recursive self-improvement * Planning * Computer vision * General game playing * Knowledge reasoning * Natural language processing * Robotics * AI safety |
+| Approaches * Machine learning * Symbolic * Deep learning * Bayesian networks * Evolutionary algorithms * Hybrid intelligent systems * Systems integration |
+| Applications * Bioinformatics * Deepfake * Earth sciences * Finance * Generative AI + Art + Audio + Music * Government * Healthcare + Mental health * Industry * Translation * Military * Physics * Projects |
+| Philosophy * Artificial consciousness * Chinese room * Friendly AI * Control problem/Takeover * Ethics * Existential risk * Turing test |
+| History * Timeline * Progress * AI winter * AI boom |
+| Glossary * Glossary |
+| * v * t * e |
+
+Deep learning encompass a class of machine learning techniques that have transformed numerous fields by enabling the modeling and interpretation of intricate data structures. These methods, often referred to as deep learning, are distinguished by their hierarchical architecture comprising multiple layers of interconnected nodes, or neurons. This architecture allows deep neural networks to autonomously learn abstract representations of data, making them particularly effective in tasks such as image recognition, natural language processing, and financial modeling. The core of this method lies in designing an appropriate neural network structure (such as fully connected networks or recurrent neural networks) and selecting effective optimization algorithms.
+
+The choice of deep BSDE network architecture, the number of layers, and the number of neurons per layer are crucial hyperparameters that significantly impact the performance of the deep BSDE method. The deep BSDE method constructs neural networks to approximate the solutions for {\displaystyle Y} and {\displaystyle Z}, and utilizes stochastic gradient descent and other optimization algorithms for training.
+
+The fig illustrates the network architecture for the deep BSDE method. Note that {\displaystyle \nabla u(t\_{n},X\_{t\_{n}})} denotes the variable approximated directly by subnetworks, and {\displaystyle u(t\_{n},X\_{t\_{n}})} denotes the variable computed iteratively in the network. There are three types of connections in this network:
+
+i) {\displaystyle X\_{t\_{n}}\rightarrow h\_{1}^{n}\rightarrow h\_{2}^{n}\rightarrow \ldots \rightarrow h\_{H}^{n}\rightarrow \nabla u(t\_{n},X\_{t\_{n}})} is the multilayer feedforward neural network approximating the spatial gradients at time {\displaystyle t=t\_{n}}. The weights {\displaystyle \theta \_{n}} of this subnetwork are the parameters optimized.
+
+ii) {\displaystyle (u(t\_{n},X\_{t\_{n}}),\nabla u(t\_{n},X\_{t\_{n}}),W\_{t\_{n}+1}-W\_{t\_{n}})\rightarrow u(t\_{n+1},X\_{t\_{n+1}})} is the forward iteration providing the final output of the network as an approximation of {\displaystyle u(t\_{N},X\_{t\_{N}})}, characterized by Eqs. 5 and 6. There are no parameters optimized in this type of connection.
+
+iii) {\displaystyle (X\_{t\_{n}},W\_{t\_{n}+1}-W\_{t\_{n}})\rightarrow X\_{t\_{n+1}}} is the shortcut connecting blocks at different times, characterized by Eqs. 4 and 6. There are also no parameters optimized in this type of connection.
+
+
+## Algorithms
+
+
+### Adam optimizer
+
+This function implements the Adam algorithm for minimizing the target function {\displaystyle {\mathcal {G}}(\theta )}.
+
+* With the ADAM algorithm described above, we now present the pseudocode corresponding to a multilayer feedforward neural network:
+
+### Backpropagation algorithm
+
+This function implements the backpropagation algorithm for training a multi-layer feedforward neural network.
+
+* Combining the ADAM algorithm and a multilayer feedforward neural network, we provide the following pseudocode for solving the optimal investment portfolio:
+
+### Numerical solution for optimal investment portfolio
+
+Source:
+
+This function calculates the optimal investment portfolio using the specified parameters and stochastic processes.
+
+
+## Application
+
+Deep BSDE is widely used in the fields of financial derivatives pricing, risk management, and asset allocation. It is particularly suitable for:
+
+* High-Dimensional Option Pricing: Pricing complex derivatives like basket options and Asian options, which involve multiple underlying assets. Traditional methods such as finite difference methods and Monte Carlo simulations struggle with these high-dimensional problems due to the curse of dimensionality, where the computational cost increases exponentially with the number of dimensions. Deep BSDE methods utilize the function approximation capabilities of deep neural networks to manage this complexity and provide accurate pricing solutions. The deep BSDE approach is particularly beneficial in scenarios where traditional numerical methods fall short. For instance, in high-dimensional option pricing, methods like finite difference or Monte Carlo simulations face significant challenges due to the exponential increase in computational requirements with the number of dimensions. Deep BSDE methods overcome this by leveraging deep learning to approximate solutions to high-dimensional PDEs efficiently.
+
+* Risk Measurement: Calculating risk measures such as Conditional Value-at-Risk (CVaR) and Expected shortfall (ES). These risk measures are crucial for financial institutions to assess potential losses in their portfolios. Deep BSDE methods enable efficient computation of these risk metrics even in high-dimensional settings, thereby improving the accuracy and robustness of risk assessments. In risk management, deep BSDE methods enhance the computation of advanced risk measures like CVaR and ES, which are essential for capturing tail risk in portfolios. These measures provide a more comprehensive understanding of potential losses compared to simpler metrics like Value-at-Risk (VaR). The use of deep neural networks enables these computations to be feasible even in high-dimensional contexts, ensuring accurate and reliable risk assessments.
+
+* Dynamic Asset Allocation: Determining optimal strategies for asset allocation over time in a stochastic environment. This involves creating investment strategies that adapt to changing market conditions and asset price dynamics. By modeling the stochastic behavior of asset returns and incorporating it into the allocation decisions, deep BSDE methods allow investors to dynamically adjust their portfolios, maximizing expected returns while managing risk effectively. For dynamic asset allocation, deep BSDE methods offer significant advantages by optimizing investment strategies in response to market changes. This dynamic approach is critical for managing portfolios in a stochastic financial environment, where asset prices are subject to random fluctuations. Deep BSDE methods provide a framework for developing and executing strategies that adapt to these fluctuations, leading to more resilient and effective asset management.
+
+## Advantages and disadvantages
+
+
+### Advantages
+
+Sources:
+
+1. High-dimensional capability: Compared to traditional numerical methods, deep BSDE performs exceptionally well in high-dimensional problems.
+2. Flexibility: The incorporation of deep neural networks allows this method to adapt to various types of BSDEs and financial models.
+3. Parallel computing: Deep learning frameworks support GPU acceleration, significantly improving computational efficiency.
+
+### Disadvantages
+
+Sources:
+
+1. Training time: Training deep neural networks typically requires substantial data and computational resources.
+2. Parameter sensitivity: The choice of neural network architecture and hyperparameters greatly impacts the results, often requiring experience and trial-and-error.

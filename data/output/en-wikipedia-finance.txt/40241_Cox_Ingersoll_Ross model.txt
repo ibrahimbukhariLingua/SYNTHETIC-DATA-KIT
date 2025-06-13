@@ -1,0 +1,65 @@
+Cox–Ingersoll–Ross model
+
+
+# Cox–Ingersoll–Ross model
+
+
+
+In mathematical finance, the **Cox–Ingersoll–Ross (CIR) model** describes the evolution of interest rates. It is a type of "one factor model" (short-rate model) as it describes interest rate movements as driven by only one source of market risk. The model can be used in the valuation of interest rate derivatives. It was introduced in 1985 by John C. Cox, Jonathan E. Ingersoll and Stephen A. Ross as an extension of the Vasicek model, itself an Ornstein–Uhlenbeck process.
+
+
+## The model
+
+The CIR model describes the instantaneous interest rate {\displaystyle r\_{t}} with a Feller square-root process, whose stochastic differential equation is
+
+where {\displaystyle W\_{t}} is a Wiener process (modelling the random market risk factor) and {\displaystyle a}, {\displaystyle b}, and {\displaystyle \sigma \,} are the parameters. The parameter {\displaystyle a} corresponds to the speed of adjustment to the mean {\displaystyle b}, and {\displaystyle \sigma \,} to volatility. The drift factor, {\displaystyle a(b-r\_{t})}, is exactly the same as in the Vasicek model. It ensures mean reversion of the interest rate towards the long run value {\displaystyle b}, with speed of adjustment governed by the strictly positive parameter {\displaystyle a}.
+
+The standard deviation factor, {\displaystyle \sigma {\sqrt {r\_{t}}}}, avoids the possibility of negative interest rates for all positive values of {\displaystyle a} and {\displaystyle b}.
+An interest rate of zero is also precluded if the condition
+
+is met. More generally, when the rate ({\displaystyle r\_{t}}) is close to zero, the standard deviation ({\displaystyle \sigma {\sqrt {r\_{t}}}}) also becomes very small, which dampens the effect of the random shock on the rate. Consequently, when the rate gets close to zero, its evolution becomes dominated by the drift factor, which pushes the rate upwards (towards equilibrium).
+
+In the case {\displaystyle 4ab=\sigma ^{2}\,}, the Feller square-root process can be obtained from the square of an Ornstein–Uhlenbeck process. It is ergodic and possesses a stationary distribution. It is used in the Heston model to model stochastic volatility.
+
+
+### Distribution
+
+* Future distribution
+
+* Asymptotic distribution
+
+### Properties
+
+* Mean reversion,
+* Level dependent volatility ({\displaystyle \sigma {\sqrt {r\_{t}}}}),
+* For given positive {\displaystyle r\_{0}} the process will never touch zero, if {\displaystyle 2ab\geq \sigma ^{2}}; otherwise it can occasionally touch the zero point,
+* {\displaystyle \operatorname {E} [r\_{t}\mid r\_{0}]=r\_{0}e^{-at}+b(1-e^{-at})}, so long term mean is {\displaystyle b},
+* {\displaystyle \operatorname {Var} [r\_{t}\mid r\_{0}]=r\_{0}{\frac {\sigma ^{2}}{a}}(e^{-at}-e^{-2at})+{\frac {b\sigma ^{2}}{2a}}(1-e^{-at})^{2}.}
+
+### Calibration
+
+* Ordinary least squares
+
+* Martingale estimation
+* Maximum likelihood
+
+### Simulation
+
+Stochastic simulation of the CIR process can be achieved using two variants:
+
+* Discretization
+* Exact
+
+## Bond pricing
+
+Under the no-arbitrage assumption, a bond may be priced using this interest rate process. The bond price is exponential affine in the interest rate:
+
+where
+
+
+## Extensions
+
+The CIR model uses a special case of a basic affine jump diffusion, which still permits a closed-form expression for bond prices. Time varying functions replacing coefficients can be introduced in the model in order to make it consistent with a pre-assigned term structure of interest rates and possibly volatilities. The most general approach is in Maghsoodi (1996). A more tractable approach is in Brigo and Mercurio (2001b) where an external time-dependent shift is added to the model for consistency with an input term structure of rates.
+
+A significant extension of the CIR model to the case of stochastic mean and stochastic volatility is given by Lin Chen (1996) and is known as Chen model. A more recent extension for handling cluster volatility, negative interest rates and different distributions is the so-called "CIR #" by Orlando, Mininni and Bufalo (2018, 2019, 2020, 2021, 2023) and a simpler extension focussing on negative interest rates was proposed by Di Francesco and Kamm (2021, 2022), which are referred to as the CIR- and CIR-- models.
+

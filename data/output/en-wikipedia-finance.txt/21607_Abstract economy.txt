@@ -1,0 +1,201 @@
+Abstract economy
+
+
+# Abstract economy
+
+
+
+In theoretical economics, an **abstract economy** (also called a **generalized N-person game**) is a model that generalizes both the standard model of an exchange economy in microeconomics, and the standard model of a game in game theory. An *equilibrium* in an abstract economy generalizes both a Walrasian equilibrium in microeconomics, and a Nash equilibrium in game-theory.
+
+The concept was introduced by Gérard Debreu in 1952. He named it generalized N-person game, and proved the existence of equilibrium in this game. Later, Debreu and Kenneth Arrow (who renamed the concept to abstract economy) used this existence result to prove the existence of a Walrasian equilibrium (aka competitive equilibrium) in the Arrow–Debreu model. Later, Shafer and Sonnenschein extended both theorems to irrational agents - agents with non-transitive and non-complete preferences.
+
+
+## Abstract economy with utility functions
+
+
+### The general case
+
+
+#### Definition
+
+In the model of Debreu, an abstract economy contains a finite number N of *agents*. For each agent {\displaystyle i}, there is:
+
+* A *choice-set* {\displaystyle X\_{i}} (a subset of some Euclidean space {\displaystyle \mathbb {R} ^{l}}). This represents the global set of choices that the agent can make.
+ + We define the cartesian product of all choice sets as: {\displaystyle X:=\prod \_{j=1}^{N}X\_{j}}.
+* An action-correspondence {\displaystyle A\_{i}:X\twoheadrightarrow X\_{i}}. This represents the set of possible actions the agent can take, given the choices of the other agents.
+* A utility function: {\displaystyle U\_{i}:X\to \mathbb {R} }, representing the utility that the agent receives from each combination of choices.
+
+The goal of each agent is to choose an action that maximizes his utility.
+
+
+#### Equilibrium
+
+An *equilibrium* in an abstract economy is a vector of choices, {\displaystyle x=(x\_{1},\ldots ,x\_{N})=(x\_{i},x\_{-i})}, such that, for each agent {\displaystyle i}, the action {\displaystyle x\_{i}} maximizes the function {\displaystyle U\_{i}(\cdot ,x\_{-i})} subject to the constraint {\displaystyle x\_{i}\in A\_{i}(x)}:
+
+> {\displaystyle U\_{i}(x\_{i},x\_{-i})=\max \_{x\_{i}'\in A\_{i}(x)}U\_{i}(x\_{i}',x\_{-i})}
+
+Equivalently, for each agent {\displaystyle i}, there is *no* action {\displaystyle x\_{i}'\in A\_{i}(x)} such that:
+
+> {\displaystyle U\_{i}(x\_{i}',x\_{-i})>U\_{i}(x\_{i},x\_{-i})}
+
+The following conditions are sufficient for the existence of equilibrium:
+
+* Each choice-set {\displaystyle X\_{i}} is compact, non-empty and convex.
+* Each action-correspondence {\displaystyle A\_{i}} is continuous, and its values are non-empty and convex.
+* Each utility function {\displaystyle U\_{i}} is continuous in {\displaystyle x} and quasi-concave in {\displaystyle x\_{i}}.
+
+The continuity conditions on the utility functions can be weakened as follows:Tʰᵐ.²
+
+* Each utility function {\displaystyle U\_{i}} is quasi-concave in {\displaystyle x\_{i}}, upper semi-continuous in {\displaystyle x}, and **graph continuous**.
+
+Another weakening, which does not use graph-continuity, is:
+
+* Each utility function {\displaystyle U\_{i}} is quasi-concave in {\displaystyle x\_{i}}, upper semi-continuous in {\displaystyle x}, and the function {\displaystyle W\_{i}(x\_{-i}):=\max \_{x\_{i}}U\_{i}(x\_{i},x\_{-i})} [which is defined since {\displaystyle U\_{i}} is upper semi-continuous] is **lower semi-continuous**.
+
+The proofs use the Kakutani fixed point theorem.
+
+
+### Exchange economy as a special case
+
+
+#### Definition
+
+An *exchange economy* is a system with N-1 consumers and {\displaystyle l} homogeneous divisible goods. For each consumer i, there is:
+
+* A consumption-set {\displaystyle Y\_{i}} (a subset of {\displaystyle \mathbb {R} ^{l}}). This represents the set of bundles that the agent can consume.
+ + We define the cartesian product of all consumption sets as: {\displaystyle Y:=\prod \_{j=1}^{N}Y\_{j}}.
+* An initial endowment vector {\displaystyle w\_{i}\in \mathbb {R} \_{+}^{l}.}
+* A utility function {\displaystyle V\_{i}:Y\_{i}\to \mathbb {R} }. This represents the preferences of the agent. Note that the utility of a consumer depends only on his own consumption, rather than on the entire allocation.
+
+Define the set of possible *price-vectors* as: {\displaystyle \Delta :=\{p\in \mathbb {R} \_{+}^{l}|\sum \_{i=1}^{l}p\_{i}=1\}}.
+
+
+#### Equilibrium
+
+A *Walrasian equilibrium* (aka *competitive equilibrium*) in an exchange economy is a vector of consumption-bundles and a price-vector, {\displaystyle (y\_{1},\ldots ,y\_{N-1},p)}, such that:
+
+* The total consumption is at most the total endowment: {\displaystyle \sum y\_{i}\leq \sum w\_{i}}.
+* The total expense of each agent is at most his budget: {\displaystyle p\cdot y\_{i}\leq p\cdot w\_{i}}.
+* For each agent {\displaystyle i}, the consumption {\displaystyle y\_{i}} maximizes the function {\displaystyle V\_{i}(\cdot )} subject to the constraint {\displaystyle p\cdot y\_{i}\leq p\cdot w\_{i}}. I.e, if {\displaystyle V\_{i}(z)>V\_{i}(y\_{i})}, then {\displaystyle p\cdot z>p\cdot w\_{i}\geq p\cdot y\_{i}}.
+
+#### Reduction to abstract economy
+
+Arrow and Debreu presented the following reduction from exchange economy to abstract economy.
+
+Given an (*N*-1)-agent exchange economy, we define an *N*-agent abstract economy by adding a special agent called the *market maker* or *market player*. The "consumption" of this special player is denoted by *p*. The components of the abstract economy are defined as follows:
+
+* Each of the first *N*-1 agents has choice set {\displaystyle X\_{i}=Y\_{i}}, utility function {\displaystyle U\_{i}=V\_{i}}, and action set defined by his budget: {\displaystyle A\_{i}(y,p)=\{y\_{i}\in Y\_{i}|py\_{i}\leq pw\_{i}\}}.
+* The market player has a choice set {\displaystyle X\_{N}:=\Delta }(the set of possible price-vectors), utility function {\displaystyle U\_{N}(y,p):=p\cdot (\sum y\_{i}-\sum w\_{i})}, and action set defined by {\displaystyle A\_{N}(y,p)\equiv \Delta }.
+
+Intuitively, the market player chooses the price in a way that balances supply and demand: for commodities with more supply than demand, the right-hand term in {\displaystyle U\_{N}(y,p)} is negative so the market player chooses a low price; for commodities with more demand than supply, the term is positive so the market player chooses a high price.
+
+The following conditions in the exchange economy are sufficient to guarantee that the abstract economy satisfies the conditions for equilibrium:
+
+* Each consumption-set {\displaystyle Y\_{i}} is compact and convex, and contains the endowment {\displaystyle w\_{i}} in its interior.
+* Each utility function {\displaystyle V\_{i}} is continuous and quasi-concave.
+
+Moreover, the following additional condition is sufficient to guarantee that the equilibrium {\displaystyle y} in the abstract economy corresponds to a competitive equilibrium in the exchange economy:
+
+* For every agent i, {\displaystyle y\_{i}} is not a local (unconstrained) maximum of {\displaystyle V\_{i}}. For example, it is sufficient to assume that all agents are not satiated.
+
+The definition {\displaystyle A\_{i}(y,p)=\{y\_{i}\in Y\_{i}|py\_{i}\leq pw\_{i}\}} guarantees that the total expense of each agent is at most his budget. The definition {\displaystyle U\_{i}=V\_{i}} guarantees that the consumption of each agent maximizes his utility given the budget. And the definition {\displaystyle U\_{N}(y,p):=p\cdot (\sum y\_{i}-\sum w\_{i})} guarantees that the total consumption equals the total endowment.
+
+Therefore, if the exchange economy satisfies the above three conditions, a competitive equilibrium exists.
+
+In the proof we assumed that {\displaystyle V\_{i}} depends only on {\displaystyle y\_{i}}, but this assumption is not really needed: the proof remains valid even if the utility depends on the consumptions of other agents (externalities), or on the prices.
+
+
+## Abstract economy with preference correspondences
+
+
+### The general case
+
+
+#### Definition
+
+In the generalized model of Shafer and Sonnenschein, For each agent {\displaystyle i} there is:
+
+* A choice-set {\displaystyle X\_{i}} - as above;
+* A constraint correspondence {\displaystyle A\_{i}:X\twoheadrightarrow X\_{i}} - as above;
+* A *preference correspondence* {\displaystyle P\_{i}:X\twoheadrightarrow X\_{i}}. This represents, for each combination of choices of the other agents, what choices the agent strictly prefers to his current choice.
+
+The model of Debreu is a special case of this model, in which the preference correspondences are defined based on utility functions: {\displaystyle P\_{i}(x):=\{z\_{i}\in X\_{i}:U\_{i}(z\_{i},x\_{-i})>U\_{i}(x\_{i},x\_{-i})\}}. However, the generalized model does not require that the preference-correspondence can be represented by a utility function. In particular, it does not have to correspond to a transitive relation.
+
+
+#### Equilibrium
+
+An *equilibrium* in a generalized abstract economy is a vector of choices, {\displaystyle x=(x\_{1},\ldots ,x\_{N})=(x\_{i},x\_{-i})}, such that, for each agent {\displaystyle i}, {\displaystyle x\_{i}\in A\_{i}(x)} and {\displaystyle P\_{i}(x)\cap A\_{i}(x)=\emptyset }. The equilibrium concept of Debreu is a special case of this equilibrium.
+
+The following conditions are sufficient for the existence of equilibrium in the generalized abstract economy:
+
+* (a) Each choice-set {\displaystyle X\_{i}} is compact, non-empty and convex.
+* (b') Each action-correspondence {\displaystyle A\_{i}} is continuous.
+* (b'') The values {\displaystyle A\_{i}(x)} are non-empty and convex for every x.
+* (c') Each preference-correspondence {\displaystyle P\_{i}} has an open graph in {\displaystyle X\times X\_{i}} (this is a form of continuity condition).
+* (c'') For each {\displaystyle x\in X}, the convex hull of {\displaystyle P\_{i}(x)} does not contain {\displaystyle x\_{i}} (this is a form of non-reflexivity condition: an agent does not strictly prefer a choice to itself).
+
+### Exchange economy as a special case
+
+
+#### Definition
+
+Mas-Colell generalized the definition of exchange economy in the following way. For every consumer i, there is:
+
+* A consumption-set {\displaystyle Y\_{i}} - as above;
+* An initial endowment vector {\displaystyle w\_{i}\in \mathbb {R} \_{+}^{l}} - as above;
+* A preference relation {\displaystyle \prec \_{i}} that can be equivalently represented by a preference-correspondence {\displaystyle P\_{i}:Y\_{i}\twoheadrightarrow Y\_{i}}, that depends only on the consumed bundle: {\displaystyle P\_{i}(y\_{i}):=\{z\_{i}\in Y\_{i}|z\_{i}\succ \_{i}y\_{i}\}}. Note the preference relation is *not* required to be complete or transitive.
+
+#### Equilibrium
+
+A *competitive equilibrium* in such exchange economy is defined by a price-vector ***p*** and an allocation ***y*** such that:
+
+* The sum of all prices is 1;
+* The sum of all allocations {\displaystyle y\_{i}} is *at most* the sum of endowments {\displaystyle w\_{i}};
+* For every i: {\displaystyle p\cdot y\_{i}=p\cdot w\_{i}};
+* For every bundle z: if {\displaystyle z\succ \_{i}y\_{i}} then {\displaystyle p\cdot z>p\cdot y\_{i}} (i.e., if the agent strictly prefers z to his share, then the agent cannot afford z).
+
+#### Reduction to abstract economy
+
+The "market maker" reduction shown above, from the exchange economy of Arrow-Debreu to the abstract economy of Debreu, can be done from the generalized exchange economy of Mas-Collel to the generalized abstract economy of Shafer-Sonnenschein. This reduction implies that the following conditions are sufficient for existence of competitive equilibrium in the generalized exchange economy:
+
+* Each {\displaystyle \prec \_{i}} is relatively-open (equivalently, each {\displaystyle P\_{i}} has an open graph);
+* For every bundle *x*, the set {\displaystyle P\_{i}(x)} is convex and does not contain x (= irreflexivity). Mas-Collel added the condition that the set {\displaystyle P\_{i}(x)} is non-empty (= non-saturation).
+* For every i: {\displaystyle w\_{i}\gg x\_{i}} for some bundle x (this means that the initial endowment is in the interior of the choice-sets).
+
+#### A negative example
+
+The following example shows that, when the open graph property does not hold, equilibrium may fail to exist.
+
+There is an economy with two goods, say apples and bananas. There are two agents with identical endowments (1,1). They have identical preferences, based on lexicographic ordering: for every vector {\displaystyle y\_{i}=(a\_{i},b\_{i})} of {\displaystyle a\_{i}} apples and {\displaystyle b\_{i}} bananas, the set {\displaystyle P\_{i}(a\_{i},b\_{i}):=\{(a\_{i}',b\_{i}')|(a\_{i}'>a\_{i})~or~(a\_{i}'=a\_{i}~and~b\_{i}'>b\_{i})\}}, i.e., each agent wants as many apples as possible, and subject to that, as many bananas as possible. Note that {\displaystyle P\_{i}(a\_{i},b\_{i})} represents a complete and transitive relation, but it does not have an open graph.
+
+This economy does not have an equilibrium. Suppose by contradiction that an equilibrium exists. Then the allocation of each agent must be lexicographically at least (1,1). But this means that the allocations of both agents must be exactly (1,1). Now there are two cases: if the price of bananas is 0, then both agents can afford the bundle (1,2) which is strictly better than their allocation. If the price of bananas is some *p* > 0 (where the price of apples is normalized to 1), then both agents can afford the bundle (1+*p*, 0), which is strictly better than their allocation. In both cases it cannot be an equilibrium price.
+
+
+## Welfare theorems in abstract economies
+
+Fon and Otani study extensions of welfare theorems to the generalized exchange economy of Mas-Collel. They make the following assumptions:
+
+* Each consumption-set {\displaystyle Y\_{i}} is non-empty, convex, closed, and bounded below.
+* The preference correspondence is non-empty: {\displaystyle P\_{i}(y\_{i})\neq \emptyset } (this is a non-saturation condition).
+
+A *competitive equilibrium* is a price-vector ***{\displaystyle \mathbf {p} }*** and an allocation ***{\displaystyle \mathbf {y} }*** such that:
+
+* Feasibility: the sum of all allocations {\displaystyle y\_{i}} equals the sum of endowments {\displaystyle w\_{i}} (there is no free disposal);
+* Budget: for every i, {\displaystyle p\cdot y\_{i}\leq p\cdot w\_{i}};
+* Preference: For every *i*, {\displaystyle P\_{i}(y\_{i})\cap B\_{i}(p,w\_{i})=\emptyset }, where {\displaystyle B\_{i}(p,w\_{i})} is the budget-set of *i*. In other words, for every bundle {\displaystyle z\in Y\_{i}}: if {\displaystyle z\succ \_{i}y\_{i}} then {\displaystyle p\cdot z>p\cdot y\_{i}} (if the agent strictly prefers z to his share, then the agent cannot afford z).
+
+A *compensated equilibrium* has the same feasibility and budget conditions, but instead of the preference condition, it satisfies:
+
+* Compensated Preference: For every *i* and for every bundle {\displaystyle z\in Y\_{i}}: if {\displaystyle z\succ \_{i}y\_{i}} then {\displaystyle p\cdot z\geq p\cdot y\_{i}}.
+
+A Pareto-optimal allocation is, as usual, an allocation without a Pareto-improvement. A *Pareto-improvement* of an allocation {\displaystyle \mathbf {y} } is defined as another allocation {\displaystyle \mathbf {y'} } that is strictly better for a subset {\displaystyle J} of the agents, and remains the same allocation for all other agents. That is:
+
+* {\displaystyle \sum \_{i\in J}y'\_{i}=\sum \_{i\in J}y\_{i}.}
+* {\displaystyle y'\_{i}\in P\_{i}(y\_{i})} for all {\displaystyle i\in J}.
+
+Note that this definition is weaker than the usual definition of Pareto-optimality (the usual definition does not require that the bundles of other agents remain the same - only that their utility remains the same).
+
+Fon and Otani prove the following theorems.
+
+* Every competitive equilibrium is Pareto-optimal.Pʳᵒᵖ.¹
+* Under certain conditions on the preferences, for every Pareto-optimal allocation, there exists a price-vector with which it is a compensated equilibrium.Pʳᵒᵖ.²,⁵,⁶

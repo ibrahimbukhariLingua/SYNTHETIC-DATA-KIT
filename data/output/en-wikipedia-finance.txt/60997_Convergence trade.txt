@@ -1,0 +1,52 @@
+Convergence trade
+
+
+# Convergence trade
+
+
+
+**Convergence trade** is a trading strategy consisting of two positions: buying one asset forward—i.e., for delivery in future (going *long* the asset)—and selling a similar asset forward (going *short* the asset) for a higher price, in the expectation that by the time the assets must be delivered, the prices will have become closer to equal (will have converged), and thus one profits by the amount of convergence.
+
+Convergence trades are often referred to as arbitrage, though in careful use arbitrage only refers to trading in *the same* or *identical* assets or cash flows, rather than in *similar* assets.
+
+
+## Examples
+
+
+### On the run/off the run
+
+On the run bonds (the most recently issued) generally trade at a premium over otherwise similar bonds, because they are more liquid—there is a liquidity premium. Once a newer bond is issued, this liquidity premium will generally decrease or disappear.
+
+For example, the 30-year US treasury bond generally trades at a premium relative to the 29½-year bond, even though these are otherwise quite similar. Once a few months pass (so the 30-year has aged to a 29½-year and the 29½-year has aged to a 29-year, say), and a new 30-year is issued, the old bonds are now both off-the run and the liquidity premium will in general decrease. Thus, if one had sold the 30-year short, bought the 29½-year, and waits a few months, one profits from the change in the liquidity premium.
+
+
+### Junk Bond/Treasury convergence
+
+Typically junk bonds, given their speculative grade, are undervalued as people avoid them. Therefore, the spread over treasuries is more than the risk of default, by buying junk bonds and selling treasuries, to hedge interest rate risk. Often profits can be achieved by buying junk bonds and selling treasuries, unless the junk bond defaults.
+
+
+### Cash and Carry
+
+This is when a trader notices a difference in the price of a futures contract (for delivery in the future) and the underlying asset (purchased immediately). For example, if gold is trading at $1000/oz, and there is a futures contract for $1200/oz, the trader would go long (buy) the gold and short (sell) the futures contract. They would make money as the prices converged together, and the profit would be $200 in this example, as the gold price equaled the futures price.
+
+
+#### Reverse
+
+A reverse version of this strategy also exists. This is when a trader believes that the futures contract is undervalued and the underlying asset overvalued. Instead of shorting the futures contract the trader would long this, and short the underlying asset.
+
+
+## Related concepts
+
+Formally, convergence trades refer to trading in similar assets in the expectation that they will converge in value. Arbitrage is a stricter notion, referring to trading in *identical* assets or cash flows, while relative value is a looser notion, referring to using valuation methods (value investing) to take long-short positions in similar assets without necessarily assuming convergence, and is more associated with equities. For example, in relative value investing one may believe that the stock of one mining company is undervalued relative to some valuation, while another stock is overvalued (relative to this or another valuation), and thus one will expect the undervalued stock to outperform the overvalued stock, even if these are quite different companies.
+
+
+## Risks
+
+> The market can stay irrational longer than you can stay solvent.
+> 
+> — John Maynard Keynes
+
+The risk of a convergence trade is that the expected convergence does *not* happen, or that it takes too long, possibly diverging before converging. Price divergence is particularly dangerous because convergence trades are necessarily synthetic, *leveraged* trades, as they involve a short position. Thus if prices diverge so that the trade temporarily loses money, and the trader is accordingly required to post margin (faces a margin call), the trader may run out of capital (if they run out of cash and cannot borrow more) and go bankrupt even though the trades may be expected to ultimately make money. In effect, convergence traders synthesize a put option on their ability to finance themselves. Prices may diverge during a financial crisis, often termed a "flight to quality"; these are precisely the times when it is hardest for leveraged investors to raise capital (due to overall capital constraints), and thus they will lack capital precisely when they need it most. Further, if other market participants are aware of the positions, they can engineer such price divergences, driving the convergence trader into bankruptcy – compare short squeeze.
+
+As with arbitrage, convergence trading has negative skew in return distributions it produces, resulting from the concave payoff characteristic of most such high-probability low-return strategies. Operators engaging in such trades will usually make consistent but relatively small profits, occasionally offset by significant losses, consuming previous profits earned over a long period of time. The low probability of encountering a loss in such strategies can lead inexperienced traders to underestimate the severity of such a loss, and assume excessive levels of leverage, potentially leading to bankruptcy as in the LTCM case.
+

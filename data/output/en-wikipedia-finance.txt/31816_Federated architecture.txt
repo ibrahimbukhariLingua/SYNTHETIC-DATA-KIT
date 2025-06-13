@@ -1,0 +1,67 @@
+Federated architecture
+
+
+# Federated architecture
+
+
+
+**Federated architecture** (**FA**) is a pattern in enterprise architecture that allows interoperability and information sharing between semi-autonomous de-centrally organized lines of business (LOBs), information technology systems and applications.
+
+* Organisational architecture
+* Business architecture
+* Process architecture
+* Information architecture
+
+This is an approach to the coordinated sharing and exchange of information which is organized by models, which are describing common concepts and behavior. The pattern emphasizes a controlled sharing and exchange of information among autonomous components by communication via messages. Highest possible autonomy shall be given to the different cooperating components. In return they are expected to adhere to common models by using defined interfaces.
+
+
+## Complex problems
+
+"Complex architectures are extremely hard to manage, not only in terms of the architecture process itself, but also in terms of getting buy-in from large numbers of stakeholders. This in turn requires a very disciplined approach to identifying common architectural components, and management of the commonalities between federated components — deciding how to integrate, what to integrate, etc."
+
+The pattern's intention is to provide the highest possible autonomy in order to reduce the complexity, which at the same time shall increase what is called agility. The expected result is a high degree of flexibility — which at the end means, taking local particularities seriously and solve local problems locally whenever possible. There are different areas where autonomy can help solve complex problems better.
+
+* Operation
+* Provisioning
+* Design decisions
+* Platform decisions
+* Application design
+
+Federated architecture is expected to deliver high flexibility and agility among independently cooperating components and at the same time reduces complexity significantly. It should be considered for problems with the root cause of unmanageable complexity. That can be caused by functional business and non-functional IT requirements. The pattern is applicable for decoupling and decentralization projects, heterogeneous environments, where a central one-fits-all approach cannot be applied and will not solve the problem of constantly changing underlying realities. It is especially applicable for long term migration projects, where a big bang approach cannot be applied.
+
+The federated architecture is an architecture vision to foster managed independence among loosely coupled cooperating components sharing a common aim.
+
+
+## Federation and syndication
+
+The concept of federation is supplemented by the concept of syndication. Syndication is a kind of central authority being able to interpret the federated model and compile meaningful information out of it. This is typically done by management information and workflow systems, portals, reporting systems, general ledger, tax reporting and even identity and security management. A typical example is demand planning of a supply chain or a stock exchange order book, where different participants have agreed on a standard protocol. Common to all such systems and organizations is a common semantic model and protocol, to which each participant agreed to adhere and behave like to a law.
+
+
+## Federated architecture foundation
+
+The FA pattern with its emphasis on autonomy by sharing of a model is forced to deliver a constitution, a federated architecture foundation (FAF), something like The Ten Commandments, common concepts, principles and even a common technical architecture: "a corpus juris". "In the absence of a global authority, the federated architecture has to resolve two conflicting requirements: the components must maintain as much autonomy as possible, but the components must be able to achieve a reasonable degree of information sharing" (Heimbiger, 1985). This is the reason federated architecture strongly demands for governance. The FAF is the legislative body, which needs an executive or an architecture enforcement QC process and sometimes a jurisdiction.
+
+
+## Federated organizations
+
+The federated architecture pattern was first used by the US Federal CIO in the early 1990s and was since then adopted by other large organization like banks, IT architecture organizations, etc. Large and complex organizations with independent lines of business (LOBs) federate the administrative and IT functions among several local authorities. It enables LOBs to maintain diversity and uniqueness, while providing interoperability. LOBs have full autonomy to develop standards for applications and infrastructure and to define enterprise architectures. The goal of the LOB is to optimize performance at LOB level.
+Federated Architectures define common or shared architecture standards across autonomous program areas, enabling, e.g., state government entities to maintain diversity and uniqueness, while providing interoperability. Federated Enterprise Architecture is a collective set of organizational architectures (as defined by the enterprise scope), operating collaboratively within the concept of federalism, in which governance is divided between a central authority and constituent units balancing organizational autonomy with enterprise needs. The central authority’s architecture focuses on the dynamics of economies of scale, standards, and the well being of the enterprise, while constituent units’ architecture has the flexibility to pursue autonomous strategies and independent processes.
+
+
+## Federated information technology systems
+
+Most recently the principle was carried over to application design by large software vendors, emphasized in large scale database system architecture as well as portal infrastructure and identity management. Federated identity systems link a user's attributes to multiple systems, such as with single sign-on technologies. It is also used to manage pricing in service industries, where the requirement of bundling services and invoice customers according to these service-bundles needs independently, across product areas organized processing systems to syndicate their service definitions and pricing determination. It allows the introduction of new pricing models in market-oriented time. A holistic customer view as well as a detailed and traceable price calculation shall allow for transparent information towards the customer and the corporation.
+
+
+## Benefits
+
+The benefits of being as independent of a global authority as possible (where a global authority may be a central computer system, central organization or central process management system), are expected to outweigh problems caused by misunderstandings and incompatibilities. There are different areas where independently solved problems can reduce complexity and increase agility.
+
+* Lifecycle independence (LI) means that each local team can define its own lifecycle concept, roadmap and release plan for its product, independently from others' products.
+* Operational independence (OI) means that in case of emergency each local team, having the know-how about their products and computer systems, is able to fix and operate them without relying on others' knowledge and willingness to support them.
+* Platform independence (PI) means that system and application platforms can be mixed as well as computer languages as long as they are able to interpret the model and produce the expected results.
+
+## History
+
+Federated architecture as database architecture was first introduced by Denis Heimbigner 1982 and 1985 with the title: A Federated Architecture for Information Management: "This federated database architecture allows a collection of database systems (components) to unite into a loosely coupled federation in order to share and exchange information. The term federation refers to the collection of constituent databases participating in a federated database."
+

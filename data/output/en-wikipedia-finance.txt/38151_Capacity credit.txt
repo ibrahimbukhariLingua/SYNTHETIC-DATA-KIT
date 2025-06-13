@@ -1,0 +1,35 @@
+Capacity credit
+
+
+# Capacity credit
+
+
+
+**Capacity credit** (**CC**, also **capacity value** or **de-rating factor**) is the fraction of the installed capacity of a power plant which can be relied upon at a given time (typically during system stress), frequently expressed as a percentage of the nameplate capacity. A conventional (dispatchable) power plant can typically provide the electricity at full power as long as it has a sufficient amount of fuel and is operational, therefore the capacity credit of such a plant is close to 100%; it is exactly 100% for some definitions of the capacity credit (see below).ᵇᵉᵗᵗᵉʳˢᵒᵘʳᶜᵉⁿᵉᵉᵈᵉᵈ The output of a variable renewable energy (VRE) plant depends on the state of an uncontrolled natural resource (usually the sun or wind), therefore a mechanically and electrically sound VRE plant might not be able to generate at the rated capacity (neither at the nameplate, nor at the capacity factor level) when needed, so its CC is much lower than 100%. The capacity credit is useful for a rough estimate of the firm power a system with weather-dependent generation can reliably provide. For example, with a low, but realistic (cf. Ensslin et al.) wind power capacity credit of 5%, 20 gigawatts (GW) worth of wind power needs to be added to the system in order to permanently retire a 1 GW fossil fuel plant while keeping the electrical grid reliability at the same level.
+
+
+## Definitions
+
+There are a few similar definitions of the capacity credit:
+
+* **effective load carrying capability** (**ELCC**) defines the capacity value as the extra load that can be added to the system once the plant is added without degrading a chosen reliability index (usually the loss of load probability). Unlike the dimensionless CC, ELCC is expressed in power units (megawatts). California regulators, in their resource adequacy calculations, use different term, **qualifying capacity** (**QC**). For a dispatchable plant, QC is self-assessed and might go as high as the maximum power of the unit. For wind and solar, QC is based on an ELCC modeling; for cogeneration, biomass power, hydropower, and geothermal power, the history of production is used. **Net qualifying capacity** (**NQC**) is similar to QC, except it takes into account the connection of the generator to the grid, for large generating plants, {\displaystyle NQC=QC}; ELCC metrics was introduced by Garver in 1966.
+* **equivalent conventional capacity** (**ECC**) compares the additional power of a new plant to that of a conventional power plant and directly represents the amount of the conventional generating capacity which can be replaced by a VRE plant while keeping the value of the risk index. A similar metrics, comparing the plant contribution to that of a perfect always-available-at-full-capacity plant is called an **equivalent firm capacity** or **EFC**;
+* percentile of peak-period availability defines the capacity value by calculating the capacity at chosen worst-case percentile (say, 5th lowest) of the power distribution during the times of the peak demand.
+
+## Values
+
+The capacity credit can be much lower than the capacity factor (CF): in a not very probable scenario, if the riskiest time for the power system is after sunset, the capacity credit for solar power without coupled energy storage is zero regardless of its CF (under this scenario all existing conventional power plants would have to be retained after the solar installation is added). More generally, the CC is low when the times of the day (or seasons) for the peak load do not correlate well with times of high energy production. Ensslin et al. report wind CC values ranging from 40% down to 5%, with values dropping off with increased wind power penetration.
+
+For very low penetrations (few percent), when the chance of the system actually being forced to rely on the VRE at peak times is negligible, the CC of a VRE plant is close to its capacity factor. For high penetrations, due to the fact that the weather tends to affect all plants of similar type at the same time and in the same way - and the chance of a system stress during low wind condition increases, the capacity credit of a VRE plant decreases. Greater geographical diversity of the VRE installations improves the capacity credit value, assuming a grid that can carry all necessary load. Increasing the penetration of one VRE resource also can result in increasing the CC for another one, e.g., in California, increase in solar capacity, with a low incremental CC, expected to be 8% in 2023 and dropping to 6% by 2026, helps shifting the peak demand from other sources later into the evening, when the wind is stronger, therefore the CC of the wind power is expected to increase from 14% to 22% within the same period. A 2020 study of ELCC by California utilities recommends even more pessimistic values for photovoltaics: by 2030 the ELCC of solar will become "nearly zero". The California Public Utilities Commission orders of 2021 and 2023 intend to add by 2035 additional renewable generation capacity with NQC of 15.5 GW and nameplate capacity of 85 GW, implying planned NQC for renewables (a combination of solar and wind), combined with geothermal, batteries, long-term storage, and demand response to be 15.5/85 = 18%.
+
+In some areas peak demand is driven by air conditioning and occurs on summer afternoons and evenings, while the wind is strongest at night, with offshore wind strongest in the winter. This results in a relatively low CC for such potential wind power locations: for example in Texas a predicted average for onshore wind is 13% and for offshore wind is 7%.
+
+In Great Britain, the solar contribution to the system adequacy is small and is primarily due to scenarios when the use of solar allows to keep the battery storage fully charged until later in the evening. The National Grid ESO in 2019 suggested planning for the following EFC-based de-rating:
+
+Indicative de-rating factors in Great Britain
+| Year | Onshore wind | Offshore wind | Solar PV |
+| --- | --- | --- | --- |
+| 2020/2021 | 9.0% | 14.7% | 1.2% |
+| 2022/2023 | 8.4% | 12.9% | 1.2% |
+| 2023/2024 | 8.2% | 12.1% | 1.2% |
+

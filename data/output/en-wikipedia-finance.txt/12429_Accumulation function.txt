@@ -1,0 +1,37 @@
+Accumulation function
+
+
+# Accumulation function
+
+
+
+In actuarial mathematics, the **accumulation function** *a*(*t*) is a function of time *t* expressing the ratio of the value at time *t* (future value) and the initial investment (present value). It is used in interest theory.
+
+Thus *a*(0) = 1 and the value at time *t* is given by:
+
+where the initial investment is {\displaystyle A(0).}
+
+For various interest-accumulation protocols, the accumulation function is as follows (with *i* denoting the interest rate and *d* denoting the discount rate):
+
+* simple interest: {\displaystyle a(t)=1+t\cdot i}
+* compound interest: {\displaystyle a(t)=(1+i)^{t}}
+* simple discount: {\displaystyle a(t)=1+{\frac {td}{1-d}}}
+* compound discount: {\displaystyle a(t)=(1-d)^{-t}}
+
+In the case of a positive rate of return, as in the case of interest, the accumulation function is an increasing function.
+
+
+## Variable rate of return
+
+The logarithmic or continuously compounded return, sometimes called force of interest, is a function of time defined as follows:
+
+which is the rate of change with time of the natural logarithm of the accumulation function.
+
+Conversely:
+
+reducing to
+
+for constant {\displaystyle \delta }.
+
+The effective annual percentage rate at any time is:
+

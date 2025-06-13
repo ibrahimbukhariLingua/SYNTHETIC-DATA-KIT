@@ -1,0 +1,46 @@
+Risk aggregation
+
+
+# Risk aggregation
+
+
+
+**Risk aggregation** is, in the context of risk management of companies or projects, the aggregation of all risks with the aim of determining the overall scope of risk, whereby the aggregation of individual risks cannot be done by mere addition.
+
+
+## General information
+
+Risk aggregation pursues the goal of determining an overall risk position for the company or for a project on the basis of the identified, analysed and evaluated individual risks. The risk classification that has to be carried out within risk aggregation represents the interface between risk evaluation and risk response. On the basis of reliable aggregated data, the risk situation of a company can be observed and optimised comprehensively.
+
+Risk aggregation is particularly necessary in order to identify possible developments threatening the existence of the company on the risk-bearing capacity of a company from combination effects of individual risks The probability of over-indebtedness or illiquidity (as a result of violations of minimum rating requirements or loan agreements) is examined, because such scenarios are to be interpreted as threatening the company's existence.
+
+
+## Process flow
+
+Risk aggregation is preceded by risk analysis, which includes risk identification and risk quantification. From risk quantification it can only be derived which risks alone could endanger the existence of a company. In order to assess how large the total scope of risk is (and thus the probability of insolvency due to the set of all risks), risk aggregation becomes necessary.
+
+A distinction must be made here as to whether the individual risks are independent of each other or not. Independent risks do not influence each other. Risk interdependence, on the other hand, means that risks are dependent on each other or on common causes. Positively correlated risks reinforce each other, while negatively correlated risks weaken each other, i.e. they offer diversification effects. It may also be that a certain risk only occurs, when another risk has already arisen. This makes it clear that simply adding up risk expectation values would not adequately represent the scope of risk. Usually, the stochastic dependence of risks is first checked for plausibility and quantified using a correlation coefficient. The closer the absolute value of the correlation coefficient is to the value 1, the more interdependent individual risks strengthen or weaken each other. The identified dependencies of the risks are to be explicitly taken into account by risk simulation procedures.
+
+In a first step of risk aggregation, three heuristic rules established by Werner Gleissner can be applied:
+
+* Cause aggregation: Risks with the same cause are grouped together and their impacts are aggregated.
+* Impact aggregation: For risks with the same impact, the probabilities of the causes are aggregated.
+* Exclusion rule: Risks that cannot occur together are not allowed to occur simultaneously in risk aggregation.
+
+However, these heuristic rules do not replace simulation-based risk aggregation. In the subsequent simulation-based risk aggregation (preferably Monte Carlo simulation), it is important to adequately consider the actual stochastic dependencies at the cause and impact level of various individual risks.
+
+Risk aggregation is followed by risk assessment in the process flow.
+
+
+## Monte Carlo simulation
+
+A numerical method for risk aggregation is the risk simulation with the help of Monte Carlo simulation. This replaces the complex problem of analytically summing up a large number of different risks with a numerical approximate solution. In particular, it is advantageous that any number of risks described by arbitrary probability distributions can be aggregated. For the aggregation of risks with reference to corporate planning (e.g. plan profit and loss account), which is necessary to determine the overall scope of risk as well as the probability of insolvency, there is therefore no alternative to Monte Carlo simulation.
+
+In order to be able to carry out a meaningful Monte Carlo simulation, it is necessary to quantify all relevant risks in the preceding risk quantification and to describe them with the help of suitable probability distributions. If necessary, this can also be done using subjective assumptions, insofar as these represent the best available information. If not all relevant risks are taken into account for the risk aggregation, this is to be equated with a rating of zero.
+
+Within the framework of a Monte Carlo simulation, the effects of individual risks are mapped in a business model and evaluated with regard to their influence on the corresponding items of the profit and loss account (P&L) and/or the balance sheet. This approach combines risk management and "traditional" corporate planning (especially controlling). The effects of individual risks on items in the P&L or balance sheet are described in the model by probability distributions (see risk quantification). In independent simulation runs, a business year is simulated several thousand times with the help of Monte Carlo simulation to determine the overall scope of risk, and the effect of a randomly occurring combination of potential risks on the P&L and/or the balance sheet is determined. Basically, this simulation generates and analyses a representative sample of all possible risk scenarios of a company.
+
+Aggregated frequency distributions result from the realisations of the target values determined in the individual simulation runs. From these, expected values of cash flow and profit as well as the associated value at risk (VaR) can be derived as a realistic maximum loss that will not be exceeded with, for example, 95% or 99% probability. Among other things, this also makes it possible to determine an appropriate equity capitalisation, as well as risk-adjusted profitability/performance measures (RAPM)
+
+In order to be able to recognise possible developments threatening the existence of the company, the effects of the risks on covenants and the future rating are analysed. The result is always a degree of threat to the company's existence, since there is no company without possible developments that threaten the company's existence. A simulation over several planning years makes sense, since developments that threaten the existence of the company usually do not arise after only one year with risks that have occurred
+

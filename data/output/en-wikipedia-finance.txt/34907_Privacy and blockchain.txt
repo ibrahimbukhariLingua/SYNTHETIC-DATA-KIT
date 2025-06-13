@@ -1,0 +1,157 @@
+Privacy and blockchain
+
+
+# Privacy and blockchain
+
+
+
+A blockchain is a shared database that records transactions between two parties in an immutable ledger. Blockchain documents and confirms pseudonymous ownership of all transactions in a verifiable and sustainable way. After a transaction is validated and cryptographically verified by other participants or nodes in the network, it is made into a "block" on the blockchain. A block contains information about the time the transaction occurred, previous transactions, and details about the transaction. Once recorded as a block, transactions are ordered chronologically and cannot be altered. This technology rose to popularity after the creation of Bitcoin, the first application of blockchain technology, which has since catalyzed other cryptocurrencies and applications.
+
+Due to its nature of decentralization, transactions and data are not verified and owned by one single entity as they are in centralized data base systems. Rather, the validity of transactions is confirmed by the form of majority-rule in which nodes or computers that have access to the network, if the network comes to a consensus of the new transaction then it is added. Blockchain technology secures and authenticates transactions and data through cryptography. With the rise and widespread adoption of technology, data breaches have become frequent. User information and data are often stored, mishandled, and misused, causing a threat to personal privacy. Advocates argue for the widespread adoption of blockchain technology because of its ability to increase user privacy, data protection, and data ownership.
+
+
+## Blockchain and Privacy Protection
+
+
+### Private and public keys
+
+A key aspect of privacy in blockchains is the use of private and public keys. Blockchain systems use asymmetric cryptography to secure transactions between users. In these systems, each user has a public and private key. These keys are random strings of numbers and are cryptographically related. It is mathematically impossible for a user to guess another user's private key from their public key. This provides an increase in security and protects users from hackers. Public keys can be shared with other users in the network because they give away no personal data. Each user has an address that is derived from the public key using a hash function. These addresses are used to send and receive assets on the blockchain, such as cryptocurrency. Because blockchain networks are shared to all participants, users can view past transactions and activity that has occurred on the blockchain.
+
+Senders and receivers of past transactions are represented and signified by their addresses; users' identities are not revealed. Public addresses do not reveal personal information or identification; rather, they act as pseudonymous identities. It is suggested by Joshi, Archana (2018) that users do not use a public address more than once; this tactic avoids the possibility of a malicious user tracing a particular address' past transactions in an attempt to reveal information. Private keys are used to protect user identity and security through digital signatures. Private keys are used to access funds and personal wallets on the blockchain; they add a layer of identity authentication. When individuals wish to send money to other users, they must provide a digital signature that is produced when provided with the private key. This process protects against theft of funds.
+
+
+### Peer-to-peer network
+
+Blockchain technology arose from the creation of Bitcoin. In 2008, the creator or creators who go by the alias Satoshi Nakamoto released a paper describing the technology behind blockchains. In his paper, he explained a decentralized network that was characterized by peer-to-peer transactions involving cryptocurrencies or electronic money. In typical transactions carried out todayʷʰᵉⁿ?, users put trust into central authorities to hold their data securely and execute transactions.
+
+In large corporations, a large amount of users' personal data is stored on single devices, posing a security risk if an authority's system is hacked, lost, or mishandled. Blockchain technology aims to remove this reliance on a central authority. To achieve this, blockchain functions in a way where nodes or devices in a blockchain network can confirm the validity of a transaction rather than a third party. In this system, transactions between users (such as sending and receiving cryptocurrency) are broadcast to every node in the network. Before the transaction is recorded as a block on the blockchain, nodes must ensure a transaction is valid. Nodes must check past transactions of the spender to ensure he/she did not double spend or spend more funds than they own.
+
+After nodes confirm a block is valid, consensus protocols such as proof of work and proof of stake are deployed by miners. These protocols allow nodes to reach a state of agreement on the order and number of transactions. Once a transaction is verified, it is published on the blockchain as a block. Once a block is created, it cannot be altered. Through blockchain's decentralized nature and elimination of the need for a central authority, user privacy is increased. Peer-to-peer networks allow users to control their data, decreasing the threat of third parties to sell, store, or manipulate personal information.
+
+
+## Cryptographic Methods for Privacy Using Blockchains
+
+
+### Zero-knowledge proofs
+
+A zero-knowledge proof (known as ZKP) is a cryptographic method by which one party (the prover) can prove to another party (the verifier) that a given statement is true, without conveying any information apart from the fact that the statement is indeed true. The "prover" does not reveal any information about the transaction. Such proofs are typically introduced into blockchain systems using ZK-SNARKs in order to increase privacy in blockchains. In typical "non-private" public blockchain systems such as Bitcoin, a block contains information about a transaction, such as the sender and receiver's addresses and the amount sent. This public information can be used in conjunction with Clustering algorithms to link these "pseudo-anonymous" addresses to users or real-world identities. Since zero-knowledge proofs reveal nothing about a transaction, except that it is valid, the effectiveness of such techniques are drastically reduced. A prominent example of a cryptocurrency using ZK proofs is Zcash.
+
+
+### Ring signatures
+
+Another method of obfuscating the flow of transactions on the public blockchain are Ring signatures, a method used by Monero.
+
+
+### Mixing
+
+Cryptocurrency tumblers can also be used as a method to increase privacy even in a pseudoanonymous cryptocurrency. Additionally, instead of using mixers as an add-on service, the mixing of public addresses can be built-in as a method in the blockchain system, as in Dash.
+
+The popular mixing service Tornado Cash was sanctioned by the US Department of Treasury in early August 2022, who accused it of laundering $455 million in stolen cryptocurrency by the Lazarus Group. The sanctions made it illegal for US citizens, residents and companies to use the service.
+
+
+## Comparison of Blockchain Privacy Systems
+
+
+### Private blockchains
+
+Private blockchains (or permissioned blockchains) are different from public blockchains, which are available to any node that wishes to download the network. Critics of public blockchains say because everyone can download a blockchain and access the history of transactions, there is not much privacy. In private blockchains, nodes must be granted access to participate, view transactions, and deploy consensus protocols. Because transactions listed on a private blockchain are private, they ensure an extra layer of privacy. Because private blockchains have restricted access and nodes must be specifically selected to view and participate in a network, someʷʰᵒ? argue that private blockchains grant more privacy to users. While private blockchains are considered the most realistic way to adopt blockchain technology into business to maintain a high level of privacy, there are disadvantages. For example, private blockchains delegate specific actors to verify blocks and transactions. Although someʷʰᵒ? argue that this provides efficiency and security, concerns have arisen that because control and verification of transactions are in the hands of a central entity, private blockchains are not truly decentralized.
+
+
+### Hybrid blockchains
+
+Hybrid blockchains allow more flexibility to determine which data remain private and which data can be shared publicly. A hybrid approach is compliant with GDPR and allows entities to store data on the cloud of their choice in order to be in compliance with local laws protecting users' privacy. A hybrid blockchain contains some of the characteristics of both private and public blockchains, though not every hybrid blockchain contains the same characteristics. Bitcoin and Ethereum do not share the same characteristics, although they are both public blockchains.
+
+
+## Use Cases for Privacy Protection
+
+
+### Financial transactions
+
+After Satoshi Nakamoto spurred the creation of blockchain technology through Bitcoin, cryptocurrencies rose in popularity. Cryptocurrencies are digital assets that can be used as an alternative form of payment to fiat money. In currentʷʰᵉⁿ? financial systems, there exists many privacy concerns and threats. Centralization is an obstacle in typical data-storage systems. When individuals deposit money, a third party intermediary is necessary. When sending money to another user, individuals must trust that a third party will complete this task. Blockchain decreases the need for this trust in a central authority. Cryptographic functions allow individuals to send money to other users. Because of Bitcoin's widespread recognition and sense of anonymity, criminals have taken advantage of this by purchasing illegal items using Bitcoin. Through the use of cryptocurrencies and its pseudonymous keys that signify transactions, illegal purchases are difficult to trace to an individual. Due to the potential and security of blockchains, manyʷʰⁱᶜʰ? banks are adopting business models that use this technology.
+
+
+### Health care records
+
+In recent years,ʷʰᵉⁿ? more than 100 million health care records have been breached. In attempts to combat this issue, solutions often result in the inaccessibility of health records. Health providers regularly send data to other providers. This often results in mishandling of data, losing records, or passing on inaccurate and old data. In some cases, only one copy of an updated health record exists; this can result in the loss of information. Health records often contain personal information such as names, social security numbers and home addresses. Overall, it is argued by someᵃᶜᶜᵒʳᵈⁱⁿᵍ ᵗᵒ ʷʰᵒᵐ? that the currentʷʰᵉⁿ? system of transferring health information compromises patient privacy to make records easy to transfer.
+
+As blockchain technology expanded and developed in recent yearsʷʰᵉⁿ?, manyᵃᶜᶜᵒʳᵈⁱⁿᵍ ᵗᵒ ʷʰᵒᵐ? have pressed to shift health record storage onto the blockchain. Rather than having both physical and electronic copies of records, blockchains could allow the shift to electronic health records (EHR). Medical records on the blockchain would be in the control of the patient rather than a third party, through the patients' private and public keys. Patients could then control access to their health records, making transferring information less cumbersome. Because blockchain ledgers are immutable, health information could not be deleted or tampered with. Blockchain transactions would be accompanied by a timestamp, allowing those with access to have updated information.
+
+
+### Legal
+
+The notarization of legal documents protects the privacy of individuals. Currentlyʷʰᵉⁿ?, documents must be verified through a third party or a notary. Notarization fees can be high. Transferring documents takes time and can lead to lost or mishandled information. Manyʷʰᵒ? are pressing for the adoption of blockchain technology for the storage legal documents. Documents cannot be tampered with and can be easily accessed by those who are granted permission to access them. Information is protected from theft and mishandling. Another possible use of blockchain technology is the execution of legal contracts using smart contracts, in which nodes automatically execute terms of a contract. By using smart contracts, peopleʷʰᵒ? will no longer rely on a third party to manage contracts, allowing an increase in privacy of personal information.
+
+
+### Shipping and logistics
+
+Businesses and individuals may purchase goods which need to be shipped from the seller to the buyer. Shipment of goods is normally accompanied by shipping documents like a bill of lading. Smart bill of lading relies on blockchain technology and buyers do not need to spend more on the issue of these documents. Also with the blockchain technology, goods can be tracked anytime, and the data is updated regularly ensuring real time management of shipments. The buyer and only the party given the shipping contract can view the real time data related to the shipment increasing the privacy of the process.
+
+
+## Legality of Blockchain and Privacy
+
+
+### GDPR
+
+With the April 2016 adoption of the General Data Protection Regulation in the European Union, questions regarding blockchain's compliance with the act have arisen. GDPR applies to those who process data in the EU and those who process data outside the EU for people inside the EU. Personal data is "any information relating to an identified or identifiable natural person". Because identities on a blockchain are associated with an individual's public and private keys, this may fall under the category of personal data because public and private keys enable pseudonymity and are not necessarily connected to an identity. A key part of the GDPR lies in a citizen's right to be forgotten, or data erasure. The GDPR allows individuals to request that data associated with them to be erased if it is no longer relevant. Due to the blockchain's nature of immutability, potential complications if an individual who made transactions on the blockchain requests their data to be deleted exist. Once a block is verified on the blockchain, it is impossible to delete it.
+
+
+### IRS
+
+Because cryptocurrency prices fluctuate, manyʷʰᵒ? treat the purchase of cryptocurrencies as an investment. By purchasing these coins, buyers hope to later sell them at a higher price. Internal Revenue Service (IRS) are currentlyʷʰᵉⁿ?facing struggles because many bitcoin holders do not include revenue from cryptocurrencies in their income reports, especially those who engage in many microtransactions. In response to these concerns, IRS issued a notice that people must apply general tax principles to cryptocurrency and treat the purchase of it as an investment or stock. IRS has enacted that if people fail to report their income from cryptocurrency, they could be subject to civil penalties and fines. In attempts to enforce these rules and avoid potential tax fraud, IRS has called on Coinbase to report users who have sent or received more than $US20,000 worth of cryptocurrency in a year. The nature of blockchain technology makes enforcement difficult. Because blockchains are decentralized, entities cannot keep track of purchases and activity of a user. Pseudonymous addresses make it difficult to link identities with users, being a perfect outlet for people to launder money.
+
+
+### Blockchain Alliance
+
+Because virtual currencies and the blockchain's protection of identity has proved to be a hub for criminal purchases and activity, FBI and Justice Department created Blockchain Alliance. This team aims to identify and enforce legal restrictions on the blockchain to combat criminal activities through open dialogue on a private-public forum. This allows law enforcers to fight the illegal exploitation of the technology. Examples of criminal activity on the blockchain include hacking cryptocurrency wallets and stealing funds. Because user identities are not tied to public addresses, it is difficult to locate and identify criminals.
+
+
+### Fair information practices
+
+Blockchain has been acknowledged as a way to solve fair information practices, a set of principles relating to privacy practices and concerns for users. Blockchain transactions allow users to control their data through private and public keys, allowing them to own it. Third-party intermediaries are not allowed to misuse and obtain data. If personal data are stored on the blockchain, owners of such data can control when and how a third party can access it. In blockchains, ledgers automatically include an audit trail that ensures transactions are accurate.
+
+
+## Concerns Regarding Blockchain Privacy
+
+
+### Transparency
+
+Although blockchain technology enables users to control their own data without necessarily relying on third parties, certain characteristics may infringe on user privacy. Public blockchains are decentralized and allow any node to access transactions, events and actions of users. Block explorers can be used to trace the financial history of a wallet address, which can be combined with OSINT research to develop profiles of criminal actors or potential scamming victims.
+
+
+### Decentralization
+
+Due to blockchain's decentralized nature, a central authority is not checking for malicious users and attacks. Users might be able to hack the system anonymously and escape. Because public blockchains are not controlled by a third party, a false transaction enacted by a hacker who has a user's private key cannot be stopped. Because blockchain ledgers are shared and immutable, it is impossible to reverse a malicious transaction.
+
+
+### Private keys
+
+Private keys provide a way to prove ownership and control of cryptocurrency. If one has access to another's private key, one can access and spend these funds. Because private keys are crucial to accessing and protecting assets on the blockchain, users must store them safely. Storing the private key on a computer, flashdrive or telephone can pose potential security risks if the device is stolen or hacked. If such a device is lost, the user no longer have access to the cryptocurrency. Storing it on physical media, such as a piece of paper, also leaves the private key vulnerable to loss, theft or damage.
+
+
+## Cases of Privacy Failure
+
+
+### MtGox
+
+In 2014, MtGox was the world's largest Bitcoin exchange at the time; it was located in Tokyo, Japan. The exchange suffered the largest blockchain hack of all time. During 2014, MtGox held an enormous portion of the Bitcoin market, accounting for more than half of the cryptocurrency at the time. Throughout February, hackers infiltrated the exchange, stealing $US450 million in Bitcoin. Many in the blockchain community were shocked because blockchain technology is often associated with security. This was the first major hack to occur in the space. Although analysts tracked the public address of the robbers by looking at the public record of transactions, the perpetrators were not identified. This is a result of the pseudonymity of blockchain transactions.
+
+
+### DAO Hack
+
+While blockchain technology is anticipated to solve privacy issues such as data breaching, tampering, and other threats, it is not immune to malicious attacks. In 2016, the DAO opened a funding window for a particular project. The system was hacked during this period, resulting in the loss of cryptocurrency then worth $US3.6 million from the Ether fund. Due to the ever-changing price of cryptocurrencies, the amount stolen has been estimated at $US64-100.
+
+
+### Coinbase
+
+Coinbase, the largest cryptocurrency exchange in the US that allows users to store, buy, and sell cryptocurrency, has faced multiple hacks since its founding in 2012. Users have reported that due to its log-in process that uses personal telephone numbers and email addresses, hackers have targeted the numbers and emails of well-known individuals and CEOS in the blockchain space. Hackers then used the email addresses to change the users' verification numbers, consequently stealing thousands of dollars worth of cryptocurrency from Coinbase user wallets.
+
+
+### By North Korea
+
+In January 2022 a report by blockchain analysis company Chainalysis found that state-backed North Korean hackers had stolen nearly $400 million in cryptocurrency in 2021. A UN panel also stated that North Korea has used stolen crypto funds to fund its missile programs despite international sanctions.
+
+
+## Privacy vs. Auditing in Blockchains
+
+The introduction of "private" or "anonymous" cryptocurrencies such as ZCash and Monero, highlighted the problem of blockchain auditing, with exchanges and government entities limiting use of those currencies. Therefore, as the notions of privacy and auditing in blockchains are contradictory, auditing blockchains with privacy characteristics has become a research focus of the academic community.
+

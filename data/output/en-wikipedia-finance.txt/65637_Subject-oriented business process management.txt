@@ -1,0 +1,69 @@
+Subject-oriented business process management
+
+
+# Subject-oriented business process management
+
+
+
+**Subject-oriented business process management** (**S-BPM**) is a communication based view on actors (the subjects), which compose a business process orchestration or choreography. The modeling paradigm uses five symbols to model any process and allows direct transformation into executable form.
+
+Each business process consists of two or more *subjects* which exchange *messages*. Each subject has an *internal behavior* (capsulation), which is defined as a control flow between different states, which are *receive* and *send message* and *do something*. For practical usage and for syntactical sugaring there are more elements available, but not necessary.
+
+In 2011 and 2012 S-BPM has been included in Gartner's Hype Cycle.
+
+
+## Foundations
+
+
+### Process calculi
+
+The S-BPM methodology in its essence is based on the CCS-Calculus of Robin Milner. The main objective of CCS was to provide a mathematical framework to describe communicating systems in a formal way. Milner states that every interesting concurrent system is built from independent agents which communicate in a synchronized way. So the objects whose behaviors are modeled are called agents. An agent can be seen as a term for a locus of activity, a process, or a computational unit. The agent's behavior is defined by the action it can perform and represented using algebraic expressions. The notion of agent corresponds in principle with the notion of subject in S-BPM.
+
+The basic capabilities of an agent (or subject) are
+
+* sending a message
+* receiving a message, and
+* performing an unobservable action.
+
+The idea of using the CCS-Calculus to model business processes was firstly proposed in 1994 in the context of subject-oriented programming. Further on, the CCS-Calculus was enhanced to support graphical modeling of business processes. Any S-BPM process can be formulated in CCS-algebra.
+
+Later Milner et al. proposed the π-Calculus as process algebra, in general an enhancement of the CCS-Calculus with the so-called link-mobility. π-Calculus was strongly proposed by Smith and Fingar as foundation for business process management and led to some discussions about future directions for research and development. The search for new methodologies is motivated by the demand to better support human collaboration and communication in business processes (e.g. *ad hoc* processes, empowerment, human interaction workflows), which seems to be not well supported by methodologies based on e.g. Petri-nets.
+
+
+### Abstract State Machines
+
+S-BPM can also be formulated as Abstract state machine. A high-level subject-oriented interpreter model for the semantics of the S-BPM constructs has been published by Egon Börger. This definition is the starting point for the development of an *Open S-BPM Workflow Engine* (see Research & Education).
+
+Today there is a tool — cloud OS Corezoid.com. Which operates on the basis of the theory of finite automata. Its main elements are the abstract state machines, which describe the status of objects in the system. Each of these new states generate new essential processes and vice versa.
+
+
+### Formal language
+
+The S-BPM methodology can be linked conceptually to the field of formal language theory as any process can be described in natural language which can be mapped during the design process on formal language as a first step of formalization.
+
+In many natural languages, subject, predicate and object are the basic building blocks of a sentence. The subject of a sentence is the person, place, thing, or idea that is carrying out the action denoted by the predicate. A predicate has at its center a simple predicate, which is always the verb or verbs linked to the subject. The direct object is the person or thing that receives the action of the verb. It normally follows the verb. The indirect object is the person or thing to whom or to which the action was directed or for whom or for which the action was performed. The indirect object is in a way the recipient of the direct object.
+
+In the requirements engineering process people typically describe their requirements, expectations or *how they do work*, typically, in full sentences (if not, sentences could always be reduced or enhanced to have such a *normal* form). That means, any statement can be expresses as a sentence with subject, object, and predicate. In S-BPM notation this can be mapped as follows:
+
+* subject (who) → subject
+* object (with what) → data (business object)
+* predicate (what) → action
+
+Subjects execute actions on objects. Nevertheless, further research seems to be needed on this topic, but it helps to explain the concept and idea behind S-BPM and it is a well explored didactical method in teaching.
+A comprehensive description of the S-BPM notation can be found in
+
+
+### Subject vs. Agent
+
+To be more precise, the relation of agent and subject is not a simple one to one match. Here, the term subject denotes a *process-related functionality* and agent denotes a real thing or *instance* (i.e. a concrete realisation of a subject). This is important, because subjects have to be matched with organisational structures (i.e. the resources of an organisation, such as people or machines). This differentiation is therefore important in the context of concrete implementations of the S-BPM methodology in an organisation - with or without the support of information technology. On the other hand, the term agent has many meanings in different domains, e.g. in economics, linguistics, social sciences or computer science. Sometimes the term actor is synonymously used. Care must be taken, not to mix up different meanings.
+
+
+## Example
+
+The basic concepts can be explained with the help of a simple example, the *process of doing a quiz*. This includes all elements of S-BPM: two subjects (person who asks, person who answers), three messages/objects (question, answer to question, and feedback, if answer is correct or not). This example is very basic, but has been developed for didactical purposes and can be enhanced to more complex behaviors (e.g. there is no answer that would leave the asker in an indefinite state and must be considered in modeling).
+
+
+## Research & Education
+
+The nonprofit organization Institute of Innovative Processmanagement (I2PM) serves as community platform to bundle research and development activities in the field of S-BPM, e.g. the *Open S-BPM* initiative (http://www.i2pm.net/interest-groups/open-s-bpm). The I2PM supports and stimulates the improvement of existing and the development of new tertiary curricula in the domain of business process management. Since 2009 I2PM organizes the yearly scientific conference S-BPM ONE. S-BPM has been applied and tested in a number of fields, including the production industry.
+

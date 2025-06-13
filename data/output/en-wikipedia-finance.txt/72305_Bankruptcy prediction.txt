@@ -1,0 +1,40 @@
+Bankruptcy prediction
+
+
+# Bankruptcy prediction
+
+
+
+**Bankruptcy prediction** is the art of predicting bankruptcy and various measures of financial distress of public firms. It is a vast area of finance and accounting research. The importance of the area is due in part to the relevance for creditors and investors in evaluating the likelihood that a firm may go bankrupt.
+
+The quantity of research is also a function of the availability of data: for public firms which went bankrupt or did not, numerous accounting ratios that might indicate danger can be calculated, and numerous other potential explanatory variables are also available. Consequently, the area is well-suited for testing of increasingly sophisticated, data-intensive forecasting approaches.
+
+
+## History
+
+The history of bankruptcy prediction includes application of numerous statistical tools which gradually became available, and involves deepening appreciation of various pitfalls in early analyses. Research is still published that suffers pitfalls that have been understood for many years.
+
+Bankruptcy prediction has been a subject of formal analysis since at least 1932, when FitzPatrick published a study of 20 pairs of firms, one failed and one surviving, matched by date, size and industry, in *The Certified Public Accountant*. He did not perform statistical analysis as is now common, but he thoughtfully interpreted the ratios and trends in the ratios. His interpretation was effectively a complex, multiple variable analysis.
+
+In 1967, William Beaver applied t-tests to evaluate the importance of individual accounting ratios within a similar pair-matched sample.
+
+In 1968, in the first formal multiple variable analysis, Edward I. Altman applied multiple discriminant analysis within a pair-matched sample. One of the most prominent early models of bankruptcy prediction is the Altman Z-score, which is still applied today.
+
+In 1980, James Ohlson applied logit regression in a much larger sample that did not involve pair-matching.
+
+
+## Modern methods
+
+Predicting bankruptcy of companies has been a hot subject of focus for many economists. The rationale for developing and predicting the financial distress of a company is to develop a predictive model used to forecast the financial condition of a company by combining several econometric variables of interest to the researcher. The study sought to introduce deep learning models for corporate bankruptcy forecasting using textual disclosures. The study constructed a comprehensive study model for predicting bankruptcy based on listed companies in Kenya. The study population included all 64 listed companies in the Nairobi Securities Exchange for ten years. Logistic analysis was used in building a model for predicting the financial distress of a company. The findings revealed that asset turnover, total asset, and working capital ratio had positive coefficients. On the other hand, inventory turnover, debt-equity ratio, debtors turnover, debt ratio, and current ratio had negative coefficients. The study concluded that inventory turnover, asset turnover, debt-equity ratio, debtors turnover, total asset, debt ratio, current ratio, and working capital ratio were the most significant ratios for predicting bankruptcy (Ogachi, D.; Ndege, R.; Gaturu, P.; Zoltan, Z. (2020)
+
+
+## Comparison of differing approaches
+
+The latest research within the field of Bankruptcy and Insolvency Prediction compares various differing approaches, modelling techniques, and individual models to ascertain whether any one technique is superior to its counterparts.
+
+Jackson and Wood (2013) is one of many reviews of the literature to date, and included an empirical evaluation of 15 popular models from the existing literature. These models range from the univariate models of Beaver through the multidimensional models of Altman and Ohlson, and continuing to more recent techniques which include option valuation approaches. They find that models based on market data - such as an option valuation approach - outperform those earlier models which rely heavily on accounting numbers.
+
+Zhang, Wang, and Ji (2013) proposed a novel rule-based system to solve bankruptcy prediction problem. The whole procedure consists of the following four stages: first, sequential forward selection was used to extract the most important features; second, a rule-based model was chosen to fit the given dataset since it can present physical meaning; third, a genetic ant colony algorithm (GACA) was introduced; the fitness scaling strategy and the chaotic operator were incorporated with GACA, forming a new algorithm—fitness-scaling chaotic GACA (FSCGACA), which was used to seek the optimal parameters of the rule-based model; and finally, the stratified K-fold cross-validation technique was used to enhance the generalization of the model.
+
+There are a few sources where data can be obtained for bankruptcy prediction. Among others the UCLA-LoPucki Database, which looks at Large US Company bankruptcies from Oct-97 to present and the Federal Judicial Center that looks at bankruptcies from 2008. Some financial providers have started to use these datasets with machine learning models to attempt to predict future bankruptcy risks. This is an emerging field and we expect that future research will look into using unstructured financial data and alternative data sources in prediction models.
+

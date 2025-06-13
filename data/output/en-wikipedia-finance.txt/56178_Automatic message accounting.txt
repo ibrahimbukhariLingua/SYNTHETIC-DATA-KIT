@@ -1,0 +1,45 @@
+Automatic message accounting
+
+
+# Automatic message accounting
+
+
+
+**Automatic message accounting** (**AMA**) provides detailed accounting for telephone calls. When direct distance dialing (DDD) was introduced in the US, message registers no longer sufficed for dialed telephone calls. The need to record the time and phone number of each long-distance call was met by electromechanical data processing equipment.
+
+
+## Centralized AMA
+
+In centralized AMA (CAMA), the originating Class 5 telephone switches used automatic number identification (ANI) and multi-frequency (MF) signaling to send the originating and dialed telephone numbers to the Class 4 toll connecting office. The Class 4 office recorded this information with punched tape machines on long strips of paper, that had approximately the width of a hand. Each day a technician cut the paper tapes and sent them to the accounting center to be read and processed to generate customer telephone bills. Each punch recorder was responsible for 100 trunks, and its associated call identity indexer (CII) identified the trunk for an initial entry when connecting the call, an answer entry when the called party answered, and a disconnect entry when the call was cleared.
+
+In Bell System telephone exchanges, particularly the 5XB switches, information from the marker told the sender that the call required ANI, and stored the calling equipment number in reed relay packs in the sender. The sender used the transverter connector (TVC) to seize a transverter (TV), which was a bay of a few hundred flat spring relays that controlled all AMA functions. The TV looked in the AMA translator (AMAT) that took care of these particular few thousand lines. AMAT was a rack of ferrite ring cores with cross-connect wires passing through holes of 3 × 4 inches or about a decimeter square, one wire per line. The wire was terminated on a wire wrap peg representing that particular line, and passed through a ring that represented the NNX digits of the billing number, then the M, C, D and finally Units of that number. When queried, AMAT sent a high-current pulse through the wire for that particular line, inducing pulses in the appropriate rings which were amplified by a cold cathode tube amplifier and then by a relay, and sent back to the transverter which supplied it to the sender for transmission by ANI to the tandem office.
+
+In case of billing complaints, a test apparatus allowed scanning through all the lines in an office at the rate of about a hundred per minute, to find which ones were translated to a particular billing number.
+
+
+## Local AMA
+
+In local AMA (LAMA) all this equipment was located at the Class 5 office. In this case, it also recorded the completion of local calls, thus obviating message registers. For detail billed calls, the punch recorded both calling and called numbers, as well as time of day. For message rate calls, only the calling number and time of day.
+
+In some electromechanical offices in the 1970s, the paper tape punch recorders were replaced by magnetic tape recorders. Most punches remained in service until the exchange switch itself was replaced by more advanced systems. Stored program control exchanges, having computers anyway, do not need separate AMA equipment. They sent magnetic tapes to the Accounting Center until approximately 1990, when data links took over this job.
+
+
+## Billing automatic message format
+
+Around the same time period, the billing AMA format (BAF) was developed to support the full range of local exchange carrier services. BAF is now the preferred format for all AMA data generated for processing by a LEC Revenue Accounting Office (RAO). BAF supports the complete spectrum of services and technologies, including local and network interconnection services, operator services, toll-free services, Intelligent Network database services, wireline and wireless call recording, IP addressing, and broadband data services.
+
+BAF is administered by Telcordia Technologies, with the Billing AMA Format Advisory Group (BAFAG) playing a central role in the overall approval and administration of BAF records. The BAFAG consists of subject matter experts and representatives from the Telcordia Consulting Services Business Group who review and authorize proposed BAF elements, as well as subject matter experts from AT&T, CenturyLink (formerly Qwest), and Verizon.
+
+The BAFAG uses the GR-1100 (Billing Automatic Message Accounting Format, BAF) specification to record call history. It describes the possible groupings of BAF structures and modules that form BAF records, the connection between service, technology, and call type, how call type and call conditions determine the structure and modules (if any) that are selected for generation of BAF records, and how the characteristics of the calling and called addresses, as well as the services provided, are factors in module generation.
+
+The members of the 3rd Generation Partnership Project (3GPP) have been working toward Abstract Syntax Notation One (ASN.1)-encoded Charging Data Records (CDRs) to be mapped to the AMA records in BAF. In telecommunications mediation, a billing mediation system converts the 3GPP CDRs to BAF when the call and service usage data is processed by a legacy billing system or any other downstream recipient system.
+
+Next Generation Networks (NGN) Accounting Management Generic Requirements adopt the NGN Charging and Accounting Architecture defined by 3GPP and uses industry standard terminology. It includes alignment with 3GPP Charging Principles, the International Telecommunication Union-Telecommunication (ITU-T) NGN Charging and Accounting Framework Architecture, and the Internet Engineering Task Force (IETF) Diameter Accounting protocol. The 3GPP effort also includes adding a conversion guide for 3GPP CDRs to AMA records.
+
+
+## Message register
+
+Electromechanical pulse counters counted message units for message rate service lines in panel switches and similar exchanges installed in the early and middle 20th century. The metering pulses were generated in a junctor circuit, at a rate set by the sender, usually one pulse every few minutes. Every month a worker read and recorded the indicated number of message units, similar to the accounting of a gas meter. In the middle of the 20th century it became customary to photograph the meters, about a hundred per film frame, for examination in comfort.
+
+American message unit counters generally had four digits, which sufficed because they were only used on local calls and most residential lines did not pay for local calls. Despite the arrival of subscriber trunk dialling (automatic long-distance dialing) in Europe, central offices there continued making and using message registers in the 1970s, designing ones that could register more than one click per second on a trunk call and display five or six digits.
+

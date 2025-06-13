@@ -1,0 +1,174 @@
+Demand flow technology
+
+
+# Demand flow technology
+
+
+
+**Demand flow technology** (**DFT**) is a strategy for defining and deploying business processes in a flow, driven in response to customer demand. DFT is based on a set of applied mathematical tools that are used to connect processes in a flow and link it to daily changes in demand.
+DFT represents a scientific approach to flow manufacturing for discrete production. It is built on principles of demand pull where customer demand is the central signal to guide factory and office activity in the daily operation. DFT is intended to provide an alternative to schedule-push manufacturing which primarily uses a sales plan and forecast to determine a production schedule.
+
+
+## History
+
+It was created by John R. Costanza, an executive with operations management experience at Hewlett Packard and Johnson & Johnson. Costanza, who was later nominated as a Nobel Laureate in Economics for Working Capital Management, founded the John Costanza Institute of Technology in Englewood, CO in 1984 to provide consulting and education services for manufacturers to implement the methodology.
+
+DFT uses applied mathematical methods to link raw and in-process materials with units of time and production resources in order to create a continuous flow in the factory. The objective is to link factory processes together in a flow and drive it to customer demand instead of to an internal forecast that is inherently inaccurate.
+
+Early adopters of DFT included American Standard Companies General Electric and John Deere (Deere & Company).
+
+In the early years, DFT was regarded as a method for "just-in-time" (JIT), which advocated manufacturing processes driven to actual customer demand via Kanban. It was introduced as a way for American manufacturers to adopt Japanese production techniques, such as Toyota Production System (TPS), whilst avoiding some of the cultural conflicts in applying Japanese business methods in an American company. Later, it has come to be seen as a lean manufacturing method that allows factories to implement techniques such as one-piece flow, TAKT-based line design, Kanban material management and demand-driven production.
+
+Demand Flow Technology is promoted as a method for any product, any day, any volume. In 2001, Costanza was awarded a patent for this approach for mixed-model manufacturing.
+
+
+## Principles
+
+
+### Demand-driven manufacturing
+
+The central tenet to DFT is the primacy of customer demand in daily execution of the operation. According to Aberdeen Group,
+
+DFT is a pathway to achieve demand-driven manufacturing capability. It is used as a framework to guide the design, implementation and deployment of demand driven manufacturing in a repeatable form. In this way, it is similar original concept of Just-in-Time (JIT) that was first deployed in Japanese manufacturers using a foundation of total quality management. More recently, Just-in-time has been more commonly used to describe supplier delivery methods, rather than a production philosophy. DFT assumes basic process capability that can arise from TQM and statistical process control (SPC) principles and embeds it in a framework of management that can more easily achieve demand driven in a repeatable way.
+
+As a result, In-Progress and Finished inventories are all but eliminated, converted permanently into cash at full market value through much faster response to customer orders.
+
+Cash released from Working Capital in this way no longer has to be reinvested in inventory. It becomes available to retire debt, fund growth and innovation.
+
+
+### Mixed-model production
+
+Mixed-model production is the production of a wide range of product models using a certain degree of shared resources and common material. It is commonly accepted that modern manufacturing places a greater pressure on producers for more choice in the product offering. Products are increasingly assembled from standard components and sub-assemblies, using machines and automated systems as well as manual labour. DFT is designed to handle this mix and provide a way to establish mixed-model production lines.
+
+A production schedule based on MRP will tend to cope with high product mix by allocating each model to a multiple of a shift or a day. This means that the whole product mix is supplied across a scheduling cycle of a multiple of weeks. This tends to extend the lead-time or increase dependency on the forecast. DFT offers “The ability to accommodate a range of volumes for any product, any day, based on the direction of actual customer demand”.
+
+
+### Product synchronization
+
+The first tool to be used in a DFT implementation, product synchronization is a definition of relationship of processes in a flow to build a product. It takes the form of a diagram, usually created in pen and paper or whiteboard and formalized with a visualization program such as Microsoft PowerPoint or Visio. It displays how the processes relate to each other in a flow, with the conversion of raw material to finished goods. A process is defined by "A logical grouping of value-adding work performed to a common volume".
+
+
+### Sequence of events (SoE)
+
+Each of the processes in the product synchronization requires a standard process definition. In DFT, the sequence of events provides this definition. In *The Quantum Leap*, written by Costanza, the sequence of events is defined as "[t]he definition of the required work and quality criteria to build a product in a specific production process."
+The SoE usually takes the form of a table with the product code, process ID, task description and sequence, required work and set-up time for machines and labour, and quality check criteria. The SoE intends to define times that are reasonable, realistic and repeatable to perform to the necessary quality. Many of the strengths and criticisms of DFT as a methodology stem from the SoE. The SoEs are the foundation of process definition but are not used as work instructions. To communicate standard work at the work center, operation method sheets are used.
+In an MRP systems environment, the SoE represents a drill-down from the routing that provides a tabular view of the Product Synchronization at the process level. A DFT manufacturer would therefore use the SoE as the master record of process definition and derive routings and ISO documentation from it.
+
+
+### Operation method sheets
+
+These are visual description of work in motion, materials and the required quality check. In the purest form, operation method sheets are drawn in wire-frame to show the significant contours of the product form and clearly represent work in motion and quality without visual noise. The OMS has three stages of activity: total quality check, work, and verify. This establishes the concept where each operator checks the output quality of the operation immediately upstream. This can contribute to a total quality culture and parts-per-million capability.
+
+
+### Mixed-model process map
+
+The sequence of events and product synchronization define how tasks and quality check compose the process for any given product. The mixed-model process map shows how products and processes form a requirement for resources. In such a map, the products and processes form a matrix with products as rows and processes as columns. At the intersection are most commonly actual times (standard times at the process from the sequence of events), but could also display yield and optionality ratios.
+
+
+### Demand at capacity
+
+Demand at capacity is the volume of production for a single product item at capacity. It is a fixed value that defines the maximum daily rate of supply. The Demand-at-Capacity is often confused with the daily rate of production. In contrast to Toyota Production System, and many other lean manufacturing derivatives, a DFT line is designed for variable output rates according to daily demand. Thus, the demand data that are used for line design represent a limit quantity not an actual rate of supply. The relationship between the Dc and the average daily demand will be driven by the required service level of the product item to market demand. A higher service level will call for capacity that can supply a higher daily rate than the average over a long range. This will likely affect the resource productivity and inventory levels. A greater mix on the line is able to provide a higher level of service for any given level of resources and inventory.
+
+
+### Effective hours
+
+The effective hours is the time available for a given resource to produce product or perform process set-up or changeover. It is defined per shift and represents the total available time to perform tasks set in the SoE. Non-productive time such as equipment maintenance, breaks, 5S activity and continuous improvement is deducted from effective hours. Setup time is included as it is arguably a form of productive time and calculations for batch size optimization and dynamic Kanban will require setup and run-time to be managed from a common pool of resource time.
+
+
+### Takt & Operational Cycle-Time, OP c/t
+
+Takt-time is the ratio of time to volume at capacity and in DFT is expressed as
+
+Where HE is Effective Hours, S is the number of shifts and DC is the demand at capacity, a daily rate set for design purposes at some point 2 to 5 years into the future. This ratio can be expressed for finished products at the end of the line and is referred to as Takt-Time. It can also apply at the process where bill of material relationships, process yield and optionality can affect the dependent volume for any given Dc at the finished goods level. At the process level, this ratio is known as operational cycle-time.
+
+Takt time is typically used to calculate the "line design" or number and disposition of physical resources required to produce a given mix and volume of products that changes on a daily basis according to customer demand.
+
+Uniquely to DFT Takt time is constant, based on a fixed mix and product volume which is set for factory design purposes 2 to 5 years into the future. This allows for a stable "line design" that does not need to change on a daily basis. Daily changes in mix and volume are accommodated in DFT by adjusting the number of people working in production. Those not required to meet the Daily Rate (Dr) are free to spend quality time in training and continuous improvement activities.
+
+Weekly scheduling cycles to achieve level-loading of mix and volume, which cause significant planning delays, are eliminated. It becomes possible to produce any product on any day in response to real customer demand making possible a true Demand Flow.
+
+As a result, In-Progress and Finished inventories are all but eliminated, converted permanently into cash at full market value through much faster response to customer orders.
+
+Cash released from Working Capital in this way no longer has to be reinvested in inventory. It becomes available to retire debt, fund growth and innovation etc.
+
+
+### Material Kanban
+
+DFT shares a conventional definition of material Kanban based on a visual signal to replenish a point of consumption with required material. A typical material Kanban system in DFT is "Single Card, Multiple Container" and enables card or container quantities to be consumed and replenished without shortages.
+
+Material Kanban provides an alternative to kitting as a way of issuing material to the production floor. A DFT environment will strive to simplify the definition of warehouse locations for material and reduce the number of transactions required to control the flow of material during production. The aim of Material Kanban is to connect the material flow with actual requirement at the process and provide a more robust availability of parts to production whilst reducing the response-time to the customer.
+
+
+### Production Kanban
+
+Production Kanban is designed for a replenishment quantity that may be smaller than a lot size or batch. It is based on a "dual card Kanban" system where a "move" card or container represents the quantity required by the downstream point of consumption and a "produce" card is kept on a display board and accumulates to a replenishment batch.
+
+
+### Demand-based management
+
+Demand-based management is an approach that defines tolerance capability for demand in order to unify material and production planning under conditions of demand uncertainty. It uses "flex fences" to set the upper and lower boundaries of supply against a definition of the current daily rate of demand. The current rate is usually some kind of smoothed average and will move over time. The flex-fences will be different for different product items or groups and should be calculated individually. Order policies, purchasing, inventory and production capacity will all be set against these flex fence boundaries, so these calculations will sit at the heart of operations planning.
+
+Unfortunately, this is a calculation-intensive and critical process that is largely unsupported by MRP/ERP systems. The lack of system tools and clash with conventional MRP planning routine are primary reason why demand-based management has not had the same level of adoption experienced by the rest of the DFT principles.
+
+
+## Value and results
+
+Companies that implement DFT are typically looking for an improvement in the response to customer demand. This is reflected in the lead-time or replenishment time for finished product and will affect the level of inventory that is held to buffer response requirements.
+Effective response to demand can be described as a distribution curve, with some orders taking longer to fill than others. The result is variation and uncertainty in the manufacturer’s ability to serve the market. Working capital is required to hedge this response lag and uncertainty.
+
+DFT aims to reduce both the variation and duration of response to demand. This can be seen as a more capable fulfillment that provides a higher level of customer service at a lower level of working capital. The intended results are improvement in delivery performance together with increased cash-flow and return on working capital.
+
+
+## Applications
+
+Demand flow technology is applicable in a wide range of product environments and has been successfully deployed in many different industries. Companies who have embraced demand flow technology include John Deere, Flextronics, American Standard Companies, Trane, AstraZeneca and many others. It has a strength in those manufacturing operations that are expected to supply a high mix to an unpredictable and volatile market. It is often seen as the science behind flow manufacturing for discrete manufacturers, whose products do not naturally flow across the manufacturing processes.
+
+
+## Advantages and criticisms
+
+
+### Advantages
+
+
+#### It is simple
+
+Demand flow technology provides a simple, logical method based on applied mathematics. The technique is based on simple operators of addition, subtraction, multiplication and division so it does not rely on advanced mathematics.
+
+
+#### It is repeatable
+
+DFT forms a step-by-step guide to converting production from a scheduled-push to a demand-pull and flow system. Although it is applicable to a wide range of products, the steps are consistent and work in the same way. It does not depend on the judgment of an expert in the same way as lean or Six Sigma and can be taught to a broader audience through short training workshops.
+
+
+#### It is effective
+
+At its heart, DFT formalizes the natural flow of material, processes and information required to build a product. It is not so much an invented technology as a description of the optimal way to align a factory towards customer demand.
+
+
+#### It is customer-centric
+
+DFT places the customer at the center of the operation. It enables companies to formalise a customer-centric view with practical tasks and actions that guide behaviour in the organisation. It moves the concept of customer-driven to an achievable plan of action beyond a statement of philosophy.
+
+
+#### It aligns business and customer goals
+
+The concept of maximizing shareholder value is often seen as a conflict with the quality of customer service. Demand Flow Technology, if applied correctly, can unify financial and customer objectives in a holistic approach to managing operating capital and growing a business.
+
+
+### Criticisms
+
+
+#### It is constrained to the factory
+
+Demand flow techniques have been widely applied to the factory, yet have failed to gain widespread acceptance in corporate management. All too often, it tends to be limited to production planning whilst operations and material planning continue to be dominated by use of ERP/MRP systems. The holistic ideal of demand flow may be fractured by this conflict.
+
+
+#### It is unsupported by systems
+
+Major ERP/MRP vendors have largely ignored the advantages of Demand Flow techniques, or been acquired before their products have had a chance to gain market share. The advocates and users of Demand Flow have largely failed to challenge the inadequate logic that conventional MRP uses for planning capacity and production resources As a result, manufacturers are forced to rely on an outdated routine for planning that is largely unchanged since the 1960s.
+
+
+#### It requires process definition and discipline
+
+DFT aims to apply a standard process definition of product to daily requirements of demand. This favours processes that are capable and defined to the task level. This is sometimes a level of detail and discipline absent from the organisation. The creation and maintenance of Sequence of Events documentation involves extensive manual work. There are powerful advantages to quality and capability in performing this work, but success usually depends on management commitment to change beyond the narrow actions of a DFT implementation.
+

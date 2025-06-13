@@ -1,0 +1,113 @@
+Energy Exchange Austria
+
+
+# Energy Exchange Austria
+
+
+
+**EXAA (Abwicklungsstelle für Energieprodukte AG)** is an electronic marketplace for energy trading in Austria, Germany and the Netherlands. As the Austrian Energy Exchange, it is active in the Austrian APG control area as well as in all four German control areas (Amprion, TenneT, TransnetBW, 50Hertz). In 2012, EXAA was the first European exchange to introduce trading in green electricity under the name "EXAA Green Power".
+
+Since 2021, EXAA has been in close cooperation with CCPA (Central Counterparty Austria), which has since taken over the clearing of financial transactions as well as EXAAs collateral and risk management.
+
+
+## History
+
+EXAA was officially founded on June 8, 2001. The complete liberalization of the Austrian electricity market on October 1, 2001 created the legal framework for the establishment of an electricity exchange. Spot trading at EXAA began on March 21, 2002 for individual hours in the APG control area, with a total of twelve market participants. EXAA spot trading now comprises around 60 electricity trading companies from 11 countries, whereby the non-Austrian share of companies currently dominates.
+
+The trading areas and -agendas have been continuously expanded:
+
+* 2024: Go-Live of EXAAs 10:15 auction in the Netherlands
+* 2022: Successful introduction of the cross-auction spread, which offers trading participants arbitrage opportunities between the independent 10:15 and the 12:00 market coupling auctions.
+* 2021: Start of the cooperation with Central Counterparty Austria (CCPA) for a more efficient clearing & risk management.
+* 2020: Introduction of the API interface for trading partners.
+* 2019: Successful market launch of physical location spread products for virtual coupling of the Austrian and German market areas and EXAAs entry in the European 2:00 market coupling auction.
+* 2018: Introduction of two auctions for the Austrian and German market areas, which were separated on October 1, 2018.
+* 2015: Identification of EXAA as one of the first European market participants in accordance with the REMIT Regulation as an RRM (Registered Reporting Mechanism) by the electricity regulator ACER (Agency for the Cooperation of Energy Regulators) in February. This made it possible for EXAA to report data directly to ACER without going through a service provider. Also, start of data reporting in accordance with the data reporting obligation under the REMIT Regulation & appointment of EXAA as a NEMO (Nominated Electricity Market Operator) in Austria by E-Control.
+* 2014: Launch of the first 1/4-hour auction in Europe.
+* 2013: Introduction of negative prices on the EXAA (price range: - 150 EUR/MWh to + 3,000 EUR/MWh).
+* 2012: Introduction of the EXAA Green Power market. End of EXAA's management of the Hungarian day-ahead market PXE.
+* 2011: EXAA takes over the operational business for the Hungarian market area from the Prague energy exchange PXE. Start of the cooperation agreement with Greenmarket-Exchange (subsidiary of Bayerische Börse) on the CO2 market and simultaneous closure of the CO2 spot market at EXAA.
+* 2009: Opening of the TransnetBW (then: EnBW) and 50Hertz (then: Vattenfall) control areas. Start of the "training for energy and environmental markets" training series "teem".
+* 2008: Conversion of the algorithm for more reliable execution of market orders. Implementation and publication of regular market analyses of the energy spot market by EXAA to increase transparency.
+* 2006: Opening of the Swiss control area (later discontinued).
+* 2002-2006: Auction Office for capacity auctions (handled by RIECADO, a company of the former CISMO-group which merged with smart technologies).
+* 2005: Opening of the Amprion control area (then: RWE) & start of trading with CO2 certificates.
+* 2004: Expansion of the trading area to Germany - opening of the Tennet control area (then: E.ON).
+* 2003: Introduction of block products and post-trading.
+
+## Trading platform
+
+An exchange is an organized trading venue whose processes are subject to legal regulations. The main objective of operating an electronic trading platform with an auction system is to optimize the bundling of liquidity. In addition, the efficiency of trading activities is promoted by significantly reducing the effort involved in concluding transactions compared to bilateral trading. The neutrality of an energy exchange, the guaranteed anonymity of bids and the immediate publication of price information make a significant contribution to promoting fairness throughout the market.
+
+**Traded products**
+
+In principle, all 24 hours of a day can be traded individually on the Austrian energy exchange. In addition to the standard block products (the combination of several hours into a common block) base, peak and off-peak, further special block products have been introduced in order to meet the specific needs of market participants (see figure 1). Besides the single-hour products and block products, all 96 quarter hours of a day can be traded at the EXAA in the independent 10:15 day-ahead auction.
+
+The physical fulfillment of transactions takes place either in one of the four control areas in Germany (Amprion, TenneT, TransnetBW or 50Hertz) or in the Austrian APG control area. This results in the determination of a price per MWh for Germany and another price for Austria. On the trading days from Monday to Friday, the orders of the individual market participants are collected in a closed order book. An auction for gray and green energy is then held daily for each market area (Austria & Germany). The price determined at the auction (Market Clearing Price, MCP) and the quantities allocated to the individual market participants are communicated to them immediately after the auction, whereas the physical settlement of transactions takes place the next day (day-ahead trading).
+
+In 2012, EXAA was the first European electricity exchange to enable its trading participants to trade in green electricity.
+
+With downstream post-trading, surplus quantities from the auction can be bought at the already defined market clearing price.
+
+**Trading System**
+
+The products of the EXAA spot markets are traded in auctions. Only a web browser is required on the trader side to transmit buy or sell bids. This avoids software installation and maintenance on the traders' IT systems and expensive dedicated lines. Access to the system is secured with electronic keys (RSA tokens).
+
+
+## Day Ahead Auctions
+
+Currently, two day-ahead auctions (an independent auction at 10:15 and a market-coupling auction at 12:00) are offered at EXAA for both Austria and Germany, with four different clearing prices per product and delivery day.
+
+**10:15 auction: Two market areas, two market clearing prices - with virtual coupling**
+
+With the price zone split on October 1, 2018, the cross-border market area Austria - Germany, which had existed for years, was terminated, leading to capacity constraints. Since then, EXAA has simultaneously offered two separate auctions for the two market areas, in which one market clearing price for Austria and another market clearing price for Germany are determined. This made it possible to submit schedule logging from the EXAA auction in Austria (APG) and in all four German control areas (Amprion, TenneT, TransnetBW, 50Hertz). Companies that already have balancing group contracts for the German grid can trade at EXAA without restriction.
+
+**Location Spread & Cross Auction Spread**
+
+On March 5, 2019, EXAA successfully expanded its product line by introducing physical location spreads that allow a virtual coupling of the two price zones of Austria and Germany. In addition to their bids for blocks, hours and quarter hours, traders can also use a new spread editor to place bids on the price difference between Austria and Germany and buy or sell this spread with or without a limit. If a spread bid is accepted at the auction, a quantity of the same amount is bought in one price zone and simultaneously sold in the other price zone. The price of the spread is determined by the simultaneous auctions in the Austrian market area and the German market area, taking into account the entire order books. The spread is physically settled in the respective market area.
+
+In addition to the location spread, another trading product was introduced at EXAA in 2022: the cross-auction spread. It can be used to profit from price differences between the EXAA 10:15 auction and the 12:00 MC auction as a part of portfolio optimization.
+
+**12:00 Uhr Market Coupling Auction**
+
+Since July 2, 2019, EXAA trading participants can also take part in the 12:00 Market Coupling Auction.
+
+* Market areas: AT and DE
+* Standard Day Ahead contracts
+* Unchanged favorable membership fee
+* Direct clearing and demand-driven risk management
+* Trade limits calculated based on the 10:15 Market Clearing Price
+* Competitive transaction fees
+
+At 12:00 pm, the order books for Germany and Austria (and all associated exchanges/countries/price zones) are implicitly auctioned with the corresponding capacity limits as part of the European market coupling. The German/Austrian cross-border capacities are included in the same way as all other cross-border capacities between the various European price zones, resulting in a 12:00 pm price for Austria and - depending on the utilization of the available transmission capacities - possibly a different 12:00 pm price for Germany.
+
+**Tradeable products**
+
+As part of the 12:00 MC auction, EXAA trading participants can trade all 24 individual hours of the day as well as specific block products as individual trading products.
+
+
+## TEEM-Trainings
+
+Since January 2009, EXAA has been offering training courses on electricity and gas trading under the brand name teem - training for energy and environmental markets. The so-called "teem modules" are aimed at both industry newcomers and energy experts. Around three inhouse sessions and three online sessions are held each year. Additionally, special seminars and workshops are offered to address current challenges and trends. Besides the regular offered dates, additional training courses can be booked on request. The content of the training courses is presented by renowned experts in the industry and ranges from the Austrian market model for electricity and gas to price formation on exchanges and current topics such as blackout prevention.
+
+There is also the opportunity to obtain a trader diploma after successfully passing the EXAA examination. This examination takes place as part of the training and on individual request and allows to trade at EXAA.
+
+As of 2024, over 2,500 employees in the energy industry have already used the electricity and gas training courses for further training purposes.
+
+
+## Ownership structure
+
+Shareholders, including shares:
+
+* APCS Power Clearing and Settlement AG (34,55 %)
+* Wiener Börse AG (25,12 %)
+* Oesterreichische Kontrollbank (8,06 %)
+* smart technologies Management Beratungs- und Beteiligungsgesellschaft mbH (8,06 %)
+* Verbund Energy4Business GmbH (3,04 %)
+* ENERGIEALLIANZ Austria GmbH (3,04 %)
+* KELAG-Kärntner Elektrizitäts AG (3,04 %)
+* Energie Steiermark Business GmbH (3,04 %)
+* TIWAG-Tiroler Wasserkraft AG (3,04 %)
+* illwerke vkw AG (3,04 %)
+* Energie Graz GmbH & Co KG (2,98 %)
+* OMV Gas & Power GmbH (2,98 %)

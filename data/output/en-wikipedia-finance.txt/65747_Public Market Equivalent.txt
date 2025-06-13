@@ -1,0 +1,363 @@
+Public Market Equivalent
+
+
+# Public Market Equivalent
+
+
+
+The **public market equivalent** (**PME**) is a collection of performance measures developed to assess private equity funds and to overcome the limitations of the internal rate of return and multiple on invested capital measurements. While the calculations differ, they all attempt to measure the return from deploying a private equity fund's cash flows into a stock market index.
+
+
+## Long-Nickels PME
+
+The first PME measure was proposed by Austin M. Long and Craig J. Nickels in 1996.
+
+The analysis is referred in the industry as Long Nickels PME, LN-PME, PME, or ICM. Long and Nickels stated that they preferred the acronym ICM (Index Comparison Method):
+
+*The ICM is also known as the Public Market Equivalent (PME). We prefer the term ICM, because it better describes the methodology, which is not limited to the use of a public market index to calculate its results*
+
+The PME analysis is covered under US patent 7058583
+
+
+### Methodology
+
+Long and Nickels compared the performance of a private equity fund with the S&P500 Index by creating a theoretical investment into the S&P using the Private Equity fund cashflows :
+
+* When paying a capital call, we assume that the same amount is used to 'buy the index'
+* When receiving a distribution, we assume that the same amount of the index is sold.
+
+As the index price evolves, the value of the theoretical amount invested in the index changes. When receiving a valuation for the fund, we can then compare the value of the fund investment to the theoretical value of the index investment.
+
+| **Period** | **Cashflows** | **Index** | **Index Performance** | **Theoretical Investment** |
+| --- | --- | --- | --- | --- |
+| p1 | -100 | 100 | 0.00% | 100 |
+| p2 | -50 | 105 | 5.00% | 155 |
+| p3 | 60 | 115 | 9.52% | 109.76 |
+| p4 | 10 | 117 | 1.74% | 101.67 |
+| |
+| **Valuation (p5)** | 110 | 120 | 2.56% | 104.28 |
+| **IRR** | 6.43% | **PME** | 5.30% |
+
+Negative cashflows are treated as contributions. On the first period, a $100 call in the fund is matched by a $100 investment into the index. On the second period, the $100 index investment is now worth $105, to which is added $50 of new investment.
+A positive cashflow is treated by decreasing the index investment by the same value.
+On the valuation period, we compare the valuation received from the fund to the value of the theoretical investment. The PME IRR is obtained by computing an IRR with the index valuation as the final cashflow.
+
+The Long Nickels PME tells how an equivalent investment in the public market would have performed. This then needs to be compared to the actual IRR of the fund. In the above example, the IRR is 1.13 percentage points above the PME, which means that the private fund outperformed the public index. The difference between the IRR and the PME is called the IRR spread.
+
+
+### Formula
+
+The PME is an IRR on the cashflows of the investment, using as final cashflow an adjusted PME NAV.
+
+{\displaystyle NAV\_{PME}=\sum \_{s}^{T}C\_{s}\times {\cfrac {I\_{T}}{I\_{s}}}}
+
+Where :
+
+{\displaystyle C\_{s}} is the cashflow from the investment at date s, positive for a contribution, negative for a distribution
+
+{\displaystyle I\_{s}} is the value of the index at date s
+
+then :
+
+{\displaystyle PME=IRR(C\_{s},NAV\_{PME})}
+
+
+### Limitation
+
+As stated in Long and Nickels paper:
+
+*If a private investment greatly outperforms the index because it makes frequent, large distributions, it is possible for the final value determined by the index comparison to be negative. In effect, the frequent large withdrawals from the index result in a net short position in the index comparison*
+
+This can be simulated in the previous example by having a period where the fund distributes a large amount and the index dives :
+
+| **Period** | **Cashflows** | **Index** | **Index Performance** | **Theoretical Investment** |
+| --- | --- | --- | --- | --- |
+| p1 | -100 | 100 | 0.00% | 100 |
+| p2 | -50 | 105 | 5.00% | 155 |
+| p3 | 60 | 115 | 9.52% | 109.76 |
+| p4 | 100 | 100 | -13.04% | -4.55 |
+| |
+| **Valuation (p5)** | 20 | 120 | 20% | -5.47 |
+| **IRR** | 7.77% | **PME** | 1.34% |
+
+When the final valuation of the theoretical investment is negative, the IRR formula for the PME may not return any results. Even if a PME can be calculated, while the investment stays negative, every increase in the index will be interpreted as a hit in the performance of the theoretical investment : on the above example, the value of the index went back up to 120, which had a negative impact on the value of the theoretical investment. Even if the investment eventually goes back into positive values and a PME can be computed, the time spent under 0 will be improperly taken into account.
+
+The next methods by Rouvinez, and Kaplan and Schoar are partly designed to address this issue.
+
+
+## PME+
+
+The PME+ was initially described in 2003 by Christophe Rouvinez in a paper *Private Equity Benchmarking with PME+*. It is written to resolve a common issue of the Long Nickels PME : an investment outperforming the index will yield a negative value in the index theoretical investment.
+
+
+### PME+ Methodology
+
+Instead of modifying the NAV of the investment, the PME+ discount every distribution by a factor computed so that the NAV of the index investment matches the NAV of the fund.
+
+| **Period** | **Cashflows** | **Index** | **Theoretical Contributions** | **Discounted Distributions** | **Discounted Cashflows** |
+| --- | --- | --- | --- | --- | --- |
+| p1 | -100 | 100 | 100 | 0 | -100 |
+| p2 | -50 | 105 | 50 | 0 | -50 |
+| p3 | 60 | 115 | 51.63 | 51.63 |
+| p4 | 100 | 100 | 86.05 | 86.05 |
+| | |
+| **Valuation (p5)** | 20 | 120 | 20 |
+| **Lambda** | 0.86 |
+| **IRR** | 7.77% | **PME+** | 2.05% |
+
+Like the Long Nickels PME, the PME+ needs to be compared to the IRR. An IRR outperforming the PME means that the fund outperformed the public index.
+
+
+### PME+ Formula
+
+Using Henly Notation in *PME Benchmarking Method*:
+
+{\displaystyle NAV\_{PME+,T}=\sum \_{s=0}^{t}(contribution\_{s}-\lambda \_{T}.distribution\_{s}).{\cfrac {I\_{t}}{I\_{s}}}}
+
+where
+
+{\displaystyle \lambda \_{T}={\cfrac {(S\_{c}-NAV\_{PE,T})}{S\_{d}}}}
+
+and
+
+{\displaystyle S\_{c}=\sum \_{s=0}^{T}(contribution\_{s}.{\cfrac {I\_{T}}{I\_{s}}})}
+
+{\displaystyle S\_{d}=\sum \_{s=0}^{T}(distribution\_{s}.{\cfrac {I\_{T}}{I\_{s}}})}
+
+In other words, lambda is chosen so that :
+
+{\displaystyle NAV\_{PME+,T}=NAV\_{PE,T}}
+
+The IRR is then calculated using as cashflows :
+
+{\displaystyle PME+\_{T}=IRR(Contributions,\lambda \_{T}.Distributions,NAV\_{PE,T})}
+
+
+## Modified PME
+
+The modified PME (or mPME) method was released by Cambridge Associates in October 2013. It provides an alternate way to tackle the negative NAV limitation of the LN-PME.
+
+Like the LN-PME and the PME+, the mPME consider an hypothetical public investment whose performance follows the public benchmark. Each contribution in the private investment is matched by an equal contribution in the public investment. However, rather than subtracting the distributed amounts from the public investment, we compute the weight of the distribution in the private investment, and remove the same weight from the public one.
+
+| **Period** | **Call** | **Dist** | **NAV** | **Index** | **Theoretical Contributions** | **Distribution Weight** | **Theoretical NAV** | **Weighted Distributions** | **Net CF** |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| p1 | 100 | 0 | 100 | 100 | 100 | 0 | 100 | 0 | -100 |
+| p2 | 50 | 165 | 105 | 50 | 0 | 155 | 0 | -50 |
+| p3 | 0 | 60 | 125 | 115 | 0 | 0.32 | 114.70 | 55 | 55.06 |
+| p4 | 0 | 100 | 15 | 100 | 0 | 0.87 | 13.01 | 87 | 86.73 |
+| **Valuation (p5)** | 20 | 120 | 15.61 | 15.61 |
+| **IRR** | 7.77% | **mPME** | 2.02% |
+
+
+### Formula
+
+For each distribution, a distribution weight is calculated
+
+{\displaystyle D\_{weight,t}={\cfrac {D\_{t}}{D\_{t}+NAV\_{t}}}}
+
+The NAV of the theoretical investment is then calculated as :
+
+{\displaystyle NAV\_{mPME,t}=(1-D\_{weight,t})\times (NAV\_{mPME,t-1}\*{\cfrac {I\_{t}}{I\_{t-1}}}+Call\_{t})}
+
+The weighted Distribution is given by :
+
+{\displaystyle Dist\_{mPME,t}=(D\_{weight,t})\times (NAV\_{mPME,t-1}\*{\cfrac {I\_{t}}{I\_{t-1}}}+Call\_{t})}
+
+{\displaystyle IRR\_{mPME}=IRR(Call,Dist\_{mPME},NAV\_{mPME,T})}
+
+
+## Kaplan Schoar PME
+
+Kaplan Schoar PME was first described in 2005 by Steve Kaplan and Antoinette Schoar. While the Long Nickels PME returns an IRR, the Kaplan Schoar PME (or KS-PME) returns a market multiple.
+A simple explanation of its computation is described into Sorensen & Jagannathan paper:
+
+*Let X(t) denote the cash flow from the fund to the LP at time t. This total cash-flow stream is divided into its positive and negative parts, called distributions (dist(t)) and capital calls (call(t)). Distributions are the cash flows returned to the LP from the PE fund (net of fees) when the fund successfully sells a company. Capital calls are the LP’s investments into the fund, including the payment of ongoing management fees. The distributions and capital calls are then valued by discounting them using the realized market returns over the same time period, and the [KS-]PME is the ratio of the two resulting values:*
+
+
+### Formula
+
+When considering an investment at time T. The KS-PME first considers the current valuation of the investment as a distribution at date T. KS-PME is then defined as
+
+{\displaystyle KS-PME={\cfrac {FV(Dist)}{FV(Call)}}}
+
+with
+
+{\displaystyle FV(Dist)=\sum \_{t}(dist(t)\times {\cfrac {I\_{T}}{I\_{t}}})}
+
+{\displaystyle FV(Call)=\sum \_{t}(call(t)\times {\cfrac {I\_{T}}{I\_{t}}})}
+
+Using the previous example :
+
+| **Period** | **Contribution** | **Distribution** | **Index** | **DPI** | | **Discounted Contribution** | **Discounted Distribution** | **KS PME** |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| p1 | 100 | 0 | 100 | 0 | | 120 | 0 | 0 |
+| p2 | 50 | 0 | 105 | 0 | | 57.14 | 0 | 0 |
+| p3 | 0 | 60 | 115 | 0.40 | | 0 | 62.60 | 0.35 |
+| p4 | 0 | 10 | 117 | 0.47 | | 0 | 10.26 | 0.41 |
+| Valuation (p5) | 0 | 110 | 120 | 1.20 | | 0 | 110 | 1.03 |
+
+While the Long Nickels PME needs to be compared to the actual IRR, the KS PME gives a direct indication of the performance of the fund compared to the performance of the index. A KS PME above 1 indicates that the fund overperformed the index. A KS PME below 1 indicates that the public index was a better investment than the fund.
+
+
+### Formula Simplification
+
+The KS-PME formula can be simplified by removing {\displaystyle I\_{T}} from the sums :
+
+{\displaystyle KS-PME={\frac {\sum \_{t}{\frac {dist(t)}{I\_{t}}}}{\sum \_{t}{\frac {call(t)}{I\_{t}}}}}}
+
+The Kaplan Schoar formula is independent of the time period used to forecast or discount the cashflows. This is an advantage over PME formulas that use an IRR calculations, whose final value will decrease over time.
+
+
+### Usage
+
+The KS PME is the subject of a paper from the Columbia Business School assessing that *The [Kaplan Schoar] PME provides a valid economic performance measure when the investor ("LP") has log-utility preferences and the return on the LP’s total wealth equals the market return.*
+
+
+### Relation between LN-PME and KS-PME
+
+In a 2008 paper *The common Mathematical Foundation of ACG's ICM and AICM and the K&S PME*, Austin Long studies the mathematical link between LN PME and KS PME.
+
+Starting with KS PME formula :
+
+{\displaystyle KS-PME={\cfrac {FV(Dist)}{FV(Call)}}}
+
+From the LN-PME formula :
+
+{\displaystyle NAV\_{PME}=\sum \_{t}^{T}C\_{t}{\cfrac {I\_{T}}{I\_{t}}}}
+
+{\displaystyle NAV\_{PME}=\sum \_{t}^{T}call(t){\cfrac {I\_{T}}{I\_{t}}}-\sum \_{t}^{T}dist(t){\cfrac {I\_{T}}{I\_{t}}}}
+
+{\displaystyle NAV\_{PME}=FV(Call)-FV(Dist)}
+
+By merging the two formulas :
+
+{\displaystyle KS-PME=1-{\cfrac {NAV\_{PME}}{FV(Call)}}}
+
+
+## Direct Alpha
+
+The Direct Alpha was introduced on March 6, 2014, in a paper by Gredil, Griffiths, and Stucke.
+
+It is deduced from the KS-PME calculation by computing an IRR using the discounted contributions and distributions, and take its natural logarithm.
+
+{\displaystyle a=IRR(FV(C),FV(D),NAV\_{PE})}
+
+{\displaystyle \alpha ={\cfrac {ln(1+a)}{\Delta }}}
+
+with {\displaystyle \Delta } being the time interval for which alpha is computed (usually in years)
+
+| **Period** | **Cashflows** | **Index** | **Index Performance** | | **Discounted Cashflows** |
+| --- | --- | --- | --- | --- | --- |
+| p1 | -100 | 100 | 1.20 | | -120 |
+| p2 | -50 | 105 | 1.14 | | -57.14 |
+| p3 | 60 | 115 | 1.04 | | 62.60 |
+| p4 | 10 | 117 | 1.03 | | 10.26 |
+| Valuation(p5) | 110 | 120 | 1 | | 110 |
+| a (IRR) : | 1.09% |
+| Direct Alpha | 1.08% |
+
+
+### Derivation
+
+As an introduction, it is reminded that the computation of an IRR for the set of cashflows {\displaystyle C\_{0\ldots n}} and final value {\displaystyle NAV} is done by solving {\displaystyle r} for :
+
+{\displaystyle NAV\_{PE}=\sum \_{i=0}^{n}{c\_{i}\cdot (1+r)^{n-i}}}
+
+The direct alpha formula is derived from the definition of {\displaystyle \alpha } in Modern portfolio theory. We define {\displaystyle r}, the rate of return, as the sum of a market return plus an alpha :
+
+{\displaystyle r(t)=b(t)+\alpha }
+
+in the scope of direct alpha, we consider that r(t) and b(t) are continuous rate.
+Hence, the value of a cashflow {\displaystyle c\_{i}} at time {\displaystyle t\_{n}} is :
+
+{\displaystyle v\_{i}(t\_{n})=c\_{i}\cdot e^{\int \_{t\_{i}}^{t\_{n}}{(b(t)+\alpha )dt}}}
+
+using the benchmark values, we know that :
+
+{\displaystyle {\frac {I\_{n}}{I\_{i}}}=e^{\int \_{t\_{i}}^{t\_{n}}{b(t)dt}}}
+
+Hence :
+
+{\displaystyle v\_{i}(t\_{n})=c\_{i}\cdot {\frac {I\_{n}}{I\_{i}}}\cdot e^{\int \_{t\_{i}}^{t\_{n}}{\alpha dt}}}
+
+by resolving the integral, and discretizing the time variable such as {\displaystyle t\_{i}=i\Delta } :
+
+{\displaystyle v\_{i}(t\_{n})=c\_{i}\cdot {\frac {I\_{n}}{I\_{i}}}\cdot e^{\alpha \cdot (n-i)\Delta }}
+
+We use this formula for every contribution in the private investment :
+
+{\displaystyle NAV\_{PE}=\sum \_{i=0}^{n}{c\_{i}\cdot {\frac {I\_{n}}{I\_{i}}}\cdot e^{\alpha \cdot (n-i)\Delta }}}
+
+Finally, we define a as {\displaystyle 1+a=e^{\alpha \cdot \Delta }}
+
+{\displaystyle NAV\_{PE}=\sum \_{i=0}^{n}{c\_{i}\cdot {\frac {I\_{n}}{I\_{i}}}\cdot (1+a)^{n-i}}}
+
+This brings us back to a typical IRR formula. In other words, the direct alpha is calculated by computing an IRR with the benchmark discounted cashflows, and then computing {\displaystyle \alpha } with {\displaystyle \alpha ={\cfrac {ln(1+a)}{\Delta }}}
+
+
+## Excess IRR
+
+Different names for this methodology includes alpha, excess IRR, Implied Private Premium ("IPP") and PME Alpha.
+
+The first reference of the alpha was in a 2005 paper from Phalippou and Gottschalg and is simply named alpha, or excess IRR. The analysis is also explained in detail and named GEM Implied Private Premium (or "IPP") by Global Endowment Management
+
+
+### Formula
+
+The excess IRR is calculated by resolving {\displaystyle \alpha } in the following equation :
+
+{\displaystyle NAV\_{PE}=\sum \_{i=0}^{n}{c\_{i}.((1+b\_{i})^{\frac {1}{t\_{n}-t\_{i}}}+\alpha )^{t\_{n}-t\_{i}}}}
+
+with {\displaystyle b\_{i}={\frac {I\_{n}}{I\_{i}}}-1}
+
+
+### Methodology
+
+To calculate the Implied Private Premium, we compute the future values of a private investment's historical distributions and contributions. Each cash flow is compounded at a rate of return equaling the benchmark's annualized return plus the IPP. We then solve for the required IPP such that the PME ratio is set to one. IPP uses annual compounding to be consistent with other reporting methodologies and comparable to IRR.
+
+More specifically, the Implied Private Premium is solved numerically from
+
+{\displaystyle 1={\frac {\sum \_{i=1}^{n}d\_{i}(1+b\_{T\_{i},T\_{N}}+r\_{pp})^{T\_{N}-T\_{i}}}{\sum \_{i=1}^{n}c\_{j}(1+b\_{T\_{j},T\_{N}}+r\_{pp})^{T\_{N}-T\_{j}}}},}
+
+where {\displaystyle c\_{i}} and {\displaystyle d\_{j}} are contributions and distributions at time {\displaystyle T\_{i}} and {\displaystyle T\_{j}}, respectively; {\displaystyle b\_{T\_{i},T\_{N}}} is the annualized benchmark return from time {\displaystyle T\_{i}} to {\displaystyle T\_{N}}, and {\displaystyle r\_{pp}} is the IPP we are solving for.
+
+
+### Derivation
+
+Starting with the definition of the IRR, which is computed by resolving {\displaystyle r} in
+
+{\displaystyle NAV\_{PE}=\sum \_{i=0}^{n}{c\_{i}.(1+r)^{t\_{n}-t\_{i}}}}
+
+we consider r as the sum of two components : {\displaystyle r(t\_{i})=\beta \_{i,n}+\alpha }, with {\displaystyle \beta \_{i,n}} being the annually compounded benchmark performance between {\displaystyle t\_{i}} and {\displaystyle t\_{n}}.
+
+{\displaystyle \beta \_{i,n}=({\frac {I\_{n}}{I\_{i}}})^{\frac {1}{t\_{n}-t\_{i}}}-1}
+
+{\displaystyle \beta \_{i,n}=(1+b\_{i})^{\frac {1}{t\_{n}-t\_{i}}}-1}
+
+by replacing in the original equation :
+
+{\displaystyle NAV\_{PE}=\sum \_{i=0}^{n}{c\_{i}.((1+b\_{i})^{\frac {1}{t\_{n}-t\_{i}}}+\alpha )^{t\_{n}-t\_{i}}}}
+
+
+### Comparison with Direct Alpha
+
+The theoretical foundation of IPP is similar to that of Direct Alpha; however, the implementation details differ. The advantage of IPP is that it's an annually compounded, arithmetic excess return. This allows IPP to be directly comparable to generally accepted performance metrics such as IRR (also an annually compounded quantity). By contrast, the continuous direct alpha is not measured in the same unit as IRR, while the discrete direct alpha is a geometric excess return.
+
+
+## Other PME analysis
+
+Other less common PME analyses exists, usually as variation from either the Long Nickels PME or the Kaplan Schoar PME.
+
+Alignment Capital defines the Alternative ICM, or AICM as a variation from the Long Nickels PME :
+
+*While ACG’s ICM calculation assumes that the capital invested into the index is a long position, the alternative index comparison method (AICM) assumes the opposite – that is, the cash used to invest in the private market investment results, not from a source external to both the private market investment and the index, but from a short position in (i.e., a sale of) the index. Expressed in the same terms, the AICM calculation of the ending value of the index (the ending value used to calculate the AICM) is as follows:* 
+
+{\displaystyle Value\_{Index\_{Ending}}=FV\_{Returned}-FV\_{Invested}}
+
+In *Valuing Private Equity*, December 13, 2011, Sorensen, Wang and Yang defines an alternate PME based on the KS PME :
+
+*There are three concerns with the standard PME measure. First, the denominator combines two types of cash flows, the investment {\displaystyle I\_{0}} and the management fees. Management fees are effectively a risk-free claim and should be discounted at a rate close to the risk-free rate. Second, the numerator contains the total proceeds net of carried interest. The carried interest is effectively a call option, making the LP's total payoff at maturity less risky than the underlying asset. Hence, it should be discounted at a lower rate than the underlying PE investment. Finally, the beta of the PE investment may not equal one.*
+*To address these concerns, we define the adjusted PME as follows :* 
+
+{\displaystyle Adj.PME={\cfrac {E[e^{-rT}(LP\_{1}(A\_{t},T)+LP\_{2}(A\_{T},T)+LP\_{3}(A\_{T},T))]}{I\_{0}+E[\int \_{0}^{T}e^{-rs}mX\_{0}ds]}}}
+

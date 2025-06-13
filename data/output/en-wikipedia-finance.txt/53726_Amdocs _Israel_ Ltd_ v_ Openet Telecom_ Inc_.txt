@@ -1,0 +1,143 @@
+Amdocs (Israel) Ltd. v. Openet Telecom, Inc.
+
+
+# Amdocs (Israel) Ltd. v. Openet Telecom, Inc.
+
+
+
+***Amdocs (Israel) Ltd. v. Openet Telecom, Inc.***, 841 F.3d 1288 (Fed. Cir. 2016), is a court case in the United States Federal Court System that ended with a panel decision by the Federal Circuit to uphold the patent eligibility of four patents on a system designed to solve an accounting and billing problem faced by network service providers. The district court had held the patents invalid because they were directed to an abstract idea. In the Federal Circuit panel's view the patents were eligible because they contained an "inventive concept"—a combination of elements that was sufficient to ensure that the patents amounted to significantly more than a patent on the ineligible concept itself.
+
+This is one of the few times since the Supreme Court's *Alice Corp. v. CLS Bank International* decision that the Federal Circuit has held computer software-based patent claims eligible.
+
+
+## Background
+
+Amdocs held four patents and sued Openet for infringement. Each patent describes the same system, one that allows network service providers to account for and bill for Internet Protocol (IP) network communications. The system includes network devices; information source modules ("ISMs"); so-called gatherers; a central event manager ("CEM"); a central database; a user interface server; and terminals or "clients." The patent specification asserts that the invention arrays the components of the system "in a distributed architecture that minimizes the impact on network and system resources," which is accomplished "by collecting and processing data close to its source." That result is the effect of including "distributed data gathering, filtering, and enhancements that enable load distribution," instead of performing those tasks centrally as prior art devices did, and thus "reducing congestion in network bottlenecks, while still allowing data to be accessible from a central location."
+
+More specifically, the suit involved four related patents—U.S. Patents Nos. 7,631,065 (the '065 patent), 7,412,510 (the '510 patent), 6,947,984 (the '984 patent), and 6,836,797 (the '797 patent). The '065, '984, and '510 patents each stem from the same original patent application and specification; they concern accounting and billing for services in a computer network. The '797 patent developed from an augmented patent application and its specification states that it concerns "data records, and more particularly [] records reflecting various services afforded utilizing a network."
+
+
+## District court ruling
+
+The district court invalidated the patents on the pleadings, holding all four patents invalid under 35 U.S.C. § 101 because they claimed an abstract idea implemented in a non-inventive manner. The court said:
+
+> A person may have invented an entirely new and useful advance, but if the patent claims sweep too broadly, or only claim the idea that was achieved rather than implementation of the idea, § 101 directs that the patent is invalid. Amdocs's asserted claims recite such conventional operation, in such a general way, that even if the inventor had developed an actual working system, the patent claims could foreclose fields of research beyond the actual invention. Accordingly, all asserted claims are invalid as patent-ineligible.
+
+The district court considered each patent separately. It found claim 1 (written in the Beauregard form) of the '065 patent representative of the invention. That claim provides:
+
+> A computer program product embodied on a computer readable storage medium for processing network account information comprising:
+> 
+> computer code for receiving from a first source a first network accounting record;
+> computer code for correlating the first network accounting record with accounting information available from a second source; and
+> computer code for using the accounting information with which the first network accounting record is correlated to enhance the first network accounting record.
+
+The court found that claim 1 was directed to the abstract idea of "the concept of correlating two network accounting records to enhance the first record." This satisfied step one of the Supreme Court's *Alice* methodology and therefore the district court proceeded to step two—"whether the claim adds enough to the abstract idea to make the claim patent eligible." Because the claim did "not limit the correlation to any specific hardware, nor give any detail regarding how the records are 'correlated' or 'enhanced,' . . . the claim amounts to 'nothing significantly more than an instruction to apply the abstract idea' of correlating two network accounting records 'using some unspecified, generic' computer hardware." That made the claim invalid under the *Alice* test.
+
+The court turned to the '510 patent, whose claim 16 was representative:
+
+> A computer program product stored in a computer readable medium for reporting on a collection of network usage information from a plurality of network devices, comprising:
+> 
+> computer code for collecting network communications usage information in real-time from a plurality of network devices at a plurality of layers;
+> computer code for filtering and aggregating the network communications usage information;
+> computer code for completing a plurality of data records from the filtered and aggregated network communications usage information, the plurality of data records corresponding to network usage by a plurality of users;
+> computer code for storing the plurality of data records in a database;
+> computer code for submitting queries to the database utilizing predetermined reports for retrieving information on the collection of the network usage information from the network devices; and
+> computer code for outputting a report based on the queries;
+> wherein resource consumption queries are submitted to the database utilizing the reports for retrieving information on resource consumption in a network; and
+> wherein a resource consumption report is outputted based on the resource consumption queries.
+
+The court held this patent "directed to the abstract idea of using a database to compile and report on network usage information." Proceeding, therefore, to step two of the *Alice* methodology, the court said that the claim describes a generic computer that "collects, filters, aggregates, and completes network communications information" and then "stores the information in a database, and queries the database to retrieve reports." All of these things were "basic functions" of a computer and a database system. The court held, accordingly:
+
+> [C]laim 16 is directed to a computer functioning in a conventional way, and a database functioning in a conventional way. The claim does not add any specific implementation beyond the abstract idea that information is collected and stored, and reports are generated. Therefore, the claim is directed to an unpatentable abstract idea.
+
+The district court next considered representative claim 1 of the '797 patent, which states:
+
+> A method for generating a single record reflecting multiple services for accounting purposes, comprising:
+> 
+> (a) identifying a plurality of services carried out over a network;
+> (b) collecting data describing the plurality of services; and
+> (c) generating a single record including the collected data, wherein the single record represents each of the plurality of services;
+> wherein the services include at least two services selected from a group consisting of a hypertext transfer protocol (HTTP) session, an electronic mail session, a multimedia streaming session, a voice over Internet Protocol (IP) session, a data communication session, an instant messaging session, a peer-to-peer network application session, a file transfer protocol (FTP) session, and a telnet session;
+> wherein the data is collected utilizing an enhancement procedure defined utilizing a graphical user interface by:
+> listing a plurality of available functions to be applied in real-time prior to end-user reporting;
+> allowing a user to choose at least one of a plurality of fields, and
+> allowing the user to choose at least one of the listed functions to be applied to the chosen field in real-time prior to end-user reporting.
+
+The court said that "the abstract idea in this claim is to generate a single record reflecting multiple services," and proceeded to step two of the *Alice* analysis. It found that "the claim is directed to an abstract idea performed using purely conventional computer operations, and is, therefore, invalid under § 101."
+
+Last, the district court considered representative claim 1 of the '984 patent:
+
+> A method for reporting on the collection of network usage information from a plurality of network devices, comprising:
+> 
+> (a) collecting networks communications usage information in real-time from a plurality of network devices at a plurality of layers utilizing multiple gatherers each including a plurality of information source modules each interfacing with one of the network devices and capable of communicating using a protocol specific to the network device coupled thereto, the network devices selected from the group consisting of routers, switches, firewalls, authentication servers, web hosts, proxy servers, netflow servers, databases, mail servers, RADIUS servers, and domain name servers, the gatherers being positioned on a segment of the network on which the network devices coupled thereto are positioned for minimizing an impact of the gatherers on the network;
+> (b) filtering and aggregating the network communications usage information;
+> (c) completing a plurality of data records from the filtered and aggregated network communications usage information, the plurality of data records corresponding to network usage by a plurality of users;
+> (d) storing the plurality of data records in a database;
+> (e) allowing the selection of one of a plurality of reports for reporting purposes;
+> (f) submitting queries to the database utilizing the selected reports for retrieving information on the collection of the network usage information from the network devices; and
+> (g) outputting a report based on the queries.
+
+Here, the abstract idea was "reporting on the collection of network usage information from a plurality of network devices." All of the steps were conventional acts for both generic computers and generic databases, making the claim invalid.
+
+
+## Federal Circuit panel decision
+
+
+### Majority opinion
+
+The Federal Circuit panel majority reversed the district court judgment. It analyzed the judgment by assuming that the claims were directed to an abstract idea, but it found that the claims satisfied step two of the *Alice* methodology.
+
+The court found it particularly important, indeed crucial, that the components (such as network devices; information source modules; gatherers; a central event manager; a central database; a user interface server; and terminals) of the system:
+
+> are arrayed in a distributed architecture that minimizes the impact on network and system resources. Through this distributed architecture, the system minimizes network impact by collecting and processing data close to its source. The system includes distributed data gathering, filtering, and enhancements that enable load distribution. This allows data to reside close to the information sources, thereby reducing congestion in network bottlenecks, while still allowing data to be accessible from a central location. Each patent [specification] explains that this is an advantage over prior art systems that stored information in one location, which made it difficult to keep up with massive record flows from the network devices and which required huge databases.
+
+The court recognized that step one under the *Alice* methodology is determining whether the claim is directed to an abstract idea, but found doing that problematic:
+
+> However, a search for a single test or definition in the decided cases concerning § 101 from this court, and indeed from the Supreme Court, reveals that at present there is no such single, succinct, usable definition or test. The problem with articulating a single, universal definition of "abstract idea" is that it is difficult to fashion a workable definition to be applied to as-yet-unknown cases with as-yet-unknown inventions. That is not for want of trying; to the extent the efforts so far have been unsuccessful it is because they often end up using alternative but equally abstract terms or are overly narrow.
+
+Therefore, the court said, it would not try to formulate a definition but would instead review the prior cases and try to distill "what prior cases were about, and which way they were decided" in order to decide whether a particular claim was. "That is the classic common law methodology for creating law when a single governing definitional context is not available."
+
+After reviewing prior Federal Circuit decisions, the panel addressed the question of what abstract idea the claims embodied:
+
+> What relative level of abstraction should we employ? From a macroscopic perspective, claim 1 could be described as focusing on correlating two network accounting records to enhance the first record. Claim 1 could also be described in several other ways—such as focusing on a computer program that includes computer code for receiving initial information, for correlating that initial information with additional information, and for using that additional information to enhance the initial information.
+
+Without answering the question it asked itself, the panel majority concluded that the claims in this case were closer to those in cases upholding validity under § 101 than those in cases denying validity. The court then decided to bypass the *Alice* step one (is the claim directed to an abstract idea) and go directly to step two (is there an inventive concept added to the abstract idea). It concluded: "Indeed, even if we were to agree that claim 1 is directed to an ineligible abstract idea under step one, the claim is eligible under step two because it contains a sufficient 'inventive concept,' [because it] requires 'computer code for using the accounting information with which the first network accounting record is correlated to enhance the first network accounting record.' " The court reached this conclusion because it had construed the term "enhance" in the claims as meaning "being dependent upon the invention's distributed architecture," or as meaning "to apply a number of field enhancements in a distributed fashion." The concept of distribution meant that "the network usage records are processed close to their sources before being transmitted to a centralized manager," which makes the database system work faster and more efficiently. The panel majority found that way to improve functionality to be an "inventive concept." According to the patent specification "this distributed enhancement was a critical advancement over the prior art."
+
+Therefore, the panel majority said, "this claim entails an unconventional technological solution (enhancing data in a distributed fashion) to a technological problem (massive record flows which previously required massive databases)." Even though the claims use generic components, "the claim's enhancing limitation necessarily requires that these generic components operate in an unconventional manner to achieve an improvement in computer functionality." Accordingly, the panel majority reversed the district court judgment of patent ineligibility under § 101 for the '065 patent.
+
+The court then similarly analyzed the other patents, and held them "eligible for patenting for reasons similar to those that undergirded the eligibility of the '065 patent claims."
+
+In summarizing its ruling and responding to the dissent, the panel majority said that "[f]or argument's sake we accepted the district court's view of the disqualifying abstract ideas, and in each instance we then explained why, in our view, the claims seen in their entirety are not disqualified. The *Alice/Mayo* framework does not require more." The panel majority said that it and the dissent were in agreement that the specification disclosed a patent-eligible system. "Unlike the dissent, however, we find the claims at issue, understood in light of that written description [specification], to be eligible for patenting."
+
+
+### Dissenting opinion
+
+Judge Reyna filed a dissent. Preliminarily, he objected to the panel majority's failure to make a full inquiry into the determination of what the abstract idea was (the panel majority said, however, in answer to this charge that it was assuming, *arguendo*, that the district court's identification of the abstract idea was correct). Reyna said the *Alice* methodology of the Supreme Court requires a specific determination of what the abstract idea is, quoting the statement in *Alice*—"First, we determine whether the claims at issue are directed to one of those patent-ineligible concepts."
+
+Reyna then turned to the more important aspect of his critique—that the panel majority had imported the limitations of the specification into the claims to find patent eligibility:
+
+> The majority also relies on the specification to import innovative limitations into the claims at issue. For each of the four patents at issue, the majority's eligibility determination rests on the use of a "distribution architecture." As explained below, however, this limitation is insufficient to satisfy *Alice* step two. Indeed, that limitation does not exist in all of the claims at issue. This contravenes the fundamental principal that the section 101 inquiry is about whether the claims are directed to a patent-eligible invention, not whether the specification is so directed.
+
+Reyna added:
+
+> Claims that fail to recite how a desired goal is accomplished do not recite an inventive concept. For example, limitations on the context—as opposed to the manner—of accomplishing a desired result is typically not inventive, even if that context is novel. The Pythagorean Theorem cannot be made eligible by confining its use to existing surveying techniques.
+
+Reyna emphasized that the proper "inquiry is not whether the specifications disclose a patent-eligible system, but whether the claims are directed to a patent ineligible concept." He then turned to a patent-by-patent analysis of the claims in suit. Claim 1 of the '065 patent, he said, merely "recites a software product embodied on a storage medium," and "it provides no [meaningful] structural limitations of either the physical medium or the digital software," since "[a]ll software products are stored on a physical storage medium." Furthermore, "claim 1 discusses only very broad, high-level functionality rather than details about how exactly that functionality is implemented." Patent eligibility is predicated on combining data from two sources, but "I find no specific process for accomplishing the abstract goal of combining data from two sources." Therefore, the claim is directed to an abstract idea and one must proceed to step two of the *Alice* methodology. "Turning to step two, I see no limitations confining the claim to a particular means of combining information from different sources." Merely "[l]imiting the abstract idea to the context in which the information relates to network accounting records is a field-of-use limitation that [under *Flook*] does not supply an inventive concept." Relying on the definition of "enhanced" as meaning "distributed" to confer patent eligibility, as the panel majority and Amdocs do, is incorrect because "claim 1 recites no components or structure over which the work might be 'distributed.' " Reyna therefore concluded, " I agree with the district court that claim 1 is ineligible because it fails to recite any structure or process limiting the claim to a particular means of combining accounting data from different sources."
+
+Reyna similarly analyzed the other patents. He found some claims patent ineligible because they merely claimed results or functions without describing how to accomplish them by using an inventive concept. Other claims, however, he found patent eligible because they not only described functions or goals, but they also recited specific steps or machinery to accomplish them. In this connection, he argued that "software structure and process can confer eligibility," so that "the district court erred by dismissing the recited components on the sole basis that they are software without considering whether these architectural aspects are inventive structure or process."
+
+
+## Commentary
+
+● Dennis Crouch, in *Patently-O*, did not "know how important *Amdocs* will be, but it offers an interesting split decision on the eligibility of software patent claims." His initial "takeaway" was—
+
+> that the Federal Circuit continues to be divided on the issues. By luck-of-the-panel in this case, the minority on the court as a whole were the majority on the panel (pushing against *Alice* & *Mayo*). Going forward, the split can be reconciled by another Supreme Court opinion, a forceful Federal Circuit *en banc* decision, or perhaps by future judicial appointments by President Trump. I expect 2-3 vacancies on the court during Trump's first term.
+
+Crouch pointed out that representative claim 1 of the first patent "is an almost pure software claim — requiring computer code embodied on a computer readable storage medium." Therefore, that the panel majority said that the claims are "much closer" to the ones found eligible than those of the many cases finding ineligibility should be translated as "the judges in the [panel] majority prefer the decisions finding eligibility over those invalidating software patent claims." He pointed out that the majority's focus on the system's "enhancing data in a distributed fashion [being] an unconventional technological solution . . . to a technological problem (massive record flows which previously required massive databases)" ignores the fact that the claim is not for a system but for software used to implement the system, and the software itself does not require the distribution of components that the specification describes. He then quotes Judge Reyna's dissent that says, "But the inquiry is not whether the specifications disclose a patent-eligible system, but whether the claims are directed to a patent ineligible concept."
+
+● The Patent Docs blog said the decision underlines the importance of claim construction. "A favorable claim construction can tip the patent-eligibility analysis in favor of the patentee, while an unfavorable ruling can doom the subject claims to abstract idea perdition." But the author, while hopeful of "a respite of sorts," was unsure that "the § 101 fog" confronting patentees would now clear away, because "we are still only one *en banc* Federal Circuit decision or Supreme Court case away from going back to that murky landscape."
+
+● One comment on the case expressed a hope for a change in the direction of post–*Alice* Federal Circuit decisions, which had overwhelmingly found software and business-method patents invalid: "Perhaps the initial stages of a patent-eligible trend for narrowly drawn software-based patent claims, that are directed to specific, unconventional technological solutions, are underway."
+
+● Another comment lauded the opinion because it was favorable to "companies operating in the software space and who seek to obtain protection for their valuable software innovations." The author argued that the opinion "serves to dispel the myth that it is not possible to obtain patent protection for software-based inventions."
+

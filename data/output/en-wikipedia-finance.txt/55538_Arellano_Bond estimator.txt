@@ -1,0 +1,110 @@
+Arellano–Bond estimator
+
+
+# Arellano–Bond estimator
+
+
+
+| Part of a series on |
+| --- |
+| Regression analysis |
+| Models |
+| * Linear regression * Simple regression * Polynomial regression * General linear model |
+| * Generalized linear model * Vector generalized linear model * Discrete choice * Binomial regression * Binary regression * Logistic regression * Multinomial logistic regression * Mixed logit * Probit * Multinomial probit * Ordered logit * Ordered probit * Poisson |
+| * Multilevel model * Fixed effects * Random effects * Linear mixed-effects model * Nonlinear mixed-effects model |
+| * Nonlinear regression * Nonparametric * Semiparametric * Robust * Quantile * Isotonic * Principal components * Least angle * Local * Segmented |
+| * Errors-in-variables |
+| Estimation |
+| * Least squares * Linear * Non-linear |
+| * Ordinary * Weighted * Generalized * Generalized estimating equation |
+| * Partial * Total * Non-negative * Ridge regression * Regularized |
+| * Least absolute deviations * Iteratively reweighted * Bayesian * Bayesian multivariate * Least-squares spectral analysis |
+| Background |
+| * Regression validation * Mean and predicted response * Errors and residuals * Goodness of fit * Studentized residual * Gauss–Markov theorem |
+| * Mathematics portal |
+| * v * t * e |
+
+In econometrics, the **Arellano–Bond estimator** is a generalized method of moments estimator used to estimate dynamic models of panel data. It was proposed in 1991 by Manuel Arellano and Stephen Bond, based on the earlier work by Alok Bhargava and John Denis Sargan in 1983, for addressing certain endogeneity problems. The GMM-SYS estimator is a system that contains both the levels and the first difference equations. It provides an alternative to the standard first difference GMM estimator.
+
+
+## Qualitative description
+
+Unlike static panel data models, dynamic panel data models include lagged levels of the dependent variable as regressors. Including a lagged dependent variable as a regressor violates strict exogeneity, because the lagged dependent variable is likely to be correlated with the random effects and/or the general errors. The Bhargava-Sargan article developed optimal linear combinations of predetermined variables from different time periods, provided sufficient conditions for identification of model parameters using restrictions across time periods, and developed tests for exogeneity for a subset of the variables. When the exogeneity assumptions are violated and correlation pattern between time varying variables and errors may be complicated, commonly used static panel data techniques such as fixed effects estimators are likely to produce inconsistent estimators because they require certain strict exogeneity assumptions.
+
+Anderson and Hsiao (1981) first proposed a solution by utilising instrumental variables (IV) estimation. However, the Anderson–Hsiao estimator is asymptotically inefficient, as its asymptotic variance is higher than the Arellano–Bond estimator, which uses a similar set of instruments, but uses generalized method of moments estimation rather than instrumental variables estimation.
+
+In the Arellano–Bond method, first difference of the regression equation are taken to eliminate the individual effects. Then, deeper lags of the dependent variable are used as instruments for differenced lags of the dependent variable (which are endogenous).
+
+In traditional panel data techniques, adding deeper lags of the dependent variable reduces the number of observations available. For example, if observations are available at T time periods, then after first differencing, only T-1 lags are usable. Then, if K lags of the dependent variable are used as instruments, only T-K-1 observations are usable in the regression. This creates a trade-off: adding more lags provides more instruments, but reduces the sample size. The Arellano–Bond method circumvents this problem.
+
+
+## Formal description
+
+Consider the static linear unobserved effects model for {\displaystyle N} observations and {\displaystyle T} time periods:
+
+where {\displaystyle y\_{it}} is the dependent variable observed for individual {\displaystyle i} at time
+{\displaystyle t,} {\displaystyle X\_{it}} is the time-variant {\displaystyle 1\times k} regressor matrix, {\displaystyle \alpha \_{i}} is the unobserved time-invariant individual effect and {\displaystyle u\_{it}} is the error term. Unlike {\displaystyle X\_{it}}, {\displaystyle \alpha \_{i}} cannot be observed by the econometrician. Common examples for time-invariant effects {\displaystyle \alpha \_{i}} are innate ability for individuals or historical and institutional factors for countries.
+
+Unlike a static panel data model, a dynamic panel model also contains lags of the dependent variable as regressors, accounting for concepts such as momentum and inertia. In addition to the regressors outlined above, consider a case where one lag of the dependent variable is included as a regressor, {\displaystyle y\_{it-1}}.
+
+Taking the first difference of this equation to eliminate the individual effect,
+
+Note that if {\displaystyle \alpha \_{i}} had a time varying coefficient, then differencing the equation will not remove the individual effect. This equation can be re-written as,
+
+Applying the formula for the Efficient Generalized Method of Moments Estimator, which is,
+
+where {\displaystyle Z} is the instrument matrix for {\displaystyle \Delta R}.
+
+The matrix {\displaystyle \Omega } can be calculated from the variance of the error terms, {\displaystyle u\_{it}} for the one-step Arellano–Bond estimator or using the residual vectors of the one-step Arellano–Bond estimator for the two-step Arellano–Bond estimator, which is consistent and asymptotically efficient in the presence of heteroskedasticity.
+
+
+## Instrument matrix
+
+The original Anderson and Hsiao (1981) IV estimator uses the following moment conditions:
+
+Using the single instrument {\displaystyle y\_{it-2}}, these moment conditions form the basis for the instrument matrix {\displaystyle Z\_{di}}:
+
+**Note:** *The first possible observation is t = 2 due to the first difference transformation*
+
+The instrument {\displaystyle y\_{it-2}} enters as a single column. Since {\displaystyle y\_{it-2}} is unavailable at {\displaystyle t=2}, all observations from {\displaystyle t=2} must be dropped.
+
+Using an additional instrument {\displaystyle y\_{it-3}} would mean adding an additional column to {\displaystyle Z\_{di}}. Thus, all observations from {\displaystyle t=3} would have to be dropped.
+
+While adding additional instruments increases the efficiency of the IV estimator, the smaller sample size decreases efficiency. This is the efficiency - sample size trade-off.
+
+The Arellano-bond estimator addresses this trade-off by using time-specific instruments.
+
+The Arellano–Bond estimator uses the following moment conditions
+
+Using these moment conditions, the instrument matrix {\displaystyle Z\_{di}} now becomes:
+
+Note that the number of moments is increasing in the time period: this is how the efficiency - sample size tradeoff is avoided. Time periods further in the future have more lags available to use as instruments.
+
+Then if one defines:
+
+The moment conditions can be summarized as:
+
+These moment conditions are only valid when the error term {\displaystyle u\_{it}} has no serial correlation. If serial correlation is present, then the Arellano–Bond estimator can still be used under some circumstances, but deeper lags will be required. For example, if the error term {\displaystyle u\_{it}} is correlated with all terms {\displaystyle u\_{it-s}} for s{\displaystyle \leq }S (as would be the case if {\displaystyle u\_{it}} were a MA(S) process), it would be necessary to use only lags of {\displaystyle y\_{it}} of depth S + 1 or greater as instruments.
+
+
+## System GMM
+
+When the variance of the individual effect term across individual observations is high, or when the stochastic process {\displaystyle y\_{it}} is close to being a random walk, then the Arellano–Bond estimator may perform very poorly in finite samples. This is because the lagged dependent variables will be weak instruments in these circumstances.
+
+Blundell and Bond (1998) derived a condition under which it is possible to use an additional set of moment conditions. These additional moment conditions can be used to improve the small sample performance of the Arellano–Bond estimator. Specifically, they advocated using the moment conditions:
+
+These additional moment conditions are valid under conditions provided in their paper. In this case, the full set of moment conditions can be written:
+
+{\displaystyle \operatorname {E} (Z\_{SYS,i}^{T}P\_{i})=0}
+
+where
+
+and
+
+This method is known as system GMM. Note that the consistency and efficiency of the estimator depends on validity of the assumption that the errors can be decomposed as in equation (1). This assumption can be tested in empirical applications and likelihood ratio test often reject the simple random effects decomposition.
+
+
+## Implementations in statistics packages
+
+* R: the Arellano–Bond estimator is available as part of the `plm` package.
+* Stata: the commands `xtabond` and `xtabond2` return Arellano–Bond estimators.

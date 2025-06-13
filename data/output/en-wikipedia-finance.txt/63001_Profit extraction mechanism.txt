@@ -1,0 +1,56 @@
+Profit extraction mechanism
+
+
+# Profit extraction mechanism
+
+
+
+In mechanism design and auction theory, a **profit extraction mechanism** (also called **profit extractor** or **revenue extractor**) is a truthful mechanism whose goal is to win a pre-specified amount of profit, if it is possible.
+³⁴⁷
+
+
+## Profit extraction in a digital goods auction
+
+Consider a digital goods auction in which a movie producer wants to decide on a price in which to sell copies of his movie. A possible approach is for the producer to decide on a certain revenue, R, that he wants to make. Then, the *R-profit-extractor* works in the following way:
+
+* Ask each agent how much he is willing to pay for the movie.
+* For each integer {\displaystyle k=1,2,...}, let {\displaystyle N\_{k}} be the number of agents willing to pay at least {\displaystyle R/k}. Note that {\displaystyle N\_{k}} is weakly increasing with {\displaystyle k}.
+* If there exists {\displaystyle k} such that {\displaystyle N\_{k}\geq k}, then find the largest such {\displaystyle k} (which must be equal to {\displaystyle N\_{k}}), sell the movie to these {\displaystyle k} agents, and charge each such agent a price of {\displaystyle R/k}.
+* If no such {\displaystyle k} exists, then the auction is canceled and there are no winners.
+
+This is a truthful mechanism. *Proof*: Since the agents have single-parametric utility functions, truthfulness is equivalent to monotonicity. The profit extractor is monotonic because:
+
+* If a winning agent increases his bid, then {\displaystyle k} weakly increases and the agent is still one of the {\displaystyle k} highest bidders, so he still wins.
+* A winning agent pays {\displaystyle R/k}, which is exactly the threshold price - the price under which the bid stops being a winner.
+
+### Estimating the maximum revenue
+
+The main challenge in using an auction based on a profit-extractor is to choose the best value for the parameter {\displaystyle R}. Ideally, we would like {\displaystyle R} to be the maximum revenue that can be extracted from the market. However, we do not know this maximum revenue in advance. We can try to estimate it using one of the following ways:
+
+1. Random sampling:
+
+This mechanism guarantees a profit of at least 1/4 the maximum profit. A variant of this mechanism partitions the agents to three groups instead of two, and attains at least 1/3.25 of the maximum profit.³⁴⁸
+
+2. Consensus estimate:
+
+This mechanism guarantees a profit of at least 1/3.39 the maximum profit, in a digital goods auction.³⁵⁰
+
+
+## Profit extraction in a double auction
+
+The profit-extraction idea can be generalized to arbitrary single-parameter utility agents. In particular, it can be used in a double auction where several sellers sell a single unit of some item (with different costs) and several buyers want at most a single unit of that item (with different valuations).
+The following mechanism is an *approximate* profit extractor:
+
+* Order the buyers by descending price and the sellers by ascending price.
+* Find the largest {\displaystyle k} such that {\displaystyle k\cdot (b\_{k}-s\_{k})\geq R}.
+* The {\displaystyle k-1} high-value buyers buy an item at price {\displaystyle b\_{k}}. The {\displaystyle k-1} low-cost sellers sell an item at price {\displaystyle s\_{k}}.
+
+The mechanism is truthful - this can be proved using a monotonicity argument similar to the digital-goods auction. The auctioneer's revenue is {\displaystyle (k-1)\cdot (b\_{k}-s\_{k})\geq {k-1 \over k}R}, which approaches the required revenue when it is sufficiently large.
+
+Combining this profit-extractor with a consensus-estimator gives a truthful double-auction mechanism which guarantees a profit of at least 1/3.75 of the maximum profit.
+
+
+## History
+
+The profit extractor mechanism is a special case of a cost sharing mechanism. It was adapted from the cost-sharing literature to the auction setting.
+

@@ -1,0 +1,74 @@
+Dynamic microsimulation pension model
+
+
+# Dynamic microsimulation pension model
+
+
+
+A **dynamic microsimulation pension model** is a type of a pension model projecting a pension system by means of a microsimulation and generating the complete history of each individual in a data set. The results of such model offer both the aggregate (e.g. total replacement ratio, implicit debt) and individual indicators (e.g. individual cash-flows) of the pension system. Thanks to complexity of results, there is a possibility to investigate the distribution of pensions, poverty of pensioners, impact of the changes of the pension formula, for more examples see e.g. (Deloitte, 2011). Detailed individual set of (administrative) data should serve as a model input.
+
+
+## Dynamic Microsimulation Pension Models
+
+A dynamic microsimulation pension models (or a dynamic model with dynamic ageing) is a type of a pension model – see its taxonomy and also (Gál, Horváth, Orbán, & Dekkers, 2009). There are two basic types of this kind of model - (i) deterministic, which is based on best estimates of input parameters and simultaneous modelling of all statuses; and (ii) stochastic, based on random simulation of one status path for the individual concerned.
+
+
+### Deterministic Models
+
+Transfers between statuses (e.g. between employment, unemployment, exit from the labour market, etc.) are all modelled simultaneously. The life path of one modelled individual or group of individuals gradually branches out. The result (e.g. insurance period, newly awarded pension) is achieved by averaging across all life paths. In such case it is not possible to explore extreme life paths and it is also not possible to satisfactorily identify e.g. the number of pensioners threatened by poverty. With a large number of model points, the model is only able to identify a poverty threat caused by a low income. A poverty threat caused by interrupting the work career (insufficiently long period of insurance) cannot be modelled without additional information and adjustments made to the model.
+
+Simplification or averaging is necessary in cases where non-linear life path dependencies occur in the pension formula (e.g. minimum pension, minimum numbers of years of work, etc.). Some extreme situations can be addressed by establishing a new status, but that makes the model more complex and again, the calculation is only approximate. With proper availability of data, it is possible to use the whole structure for selected parameters (primarily insurance period), but it is both calculation- and memory-consuming.
+
+On the other hand, the advantage of the deterministic approach is the fact that it is easier to ensure consistency with external outputs, e.g. population projection and macroeconomic scenario of average-wage growth. Yet it may be necessary to calibrate the model even in this case. For example, to ensure consistency with an external macroeconomic projection, it is necessary to calibrate salary growth over the career.
+
+
+### Stochastic Models
+
+Transfers between statuses are modelled based on random parameters (generating a random number). At one moment in time, each model point corresponds with just one status. The transfer between defined statuses depends on a random number and its comparison with the transfer probability.
+
+One model point has exactly one random career. As a result, the insurance period and other variables occurring in the pension formula are known exactly at the point of retirement, which makes it possible to perform exact modelling of pension formula non-linearities in extreme lines, see e.g. ("Pojistné rozpravy 28/2011").
+
+The data requirements are the same as with the deterministic model (probability of transfers). If more detailed data are available, it is easy to use them and adapt the structure of the model.
+
+To achieve stable overall results, it is necessary to use a sufficient number of model points or simulations (with multiple simulations, the result is the average across the respective simulations). The need for a larger number of model points or simulations makes the calculation time longer. That, on the other hand, is compensated by simpler calculation, because it is not necessary to calculate all life paths simultaneously and average them.
+
+Due to randomness, the results do not exactly correspond with the external outputs (population projections, macroeconomic projections), but if the number of model points or simulations is sufficient, the degree of consistency is very good.
+
+The main benefit of the stochastic approach is the possibility of exact modelling of all non-linear elements in the pension formula. The results thus include even extreme lines and it is possible to explore cases of individuals threatened by poverty. It is possible to integrate more statuses into this type of model, and so it can be used also to model other types of benefits (unemployment, child, sickness benefits). On the other hand, establishing an additional status in a deterministic model makes the model highly complicated.
+
+Some properties of stochastic models may be unusual for the users. Some outputs, especially those associated with transfers between statuses such as number of deaths, number of newly employed individuals etc., are “noised”. That corresponds to the observation of reality, but the users may be used to “smooth” results.
+
+To achieve stable results, it is necessary to have a large number of model points or simulations. The more parameters are generated stochastically, the higher is the number of simulations required to ensure convergence.
+
+
+## Strengths and weaknesses of the Dynamic Microsimulation Models
+
+Strengths
+
+* models the entire history of individuals' lives
+* makes it possible to use all available information and individual data (exact calculation of pensions for individuals approaching the retirement age)
+* makes it possible to reflect all legislative parameters (i.e. even non-linearities, etc.)
+* comprehensive outputs (non-deviated aggregate results, individual results and pensions structure, poverty indicators, for more see e.g. see (Deloitte, 2011))
+* evaluation of actuarial aspects of the pension system
+* can be extended to cover other social benefit systems and used as a consistent tool in creating the social policy
+
+Weaknesses
+
+* higher costs of model implementation (software, experience, team) and maintenance
+* higher calculation demands (both software and hardware requirements)
+* longer calculation time (compared to the standard models)
+* high demands for input data and the preparation of assumptions for the model
+* higher demands in terms of ensuring consistency with other assumptions (macro scenario, population projections)
+
+## Examples of Dynamic Microsimulation Models
+
+There are a number of dynamic microsimulation models in various countries:
+
+* Dynamic Microsimulation Model of the Czech Republic (Ministry of Labour and Social Affairs of the Czech Republic),
+* Pensim2 (British Department for Work and Pensions),
+* Destinie (French National Statistical Institute),
+* Mosart (Statistics Norway),
+* FAMSIM (Austrian Institute for Family Studies) etc.
+
+For more see e.g. (Asghar Zaidi and Katherine Rake, 2001).
+

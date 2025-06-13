@@ -1,0 +1,40 @@
+Stochastic logarithm
+
+
+# Stochastic logarithm
+
+
+
+In stochastic calculus, **stochastic logarithm** of a semimartingale {\displaystyle Y}such that {\displaystyle Y\neq 0} and {\displaystyle Y\_{-}\neq 0} is the semimartingale {\displaystyle X} given by{\displaystyle dX\_{t}={\frac {dY\_{t}}{Y\_{t-}}},\quad X\_{0}=0.}In layperson's terms, stochastic logarithm of {\displaystyle Y} measures the cumulative percentage change in {\displaystyle Y}.
+
+
+## Notation and terminology
+
+The process {\displaystyle X} obtained above is commonly denoted {\displaystyle {\mathcal {L}}(Y)}. The terminology *stochastic logarithm* arises from the similarity of {\displaystyle {\mathcal {L}}(Y)} to the natural logarithm {\displaystyle \log(Y)}: If {\displaystyle Y} is absolutely continuous with respect to time and {\displaystyle Y\neq 0}, then *{\displaystyle X}* solves, path-by-path, the differential equation {\displaystyle {\frac {dX\_{t}}{dt}}={\frac {\frac {dY\_{t}}{dt}}{Y\_{t}}},}whose solution is {\displaystyle X=\log |Y|-\log |Y\_{0}|}.
+
+
+## General formula and special cases
+
+* Without any assumptions on the semimartingale {\displaystyle Y} (other than {\displaystyle Y\neq 0,Y\_{-}\neq 0}), one has{\displaystyle {\mathcal {L}}(Y)\_{t}=\log {\Biggl |}{\frac {Y\_{t}}{Y\_{0}}}{\Biggl |}+{\frac {1}{2}}\int \_{0}^{t}{\frac {d[Y]\_{s}^{c}}{Y\_{s-}^{2}}}+\sum \_{s\leq t}{\Biggl (}\log {\Biggl |}1+{\frac {\Delta Y\_{s}}{Y\_{s-}}}{\Biggr |}-{\frac {\Delta Y\_{s}}{Y\_{s-}}}{\Biggr )},\qquad t\geq 0,}where {\displaystyle [Y]^{c}} is the continuous part of quadratic variation of {\displaystyle Y} and the sum extends over the (countably many) jumps of {\displaystyle Y} up to time {\displaystyle t}.
+* If {\displaystyle Y} is continuous, then {\displaystyle {\mathcal {L}}(Y)\_{t}=\log {\Biggl |}{\frac {Y\_{t}}{Y\_{0}}}{\Biggl |}+{\frac {1}{2}}\int \_{0}^{t}{\frac {d[Y]\_{s}^{c}}{Y\_{s-}^{2}}},\qquad t\geq 0.}In particular, if {\displaystyle Y} is a geometric Brownian motion, then {\displaystyle X} is a Brownian motion with a constant drift rate.
+* If {\displaystyle Y} is continuous and of finite variation, then{\displaystyle {\mathcal {L}}(Y)=\log {\Biggl |}{\frac {Y}{Y\_{0}}}{\Biggl |}.}Here {\displaystyle Y} need not be differentiable with respect to time; for example, {\displaystyle Y} can equal 1 plus the Cantor function.
+
+## Properties
+
+* Stochastic logarithm is an inverse operation to stochastic exponential: If {\displaystyle \Delta X\neq -1}, then {\displaystyle {\mathcal {L}}({\mathcal {E}}(X))=X-X\_{0}}. Conversely, if {\displaystyle Y\neq 0} and {\displaystyle Y\_{-}\neq 0}, then {\displaystyle {\mathcal {E}}({\mathcal {L}}(Y))=Y/Y\_{0}}.
+* Unlike the natural logarithm {\displaystyle \log(Y\_{t})}, which depends only of the value of {\displaystyle Y} at time {\displaystyle t}, the stochastic logarithm {\displaystyle {\mathcal {L}}(Y)\_{t}} depends not only on {\displaystyle Y\_{t}} but on the whole history of {\displaystyle Y} in the time interval {\displaystyle [0,t]}. For this reason one must write {\displaystyle {\mathcal {L}}(Y)\_{t}} and not {\displaystyle {\mathcal {L}}(Y\_{t})}.
+* Stochastic logarithm of a local martingale that does not vanish together with its left limit is again a local martingale.
+* All the formulae and properties above apply also to stochastic logarithm of a complex-valued {\displaystyle Y}.
+* Stochastic logarithm can be defined also for processes {\displaystyle Y} that are absorbed in zero after jumping to zero. Such definition is meaningful up to the first time that {\displaystyle Y} reaches {\displaystyle 0} continuously.
+
+## Useful identities
+
+* Converse of the Yor formula: If {\displaystyle Y^{(1)},Y^{(2)}} do not vanish together with their left limits, then{\displaystyle {\mathcal {L}}{\bigl (}Y^{(1)}Y^{(2)}{\bigr )}={\mathcal {L}}{\bigl (}Y^{(1)}{\bigr )}+{\mathcal {L}}{\bigl (}Y^{(2)}{\bigr )}+{\bigl [}{\mathcal {L}}{\bigl (}Y^{(1)}{\bigr )},{\mathcal {L}}{\bigl (}Y^{(2)}{\bigr )}{\bigr ]}.}
+* Stochastic logarithm of {\displaystyle 1/{\mathcal {E}}(X)}: If {\displaystyle \Delta X\neq -1}, then{\displaystyle {\mathcal {L}}{\biggl (}{\frac {1}{{\mathcal {E}}(X)}}{\biggr )}\_{t}=X\_{0}-X\_{t}-[X]\_{t}^{c}+\sum \_{s\leq t}{\frac {(\Delta X\_{s})^{2}}{1+\Delta X\_{s}}}.}
+
+## Applications
+
+* Girsanov's theorem can be paraphrased as follows: Let {\displaystyle Q} be a probability measure equivalent to another probability measure {\displaystyle P}. Denote by {\displaystyle Z} the uniformly integrable martingale closed by {\displaystyle Z\_{\infty }=dQ/dP}. For a semimartingale {\displaystyle U} the following are equivalent:
+ 1. Process {\displaystyle U} is special under {\displaystyle Q}.
+ 2. Process {\displaystyle U+[U,{\mathcal {L}}(Z)]} is special under {\displaystyle P}.
+* + If either of these conditions holds, then the {\displaystyle Q}-drift of {\displaystyle U} equals the {\displaystyle P}-drift of {\displaystyle U+[U,{\mathcal {L}}(Z)]}.

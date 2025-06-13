@@ -1,0 +1,172 @@
+Payment Card Industry Data Security Standard
+
+
+# Payment Card Industry Data Security Standard
+
+
+
+The **Payment Card Industry Data Security Standard** (**PCI DSS**) is an information security standard used to handle credit cards from major card brands. The standard is administered by the Payment Card Industry Security Standards Council, and its use is mandated by the card brands. It was created to better control cardholder data and reduce credit card fraud. Validation of compliance is performed annually or quarterly with a method suited to the volume of transactions:
+
+* Self-assessment questionnaire (SAQ)
+* Firm-specific Internal Security Assessor (ISA)
+* External Qualified Security Assessor (QSA)
+
+## History
+
+The major card brands had five different security programs:
+
+* Visa's Cardholder Information Security Program
+* Mastercard's Site Data Protection
+* American Express's Data Security Operating Policy
+* Discover's Information Security and Compliance
+* JCB's Data Security Program
+
+The intentions of each were roughly similar: to create an additional level of protection for card issuers by ensuring that merchants meet minimum levels of security when they store, process, and transmit cardholder data. To address interoperability problems among the existing standards, the combined effort by the principal credit-card organizations resulted in the release of version 1.0 of PCI DSS in December 2004.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ PCI DSS has been implemented and followed worldwide.
+
+The Payment Card Industry Security Standards Council (PCI SSC) was then formed, and these companies aligned their policies to create the PCI DSS. MasterCard, American Express, Visa, JCB International and Discover Financial Services established the PCI SSC in September 2006 as an administrative and governing entity which mandates the evolution and development of the PCI DSS. Independent private organizations can participate in PCI development after they register. Each participating organization joins a SIG (Special Interest Group) and contributes to activities mandated by the group. The following versions of the PCI DSS have been made available:
+
+| Version | Date | Notes |
+| --- | --- | --- |
+| 1.0 | December 15, 2004 |
+| 1.1 | September 2006 | clarification and minor revisions |
+| 1.2 | October 2008 | enhanced clarity, improved flexibility, and addressed evolving risks and threats |
+| 1.2.1 | July 2009 | minor corrections designed to create more clarity and consistency among the standards and supporting documents |
+| 2.0 | October 2010 |
+| 3.0 | November 2013 | active from January 1, 2014 to June 30, 2015 |
+| 3.1 | April 2015 | retired since October 31, 2016 |
+| 3.2 | April 2016 | retired since December 31, 2018 |
+| 3.2.1 | May 2018 | retired since March 31, 2024 |
+| 4.0 | March 2022 | updated firewall terminology, expansion of Requirement 8 to implement multi-factor authentication (MFA), increased flexibility to demonstrate security, and targeted risk analyses to establish risk exposure operation and management |
+| 4.0.1 | June 2024 | correct typographical and other minor errors, update and clarify guidance, remove *Definitions* in guidance and refer to Glossary instead, add references to the Glossary for newly defined glossary terms and for existing glossary terms that did not previously have references |
+
+
+## Requirements
+
+The PCI DSS has twelve requirements for compliance, organized into six related groups known as control objectives:
+
+1. Build and maintain a secure network and systems
+2. Protect cardholder data
+3. Maintain a vulnerability management program
+4. Implement strong access-control measures
+5. Regularly monitor and test networks
+6. Maintain an information security policy
+
+Each PCI DSS version has divided these six requirement groups differently, but the twelve requirements have not changed since the inception of the standard. Each requirement and sub-requirement is divided into three sections:
+
+1. PCI DSS requirements: Define the requirement. The PCI DSS endorsement is made when the requirement is implemented.
+2. Testing: The processes and methodologies carried out by the assessor for the confirmation of proper implementation.
+3. Guidance: Explains the purpose of the requirement and the corresponding content, which can assist in its proper definition.
+
+In version 4.0.1 of the PCI DSS, the twelve requirements are:
+
+1. Install and maintain network security controls.
+2. Apply secure configurations to all system components.
+3. Protect stored account data.
+4. Protect cardholder data with strong cryptography during transmission over open, public networks.
+5. Protect all systems and networks from malicious software.
+6. Develop and maintain secure systems and software.
+7. Restrict access to system components and cardholder data by business need to know.
+8. Identify users and authenticate access to system components.
+9. Restrict physical access to cardholder data.
+10. Log and monitor all access to system components and cardholder data.
+11. Test security of systems and networks regularly.
+12. Support information security with organizational policies and programs.
+
+## Updates and supplemental information
+
+The PCI SSC (Payment Card Industry Security Standards Council) has released supplemental information to clarify requirements, which includes:
+
+* Information Supplement: Requirement 11.3 Penetration Testing
+* Information Supplement: Requirement 6.6 Code Reviews and Application Firewalls Clarified
+* Navigating the PCI DSS - Understanding the Intent of the Requirements
+* PCI DSS Wireless Guidelines
+* PCI DSS Applicability in an EMV Environment
+* Prioritized Approach for PCI DSS
+* Prioritized Approach Tool
+* PCI DSS Quick Reference Guide
+* PCI DSS Virtualization Guidelines
+* PCI DSS Tokenization Guidelines
+* PCI DSS 2.0 Risk Assessment Guidelines
+* The lifecycle for Changes to the PCI DSS and PA-DSS
+* Guidance for PCI DSS Scoping and Segmentation
+* PCI DSS v4.0 Resource Hub
+
+## Reporting levels
+
+Companies subject to PCI DSS standards must be PCI-compliant; how they prove and report their compliance is based on their annual number of transactions and how the transactions are processed. An acquirer or payment brand may manually place an organization into a reporting level at its discretion. Merchant levels are:
+
+* Level 1 – Over six million transactions annually
+* Level 2 – Between one and six million transactions
+* Level 3 – Between 20,000 and one million transactions, and all e-commerce merchants
+* Level 4 – Less than 20,000 transactions
+
+Each card issuer maintains a table of compliance levels and a table for service providers.
+
+
+## Compliance validation
+
+Compliance validation involves the evaluation and confirmation that the security controls and procedures have been implemented according to the PCI DSS. Validation occurs through an annual assessment, either by an external entity, or by self-assessment.
+
+
+### Report on Compliance
+
+A Report on Compliance (ROC) is conducted by a PCI Qualified Security Assessor (QSA) and is intended to provide independent validation of an entity's compliance with the PCI DSS standard. A completed ROC results in two documents: a ROC Reporting Template populated with detailed explanation of the testing completed, and an Attestation of Compliance (AOC) documenting that a ROC has been completed and the overall conclusion of the ROC.
+
+
+### Self-Assessment Questionnaire
+
+The PCI DSS Self-Assessment Questionnaire (SAQ) is a validation tool intended for small to medium sized merchants and service providers to assess their own PCI DSS compliance status. There are multiple types of SAQ, each with a different length depending on the entity type and payment model used. Each SAQ question has a yes-or-no answer, and any "no" response requires the entity to indicate its future implementation. As with ROCs, an attestation of compliance (AOC) based on the SAQ is also completed.
+
+
+### Security Assessors
+
+The PCI Security Standards Council maintains a program to certify companies and individuals to perform assessment activities.
+
+
+#### Qualified Security Assessor
+
+A Qualified Security Assessor (QSA) is an individual certified by the PCI Security Standards Council to validate another entity's PCI DSS compliance. QSAs must be employed and sponsored by a QSA Company, which also must be certified by the PCI Security Standards Council.
+
+
+#### Internal Security Assessor
+
+An Internal Security Assessor (ISA) is an individual who has earned a certificate from the PCI Security Standards Council for their sponsoring organization, and can conduct PCI self-assessments for their organization. The ISA program was designed to help Level 2 merchants meet Mastercard compliance validation requirements. ISA certification empowers an individual to conduct an appraisal of his or her association and propose security solutions and controls for PCI DSS compliance. ISAs are in charge of cooperation and participation with QSAs.
+
+
+## Compliance versus validation of compliance
+
+Although the PCI DSS must be implemented by all entities which process, store or transmit cardholder data, formal validation of PCI DSS compliance is not mandatory for all entities. Visa and Mastercard require merchants and service providers to be validated according to the PCI DSS; Visa also offers a Technology Innovation Program (TIP), an alternative program which allows qualified merchants to discontinue the annual PCI DSS validation assessment. Merchants are eligible if they take alternative precautions against fraud, such as the use of EMV or point-to-point encryption.
+
+Issuing banks are not required to undergo PCI DSS validation, although they must secure sensitive data in a PCI DSS-compliant manner. Acquiring banks must comply with PCI DSS and have their compliance validated with an audit. In a security breach, any compromised entity which was not PCI DSS-compliant at the time of the breach may be subject to additional penalties (such as fines) from card brands or acquiring banks.
+
+
+## Legislation in the United States
+
+Compliance with PCI DSS is not required by federal law in the United States, but the laws of some states refer to PCI DSS directly or make equivalent provisions. Legal scholars Edward Morse and Vasant Raval have said that by enshrining PCI DSS compliance in legislation, card networks reallocated the cost of fraud from card issuers to merchants.
+In 2007, Minnesota enacted a law prohibiting the retention of some types of payment-card data more than 48 hours after authorization of a transaction. Nevada incorporated the standard into state law two years later, requiring compliance by merchants doing business in that state with the current PCI DSS and shielding compliant entities from liability. The Nevada law also allows merchants to avoid liability by other approved security standards. In 2010, Washington also incorporated the standard into state law. Unlike Nevada's law, entities are not required to be PCI DSS-compliant; however, compliant entities are shielded from liability in the event of a data breach.
+
+
+## Controversy and criticism
+
+Visa and Mastercard impose fines for non-compliance. Stephen and Theodora "Cissy" McComb, owners of Cisero's Ristorante and Nightclub in Park City, Utah, were fined for a breach for which two forensics firms could not find evidence:
+
+> The McCombs assert that the PCI system is less a system for securing customer card data than a system for raking in profits for the card companies via fines and penalties. Visa and MasterCard impose fines on merchants even when there is no fraud loss at all, simply because the fines are "profitable to them," the McCombs say.
+
+Michael Jones, CIO of Michaels, testified before a U.S. Congressional subcommittee about the PCI DSS:
+
+> [The PCI DSS requirements] are very expensive to implement, confusing to comply with, and ultimately subjective, both in their interpretation and in their enforcement. It is often stated that there are only twelve "Requirements" for PCI compliance. In fact there are over 220 sub-requirements; some of which can place an *incredible burden on a retailer* and *many of which are subject to interpretation*.
+
+The PCI DSS may compel businesses pay more attention to IT security, even if minimum standards are not enough to eradicate security problems. Bruce Schneier spoke in favor of the standard:
+
+> Regulation—SOX, HIPAA, GLBA, the credit-card industry's PCI, the various disclosure laws, the European Data Protection Act, whatever—has been the best stick the industry has found to beat companies over the head with. And it works. Regulation forces companies to take security more seriously, and sells more products and services.
+
+PCI Council general manager Bob Russo responded to objections by the National Retail Federation:
+
+> [PCI is a structured] blend ... [of] specificity and high-level concepts [that allows] stakeholders the opportunity and flexibility to work with Qualified Security Assessors (QSAs) to determine appropriate security controls within their environment that meet the intent of the PCI standards.
+
+Visa chief enterprise risk officer Ellen Richey said in 2018, "No compromised entity has yet been found to be in compliance with PCI DSS at the time of a breach". However, a 2008 breach of Heartland Payment Systems (validated as PCI DSS-compliant) resulted in the compromising of one hundred million card numbers. Around that time, Hannaford Brothers and TJX Companies (also validated as PCI DSS-compliant) were similarly breached as a result of the allegedly-coordinated efforts of Albert Gonzalez and two unnamed Russian hackers.
+
+Assessments examine the compliance of merchants and service providers with the PCI DSS at a specific point in time, frequently using sampling to allow compliance to be demonstrated with representative systems and processes. It is the responsibility of the merchant and service provider to achieve, demonstrate, and maintain compliance throughout the annual validation-and-assessment cycle across all systems and processes. A breakdown in merchant and service-provider compliance with the written standard may have been responsible for the breaches; Hannaford Brothers received its PCI DSS compliance validation one day after it had been made aware of a two-month-long compromise of its internal systems.
+
+Compliance validation is required only for level 1 to 3 merchants and may be optional for Level 4, depending on the card brand and acquirer. According to Visa's compliance validation details for merchants, level-4 merchant compliance-validation requirements ("Merchants processing less than 20,000 Visa e-commerce transactions annually and all other merchants processing up to 1 million Visa transactions annually") are set by the acquirer. Over 80 percent of payment-card compromises between 2005 and 2007 affected level-4 merchants, who handled 32 percent of all such transactions.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+

@@ -1,0 +1,49 @@
+Bespoke portfolio (CDO)
+
+
+# Bespoke portfolio (CDO)
+
+
+
+A **bespoke portfolio** is a table of reference securities. A bespoke portfolio may serve as the reference portfolio for a synthetic CDO arranged by an investment bank and selected by a particular investor or for that investor by an investment manager.
+
+
+## Overview
+
+The list of reference securities making up a portfolio is one of the primary drivers of the investment outcome of a synthetic CDO. Because the portfolio is not that of a corporate credit index like the CDX or iTraxx, the mean default probabilities of the reference securities, their distribution of default probabilities, their default correlations and the recovery amounts upon default can vary greatly.
+
+In principle, the investor chooses the reference securities and decides on the "attachment" and "detachment" points (that is, the amount of losses that occur before the investor suffers its first dollar of loss; and the upper limit beyond which the investor suffers no further losses). In reality, the arranger demands a good deal of input into the selection of the reference portfolio. Most arrangers manage their risks by buying and selling protection on single-name CDS or on the CDX indexes and therefore they usually avoid taking positions in CDS that cannot readily be traded.
+
+Bespoke portfolios can have very different default correlation characteristics from credit indices with similar distributions of riskiness. Bespoke portfolios almost invariably have numbers of reference securities similar to those of the major credit indices – 100 to 125 reference securities – but bespoke portfolios can include reference securities that have highly correlated default probabilities, either because they are issued by different subsidiaries of the same parent company, because they include closely related but separate companies, or because the bespoke portfolios include much higher concentrations in single industries than occurs in credit indices. Determining the fair default correlations for a bespoke portfolio can be very difficult. The chart on the right shows that differences in correlation can greatly change the probability distribution of defaults and thus change the fair value of any given CDO tranche linked to a particular portfolio.
+
+Initially, bespoke portfolios referenced in most synthetic CDOs were static, meaning that the list of reference securities would change only because of default, because of a succession event, or because of the disappearance of a reference security or its issuer. From 2004 onwards, managed transactions were also issued. Managed bespoke portfolios are those where a third party investment manager is appointed to select the bespoke portfolio but also to buy and sell the underlying reference securities to exploit trading opportunities or avoid credit losses.
+
+A synthetic CDO can be structured as a swap between an investor and an arranger, in which case the investor does not need to fund the purchase of the synthetic CDO notes. The majority of bespoke portfolio linked CDOs, however, are embedded into credit-linked notes that are purchased by the investor.
+
+
+## Market size
+
+The overall volume of CDOs on bespoke portfolios rose rapidly in the early 2000s. In 1999, synthetic CDO issuance in total was less than $10 billion. 2005 issuance of bespoke portfolio tranches was cited by Rajan, McDermott and Roy as $294 billion.
+
+CDO tranches linked to bespoke portfolios continued to trade after the financial crisis of 2007–08 but in considerably reduced amounts.
+
+
+## Cited advantages
+
+As mentioned above, the key advantage to investors was that it allowed them to specify the reference securities in the bespoke portfolio as well as the tranche's attachment and detachment points and other characteristics. A report from the Banque de France stated that: "this avoids some of the dangers of traditional CDO structures, such as the risks of moral hazard or adverse selection in the choice of the names in the portfolio ...".
+
+Also, arrangers like CDOs on bespoke portfolios because they are relatively easy to set up. Traditional CDOs take three to six months to arrange and typically cost $2 to $4 million in legal, rating and marketing costs, whereas single tranches on bespoke portfolios can be arranged in four to six weeks and upfront costs are typically less than $500,000.
+
+
+## Criticisms
+
+Because CDOs linked to bespoke portfolios are, by their nature, only held by one or a very small number of investors, there is no liquid market where they can be bought, sold or valued. Therefore, these CDOs are valued using mathematical models that performed poorly both before and during the financial crisis. Subsequently banking industry regulators have pointed out concerns applicable to CDO tranches on bespoke portfolios that exceed even the regulators' concerns about index-based tranches (which are referred to as "standardized products" in regulatory literature). The Basel Committee on Banking Supervision's Regulatory Consistency Assessment Programme tested banks' internal models to identify the factors "contribut[ing] to the observed variability in trading book RWAs". "Bespoke products" were found to "exhibit much larger variability than standardised products" with respect to value at risk dispersion.
+
+A key reason for this was the correlation characteristics of bespoke portfolios, which by their nature were unique to the specific portfolio and inherently unobservable in the markets. Brigo, Pallavicini and Torresetti summed up the problem in their 2010 book as follows: "Bespoke corporate pools have no data from which to infer default "correlation" and dubious mapping methods are used."
+
+One result of this was that hedge funds specializing in credit correlation were able to arbitrage tranches among dealers, buying protection from one dealer and almost immediately selling it at a profit to another dealer. The hedge funds would do this by specifying their own bespoke portfolio and asking 5 to 10 dealers to quote bids and offers on tranches on the portfolio, usually allowing the dealers only a few hours to quote. Often both dealers would report a first-day profit on the trade.
+
+Part of the problem lies in calibrating tranches on a bespoke portfolio to observable data generated from credit index tranche prices. Matching a bespoke portfolio to a credit index can be extremely subjective. Rajan, McDermott and Roy discussed the problem and its possible solution: "... we have no insight into the value of a tranche that spans, for example, part of two index attachment points ... by being able to relate [correlation] skews across a range of portfolios through their risk characteristics and maturities, one can price and hedge customized tranches of bespoke portfolios." However, it is extremely difficult to obtain certainty as to the correlation skew appropriate to a given bespoke portfolio.
+
+The aforementioned 2005 Banque de France report pointed out that CDO tranche issuance referencing bespoke portfolios "may have a major impact on credit spreads due to their leverage". Because CDO tranches on bespoke portfolios could have very narrow spreads between their attachment and detachment points – far less than the 3% to 5% thickness on index tranche products – they could be far more leveraged, meaning that a small movement in credit default swap spreads could cause a very large change in the value of CDO tranches linked to bespoke portfolios. This in turn meant that changes in observed correlations on index tranches caused very large scale buying of CDS protection by swaps dealers during the financial crisis, increasing instability and illiquidity.
+

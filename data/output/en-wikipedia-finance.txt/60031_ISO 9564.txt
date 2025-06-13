@@ -1,0 +1,152 @@
+ISO 9564
+
+
+# ISO 9564
+
+
+
+**ISO 9564** is an international standard for personal identification number (PIN) management and security in financial services.
+
+The PIN is used to verify the identity of a customer (the user of a bank card) within an electronic funds transfer system, and (typically) to authorize the transfer or withdrawal of funds. Therefore, it is important to protect PINs against unauthorized disclosure or misuse. Modern banking systems require interoperability between a variety of PIN entry devices, smart cards, card readers, card issuers, acquiring banks and retailers – including transmission of PINs between those entities – so a common set of rules for handling and securing PINs is required, to ensure both technical compatibility and a mutually agreed level of security. ISO 9564 provides principles and techniques to meet these requirements.
+
+ISO 9564 comprises three parts, under the general title of *Financial services — Personal Identification Number (PIN) management and security*.
+
+
+## Part 1: Basic principles and requirements for PINs in card-based systems
+
+ISO 9564-1:2011 specifies the basic principles and techniques of secure PIN management. It includes both general principles and specific requirements.
+
+
+### Basic principles
+
+The basic principles of PIN management include:
+
+* PIN management functions shall be implemented in software and hardware in such a way that the functionality cannot be modified without detection, and that the data cannot be obtained or misused.
+* Encrypting the same PIN with the same key but for a different bank account shall not predictably give the same cipher text.
+* Security of the PIN encryption shall depend on secrecy of the key, not secrecy of the algorithm.
+* The PIN must always be stored encrypted or physically secured.
+* Only the customer (i.e. the user of a card) and/or authorized card issuer staff shall be involved with PIN selection or issuing. Where card issuer staff are involved, appropriate strictly enforced procedures shall be used.
+* A stored encrypted PIN shall be protected from substitution.
+* A PIN shall be revoked if it is compromised, or suspected to be.
+* The card issuer shall be responsible for PIN verification.
+* The customer shall be advised of the importance of keeping the PIN secret.
+
+### PIN entry devices
+
+The standard specifies some characteristics required or recommended of *PIN entry devices* (also known as PIN pads), i.e. the device into which the customer enters the PIN, including:
+
+* All PIN entry devices shall allow entry of the digits zero to nine. Numeric keys may also have letters printed on them, e.g. as per E.161. These letters are only for the customers' convenience; internally, the PIN entry device only handles digits. (E.g. the standard does not support multi-tap or similar.) The standard also recommends that customers should be warned that not all devices may have letters.
+* The PIN entry device shall be physically secured so that it is not feasible to modify its operation or extract PINs or encryption keys from it.
+* The PIN entry device should be designed or installed so as to prevent other people from observing the PIN as it is entered.
+* The keyboard layout should be standardized, with consistent and unambiguous labels for function keys, such as "enter", "clear" (this entry) and "cancel" (the transaction). The standard also recommends specific colours for function keys: green for "enter", yellow for "clear", red for "cancel".
+
+### Smart card readers
+
+A PIN may be stored in a secure smart card, and verified offline by that card. The PIN entry device and the reader used for the card that will verify the PIN may be integrated into a single physically secure unit, but they do not need to be.
+
+Additional requirements that apply to smart card readers include:
+
+* The card reader should be constructed in such a way as to prevent someone monitoring the communications to the card by inserting a monitoring device into the card slot.
+* If the PIN entry device and the card reader are not both part of an integrated secure unit, then the PIN shall be encrypted while it is transmitted from the PIN entry device to the card reader.
+
+### Other specific PIN control requirements
+
+Other specific requirements include:
+
+* All hardware and software used for PIN processing shall be implemented such that:
+ + Their correct functioning can be assured.
+ + They cannot be modified or accessed without detection.
+ + The data cannot be inappropriately accessed, modified or misused.
+ + The PIN cannot be determined by a brute-force search.
+* The PIN shall not be communicated verbally. In particular bank personnel shall never ask the customer to disclose the PIN, nor recommend a PIN value.
+* PIN encryption keys should not be used for any other purpose.
+
+#### PIN length
+
+The standard specifies that PINs shall be from four to twelve digits long, noting that longer PINs are more secure but harder to use. It also suggests that the issuer should not assign PINs longer than six digits.
+
+
+#### PIN selection
+
+There are three accepted methods of selecting or generating a PIN:
+
+
+#### PIN issuance and delivery
+
+The standard includes requirements for keeping the PIN secret while transmitting it, after generation, from the issuer to the customer. These include:
+
+* The PIN is never available to the card issuing staff.
+* The PIN can only be displayed or printed for the customer in an appropriately secure manner. One method is a *PIN mailer*, an envelope designed so that it can be printed without the PIN being visible (even at printing time) until the envelope is opened. A PIN mailer must also be constructed so that any prior opening will be obvious to the customer, who will then be aware that the PIN may have been disclosed.
+* The PIN shall never appear where it can be associated with a customer's account. For example, a PIN mailer must not include the account number, but only sufficient information for its physical delivery (e.g. name and address). The PIN and the associated card shall not be mailed together, nor at the same time.
+
+#### PIN encryption
+
+To protect the PIN during transmission from the PIN entry device to the verifier, the standard requires that the PIN be encrypted, and specifies several formats that may be used. In each case, the PIN is encoded into a *PIN block*, which is then encrypted by an "approved algorithm", according to part 2 of the standard).
+
+The PIN block formats are:
+
+
+##### Format 0
+
+The PIN block is constructed by XOR-ing two 64-bit fields: the *plain text PIN field* and the *account number field*, both of which comprise 16 four-bit nibbles.
+
+The plain text PIN field is:
+
+* one nibble with the value of 0, which identifies this as a format 0 block
+* one nibble encoding the length *N* of the PIN
+* *N* nibbles, each encoding one PIN digit
+* 14−*N* nibbles, each holding the "fill" value 15 (i.e. 1111₂)
+
+The account number field is:
+
+* four nibbles with the value of zero
+* 12 nibbles containing the right-most 12 digits of the primary account number (PAN), excluding the check digit
+
+##### Format 1
+
+This format should be used where no PAN is available. The PIN block is constructed by concatenating the PIN with a transaction number thus:
+
+* one nibble with the value of 1, which identifies this as a format 1 block
+* one nibble encoding the length *N* of the PIN
+* *N* nibbles, each encoding one PIN digit
+* 14−*N* nibbles encoding a unique value, which may be a transaction sequence number, time stamp or random number
+
+##### Format 2
+
+Format 2 is for local use with off-line systems only, e.g. smart cards. The PIN block is constructed by concatenating the PIN with a filler value thus:
+
+* one nibble with the value of 2, which identifies this as a format 2 block
+* one nibble encoding the length *N* of the PIN
+* *N* nibbles, each encoding one PIN digit
+* 14−*N* nibbles, each holding the "fill" value 15 (i.e. 1111₂)
+
+(Except for the format value in the first nibble, this is identical to the plain text PIN field of format 0.)
+
+
+##### Format 3
+
+Format 3 is the same as format 0, except that the "fill" digits are random values from 10 to 15, and the first nibble (which identifies the block format) has the value 3.
+
+
+##### Extended PIN blocks
+
+Formats 0 to 3 are all suitable for use with the Triple Data Encryption Algorithm, as they correspond to its 64-bit block size. However the standard allows for other encryption algorithms with larger block sizes, e.g. the Advanced Encryption Standard has a block size of 128 bits. In such cases the PIN must be encoding into an *extended PIN block*, the format of which is defined in a 2015 amendment to ISO 9564-1.
+
+
+## Part 2: Approved algorithms for PIN encipherment
+
+ISO 9564-2:2014 specifies which encryption algorithms may be used for encrypting PINs. The approved algorithms are:
+
+* Triple Data Encryption Algorithm
+* RSA;
+* Advanced Encryption Standard
+
+## Part 3 (withdrawn)
+
+ISO 9564-3 *Part 3: Requirements for offline PIN handling in ATM and POS systems*, most recently published in 2003, was withdrawn in 2011 and its contents merged into part 1.
+
+
+## Part 4: Requirements for PIN handling in eCommerce for Payment Transactions
+
+ISO 9564-4:2016 defines minimum security requirements and practices for the use of PINs and PIN entry devices in electronic commerce.
+

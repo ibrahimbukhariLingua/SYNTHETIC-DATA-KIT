@@ -1,0 +1,42 @@
+Ramsey problem
+
+
+# Ramsey problem
+
+
+
+The **Ramsey problem**, or **Ramsey pricing**, or **Ramsey–Boiteux pricing**, is a second-best policy problem concerning what prices a public monopoly should charge for the various products it sells in order to maximize social welfare (the sum of producer and consumer surplus) while earning enough revenue to cover its fixed costs.
+
+Under Ramsey pricing, the price markup over marginal cost is inverse to the price elasticity of demand and the Price elasticity of supply: the more elastic the product's demand or supply, the smaller the markup. Frank P. Ramsey found this 1927 in the context of Optimal taxation: the more elastic the demand or supply, the smaller the optimal tax. The rule was later applied by Marcel Boiteux (1956) to natural monopolies (industries with decreasing average cost). A natural monopoly earns negative profits if it sets price equals to marginal cost, so it must set prices for some or all of the products it sells to above marginal cost if it is to be viable without government subsidies. Ramsey pricing says to mark up most the goods with the least elastic (that is, least price-sensitive) demand or supply.
+
+
+## Description
+
+In a first-best world, without the need to earn enough revenue to cover fixed costs, the optimal solution would be to set the price for each product equal to its marginal cost. If the average cost curve is declining where the demand curve crosses it however, as happens when the fixed cost is large, this would result in a price less than average cost, and the firm could not survive without subsidy. The Ramsey problem is to decide exactly how much to raise each product's price above its marginal cost so the firm's revenue equals its total cost. If there is just one product, the problem is simple: raise the price to where it equals average cost. If there are two products, there is leeway to raise one product's price more and the other's less, so long as the firm can break even overall.
+
+The principle is applicable to pricing of goods that the government is the sole supplier of (public utilities) or regulation of natural monopolies, such as telecommunications firms, where it is efficient for only one firm to operate but the government regulates its prices so it does not earn above-market profits.
+
+In practice, government regulators are concerned with more than maximizing the sum of producer and consumer surplus. They may wish to put more weight on the surplus of politically powerful consumers, or they may wish to help the poor by putting more weight on their surplus. Moreover, many people will see Ramsey pricing as unfair, especially if they do not understand why it maximizes total surplus. In some contexts, Ramsey pricing is a form of price discrimination because the two products with different elasticities of demand are one physically identical product sold to two different groups of customers, e.g., electricity to residential customers and to commercial customers. Ramsey pricing says to charge whichever group has less elastic demand a higher price in order to maximize overall social welfare. Customers sometimes object to it on that basis, since they care about their own individual welfare, not social welfare. Customers who are charged more may consider unfair, especially they, with less elastic demand, would say they "need" the good more. In such situations regulators may further limit an operator’s ability to adopt Ramsey prices.
+
+
+## Formal presentation and solution
+
+Consider the problem of a regulator seeking to set prices {\displaystyle \left(p\_{1},\ldots ,p\_{N}\right)} for a multiproduct monopolist with costs {\displaystyle C(q\_{1},q\_{2},\ldots ,q\_{N})=C(\mathbf {q} ),} where {\displaystyle q\_{i}} is the output of good *i* and {\displaystyle p\_{i}} is the price. Suppose that the products are sold in separate markets so demands are independent, and demand for good *i* is {\displaystyle q\_{i}\left(p\_{i}\right),} with inverse demand function {\displaystyle p\_{i}(q).} Total revenue is {\displaystyle R\left(\mathbf {p,q} \right)=\sum \_{i}p\_{i}q\_{i}(p\_{i}).}
+
+Total welfare is given by
+
+The problem is to maximize {\displaystyle W\left(\mathbf {p,q} \right)} by choice of the subject to the requirement that profit {\displaystyle \Pi =R-C} equal some fixed value {\displaystyle \Pi ^{\*}}. Typically, the fixed value is zero, which is to say that the regulator wants to maximize welfare subject to the constraint that the firm not lose money. The constraint can be stated generally as:
+
+This problem may be solved using the Lagrange multiplier technique to yield the optimal output values, and backing out the optimal prices. The first order conditions on {\displaystyle \mathbf {q} } are
+
+where {\displaystyle \lambda } is a Lagrange multiplier, *C*ᵢ(**q**) is the partial derivative of *C*(**q**) with respect to *q*ᵢ, evaluated at **q**, and {\displaystyle \mathrm {Elasticity} \_{i}=-{\frac {\partial q\_{i}}{\partial p\_{i}}}{\frac {p\_{i}}{q\_{i}}}} is the elasticity of demand for good {\displaystyle i.}
+
+Dividing by {\displaystyle p\_{i}} and rearranging yields
+
+where {\displaystyle k={\frac {\lambda }{1+\lambda }}<1.}. That is, the price margin compared to marginal cost for good {\displaystyle i} is again inversely proportional to the elasticity of demand. Note that the Ramsey mark-up is smaller than the ordinary monopoly markup of the Lerner Rule which has {\displaystyle k=1}, since {\displaystyle \lambda =1} (the fixed-profit requirement, {\displaystyle \Pi ^{\*}=R-C} is non-binding). The Ramsey-price setting monopoly is in a second-best equilibrium, between ordinary monopoly and perfect competition.
+
+
+## Ramsey condition
+
+An easier way to solve this problem in a two-output context is the Ramsey condition. According to Ramsey, in order to minimize deadweight losses, one must increase prices to rigid and elastic demands/supplies in the same proportion, in relation to the prices that would be charged at the first-best solution (price equal to marginal cost).
+

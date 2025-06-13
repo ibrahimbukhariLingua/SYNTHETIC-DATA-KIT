@@ -1,0 +1,60 @@
+Autoregressive fractionally integrated moving average
+
+
+# Autoregressive fractionally integrated moving average
+
+
+
+In statistics, **autoregressive fractionally integrated moving average** models are time series models that generalize ARIMA (*autoregressive integrated moving average*) models by allowing non-integer values of the differencing parameter. These models are useful in modeling time series with long memory—that is, in which deviations from the long-run mean decay more slowly than an exponential decay. The acronyms "ARFIMA" or "FARIMA" are often used, although it is also conventional to simply extend the "ARIMA(*p*, *d*, *q*)" notation for models, by simply allowing the order of differencing, *d*, to take fractional values. Fractional differencing and the ARFIMA model were introduced in the early 1980s by Clive Granger, Roselyne Joyeux, and Jonathan Hosking.
+
+
+## Basics
+
+In an ARIMA model, the *integrated* part of the model includes the differencing operator (1 − *B*) (where *B* is the backshift operator) raised to an integer power. For example,
+
+where
+
+so that
+
+In a *fractional* model, the power is allowed to be fractional, with the meaning of the term identified using the following formal binomial series expansion
+
+
+## ARFIMA(0, *d*, 0)
+
+The simplest autoregressive fractionally integrated model, ARFIMA(0, *d*, 0), is, in standard notation,
+
+where this has the interpretation
+
+ARFIMA(0, *d*, 0) is similar to fractional Gaussian noise (fGn): with *d* = *H*−1⁄2, their covariances have the same power-law decay. The advantage of fGn over ARFIMA(0,*d*,0) is that many asymptotic relations hold for finite samples. The advantage of ARFIMA(0,*d*,0) over fGn is that it has an especially simple spectral density—
+{\displaystyle f(\lambda )={\frac {1}{2\pi }}\left(2\sin \left({\frac {\lambda }{2}}\right)\right)^{-2d}}
+
+—and it is a particular case of ARFIMA(*p*, *d*, *q*), which is a versatile family of models.
+
+
+## General form: ARFIMA(*p*, *d*, *q*)
+
+An ARFIMA model shares the same form of representation as the ARIMA(*p*, *d*, *q*) process, specifically:
+
+In contrast to the ordinary ARIMA process, the "difference parameter", *d*, is allowed to take non-integer values.
+
+
+## Enhancement to ordinary ARMA models
+
+The enhancement to ordinary ARMA models is as follows:
+
+1. Take the original data series and high-pass filter it with fractional differencing enough to make the result stationary, and remember the order d of this fractional difference, d usually between 0 and 1 ... possibly up to 2+ in more extreme cases. Fractional difference of 2 is the 2nd derivative or 2nd difference.
+ * note: applying fractional differencing changes the units of the problem. If we started with Prices then take fractional differences, we no longer are in Price units.
+ * determining the order of differencing to make a time series stationary may be an iterative, exploratory process.
+2. Compute plain ARMA terms via the usual methods to fit to this stationary temporary data set which is in ersatz units.
+3. Forecast either to existing data (static forecast) or "ahead" (dynamic forecast, forward in time) with these ARMA terms.
+4. Apply the reverse filter operation (fractional **integration** to the same level d as in step 1) to the forecasted series, to return the forecast to the original problem units (e.g. turn the ersatz units back into Price).
+ * Fractional differencing and fractional integration are the same operation with opposite values of d: e.g. the fractional difference of a time series to d = 0.5 can be inverted (integrated) by applying the same fractional differencing operation (again) but with fraction d = -0.5. See GRETL fracdiff function.
+
+The point of the pre-filtering is to reduce low frequencies in the data set which can cause non-stationarities in the data, which non-stationarities ARMA models cannot handle well (or at all)... but only enough so that the reductions can be recovered after the model is built.
+
+Fractional differencing and the inverse operation fractional integration (both directions being used in the ARFIMA modeling and forecasting process) can be thought of as digital filtering and "unfiltering" operations. As such, it is useful to study the frequency response of such filters to know which frequencies are kept and which are attenuated or discarded.
+
+Note that any filtering that would substitute for fractional differencing and integration in this AR(FI)MA model should be similarly invertible as differencing and integration (summing) to avoid information loss. E.g. a high pass filter which completely discards many low frequencies (unlike the fractional differencing high pass filter which only completely discards frequency 0 [constant behavior in the input signal] and merely attenuates other low frequencies, see above PDF) may not work so well, because after fitting ARMA terms to the filtered series, the reverse operation to return the ARMA forecast to its original units would not be able re-boost those attenuated low frequencies, since the low frequencies were cut to zero.
+
+Such frequency response studies may suggest other similar families of (reversible) filters that might be useful replacements for the "FI" part of the ARFIMA modeling flow, such as the well-known, easy to implement, and minimal distortion high-pass Butterworth filter or similar.
+

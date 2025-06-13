@@ -1,0 +1,25 @@
+Advanced Stream Redirector
+
+
+# Advanced Stream Redirector
+
+
+
+The **Advanced Stream Redirector** (**ASX**) format is a type of XML metafile designed to store a playlist of Windows Media files for a multimedia presentation.
+
+It is used frequently on streaming video servers where multiple *ASF* files are to be played in succession. Both RTSP and MMS streaming protocols are supported, as well as HTTP.
+
+ASX files have MIME type `video/x-ms-asf` (as do ASF files).
+
+With the introduction of the `WMA` and `WMV` container formats in late 1990s, `WAX` and `WVX` extensions have also been introduced by Microsoft respectively.
+
+
+## Example
+
+
+## Windows Media Player playlists
+
+ASX can be used to print playlists done with Windows Media Player. To print a playlist, there are two main steps for those people that are familiar with Windows command lines and XSLT:
+
+* Install an XSLT processor
+* Export the playlist from the Windows Media Player with: Menu File -> Save current playlist

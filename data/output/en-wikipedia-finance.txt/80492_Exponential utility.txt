@@ -1,0 +1,55 @@
+Exponential utility
+
+
+# Exponential utility
+
+
+
+In economics and finance, **exponential utility** is a specific form of the utility function, used in some contexts because of its convenience when risk (sometimes referred to as uncertainty) is present, in which case expected utility is maximized. Formally, exponential utility is given by:
+
+{\displaystyle c} is a variable that the economic decision-maker prefers more of, such as consumption, and {\displaystyle a} is a constant that represents the degree of risk preference ({\displaystyle a>0} for risk aversion, {\displaystyle a=0} for risk-neutrality, or {\displaystyle a<0} for risk-seeking). In situations where only risk aversion is allowed, the formula is often simplified to {\displaystyle u(c)=1-e^{-ac}}.
+
+Note that the additive term 1 in the above function is mathematically irrelevant and is (sometimes) included only for the aesthetic feature that it keeps the range of the function between zero and one over the domain of non-negative values for *c*. The reason for its irrelevance is that maximizing the expected value of utility {\displaystyle u(c)=(1-e^{-ac})/a} gives the same result for the choice variable as does maximizing the expected value of {\displaystyle u(c)=-e^{-ac}/a}; since expected values of utility (as opposed to the utility function itself) are interpreted ordinally instead of cardinally, the range and sign of the expected utility values are of no significance.
+
+The exponential utility function is a special case of the hyperbolic absolute risk aversion utility functions.
+
+
+## Risk aversion characteristic
+
+Exponential utility implies constant absolute risk aversion (CARA), with coefficient of absolute risk aversion equal to a constant:
+
+In the standard model of one risky asset and one risk-free asset, for example, this feature implies that the optimal holding of the risky asset is independent of the level of initial wealth; thus on the margin any additional wealth would be allocated totally to additional holdings of the risk-free asset. This feature explains why the exponential utility function is considered unrealistic.
+
+
+## Mathematical tractability
+
+Though isoelastic utility, exhibiting constant relative risk aversion (CRRA), is considered more plausible (as are other utility functions exhibiting decreasing absolute risk aversion), exponential utility is particularly convenient for many calculations.
+
+
+### Consumption example
+
+For example, suppose that consumption *c* is a function of labor supply *x* and a random term {\displaystyle \epsilon }: *c* = *c*(*x*) + {\displaystyle \epsilon }. Then under exponential utility, expected utility is given by:
+
+where E is the expectation operator. With normally distributed noise, i.e.,
+
+E(*u*(*c*)) can be calculated easily using the fact that
+
+Thus
+
+
+### Multi-asset portfolio example
+
+Consider the portfolio allocation problem of maximizing expected exponential utility {\displaystyle {\text{E}}[-e^{-aW}]} of final wealth *W* subject to
+
+where the prime sign indicates a vector transpose and where {\displaystyle W\_{0}} is initial wealth, *x* is a column vector of quantities placed in the *n* risky assets, *r* is a random vector of stochastic returns on the *n* assets, *k* is a vector of ones (so {\displaystyle W\_{0}-x'k} is the quantity placed in the risk-free asset), and *r*f is the known scalar return on the risk-free asset. Suppose further that the stochastic vector *r* is jointly normally distributed. Then expected utility can be written as
+
+where {\displaystyle \mu } is the mean vector of the vector *r* and {\displaystyle \sigma ^{2}} is the variance of final wealth. Maximizing this is equivalent to minimizing
+
+which in turn is equivalent to maximizing
+
+Denoting the covariance matrix of *r* as *V*, the variance {\displaystyle \sigma ^{2}} of final wealth can be written as {\displaystyle x'Vx}. Thus we wish to maximize the following with respect to the choice vector *x* of quantities to be placed in the risky assets:
+
+This is an easy problem in matrix calculus, and its solution is
+
+From this it can be seen that (1) the holdings *x*\* of the risky assets are unaffected by initial wealth *W*₀, an unrealistic property, and (2) the holding of each risky asset is smaller the larger is the risk aversion parameter *a* (as would be intuitively expected). This portfolio example shows the two key features of exponential utility: tractability under joint normality, and lack of realism due to its feature of constant absolute risk aversion.
+

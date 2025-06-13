@@ -1,0 +1,76 @@
+Beneish M-score
+
+
+# Beneish M-score
+
+
+
+**The Beneish model** is a statistical model that uses financial ratios calculated with accounting data of a specific company in order to check if it is likely (high probability) that the reported earnings of the company have been manipulated.
+
+
+## How to calculate
+
+The Beneish M-score is calculated using 8 variables (financial ratios):
+
+* Days Sales in Receivables Index
+
+(DSRI)
+DSRI = (Net Receivablesₜ / Salesₜ) / (Net Receivablesₜ-₁ / Salesₜ-₁)
+
+* Gross Margin Index (GMI)
+
+GMI = [(Salesₜ-₁ - COGSₜ-₁) / Salesₜ-₁] / [(Salesₜ - COGSₜ) / Salesₜ]
+
+* Asset Quality Index (AQI)
+
+AQI = [1 - (Current Assetsₜ + PP&Eₜ + Securitiesₜ) / Total Assetsₜ] / [1 - ((Current Assetsₜ-₁ + PP&Eₜ-₁ + Securitiesₜ-₁) / Total Assetsₜ-₁)]
+
+* Sales Growth Index (SGI)
+
+SGI = Salesₜ / Salesₜ-₁
+
+* Depreciation Index (DEPI)
+
+DEPI = (Depreciationₜ-₁/ (PP&Eₜ-₁ + Depreciationₜ-₁)) / (Depreciationₜ / (PP&Eₜ + Depreciationₜ))
+
+* Sales General and Administrative Expenses Index (SGAI)
+
+SGAI = (SG&A Expenseₜ / Salesₜ) / (SG&A Expenseₜ-₁ / Salesₜ-₁)
+
+* Leverage Index (LVGI)
+
+LVGI = [(Current Liabilitiesₜ + Total Long Term Debtₜ) / Total Assetsₜ] / [(Current Liabilitiesₜ-₁ + Total Long Term Debtₜ-₁) / Total Assetsₜ-₁]
+
+* Total Accruals to Total Assets (TATA)
+
+TATA = (Income from Continuing Operationsₜ - Cash Flows from Operationsₜ) / Total Assetsₜ
+
+The formula to calculate the M-score is:
+
+
+## How to interpret
+
+The threshold value is -1.78 for the model whose coefficients are reported above. (see Beneish 1999, Beneish, Lee, and Nichols 2013, and Beneish and Vorst 2020).
+
+* If M-score is less than -1.78, the company is unlikely to be a manipulator. For example, an M-score value of -2.50 suggests a low likelihood of manipulation.
+* If M-score is greater than −1.78, the company is likely to be a manipulator. For example, an M-score value of -1.50 suggests a high likelihood of manipulation.
+
+### Aggregate recession predictor
+
+A 2023 research paper will use an aggregate score of many companies to predict recessions. It finds that the score in early 2023 is the highest in some 40 years.
+
+
+## Important notices
+
+* Beneish M-score is a probabilistic model, so it cannot detect companies that manipulate their earnings with 100% accuracy.
+* Financial institutions were excluded from the sample in Beneish paper when calculating M-score since these institutions make money through different routes. Sales and receivables which are two main ingredients that go into the Beneish formula are not used when analyzing a financial institution.
+
+## Example of successful application
+
+Enron Corporation was correctly identified 1998 as an earnings manipulator by students from Cornell University using M-score Noticeably, Wall Street financial analysts were still recommending to buy Enron shares at that point in time..
+
+
+## Further reading on financial statement manipulation
+
+* A sequence of articles on Alpha Architect blog.
+* An article on Investopedia about different types of financial statement manipulation ("smoke and mirrors", "elder abuse", "fleeing town", and others).

@@ -1,0 +1,229 @@
+Kelly criterion
+
+
+# Kelly criterion
+
+
+
+In probability theory, the **Kelly criterion** (or **Kelly strategy** or **Kelly bet**) is a formula for sizing a sequence of bets by maximizing the long-term expected value of the logarithm of wealth, which is equivalent to maximizing the long-term expected geometric growth rate. John Larry Kelly Jr., a researcher at Bell Labs, described the criterion in 1956.
+
+The practical use of the formula has been demonstrated for gambling, and the same idea was used to explain diversification in investment management. In the 2000s, Kelly-style analysis became a part of mainstream investment theory and the claim has been made that well-known successful investors including Warren Buffett and Bill Gross use Kelly methods. Also see intertemporal portfolio choice. It is also the standard replacement of statistical power in anytime-valid statistical tests and confidence intervals, based on e-values and e-processes.
+
+
+## Kelly criterion for binary return rates
+
+In a system where the return on an investment or a bet is binary, so an interested party either wins or loses a fixed percentage of their bet, the expected growth rate coefficient yields a very specific solution for an optimal betting percentage.
+
+
+### Gambling Formula
+
+Where losing the bet involves losing the entire wager, the Kelly bet is:
+
+where:
+
+* {\displaystyle f^{\*}} is the fraction of the current bankroll to wager.
+* {\displaystyle p} is the probability of a win.
+* {\displaystyle q=1-p} is the probability of a loss.
+* {\displaystyle b} is the proportion of the bet gained with a win. E.g., if betting $10 on a 2-to-1 odds bet (upon win you are returned $30, winning you $20), then {\displaystyle b=\$20/\$10=2.0}.
+
+As an example, if a gamble has a 60% chance of winning ({\displaystyle p=0.6}, {\displaystyle q=0.4}), and the gambler receives 1-to-1 odds on a winning bet ({\displaystyle b=1}), then to maximize the long-run growth rate of the bankroll, the gambler should bet 20% of the bankroll at each opportunity (
+f
+∗
+
+
+=
+0.6
+−
+0.4
+1
+
+
+=
+0.2
+
+
+{\textstyle f^{\*}=0.6-{\frac {0.4}{1}}=0.2}
+
+).
+
+If the gambler has zero edge (i.e., if {\displaystyle b=q/p}), then the criterion recommends the gambler bet nothing.
+
+If the edge is negative ({\displaystyle b<q/p}), the formula gives a negative result, indicating that the gambler should take the other side of the bet.
+
+
+### Investment formula
+
+A more general form of the Kelly formula allows for partial losses, which is relevant for investments:⁷
+
+where:
+
+* {\displaystyle f^{\*}} is the fraction of the assets to apply to the security.
+* {\displaystyle p} is the probability that the investment increases in value.
+* {\displaystyle q} is the probability that the investment decreases in value ({\displaystyle q=1-p}).
+* {\displaystyle g} is the fraction that is gained in a positive outcome.⁷ If the security price rises 10%, then {\displaystyle g={\frac {{\text{final value}}-{\text{original value}}}{\text{original value}}}={\frac {1.1-1}{1}}=0.1}.
+* {\displaystyle l} is the fraction that is lost in a negative outcome.⁷ If the security price falls 10%, then {\displaystyle l={\frac {{\text{original value}}-{\text{final value}}}{\text{original value}}}={\frac {1-.9}{1}}=0.1}
+
+Note that the Kelly criterion is perfectly valid only for *fully known* outcome probabilities, which is almost never the case with investments. In addition, risk-averse strategies invest less than the full Kelly fraction.
+
+The general form can be rewritten as follows
+
+where:
+
+* {\displaystyle WLP={\frac {p}{1-p}}} is the win-loss probability (WLP) ratio, which is the ratio of winning to losing bets.
+* {\displaystyle WLR={\frac {g}{l}}} is the win-loss ratio (WLR) of bet outcomes, which is the *winning skew*.
+
+It is clear that, at least, one of the factors {\displaystyle WLP} or {\displaystyle WLR} needs to be larger than 1 for having an edge (so {\displaystyle f^{\*}>0}). It is even possible that the win-loss probability ratio is unfavorable {\displaystyle WLP<1}, but one has an edge as long as {\displaystyle WLP\*WLR>1}.
+
+The Kelly formula can easily result in a fraction higher than 1, such as with losing size {\displaystyle l\ll 1} (see the above expression with factors of {\displaystyle WLR} and {\displaystyle WLP}). This happens somewhat counterintuitively, because the Kelly fraction formula compensates for a small losing size with a larger bet. However, in most real situations, there is high uncertainty about all parameters entering the Kelly formula. In the case of a Kelly fraction higher than 1, it is theoretically advantageous to use leverage to purchase additional securities on margin.
+
+
+### Betting example – behavioural experiment
+
+In a study, each participant was given $25 and asked to place even-money bets on a coin that would land heads 60% of the time. Participants had 30 minutes to play, so could place about 300 bets, and the prizes were capped at $250. But the behavior of the test subjects was far from optimal:
+
+> Remarkably, 28% of the participants went bust, and the average payout was just $91. Only 21% of the participants reached the maximum. 18 of the 61 participants bet everything on one toss, while two-thirds gambled on tails at some stage in the experiment.
+
+Using the Kelly criterion and based on the odds in the experiment (ignoring the cap of $250 and the finite duration of the test), the right approach would be to bet 20% of one's bankroll on each toss of the coin, which works out to a 2.034% average gain each round. This is a geometric mean, not the arithmetic rate of 4% (r = 0.2 x (0.6 - 0.4) = 0.04). The theoretical expected wealth after 300 rounds works out to $10,505 ({\displaystyle =25\cdot (1.02034)^{300}}) if it were not capped.
+
+In this particular game, because of the cap, a strategy of betting only 12% of the pot on each toss would have even better results (a 95% probability of reaching the cap and an average payout of $242.03).
+
+
+### Proof
+
+Heuristic proofs of the Kelly criterion are straightforward. The Kelly criterion maximizes the expected value of the logarithm of wealth (the expectation value of a function is given by the sum, over all possible outcomes, of the probability of each particular outcome multiplied by the value of the function in the event of that outcome). We start with 1 unit of wealth and bet a fraction {\displaystyle f} of that wealth on an outcome that occurs with probability {\displaystyle p} and offers odds of {\displaystyle b}. The probability of winning is {\displaystyle p}, and in that case the resulting wealth is equal to {\displaystyle 1+fb}. The probability of losing is {\displaystyle q=1-p} and the odds of a negative outcome is {\displaystyle a}. In that case the resulting wealth is equal to {\displaystyle 1-fa}. Therefore, the expected geometric growth rate {\displaystyle r} is:
+
+We want to find the maximum *r* of this curve (as a function of *f*), which involves finding the derivative of the equation. This is more easily accomplished by taking the logarithm of each side first; because the logarithm is monotonic, it does not change the locations of function extrema. The resulting equation is:
+
+with {\displaystyle E} denoting logarithmic wealth growth. To find the value of {\displaystyle f} for which the growth rate is maximized, denoted as {\displaystyle f^{\*}}, we differentiate the above expression and set this equal to zero. This gives:
+
+Rearranging this equation to solve for the value of {\displaystyle f^{\*}} gives the Kelly criterion:
+
+Notice that this expression reduces to the simple gambling formula when {\displaystyle a=1=100\%}, when a loss results in full loss of the wager.
+
+
+## Kelly criterion for non-binary return rates
+
+If the return rates on an investment or a bet are continuous in nature the optimal growth rate coefficient must take all possible events into account.
+
+
+### Application to the stock market
+
+In mathematical finance, if security weights maximize the expected geometric growth rate (which is equivalent to maximizing log wealth), then a portfolio is *growth optimal.*
+
+The Kelly Criterion shows that for a given volatile security this is satisfied when
+
+{\displaystyle f^{\*}={\frac {\mu -r}{\sigma ^{2}}}}
+
+where {\displaystyle f^{\*}} is the fraction of available capital invested that maximizes the expected geometric growth rate, {\displaystyle \mu } is the expected growth rate coefficient, {\displaystyle \sigma ^{2}} is the variance of the growth rate coefficient and {\displaystyle r} is the risk-free rate of return. Note that a symmetric probability density function was assumed here.
+
+Computations of growth optimal portfolios can suffer tremendous garbage in, garbage out problems. For example, the cases below take as given the expected return and covariance structure of assets, but these parameters are at best estimates or models that have significant uncertainty. If portfolio weights are largely a function of estimation errors, then *Ex-post* performance of a growth-optimal portfolio may differ fantastically from the *ex-ante* prediction. Parameter uncertainty and estimation errors are a large topic in portfolio theory. An approach to counteract the unknown risk is to invest less than the Kelly criterion.
+
+Rough estimates are still useful. If we take excess return 4% and volatility 16%, then yearly Sharpe ratio and Kelly ratio are calculated to be 25% and 150%. Daily Sharpe ratio and Kelly ratio are 1.7% and 150%. Sharpe ratio implies daily win probability of p=(50% + 1.7%/4), where we assumed that probability bandwidth is {\displaystyle 4\sigma =4\%}. Now we can apply discrete Kelly formula for {\displaystyle f^{\*}} above with {\displaystyle p=50.425\%,a=b=1\%}, and we get another rough estimate for Kelly fraction {\displaystyle f^{\*}=85\%}. Both of these estimates of Kelly fraction appear quite reasonable, yet a prudent approach suggest a further multiplication of Kelly ratio by 50% (i.e. half-Kelly).
+
+A detailed paper by Edward O. Thorp and a co-author estimates Kelly fraction to be 117% for the American stock market SP500 index.
+Significant downside tail-risk for equity markets is another reason to reduce Kelly fraction from naive estimate (for instance, to reduce to half-Kelly).
+
+
+## Proof
+
+A rigorous and general proof can be found in Kelly's original paper or in some of the other references listed below. Some corrections have been published.
+We give the following non-rigorous argument for the case with {\displaystyle b=1} (a 50:50 "even money" bet) to show the general idea and provide some insights.
+When {\displaystyle b=1}, a Kelly bettor bets {\displaystyle 2p-1} times their initial wealth {\displaystyle W}, as shown above. If they win, they have {\displaystyle 2pW} after one bet. If they lose, they have {\displaystyle 2(1-p)W}. Suppose they make {\displaystyle N} bets like this, and win {\displaystyle K} times out of this series of {\displaystyle N} bets. The resulting wealth will be:
+
+The ordering of the wins and losses does not affect the resulting wealth. Suppose another bettor bets a different amount, {\displaystyle (2p-1+\Delta )W} for some value of {\displaystyle \Delta } (where {\displaystyle \Delta } may be positive or negative). They will have {\displaystyle (2p+\Delta )W} after a win and {\displaystyle [2(1-p)-\Delta ]W} after a loss. After the same series of wins and losses as the Kelly bettor, they will have:
+
+Take the derivative of this with respect to {\displaystyle \Delta } and get:
+
+The function is maximized when this derivative is equal to zero, which occurs at:
+
+which implies that
+
+but the proportion of winning bets will eventually converge to:
+
+according to the weak law of large numbers.
+So in the long run, final wealth is maximized by setting {\displaystyle \Delta } to zero, which means following the Kelly strategy.
+This illustrates that Kelly has both a deterministic and a stochastic component. If one knows K and N and wishes to pick a constant fraction of wealth to bet each time (otherwise one could cheat and, for example, bet zero after the Kᵗʰ win knowing that the rest of the bets will lose), one will end up with the most money if one bets:
+
+each time. This is true whether {\displaystyle N} is small or large. The "long run" part of Kelly is necessary because K is not known in advance, just that as {\displaystyle N} gets large, {\displaystyle K} will approach {\displaystyle pN}. Someone who bets more than Kelly can do better if {\displaystyle K>pN} for a stretch; someone who bets less than Kelly can do better if {\displaystyle K<pN} for a stretch, but in the long run, Kelly always wins.
+The heuristic proof for the general case proceeds as follows.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+In a single trial, if one invests the fraction {\displaystyle f} of their capital, if the strategy succeeds, the capital at the end of the trial increases by the factor {\displaystyle 1-f+f(1+b)=1+fb}, and, likewise, if the strategy fails, the capital is decreased by the factor {\displaystyle 1-fa}. Thus at the end of {\displaystyle N} trials (with {\displaystyle pN} successes and {\displaystyle qN} failures), the starting capital of $1 yields
+
+Maximizing {\displaystyle \log(C\_{N})/N}, and consequently {\displaystyle C\_{N}}, with respect to {\displaystyle f} leads to the desired result
+
+Edward O. Thorp provided a more detailed discussion of this formula for the general case. There, it can be seen that the substitution of {\displaystyle p} for the ratio of the number of "successes" to the number of trials implies that the number of trials must be very large, since {\displaystyle p} is defined as the limit of this ratio as the number of trials goes to infinity. In brief, betting {\displaystyle f^{\*}} each time will likely maximize the wealth growth rate only in the case where the number of trials is very large, and {\displaystyle p} and {\displaystyle b} are the same for each trial. In practice, this is a matter of playing the same game over and over, where the probability of winning and the payoff odds are always the same. In the heuristic proof above, {\displaystyle pN} successes and {\displaystyle qN} failures are highly likely only for very large {\displaystyle N}.
+
+
+### Multiple outcomes
+
+Kelly's criterion may be generalized on gambling on many mutually exclusive outcomes, such as in horse races. Suppose there are several mutually exclusive outcomes. The probability that the {\displaystyle k}-th horse wins the race is {\displaystyle p\_{k}}, the total amount of bets placed on {\displaystyle k}-th horse is {\displaystyle B\_{k}}, and
+
+where {\displaystyle Q\_{k}} are the pay-off odds. {\displaystyle D=1-tt}, is the dividend rate where {\displaystyle tt} is the track take or tax, {\displaystyle {\frac {D}{\beta \_{k}}}} is the revenue rate after deduction of the track take when {\displaystyle k}-th horse wins. The fraction of the bettor's funds to bet on {\displaystyle k}-th horse is {\displaystyle f\_{k}}. Kelly's criterion for gambling with multiple mutually exclusive outcomes gives an algorithm for finding the optimal set {\displaystyle S^{o}} of outcomes on which it is reasonable to bet and it gives explicit formula for finding the optimal fractions {\displaystyle f\_{k}^{o}} of bettor's wealth to be bet on the outcomes included in the optimal set {\displaystyle S^{o}}.
+The algorithm for the optimal set of outcomes consists of four steps:
+
+1. Calculate the expected revenue rate for all possible (or only for several of the most promising) outcomes: {\displaystyle er\_{i}={\frac {Dp\_{i}}{\beta \_{i}}}=p\_{i}(Q\_{i}+1)}
+2. Reorder the outcomes so that the new sequence {\displaystyle er\_{k}} is non-increasing. Thus {\displaystyle er\_{1}} will be the best bet.
+3. Set {\displaystyle S=\varnothing } (the empty set), {\displaystyle k=1}, {\displaystyle R(S)=1}. Thus the best bet {\displaystyle er\_{k}=er\_{1}} will be considered first.
+4. Repeat:
+ If {\displaystyle er\_{k}={\frac {D}{\beta \_{k}}}p\_{k}>R(S)} then insert {\displaystyle k}-th outcome into the set: {\displaystyle S=S\cup \{k\}}, recalculate {\displaystyle R(S)} according to the formula: {\displaystyle R(S)={\frac {D\sum \_{k\notin S}p\_{k}}{D-\sum \_{k\in S}\beta \_{k}}}} and then set {\displaystyle k=k+1}, Otherwise, set {\displaystyle S^{o}=S} and stop the repetition.
+
+If the optimal set {\displaystyle S^{o}} is empty then do not bet at all. If the set {\displaystyle S^{o}} of optimal outcomes is not empty, then the optimal fraction {\displaystyle f\_{k}^{o}} to bet on {\displaystyle k}-th outcome may be calculated from this formula:
+
+One may prove that
+
+where the right hand-side is the reserve rateᶜˡᵃʳⁱᶠⁱᶜᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ. Therefore, the requirement {\displaystyle er\_{k}={\frac {D}{\beta \_{k}}}p\_{k}>R(S)} may be interpreted as follows: {\displaystyle k}-th outcome is included in the set {\displaystyle S^{o}} of optimal outcomes if and only if its expected revenue rate is greater than the reserve rate. The formula for the optimal fraction {\displaystyle f\_{k}^{o}} may be interpreted as the excess of the expected revenue rate of {\displaystyle k}-th horse over the reserve rate divided by the revenue after deduction of the track take when {\displaystyle k}-th horse wins or as the excess of the probability of {\displaystyle k}-th horse winning over the reserve rate divided by revenue after deduction of the track take when {\displaystyle k}-th horse wins. The binary growth exponent is
+
+and the doubling time is
+
+This method of selection of optimal bets may be applied also when probabilities {\displaystyle p\_{k}} are known only for several most promising outcomes, while the remaining outcomes have no chance to win. In this case it must be that
+
+
+### Stock investments
+
+The second-order Taylor polynomial can be used as a good approximation of the main criterion. Primarily, it is useful for stock investment, where the fraction devoted to investment is based on simple characteristics that can be easily estimated from existing historical data – expected value and variance. This approximation may offer similar results as the original criterion, but in some cases the solution obtained may be infeasible.
+
+For single assets (stock, index fund, etc.), and a risk-free rate, it is easy to obtain the optimal fraction to invest through geometric Brownian motion.
+The stochastic differential equation governing the evolution of a lognormally distributed asset {\displaystyle S} at time {\displaystyle t} ({\displaystyle S\_{t}}) is
+
+whose solution is
+
+where {\displaystyle W\_{t}} is a Wiener process, and {\displaystyle \mu } (percentage drift) and {\displaystyle \sigma } (the percentage volatility) are constants. Taking expectations of the logarithm:
+
+Then the expected log return {\displaystyle R\_{s}} is
+
+Consider a portfolio made of an asset {\displaystyle S} and a bond paying risk-free rate {\displaystyle r}, with fraction {\displaystyle f} invested in {\displaystyle S} and {\displaystyle (1-f)} in the bond. The aforementioned equation for {\displaystyle dS\_{t}} must be modified by this fraction, ie {\displaystyle dS\_{t}'=fdS\_{t}}, with associated solution
+
+the expected one-period return is given by
+
+For small {\displaystyle \mu }, {\displaystyle \sigma }, and {\displaystyle W\_{t}}, the solution can be expanded to first order to yield an approximate increase in wealth
+
+Solving {\displaystyle \max(G(f))} we obtain
+
+{\displaystyle f^{\*}} is the fraction that maximizes the expected logarithmic return, and so, is the Kelly fraction.
+Thorp arrived at the same result but through a different derivation.
+Remember that {\displaystyle \mu } is different from the asset log return {\displaystyle R\_{s}}. Confusing this is a common mistake made by websites and articles talking about the Kelly Criterion.
+
+For multiple assets, consider a market with {\displaystyle n} correlated stocks {\displaystyle S\_{k}} with stochastic returns {\displaystyle r\_{k}}, {\displaystyle k=1,\dots ,n,} and a riskless bond with return {\displaystyle r}. An investor puts a fraction {\displaystyle u\_{k}} of their capital in {\displaystyle S\_{k}} and the rest is invested in the bond. Without loss of generality, assume that investor's starting capital is equal to 1.
+According to the Kelly criterion one should maximize
+
+Expanding this with a Taylor series around {\displaystyle {\vec {u\_{0}}}=(0,\ldots ,0)} we obtain
+
+Thus we reduce the optimization problem to quadratic programming and the unconstrained solution
+is
+
+where {\displaystyle {\widehat {\vec {r}}}} and {\displaystyle {\widehat {\Sigma }}} are the vector of means and the matrix of second mixed noncentral moments of the excess returns.
+There is also a numerical algorithm for the fractional Kelly strategies and for the optimal solution under no leverage and no short selling constraints.
+
+
+## Bernoulli
+
+In a 1738 article, Daniel Bernoulli suggested that, when one has a choice of bets or investments, one should choose that with the highest geometric mean of outcomes. This is mathematically equivalent to the Kelly criterion, although the motivation is different (Bernoulli wanted to resolve the St. Petersburg paradox).
+
+An English translation of the Bernoulli article was not published until 1954, but the work was well known among mathematicians and economists.
+
+
+## Criticism
+
+Although the Kelly strategy's promise of doing better than any other strategy in the long run seems compelling, some economists have argued strenuously against it, mainly because an individual's specific investing constraints may override the desire for optimal growth rate. The conventional alternative is expected utility theory which says bets should be sized to maximize the expected utility of the outcome (to an individual with logarithmic utility, the Kelly bet maximizes expected utility, so there is no conflict; moreover, Kelly's original paper clearly states the need for a utility function in the case of gambling games which are played finitely many times). Even Kelly supporters usually argue for fractional Kelly (betting a fixed fraction of the amount recommended by Kelly) for a variety of practical reasons, such as wishing to reduce volatility, or protecting against non-deterministic errors in their advantage (edge) calculations. In colloquial terms, the Kelly criterion requires accurate probability values, which isn't always possible for real-world event outcomes. When a gambler overestimates their true probability of winning, the criterion value calculated will diverge from the optimal, increasing the risk of ruin.
+
+Kelly formula can be thought as 'time diversification', which is taking equal risk during different sequential time periods (as opposed to taking equal risk in different assets for asset diversification). There is clearly a difference between *time diversification* and asset diversification, which was raised by Paul A. Samuelson. There is also a difference between ensemble-averaging (utility calculation) and time-averaging (Kelly multi-period betting over a single time path in real life). The debate was renewed by envoking ergodicity breaking. Yet the difference between ergodicity breaking and Knightian uncertainty should be recognized.
+

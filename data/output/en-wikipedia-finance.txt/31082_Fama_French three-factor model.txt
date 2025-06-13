@@ -1,0 +1,44 @@
+Fama–French three-factor model
+
+
+# Fama–French three-factor model
+
+
+
+In asset pricing and portfolio management the **Fama–French three-factor model** is a statistical model designed in 1992 by Eugene Fama and Kenneth French to describe stock returns. Fama and French were colleagues at the University of Chicago Booth School of Business, where Fama still works. In 2013, Fama shared the Nobel Memorial Prize in Economic Sciences for his empirical analysis of asset prices. The three factors are:
+
+1. Market excess return,
+2. Outperformance of small versus big companies, and
+3. Outperformance of high book/market versus low book/market companies
+
+There is academic debate about the last two factors.
+
+
+## Background and development
+
+Factor models are statistical models that attempt to explain complex phenomena using a small number of underlying causes or factors. The traditional asset pricing model, known formally as the capital asset pricing model (CAPM) uses only one variable to compare the returns of a portfolio or stock with the returns of the market as a whole. In contrast, the Fama–French model uses three variables.
+
+They then added two factors to CAPM to reflect a portfolio's exposure to these two classes:
+
+Here r is the portfolio's expected rate of return, *R*f is the risk-free return rate, and *R*ₘ is the return of the market portfolio. The "three factor" *β* is analogous to the classical *β* but not equal to it, since there are now two additional factors to do some of the work. *SMB* stands for "**S**mall [market capitalization] **M**inus **B**ig" and *HML* for "**H**igh [book-to-market ratio] **M**inus **L**ow"; they measure the historic excess returns of small caps over big caps and of value stocks over growth stocks, alpha is the error term.
+
+These factors are calculated with combinations of portfolios composed by ranked stocks (BtM ranking, Cap ranking) and available historical market data. Historical values may be accessed on Kenneth French's web page. Moreover, once SMB and HML are defined, the corresponding coefficients *b*ₛ and *b*ᵥ are determined by linear regressions and can take negative values as well as positive values.
+
+
+## Discussion
+
+The Fama–French three-factor model explains over 90% of the diversified portfolios returns, compared with the average 70% given by the CAPM (within sample). They find positive returns from small size as well as value factors, high book-to-market ratio and related ratios. Examining β and size, they find that higher returns, small size, and higher β are all correlated. They then test returns for β, controlling for size, and find no relationship. Assuming stocks are first partitioned by size the predictive power of β then disappears. They discuss whether β can be saved and the Sharpe-Lintner-Black model resuscitated by mistakes in their analysis, and find it unlikely.
+
+Griffin shows that the Fama and French factors are country-specific (Canada, Japan, the U.K., and the U.S.) and concludes that the local factors provide a better explanation of time-series variation in stock returns than the global factors. Therefore, updated risk factors are available for other stock markets in the world, including the United Kingdom, Germany and Switzerland. Eugene Fama and Kenneth French also analysed models with local and global risk factors for four developed market regions (North America, Europe, Japan and Asia Pacific) and conclude that local factors work better than global developed factors for regional portfolios. The global and local risk factors may also be accessed on Kenneth French's web page. Finally, recent studies confirm the developed market results also hold for emerging markets.
+
+A number of studies have reported that when the Fama–French model is applied to emerging markets the book-to-market factor retains its explanatory ability but the market value of equity factor performs poorly. In a recent paper, Foye, Mramor and Pahor (2013) propose an alternative three factor model that replaces the market value of equity component with a term that acts as a proxy for accounting manipulation.
+
+
+## Fama–French five-factor model
+
+In 2015, Fama and French extended the model, adding a further two factors — profitability and investment. Defined analogously to the HML factor, the profitability factor (RMW) is the difference between the returns of firms with robust (high) and weak (low) operating profitability; and the investment factor (CMA) is the difference between the returns of firms that invest conservatively and firms that invest aggressively. In the US (1963-2013), adding these two factors makes the HML factors redundant since the time series of HML returns are completely explained by the other four factors (most notably CMA which has a 0.7 correlation with HML).
+
+Whilst the model still fails the Gibbons, Ross & Shanken (1989) test, which tests whether the factors fully explain the expected returns of various portfolios, the test suggests that the five-factor model improves the explanatory power of the returns of stocks relative to the three-factor model. The failure to fully explain all portfolios tested is driven by the particularly poor performance (i.e. large negative five-factor alpha) of portfolios made up of small firms that invest a lot despite low profitability (i.e. portfolios whose returns covary positively with SMB and negatively with RMW and CMA). If the model fully explains stock returns, the estimated alpha should be statistically indistinguishable from zero.
+
+Whilst a momentum factor wasn't included in the model since few portfolios had statistically significant loading on it, Cliff Asness, former PhD student of Eugene Fama and co-founder of AQR Capital has made the case for its inclusion. Foye (2018) tested the five-factor model in the UK and raises some serious concerns. Firstly, he questions the way in which Fama and French measure profitability. Furthermore, he shows that the five-factor model is unable to offer a convincing asset pricing model for the UK. Besides the lack of momentum more concerns with the five-factor model have been raised and the debate on the best asset pricing model has not been settled yet.
+

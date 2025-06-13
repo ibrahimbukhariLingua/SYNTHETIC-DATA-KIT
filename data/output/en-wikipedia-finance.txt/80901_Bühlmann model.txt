@@ -1,0 +1,66 @@
+Bühlmann model
+
+
+# Bühlmann model
+
+
+
+In credibility theory, a branch of study in actuarial science, the **Bühlmann model** is a random effects model (or "variance components model" or hierarchical linear model) used to determine the appropriate premium for a group of insurance contracts. The model is named after Hans Bühlmann who first published a description in 1967.
+
+
+## Model description
+
+Consider *i* risks which generate random losses for which historical data of *m* recent claims are available (indexed by *j*). A premium for the *i*th risk is to be determined based on the expected value of claims. A linear estimator which minimizes the mean square error is sought. Write
+
+* *X*ᵢⱼ for the *j*-th claim on the *i*-th risk (we assume that all claims for *i*-th risk are independent and identically distributed)
+* {\displaystyle \scriptstyle ={\frac {1}{m}}\sum \_{j=1}^{m}X\_{ij}} for the average value.
+* {\displaystyle \Theta \_{i}} - the parameter for the distribution of the i-th risk
+* {\displaystyle m(\vartheta )=\operatorname {E} \left[X\_{ij}|\Theta \_{i}=\vartheta \right]}
+* {\displaystyle \Pi =\operatorname {E} (m(\vartheta )|X\_{i1},X\_{i2},...X\_{im})} - premium for the i-th risk
+* {\displaystyle \mu =\operatorname {E} (m(\vartheta ))}
+* {\displaystyle s^{2}(\vartheta )=\operatorname {Var} \left[X\_{ij}|\Theta \_{i}=\vartheta \right]}
+* {\displaystyle \sigma ^{2}=\operatorname {E} \left[s^{2}(\vartheta )\right]}
+* {\displaystyle v^{2}=\operatorname {Var} \left[m(\vartheta )\right]}
+
+Note: {\displaystyle m(\vartheta )} and {\displaystyle s^{2}(\vartheta )} are functions of random parameter {\displaystyle \vartheta }
+
+The Bühlmann model is the solution for the problem:
+
+where {\displaystyle a\_{i0}+\sum \_{j=1}^{m}a\_{ij}X\_{ij}} is the estimator of premium {\displaystyle \Pi } and arg min represents the parameter values which minimize the expression.
+
+
+## Model solution
+
+The solution for the problem is:
+
+where:
+
+We can give this result the interpretation, that Z part of the premium is based on the information that we have about the specific risk, and (1-Z) part is based on the information that we have about the whole population.
+
+
+### Proof
+
+The following proof is slightly different from the one in the original paper. It is also more general, because it considers all linear estimators, while original proof considers only estimators based on average claim.
+
+Proof:
+
+The last equation follows from the fact that
+
+We are using here the law of total expectation and the fact, that {\displaystyle \Pi =\mathbb {E} [m(\vartheta )|X\_{i1},\ldots ,X\_{im}].}
+
+In our previous equation, we decompose minimized function in the sum of two expressions. The second expression does not depend on parameters used in minimization. Therefore, minimizing the function is the same as minimizing the first part of the sum.
+
+Let us find critical points of the function
+
+For {\displaystyle k\neq 0} we have:
+
+We can simplify derivative, noting that:
+
+Taking above equations and inserting into derivative, we have:
+
+Right side doesn't depend on *k*. Therefore, all {\displaystyle a\_{ik}} are constant
+
+From the solution for {\displaystyle a\_{i0}} we have
+
+Finally, the best estimator is
+

@@ -1,0 +1,177 @@
+Stochastic portfolio theory
+
+
+# Stochastic portfolio theory
+
+
+
+**Stochastic portfolio theory** (**SPT**) is a mathematical theory for analyzing stock market structure and portfolio behavior introduced by E. Robert Fernholz in 2002. It is descriptive as opposed to normative, and is consistent with the observed behavior of actual markets. Normative assumptions, which serve as a basis for earlier theories like modern portfolio theory (MPT) and the capital asset pricing model (CAPM), are absent from SPT.
+
+SPT uses continuous-time random processes (in particular, continuous semi-martingales) to represent the prices of individual securities. Processes with discontinuities, such as jumps, have also been incorporated\* into the theory (\*unverifiable claim due to missing citation!).
+
+
+
+
+## Stocks, portfolios and markets
+
+SPT considers stocks and stock markets, but its methods can be applied to other classes of assets as well. A stock is represented by its price process, usually in the **logarithmic representation**. In the case the **market** is a collection of stock-price processes {\displaystyle X\_{i},} for {\displaystyle i=1,\dots ,n,} each defined by a continuous semimartingale
+
+where {\displaystyle W:=(W\_{1},\dots ,W\_{d})} is an {\displaystyle n}-dimensional Brownian motion (Wiener) process with {\displaystyle d\geq n}, and the processes {\displaystyle \gamma \_{i}} and {\displaystyle \xi \_{i\nu }} are progressively measurable with respect to the Brownian filtration
+{\displaystyle \{{\mathcal {F}}\_{t}\}=\{{\mathcal {F}}\_{t}^{W}\}}. In this representation {\displaystyle \gamma \_{i}(t)} is called the (compound) growth rate of {\displaystyle X\_{i},} and the **covariance** between {\displaystyle \log X\_{i}} and {\displaystyle \log X\_{j}} is {\displaystyle \sigma \_{ij}(t)=\sum \_{\nu =1}^{d}\xi \_{i\nu }(t)\xi \_{j\nu }(t).} It is frequently assumed that, for all {\displaystyle i,} the process {\displaystyle \xi \_{i,1}^{2}(t)+\cdots +\xi \_{id}^{2}(t)} is positive, locally square-integrable, and does not grow too rapidly as {\displaystyle t\rightarrow \infty .}
+
+The logarithmic representation is equivalent to the classical arithmetic representation which uses the **rate of return** {\displaystyle \alpha \_{i}(t),} however the growth rate can be a meaningful indicator of long-term performance of a financial asset, whereas the rate of return has an upward bias. The relation between the rate of return and the growth rate is
+
+The usual convention in SPT is to assume that each stock has a single share outstanding, so {\displaystyle X\_{i}(t)}
+represents the total capitalization of the {\displaystyle i}-th stock at time {\displaystyle t,} and
+{\displaystyle X(t)=X\_{1}(t)+\cdots +X\_{n}(t)} is the total capitalization of the market.
+Dividends can be included in this representation, but are omitted here for simplicity.
+
+An **investment strategy** {\displaystyle \pi =(\pi \_{1},\cdots ,\pi \_{n})} is a vector of bounded, progressively measurable
+processes; the quantity {\displaystyle \pi \_{i}(t)} represents the proportion of total wealth invested in the {\displaystyle i}-th stock at
+time {\displaystyle t}, and {\displaystyle \pi \_{0}(t):=1-\sum \_{i=1}^{n}\pi \_{i}(t)} is the proportion hoarded (invested in a money market with zero interest rate). Negative weights correspond to short positions. The cash strategy {\displaystyle \kappa \equiv 0(\kappa \_{0}\equiv 1)} keeps all wealth in the money market. A strategy {\displaystyle \pi } is called portfolio, if it is fully invested in the stock market, that is {\displaystyle \pi \_{1}(t)+\cdots +\pi \_{n}(t)=1} holds, at all times.
+
+The **value process** {\displaystyle Z\_{\pi }} of a strategy {\displaystyle \pi } is always positive and satisfies
+
+where the process {\displaystyle \gamma \_{\pi }^{\*}} is called the **excess growth rate process** and is given by
+
+This expression is non-negative for a portfolio with non-negative weights {\displaystyle \pi \_{i}(t)} and has been used
+in quadratic optimization of stock portfolios, a special case of which is optimization with respect to the logarithmic utility function.
+
+The **market weight processes**,
+
+where {\displaystyle i=1,\dots ,n} define the **market portfolio** {\displaystyle \mu }. With the initial condition {\displaystyle Z\_{\mu }(0)=X(0),} the associated value process will satisfy {\displaystyle Z\_{\mu }(t)=X(t)} for all {\displaystyle t.}
+
+A number of conditions can be imposed on a market, sometimes to model actual markets and sometimes to emphasize certain types of hypothetical market behavior. Some commonly invoked conditions are:
+
+1. A market is **nondegenerate** if the eigenvalues of the covariance matrix {\displaystyle (\sigma \_{ij}(t))\_{1\leq i,j\leq n}} are bounded away from zero. It has **bounded variance** if the eigenvalues are bounded.
+2. A market is **coherent** if {\displaystyle \operatorname {lim} \_{t\rightarrow \infty }t^{-1}\log(\mu \_{i}(t))=0} for all {\displaystyle i=1,\dots ,n.}
+3. A market is **diverse** on {\displaystyle [0,T]} if there exists {\displaystyle \varepsilon >0} such that {\displaystyle \mu \_{\max }(t)\leq 1-\varepsilon } for {\displaystyle t\in [0,T].}
+4. A market is **weakly diverse** on {\displaystyle [0,T]} if there exists {\displaystyle \varepsilon >0} such that
+
+{\displaystyle {\frac {1}{T}}\int \_{0}^{T}\mu \_{\max }(t)\,dt\leq 1-\varepsilon }
+
+Diversity and weak diversity are rather weak conditions, and markets are generally far more diverse than would be tested by these extremes. A measure of market diversity is **market entropy**, defined by
+
+
+
+## Stochastic stability
+
+We consider the vector process {\displaystyle (\mu \_{(1)}(t),\dots ,\mu \_{(n)}(t)),} with {\displaystyle 0\leq t<\infty } of **ranked market weights**
+
+where ties are resolved “lexicographically”, always in favor of the lowest index. The log-gaps
+
+where {\displaystyle 0\leq t<\infty } and {\displaystyle k=1,\dots ,n-1} are continuous, non-negative semimartingales; we denote by {\displaystyle \Lambda ^{(k,k+1)}(t)=L^{G^{(k,k+1)}}(t;0)} their local times at the origin. These quantities measure the amount of turnover between ranks {\displaystyle k} and {\displaystyle k+1} during the time-interval {\displaystyle [0,t]}.
+
+A market is called **stochastically stable**, if {\displaystyle (\mu \_{(1)}(t),\cdots ,\mu \_{(n)}(t))} converges in distribution as {\displaystyle t\rightarrow \infty } to a random vector {\displaystyle (M\_{(1)},\cdots ,M\_{(n)})} with values in the Weyl chamber
+{\displaystyle \{(x\_{1},\dots ,x\_{n})\mid x\_{1}>x\_{2}>\dots >x\_{n}{\text{ and }}\sum \_{i=1}^{n}x\_{i}=1\}}
+of the unit simplex, and if the strong law of large numbers
+
+holds for suitable real constants {\displaystyle \lambda ^{(1,2)},\dots ,\lambda ^{(n-1,n)}.}
+
+
+## Arbitrage and the numeraire property
+
+Given any two investment strategies {\displaystyle \pi ,\rho } and a real number {\displaystyle T>0}, we say that {\displaystyle \pi } is **arbitrage** relative to {\displaystyle \rho } over the time-horizon {\displaystyle [0,T]}, if {\displaystyle \mathbb {P} (Z\_{\pi }(T)\geq Z\_{\rho }(T))\geq 1} and {\displaystyle \mathbb {P} (Z\_{\pi }(T)>Z\_{\rho }(T))>0} both hold; this relative arbitrage is called “strong” if {\displaystyle \mathbb {P} (Z\_{\pi }(T)>Z\_{\rho }(T))=1.} When {\displaystyle \rho } is {\displaystyle \kappa \equiv 0,} we recover the usual definition of arbitrage relative to cash.
+We say that a given strategy {\displaystyle \nu } has the numeraire property, if for any strategy {\displaystyle \pi } the ratio {\displaystyle Z\_{\pi }/Z\_{\nu }} is a {\displaystyle \mathbb {P} }−supermartingale. In such a case, the process {\displaystyle 1/Z\_{\nu }} is called a “deflator” for the market.
+
+No arbitrage is possible, over any given time horizon, relative to a strategy {\displaystyle \nu } that has the numeraire property (either with respect to the underlying probability measure {\displaystyle \mathbb {P} }, or with respect to any other probability measure which is equivalent to {\displaystyle \mathbb {P} }). A strategy {\displaystyle \nu } with the numeraire property maximizes the asymptotic growth rate from investment, in the sense that
+
+holds for any strategy {\displaystyle \pi }; it also maximizes the expected log-utility from investment, in the sense that for any strategy {\displaystyle \pi } and real number {\displaystyle T>0} we have
+
+If the vector {\displaystyle \alpha (t)=(\alpha \_{1}(t),\cdots ,\alpha \_{n}(t))'} of instantaneous rates of return, and the matrix {\displaystyle \sigma (t)=(\sigma (t))\_{1\leq i,j\leq n}} of instantaneous covariances, are known, then the strategy
+
+has the numeraire property whenever the indicated maximum is attained.
+
+The study of the numeraire portfolio links SPT to the so-called Benchmark approach to Mathematical Finance, which takes such a numeraire portfolio as given and provides a way to price contingent claims, without any further assumptions.
+
+A probability measure {\displaystyle \mathbb {Q} } is called equivalent martingale measure (EMM) on a given time-horizon {\displaystyle [0,T]}, if it has the same null sets as {\displaystyle \mathbb {P} } on {\displaystyle {\mathcal {F}}\_{T}}, and if the processes {\displaystyle X\_{1}(t),\dots ,X\_{n}(t)} with {\displaystyle 0\leq t\leq T} are all {\displaystyle \mathbb {Q} }−martingales. Assuming that such an EMM exists, arbitrage is not possible on {\displaystyle [0,T]} relative to either cash {\displaystyle \kappa } or to the market portfolio {\displaystyle \mu } (or more generally, relative to any
+strategy {\displaystyle \rho } whose wealth process {\displaystyle Z\_{\rho }} is a martingale under some EMM). Conversely, if {\displaystyle \pi ,\rho } are portfolios and one of them is arbitrage relative to the other on {\displaystyle [0,T]} then no EMM can exist on this horizon.
+
+
+## Functionally-generated portfolios
+
+Suppose we are given a smooth function {\displaystyle G:U\rightarrow (0,\infty )} on some neighborhood
+{\displaystyle U} of the unit simplex in {\displaystyle \mathbb {R} ^{n}} . We call
+
+the **portfolio generated by the function {\displaystyle \mathbb {G} }**. It can be shown that all the weights of this portfolio are non-negative, if its generating function {\displaystyle \mathbb {G} } is concave. Under mild conditions, the relative performance of this functionally-generated portfolio {\displaystyle \pi \_{\mathbb {G} }} with respect to the market portfolio {\displaystyle \mu }, is given by the **F-G decomposition**
+
+which involves no stochastic integrals. Here the expression
+
+is called the **drift process** of the portfolio (and it is a non-negative quantity if the generating function {\displaystyle \mathbb {G} } is concave); and the quantities
+
+with {\displaystyle 1\leq i,j\leq n} are called the **relative covariances** between {\displaystyle \log(X\_{i})} and {\displaystyle \log(X\_{j})} with respect to the market.
+
+
+### Examples
+
+1. The constant function {\displaystyle \mathbb {G} :=w>0} generates the *market portfolio* {\displaystyle \mu },
+2. The geometric mean function {\displaystyle \mathbb {H} (x):=(x\_{1}\cdots x\_{n})^{\frac {1}{n}}} generates the *equal-weighted portfolio* {\displaystyle \varphi \_{i}(n)={\frac {1}{n}}} for all {\displaystyle 1\leq i\leq n},
+3. The modified entropy function {\displaystyle \mathbb {S} ^{c}(x)=c-\sum \_{i=1}^{n}x\_{i}\cdot \log(x\_{i})} for any {\displaystyle c>0} generates the *modified entropy-weighted portfolio*,
+4. The function {\displaystyle \mathbb {D} ^{(p)}(x):=(\sum \_{i=1}^{n}x\_{i}^{p})^{\frac {1}{p}}} with {\displaystyle 0<p<1} generates the *diversity-weighted portfolio* {\displaystyle \delta \_{i}^{(p)}(t)={\frac {(\mu \_{i}(t))^{p}}{\sum \_{i=1}^{n}(\mu \_{i}(t))^{p}}}} with *drift process* {\displaystyle (1-p)\gamma \_{\delta ^{(p)}}^{\*}(t)}.
+
+### Arbitrage relative to the market
+
+The excess growth rate of the market portfolio admits
+the representation {\displaystyle 2\gamma \_{\mu }^{\*}(t)=\sum \_{i=1}^{n}\mu \_{i}(t)\tau \_{ii}^{\mu }(t)} as a capitalization-weighted average relative stock
+variance. This quantity is nonnegative; if it happens to be bounded away from zero, namely
+
+for all {\displaystyle 0\leq t<\infty } for some real constant {\displaystyle h}, then it can be shown using the F-G decomposition that,
+for every {\displaystyle T>\mathbb {S} (\mu (0))/h,} there exists a constant {\displaystyle c>0} for which the modified entropic portfolio {\displaystyle \Theta ^{(c)}} is strict arbitrage relative to the market {\displaystyle \mu } over {\displaystyle [0,T]}; see Fernholz and Karatzas (2005) for details. It is an
+open question, whether such arbitrage exists over arbitrary time horizons (for two special cases, in
+which the answer to this question turns out to be affirmative, please see the paragraph below and
+the next section).
+
+If the eigenvalues of the covariance matrix {\displaystyle (\sigma \_{ij}(t))\_{1\leq i,j\leq n}} are bounded away from both zero and infinity, the condition {\displaystyle \gamma \_{\mu }^{\*}\geq h>0} can be shown to be equivalent to diversity, namely {\displaystyle \mu \_{\max }\leq 1-\varepsilon } for a suitable {\displaystyle \varepsilon \in (0,1).} Then the diversity-weighted portfolio {\displaystyle \delta ^{(p)}} leads to strict arbitrage
+relative to the market portfolio over sufficiently long time horizons; whereas, suitable modifications
+of this diversity-weighted portfolio realize such strict arbitrage over arbitrary time horizons.
+
+
+## An example: volatility-stabilized markets
+
+We consider the example of a system of stochastic differential equations
+
+with {\displaystyle 1\leq i\leq n} given real constants {\displaystyle \alpha \geq 0} and an {\displaystyle n}-dimensional Brownian motion
+{\displaystyle (W\_{1},\dots ,W\_{n}).} It follows from the work of Bass and Perkins (2002) that this system has a weak solution, which is unique in distribution. Fernholz and Karatzas (2005) show how to construct this solution in terms of scaled and time-changed squared Bessel processes, and prove that the resulting system is coherent.
+
+The total market capitalization {\displaystyle X} behaves here as geometric Brownian motion with drift, and has the same constant growth rate as the largest stock; whereas the excess growth rate of the market
+portfolio is a positive constant. On the other hand, the relative market weights {\displaystyle \mu \_{i}}
+with {\displaystyle 1\leq i\leq n} have the dynamics of multi-allele Wright-Fisher processes.
+This model is an example of a non-diverse market with unbounded variances, in which strong arbitrage opportunities with respect to the market portfolio {\displaystyle \mu } exist over *arbitrary time horizons*, as was shown by Banner and Fernholz (2008). Moreover, Pal (2012) derived the joint density of market weights at fixed times and at certain stopping times.
+
+
+## Rank-based portfolios
+
+We fix an integer {\displaystyle m\in \{2,\dots ,n-1\}} and construct two capitalization-weighted portfolios: one consisting of the top {\displaystyle m} stocks, denoted {\displaystyle \zeta }, and one consisting of the bottom {\displaystyle n-m} stocks, denoted {\displaystyle \eta }. More specifically,
+
+for {\displaystyle 1\leq i\leq n.} Fernholz (1999), (2002) showed that the relative performance of the large-stock portfolio with respect to the market is given as
+
+Indeed, if there is no turnover at the mth rank during the interval {\displaystyle [0,T]}, the fortunes of {\displaystyle \zeta } relative
+to the market are determined solely on the basis of how the total capitalization of this sub-universe
+of the {\displaystyle m} largest stocks fares, at time {\displaystyle T} versus time 0; whenever there is turnover at the {\displaystyle m}-th rank,
+though, {\displaystyle \zeta } has to sell at a loss a stock that gets “relegated” to the lower league, and buy a stock
+that has risen in value and been promoted. This accounts for the “leakage” that is evident in the
+last term, an integral with respect to the cumulative turnover process {\displaystyle \Lambda ^{(m,m+1)}} of the relative weight in the large-cap portfolio {\displaystyle \zeta } of the stock that occupies the mth rank.
+
+The reverse situation prevails with the portfolio {\displaystyle \eta } of small stocks, which gets to sell at a profit stocks that are being promoted to the “upper capitalization” league, and buy relatively cheaply stocks that are being relegated:
+
+It is clear from these two expressions that, in a *coherent* and *stochastically stable* market, the small-
+stock cap-weighted portfolio {\displaystyle \zeta } will tend to outperform its large-stock counterpart {\displaystyle \eta }, at least over
+large time horizons and; in particular, we have under those conditions
+
+This quantifies the so-called **size effect**. In Fernholz (1999, 2002), constructions such as these are generalized to include functionally generated portfolios based on ranked market weights.
+
+
+## First- and second-order models
+
+First- and second-order models are hybrid Atlas models that reproduce some of the structure of real stock markets. First-order models have only rank-based parameters, and second-order models have both rank-based and name-based parameters.
+
+Suppose that {\displaystyle X\_{1},\ldots ,X\_{n}} is a coherent market, and that the limits
+
+and
+
+exist for {\displaystyle k=1,\ldots ,n}, where {\displaystyle r\_{t}(i)} is the rank of {\displaystyle X\_{i}(t)}. Then the Atlas model {\displaystyle {\widehat {X}}\_{1},\ldots ,{\widehat {X}}\_{n}} defined by
+
+where {\displaystyle {\hat {r}}\_{t}(i)} is the rank of {\displaystyle {\widehat {X}}\_{i}(t)} and {\displaystyle (W\_{1},\ldots ,W\_{n})} is an {\displaystyle n}-dimensional Brownian motion process, is the **first-order model** for the original market, {\displaystyle X\_{1},\ldots ,X\_{n}}.
+
+Under reasonable conditions, the capital distribution curve for a first-order model will be close to that of the original market. However, a first-order model is ergodic in the sense that each stock asymptotically spends {\displaystyle (1/n)}-th of its time at each rank, a property that is not present in actual markets. In order to vary the proportion of time that a stock spends at each rank, it is necessary to use some form of hybrid Atlas model with parameters that depend on both rank and name. An effort in this direction was made by Fernholz, Ichiba, and Karatzas (2013), who introduced a **second-order model** for the market with rank- and name-based growth parameters, and variance parameters that depended on rank alone.
+

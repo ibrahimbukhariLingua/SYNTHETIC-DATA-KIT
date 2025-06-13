@@ -1,0 +1,31 @@
+Self-financing portfolio
+
+
+# Self-financing portfolio
+
+
+
+In financial mathematics, a **self-financing portfolio** is a portfolio having the feature that, if there is no
+exogenous infusion or withdrawal of money, the purchase of a new asset must be financed by the sale of an old one.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ This concept is used to define for example admissible strategies and replicating portfolios, the latter being fundamental for arbitrage-free derivative pricing.
+
+
+## Mathematical definition
+
+
+### Discrete time
+
+Assume we are given a discrete filtered probability space {\displaystyle (\Omega ,{\mathcal {F}},\{{\mathcal {F}}\_{t}\}\_{t=0}^{T},P)}, and let {\displaystyle K\_{t}} be the solvency cone (with or without transaction costs) at time *t* for the market. Denote by {\displaystyle L\_{d}^{p}(K\_{t})=\{X\in L\_{d}^{p}({\mathcal {F}}\_{T}):X\in K\_{t}\;P-a.s.\}}. Then a portfolio {\displaystyle (H\_{t})\_{t=0}^{T}} (in physical units, i.e. the number of each stock) is self-financing (with trading on a finite set of times only) if
+
+If we are only concerned with the set that the portfolio can be at some future time then we can say that {\displaystyle H\_{\tau }\in -K\_{0}-\sum \_{k=1}^{\tau }L\_{d}^{p}(K\_{k})}.
+
+If there are transaction costs then only discrete trading should be considered, and in continuous time then the above calculations should be taken to the limit such that {\displaystyle \Delta t\to 0}.
+
+
+### Continuous time
+
+Let {\displaystyle S=(S\_{t})\_{t\geq 0}} be a d-dimensional semimartingale frictionless market and {\displaystyle h=(h\_{t})\_{t\geq 0}} a d-dimensional predictable stochastic process such that the stochastic integrals {\displaystyle h^{i}\cdot S^{i}} exist {\displaystyle \forall \,i=1,\dots ,d}. The process {\displaystyle h\_{t}^{i}} denote the number of shares of stock number {\displaystyle i} in the portfolio at time {\displaystyle t}, and {\displaystyle S\_{t}^{i}} the price of stock number {\displaystyle i}. Denote the value process of the trading strategy {\displaystyle h} by
+
+Then the portfolio/the trading strategy {\displaystyle h=\left((h\_{t}^{1},\dots ,h\_{t}^{d})\right)\_{t}} is called *self-financing* if
+
+The term {\displaystyle h\_{0}\cdot S\_{0}} corresponds to the initial wealth of the portfolio, while {\displaystyle \int \_{0}^{t}h\_{u}\cdot \mathrm {d} S\_{u}} is the cumulated gain or loss from trading up to time {\displaystyle t}. This means in particular that there have been no infusion of money in or withdrawal of money from the portfolio.
+

@@ -1,0 +1,58 @@
+First-difference estimator
+
+
+# First-difference estimator
+
+
+
+In statistics and econometrics, the **first-difference (FD) estimator** is an estimator used to address the problem of omitted variables with panel data. It is consistent under the assumptions of the fixed effects model. In certain situations it can be more efficient than the standard fixed effects (or "within") estimator, for example when the error terms follows a random walk.
+
+The estimator requires data on a dependent variable, {\displaystyle y\_{it}}, and independent variables, {\displaystyle x\_{it}}, for a set of individual units {\displaystyle i=1,\dots ,N} and time periods {\displaystyle t=1,\dots ,T}. The estimator is obtained by running a pooled ordinary least squares (OLS) estimation for a regression of {\displaystyle \Delta y\_{it}} on {\displaystyle \Delta x\_{it}}.
+
+
+## Derivation
+
+The FD estimator avoids bias due to some unobserved, time-invariant variable {\displaystyle c\_{i}}, using the repeated observations over time:
+
+Differencing the equations, gives:
+
+which removes the unobserved {\displaystyle c\_{i}} and eliminates the first time period.
+
+The FD estimator {\displaystyle {\hat {\beta }}\_{FD}} is then obtained by using the differenced terms for {\displaystyle x} and {\displaystyle u} in OLS:
+
+where {\displaystyle X,y,} and {\displaystyle u}, are notation for matrices of relevant variables. Note that the rank condition must be met for {\displaystyle \Delta X'\Delta X} to be invertible ({\displaystyle {\text{rank}}[\Delta X'\Delta X]=k}), where {\displaystyle k} is the number of regressors.
+
+Let
+
+and, analogously,
+
+If the error term is strictly exogenous, i.e. {\displaystyle E[u\_{it}|x\_{i1},x\_{i2},..,x\_{iT}]=0}, by the central limit theorem, the law of large numbers, and the Slutsky's theorem, the estimator is distributed normally with asymptotic variance of
+
+Under the assumption of homoskedasticity and no serial correlation, {\displaystyle {\text{Var}}(\Delta u|X)=\sigma \_{\Delta u}^{2}}, the asymptotic variance can be estimated as
+
+where {\displaystyle {\hat {\sigma }}\_{u}^{2}}, a consistent estimator of {\displaystyle \sigma \_{u}^{2}}, is given by
+
+and
+
+
+## Properties
+
+To be unbiased, the fixed effects estimator (FE) requires strict exogeneity, defined as
+
+The first difference estimator (FD) is also unbiased under this assumption.
+
+If strict exogeneity is violated, but the weaker assumption
+
+holds, then the FD estimator is consistent.
+
+Note that this assumption is less restrictive than the assumption of strict exogeneity which is required for consistency using the FE estimator when {\displaystyle T} is fixed. If {\displaystyle T\rightarrow \infty }, then both FE and FD are consistent under the weaker assumption of contemporaneous exogeneity.
+
+The Hausman test can be used to test the assumptions underlying the consistency of the FE and FD estimators.
+
+
+## Relation to fixed effects estimator
+
+For {\displaystyle T=2}, the FD and fixed effects estimators are numerically equivalent.
+
+Under the assumption of homoscedasticity and no serial correlation in {\displaystyle u\_{it}}, the FE estimator is more efficient than the FD estimator. This is because the FD estimator induces no serial correlation when differencing the errors. If {\displaystyle u\_{it}} follows a random walk, however, the FD estimator is more efficient as {\displaystyle \Delta u\_{it}} are serially uncorrelated.
+

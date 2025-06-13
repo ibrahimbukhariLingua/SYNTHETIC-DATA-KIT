@@ -1,0 +1,112 @@
+Cost-loss model
+
+
+# Cost-loss model
+
+
+
+The **cost-loss model**, also called the **cost/loss model** or the **cost-loss decision model**, is a model used to understand how the predicted probability of adverse events affects the decision of whether to take a costly precautionary measure to protect oneself against losses from that event. The threshold probability above which it makes sense to take the precautionary measure equals the ratio of the cost of the preventative measure to the loss averted, and this threshold is termed the **cost/loss ratio** or **cost-loss ratio**. The model is typically used in the context of using prediction about weather conditions to decide whether to take a precautionary measure or not.
+
+
+## Mathematical model
+
+Suppose we are concerned about the occurrence of an adverse event (such as rainfall during an outdoor picnic). Suppose that, if we do not take any action to address the possibility, and the adverse event does occur, we incur a loss *L*. On the other hand, if we undertake the specified precautionary action (which may mean taking umbrellas or tents to the picnic, or changing the picnic venue to a worse but rain-free location), then, regardless of whether or not the adverse event occurs, we incur a cost *C*. In other words, our matrix of costs is as follows:
+
+| Adverse events occur | Adverse event does not occur |
+| --- | --- |
+| Precautionary action taken | *C* | *C* |
+| Precautionary action not taken | *L* | 0 |
+
+Suppose the probability of the adverse event occurring is *p*. Then, the expected cost of taking the precautionary action is *C* and the expected cost of not taking the precautionary action is *pL*. Therefore, the precautionary action passes a cost-benefit analysis if {\displaystyle C<pL} (or equivalently, {\displaystyle C/L<p}) and fails such an analysis if {\displaystyle C>pL} (or equivalently, {\displaystyle C/L>p}). The case {\displaystyle C=pL} is the case of indifference between taking and not taking the precautionary action.
+
+Thus, the threshold probability above which it makes sense to take the precautionary action is {\displaystyle C/L}. This ratio is termed the cost-loss ratio.
+
+Note that in the case that {\displaystyle C>L}, it never makes sense to take the precautionary action, because even if we were certain of the event occurring, the cost of the precautionary action would still be greater than the loss experienced.
+
+Note that, due to risk aversion, the values of cost and loss measured above need not be the same as the monetary values even in the case that they depend only on monetary values.
+
+
+## Application to the utility of forecasting
+
+One of the goals of weather forecasting is to help obtain better probability estimates for the occurrence of adverse events, so that the decisions made in the cost loss model are more informed and have higher quality. Examples include predicting whether or not it will rain, whether or not it will snow, and whether there will be a hurricane, cyclone, blizzard, tornado, heavy winds or extreme temperatures. The ability of decision makers to translate probabilistic information provided by forecasts into good decisions is therefore a measure of the utility of weather forecasting.
+
+The cost-loss model has also been applied in the context of decisions based on forecasts of air pollution levels and long-range weather forecasting, including ensemble forecasting.
+
+
+## Extended Cost-loss model
+
+The **Extended cost-loss model**
+is a simple extension of the cost-loss model.
+While the cost-loss model analyses the question *"Should I take precautionary action now?"* the extended cost-loss model analyses the question *"Should I take precautionary action now or should I wait for the next forecast before deciding whether to take precautionary action?"*.
+The cost-loss model shows that forecast users make better decisions if they have probabilities about future outcomes,
+while the extended cost-loss model shows that forecast users make even better decisions if they have information about possible forecast changes, in addition to the probabilities of the future outcomes.
+It also leads to an algorithm that shows how to make the "decide now or wait for the next forecast" decision.
+It applies to situations in which the decision maker is using probabilistic forecasts, such as probabilistic weather forecasts, probabilistic climate predictions or probabilistic economic forecasts.
+The Cost-loss model considers one forecast prior to an event, while the Extended cost-loss model considers two forecasts at different times prior to the event.
+
+The Extended cost-loss model is an example of a dynamic decision model, and links the cost-loss model to the Bellman equation and Dynamic programming.
+
+
+### Extended Cost-loss Example Situations
+
+* Should I cancel my event now, or wait for the next weather forecast and then decide whether to cancel?
+* Should I evacuate now, or wait for the next hurricane forecast and then decide whether to evacuate?
+* Should I irrigate now, or wait for the next weather forecast?
+* Should I harvest now, or wait for the next weather forecast?
+* Should I invest now, or wait for more information before I decide whether to invest or not?
+
+### Extended Cost-loss Intuition
+
+The intuition behind the Extended cost-loss model, and the reason why information about forecast changes can help decisions, can be explained as follows.
+
+Consider the situation in which an event organizer is holding an event on Saturday, and is accessing a weather forecast on Thursday to help them decide whether to cancel the event or not. If they do not cancel the event on Thursday, they will be able to access another forecast on Friday, and make a final decision then as to whether to cancel or not. There are costs related to cancellation, which are larger on Friday than on Thursday.
+Information about forecast changes comes into the decision to be made on Thursday in the following way: if the forecast is known to often change by a large extent, and become much more accurate on average, between Thursday and Friday, then waiting until Friday may make more sense, especially if cancellation on Friday is not much more expensive than cancellation on Thursday. On the other hand if the forecast is known not to change very much between Thursday and Friday, then cancelling on Thursday may make more sense, especially if cancellation on Thursday is substantially cheaper.
+
+
+### Extended Cost-loss Mathematical Model
+
+The extended cost-loss model can be formulated as an extension of the cost-loss model as follows
+.
+
+Suppose we are concerned about the risk of occurrence of an adverse event at a certain future time (such as rainfall during an outdoor picnic).
+Suppose that, if we do not take any action to address the risk, and the adverse event does occur, we incur a loss {\displaystyle L}.
+We have two opportunities to take precautionary action: when we get forecast 2, two time-steps before the event (time step -2) at which point taking precautionary action will cost {\displaystyle C\_{2}},
+and when we get forecast 1, one time-step before the event (time step -1), at which point taking precautionary action will cost {\displaystyle C\_{1}}.
+We are only allowed to take precautionary action once.
+The model creates an interesting trade-off when taking action at time-step -2 is cheaper than taking action at time-step -1 (and hence {\displaystyle C\_{2}<C\_{1}}), and both are cheaper than the loss (and hence {\displaystyle C\_{1}<L}).
+The matrix of costs is as follows:
+
+| Adverse event occurs | Adverse event does not occur |
+| --- | --- |
+| Precautionary action taken at time-step -2 | {\displaystyle C\_{2}} | {\displaystyle C\_{2}} |
+| Precautionary action taken at time-step -1 | {\displaystyle C\_{1}} | {\displaystyle C\_{1}} |
+| Precautionary action not taken | {\displaystyle L} | {\displaystyle 0} |
+
+Analysis of this model
+leads naturally to the following four probabilities:
+
+* {\displaystyle p\_{crit}=C\_{1}/L}: the critical probability in the cost-loss model, as used on time-step -1 to decide whether to take precautionary action.
+* {\displaystyle p\_{1}}: the probability, evaluated on time-step -1, of adverse events. When considered from the point of view of time-step -1, {\displaystyle p\_{1}} takes a single value. When considered from the point of view of time-step -2, {\displaystyle p\_{1}} has a distribution of possible values.
+* {\displaystyle p'}: the probability, evaluated on time-step -2, that on time-step -1, {\displaystyle p\_{1}} will exceed {\displaystyle p\_{crit}}. This is a probability of a probability.
+* {\displaystyle {\hat {p}}}: the probability, evaluated on time-step -2, that if on time-step -1, {\displaystyle p\_{1}} does not exceed {\displaystyle p\_{crit}}, adverse events will nevertheless occur. This is also a probability of a probability.
+
+In weather forecasting, the probabilities {\displaystyle p'} and {\displaystyle {\hat {p}}} cannot be derived directly from standard probabilistic weather predictions, but require additional analysis of the properties of the forecasts.
+
+With regards to the decision to be made on time-step -2, which is whether to take precautionary action or wait, the expected utilities of the two actions available at time-step -2 are given by:
+
+* Expected utility of *taking* precautionary action {\displaystyle =-C\_{2}}
+* Expected utility of *not taking* precautionary action and waiting{\displaystyle =-p'C\_{1}-(1-p'){\hat {p}}L}
+
+Using these expected utilities, and applying the principle of maximising expected utility, leads to the rule that precautionary action should be taken on time-step -2 if: {\displaystyle -C\_{2}>-p'C\_{1}-(1-p'){\hat {p}}L}
+
+
+### Extended Cost-Loss Algorithms
+
+Algorithms for evaluating the above inequality typically take the forecast at time-step -2 and use martingales to simulate the distribution of possible forecasts at time-step -1 and the distribution of possible outcomes on day 0.
+In weather forecasting, the use of martingales is based on the observation that, while weather itself is predictable to some extent, changes in well-calibrated weather forecasts are not.
+This is analogous to the Efficient-market hypothesis in finance.
+
+Martingales can either be used to simulate possible forecast probabilities, or, for forecasts that consist of normal distributions, martingales can be used to simulate the changes in the mean of the forecast distribution.
+
+In both cases the parameters of the martingales can be derived from past forecasts.
+

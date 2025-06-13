@@ -1,0 +1,44 @@
+Multilateral exchange
+
+
+# Multilateral exchange
+
+
+
+A **multilateral exchange** is a transaction, or forum for transactions, which involve more than two parties.
+
+For example, Alice gives Bob an apple in exchange for an orange, that is a bilateral exchange.
+A multilateral exchange would involve a third party, for example:
+Alice gives an apple to Bob who gives an orange to Charles, who gives a pear to Alice.
+
+In the real world, such transactions are spread over time, involve items of different values, and involve many more parties. A special type of accounting is used for this, called mutual credit, or credit clearing.
+
+
+## Accounting
+
+Although any accounting framework can be used, there is one approach that fits naturally for multilateral exchange. It is the simplest possible database/spreadsheet design, single-entry bookkeeping rather than double-entry bookkeeping.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+All accounts begin with a balance of zero, meaning they owe nothing and are owed nothing. An account may only close at zero, meaning it has given as much as it has received, i.e. that the exchange is complete with respect to all the other accounts. When a transaction happens, an entry is made in an accounting journal of a payment, or credit flowing in the opposite direction.
+
+| #id | Payee | Payer | Amount | Description |
+| --- | --- | --- | --- | --- |
+| 1 | Ann | Bob | 10 | Bob gave Ann an Apple |
+| 2 | Bob | Charlie | 5 | Charlie gave Bob an Apricot |
+| 3 | Charlie | Ann | 10 | Ann gave Charlie an Orange |
+| Volume | 15 |
+
+Account balances are derived by 'adding up' the journal.
+
+| Name | Balance | Meaning |
+| --- | --- | --- |
+| Ann | 0 | Balanced - Ann may close her account |
+| Bob | +10-5=5 | Bob is owed (and obliged to take) goods and services to the value of 5 units |
+| Charlie | +5-10=-5 | Charlie owes (and is obliged to give) goods and services to the value of 5 units |
+| Total | 0 | nothing entered or left this closed system of accounts. |
+
+The sum of all account balances is *a priori* zero. Accounts which close (or are retired) above zero have given more value to the other accounts than they have received and vice versa. Thus a positive balance represents not value \*in\* the account, but value \*owed\* to that account by (the aggregate of) all other accounts.
+
+An account's balance in such a system indicates not the position of the account with respect to past activities with other accounts, but also the activity needed to complete the exchange. thus a balance of +10 means that not only has the account delivered +10 more value to the other members than it has received, but that in order to complete the exchange it intends to receive +10 more in the future than it delivers.
+
+Bob's obligation to spend 5, exactly matches Charlie's obligation to earn 5.
+

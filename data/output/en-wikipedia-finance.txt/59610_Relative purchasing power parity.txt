@@ -1,0 +1,47 @@
+Relative purchasing power parity
+
+
+# Relative purchasing power parity
+
+
+
+**Relative Purchasing Power Parity** is an economic theory which predicts a relationship between the inflation rates of two countries over a specified period and the movement in the exchange rate between their two currencies over the same period. It is a dynamic version of the absolute purchasing power parity theory.
+
+A reason for the prominence of this concept in economic research is the fact that most countries publish inflation data normalized to an arbitrary year, but not absolute price level data.
+
+
+## Explanation
+
+Suppose that the currency of Country A is called the A$ (A-dollar) and the currency of country B is called the B$. The exchange rate between the two countries is quoted as {\displaystyle S\equiv {\tfrac {A\$}{B\$}}}, so country A can be regarded as the "home country".
+
+The theory states that if the price of a basket of commodities and services in country A is {\displaystyle P\_{t}} (measured in A$), then the price {\displaystyle Q\_{t}} of the same basket in country B will be {\displaystyle Q\_{t}=C\cdot P\_{t}} (still measured in A$), where C is a unitless and time-invariant constant. That is, one price level is always a constant multiple of the other. To measure {\displaystyle Q\_{t}} in B$, divide by the exchange rate {\displaystyle Q\_{t}={\tfrac {C\cdot P\_{t}}{S\_{t}}}} (now measured in B$).
+
+The last identity can be rewritten for t=1 as
+
+and because C is time-invariant, this has to hold for all periods, so
+
+This can be further transformed to
+
+which is the "exact formulation" of the Relative Purchasing Power Parity.
+
+Using the common first-order Taylor approximation to the logarithm {\displaystyle \log(x)\approx x-1} for {\displaystyle x} close to {\displaystyle 1}, this can be written linearly as
+
+where lowercase letters denote natural logarithms of the original variables.
+
+Using the first-order approximation again on the definition of the inflation rate from t=1 to t=2
+
+allows us to finally rewrite the equation as
+
+which implies that the value of A$ relative to B$ should depreciate (nominally) by (approximately) the same amount that the inflation in country A exceeds inflation in country B. This is quite intuitive, as an agent in country A with a constant real income stream would ceteris-paribus have a higher purchasing power for goods from country B after one period has passed, but the exchange rate adjusts exactly to offset this advantage by making the currency of country B nominally more expensive.
+
+Absolute purchasing power parity occurs when C=1, and is a special case of the above.
+
+A simple numerical example: If prices in the United States rise by 3% and prices in the European Union rise by 1%, then the price of EUR quoted in USD should rise by approximately 2%, which is equivalent with a 2% depreciation of the USD or an increase in the purchasing power of the EUR relative to that of the USD. Note that the above difference-in-logs equation is based on the first-order approximation of the logarithm and therefore only holds approximately. To obtain the precise value, use the exact formulation {\displaystyle {\tfrac {S\_{2}}{S\_{1}}}={\tfrac {P\_{2}/P\_{1}}{Q\_{2}/Q\_{1}}}={\tfrac {1.01}{1.03}}=0.98058}, which implies a USD depreciation of {\displaystyle (0.98058)^{-1}=1.942\%} relative to the EUR. As the linear approximation to the logarithm deteriorates in the size of the change in the exchange rate or the price level, the exact formulation should be preferred for large deviations.
+
+Unlike absolute PPP, relative PPP predicts a relationship between changes in prices and changes in exchange rates, rather than a relationship between their levels. Remember that relative PPP is derived from absolute PPP. Hence, the latter always implies the former: if absolute PPP holds, this implies that relative PPP must hold also. But the converse need not be true: relative PPP does not necessarily imply absolute PPP (if relative PPP holds, absolute PPP can hold or fail).
+
+
+## Absolute purchasing power parity
+
+Commonly called ***absolute* purchasing power parity**, this theory assumes that equilibrium in the exchange rate between two currencies will force their purchasing powers to be equal. This theory is likely to hold well for commodities which are easily transportable between the two countries (such as gold, assuming this is freely transferable) but is likely to be false for other goods and services which cannot easily be transported, because the transportation costs will distort the parity.
+

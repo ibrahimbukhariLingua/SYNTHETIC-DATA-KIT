@@ -1,0 +1,82 @@
+Single-tranche CDO
+
+
+# Single-tranche CDO
+
+
+
+**Single-tranche CDO** or **bespoke CDO** is an extension of full capital structure synthetic CDO deals, which are a form of collateralized debt obligation. These are bespoke transactions where the bank and the investor work closely to achieve a specific target.
+
+In a bespoke portfolio transaction, the investor chooses or agrees to the list of reference entities, the rating of the tranche, maturity of the transaction, coupon type (fixed or floating), subordination level, type of collateral assets used etc. Typically the objective is to create a debt instrument where the return is significantly higher than comparably rated bonds. In a nutshell, a single-tranche CDO is a CDO where the arranging bank does not simultaneously place the entirety of the capital structure. These CDOs are also called arbitrage CDOs because the arranging bank seeks to pay a lower return than the return available from hedging the single-tranche exposure.
+
+
+## Full-capital-structure CDOs
+
+In a full capital structure transaction, the total nominal of the notes issued equals to the total nominal of the underlying portfolio. Therefore, the full capital structure transaction requires all of the tranches being placed with investors.
+
+
+### Full-capital-structure deal example
+
+Consider a US$1,000,000,000 portfolio consisting of 100 entities. Furthermore, consider an SPV which has no assets or liabilities to start with. In order to purchase this $1,000,000,000 portfolio it has to borrow $1,000,000,000. Instead of borrowing $1,000,000,000 in one go, it borrows in tranches and which have different risks associated with them. As an example consider the following transaction:
+
+Full capital structure CDO
+| Class A | US$800,000,000 | AAA/Aaa |
+| --- | --- | --- |
+| Class B | $100,000,000 | A+/A1 |
+| Class C | $70,000,000 | B+/B1 |
+| Class D | $30,000,000 | Unrated |
+| Issuer | SPV Registered in Cayman Islands | |
+| Maturity | 5 years | |
+| Reference portfolio | $1,000,000,000 total of 100 entities | |
+
+Class D notes are not rated and they are called equity or the first loss piece. As soon as there are defaults within the portfolio, the principals of the Class D notes are reduced with the corresponding amount. If there are a total of $12,000,000 of losses in the portfolio during the life of the deal, Class D noteholders receive only $18,000,000 back, having lost $12,000,000 of their capital. Class A, B, and C noteholders receive all of their money back. However, if there are $42,000,000 of losses in the portfolio during the life of the transaction then the entire capital of the Class D noteholders is gone and the Class C noteholders receive only $58,000,000.
+
+
+### What drives full capital-structure deals?
+
+The investor who is most at risk is the equity investor. In the above example this is the investor of the Class D notes. The equity piece is the most difficult part of the capital structure to place. Therefore the equity investor has the most say in shaping up a full capital structure deal. Typically the sponsor of the CDO will take a portion of the equity notes with the condition of not selling them until maturity to demonstrate that they are comfortable with the portfolio and expect the deal to perform well. This is an important selling point for the investors of mezzanine and senior notes.
+
+
+### Structure of full-capital-structure deals
+
+In synthetic transactions, credit risk of the Reference Portfolio is transferred to the SPV via credit default swaps. For each name in the portfolio the SPV enters into a credit default swap where the SPV sells credit protection to the bank in return for a periodically paid premium. The cash raised from the sale of the various classes of notes, i.e.; Class A, B, C and D in the above example, is placed in *collateral securities*. Typically these are AAA rated notes issued by supranationals, governments, governmental organizations, or covered bonds (Pfandbrief). These are low-risk instruments with a return slightly below the interbank market yield. If there is a default in the portfolio, the credit default swap for that entity is triggered and the bank demands the loss suffered for that entity from the SPV. For example if the bank has entered into a credit default swap for $10,000,000 on Company A and this company is bankrupt the bank will demand $10,000,000 less the recovery amount from the SPV. The recovery amount is the secondary market price of $10,000,000 of bonds of Company A after bankruptcy. Typically recovery amount is assumed to be 40% but this number changes depending on the credit cycle, industry type, and depending on the company in question. Hence, if recovery amount is $4,000,000 (working on 40% recovery assumption), the bank receives $6,000,000 from the SPV. In order to pay this money, the SPV has to liquidate some collateral securities to pay the bank. Having lost some assets, the SPV has to reduce some liabilities as well and it does so by reducing the notional of the equity notes. Hence, after the first default in the portfolio, the equity notes, i.e.; Class D notes in the above example are reduced to $24,000,000 from $30,000,000.
+
+A typical single-tranche CDO is a note issued by a bank or an SPV where in addition to the credit risk of the issuing entity, the investors take credit risk on a portfolio of entities. In return for taking this additional credit risk on the portfolio, the investors achieve a higher return than the market interest rate for the corresponding maturity. A typical Single Tranche CDO will have the following terms depending on whether it is issued by the bank or by the SPV:
+
+Single tranche CDO terms (issued from a bank's balance sheet)
+| Issuer | MyBank |
+| --- | --- |
+| Nominal | $10,000,000 |
+| Maturity | 5 years |
+| Coupon | 6m Libor + 1.00% |
+| Rating | A+/A1 |
+| Reference portfolio | $1,000,000,000 portfolio of 100 investment grade entities based in USA and Canada |
+| Attachment point | 5% |
+| Detachment point | 6% |
+
+Single Tranche CDO Terms (issued from an SPV)
+| Issuer | CDO Company I Cayman Islands Ltd. |
+| --- | --- |
+| Nominal | $10,000,000 |
+| Maturity | 5 years |
+| Rating | A+/A1 |
+| Collateral | 5yr MTN issued by the International Bank for Reconstruction and Development (World Bank) rated AAA/Aaa |
+| Coupon | 6m Libor + 1.00% |
+| Reference portfolio | $1,000,000,000 portfolio of 100 investment grade entities based in USA and Canada |
+| Attachment point | 5% |
+| Detachment point | 6% |
+
+
+## Bespoke portfolio
+
+According to researchers at Joseph L. Rotman School of Management, the
+
+> Tranches of nonstandard portfolios are regularly traded. These are referred to as “bespokes.” Bespoke portfolios differ in the names that are included in the portfolio, the average CDS spread for the names in the portfolio, and in the dispersion of the CDS spreads. The approach to estimating tranche spreads for a bespoke depends on its characteristics.
+> 
+> — Hull and White 2008
+
+
+### How does it work?
+
+In the above example, the investor is making a $10,000,000 investment. He will receive 6 month Libor + 1.00% as long as the cumulative losses in the Reference Portfolio remain below 5%. If for example at the end of the transaction the losses in the portfolio remain below $50,000,000 (5% of $1,000,000,000) the investor will receive $10,000,000 back. If however, the losses in the portfolio amount to $52,000,000, which corresponds to 5.2% of pool notional, the investor will lose 20% ($2,000,000) of his capital, i.e. he will receive only $8,000,000 back. The coupon he receives will be on the reduced notional from the moment the portfolio suffers a loss that affects the investor.
+

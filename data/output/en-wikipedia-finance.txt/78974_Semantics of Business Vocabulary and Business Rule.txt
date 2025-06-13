@@ -1,0 +1,143 @@
+Semantics of Business Vocabulary and Business Rules
+
+
+# Semantics of Business Vocabulary and Business Rules
+
+
+
+The **Semantics of Business Vocabulary and Business Rules** (**SBVR**) is an adopted standard of the Object Management Group (OMG) intended to be the basis for formal and detailed natural language declarative description of a complex entity, such as a business. SBVR is intended to formalize complex compliance rules, such as operational rules for an enterprise, security policy, standard compliance, or regulatory compliance rules. Such formal vocabularies and rules can be interpreted and used by computer systems. SBVR is an integral part of the OMG's model-driven architecture (MDA).
+
+
+## Overview
+
+The SBVR standard defines the vocabulary and rules for documenting the semantics of business vocabularies, business facts, and business rules; as well as an XMI schema for the interchange of business vocabularies and business rules among organizations and between software tools.
+
+SBVR allows the production of business vocabularies and rules; vocabulary plus rules constitute a shared domain model with the same expressive power of standard ontological languages. SBVR allows multilingual development, since it is based on separation between
+symbols and their meaning. SBVR enables making business rules accessible to software tools, including tools that support the business experts in creating, finding, validating, and managing business rules, and tools that support the information technology experts in converting business rules into implementation rules for automated systems.
+
+SBVR uses OMG's Meta-Object Facility (MOF) to provide interchange capabilities MOF/XMI mapping rules, enable
+generating MOF-compliant models and define an XML schema. SBVR proposes Structured English as one of possibly many notations that can map to the SBVR Metamodel.
+
+SBVR and Knowledge Discovery Metamodel (KDM) are designed as two parts of a unique OMG Technology Stack for software analytics related to existing software systems. KDM defines an ontology related to software artifacts and thus provides an initial formalization of the information related to a software system. SBVR can be further used to formalize complex compliance rules related to the software.
+
+
+## Background
+
+Business rules represent the primary means by which an organization can direct its business, defining the operative way to reach its objectives and perform its actions.
+
+A rule-based approach to managing business and the information used by that business is a way of *identifying and articulating the rules which define the structure and control the operation of an enterprise* it represents a new way to think about enterprise and its rules, in order to enable a complete business representation made by and for business people. Business rules can play an important role in defining business semantics: they can influence or guide behaviours and support policies, responding to environmental situations and events. *Semantics of Business Vocabulary and Business Rules* (SBVR) is the OMG implementation of the business rules approach.
+
+
+## History
+
+In June 2003 OMG issued the Business Semantics of Business Rule (BSBR) Request For Proposal, in order to create a standard *to allow business people to define the policies and rules by which they run their business in their own language, in terms of the things they deal with in the business, and to capture those rules in a way that is clear, unambiguous and readily translatable into other representations.* The SBVR proposal was developed by the Business Rules Team, a consortium organized in August 2003 to respond to the BSBR RFP.
+
+In September 2005, The Business Modeling and Integration Task Force and the Architecture Board of the Object Management Group approved the proposal *Semantics of Business Vocabulary and Business Rules (SBVR)* to become a final adopted specification in response to the RFP. Later SBVR proposal was ratified by the Domain Technical Committee (DTC), approved of the OMG Board of Directors, and SBVR finalization task force was launched to convert the proposal into ISO/OMG standard format and perform final editing prior to release as an OMG formal specification.
+
+In January 2008, the finalization phase was completed and the Semantics of Business Vocabulary and Business Rules (SBVR), Version 1.0 formal specification was released and is publicly available at the Catalog of OMG Business Strategy, Business Rules and Business Process Management Specifications web page.
+
+
+## Conceptual formalization
+
+SBVR is a landmark for the OMG, the first OMG specification to incorporate the formal use of natural language in modeling and the first to provide explicitly a model of formal logic. Based on a fusion of linguistics, logic, and computer science, and two years in preparation, SBVR provides a way to capture specifications in natural language and represent them in formal logic so they can be machine-processed.
+
+Methodologies used in software development are typically applied only when a problem is already formulated and well described. The actual difficulty lies in the previous step, that is describing problems and expected functionalities. Stakeholders involved in software development can express their ideas using a language very close to them, but they usually are not able to formalize these concepts in a clear and unambiguous way. This implies a large effort in order to interpret and understand real meanings and concepts hidden among stakeholders' words. Special constraints on syntax or predefined linguistic structures can be used in order to overcome this problem, enabling natural language to well represent and formally define problems and requirements.
+
+The main purpose of natural language modelling is hence to make natural language suitable for conceptual modelling. The focus is on semantic aspects and shared meanings, while syntax is thought in a perspective based on formal logic mapping.
+
+Conceptualization and representation play fundamental roles in thinking, communicating, and modeling. There is a triad of
+1) concepts in our minds,
+2) real-world things conceptualized by concepts, and
+3) representations of concepts that we can use to think and communicate about the concept and its corresponding real-world things.
+
+(Note that real-world things include both concrete things and representations of those concrete things as records and processes in operational information systems.)
+
+A conceptual model is a formal structure representing a possible world, comprising a conceptual schema and a set of facts that instantiate the conceptual schema. The conceptual schema is a combination of concepts and facts of what is possible, necessary, permissible, and obligatory in each possible world. The set of facts instantiates the conceptual schema by assertion to describe one possible world. A rule is a fact that asserts either a logical necessity or an obligation. Obligations are not necessarily satisfied by the facts; necessities are always satisfied.
+
+SBVR contains a vocabulary for conceptual modeling and captures expressions based on this vocabulary as formal logic structures. The SBVR vocabulary allows one to formally specify representations of concepts, definitions, instances, and rules of any knowledge domain in natural language, including tabular forms. These features make SBVR well suited for describing business domains and requirements for business processes and information systems to implement business models.
+
+
+## Fact-orientation
+
+People communicate facts, that is the fact is the unit of communication. The fact-oriented approach enables multidimensional categorization.
+
+* The fact-oriented approach supports time changeability.
+* The fact-oriented approach provides semantic stability.
+* The fact-oriented approach enables extensibility and reuse.
+* The fact-oriented approach involves breaking down compound fact types into elementary (atomic) ones.
+
+Conceptual formalization describes a business domain, and is composed of 1) a conceptual schema (fact structure) and 2) a population of ground facts. A business domain (universe of discourse) comprises those aspects of the business that are of interest.
+
+The schema declares:
+
+* the relevant fact types (kinds of ground fact, e.g. *Employee works for Department*)
+* the relevant business rules (typically constraints or derivation rules).
+
+A fact is a proposition taken to be true by the business. Population facts are restricted to elementary and existential facts.
+
+Constraints can be static or dynamic:
+
+* A static constraint imposes a restriction on what fact populations are possible or permitted, for each fact population taken individually e.g. *Each Employee was born on at most one Date.*
+* A dynamic constraint imposes a restriction on transitions between fact populations
+
+e.g. *a person’s marital status may change from single to married, but not from divorced to single*
+
+Derivation of facts.
+
+* Derivation means either, how a fact type may be derived from one or more other fact types e.g.
+ + *Person1 is an uncle of Person2 if Person1 is a brother of some Person3 who is a parent of Person2*
+* Or, how a noun concept (object type) may be defined in terms of other object types and fact types e.g.
+ + *Each FemaleAustralian is a Person who was born in Country ‘Australia’ and has Gender ‘Female’*
+
+## Rule-based approach
+
+Rules play a very important role in defining business semantics: they can influence or guide behaviours and support policies, responding to environmental situations and events. This means that rules represent the primary means by which an organization can direct its business, defining the operative way to reach its objectives and perform its actions.
+
+The rule-based approach aims to address two different kinds of users:
+
+* it addresses business communities, in order to provide them with a structured approach, based on a clear set of concepts and used to access and manage business rules;
+* it addresses IT professionals, in order to provide them with a deep understanding about business rules and to help them in models creation. The rules-based approach also helps bridge the rift that can occur between the data managers and the software designers.
+
+The essence of the rule-based conceptual formalizations is that *rules build on facts, and facts build on concepts as expressed by terms*.
+
+This mantra is memorable, but a simplification since in SBVR: Meaning is separate from expression; Fact Types (Verb Concepts) are built on Noun Concepts; Noun Concepts are represented by Terms; and Fact Types are represented by Fact Symbols (verb phrases).
+
+Rule statements are expressed using either alethic modality or deontic modality and require elements of modal logic as formalization.
+
+SBVR **Structural Business Rules** use two alethic modal operators:
+
+SBVR **Operative Business Rules** use two deontic modal operators:
+
+Structural business rules (static constraints) are treated as alethic necessities by default, where each state of the fact model corresponds to a possible world. Pragmatically, the rule is understood to apply to all future states of the fact model, until the rule is revoked or changed. For the model theory, the necessity operator is omitted from the formula. Instead, the rule is merely tagged as a necessity. For compliance with Common Logic, such formulae can be treated as irregular expressions, with the necessity modal operator treated as an uninterpreted symbol.
+
+If the rule includes exactly one deontic operator, e.g. O (obligation), and this is at the front, then the rule may be formalized as Op, where p is a first-order formula that is tagged as obligatory. In SBVR, this tag is assigned the informal semantics: it ought to be the case that p (for all future states of the fact model, until the constraint is revoked or changed). From a model-theoretic perspective, a model is an interpretation where each non-deontic formula evaluates to true, and the model is classified as: a permitted model if the p in each deontic formula (of the form Op) evaluates to true, otherwise the model is a forbidden model (though still a model). This approach removes any need to assign a truth value to expressions of the form Op.
+
+
+## Formal logic with a natural language interface
+
+SBVR is for modeling in natural language. Based on linguistics and formal logic, SBVR provides a way to represent statements in controlled natural languages as logic structures called semantic formulations. SBVR is intended for expressing business vocabulary and business rules, and for specifying business requirements for information systems in natural language. SBVR models are
+declarative, not imperative or procedural. SBVR has the greatest expressivity of any OMG modeling language. The logics supported by SBVR are typed first order predicate logic with equality, restricted higher order logic (Henkin semantics), restricted deontic and alethic modal logic, set theory with bag comprehension, and mathematics. SBVR also includes projections, to support definitions and answers to queries, and questions, for formulating queries. Interpretation of SBVR semantic formulations is based on model theory. SBVR has a MOF model, so models can be structurally linked at the level of individual facts with other MDA models based on MOF.
+
+SBVR is aligned with Common Logic – published by ISO as ISO/IEC 24707:2007.
+
+SBVR captures business facts and business rules that may be expressed either informally or formally. Business rule expressions are formal only if they are expressed purely in terms of: fact types in the pre-declared schema for the business domain, certain logical/ mathematical operators, quantifiers etc. Formal rules are transformed into a logical formulation that is used for exchange with other rules-based software tools. Informal rules may be exchanged as un-interpreted comments. An approach to automatically generate SBVR business rules from natural language specification is presented in.
+
+
+## Other OMG standards
+
+SBVR specification defines a metamodel and allows to instance it, in order to create different vocabularies and to define the related business rules; it is also possible to complete these models with data suitable to describe a specific organization. the SBVR approach provides means (i.e. mapping rules) to translate natural language artifacts into MOF-compliant artifacts; this allows to exploit all the advantages related to MOF (repository facilities, interchangeability, tools, ...).
+
+Several MDA-related OMG works in progress are expected to incorporate SBVR, including:
+
+* Business Process Definition Metamodel (BPDM)
+* Organization Structure Metamodel (OSM)
+* Business Motivation Model (BMM)
+* UML Profile for Production Rule Representation (PRR)
+* UML Profile for the Department of Defense Architecture Framework/Ministry of Defense(Canada) Architecture Framework (DoDAF/MODAF).
+* Knowledge Discovery Metamodel (KDM)
+* Wider interest in SBVR– Semantic Web, OASIS
+
+The Ontology Definition Metamodel (ODM) has been made compatible with SBVR, primarily by aligning the logic grounding of the ISO Common Logic specification (CL) referenced by ODM with the SBVR Logical Formulation of Semantics vocabulary. CL itself was modified specifically so it potentially can include the modal sentence requirements of SBVR. ODM provides a bridge to link SBVR to the Web Ontology Language for Services (OWL-S), Resource Description Framework Schema (RDFS), Unified Modeling Language (UML), Topic Map (TM), Entity Relationship Modeling (ER), Description Logic (DL), and CL.
+
+Other programs outside the OMG are adopting SBVR. The Digital Business Ecosystem (DBE), an integrated project of the European Commission Framework Programme 6, has adopted SBVR as the basis for its Business Modeling Language.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ The World Wide Web Consortium (W3C) is assessing SBVR for use in the Semantic Web, through the bridge provided by ODM.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ SBVR will extend the capability of MDA in all these areas.
+

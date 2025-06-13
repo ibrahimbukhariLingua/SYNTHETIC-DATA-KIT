@@ -1,0 +1,32 @@
+EconMult
+
+
+# EconMult
+
+
+
+**EconMult** is a general fleet model to be used in fisheries modelling. EconMult has been developed since 1991 as a part of the Multispecies management programme by the Norwegian Research Council at the Norwegian College of Fishery Science (University of Tromsø, Norway).
+
+
+## Model resolution and key variables
+
+EconMult is a discrete time simulation model where the fleet activity is controlled by two variables: *Number of vessels (**v**)* (within each fleet segment) and *Number of fishing days **d**)* (within each time interval). *The biomass units* (***x***) are exogenous variables. The model resolution is determined by four structural variables: *Number of fleet groups **j**)*, *Number of targeted species **n**)*, *Number of biomass units **i**)* (which may be more than one within each targeted species) and *Period length* (time step in the simulation). The number of vessels and fishing days therefore are presented in fleet (columns)-targeted species (rows) matrices, while the biomass units is presented in a column vector (***X***):
+
+| {\displaystyle V={\begin{pmatrix}v\_{1,1}&\cdots &v\_{1,n}\\\vdots &\ddots &\vdots \\v\_{j,1}&\cdots &v\_{j,n}\end{pmatrix}}} | {\displaystyle D={\begin{pmatrix}d\_{1,1}&\cdots &d\_{1,n}\\\vdots &\ddots &\vdots \\d\_{j,1}&\cdots &d\_{j,n}\end{pmatrix}}} | {\displaystyle X={\begin{pmatrix}x\_{1}\\\vdots \\x\_{i}\end{pmatrix}}} | {\displaystyle i\geq n>0} {\displaystyle j>0\,\!} |
+| --- | --- | --- | --- |
+
+
+## Catch production
+
+A *fishery* is in EconMult defined as a unique fleet/targeted species combination. The total catch within each fishery may include all biomass units defined in the model. Each biomass unit vessel catch is computed by Cobb–Douglas production function, applying two input variables: *number of fishing days **d**)* and *biomass unit **x**)*. In the matrix below each column represents a fleet group and each row a targeted species so each element in the matrix is a fishery and gives the vessel catch of the biomass units represented. The biomass units represent all the targeted species. Each catch is represented a Cobb–Douglas production equation as shown in the vessel yield matrix (Y):
+
+{\displaystyle Y\_{V}={\begin{pmatrix}{\begin{pmatrix}q\_{1,1,1}d\_{1,1}v\_{1,1}^{\alpha \_{1,1,1}-1}x\_{1}^{\beta \_{1,1,1}}\\\vdots \\q\_{1,1,i}d\_{1,1}v\_{1,1}^{\alpha \_{1,1,i}-1}x\_{i}^{\beta \_{1,1,i}}\end{pmatrix}}&\cdots &{\begin{pmatrix}q\_{1,n,1}d\_{1,n}v\_{1,n}^{\alpha \_{1,n,1}-1}x\_{1}^{\beta \_{1,n,1}}\\\vdots \\q\_{1,n,i}d\_{1,n}v\_{1,n}^{\alpha \_{1,n,i}-1}x\_{i}^{\beta \_{1,n,i}}\end{pmatrix}}\\\vdots &\ddots &\vdots \\{\begin{pmatrix}q\_{j,1,1}d\_{j,1}v\_{j,1}^{\alpha \_{j,1,1}-1}x\_{1}^{\beta \_{j,1,1}}\\\vdots \\q\_{j,1,i}d\_{j,1}v\_{j,1}^{\alpha \_{j,1,i}-1}x\_{i}^{\beta \_{j,1,i}}\end{pmatrix}}&\cdots &{\begin{pmatrix}q\_{j,n,1}d\_{j,n}v\_{j,n}^{\alpha \_{j,n,1}-1}x\_{1}^{\beta \_{j,n,1}}\\\vdots \\q\_{j,n,i}d\_{j,n}v\_{j,n}^{\alpha \_{j,n,i}-1}x\_{i}^{\beta \_{j,n,i}}\end{pmatrix}}\end{pmatrix}}}
+
+The corresponding fleet catches are
+
+{\displaystyle Y={\begin{pmatrix}{\begin{pmatrix}q\_{1,1,1}d\_{1,1}v\_{1,1}^{\alpha \_{1,1,1}}x\_{1}^{\beta \_{1,1,1}}\\\vdots \\q\_{1,1,i}d\_{1,1}v\_{1,1}^{\alpha \_{1,1,i}}x\_{i}^{\beta \_{1,1,i}}\end{pmatrix}}&\cdots &{\begin{pmatrix}q\_{1,n,1}d\_{1,n}v\_{1,n}^{\alpha \_{1,n,1}}x\_{1}^{\beta \_{1,n,1}}\\\vdots \\q\_{1,n,i}d\_{1,n}v\_{1,n}^{\alpha \_{1,n,i}}x\_{i}^{\beta \_{1,n,i}}\end{pmatrix}}\\\vdots &\ddots &\vdots \\{\begin{pmatrix}q\_{j,1,1}d\_{j,1}v\_{j,1}^{\alpha \_{j,1,1}}x\_{1}^{\beta \_{j,1,1}}\\\vdots \\q\_{j,1,i}d\_{j,1}v\_{j,1}^{\alpha \_{j,1,i}}x\_{i}^{\beta \_{j,1,i}}\end{pmatrix}}&\cdots &{\begin{pmatrix}q\_{j,n,1}d\_{j,n}v\_{j,n}^{\alpha \_{j,n,1}}x\_{1}^{\beta \_{j,n,1}}\\\vdots \\q\_{j,n,i}d\_{j,n}v\_{j,n}^{\alpha \_{j,n,i}}x\_{i}^{\beta \_{j,n,i}}\end{pmatrix}}\end{pmatrix}}}
+
+*α* *β* and *q* are parameters, the first two known as output elasticities of effort and biomass respectively, *q* is often referred to as *the catchability coefficient*. All the three parameters have the same dimension as the matrix above, e.g. the catchability coefficient:
+
+{\displaystyle Q={\begin{pmatrix}{\begin{pmatrix}q\_{1,1,1}\\\vdots \\q\_{1,1,i}\end{pmatrix}}&\cdots &{\begin{pmatrix}q\_{1,n,1}\\\vdots \\q\_{1,n,i}\end{pmatrix}}\\\vdots &\ddots &\vdots \\{\begin{pmatrix}q\_{j,1,1}\\\vdots \\q\_{j,1,i}\end{pmatrix}}&\cdots &{\begin{pmatrix}q\_{j,n,1}\\\vdots \\q\_{j,n,i}\end{pmatrix}}\end{pmatrix}}}
+

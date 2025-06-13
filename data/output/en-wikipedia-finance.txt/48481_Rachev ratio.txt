@@ -1,0 +1,62 @@
+Rachev ratio
+
+
+# Rachev ratio
+
+
+
+The **Rachev Ratio** (or **R-Ratio**) is a risk-return performance measure of an investment asset, portfolio, or strategy. It was devised by Dr. Svetlozar Rachev and has been extensively studied in quantitative finance. Unlike the *reward-to-variability* ratios, such as Sharpe ratio and Sortino ratio, the Rachev ratio is a *reward-to-risk* ratio, which is designed to measure the right tail reward potential relative to the left tail risk in a non-Gaussian setting. Intuitively, it represents the potential for extreme positive returns compared to the risk of extreme losses (negative returns), at a rarity frequency q (quantile level) defined by the user.
+
+The ratio is defined as the Expected Tail Return (ETR) in the best q% cases divided by the Expected tail loss (ETL) in the worst q% cases. The ETL is the average loss incurred when losses exceed the Value at Risk at a predefined quantile level. The ETR, defined by symmetry to the ETL, is the average profit gained when profits exceed the Profit at risk at a predefined quantile level.
+
+For more tailored applications, the generalized Rachev Ratio has been defined with different powers and/or different confidence levels of the ETR and ETL.
+
+
+## Definition
+
+According to its original version introduced by the authors in 2004, the Rachev ratio is defined as:
+
+{\displaystyle \rho \left({x'r}\right)={\frac {CVa{R\_{(1-\alpha )}}\left({{r\_{f}}-x'r}\right)}{CVa{R\_{(1-\beta )}}\left({x'r-{r\_{f}}}\right)}}}
+
+or, alternatively,
+
+{\displaystyle \rho \left({x'r}\right)={\frac {ET{L\_{\alpha }}\left({{r\_{f}}-x'r}\right)}{ET{L\_{\beta }}\left({x'r-{r\_{f}}}\right)}},}
+
+where {\displaystyle \alpha } and {\displaystyle \beta } belong to {\displaystyle \left({0,1}\right)}, and in the symmetric case: {\displaystyle \alpha =\beta }. {\displaystyle r\_{f}} is the risk-free rate of return and {\displaystyle x'r} presents the portfolio return. The **ETL** is the expected tail loss, also known as conditional value at risk (CVaR), is defined as:
+
+{\displaystyle ET{L\_{\alpha }}={\frac {1}{\alpha }}\int \_{0}^{\alpha }{Va{R\_{q}}\left(X\right)dq},}
+
+and
+
+{\displaystyle Va{R\_{\alpha }}=-F\_{X}^{-1}\left(\alpha \right)=-\inf \left\{{x\left|P{\left({X\leq x}\right)>\alpha }\right.}\right\}}
+
+is the value at risk (VaR) of the random return {\displaystyle X}.
+
+Thus, the ETL can be interpreted as the average loss beyond VaR:
+
+{\displaystyle ET{L\_{\alpha }}\left(X\right)=E\left[{L|L>Va{R\_{\_{\alpha }}}}\right]}.
+
+The generalized Rachev ratio is the ratio between the power CVaR of the opposite of the excess return at a given confidence level and the power CVaR of the excess return at another confidence level. That is,
+
+{\displaystyle \rho \left({x'r}\right)={\frac {ET{L\_{\left({\gamma ,\alpha }\right)}}\left({{r\_{f}}-x'r}\right)}{ET{L\_{\left({\delta ,\beta }\right)}}\left({x'r-{r\_{f}}}\right)}},}
+
+where {\displaystyle ET{L\_{\left({\gamma ,\alpha }\right)}}\left(X\right)=E\left[{{\rm {max}}{{\left({L,0}\right)}^{\gamma }}|L>Va{R\_{\_{\alpha }}}}\right]} is the power CVaR of {\displaystyle X}, and {\displaystyle \gamma } is a positive constant. The main advantage of the generalized Rachev ratio over the traditional Rachev ratio is conferred by the power indexes {\displaystyle \gamma } and {\displaystyle \delta } that characterize an investor's aversion to risk.
+
+
+## Properties
+
+The Rachev ratio can be used in both *ex-ante* and *ex-post* analyses.
+
+In the *ex-post* analysis, the Rachev ratio is computed by dividing the corresponding two sample AVaR's. Since the performance levels in the Rachev ratio are quantiles of the active return distribution, they are relative levels as they adjust according to the distribution. For example, if the scale is small, then the two performance levels will be closer to each other. As a consequence, the Rachev ratio is always well-defined.
+
+In the *ex-ante* analysis, optimal portfolio problems based on the Rachev ratio are, generally, numerically hard to solve because the Rachev ratio is a fraction of two CVaRs which are convex functions of portfolio weights. In effect, the Rachev ratio, if viewed as a function of portfolio weights, may have many local extrema.
+
+Several empirical tests of the Rachev ratio and the generalized Rachev ratio have been proposed.
+
+An algorithm for solving Rachev ratio optimization problem was provided in Konno, Tanaka, and Yamamoto (2011).
+
+
+## Example
+
+In quantitative finance, non-Gaussian return distributions are common. The Rachev ratio, as a risk-adjusted performance measurement, characterizes the skewness and kurtosis of the return distribution (see picture on the right).
+

@@ -1,0 +1,145 @@
+Dynamic currency conversion
+
+
+# Dynamic currency conversion
+
+
+
+**Dynamic currency conversion** (DCC) or **cardholder preferred currency** (CPC) is a process whereby the amount of a credit card transaction is converted at the point of sale, ATM or internet to the currency of the card's country of issue. DCC is generally provided by third party operators in association with the merchant, and not by a card issuer. Card issuers permit DCC operators to offer DCC in accordance with the card issuers' processing rules. However, using DCC, the customer is usually charged an amount in excess of the transaction amount converted at the normal exchange rate, though this may not be obviously disclosed to the customer at the time. The merchant, the merchant's bank or ATM operator usually impose a markup on the transaction, in addition to the exchange rate that would normally apply, sometimes by as much as 18%.
+
+Without DCC, the currency conversion would take place by the card issuer when the transaction is charged to the card holder's statement, usually a day or two later, but for an increasing number of cards in real time. Even though the card issuer will publish the exchange rate used for conversion on the statement, most do not disclose the exchange rate used to convert a transaction at the time of payment. Both Visa and Mastercard state that the rates they publish in advance of a transaction posting to a cardholder's statement are indicative, since the rates they use for conversion correspond to the date and time they process the transaction, as opposed to the actual transaction date.
+
+With DCC, the currency conversion takes place at the point of sale. Unlike a credit card company, a DCC operator must disclose the exchange rate used for conversion at the time of the transaction according to credit card company rules which govern how DCC is offered. The DCC exchange rate must be based on a wholesale interbank rate, to which any additional markup is then applied. Visa requires that this markup be disclosed to the cardholder. The credit card company may still charge an additional fee for charges made outside the card holder's home country, even when the transaction has been processed in their home currency with DCC.
+
+Proponents of DCC argue that customers can better understand prices in their home currency, making it easier for business travelers to keep track of their expenses. They also point out that the customer has full transparency inclusive of conversion fees, and can make an informed choice whether or not to use DCC. The financial benefit to the merchant or their card processor may be an incentive for the merchant to offer DCC even when it would be disadvantageous to the customer. Opponents of DCC argue that many customers do not understand DCC, and point out that DCC markups are usually higher than the card issuers' currency conversion fees, and therefore, in almost all cases, opting for DCC will result in a higher cost to the cardholder.
+
+Due to the strategic threat posed by DCC on Visa's core revenues (namely, currency conversions), in 2010 Visa attempted to ban DCC. However, the Federal Court of Australia found that Visa acted anti-competitively to protect its own revenues and was fined $A18 million.
+
+
+## History
+
+A currency conversion service was offered in 1996 and commercialized by a number of companies including Monex Financial Services and Fexco.
+
+Prior to the card schemes (Visa and MasterCard) imposing rules relating to DCC, cardholder transactions were converted without the need to disclose that the transaction was being converted into a customer's home currency, in a process known as "back office DCC". Visa and MasterCard now prohibit this practice and require the customer's consent for DCC, although many travelers have reported that this is not universally followed.
+
+Visa Chargeback reason code 76 explicitly covers situations where the "Cardholder was not advised that Dynamic Currency Conversion (DCC) would occur" or "Cardholder was refused the choice of paying in the merchant’s local currency". Customers have a strong chance of successfully disputing such transactions, especially in situations where they pay with a credit card and where 3-D Secure (such as Verified by Visa or SecureCode) is not involved. Mastercard DCC Compliance team investigates the case and then notifies the Acquirer of their findings. If appropriate, the Acquirer will also be asked to take action to remedy the complaint.
+
+Mastercard take seriously any complaint from a customer by investigating the case for compliance with DCC rules, and if the customer was not given a choice in a DCC transaction, the customer's bank has the possibility to refund the customer with a chargeback sent to the merchant's bank.
+
+
+## How it works
+
+DCC is provided by DCC operators, in association with the merchant, and not by a credit card company. Merchants who wish to provide a DCC option to their customers would sign up for the facility with a DCC operator. The DCC operator would provide the merchant with a special DCC-POS terminal.
+
+When a customer is ready to pay for a transaction and chooses to pay with a credit card, the DCC-POS terminal of a DCC merchant will determine the card's country of issue from the card's issuer identification number (first 6 digits of the card number). If it detects a foreign card is being used, then the transaction will be routed through the DCC provider. The terminal will send to the DCC operator the transaction details, and the DCC operator would perform the usual card verification checks, and determine using its own criteria whether to offer DCC to the customer. To this point, the customer is not aware that the card and transaction information had been forwarded to the DCC operator. The customer also does not know who the DCC operator is.
+
+If the DCC operator is going to offer the customer DCC, the POS terminal will also display the transaction amount in the customer's home currency. Visa and Mastercard require the DCC provider to disclose the exchange rate and margin to the cardholder, but not all merchants comply with this obligation, and other card issuers may not have that obligation. The cardholder can then select whether the transaction is to be processed in the local or home currency.
+
+If the cardholder chooses to pay in their home currency, the DCC provider will cause the cardholder's account to be debited by the transaction amount in the home currency, and the merchant's account to be credited with the amount in the local currency. At regular periods, usually monthly, the merchant would also be credited with the commission for DCC transactions. The exchange rate risk is borne by the DCC operator, which may carry that risk or set up some hedging arrangement to minimise or transfer that risk.
+
+Some card issuers impose an additional foreign transaction fee on DCC transactions, even though they are denominated in the card's home currency.
+
+
+### Practical example
+
+An example of the difference with DCC can be seen in the following image, where the same GBP purchase is made twice just after each other: one with DCC and one without DCC. In both cases, the original amount is GB£6.90 and is paid with a Visa card denominated in EUR.
+
+The difference in charges can be seen on the customer's card statement. With DCC (left part of the above image), the amount becomes EUR 8.20, at an exchange rate of 1.1882. The DCC provider, in this example the merchant itself, also disclosed that it is using the Reuters Wholesale Interbank exchange rate plus 2.95%. Without DCC (right part of the above image), the amount can vary with fluctuations between the GBP and EUR currencies, but on the date of this transaction it was EUR 8.04 (image below).
+
+In this example, difference is just over 2%. Though this difference may seem a small amount for the customer, it can result in a big income stream for the DCC provider and merchant. One should also realise that even without DCC the card issuer converts the transaction amount using its own exchange rates and margins, which in this example was 1.16522.
+
+
+### Limitations
+
+The merchant's point-of-sale terminal can only detect the card's country of issue and not the currency of the account that is to be selected. The DCC makes an assumption that the account home currency is the currency of the card's country of issue. This assumption can result in DCC being offered incorrectly. For example, a DCC-enabled terminal in the Eurozone will offer DCC to a customer paying with a debit card issued in the United Kingdom on a Euro bank account. If the customer mistakenly chooses DCC, then the transaction will first be converted from EUR to GBP by the DCC provider, and then from GBP back to EUR by the UK card issuer, often with its markup.
+
+Here is a detailed step by step demonstration of a representative DCC misuse – enable DCC in foreign transactions with sole US dollar account credit cards issued in China. Due to foreign exchange controls, China's banks issue large amount of such credit cards for international use. In the worst situation, cardholders may have to experience 3 conversions to finish the transactions:
+
+1. From merchant's local currency to CNY with markup carried by DCC provider, but card issuing bank cannot process;
+2. From CNY to USD with markup (sometimes waived by card issuing bank) carried by Visa or Mastercard and enters bank account;
+3. Cardholder buys US dollar from bank to pay statement balance before due date (card issuing bank may do this automatically).
+
+There have reported cases of point-of-sale terminals allowing merchants to change the transaction amount and currency after the cardholder has entered their PIN and handed the terminal back to the merchant. In this scenario, DCC is carried out without the cardholder's consent, even though the receipt subsequently printed states falsely that the cardholder has given their consent.
+
+
+## DCC on the Internet and ATMs
+
+DCC operates similarly with Internet transactions. When payment card information is entered to finalize payment, the system can detect the home country of the cardholder and offer the cardholder the option of paying in their home currency.
+
+Many commercial websites can detect the country from which a query has come and quote prices in terms of the enquirer's country. Often the prices in the local currency of the supplier are not indicated, and the exchange rate used to convert prices is often also not disclosed.
+
+Visa issued a rule making DCC available for cash withdrawals at ATMs as of 13 April 2019. Mastercard now does the same.
+
+In the VISA example, when DCC is NOT chosen, Visa converts currency at the wholesale (!) rate and adds a 1% charge for performing the conversion. The customer gets the "real" exchange rate (no commission) unless the card issuer adds a charge for international transactions. American banks, for example, often charge 3%, even though the debit order they receive is already presented for collection in US dollars. Some banks and other issuers make no extra charge, so the full international transaction cost is just the 1%.
+
+When DCC is applied, the alternate companies do the exchange and add the commissions described above, which have no limit. The bank card company, such as Visa, still takes its 1%.
+
+Visa rule 5.9.8.3 of 13 April 2019 says that ATM customers must be given a clear choice whether to use DCC or not:
+
+"A Merchant or ATM Acquirer that offers Dynamic Currency Conversion
+(DCC) must comply with all of the following:
+. . .
+"5 Acceptance
+
+"—Inform the Cardholder that DCC is optional and not use any language or
+procedures that may cause the Cardholder to choose DCC by default
+
+"-- Ensure that the Cardholder is given all the relevant information to
+allow them to make a clear and transparent decision to expressly agree to
+a DCC Transaction"
+
+The reality is otherwise. The screen on an ATM announces the exchange rate that will be used and asks whether the customer accepts or refuses that rate. It appears to be "take it or leave it." There is NO explanation that refusal will not end the transaction, but rather means the exchange will be done without charging the commission. The clear "choice" required by the rule is not presented. In addition, there is usually very small type giving the % of the commission and saying this is not an additional charge (which is false). On some screens there will be advice to be sure to know the rules, but no way is provided to learn the rules and bank tellers are generally unaware of them.
+
+
+## Impact
+
+DCC enables merchants to profit from the foreign exchange conversion that occurs during the payment process for a foreign denominated credit card. The merchant would normally earn a margin on the transaction with no exchange rate risk, which is borne by the DCC operator.
+
+Credit card acquirers and payment gateways also profit on the foreign exchange conversion that occurs during the payment process for foreign denominated credit card when DCC is used.
+
+
+### Advantages
+
+DCC enables a customer to know the cost of a transaction in their home currency. In a non-DCC transaction the customer would not know the exchange rate that the credit card company will apply (and the final cost) until the transaction appears on a monthly statement.
+
+Other advantages to customers, according to proponents, are:
+
+* the ability to view and therefore understand prices in foreign countries in their home currency,
+* the ability to enter expenses more efficiently and promptly, especially for business travellers, and
+* EU regulation 2560/2001 could make non-eurozone cash withdrawals within the European Economic Area cheaper for eurozone customers because euro cash withdrawals are regulated. A Swedish law (SFS 2002:598) combined with the EU resolution does the same thing for Swedish cards if the transaction is in SEK or EUR. Generally, Eurozone banks charge a fixed fee for non-EEA and non-EUR cash withdrawals while EEA withdrawals in EUR are free of charge. For example, if a Eurozone card is used for a withdrawal in the UK, with DCC there are two options – processing the transaction in GBP (card issuer's exchange rate but a fixed cash withdrawal fee) or processing the transaction in EUR (DCC marked-up exchange rate but no fixed cash withdrawal fee). For small amounts, the latter option will often be cheaper.
+
+### Disadvantages
+
+The main objection to DCC is the unfavorable exchange rates and fees being applied on the transaction, resulting in a higher charge on their credit card, and that in many cases the customer is not aware of the additional and often unnecessary cost of the DCC transaction.
+
+The size of the foreign exchange margin added using DCC varies depending on the DCC operator, card acquirer or payment gateway and merchant. This margin is in addition to any charges levied by the customer's bank or credit card company for a foreign purchase. In most cases, customers are charged more using DCC than they would have been if they had simply paid in the foreign currency.
+
+
+## Regulatory issues
+
+In May 2010 Visa Inc attempted to ban DCC on its network citing strategic issues and ultimately (as described by the ACCC) significant financial losses to its business. Many protests were made by merchants, financial institutions, and regulators.
+
+In 2015, Visa was fined approximately A$18 million plus $2 million in costs for engaging in anti-competitive conduct, in proceedings brought by the Australian Competition & Consumer Commission. The action was taken after Visa partially blocked the use of DCC 1 May 2010 to 6 October 2010.
+
+In 2019, the EU legislator has passed Regulation 2019/518, amending Regulation 924/2009. The regulation introduced transparency obligations for card-based payment transactions at ATMs and terminals and for online transactions. Payment service providers must inform their contractual partners of the total currency conversion charges as a percentage mark-up compared to the latest available euro foreign exchange reference rate.
+
+
+## DCC providers
+
+The main DCC providers are:
+
+* Alliex based in South Korea
+* ConCardis based in Germany
+* Cuscal based in Australia
+* Euronet Worldwide based in the United States
+* Pure Commerce based in Australia
+* Continuum Commerce Solutions based in Ireland
+* Elavon based in USA
+* Fexco based in Ireland
+* First Data based in the United States
+* Global Blue based in Switzerland
+* Monex Financial Services based in Ireland
+* Planet global company with HQ in the UK
+* Six Payment Services based in Switzerland
+* Travelex based in the United Kingdom
+* Worldline based in France

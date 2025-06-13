@@ -21,6 +21,7 @@ def determine_parser(file_path: str, config: Dict[str, Any]):
     from synthetic_data_kit.parsers.docx_parser import DOCXParser
     from synthetic_data_kit.parsers.ppt_parser import PPTParser
     from synthetic_data_kit.parsers.txt_parser import TXTParser
+    from synthetic_data_kit.parsers.jsonl_parser import JSONLParser
     
     # Check if it's a URL
     if file_path.startswith(('http://', 'https://')):
@@ -42,6 +43,7 @@ def determine_parser(file_path: str, config: Dict[str, Any]):
             '.docx': DOCXParser(),
             '.pptx': PPTParser(),
             '.txt': TXTParser(),
+            '.jsonl':JSONLParser()
         }
         
         if ext in parsers:

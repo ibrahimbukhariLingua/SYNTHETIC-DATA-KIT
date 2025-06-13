@@ -1,0 +1,55 @@
+CLP(R)
+
+
+# CLP(R)
+
+
+
+**CLP(R)** is a declarative programming language. It stands for constraint logic programming (real) where real refers to the real numbers. It can be considered and is generally implemented as a superset or add-on package for a Prolog implementation.
+
+
+## Example rule
+
+The simultaneous linear equations:
+
+are expressed in CLP(R) as:
+
+and a typical implementation's response would be:
+
+`Z = 35.75
+Y = 8.25
+X = 15.5
+Yes`
+
+
+## Example program
+
+CLP(R) allows the definition of predicates using recursive definitions. For example a *mortgage* relation can be defined as
+relating the principal P, the number of time periods of the loan T, the repayment each period R, the interest rate per period I
+and the final balance owing at the end of the loan B.
+
+The first rule expresses that for a 0 period loan the balance owing at the end is simply the original principal.
+The second rule expresses that for a loan of at least one time period we can calculate the new owing amount P1 by
+multiplying the principal by 1 plus the interest rate and subtracting the repayment. The remainder of the loan
+is treated as another mortgage for the new principal and one less time period.
+
+What can you do with it? You can ask many questions.
+If I borrow 1000$ for 10 years at 10% per year repaying 150 per year, how much will I owe at the end?
+
+The system responds with the answer
+
+How much can I borrow with a 10 year loan at 10% repaying 150 each year to owe nothing at the end?
+
+The system responds with the answer
+
+What is the relationship between the principal, repayment and balance on a 10 year loan at 10% interest?
+
+The system responds with the answer
+
+This shows the relationship between the variables, without requiring any to take a particular value.
+
+
+## Prolog Integration
+
+CLP(R) has first been integrated into a Prolog system in 1994, namely into SICStus Prolog. This implementation has since been ported to many popular Prolog systems, including Ciao, SWI-Prolog and XSB.
+

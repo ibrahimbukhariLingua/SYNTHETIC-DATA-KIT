@@ -1,0 +1,143 @@
+Revenue management
+
+
+# Revenue management
+
+
+
+
+
+**Revenue management** (**RM**) is a discipline to maximize profit by optimizing rate (ADR) and occupancy (Occ). In its day to day application the maximization of Revenue per Available Room (RevPAR) is paramount. It is seen by some as synonymous with yield management.
+
+
+## Overview
+
+Businesses face important decisions regarding what to sell, when to sell, to whom to sell, and for how much. Revenue management uses data-driven tactics and strategy to answer these questions in order to increase revenue. The discipline of revenue management (RM) is also known as also known as Yield Management (YM), and is a cross-disciplinary field. It combines operations research or management science, analytics, economics, human resource management, software development, marketing, e-commerce, consumer behaviour, and consulting.
+
+For destinations with benchmark data available the maximization of RGI (Revenue Generated Index or RevPar Index) is the focus of this discipline.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+
+## History
+
+Before the emergence of revenue management, BOAC (now British Airways) experimented with differentiated fare products by offering capacity-controlled "Earlybird" discounts to stimulate demand for seats that would otherwise fly empty. Taking it a step further, Robert Crandall, former chairman and CEO of American Airlines (AA), pioneered a practice he called yield management, which focused primarily on maximizing revenue through analytics-based inventory control. Under Crandall's leadership, American continued to invest in yield management's forecasting, inventory control and overbooking capabilities. By the early 1980s, the combination of a mild recession and new competition spawned by airline deregulation act (1978) posed an additional threat. Low-cost, low-fare airlines like People Express were growing rapidly because of their ability to charge even less than American's Super Saver fares. After investing millions in the next generation capability which they would call DINAMO (Dynamic Inventory Optimization and Maintenance Optimizer), American announced Ultimate Super Saver Fares in 1985 that were priced lower than those of People Express. These fares were non-refundable in addition to being advance-purchase restricted and capacity controlled. This yield management system targeted those discounts to only those situations where they had a surplus of empty seats. The system and analysts engaged in continual re-evaluation of the placement of the discounts to maximize their use. Over the next year, American's revenue increased 14.5% and its profits were up 47.8%.
+
+Other industries took note of AA's success and implemented similar systems. Robert Crandall discussed his success with yield management with J. W. "Bill" Marriott, Jr., CEO of Marriott International. Marriott International had many of the same issues that airlines did: perishable inventory, customers booking in advance, lower cost competition and wide swings with regard to balancing supply and demand. Since "yield" was an airline term and did not necessarily pertain to hotels, Marriott International and others began calling the practice Revenue Management. The company created a Revenue Management organization and invested in automated Revenue Management Systems (RMS) that would provide daily forecasts of demand and make inventory recommendations for each of its 160,000 rooms at its Marriott, Courtyard Marriott and Residence Inn brands. They also created "fenced rate" logic similar to airlines, which would allow them to offer targeted discounts to price sensitive market segments based on demand. To address the additional complexity created by variable lengths-of-stay, Marriott's Demand Forecast System (DFS) was built to forecast guest booking patterns and optimize room availability by price and length of stay. By the mid-1990s, Marriott's successful execution of revenue management was adding between $150 million and $200 million in annual revenue.
+
+A natural extension of hotel revenue management was to rental car firms, which experienced similar issues of discount availability and duration control. In 1994, revenue management saved National Car Rental from bankruptcy. Their revival from near collapse to making profits served as an indicator of revenue management's potential.
+
+Up to this point, revenue management had focused on driving revenue from Business to Consumer (B2C) relationships. In the early 1990s UPS developed revenue management further by revitalizing their Business to Business (B2B) pricing strategy. Faced with the need for volume growth in a competitive market, UPS began building a pricing organization that focused on discounting. Prices began to erode rapidly, however, as they began offering greater discounts to win business. The executive team at UPS prioritized specific targeting of their discounts but could not strictly follow the example set by airlines and hotels. Rather than optimizing the revenue for a discrete event such as the purchase of an airline seat or a hotel room, UPS was negotiating annual rates for large-volume customers using a multitude of services over the course of a year. To alleviate the discounting issue, they formulated the problem as a customized bid-response model, which used historical data to predict the probability of winning at different price points. They called the system Target Pricing. With this system, they were able to forecast the outcomes of any contractual bid at various net prices and identify where they could command a price premium over competitors and where deeper discounts were required to land deals. In the first year of this revenue management system, UPS reported increased profits of over $100 million.
+
+The concept of maximizing revenue on negotiated deals found its way back to the hospitality industry. Marriott's original application of revenue management was limited to individual bookings, not groups or other negotiated deals. In 2007, Marriott introduced a "Group Price Optimizer" that used a competitive bid-response model to predict the probability of winning at any price point, thus providing accurate price guidance to the sales force. The initial system generated an incremental $46 million in profit. This led to an Honorable Mention for the Franz Edelman Award for Achievement in Operations Research and the Management Sciences in 2009.
+
+By the early 1990s revenue management also began to influence television ad sales. Companies like Canadian Broadcast Corporation, ABC, and NBC developed systems that automated the placement of ads in proposals based on total forecasted demand and forecasted ratings by program. Today, many television networks around the globe have revenue management systems.
+
+Revenue management to this point had been utilized in the pricing of perishable products. In the 1990s, however, the Ford Motor Company began adopting revenue management to maximize profitability of its vehicles by segmenting customers into micro-markets and creating a differentiated and targeted price structure. Pricing for vehicles and options packages had been set based upon annual volume estimates and profitability projections. The company found that certain products were overpriced and some were underpriced. Understanding the range of customer preferences across a product line and geographical market, Ford leadership created a Revenue management organization to measure the price-responsiveness of different customer segments for each incentive type and to develop an approach that would target the optimal incentive by product and region. By the end of the decade, Ford estimated that roughly $3 billion in additional profits came from revenue management initiatives.
+
+The public success of Pricing and Revenue Management at Ford solidified the ability of the discipline to address the revenue generation issues of virtually any company. Many auto manufacturers have adopted the practice for both vehicle sales and the sale of parts. Retailers have leveraged the concepts pioneered at Ford to create more dynamic, targeted pricing in the form of discounts and promotions to more accurately match supply with demand. Promotions planning and optimization assisted retailers with the timing and prediction of the incremental lift of a promotion for targeted products and customer sets. Companies have rapidly adopted price markdown optimization to maximize revenue from end-of-season or end-of-life items. Furthermore, strategies driving promotion roll-offs and discount expirations have allowed companies to increase revenue from newly acquired customers.
+
+By 2000, virtually all major airlines, hotel firms, cruise lines and rental car firms had implemented revenue management systems to predict customer demand and optimize available price. These revenue management systems had limited "optimize" to imply managing the availability of pre-defined prices in pre-established price categories. The objective function was to select the best blends of predicted demand given existing prices. The sophisticated technology and optimization algorithms had been focused on selling the right amount of inventory at a given price, not on the price itself. Realizing that controlling inventory was no longer sufficient, InterContinental Hotels Group (IHG) launched an initiative to better understand the price sensitivity of customer demand. IHG determined that calculating price elasticity at very granular levels to a high degree of accuracy still was not enough. Rate transparency had elevated the importance of incorporating market positioning against substitutable alternatives. IHG recognized that when a competitor changes its rate, the consumer's perception of IHG's rate also changes. Working with third party competitive data, the IHG team was able to analyze historical price, volume and share data to accurately measure price elasticity in every local market for multiple lengths of stay. These elements were incorporated into a system that also measured differences in customer elasticity based upon how far in advance the booking is being made relative to the arrival date. The incremental revenue from the system was significant as this new Price Optimization capability increased Revenue per Available Room (RevPAR) by 2.7%. IHG and Revenue Analytics, a pricing and revenue management consulting firm, were selected as finalists for the Franz Edelman Award for Achievement in Operations Research and the Management Sciences for their joint effort in implementing Price Optimization at IHG.
+
+In 2017, Holiday Retirement and Prorize LLC were awarded with the Franz Edelman Award for Achievement in Operations Research and the Management Sciences () for their use of operations research (O.R.) to improve the pricing model for more than 300 senior living communities. Holiday Retirement partnered with Prorize LLC, an Atlanta-based revenue management firm that leveraged O.R. to develop its Senior Living Rent Optimizer. The revenue management system developed by Prorize enabled a consistent and proactive pricing process across Holiday, while simultaneously providing optimal pricing recommendations for each unit in every one of their communities. As a result of their joint efforts, they were able to consistently raise revenues by over 10%.
+
+
+## Levers
+
+Whereas yield management involves specific actions to generate yield through perishable inventory management, revenue management encompasses a wide range of opportunities to increase revenue. A company can utilize these different categories like a series of levers in the sense that all are usually available, but only one or two may drive revenue in a given situation. The primary levers are:
+
+
+### Pricing
+
+This category of revenue management involves redefining pricing strategy and developing disciplined pricing tactics. The key objective of a pricing strategy is anticipating the value created for customers and then setting specific prices to capture that value. A company may decide to price against their competitors or even their own products, but the most value comes from pricing strategies that closely follow market conditions and demand, especially at a segment level. Once a pricing strategy dictates what a company wants to do, pricing tactics determine how a company actually captures the value. Tactics involve creating pricing tools that change dynamically, in order to react to changes and continually capture value and gain revenue. Price Optimization, for example, involves constantly optimizing multiple variables such as price sensitivity, price ratios, and inventory to maximize revenues. A successful pricing strategy, supported by analytically based pricing tactics, can drastically improve a firm's profitability.
+
+
+### Inventory
+
+When focused on controlling inventory, revenue management is mainly concerned with how best to price or allocate capacity. First, a company can discount products in order to increase volume. By lowering prices on products, a company can overcome weak demand and gain market share, which ultimately increases revenue. On the other hand, in situations where demand is strong for a product but the threat of cancellations rooms (e.g. hotel rooms or airline seats), firms often overbook in order to maximize revenue from full capacity. Overbooking's focus is increasing the total volume of sales in the presence of cancellations rather than optimizing customer mix.
+
+
+### Marketing
+
+Price promotions allow companies to sell higher volumes by temporarily decreasing the price of their products. Revenue management techniques measure customer responsiveness to promotions in order to strike a balance between volume growth and profitability. An effective promotion helps maximize revenue when there is uncertainty about the distribution of customer willingness to pay. When a company's products are sold in the form of long-term commitments, such as internet or telephone service, promotions help attract customers who will then commit to contracts and produce revenue over a long time horizon. When this occurs, companies must also strategize their promotion roll-off policies; they must decide when to begin increasing the contract fees and by what magnitude to raise the fees in order to avoid losing customers. Revenue management optimization proves useful in balancing promotion roll-off variables in order to maximize revenue while minimizing churn.
+
+
+### Channels
+
+Revenue management through channels involves strategically driving revenue through different distribution channels. Different channels may represent customers with different price sensitivities. For example, customers who shop online are usually more price sensitive than customers who shop in a physical store. Different channels often have different costs and margins associated with those channels. When faced with multiple channels to retailers and distributors, revenue management techniques can calculate appropriate levels of discounts for companies to offer distributors through opaque channels to push more products without losing integrity with respect to public perception of quality.
+
+Since the advent of the Internet the distribution network and control has become a major concern for service providers. When the producer collaborates with a powerful provider, sacrifices may be necessary, particularly concerning the selling price/commission rate, in exchange for the capacity to reach a certain clientele and sales volumes.
+
+
+## Process
+
+
+### Data collection
+
+The revenue management process begins with data collection. Relevant data is paramount to a revenue management system's capability to provide accurate, actionable information. A system must collect and store historical data for inventory, prices, demand, and other causal factors. Any data that reflects the details of products offered, their prices, competition, and customer behavior must be collected, stored, and analyzed. In some markets, specialized data collection methods have rapidly emerged to service their relevant sector, and sometimes have even become a norm. In the European Union for example, the European Commission makes sure businesses and governments stick to EU rules on fair competition, while still leaving space for innovation, unified standards, and the development of small businesses. To support this, third-party sources are utilized to collect data and make only averages available for commercial purposes, such as is the case with the hotel sector – in Europe and the Middle East & North Africa region, where key operating indicators are monitored, such as Occupancy Rate (OR), Average Daily Rate (ADR) and Revenue per Available Room (RevPAR). Data is supplied directly by hotel chains and groups (as well as independent properties) and benchmark averages are produced by direct market (competitive set) or wider macro market. This data is also utilized for financial reporting, forecasting trends and development purposes. Information about customer behavior is a valuable asset that can reveal consumer behavioral patterns, the impact of competitors' actions, and other important market information. This information is crucial to starting the revenue management process.
+
+
+### Segmentation
+
+After collecting the relevant data, market segmentation is the key to market-based pricing and revenue maximization. Airlines, for example, employed this tactic in differentiating between price-sensitive leisure customers and price-insensitive business customers. Leisure customers tend to book earlier and are flexible about when they fly and are willing to sit in coach seats to save more money for their destination, whereas business customers tend to book closer to departure and are typically less price sensitive. Success hinges on the ability to segment customers into similar groups based on a calculation of price responsiveness of customers to certain products based upon the circumstances of time and place. Revenue management strives to determine the value of a product to a very narrow micro-market at a specific moment in time and then chart customer behavior at the margin to determine the maximum obtainable revenue from those micro-markets. Micro-markets can be derived qualitatively by conducting a dimensional analysis. Business customers and leisure customers are two segments, but business customers could be further segmented by the time they fly (those who book late and fly in the morning etc.). Useful tools such as Cluster Analysis allow Revenue Managers to create a set of data-driven partitioning techniques that gather interpretable groups of objects together for consideration. Market segmentation based upon customer behavior is essential to the next step, which is forecasting demand associated with the clustered segments.
+
+
+### Forecasting
+
+Revenue management requires forecasting various elements such as demand, inventory availability, market share, and total market. Its performance depends critically on the quality of these forecasts. Forecasting is a critical task of revenue management and takes much time to develop, maintain, and implement; see Financial forecast.
+
+* Quantity-based forecasts, which use time-series models, booking curves, cancellation curves, etc., project future quantities of demand, such as reservations or products bought. See Demand forecasting and Production budget.
+* Price-based forecasts seek to forecast demand as a function of marketing variables, such as price or promotion. These involve building specialized forecasts such as market response models or cross price elasticity of demand estimates to predict customer behavior at certain price points.
+
+By combining these forecasts with calculated price sensitivities and price ratios, a revenue management system can then quantify these benefits and develop price optimization strategies to maximize revenue.
+
+
+### Optimization
+
+While forecasting suggests what customers are likely to do, optimization suggests how a firm should respond. Often considered the pinnacle of the revenue management process, optimization is about evaluating multiple options on how to sell your product and to whom to sell your product. Optimization involves solving two important problems in order to achieve the highest possible revenue. The first is determining which objective function to optimize. A business must decide between optimizing prices, total sales, contribution margins, or even customer lifetime values. Secondly, the business must decide which optimization technique to utilize. For example, many firms utilize linear programming, a complex technique for determining the best outcome from a set of linear relationships, to set prices in order to maximize revenue. Regression analysis, another statistical tool, involves finding the ideal relationship between several variables through complex models and analysis. Discrete choice models can serve to predict customer behavior in order to target them with the right products for the right price. Tools such as these allow a firm to optimize its product offerings, inventory levels, and pricing points in order to achieve the highest revenue possible.
+
+
+### Dynamic re-evaluation
+
+Revenue management requires that a firm must continually re-evaluate their prices, products, and processes in order to maximize revenue. In a dynamic market, an effective revenue management system constantly re-evaluates the variables involved in order to move dynamically with the market. As micro-markets evolve, so must the strategy and tactics of revenue management adjust.
+(See Financial risk management § Corporate finance and Volume risk.)
+
+
+## In an organization
+
+Revenue management's fit within the organizational structure depends on the type of industry and the company itself. Some companies place revenue management teams within Marketing because marketing initiatives typically focus on attracting and selling to customers. Other firms dedicate a section of Finance to handle revenue management responsibilities because of the tremendous bottom line implications. Some companies have elevated the position of chief revenue officer, or CRO, to the senior management level. This position typically oversees functions like sales, pricing, new product development, and advertising and promotions. A CRO in this sense would be responsible for all activities that generate revenue and directing the company to become more "revenue-focused".
+
+Supply chain management and revenue management have many natural synergies. Supply chain management (SCM) is a vital process in many companies today and several are integrating this process with a revenue management system. On one hand, supply chain management often focuses on filling current and anticipated orders at the lowest cost, while assuming that demand is primarily exogenous. Conversely, revenue management generally assumes costs and sometimes capacity are fixed and instead looks to set prices and customer allocations that maximize revenue given these constraints. A company that has achieved excellence in supply chain management and revenue management individually may have many opportunities to increase profitability by linking their respective operational focus and customer-facing focus together.
+
+Business intelligence platforms have also become increasingly integrated with the revenue management process. These platforms, driven by data mining processes, offer a centralized data and technology environment that delivers business intelligence by combining historical reporting and advanced analytics to explain and evaluate past events, deliver recommended actions and eventually optimize decision-making. Not synonymous with Customer Relationship Management (CRM), Business intelligence generates proactive forecasts, whereas CRM strategies track and document a company's current and past interactions with customers. Data mining this CRM information, however, can help drive a business intelligence platform and provide actionable information to aid decision-making.
+
+
+## Developing industries
+
+The ability for revenue management to optimize price based on forecast demand, price elasticity, and competitive rates has incredible benefits, and many companies rushed to develop their own revenue management capabilities in the early 2000s.
+
+Industries embracing revenue management include the following:
+
+* Hotel, hospitality, and tourism services – daily revenue or yield management strategies are a popular practice within the hotel sector, particularly prominent in mature and large hotel markets such as in Western Europe and the North America. Key operating indicators Occupancy Rate (OR), Average Daily Rate (ADR) and Revenue per Available Room (RevPAR) are tracked using third-party sources to follow direct competitor set averages in demand and price, thereby indicating penetration rate and performance index.
+* Leisure industries
+* Media/Telecommunications – a promotion-driven industry often focused on attracting customers with discounted plans and then retaining them at higher price points. Businesses in this industry often face regulatory constraints, demand volatility, and sales through multiple channels to both business and consumer segments. Revenue management can help these companies understand micro-markets and forecast demand in order to optimize advertising sales and long-term contracts.
+* Retail industries
+* Distributors – face a complex environment that often includes thousands of individual SKUs with several different product lifecycles. Each distributor must account for factors such as channel conflict, cross-product cannibalization, and competitive actions. Revenue Management has proved useful to distributors in promotion analysis and negotiated contracts.
+* Medical products and services – deal with large fluctuations in demand depending on time of day and day of week. Hospital surgeries are often overflowing on weekday mornings but sit empty and underutilized on the weekend. Hospitals may experiment with optimizing their inventory of services and products based on different demand points. Additionally, revenue management techniques allow hospitals to mitigate claim underpayments and denials, thus preventing significant revenue leakage.
+* Financial services – offer a wide range of products to a wide range of customers. Banks have applied segmented pricing tactics to loan holders, often utilizing heavy amounts of data and modeling to project interest rates based on how much a customer is willing to pay.
+
+## Industry organizations
+
+
+### RMS/RMAPI (UK)
+
+The Revenue Management Society (RMS), now operating under the name Revenue Management and Pricing International Limited, is the industry body representing companies and practitioners working in this area in the UK. It was founded as Revenue Management Club by Steve Marchant and Tim Rosen in 2003, becoming incorporated as the Revenue Management Society in 2007. In 2013, Marchant resigned, and Tim Rosen, with the support of the committee, restructured the organisation (still retaining the company name) and started operating under the name Revenue Management and Pricing International Limited (RMAPI). Originally covering the tourism and leisure industries, RMS/RMAPI expanded into other sectors using the same disciplines, including retail, telecommunications, and media. Membership is by annual subscription, and it aims to provide a forum for practitioners of revenue management and pricing and related disciplines, including conferences and other events.
+
+
+### Others
+
+The equivalent in France is the Revenue Management Club.
+
+
+## Journals
+
+A bi-monthly journal, *Journal of Revenue and Pricing Management* provides an international forum for research in revenue management and pricing. It publishes applied research papers, case studies, models and theories, along with new trends and future ideas by experts and practitioners. It is aimed at senior professionals in private and public sector organisations as well as academics in universities and business schools. The editorial board, as of September 2024ᵘᵖᵈᵃᵗᵉ headed by Ian Yeoman, Professor of Innovation, Disruption and New Phenomena, at the Stenden University of Applied Sciences, Netherlands, is drawn from across the globe.
+

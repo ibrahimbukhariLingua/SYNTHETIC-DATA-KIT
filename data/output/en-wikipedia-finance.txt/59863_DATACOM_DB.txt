@@ -1,0 +1,92 @@
+DATACOM/DB
+
+
+# DATACOM/DB
+
+
+
+**Datacom/DB** is a relational database management system for mainframe computers. It was developed in the early 1970s by Computer Information Management Company and was subsequently owned by Insyte, Applied Data Research, Ameritech, and Computer Associates International, Inc. Datacom was acquired by CA Technologies (formerly Computer Associates), which renamed it to **CA-Datacom/DB** and later to **CA Datacom/DB**. In 2018, Broadcom acquired CA Technologies which included the CA Datacom product family. In 2021, Broadcom has dropped the CA and now refers to the product family as Datacom or Datacom/DB.
+
+
+## Origin
+
+The genesis of modern DBMS technology occurred in the 1970s with the advent of huge databases that were cumbersome to manage and maintain. As long as most mainframe processing was done in batch mode, the rapidity of maintenance operations was not a key ingredient to success. During the 1970s however, the introduction of online systems required that information become quickly available and dynamically maintained. Some of the most dramatic changes occurred in the banking and credit industry:
+
+* Large banks needed to manage tens of millions of banking account records in real-time rather than utilizing off-shift batch processing as they had done historically
+* Credit bureaus needed to maintain and dynamically update massive customer credit files for millions of citizens and businesses.
+
+Datacom was initially designed to rapidly retrieve data from massive files using Inverted List technology. Although very well suited for rapid retrieval, it was less effective when handling large amounts of data maintenance. To solve this problem, Datacom/DB transitioned to relational technology utilizing special index-driven capabilities that radically improved maintenance with no loss in retrieval speed. This relational version of Datacom served as the foundation for a continuing stream of industry-leading enhancements that have preserved its position as an extremely cost-effective and high-performing DBMS for the IBM mainframe.
+
+
+## History
+
+
+### *Credit Bureau industry*
+
+In the 1950s and 1960s, credit bureaus were local organizations that maintained paper records about local borrowers and retail customers, usually storing these records in small envelopes filed in literally hundreds of file cabinets. In fact, one major credit bureau attempted to speed up its transaction rate by having its employees wear roller skates to move rapidly from file cabinet to file cabinet!
+
+In 1965, a project was initiated by IBM to use its new System/360 mainframe computers to automate the two largest credit bureaus - Chilton Corporation of Dallas and the Credit Bureau of Greater Houston - and the national association of credit bureaus. Three IBM veterans were selected to head up the development team. At the successful conclusion of this project, the three men agreed that their credit industry automation experience could equip them to build systems for other credit bureaus, so they collaborated to start Computer Information Management Company in Dallas in 1968.
+
+
+### Computer Information Management Co.
+
+The team’s specialty with IBM had been the development of telecommunication-based applications. Building on this expertise, one of CIM’s first contracts was with First National Bank of Fort Worth, for which CIM designed an online teller system. At this time CICS was not functioning well, so CIM wrote a general purpose telecommunications monitor system which was later packaged and named Generalized Multi-Tasking Monitor (GMT).
+
+Many of the subsequent consulting jobs undertaken by CIM were in the finance industry. At that time, savings and loan institutions were characterized by having huge collections of data but very few daily transactions. Because there were serious performance problems with ISAM, CIM designed a key-driven adjunct to GMT to manage the data for a large West Coast savings bank. This implementation became the foundation of Datacom/DB.
+
+CIM continued to procure heavily-technical programming and consulting jobs and to sell GMT as a product. However, GMT was a tough product to sell to most executives because it was a very technical sale. Top management in many prospective companies usually did not have the technical knowledge to understand the requirements of a teleprocessing monitor. Consequently, CIM needed to find prospective sites with technically knowledgeable data processing (DP) managers or sites that gave significant executive power to their lead technicians.
+
+
+### Insyte
+
+In the early 1970s a Houston-based venture capitalist acquired a small group of companies which he named Information System Technologies (known as Insyte and pronounced “insight”). In 1974 Insyte acquired CIM’s promissory notes to gain control of CIM. Insyte replaced top management and made the decision to split the teleprocessing monitor from its key-driven access method and rename the two parts as Datacom/DC (for data communications) and Datacom/DB (for database). To emphasize the products’ relationship with Insyte, the company was renamed Insyte Datacom.
+
+Datacom/DB’s primary competitors at this time were IDMS, IMS, DL/1, ADABAS, DBOMP, and Cincom Systems' TOTAL. Although still a very small company, Insyte Datacom became well known throughout the marketplace for the outstanding speed and efficiency of its Datacom/DB and Datacom/DC applications.
+
+
+### Applied Data Research
+
+In 1978 Insyte sold Insyte Datacom to Applied Data Research, which was based in Princeton, New Jersey. This sale came about as a result of a business relationship that had been created between Insyte and ADR by which Datacom/DC was provided to ADR/Vollie clients as an online programmer’s workstation. In the late 1970s ADR recognized that DBMS products were going to become increasingly important – and set out to acquire one. After a 2-year search ADR acquired the assets and people of Insyte Datacom in November 1978. ADR began aggressively marketing Datacom in the United States and worldwide.
+
+
+#### *IDEAL*
+
+The ADR sales force concentrated on Datacom/DB and enjoyed remarkable success worldwide with several thousand clients in dozens of industries. As an offshoot of this success ADR recognized the need for a highly efficient and sophisticated application development language for Datacom/DB. This development language would need to offset the normal difficulties of writing telecommunication-based application programs. ADR’s Princeton-based application language development team had developed MetaCOBOL, which generated detailed and accurate COBOL statements from a high-level logical language set. Soon after the purchase of Datacom the team designed IDEAL. “**I**nteractive **D**evelopment **E**nvironment for an **A**pplication **L**ifecycle” was a watershed achievement in database application language development.
+
+Combining IDEAL and its highly-productive programming environment with Datacom/DB’s ease-of-use and Datacom/DC’s high performance gave ADR a very potent product combination which dominated industry performance throughout the 1980s.
+
+
+#### *Datacom/DC vs. IBM's CICS and VTAM*
+
+Datacom/DC was designed as a solution to CICS’ difficult-to-use and poorly performing characteristics. Although Datacom/DC solved virtually all of CICS’s shortcomings and provided high performance, IBM continued to pour massive resources into CICS. VTAM’s introduction in the late 1980s meant that much of Datacom/DC would have to be gutted and rewritten. Rather than pursue this tack, ADR chose to back out of that marketplace and replaced Datacom/DC with CICS Services as the interface between CICS, Datacom and later, IDEAL.
+
+Even though IDEAL was originally designed to work only with Datacom/DB, IDEAL was subsequently developed as a service for DB2.
+
+
+#### DATACOM/DB for Edos
+
+ADR licensed DATACOM/DB to TCSC, a firm which sold modified versions of IBM's DOS/360 and DOS/VS operating systems, known as Edos (later also known as Edos/VS and Edos/VSE). When, in 1980, Nixdorf Computer bought TCSC, Nixdorf sought to continue the licensing arrangement; ADR and NCSC went to court in a dispute over whether the licensing arrangement was terminated by the acquisition. ADR and Nixdorf settled out of court in 1981, with an agreement that Nixdorf could continue to resell ADR's products.
+
+
+### Ameritech
+
+In 1986 ADR was acquired by Chicago-based Ameritech. Ameritech’s primary motivation was a belief that communications and software would eventually become intertwined and Ameritech wanted to be in the game at the outset.
+
+
+### Computer Associates
+
+Although Ameritech’s original motivation would prove accurate in later years, Ameritech sold ADR to Computer Associates in 1988. The acquisition by CA incorporated Datacom/DB and IDEAL into CA’s already large family of mainframe products.
+One of the hallmarks of Datacom/DB has been its ability to provide major new enhancements to existing application programs without requiring any recoding.
+
+Datacom/DB and IDEAL remain major CA products today and are the data processing backbones of many Fortune 500 companies as well as many U.S. federal agencies.
+
+
+#### *CA, Inc. v ISI Pty Limited*
+
+In 2012, CA was successful in a lawsuit against an Australian software company, ISI Pty Limited, which offered a software product "2BDB2" designed to simplify migration from Datacom to IBM's DB2 relational database. 2BDB2 contained macros designed to interoperate with those CA macros used by software to access Datacom, but which instead connected to DB2. The Federal Court of Australia found that 2BDB2's macros were based on those included in CA Datacom, and thus infringed on CA's copyright; while there is an interoperability exception under Australian copyright law, the Federal Court adopted a narrow reading of that exception, rendering it largely unavailable to ISVs such as ISI. The Federal Court also found that ISI had illegally relied on CA's confidential information in developing the 2BDB2 product.
+
+
+## CADRE
+
+The first Datacom user conference was held in Dallas in 1974. Every year since then an annual user conference has been held. When Insyte Datacom was sold to ADR in 1978, the conferences continued and they were renamed CADRE. So CADRE or its logical predecessor has been in existence since 1974.
+

@@ -1,0 +1,71 @@
+Jaimovich–Rebelo preferences
+
+
+# Jaimovich–Rebelo preferences
+
+
+
+**Jaimovich-Rebelo preferences** refer to a utility function that allows to parameterize the strength of short-run wealth effects on the labor supply, originally developed by Nir Jaimovich and Sergio Rebelo in their 2009 article *Can News about the Future Drive the Business Cycle?*
+
+Let {\displaystyle C\_{t}} denote consumption and let {\displaystyle N\_{t}} denote hours worked at period {\displaystyle t}. The instantaneous utility has the form
+
+{\displaystyle u\left({C\_{t},N\_{t}}\right)={\frac {\left(C\_{t}-\psi N\_{t}^{\theta }X\_{t}\right)^{1-\sigma }-1}{1-\sigma }},}
+
+where
+
+{\displaystyle X\_{t}=C\_{t}^{\gamma }X\_{t-1}^{1-\gamma }.}
+
+It is assumed that {\displaystyle \theta >1}, {\displaystyle \psi >0}, and {\displaystyle \sigma >0}.
+
+The agents in the model economy maximize their lifetime utility, {\displaystyle U}, defined over sequences of consumption and hours worked,
+
+{\displaystyle U=E\_{0}\sum \_{t=0}^{\infty }\beta ^{t}u\left({C\_{t},N\_{t}}\right),}
+
+where {\displaystyle E\_{0}} denotes the expectation conditional on the information available at time zero, and the agents internalize the dynamics of {\displaystyle X\_{t}} in their maximization problem.
+
+
+## Relationship to other common macroeconomic preference types
+
+Jaimovich-Rebelo preferences nest the KPR preferences and the GHH preferences.
+
+
+### KPR preferences
+
+When {\displaystyle \gamma =1}, the scaling variable {\displaystyle X\_{t}} reduces to
+{\displaystyle X\_{t}=C\_{t},}
+and the instantaneous utility simplifies to
+
+{\displaystyle u\left({C\_{t},N\_{t}}\right)={\frac {\left(C\_{t}\left(1-\psi N\_{t}^{\theta }\right)\right)^{1-\sigma }-1}{1-\sigma }},}
+
+corresponding to the KPR preferences.
+
+
+### GHH preferences and balanced growth path
+
+When {\displaystyle \gamma \rightarrow 0}, and if the economy does not present exogenous growth, then the scaling variable {\displaystyle X\_{t}} reduces to a constant
+{\displaystyle X\_{t}=X>0,}
+and the instantaneous utility simplifies to
+
+{\displaystyle u\left({C\_{t},N\_{t}}\right)={\frac {\left(C\_{t}-\psi XN\_{t}^{\theta }\right)^{1-\sigma }-1}{1-\sigma }},}
+
+corresponding to the original GHH preferences, in which the wealth effect on the labor supply is completely shut off.
+
+Note however that the original GHH preferences are not compatible with a balanced growth path, while the Jaimovich-Rebelo preferences are compatible with a balanced growth path for {\displaystyle 0<\gamma \leq 1}.
+To reconcile these facts, first note that the Jaimovich-Rebelo preferences are compatible with a balanced growth path for {\displaystyle 0<\gamma \leq 1} because the scaling variable, {\displaystyle X\_{t}}, grows at the same rate as the labor augmenting technology.
+
+Let {\displaystyle z\_{t}} denote the level of labor augmenting technology. Then, in a balanced growth path, consumption {\displaystyle C\_{t}} and the scaling variable {\displaystyle X\_{t}} grow at the same rate as {\displaystyle z\_{t}}. When {\displaystyle \gamma \rightarrow 0}, the stationary variable {\displaystyle {\frac {X\_{t}}{z\_{t}}}} satisfies the relation
+
+{\displaystyle {\frac {X\_{t}}{z\_{t}}}={\frac {X\_{t-1}}{z\_{t-1}}}{\frac {z\_{t-1}}{z\_{t}}},}
+
+which implies that
+
+{\displaystyle X\_{t}=Xz\_{t},}
+
+for some constant {\displaystyle X>0}.
+
+Then, the instantaneous utility simplifies to
+
+{\displaystyle u\left({C\_{t},N\_{t}}\right)={\frac {\left(C\_{t}-z\_{t}\psi XN\_{t}^{\theta }\right)^{1-\sigma }-1}{1-\sigma }},}
+
+consistent with the shortcut of introducing a scaling factor containing the level of labor augmenting technology before the hours worked term.
+

@@ -1,0 +1,163 @@
+Ethereum Classic
+
+
+# Ethereum Classic
+
+
+
+**Ethereum Classic** is a blockchain-based distributed computing platform that offers smart contract (scripting) functionality. It is open source and supports a modified version of Nakamoto consensus via transaction-based state transitions executed on a public Ethereum Virtual Machine (EVM).
+
+Ethereum Classic maintains the original, unaltered history of the Ethereum network. The Ethereum project's mainnet was initially released via Frontier on 30 July 2015. However, due to a hack of a third-party project, The DAO, the Ethereum Foundation created a new version of the Ethereum mainnet on 20 July 2016 with an *irregular state change* implemented that erased the DAO theft from the Ethereum blockchain history. The Ethereum Foundation applied their trademark to the new, altered version of the Ethereum blockchain. The older, unaltered version of Ethereum was renamed and continued on as Ethereum Classic.
+
+Ethereum Classic's native Ether token is a cryptocurrency traded on digital currency exchanges under the currency code ETC. Ether is created as a reward to network nodes for a process known as "mining", which validates computations performed on Ethereum Classic's EVM. Implemented on 11 December 2017, the current ETC monetary policy seeks the same goals as bitcoin: being mechanical, algorithmic, and capped. ETC can be exchanged for network transaction fees or other assets, commodities, currencies, products, and services.
+
+Ethereum Classic provides a decentralized Turing-complete virtual machine, the Ethereum Virtual Machine (EVM), which can execute scripts using an international network of public nodes. The virtual machine's instruction set is Turing-complete, in contrast to others like Bitcoin Script. Gas, an internal transaction pricing mechanism, is used to mitigate spam and allocate resources on the network.
+
+
+## Milestones
+
+
+### Frontier
+
+Several codenamed prototypes of the Ethereum platform were developed by the Ethereum Foundation, as part of their proof-of-concept series, prior to the official launch of the Frontier network. Ethereum Classic followed this codebase after the DAO incident.
+
+| Date | Block | Milestone name |
+| --- | --- | --- |
+| 2015-07-30 | 0 | Frontier |
+| 2015-07-30 | 1 | 5M20 Era 1 |
+| 2015-09-08 | 200,000 | Ice Age |
+| 2016-03-15 | 1,150,000 | Homestead |
+| 2016-10-24 | 2,500,000 | Gas Reprice |
+| 2017-01-13 | 3,000,000 | Die Hard |
+| 2017-12-11 | 5,000,000 | Gotham |
+| 2017-12-11 | 5,000,001 | 5M20 Era 2 |
+| 2018-05-29 | 5,900,000 | Defuse Difficulty Bomb |
+| 2019-09-12 | 8,772,000 | Atlantis |
+| 2020-01-11 | 9,573,000 | Agharta |
+| 2020-03-17 | 10,000,001 | 5M20 Era 3 |
+| 2020-06-01 | 10,500,839 | Phoenix |
+| 2020-11-28 | 11,700,000 | Thanos |
+| 2021-07-23 | 13,189,133 | Magneto |
+| 2022-02-12 | 14,525,000 | Mystique |
+| 2022-04-25 | 15,000,001 | 5M20 Era 4 |
+| 2022-09-15 | 15,950,000 | Largest PoW EVM |
+| 2024-02-04 | 19,250,000 | Spiral |
+| 2024-05-30 | 20,000,001 | 5M20 Era 5 |
+| TBD | 25,000,001 | 5M20 Era 6 |
+
+
+### The DAO bailout
+
+On 20 July 2016, as a result of the exploitation of a flaw in The DAO project's smart contract software, and subsequent theft of $50 million worth of Ether, the Ethereum network split into two separate blockchains – the altered history was named Ethereum (ETH) and the unaltered history was named Ethereum Classic (ETC).
+
+* The new chain with the altered history was branded as Ethereum (code: ETH) with the BIP-44 Coin Index 60 and EVM Chain ID 1 attributed to it by the trademark-owning Ethereum Foundation. On this new chain, the history of the theft was erased from the Ethereum blockchain.
+* Some members of the Ethereum community ignored the change and continued to participate on the original Ethereum network. The non-fork chain with an unaltered history continued on as Ethereum Classic (code: ETC) with the BIP-44 Coin Index 61 and EVM Chain ID 61.
+
+#### Security vulnerabilities disclosed
+
+On 28 May 2016, a paper was released detailing security vulnerabilities with the DAO that could allow Ether to be stolen. On 9 June 2016, Peter Vessenes publicly disclosed the existence of a critical security vulnerability overlooked in many Solidity contracts, a recursive call bug. On 12 June 2016, Stephan Tual publicly claimed that the DAO funds were safe despite the newly-discovered critical security flaw.
+
+
+#### Carbon vote
+
+On 15 July 2016, a short notice on-chain vote was held on the DAO hard fork. Of the 82,054,716 ETH in existence, only 4,542,416 voted, for a total voter turn out of 5.5% of the total supply on 16 July 2016; 3,964,516 ETH (87%) voted in favor, 1/4 of which came from a single address, and 577,899 ETH (13%) opposed the DAO fork. The expedited process of the carbon vote drew criticism from opponents of the DAO fork. Proponents of the fork were quick to market the vote as an effective consensus mechanism, pushing forward with the DAO fork four days later.
+
+
+#### Block 1,920,000
+
+The first Ethereum Classic block that was not included in the forked Ethereum chain was block number 1,920,000, which was generated by Ethereum Classic miners on 20 July 2016.
+
+
+### Defuse Difficulty Bomb
+
+A mechanism called the "Difficulty Bomb" was designed to push the Ethereum chain from proof-of-work consensus mechanism to proof-of-stake in the future by exponentially increasing the difficulty of mining. This Difficulty Bomb was added to the network on block 200,000 in an upgrade named "Ice Age". While Ethereum Classic participants debated the merits of the Difficulty Bomb, a network upgrade called "Die Hard" at block 3,000,000 delayed the effects of the mechanism. Once the network participants came to consensus on the issue, Ethereum Classic upgraded its network on block 5,900,000 to permanently defuse the Difficulty Bomb. This abandoned a future with proof-of-stake and committed the network to the proof-of-work consensus mechanism.
+
+
+### Protocol parity
+
+In an attempt to modernize the Ethereum Classic protocol, several protocol upgrades were scheduled to activate features that the Ethereum network already enabled over the past years. Atlantis, activated in September 2019, enabled the Agharta upgrade, which included the outstanding Byzantium changes. Agharta was followed by the incorporation of the Constantinople patches through the January 2020 upgrade. Finally, with the Phoenix upgrade, Ethereum Classic achieved protocol parity with Ethereum, allowing for fully cross-compatible applications between the two networks.
+
+
+### Mining algorithm
+
+After a series of 51% attacks on the Ethereum Classic network in 2020, a change to the underlying Ethash mining algorithm was considered by the community to prevent being a minority proof-of-work chain in the Ethash mining algorithm where Ethereum is dominating the hashrate. After evaluating various options such as Monero's RandomX or the standardized SHA-3-256, it was eventually decided to double the Ethash epoch duration from 30,000 to 60,000 in order to reduce the DAG size and prevent Ethash miners to easily switch to Ethereum Classic. This modified Ethash is also referred to as *ETChash* or *Thanos* upgrade.
+
+
+## Characteristics
+
+As with other cryptocurrencies, the validity of each ether is provided by a blockchain, which is a continuously growing list of records, called "blocks", which are linked and secured using cryptography. By design, the blockchain is inherently resistant to modification of the data. It is an open, distributed ledger that records transactions between two parties efficiently and in a verifiable and permanent way. Unlike bitcoin, Ethereum Classic operates using accounts and balances in a manner called state transitions. This does not rely upon unspent transaction outputs (UTXOs). The state denotes the current balances of all accounts and extra data. The state is not stored on the blockchain, it is stored in a separate Merkle Patricia tree. A cryptocurrency wallet stores the public and private "keys" or "addresses" which can be used to receive or spend Ether. These can be generated through BIP 39 style mnemonics for a BIP 32 "HD wallet". In the Ethereum tech stack, this is unnecessary as it does not operate in a UTXO scheme. With the private key, it is possible to write in the blockchain, effectively making an ether transaction.
+
+To send Ether to an account, the Keccak-256 hash of the public key of that account is needed. Ether accounts are pseudonymous in that they are not linked to individual persons, but rather to one or more specific addresses.
+
+
+### Ether
+
+*ETC* is a fundamental token for operation of Ethereum Classic, which thereby provides a public distributed ledger for transactions. It is used to pay for Gas, a unit of computation used in transactions and other state transitions. Within the context of Ethereum Classic it might be called ether, but it should not be confused with ETH, which is also called ether.
+
+It is listed under the currency code ETC and traded on cryptocurrency exchanges, and the Greek uppercase Xi character (Ξ) is generally used for its currency symbol. It is also used to pay for transaction fees and computational services on the Ethereum Classic network.
+
+
+### Addresses
+
+Ethereum Classic addresses are composed of the prefix "0x", a common identifier for hexadecimal, concatenated with the rightmost 20 bytes of the Keccak-256 hash (big endian) of the ECDSA public key (the curve used is the so-called *secp256k1*, the same as bitcoin). In hexadecimal, two digits represent a byte, meaning addresses contain 40 hexadecimal digits. An example of an Ethereum Classic address is `0xb794f5ea0ba39494ce839613fffba74279579268`. Contract addresses are in the same format, however, they are determined by sender and creation transaction nonce. User accounts are indistinguishable from contract accounts given only an address for each and no blockchain data. Any valid Keccak-256 hash put into the described format is valid, even if it does not correspond to an account with a private key or a contract. This is unlike bitcoin, which uses base58check to ensure that addresses are properly typed.
+
+
+### Monetary policy
+
+On 11 December 2017, the total supply of Ether on Ethereum Classic was hard capped at ETC 210,700,000 via the Gotham hard fork upgrade. This added a bitcoin-inspired deflationary emission schedule that is documented in Ethereum Classic Improvement Proposal (ECIP) 1017. The emission schedule, also known as "5M20", reduces the block reward by 20% every 5,000,000 blocks. Socially, this block reward reduction event has taken the moniker of "the fifthening."
+
+| ETA Date | Date | 5M20 era | Block | Block reward | Total era emission | Total emission |
+| --- | --- | --- | --- | --- | --- | --- |
+| - | 30 July 2015 | Era 1 | 1 | 5 Ξ | 25,000,000 Ξ | 25,000,000 Ξ |
+| December 2017 | 11 December 2017 | Era 2 | 5,000,001 | 4 Ξ | 20,000,000 Ξ | 45,000,000 Ξ |
+| March 2020 | 17 March 2020 | Era 3 | 10,000,001 | 3.2 Ξ | 16,000,000 Ξ | 61,000,000 Ξ |
+| April 2022 | 25 April 2022 | Era 4 | 15,000,001 | 2.56 Ξ | 12,800,000 Ξ | 73,000,000 Ξ |
+| May 2024 | 30 May 2024 | Era 5 | 20,000,001 | 2.048 Ξ | 10,240,000 Ξ | 83,240,000 Ξ |
+| August 2026 | - | Era 6 | 25,000,001 | 1.6384 Ξ | 8,192,000 Ξ | 91,480,000 Ξ |
+| ~2028 | - | Era 7 | 30,000,001 | 1.31072 Ξ | 6,553,600 Ξ | 98,033,000 Ξ |
+| ~2030 | - | Era 8 | 35,000,001 | 1.048576 Ξ | 5,242,880 Ξ | 103,275,880 Ξ |
+
+
+### Ethereum Classic Improvement Proposal
+
+The Ethereum Classic Improvement Proposal (ECIP) process enables engineers and computer scientists to propose modifications, upgrades, or fixes. Any software developer who is a GitHub user is allowed to make contributions to the ECIP process. There is a number of ECIP types, each listed in the table below.
+
+ECIP Types
+| Type | Explanation |
+| --- | --- |
+| Standard Track | Any change that affects most or all Ethereum Classic implementations |
+| Core | Improvements requiring a consensus fork |
+| Networking | Improvements to networking protocol specifications |
+| Interface | improvements around client API/RPC specifications and standards and certain language-level standards |
+| ECBP | Application-level standards and conventions, including contract standards |
+| Meta | Proposes a change to, or an event in, a process and often requires community consensus |
+| Informational | Discussing a design flaw in Ethereum Classic or offering general guidelines or information to the Ethereum Classic community, without suggesting the addition of a new feature |
+
+
+## Code is law
+
+The people who continued with Ethereum Classic advocate for blockchain immutability, and the concept that "code is law" against the pro-fork side (Ethereum) which largely argued for extra-protocol intentionality, decentralized decision-making, and conflict resolution. Code is law refers to the idea that the code is above all else including law from outside forces such as a government. The law is written into the code, therefore, anything the code allows is legal.
+
+
+## Attacks
+
+
+### The DAO fork replay attacks
+
+On 20 July 2016, due to reliance on the same clients, the DAO fork created a replay attack where a transaction was broadcast on both the ETC and ETH networks. On 13 January 2017, the Ethereum Classic network was updated to resolve transaction replay attacks. The networks are now officially operating separately.
+
+
+### RHG sells stolen ETC
+
+On 10 August 2016, the ETH proponent Robin Hood Group transferred 2.9 million stolen ETC to Poloniex in an attempt to sell ETC for ETH on the advice of Bitly SA; 14% was successfully converted to ETH and other currencies, 86% was frozen by Poloniex. On 30 August 2016, Poloniex returned the ETC funds to the RHG. They set up a refund contract on the ETC network.
+
+
+### Classic Ether Wallet website attack
+
+On 29 June 2017, the Ethereum Classic Twitter account made a public statement indicating reason to believe that the website for Classic Ether Wallet had been compromised. The Ethereum Classic Twitter account confirmed the details released via Threatpost. The Ethereum Classic team worked with Cloudflare to place a warning on the compromised domain warning users of the phishing attack.ᵇᵉᵗᵗᵉʳˢᵒᵘʳᶜᵉⁿᵉᵉᵈᵉᵈ
+
+
+### 51% double spend attacks
+
+ETC has experienced multiple 51% double-spending attacks throughout its history. These attacks exploit the decentralized nature of the network by amassing more than 50% of its mining power, enabling attackers to manipulate transactions and double-spend digital assets. The first significant attack occurred in January 2019, when Ethereum Classic was subject to double-spending attacks and an estimated $1.1 million worth of ETC was double-spent. In response, the Ethereum Classic team initiated several network upgrades, including the adoption of a modified version of the Proof of Work (PoW) consensus algorithm called "ECIP-1049 Keccak256." Despite these efforts, additional 51% attacks were carried out in August and October of 2020, with estimated losses of $5.6 million and $1.68 million, respectively.
+

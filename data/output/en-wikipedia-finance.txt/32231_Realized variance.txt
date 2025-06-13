@@ -1,0 +1,44 @@
+Realized variance
+
+
+# Realized variance
+
+
+
+**Realized variance** or **realised variance** (RV, see spelling differences) is the sum of squared returns. For instance the RV can be the sum of squared daily returns for a particular month, which would yield a measure of price variation over this month. More commonly, the realized variance is computed as the sum of squared intraday returns for a particular day.
+
+The realized variance is useful because it provides a relatively accurate measure of volatility
+which is useful for many purposes, including volatility forecasting and forecast evaluation.
+
+
+## Related quantities
+
+Unlike the variance the realized variance is a random quantity.
+
+The realized volatility is the square root of the realized variance, or the square root of the RV multiplied by a suitable constant to bring the measure of volatility to an annualized scale.
+For instance, if the RV is computed as the sum of squared daily returns for some month, then an annualized realized volatility is given by {\displaystyle {\sqrt {252\times RV}}}.
+
+
+## Properties under ideal conditions
+
+Under ideal circumstances the RV consistently estimates the quadratic variation of the price process that the returns are computed from.
+Ole E. Barndorff-Nielsen and Neil Shephard (2002), Journal of the Royal Statistical Society, Series B, 63, 2002, 253–280.
+
+For instance suppose that the price process {\displaystyle P\_{t}=\exp {(p\_{t})}} is given by the stochastic integral
+
+where {\displaystyle B\_{s}} is a standard Brownian motion, and {\displaystyle \sigma \_{s}} is some (possibly random) process for which the integrated variance,
+
+is well defined.
+
+The realized variance based on {\displaystyle n} intraday returns is given by {\displaystyle RV^{(n)}=\sum \_{i=1}^{n}r\_{i,n}^{2},} where the intraday returns may be defined by
+
+Then it has been shown that, as {\displaystyle n\rightarrow \infty } the realized variance converges to IV in probability. Moreover, the RV also converges in distribution in the sense that
+
+is approximately distributed as a standard normal random variables when {\displaystyle n} is large.
+
+
+## Properties when prices are measured with noise
+
+When prices are measured with noise the RV may not estimate the desired quantity.
+This problem motivated the development of a wide range of robust realized measures of volatility, such as the realized kernel estimator.
+

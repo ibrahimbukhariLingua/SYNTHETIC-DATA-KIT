@@ -1,0 +1,245 @@
+IBM Operational Decision Management
+
+
+# IBM Operational Decision Management
+
+
+
+**IBM Operational Decision Manager** (**ODM**) is IBM's Business Rule Management System (BRMS). IBM ODM also incorporates IBM's implementation of business event processing (also called complex event processing) capabilities.
+
+IBM ODM can be installed both independently and as an application running on WebSphere Application Server.
+
+This software is currently in V8.11.0 (as of October 2022).
+
+
+## Business rules and events
+
+
+### Rules
+
+A *business rule* is a statement of logic that is used for a business decision to be made. This statement of logic is generally part of a business policy. Rules processing involves a piece of software using this pre-defined rule to make a real-time decision.
+
+
+#### Example
+
+A policy states that a borrower's initial loan must not exceed 3 times their annual salary.
+The Business Rule would read:
+*if Loan > (Salary \* 3) then disallow.*
+
+
+### Events
+
+A business event is a signal or collection of signals indicating that a change in state has occurred, and consists of a small message. Event processing involves using events to determine if an action needs to occur as a result, and carrying out that action.
+
+
+#### Example
+
+*If a customer's withdrawal event on their account causes the balance to drop below zero, then an action is taken to notify that customer.*
+
+
+## Artifacts of IBM ODM
+
+IBM ODM is an implementation of a Business Rule Management System. It allows the creation, management, testing and governance of business rules and events and stores them in a central repository where they can be accessed by multiple individuals and software products. This central storage of the rules and events mean that they can be easily modified without having to rebuild software, and with a reduced testing cycle, and the different software products will pick up this change simultaneously.
+
+
+### Action rules
+
+A basic rule expressed in a logical form, stating that if a condition occurs then an action should result. IBM ODM uses Business Action Language (BAL) to define such rules, allowing them to be viewed in a more 'natural' language.
+
+
+#### Examples
+
+If a credit card transaction occurs outside a customer's country, then that customer should be called to confirm the card is not being used fraudulently.
+*If Country of Card Usage is not equal to Customer's home country then trigger the sending of a message to call that customer.*
+
+At a bank some customers are not allowed to become overdrawn and some are:
+*If a customer tries to withdraw funds allowing their account to drop below $0 and they are allowed:*
+
+otherwise:
+
+
+### Decision tables
+
+Decision table
+
+
+#### Example
+
+A loan company determines the insurance rate of a loan depending on the amount, and the credit rating of the customer.
+
+| Amount Loan ($) |
+| --- |
+| Credit Rating Group | Min / Max | Insurance Rate (%) |
+| A | Loan < 100,000 | 0.001 |
+| 100,000 <= Loan < 200,000 | 0.002 |
+| 200,000 <= Loan < 300,000 | 0.003 |
+| 300,000 <= Loan | 0.005 |
+| B | Loan < 200,000 | 0.001 |
+| 200,000 <= Loan < 300,000 | 0.002 |
+| 300,000 <= Loan | 0.004 |
+
+Presented with a customer in group B asking for a loan of $250,000, the rule would indicate the insurance rate should be 0.002%.
+
+
+### Rule flows
+
+These indicate the order in which rules should be executed.
+
+
+#### Example
+
+An insurance company wants to establish whether a driver should be given a particular insurance policy.
+The decision depends on:
+
+The age of the applicant
+Whether their history indicates they are a high risk driver, based on speeding tickets and past accidents.
+A profile score of that customer, based on how recently they have passed their test and other factors.
+Whether a particular rule is run is dependent on answers to previous rules.
+*A rule flow is constructed, from a start node to the different rules that must be considered and finishing at the end node.*
+
+
+### Score card
+
+This is a statistical model that applies a numerical score to an object, such as a customer or an account. The same attributes are applied when calculating this score for each item.
+An example of this is a Credit scorecards.
+
+
+#### Example
+
+A score is allocated to a borrower depending on their Age, Citizenship and Credit grade.
+
+| Attribute | Range | Score | Expected Score | Reason code |
+| --- | --- | --- | --- | --- |
+| Credit Grade | AA | 100 | 90 |
+| A | 90 | 90 |
+| B | 70 | 90 |
+| C | 40 | 90 | CREDIT\_C |
+| CC | 10 | 90 | CREDIT CC |
+| Self Employed | Yes | 10 | 30 | Self-employed |
+| No | 30 | 30 |
+
+
+### Events
+
+If a specific change in state occurs then a message is emitted causing an event to occur.
+
+
+#### Example
+
+At a bank some customers are not allowed to become overdrawn and some are. A customer who has tried to take out a loan is refused by the system because their credit rating is too low.
+*If customer is refused, emit an event causing a message to be sent to the user informing them that they have been refused in indicating the reason.*
+
+
+### In summary
+
+Combining Business Rules and Events within the same system brings together two complementary technologies to automate real-time decisions. An event may trigger a rule to be run, conversely the outcome of a decision made by a rule may emit an event.
+
+
+## Components
+
+IBM ODM consists of the following parts:
+
+
+### Decision center
+
+This provides a repository and management component for the creation and maintenance of decision logic, guiding the business system's behavior. It is the central hub for the coordination of the decision life cycle, covering both business rules and business events, and allowing editing of each.
+It is presented in different ways depending on how the user is intended to view the system.
+*Business Console*, for collaboratively working with business rules.
+*Enterprise Console*.
+
+
+### Decision server
+
+This consists of the runtime components for business rules and business events.
+
+
+#### Decision server rules
+
+This provides a group of tools for construction and running of rules and automated decisions. Various components give access for different types of users, allowing the design, authoring, review, testing and running of business rules. This includes the **Rules Designer**, an Eclipse-based application for developing applications in Decision Server Rules.
+
+
+#### Decision server events
+
+This provides an integrated set of components for running events. Various components give access for different types of users, allowing the design, development, testing, deployment and maintenance of business events. This includes the **Events Designer**, an Eclipse-based application for developing applications in Decision Server Events.
+
+
+### Connection between parts
+
+Rules can be defined in the Decision Center and can also be updated there, using a variety of interfaces, including the Enterprise Console, Business Console. Rules are then stored in a Repository which manages the Decision Artifacts, access and control and versioning. From here the rules are deployed to the Decision Server, which executes these rules, and provides monitoring and measuring facilities. Rules can also be deployed direct to the Decision Server using the Rule Designer or Event Designer.
+
+
+## Requirements
+
+*Decision Server Rules* can run on distributed systems:
+On WebSphere Application Server
+WebSphere Application Server ND
+On WebSphere Application Server Express
+On Tomcat
+On JBoss application server
+On JBoss Enterprise Application Platform
+On WebLogic Server
+As a shared or scoped Java EE application
+
+Decision Server Rules can run on the z/OS mainframe:
+Standalone (as Rule Execution Server for z/OS)
+On WebSphere Application Server for z/OS
+On WebSphere Application Server ND for z/OS
+
+Decision Server Events and Decision Center can run on
+WebSphere Application Server for z/OS
+WebSphere Application Server ND for z/OS
+Rules Designer is run in Eclipse, or an Eclipse-based product
+
+
+## Supported platforms
+
+Hardware and software requirements
+
+
+## Version history
+
+Prior to its release at V7.5, the parts of ODM were available as separate products:
+
+* ILOG JRules, coming from the acquisition of ILOG
+* WebSphere Business Events, coming from the acquisition of Aptsoft.
+
+| Version | General Availability | Comments |
+| --- | --- | --- |
+| 1 | 1996 | First version of JRules |
+| 3.5 | May 2001 | Re-architected to be based on XML. |
+| 4.0 | March 2002 |
+| 4.5 | late 2002 | Introduced decision tables, rule flow editor. |
+| 5.0 | 2005 |
+| 5.1 | June 2005 |
+| 6.0 | early 2006 | Introduced Rule Studio (Eclipse-based editor and flat files) and Rule Team Server (web app and repository), which replace Rule Builder (custom app and repository). |
+| 6.1 | late 2006 |
+| 6.5 | January 2007 | Introduced Transparent Decision Services, semantic queries. |
+| 6.6 | July 2007 |
+| 6.7 | February 2008 |
+| 7.0 | July 2009 | Introduced Decision Validation Services (DVS), which replaces Rule Scenario Manager (RSM). |
+| 7.1 | June 2010 |
+| 7.5 | December 2011 | The first release of ODM as a combined package, released for distributed and z/OS systems. |
+| 8.0 | June 2012 | This version introduced the Business Console, providing an interface to the product more closely mirroring the social media style. |
+| 8.0.1 | December 2012 | Included Byte code generation for Java, a REST API for Rules Execution Server, and a new high performance engine for z/OS. |
+| 8.5 | June 2013 | New Decision Governance Framework; Further integration options. |
+| 8.6 | June 2014 | Improvements to the Business Console. |
+| 8.7 | December 2014 | Improved Business Console, restructured product packaging. |
+| 8.8 | November 2015 | Improved Business Console, improved cross version compatibility. |
+| 8.9.0 | March 2017 | Improved Business Console, improved DevOps automation, and improved integration with API management products. |
+| 8.9.1 | November 2017 | Enhanced Business Console. More detailed error messages at compilation and execution. Docker support. |
+| 8.9.2 | March 2018 | Support for IBM Cloud Private. Simplified product structure, including ODM for developers that is available at no charge for development and evaluation purposes. |
+| 8.10.0 | December 2018 | New decision modeling capability in Decision Center. Rule Designer based on Eclipse 4.7.3. Trial version for developers. |
+| 8.10.1 | March 2019 | Various enhancements in Decision Center. |
+| 8.10.2 | June 2019 | Various enhancements in Decision Center. Can test from Rule Designer. |
+| 8.10.3 | December 2019 | Support for OpenId Connect authentication. Improved performance in Decision Center. |
+| 8.10.4 | June 2020 | Improved incremental migration. Decision Center: Session timeout settings, Creating branches from snapshots. Improvements on Certified Kubernetes. |
+| 8.10.5 | December 2020 | Decision Center configuration improvements and REST API. RES configure maxRunningTime and supports OPEN API. Improvements on Certified Kubernetes. |
+| 8.11.0 | June 2022 | Release notes |
+| 9.0.0 | December 2024 | Release notes |
+
+
+## Websites claiming or suggesting that ODM is a notable piece of software
+
+Technology Blog
+James Taylor on Everything Decision Management
+

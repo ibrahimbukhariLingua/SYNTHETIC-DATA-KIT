@@ -1,0 +1,47 @@
+Pentera
+
+
+# Pentera
+
+
+
+**Pentera** is an American cybersecurity software company, specializing in automated security validation solutions. Originally founded as **Pcysys** in 2015, the company later rebranded as Pentera in 2021. The company is led by Amitai Ratzon (CEO) and Dr. Arik Liberzon (founder and CTO). Pentera has entities in the US, Germany, UK, Israel, Dubai, and Singapore.
+
+
+## Funding
+
+To date, the company has raised $115 million in primary funding:
+
+* Seed funding — Since its incorporation and by 2018, the company raised the total amount of $5 million.
+* Series A — In November 2019, $10 million were raised from AWZ Ventures and Blackstone Group.
+* Series B – In September 2020, $25 million were raised from Insight Partners, AWZ Ventures, and Blackstone Group.
+* Series C – In January 2022, Pentera became a unicorn raising $150 million, out of which $75 million in primary, from K1 Investment Management, Evolution Equity Partners, and Insight Partners. This funding round brought Pentera's valuation to $1 billion.
+
+## Product
+
+Pentera develops security validation software designed to test cybersecurity controls, credentials, and vulnerabilities within organizations. The platform is designed to assist in identifying and prioritizing security flaws to increase an organization's resilience to cyberattacks.
+
+The Pentera software employs algorithms to test across the entire IT environment, including the internal and external network attack surfaces, on-premises and cloud-based. The platform is designed to perform automated emulation of ethical attack techniques such as remote code execution, password cracking, and data exfiltration. The platform does not require the installation of software agents on the network’s endpoints, making it compatible with most enterprise systems and security service providers.
+
+The Pentera platform consists of products and add-on modules:
+
+* **Pentera Core Product** — maps, tests and validates the security control of the organization’s internal network.
+
+* **Pentera Surface Product** — maps, tests and validates the security control of the organization’s external network.
+* **Pentera Cloud Product** — maps, tests and validates the security controls of the organization’s cloud environments.
+
+* **Pentera RansomwareReady Module** — validates the organization’s defenses against the latest known ransomware attacks.
+
+* **Pentera Credentials Exposure Module** — leverages data of real-world leaked credentials sources to identify threats to organizational internal and external attack surfaces.
+
+## Research
+
+Pentera Lab is the company's research arm, which actively monitors threat intelligence feeds and identifies new vulnerabilities and attack techniques used by adversaries. Its publications are available for cyber defenders to identify, analyze, emulate, and mitigate new adversary tactics and techniques in the wild.
+
+These findings are synthesized and fed into the Pentera platform to continually enhance its security testing capabilities. Pentera lab also disclosed newly discovered "zero day" vulnerabilities and contributed to adversary tactics techniques and procedures (TTPs) to the MITRE ATT&CK matrix.
+
+Sample Pentera Lab findings and community contribution:
+
+* Zero-Day Vulnerabilities – In March 2022, the Pentera Labs team discovered two zero-day vulnerabilities, CVE-2022-22948 and CVE-2021-22015. They exposed weakness in VMware vCenter managed environments in over 500,000 organizations globally. The vulnerabilities were reported to VMware by Senior Security Researcher Yuval Lazar which resulted in a corrective VMware patch.
+* "135 is the new 445" – In September 2022, the Pentera Lab team developed an implementation of the Sysinternals PsExec utility that allows moving laterally in a network using the less monitored port, Windows TCP port 135.
+* "Who Stole My Cookies? XSS Vulnerability in Microsoft Azure Functions" – In January 2023, the Pentera Lab team found a web XSS vulnerability on Microsoft Azure Functions, which was patched by Microsoft after their report.

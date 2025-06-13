@@ -1,0 +1,99 @@
+Interest rate cap and floor
+
+
+# Interest rate cap and floor
+
+
+
+In finance, an **interest rate cap** is a type of interest rate derivative in which the buyer receives payments at the end of each period in which the interest rate exceeds the agreed strike price. An example of a cap would be an agreement to receive a payment for each month the LIBOR rate exceeds 2.5%.
+
+Similarly, an **interest rate floor** is a derivative contract in which the buyer receives payments at the end of each period in which the interest rate is below the agreed strike price.
+
+Caps and floors can be used to hedge against interest rate fluctuations. For example, a borrower who is paying the LIBOR rate on a loan can protect himself against a rise in rates by buying a cap at 2.5%. If the interest rate exceeds 2.5% in a given period the payment received from the derivative can be used to help make the interest payment for that period, thus the interest payments are effectively "capped" at 2.5% from the borrowers' point of view.
+
+
+## Interest rate cap
+
+An **interest rate cap** is a derivative in which the buyer receives payments at the end of each period in which the interest rate exceeds the agreed strike price. An example of a cap would be an agreement to receive a payment for each month the LIBOR rate exceeds 2.5%. They are most frequently taken out for periods of between 2 and 5 years, although this can vary considerably. Since the strike price reflects the maximum interest rate payable by the purchaser of the cap, it is frequently a whole number integer, for example 5% or 7%. By comparison the underlying index for a cap is frequently a LIBOR rate, or a national interest rate. The extent of the cap is known as its notional profile and can change over the lifetime of a cap, for example, to reflect amounts borrowed under an amortizing loan. The purchase price of a cap is a one-off cost and is known as the premium.
+
+The purchaser of a cap will continue to benefit from any rise in interest rates above the strike price, which makes the cap a popular means of hedging a floating rate loan for an issuer.
+
+The interest rate cap can be analyzed as a series of European call options, known as caplets, which exist for each period the cap agreement is in existence. To exercise a cap, its purchaser generally does not have to notify the seller, because the cap will be exercised automatically if the interest rate exceeds the strike (rate). Note that this automatic exercise feature is different from most other types of options. Each caplet is settled in cash at the end of the period to which it relates.
+
+In mathematical terms, a caplet payoff on a rate *L* struck at *K* is
+
+where *N* is the notional value exchanged and *{\displaystyle \alpha }* is the day count fraction corresponding to the period to which *L* applies. For example, suppose that it is January 2007 now and you own a caplet on the six month USD LIBOR rate with an expiry of 1 February 2007 struck at 2.5% with a notional of 1 million dollars. Next, if on 1 February the USD LIBOR rate sets at 3%, then you will receive the following payment:
+
+{\displaystyle \$1M\cdot 0.5\cdot \max(0.03-0.025,0)=\$2500}
+
+Customarily the payment is made at the end of the rate period, in this case on 1 August 2007.
+
+
+## Interest rate floor
+
+An **interest rate floor** is a series of European put options or **floorlets** on a specified reference rate, usually LIBOR. The buyer of the floor receives money if on the maturity of any of the floorlets, the reference rate is below the agreed strike price of the floor.
+
+
+## Interest rate collars and reverse collars
+
+An **interest rate collar** is the simultaneous purchase of an interest rate cap and sale of an interest rate floor on the same index for the same maturity and notional principal amount.
+
+* The cap rate is set above the floor rate.
+* The objective of the buyer of a collar is to protect against rising interest rates (while agreeing to give up some of the benefit from lower interest rates).
+* The purchase of the cap protects against rising rates while the sale of the floor generates premium income.
+* A collar creates a band within which the buyer's effective interest rate fluctuates
+
+A **reverse interest rate collar** is the simultaneous purchase of an interest rate floor and simultaneously selling an interest rate cap.
+
+* The objective is to protect the bank from falling interest rates.
+* The buyer selects the index rate and matches the maturity and notional principal amounts for the floor and cap.
+* Buyers can construct zero cost reverse collars when it is possible to find floor and cap rates with the same premiums that provide an acceptable band.
+
+## Valuation of interest rate caps
+
+The size of cap and floor premiums are impacted by a wide range of factors, as follows; the price calculation itself is performed by one of several approaches discussed below.
+
+* The relationship between the strike rate and the prevailing 3-month LIBOR
+ + premiums are highest for in the money options and lower for at the money and out of the money options
+* Premiums increase with maturity.
+ + The option seller must be compensated more for committing to a fixed-rate for a longer period of time.
+* Prevailing economic conditions, the shape of the yield curve, and the volatility of interest rates.
+ + upsloping yield curve—caps will be more expensive than floors.
+ + the steeper is the slope of the yield curve, ceteris paribus, the greater are the cap premiums.
+ + floor premiums reveal the opposite relationship.
+
+### Black model
+
+The simplest and most common valuation of interest rate caplets is via the Black model. Under this model we assume that the underlying rate is distributed log-normally with volatility {\displaystyle \sigma }. Under this model, a caplet on a LIBOR expiring at t and paying at T has present value
+
+where
+
+and
+
+Notice that there is a one-to-one mapping between the volatility and the present value of the option. Because all the other terms arising in the equation are indisputable, there is no ambiguity in quoting the price of a caplet simply by quoting its volatility. This is what happens in the market. The volatility is known as the "Black vol" or implied vol.
+
+As negative interest rates became a possibility and then reality in many countries at around the time of Quantitative Easing, so the Black model became increasingly inappropriate (as it implies a zero probability of negative interest rates). Many substitute methodologies have been proposed, including shifted log-normal, normal and Markov-Functional, though a new standard is yet to emerge.
+
+
+### As a bond put
+
+It can be shown that a cap on a LIBOR from *t* to *T* is equivalent to a multiple of a *t*-expiry put on a *T*-maturity bond. Thus if we have an interest rate model in which we are able to value bond puts, we can value interest rate caps. Similarly a floor is equivalent to a certain bond call. Several popular short-rate models, such as the Hull–White model have this degree of tractability. Thus we can value caps and floors in those models.
+
+
+### Valuation of CMS Caps
+
+Caps based on an underlying rate (like a Constant Maturity Swap Rate) cannot be valued using simple techniques described above. The methodology for valuation of CMS Caps and Floors can be referenced in more advanced papers.
+
+
+## Implied Volatilities
+
+* An important consideration is cap and floor (so called Black) volatilities. Caps consist of caplets with volatilities dependent on the corresponding forward LIBOR rate. But caps can also be represented by a "flat volatility", a single number which if plugged in the formula for valuing each caplet recovers the price of the cap i.e. the net of the caplets still comes out to be the same. To illustrate: (Black Volatilities) → (Flat Volatilities) : (15%,20%,....,12%) → (16.5%,16.5%,....,16.5%)
+ + Therefore, one cap can be priced at one vol. This is extremely useful for market practitioners as it reduces greatly the dimensionality of the problem: instead of tracking n caplet Black volatilities, you need to track just one: the flat volatility.
+* Another important relationship is that if the fixed swap rate is equal to the strike of the caps and floors, then we have the following put–call parity: Cap-Floor = Swap.
+* Caps and floors have the same implied vol too for a given strike.
+ + Imagine a cap with 20% vol and floor with 30% vol. Long cap, short floor gives a swap with no vol. Now, interchange the vols. Cap price goes up, floor price goes down. But the net price of the swap is unchanged. So, if a cap has x vol, floor is forced to have x vol else you have arbitrage.
+* Assuming rates can't be negative, a Cap at strike 0% equals the price of a floating leg (just as a call at strike 0 is equivalent to holding a stock) regardless of volatility cap.
+
+## Compare
+
+* Interest rate swap

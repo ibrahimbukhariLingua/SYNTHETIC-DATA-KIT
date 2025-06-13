@@ -1,0 +1,102 @@
+Cashier as a service
+
+
+# Cashier as a service
+
+
+
+**Cashier as a service** (**CaaS**) refers to using a third party service as payment. When a shopper buys merchandise online, oftentimes, the shopper does not pay the merchant directly, but rather through a third party – the cashier. The cashier is trusted by both the shopper and the merchant and is expected to allow for reliable and secure transfer of money. By paying a merchant through a cashier, shoppers are able to pay for merchandise without giving away their financial information to the merchants.
+
+
+## Shopping online
+
+When using CaaS, shopping online involves three parties – the shopper, merchant, and CaaS.
+
+The shopper is the user who adds items to the shopping cart and pays the merchant for the items.
+
+The merchant sells merchandise from a website. To sell merchandise, the merchant must provide a way for shoppers to add items to the shopping cart, provide a way for the shopper to pay the merchant, and keep track of customer information. Popular open source merchant software include nopCommerce and Interspire, which provide this functionality and integration of several different CaaS.
+
+The CaaS provides a method for the shopper to pay the merchant. Examples of popular CaaS include PayPal, Amazon Payments, Google Wallet, and Venmo.
+
+
+## Security
+
+Integrating a CaaS to a merchant website introduces issues in securing a payment from the shopper to the merchant. With three parties instead of two, securing a transaction becomes significantly more complex, especially when there is a malicious shopper. The CaaS and the merchant now need to stay in sync with each other to keep a consistent view of the transactions. Moreover, the shopper may try to masquerade as the merchant or CaaS to trick the other parties into changing their state or giving signed messages to the shopper.
+
+
+### Security goal – invariants
+
+For a successful transaction from a shopper S buying and item I from a merchant M, the following invariants must hold true.
+
+1. M owns I
+2. A payment is guaranteed to be transferred from an account S to that of M in the CaaS
+3. The payment is for the purchase of I, and is valid for only one piece of I
+4. The amount of this payment is equal to the price of I
+
+### Generic transaction flow
+
+When a shopper buys merchandise from a merchant, the shopper calls public APIs (as indicated by the black diamonds) of the merchant and the CaaS with HTTP requests. The merchant and CaaS may also call each other's APIs to give information to each other. Below is a detailed description of the generic flow:
+
+RT1.a) The shopper checks out the items in his shopping cart.
+
+RT1.a.a) The merchant notifies the CaaS that a customer will be paying.
+
+RT1.a.b) The CaaS acknowledges the merchant.
+
+RT1.b) The merchant redirects the shopper to the CaaS, possibly providing the shopper with information to identify the order and gross
+information.
+
+RT2.a) The shopper provides the information given by the merchant to the CaaS.
+
+RT2.a.a) The CaaS notifies the merchant that the shopper has paid.
+
+RT2.a.b) The merchant acknowledges the CaaS.
+
+RT2.b) The CaaS redirects the shopper to the merchant, possibly providing the shopper with information to pass back to the merchant.
+
+RT3.a) The shopper provides the information given by the CaaS to the merchant.
+
+RT3.b) After the merchant updates the database, the merchant sends a confirmation response back to the shopper and the transaction is complete.
+
+RT4.a/b) Represents the shopper masquerading as the CaaS. The shopper calls a merchant API which only the CaaS should be calling.
+
+RT5.a/b) Represents the shopper masquerading as the merchant. The shopper creates a merchant store and receives API calls from the CaaS.
+
+
+## Tools available for the security flow
+
+HTTP Headers and Fiddlers are two of the popular debugging tools are available to exploit on live stores.
+
+
+### Security flaws – examples
+
+The following are examples of how malicious shoppers may be able to exploit the logic flaws in the merchant and CaaS software to buy items for free. These are real examples and the flaws have been patched.
+
+The following notation will be used:
+
+* A is the shopper/attacker.
+* T is the merchant
+* C is the CaaS
+* \* indicates that the message is signed
+
+#### nopCommerce's integration of PayPal standard
+
+In nopCommerce's integration of PayPal standard, the shopper places an order and is redirected to PayPal, given an orderID and gross by the merchant. However, these arguments are not signed by the merchant, therefore the shopper may change this information before passing it along to PayPal. By changing the gross amount to 0, the CaaS expects the shopper to pay that amount. When the shopper is redirected back to the merchant, the merchant contacts PayPal about the status of the payment for that particular order and PayPal will reply that the shopper paid for the item. The merchant then updates the status of the order to "paid" without comparing the gross information that PayPal gave back to the price of the item. Thus, the shopper successfully bought an item from the merchant for free.
+
+
+#### nopCommerce's integration of Amazon Simple Pay
+
+In nopCommerce's integration of Amazon Simple Pay, the shopper will place an order and be redirected to Amazon. The arguments given by the merchant are signed as indicated by the \*, therefore preventing the shopper from tampering with the arguments. The shopper will pass these arguments to Amazon, pay, and be redirected to the returnURL that was provided. The merchant that "status=PAID" and will finish the transaction. In this case, the shopper can create a separate merchant account that can sign a message which Amazon will accept. Thus, when the shopper places an order at a merchant store, the shopper will not give Amazon the message provided by the merchant, but instead create his own message and sign it with his merchant account. The arguments in this message will be the same as in the merchant's message but since the shopper's merchant account signed the message, the shopper will be paying himself. However, the shopper will be redirected to the merchant's website because of the returnURL and the merchant will update its database that the order was paid for because it received a signed message from Amazon with "status=PAID". The shopper has successfully bought an item from a merchant by paying himself.
+
+
+#### Interspire's integration of PayPal standard
+
+In Interspire's integration of PayPal standard, the shopper places an order and is redirected to PayPal, given an orderID, gross, merchantID, and IPNHandler. An IPNHandler specifies the merchant's URL, which PayPal will use to contact the merchant. The shopper sends these arguments to PayPal and pays. PayPal will notify the merchant of the payment using the given IPNHandler and redirect the shopper back to the merchant. The shopper will then be given a status update from the merchant.
+
+The exploit in this case involves the shopper to act as all three parties (Shopper, Merchant, and CaaS). The shopper first creates a merchant account of his own and changes the orderID to empty and IPNHandler to point to his merchant URL. PayPal will then send a signed message to the specified IPNHandler, which the shopper will save. The shopper can now send this message to the merchant to tell the merchant he has paid for a particular order. When the merchant receives a message with an empty orderID, the merchant will get the orderID from the cookies, which the shopper can change easily. With the saved message from PayPal, the shopper can now buy an arbitrary number of items of the same price from the merchant for free by changing the cookies and replaying the message from PayPal to the merchant.
+
+
+#### Attacker anonymity
+
+Attackers may need to create their own merchant accounts for some of the attacks. These often include the need to provide credit card information. The attacker can use gift cards that act as credit cards but do not contain any personal information. Moreover, attackers can hide their real IP address by using IP spoofing or other technologies to make his IP address untraceable.
+

@@ -1,0 +1,24 @@
+Operational data store
+
+
+# Operational data store
+
+
+
+An **operational data store** (**ODS**) is used for operational reporting and as a source of data for the enterprise data warehouse (EDW). It is a complementary element to an EDW in a decision support environment, and is used for operational reporting, controls, and decision making, as opposed to the EDW, which is used for tactical and strategic decision support.
+
+An ODS is a database designed to integrate data from multiple sources for additional operations on the data, for reporting, controls and operational decision support. Unlike a production master data store, the data is not passed back to operational systems. It may be passed for further operations and to the data warehouse for reporting.
+
+An ODS should not be confused with an enterprise data hub (EDH). An operational data store will take transactional data from one or more production systems and loosely integrate it, in some respects it is still subject oriented, integrated and time variant, but without the volatility constraints. This integration is mainly achieved through the use of EDW structures and content.
+
+An ODS is not an intrinsic part of an EDH solution, although an EDH may be used to subsume some of the processing performed by an ODS and the EDW. An EDH is a broker of data. An ODS is certainly not.
+
+Because the data originates from multiple sources, the integration often involves cleaning, resolving redundancy and checking against business rules for integrity. An ODS is usually designed to contain low-level or atomic (indivisible) data (such as transactions and prices) with limited history that is captured "real time" or "near real time" as opposed to the much greater volumes of data stored in the data warehouse generally on a less-frequent basis.
+
+
+## General use
+
+The general purpose of an ODS is to integrate data from disparate source systems in a single structure, using data integration technologies like data virtualization, data federation, or extract, transform, and load (ETL). This will allow operational access to the data for operational reporting, master data or reference data management.
+
+An ODS is not a replacement or substitute for a data warehouse or for a data hub but in turn could become a source.
+

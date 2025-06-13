@@ -1,0 +1,52 @@
+Japanese auction
+
+
+# Japanese auction
+
+
+
+| Part of a series on |
+| --- |
+| Auctions |
+| Types |
+| * All-pay + Chinese + Bidding fee + Dollar * Amsterdam * Anglo-Dutch * Barter double * Best/not best * Brazilian * Calcutta * Candle * Click-box bidding * Combinatorial * Common value * Deferred-acceptance * Discriminatory price * Double * Dutch * English * Forward * French * Generalized first-price * Generalized second-price * Japanese * Knapsack * Multi-attribute * Multiunit * No-reserve * Rank * Reverse * Scottish * Sealed first-price * Simultaneous ascending * Single-price * Traffic light * Uniform price * Unique bid * Value of revenues * Vickrey * Vickrey–Clarke–Groves * Walrasian * Yankee |
+| Bidding |
+| * Shading * Calor licitantis * Cancellation hunt * Jump * Rigging * Sniping * Suicide * Tacit collusion |
+| Contexts |
+| * Algorithms * Autos * Art * Charity * Children * Players * Domain names * Flowers * Loans * Scam * Slaves * Spectrum * Stamps * Virginity * Wine * Wives |
+| Theory |
+| * Digital goods * Price of anarchy * Revenue equivalence * Winner's curse |
+| Online |
+| * Ebidding * Private electronic market * Software |
+| * v * t * e |
+
+A **Japanese auction** (also called **ascending clock auction**) is a dynamic auction format. It proceeds in the following way.
+
+* An initial price is displayed. This is usually a low price - it may be either 0 or the seller's reserve price.
+* All buyers that are interested in buying the item at the displayed price enter the auction arena.
+* The displayed price increases continuously, or by small discrete steps (e.g. one cent per second).
+* Each buyer may exit the arena at any moment.
+* No exiting buyer is allowed to re-enter the arena.
+* When a single buyer remains in the arena, the auction stops. The remaining buyer wins the item and pays the displayed price.
+
+## Strategies
+
+Suppose a buyer believes that the value of the item is *v*. Then this buyer has a simple dominant strategy: stay in the arena as long as the displayed price is below *v*; exit the arena whenever the displayed price equals *v*. This means that the Japanese auction is a truthful mechanism: it is always best to act according to your true value, regardless of the others' values.
+
+When all buyers play their dominant strategies, the outcome is:
+
+* The winning buyer is the buyer with the highest valuation;
+* The final price is the second-highest valuation.
+
+## Comparison to Vickrey auction
+
+A Vickrey auction is a sealed-bid auction, where all buyers submit their bids in advance, the highest bidder wins and pays the second-highest bid. It is a truthful mechanism. At first glance, its outcome looks identical to the outcome of the Japanese auction. Moreover, the Vickrey auction is apparently much faster, since it does not require bidders to wait until the clock increases to the final price. However, the Japanese auction has several advantages that make it much more useful in practice.
+
+* **Simplicity**: the bidders do not have to report their values in advance; all they have to do is make a binary decision in each point of time, whether to remain or to leave the arena.
+* **Obvious truthfulness**: acting according to the true valuation is a dominant strategy even if there are other bidders whose actions depend on your own action. In particular, being truthful is a dominant strategy even if the auctioneer secretly sends allies that bid according to your own bid.
+* **Information revelation**: buyers can see the exit-prices of the other buyers, and dynamically update their own valuation accordingly. This point is relevant when the buyers' valuations are affiliated (e.g. in common value auctions). In this case, buyers in a Vickrey auction might be hurt by the winner's curse: if all buyers bid truthfully, the winner pays (in expectation) more than the actual value, since all other bids are lower. This, in turn, makes them to decrease their bids below their true value, and decreases the seller's revenue. In contrast, in a Japanese auction, buyers may gain information during the auction, so they are willing to make higher bids and this increases the seller's revenue.
+
+## Comparison to English auction
+
+An English auction is a dynamic "open outcry" auction. Here, the displayed price is increased by bidders shouting prices above the displayed price, rather than by the auctioneer's clock. At first glance, this seems equivalent to the Japanese auction: apparently, it is a dominant strategy for each buyer whose price is above the displayed price, to always bid the minimal allowed increment (e.g. one cent) above the displayed price. However, in practice, jump bidding is often observed: buyers increase the displayed price much more than the minimal allowed increment. Obviously, jump-bidding is not possible in a Japanese auction. This may be seen as either an advantage or a disadvantage of the Japanese auction format.
+

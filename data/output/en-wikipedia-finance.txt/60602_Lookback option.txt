@@ -1,0 +1,43 @@
+Lookback option
+
+
+# Lookback option
+
+
+
+**Lookback options**, in the terminology of finance, are a type of exotic option with path dependency, among many other kind of options. The payoff depends on the optimal (maximum or minimum) underlying asset's price occurring over the life of the option. The option allows the holder to "look back" over time to determine the payoff. There exist two kinds of lookback options: with floating strike and with fixed strike.
+
+
+## Lookback option with floating strike
+
+As the name introduces it, the option's strike price is floating and determined at maturity. The floating strike is the optimal value of the underlying asset's price during the option life. The payoff is the maximum difference between the market asset's price at maturity and the floating strike. For the call, the strike price is fixed at the asset's lowest price during the option's life, and, for the put, it is fixed at the asset's highest price. Note that these options are not really options, as they will be always exercised by their holder. In fact, the option is never out-of-the-money, which makes it more expensive than a standard option. The payoff functions for the lookback call and the lookback put, respectively, are given by:
+
+where {\displaystyle S\_{max}} is the asset's maximum price during the life of the option, {\displaystyle S\_{min}} is the asset's minimum price during the life of the option, and {\displaystyle S\_{T}} is the underlying asset's price at maturity {\displaystyle T}.
+
+
+## Lookback option with fixed strike
+
+As for the standard European options, the option's strike price is fixed. The difference is that the option is not exercised at the price at maturity: the payoff is the maximum difference between the optimal underlying asset price and the strike. For the call option, the holder chooses to exercise at the point when the underlying asset price is at its highest level. For the put option, the holder chooses to exercise at the underlying asset's lowest price. The payoff functions for the lookback call and the lookback put, respectively, are given by:
+
+where {\displaystyle S\_{max}} is the asset's maximum price during the life of the option, {\displaystyle S\_{min}} is the asset's minimum price during the life of the option, and {\displaystyle K} is the strike price.
+
+
+## Arbitrage-free price of lookback options with floating strike
+
+Using the Black–Scholes model, and its notations, we can price the European lookback options with floating strike. The pricing method is much more complicated than for the standard European options and can be found in *Musiela*. Assume that there exists a continuously-compounded risk-free interest rate {\displaystyle r>0} and a constant stock's volatility {\displaystyle \sigma >0}. Assume that the time to maturity is {\displaystyle T>0}, and that we will price the option at time {\displaystyle t<T}, although the life of the option started at time zero. Define {\displaystyle \tau =T-t}. Finally, set that
+
+Then, the price of the lookback call option with floating strike is given by:
+
+where
+
+and where {\displaystyle \Phi } is the standard normal cumulative distribution function, {\displaystyle \Phi (a)={\frac {1}{\sqrt {2\pi }}}\int \_{-\infty }^{a}e^{-{\frac {x^{2}}{2}}}\,dx}.
+
+Similarly, the price of the lookback put option with floating strike is given by:
+
+
+## Partial lookback options
+
+Partial lookback options are a subclass of lookback options with the same payoff structure, but with the goal of reducing its fair price. One way is to scale the fair price linearly with constant {\displaystyle \lambda }, where {\displaystyle 0<\lambda <1}. Thus the payoff is:
+
+Selecting specific dates is a more intricate way of creating partial lookback options and other partial path-dependent options. The principle lies in selecting a subset of monitoring dates, so that the lookback condition is less strong and thus reducing the premium. Examples include the partial lookback option proposed by Heynen and Kat, and the amnesiac lookback option proposed by Chang and Li. Discrete partial path-dependent options are overpriced under continuous assumptions; their pricing is complex and is typically performed using numerical methods.
+

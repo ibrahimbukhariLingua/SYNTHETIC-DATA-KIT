@@ -1,0 +1,154 @@
+Alice Corp. v. CLS Bank International
+
+
+# Alice Corp. v. CLS Bank International
+
+
+
+***Alice Corp. v. CLS Bank International***, 573 U.S. 208 (2014), was a 2014 United States Supreme Court decision about patent eligibility of business method patents. The issue in the case was whether certain patent claims for a computer-implemented, electronic escrow service covered abstract ideas, which would make the claims ineligible for patent protection. The patents were held to be invalid, because the claims were drawn to an abstract idea, and implementing those claims on a computer was not enough to transform that abstract idea into patentable subject matter.
+
+Although the *Alice* opinion did not mention software as such, the case was widely considered as a decision on software patents or patents on software for business methods. *Alice* and the 2010 Supreme Court decision of *Bilski v. Kappos*, another case involving software for a business method (which also did not opine on software as such), were the most recent Supreme Court cases on the patent eligibility of software-related inventions since *Diamond v. Diehr* in 1981.
+
+
+## Background
+
+Alice Corporation ("Alice") owned four patents on electronic methods and computer programs for financial-trading systems. These financial-trading systems described how two parties could settle their exchange through a third party to reduce "settlement risk"—the risk that one party will perform while the other will not. Alice alleged that CLS Bank International and CLS Services Ltd. (collectively "CLS Bank") began to use similar technology in 2002. Alice accused CLS Bank of infringement of Alice's patents, and when the parties did not resolve the issue, CLS Bank filed suit against Alice in 2007, seeking a declaratory judgment that the claims at issue were invalid. Alice counterclaimed, alleging infringement.
+
+The relevant claims are in these patents:
+
+* US patent 5,970,479 filed 1992, issued 1999 (available at the USPTO site and at Google patents)
+* US patent 6,912,510 filed 2000, issued 2005 (available at the USPTO site and at Google patents)
+* US patent 7,149,720 filed 2002, issued 2006 (available at the USPTO site and at Google patents)
+* US patent 7,725,375 filed 2005, issued 2010 (available at the USPTO site and at Google patents)
+
+## Rulings in lower courts
+
+
+### District court
+
+In 2007, CLS Bank sued Alice in the United States District Court for the District of Columbia seeking a declaratory judgment that Alice's patents were invalid and unenforceable and that CLS Bank had not infringed them. Alice countersued CLS Bank for infringement of the patents. After the court had allowed initial, limited discovery on the questions of CLS Bank's operations and its relationship to the allegedly infringing CLS Bank system, the court ruled on the parties' cross-motions for summary judgment. It declared each of Alice's patents invalid because the claims concerned abstract ideas, which are not eligible for patent protection under 35 U.S.C. § 101.
+
+The court stated that a method "directed to an abstract idea of employing an intermediary to facilitate simultaneous exchange of obligations in order to minimize risk" is a "basic business or financial concept," and that a "computer system merely 'configured' to implement an abstract method is no more patentable than an abstract method that is simply 'electronically' implemented." In so holding, the district court relied on *Bilski v. Kappos* as precedent, in which the Supreme Court held that Bilski's claims to business methods for hedging against the risk of price fluctuations in commodities markets were not patent-eligible because they claimed and preempted (*i.e.*, monopolized) the abstract idea of hedging against risk.
+
+
+### Federal Circuit
+
+Alice appealed the decision to the United States Court of Appeals for the Federal Circuit. A panel of the appeals court decided by 2–1 in July 2012 to reverse the lower court's decision. But the members of the Federal Circuit vacated that decision and set the case for reargument *en banc*. It ordered that the parties (and any *amici curiae* who cared to brief the matter) address the following questions:
+
+* what test should the court adopt to determine whether a computer-implemented invention is a patent-ineligible abstract idea;
+* whether the presence of a computer in a claim could ever make patent-ineligible subject matter patentable; and
+* whether method, system, and media claims should be considered equivalent under § 101.
+
+A very fractured panel of ten judges of the Federal Circuit issued seven different opinions, with no single opinion supported by a majority on all points. Seven of the ten judges upheld the district court's decision that Alice's method claims and computer-readable-medium claims were not patent-eligible, but they did so for different reasons. Five of the ten judges upheld the district court's decision that Alice's computer-systems claims were not patent-eligible, and five judges disagreed. The panel as a whole did not agree on a single standard to determine whether a computer-implemented invention is a patent-ineligible abstract idea.
+
+
+#### Plurality opinion
+
+In the leading, five-member, plurality opinion written by Judge Lourie, joined by Judges Dyk, Prost, Reyna, and Wallach, the court stated a test that focused on first identifying the abstract idea or fundamental concept applied by the claim and then determining whether the claim would preempt the abstract idea. The analysis involved making four steps:
+
+1. determine whether the claimed invention fits within one of the four classes in the statute: process, machine, manufacture, or composition of matter;
+2. determine whether the claim poses a risk of "preempting an abstract idea";
+3. identify the idea supposedly at risk of preemption by defining "whatever fundamental concept appears wrapped up in the claim";
+4. in a final step called "inventive concept" analysis, determine whether there is genuine, human contribution to the claimed subject matter. The "balance of the claim," or the human contribution, must "contain[] additional substantive limitations that narrow, confine, or otherwise tie down the claim so that, in practical terms, it does not cover the full abstract idea itself."
+
+The last part of the Federal Circuit plurality analysis "considers whether steps combined with a natural law or abstract idea are so insignificant, conventional, or routine as to yield a claim that effectively covers the natural law or abstract idea itself." The Supreme Court would later adopt a similar principle. In the Supreme Court's opinion, the Court combined the first three steps into one identification step, resulting in a two-step analysis.
+
+
+#### Four-judge opinion
+
+Chief Judge Rader and Circuit Judges Linn, Moore, and O'Malley filed an opinion concurring in part and dissenting in part. Their patent-eligibility analysis focused on whether the claim, as a whole, was limited to an application of an abstract idea, or was merely a recitation of the abstract idea. They would have held Alice's system claims patent eligible because they were limited to a computer-implemented application.
+
+
+#### Judge Rader's "reflections"
+
+Judge Rader also filed "additional reflections" to the ruling (not joined by any other judges) expressing his view of the patent statute as allowing very broad patentability under § 101, and his understanding that natural laws are restricted to "universal constants created, if at all, only by God, Vishnu, or Allah." Referencing Einstein, he stated that "even gravity is not a natural law."
+
+
+#### Opinions supporting patent eligibility of all claims
+
+Judge Newman concurred in part and dissented in part, calling for the Federal Circuit to clarify the interpretation of § 101. She would have held all of Alice's claims patent eligible.
+
+Judges Linn and O'Malley dissented, arguing that all claims were patent eligible. They called for legislative, rather than judicial, action to address the "proliferation and aggressive enforcement of low quality software patents" cited in the many *amicus curiae* briefs and suggested new laws to limit the term of software patents or limit the scope of such patents.
+
+
+## Supreme Court
+
+
+### *Amicus curiae* participation
+
+The keen interest of the software industry and patent professionals in the issue was illustrated by many companies and groups filing 52 *amicus curiae* briefs urging the Supreme Court to decide the issue of software patent eligibility. Those *amici* included the Electronic Frontier Foundation, Software Freedom Law Center, Institute of Electrical and Electronics Engineers, Intellectual Property Law Association of Chicago, Accenture Global Services. and the USPTO itself for the United States. Nearly all such briefs argued that the patents should be invalidated. They disagreed, however, as to the proper reasoning.
+
+* A brief prepared by Google, Amazon and other companies argued that the patent was on an abstract idea, which actually harms innovation, and that the real innovation lies in detailing out a working system.
+* Microsoft, Adobe and Hewlett-Packard argued it was nothing more than an unpatentable business method (per *Bilski v. Kappos*) and merely saying to perform it with a computer does not change this fact.
+* Free Software Foundation and others argued that no software should be patented unless it passes machine-or-transformation test, as this blocks both innovation and scientific collaboration.
+* IBM disagreed with the "abstract ideas" reasoning and argued that the patent should instead be struck down for being too obvious.
+* Finally, a consortium of retailer and manufacturers, including Dillard's and Hasbro, simply asked for a clear rule.
+
+### Supreme Court opinions
+
+The Court unanimously invalidated the patent, in an opinion by Justice Clarence Thomas.
+
+
+#### Majority opinion
+
+Relying on *Mayo v. Prometheus*, the court found that an abstract idea could not be patented just because it is implemented on a computer. In *Alice*, a software implementation of an escrow arrangement was not patent eligible because it is an implementation of an abstract idea. Escrow is not a patentable invention, and merely using a computer system to manage escrow debts does not rise to the level needed for a patent. Under *Alice*, the "*Mayo* framework" should be used in all cases in which the Court has to decide whether a claim is patent-eligible.
+
+The Court began by recognizing that the patents cover what amounts to a computerized escrow arrangement. The Court held that *Mayo* explained how to address the problem of determining whether a patent claimed a patent-ineligible abstract idea or instead a potentially patentable practical implementation of an idea. This requires using a "two-step" analysis.
+
+In the first *Mayo* step, the court must determine whether the patent claim under examination contains an abstract idea, such as an algorithm, method of computation, or other general principle. If not, the claim is potentially patentable, subject to the other requirements of the patent code. If the answer is affirmative, the court must proceed to the next step.
+
+In the second step of analysis, the court must determine whether the patent adds to the idea "something extra" that embodies an "inventive concept."
+
+If there is no addition of an inventive element to the underlying abstract idea, the court should find the patent invalid under § 101. This means that the implementation of the idea must not be generic, conventional, or obvious, if it is to qualify for a patent. Ordinary and customary use of a general-purpose digital computer is insufficient, the Court said—"merely requir[ing] generic computer implementation fail[s] to transform [an] abstract idea into a patent-eligible invention."
+
+The ruling continued with these points:
+
+* A mere instruction to implement an abstract idea on a computer "cannot impart patent eligibility."
+* "[T]he mere recitation of a generic computer cannot transform a patent-ineligible abstract idea into a patent-eligible invention."
+* "Stating an abstract idea 'while adding the words "apply it"' is not enough for patent eligibility."
+* "Nor is limiting the use of an abstract idea to a particular technological environment."
+
+#### Concurring opinion
+
+Three justices joined in a concurring opinion (per Justice Sotomayor) that essentially reiterated now-retired Justice Stevens's argument in *Bilski*, on historical grounds, that business methods were categorically outside the patent system. But because they too agreed that the claimed subject matter was an abstract idea, they joined the main opinion also.
+
+
+## Reception
+
+According to *The Washington Post*:
+
+> [W]hile the court struck down what was universally said to be a bad patent, it didn't do much to say what kinds of software should be patentable. In other words, the court decided the most basic conflict in the case, but more or less declined to offer guidance for other, future cases.
+
+The Electronic Frontier Foundation said that the Supreme Court:
+
+> reaffirmed that merely adding "a generic computer to perform generic computer functions" does not make an otherwise abstract idea patentable. This statement (and the opinion itself) makes clear that an abstract idea along with a computer doing what a computer normally does is not something our patent system was designed to protect. Admittedly, the Supreme Court did not offer the clearest guidance on when a patent claims merely an abstract idea, but it did offer guidance that should help to invalidate some of the more egregious software patents out there.
+
+The Software Freedom Law Center said the Supreme Court:
+
+> took one more step towards the abolition of patents on software inventions. Upholding its previous positions, the Court held that abstract ideas and algorithms are unpatentable. It also emphasized that one cannot patent "an instruction to apply [an] abstract idea ... using some un-specified, generic computer.""
+
+The Coalition for Patent Fairness, which advocates for patent reform legislation, said:
+
+> [N]either the ruling—nor any single act by the court or the executive branch—can do what is needed to make the business model of being a patent troll unprofitable and unattractive."
+
+Some commentators expressed disappointment with the opinion because it did not define more comprehensively the boundaries between abstract ideas and patent-eligible implementations of ideas. They were particularly critical of Justice Thomas's statement—
+
+> In any event, we need not labor to delimit the precise contours of the "abstract ideas" category in this case. It is enough to recognize that there is no meaningful distinction between the concept of risk hedging in *Bilski* and the concept of intermediated settlement at issue here. Both are squarely within the realm of 'abstract ideas' as we have used that term."
+
+For example, Robert Merges said, "To say we did not get an answer is to miss the depth of the non-answer we did get." John Duffy remarked, "[T]he Supreme Court has been remarkably resistant to providing clear guidance in this area, and this case continues that trend."
+
+Richard H. Stern defended the opinion as "the expectable price of unanimity in a nine-member tribunal," arguing that the "greater sensed legitimacy and precedential stability" of a unanimous opinion "outbalanced" the shortcomings of a lack of clear guidance as to details. This commentator also asserted that "it is sensible to make narrow, incremental rulings as to software patent eligibility, because at present we are not so well informed that we can speak with confidence in very broad terms."
+
+Gene Quinn, a patent-lawyer advocate of patenting software, opined that "In what can only be described as an intellectually bankrupt opinion, the Supreme Court never once used the word "software" in its decision. This is breathtaking given that the Supreme Court decision in *Alice* will render many hundreds of thousands of software patents completely useless." He also opined that "In years to come this decision will be ridiculed for many legitimate reasons."
+
+
+## Subsequent developments
+
+Despite the Court's avoidance of mention of software in the opinion, the *Alice* decision has had a dramatic effect on the validity of so-called software patents and business-method patents. Since *Alice*, these patents have suffered a very high mortality rate. Hundreds of patents have been invalidated under §101 of the U.S. patent laws in Federal District Courts. Applying Alice, district court judges have found many of these claims to be patent-ineligible abstract ideas.
+
+Federal Circuit Judge William Curtis Bryson explained the high mortality rate when sitting by designation as a trial judge in the *Loyalty v. American Airlines* case:
+
+> In short, such patents, although frequently dressed up in the argot of invention, simply describe a problem, announce purely functional steps that purport to solve the problem, and recite standard computer operations to perform some of those steps. The principal flaw in these patents is that they do not contain an "inventive concept" that solves practical problems and ensures that the patent is directed to something "significantly more than" the ineligible abstract idea itself. See *CLS Bank*, 134 S. Ct. at 2355, 2357; *Mayo*, 132 S. Ct. at 1294. As such, they represent little more than functional descriptions of objectives, rather than inventive solutions. In addition, because they describe the claimed methods in functional terms, they preempt any subsequent specific solutions to the problem at issue. See *CLS Bank*, 134 S. Ct. at 2354; *Mayo*, 132 S. Ct. at 1301-02. It is for those reasons that the Supreme Court has characterized such patents as claiming "abstract ideas" and has held that they are not directed to patentable subject matter.
+
+Patent issuance statistics from the PTO show a significant drop in the number of business method patents (PTO class 705) issued in the months following the *Alice* decision. A graph available here shows that the PTO issued fewer than half the number after *Alice* that it had issued per month during the period prior to *Alice*. At the same time, the issuance of other types of software patents rose. (According to the graph, before *Alice* approximately 10% of software patents issued were business method patents, but afterwards that dropped in half, to 5%.)
+

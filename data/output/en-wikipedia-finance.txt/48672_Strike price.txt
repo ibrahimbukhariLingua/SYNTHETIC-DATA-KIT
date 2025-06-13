@@ -1,0 +1,52 @@
+Strike price
+
+
+# Strike price
+
+
+
+| Part of a series on |
+| --- |
+| Finance |
+| Markets | Assets | | --- | | * Asset (economics) * Bond * Asset growth * Capital asset * Commodity * Derivatives * Domains * Equity * Foreign exchange * Money * Over-the-counter * Private equity * Real estate * Spot * Stock | | Participants | | * Angel investor * Bull (stock market speculator) * Financial planner * Investor + institutional * Retail * Speculator | | Locations | | * Financial centres * Offshore financial centres * Conduit and sink OFCs | |
+| Instruments * Bond * Cash * Collateralised debt obligation * Credit default swap * Time deposit (certificate of deposit) * Credit line * Deposit * Derivative * Futures contract * Indemnity * Insurance * Letter of credit * Loan * Mortgage * Option (call * exotic * put) * Performance bonds * Repurchase agreement * Stock * Security * Syndicated loan * Synthetic CDO |
+| Corporate | General | | --- | | * Accounting * Audit * Capital budgeting * Capital structure * Corporate finance * Credit rating agency * Enterprise risk management * Enterprise value * Risk management * Financial statements | | Transactions | | * Leveraged buyout * Mergers and acquisitions * Structured finance * Venture capital | | Taxation | | * Base erosion and profit shifting (BEPS) * Corporate tax haven * Tax inversion * Tax haven * Transfer pricing | |
+| Personal * Credit / Debt * Employment contract * Financial planning * + Retirement + Student loan |
+| Public | Government spending | | --- | | * Final consumption expenditure * + Operations + Redistribution * Transfer payment | | Government revenue | | * + Taxation + Deficit spending * + Budget (balance) + Debt * Non-tax revenue * Warrant of payment | |
+| Banking * Central bank * Deposit account * Fractional-reserve * Full-reserve * Investment banking * Loan * Money supply * Lists of banks | Bank regulation | | --- | | * Banking license * Basel Accords * Bank for International Settlements * Financial Stability Board * Deposit insurance * Separation of investment and retail banking | |
+| Regulation **·** Financial law | * International Financial Reporting Standards * ISO 31000 * Professional certification * Fund governance | | --- | |
+| Economic history * Private equity and venture capital * Recession * Stock market bubble * Stock market crash * Accounting scandals |
+| * Outline * Business and Economics portal * Money portal |
+| * v * t * e |
+
+In finance, the **strike price** (or **exercise price**) of an option is a fixed price at which the owner of the option can buy (in the case of a call), or sell (in the case of a put), the underlying security or commodity. The strike price may be set by reference to the spot price, which is the market price of the underlying security or commodity on the day an option is taken out. Alternatively, the strike price may be fixed at a discount or premium.
+
+The strike price is a key variable in a derivatives contract between two parties. Where the contract requires delivery of the underlying instrument, the trade will be at the strike price, regardless of the market price of the underlying instrument at that time.
+
+
+## Moneyness
+
+Moneyness is the value of a financial contract if the contract settlement is financial. More specifically, it is the difference between the strike price of the option and the current trading price of its underlying security.
+
+In options trading, terms such as *in-the-money*, *at-the-money* and *out-of-the-money* describe the moneyness of options.
+
+* A call option is in-the-money if the strike price is below the market price of the underlying stock.
+* A put option is in-the-money if the strike price is above the market price of the underlying stock.
+* A call or put option is at-the-money if the stock price and the exercise price are the same (or close).
+* A call option is out-of-the-money if the strike price is above the market price of the underlying stock.
+* A put option is out-of-the-money if the strike price is below the market price of the underlying stock.
+
+### Mathematical formula
+
+A call option has positive monetary value at expiration when the underlying has a spot price (**S**) *above* the strike price (**K**). Since the option will not be exercised unless it is in-the-money, the payoff for a call option is
+
+also written as
+
+where
+
+A put option has positive monetary value at expiration when the underlying has a spot price *below* the strike price; it is "out-the-money" otherwise, and will not be exercised. The payoff is therefore:
+
+or
+
+For a digital option payoff is {\displaystyle 1\_{S\geq K}}, where {\displaystyle 1\_{\{\}}} is the indicator function:
+

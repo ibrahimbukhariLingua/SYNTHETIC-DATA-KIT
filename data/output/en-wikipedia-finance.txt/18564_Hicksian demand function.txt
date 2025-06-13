@@ -1,0 +1,45 @@
+Hicksian demand function
+
+
+# Hicksian demand function
+
+
+
+In microeconomics, a consumer's **Hicksian demand function** (or **compensated demand function**) represents the quantity of a good demanded when the consumer minimizes expenditure while maintaining a fixed level of utility.
+
+The Hicksian demand function illustrates how a consumer would adjust their demand for a good in response to a price change, assuming their income is adjusted (or compensated) to keep them on the same indifference curve—ensuring their utility remains unchanged. Mathematically,
+
+where {\displaystyle h(p,u)} is the Hicksian demand function or commodity bundle demanded, at price vector {\displaystyle p} and utility level {\displaystyle {\bar {u}}}. Here {\displaystyle p} is a vector of prices, and {\displaystyle x} is a vector of quantities demanded, so the sum of all
+{\displaystyle p\_{i}x\_{i}} is the total expenditure on all goods.
+
+The Hicksian demand function isolates the effect of relative prices on demand, assuming utility remains constant. It contrasts with the Marshallian demand function, which accounts for both the substitution effect and the reduction in real income caused by price changes. The function is named after John Hicks.
+
+
+## Relationship to other functions
+
+Hicksian demand functions are often convenient for mathematical manipulation because they do not require representing income or wealth. Additionally, the function to be minimized is linear in the {\displaystyle x\_{i}}, which gives a simpler optimization problem. However, Marshallian demand functions of the form {\displaystyle x(p,w)} that describe demand given prices *p* and income {\displaystyle w} are easier to observe directly. The two are related by
+
+where {\displaystyle e(p,u)} is the expenditure function (the function that gives the minimum wealth required to get to a given utility level), and by
+
+where {\displaystyle v(p,w)} is the indirect utility function (which gives the utility level of having a given wealth under a fixed price regime). Their derivatives are more fundamentally related by the Slutsky equation.
+
+Whereas Marshallian demand comes from the Utility Maximization Problem, Hicksian Demand comes from the Expenditure Minimization Problem. The two problems are mathematical duals, and hence the Duality Theorem provides a method of proving the relationships described above.
+
+The Hicksian demand function is intimately related to the expenditure function. If the consumer's utility function {\displaystyle u(x)} is locally nonsatiated and strictly convex, then
+by Shephard's lemma it is true that {\displaystyle h(p,u)=\nabla \_{p}e(p,u).}. Note that if there is more than one vector of quantities that minimizes expenditure for the given utility, we have a Hicksian demand correspondence rather than a function.
+
+
+## Hicksian demand and compensated price changes
+
+Marshallian demand curves show the effect of price changes on quantity demanded. As the price of a good rises, ordinarily, the quantity of that good demanded will fall, but not in every case. The price rise has both a substitution effect and an income effect. The substitution effect is the change in quantity demanded due to a price change that alters the slope of the budget constraint but leaves the consumer on the same indifference curve (i.e., at the same level of utility). The substitution effect always is to buy less of that good. The income effect is the change in quantity demanded due to the effect of the price change on the consumer's total buying power. Since for the Marshallian demand function the consumer's nominal income is held constant, when a price rises his real income falls and he is poorer. If the good in question is a *normal good* and its price rises, the income effect from the fall in purchasing power reinforces the substitution effect. If the good is an *inferior good*, the income effect will offset in some degree to the substitution effect. If the good is a *Giffen good*, the income effect is so strong that the Marshallian quantity demanded rises when the price rises.
+
+The Hicksian demand function isolates the substitution effect by supposing the consumer is compensated with exactly enough extra income after the price rise to purchase some bundle on the same indifference curve. If the Hicksian demand function is steeper than the Marshallian demand, the good is a normal good; otherwise, the good is inferior. Hicksian demand always slopes down.
+
+
+## Mathematical properties
+
+If the consumer's utility function {\displaystyle u(x)} is continuous and represents a locally nonsatiated preference relation, then the Hicksian demand correspondence {\displaystyle h(p,u)} satisfies the following properties:
+
+* Homogeneity of degree zero in *p*: For all {\displaystyle a>0}, {\displaystyle h(ap,u)=h(p,u)}. This is because the same *x* that minimizes {\displaystyle \sum \_{i}p\_{i}x\_{i}} also minimizes {\displaystyle \sum \_{i}ap\_{i}x\_{i}} subject to the same constraint.
+
+* No excess demand: The constraint {\displaystyle u(hx)\geq {\bar {u}}} holds with strict equality, {\displaystyle u(x)={\bar {u}}}. This follows from the continuity of the utility function. Informally, they could simply spend less until utility was exactly {\displaystyle {\bar {u}}}.

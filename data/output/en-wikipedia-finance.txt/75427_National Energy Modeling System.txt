@@ -1,0 +1,47 @@
+National Energy Modeling System
+
+
+# National Energy Modeling System
+
+
+
+The **National Energy Modeling System** (**NEMS**) is an economic and energy model of United States energy markets created at the U.S. Energy Information Administration (EIA). NEMS projects the production, consumption, conversion, import, export, and pricing of energy. The model relies on assumptions for economic variables, including world energy market interactions, resource availability (which influences costs), technological choice and characteristics, and demographics.
+
+
+## Uses
+
+The primary use for NEMS is to produce the *Annual Energy Outlook*, published on the EIA website in the early months of each year. NEMS is maintained by the EIA Office of Energy Analysis and was first used for *AEO* projections in 1994.
+
+NEMS is also used for special requests related to scenario analysis, primarily from the U.S. Congress. Subjects such as the economic and environmental impacts of energy-related policy or structure changes are most frequently studied using NEMS.
+
+
+## Design
+
+The model contains several modules that interact as part of the equilibrium calculations for long-term projections. These modules are as follows:
+
+* The Integrating Module
+* The Macroeconomic Activity Module
+* The Transportation Sector Module
+* The Residential Sector Module
+* The Industrial Sector Module
+* The Commercial Sector Module
+* The Coal Market Module
+* The Electricity Market Module
+* The Liquid Fuels Market Module
+* The Oil and Gas Supply Module
+* The Renewable Fuels Module
+* The International Energy Activity Module
+* The Natural Gas Transmission and Distribution Module
+
+Each of these NEMS modules is maintained annually, with changes to data and methodology described in periodic updates to module-specific documentation reports.
+
+NEMS accounts for a variety of energy sources used for fuel purposes (heat and power) and feedstock purposes. The primary energy sources and carriers reported in NEMS include crude oil and lease condensate, natural gas plant liquids, dry natural gas, coal, nuclear/uranium, conventional hydroelectric power, biomass, other renewable energy, and other (not otherwise specified) primary energy. The end-use consumption energy carriers and feedstocks reported by NEMS include, among others, electricity, natural gas, coal, gasoline, distillate oil (diesel), residual oil, propane, kerosene, liquefied refinery gases, jet fuel, renewables (primarily biomass and wind), and petrochemical feedstocks.
+
+Each of the modules in NEMS may employ its own unique sub-national regional structure.
+Projections from NEMS are provided at the national level; however, regional results are generally available consistent with the modules' regional definitions. For example, energy consumption by fuel and sector is reported for the nine Census Divisions, the geographic definition used by the four end-use energy demand modules.
+
+
+## Availability
+
+EIA provides access to NEMS to outside users through its model archival program. An archive includes the model source code and input data used to derive a given projection case, such as the "reference case." The stated archive purpose "is to demonstrate that the published results from the AEO reference case can be replicated with the model and to disclose the source code and inputs used." The model is not widely used outside of EIA, as deploying the model requires additional commercial software, such as compilers and optimization modeling packages, in addition to the model source code and data.
+

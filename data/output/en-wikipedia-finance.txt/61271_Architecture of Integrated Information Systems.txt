@@ -1,0 +1,62 @@
+Architecture of Integrated Information Systems
+
+
+# Architecture of Integrated Information Systems
+
+
+
+The **ARIS** concept (**Architecture of Integrated Information Systems**) by August-Wilhelm Scheer aims to ensure that an enterprise information system can completely meet its requirements.
+
+This framework is based on a division of the model into description views and levels, which allows a description of the individual elements through specially designed methods, without having to include the entire model. The methodology serves as a systems development life cycle for mapping and optimizing business processes. These processes are mapped for each description view, starting with the business management question up to the implementation on data processing level.
+
+
+## ARIS house (description views)
+
+ARIS relies mainly on its own five-view architecture (ARIS house). These five views are based on function, organization, data, product or service views of a process, and the process view itself, that integrates the other views. The classification is made to break down the complexity of the model into five facets and thus make business process modeling simpler.
+
+Each view of the ARIS concept represents the model of a business process under a specific aspect:
+
+* *Function view*: The activities, groupings and hierarchical relationships that exist between them are described in the function view, for example in a function tree. Since functions support goals and are controlled by them, goals are also assigned to the function view
+* *Organization view:* This provides an overview of the organizational structure of a company, including human resources, machines, hardware and their relationships, see also Organizational chart
+* *Data view:* This includes all events (that generate data) and environmental data, such as correspondence, documents, etc., i.e. all company-relevant information objects, see also Entity Relationship Model
+* *Product/Service view:* Provides an overview of the entire product/service portfolio (incl. services, products, financial)
+* *Process view*: The process view connects all other views into a time-logical schedule, for example in an event-driven process chain or BPMN
+
+## Description levels
+
+Each description view of the ARIS house is divided into three description levels:
+
+**Concept**
+
+Structured representation of the business processes by means of description models that are understandable for the business side (depending on the view, e.g.: ERM, EPC, organization chart, function tree)
+
+**Data Concept (= data processing concept, IT concept)**
+
+Implementation of the technical concept in IT-related description models (depending on the view e.g. relations, structure charts, topologies)
+
+**Implementation**
+
+IT-technical realization of the described process parts (depending on the view, e.g. by creating program code, database systems, use of protocols)
+
+
+## Dissemination and related work
+
+The ARIS concept forms the basis of various software products, including the ARIS Toolset from Software AG, which has been the owner of ARIS trademarks since IDS Scheer AG was acquired. At the end of 2004, part of the concept was reflected in the graphical process integration of SAP Exchange Infrastructure.
+
+Although ARIS is a well-known approach for the description of information system architectures, especially in German-speaking countries, it is not as well known on a larger scale. With in the Management Frameworks group it is one of over fifty existing frameworks for information management on the market. The architecture of interoperable information systems (AIOS) was also published in 2010 at the Institut für Wirtschaftsinformatik (Institute for Information Systems) in Saarbrücken, which was founded by Scheer. While ARIS describes company-internal information systems and business processes, AIOS describes how cross-company business processes can be realized by adapting and loosely coupling information systems.
+
+With the "Model-to-Execute" approach, business processes can be modelled in ARIS and automatically transferred to webMethods BPM for technical execution.
+
+
+## Applications
+
+As one of the Enterprise Modeling methods, ARIS provides four different aspects of applications:
+
+* The ARIS concept:
+ + is the architecture for describing business processes.
+ + provides modelling methods, the meta structures of which are comprised in information models.
+ + is the foundation for the ARIS Toolset software system for the support of modelling.
+* The ARIS house of Business Engineering (HOBE) represents a concept for comprehensive computer-aided Business Process Management.
+
+## Examples
+

@@ -1,0 +1,104 @@
+Ramsey–Cass–Koopmans model
+
+
+# Ramsey–Cass–Koopmans model
+
+
+
+| Part of a series on |
+| --- |
+| Macroeconomics |
+| Basic concepts * Aggregate demand * Aggregate supply * Business cycle * CAGR * Deflation * Demand shock * Disinflation * Effective demand * Expectations + Adaptive + Rational * Financial crisis * Growth * Inflation + Demand-pull + Cost-push * Interest rate * Investment * Liquidity trap * Measures of national income and output + GDP + GNI + NNI * Microfoundations * Money + Endogenous * Money creation * Demand for money + Liquidity preference * Money supply * National accounts + SNA * Nominal rigidity * Price level * Recession * Shrinkflation * Stagflation * Supply shock * Saving * Unemployment |
+| Policies * Fiscal * Monetary * Commercial * Central bank * Universal basic income |
+| Models * IS–LM * AD–AS * Keynesian cross * Multiplier * Accelerator * Phillips curve * Arrow–Debreu * Harrod–Domar * Solow–Swan * Ramsey–Cass–Koopmans * Overlapping generations * General equilibrium + DSGE * Endogenous growth * Matching theory * Mundell–Fleming * Overshooting * NAIRU |
+| Related fields * Econometrics * Economic statistics * Monetary economics * Development economics * Evolutionary economics * International economics |
+| Schools*Mainstream* * Keynesian + Neo- + New * Monetarism * New classical + Real business-cycle theory * Stockholm * New neoclassical synthesis * Saltwater and freshwater *Heterodox* * Austrian * Chartalism + Modern monetary theory * Ecological * Post-Keynesian + Circuitism * Disequilibrium * Marxian * Market monetarism * Supply-side |
+| People * François Quesnay * Adam Smith * Thomas Robert Malthus * Karl Marx * Léon Walras * Knut Wicksell * Irving Fisher * Wesley Clair Mitchell * John Maynard Keynes * Alvin Hansen * Michał Kalecki * Gunnar Myrdal * Simon Kuznets * Joan Robinson * Friedrich Hayek * John Hicks * Richard Stone * Hyman Minsky * Milton Friedman * Paul Samuelson * Lawrence Klein * Edmund Phelps * Robert Lucas Jr. * Edward C. Prescott * Peter Diamond * William Nordhaus * Joseph Stiglitz * Thomas J. Sargent * Paul Krugman * N. Gregory Mankiw |
+| See also * Macroeconomic model * Publications in macroeconomics * Economics + Applied * Microeconomics * Political economy * Mathematical economics |
+| * Money portal * Business portal |
+| * v * t * e |
+
+The **Ramsey–Cass–Koopmans model** (also **Ramsey growth model** or **neoclassical growth model**) is a neoclassical model of economic growth based primarily on the work of Frank P. Ramsey in 1928, with significant extensions by David Cass and Tjalling Koopmans in 1965. The Ramsey–Cass–Koopmans model differs from the Solow–Swan model in that the choice of consumption is explicitly microfounded at a point in time and so endogenizes the savings rate. As a result, unlike in the Solow–Swan model, the saving rate may not be constant along the transition to the long run steady state. Another implication of the model is that the outcome is Pareto optimal or Pareto efficient.
+
+Originally, Ramsey defined the model as a social planner's problem of maximizing consumption levels over successive generations. Only later was a model adopted by Cass and Koopmans as a description of a decentralized dynamic economy with a representative agent. The Ramsey–Cass–Koopmans model aims only at explaining long-run economic growth rather than business cycle fluctuations and does not include sources of disturbances like market imperfections, heterogeneity among households, or exogenous shocks. Subsequent researchers extended the model, allowing for government purchases, employment variations, and other shocks, notably in real business cycle theory.
+
+
+## Mathematical description
+
+
+### Model setup
+
+In the usual setup, time is continuous, starting, for simplicity, at {\displaystyle t=0} and continuing forever. By assumption, the only productive factors are capital {\displaystyle K} and labour {\displaystyle L}, both required to be nonnegative. The labour force, which makes up the entire population, is assumed to grow at a constant rate {\displaystyle n}, i.e. {\displaystyle {\dot {L}}={\tfrac {\mathrm {d} L}{\mathrm {d} t}}=nL}, implying that {\displaystyle L=L\_{0}e^{nt}} with initial level {\displaystyle L\_{0}>0} at {\displaystyle t=0}. Finally, let {\displaystyle Y} denote aggregate production and {\displaystyle C} denote aggregate consumption.
+
+The variables that the Ramsey–Cass–Koopmans model ultimately aims to describe are the *per capita* (or more accurately, *per labour*) consumption: {\displaystyle c={\frac {C}{L}}} and capital intensity:{\displaystyle k={\frac {K}{L}}}It does so by connecting capital accumulation, written {\displaystyle {\dot {K}}={\tfrac {\mathrm {d} K}{\mathrm {d} t}}} in Newton's notation, with consumption {\displaystyle C}, describing a consumption-investment trade-off. More specifically, since the existing capital stock decays by depreciation rate {\displaystyle \delta } (assumed to be constant), it requires investment of current-period production output {\displaystyle Y}. Thus, {\displaystyle {\dot {K}}=Y-\delta K-cL}
+
+The relationship between the productive factors and aggregate output is described by the aggregate production function, {\displaystyle Y=F(K,L)}. A common choice is the Cobb–Douglas production function {\displaystyle F(K,L)=AK^{1-\alpha }L^{\alpha }}, but generally, any production function satisfying the Inada conditions is permissible. Importantly, though, {\displaystyle F} is required to be homogeneous of degree 1, which economically implies constant returns to scale. With this assumption, we can re-express aggregate output in *per capita* terms {\displaystyle F(K,L)=L\cdot F\left({\frac {K}{L}},1\right)=L\cdot f(k)} For example, if we use the Cobb–Douglas production function with {\displaystyle A=1,\alpha =0.5}, then {\displaystyle f(k)=k^{0.5}}.
+
+To obtain the first key equation of the Ramsey–Cass–Koopmans model, the dynamic equation for the capital stock needs to be expressed in *per capita* terms. Noting the quotient rule for {\displaystyle {\tfrac {\mathrm {d} }{\mathrm {d} t}}\left({\tfrac {K}{L}}\right)}, we have
+
+A non-linear differential equation akin to the Solow–Swan model but incorporates endogenous consumption 𝑐, reflecting the model's microfoundations.
+
+
+### Maximizing welfare
+
+If we ignore the problem of how consumption is distributed, then the rate of utility {\displaystyle U} is a function of aggregate consumption. That is, {\displaystyle U=U(C,t)}. To avoid the problem of infinity, we exponentially discount future utility at a discount rate {\displaystyle \rho \in (0,\infty )}. A high {\displaystyle \rho } reflects high impatience.
+
+The social planner's problem is maximizing the social welfare function {\displaystyle U\_{0}=\int \_{0}^{\infty }e^{-\rho t}U(C,t)\,\mathrm {d} t}Assume that the economy is populated by identical immortal individuals with unchanging utility functions {\displaystyle u(c)} (a representative agent), such that the total utility is:{\displaystyle U(C,t)=Lu(c)=L\_{0}e^{nt}u(c)}The utility function is assumed to be strictly increasing (i.e., there is no bliss point) and concave in {\displaystyle c}, with {\displaystyle \lim \_{c\to 0}u\_{c}=\infty }, where {\displaystyle u\_{c}} is marginal utility of consumption {\displaystyle {\tfrac {\partial u}{\partial c}}}. Thus, we have the social planner's problem:
+
+where an initial non-zero capital stock {\displaystyle k(0)=k\_{0}>0} is given. To ensure that the integral is well-defined, we impose {\displaystyle \rho >n}.
+
+
+### Solution
+
+The solution, usually found by using a Hamiltonian function, is a differential equation that describes the optimal evolution of consumption,
+
+the Keynes–Ramsey rule.
+
+The term {\displaystyle f\_{k}(k)-\delta -\rho }, where {\displaystyle f\_{k}=\partial \_{k}f} is the marginal product of capital, reflects the marginal return on net investment, accounting for capital depreciation and time discounting.
+
+Here {\displaystyle \sigma (c)} is the elasticity of intertemporal substitution (EIS), defined by{\displaystyle \sigma (c)=-{\frac {u\_{c}(c)}{c\cdot u\_{cc}(c)}}=-{\frac {d\ln c}{d\ln(u'(c))}}}It is formally equivalent to the inverse of relative risk aversion. The quantity reflects the curvature of the utility function and indicates how much the representative agent wishes to smooth consumption over time. If the agent has high relative risk aversion, it has low EIS and thus would be more willing to smooth consumption over time.
+
+It is often assumed that {\displaystyle u} is strictly monotonically increasing and concave, thus {\displaystyle \sigma >0}. In particular, if utility is logarithmic, then it is constant:{\displaystyle u(c)=u\_{0}\ln c\implies \sigma (c)=1}We can rewrite the Ramsey rule as{\displaystyle \underbrace {{\frac {d}{dt}}\ln c} \_{\text{consumption delay rate}}=\underbrace {\sigma (c)} \_{{\text{EIS at current consumption level}}\quad }\underbrace {[f\_{k}(k)-\delta -\rho ]} \_{\text{marginal return on net investment}}}where we interpret {\displaystyle {\frac {d}{dt}}\ln c} as the "consumption delay rate," indicating the rate at which current consumption is being postponed in favor of future consumption. A higher value implies that the agent prioritizes saving over consuming today, thereby deferring consumption later.
+
+
+### Graphical analysis in phase space
+
+The two coupled differential equations for {\displaystyle k} and {\displaystyle c} form the Ramsey–Cass–Koopmans dynamical system.
+
+A steady state {\displaystyle (k^{\ast },c^{\ast })} for the system is found by setting {\displaystyle {\dot {k}}} and {\displaystyle {\dot {c}}} equal to zero. There are three solutions:
+
+The first is the only solution in the interior of the upper quadrant. It is a saddle point (as shown below). The second is a repelling point. The third is a degenerate stable equilibrium. The first solution is meant by default, although the other two are important to keep track of.
+
+Any optimal trajectory must follow the dynamical system. However, since the variable {\displaystyle c} is a control variable, at each capital intensity {\displaystyle k}, to find its corresponding optimal trajectory, we still need to find its starting consumption rate {\displaystyle c(0)}. As it turns out, the optimal trajectory is the unique one that converges to the interior equilibrium point. Any other trajectory either converges to the all-saving equilibrium with {\displaystyle k^{\*}>0,c^{\*}=0}, or diverges to {\displaystyle k\to 0,c\to \infty }, which means that the economy expends all its capital in finite time. Both achieve a lower overall utility than the trajectory toward the interior equilibrium point.
+
+A qualitative statement about the stability of the solution {\displaystyle (k^{\ast },c^{\ast })} requires a linearization by a first-order Taylor polynomial
+
+where {\displaystyle \mathbf {J} (k^{\ast },c^{\ast })} is the Jacobian matrix evaluated at steady state, given by
+
+which has determinant {\displaystyle \left|\mathbf {J} \left(k^{\ast },c^{\ast }\right)\right|={\frac {1}{\sigma }}f\_{kk}(k)\cdot c^{\ast }<0} since {\displaystyle c^{\*}>0} , {\displaystyle \sigma } is positive by assumption, and {\displaystyle f\_{kk}<0} since {\displaystyle f} is concave (Inada condition). Since the determinant equals the product of the eigenvalues, the eigenvalues must be real and opposite in sign.
+
+Hence, by the stable manifold theorem, the equilibrium is a saddle point, and there exists a unique stable arm, or "saddle path," that converges on the equilibrium, indicated by the blue curve in the phase diagram.
+
+The system is called "saddle path stable" since all unstable trajectories are ruled out by the "no Ponzi scheme" condition:
+
+implying that the present value of the capital stock cannot be negative.
+
+
+## History
+
+Spear and Young re-examine the history of optimal growth during the 1950s and 1960s, focusing in part on the veracity of the claimed simultaneous and independent development of Cass' "Optimum growth in an aggregative model of capital accumulation" (published in 1965 in the *Review of Economic Studies*), and Tjalling Koopman's "On the concept of optimal economic growth" (published in Study Week on the Econometric Approach to Development Planning, 1965, Rome: Pontifical Academy of Science).
+
+Over their lifetimes, neither Cass nor Koopmans ever suggested that their results characterizing optimal growth in the one-sector, continuous-time growth model were anything other than "simultaneous and independent". The priority issue became a discussion point because, in the published version of Koopmans' work, he cited the chapter from Cass' thesis that later became the *RES* paper. In his paper, Koopmans states in a footnote that Cass independently obtained conditions similar to what he finds. Cass also considers the limiting case where the discount rate goes to zero in his paper. For his part, Cass notes that "after the original version of this paper was completed, a very similar analysis by Koopmans came to our attention. We draw on his results in discussing the limiting case, where the effective social discount rate goes to zero". In the interview that Cass gave to *Macroeconomic Dynamics*, he credits Koopmans with pointing him to Frank Ramsey's previous work, claiming to have been embarrassed not to have known of it, but says nothing to dispel the basic claim that his work and Koopmans' were independent.
+
+Spear and Young dispute this history, based upon a previously overlooked working paper version of Koopmans' paper, which was the basis for Koopmans' oft-cited presentation at a conference held by the Pontifical Academy of Sciences in October 1963. In this Cowles Discussion paper, there is an error. Koopmans claims in his main result that the Euler equations are both necessary and sufficient to characterize optimal trajectories in the model because any solutions to the Euler equations that do not converge to the optimal steady-state would hit either a zero consumption or zero capital boundary in finite time. This error was presented at the Vatican conference, although no participant commented on the problem at the time of Koopmans' presentation. This can be inferred because the discussion after each paper presentation at the Vatican conference is verbatim in the conference volume.
+
+In the Vatican volume discussion following the presentation of a paper by Edmond Malinvaud, the issue does arise because of Malinvaud's explicit inclusion of a so-called "transversality condition" (which Malinvaud calls Condition I) in his paper. At the end of the presentation, Koopmans asks Malinvaud whether it is not the case that Condition I guarantees that solutions to the Euler equations that do not converge to the optimal steady-state hit a boundary in finite time. Malinvaud replies that this is not the case and suggests that Koopmans look at the example with log utility functions and Cobb-Douglas production functions.
+
+At this point, Koopmans recognizes he has a problem. However, based on a confusing appendix to a later version of the paper produced after the Vatican conference, he seems unable to decide how to deal with the issue raised by Malinvaud's Condition I.
+
+From the *Macroeconomic Dynamics* interview with Cass, it is clear that Koopmans met with Cass' thesis advisor, Hirofumi Uzawa, at the winter meetings of the Econometric Society in January 1964, where Uzawa advised him that his student [Cass] had solved this problem already. Uzawa must have then provided Koopmans with the copy of Cass' thesis chapter, which he sent along in the guise of the IMSSS Technical Report that Koopmans cited in the published version of his paper. The word "guise" is appropriate here because the TR number listed in Koopmans' citation would have put the issue date of the report in the early 1950s, which it was not.
+
+In the published version of Koopmans' paper, he imposes a new Condition Alpha in addition to the Euler equations, stating that the only admissible trajectories among those satisfying the Euler equations are the one that converges to the optimal steady-state equilibrium of the model. This result is derived in Cass' paper via the imposition of a transversality condition that Cass deduced from relevant sections of a book by Lev Pontryagin. Spear and Young conjecture that Koopmans took this route because he did not want to appear to be "borrowing" either Malinvaud's or Cass' transversality technology.
+
+Based on this and other examination of Malinvaud's contributions in 1950s—specifically his intuition of the importance of the transversality condition—Spear and Young suggest that the neo-classical growth model might better be called the Ramsey–Malinvaud–Cass model than the established Ramsey–Cass–Koopmans honorific.
+

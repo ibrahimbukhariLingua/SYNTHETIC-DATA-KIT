@@ -1,0 +1,172 @@
+Cobb–Douglas production function
+
+
+# Cobb–Douglas production function
+
+
+
+In economics and econometrics, the **Cobb–Douglas production function** is a particular functional form of the production function, widely used to represent the technological relationship between the amounts of two or more inputs (particularly physical capital and labor) and the amount of output that can be produced by those inputs. The Cobb–Douglas form was developed and tested against statistical evidence by Charles Cobb and Paul Douglas between 1927 and 1947; according to Douglas, the functional form itself was developed earlier by Philip Wicksteed.
+
+
+## Formulation
+
+In its most standard form for production of a single good with two factors, the function is given by:
+
+where:
+
+* *Y* = total production (the real value of all goods produced in a year or 365.25 days)
+* *L* = labour input (person-hours worked in a year or 365.25 days)
+* *K* = capital input (a measure of all machinery, equipment, and buildings; the value of capital input divided by the price of capital)ᶜˡᵃʳⁱᶠⁱᶜᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+* *A* = total factor productivity
+* {\displaystyle 0<\alpha <1} and {\displaystyle 0<\beta <1} are the output elasticities of capital and labor, respectively. These values are constants determined by available technology.
+
+Capital and labour are the two "factors of production" of the Cobb–Douglas production function.
+
+
+## History
+
+Paul Douglas explained that his first formulation of the Cobb–Douglas production function was developed in 1927; when seeking a functional form to relate estimates he had calculated for workers and capital, he spoke with mathematician and colleague Charles Cobb, who suggested a function of the form *Y* = *ALβK*¹−β, previously used by Knut Wicksell, Philip Wicksteed, and Léon Walras, although Douglas only acknowledges Wicksteed and Walras for their contributions. Not long after Knut Wicksell's death in 1926, Paul Douglas and Charles Cobb implemented the Cobb–Douglas function in their work covering the subject manner of producer theory for the first time. Estimating this using least squares, he obtained a result for the exponent of labour of 0.75—which was subsequently confirmed by the National Bureau of Economic Research to be 0.741. Later work in the 1940s prompted them to allow for the exponents on *K* and *L* to vary, resulting in estimates that subsequently proved to be very close to improved measure of productivity developed at that time.
+
+A major criticism at the time was that estimates of the production function, although seemingly accurate, were based on such sparse data that it was hard to give them much credibility. Douglas remarked "I must admit I was discouraged by this criticism and thought of giving up the effort, but there was something which told me I should hold on." The breakthrough came in using US census data, which was cross-sectional and provided a large number of observations. Douglas presented the results of these findings, along with those for other countries, at his 1947 address as president of the American Economic Association. Shortly afterwards, Douglas went into politics and was stricken by ill health—resulting in little further development on his side. However, two decades later, his production function was widely used, being adopted by economists such as Paul Samuelson and Robert Solow. The Cobb–Douglas production function is especially notable for being the first time an aggregate or economy-wide production function had been developed, estimated, and then presented to the profession for analysis; it marked a landmark change in how economists approached macroeconomics from a microeconomics perspective.
+
+
+## Positivity of marginal products
+
+The marginal product of a factor of production is the change in output when that factor of production changes, holding constant all the other factors of production as well as the total factor productivity.
+
+The marginal product of capital, {\displaystyle MPK} corresponds to the first derivative of the production function with respect to capital:
+
+Because {\displaystyle \alpha >0} (and {\displaystyle Y>0,K>0} as well), we find out that the marginal product of capital is always positive; that is, increasing capital leads to an increase in output.
+
+We also find that increasing the total factor productivity {\displaystyle A} increases the marginal product of capital.
+
+An analogous reasoning holds for labor.
+
+
+## Law of diminishing returns
+
+Taking the derivative of the marginal product of capital with respect to capital (i.e., taking the second derivative of the production function with respect to capital), we have:
+
+Because {\displaystyle \alpha <1}, then {\displaystyle \alpha -1<0} and so {\displaystyle {\dfrac {\partial MPK}{\partial K}}<0}.
+
+Thus, this function satisfies the law of "diminishing returns"; that is, the marginal product of capital, while always positive, is declining. As capital increases (holding labor and total factor productivity constant), the output increases but at a diminishing rate.
+
+A similar reasoning holds for labor.
+
+
+## Cross derivatives
+
+We can study what happens to the marginal product of capital when labor increases by taking the partial derivative of the marginal product of capital with respect to labor, that is, the cross-derivative of output with respect to capital and labor:
+
+{\displaystyle {\dfrac {\partial MPK}{\partial L}}={\dfrac {\partial ^{2}Y}{\partial K\partial L}}={\dfrac {\partial }{\partial L}}(AL^{\beta }\alpha K^{\alpha -1})=A\beta L^{\beta -1}\alpha K^{\alpha -1}=A\alpha \beta {\dfrac {L^{\beta }K^{\alpha }}{LK}}=\alpha \beta {\dfrac {Y}{LK}}}
+
+Since {\displaystyle {\dfrac {\partial MPK}{\partial L}}>0}, an increase in labor raises the marginal product of capital.
+
+
+## Returns to scale
+
+Output elasticity measures the responsiveness of output to a change in levels of either labor or capital used in production, ceteris paribus. For example, if *α* = 0.45, a 1% increase in capital usage would lead to approximately a .45% increase in output.
+
+Sometimes the term has a more restricted meaning, requiring that the function display constant returns to scale, meaning that increasing capital *K* and labor *L* by a factor *k* also increases output *Y* by the same factor, that is, {\displaystyle Y(kL,kK)=kY(L,K)}. This holds if {\displaystyle \alpha +\beta =1}.
+
+If {\displaystyle \alpha +\beta <1}, then returns to scale are decreasing, meaning that an increase of capital *K* and labor *L* by a factor *k* will produce an increase in output *Y* smaller than a factor *k*, that is {\displaystyle Y(kL,kK)<kY(L,K)}.
+
+If {\displaystyle \alpha +\beta >1}, then returns to scale are increasing, meaning that an increase in capital *K* and labor *L* by a factor *k* produce an increase in output *Y* greater than a factor *k*, that is, {\displaystyle Y(kL,kK)>kY(L,K)}.
+
+
+## Remuneration under perfect competition
+
+Under perfect competition, the factors of production are remunerated at their total marginal product.
+
+The marginal product of capital is given by: {\displaystyle MPK=\alpha {\dfrac {Y}{K}}}. This is the remuneration for each unit of capital. To find out the remuneration for the total capital, we multiply this quantity by {\displaystyle K}:
+
+{\displaystyle {\text{Capital earnings}}=K\cdot MPK=\alpha Y}.
+
+So a share {\displaystyle \alpha } of the output will remunerate capital.
+
+By a similar reasoning, we can find out that a share {\displaystyle \beta } of the output will remunerate labor.
+
+Those shares add up to 100% of the output only if {\displaystyle \alpha +\beta =1}.
+
+
+## Generalized form
+
+In its generalized form, the Cobb–Douglas function models more than two goods. The Cobb–Douglas function may be written as
+
+where
+
+* *A* is an efficiency parameter
+* *n* is the total number of input variables (goods)
+* *x*₁, ..., *xₙ* are the (non-negative) quantities of good consumed, produced, etc.
+* {\displaystyle \lambda \_{i}} is an elasticity parameter for good *i*
+
+## Criticisms
+
+The function has been criticised for its lack of foundation. Cobb and Douglas were influenced by statistical evidence that appeared to show that labor and capital shares of total output were constant over time in developed countries; they explained this by statistical fitting least-squares regression of their production function. It is now widely accepted that labor share is declining in industrialized economies. The production function contains a principal assumption that may not always provide the most accurate representation of a country's productive capabilities and supply-side efficiencies. This assumption is a "constant share of labor in output," which may not be effective when applied to cases of countries whose labor markets are growing at significant rates. Another issue within the fundamental composition the Cobb–Douglas production function is the presence of simultaneous equation bias. When competition is presumed, the simultaneous equation bias has impact on all function types involving firm decisions – including the Cobb–Douglas function. In some cases this simultaneous equation bias doesn't appear. However, it is apparent when least squares asymptotic approximations are used.
+
+The Cobb–Douglas production function was not developed on the basis of any knowledge of engineering, technology, or management of the production processᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ. This rationale may be true given the definition of the Capital term. Labor hours and Capital need a better definition. If capital is defined as a building, labor is already included in the development of that building. A building is composed of commodities, labor and risks and general conditions. It was instead developed because it had attractive mathematical characteristicsᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ, such as diminishing marginal returns to either factor of production and the property that the optimal expenditure shares on any given input of a firm operating a Cobb–Douglas technology are constant. Initially, there were no utility foundations for it. In the modern era, some economists try to build models up from individual agents acting, rather than imposing a functional form on an entire economyᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ. The Cobb–Douglas production function, if properly defined, can be applied at a micro-economic level, up to a macro- economic level.
+
+However, many modern authorsʷʰᵒ? have developed models which give microeconomically based Cobb–Douglas production functions, including many New Keynesian models. It is nevertheless a mathematical mistake to assume that just because the Cobb–Douglas function applies at the microeconomic level, it also always applies at the macroeconomic level. Similarly, it is not necessarily the case that a macro Cobb–Douglas applies at the disaggregated level. An early microfoundation of the aggregate Cobb–Douglas technology based on linear activities is derived in Houthakker (1955). The Cobb–Douglas production function is inconsistent with modern empirical estimates of the elasticity of substitution between capital and labor, which suggest that capital and labor are gross complements. A 2021 meta-analysis of 3186 estimates concludes that "the weight of evidence accumulated in the empirical literature emphatically rejects the Cobb–Douglas specification."
+
+
+## Cobb–Douglas utilities
+
+The Cobb–Douglas function is often used as a utility function. Utility {\displaystyle {\tilde {u}}} is a function of the quantities {\displaystyle x\_{i}} of the {\displaystyle n} goods consumed:
+
+Utility functions represent ordinal preferences and do not have natural units, unlike production functions. As the result, a monotonic transformation of a utility function represents the same preferences. Unlike with a Cobb–Douglas production function, where the sum of the exponents determines the degree of economies of scale, the sum can be normalized to one for a utility function because normalization is a monotonic transformation of the original utility function. Thus, let us define {\displaystyle \lambda =\sum \_{i=1}^{n}\lambda \_{i}} and {\displaystyle \alpha \_{i}={\frac {\lambda \_{i}}{\lambda }}}, so {\displaystyle \sum \_{i=1}^{n}\alpha \_{i}=1}, and write the utility function as:
+
+The consumer maximizes utility subject to the budget constraint that the cost of the goods is less than her wealth {\displaystyle w}. Letting {\displaystyle p\_{i}} denote the goods' prices, she solves:
+
+Note that {\displaystyle p\_{i}x\_{i}^{\*}=\alpha \_{i}w}, the consumer spends fraction {\displaystyle \alpha \_{i}} of her wealth on good i.
+
+Also note that each good is affected solely by its own price. That is, any two goods are not substitute goods nor complementary goods. Namely, their cross elasticity equals to zero and the cross demand function of any good is described by a vertical line.
+
+Finally, note that when the income increase by some percent the demand for the good increase by the same percent. That is, the elasticity of the demand with respect to income equals 1 and therefore, the Engel curve is a straight line starting from the origin.
+
+Note that this is the solution for either {\displaystyle u(x)} or {\displaystyle {\tilde {u}}(x),} since the same preferences generate the same demand.
+
+The indirect utility function can be calculated by substituting the demands {\displaystyle x\_{i}} into the utility function. Define the constant {\displaystyle K=\prod \_{i=1}^{n}\alpha \_{i}^{\alpha \_{i}}} and we get:
+
+which is a special case of the Gorman polar form. The expenditure function is the inverse of the indirect utility function:¹¹²
+
+
+## Various representations of the production function
+
+The Cobb–Douglas function form can be estimated as a linear relationship using the following expression:
+
+where
+
+* {\displaystyle Y={\text{output}}}
+* {\displaystyle I\_{i}={\text{inputs}}}
+* {\displaystyle a\_{i}={\text{model coefficients}}}
+
+The model can also be written as
+
+As noted, the common Cobb–Douglas function used in macroeconomic modeling is
+
+where *K* is capital and *L* is labor. When the model exponents sum to one, the production function is first-order homogeneous, which implies constant returns to scale—that is, if all inputs are scaled by a common factor greater than zero, output will be scaled by the same factor.
+
+
+## Relationship to the CES production function
+
+The constant elasticity of substitution (CES) production function (in the two-factor case) is
+
+in which the limiting case *γ* = 0 corresponds to a Cobb–Douglas function, {\displaystyle Y=AK^{\alpha }L^{1-\alpha },} with constant returns to scale.
+
+To see this, the log of the CES function:
+
+can be taken to the limit by applying L'Hôpital's rule:
+
+Therefore, {\displaystyle Y=AK^{\alpha }L^{1-\alpha }}.
+
+
+### Translog production function
+
+The translog production function is an approximation of the CES function by a second-order Taylor polynomial in the variable {\displaystyle \gamma } about {\displaystyle \gamma =0}, i.e. the Cobb–Douglas case. The name translog stands for "transcendental logarithmic." It is often used in econometrics for the fact that it is linear in the parameters, which means ordinary least squares could be used if inputs could be assumed exogenous.
+
+In the two-factor case above the translog production function is
+
+where {\displaystyle a\_{K}}, {\displaystyle a\_{L}}, {\displaystyle b\_{KK}}, {\displaystyle b\_{LL}}, and {\displaystyle b\_{KL}} are defined appropriately. In the three factor case, the translog production function is:
+
+where {\displaystyle A} = total factor productivity, {\displaystyle L} = labor, {\displaystyle K} = capital, {\displaystyle M} = materials and supplies, and {\displaystyle Y} = output.
+

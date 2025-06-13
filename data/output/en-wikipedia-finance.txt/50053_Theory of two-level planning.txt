@@ -1,0 +1,24 @@
+Theory of two-level planning
+
+
+# Theory of two-level planning
+
+
+
+The **theory of two-level planning** (alternatively, **Kornai–Liptak decomposition**) is a method that decomposes large problems of linear optimization into sub-problems. This decomposition simplifies the solution of the overall problem. The method also models a method of coordinating economic decisions so that decentralized firms behave so as to produce a global optimum. It was introduced by the Hungarian economist János Kornai and the mathematician Tamás Lipták in 1965. It is an alternative to Dantzig–Wolfe decomposition.
+
+
+## Description
+
+The LP problem must have a special structure, known as a block angular structure. This is the same structure required for the Dantzig Wolfe decomposition:
+
+There are some constraints on overall resources (D) for which a central planning agency is assumed to be responsible, and n blocks of coefficients (F1 through Fn) that are the concern of individual firms.
+
+The central agency starts the process by providing each firm with tentative resource allocations which satisfy the overall constraints D. Each firm optimizes its local decision variables assuming the global resource allocations are as indicated. The solution of the firm LP's yield Lagrange multipliers (prices) for the global resources which the firms transmit back to the planning agency.
+
+In the next iteration, the central agency uses the information received from firms to come up with a revised resource allocation; for example if firm i reports a high shadow price for resource j, the agency will grant more of this resource to this firm and less to other firms. The revised tentative allocations are sent back to the individual firms and the process continues.
+
+It has been shown that this process will converge (though not necessarily in a finite number of steps) towards the global solution for the overall problem. (In contrast the Dantzig Wolfe method converges in a finite number of steps).
+
+The DW and KL methods are dual: in DW the central market establishes prices (based on firm demands for resources) and sends these to the firms who then modify the quantities they demand, while in KL the central agency sends out quantity information to firms and receives bids (i.e. firm specific pricing information) from firms.
+

@@ -1,0 +1,81 @@
+Lotus Improv
+
+
+# Lotus Improv
+
+
+
+**Lotus Improv** is a discontinued spreadsheet program from Lotus Development released in 1991 for the NeXTSTEP platform and then for Windows 3.1 in 1993. Development was put on hiatus in 1994 after slow sales on the Windows platform, and officially ended in April 1996 after Lotus was purchased by IBM.
+
+Improv was an attempt to redefine the way a spreadsheet program should work, to make it easier to build new spreadsheets and to modify existing ones. Conventional spreadsheets used on-screen cells to store all data, formulas, and notes. Improv separated these concepts and used the cells only for input and output data. Formulas, macros and other objects existed outside the cells, to simplify editing and reduce errors. Improv used named ranges for all formulas, as opposed to cell addresses.
+
+Although not a commercial success in comparison to mainstream products like Lotus 1-2-3 or Microsoft Excel, Improv found a strong following in certain niche markets, notably financial modeling. It was very influential within these special markets, and spawned a number of clones on different platforms, notably Lighthouse Design's Quantrix.
+
+Apple Inc.'s Numbers combines a formula and naming system similar to Improv's, but running within a conventional spreadsheet.
+
+
+## History
+
+
+### Background
+
+The original spreadsheets were pieces of paper with vertical and horizontal lines on them, a customized worksheet intended for accounting uses. Users would enter data into rectangular areas on the sheets, known as cells, then apply formulas to the data to produce output values that were written down in other cells. A Berkeley professor, Richard Mattessich, was a proponent of using spreadsheets for financial modeling and "what if" calculations for businesses, but noted that it could take so long to recalculate it to run a different scenario that the inputs would be out of date by the time the calculation was finished. In 1964 he proposed using a computer to run all of the calculations from the point of the change on, thereby updating the sheet in seconds, rather than days.
+
+Teaching the use of spreadsheet modelling was common in business schools, often using chalkboards marked up with a layout similar to the paper versions. Using a chalkboard made it easier to fix errors, and allowed the sheet to be shared with a class. In 1979, Dan Bricklin was using such a device when he decided to attempt to computerize it on the newly introduced personal computers. Joined by Bob Frankston, the two created the first spreadsheet, VisiCalc, and released it for the Apple II in 1979. When Ben Rosen of Morgan Stanley saw the program, he wrote that "VisiCalc might be the software tail that wagged the computer industry dog."
+
+VisiCalc was an enormous success, so much so that a huge number of clones appeared. One of these was written by a former VisiCalc programmer, Mitch Kapor. His version, Lotus 1-2-3, would go on to be an even greater success than VisiCalc, in no small part due to the fact that it ran on, and was tuned for, the new IBM PC. Lotus 1-2-3 shipped 60,000 copies in the first month, and Lotus was soon one of the largest software companies in the world.
+
+
+### ATG
+
+Lotus set up an advanced technology group in 1986. One of their initial tasks was to see if they could simplify the task of setting up a spreadsheet. Completed spreadsheets were easy to use, but many users found it difficult to imagine what the sheet needed to look like in order to get started creating it. Should data be entered down columns, or across rows? Should intermediate values be stored within the sheet, or on a separate one? How much room will we need?
+
+Pito Salas, a developer at ATG, decided to attack this problem. After a few months of studying existing real-world examples, it became clear that the data, views of that data, and the formulas that acted on that data were very separate concepts. Yet in every case, the existing spreadsheet programs required the user to type all of these items into the same (typically single) sheet's cells.
+
+This overlap of functionality led to considerable confusion, because it's not obvious which cells hold what sort of data. Is this cell an input value that is used elsewhere? Is it an intermediate value used for a calculation? Perhaps it is an output value from a calculation? There's no way to know. This insight led to ideas for a new spreadsheet that would cleanly separate these concepts — data, formulas, and output views that would combine data and formulas in a format suitable for the end user. At the same time, the new product would allow users to group data "by purpose", giving it a name instead of referring to it by its position in the sheet. This meant that moving the data on the sheet would have no effect on calculation.
+
+Salas also noted that it was the views of output data that was often the weakest part of existing spreadsheets. Since the input, calculations and output were all mixed on a sheet, changing the layout could lead to serious problems if data moved. With the data and formulas separated, this was no longer an issue. Salas demonstrated that this separation meant that a number of common tasks that required lengthy calculations on existing spreadsheets could be handled almost for free simply by changing the view. For instance, if a spreadsheet contained a list of monthly sales, it was not uncommon to have an output column that summed up the sales by month. But if one wanted that summed by year, this would normally require another formula column and a different output sheet.
+
+
+### Back Bay
+
+By the end of the summer of 1986, Salas had created a slideshow-like demonstration of a system known as Modeler on the IBM PC. In February 1987 he hired Glenn Edelson to implement a working version in C++. As they worked on the project, it became clear that the basic concept was a good one, and was especially useful for financial modeling. At the end of the spring, they hired Bonnie Sullivan to write up a project specification, and Jeff Anderholm was hired to examine the market for a new program aimed at the financials industry. That summer, the team took Modeler to a number of financials companies, and found an overwhelmingly positive reception.
+
+A year later, in September 1988, the team was finally given the go-ahead to start implementing Modeler. After examining a number of platforms, including DOS and the Macintosh OS, the team decided the target platform would be OS/2, at that time considered to be an up-and-coming system in the commercial space. The project was given the code name "Back Bay", which was named after Back Bay in Boston, and a mascot, namd Fluffy Bunny, was selected.
+
+The next month, in October 1988, Steve Jobs visited Lotus to show them the new NeXT computer. When he saw Back Bay he immediately got excited and started pressing for it to be developed on the NeXT platform. The Lotus team was equally excited about NeXT, but continued work on the OS/2 platform. This proved to be much more difficult than imagined; at the time, OS/2 was very buggy, and their Presentation Manager UI was in its infancy. Development was not proceeding well.
+
+
+### NeXT release
+
+After struggling with OS/2 for months, in February 1989 they decided to move it to NeXT. When Jobs learned of the decision he sent an enormous bouquet of flowers to the team. More importantly, he also sent Bruce Blumberg, one of NeXT's software experts, to teach the Lotus team about NeXTSTEP. One worrying problem turned out to be an enormous advantage in practice; as the back-end was written in C++ and the front-end in Objective-C, it turned out to be very easy to segregate the program and track down bugs. Additionally, NeXT's Interface Builder let the team experiment with different UIs at a rate that was not possible on other platforms, and the system evolved rapidly during this period.
+
+Returning for a visit in April 1989, Jobs took the team to task about their categorization system. He demanded a way to directly manipulate the categories and data on-screen, rather than using menus or separate windows. This led to one of Improv's most noted features, the category "tiles", icons that allowed output sheets to be re-arranged in seconds. Jobs remained a supporter throughout, and constantly drove the team to improve the product in many ways. Blumberg remained on-call to help with technical issues, which became serious as NeXT was in the process of releasing NeXTSTEP 2.0, the first major update to the system.
+
+Improv for NeXT was released in February 1991, resulting in "truckloads" of flowers from Jobs. The program was an immediate hit, receiving praise and excellent reviews from major computer publications, and, unusually, mainstream business magazines as well. Earlier predictions that Improv might be NeXT's killer app proved true, and thousands of machines would eventually be sold into the financials market, initially just to run Improv. This gave NeXT a foothold in this market that lasted into the late 1990s, even after their purchase by Apple Inc.
+
+
+### Windows release
+
+After release on NeXT (a version known as "Black Marlin"), attempts were made to port to Windows ("Blue Marlin") and Macintosh ("Red Marlin"). The APIs and programming language for NeXTSTEP were so different from Windows and Macintosh system software that porting was very difficult. **Lotus Improv for Windows v2.0** (there was no 1.0) shipped in May 1993, running on Windows 3.1. Like the NeXT release, the Windows version also garnered critical praise, with *Byte* magazine noting its "usability is outstanding".
+
+In spite of the positive reviews, sales on Windows were slow. In March 1994, Lotus decided to attack this problem by re-positioning Improv as an add-in for 1-2-3, although the programs had nothing in common other than Improv's ability to read data in 1-2-3 files. This had no effect on the sales, and after the release of the minor 2.1 upgrade, development ended in August 1994. The project was left in limbo until April 1996 when the product was officially killed, shortly after IBM purchased Lotus.
+
+
+### After Improv
+
+Improv's disappointing sales and eventual cancellation on the PC platform has been used as a case study in numerous post-failure analyses of the software market. Sales on the NeXT platform could be explained by NeXTs limited marketshare, but the failure on the PC was another issue. Among the favored explanations are the fact that, unlike the release on NeXT, the Windows version faced strong internal resistance from 1-2-3, and corporate immune response became an issue. Lotus' sales and marketing teams, well versed in selling 1-2-3, did not know how to sell Improv into the market, so they simply didn't, selling the well known and understood 1-2-3. Other explanations include the fact that Microsoft Excel was being offered as part of the Office bundle at marginal rates that were tiny in comparison, as well as several mis-steps during introduction, like the lack of a macro language or undo. Joel Spolsky blames it on the design itself, claiming it was too perfectly aimed at a specific market and lacked the generality that Excel featured.
+
+Although Improv disappeared in the 1990s, the program is fondly recalled in the industry and continues to be mentioned in books on Excel. When Improv disappeared a number of clones of Improv quickly appeared. Notable among these was Lighthouse Design's Quantrix, an almost direct clone aimed at the financial market. Quantrix suffered the same fate as Improv when the company was purchased by Sun Microsystems.
+
+
+## Concepts
+
+The core of what would become Improv was to separate the concepts of data, views of the data, and formulas into three portions. The spreadsheet itself would contain only input data. Instead of referring to the data as, in effect, "the data that happens to be in these cells", each set of data in the sheet was given a name, and could then be grouped into categories. Formulas were typed into a separate section, and referred to data through their range, not their physical position in the sheets. Views of the data, some of which looked like spreadsheets, others like charts, could be created dynamically and were not limited in number.
+
+To illustrate the difference between Improv and other systems, consider the simple task of calculating the total sales for a product, given unit sales per month and unit prices. In a conventional spreadsheet the unit price would be typed into one set of cells, say the "A" column, and the sales into another, say "B". The user would then type a formula into "C" that said "A1 times B1" (typically in a form such as `@times(A:1, B:1)` or `=A1*B1`). Then that formula must be copied into all of the cells in column C, making sure to change the reference to A1 to a new reference for A2, etc. The sheet can automate this to some degree, but the real problem is that it simply has no idea what the formula means. Any changes to the layout of the spreadsheet will often make the entire sheet stop working properly.
+
+In Improv, one simply enters the data into columns called "Unit Price" and "Unit Sales". A formula can then be created that says "Total Sales = Unit Price times Unit Sales". Then if "Total Sales" view is added to the workbook, the totals would automatically appear there, because the sheet "knows" that is what the formula is for.
+
+But the real power of Improv did not become clear until work had already started on the project. With the grouping system, one could collect monthly sales into groups like "1995" and "1996", and call the category "years". Then the unit prices could be grouped in terms of the product type, say "clothing" and "food". Now by dragging these groups around (represented by small tabs) the view could be quickly changed. This concept has later been implemented in the form of pivot tables in several products.
+

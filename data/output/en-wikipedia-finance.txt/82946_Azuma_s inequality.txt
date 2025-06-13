@@ -1,0 +1,93 @@
+Azuma's inequality
+
+
+# Azuma's inequality
+
+
+
+In probability theory, the **Azuma–Hoeffding inequality** (named after Kazuoki Azuma and Wassily Hoeffding) gives a concentration result for the values of martingales that have bounded differences.
+
+Suppose {\displaystyle \{X\_{k}:k=0,1,2,3,\dots \}} is a martingale (or super-martingale) and
+
+almost surely. Then for all positive integers *N* and all positive reals *{\displaystyle \epsilon }*,
+
+And symmetrically (when *X*ₖ is a sub-martingale):
+
+If *X* is a martingale, using both inequalities above and applying the union bound allows one to obtain a two-sided bound:
+
+
+## Proof
+
+The proof shares similar idea of the proof for the general form of Azuma's inequality listed below. Actually, this can be viewed as a direct corollary of the general form of Azuma's inequality.
+
+
+## A general form of Azuma's inequality
+
+
+### Limitation of the vanilla Azuma's inequality
+
+Note that the vanilla Azuma's inequality requires symmetric bounds on martingale increments, i.e. {\displaystyle -c\_{t}\leq X\_{t}-X\_{t-1}\leq c\_{t}}. So, if known bound is asymmetric, e.g. {\displaystyle a\_{t}\leq X\_{t}-X\_{t-1}\leq b\_{t}}, to use Azuma's inequality, one need to choose {\displaystyle c\_{t}=\max(|a\_{t}|,|b\_{t}|)} which might be a waste of information on the boundedness of {\displaystyle X\_{t}-X\_{t-1}}. However, this issue can be resolved and one can obtain a tighter probability bound with the following general form of Azuma's inequality.
+
+
+### Statement
+
+Let {\displaystyle \left\{X\_{0},X\_{1},\cdots \right\}} be a martingale (or supermartingale) with respect to filtration {\displaystyle \left\{{\mathcal {F}}\_{0},{\mathcal {F}}\_{1},\cdots \right\}}. Assume there are predictable processes {\displaystyle \left\{A\_{0},A\_{1},\cdots \right\}} and {\displaystyle \left\{B\_{0},B\_{1},\dots \right\}} with respect to {\displaystyle \left\{{\mathcal {F}}\_{0},{\mathcal {F}}\_{1},\cdots \right\}}, i.e. for all {\displaystyle t}, {\displaystyle A\_{t},B\_{t}} are {\displaystyle {\mathcal {F}}\_{t-1}}-measurable, and constants {\displaystyle 0<c\_{1},c\_{2},\cdots <\infty } such that
+
+almost surely. Then for all {\displaystyle \epsilon >0},
+
+Since a submartingale is a supermartingale with signs reversed, we have if instead {\displaystyle \left\{X\_{0},X\_{1},\dots \right\}} is a martingale (or submartingale),
+
+If {\displaystyle \left\{X\_{0},X\_{1},\dots \right\}} is a martingale, since it is both a supermartingale and submartingale, by applying union bound to the two inequalities above, we could obtain the two-sided bound:
+
+
+### Proof
+
+We will prove the supermartingale case only as the rest are self-evident. By Doob decomposition, we could decompose supermartingale {\displaystyle \left\{X\_{t}\right\}} as {\displaystyle X\_{t}=Y\_{t}+Z\_{t}} where {\displaystyle \left\{Y\_{t},{\mathcal {F}}\_{t}\right\}} is a martingale and {\displaystyle \left\{Z\_{t},{\mathcal {F}}\_{t}\right\}} is a nonincreasing predictable sequence (Note that if {\displaystyle \left\{X\_{t}\right\}} itself is a martingale, then {\displaystyle Z\_{t}=0}). From {\displaystyle A\_{t}\leq X\_{t}-X\_{t-1}\leq B\_{t}}, we have
+
+Applying Chernoff bound to {\displaystyle Y\_{n}-Y\_{0}}, we have for {\displaystyle \epsilon >0},
+
+For the inner expectation term, since
+
+(i) {\displaystyle \mathbb {E} [Y\_{t}-Y\_{t-1}\mid {\mathcal {F}}\_{t-1}]=0} as {\displaystyle \left\{Y\_{t}\right\}} is a martingale;
+
+(ii) {\displaystyle -(Z\_{t}-Z\_{t-1})+A\_{t}\leq Y\_{t}-Y\_{t-1}\leq -(Z\_{t}-Z\_{t-1})+B\_{t}};
+
+(iii) {\displaystyle -(Z\_{t}-Z\_{t-1})+A\_{t}} and {\displaystyle -(Z\_{t}-Z\_{t-1})+B\_{t}} are both {\displaystyle {\mathcal {F}}\_{t-1}}-measurable as {\displaystyle \left\{Z\_{t}\right\}} is a predictable process;
+
+(iv) {\displaystyle B\_{t}-A\_{t}\leq c\_{t}};
+
+by applying Hoeffding's lemma, we have
+
+Repeating this step, one could get
+
+Note that the minimum is achieved at {\displaystyle s={\frac {4\epsilon }{\sum \_{t=1}^{n}c\_{t}^{2}}}}, so we have
+
+Finally, since {\displaystyle X\_{n}-X\_{0}=(Y\_{n}-Y\_{0})+(Z\_{n}-Z\_{0})} and {\displaystyle Z\_{n}-Z\_{0}\leq 0} as {\displaystyle \left\{Z\_{n}\right\}} is nonincreasing, so event {\displaystyle \left\{X\_{n}-X\_{0}\geq \epsilon \right\}} implies {\displaystyle \left\{Y\_{n}-Y\_{0}\geq \epsilon \right\}}, and therefore
+
+
+### Remark
+
+Note that by setting {\displaystyle A\_{t}=-c\_{t},B\_{t}=c\_{t}}, we could obtain the vanilla Azuma's inequality.
+
+Note that for either submartingale or supermartingale, only one side of Azuma's inequality holds. We can't say much about how fast a submartingale with bounded increments rises (or a supermartingale falls).
+
+This general form of Azuma's inequality applied to the Doob martingale gives McDiarmid's inequality which is common in the analysis of randomized algorithms.
+
+
+## Simple example of Azuma's inequality for coin flips
+
+Let *F*ᵢ be a sequence of independent and identically distributed random coin flips (i.e., let *F*ᵢ be equally likely to be −1 or 1 independent of the other values of *F*ᵢ). Defining {\displaystyle X\_{i}=\sum \_{j=1}^{i}F\_{j}} yields a martingale with |*X*ₖ − *X*ₖ−₁| ≤ 1, allowing us to apply Azuma's inequality. Specifically, we get
+
+For example, if we set *t* proportional to *n*, then this tells us that although the *maximum* possible value of *X*ₙ scales linearly with *n*, the *probability* that the sum scales linearly with *n* decreases exponentially fast with *n*.
+
+If we set {\displaystyle t={\sqrt {2n\ln n}}} we get:
+
+which means that the probability of deviating more than {\displaystyle {\sqrt {2n\ln n}}} approaches 0 as *n* goes to infinity.
+
+
+## Remark
+
+A similar inequality was proved under weaker assumptions by Sergei Bernstein in 1937.
+
+Hoeffding proved this result for independent variables rather than martingale differences, and also observed that slight modifications of his argument establish the result for martingale differences (see page 9 of his 1963 paper).
+

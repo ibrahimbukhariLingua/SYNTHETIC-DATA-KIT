@@ -1,0 +1,31 @@
+Adaptive Modeler
+
+
+# Adaptive Modeler
+
+
+
+**Altreva Adaptive Modeler** is a software application for creating agent-based financial market simulation models for the purpose of forecasting prices of real world market traded stocks or other securities. The technology it uses is based on the theory of agent-based computational economics (ACE), the computational study of economic processes modeled as dynamic systems of interacting heterogeneous agents.
+
+Altreva's Adaptive Modeler and other agent-based models are used to simulate financial markets to capture the complex dynamics of a large diversity of investors and traders with different strategies, different trading time frames, and different investment goals. Agent-based models based on heterogeneous and boundedly rational (learning) agents have shown to be able to explain the empirical features of financial markets better than traditional financial models that are based on representative rational agents.
+
+
+## Technology
+
+The software creates an agent-based model for a particular stock, consisting of a population of trader agents and a virtual market. Each agent represents a virtual trader/investor and has its own trading rule and funds. The model is then evolved step by step in the following way: At every step a new (historical) real market price is imported. All agents evaluate their trading rule and place orders on the virtual market. The virtual market then determines the clearing price and executes all matching orders. The clearing price is taken as the forecast for the next step real market price. (So the virtual market serves as a one-step-ahead prediction market for the real market). This process is repeated for every new received real market price. Meanwhile, the trading rules evolve through a special adaptive form of genetic programming. The forecasts are thus based on the behavior of the entire market instead of only the best performing trading rule. This intends to increase the robustness of the model and its ability to adapt to changing market circumstances.
+
+To avoid overfitting (or curve-fitting) to historical data - and unlike many other techniques used in trading software such as optimizing of trading rules by repeated backtesting, genetic algorithms and neural networks - Adaptive Modeler does not optimize trading rules on historical data. Instead its models evolve incrementally over the available price data so that agents experience every price change only once (as in the real world). Also there is no difference in the processing of historical and new price data. Therefore, there is no specific reason to expect that a model's back-tested historical performance is better than its future performance (unlike when trading rules have been optimized on historical data). The historical results can therefore be considered more meaningful than results demonstrated by techniques based on optimization.
+
+
+## Examples and use cases
+
+In an example model for the S&P 500 index, Adaptive Modeler demonstrates significant risk-adjusted excess returns after transaction costs. On back-tested historical price data covering a period of 58 years (1950–2008) a compound average annual return of 20.6% was achieved, followed by a compound average annual return of 22.2% over the following 6 year out-of-sample period (2008-2014).
+
+Adaptive Modeler was used in a study to demonstrate increased complexity of trading rules in an evolutionary forecasting model during a critical period of a company's history.
+
+In a study of profitability of technical trading in the foreign exchange markets, researchers using Adaptive Modeler found economically and statistically significant out-of-sample excess returns (after transaction costs) for the six most traded currency pairs. The returns were superior to those achieved by traditional econometric forecasting models.
+
+Adaptive Modeler was also used to study the impact of different levels of trader rationality on market properties and efficiency. It was found that artificial markets with more intelligent traders (compared to markets with less intelligent or zero-intelligence traders) showed improved forecasting performance, though also experienced higher volatility and lower trading volume (consistent with earlier findings). The markets with more intelligent traders also replicated the stylized facts of real financial markets the best.
+
+As an example of virtual intelligent life in a complex system (such as a stock market), Adaptive Modeler was used as an illustration of simple agents interacting in a complex (nonlinear) way to forecast stock prices.
+

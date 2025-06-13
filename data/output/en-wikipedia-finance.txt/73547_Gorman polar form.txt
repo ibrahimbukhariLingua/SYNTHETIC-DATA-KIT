@@ -1,0 +1,88 @@
+Gorman polar form
+
+
+# Gorman polar form
+
+
+
+**Gorman polar form** is a functional form for indirect utility functions in economics.
+
+
+## Motivation
+
+Standard consumer theory is developed for a single consumer. The consumer has a utility function, from which his demand curves can be calculated. Then, it is possible to predict the behavior of the consumer in certain conditions, price or income changes. But in reality, there are many different consumers, each with his own utility function and demand curve. How can we use consumer theory to predict the behavior of an entire society? One option is to represent an entire society as a single "mega consumer", which has an aggregate utility function and aggregate demand curve. But in what cases is it indeed possible to represent an entire society as a single consumer?
+
+Formally: consider an economy with {\displaystyle n} consumers, each of whom has a demand function that depends on his income {\displaystyle m^{i}} and the price system:
+
+The aggregate demand of society is, in general, a function of the price system and the entire distribution of incomes:
+
+To represent the entire society as a single consumer, the aggregate demand must be a function of only the prices and the *total* income, regardless of its distribution:
+
+Under what conditions is it possible to represent the aggregate demand in this way?
+
+Early results by Antonelli (1886) and Nataf (1953) had shown that, assuming all individuals face the same prices in a market, their income consumption curves and their Engel curves (expenditure as a function of income) should be parallel straight lines. This means that we can calculate an income-consumption curve of an entire society just by summing the curves of the consumers. In other words, suppose the entire society is given a certain income. This income is somehow distributed between the members of society, then each member selects his consumption according to his income-consumption curve. If the curves are all parallel straight lines, the aggregate demand of society will be *independent of the distribution of income among the agents*.
+
+
+## Gorman's form of the expenditure function
+
+Gorman's first published paper in 1953 developed these ideas in order to answer the question of representing a society by a single individual. In 1961, Gorman published a short, four-page paper in *Metroeconomica* which derived an explicit expression for the functional form of preferences which give rise to linear Engel curves. The expenditure function of each consumer {\displaystyle i} (the amount of money required to reach a certain utility level in a certain price system) must be linear in utility:
+
+where both {\displaystyle f^{i}\left(p\right)} and {\displaystyle g\left(p\right)} are homogeneous of degree one in prices ({\displaystyle p}, a vector). This homogeneity condition ensures that {\displaystyle e^{i}\left(p,u\right)} gives linear Engel curves.
+
+{\displaystyle f^{i}\left(p\right)} and {\displaystyle g\left(p\right)} have nice interpretations: {\displaystyle f^{i}\left(p\right)} is the expenditure needed to reach a reference utility level of zero for each individual ({\displaystyle i}), while {\displaystyle g\left(p\right)} is the price index which deflates the excess money income {\displaystyle e^{i}\left(p,u\right)-f^{i}(p)} needed to attain a level of utility {\displaystyle {\bar {u}}}. It is important to note that {\displaystyle g\left(p\right)} is the same for every individual in a society, so the Engel curves for all consumers are parallel.
+
+
+## Gorman's form of the indirect utility function
+
+Inverting this formula gives the indirect utility function (utility as a function of price and income):
+
+where {\displaystyle m} is the amount of income available to the individual and is equivalent to the expenditure ({\displaystyle e^{i}\left(p,u^{i}\right)}) in the previous equation. This is what Gorman called “the polar form of the underlying utility function.” Gorman's use of the term *polar* was in reference to the idea that the indirect utility function can be seen as using polar rather than Cartesian (as in direct utility functions) coordinates to describe the indifference curve. Here, income ({\displaystyle m^{i}}) is analogous to the radius and prices ({\displaystyle p}) to an angle.
+
+
+## Examples
+
+Two types of preferences that have the Gorman polar form are:¹⁵⁴
+
+
+### Quasilinear utilities
+
+When the utility function of agent {\displaystyle i} has the form:
+
+the indirect utility function has (assuming an interior solution) the form:
+
+which is a special case of the Gorman form.
+
+Indeed, the Marshallian demand function for the nonlinear good of consumers with quasilinear utilities does not depend on the income at all (in this quasilinear case, the demand for the linear good is linear in income):
+
+Hence, the aggregate demand function for the nonlinear good also does not depend on income:
+
+The entire society can be represented by a single representative agent with quasilinear utility function:
+
+where the function {\displaystyle U} satisfies the equality:
+
+In the special case in which all agents have the same utility function {\displaystyle u(x,m)=u(x)+m}, the aggregate utility function is:
+
+
+### Homothetic preferences
+
+The indirect utility function has the form:
+
+which is also a special case of the Gorman form.
+
+Particularly: linear, Leontief and Cobb-Douglas utilities are homothetic and thus have the Gorman form.
+
+
+## Proof of linearity and equality of slope of Engel curves
+
+To prove that the Engel curves of a function in Gorman polar form are linear, apply Roy's identity to the indirect utility function to get a Marshallian demand function for an individual ({\displaystyle i}) and a good ({\displaystyle n}):
+
+This is linear in income ({\displaystyle m}), so the change in an individual's demand for some commodity with respect to a change in that individual's income,
+{\displaystyle {\frac {\partial x\_{n}^{i}(p,m^{i})}{\partial m}}={\frac {\frac {\partial g(p)}{\partial p\_{n}}}{g(p)}}}, does not depend on income, and thus Engel curves are linear.
+
+Also, since this change does not depend on variables particular to any individual, the slopes of the Engel curves of different individuals are equal.
+
+
+## Application
+
+Many applications of Gorman polar form are summarized in various texts and in Honohan and Neary's article. These applications include the ease of estimation of {\displaystyle f^{i}(p)} and {\displaystyle g(p)} in certain cases. But the most important application is for the theorist of economics, in that it allows a researcher to treat a society of utility-maximizing individuals as a single individual. In other words, under these conditions a community indifference mapping is guaranteed to exist.
+

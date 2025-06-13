@@ -1,0 +1,139 @@
+Common value auction
+
+
+# Common value auction
+
+
+
+| Part of a series on |
+| --- |
+| Auctions |
+| Types |
+| * All-pay + Chinese + Bidding fee + Dollar * Amsterdam * Anglo-Dutch * Barter double * Best/not best * Brazilian * Calcutta * Candle * Click-box bidding * Combinatorial * Common value * Deferred-acceptance * Discriminatory price * Double * Dutch * English * Forward * French * Generalized first-price * Generalized second-price * Japanese * Knapsack * Multi-attribute * Multiunit * No-reserve * Rank * Reverse * Scottish * Sealed first-price * Simultaneous ascending * Single-price * Traffic light * Uniform price * Unique bid * Value of revenues * Vickrey * Vickrey–Clarke–Groves * Walrasian * Yankee |
+| Bidding |
+| * Shading * Calor licitantis * Cancellation hunt * Jump * Rigging * Sniping * Suicide * Tacit collusion |
+| Contexts |
+| * Algorithms * Autos * Art * Charity * Children * Players * Domain names * Flowers * Loans * Scam * Slaves * Spectrum * Stamps * Virginity * Wine * Wives |
+| Theory |
+| * Digital goods * Price of anarchy * Revenue equivalence * Winner's curse |
+| Online |
+| * Ebidding * Private electronic market * Software |
+| * v * t * e |
+
+In **common value** **auctions** the value of the item for sale is identical amongst bidders, but bidders have different information about the item's value. This stands in contrast to a **private value auction** where each bidder's private valuation of the item is different and independent of peers' valuations.
+
+A classic example of a pure common values auction is when a jar full of quarters is auctioned off. The jar will be worth the same amount to anyone. However, each bidder has a different guess about how many quarters are in the jar. Other, real-life examples include Treasury bill auctions, initial public offerings, spectrum auctions, very prized paintings, art pieces, antiques etc.
+
+One important phenomenon occurring in common value auctions is the winner's curse. Bidders have only estimates of the value of the good. If, on average, bidders are estimating correctly, the highest bid will tend to have been placed by someone who overestimated the good's value. This is an example of adverse selection, similar to the classic "lemons" example of Akerlof. Rational bidders will anticipate the adverse selection, so that even though their information will still turn out to have been overly optimistic when they win, they do not pay too much on average.
+
+Sometimes the term winner's curse is used differently, to refer to cases in which naive bidders ignore the adverse selection and bid sufficiently more than a fully rational bidder would that they actually pay more than the good is worth. This usage is prevalent in the experimental economics literature, in contrast with the theoretical and empirical literatures on auctions.
+
+
+## Interdependent value auctions
+
+Common-value auctions and private-value auctions are two extremes. Between these two extremes are **interdependent value auctions** (also called: **affiliated value auctions**), where bidder's valuations (e.g., {\displaystyle \theta \_{i}=\theta +\nu \_{i}}) can have a common value component ({\displaystyle \theta }) and a private value ({\displaystyle \nu \_{i}}) component. The two components can be correlated so that one bidder's private valuation can influence another bidder's valuation. These types of auctions comprise most real-world auctions and are sometimes confusingly referred to as common value auctions also.
+
+
+## Examples
+
+In the following examples, a common-value auction is modeled as a Bayesian game. We try to find a Bayesian Nash equilibrium (BNE), which is a function from the information held by a player, to the bid of that player. We focus on a *symmetric* BNE (SBNE), in which all bidders use the same function.
+
+
+### Binary signals, first-price auction
+
+The following example is based on Acemoglu and Özdağlar.⁴⁴–⁴⁶
+
+There are two bidders participating in a first-price sealed-bid auction for an object that has either high quality (value V) or low quality (value 0) to both of them. Each bidder receives a signal that can be either high or low, with probability 1/2. The signal is related to the true value as follows:
+
+* If at least one bidder receives a low signal, then the true value is 0.
+* If both receive a high signal, then the true value is V.
+
+This game has no SBNE in pure-strategies.
+
+PROOF: Suppose that there was such an equilibrium *b*. This is a function from a signal to a bid, i.e., a player with signal *x* bids *b*(*x*). Clearly *b*(low)=0, since a player with low signal knows with certainty that the true value is 0 and does not want to pay anything for it. Also, *b*(high) ≤ V, otherwise there will be no gain in participation. Suppose bidder 1 has *b1*(high)=B1 > 0. We are searching the best-response for bidder 2, *b2*(high)=B2. There are several cases:
+
+1. The other bidder bids B2 < B1. Then, his expected gain is 1/2 (the probability that bidder 2 has a low signal) times −B2 (since in that case he wins a worthless item and pays *b2*(high)), plus 1/2 (the probability that bidder 2 has a high signal) times 0 (since in that case he loses the item). The total expected gain is −B2/2 which is worse than 0, so it cannot be a best response.
+2. The other bidder bids B2 = B1. Then, his expected gain is 1/2 times −B2, plus 1/2 times 1/2 times [V− B2] (since in that case, he wins the item with probability 1/2). The total expected gain is (V − 3 B2)/4.
+3. The bidder b2 bids B2 > B1. Then, his expected gain is 1/2 times −B2, plus 1/2 times [V− B2] (since in that case, he wins the item with probability 1). The total expected gain is (2 V − 4 B2)/4.
+
+The latter expression is positive only when B2 < V/2. But in that case, the expression in #3 is larger than the expression in #2: it is always better to bid slightly more than the other bidder. This means that there is no symmetric equilibrium.
+
+This result is in contrast to the private-value case, where there is always a SBNE (see first-price sealed-bid auction).
+
+
+### Independent signals, second-price auction
+
+The following example is based on.⁴⁷–⁵⁰
+
+There are two bidders participating in a second-price sealed-bid auction for an object. Each bidder {\displaystyle i} receives signal {\displaystyle s\_{i}}; the signals are independent and have continuous uniform distribution on [0,1]. The valuations are:
+
+where {\displaystyle a,b} are constants ({\displaystyle a=1,b=0} means private values; {\displaystyle a=b} means common values).
+
+Here, there is a unique SBNE in which each player bids:
+
+This result is in contrast to the private-value case, where in SBNE each player truthfully bids her value (see second-price sealed-bid auction).
+
+
+### Dependent signals, second-price auction
+
+This example is suggested¹⁸⁸–¹⁹⁰ as an explanation to jump bidding in English auctions.
+
+Two bidders, Xenia and Yakov, participate in an auction for a single item. The valuations depend on A B and C -- three independent random variables drawn from a continuous uniform distribution on the interval [0,36]:
+
+* Xenia sees {\displaystyle X:=A+B};
+* Yakov sees {\displaystyle Y:=B+C};
+* The common value of the item is {\displaystyle V:=(X+Y)/2=(A+2B+C)/2}.
+
+Below we consider several auction formats and find a SBNE in each of them. For simplicity we look for SBNE in which each bidder bids {\displaystyle r} times his/her signal: Xenia bids {\displaystyle r\cdot X} and Yakov bids {\displaystyle r\cdot Y}. We try to find the value of {\displaystyle r} in each case.
+
+In a **sealed-bid second-price auction**, there is a SBNE with {\displaystyle r=1}, i.e., each bidder bids exactly his/her signal.
+
+PROOF: The proof takes the point-of-view of Xenia. We assume that she knows that Yakov bids {\displaystyle rY}, but she does not know {\displaystyle Y}. We find the best response of Xenia to Yakov's strategy. Suppose Xenia bids {\displaystyle Z}. There are two cases:
+
+* {\displaystyle Z\geq rY}. Then Xenia wins and enjoys a net gain of {\displaystyle V-rY=(X+Y-2rY)/2}.
+* {\displaystyle Z<rY}. Then Xenia loses and her net gain is 0.
+
+All in all, Xenia's expected gain (given her signal X) is:
+
+where {\displaystyle f(Y|X)} is the conditional probability-density of Y given X.
+
+By the Fundamental theorem of calculus, the derivative of this expression as a function of Z is just {\displaystyle {1 \over r}{X+Z/r-2Z \over 2}\cdot f(Z/r|X)}. This is zero when {\displaystyle X=2Z-Z/r}. So, the best response of Xenia is to bid {\displaystyle Z={rX \over 2r-1}}.
+
+In a symmetric BNE, Xenia bids {\displaystyle Z=rX}. Comparing the latter two expressions implies that {\displaystyle r=1}.
+
+The expected auctioneer's revenue is:
+
+In a Japanese auction, the outcome is the same as in the second-price auction, since information is revealed only when one of the bidders exits, but in this case the auction is over. So each bidder exits at his observation.
+
+
+### Dependent signals, first-price auction
+
+In the above example, in a first-price sealed-bid auction, there is a SBNE with {\displaystyle r=2/3}, i.e., each bidder bids 2/3 of his/her signal.
+
+PROOF: The proof takes the point-of-view of Xenia. We assume that she knows that Yakov bids {\displaystyle rY}, but does not know {\displaystyle Y}. We find the best response of Xenia to Yakov's strategy. Suppose Xenia bids {\displaystyle Z}. There are two cases:
+
+* {\displaystyle Z\geq rY}. Then Xenia wins and enjoys a net gain of {\displaystyle V-Z=(X+Y-2Z)/2}.
+* {\displaystyle Z<rY}. Then Xenia loses and her net gain is 0.
+
+All in all, Xenia's expected gain (given her signal X and her bid Z) is:
+
+where {\displaystyle f(Y|X)} is the conditional probability-density of Y given X.
+
+Since {\displaystyle Y=X+C-A}, the conditional probability-density of Y is:
+
+* {\displaystyle f(Y|X)=Y-(X-1)} when {\displaystyle X-1\leq Y\leq X}
+* {\displaystyle f(Y|X)=(X+1)-Y} when {\displaystyle X\leq Y\leq X+1}
+
+Substituting this into the above formula gives that the gain of Xenia is:
+
+This has a maximum when {\displaystyle Z={rX \over 3r-1}}. But, since we want a symmetric BNE, we also want to have {\displaystyle Z=rX}. These two equalities together imply that {\displaystyle r=2/3}.
+
+The expected auctioneer's revenue is:
+
+Note that here, the revenue equivalence principle does NOT hold—the auctioneer's revenue is lower in a first-price auction than in a second-price auction (revenue-equivalence holds only when the values are independent).
+
+
+## Relationship to Bertrand competition
+
+Common-value auctions are comparable to Bertrand competition. Here, the firms are the bidders and the consumer is the auctioneer. Firms "bid" prices up to but not exceeding the true value of the item. Competition among firms should drive out profit. The number of firms will influence the success or otherwise of the auction process in driving price towards true value. If the number of firms is small, collusion may be possible. See Monopoly, Oligopoly.
+

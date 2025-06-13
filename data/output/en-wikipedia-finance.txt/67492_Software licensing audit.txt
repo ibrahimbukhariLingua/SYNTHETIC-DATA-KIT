@@ -1,0 +1,50 @@
+Software licensing audit
+
+
+# Software licensing audit
+
+
+
+A **software licensing audit** or **software compliance audit** is an important sub-set of software asset management and component of corporate risk management. When a company is unaware of what software is installed and being used on its machines, it can result in multiple layers of exposure.
+
+The primary benefits a corporation receives from performing a software licensing audit are greater control and various forms of cost savings.
+The audit is used both as an efficiency mechanism to improve software distribution within an organization and as a preventative mechanism to avoid copyright infringement prosecution by software companies. Software licensing audits are an important part of software asset management, but also serve as a method of corporate reputation management by ensuring that the company is operating within legal and ethical guidelines.
+
+Software audits should not be confused with code audits, which are carried out on the source code of a software project.
+
+
+## Challenges
+
+If the auditing company self-dependently scans the code base, one of the serious challenges is the license changes between versions. Some software libraries start with one license and later switch into another. The typical examples are switching from the single permissive license to the dual licensing model (the choice between strong reciprocal or paid commercial) as for iText, switching from more reciprocal to more permissive license (as for Qt Extended) and open sourcing the previously commercial code (as for OpenJDK). In such cases it is not enough to detect that some library or code fragment has been used - an exact used version must be correctly identified. Further difficulties may arise if the library owner removes the obsolete versions (that were under different license) from the public sources.
+
+Some licenses (like LGPL) have very different conditions for the simple linking and creating of the derivative works. In such case the proper audit must take into consideration if the library has been linked or the derivative work (custom branch) has been created.
+
+Finally, some software packages may internally contain fragments of the source code (such as source code of the Oracle Java) that may be provided only for reference or have various other licenses, not necessary compatible with the internal policies of the company. If the software team actually does not use (or even is not aware) about such fragments, this must be viewed differently from the case if they would be directly linked.
+
+All these issues are relatively easy to resolve if the auditing group cooperates with the software team that normally should know the used versions and so on. If the software team is not trusted, an incompetent audit may find many "inconsistencies" and "violations" where there are not any.
+
+
+## Software asset management
+
+Software asset management is an organization process, which is outlined in ISO/IEC 19770-1. It is also now embraced within ISO/IEC 27001:2005 Information Technology - Security Techniques - Information Security Management Systems - Requirements and ISO/IEC 17799:2005 Information Technology - Security Techniques - Code of Practice for Information Security Management.
+
+Software asset management is a comprehensive strategy that has to be addressed from top to bottom in an organization to be effective, to minimize risk.
+A software compliance audit is an important sub-set of software asset management and is covered in the above referenced standards. At its simplest it involves the following:
+
+1. Identification of Software Assets.
+2. Verifying the Software Assets including licenses, usage, and rights.
+3. Identifying gaps that may exist between what exists on the installations, and the licenses possessed, and the rights of usage.
+4. Taking action to close any gaps.
+5. Recording the results in a centralized location with Proof Of Purchase records.
+
+The audit process itself should be a continuing action, and modern SAM software identifies what is installed, where it is installed, its usage, and provides a reconciliation of this discovery against usage. This is a very useful means of controlling software installations and lowering the costs of licensing. Large organizations could not do this without discovery and inventory applications.
+
+From time to time internal or external (by major accounting firms) audits may take a forensic approach to establish what is installed on the computers in an organization with the purpose of ensuring that it is all legal and authorized and to ensure that its process of processing transactions or events is correct. Though one might be confronted with a software vendor audit by fair contractual and legal means, one should know and reserve one's crucial rights in an audit situation as well.
+
+Software audits are a component of corporate risk management, and they certainly minimize the risk of prosecution for copyright infringement due to use of unlicensed software. Most vendors permit the company to settle without prosecution though in serious cases, prosecutions certainly occur. In addition with a strict software usage policy the risk of computer viruses are minimized by preventing uncontrolled software copying.
+
+
+## Organizations
+
+Vendors subscribe to organizations such as the Federation Against Software Theft (FAST) and the Business Software Alliance (BSA) as a means of providing an industry approach to control piracy, counterfeiting, and illegal use of software. They publicize campaigns against illegal use of software and reward any employees who notify them of any breaches which result in successful prosecution and/or recovery of license fees.
+

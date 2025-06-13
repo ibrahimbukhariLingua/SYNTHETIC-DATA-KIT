@@ -1,0 +1,118 @@
+Financial correlation
+
+
+# Financial correlation
+
+
+
+**Financial correlations** measure the relationship between the changes of two or more financial variables over time. For example, the prices of equity stocks and fixed interest bonds often move in opposite directions: when investors sell stocks, they often use the proceeds to buy bonds and vice versa. In this case, stock and bond prices are negatively correlated.
+
+Financial correlations play a key role in modern finance. Under the capital asset pricing model (CAPM; a model recognised by a Nobel prize), an increase in diversification increases the return/risk ratio. Measures of risk include value at risk, expected shortfall, and portfolio return variance.
+
+
+## Financial correlation and the Pearson product-moment correlation coefficient
+
+There are several statistical measures of the degree of financial correlations. The Pearson product-moment correlation coefficient is sometimes applied to finance correlations. However, the limitations of Pearson correlation approach in finance are evident. First, linear dependencies as assessed by the Pearson correlation coefficient do not appear often in finance. Second, linear correlation measures are only natural dependence measures if the joint distribution of the variables is elliptical. However, only few financial distributions such as the multivariate normal distribution and the multivariate student-t distribution are special cases of elliptical distributions, for which the linear correlation measure can be meaningfully interpreted. Third, a zero Pearson product-moment correlation coefficient does not necessarily mean independence, because only the two first moments are considered. For example, {\displaystyle Y=X^{2}} (*y* ≠ 0) will lead to Pearson correlation coefficient of zero, which is arguably misleading. Since the Pearson approach is unsatisfactory to model financial correlations, quantitative analysts have developed specific financial correlation measures. Accurately estimating correlations requires the modeling process of marginals to incorporate characteristics such as skewness and kurtosis. Not accounting for these attributes can lead to severe estimation error in the correlations and covariances that have negative biases (as much as 70% of the true values). In a practical application in portfolio optimization, accurate estimation of the variance-covariance matrix is paramount. Thus, forecasting with Monte-Carlo simulation with the Gaussian copula and well-specified marginal distributions are effective.
+
+
+## Financial correlation measures
+
+
+### Correlation Brownian motions
+
+Steven Heston applied a correlation approach to negatively correlate stochastic stock returns {\displaystyle {\frac {dS(t)}{S(t)}}} and stochastic volatility {\displaystyle \ \sigma (t)}. The core equations of the original Heston model are the two stochastic differential equations, SDEs
+
+and
+
+where S is the underlying stock, {\displaystyle \ \mu } is the expected growth rate of {\displaystyle S}, and {\displaystyle \ \sigma (t)} is the stochastic volatility of {\displaystyle S} at time t. In equation (2), g is the mean reversion rate (gravity), which pulls the variance {\displaystyle \ \sigma ^{2}(t)} to its long term mean {\displaystyle \sigma \_{L}^{2}}, and {\displaystyle \ \xi } is the volatility of the volatility σ(t). dz(t) is the standard Brownian motion, i.e. {\displaystyle dz(t)=\varepsilon \_{t}{\sqrt {dt}}}, {\displaystyle \ \varepsilon \_{t}} is i.i.d., in particular {\displaystyle \varepsilon \_{t}} is a random drawing from a standardized normal distribution n~(0,1). In equation (1), the underlying {\displaystyle S} follows the standard geometric Brownian motion, which is also applied in Black–Scholes–Merton model, which however assumes constant volatility.
+The correlation between the stochastic processes (1) and (2) is introduced by correlating the two Brownian motions {\displaystyle dz\_{1}} and {\displaystyle dz\_{2}}. The instantaneous correlation {\displaystyle \ \rho } between the Brownian motions is
+
+The definition (3) can be conveniently modeled with the identity
+
+where {\displaystyle dz\_{2}(t)} and {\displaystyle dz\_{3}(t)} are independent, and {\displaystyle dz(t)} and {\displaystyle dz(t')} are independent, t ≠ t’.
+
+
+### The binomial correlation coefficient
+
+A further financial correlation measure, mainly applied to default correlation,ᵃᶜᶜᵒʳᵈⁱⁿᵍ ᵗᵒ ʷʰᵒᵐ? is the binomial correlation approach of Lucas (1995). We define the binomial events {\displaystyle 1\_{X}=1\_{\{\tau \_{X}\leq T\}}} and {\displaystyle 1\_{Y}=1\_{\{\tau \_{Y}\leq T\}}} where {\displaystyle \tau \_{X}} is the default time of entity {\displaystyle X} and {\displaystyle \tau \_{Y}} is the default time of entity {\displaystyle Y}. Hence if entity {\displaystyle X} defaults before or at time {\displaystyle T}, the random indicator variable {\displaystyle 1\_{X}} will take the value in 1, and 0 otherwise. The same applies to {\displaystyle Y}. Furthermore, {\displaystyle P(X)} and {\displaystyle P(Y)} is the default probability of {\displaystyle X} and {\displaystyle Y} respectively, and {\displaystyle P(XY)} is the joint probability of default. The standard deviation of a one-trial binomial event is {\displaystyle {\sqrt {P(X)-(P(X))^{2}}}}, where P is the probability of outcome X. Hence, we derive the joint default dependence coefficient of the binomial events {\displaystyle 1\_{\{\tau \_{X}\leq T\}}}and {\displaystyle 1\_{\{\tau \_{Y}\leq T\}}} as
+
+By construction, equation (5) can only model binomial events, for example default and no default. The binomial correlation approach of equation (5) is a limiting case of the Pearson correlation approach discussed in section 1. As a consequence, the significant shortcomings of the Pearson correlation approach for financial modeling apply also to the binomial correlation model.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+
+#### Copula correlations
+
+A fairly recent, famous as well as infamous correlation approach applied in finance is the copula approach. Copulas go back to Sklar (1959). Copulas were introduced to finance by Vasicek (1987) and Li (2000).
+
+Copulas simplify statistical problems. They allow the joining of multiple univariate distributions to a single multivariate distribution. Formally, a copula function C transforms an n-dimensional function on the interval [0,1] into a unit-dimensional one:
+
+More explicitly, let {\displaystyle u\_{i}} be a uniform random vector with {\displaystyle u\_{i}=u\_{1},...,u\_{n},u\_{i}\in [0,1]} and {\displaystyle i\in N}. Then there exists a copula function {\displaystyle C} such that
+
+where F is the joint cumulative distribution function and {\displaystyle \ F\_{i}}, *i* = 1, ..., *n*ᵢ are the univariate marginal distributions. {\displaystyle F\_{i}^{-1}} is the inverse of {\displaystyle \ F\_{i}}. If the marginal distributions {\displaystyle F\_{i}^{-1}(u\_{i})} are continuous, it follows that C is unique. For properties and proofs of equation (11), see Sklar (1959) and Nelsen (2006).
+Numerous types of copula functions exist. They can be broadly categorized in one-parameter copulas as the Gaussian copula, and the Archimedean copula, which comprise Gumbel, Clayton and Frank copulas. Often cited two-parameter copulas are student-t, Fréchet, and Marshall-Olkin. For an overview of these copulas, see Nelsen (2006).
+In finance, copulas are typically applied to derive correlated default probabilities in a portfolio,ᵃᶜᶜᵒʳᵈⁱⁿᵍ ᵗᵒ ʷʰᵒᵐ? for example in a collateralized debt obligation, CDO. This was first done by Li in 2006. He defined the uniform margins {\displaystyle u\_{i}} as cumulative default probabilities Q for entity i at a fixed time t, {\displaystyle Q\_{i}(t)}:
+
+Hence, from equations (7) and (8) we derive the Gaussian default time copula CGD,
+
+In equation (9) the terms {\displaystyle N\_{i}^{-1}} map the cumulative default probabilities Q of asset i for time t, {\displaystyle Q\_{i}(t)}, percentile to percentile to standard normal. The mapped standard normal marginal distributions {\displaystyle N\_{i}^{-1}Q\_{i}(t)} are then joined to a single n-variate distribution {\displaystyle M\_{n,R}} by applying the correlation structure of the multivariate normal distribution with correlation matrix R. The probability of n correlated defaults at time t is given by {\displaystyle M\_{n,R}}.
+
+
+#### Copulae and the 2007–08 financial crisis
+
+Numerous non-academic articles have been written demonizing the copula approach and blaming it for the 2007/2008 global financial crisis, see for example Salmon 2009, Jones 2009, and Lohr 2009. There are three main criticisms of the copula approach: (a) tail dependence, (b) calibration, (c) risk management.
+
+(a) Tail dependence
+
+In a crisis, financial correlations typically increase, see studies by Das, Duffie, Kapadia, and Saita (2007) and Duffie, Eckner, Horel and Saita (2009) and references therein. Hence it would be desirable to apply a correlation model with high co-movements in the lower tail of the joint distribution. It can be mathematically shown that the Gaussian copula has relative low tail dependence, as seen in the following scatter plots.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+Figure 1: Scatter plots of different copula models
+
+As seen in Figure 1b, the student-t copula exhibits higher tail dependence and might be better suited to model financial correlations. Also, as seen in Figure 1(c), the Gumbel copula exhibits high tail dependence especially for negative co-movements. Assuming that correlations increase when asset prices decrease, the Gumbel copula might also be a good correlation approach for financial modeling.
+
+(b) Calibration
+
+A further criticism of the Gaussian copula is the difficulty to calibrate it to market prices. In practice, typically a single correlation parameter (not a correlation matrix) is used to model the default correlation between any two entities in a collateralized debt obligation, CDO. Conceptually this correlation parameter should be the same for the entire CDO portfolio. However, traders randomly alter the correlation parameter for different tranches, in order to derive desired tranche spreads. Traders increase the correlation for ‘extreme’ tranches as the equity tranche or senior tranches, referred to as the correlation smile. This is similar to the often cited implied volatility smile in the Black–Scholes–Merton model. Here traders increase the implied volatility especially for out-of-the money puts, but also for out-of-the money calls to increase the option price.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ.
+
+In a mean-variance optimization framework, accurate estimation of the variance-covariance matrix is paramount. Thus, forecasting with Monte-Carlo simulation with the Gaussian copula and well-specified marginal distributions are effective. Allowing the modeling process to allow for empirical characteristics in stock returns such as auto-regression, asymmetric volatility, skewness, and kurtosis is important. Not accounting for these attributes lead to severe estimation error in the correlations and variances that have negative biases (as much as 70% of the true values).
+
+(c) Risk management
+
+A further criticism of the Copula approach is that the copula model is static and consequently allows only limited risk management, see Finger (2009) or Donnelly and Embrechts (2010). The original copulas models of Vasicek (1987) and Li (2000) and several extensions of the model as Hull and White (2004) or Gregory and Laurent (2004) do have a one period time horizon, i.e. are static. In particular, there is no stochastic process for the critical underlying variables default intensity and default correlation. However, even in these early copula formulations, back testing and stress testing the variables for different time horizons can give valuable sensitivities, see Whetten and Adelson (2004) and Meissner, Hector, and. Rasmussen (2008).
+In addition, the copula variables can be made a function of time as in Hull, Predescu, and White (2005). This still does not create a fully dynamic stochastic process with drift and noise, which allows flexible hedging and risk management. The best solutions are truly dynamic copula frameworks, see section ‘Dynamic Copulas’ below.
+
+
+#### Irrational complacency
+
+Before the global 2007–08 financial crisis, numerous market participants trusted the copula model uncritically and naively.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ However, the 2007–08 crisis was less a matter of a particular correlation model, but rather an issue of "irrational complacency". In the extremely benign time period from 2003 to 2006, proper hedging, proper risk management and stress test results were largely ignored.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ The prime example is AIG's London subsidiary, which had sold credit default swaps and collateralized debt obligations in an amount of close to $500 billion without conducting any major hedging. For an insightful paper on inadequate risk management leading up to the crisis, see “A personal view of the crisis – Confessions of a Risk Manager” (The Economist 2008). In particular, if any credit correlation model is fed with benign input data as low default intensities and low default correlation, the risk output figures will be benign, ‘garbage in garbage out’ in modeling terminology.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+
+#### Dynamic copulas
+
+A core enhancement of copula models are dynamic copulas, introduced by Albanese et al. (2005) and (2007). The "dynamic conditioning" approach models the evolution of multi-factor super-lattices, which correlate the return processes of each entity at each time step. Binomial dynamic copulas apply combinatorial methods to avoid Monte Carlo simulations. Richer dynamic Gaussian copulas apply Monte Carlo simulation and come at the cost of requiring powerful computer technology.
+
+
+### Conditionally independent default (CID) correlation modeling
+
+In order to avoid specifying the default correlation between each entity pair in a portfolio a factorization is often applied.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ This leads to conditionally independent default (CID) modeling. The most widely applied CID model is the one-factor Gaussian copula (OFGC) model. It was the de facto market model for pricing CDOs before the 2007/2008 global financial crisis.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ The core equation of the OFGC model
+
+where {\displaystyle M} and {\displaystyle Z\_{i}} are random drawings from {\displaystyle N(0,1)} and {\displaystyle 0\leq \rho \leq 1}. As a result, the latent variable {\displaystyle x\_{i}}, sometimes interpreted as the asset value of i, see Turc, Very, Benhamou and Alvarez et al. (2005),ᵇᵉᵗᵗᵉʳˢᵒᵘʳᶜᵉⁿᵉᵉᵈᵉᵈ is also n~(0,1). The common factor {\displaystyle M} can be interpreted as the economic environment, possibly represented by the return of the S&P 500. {\displaystyle Z\_{i}} is the idiosyncratic component, the ‘strength’ of entity i, possibly measured by entity i's stock price return. From equation (10) we see, that the correlation between entities i is modeled indirectly by conditioning the latent variable {\displaystyle x\_{i}} on the common factor {\displaystyle M}. For example, for p =1, the latent variables of all entities {\displaystyle i=1,...,n,\ x\_{i}=M}, so the {\displaystyle x\_{i}} are identical in each simulation. For p = 0, all latent variable for all entities {\displaystyle i=1,\ldots ,n,\ x\_{i}=Z\_{i}}, hence the {\displaystyle x\_{i}} are independent. Importantly, once we fix the value of M, the defaults of the n entities are (conditionally on M) mutually independent.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+As of 2010, the OFGC is the basis for credit risk management in Basel II.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ The benefits of the model are simplicity and intuition. One of the main shortcomings of the model is that traders when pricing CDOs randomly alter the correlation parameter for different CDO tranches to achieve desired tranche spreads. However conceptually, the correlation parameter should be identical for the whole portfolio.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+
+### Contagion default modeling
+
+Contagion default modeling can be viewed as a variation of CID modeling. As discussed in section 2.3, in the CID framework, correlation is modeled by conditioning on a common market factor M, which impacts all entities to the same degree. The lower the random drawing for M, the higher is the default intensity of all entities (unless ρ = 0). Hence CID modeling can elucidate default clustering. In contrast, contagion approaches model the default intensity of an entity as a function of the default of another entity. Hence contagion default modeling incorporates counterparty risk, i.e. the direct impact of a defaulting entity on the default intensity of another entity. In particular, after a default of a particular entity, the default intensity of all assets in the portfolio increases. This default contagion then typically fades exponentially to non-contagious default intensity levels. See the papers of Davis and Lo (2001) and Jarrow and Yu (2001), who pioneered contagion default modeling.
+
+
+## Top–down correlation approaches
+
+Within the credit correlation modeling framework, a fairly new correlation approach is top–down modeling. Here the evolution of the portfolio intensity distribution is derived directly, i.e. abstracting from the default intensities of individual entities. Top-down models are typically applied in practice if:
+
+* The default intensities of the individual entities are unavailable or unreliable.
+* The default intensities of the individual entities are unnecessary. This may be the case when evaluating a homogeneous portfolio such as an index of homogeneous entities.
+* The sheer size of a portfolio makes the modeling of individual default intensities problematic.
+
+Top–down models are typically more parsimonious, computationally efficient and can often be calibrated better to market prices than bottom–up models. Although seemingly important information such as the default intensities of individual entities is disregarded, a top-down model can typically better capture properties of the portfolio such as volatility or correlation smiles. In addition, the default information of individual entities can often be inferred by random thinning techniques, see Giesecke, Goldberg and Ding (2007) for details.
+
+Within the top-down framework, Schönbucher (2006) creates a time-inhomogeneous Markov-chain of transition rates. Default correlation is introduced by changes in the volatility of transition rates. For certain parameter constellations, higher volatility means faster transition to lower states as default, and as a consequence implies higher default correlation, and vice versa. Similarly, Hurd and Kuznetsov (2006a) and (2006b) induce correlation by a random change in the speed of time. A faster speed of time means faster transition to a lower state, possibly default, and as a result increases default correlation, and vice versa. For a comparative analysis of correlation approaches in finance, see Albanese, Li, Lobachevskiy, and Meissner (2010).
+

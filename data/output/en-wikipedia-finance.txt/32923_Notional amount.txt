@@ -1,0 +1,60 @@
+Notional amount
+
+
+# Notional amount
+
+
+
+The **notional amount** (or **notional principal amount** or **notional value**) on a financial instrument is the nominal or face amount that is used to calculate payments made on that instrument. This amount generally does not change and is thus referred to as *notional.*
+
+
+## Explanation
+
+Contrast a bond with an interest rate swap:
+
+* In a bond, the buyer pays the principal amount at issue (start), then receives coupons (computed off this principal) over the life of the bond, then receives the principal back at maturity (end).
+* In a swap, no principal changes hands at inception (start) or expiry (end), and in the meantime, interest payments are computed based on a notional amount, which acts *as if* it were the principal amount of a bond, hence the term *notional principal amount*, abbreviated to *notional*.
+
+In simple terms, the notional principal amount is essentially how much of an asset or bonds a person owns. For example, if a premium bond were bought for £1, then the notional principal amount would be the face value amount of the premium bond that £1 was able to purchase. Hence, the notional principal amount is the **quantity** of the assets and bonds.
+
+
+## Examples
+
+
+### Interest rate swaps
+
+In the context of an interest rate swap, the notional principal amount is the specified amount on which the exchanged interest payments are based; this could be 8000 US dollars, or 2.7 million pounds sterling, or any other combination of a number and a currency. Each period's rates are multiplied by the notional principal amount to determine the height and currency of each counter-party's payment. A notional principal amount is an amount used as a reference to calculate the amount of interest due on an 'interest only class' which is not entitled to any principal.
+
+
+### Total return swaps
+
+In a typical total return swap, one party pays a fixed or floating rate multiplied by a notional principal amount plus the depreciation, if any, in a notional amount of property, in exchange for payments by the other party of the appreciation, if any, on the same notional amount of property. For example, assume the underlying property is the S&P 500 stock index" A would pay B the London Inter-Bank Offered Rate, multiplied by a $100 notional amount plus depreciation, if any, on a $100 notional investment in the S&P 500 index. B would pay A the appreciation, if any, in the same notional S&P 500 investment.
+
+
+### Equity options
+
+Shares also have a notional principal amount. The notional amount refers to the total amount changing hand in case the option is exercised.
+Some people refer to it as *nominal* instead of notional. The formula is as follows:
+
+Notional amount = number of options \* multiplier \* strike price.
+
+The notional value is the value of what is controlled, rather than the value of what is owned. If stock option contracts are being bought, those contracts could potentially give a lot more shares than would be possible to control by buying shares outright.
+
+Let us assume we purchase 1 equity call option with a strike of USD 60. This option allows the holder to buy 100 shares (multiplier 100). In this case, the notional is USD 6'000. This position has the same upside potential as holding USD 6,000 of stock (1 option × 100 multiplier × USD 60), but the options may have been purchased for USD 5 each (for a total of USD 500). By this measure, a leverage of 6,000/500 = 12*x* has been achieved. Note that if the stock price moves to USD 70, the value of the shares that could be purchased is now USD 7,000 (minus the cost of option and commission differential), but the notional amount is still considered to be USD 6'000, the amount used to purchase 100 shares for USD 60 each.
+
+
+### Foreign currency/exchange (FX derivatives)
+
+In FX derivatives, such as forwards or options, there are *two* notionals. For example, if an individual has a call option on USD/JPY currency struck at 110, and one of these is purchased, then this gives the buyer the option to pay 100 USD and receive 110 × 100 = 11,000 JPY, so the USD notional is 100 USD, and the JPY notional is 11,000 JPY.
+
+Note that the ratio of notionals is exactly the strike, and thus if the strike is moved, one of the notionals will change. For instance, if the strike is moved to 100, and the USD fixed at 100, the JPY notional becomes 10,000; the buyer will pay the same number of USD and receive fewer JPY. Alternatively, JPY currency could be held constant at 11,000 and change the USD notional to 110: hence, the buyer will pay more in USD and receive the same number of JPY.
+
+When hedging foreign currency exposure, such as for an American business in USD, an outflow of 11,000 JPY, the *foreign currency* notional must be fixed.
+
+
+### ETFs
+
+Exchange-traded funds track underlying positions, so an investment performs equivalently to purchasing that number of physical positions, though the fund may in fact not directly purchase the positions, and instead use derivatives (especially futures) to produce the position.
+
+Levered ETFs, notably inverse exchange-traded funds, have the unusual property that their notional changes every day; they pay the compounded daily return, so it is as if one were re-investing each day's earnings at the new daily price. If an investor has an inverse ETF in an asset that goes down, they will have more money, which can be used to short a cheaper asset, hence one's unit notional goes up. Conversely, if the asset has gone up in value in this situation, the notional will go down, as seen in inverse exchange-traded funds,
+

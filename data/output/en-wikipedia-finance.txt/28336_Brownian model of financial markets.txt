@@ -1,0 +1,191 @@
+Brownian model of financial markets
+
+
+# Brownian model of financial markets
+
+
+
+The Brownian motion models for financial markets are based on the work of Robert C. Merton and Paul A. Samuelson, as extensions to the one-period market models of Harold Markowitz and William F. Sharpe, and are concerned with defining the concepts of financial assets and markets, portfolios, gains and wealth in terms of continuous-time stochastic processes.
+
+Under this model, these assets have continuous prices evolving continuously in time and are driven by Brownian motion processes. This model requires an assumption of perfectly divisible assets and a frictionless market (i.e. that no transaction costs occur either for buying or selling). Another assumption is that asset prices have no jumps, that is there are no surprises in the market. This last assumption is removed in jump diffusion models.
+
+
+## Financial market processes
+
+Consider a financial market consisting of {\displaystyle N+1} financial assets, where one of these assets, called a *bond* or *money market*, is risk free while the remaining {\displaystyle N} assets, called *stocks*, are risky.
+
+
+### Definition
+
+A *financial market* is defined as {\displaystyle {\mathcal {M}}=(r,\mathbf {b} ,\mathbf {\delta } ,\mathbf {\sigma } ,A,\mathbf {S} (0))} that satisfies the following:
+
+1. A probability space {\displaystyle (\Omega ,{\mathcal {F}},P)}.
+2. A time interval {\displaystyle [0,T]}.
+3. A {\displaystyle D}-dimensional Brownian process {\displaystyle \mathbf {W} (t)=(W\_{1}(t)\ldots W\_{D}(t))',} where {\displaystyle \;0\leq t\leq T} adapted to the augmented filtration {\displaystyle \{{\mathcal {F}}(t);\;0\leq t\leq T\}}.
+4. A measurable risk-free money market rate process {\displaystyle r(t)\in L\_{1}[0,T]}.
+5. A measurable mean rate of return process {\displaystyle \mathbf {b} :[0,T]\times \mathbb {R} ^{N}\rightarrow \mathbb {R} \in L\_{2}[0,T]}.
+6. A measurable dividend rate of return process {\displaystyle \mathbf {\delta } :[0,T]\times \mathbb {R} ^{N}\rightarrow \mathbb {R} \in L\_{2}[0,T]}.
+7. A measurable volatility process {\displaystyle \mathbf {\sigma } :[0,T]\times \mathbb {R} ^{N\times D}\rightarrow \mathbb {R} }, such that {\displaystyle \sum \_{n=1}^{N}\sum \_{d=1}^{D}\int \_{0}^{T}\sigma \_{n,d}^{2}(s)ds<\infty }.
+8. A measurable, finite variation, singularly continuous stochastic {\displaystyle A(t)}.
+9. The initial conditions given by {\displaystyle \mathbf {S} (0)=(S\_{0}(0),\ldots S\_{N}(0))'}.
+
+### The augmented filtration
+
+Let {\displaystyle (\Omega ,{\mathcal {F}},p)} be a probability space, and a
+{\displaystyle \mathbf {W} (t)=(W\_{1}(t)\ldots W\_{D}(t))',\;0\leq t\leq T} be
+D-dimensional Brownian motion stochastic process, with the natural filtration:
+
+If {\displaystyle {\mathcal {N}}} are the measure 0 (i.e. null under
+measure {\displaystyle P}) subsets of {\displaystyle {\mathcal {F}}^{\mathbf {W} }(t)}, then define
+the augmented filtration:
+
+The difference between {\displaystyle \{{\mathcal {F}}^{\mathbf {W} }(t);\;0\leq t\leq T\}} and {\displaystyle \{{\mathcal {F}}(t);\;0\leq t\leq T\}} is that the
+latter is both left-continuous, in the sense that:
+
+and right-continuous, such that:
+
+while the former is only left-continuous.
+
+
+### Bond
+
+A share of a bond (money market) has price {\displaystyle S\_{0}(t)>0} at time
+{\displaystyle t} with {\displaystyle S\_{0}(0)=1}, is continuous, {\displaystyle \{{\mathcal {F}}(t);\;0\leq t\leq T\}} adapted, and has finite variation. Because it has finite variation, it can be decomposed into an absolutely continuous part {\displaystyle S\_{0}^{a}(t)} and a singularly continuous part {\displaystyle S\_{0}^{s}(t)}, by Lebesgue's decomposition theorem. Define:
+
+resulting in the SDE:
+
+which gives:
+
+Thus, it can be easily seen that if {\displaystyle S\_{0}(t)} is absolutely continuous (i.e. {\displaystyle A(\cdot )=0}), then the price of the bond evolves like the value of a risk-free savings account with instantaneous interest rate {\displaystyle r(t)}, which is random, time-dependent and {\displaystyle {\mathcal {F}}(t)} measurable.
+
+
+### Stocks
+
+Stock prices are modeled as being similar to that of bonds, except with a randomly fluctuating component (called its volatility). As a premium for the risk originating from these random fluctuations, the mean rate of return of a stock is higher than that of a bond.
+
+Let {\displaystyle S\_{1}(t)\ldots S\_{N}(t)} be the strictly positive prices per share of the {\displaystyle N} stocks, which are continuous stochastic processes satisfying:
+
+Here, {\displaystyle \sigma \_{n,d}(t),\;d=1\ldots D} gives the volatility of the {\displaystyle n}-th stock, while {\displaystyle b\_{n}(t)} is its mean rate of return.
+
+In order for an arbitrage-free pricing scenario, {\displaystyle A(t)} must be as defined above. The solution to this is:
+
+and the discounted stock prices are:
+
+Note that the contribution due to the discontinuities in the bond price {\displaystyle A(t)} does not appear in this equation.
+
+
+### Dividend rate
+
+Each stock may have an associated dividend rate process {\displaystyle \delta \_{n}(t)} giving the rate of dividend payment per unit price of the stock at time {\displaystyle t}. Accounting for this in the model, gives the *yield* process {\displaystyle Y\_{n}(t)}:
+
+
+## Portfolio and gain processes
+
+
+### Definition
+
+Consider a financial market {\displaystyle {\mathcal {M}}=(r,\mathbf {b} ,\mathbf {\delta } ,\mathbf {\sigma } ,A,\mathbf {S} (0))}.
+
+A *portfolio process* {\displaystyle (\pi \_{0},\pi \_{1},\ldots \pi \_{N})} for this market is an {\displaystyle {\mathcal {F}}(t)} measurable, {\displaystyle \mathbb {R} ^{N+1}} valued process such that:
+
+The *gains process* for this portfolio is:
+
+We say that the portfolio is *self-financed* if:
+
+It turns out that for a self-financed portfolio, the appropriate value of {\displaystyle \pi \_{0}} is determined from {\displaystyle \pi =(\pi \_{1},\ldots \pi \_{N})} and therefore sometimes {\displaystyle \pi } is referred to as the portfolio process. Also, {\displaystyle \pi \_{0}<0} implies borrowing money from the money-market, while {\displaystyle \pi \_{n}<0} implies taking a short position on the stock.
+
+The term {\displaystyle b\_{n}(t)+\mathbf {\delta } \_{n}(t)-r(t)} in the SDE of {\displaystyle G(t)} is the *risk premium* process, and it is the compensation received in return for investing in the {\displaystyle n}-th stock.
+
+
+### Motivation
+
+Consider time intervals {\displaystyle 0=t\_{0}<t\_{1}<\ldots <t\_{M}=T}, and let {\displaystyle \nu \_{n}(t\_{m})} be the number of shares of asset {\displaystyle n=0\ldots N}, held in a portfolio during time interval at time {\displaystyle [t\_{m},t\_{m+1}\;m=0\ldots M-1}. To avoid the case of insider trading (i.e. foreknowledge of the future), it is required that {\displaystyle \nu \_{n}(t\_{m})} is {\displaystyle {\mathcal {F}}(t\_{m})} measurable.
+
+Therefore, the incremental gains at each trading interval from such a portfolio is:
+
+and {\displaystyle G(t\_{m})} is the total gain over time {\displaystyle [0,t\_{m}]}, while the total value of the portfolio is {\displaystyle \sum \_{n=0}^{N}\nu \_{n}(t\_{m})S\_{n}(t\_{m})}.
+
+Define {\displaystyle \pi \_{n}(t)\triangleq \nu \_{n}(t)}, let the time partition go to zero, and substitute for {\displaystyle Y(t)} as defined earlier, to get the corresponding SDE for the gains process. Here {\displaystyle \pi \_{n}(t)} denotes the dollar amount invested in asset {\displaystyle n} at time {\displaystyle t}, not the number of shares held.
+
+
+## Income and wealth processes
+
+
+### Definition
+
+Given a financial market {\displaystyle {\mathcal {M}}}, then a *cumulative income process* {\displaystyle \Gamma (t)\;0\leq t\leq T} is a semimartingale and represents the income accumulated over time {\displaystyle [0,t]}, due to sources other than the investments in the {\displaystyle N+1} assets of the financial market.
+
+A *wealth process* {\displaystyle X(t)} is then defined as:
+
+and represents the total wealth of an investor at time {\displaystyle 0\leq t\leq T}. The portfolio is said to be *{\displaystyle \Gamma (t)}-financed* if:
+
+The corresponding SDE for the wealth process, through appropriate substitutions, becomes:
+
+{\displaystyle dX(t)=d\Gamma (t)+X(t)\left[r(t)dt+dA(t)\right]+\sum \_{n=1}^{N}\left[\pi \_{n}(t)\left(b\_{n}(t)+\delta \_{n}(t)-r(t)\right)\right]+\sum \_{d=1}^{D}\left[\sum \_{n=1}^{N}\pi \_{n}(t)\sigma \_{n,d}(t)\right]dW\_{d}(t)}.
+
+Note, that again in this case, the value of {\displaystyle \pi \_{0}} can be determined from {\displaystyle \pi \_{n},\;n=1\ldots N}.
+
+
+## Viable markets
+
+The standard theory of mathematical finance is restricted to viable financial markets, i.e. those in which there are no opportunities for arbitrage. If such opportunities exists, it implies the possibility of making an arbitrarily large risk-free profit.
+
+
+### Definition
+
+In a financial market {\displaystyle {\mathcal {M}}}, a self-financed portfolio process {\displaystyle \pi (t)} is considered to be an *arbitrage opportunity* if the associated gains process {\displaystyle G(T)\geq 0}, almost surely and {\displaystyle P[G(T)>0]>0} strictly. A market {\displaystyle {\mathcal {M}}} in which no such portfolio exists is said to be *viable*.
+
+
+### Implications
+
+In a viable market {\displaystyle {\mathcal {M}}}, there exists a {\displaystyle {\mathcal {F}}(t)} adapted process {\displaystyle \theta :[0,T]\times \mathbb {R} ^{D}\rightarrow \mathbb {R} } such that for almost every {\displaystyle t\in [0,T]}:
+
+This {\displaystyle \theta } is called the *market price of risk* and relates the premium for the {\displaystyle n}-th stock with its volatility {\displaystyle \sigma \_{n,\cdot }}.
+
+Conversely, if there exists a D-dimensional process {\displaystyle \theta (t)} such that it satisfies the above requirement, and:
+
+then the market is viable.
+
+Also, a viable market {\displaystyle {\mathcal {M}}} can have only one money-market (bond) and hence only one risk-free rate. Therefore, if the {\displaystyle n}-th stock entails no risk (i.e. {\displaystyle \sigma \_{n,d}=0,\;d=1\ldots D}) and pays no dividend (i.e.{\displaystyle \delta \_{n}(t)=0}), then its rate of return is equal to the money market rate (i.e. {\displaystyle b\_{n}(t)=r(t)}) and its price tracks that of the bond (i.e., {\displaystyle S\_{n}(t)=S\_{n}(0)S\_{0}(t)}).
+
+
+## Standard financial market
+
+
+### Definition
+
+A financial market {\displaystyle {\mathcal {M}}} is said to be *standard* if:
+
+
+### Comments
+
+In case the number of stocks {\displaystyle N} is greater than the dimension {\displaystyle D}, in violation of point (ii), from linear algebra, it can be seen that there are {\displaystyle N-D} stocks whose volatilities (given by the vector {\displaystyle (\sigma \_{n,1}\ldots \sigma \_{n,D})}) are linear combination of the volatilities of {\displaystyle D} other stocks (because the rank of {\displaystyle \sigma } is {\displaystyle D}). Therefore, the {\displaystyle N} stocks can be replaced by {\displaystyle D} equivalent mutual funds.
+
+The *standard martingale measure* {\displaystyle P\_{0}} on {\displaystyle {\mathcal {F}}(T)} for the standard market, is defined as:
+
+Note that {\displaystyle P} and {\displaystyle P\_{0}} are absolutely continuous with respect to each other, i.e. they are equivalent. Also, according to Girsanov's theorem,
+
+is a {\displaystyle D}-dimensional Brownian motion process on the filtration {\displaystyle \{{\mathcal {F}}(t);\;0\leq t\leq T\}} with respect to {\displaystyle P\_{0}}.
+
+
+## Complete financial markets
+
+A complete financial market is one that allows effective hedging of the risk inherent in any investment strategy.
+
+
+### Definition
+
+Let {\displaystyle {\mathcal {M}}} be a standard financial market, and {\displaystyle B} be an {\displaystyle {\mathcal {F}}(T)}-measurable random variable, such that:
+
+The market {\displaystyle {\mathcal {M}}} is said to be *complete* if every such {\displaystyle B} is *financeable*, i.e. if there is an {\displaystyle x}-financed portfolio process {\displaystyle (\pi \_{n}(t);\;n=1\ldots N)}, such that its associated wealth process {\displaystyle X(t)} satisfies
+
+
+### Motivation
+
+If a particular investment strategy calls for a payment {\displaystyle B} at time {\displaystyle T}, the amount of which is unknown at time {\displaystyle t=0}, then a conservative strategy would be to set aside an amount {\displaystyle x=\sup \_{\omega }B(\omega )} in order to cover the payment. However, in a complete market it is possible to set aside less capital (viz. {\displaystyle x}) and invest it so that at time {\displaystyle T} it has grown to match the size of {\displaystyle B}.
+
+
+### Corollary
+
+A standard financial market {\displaystyle {\mathcal {M}}} is complete if and only if {\displaystyle N=D}, and the {\displaystyle N\times D} volatility process {\displaystyle \sigma (t)} is non-singular for almost every {\displaystyle t\in [0,T]}, with respect to the Lebesgue measure.
+

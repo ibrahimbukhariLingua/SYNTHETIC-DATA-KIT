@@ -1,0 +1,25 @@
+Littlewood's rule
+
+
+# Littlewood's rule
+
+
+
+The earliest revenue management model is known as **Littlewood’s rule**, developed by Ken Littlewood while working at British Overseas Airways Corporation.
+
+
+## The two class model
+
+Littlewood proposed the first static single-resource quantity-based RM model. It was a solution method for the seat inventory problem for a single-leg flight with two fare classes. Those two fare classes have a fare of {\displaystyle R\_{1}} and {\displaystyle R\_{2}}, whereby {\displaystyle R\_{1}>R\_{2}}. The total capacity is {\displaystyle C} and demand for class {\displaystyle j} is indicated with {\displaystyle D\_{j}}.
+The demand has a probability distribution whose cumulative distribution function is denoted {\displaystyle F\_{j}}. The demand for class 2 comes before demand for class 1. The question now is how much demand for class 2 should be accepted so that the optimal mix of passengers is achieved and the highest revenue is obtained. Littlewood suggests closing down class 2 when the certain revenue from selling another low fare seat is exceeded by the expected revenue of selling the same seat at the higher fare. In formula form this means: accept demand for class 2 as long as:
+
+where
+
+This suggests that there is an optimal protection limit {\displaystyle y\_{1}^{\star }}. If the capacity left is less than this limit demand for class 2 is rejected. If a continuous distribution {\displaystyle F\_{j}(x)} is used to model the demand, then {\displaystyle y\_{1}^{\star }} can be calculated using what is called *Littlewood’s rule*:
+
+This gives the optimal protection limit, in terms of the division of the marginal revenue of both classes.
+
+Alternatively bid prices can be calculated via
+
+Littlewood's model is limited to two classes. Peter Belobaba developed a model based on this rule called expected marginal seat revenue, abbreviated as EMSR, which is an {\displaystyle n}-class model
+

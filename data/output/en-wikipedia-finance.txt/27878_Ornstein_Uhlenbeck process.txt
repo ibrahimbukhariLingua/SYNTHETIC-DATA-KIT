@@ -1,0 +1,151 @@
+Ornstein–Uhlenbeck process
+
+
+# Ornstein–Uhlenbeck process
+
+
+
+In mathematics, the **Ornstein–Uhlenbeck process** is a stochastic process with applications in financial mathematics and the physical sciences. Its original application in physics was as a model for the velocity of a massive Brownian particle under the influence of friction. It is named after Leonard Ornstein and George Eugene Uhlenbeck.
+
+The Ornstein–Uhlenbeck process is a stationary Gauss–Markov process, which means that it is a Gaussian process, a Markov process, and is temporally homogeneous. In fact, it is the only nontrivial process that satisfies these three conditions, up to allowing linear transformations of the space and time variables. Over time, the process tends to drift towards its mean function: such a process is called mean-reverting.
+
+The process can be considered to be a modification of the random walk in continuous time, or Wiener process, in which the properties of the process have been changed so that there is a tendency of the walk to move back towards a central location, with a greater attraction when the process is further away from the center. The Ornstein–Uhlenbeck process can also be considered as the continuous-time analogue of the discrete-time AR(1) process.
+
+
+## Definition
+
+The Ornstein–Uhlenbeck process {\displaystyle x\_{t}} is defined by the following stochastic differential equation:
+
+where {\displaystyle \theta >0} and {\displaystyle \sigma >0} are parameters and {\displaystyle W\_{t}} denotes the Wiener process.
+
+An additional drift term is sometimes added:
+
+where {\displaystyle \mu } is a constant.
+The Ornstein–Uhlenbeck process is sometimes also written as a Langevin equation of the form
+
+where {\displaystyle \eta (t)}, also known as white noise, stands in for the supposed derivative {\displaystyle dW\_{t}/dt} of the Wiener process. However, {\displaystyle dW\_{t}/dt} does not exist because the Wiener process is nowhere differentiable, and so the Langevin equation only makes sense if interpreted in distributional sense. In physics and engineering disciplines, it is a common representation for the Ornstein–Uhlenbeck process and similar stochastic differential equations by tacitly assuming that the noise term is a derivative of a differentiable (e.g. Fourier) interpolation of the Wiener process.
+
+
+## Fokker–Planck equation representation
+
+The Ornstein–Uhlenbeck process can also be described in terms of a probability density function, {\displaystyle P(x,t)}, which specifies the probability of finding the process in the state {\displaystyle x} at time {\displaystyle t}. This function satisfies the Fokker–Planck equation
+
+where {\displaystyle D=\sigma ^{2}/2}. This is a linear parabolic partial differential equation which can be solved by a variety of techniques. The transition probability, also known as the Green's function, {\displaystyle P(x,t\mid x',t')} is a Gaussian with mean {\displaystyle x'e^{-\theta (t-t')}} and variance {\displaystyle {\frac {D}{\theta }}\left(1-e^{-2\theta (t-t')}\right)}:
+
+This gives the probability of the state {\displaystyle x} occurring at time {\displaystyle t} given initial state {\displaystyle x'} at time {\displaystyle t'<t}. Equivalently, {\displaystyle P(x,t\mid x',t')} is the solution of the Fokker–Planck equation with initial condition {\displaystyle P(x,t')=\delta (x-x')}.
+
+
+## Mathematical properties
+
+Conditioned on a particular value of {\displaystyle x\_{0}}, the mean is
+
+and the covariance is
+
+For the stationary (unconditioned) process, the mean of {\displaystyle x\_{t}} is {\displaystyle \mu }, and the covariance of {\displaystyle x\_{s}} and {\displaystyle x\_{t}} is {\displaystyle {\frac {\sigma ^{2}}{2\theta }}e^{-\theta |t-s|}}.
+
+The Ornstein–Uhlenbeck process is an example of a Gaussian process that has a bounded variance and admits a stationary probability distribution, in contrast to the Wiener process; the difference between the two is in their "drift" term. For the Wiener process the drift term is constant, whereas for the Ornstein–Uhlenbeck process it is dependent on the current value of the process: if the current value of the process is less than the (long-term) mean, the drift will be positive; if the current value of the process is greater than the (long-term) mean, the drift will be negative. In other words, the mean acts as an equilibrium level for the process. This gives the process its informative name, "mean-reverting."
+
+
+### Properties of sample paths
+
+A temporally homogeneous Ornstein–Uhlenbeck process can be represented as a scaled, time-transformed Wiener process:
+
+where {\displaystyle W\_{t}} is the standard Wiener process. This is roughly Theorem 1.2 in Doob 1942. Equivalently, with the change of variable {\displaystyle s=e^{2\theta t}} this becomes
+
+Using this mapping, one can translate known properties of {\displaystyle W\_{t}} into corresponding statements for {\displaystyle x\_{t}}. For instance, the law of the iterated logarithm for {\displaystyle W\_{t}} becomes
+
+
+### Formal solution
+
+The stochastic differential equation for {\displaystyle x\_{t}} can be formally solved by variation of parameters. Writing
+
+we get
+
+Integrating from {\displaystyle 0} to {\displaystyle t} we get
+
+whereupon we see
+
+From this representation, the first moment (i.e. the mean) is shown to be
+
+assuming {\displaystyle x\_{0}} is constant. Moreover, the Itō isometry can be used to calculate the covariance function by
+
+Since the Itô integral of deterministic integrand is normally distributed, it follows thatᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+
+### Kolmogorov equations
+
+The infinitesimal generator of the process is{\displaystyle Lf=-\theta (x-\mu )f'+{\frac {1}{2}}\sigma ^{2}f''}If we let {\displaystyle y=(x-\mu ){\sqrt {\frac {2\theta }{\sigma ^{2}}}}}, then the eigenvalue equation simplifies to:
+{\displaystyle {\frac {d^{2}}{dy^{2}}}\phi -y{\frac {d}{dy}}\phi -{\frac {\lambda }{\theta }}\phi =0}which is the defining equation for Hermite polynomials. Its solutions are {\displaystyle \phi (y)=He\_{n}(y)}, with {\displaystyle \lambda =-n\theta }, which implies that the mean first passage time for a particle to hit a point on the boundary is on the order of {\displaystyle \theta ^{-1}}.
+
+
+## Numerical simulation
+
+By using discretely sampled data at time intervals of width {\displaystyle t}, the maximum likelihood estimators for the parameters of the Ornstein–Uhlenbeck process are asymptotically normal to their true values. More precisely,ᶠᵃⁱˡᵉᵈ ᵛᵉʳⁱᶠⁱᶜᵃᵗⁱᵒⁿ{\displaystyle {\sqrt {n}}\left({\begin{pmatrix}{\widehat {\theta }}\_{n}\\{\widehat {\mu }}\_{n}\\{\widehat {\sigma }}\_{n}^{2}\end{pmatrix}}-{\begin{pmatrix}\theta \\\mu \\\sigma ^{2}\end{pmatrix}}\right)\xrightarrow {d} \ {\mathcal {N}}\left({\begin{pmatrix}0\\0\\0\end{pmatrix}},{\begin{pmatrix}{\frac {e^{2t\theta }-1}{t^{2}}}&0&{\frac {\sigma ^{2}(e^{2t\theta }-1-2t\theta )}{t^{2}\theta }}\\0&{\frac {\sigma ^{2}\left(e^{t\theta }+1\right)}{2\left(e^{t\theta }-1\right)\theta }}&0\\{\frac {\sigma ^{2}(e^{2t\theta }-1-2t\theta )}{t^{2}\theta }}&0&{\frac {\sigma ^{4}\left[\left(e^{2t\theta }-1\right)^{2}+2t^{2}\theta ^{2}\left(e^{2t\theta }+1\right)+4t\theta \left(e^{2t\theta }-1\right)\right]}{t^{2}\left(e^{2t\theta }-1\right)\theta ^{2}}}\end{pmatrix}}\right)}
+
+To simulate an OU process numerically with standard deviation {\displaystyle \Sigma } and correlation time {\displaystyle \tau =1/\Theta }, one method is to apply the finite-difference formula
+
+{\displaystyle x(t+dt)=x(t)-\Theta \,dt\,x(t)+\Sigma {\sqrt {2\,dt\,\Theta }}\nu \_{i}}
+where {\displaystyle \nu \_{i}} is a normally distributed random number with zero mean and unit variance, sampled independently at every time-step {\displaystyle dt}.
+
+
+## Scaling limit interpretation
+
+The Ornstein–Uhlenbeck process can be interpreted as a scaling limit of a discrete process, in the same way that Brownian motion is a scaling limit of random walks. Consider an urn containing {\displaystyle n} black and white balls. At each step a ball is chosen at random and replaced by a ball of the opposite colour. Let {\displaystyle X\_{k}} be the number of black balls in the urn after {\displaystyle k} steps. Then {\displaystyle {\frac {X\_{[nt]}-n/2}{\sqrt {n}}}} converges in law to an Ornstein–Uhlenbeck process as {\displaystyle n} tends to infinity. This was obtained by Mark Kac.
+
+Heuristically one may obtain this as follows.
+
+Let {\displaystyle X\_{t}^{(n)}:={\frac {X\_{[nt]}-n/2}{\sqrt {n}}}}, and we will obtain the stochastic differential equation at the {\displaystyle n\to \infty } limit. First deduce
+{\displaystyle \Delta t=1/n,\quad \Delta X\_{t}^{(n)}=X\_{t+\Delta t}^{(n)}-X\_{t}^{(n)}.}
+With this, we can calculate the mean and variance of {\displaystyle \Delta X\_{t}^{(n)}}, which turns out to be {\displaystyle -2X\_{t}^{(n)}\Delta t} and {\displaystyle \Delta t}. Thus at the {\displaystyle n\to \infty } limit, we have {\displaystyle dX\_{t}=-2X\_{t}\,dt+dW\_{t}}, with solution (assuming {\displaystyle X\_{0}} distribution is standard normal) {\displaystyle X\_{t}=e^{-2t}W\_{e^{4t}}}.
+
+
+## Applications
+
+
+### In physics: noisy relaxation
+
+The Ornstein–Uhlenbeck process is a prototype of a noisy relaxation process. A canonical example is a Hookean spring (harmonic oscillator) with spring constant {\displaystyle k} whose dynamics is overdamped
+with friction coefficient {\displaystyle \gamma }. In the presence of thermal fluctuations with temperature {\displaystyle T}, the length {\displaystyle x(t)} of the spring fluctuates around the spring rest length {\displaystyle x\_{0}}; its stochastic dynamics is described by an Ornstein–Uhlenbeck process with
+
+where {\displaystyle \sigma } is derived from the Stokes–Einstein equation {\displaystyle D=\sigma ^{2}/2=k\_{B}T/\gamma } for the effective diffusion constant. This model has been used to characterize the motion of a Brownian particle in an optical trap.
+
+At equilibrium, the spring stores an average energy {\displaystyle \langle E\rangle =k\langle (x-x\_{0})^{2}\rangle /2=k\_{B}T/2} in accordance with the equipartition theorem.
+
+
+### In financial mathematics
+
+The Ornstein–Uhlenbeck process is used in the Vasicek model of the interest rate. The Ornstein–Uhlenbeck process is one of several approaches used to model (with modifications) interest rates, currency exchange rates, and commodity prices stochastically. The parameter {\displaystyle \mu } represents the equilibrium or mean value supported by fundamentals; {\displaystyle \sigma } the degree of volatility around it caused by shocks, and {\displaystyle \theta } the rate by which these shocks dissipate and the variable reverts towards the mean. One application of the process is a trading strategy known as pairs trade.
+
+A further implementation of the Ornstein–Uhlenbeck process is derived by Marcello Minenna in order to model the stock return under a lognormal distribution dynamics. This modeling aims at the determination of confidence interval to predict market abuse phenomena.
+
+
+### In evolutionary biology
+
+The Ornstein–Uhlenbeck process has been proposed as an improvement over a Brownian motion model for modeling the change in organismal phenotypes over time. A Brownian motion model implies that the phenotype can move without limit, whereas for most phenotypes natural selection imposes a cost for moving too far in either direction. A meta-analysis of 250 fossil phenotype time-series showed that an Ornstein–Uhlenbeck model was the best fit for 115 (46%) of the examined time series, supporting stasis as a common evolutionary pattern. This said, there are certain challenges to its use: model selection mechanisms are often biased towards preferring an OU process without sufficient support, and misinterpretation is easy to the unsuspecting data scientist.
+
+
+## Generalizations
+
+It is possible to define a *Lévy-driven Ornstein–Uhlenbeck process*, in which the background driving process is a Lévy process instead of a Wiener process:
+
+Here, the differential of the Wiener process {\displaystyle W\_{t}} has been replaced with the differential of a Lévy process {\displaystyle L\_{t}}.
+
+In addition, in finance, stochastic processes are used where the volatility increases for larger values of {\displaystyle X}. In particular, the CKLS process (Chan–Karolyi–Longstaff–Sanders) with the volatility term replaced by {\displaystyle \sigma \,x^{\gamma }\,dW\_{t}} can be solved in closed form for {\displaystyle \gamma =1}, as well as for {\displaystyle \gamma =0}, which corresponds to the conventional OU process. Another special case is {\displaystyle \gamma =1/2}, which corresponds to the Cox–Ingersoll–Ross model (CIR-model).
+
+
+### Higher dimensions
+
+A multi-dimensional version of the Ornstein–Uhlenbeck process, denoted by the *N*-dimensional vector {\displaystyle \mathbf {x} \_{t}}, can be defined from
+
+where {\displaystyle \mathbf {W} \_{t}} is an *N*-dimensional Wiener process, and {\displaystyle {\boldsymbol {\beta }}} and {\displaystyle {\boldsymbol {\sigma }}} are constant *N*×*N* matrices. The solution is
+
+and the mean is
+
+These expressions make use of the matrix exponential.
+
+The process can also be described in terms of the probability density function {\displaystyle P(\mathbf {x} ,t)}, which satisfies the Fokker–Planck equation
+
+where the matrix {\displaystyle {\boldsymbol {D}}} with components {\displaystyle D\_{ij}} is defined by {\displaystyle {\boldsymbol {D}}={\boldsymbol {\sigma }}{\boldsymbol {\sigma }}^{T}/2}. As for the 1d case, the process is a linear transformation of Gaussian random variables, and therefore itself must be Gaussian. Because of this, the transition probability {\displaystyle P(\mathbf {x} ,t\mid \mathbf {x} ',t')} is a Gaussian which can be written down explicitly. If the real parts of the eigenvalues of {\displaystyle {\boldsymbol {\beta }}} are larger than zero, a stationary solution {\displaystyle P\_{\text{st}}(\mathbf {x} )} moreover exists, given by
+
+where the matrix {\displaystyle {\boldsymbol {\omega }}} is determined from the Lyapunov equation {\displaystyle {\boldsymbol {\beta }}{\boldsymbol {\omega }}+{\boldsymbol {\omega }}{\boldsymbol {\beta }}^{T}=2{\boldsymbol {D}}}.
+

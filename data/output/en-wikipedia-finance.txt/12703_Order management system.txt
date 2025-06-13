@@ -1,0 +1,77 @@
+Order management system
+
+
+# Order management system
+
+
+
+An **order management system**, or **OMS**, is a computer software system used in a number of industries for order entry and processing.
+
+
+## Electronic commerce and catalogers
+
+Orders can be received from businesses, consumers, or a mix of both, depending on the products. Offers and pricing may be done via catalogs, websites, or [broadcast network] advertisements.
+
+An integrated order management system may encompass these modules:
+
+* Product information (descriptions, attributes, locations, quantities)
+* Inventory available to promise (ATP) and sourcing
+* Vendors, purchasing, and receiving
+* Marketing (catalogs, promotions, pricing)
+* Customers and prospects
+* Order entry and customer service (including returns and refunds)
+* Financial processing (credit cards, billing, payment on account)
+* Order processing (selection, printing, picking, packing, shipping)
+
+There are several business domains which use OMS for different purposes but the core reasons remain the same:
+
+1. Telecom – To keep track of customers, accounts, credit verification, product delivery, billing, etc.
+2. Retail – Large retail companies use OMS to keep track of orders from customers, stock level maintenance, packaging and shipping and to synchronize orders across various channels. For example, if a customer orders online and picks up in store.
+3. Pharmaceuticals and healthcare
+4. Automotive – to keep track of parts sourced through OEMs
+5. Financial services
+
+Order management requires multiple steps in a sequential process like capture, validation, fraud check, payment authorization, sourcing, backorder management, pick, pack, ship and associated customer communications. Order management systems usually have workflow capabilities to manage this process.
+
+
+## Financial securities
+
+Another use for order management systems is as a software-based platform that facilitates and manages the order execution of securities, typically through the FIX protocol. Order management systems, sometimes known in the financial markets as trade order management systems, are used on both the buy-side and the sell-side, although the functionality provided by buy-side and sell-side OMS differs slightly. Typically only exchange members can connect directly to an exchange, which means that a sell-side OMS usually has exchange connectivity, whereas buy-side an OMS is concerned with connecting to sell-side firms.
+
+
+### Buy-side vs sell-side
+
+An OMS allows firms to input orders to the system for routing to the pre-established destinations. They also allow firms to change, cancel and update orders. When an order is executed on the sell-side, the sell-side OMS must then update its state and send an execution report to the order's originating firm. An OMS should also allow firms to access information on orders entered into the system, including detail on all open orders and on previously completed orders. The development of multi-asset functionality is a pressing concern for firms developing OMS software.
+
+The Order Management System supports Portfolio Management by translating intended Asset Allocation actions into marketable orders for the buy-side. This typically falls into four categories:
+
+* Re-balance – The periodic reallocation of a fund's asset allocation / market exposures to correct for market valuation fluctuations and cash flows
+* Tracking – Periodic adjustment to align an Index Fund or SMA with its target
+* Discretionary – Adhoc reallocation initiated by Portfolio Managers and Analysts
+* Tactical Asset Allocation – Reallocation made to capture temporary inefficiencies TAA
+
+### How an OMS works
+
+Changes in positional allocation often affect multiple accounts creating hundreds or thousands of small orders, which are typically grouped into aggregate market orders and crossing orders to avoid the legitimate fear of front running. When reallocation involves contradictory operations, trade crossing can sometimes be done. Crossing orders involve moving shares and cash between internal accounts, and then potentially publishing the resulting "trade" to the listing exchange. Aggregate orders, on the other hand, are traded together. The details of which accounts are participating in the market order are sometimes divulged with the trade (OTC trading) or post-execution (FIX and/or through the settlement process.)
+
+In some circumstances, such as equities in the United States, an average price for the aggregate market order can be applied to all of the shares allocated to the individual accounts which participated in the aggregate market order. In other circumstances, such as Futures or Brazilian markets, each account must be allocated specific prices at which the market order is executed. Identifying the price that an account received from the aggregate market order is regulated and scrutinized post-trade process of trade allocation.
+
+Some Order Management Systems go a step further in their trade allocation process by providing tax lot assignment. Because investment managers are graded on unrealized profit & loss, but the investor needs to pay capital gains on realized profit & loss; it is often beneficial for the investor that the exact share/contract uses in a closing trade be carefully chosen. For example, selling older shares rather than newly acquired shares may reduce the effective tax rate. This information does not need to be finalized until capital gains are to be paid or until taxes are to be filed, OMS tax lot assignments are considered usually tentative. The tax lot assignments remade or recorded within the Accounting System are considered definitive.
+
+
+### Compliance
+
+An OMS is a data-rich source of information which is able to communicate to the front and back office systems (or modules in the case of a single platform software). Prices, number of shares, volumes, date, time, financial instrument, share class, exchange are all key data values which allows the asset/investment manager to maintain an accurate and true positional view of their portfolio ensures all investment guidelines are met and any potential breaches are avoided or resolved in a timely manner. Guidelines between the investor and investment manager are stated in the Investment Policy Statement, IPS, and can be understood as constraints on the asset allocation of the portfolio to ensure the manager does not drift from the stated investment strategy over time at an attempt of TAA. For example, an agreed guideline may include a set portion of the portfolio should constitute of cash and cash equivalents to maintain liquidity levels.
+
+
+### Reporting
+
+An outcome of an OMS successfully communicating to an asset manager's systems is the ease of producing accurate and timely reporting. All data can be seamlessly interpreted to create valuable information about the portfolio's performance and composition, as well as investment activities, fees and cash flows to a granular level. As investors are demanding increasingly detailed and frequent reporting, an asset manager can benefit from the correct set up of an OMS to deliver information whilst focusing on core activities. Increasing financial regulations are also causing managers to allocate more resources to ensure firstly, they are able to obtain the correct data on their trades and then they are compliant to the new metrics. For example, if a predetermined percent of the portfolio can hold a certain asset class or risk exposure to the asset class or market, the investment manager must be able to report this was satisfied during the reporting period.
+
+
+## Types
+
+Order management systems can be standalone systems like Multiorders or modules of ERP and SCM systems such as Oracle, Megaventory, NetSuite, Ordoro, Fishbowl or Cloud Commerce Pro. Another difference is whether the system is an on-premises software or a cloud-based software. Their basic difference is that the on-premises ERP solutions are installed locally on a company's own computers and servers and managed by their own IT staff, while a cloud software is hosted on the vendor's servers and accessed through a web browser.
+
+Order management systems for financial securities can also be used as a standalone system or modules of a PMS system, to process trade orders simultaneously across a number of funds, the IT infrastructure lowers operational risk.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+

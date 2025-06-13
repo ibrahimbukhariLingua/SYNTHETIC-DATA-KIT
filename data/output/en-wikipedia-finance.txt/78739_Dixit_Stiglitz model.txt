@@ -1,0 +1,76 @@
+Dixit–Stiglitz model
+
+
+# Dixit–Stiglitz model
+
+
+
+**Dixit–Stiglitz model** is a model of monopolistic competition developed by Avinash Dixit and Joseph Stiglitz (1977). It has been used in many fields of economics including macroeconomics, economic geography and international trade theory. The model formalises consumers' preferences for product variety by using a CES function. Previous attempts to provide a model that accounted for variety preference (such as Harold Hotelling's location model) were indirect and failed to provide an easily interpretable and usable form for further study. In the Dixit–Stiglitz model, variety preference is inherent within the assumption of monotonic preferences because a consumer with such preferences prefers to have an average of any two bundles of goods as opposed to extremes.
+
+
+## Mathematical Derivation
+
+The model begins with a standard CES utility function:
+
+{\displaystyle u=\left[\sum \_{i=1}^{N}x\_{i}^{\frac {\sigma -1}{\sigma }}\right]^{\frac {\sigma }{\sigma -1}}}
+
+where N is the number of available goods, xᵢ is the quantity of good i, and σ is the elasticity of substitution. Placing the restriction that σ > 1 ensures that preferences will be convex and thus monotonic for over any optimising range. Additionally, all CES functions are homogeneous of degree 1 and therefore represent homothetic preferences.
+
+Additionally the consumer has a budget set defined by:
+
+{\displaystyle B=\{{\boldsymbol {x}}:\sum \_{i=1}^{N}p\_{i}x\_{i}\leq M\}}
+
+For any rational consumer the objective is to maximise their utility functions subject to their budget constraint (M) which is set exogenously. Such a process allows us to calculate a consumer's Marshallian Demand. Mathematically this means the consumer is working to achieve:
+
+{\displaystyle \max\{u=[\sum \_{i=1}^{N}x\_{i}^{\frac {\sigma -1}{\sigma }}]^{\frac {\sigma }{\sigma -1}}\}\ st.\ {\boldsymbol {x}}\in B}
+
+Since utility functions are ordinal rather than cardinal any monotonic transform of a utility function represents the same preferences. Therefore, the above constrained optimisation problem is analogous to:
+
+{\displaystyle \max\{u=\sum \_{i=1}^{N}x\_{i}^{\frac {\sigma -1}{\sigma }}\}\ st.\ {\boldsymbol {x}}\in B}
+
+since {\displaystyle f(u)=u^{\frac {\sigma -1}{\sigma }}} is strictly increasing.
+
+By using a Lagrange multiplier we can convert the above primal problem into the dual below (see Duality)
+
+{\displaystyle \nabla =\sum \_{i=1}^{N}x\_{i}^{\frac {\sigma -1}{\sigma }}-\lambda [\sum \_{i=1}^{N}p\_{i}x\_{i}-M]}
+
+Taking first order conditions of two goods xᵢ and xⱼ we have
+
+{\displaystyle \nabla x\_{i}={\frac {\sigma -1}{\sigma }}x\_{i}^{-{\frac {1}{\sigma }}}-\lambda p\_{i}=0}
+
+{\displaystyle \nabla x\_{j}={\frac {\sigma -1}{\sigma }}x\_{j}^{-{\frac {1}{\sigma }}}-\lambda p\_{j}=0}
+
+dividing through:
+
+{\displaystyle ({\frac {x\_{i}}{x\_{j}}})^{-{\frac {1}{\sigma }}}={\frac {p\_{i}}{p\_{j}}}}
+
+thus,
+
+{\displaystyle p\_{j}x\_{j}=p\_{i}^{\sigma }x\_{i}p\_{j}^{1-\sigma }}
+
+summing left and right hand sides over 'j' and using the fact that {\displaystyle \sum \_{j=1}^{N}p\_{j}x\_{j}=M} we have
+
+{\displaystyle M=p\_{i}^{\sigma }x\_{i}P^{1-\sigma }}
+
+where P is a price index represented as {\displaystyle P=(\sum \_{j=1}^{N}p\_{j}^{1-\sigma })^{\frac {1}{1-\sigma }}}
+
+Therefore, the Marshallian demand function is:
+
+{\displaystyle x\_{i}={\frac {M}{P}}({\frac {p\_{i}}{P}})^{-\sigma }}
+
+Under monopolistic competition, where goods are almost perfect substitutes prices are likely to be relatively close. Hence, assuming {\displaystyle p\_{i}=p} we have:
+
+{\displaystyle x\_{i}^{m}(\mathbf {p} ,M)={\frac {M}{Np}}}
+
+From this we can see that the indirect utility function will have the form
+
+{\displaystyle v(\mathbf {p} ,x\_{i}^{m})=\left(\sum \_{i=1}^{N}\left({\frac {M}{Np}}\right)^{\frac {\sigma -1}{\sigma }}\right)^{\frac {\sigma }{\sigma -1}}}
+
+hence,
+
+{\displaystyle v(\mathbf {p} ,x\_{i}^{m})={\frac {M}{p}}N^{\frac {1}{\sigma -1}}}
+
+as σ > 1 we find that utility is strictly increasing in N implying that consumers are strictly better off as variety, i.e. how many products are on offer, increases.
+
+The derivation can also be done with a continuum of varieties, with no major difference in the approach.
+

@@ -1,0 +1,14 @@
+THOR (trading platform)
+
+
+# THOR (trading platform)
+
+
+
+**Tactical Hybrid Order Router** (simply known as **THOR**) is an electronic trading platform that manages securities orders in order to dodge certain tactics used in high-frequency trading. The program was created by Allen Zhang while working for the Royal Bank of Canada (RBC) in a team led by Brad Katsuyama.
+
+
+## Trading process
+
+Katsuyama noticed that placing a single large order that can be fulfilled only through many different stock exchanges was being taken as an advantage by stock scalpers. Scalpers, noticing the order would not be able to be fulfilled by one single exchange, would instead buy the securities in the other exchanges, so that by the time the rest of the large order arrived to those exchanges the scalpers could sell the securities at a higher price. All these events would happen in milliseconds not perceivable to humans but perceivable to supercomputers capable of noticing such events in microscopic time scales. He instead led a team that implemented THOR, a platform where large orders are split into many different sub-orders with each sub-order arriving at the same time to all the exchanges through the use of intentional delays.
+

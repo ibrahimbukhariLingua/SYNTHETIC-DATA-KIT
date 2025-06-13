@@ -1,0 +1,113 @@
+Reverse logistics network modelling
+
+
+# Reverse logistics network modelling
+
+
+
+**Reverse logistics** is for all operations related to the reuse of products and materials. It is "the process of moving goods from their typical final destination for the purpose of capturing value, or proper disposal. Remanufacturing and refurbishing activities also may be included in the definition of reverse logistics."
+
+In order to model reverse logistics network from an economics point of view, the following simplified reverse logistics system has to be set.
+
+In this model the products are gathered from the consumers and transferred back to the producers, hence the direction of the flow in the distribution supply chain is reversed and the model is expanded with the recovery center. First of all the used products are collected from the consumers and moved to the recovery center, where the condition of the products are examined according to their end of life cycle. If there is still recapture value, then the product is disassembled as preparation for further reprocessing, which means physical transformation to new customer. Otherwise the used product is disposed and transferred to the landfill site. According to the introduced model the main differences between forward and reverse logistics can be identified:
+
+* Uncertainty on the quantity, quality and timing
+* Complex system due to more participants and more interactions
+* Mismatch between demand and supply occurs
+* Unexplored market opportunities but the low value of return flow means a limit
+
+## Modeling techniques for optimizing in reverse logistics network
+
+In case of a reverse logistics network the nodes represent the different kind of facilities such as the manufacturers, distribution centers, recovery centers, ware houses. The opening of a facility is marked with a binary integer number. The links are acted for flow between facilities and the weights are continuous variables showing the quantity of flow. The two common way of designing reverse logistics network are the Mixed Integer Linear Programing (MILP) and Mixed Integer Non-Linear Programing (MINLP) methods, where the objective function, decision variables and constraint have to be defined
+
+
+### Mixed Integer Linear Programing (MILP)
+
+
+#### Remanufacturing model
+
+This model is a two-level location problem with three type of facilities, integrated forward and reverse flow of goods. It means that the used items are gathered from consumers, transported back to plants and after remanufacturing get into the logistics network of new products.
+Objective function:
+
+* minimizing linear cost function including fix and variable costs
+
+Decision variables:
+
+* location of manufacturer and distribution centeramount of production demand
+* quantity of returned used products
+
+Constraints:
+
+* satisfaction of the demand
+* opening of facilities
+
+#### Refurbishment model
+
+This model take into account just reverse flow of goods.
+Objective function:
+
+* minimizing linear cost function incorporating fix cost of settling sites and transportation cost of returning goods
+
+Decision variables:
+
+* location of collector and refurbishing site
+* fraction of transported products to refurbishing site
+
+Constraints:
+
+* capacity
+* opening of facilities
+* maximum and minimum number of sites to be open in order uninterrupted flow
+
+#### Generic reverse logistics network model
+
+Objective function:
+
+* minimizing linear total cost function encompassing fix cost of facilities (plant, warehouse, disassembly locations), transportation cost and processing cost (recycling, disassembly, disposal, inventory)
+
+Decision variables:
+
+* identification of facilities to be opened
+* quantity of transported products between facilities
+
+Constraints:
+
+* number of facilities
+* opening of facilities
+* demand and capacity satisfaction
+* flow and inventory constraints
+
+This model can be further developed by introducing penalty cost for not collecting returned items and a compulsory minimal disposal fraction as a feasibility technical constraints of reuse. Moreover, the static approach can be partly eliminated by multi-period programming, as a result trade-off between investment and operational cost and long run effect can be analyzed.
+
+
+### Mixed Integer Non-Linear Programing (MINLP)
+
+The most severe drawback of MILP is the static aspect, hence MINLP try to relieve these restriction and develop further the existing model with dynamic elements, such as integrating cycle time, time and inventory positions. By this way uncertainty appears stronger in the model. The main objective is to maximize profit by determining the optimal number of facilities in order to:
+
+* collection point be close to the consumers
+* returning process be simple
+* collection period be appropriate
+
+## Manage uncertainty in reverse logistics networks
+
+* *Sensitivity analysis:* Through sensitivity analysis it can be tested how the output of the model will be changed if the decision variables such as the returned amount, number of disassembly and cost are varying.
+* *Scenario analysis:* The process is about generating scenarios for input parameters and calculate optimal solution at each case.
+* *Robust optimization:* This method is calibrating the model in that way to minimize the deviation of the values of the objective function at each scenario. Tis process is more elaborated, than scenario analysis and a good substitute of stochastic programming when there is lack of quality information
+* *Stochastic programming:* Mathematical programming technique. It applies probability distribution instead of deterministic number. It is a two-stage process, where at the first stage the decision binary variables, representing openness are determined, then happens the random events and finally at the second stage recourse (flow) actions ensures the justification of the formerly set constraints
+
+## Solution techniques of reverse logistics network models
+
+
+### Genetic algorithm
+
+It is applicable for large size complex problems
+Main steps of the algorithm:
+
+* objective function: minimize a combination of overall costs
+* identifying the number of facilities their locations, capacities, and topology of the network.
+* encoding scheme selected is a binary coded string reflecting one-gene-one facility correspondence on a linear string, whose substrings represent different types of facilities
+
+### Tabu search
+
+The algorithm pursues local search and if it finds a local optimum it is prevented to get back formerly visited solution, which were recorded in the so-called tabu list
+

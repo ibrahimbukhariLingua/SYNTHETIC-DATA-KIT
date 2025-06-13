@@ -1,0 +1,46 @@
+Event-driven process chain
+
+
+# Event-driven process chain
+
+
+
+An **event-driven process chain** (**EPC**) is a type of flow chart for business process modeling. EPC can be used to configure enterprise resource planning execution, and for business process improvement. It can be used to control an autonomous workflow instance in work sharing.
+
+The event-driven process chain method was developed within the framework of Architecture of Integrated Information Systems (ARIS) by August-Wilhelm Scheer at the Institut für Wirtschaftsinformatik, Universität des Saarlandes (Institute for Business Information Systems at the University of Saarland) in the early 1990s.
+
+
+## Overview
+
+Businesses use event-driven process chain diagrams to lay out business process workflows, originally in conjunction with SAP R/3 modeling, but now more widely. It is used by many companies for modeling, analyzing, and redesigning business processes. The event-driven process chain method was developed within the framework of Architecture of Integrated Information Systems (ARIS). As such it forms the core technique for modeling in ARIS, which serves to link the different views in the so-called control view. To quote from a 2006 publication on event-driven process chains:
+
+The statement that event-driven process chains are ordered graphs is also found in other directed graphs for which no explicit node ordering is provided. No restrictions actually appear to exist on the possible structure of EPCs, but nontrivial structures involving parallelism have ill-defined execution semantics; in this respect they resemble UML activity diagrams.
+
+Several scientific articles are devoted to providing well-defined execution semantics for general event-driven process chains. One particular issue is that EPCs require non-local semantics, i.e., the execution behavior of a particular node within an EPC may depend on the state of other parts of the EPC, arbitrarily far away.
+
+
+## Elements
+
+These elements are used in event-driven process chain diagrams:
+
+|
+| |
+
+* Branch/Merge: Branch and merge correspond to making decision of which path to choose among several control flows. A branch may have one incoming control flow and two or more outgoing control flows. When the condition is fulfilled, a branch activates exactly only one of the outgoing control flows and deactivates the others. The counterpart of a branch is a merge. A merge may have two or more incoming flows and one outgoing control flow. A merge synchronizes an activated and the deactivated alternatives. The control will then be passed to the next element after the merge. A branch in the EPC is represented by an opening XOR, whereas a merge is represented as a closing XOR connectors.
+
+* Fork/Join : Fork and join correspond to activating all paths in the control flow concurrently. A fork may have one incoming control flow and two or more outgoing control flows. When the condition is fulfilled, a fork activates all of the outgoing control flows in parallel. A join may have two or more incoming control flows and one outgoing control flow. A join synchronizes all activated incoming control flows. In the Event-driven Process Chain diagram how the concurrency achieved is not a matter. In reality the concurrency can be achieved by true parallelism or by virtual concurrency achieved by interleaving. A fork in the EPC is represented by an opening 'AND', whereas a join is represented as a closing 'AND' connectors.
+* OR : An 'OR' relationship corresponds to activating one or more paths among control flows. An opening 'OR' connector may have one incoming control flow and two or more outgoing control flows. When the condition is fulfilled, an opening 'OR' connector activates one or more control flows and deactivates the rest of them. The counterpart of this is the closing 'OR' connector. When at least one of the incoming control flows is activated, the closing 'OR' connector will pass the control to the next element after it.
+
+## Example
+
+As shown in the example, a customer order received is the initial event which creates a requirement capture within the company. In order to specify this function, sales is responsible for marketing, currency etc. As a result, event 'requirement captured' leads to another new function: check material on stock, in order to manufacture the productions.
+
+All input or output data about material remains in the information resource. After checking material, two events may happen-with or without material on stock. If positive, get material from stock; if not, order material from suppliers. Since the two situations cannot happen at the same time, XOR is the proper connector to link them together.
+
+
+## Meta-model
+
+Although a real process may include a series of stages until it is finished eventually, the main activities remain similar. An event triggers one function; and a function will lead to one event. Meanwhile, an event may involve one or more processes to fulfill but a process is unique for one event, the same goes for process and process path.
+
+As for the function, its data may be included in one or more information resources, while organization unit is only responsible for one specific function.
+

@@ -1,0 +1,83 @@
+SMS banking
+
+
+# SMS banking
+
+
+
+**SMS banking** is a form of mobile banking. It is a facility used by some banks or other financial institutions to send messages (also called notifications or alerts) to customers' mobile phones using SMS messaging, or a service provided by them which enables customers to perform some financial transactions using SMS.
+
+
+## Push and pull messages
+
+SMS banking services may use either push or pull messages. Push messages are those that a bank sends out to a customer's mobile phone, without the customer initiating a request for the information. Typically, a push message could be a mobile marketing message or an alert of an event happening in the customer's bank account, such as a large withdrawal of funds from an ATM or a large payment involving the customer's credit card, etc. It may also be an alert that some payment is due, an amount has been credited to the customer's account or that an e-statement is ready to be downloaded.
+
+Another type of push message is one-time password (OTPs). OTPs are the latest tool used by financial institutions to combat cyber fraud. Instead of relying on traditional memorized passwords, OTPs are sent to a customer's mobile phone via SMS, who are required to repeat the OTP to complete transactions using online or mobile banking. The OTP is valid for a relatively short period and expires once it has been used.
+
+Bank customers can select the type of activities for which they wish to receive an alert. The selection can be done either using internet banking or by phone.
+
+Pull messages are initiated by the customer, using a mobile phone, for obtaining information or performing a transaction in the bank account. Examples of pull messages include an account balance enquiry, or requests for current information like currency exchange rates and deposit interest rates, as published and updated by the bank.
+
+
+## Typical push and pull services offered
+
+Depending on the selected extent of SMS banking transactions offered by the bank, a customer can be authorized to carry out either non-financial transactions, or both and financial and non-financial transactions. SMS banking solutions offer customers a range of functionality, classified by push and pull services as outlined below.
+
+Typical push services would include:
+
+* periodic account balance reporting (say at the end of month);
+* reporting of salary and other credits to the bank account;
+* successful or un-successful execution of a standing order;
+* successful payment of a cheque issued on the account;
+* insufficient funds;
+* large value withdrawals on an account;
+* large value withdrawals on the ATM or EFTPOS on a debit card;
+* large value payment on a credit card or out of country activity on a credit card.
+* one-time password and authentication
+* an alert that some payment is due
+* an alert that an e-statement is ready to be downloaded.
+
+Typical pull services would include:
+
+* Account balance enquiry;
+* Mini statement request;
+* Electronic bill payment;
+* Transfers between customer's own accounts, like moving money from a savings account to a current account to fund a cheque;
+* Stop payment instruction on a cheque;
+* Requesting for an ATM card or credit card to be suspended;
+* De-activating a credit or debit card when it is lost or the PIN is known to be compromised;
+* Foreign currency exchange rates enquiry;
+* Fixed deposit interest rates enquiry.
+
+## Concerns and skepticism
+
+There is a very real possibility for fraud when SMS banking is involved, as SMS uses insecure encryption and is easily spoofable (see the SMS page for details). Supporters of SMS banking claim that while SMS banking is not as secure as other conventional banking channels, like the ATM and internet banking, the SMS banking channel is not intended to be used for very high-risk transactions.
+
+
+## Quality of service
+
+Due to the concerns made explicit above, it is extremely important that SMS gateway providers can provide a decent quality of service for banks and financial institutions in regards to SMS services. Therefore, the provision of Service Level Agreement (SLA) is a requirement for this industry; it is necessary to give the bank customer delivery guarantees of all messages, as well as measurements on the speed of delivery, throughput, etc. SLAs give the service parameters in which a messaging solution is guaranteed to perform.
+
+
+## The convenience factor
+
+The convenience of executing simple transactions and sending out information or alerting a customer on the mobile phone is often the overriding factor that dominates over the skeptics who tend to be overly bitten by security concerns.
+
+As a personalized end-user communication instrument, today mobile phones are perhaps the easiest channel on which customers can be reached on the spot, as they carry the mobile phone all the time no matter where they are. Besides, the operation of SMS banking functionality over phone key instructions makes its use very simple. This is quite different from internet banking which can offer broader functionality, but has the limitation of use only when the customer has access to a computer and the Internet. Also, urgent warning messages, such as SMS alerts, are received by the customer instantaneously; unlike other channels such as the post, email, Internet, telephone banking, etc. on which a bank's notifications to the customer involves the risk of delayed delivery and response.
+
+The SMS banking channel also acts as the bank's means of alerting its customers, especially in an emergency situation; e.g. when there is an ATM fraud happening in the region, the bank can push a mass alert (although not subscribed by all customers) or automatically alert on an individual basis when a predefined ‘abnormal’ transaction happens on a customer's account using the ATM or credit card. This capability mitigates the risk of fraud going unnoticed for a long time and increases customer confidence in the bank's information systems.
+
+
+## Compensating controls for lack of encryption
+
+The lack of encryption on SMS messages is an area of concern that is often discussed. This concern sometimes arises within the group of the bank's technology personnel, due to their familiarity and past experience with encryption on the ATM and other payment channels. The lack of encryption is inherent to the SMS banking channel and several banks that use it have overcome their fears by introducing compensating controls and limiting the scope of the SMS banking application to where it offers an advantage over other channels.
+
+Suppliers of SMS banking software solutions have found reliable means by which the security concerns can be addressed. Typically the methods employed are by pre-registration and using security tokens where the transaction risk is perceived to be high. Sometimes ATM type PINs are also employed, but the usage of PINs in SMS banking makes the customer's task more cumbersome.
+
+
+## Technologies
+
+SMS banking usually integrates with a bank's computer and communications systems. As most banks have multiple backend hosts, the more advanced SMS banking systems are built to be able to work in a multi-host banking environment; and to have open interfaces which allow for messaging between existing banking host systems using industry or de facto standards.
+
+Well developed and mature SMS banking software normally provide a robust control environment and a flexible and scalable operating environment. These solutions are able to connect seamlessly to multiple SMSC operators in the country of operation. Depending on the volume of messages that are required to be pushed, means to connect to the SMSC could be different, such as using simple modems or connecting over leased line using low level communication protocols (like SMPP, UCP etc.) Advanced SMS banking solutions also cater to providing failover mechanisms and least-cost routing options.
+

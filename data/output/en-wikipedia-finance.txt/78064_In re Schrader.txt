@@ -1,0 +1,107 @@
+In re Schrader
+
+
+# In re Schrader
+
+
+
+***In re Schrader***, 22 F.3d 290 (Fed. Cir. 1994) is a 1994 decision of the United States Court of Appeals for the Federal Circuit in which the court summarized and synthesized its precedents under the *Freeman-Walter-Abele Test* of patent eligibility. Under this test a key element is that the claimed invention is implemented with some type of hardware—that is, a particular machine. This was one of the last Federal Circuit decisions using that test.
+
+
+## Background
+
+
+### Schrader's invention
+
+Schrader invented a business method for determining which combination of bids in an auction of a set of items reflects the highest total payment to the seller. The Federal Circuit opinion gave an oversimplified example to illustrate the claimed invention:
+
+> For example, in an auction involving two contiguous tracts of land, tracts 1 and 2, the following bids might be received and recorded: Bid 1—$100,000 for tract 1 by bidder A; Bid 2—$200,000 for tract 2 by bidder B; and Bid 3—$250,000 for both tracts 1 and 2 by bidder C. The combination of bids that maximizes the revenue to the seller . . . would be bids 1 and 2.
+
+This example does not, however, illustrate the value of the invention, because it does not reveal the difficulty of the underlying problem as the number of items to be bid upon increases. As one commentator pointed out:
+
+> The management of bidding becomes exponentially more complicated as the number of items under bid increases. One can determine in one's head what bid combination provides maximum revenue for two items, as in the court's example, but as the number of items gets larger it becomes impossible to do so. By the same token, doing this kind of competitive auction bidding in real time becomes increasingly infeasible as the number of items increases. The bidders cannot tell what bid they must raise in order to prevail or how much to raise it. The calculations become too difficult to perform at auction speed.
+> 
+> For example, if four items a, b, c, and d are involved, and if we represent the possible combination bids by corresponding capital letters, we have the following possible item combinations or sets:
+> 
+> A, B, C, D,
+> AB, AC, AD, BC, BD, CD,
+> ABC, ABD, ACD, BCD,
+> ABCD
+> 
+> In general, for n items there are 2ⁿ - 1 possible combinations of items on which a bidder might bid. Even the four–item example used here is probably too complex for carrying on an auction in real time without computer assistance, since each of 15 possible combinations may need to be considered in resolving each successive bid.
+
+Schrader devised a method of making it possible to carry on auction bidding of this type in real time. In other words, Schrader made it possible to carry on a multi–item auction the same way that one carries on an ordinary single-item auction.
+
+As explained in the specification of the patent application, it is contemplated that the auction will be carried out with bidders grouped in different locations, possibly different cities. The bidders would view a large TV display unit on which bids would be displayed. The bids would be processed in a central computer ("processor"), so that the displays could show what combinations of bids for single items or combinations of items were prevailing ("winning") at any given point. That would give each bidder the opportunity to submit a higher bid for a particular item or combination of items, so as to become prevailing bidder in place of the previously prevailing bidder.
+
+Thus, multiple bidders in two or more cities enter bids by means of bid entry devices. These may be keyboards, touch-screens, or other conventional input devices. The bids (i.e., bid signals) are then transmitted to the processor via telecommunications links (for example, telephone lines). The processor processes the bids to determine which combinations prevail at a given time.
+
+The patent application did not describe details of Schrader's actual computer program. But according to a description of discussions with his counsel, it appears that a simple brute force method was used. After the processor evaluates each new bid, the processor sends image signals to display units, so that the displays show the then-prevailing bids. Preferably, this information is presented on the screens in a manner that facilitates bidders' comprehension of what kind of bid raises are needed to exceed the previously prevailing bids. For example, the user interface program highlights the prevailing combination bids in colors contrasting with the others. This system gives the different bidders the opportunity to submit higher bids for particular plots and sets of plots, so as to become prevailing bidders instead of those bidders previously prevailing.
+
+
+### The invention as claimed
+
+The court said claim 1 was representative:
+
+> 1. A method of competitively bidding on a plurality of items comprising the steps of:
+> 
+> identifying a plurality of related items in a record;
+> 
+> offering said plurality of items to a plurality of potential bidders;
+> 
+> receiving bids from said bidders for both individual ones of said items and a plurality of groups of said items, each of said groups including one or more of said items, said items and groups being any number of all of said individual ones and all of the possible combinations of said items;
+> 
+> entering said bids in said record;
+> 
+> indexing each of said bids to one of said individual ones or said groups of said items; and
+> 
+> assembling a completion of all said bids on said items and groups, said completion identifying a bid for all of said items at a prevailing total price, identifying in said record all of said bids corresponding to said prevailing total price.
+
+The claim does not mention the bid entry devices, bid signals, telecommunication links, image signals. display devices, or the like, described in the preceding section.
+
+
+## The PTO's decision
+
+The PTO decision ruled that the claims could not be patented, on three grounds:
+
+1. "The claimed process involves only information exchange and data processing and does not involve a process of transforming or reducing an article to a different state or thing...."
+2. The claimed method "involves a mathematical algorithm or mathematical calculation steps, as the method includes a procedure for solving a given type of mathematical problem. . . . [T]he mathematical computations of the summation of the possible bidding combinations is at the heart of the invention."
+3. The claimed subject matter is a method of doing business, which cannot be patented, under § 101.
+
+## The Federal Circuit's opinion
+
+Schrader appealed to the Federal Circuit. Schrader argued first that there was no algorithm. The court (in a 2-1 opinion authored by Judge Plager) said that it disagreed, because the claimed procedure for optimizing a combination of bids "is within or similar to a class of well-known mathematical optimization procedures commonly applied to business problems, called linear programming." Apparently, the court considered a brute force procedure a form of algorithm.
+
+Schrader argued next that the claim had sufficient structure in it to satisfy the *Freeman-Walter-Abele* test:
+
+> Thus, he argues the method physically regroups raw bids into new groupings and ultimately "completions," physically transforms bid data into completion data or display data, and makes physical changes to a "display." In the specification, Schrader says that the claim envisages an auction environment in which "all of the bidders are assembled in one large room with a display in front of the room" or with the bidders "assembled in several rooms either adjacent or in different cities interconnected by a closed-circuit television system or the like using large screen displays."
+
+But all of that was the specification, the court replied, not the claim:
+
+> The word "display" is nowhere mentioned in the claim. Moreover, there is nothing physical about bids per se. Thus, the grouping or regrouping of bids cannot constitute a physical change, effect, or result. Also, the terms "bid data," "completion data," or "display data" are nowhere mentioned in the claim and there is no basis to read them into the claim. Therefore, we do not find in the claim any kind of data transformation. Finally, the notion of bidders assembled in a single location in front of a display, or in several locations interconnected by closed-circuit television through a large-screen display is not recited in the claim. The only physical effect or result which is required by the claim is the entering of bids in a "record," a step that can be accomplished simply by writing the bids on a piece of paper or a chalkboard. For purposes of § 101, such activity is indistinguishable from the data gathering steps which [are] insufficient to impart patentability to a claim involving the solving of a mathematical algorithm. . . . Schrader's claims are thus not patentable.
+
+The court found it unnecessary to opine on the third ground (business method) "in view of our disposition of the appeal on the mathematical algorithm ground."
+
+Judge Newman dissented, arguing: "Schrader's claimed process requires the performance of specified steps and procedures, including calculations, to achieve a technologically useful result; it is not a mathematical abstraction."
+
+
+## Commentary on significance of lack of mechanical elements
+
+It was suggested in commentary that the result would have been different if Schrader had included in the claims the physical elements that the court noted were "nowhere mentioned in the claim":
+
+> *Schrader* may suggest that whether a computerized method of doing something that involves crunching numbers without using any dedicated apparatus (rather, just a general-purpose digital computer) is statutory subject matter depends on how one writes the claims. If you make a great deal of noise in the claim about transforming signals representative of whatever "physical" the method concerns, and you also put in some references to the conventional and perhaps obvious kinds of apparatus (perhaps a display, keyboard, some telephone wires) that one always uses with things of this sort, *voilá* — patentable subject matter. But if you fail to do that, you just have a nonstatutory method or an abstract idea.
+> 
+> As for form vs. substance, form is discernible; it is objective. . . . [W]e can even describe and define it with particularity. Substance, as always, is elusive.
+
+Another commentator criticized the decision in these terms:
+
+> A clear rule for determining § 101 eligibility is discernable from the majority decision in *Schrader*; however, the doctrinal justification for this rule is not compelling. *Schrader* established two alternative paths to eligibility for computer inventions under § 101: (1) include physical
+> apparatus for implementing the process in the claim, or (2) establish that the data signals manipulated by the algorithm are representative of physical activity or tangible objects. If the claims do not include such limitations they will be rejected as claiming the algorithm in isolation. The simple, highly predictable nature of this rule, when combined with its questionable utility as a judicially created per se limitation on § 101 eligibility, led one commentator to label it a "bright zig-zag rule." Would Schrader's claims have been found eligible under § 101 if he had included superfluous physical limitations in the claims such as prior art video display units? That is the type of claiming trickery that Judge Nies protested in [*In re] Trovato*.
+
+
+## Aftermath
+
+In 1999, in *AT&T Corp. v. Excel Communications, Inc.*, the Federal Circuit said, "[I]n light of our recent understanding of the issue, the *Schrader* court's analysis is . . . unhelpful."
+
+Subsequently, in *In re Bilski*, the Federal Circuit essentially restored the machine-or-transformation analysis of *Schrader*, but on Supreme Court review, in *Bilski v. Kappos*, the Court held that the analysis of the type used in *Schrader* was only a "useful clue" and not definitive. Subsequently, in *Alice Corp. v. CLS Bank International*, the Supreme Court reaffirmed its position that the analysis of the type used in *Schrader* was only a "useful clue" and not definitive.
+

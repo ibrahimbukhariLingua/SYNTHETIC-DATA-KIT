@@ -1,0 +1,44 @@
+Baumol–Tobin model
+
+
+# Baumol–Tobin model
+
+
+
+The **Baumol–Tobin model** is an economic model of the transactions demand for money as developed independently by William Baumol (1952) and James Tobin (1956). The theory relies on the tradeoff between the liquidity provided by holding money (the ability to carry out transactions) and the interest forgone by holding one’s assets in the form of non-interest bearing money. The key variables of the demand for money are then the nominal interest rate, the level of real income that corresponds to the number of desired transactions, and the fixed transaction costs of transferring one’s wealth between liquid money and interest-bearing assets. The model was originally developed to provide microfoundations for aggregate money demand functions commonly used in Keynesian and monetarist macroeconomic models of the time. Later, the model was extended to a general equilibrium setting by Boyan Jovanovic (1982) and David Romer (1986).
+
+For decades, debate raged between the students of Baumol and Tobin as to which deserved primary credit. Baumol had published first, but Tobin had been teaching the model well before 1952. In 1989, the two set the matter to rest in a joint article, conceding that Maurice Allais had developed the same model in 1947.
+
+
+## Formal exposition of the model
+
+Suppose an individual receives his paycheck of {\displaystyle Y} dollars at the beginning of each period and subsequently spends it at an even rate over the whole period. In order to spend the income he needs to hold some portion of {\displaystyle Y} in the form of money balances which can be used to carry out the transactions. Alternatively, he can deposit some portion of his income in an interest bearing bank account or in short term bonds. Withdrawing money from the bank, or converting from bonds to money, incurs a fixed transaction cost equal to {\displaystyle C} per transfer (which is independent of the amount withdrawn). Let {\displaystyle N} denote the number of withdrawals made during the period and assume merely for the sake of convenience that the initial withdrawal of money also incurs this cost. Money held at the bank pays a nominal interest rate, {\displaystyle i}, which is received at the end of the period. For simplicity, it is also assumed that the individual spends his entire paycheck over the course of the period (there is no saving from period to period).
+
+As a result the total cost of money management is equal to the cost of withdrawals, {\displaystyle NC}, plus the interest foregone due to holdings of money balances, {\displaystyle iM}, where {\displaystyle M} is the average amount held as money during the period. Efficient money management requires that the individual minimizes this cost, given his level of desired transactions, the nominal interest rate and the cost of transferring from interest accounts back to money.
+
+The average holdings of money during the period depend on the number of withdrawals made. Suppose that all income is withdrawn at the beginning (N=1) and spent over the entire period. In that case the individual starts with money holdings equal to Y and ends the period with money holdings of zero. Normalizing the length of the period to 1, average money holdings are equal to Y/2. If an individual initially withdraws half his income, {\displaystyle Y/2}, spends it, then in the middle of the period goes back to the bank and withdraws the rest he has made two withdrawals (N=2) and his average money holdings are equal to {\displaystyle Y/4}. In general, the person’s average money holdings will equal {\displaystyle Y/2N}.
+
+This means that the total cost of money management is equal to:
+
+{\displaystyle NC+{\frac {Yi}{2N}}}
+
+The optimal number of withdrawals can be found by taking the derivative of this expression with respect to {\displaystyle N} and setting it equal to zero (note that the second derivative is positive, which ensures that this is a minimum, not a maximum).
+
+The condition for the optimum is then given by:
+
+{\displaystyle C-{\frac {Yi}{2{N^{2}}}}=0}
+
+Solving this for N we get the optimal number of withdrawals:
+
+{\displaystyle N^{\*}={\sqrt {\frac {Yi}{2C}}}}
+
+Using the fact that average money holdings are equal to M = Y/2N we obtain the optimal demand for money function:
+
+{\displaystyle M={\sqrt {\frac {CY}{2i}}}}
+
+The model can be easily modified to incorporate an average price level which turns the money demand function into a micro-founded demand for liquidity function:
+
+{\displaystyle L(Y,i)={\frac {M}{P}}={\sqrt {\frac {CQ}{2iP}}}}
+
+where Q is the volume of goods sold at an average price P, so that Y = P\*Q.
+

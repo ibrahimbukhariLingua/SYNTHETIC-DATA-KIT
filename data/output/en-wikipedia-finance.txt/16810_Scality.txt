@@ -1,0 +1,51 @@
+Scality
+
+
+# Scality
+
+
+
+**Scality** is a global technology provider of software-defined storage (SDS) solutions, specializing in distributed file and object storage with cloud data management. Scality maintains offices in Paris (France), London (UK), San Francisco and Washington DC (USA), and Tokyo (Japan) and has employees in 14 countries.
+
+
+## History
+
+Scality was founded in 2009 by Jérôme Lecat, Giorgio Regni, Daniel Binsfeld, Serge Dugas, and Brad King.
+
+Scality raised $7 million of venture capital funding in March 2011. A C-round of $22 million was announced in June 2013, led by Menlo Ventures and Iris Capital with participation from FSN PME and all existing investors, including Idinvest Partners, OMNES Capital and Galileo Partners. Scality raised $45 million in August 2015. This Series D funding was led by Menlo Ventures with participation from all existing investors and one new strategic investor, BroadBand Tower. In 2016, HPE made a strategic investment in the company. In April, 2018, the company announced a $60 million round of funding.
+
+Scality announced a refreshed brand, along with a distribution agreement with Hewlett-Packard in October 2014. Scality added Dell and Cisco Systems as resellers in 2015.
+
+
+## Products
+
+
+### RING
+
+Scality's released the first version of its principal product, RING, in 2010. The object storage software platform is a multitiered architecture and can scale up to thousands of servers and up to 100 petabytes under a single namespace. Ring product depends on a keyspace calculated using a Monte Carlo simulation at install, spread across all of its node servers. While the company aims for the Ring to function without the need of any external management process, a Supervisor server is functionally required to kick-off data integrity operations and keep track of node state, while also providing a single source of truth for data about the ring itself. The Supervisor process is relatively lightweight and can be installed on a node server if required, but the company recommends it run separately from the Ring's constituent storage servers.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+The Ring employs erasure coding schemes in multiples of six, which is the minimum number of storage nodes required to install a Ring. The underlying filesystem formatted on the storage drives is transparent to the Ring and it does not interact with filesystem operations directly. The Ring installer was originally written in Python for Saltstack, but then re-implemented closed-source.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+Object storage was covered by trade press in 2017.
+
+
+### Zenko
+
+In 2017, Scality released Zenko, an open source multi-cloud data controller. In 2018, Scality released a commercially supported version of Zenko. Zenko integrates data managed on-premises with services available in public clouds.
+
+Zenko CloudServer (formerly Scality S3 Server) is an Amazon Web Services Simple Storage Service-compatible open source object storage server. The code is written in Node.js. It is a single instance running in a Docker container, and it uses Docker volumes for persistent storage. CloudServer uses the same code as the Scality RING S3 interface and includes an Apache 2.0 license. It is not a distributed system (that is the paid version, S3 for Enterprise). However, it does have the same level of compatibility as the S3 interface for the Scality RING. Zenko Orbit is a cloud-based portal for data placement, workflows, and global metadata search. The product enables asynchronous replication between clouds.
+
+
+## Versions
+
+* Scality released version 4.2 in October 2013 which added native file access protocols including Network File System (NFS), Server Message Block (SMB), Apple Filing Protocol (AFP), and FTP.
+* Scality released version 4.3 of the RING software in July 2014, improving performance, adding replication options, and introducing a redesigned management GUI.
+* In November 2014, Scality made generally available a plug-in for OpenStack Swift, enabling Swift-compatible applications to use the Scality RING as a storage backend without modification. Scality also released an open-source driver that enables the creation of block storage volumes that can connect to CDMI-compatible storage backends.
+* Scality released version 5.0 of the RING software in March 2015, simplifying installation and configuration, expanding Windows support, and improving video streaming and content distribution performance
+* Version 6.0 of the Scality RING was introduced in 2016
+* Scality open sourced their object server frontend called S3 Server Archived 2017-03-22 at the Wayback Machine that implements the AWS S3 API in July 2017, the source code is available on Github under an Apache 2.0 license and prebuilt containers are available on Docker Hub
+* Scality RING7 launched in June, 2017 with enhanced security and multi-cloud file and object storage.
+
+Scality has been recognized consistently over the years for object-based storage by IDC. In Gartner's first Magic Quadrant for Distributed File Systems and Object Storage Scality was ranked a leader.
+Scality was a 2014 storage system software finalist by Storage Magazine. In 2017, Scality was again ranked a leader in Gartner's Magic Quadrant for Distributed File Systems and Object Storage.
+

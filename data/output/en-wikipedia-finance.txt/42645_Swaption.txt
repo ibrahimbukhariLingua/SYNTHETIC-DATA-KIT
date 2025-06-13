@@ -1,0 +1,57 @@
+Swaption
+
+
+# Swaption
+
+
+
+A **swaption** is an option granting its owner the right but not the obligation to enter into an underlying swap. Although options can be traded on a variety of swaps, the term "swaption" typically refers to options on interest rate swaps.
+
+
+## Types
+
+There are two types of swaption contracts (analogous to put and call options):
+
+* A **payer swaption** gives the owner of the swaption the right to enter into a swap where they pay the fixed leg and receive the floating leg.
+* A **receiver swaption** gives the owner of the swaption the right to enter into a swap in which they will receive the fixed leg, and pay the floating leg.
+
+In addition, a "straddle" refers to a combination of a receiver and a payer option on the same underlying swap.
+
+The buyer and seller of the swaption agree on:
+
+* The premium (price) of the swaption
+* Length of the option period (which usually ends two business days prior to the start date of the underlying swap),
+* The terms of the underlying swap, including:
+ + Notional amount (with amortization amounts, if any)
+ + The fixed rate (which equals the strike of the swaption) and payment frequency for the fixed leg
+ + The frequency of observation for the floating leg of the swap (for example, 3 month Libor paid quarterly)
+
+There are two possible settlement conventions. Swaptions can be settled physically (i.e., at expiry the swap is entered between the two parties) or cash-settled, where the value of the swap at expiry is paid according to a market-standard formula.
+
+
+## Swaption market
+
+The participants in the swaption market are predominantly large corporations, banks, financial institutions and hedge funds. End users such as corporations and banks typically use swaptions to manage interest rate risk arising from their core business or from their financing arrangements. For example, a corporation wanting protection from rising interest rates might buy a payer swaption. A bank that holds a mortgage portfolio might buy a receiver swaption to protect against lower interest rates that might lead to early prepayment of the mortgages. A hedge fund believing that interest rates will not rise by more than a certain amount might sell a payer swaption aiming to make money by collecting the premium. Investment banks make markets in swaptions in the major currencies, and these banks trade amongst themselves in the swaption interbank market. The market-making banks typically manage large portfolios of swaptions that they have written with various counterparties. A significant investment in technology and human capital is required to properly monitor and risk-manage the resulting exposure. Swaption markets exist in most of the major currencies in the world, the largest markets being in U.S. dollars, euro, sterling and Japanese yen.
+
+The swaption market is primarily over-the-counter (OTC), i.e., not cleared or traded on an exchange. Legally, a swaption is a contract granting a party the right to enter an agreement with another counterparty to exchange the required payments. The owner ("buyer") of the swaption is exposed to a failure by the "seller" to enter the swap upon expiry (or to pay the agreed payoff in the case of a cash-settled swaption). Often this exposure is mitigated through the use of collateral agreements whereby variation margin is posted to cover the anticipated future exposure.
+
+
+## Swaption exercise styles
+
+There are three main styles that define the exercise of the swaption:
+
+* European swaption, in which the owner is allowed to enter the swap only at the start of the swap. These are the standard in the marketplace.
+* Bermudan swaption, in which the owner is allowed to enter the swap on multiple specified dates, typically coupon dates during the life of the underlying swap.
+* American swaption, in which the owner is allowed to enter the swap on any day that falls within a range of two dates.
+
+Exotic desks may be willing to create customised types of swaptions, analogous to exotic options. These can involve bespoke exercise rules, or a non-constant swap notional.
+
+
+## Valuation
+
+The valuation of swaptions is complicated in that the at-the-money level is the forward swap rate, being the forward rate that would apply between the maturity of the option—time m—and the tenor of the underlying swap such that the swap, at time m, would have an "NPV" of zero; see swap valuation. Moneyness, therefore, is determined based on whether the strike rate is higher, lower, or at the same level as the forward swap rate.
+
+Addressing this, quantitative analysts value swaptions by constructing complex lattice-based term structure and short-rate models that describe the movement of interest rates over time. However, a standard practice, particularly amongst traders, to whom *speed* of calculation is more important, is to value European swaptions using the Black model. For American- and Bermudan- styled options, where exercise is permitted prior to maturity, only the lattice based approach is applicable.
+
+* In valuing European swaptions using the Black model, the underlier is treated as a forward contract on a swap. Here, as mentioned, the forward price is the forward swap rate. The volatility is typically "read-off" a two dimensional grid ("cube") of at-the-money volatilities as observed from prices in the Interbank swaption market. On this grid, one axis is the time to expiration and the other is the length of the underlying swap. Adjustments may then be made for moneyness; see Volatility smile § Implied volatility surface.
+* To use the lattice based approach, the analyst constructs a "tree" of short rates—a zeroeth step—consistent with today's yield curve and short rate (caplet) volatility, and where the final time step of the tree corresponds to the date of the underlying swap's maturity. Models commonly used here are Ho–Lee, Black-Derman-Toy and Hull-White. Using this tree, (1) the swap is valued at each node by "stepping backwards" through the tree, where at each node, its value is the discounted expected value of the up- and down-nodes in the later time step, added to which is the discounted value of payments made during the time step in question, and noting that floating payments are based on the short rate at each tree-node. Then (2), the option is valued similar to the approach for equity options: at nodes in the time-step corresponding to option maturity, value is based on moneyness; at earlier nodes, it is the discounted expected value of the option at the up- and down-nodes in the later time step, and, depending on option style, of the swap value at the node. For both steps, the discounting is at the short rate at the tree-node in question. (Note that the Hull-White Model returns a Trinomial Tree: the same logic is applied, although there are then three nodes in question at each point.) See Lattice model (finance) § Interest rate derivatives.

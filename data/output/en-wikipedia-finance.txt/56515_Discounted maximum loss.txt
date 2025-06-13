@@ -1,0 +1,38 @@
+Discounted maximum loss
+
+
+# Discounted maximum loss
+
+
+
+**Discounted maximum loss**, also known as **worst-case risk measure**, is the present value of the worst-case scenario for a financial portfolio.
+
+In investment, in order to protect the value of an investment, one must consider all possible alternatives to the initial investment. How one does this comes down to personal preference; however, the worst possible alternative is generally considered to be the benchmark against which all other options are measured. The present value of this worst possible outcome is the discounted maximum loss.
+
+
+## Definition
+
+Given a finite state space {\displaystyle S}, let {\displaystyle X} be a portfolio with profit {\displaystyle X\_{s}} for {\displaystyle s\in S}. If {\displaystyle X\_{1:S},...,X\_{S:S}} is the order statistic the discounted maximum loss is simply {\displaystyle -\delta X\_{1:S}}, where {\displaystyle \delta } is the discount factor.
+
+Given a general probability space {\displaystyle (\Omega ,{\mathcal {F}},\mathbb {P} )}, let {\displaystyle X} be a portfolio with discounted return {\displaystyle \delta X(\omega )} for state {\displaystyle \omega \in \Omega }. Then the discounted maximum loss can be written as {\displaystyle -\operatorname {ess.inf} \delta X=-\sup \delta \{x\in \mathbb {R} :\mathbb {P} (X\geq x)=1\}} where {\displaystyle \operatorname {ess.inf} } denotes the essential infimum.
+
+
+## Properties
+
+* The discounted maximum loss is the expected shortfall at level {\displaystyle \alpha =0}. It is therefore a coherent risk measure.
+* The worst-case risk measure {\displaystyle \rho \_{\max }} is the most conservative (normalized) risk measure in the sense that for any risk measure {\displaystyle \rho } and any portfolio {\displaystyle X} then {\displaystyle \rho (X)\leq \rho \_{\max }(X)}.
+
+## Example
+
+As an example, assume that a portfolio is currently worth 100, and the discount factor is 0.8 (corresponding to an interest rate of 25%):
+
+| probability | value |
+| --- | --- |
+| of event | of the portfolio |
+| 40% | 110 |
+| 30% | 70 |
+| 20% | 150 |
+| 10% | 20 |
+
+In this case the maximum loss is from 100 to 20 = 80, so the discounted maximum loss is simply {\displaystyle 80\times 0.8=64}
+

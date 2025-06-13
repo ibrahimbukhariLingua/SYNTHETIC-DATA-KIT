@@ -1,0 +1,88 @@
+Solow residual
+
+
+# Solow residual
+
+
+
+The **Solow residual** is a number describing empirical productivity growth in an economy from year to year and decade to decade. Robert Solow, the Nobel Memorial Prize in Economic Sciences-winning economist, defined rising productivity as rising output with constant capital and labor input. It is a "residual" because it is the part of growth that is not accounted for by measures of capital accumulation or increased labor input. Increased physical throughput – i.e. environmental resources – is specifically excluded from the calculation; thus some portion of the residual can be ascribed to increased physical throughput. The example used is for the intracapital substitution of aluminium fixtures for steel during which the inputs do not alter. This differs in almost every other economic circumstance in which there are many other variables. The Solow residual is procyclical and measures of it are now called the rate of growth of multifactor productivity or total factor productivity, though Solow (1957) did not use these terms.
+
+
+## History
+
+In the 1950s, many economistsᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ undertook comparative studies of economic growth following World War II reconstruction. Someʷʰᵒ? said that the path to long-term growth was achieved through investment in industry and infrastructure and in moving further and further into capital intensive automated production. Although there was always a concern about diminishing returns to this approach because of equipment depreciation, it was a widespread view of the correct industrial policy to adopt. Many economists pointed to the Soviet command economy as a model of high-growth through tireless re-investment of output in further industrial construction.
+
+However, some economistsʷʰᵒ? took a different view: they said that greater capital concentrations would yield diminishing returns once the marginal return to capital had equalized with that of labour – and that the apparently rapid growth of economies with high savings rates would be a short-term phenomenon. This analysis suggestedᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ that improved labour productivity or total factor technology was the long-run determinant of national growth, and that only under-capitalized countries could grow per-capita income substantially by investing in infrastructure – some of these undercapitalized countries were still recovering from the war and were expected to rapidly develop in this way on a path of convergence with developed nations.
+
+The Solow residual is defined as per-capita economic growth above the rate of per-capita capital stock growth, so its detection indicates that there must be some contribution to output other than advances in industrializing the economy. The fact that the measured growth in the standard of living, also known as the ratio of output to labour input, could not be explained entirely by the growth in the capital/labour ratio was a significant finding, and pointed to innovation rather than capital accumulation as a potential path to growth.
+
+The 'Solow growth model' is not intended to explain or derive the empirical residual, but rather to demonstrate how it will affect the economy in the long run when imposed on an aggregate model of the macroeconomy exogenously. This model was really a tool for demonstrating the impact of "technology" growth as against "industrial" growth rather than an attempt to understand where either type of growth was coming from. The Solow residual is primarily an observation to explain, rather than predict the outcome of a theoretical analysis. It is a question rather than an answer, and the following equations should not obscure that fact.
+
+
+## As a residual term in the Solow model
+
+Solow assumed a very basic model of annual aggregate output over a year (*t*). He said that the output quantity would be governed by the amount of capital (the infrastructure), the amount of labour (the number of people in the workforce), and the productivity of that labour. He thought that the productivity of labour was the factor driving long-run GDP increases. An example economic model of this form is given below:
+
+where:
+
+* *Y*(*t*) represents the total production in an economy (the GDP) in some year, *t*.
+* *K*(*t*) is capital in the productive economy – which might be measured through the combined value of all companies in a capitalist economy.
+* *A*(*t*) represents multifactor productivity (often generalized as "technology"). The change in this figure from *A*(1960) to *A*(1980) is the key to estimating the growth in labour 'efficiency' and the Solow residual between 1960 and 1980, for instance.
+* *L*(*t*) is labour; this is simply the number of people working, and since growth models are long run models they tend to ignore cyclical unemployment effects, assuming instead that the labour force is a constant fraction of an expanding population.
+
+To measure or predict the change in output within this model, the equation above is differentiated in time (*t*), giving a formula in partial derivatives of the relationships: labour-to-output, capital-to-output, and productivity-to-output, as shown:
+
+Observe:
+
+Similarly:
+
+Therefore:
+
+The growth factor in the economy is a proportion of the output last year, which is given (assuming small changes year-on-year) by dividing both sides of this equation by the output, *Y*:
+
+The first two terms on the right hand side of this equation are the proportional changes in capital and labour year-on-year, and the left hand side is the proportional output change. The remaining term on the right, giving the effect of productivity improvements on GDP is defined as the Solow residual:
+
+The residual, *SR*(*t*) is that part of growth not explicable by measurable changes in the amount of capital, *K*, and the number of workers, *L*. If output, capital, and labour all double every twenty years the residual will be zero, but in general it is higher than this: output goes up faster than growth in the input factors. The residual varies between periods and countries, but is almost always positive in peace-time capitalist countries. Some estimates of the post-war U.S. residual credited the country with a 3% productivity increase per-annum until the early 1970s when productivity growth appeared to stagnate.
+
+
+## Regression analysis and the Solow residual
+
+The above relation gives a very simplified picture of the economy in a single year; what growth theory econometrics does is to look at a sequence of years to find a statistically significant pattern in the changes of the variables, and perhaps identify the existence and value of the "Solow residual". The most basic technique for doing this is to assume **constant rates of change** in all the variables (obscured by noise), and regress on the data to find the best estimate of these rates in the historical data available (using an ordinary least squares regression). Economists always do this by first taking the natural log of their equation (to separate out the variables on the right-hand-side of the equation); logging both sides of this production function produces a simple linear regression with an error term, {\displaystyle \varepsilon }:
+
+A constant growth factor implies exponential growth in the above variables, so differentiating gives a linear relationship between the growth factors which can be deduced in a simple regression.
+
+In a regression analysis, the equation one would estimate is:
+
+where:
+
+* *C* can be interpreted as the co-efficient on log(*A*) – the rate of technological change – (1 − *α*).
+* *k* is capital, ln(K)
+* γ is (log) output, ln(Y)
+* *ℓ* is labour, ln(L)
+
+Given the form of the regression equation, we can interpret the coefficients as elasticities.
+
+For the calculation of {\displaystyle A}, the actual quantity or level of technology, we simply refer back to our equation in levels.
+
+Knowing quantities of output {\displaystyle Y(t)}, capital {\displaystyle K(t)}, labor {\displaystyle L(t)} and estimates for {\displaystyle C},{\displaystyle \beta } and {\displaystyle \gamma } we can solve for {\displaystyle A(t)} as:
+
+Mankiw, Romer, and Weil augmented the Solow-Swan model with a human capital term. The explicit inclusion of this term in the model transfers the effect of changes in human capital from the Solow residual to capital accumulation. As a consequence, the Solow residual is smaller in the augmented Solow model:
+
+where:
+
+* *H*(*t*) represents the human capital stock in an economy (the GDP) in some year, *t*.
+
+The associated regression to estimate this model is:
+
+Breton estimates the Solow residual for the human capital-augmented version of the Solow-Swan model over the 20th century. He finds that from 1910 to 2000 {\displaystyle A(t)} in 42 of the world's leading economies increased at an average rate of 1%/year and {\displaystyle A(t)^{1-\alpha -\beta }} increased at 0.3%/year.
+
+
+## Why the productivity growth is attached to labor
+
+The Solow residual measures total factor productivity, but the productivity variable is normally attached to the labor variable in the Solow-Swan model to make technological growth labor-augmenting. This type of productivity growth is required mathematically to keep the shares of national income accruing to the factors of production constant over time. These shares appear to have been stable historically in developing nations, and developed nations. However, Thomas Piketty's famous study of inequality in 2014, using a version of the Solow model, argued that a stable, relatively low profit share of national income was largely a twentieth century phenomenon.
+
+
+## Critique of the measurement in rapidly developing economies
+
+Rapidly expanding countries (catching up after a crisis or trade liberalization) tend to have a rapid turn-over in technologies as they accumulate capital. It has been suggested that this will tend to make it harder to gain experience with the available technologies and that a zero Solow residual in these cases actually indicates rising labour productivity. In this theory, the fact that *A* (labour output productivity) is not falling as new skills become essential indicates that the labour force is capable of adapting, and is likely to have its productivity growth underestimated by the residual—This idea is linked to "learning-by-doing".
+

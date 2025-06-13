@@ -1,0 +1,53 @@
+Pairs trade
+
+
+# Pairs trade
+
+
+
+A **pairs trade** or **pair trading** is a market neutral trading strategy enabling traders to profit from virtually any market conditions: uptrend, downtrend, or sideways movement. This strategy is categorized as a statistical arbitrage and convergence trading strategy. Pair trading was pioneered by Gerry Bamberger and later led by Nunzio Tartaglia's quantitative group at Morgan Stanley in the 1980s.
+
+The strategy monitors performance of two historically correlated securities. When the correlation between the two securities temporarily weakens, i.e. one stock moves up while the other moves down, the pairs trade would be to short the outperforming stock and to long the underperforming one, betting that the "spread" between the two would eventually converge. The divergence within a pair can be caused by temporary supply/demand changes, large buy/sell orders for one security, reaction for important news about one of the companies, and so on.
+
+Pairs trading strategy demands good position sizing, market timing, and decision making skill. Although the strategy does not have much downside risk, there is a scarcity of opportunities, and, for profiting, the trader must be one of the first to capitalize on the opportunity.
+
+A notable pairs trader was hedge fund Long-Term Capital Management; see Dual-listed companies.
+
+
+## Model-based pairs trading
+
+While it is commonly agreed that *individual* stock prices are difficult to forecast, there is evidence suggesting that it may be possible to forecast the price—the spread series—of certain stock *portfolios*. A common way to attempt this is by constructing the portfolio such that the spread series is a stationary process. To achieve spread stationarity in the context of pairs trading, where the portfolios only consist of two stocks, one can attempt to find a cointegration irregularities between the two stock price series who generally show stationary correlation. This irregularity is assumed to be bridged soon and forecasts are made in the opposite nature of the irregularity. This would then allow for combining them into a portfolio with a stationary spread series. Regardless of how the portfolio is constructed, if the spread series is a stationary processes, then it can be modeled, and subsequently forecast, using techniques of time series analysis. Among those suitable for pairs trading are Ornstein-Uhlenbeck models, autoregressive moving average (ARMA) models and (vector) error correction models. Forecastability of the portfolio spread series is useful for traders because:
+
+1. The spread can be directly traded by buying and selling the stocks in the portfolio, and
+2. The forecast and its error bounds (given by the model) yield an estimate of the return and risk associated with the trade.
+
+The success of pairs trading depends heavily on the modeling and forecasting of the spread time series. Comprehensive empirical studies on pairs trading have investigated its profitability over the long-term in the US market using the distance method, co-integration, and copulas. They have found that the distance and co-integration methods result in significant alphas and similar performance, but their profits have decreased over time. Copula pairs trading strategies result in more stable but smaller profits.
+
+
+## Algorithmic pairs trading
+
+Today, pairs trading is often conducted using algorithmic trading strategies on an execution management system. These strategies are typically built around models that define the spread based on historical data mining and analysis. The algorithm monitors for deviations in price, automatically buying and selling to capitalize on market inefficiencies. The advantage in terms of reaction time allows traders to take advantage of tighter spreads.
+
+
+## Market neutrality
+
+* The pairs trade helps to hedge sector- and market-risk. For example, if the whole market crashes, and the two stocks plummet along with it, the trade should result in a gain on the short position and a negating loss on the long position, leaving the profit close to zero in spite of the large move.
+* Pairs trade is a mean-reverting strategy, betting that the prices will eventually revert to their historical trends.
+* Pairs trade is a substantially self-funding strategy, since the short sale proceeds may be used to create the long position.
+
+## Drift and risk management
+
+Trading pairs is not a risk-free strategy. The difficulty comes when prices of the two securities begin to drift apart, i.e. the spread begins to trend instead of reverting to the original mean. Dealing with such adverse situations requires strict risk management rules, which have the trader exit an unprofitable trade as soon as the original setup—a bet for reversion to the mean—has been invalidated. This can be achieved, for example, by forecasting the spread and exiting at forecast error bounds. A common way to model, and forecast, the spread for risk management purposes is by using autoregressive moving average models.
+
+Some other risks include:
+
+* In ‘market-neutral’ strategies, you are assuming that the CAPM model is valid and that beta is a correct estimate of systematic risk—if this is not the case, your hedge may not properly protect you in the event of a shift in the markets. Note there are other theories on how to estimate market risk—such as the Fama-French Factors.
+* Measures of market risk, such as beta, are historical and could be very different in the future than they have been in the past.
+* If you are implementing a mean reversion strategy, you are assuming that the mean will remain the same in the future as it has been in the past. When the means change, it is sometimes referred to as ‘drift’.
+
+## A simplified example
+
+Pepsi (PEP) and Coca-Cola (KO) are different companies that create a similar product, soda pop. Historically, the two companies have shared similar dips and highs, depending on the soda pop market. If the price of Coca-Cola were to go up a significant amount while Pepsi stayed the same, a pairs trader would buy Pepsi stock and sell Coca-Cola stock, assuming that the two companies would later return to their historical balance point. If the price of Pepsi rose to close that gap in price, the trader would make money on the Pepsi stock, while if the price of Coca-Cola fell, they would make money on having shorted the Coca-Cola stock.
+
+The reason for the deviated stock to come back to original value is itself an assumption. It is assumed that the pair will have similar business performance as in the past during the holding period of the stock.
+

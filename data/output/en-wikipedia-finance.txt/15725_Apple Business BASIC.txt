@@ -1,0 +1,86 @@
+Apple Business BASIC
+
+
+# Apple Business BASIC
+
+
+
+**Apple Business BASIC** is a dialect of the BASIC programming language for the Apple III with added features for producing business and productivity software. It belongs to the wider group of business BASICs, which first emerged on minicomputers.
+
+The main additions compared to AppleSoft BASIC on the Apple II were 19-digit long integer values in addition to floating point, better control over formatting input and output, and floppy disk commands that allowed file management without having to exit to Apple DOS. It included a rudimentary system to load and save fixed-width records, which made file handling easier. It also allowed programs to be built in parts and loaded on demand to allow the construction of larger applications.
+
+Business BASIC was the standard dialect for the Apple III. The Apple III also offered an expanded version of Microsoft BASIC, Apple III Microsoft BASIC, which ran under CP/M using 3rd party CP/M support.
+
+
+## Description
+
+
+### Program editing
+
+Apple Business BASIC used many of the editing conventions from the earlier AppleSoft BASIC, with the most noticeable change being the command prompt becoming a paren, `)`. This visually indicated you were in Business BASIC, as Integer BASIC used `>` and AppleSoft used `]`. Statements entered without a line number were executed immediately, while those with a line number were instead stored for future execution, which Apple referred to as *deferred mode*. As was the case for AppleSoft, line numbers were limited to 0 through 63999.
+
+Editing was improved with the ability to enter a full-screed editing mode by pressing the `Escape` key and then using the cursor keys to move within program text. Most home computers of the era already supported this, but the Apple II predated this becoming a standard feature. Setting the value of the `INDENT` variable, normally defaulted to 2, provided leading spaces in front of the lines inside a `FOR...NEXT` loop, while the `OUTREC` variable controlled the maximum line length of `LIST`ed program lines, avoiding it running off the right side of some printers. Finally, the `DEL` command allowed the mass deletion of program lines, for instance `DEL 100 TO 500`. `DEL` and `LIST` could both use `TO`, a comma, or a hyphen to separate the starting and ending ranges.
+
+Business BASIC was intended to support large programs, and writing such programs makes debugging difficult using traditional BASIC tools. To address this, Business BASIC added the `TRACE` command, which causes the system to print a `#` followed by the line number as statements are executed. Using this with `PRINT` allows the user to watch as values change and notice the line where it might occur. This can be turned off again with `NOTRACE`.
+
+
+### Data types and variables
+
+Most BASICs of the era allowed variable names to be a single letter, two letters, or one letter and one digit. A small number, including later versions of Microsoft BASIC, allowed longer variable names to be typed in the source code but only read the first two characters at runtime. This often led to a lack of suitable variable names, especially in long programs where many different variables were being used and spread across hundreds of lines of code. Business BASIC addressed this by allowing variable names up to 64 characters, all of which were significant. A variable name could include most non-space printing characters including basic punctuation, often using the period between individual works in a name, like `This.Is.A.Variable.Name` Names were case insensitive, so `A.Variable` and `a.VARIABLE` are the same.
+
+Variables were typed, meaning they could hold only one type of data. Most BASICs of the era had two types of data. The default type was a floating point number, or "real", normally stored in a 40-bit format (at least on MOS 6502-based machines). The other was the string, which was indicated by adding a dollar sign, `$`, to the end of the name of the variable. Some dialects, including Business BASIC, added an integer type, normally stored as a 16-bit binary value, indicated by a percent sign, `%`. To this, Business BASIC added the *long integer*, a 64-bit binary value that allowed up to 19 decimal digits of accuracy. These were denoted with an ampersand, `&`.
+
+Small currency values, like one penny, are represented in decimal by the fraction 0.01. This value cannot be exactly represented in binary floating point, and any manipulations, even simple ones like addition, can lead to the values being rounded incorrectly and producing odd output. Apple Business BASIC used the long integer format to address this issue, multiplying dollar values by 100. A value like 0.01 would be stored as 1, and the value 10.10 would be stored as 1010. While this format does not eliminate rounding issues, it greatly reduces them in unexpected cases like addition.
+
+The downside is that all numbers have to be converted back to decimal format on output. This can be accomplished by dividing them by 100, but this may introduce the rounding errors that this system is attempting to avoid. Instead, it uses formatted output that placed the decimal point in the correct location, without changing the number itself. That is, 1010 would be printed as 10.10. This was accomplished with the `PRINT USING` and the `IMAGE` statements. The format was represented by a string, which could be typed directly after the `USING`, or on a separate line using `IMAGE`. If the `IMAGE` style was used, the `USING` was instead followed by the line number of the `IMAGE` statement.
+
+
+### Program statements and reserved variables
+
+The list of supported statements is largely similar to those in AppleSoft BASIC, with a few additions. One is the `ELSE` clause on `IF...THEN` statements. `ELSE` operated as a separate statement, it could only follow a colon at the end of an IF statement. Another is the `WINDOW`, which allowed the text display area to be controlled, for instance, `WINDOW 37,9 TO 44,16` would limit text output to a small rectangle on the right side of the screen. `HOME` cleared the text area and returned the cursor to the upper left of the window, and `INVERSE` and `NORMAL` set the text mode. Other new basic functionality was offered through the use of "reserved variables", like `INDENT`. `HPOS` and `VPOS` contained the X and Y location of the cursor, respectively, or could be set to move it, like `HPOS=6`.
+
+
+### Operators and functions
+
+Infix operators included `+` (addition), `-` (subtraction), `*` (multiplication), `/` (division) and exponent using the `^` character. Binary operators included `AND`, `OR` and `NOT`. Binary comparisons included the standard set of `=`, `>`, `<`, `>=`, `<=`, `<>`. Extensions to these standard operators included MOD (remainder), DIV (integer division, dropping any fraction), and the alternate form of logical tests, `><` `=>` and `=<`. It did not support the `#` alternative for not-equals seen in HP Time-Shared BASIC, which had previously been supported in Integer BASIC.
+
+Mathematical functions were fairly standard, including `SIN`, `COS`, `ATN`, `RND`, `INT`, `ABS`, `SQR`, `EXP`, `LOG`. It also included `TAN`, which was often left out on systems with limited memory. It added the new functions `HEX$` which converted a number into a four-digit hexadecimal number and `TEN` which did the opposite, taking a string with a hex value and converting that to an integer. String functions included the standard `LEFT$`, `RIGHT$`, `MID$`, `LEN`, `ASC`, `CHR$`, `VAL`, `STR$`, and added `INSTR` to find a string within another and return its index, and `SUB$` which overwrote the characters in one string with another, starting at a given location. User functions could be defined with `DEF FN`.
+
+In most BASICs, conversions between types were automatic where possible, meaning that one could use expressions that combined floating point and integer functions and values and the data would be converted between those as needed. Strings could not be automatically converted to numbers, but could be done explicitly using the `VAL` and `STR$` functions, which converted a string to a number and vice versa. To address the need to convert long integers to the other types, and to generally improve conversions between types in general, Business BASIC introduced a set of four `CONV` functions, which returned a value of a specified type no matter what sort of input value was used. For instance, `CONV&(A%)` would convert the (short) integer value in `A%` into a long integer value. Likewise, one could `CONV$(A&)` to convert a long integer value to a string.
+
+
+### File handling
+
+Like most BASICs of the era, Business BASIC offered file handling based on the concept of opening a file, reading and writing to it, and then closing the file. Files were referred to by a number provided when the files are opened. Files were opened with the `OPEN#` statement - the hash mark is not normally used in most dialects. `CLOSE#` similarly added the hash, but in this case there was another variation, `CLOSE`, which closed all open files. Once opened, files could be read using `INPUT#` or `READ#` and written to using `PRINT#` or `WRITE#`.
+
+When reading from files, it is possible that any particular operation will reach the end of file, which would normally return a `?OUT OF DATA` error. This error could be trapped like any other using the `ON ERR` statement, but as these particular errors are expected and commonplace, Business BASIC added the specialized `ON EOF#` which trapped only that one error and only on the provided file number. This could be turned off using the `OFF EOF#` statement. Additionally, it had a system variable `EOF` that was assigned the file number that caused the error, so it could be handled in more general error trapping routines.
+
+Business BASIC also provided a rudimentary system for reading and writing files in a random access fashion. This was managed by the `CREATE` statement, which had parameters for the filename, file type, and the length of the records. For instance, one could `CREATE "testfile",DATA,500` to create a new random-access file containing byte data where each "record" was 500 bytes long. Once created, all reads and writes to such a file would now always read exactly that number of bytes, so if one were to `PRINT #1,A`, the system would print the value of A and then pad out the rest of the line with nulls. When used with a random-access file, the read and write statements allowed an optional "record number" to be added after the file number. For instance `INPUT #1,10;A` would read the 10th record, and then attempt to read the value for A from it. Random-access files also set the value of the `TYP` system variable to a value indicating the type of variable that would next be read or written, and `REC` contained the number of the last record to be read or written.
+
+Files had to be `CREATE`d before they could be written to, whereas most dialects would create the file when it was `OPEN`ed for writing. `CREATE` could also be used to create directories. Additional statements included `CATALOG` to produce a directory of files at a given path, `DELETE` to remove files, `RENAME` and `LOCK` and `UNLOCK`. To make working with directories easier, the `PREFIX$` system variable could be set to a string containing a path, which would then be pre-pended to any file name reference.
+
+
+### Constructing longer programs
+
+Machines of the era had limited memory, often too little to build useful business programs in BASIC. To address this, a number of dialects added the `CHAIN` statement. In Business BASIC, `CHAIN` had a required parameter, a filename which was not surrounded by quotes. When encountered in a program, this would load the new program code and start executing it. Unlike a `LOAD` or `RUN`, using `CHAIN` did not clear out the current values in variables, allowing the new code to continue processing data created by the previous one. It also allowed a second optional parameter, a line number, where execution should start in the new code. For instance, `CHAIN /Link/Fence, 800` would load the program "Fence" in the directory "Chain" and start execution at line 800.
+
+One problem with this approach is that BASIC variables are global, meaning that any values that are changed by the new program will cause them to be changed in the original one, assuming it is loaded again as part of the `CHAIN`. For common variables like `I`, often used as the index variable in loops, this can lead to problems when one program changes the value in another. Many dialects that supported `CHAIN` had functionality to address this, like `COMMON`, but Business BASIC lacked this ability. This meant authors had to carefully track their use of variables. This was especially true for arrays, as it was possible for two chained programs to both `DIM` the same variable, which would cause the second to raise a `?REDIM ERROR`.
+
+The new `EXEC` statement read a named text file and parsed its contents as input into the system. One could use this to place a series of instructions in a text file, like `LOAD` and `RUN`, and these would be executed one by one when the file was `EXEC`ed. The file could also contain new lines of code, allowing programs to be merged, rather than replaced entirely, although this was a slower process than reading in the already-parsed code which was used by `CHAIN` or `RUN`. The program text could be written into a text file using the `OUTPUT` statement, which redirected all output, including `LIST`s, to a numbered file handle previously `OPEN`ed.
+
+
+### Calling external code
+
+Business BASIC also included a number of features to allow external, non-BASIC, code to be used in BASIC programs. `INVOKE` loaded machine language code from an external file into memory. Multiple routines could be loaded by comma separating the file names in a single statement.
+
+`PERFORM` called a routine previously loaded by `INVOKE`, and passed in values in parens like a function call. For unexplained reasons, integer and long values had to be indicated by prefixing the variable name, rather than the normal post-fix notation. For instance, `PERFORM StrangeRites(&Pennies, %Accountants)` would call the StrangeRights function, passing in a long integer Pennies and a short integer Accountants.
+
+`EXFN` was similar to `PERFORM`, but called code that was expected to return a real number (floating point) value to the program. `EXFN%` was the same but expected an integer value.
+
+
+## Examples
+
+This program creates a new random-access file containing text, and then writes 10 lines of text to it. As the `CREATE` statement specifies a record length of 16, the lines will be 16 characters long no matter how much text is actually written.
+
+The following program reads the data back in again, but due to the `STEP 2` in line 30, it will print every other line in the file:
+

@@ -1,0 +1,56 @@
+CAdES (computing)
+
+
+# CAdES (computing)
+
+
+
+**CAdES** (*CMS Advanced Electronic Signatures*) is a set of extensions to Cryptographic Message Syntax (CMS) signed data making it suitable for advanced electronic signatures.
+
+
+## Description
+
+CMS is a general framework for electronic signatures for various kinds of transactions like purchase requisition, contracts or invoices. CAdES specifies precise profiles of CMS signed data making it compliant with the European eIDAS regulation (Regulation on electronic identification and trust services for electronic transactions in the internal market). The eIDAS regulation enhances and repeals the Electronic Signatures Directive 1999/93/EC. EIDAS is legally binding in all EU member states since July 2014. An electronic signature that has been created in compliance with eIDAS has the same legal value as a handwritten signature.
+
+An electronic signature, technically implemented based on CAdES has the status of an advanced electronic signature. This means that
+
+* it is uniquely linked to the signatory;
+* it is capable of identifying the signatory;
+* only the signatory has control of the data used for the signature creation;
+* it can be identified if data attached to the signature has been changed after signing.
+
+A resulting property of CAdES is that electronically signed documents can remain valid for long periods, even if the signer or verifying party later attempts to deny the validity of the signature.
+
+A CAdES-based electronic signature is accepted in a court proceeding as evidence; as advanced electronic signatures are legally binding. But it gets higher probative value when enhanced to a qualified electronic signature. To receive that legal standing, it needs to be doted with a digital certificate, encrypted by a security signature creation device ("qualified electronic signature"). The authorship of a statement with a qualified electronic signature cannot be challenged - the statement is non-repudiable.
+
+The document ETSI TS 101 733 Electronic Signature and Infrastructure (ESI) – CMS Advanced Electronic Signature (CAdES) describes the framework.
+
+
+## Evolution of the framework
+
+The main document describing the format is ETSI TS 101 733 Electronic Signature and Infrastructure (ESI) – CMS Advanced Electronic Signature (CAdES).
+
+The ETSI TS 101 733 was first issued as V1.2.2 (2000–12). The current release version has the release number V2.2.1 (2013-04). ETSI is working on a new draft of CAdES. All drafts and released documents are publicly accessible at .
+
+The ETSI TS V.1.7.4 (2008-07) is technically equivalent to RFC 5126. RFC 5126 document builds on existing standards that are widely adopted.
+These include:
+
+* RFC 3852 : "Cryptographic Message Syntax (CMS)"
+* ISO/IEC 9594-8/ITU-T Recommendation X.509 "Information technology - Open Systems Interconnection - The Directory: Authentication framework"
+* RFC 3280 "Internet X.509 Public Key Infrastructure (PKIX) Certificate and Certificate Revocation List (CRL) Profile"
+* RFC 3161 "Internet X.509 Public Key Infrastructure Time-Stamp Protocol (TSP)".
+
+## Profiles
+
+ETSI "TS 101 733" specifies formats for Advanced Electronic Signatures built on CMS (CAdES). It defines a number of signed and unsigned optional signature properties, resulting in support for a number of variations in the signature contents and processing requirements.
+
+In order to maximize interoperability in communities applying CAdES to particular environments it was necessary to identify a common set of options that are appropriate to that environment. Such a selection is commonly called a profile.
+
+ETSI "TS 103 173" describes profiles for CAdES signatures, in particular their use in the context of the EU Services Directive, "Directive 2006/123/EC of the European Parliament and of the Council of 12 December 2006 on services in the internal market".
+
+There are four profiles available:
+
+* **CAdES-B**: Basic Electronic Signature, the simplest version, containing the SignedInfo, SignatureValue, KeyInfo and SignedProperties. This level combines the old -BES and -EPES levels. This form extends the definition of an electronic signature to conform to the identified signature policy
+* **CAdES-T**: B-Level for which a Trust Service Provider has generated a trusted token (time-mark or time-stamp token) proving that the signature itself actually existed at a certain date and time.
+* **CAdES-LT**: are built by direct incorporation to CAdES-T signatures conformant to the T-Level, a long-term-validation attribute containing values of certificates and values of certificate revocation status used to validate the signature.
+* **CAdES-LTA**: a signature conformant to LT-Level to which one or more long-term-validation attribute with a poeValue has been incorporated. By using periodical timestamping (e.g. each year) it is prevented the compromising of the signature due to weakening algorithms during long time storage periods. This level is equivalent to the old -A level

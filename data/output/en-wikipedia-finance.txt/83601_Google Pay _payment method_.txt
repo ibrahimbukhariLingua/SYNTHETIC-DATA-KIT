@@ -1,0 +1,84 @@
+Google Pay (payment method)
+
+
+# Google Pay (payment method)
+
+
+
+**Google Pay** (formerly **Android Pay**) is a mobile payment service developed by Google to power in-app, online, and in-person contactless purchases on mobile devices, enabling users to make payments with Android phones, tablets, or watches. Users can authenticate via a PIN, passcode, or biometrics such as 3D face scanning or fingerprint recognition.
+
+As of 2025ᵘᵖᵈᵃᵗᵉ, it is available in 92 countries.
+
+
+## Service
+
+| Google payment apps |
+| --- |
+| * v * t * e | 2006–2013Google Checkout | | | | | | | --- | --- | --- | --- | --- | --- | | 2011–2015Google Wallet | | | | | | | 2015–2018Android Pay | | | | | | 2015–2018Google Wallet | | | | | | 2017–2018Tez | | | | | | | 2018–2022Google Pay | | | | | | 2018–2020Google Pay Send | | | | | | 2018–2020Google Pay | | | | | | | 2022–presentGoogle Wallet | | | | | | 2020–presentGoogle Pay | | | | | | *See also: Google Pay (payment method)* |
+
+Google Pay uses near-field communication (NFC) to transmit card information facilitating funds transfer to the retailer. It replaces the credit or debit card chip and PIN or magnetic stripe transaction at point-of-sale terminals by allowing the user to upload these in Google Wallet. It is similar to contactless payments already used in many countries, with the addition of two-factor authentication. The service lets Android devices wirelessly communicate with point of sale systems using a near-field communication (NFC) antenna and host-based card emulation (HCE).
+
+When the user makes a payment to a merchant, Google Pay does not send the actual payment card number. Instead, it generates a virtual account number representing the user's account information.
+
+Google Pay requires that a screen lock be set on the phone or watch. An age limit minimum of 13 years is imposed on users seeking to manage the service themselves. However, younger users can still have access to Google Pay if a parent or guardian manages Wallet for them, and utilizes an approved bank (currently only available on the Fitbit Ace.)
+
+Users can add payment cards to the service by taking a photo of the card, or by entering the card information manually. To pay at points of sale, users hold their authenticated device to the point of sale system. The service has smart-authentication, allowing the system to detect when the device is considered secure (for instance, if unlocked in the last five minutes) and challenge if necessary for unlock information.
+
+
+### Technology
+
+Google Pay uses the EMV Payment Tokenization Specification.
+
+The service keeps customer payment information private from the retailer by replacing the customer's credit or debit card Funding Primary Account Number (FPAN) with a tokenized Device Primary Account Number (DPAN) and creates a "dynamic security code [...] generated for each transaction". The "dynamic security code" is the cryptogram in an EMV-mode transaction, and the Dynamic Card Verification Value (dCVV) in a magnetic-stripe-data emulation-mode transaction. Users can also remotely halt the service on a lost phone via Google's Find My Device service.
+
+To pay at points of sale, users hold their authenticated Android device to the point-of-sale system's NFC reader. Android users authenticate unlocking their phone by using biometrics, a pattern, or a passcode, whereas Wear OS and Fitbit OS users authenticate by opening the Google Wallet app prior to payment.
+
+
+### Consumer Device Cardholder Verification Method (CDCVM)
+
+In EMV-mode transactions, Google Pay supports the use of the Consumer Device Cardholder Verification Method (CDCVM) using biometrics, pattern, or the device's passcode. The use of CDCVM allows the device itself to provide verification for the transaction and may not require the cardholder to sign a receipt or enter their PIN.
+
+
+### Security
+
+Payments for supported transit networks are available to skip verification, either via a payment card or transit card. Though the phone screen needs to be on and is not available when the battery is low, unlike Apple Pay's Express Mode.
+
+On Wear OS and Fitbit OS, this option is not available. All transactions on wearable devices must be authenticated by opening the Wallet app prior to tapping.
+
+Since 2022, the functionality of adding NFC bank cards in Google Wallet requires devices to pass Play Integrity API checks. This implies having a device with locked bootloader and no rooting.
+
+
+## Availability
+
+
+### Supported countries
+
+As of January 2025ᵘᵖᵈᵃᵗᵉ, Google Pay is available in 92 countries worldwide.
+
+
+#### Upcoming
+
+* Saudi Arabia
+
+### Supported networks
+
+* Visa / Visa Debit / Visa electron (Android, Wear OS, Fitbit OS)
+* Mastercard / Debit Mastercard (Android, Wear OS, Fitbit OS)
+* American Express (Android, Wear OS, Fitbit OS)
+* Discover (Android & Wear OS)
+* Diners Club (Android & Wear OS)
+* JCB (Android only)
+* Maestro (Android & Wear OS)
+* Elo in Brazil (Android & Wear OS)
+* PayPal in the US, Germany (Android only)
+* EFTPOS in Australia (Android & Wear OS)
+* Interac in Canada (Android & Wear OS)
+* QUICPay [ja] (Android & Wear OS)
+* iD [ja] (Android & Wear OS)
+* WAON (Android only)
+* Edy (Android only)
+* nanaco (Android only)
+
+#### Upcoming
+
+* mada

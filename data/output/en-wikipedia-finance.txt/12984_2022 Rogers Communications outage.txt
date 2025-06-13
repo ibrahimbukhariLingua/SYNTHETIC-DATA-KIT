@@ -1,0 +1,74 @@
+2022 Rogers Communications outage
+
+
+# 2022 Rogers Communications outage
+
+
+
+On July 8, 2022, Canadian telecom provider Rogers Communications experienced a major service outage affecting more than 12 million users of Rogers' cable internet and cellular networks, including those of subsidiary brands Rogers Wireless, Fido, Cityfone, and Chatr. This followed another major national outage a year prior in April 2021.
+
+The 2022 outage impacted internet service providers with wholesale access to the Rogers network, such as TekSavvy, as well as various other information systems nationwide that relied on the Rogers network, including Interac (this resulted in businesses nationwide being unable to accept debit transactions), OLG, and some federal government services. Multiple international web monitoring organizations observed the outage.
+
+The event spurred new government policies requiring all telecommunications providers to provide mutual assistance to each other in the event of an outage, offer emergency roaming service for rivals' affected customers, and establish plans for how to communicate to the public about outages.
+
+Rebates for customers are estimated to cost Rogers $28 million to $70 million. Splitting their physical and wireless lines for $261 million, and giving out $150 million in customer credits became part of a $10 billion plan for Rogers over a three-year span involving increased management and additionally the use of artificial intelligence to supervise potential future errors. The economic toll to the Canadian economy for the outage period was projected at $142 million.
+
+An executive summary was published by the Canadian Radio-television and Telecommunications Commission in July 2024.
+
+
+## Impact
+
+The outage had a significant impact on various information systems nationwide, much of which extended past residential and commercial Rogers customers, due to their dependencies on Rogers infrastructure:
+
+* Around 25% of Canada lost internet connectivity, according to the UK cybersecurity organization Netblocks. Over 12 million subscribers were affected.
+* Interac was taken offline by the outage, preventing all businesses nationwide from being able to accept debit card transactions, regardless of their internet service provider. Some stores temporarily closed.
+* The outage inhibited the ability to use 911 services from mobile phones on the Rogers network, resulting in at least one reported case of a death. It is unclear as to whether or not the death could have been avoided had 911 contact been possible.
+* Along with the inability mentioned above to accept debit, some public transport agencies reported other computer system issues tied to the outage.
+* The outage affected some Government of Canada services, such as Service Canada, Canada Revenue Agency, and passport offices.
+* The Canadian Federation of Independent Business (CFIB) reported small businesses lost anywhere from a few hundred to several thousands of dollars.
+* In Toronto there was some dependency on Rogers. One quarter of all traffic signals relied on their cellular network for signal timing changes. The Rogers GSM network was also used to remotely monitor fire alarms and sprinklers in municipal buildings. Public parking payments and public bike services were also unavailable. It was also the sole provider of cable TV for the city.
+* Medical appointments through the Niagara Health System for oncology patients with radiation therapy were rescheduled, with a plan to transfer patients requiring emergency care to Hamilton Health Sciences.
+* Canadian singer-songwriter the Weeknd was forced to postpone a concert that night at Toronto's Rogers Centre on the After Hours til Dawn Tour, due to "service outages impacting venue operation". The concert was later rescheduled for September 22, 2022. A second show at Rogers Centre was added for September 23.
+
+## Recovery
+
+Rogers had begun to slowly restore service that evening, but CEO Tony Staffieri stated there was no estimated time for when services would become fully operational again. The next day, Rogers stated that it had restored service to the "vast majority" of its customers; however, not all service had been restored across the country. On July 11, a spike of service issues was reported to the web traffic monitoring company Ookla's Downdetector, with some users reporting that service had not recovered for them.
+
+
+## Causes
+
+A report by Cloudflare suggested that the outage was due to internal, rather than external, causes. It identified spikes in BGP updates, as well as withdrawals of IP prefixes, noting that Rogers was not advertising its presence, causing other networks to not find the Rogers network. As of the day after the outage, the cause remained unknown. Public Safety Canada stated that it was not a cyberattack. The outage was later said to be caused by a maintenance upgrade that caused routers to malfunction. A similar outage occurred in April 2021, which was attributed to a software update.
+
+
+### Postmortem
+
+In a letter to the CRTC, Rogers stated that the deletion of a routing filter on its distribution routers caused all possible routes to the internet to pass through the routers, exceeding the capacity of the routers on its core network. The deletion occurred during the sixth phase in a seven-phase update to its core IP network. The failure occurred at 4:45 a.m. and resulted in a nationwide loss of access to the company's phone and internet services, as well as internal access to systems such as the company's VPN to its core network nodes, hampering the ability of the company's employees to mobilize a team and identify the issue. Some employees were able to connect through "emergency SIMs" on alternate networks, which they had due to a practice established through reciprocal agreements made with other carriers in 2015. Others traveled to centralized locations to establish network access.
+
+At 6 a.m., the company's CTO Jorge Fernandes, who has since been replaced, contacted leadership at rival companies Bell and Telus, advising them of the issues they were facing, as well as warning "to watch out for possible cyber-attacks." Both competitors offered assistance to Rogers, though the company determined that it was not possible to switch its users over to alternate networks, citing the inability to access its user database, as well as the excess load that the sudden addition of more than 10 million users would put on the other networks. A Memorandum of Understanding on how the carriers can work together in the future was submitted in September to the Minister of Innovation, Science and Economic Development. Rogers plans to physically separate its wireless and wireline core networks to help mitigate the fallout of future outages.
+
+
+## Reactions
+
+Critics have cited the outage as an example of the impact of Canada's telecom oligopoly, and an argument against Rogers' proposed acquisition of Shaw Communications (which would further consolidate the industry). NDP leader Jagmeet Singh accused the Liberal Party government of "protecting the profits of telecoms giants", while Conservative MP Michelle Rempel Garner called for an investigation, arguing that "given the critical infrastructure that's affected, and that because the Canadian Radio-television and Telecommunications Commission (CRTC) itself is affected, the cause of the Rogers outage should be immediately explained." A spokesperson for the CRTC promised that the organization would examine the outage and "put in place the necessary measures to prevent it from happening again."
+
+Critics also highlighted the importance of consumers and businesses diversifying their telecommunications services, such as businesses having backup service contracts with multiple providers and consumers reducing their dependence on bundled "all-in-one" cable, internet and phone service packages.
+
+
+## Response
+
+Rogers planned to credit customers for five days of lost service, which was to be credited August 1. On July 10, 2022, Tony Staffieri, president and CEO of Rogers Communications, sent an email to all customers to officially apologize for the incident and inform them that Rogers would credit all customers' accounts for Friday. The last time they credited consumers on such a scale was soon after their April 19, 2021 outage, when "wireless calls, SMS and data services were down across Canada for almost an entire day because of an issue with a software update".
+
+On July 8, the same day as the outage, an internal email was sent requesting that retail locations remove signage that contained the slogan "Canada's Most Reliable 5G Network."
+
+On July 11, the CEOs of Rogers, Bell, Telus, Shaw, Vidéotron, SaskTel, and EastLink were all invited to take part in a conference call with federal cabinet minister François-Philippe Champagne to discuss a new "mutual assistance" framework of cooperation between the companies in emergencies to prevent the recurrence of a similar incident in the future. On the same day, Champagne announced new policies requiring all telecommunications providers to provide mutual assistance to each other in the event of an outage, offer emergency roaming service for rivals' affected customers, and establish plans for how to communicate to the public about said incidents. Champagne said that the companies would have 60 days to reach agreements with each other to that effect.
+
+The House of Commons of Canada were discussing requests to conduct a study of the outage involving members of parliament from the Liberal Party, Conservative Party, New Democratic Party, and the Bloc Québécois.
+
+A class action lawsuit was filed in the Superior Court of Quebec which requested all customers receive a $400 rebate. Reasons cited included negligence of the CRTC regulations to make 9-1-1 calls available at all times.
+
+The CFIB requested Rogers to give a free month of service to compensate for losses to others.
+
+As a result of the outage, the city government of Toronto reviewed its legacy contract for sourcing with a variety of providers. Council meetings were planned to review the full cost to the economy and the ability to use local *ConnectTO* in the city's infrastructure instead in the future.
+
+On July 21, it was reported that the Chief Technology and Information Officer, Jorge Fernandes, was to be replaced by Ron McKenzie, who was the former president of Rogers for Business. The leadership team was updated the previous night on the Rogers Website to reflect this change.
+

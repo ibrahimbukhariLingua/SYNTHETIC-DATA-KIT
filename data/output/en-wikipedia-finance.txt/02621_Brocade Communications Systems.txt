@@ -1,0 +1,276 @@
+Brocade Communications Systems
+
+
+# Brocade Communications Systems
+
+
+
+**Brocade Communications Systems, Inc.**, was an American technology company specializing in storage networking products, now a subsidiary of Broadcom Inc. The company is known for its Fibre Channel storage networking products and technology. Prior to the acquisition, the company expanded into adjacent markets including a wide range of IP/Ethernet hardware and software products. Offerings included routers and network switches for data center, campus and carrier environments, IP storage network fabrics; Network Functions Virtualization (NFV) and software-defined networking (SDN) markets such as a commercial edition of the OpenDaylight Project controller; and network management software that spans physical and virtual devices.
+
+On November 2, 2016, Singapore-based chip maker Broadcom Limited announced it was buying Brocade for about $5.5 billion. As part of the acquisition, Broadcom divested all of the IP networking hardware and software-defined networking assets. Broadcom has since re-domesticated to the United States and is now known as Broadcom Inc.
+
+
+## History
+
+Brocade was founded in August 1995, by Seth Neiman (a venture capitalist, a former executive from Sun Microsystems and a professional auto racer), Kumar Malavalli (a co-author of the Fibre Channel specification) and Paul R. Bonderson (a former executive from Intel Corporation and Sun). Neiman became the first CEO of the company. Brocade was incorporated on May 14, 1998, in Delaware.
+
+The company's first product, SilkWorm, which was a Fibre Channel switch, was released in early 1997.
+
+On May 25, 1999, the company went public at a split-adjusted price of $4.75. On initial public offering (IPO), the company offered 3,250,000 shares, with an additional 487,500 shares offered to the underwriters to cover over-allotments. The top three underwriters (based on number of shares) for Brocade's IPO were, in order, Morgan Stanley Dean Witter, BT Alex.Brown, and Dain Rauscher Wessels.
+Brocade stock is traded in the National Market System of the NASDAQ GS stock market under the ticker symbol BRCD.
+The second generation of switches was announced in 1999.
+
+On January 14, 2013, Brocade named Lloyd Carney as new chief executive.
+On November 2, 2016, Singapore-based chip maker Broadcom Limited announced they were buying Brocade for $5.5 billion. As part of the announcement, Broadcom said they would sell Brocade's networking business to avoid competing with its top customers such as Cisco Systems.
+
+On August 8, 2017, Brocade announced that its SDN technology had been spun off as a new company called Lumina Networks. This follows the sales of other divisions designed to allow the Broadcom acquisition to proceed, including Ruckus Wireless, Connectem (vEPC), Virtual ADC, Vyatta & vRouter, and Brocade's data center networking business.
+
+Broadcom announced the acquisition of Brocade in Nov 2016, and it completed the acquisition in Nov 2017 for $5.5 billion.
+
+
+## Products
+
+Brocade focuses on Fibre Channel and FICON storage area network (SAN) directors and switches; SAN extension switches (FCIP), embedded switches for blade servers, optical transceivers and SAN management software.
+
+Prior to the acquisition by Broadcom, Brocade also provided ultra-low-latency data center switches; Ethernet fabrics, Federal and enterprise Ethernet (LAN/WLAN) switches; WAN (Internet) routers; application delivery controllers (load balancers); embedded Ethernet switch blades; Fibre Channel host bus adapters (HBAs); converged Fibre Channel/Ethernet network adapters (CNAs), and Ethernet transceivers. Other hardware from Brocade supports common protocols including iSCSI, Gigabit Ethernet, FCoE, DCB/CEE, and Layer 4-7 networking protocols.
+
+Brocade also previously sold software-based networking devices including technology for SDN, Network virtualization, virtual routers, virtual firewalls, virtual Application Delivery Controllers (load balancers), network security appliances and VPNs through its wholly owned subsidiary, Vyatta.
+
+
+### Fibre Channel
+
+Brocade's first Fibre Channel switch SilkWorm 1000 (SW1000) (released in 1997) was based on the "Stitch" 1 Gbit/s ASIC and their own VxWorks-based firmware (Fabric OS or FOS). SilkWorm eventually came to be a long-lived marketing designation for an entire line of products, with the first product being retro-named the SilkWorm 1000 (SW1000) to distinguish it from subsequent platforms. Bruce Bergman was the CEO during most of this period. Product names were generally puns on various kinds of woven fabric, since a switched Fibre Channel network is also called a "fabric". The SilkWorm 1000 series included the SilkWorm I and II launched in 1997 with 16 ports. In 1998, the SilkWorm Express launched with 8 ports.
+
+In 1998, Gregory Reyes joined the company as CEO. Between 1999 and 2000, Brocade launched several 1 Gbit/s switches including the SilkWorm 2800 (16-ports), SilkWorm 2400 (8-ports), SilkWorm 2250 (16-ports) and the SilkWorm 2050 (8-ports) based on the Loom ASIC. In 2001, Brocade released the SilkWorm 6400, which was designated a "director" similarly to IBM ESCON directors already well-established in the mainframe computer market. The term "director" became universally used for more expensive FC switches.
+
+From 2001 to 2003, Brocade released switches based on its third generation ASIC, "BLOOM" (Big LOOM). BLOOM introduced increased throughput of 2 Gbit/s. Between 2001-2002 the SilkWorm 3800 (16-ports) and SilkWorm 3200 (8-ports), and SilkWorm 3900 (32-ports) were launched. Brocade integrated BLOOM into its first "pure" director, the SilkWorm 12000, in April 2002. The director offered up to 128 ports in two 64-port pseudo-switches (*domains*). The 12000 represented several internal architecture and technical changes besides the new ASIC: it had an upgraded control processor architecture (Intel i960 moved to PowerPC 405GP), changed the embedded operating system (FOS v4.0 migrated from Wind River Systems VxWorks to MontaVista Linux), and introduced the backplane architecture (hierarchical PCI buses with replaceable blades attached to a backplane). The Bloom ASIC also introduced a notable capability of frame-level Fibre Channel trunking, which provided high throughput with load balancing across multiple cables. It needed to be implemented in the ASIC hardware to ensure in-order delivery of frames. Also, hot firmware upgrade was introduced with FOS v4.1 in October 2003.
+
+At the time, Brocade's main rival, McDATA, held over 90% market share in director segment, owing to a strong position first in the ESCON market, and then in the FICON market. The SilkWorm 12000 director gained over one-third of the market share after its release in 2002. Brocade added mainframe customers with FICON and FICON CUP support on the SilkWorm 12000.
+
+In 2004, the BLOOM II improved on the previous ASIC design by reducing its power consumption and die size, while maintaining 2 Gbit/s technology. New switches were launched including the SilkWorm 3850 (16-ports) and SilkWorm 3250 (8-ports). BLOOM II also powered Brocade's second-generation director, the SilkWorm 24000. Still a 128-port design, it was the first one which could operate as a single 128-port switch (a single domain). The new director also used approximately two thirds less power than its predecessor. Brocade also introduced its first multiprotocol Fibre Channel router, the SilkWorm 7420. Brocade also acquired Rhapsody Networks (a SAN virtualization startup company). This was also the time frame in which Brocade first entered into the embedded switch market, delivering multiple switches physically integrated into other vendors' hardware, such as storage controllers and blade server chassis.
+
+2004 also saw the introduction of 4 Gbit/s Condor-based platforms. Between 2004 and 2006, Brocade launched several switches including the 4900 (64-ports) 4100 (32-ports), and 200E (16-ports). The 384-port 48000 director was launched in 2005. In 2006, the second generation multiprotocol Fibre Channel router 7500 switch and FR4-18i blade for the 48000 director were launched.
+
+In January 2008 Brocade launched the 384-port 8 Gbit/s DCX Backbone.
+
+In May 2008, Brocade unveiled 3 new 8 Gbit/s switches: 24-port 300 switch, 40-port 5100 switch and the 80-port 5300 switch.
+
+In January 2009, Brocade launched the 192-port 8 Gbit/s DCX-4S Backbone.
+
+In September 2009, Brocade launched the Brocade 7800 Extension Switch and the FX8-24 Extension Blade for the DCX Backbone family for extending SANs over FCIP (Fibre Channel over IP). They also launched the Brocade 8000 Switch and the FCOE 10-24 blade for the DCX Backbone family for FCoE (Fibre Channel over Ethernet) SAN connectivity.
+
+In late 2010 Brocade introduced Virtual Cluster Switching (VCS) on the VDX ultra-low-latency data center switch product line. These are DCB/CEE- and TRILL-based switches, eliminating the need for Spanning Tree Protocol, and supporting multi-hop Fibre Channel over Ethernet (FCoE) and self-trunking.
+
+In May 2011, Brocade launched the industry's first "Gen 5 Fibre Channel" (16 Gbit/s) SAN platform family including the Brocade DCX 8510 Backbone, 6510 switch and 1860 Fabric Adapter. The Brocade DCX 8510 is available in 8-slot or 4-slot chassis models supporting up to 384 16 Gbit/s ports at line-rate speeds and 8.2 terabits per second (Tbit/s) of chassis bandwidth. It includes optical UltraScale inter-chassis links (ICLs) which simplify scale-out design for multi-chassis architectures. The Brocade 6510 switch is a 48-port 16 Gbit/s switch designed for virtualized applications and high-performance storage including SSD arrays. Brocade also introduced the 1860 Fabric Adapter, the industry's first adapter which includes AnyIO 16 Gbit/s FC HBA, 10GbE CNA, and 10GbE NIC functionality on the same card.
+
+In April 2012, Brocade launched the Gen 5 (16 Gbit/s) 6505 switch (24-port) entry-level switch.
+
+In March 2013, Brocade launched the Gen 5 (16 Gbit/s) 6520 96-port Fibre Channel high-density switch and announced Brocade Fabric Vision technology. Brocade Fabric Vision technology introduces advanced diagnostics, monitoring, and management capabilities through a combination of ASIC, FOS, and Brocade Network Advisor. New features include Brocade Monitoring and Alerting Policy Suite (MAPS) for fabric-wide threshold configuration and monitoring and Brocade Flow Vision for data flow monitoring and analysis.
+
+In October 2014, Brocade launched the Gen 5 (16 Gbit/s) 7840 extension switch and the FC16-64 64-port blade for the DCX 8510.
+
+In March 2016, Brocade launched the G620 switch, their first Gen 6 (32 Gbit/s) Fibre Channel product.
+
+In July 2016, Brocade launched the Gen 6 (32 Gbit/s) X6 Director with 4 slots (192 or 256-ports) or 8 slots (382 or 512-ports) and SX6 extension blade.
+
+In March 2017, Brocade launched the Gen 6 (32 Gbit/s) G610 entry switch (24-port).
+
+In April 2018, Brocade launched the Gen 6 (32 Gbit/s) G630 enterprise switch (128-port) and FC32-64 high density blade (64-port) for the X6 Director.
+
+In December 2018, Brocade launched the Gen 6 (32 Gbit/s) 7810 extension switch.
+
+In September 2020, Brocade launched the X7 Director and G720 Switch, their first Gen 7 (64 Gbit/s) Fibre Channel products.
+
+In February 2022, Brocade launched the Gen 7 (64 Gbit/s) G730 128-port switch and the 64 Gbit/s double density optical transceiver.
+
+In August 2023, Brocade launched the Gen 7 (64 Gbit/s) FC64-64 64-port blade for the X7 Director and the 64 Gbit/s 7850 Extension Switch.
+
+In January 2025, Brocade launched the Gen 7 (64 Gbit/s) G710 24-port entry switch.
+
+
+#### SAN ASICs
+
+Brocade designs its Fibre Channel ASICs for performing switching functions in its SAN switches.
+
+The first family of SAN switches, the SilkWorm 1000, released in 1997, were based on the first generation of Brocade ASICs, called **Stitch**. The SilkWorm 6400 series of SAN Director class switches and SilkWorm 2400/2800 switches, released in 1999, were based on the second generation of Brocade ASICs, called **LOOM**. The SilkWorm 12000/24000 SAN Directors and SilkWorm 3200/3800/3850 SAN switches, released in 2001, were based on the third and fourth generation of Brocade ASICs called **BLOOM** and **BLOOM-II**.
+
+The fifth generation of ASICs, called **Condor and GoldenEye** (scaled-down Condor), powered the SilkWorm 48000 series of Directors and port blades, FR4-18i Extension Blade, and SilkWorm 200E/4100/4900/7500 series of switches respectively. These products were released into the market in 2004.
+
+The sixth generation of Brocade ASICs (designed in 2008) are called **Condor2 and GoldenEye2**. Condor2 supports 40 ports of 8 Gbit/s per ASIC and GoldenEye2 supports 32 ports of 8 Gbit/s. These ASICs are used in the DCX Backbone Family of chassis and port blades, FS8-18 Encryption Blade, FX8-24 Extension Blade, and 300/5100/5300/7800/Encryption switches.
+
+The seventh generation of Brocade ASICs are **Condor3**. Condor3 supports 48 ports of 16 Gbit/s per ASIC. These ASICs are used in the DCX 8510 Backbone Family and port blades, and the 6505/6510/6520 switches. The initial 16 Gbit/s product line (DCX 8510-8, DCX 8510-4, 6510 48-port switch, and 1860 Fabric Adapter) was originally launched in 2011. The 6505 24-port switch was launched in May 2012. The 6520 96-port switch was launched in March 2013.
+
+The eighth generation of Brocade ASICs are **Condor4**. Condor4 supports 32 Gbit/s. These ASICs are used in X6 Director chassis and port blades, and the G610/G620/G630 switches.
+
+The ninth generation of Brocade ASICs are **Condor5 and GoldenEye5**. Condor5 and GoldenEye5 support 64 Gbit/s. Condor5 is used in X7 Director chassis and port blades, the G720 switch and the 7850 extension switch. The GoldenEye5 is used in the G730 and G710 switches.
+
+
+#### SAN products
+
+Latest products (Gen 7 - 64G):
+
+| Brocade name | Brocade switch type | Max. port data rate (Gbit/s) | Max. ports | Dell EMC version | Fujitsu version | HDS version | HP version | IBM version |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| X7-8 | 180 | 64 | 512 (SFP-DD)/384 (SFP) | ED-DCX7-8B | SAN512B-7 |
+| X7-4 | 179 | 64 | 256 (SFP-DD)/192 (SFP) | ED-DCX7-4B | SAN256B-7 |
+| G710 | 191 | 24 | 24 (SFP) |
+| G720 | 181 | 64 | 64 (SFP-DD)/48 (SFP) | DS-7720B | SAN64B-7 |
+| G730 | 189 | 64 | 128 (SFP-DD)/96 (SFP) |
+| 7850 (extension) | 190 | 64 (FC)/100 (GbE) | 24 FC (8 SFP + 8 SFP-DD) + 18 Ethernet (16 SFP + 2 QSFP) |
+
+Recent products (Gen 6 - 32G):
+
+| Brocade name | Brocade switch type | Max. port data rate (Gbit/s) | Max. ports | Dell EMC version | Fujitsu version | HDS version | HP version | IBM version |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| X6-8 | 166 | 32/128 | 512 | ED-DCX6-8B | SN8600B 8-slot SAN Director Switch | SAN512B-6 |
+| X6-4 | 165 | 32/128 | 256 | ED-DCX6-4B | SN8600B 4-slot SAN Director Switch | SAN256B-6 |
+| G610 | 170 | 32 | 24 | DS-6610B | SN3600B | SAN24B-6 |
+| G620 | 162 | 32/128 | 48 (SFP) + 4 (QSFP) = 64 | DS-6620B | G620 | G620 | SN6600B | SAN64B-6 |
+| G630 | 173 | 32/128 | 96 (SFP) + 8 (QSFP) = 128 | DS-6630B | SN6650B | SAN128B-6 |
+| 7810 (extension) | 178 | 32 | 12 FC+6 Ethernet | MP-7810B | SAN18B-6 |
+
+End-of-sale products (Gen 5 - 16G):
+
+| Brocade name | Brocade switch type | Max. port data rate (Gbit/s) | Max. ports | Dell version | EMC version | Fujitsu version | HDS version | HP version | IBM version |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| DCX 8510-8 | 120 | 16 | 512 | DCX 8510-8 | ED-DCX8510-8B | DCX 8510-8 | DCX 8510-8 | SN8000B SAN Director 8-Slot | SAN768B-2 |
+| DCX 8510-4 | 121 | 16 | 256 | DCX 8510-4 | ED-DCX8510-4B | DCX 8510-4 | DCX 8510-4 | SN8000B SAN Director 4-Slot | SAN384B-2 |
+| 6505 | 118 | 16 | 24 | 6505 | DS-6505B | 6505 | SN3000B | SAN24B-5 |
+| 6510 | 109 | 16 | 48 | 6510 | DS-6510B | 6510 | 6510 | SN6000B | SAN48B-5 |
+| 6520 | 133 | 16 | 96 | 6520 | DS-6520B | 6520 | 6520 | SN6500B | SAN96B-5 |
+| 7840 (extension) | 148 | 16 | 24 FC+12 Ethernet | MP-7840B | SAN42B-R |
+
+
+#### Legacy SAN products
+
+Legacy products (1G 2G 4G):
+| Brocade name | Brocade switch type | Max. port speed (Gb/s) | Max. ports | IBM version | HP version | EMC version |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1000 | 1 | 1 | 16 | ? | ? | ? |
+| 2000 | 7 | ? | ? | ? | ? | ? |
+| 2800 | 2, 6 | 1 | 16 | 2109-S16 | 16B | DS-16B |
+| 3000 | 18 | ? | ? | ? | ? | ? |
+| 3014 | 33 | ? | ? | ? | ? | ? |
+| 3016 | 22 | ? | ? | ? | ? | ? |
+| 3200 | 16 | 2 | 8 | 3534-F08 | 2/8 | DS-8B2 |
+| 3250 | 27 | 2 | 8 | 2005-H08 | 2/8V | ? |
+| 3800 | 9 | 2 | 16 | 2109-F16 | 2/16 | DS-16B2 |
+| 3800VL | 17 | ? | ? | ? | ? | ? |
+| 3850 | 26 | 2 | 16 | 2005-H16 | 2/16V | DS-16B3 |
+| 3900 | 12 | 2 | 32 | 2109-F32 | 2/32 | DS-32B2 |
+| 12000 Director | 10 | 2 | 2 x 64 | 2109-M12 | 2/64 | ED-12000-B |
+| 24000 Director | 21 | 4 | 128 | 2109-M14 | 2/128 | ED-24000B |
+| 48000 Director | 42 | 4 | 384 | 2109-M48 | 4/256 | ED-48000B |
+| 200E | 34 | 4 | 16 | 2005-B16 | 4/16 | DS-220B |
+| 4100 | 32 | 4 | 32 | 2005-B32 | 4/32 | DS-4100B |
+| 4900 | 44 | 4 | 64 | 2005-B64 | 4/64 | DS-4900B |
+| 5000 | 58 | 4 | 32 | 2005-B5K | 4/32B | DS-5000B |
+| AP-7420 | ? | 4 | 16 | 2109-A16 | ? | ? |
+| 7500 | 46 | 4 | 16 | 2005-R18 | 400 MPR | MP-7500B |
+| 7600 app | 55.2 | 4 | 16 | ? | ? | ? |
+
+Legacy products (8G):
+| Brocade name | Brocade switch type | Max. port data rate (Gbit/s) | Max. ports | Dell version | EMC version | Fujitsu version | HDS version | HP version | IBM version |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| DCX | 62 | 8 | 512 | ED-DCX-B | DCX | DC SAN Backbone Director | SAN768B |
+| DCX-4S | 77 | 8 | 256 | B-DCX | ED-DCX-4S-B | DCX-4S | DC04 SAN Director | SAN384B |
+| 300 | 71 | 8 | 24 | 300 | DS-300B | 300 | 300 | 8/24 | SAN24B-4 |
+| 5100 | 66 | 8 | 40 | 5100 | DS-5100B | 5100 | 5100 | 8/40 | SAN40B-4 |
+| VA-40FC | 92 | 8 | 40 |
+| 5300 | 64 | 8 | 80 | 5300 | DS-5300B | 5300 | 5300 | 8/80 | SAN80B-4 |
+| 7800 (extension) | 83 | 8 | 16 FC+6 Ethernet | MP-7800B | 7800 | 7800 | 1606 Extension SAN Switch | SAN06B-R |
+| Encryption Switch | 67 | 8 | 32 | ES-5832B | Encryption SAN Switch | SAN32B-E4 Encryption Switch |
+
+Legacy products (McDATA):
+| Brocade name | McDATA name before acquisition | Max. port speed (Gb/s) | Max. ports | IBM version | HP version | EMC version |
+| --- | --- | --- | --- | --- | --- | --- |
+| Mi10K | Intrepid 10000 | 10 | 256 | 2027-256 | ? | ED-10000M |
+| M6140 | Intrepid 6140 | 10 | 140 | 2027-140 | 2/140 | ED-140M |
+| ? | ED-6064 | 10 | 64 | 2032-064 | 2/64 | ED-64M |
+| ? | Sphereon 4300 | 2 | 12 | 2026-E12 | 2/12 | ? |
+| M4400 | Sphereon 4400 | 4 | 16 | 2026-416 | N/A | DS-4400M |
+| ? | Sphereon 4500 | 2 | 24 | 2026-224 | 2/24 | DS-24M2 |
+| M4700 | Sphereon 4700 | 4 | 32 | 2026-432 | N/A | DS-4700M |
+| ? | Sphereon 3232 | 2 | 32 | 2027-232 | 2/32 | DS-32M2 |
+| ? | ES-3016 | 1 | 16 | 2031-016 | ? | DS-16M |
+| ? | ES-3032 | 1 | 32 | 2031-032 | ? | DS-32M |
+| ? | ES-3216 | 2 | 16 | 2031-216 | ? | DS-16M2 |
+
+
+### Ethernet switches and routers
+
+Brocade entered into the Federal, ISP, carrier, enterprise and campus switch/router market through its acquisition of Foundry Networks in 2008.
+
+In September 2010, Brocade entered the 100 Gigabit Ethernet market with the 32-port Brocade MLXe Core Router chassis and a two-port 100 Gigabit Ethernet module, targeted at service providers and data centers. Along with it, the company also released the Brocade Network Advisor application for managing IP, storage, MPLS, application delivery, and wireless elements in converged service provider and data center networks. In November 2011, Brocade announced a large 100 Gigabit Ethernet deployment.
+
+In December 2010, Brocade began shipping the Brocade VDX 6720 Switch as part of its product family for Ethernet fabric environments based on Brocade VCS Fabric technology designed for highly scalable virtualized and cloud computing environments. In August 2011, Brocade introduced two additional products for this family. The Brocade VDX 6730 Switch is a 10 GbE switch which can also use FCoE to bridge VCS Fabrics with Fibre Channel SAN fabrics. The Brocade VDX 6710 Switch is an entry-level 1/10 GbE switch which enables legacy 1 GbE servers to connect to VCS Fabrics as well as traditional LANs. In September 2012, Brocade announced a modular switch as part of this portfolio. The Brocade VDX 8770 Switch supports single VCS Fabrics as large as 8000+ switch ports supporting up to 384,000 VMs attached to a single VCS Fabric. The VDX 8770 provides port-to-port latency at 3.5 μs across 1, 10, and 40 GbE ports.
+
+In November 2011, Brocade introduced the Brocade ICX product family. It released the Brocade ICX 6610 Switch for the Federal, enterprise and campus networking segment, with a maximum switching capacity of 576 Gbit/s and forwarding capacity of 432 Mpps with PoE+. In March 2012, Brocade released the Brocade ICX 6430 Switch and Brocade ICX 6450 Switch for the Federal, enterprise and campus networking segments, with full stacking capabilities as well as Layer 2 and Layer 3 functionality. The switches are available in 24- and 48-port 1 GbE models, with optional 1/10 GbE uplink/stacking ports. The company also announced its HyperEdge technology for automated single-point management and mix-and-max stacking for sharing advanced functionality among all the members of a switching stack. In September 2012, Brocade introduced the fixed form factor Brocade ICX 6650 switch. This Ethernet switch features 1/10 GbE ports for server connectivity and 10/40 GbE ports for uplink connectivity. It is designed for data center top-of-rack (ToR) environments and Federal, enterprise and campus LAN aggregation deployments.
+
+In 2009, Brocade introduced the Brocade Mobility family of Wireless LAN (WLAN) for federal, enterprise and campus environments, including multiple models of access points and controllers.
+
+
+### Software
+
+The Brocade software product portfolio includes SAN management software networking. Legacy software includes network management applications, IP network management solutions and software networking solutions ᵇᵘᶻᶻʷᵒʳᵈ include:
+
+* SAN Management Software
+ + Brocade SANnav Management Portal and SANnav Global View(current)
+ + SAN Health (Current)
+ + Brocade Network Advisor (legacy)
+ + Data Center Fabric Manager (DCFM) (legacy)
+ + Enterprise Fabric Connectivity Manager (EFCM) (from McDATA) (legacy)
+ + Fabric Manager (legacy)
+ + Host Connectivity Manager (HCM) (legacy)
+* SAN Application Modules (legacy)
+ + Data Migration Manager (DMM) (legacy)
+* IP Network Management Software (legacy)
+ + IronView Network Manager (INM) (legacy)
+* Software networking solutionsᵇᵘᶻᶻʷᵒʳᵈ
+ + Brocade Vyatta 5400 vRouter
+ + Brocade vADX (a virtual version of Brocade's ADX application delivery platform).
+
+## Acquisitions
+
+* 2003 – Rhapsody Networks
+* 2005 – Therion Software Corporation
+* 2006 – NuView, Inc. Developed software for enterprise file data management.
+* 2007 – McDATA. Key competitor in the Fibre Channel switch and director market.
+* 2007 – Silverback Systems, Inc. Provided network acceleration technologies.
+* 2008 – Foundry Networks. Ethernet switches and routers maker. The acquisition of Foundry for approximately $2.6 Billion in December 2008 resulted in approximately $2B in goodwill moving to Brocade's asset sheets, of which approximately $1.7B still remained as of Q2FY2013.
+* 2008 – Strategic Business Systems. Storage professional services company.
+* 2012 – Vyatta, Inc. Software-based networking technologies. The deal was completed on November 9, 2012.
+* 2014 – Vistapointe Network visibility and analytic technology for mobile networks.
+* 2015 – Connectem Inc. Carrier-focused wireless networking specialist.
+* 2015 – SteelApp. Application delivery controller (ADC) business unit from Riverbed Technology. The deal completed on March 4, 2015.
+* 2016 – Ruckus Wireless
+
+## Acquisition Transition
+
+| Product | Acquirer |
+| --- | --- |
+| Ethernet Switching Lines - ICX Campus Switches, FastIron CX Series, FastIron SX Series, FastIron Edge X Series, FastIron WS Series, TurboIron 24X Series, Ruckus ZoneSwitch | ARRIS (Ruckus Networks) |
+| Wireless Products and software - Brocade Mobility RFS Series Wireless controller and Access Points, Ruckus Wireless Controller and Access Points, Cloudpath, SPoT, SCI | ARRIS (Ruckus Networks) |
+| vRouter, Vyatta | AT&T |
+| SAN Products - 300, 6505, 6510, 6520, 7800, 7840, Blade Server I/O Modules, DCX8510, FC16, FX8, FCOE10, G610, G620, SX6 extension blade, X6 Director | Broadcom |
+| Application Delivery Controller - ADX, vADX | Broadcom |
+| Software Products - Brocade Network Advisor | Broadcom also licensed to Ruckus and Extreme |
+| Routers - CER, CES | Extreme Networks |
+| Switches and software products - VDX Series, SLX Series, MLX Series, NetIron Series, BR6910, RX(Not active), XMR(Not active), NVA, Brocade Workflow Composer, Brocade Workflow Optimizer | Extreme Networks |
+| SDN Controller | Lumina Networks (Now defunct) |
+| Virtual Evolved Packet Core | Mavenir Systems |
+| vADC, vTM, vWAF | Pulse Secure |
+
+
+## Competition
+
+Brocade is the dominant vendor in the Fibre Channel Storage Area Network (SAN) networking switch market, competing with Cisco Systems.
+
+
+## Legal issues
+
+In 2005, Gregory Reyes resigned as CEO after being indicted for securities fraud relating to backdating stock option grants. After spending about a year investigating these allegations, the Department of Justice (DoJ), through the US Attorney's Office, the SEC, and the FBI filed criminal and civil charges against Reyes. In roughly the same time frame, the DoJ, SEC, and FBI also began investigating over 100 other companies for similar activities. Greg Reyes and Stephanie Jensen, the former vice president of HR, were charged with 12 counts of fraud. Two counts were dismissed, and on August 7, 2007, Reyes was convicted on the remaining 10 counts. On January 16, 2008, he was sentenced to 21 months in prison and ordered to pay a $15 million fine. Stephanie Jensen, Brocade's former vice president of human resources, was convicted in a separate trial. On March 19, 2008, she was sentenced to four months in prison and ordered to pay a $1.25 million fine. The convictions of both Reyes and Jensen were appealed. On August 18, 2009, the United States Court of Appeals for the Ninth Circuit overturned Gregory Reyes' convictions and sent the case back to the lower courts for retrial, where he was again convicted, and sentenced to 18 months in prison and a $10 million fine. Reyes was incarcerated at the Taft Correctional Institution in Taft, California, with an anticipated release date of December 29, 2011. As of August 2011ᵘᵖᵈᵃᵗᵉ, a second appeal remains pending. Greg Reyes was granted a full pardon by President Trump on January 20, 2021.
+
+Brocade announced on August 6, 2012, a San Jose federal court jury returned its verdict in the case of Brocade v. A10 Networks, and found A10 responsible for broad-based intellectual property infringement and unfair competition, awarding approximately $112 million to Brocade The trial lasted three weeks.
+The jury unanimously awarded punitive damages against A10 and also personally against its CEO Lee Chen, strongly condemning Chen and A10's unfair competition. The jury also returned an unambiguous verdict for patent and copyright infringement and trade secret misappropriation covering A10's entire AX Series load balancing server products. Brocade announced on January 11, 2013, a San Jose federal court confirmed a $60 million damages verdict against A10 Networks and entered an order permanently enjoining A10 from infringing on Brocade's patents involving technologies for Global Server Load Balancing and High Availability. On May 20, 2013, Brocade and A10 reached an agreement to settle the lawsuit, along with all related claims. Among other agreed upon terms, A10 granted Brocade a broad patent license and agreed to pay Brocade $5 million in cash and issue a $70 million unsecured convertible promissory note payable to Brocade.
+

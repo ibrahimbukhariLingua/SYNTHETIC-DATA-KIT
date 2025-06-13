@@ -1,0 +1,24 @@
+Too connected to fail
+
+
+# Too connected to fail
+
+
+
+The "**too connected to fail**" (**TCTF**) concept refers to a financial institution which is so connected to other institutions that its failure would probably lead to a turnover in the whole system.
+
+
+## Relevance of TCTF: systemic risk
+
+The 2007/2008 financial crisis highlighted that a turmoil can cause a fallback in the financial system – mainly because financial institutions form a highly interconnected network. From a network science point of view, this means that some nodes (institutions) have very high degree, i.e. they are linked to other nodes. As a consequence, they play a central role in the system, which can be "highly important" in the case of disturbances.
+
+
+### Eigenvector Centrality
+
+Nacaskul posits that a financial institution is systemically important if it is highly connected (e.g. via interbank lending market/money market channel) to systemically important banks. Those, in turn, are systemically important if they are highly connected to systemically important banks, and so on. The recursive definition is equivalent to performing eigendecomposition of a matrix of connectivity weights and assigning systemic importance in proportion to the values of the principal eigenvector. The "entropic" factor correction is introduced therein to correct for the possibility that performing eigendecomposition on weighted connectivity matrices may occasionally yield "degenerate" systemic importance scores (all financial institutions identical in terms of systemic importance). Nacaskul & Sabborriboon then extends the Systemic Importance Analysis (SIA) above, which focuses on systemic leverage each individual financial institution exerts on the overall system, to Systemic Vulnerability Analysis (SVA), whereby the overall system is assessed as to how vulnerable it is to disproportionate systemic leverages exerted by individual financial institutions, and applied the methodology to Thai interbank money-market funding matrix.
+
+
+### DebtRank (feedback centrality)
+
+Another way to measure the TCTF feature of an institution is based on the concept of feedback centrality. One example for this is the DebtRank introduced in the paper of Battiston et al.
+

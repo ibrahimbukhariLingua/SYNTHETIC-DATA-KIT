@@ -1,0 +1,54 @@
+Altos Computer Systems
+
+
+# Altos Computer Systems
+
+
+
+**Altos Computer Systems** was founded in 1977 by David G. Jackson and Roger William Vass Sr. It focused on small multi-user computers, starting with multi-user derivatives of CP/M, and later including Unix and Xenix-based machines. In its 1982 initial public offering on NASDAQ, the company raised $59M. Thereafter the company's stock was traded under the symbol ALTO.
+
+Coming under increasing pressure from competitors in the server market, such as Compaq and Sun Microsystems, Altos posted a $5M loss (its first ever) in the fiscal year ending in June, 1989. In the aftermath, Altos was acquired by Acer in 1990 for $94M, although mostly for its US distribution channels rather than its technology. Shortly before this acquisition, there were about 128,000 Altos systems installed throughout the world.
+
+
+## Company history and products
+
+According to a brief history of the company, which ran as an advertisement on their 10th anniversary, Altos Computer Systems was started by Dave Jackson in 1977 when he designed a single-board microcomputer in a room he rented on Stevens Creek Boulevard. According to this account, the company bootstrapped itself with profitable sales from the beginning, with a revenue of $260,000 in the first year. Jackson named the company after Los Altos Hills, California, where he lived.
+
+In an interview from May 1979, the company's vice-president Roger Vass described the Altos' strategy at the time as selling OEM computer systems. Vass also said that the company's revenue had reached an annual figure of $5M that year, after 15 months of operations. The company's single-board computer product was named "Sun-Series 8000" at this point; it was based on 4-MHz Z80 processor and shipped with 32 KB of RAM, expandable to 64 KB. Altos eschewed using the (fairly standard at the time) S-100 bus, but packed their board with a disk controller (which could connect up to two 8-inch Shugart drives), two serial and one parallel port, while also leaving room for another optional Z80 to be used as DMA controller and an optional AMD 9511 floating-point coprocessor. As operating system, this machine could use CP/M or Oasis.
+
+
+### ACS 8000
+
+In the aforementioned interview, Vass also described their plans for the company's first multi-user computer, based on a CP/M-derived executive that they called AMEX (Altos Multiuser Executive). Their new design planned to support up to four users, by providing each user with its own 48 KB of dedicated program memory (addressable by the 8-bit Z80 processor through bank switching), while the 16 KB of memory for the operating system's image could be shared by all users. An advertisement for the "Sun-Series ACS8000-6" sold under Altos' own brand appeared in the November 1979 issue of *Byte*, and indeed promised to support up to four users by means of its AMEX kernel, and supporting a maximum system memory of 208 KB. The ACS 8000 could run at least three multi-user operating systems: Altos' own AMEX, Oasis, or MP/M. The sample code for the Banked XIOS implementation published in the MP/M II System Implementors Guide was written by Altos (and carries a disclaimer that it only works as-is with their Sun Series 8000).
+
+The "8000" contained in the name of Altos' first series of computer did cause some confusion in the marketplace because its name may have suggested the inclusion of the 16-bit Zilog Z8000 processor, which had just been released in 1979, although Altos' ACS-8000 did not use this processor, but the older 8-bit Z80. A 1981 review in *Computerworld*, comparing the ACS 8000 with other multi-user systems, found that Altos' Z80 processor was underpowered, especially for CPU-intensive tasks (most other multi-user systems used 16-bit processors by then), but the ACS-8000 was found adequate for multi-user order entry systems. A configuration with a 10-MB hard-drive plus a 1-MB 8" floppy drive, bundled with a printer and one terminal was priced at $12,340 (the same machine but with four terminals was $15,625), which was considerably less than most other multi-user systems, which were typically priced in the $25,000–$50,000 range. Altos thus carved for itself a niche in the low-cost multi-user systems. The lack of any expansion slots was judged however as fairly limiting. Their omission, as well the omission of circuitry that would have been necessary to connect the Z80 to the industry-standard S-100 bus, which was Intel-centric (around the Intel 8080) was one of the reasons why the ACS-8000 could keep its cost low (relative to its epoch).
+
+
+### ACS 8600
+
+Alto's next major product line would indeed use a 16-bit processor, but it would be Intel's 8086, seemingly chosen for reasons of availability both in terms of the hardware itself and of the CP/M-86 operating system. The ACS-8600 series, announced in October 1980 as "ACS 16000" and launched in November 1981, was based on the 8086 with a 8089 standard communications co-processor. Supported operating systems were CP/M-86, MP/M-86, Oasis-16, and—for the first time—Xenix. This was still a machine based on 8" disk technology, both for floppy and hard disks. The entry level unit, equipped with 128 KB RAM and a single 1-MB floppy drive was priced at $8,990 at launch, while the high end version, with 512 KB of RAM and a 40 MB hard drive launched at $18,980. By 1983, Altos was the leading 8086-based Unix vendor, running Xenix.
+
+
+### ACS 68000
+
+In 1982, Altos diversified its product line yet again with the introduction of the ACS68000, which was based on the Motorola 68000 processor (at 8 MHz) and was intended to support up to 16 users. It shipped with Unix System III initially. The machine was initially offered with a 40 MB disk drive (and sticker price of $14,500), while an 80-MB disk version was offered in the first quarter of 1983 (for $16,500). As business packages were generally lacking for the ACS 68000, it was mostly sold through OEMs rather than Altos' own dealer network. The first version of the Oracle database which ran on Unix (version 3) was announced supporting the ACS68000 among other similar "supermicro" computers like the Tandy Model 16, and the Fortune 32:16.
+
+
+### Subsequent products
+
+Other multi-user computers:
+
+* Altos 580 (1983), 5-5, and 5-15 were somewhat cheaper Z80 machines, based on 5.25" drives.
+* Altos ACS-86C, ran Altos MS-DOS 2.11 including a 1.95 MiB harddisk with media descriptor byte 0xF5.
+* Altos 586 (despite what its name might suggest today) used a 10 MHz 8086 processor, among the fastest for a 1983 microcomputer. An 8089 chip aided by a Z80 queuing processor supported up to eight terminals. Ran Xenix or MP/M-86. The 586 had 512 KB standard memory and came with six RS-232C serial port and one RS-422, which was intended for networking rather than terminal attachment. The Altos 986 was a variant with 1 MB RAM and four extra serial ports. 3Com developed their new Ethernet card for the 986 model, running Xenix 3.0 and sold as a network disk server for IBM PC, XT computers installed with 3Com Ethernet expansion cards.
+* The Altos 486 was announced in November 1984. Altos claimed it was their response to the perceived multi-user capabilities of the IBM PC/AT. The Altos 486 was however based on an 8-MHz Intel 80186 processor and also ran Xenix. It was however cheaper than their 586.
+* Altos 886, 1086, and 2086. Based on a 80286 central processor, and intended to support 8, 10, and respectively 20 users at terminals. The 886 used a 7.5 MHz processor, while in the other two it ran at 8 MHz. The 2086 had a zero wait state main processor. Each 10-port serial communication board had its own 8-MHz 8086. Announced in 1985. Ran Xenix 3.0. Unlike Altos' earlier machines, the 1086 and 2086 used a tower case.
+* Altos 3068. Initially based on a 12 MHz Motorola 68020. Released in 1985. Ran the Pick operating system release 2.15 or Unix System V (SysV). This machine formed the basis of the Tandem LXN.
+* Altos 686 and 3086. Announced in June 1986, these were a revamping of the 286-based product line. The high-end 3086 supported up to 32 users and had 12.5 MHz processor. This faster processor was now also offered as an upgrade option for the 1086 and 2086 machines, which had a processor board. The 686 model used a 7.5 MHz processor. The company also announced some 50 layoffs due to flat sales, reducing their workforce to about 700.
+* Altos Series 2000 was their first system based on a 80386 and was released in 1987. Ran Xenix System V. For their 386 and 486-based systems Altos later offered a rebranded version of SCO Unix, "Altos Unix". They also offered a rebadged version of Portable NetWare running on their Unix.
+* In December 1988, Altos introduced an updated 68030-based product called "68x Series 030", which supported up to two 25 MHz processors. The operating system offered for this machine was still Pick.
+
+Altos also sold a number of accompanying terminal models, from Altos II to Altos IV. Typically, these were VT100 compatible.
+
+After it was acquired by Acer, Altos started to sell Unix servers derived from Acer products. For example, in February 1993, Altos was offering servers based on AcerPower 486e (EISA-based) systems, but bundled with Unix. In December of that year, Acer unified its server line with that of Altos and created its Acer Altos brand,ᵖᵉʳᵐᵃⁿᵉⁿᵗ ᵈᵉᵃᵈ ˡⁱⁿᵏ which is still being commercialized as of December 2013ᵘᵖᵈᵃᵗᵉ, although Acer also commercialized servers under the other brands it has acquired, such as Gateway, as part of its multi-brand strategy.
+

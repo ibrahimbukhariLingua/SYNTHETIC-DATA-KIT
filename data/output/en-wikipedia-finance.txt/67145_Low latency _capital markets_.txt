@@ -1,0 +1,148 @@
+Low latency (capital markets)
+
+
+# Low latency (capital markets)
+
+
+
+In capital markets, **low latency** is the use of algorithmic trading to react to market events faster than the competition to increase profitability of trades. For example, when executing arbitrage strategies the opportunity to "arb" the market may only present itself for a few milliseconds before parity is achieved. To demonstrate the value that clients put on latency, in 2007 a large global investment bank has stated that every millisecond lost results in $100m per annum in lost opportunity.
+
+What is considered "low" is therefore relative but also a self-fulfilling prophecy. Many organisations and companies are using the words "ultra low latency" to describe latencies of under 1 millisecond, but it is an evolving definition, with the amount of time considered "low" ever-shrinking.
+
+There are many technical factors which impact on the time it takes a trading system to detect an opportunity and to successfully exploit that opportunity. Firms engaged in low latency trading are willing to invest considerable effort and resources to increase the speed of their trading technology as the gains can be significant. This is often done in the context of high-frequency trading.
+
+
+## Factors
+
+There are many factors which impact on the time it takes a trading system to detect an opportunity and to successfully exploit that opportunity, including:
+
+* Distance between the exchange and the trading system
+* Distance between two trading venues, in the case of for example arbitrage
+* Efficiency of the trading system architecture:
+ + Network adaptors
+ + Choice of operating system
+ + Efficiency of the code / logic
+ + Choice of the programming language
+ + Traditional CPU vs FPGA
+ + Cabling choices: Copper vs fibre vs microwave,
+
+From a networking perspective, the speed of light "c" dictates one theoretical latency limit: a trading engine just 150 km (93 miles) down the road from the exchange can never achieve better than 1ms return times to the exchange before one even considers the internal latency of the exchange and the trading system. This theoretical limit assumes light is travelling in a straight line in a vacuum which in practice is unlikely to happen: Firstly achieving and maintaining a vacuum over a long distance is difficult and secondly, light cannot easily be beamed and received over long distances due to many factors, including the curvature of the Earth, interference by particles in the air, etc. Light travelling within dark fibre cables does not travel at the speed of light – "c" – since there is no vacuum and the light is constantly reflected off the walls of the cable, lengthening the effective path travelled in comparison to the length of the cable and hence slowing it down. There are also in practice several routers, switches, other cable links and protocol changes between an exchange and a trading system. As a result, most low latency trading engines will be found physically close to the exchanges, even in the same building as the exchange (co-location) to further reduce latency.
+
+To further reduce latency, new technologies are being employed. Wireless data transmission technology can offer speed advantages over the best cabling options, as signals can travel faster through air than fiber. Wireless transmission can also allow data to move in a straighter, more direct path than cabling routes.
+
+A crucial factor in determining the latency of a data channel is its throughput. Data rates are increasing exponentially which has a direct relation to the speed at which messages can be processed. Also, low-latency systems need not only to be able to get a message from A to B as quickly as possible, but also need to be able to process millions of messages per second. See comparison of latency and throughput for a more in-depth discussion.
+
+
+## Where latency occurs
+
+
+### Latency from event to execution
+
+When talking about latency in the context of capital markets, consider the round trip between event and trade:
+
+* Event occurs at a particular venue
+* Information about that event is placed in a message on the wire
+* Message reaches the decision-making application
+* Application makes a trade decision based upon that event
+* Order is sent to the trading venue
+* Venue executes the order
+* Order confirmation is sent back to application
+
+We also need to consider how latency is assembled in this chain of events:
+
+* Processing—the time taken to process a message (which could be as simple as a network switch forwarding a packet)
+* Propagation—the time taken for a bit of data to get from A to B (limited by the speed of light)
+* Packet size divided by bandwidth, total message size (payload + headers), available bandwidth, number of messages being sent across the link.
+
+There are a series of steps that contribute to the total latency of a trade:
+
+
+#### Event occurrence to being on the wire
+
+The systems at a particular venue need to handle events, such as order placement, and get them onto the wire as quickly as possible to be competitive within the market place. Some venues offer premium services for clients needing the quickest solutions.
+
+
+#### Exchange to application
+
+This is one of the areas where most delay can be added, due to the distances involved, amount of processing by internal routing engines, hand off between different networks and the sheer amount of data which is being sent, received and processed from various data venues.
+
+Latency is largely a function of the speed of light, which is 299,792,458 meters/second (186,000 miles/second)(671,000,000 miles/hour) in a scientifically controlled environment; this would equate to a latency of 3 microseconds for every kilometer. However, when measuring latency of data we need to account for the fiber optic cable. Although it seems "pure", it is not a vacuum and therefore refraction of light needs to be accounted for. For measuring latency in long-haul networks, the calculated latency is actually 4.9 microseconds for every kilometer. In shorter metro networks, the latency performance rises a bit more due to building risers and cross-connects that can make the latency as high as 5 microseconds per kilometer.
+
+It follows that to calculate latency of a connection, one needs to know the full distance travelled by the fiber, which is rarely a straight line, since it has to traverse geographic contours and obstacles, such as roads and railway tracks, as well as other rights-of-way.
+
+Due to imperfections in the fiber, light degrades as it is transmitted through it. For distances greater than 100 kilometers, either amplifiers or regenerators need to be deployed. Accepted wisdom has it that amplifiers add less latency than regenerators, though in both cases the added latency can be highly variable, which needs to be taken into account. In particular, legacy spans are more likely to make use of higher latency regenerators.
+
+* Propagation between the location of the execution venue and the location of the application
+* Delays in data aggregation networks such as Refinitiv Elektron, Bloomberg, IDC and others
+* Propagation within internal networks
+* Processing within internal networks
+* Processing by internal routing systems
+* Bandwidth of extranet and internal networks
+* Message packet sizes
+* Amount of data being sent and received
+
+#### Application decision making
+
+This area doesn't strictly belong under the umbrella of "low-latency", rather it is the ability of the trading firm to take advantage of High Performance Computing technologies to process data quickly. However, it is included for completeness.
+
+* Processing by APIs
+* Processing by Applications
+* Propagation between internal systems
+* Network processing/bandwidth/packet size/propagation between internal systems
+
+#### Sending the order to the venue
+
+As with delays between Exchange and Application, many trades will involve a brokerage firm's systems. The competitiveness of the brokerage firm in many cases is directly related to the performance of their order placement and management systems.
+
+* Processing by internal order management systems
+* Processing by Broker systems
+* Propagation between Application and Broker
+* Propagation between Broker and Execution Venue
+
+#### Order execution
+
+The amount of time it takes for the execution venue to process and match the order.
+
+
+## Latency measurement
+
+
+### Terminology
+
+
+#### Average latency
+
+Average latency is the mean average time for a message to be passed from one point to another – the lower the better. Times under 1 millisecond are typical for a market data system.
+
+
+#### Co-Location
+
+Co-location is the act of locating high frequency trading firms' and proprietary traders' computers in the same premises where an exchange's computer servers are located. This gives traders access to stock prices slightly before other investors. Many exchanges have turned co-location into a significant moneymaker by charging trading firms for "low latency access" privileges. Increasing demand for co-location has led many stock exchanges to expand their data centers.
+
+
+#### Latency Jitter
+
+There are many use cases where predictability of latency in message delivery is just as important, if not more important than achieving a low average latency. This latency predictability is also referred to as "Low Latency Jitter" and describes a deviation of latencies around the mean latency measurement.
+
+
+#### Throughput
+
+Throughput can be defined as amount of data processed per unit of time.
+Throughput refers to the number of messages being received, sent and processed by the system and is usually measured in updates per second. Throughput has a correlation to latency measurements and typically as the message rate increases so do the latency figures. To give an indication of the number of messages we are dealing with the "Options Price Reporting Authority" (OPRA) is predicting peak message rates of 907,000 updates per second (ups) on its network by July 2008. This is just a single venue – most firms will be taking updates from several venues.
+
+
+### Testing procedure nuances
+
+
+#### Timestamping/clocks
+
+Clock accuracy is paramount when testing the latency between systems. Any discrepancies will give inaccurate results. Many tests involve locating the publishing node and the receiving node on the same machine to ensure the same clock time is being used. This isn't always possible, however, so clocks on different machines need to be kept in sync using some sort of time protocol:
+
+* NTP is limited to milliseconds, so is not accurate enough for today's low-latency applications
+* CDMA time accuracy is in tens of microseconds. It is US based only. Accuracy is affected by the distance from the transmission source.
+* GPS is the most accurate time protocol in terms of synchronisation. It is, however, the most expensive.
+
+## Reducing latency in the order chain
+
+Reducing latency in the order chain involves attacking the problem from many angles. Amdahl's Law, commonly used to calculate performance gains of throwing more CPUs at a problem, can be applied more generally to improving latency – that is, improving a portion of a system which is already fairly inconsequential (with respect to latency) will result in minimal improvement in the overall performance. Another strategy for reducing latency involves pushing the decision making on trades to a Network Interface Card. This can alleviate the need to involve the system's main processor, which can create undesirable delays in response time. Known as network-side processing, because the processing involved takes place as close to the network interface as possible, this practice is a design factor for "ultra-low latency systems."
+

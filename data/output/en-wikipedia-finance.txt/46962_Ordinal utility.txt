@@ -1,0 +1,207 @@
+Ordinal utility
+
+
+# Ordinal utility
+
+
+
+In economics, an **ordinal utility** function is a function representing the preferences of an agent on an ordinal scale. Ordinal utility theory claims that it is only meaningful to ask which option is better than the other, but it is meaningless to ask *how much* better it is or how good it is. All of the theory of consumer decision-making under conditions of certainty can be, and typically is, expressed in terms of ordinal utility.
+
+For example, suppose George tells us that "I prefer A to B and B to C". George's preferences can be represented by a function *u* such that:
+
+But critics of cardinal utility claim the only meaningful message of this function is the order {\displaystyle u(A)>u(B)>u(C)}; the actual numbers are meaningless. Hence, George's preferences can also be represented by the following function *v*:
+
+The functions *u* and *v* are ordinally equivalent – they represent George's preferences equally well.
+
+Ordinal utility contrasts with cardinal utility theory: the latter assumes that the differences between preferences are also important. In *u* the difference between A and B is much smaller than between B and C, while in *v* the opposite is true. Hence, *u* and *v* are *not* cardinally equivalent.
+
+The ordinal utility concept was first introduced by Pareto in 1906.
+
+
+## Notation
+
+Suppose the set of all states of the world is {\displaystyle X} and an agent has a preference relation on {\displaystyle X}. It is common to mark the weak preference relation by {\displaystyle \preceq }, so that {\displaystyle A\preceq B} reads "the agent wants B at least as much as A".
+
+The symbol {\displaystyle \sim } is used as a shorthand to the indifference relation: {\displaystyle A\sim B\iff (A\preceq B\land B\preceq A)}, which reads "The agent is indifferent between B and A".
+
+The symbol {\displaystyle \prec } is used as a shorthand to the strong preference relation: {\displaystyle A\prec B\iff (A\preceq B\land B\not \preceq A)} if:
+
+
+## Related concepts
+
+
+### Indifference curve mappings
+
+Instead of defining a numeric function, an agent's preference relation can be represented graphically by indifference curves. This is especially useful when there are two kinds of goods, *x* and *y*. Then, each indifference curve shows a set of points {\displaystyle (x,y)} such that, if {\displaystyle (x\_{1},y\_{1})} and {\displaystyle (x\_{2},y\_{2})} are on the same curve, then {\displaystyle (x\_{1},y\_{1})\sim (x\_{2},y\_{2})}.
+
+An example indifference curve is shown below:
+
+Each indifference curve is a set of points, each representing a combination of quantities of two goods or services, all of which combinations the consumer is equally satisfied with. The further a curve is from the origin, the greater is the level of utility.
+
+The slope of the curve (the negative of the marginal rate of substitution of X for Y) at any point shows the rate at which the individual is willing to trade off good X against good Y maintaining the same level of utility. The curve is convex to the origin as shown assuming the consumer has a diminishing marginal rate of substitution. It can be shown that consumer analysis with indifference curves (an ordinal approach) gives the same results as that based on cardinal utility theory — i.e., consumers will consume at the point where the marginal rate of substitution between any two goods equals the ratio of the prices of those goods (the equi-marginal principle).
+
+
+### Revealed preference
+
+Revealed preference theory addresses the problem of how to observe ordinal preference relations in the real world. The challenge of revealed preference theory lies in part in determining what goods bundles were foregone, on the basis of them being less liked, when individuals are observed choosing particular bundles of goods.
+
+
+## Necessary conditions for existence of ordinal utility function
+
+Some conditions on {\displaystyle \preceq } are necessary to guarantee the existence of a representing function:
+
+* Transitivity: if {\displaystyle A\preceq B} and {\displaystyle B\preceq C} then {\displaystyle A\preceq C}.
+* Completeness: for all bundles {\displaystyle A,B\in X}: either {\displaystyle A\preceq B} or {\displaystyle B\preceq A} or both.
+ + Completeness also implies reflexivity: for every {\displaystyle A\in X}: {\displaystyle A\preceq A}.
+
+When these conditions are met and the set {\displaystyle X} is finite, it is easy to create a function {\displaystyle u} which represents {\displaystyle \prec } by just assigning an appropriate number to each element of {\displaystyle X}, as exemplified in the opening paragraph. The same is true when X is countably infinite. Moreover, it is possible to inductively construct a representing utility function whose values are in the range {\displaystyle (-1,1)}.
+
+When {\displaystyle X} is infinite, these conditions are insufficient. For example, lexicographic preferences are transitive and complete, but they cannot be represented by any utility function. The additional condition required is continuity.
+
+
+## Continuity
+
+A preference relation is called *continuous* if, whenever B is preferred to A, small deviations from B or A will not reverse the ordering between them. Formally, a preference relation on a set X is called continuous if it satisfies one of the following equivalent conditions:
+
+1. For every {\displaystyle A\in X}, the set {\displaystyle \{(A,B)|A\preceq B\}} is topologically closed in {\displaystyle X\times X} with the product topology (this definition requires {\displaystyle X} to be a topological space).
+2. For every sequence {\displaystyle (A\_{i},B\_{i})}, if for all *i* {\displaystyle A\_{i}\preceq B\_{i}} and {\displaystyle A\_{i}\to A} and {\displaystyle B\_{i}\to B}, then {\displaystyle A\preceq B}.
+3. For every {\displaystyle A,B\in X} such that {\displaystyle A\prec B}, there exists a ball around {\displaystyle A} and a ball around {\displaystyle B} such that, for every {\displaystyle a} in the ball around {\displaystyle A} and every {\displaystyle b} in the ball around {\displaystyle B}, {\displaystyle a\prec b} (this definition requires {\displaystyle X} to be a metric space).
+
+If a preference relation is represented by a continuous utility function, then it is clearly continuous. By the theorems of Debreu (1954), the opposite is also true:
+
+Note that the lexicographic preferences are not continuous. For example, {\displaystyle (5,0)\prec (5,1)}, but in every ball around (5,1) there are points with {\displaystyle x<5} and these points are inferior to {\displaystyle (5,0)}. This is in accordance with the fact, stated above, that these preferences cannot be represented by a utility function.
+
+
+## Uniqueness
+
+For every utility function *v*, there is a unique preference relation represented by *v*. However, the opposite is not true: a preference relation may be represented by many different utility functions. The same preferences could be expressed as *any* utility function that is a monotonically increasing transformation of *v*. E.g., if
+
+where {\displaystyle f:\mathbb {R} \to \mathbb {R} } is *any* monotonically increasing function, then the functions *v* and *v* give rise to identical indifference curve mappings.
+
+This equivalence is succinctly described in the following way:
+
+In contrast, a cardinal utility function is unique up to increasing affine transformation. Every affine transformation is monotone; hence, if two functions are cardinally equivalent they are also ordinally equivalent, but not vice versa.
+
+
+## Monotonicity
+
+Suppose, from now on, that the set {\displaystyle X} is the set of all non-negative real two-dimensional vectors. So an element of {\displaystyle X} is a pair {\displaystyle (x,y)} that represents the amounts consumed from two products, e.g., apples and bananas.
+
+Then under certain circumstances a preference relation {\displaystyle \preceq } is represented by a utility function {\displaystyle v(x,y)}.
+
+Suppose the preference relation is *monotonically increasing*, which means that "more is always better":
+
+Then, both partial derivatives, if they exist, of *v* are positive. In short:
+
+
+## Marginal rate of substitution
+
+Suppose a person has a bundle {\displaystyle (x\_{0},y\_{0})} and claims that he is indifferent between this bundle and the bundle {\displaystyle (x\_{0}-\lambda \cdot \delta ,y\_{0}+\delta )}. This means that he is willing to give {\displaystyle \lambda \cdot \delta } units of x to get {\displaystyle \delta } units of y. If this ratio is kept as {\displaystyle \delta \to 0}, we say that {\displaystyle \lambda } is the *marginal rate of substitution (MRS)* between *x* and *y* at the point {\displaystyle (x\_{0},y\_{0})}.⁸²
+
+This definition of the MRS is based only on the ordinal preference relation – it does not depend on a numeric utility function. If the preference relation is represented by a utility function and the function is differentiable, then the MRS can be calculated from the derivatives of that function:
+
+For example, if the preference relation is represented by {\displaystyle v(x,y)=x^{a}\cdot y^{b}} then {\displaystyle MRS={\frac {a\cdot x^{a-1}\cdot y^{b}}{b\cdot y^{b-1}\cdot x^{a}}}={\frac {ay}{bx}}}. The MRS is the same for the function {\displaystyle v(x,y)=a\cdot \log {x}+b\cdot \log {y}}. This is not a coincidence as these two functions represent the same preference relation – each one is an increasing monotone transformation of the other.
+
+In general, the MRS may be different at different points {\displaystyle (x\_{0},y\_{0})}. For example, it is possible that at {\displaystyle (9,1)} the MRS is low because the person has a lot of *x* and only one *y*, but at {\displaystyle (9,9)} or {\displaystyle (1,1)} the MRS is higher. Some special cases are described below.
+
+
+## Linearity
+
+When the MRS of a certain preference relation does not depend on the bundle, i.e., the MRS is the same for all {\displaystyle (x\_{0},y\_{0})}, the indifference curves are linear and of the form:
+
+and the preference relation can be represented by a linear function:
+
+(Of course, the same relation can be represented by many other non-linear functions, such as {\displaystyle {\sqrt {x+\lambda y}}} or {\displaystyle (x+\lambda y)^{2}}, but the linear function is simplest.)⁸⁵
+
+
+## Quasilinearity
+
+When the MRS depends on {\displaystyle y\_{0}} but not on {\displaystyle x\_{0}}, the preference relation can be represented by a quasilinear utility function, of the form
+
+where {\displaystyle v\_{Y}} is a certain monotonically increasing function. Because the MRS is a function {\displaystyle \lambda (y)}, a possible function {\displaystyle v\_{Y}} can be calculated as an integral of {\displaystyle \lambda (y)}:⁸⁷
+
+In this case, all the indifference curves are parallel – they are horizontal transfers of each other.
+
+
+## Additivity with two goods
+
+A more general type of utility function is an additive function:
+
+There are several ways to check whether given preferences are representable by an additive utility function.
+
+
+### Double cancellation property
+
+If the preferences are additive then a simple arithmetic calculation shows that
+
+so this "double-cancellation" property is a necessary condition for additivity.
+
+Debreu (1960) showed that this property is also sufficient: i.e., if a preference relation satisfies the double-cancellation property then it can be represented by an additive utility function.
+
+
+### Corresponding tradeoffs property
+
+If the preferences are represented by an additive function, then a simple arithmetic calculation shows that
+
+so this "corresponding tradeoffs" property is a necessary condition for additivity.
+This condition is also sufficient.⁹¹
+
+
+## Additivity with three or more goods
+
+When there are three or more commodities, the condition for the additivity of the utility function is surprisingly *simpler* than for two commodities. This is an outcome of Theorem 3 of Debreu (1960). The condition required for additivity is **preferential independence**.¹⁰⁴
+
+A subset A of commodities is said to be *preferentially independent* of a subset B of commodities, if the preference relation in subset A, given constant values for subset B, is independent of these constant values. For example, suppose there are three commodities: *x* *y* and *z*. The subset {*x*,*y*} is preferentially-independent of the subset {*z*}, if for all {\displaystyle x\_{i},y\_{i},z,z'}:
+
+In this case, we can simply say that:
+
+Preferential independence makes sense in case of independent goods. For example, the preferences between bundles of apples and bananas are probably independent of the number of shoes and socks that an agent has, and vice versa.
+
+By Debreu's theorem, if all subsets of commodities are preferentially independent of their complements, then the preference relation can be represented by an additive value function. Here we provide an intuitive explanation of this result by showing how such an additive value function can be constructed. The proof assumes three commodities: *x*, *y*, *z*. We show how to define three points for each of the three value functions {\displaystyle v\_{x},v\_{y},v\_{z}}: the 0 point, the 1 point and the 2 point. Other points can be calculated in a similar way, and then continuity can be used to conclude that the functions are well-defined in their entire range.
+
+**0 point**: choose arbitrary {\displaystyle x\_{0},y\_{0},z\_{0}} and assign them as the zero of the value function, i.e.:
+
+**1 point**: choose arbitrary {\displaystyle x\_{1}>x\_{0}} such that {\displaystyle (x\_{1},y\_{0},z\_{0})\succ (x\_{0},y\_{0},z\_{0})}. Set it as the unit of value, i.e.:
+
+Choose {\displaystyle y\_{1}} and {\displaystyle z\_{1}} such that the following indifference relations hold:
+
+This indifference serves to scale the units of *y* and *z* to match those of *x*. The value in these three points should be 1, so we assign
+
+**2 point**: Now we use the preferential-independence assumption. The relation between {\displaystyle (x\_{1},y\_{0})} and {\displaystyle (x\_{0},y\_{1})} is independent of *z*, and similarly the relation between {\displaystyle (y\_{1},z\_{0})} and {\displaystyle (y\_{0},z\_{1})} is independent of *x* and the relation between {\displaystyle (z\_{1},x\_{0})} and {\displaystyle (z\_{0},x\_{1})} is independent of *y*. Hence
+
+This is useful because it means that the function *v* can have the same value – 2 – in these three points. Select {\displaystyle x\_{2},y\_{2},z\_{2}} such that
+
+and assign
+
+**3 point**: To show that our assignments so far are consistent, we must show that all points that receive a total value of 3 are indifference points. Here, again, the preferential independence assumption is used, since the relation between {\displaystyle (x\_{2},y\_{0})} and {\displaystyle (x\_{1},y\_{1})} is independent of *z* (and similarly for the other pairs); hence
+
+and similarly for the other pairs. Hence, the 3 point is defined consistently.
+
+We can continue like this by induction and define the per-commodity functions in all integer points, then use continuity to define it in all real points.
+
+An implicit assumption in point 1 of the above proof is that all three commodities are *essential* or *preference relevant*.⁷ This means that there exists a bundle such that, if the amount of a certain commodity is increased, the new bundle is strictly better.
+
+The proof for more than 3 commodities is similar. In fact, we do not have to check that all subsets of points are preferentially independent; it is sufficient to check a linear number of pairs of commodities. E.g., if there are {\displaystyle m} different commodities, {\displaystyle j=1,...,m}, then it is sufficient to check that for all {\displaystyle j=1,...,m-1}, the two commodities {\displaystyle \{x\_{j},x\_{j+1}\}} are preferentially independent of the other {\displaystyle m-2} commodities.¹¹⁵
+
+
+### Uniqueness of additive representation
+
+An additive preference relation can be represented by many different additive utility functions. However, all these functions are similar: they are not only increasing monotone transformations of each other (as are all utility functions representing the same relation); they are increasing linear transformations of each other.⁹ In short,
+
+
+## Constructing additive and quadratic utility functions from ordinal data
+
+The mathematical foundations of most common types of utility functions — quadratic and additive — laid down by Gérard Debreu
+enabled Andranik Tangian to develop methods for their construction from purely ordinal data.
+In particular, additive and quadratic utility functions in {\displaystyle n} variables can be constructed from interviews of decision makers, where questions are aimed at tracing totally {\displaystyle n} 2D-indifference curves in {\displaystyle n-1} coordinate planes without referring to cardinal utility estimates.
+
+
+## Comparison between ordinal and cardinal utility functions
+
+The following table compares the two types of utility functions common in economics:
+
+| Level of measurement | Represents preferences on | Unique up to | Existence proved by | Mostly used in |
+| --- | --- | --- | --- | --- |
+| Ordinal utility | Ordinal scale | Sure outcomes | Increasing monotone transformation | Debreu (1954) | Consumer theory under certainty |
+| Cardinal utility | Interval scale | Random outcomes (lotteries) | Increasing monotone linear transformation | Von Neumann-Morgenstern (1947) | Game theory, choice under uncertainty |
+

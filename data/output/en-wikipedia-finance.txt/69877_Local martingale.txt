@@ -1,0 +1,82 @@
+Local martingale
+
+
+# Local martingale
+
+
+
+In mathematics, a **local martingale** is a type of stochastic process, satisfying the localized version of the martingale property. Every martingale is a local martingale; every bounded local martingale is a martingale; in particular, every local martingale that is bounded from below is a supermartingale, and every local martingale that is bounded from above is a submartingale; however, a local martingale is not in general a martingale, because its expectation can be distorted by large values of small probability. In particular, a driftless diffusion process is a local martingale, but not necessarily a martingale.
+
+Local martingales are essential in stochastic analysis (see Itô calculus, semimartingale, and Girsanov theorem).
+
+
+## Definition
+
+Let {\displaystyle (\Omega ,F,P)} be a probability space; let {\displaystyle F\_{\*}=\{F\_{t}\mid t\geq 0\}} be a filtration of {\displaystyle F}; let {\displaystyle X\colon [0,\infty )\times \Omega \rightarrow S} be an {\displaystyle F\_{\*}}-adapted stochastic process on the set {\displaystyle S}. Then {\displaystyle X} is called an {\displaystyle F\_{\*}}-**local martingale** if there exists a sequence of {\displaystyle F\_{\*}}-stopping times {\displaystyle \tau \_{k}\colon \Omega \to [0,\infty )} such that
+
+* the {\displaystyle \tau \_{k}} are almost surely increasing: {\displaystyle P\left\{\tau \_{k}<\tau \_{k+1}\right\}=1};
+* the {\displaystyle \tau \_{k}} diverge almost surely: {\displaystyle P\left\{\lim \_{k\to \infty }\tau \_{k}=\infty \right\}=1};
+* the stopped process {\displaystyle X\_{t}^{\tau \_{k}}:=X\_{\min\{t,\tau \_{k}\}}} is an {\displaystyle F\_{\*}}-martingale for every {\displaystyle k}.
+
+## Examples
+
+
+### Example 1
+
+Let *W*ₜ be the Wiener process and *T* = min{ *t* : *W*ₜ = −1 } the time of first hit of −1. The stopped process *W*ₘᵢₙ{ ₜ, T } is a martingale. Its expectation is 0 at all times; nevertheless, its limit (as *t* → ∞) is equal to −1 almost surely (a kind of gambler's ruin). A time change leads to a process
+
+The process {\displaystyle X\_{t}} is continuous almost surely; nevertheless, its expectation is discontinuous,
+
+This process is not a martingale. However, it is a local martingale. A localizing sequence may be chosen as {\displaystyle \tau \_{k}=\min\{t:X\_{t}=k\}} if there is such *t*, otherwise {\displaystyle \tau \_{k}=k}. This sequence diverges almost surely, since {\displaystyle \tau \_{k}=k} for all *k* large enough (namely, for all *k* that exceed the maximal value of the process *X*). The process stopped at τₖ is a martingale.
+
+
+### Example 2
+
+Let *W*ₜ be the Wiener process and *ƒ* a measurable function such that {\displaystyle \operatorname {E} |f(W\_{1})|<\infty .} Then the following process is a martingale:
+
+where
+
+The Dirac delta function {\displaystyle \delta } (strictly speaking, not a function), being used in place of {\displaystyle f,} leads to a process defined informally as {\displaystyle Y\_{t}=\operatorname {E} (\delta (W\_{1})\mid F\_{t})} and formally as
+
+where
+
+The process {\displaystyle Y\_{t}} is continuous almost surely (since {\displaystyle W\_{1}\neq 0} almost surely), nevertheless, its expectation is discontinuous,
+
+This process is not a martingale. However, it is a local martingale. A localizing sequence may be chosen as {\displaystyle \tau \_{k}=\min\{t:Y\_{t}=k\}.}
+
+
+### Example 3
+
+Let {\displaystyle Z\_{t}} be the complex-valued Wiener process, and
+
+The process {\displaystyle X\_{t}} is continuous almost surely (since {\displaystyle Z\_{t}} does not hit 1, almost surely), and is a local martingale, since the function {\displaystyle u\mapsto \ln |u-1|} is harmonic (on the complex plane without the point 1). A localizing sequence may be chosen as {\displaystyle \tau \_{k}=\min\{t:X\_{t}=-k\}.} Nevertheless, the expectation of this process is non-constant; moreover,
+
+which can be deduced from the fact that the mean value of {\displaystyle \ln |u-1|} over the circle {\displaystyle |u|=r} tends to infinity as {\displaystyle r\to \infty }. (In fact, it is equal to {\displaystyle \ln r} for *r* ≥ 1 but to 0 for *r* ≤ 1).
+
+
+## Martingales via local martingales
+
+Let {\displaystyle M\_{t}} be a local martingale. In order to prove that it is a martingale it is sufficient to prove that {\displaystyle M\_{t}^{\tau \_{k}}\to M\_{t}} in L¹ (as {\displaystyle k\to \infty }) for every *t*, that is, {\displaystyle \operatorname {E} |M\_{t}^{\tau \_{k}}-M\_{t}|\to 0;} here {\displaystyle M\_{t}^{\tau \_{k}}=M\_{t\wedge \tau \_{k}}} is the stopped process. The given relation {\displaystyle \tau \_{k}\to \infty } implies that {\displaystyle M\_{t}^{\tau \_{k}}\to M\_{t}} almost surely. The dominated convergence theorem ensures the convergence in *L*¹ provided that
+
+Thus, Condition (\*) is sufficient for a local martingale {\displaystyle M\_{t}} being a martingale. A stronger condition
+
+is also sufficient.
+
+*Caution.* The weaker condition
+
+is not sufficient. Moreover, the condition
+
+is still not sufficient; for a counterexample see Example 3 above.
+
+A special case:
+
+where {\displaystyle W\_{t}} is the Wiener process, and {\displaystyle f:[0,\infty )\times \mathbb {R} \to \mathbb {R} } is twice continuously differentiable. The process {\displaystyle M\_{t}} is a local martingale if and only if *f* satisfies the PDE
+
+However, this PDE itself does not ensure that {\displaystyle M\_{t}} is a martingale. In order to apply (\*\*) the following condition on *f* is sufficient: for every {\displaystyle \varepsilon >0} and *t* there exists {\displaystyle C=C(\varepsilon ,t)} such that
+
+for all {\displaystyle s\in [0,t]} and {\displaystyle x\in \mathbb {R} .}
+
+
+## Technical details
+
+

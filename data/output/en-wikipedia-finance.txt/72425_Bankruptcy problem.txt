@@ -1,0 +1,89 @@
+Bankruptcy problem
+
+
+# Bankruptcy problem
+
+
+
+A **bankruptcy problem**, also called a **claims problem**, is a problem of distributing a homogeneous divisible good (such as money) among people with different claims. The focus is on the case where the amount is insufficient to satisfy all the claims.
+
+The canonical application is a bankrupt firm that is to be liquidated. The firm owes different amounts of money to different creditors, but the total worth of the company's assets is smaller than its total debt. The problem is how to divide the scarce existing money among the creditors.
+
+Another application would be the division of an estate amongst several heirs, particularly when the estate cannot meet all the deceased's commitments.
+
+A third application is *tax assessment*. One can consider the claimants as taxpayers, the claims as the incomes, and the endowment as the total after-tax income. Determining the allocation of total after-tax income is equivalent to determining the allocation of tax payments.
+
+
+## Definitions
+
+The amount available to divide is denoted by *{\displaystyle E}* (=Estate or Endowment). There are *n* *claimants*. Each claimant *i* has a claim denoted by *{\displaystyle c\_{i}}*.
+
+It is assumed that {\displaystyle \sum \_{i=1}^{n}c\_{i}\geq E}, that is, the total claims are (weakly) larger than the estate.
+
+A *division rule* is a function that maps a problem instance {\displaystyle (c\_{1},\ldots ,c\_{n},E)} to a vector {\displaystyle (x\_{1},\ldots ,x\_{n})} such that {\displaystyle \sum \_{i=1}^{n}x\_{i}=E} and {\displaystyle 0\leq x\_{i}\leq c\_{i}} for all *i*. That is: each claimant receives at most its claim, and the sum of allocations is exactly the estate *E*.
+
+
+### Generalizations
+
+There are generalized variants in which the total claims might be smaller than the estate. In these generalized variants, {\displaystyle \sum \_{i=1}^{n}c\_{i}\geq E} is not assumed and {\displaystyle 0\leq x\_{i}\leq c\_{i}} is not required.
+
+Another generalization, inspired by realistic bankruptcy problems, is to add an exogeneous priority ordering among the claimants, that may be different even for claimants with identical claims. This problem is called a *claims problem with priorities*. Another variant is called a *claims problem with weights.*
+
+
+## Rules
+
+There are various rules for solving bankruptcy problems in practice.
+
+* The **proportional rule** divides the estate proportionally to each agent's claim. Formally, each claimant *i* receives {\displaystyle r\cdot c\_{i}}, where *r* is a constant chosen such that {\displaystyle \sum \_{i=1}^{n}r\cdot c\_{i}=E}. We denote the outcome of the proportional rule by {\displaystyle PROP(c\_{1},\ldots ,c\_{n};E)}.
+* There is a variant called **truncated-claims proportional rule**, in which each claim larger than *E* is truncated to *E*, and then the proportional rule is activated. That is, it equals {\displaystyle PROP(c\_{1}',\ldots ,c\_{n}',E)}, where {\displaystyle c'\_{i}:=\min(c\_{i},E)}.
+* The **adjusted proportional rule** first gives, to each agent *i*, his *minimal right*, which is the amount not claimed by the other agents. Formally, {\displaystyle m\_{i}:=\max(0,E-\sum \_{j\neq i}c\_{j})}. Note that {\displaystyle \sum \_{i=1}^{n}c\_{i}\geq E} implies {\displaystyle m\_{i}\leq c\_{i}}. Then, it revises the claim of agent *i* to {\displaystyle c'\_{i}:=c\_{i}-m\_{i}}, and the estate to {\displaystyle E':=E-\sum \_{i}m\_{i}}. Note that {\displaystyle E'\geq 0}. Finally, it activates the truncated-claims proportional rule, that is, it returns {\displaystyle TPROP(c\_{1},\ldots ,c\_{n},E')=PROP(c\_{1}'',\ldots ,c\_{n}'',E')}, where {\displaystyle c''\_{i}:=\min(c'\_{i},E')}. With two claimants, the revised claims are always equal, so the remainder is divided equally. With three or more claimants, the revised claims may be different.
+* The **constrained equal awards** rule divides the estate equally among the agents, ensuring that nobody gets more than their claim. Formally, each claimant *i* receives {\displaystyle \min(c\_{i},r)}, where *r* is a constant chosen such that {\displaystyle \sum \_{i=1}^{n}\min(c\_{i},r)=E}. We denote the outcome of this rule by {\displaystyle CEA(c\_{1},\ldots ,c\_{n};E)}. In the context of taxation, it is known as **leveling tax**.
+* The **constrained equal losses rule** divides equally the difference between the aggregate claim and the estate, ensuring that no agent ends up with a negative transfer. Formally, each claimant *i* receives {\displaystyle \max(0,c\_{i}-r)}, where *r* is chosen such that {\displaystyle \sum \_{i=1}^{n}\max(0,c\_{i}-r)=E}. This rule was discussed by Maimonides. In the taxation context, it is known as **poll tax**.
+* The **contested garment rule** (also called the **Talmud rule**) uses the CEA rule on half the claims if the estate is smaller than half the total claim; otherwise, it gives each claimant half their claims, and applies the CEL rule. Formally, if {\displaystyle 2E<\sum \_{i=1}^{n}c\_{i}} then {\displaystyle CG(c\_{1},\ldots ,c\_{n};E)=CEA(c\_{1}/2,\ldots ,c\_{n}/2;E)}; Otherwise, {\displaystyle CG(c\_{1},\ldots ,c\_{n};E)=c/2+CEL(c\_{1}/2,\ldots ,c\_{n}/2;E-\sum \_{j}(c\_{j}/2))}.
+* The following rule is attributed to **Piniles.** If the sum of claims is larger than 2*E*, then it applies the CEA rule on half the claims, that is, it returns {\displaystyle CEA(c\_{1}/2,\ldots ,c\_{n}/2;E)} ; Otherwise, it gives each agent half its claim and then applies CEA on the remainder, that is, it returns {\displaystyle (c\_{1}/2,\ldots ,c\_{n}/2)+CEA(c\_{1}/2,\ldots ,c\_{n}/2;E-\sum \_{j=1}^{n}c\_{j}/2)} .
+* The **constrained egalitarian** rule works as follows. If the sum of claims is larger than 2*E*, then it runs the CEA rule on half the claims, giving each claimant *i* {\displaystyle \min(c\_{i}/2,r)}. Otherwise, it gives each agent i {\displaystyle \max(c\_{i}/2,\min(c\_{i},r))}, In both cases, *r* is a constant chosen such that the sum of allocations equals *E*.
+* The **random arrival rule** works as follows. Suppose claimants arrive one by one. Each claimant receives all his claim, up to the available amount. The rule returns the average of resulting allocation vectors when the arrival order is chosen uniformly at random. Formally:
+
+{\displaystyle RA(c\_{1},\ldots ,c\_{n};E)={\frac {1}{n!}}\sum \_{\pi \in {\text{permutations}}}\min(c\_{i},\max(0,E-\sum \_{\pi (j)<\pi (i)}c\_{j}))}.
+
+
+## Bankruptcy rules and cooperative games
+
+
+### Bargaining games
+
+It is possible to associate each bankruptcy problem with a cooperative bargaining problem, and use a bargaining rule to solve the bankruptcy problem. Then:
+
+* The Nash bargaining solution corresponds to the constrained equal awards rule;
+* The lexicographic-egalitarian bargaining solution also corresponds to the constrained equal awards rule;
+* The weighted Nash bargaining solution, with weights equal to the claims, corresponds to the proportional rule;
+* The Kalai-Smorodinsky bargaining solution corresponds to the truncated-claims proportional rule;
+* The extended-equal-losses bargaining solution corresponds to the truncated-claims constrained-equal-losses rule.
+
+### Coalitional games
+
+It is possible to associate each bankruptcy problem with a cooperative game in which the value of each coalition is its *minimal right* - the amount that this coalition can ensure itself if all other claimants get their full claim (that is, the amount this coalition can get without going to court). Formally, the value of each subset *S* of claimants is {\displaystyle v(S):=\max \left(0,~E-\sum \_{j\not \in S}c\_{j}\right)}. The resulting game is convex, so its core is non-empty. One can use a solution concept for cooperative games, to solve the corresponding bankruptcy problem. Every division rule that depends only on the truncated claims corresponds to a cooperative-game solution. In particular:
+
+* The Shapley value corresponds to the random-arrival rule;
+* The prenucleolus corresponds to the Talmud rule;
+* The Dutta-Ray solution corresponds to the constrained equal awards rule;
+* The Tau-value solution corresponds to the adjusted proportional rule.
+
+An alternative way to associate a claims problem with a cooperative game is its *maximal right* - the amount that this coalition can ensure itself if all other claimants drop their claims: {\displaystyle v(S):=\min \left(E,\sum \_{j\in S}c\_{j}\right)}.
+
+
+## Properties of division rules
+
+In most settings, division rules are often required to satisfy the following basic properties:
+
+* **Feasibility**: the sum of allocations is at most the total estate, {\displaystyle \sum \_{i=1}^{n}x\_{i}\leq E}.
+* **Efficiency**: stronger than feasibility: the sum of allocations equals the total estate, {\displaystyle \sum \_{i=1}^{n}x\_{i}=E}.
+* **Non-negativity**: each claimant should get a non-negative amount, {\displaystyle \forall i:x\_{i}\geq 0}.
+* **Claims-boundedness**: each claimant should get at most his claim, {\displaystyle \forall i:x\_{i}\leq c\_{i}}.
+* **Minimal-rights**: stronger than non-negativity: each claimant should get at least his minimal right, which is what's left if all other agents get their full claims: {\displaystyle \forall i:x\_{i}\geq m\_{i},{\text{ where }}m\_{i}:=\max(0,E-\sum \_{j\neq i}c\_{j})}.
+ + Note that efficiency, non-negativity and claims-boundedness together imply minimal-rights.
+* **Equal treatment of equals (ETE)**: two claimants with identical claims should get identical allocations: {\displaystyle c\_{i}=c\_{j}\implies x\_{i}=x\_{j}}. In generalized problems of *claims with priorities*, equal treatment of equals is required to hold for agents in each priority class, but not for agents in different priority classes.
+* **Equal treatment of equal groups**: stronger than ETE: two subsets of claimants with the same total claim should get the same total allocation.
+* Anonymity: stronger than ETE: if we permute the vector of claims, then the vector of allocations is permuted accordingly.
+* **Order-preservation**: stronger than ETE: agents with weakly-higher claims should get weakly-more and should lose weakly-more: {\displaystyle c\_{i}\geq c\_{j}\implies (x\_{i}\geq x\_{j}{\text{ and }}c\_{i}-x\_{i}\geq c\_{j}-x\_{j})}.
+* **Group order preservation**: stronger than both group-ETE and order preservation: it requires order-preservation among every two subsets of agents.

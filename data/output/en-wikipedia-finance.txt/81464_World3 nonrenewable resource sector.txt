@@ -1,0 +1,71 @@
+World3 nonrenewable resource sector
+
+
+# World3 nonrenewable resource sector
+
+
+
+The **World3 nonrenewable resource sector** is the portion of the World3 model that simulates nonrenewable resources. The World3 model is a simulation of human interaction with the environment that was designed in the 1970s to predict population and living standards over the next 100 years. The nonrenewable resource sector of the World3 model was used to calculate the cost and usage rates of nonrenewable resources. In the context of this model, nonrenewable resources are resources that there are a finite amount of on Earth, such as iron ore, oil, or coal. This model assumes that regardless of how much money is spent on extraction, there is a finite limit for the amount of nonrenewable resources that can be extracted.³⁷⁷
+
+
+## Overview
+
+The model combines all possible nonrenewable resources into one aggregate variable, nonrenewable\_resources.³⁸⁷ This combines both energy resources and non-energy resources. Examples of nonrenewable energy resources would include oil and coal. Examples of material nonrenewable resources would include aluminum and zinc. This assumption allows costless substitution between any nonrenewable resource. The model ignores differences between discovered resources and undiscovered resources.³⁸¹
+
+The model assumes that as greater percentages of total nonrenewable resources are used, the amount of effort used to extract the nonrenewable resources will increase.
+The way this cost is done is as a variable fraction\_of\_capital\_allocated\_to\_obtaining\_resources, or abbreviated fcaor.³⁹³–⁸ The way this variable is used is in the equation that calculates industrial output. Basically, it works as `effective_output = industrial_capital*other_factors*(1-fcaor)`. This causes the amount of resources expended to depend on the amount of industrial capital, and not on the amount of resources consumed.³⁹⁰–³
+
+The consumption of nonrenewable resources is determined by a nonlinear function of the per capita industrial output. The higher the per capita industrial output, the higher the nonrenewable resource consumption.
+
+
+## Cost of obtaining nonrenewable resources
+
+The fraction of capital allocated to obtaining resources is dependent only on the nonrenewable\_resource\_fraction\_remaining, or abbreviated nrfr. This variable is the current amount of non-renewable resources divided by the initial amount of non-renewable resources available. As such nrfr starts out as 1.0 and decreases as World3 runs. Fraction of capital allocated to obtaining resources is dependent on nrfr as interpolated values from the following table:
+
+| NRFR | FCAOR³⁹⁴ |
+| --- | --- |
+| 0.0 | 1.0 |
+| 0.1 | 0.9 |
+| 0.2 | 0.7 |
+| 0.3 | 0.5 |
+| 0.4 | 0.2 |
+| 0.5 | 0.1 |
+| 0.6 | 0.05 |
+| 0.7 | 0.05 |
+| 0.8 | 0.05 |
+| 0.9 | 0.05 |
+| 1.0 | 0.05 |
+
+Qualitatively, this basically states that the relative amount of non-renewable resources decreases, the amount capital required to extract the resources increases. To more deeply examine this table requires examining the equation that it comes from, `effective_output = industrial_capital*other_factors*(1-fcaor)` So, if industrial capital and the other factors (described in the capital sector) are the same, then 1 unit of the effective capital when nrfr is 1.0 the effective output is 0.95 (= 1.0 \* ( 1 - 0.05)). So, when nrfr is 0.5, the effective output is 0.90 (= 1.0 \* (1 - 0.10)). Another useful way to look at this equation is to reverse it and see how much effective capital is required to get 1 unit of effective output (i.e. effective\_output / (1 - fcaor) = effective\_capital). So, when nrfr is 1.0, the effective capital required for 1 unit of effective output is 1.053 (=1.0/(1-0.05)), and when *nrfr* is 0.3, the effective capital required is 2 (=1.0/(1-0.5)). Lastly, looking at the relative cost is required for obtaining the resources. This is based on the fact that it requires 1/19th of a unit of effective capital extra when the *nrfr* is 1.0. So, (effective capital required - 1.0) / (1 / 19) will give the relative cost of obtaining the resources compared to the cost of obtaining them when *nrfr* was 1.0. For example, when *nrfr* is 0.3, the effective capital required is 2.0, and 1.0 of that is for obtaining resources. So, the cost of obtaining the resources is (2.0 - 1.0) / ( 1 / 19) or 1.0\*19 or 19 times the cost when *nrfr* was 1.0. Here is a table showing these calculations for all the values:
+
+| NRFR | FCAOR³⁹⁴ | Required Capital | Relative Resource Cost |
+| --- | --- | --- | --- |
+| 0.0 | 1.0 | ∞ | ∞ |
+| 0.1 | 0.9 | 10.0 | 171.0 |
+| 0.2 | 0.7 | 3.333 | 44.333 |
+| 0.3 | 0.5 | 2.0 | 19.0 |
+| 0.4 | 0.2 | 1.250 | 4.750 |
+| 0.5 | 0.1 | 1.111 | 2.111 |
+| 0.6 | 0.05 | 1.053 | 1.0 |
+| 0.7 | 0.05 | 1.053 | 1.0 |
+| 0.8 | 0.05 | 1.053 | 1.0 |
+| 0.9 | 0.05 | 1.053 | 1.0 |
+| 1.0 | 0.05 | 1.053 | 1.0 |
+
+
+## Consumption of Nonrenewable Resources
+
+The World3 model does not directly link industrial output to resource utilization. Instead, the industrial output per capita is calculated, which is then used to determine resource usage per capita. This is then multiplied by the total population to determine the total resource consumption. Per capita resource utilization multiplier (PCRUM) and Industrial Output per Capita (IOPC)
+
+| IOPC | PCRUM³⁹⁰ | PCRUM/IOPC |
+| --- | --- | --- |
+| 0.0 | 0.0 | NA |
+| 200 | 0.85 | 0.00425 |
+| 400 | 2.6 | 0.0065 |
+| 600 | 4.4 | 0.007333 |
+| 800 | 5.4 | 0.00675 |
+| 1000 | 6.2 | 0.0062 |
+| 1200 | 6.8 | 0.005666 |
+| 1400 | 7 | 0.005 |
+| 1600 | 7 | 0.004375 |
+

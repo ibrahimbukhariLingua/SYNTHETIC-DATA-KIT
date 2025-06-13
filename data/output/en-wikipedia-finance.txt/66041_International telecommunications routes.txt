@@ -1,0 +1,64 @@
+International telecommunications routes
+
+
+# International telecommunications routes
+
+
+
+Telephone companies in different countries use a variety of **international telecoms routes** to send traffic to each other. These can be legal (or 'white') routes or other arrangements the industry calls *grey routes*, *special carrier arrangements*, *settlement by-pass* and other euphemisms.
+
+
+## Settlement routes
+
+Before the telecoms industry deregulation that started in the 1980s, most telephone companies were owned or regulated by their governments: even countries with many domestic phone companies usually had a regulated international carrier. These carriers used **settlement routes** to handle traffic between them.
+
+For example, BT and the Australian carrier Telstra send each other traffic over a satellite link or by submarine communications cable. Telstra terminate calls to Australians from British callers, while BT terminate calls in the UK from Australians. At the end of the year Telstra and BT add up the traffic, measured in minutes, they have sent each other and settle net: if BT had sent more minutes to Telstra than vice versa, BT would pay at the *settlement rate* for the excess minutes. Settlement rates can be in the range of $0.10 - $2 per minute, depending on the countries involved. If the traffic balanced, neither company pays the other anything.
+
+The amount of money involved in the settlement rate system is considerable. In 2003, American telephone companies made payments of three billion dollars to telephone companies and governments across the world.
+
+The settlement route arrangement is also known as the **accounting rate system**. The accounting rate is the sum of the two settlement rates. The *collection rate* is what the subscriber pays.
+
+
+## Wholesale market
+
+Telecoms carriers can obtain traffic to make up a shortfall, or send traffic on other routes, by trading with other carriers in the wholesale or **carrier-to-carrier market**. A carrier needs a point of presence where they can interconnect with other carriers, usually in a carrier hotel such as 60 Hudson Street in New York or Telehouse in London by using a fiber ring to link their switches. This is an easy way of doing business, but it does mean that the other carriers in the market have partial visibility of what each other is doing.
+
+**Minutes exchanges** allow carriers to buy and sell termination anonymously at a contracted price and quality. The anonymity is important, as minutes exchanges are used daily by PTT's and Tier One carriers to manage their commitment deals.
+
+Prices in the wholesale market are far lower than consumer prices but can and do change on a daily or weekly basis. A carrier will have a least cost routing function to manage its trading on the wholesale market. The quality of routes in the wholesale market can also vary, as the traffic may be going on a grey route.
+
+
+## Grey routes
+
+Grey routes are arrangements where at one point in the route of a call a black (=illegal) action is taken so that even though both sides of the call look white (=legitimate), the call is actually grey. Regulators often set different tariffs for domestically and internationally originating calls and thus there is a financial incentive to take an illegal action to profit from this tariff difference. On the sending side it looks like an international call, but on the receiving side it looks like a domestic call and settlement is done as if it was a local call.
+
+**Re-origination** or Refiling is the name given to the practice of substituting a new calling line identity (CLI) for the call at some point in its journey. Re-origination is made possible by exploiting the functionality of the SS7 signaling system, which allows a great deal of call information to be transmitted. In principle the receiving telecoms company can inspect the CLI to see where the call has come from and charge accordingly. In practice, switches are able to remove or change the CLI, thus disguising the origin of the call.
+
+This is of course not allowed by the local regulator and also the receiving carriers prefers the higher international rates, but since the black action is done in a switch owned by a person or company who is willing to break the law, this is usually outside of the view of these parties and thus enforcement can be difficult. Grey routes can be prevented by good Fraud Management or by regulators or carriers opting to close the gap between the international and domestic tariffs. Tariffs are usually a maximum and thus sometimes carriers opt to lower the international rates to prevent grey routes.
+
+**Leaky PBX** is the name given to the practice of using a local PBX to leak calls from country A into the network in country B, disguising them as local calls. It receives the calls on its PBX in country A, sends them over a satellite link, dedicated telephone circuit or data link to country B, and sends the calls out into the public telephone network of country B through its PBX there.
+With a small satellite dish on the roofs of its offices in country A and B and a little capacity on a transponder, a company can become a small-scale international carrier.
+
+**Grey market Setup** is the terminology being used in country like India for the arrangement of termination of International Long Distance Calls over internet using leaky PBX to India. There grey market setups are popularly known as illegal International Long Distance (ILD) telephone exchange.
+
+
+## VoIP
+
+Voice calls can be compressed and packaged into voice-over-IP packets and sent over the public Internet or a more direct IP-based data link, thus by-passing the conventional telephone routes into a country.
+
+A carrier receives calls in country A, turns them into IP packets using an IP gateway device and sends them over an IP connection (public or dedicated) to another carrier or ISP in country B, which re-assembles the voice call and sends it out from a PBX. The cost is composed of the cost to convert the call, IP connectivity, convert the call back. This however can be less than the cost for conventional telephone routes.
+
+
+## Arbitrage (or tromboning)
+
+Arbitrage is routing traffic via an intermediate country to take advantage of the differences in settlement rates. If country B has much lower settlement rates with country C than with country A, it might be cheaper for country A to send its traffic for country B via country C. One of the first larger arbitrage routes was for traffic between Australia and the US, which was cheaper if sent via New Zealand and Canada. Arbitrage is and was practiced even before the spread of de-regulation.
+
+
+## Route quality
+
+The best quality is usually over 'bilaterals': high-capacity direct fiber-optic links between the former national telephone companies. The calls go straight to the far end company managing the national network. Routes to other licensed telecoms companies in de-regulated countries will usually have as high a quality as bilaterals. Satellite transmission adds a slight delay, which is noticeable even over transatlantic calls, though the call quality can be as good as a call over a fiber-optic cable.
+
+At the other end of the quality spectrum is a route using VoIP over the long-distance satellite link terminating in an ISP using a leaky PBX to terminate the calls.
+
+VoIP packets contain a lot of signaling overhead: to carry the 64k of data packet a conventional telecoms network transmits needs around 100k of bandwidth with VoIP. VoIP achieves lower bandwidth by using data compression techniques on the voice part of the data packet and this reduces the call quality.
+

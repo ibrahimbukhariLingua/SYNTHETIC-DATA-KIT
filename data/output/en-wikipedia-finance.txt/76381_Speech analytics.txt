@@ -1,0 +1,39 @@
+Speech analytics
+
+
+# Speech analytics
+
+
+
+**Speech analytics** is the process of analyzing recorded calls to gather customer information to improve communication and future interaction. The process is primarily used by customer contact centers to extract information buried in client interactions with an enterprise. Although speech analytics includes elements of automatic speech recognition, it is known for analyzing the topic being discussed, which is weighed against the emotional character of the speech and the amount and locations of speech versus non-speech during the interaction. Speech analytics in contact centers can be used to mine recorded customer interactions to surface the intelligence essential for building effective cost containment and customer service strategies. The technology can pinpoint cost drivers, trend analysis, identify strengths and weaknesses with processes and products, and help understand how the marketplace perceives offerings.
+
+
+## Definition
+
+Speech analytics provides a Complete analysis of recorded phone conversations between a company and its customers. It provides advanced functionality and valuable intelligence from customer calls. This information can be used to discover information relating to strategy, product, process, operational issues and contact center agent performance. In addition, speech analytics can automatically identify areas in which contact center agents may need additional training or coaching, and can automatically monitor the customer service provided on calls.
+
+The process can isolate the words and phrases used most frequently within a given time period, as well as indicate whether usage is trending up or down. This information is useful for supervisors, analysts, and others in an organization to spot changes in consumer behavior and take action to reduce call volumes—and increase customer satisfaction. It allows insight into a customer's thought process, which in turn creates an opportunity for companies to make adjustments.
+
+
+## Usability
+
+Speech analytics applications can spot spoken keywords or phrases, either as real-time alerts on live audio or as a post-processing step on recorded speech. This technique is also known as audio mining. Other uses include categorization of speech in the contact center environment to identify calls from unsatisfied customers.
+
+Measures such as Precision and recall, commonly used in the field of Information retrieval, are typical ways of quantifying the response of a speech analytics search system. Precision measures the proportion of search results that are relevant to the query. Recall measures the proportion of the total number of relevant items that were returned by the search results. Where a standardised test set has been used, measures such as precision and recall can be used to directly compare the search performance of different speech analytics systems.
+
+Making a meaningful comparison of the accuracy of different speech analytics systems can be difficult. The output of LVCSR systems can be scored against reference word-level transcriptions to produce a value for the word error rate (WER), but because phonetic systems use phones as the basic recognition unit, rather than words, comparisons using this measure cannot be made. When speech analytics systems are used to search for spoken words or phrases, what matters to the user is the accuracy of the search results that are returned. Because the impact of individual recognition errors on these search results can vary greatly, measures such as word error rate are not always helpful in determining overall search accuracy from the user perspective.
+
+According to the US Government Accountability Office, “data reliability refers to the accuracy and completeness of computer-processed data, given the uses they are intended for.” In the realm of Speech Recognition and Analytics, “completeness” is measured by the “detection rate”, and usually as accuracy goes up, the detection rate goes down.
+
+
+## Technology
+
+Speech analytics vendors use the "engine" of a 3rd party and others develop proprietary engines. The technology mainly uses three approaches. The phonetic approach is the fastest for processing, mostly because the size of the grammar is very small, with a phoneme as the basic recognition unit. There are only few tens of unique phonemes in most languages, and the output of this recognition is a stream (text) of phonemes, which can then be searched. Large-vocabulary continuous speech recognition (LVCSR, more commonly known as speech-to-text, full transcription or ASR - automatic speech recognition) uses a set of words (bi-grams, tri-grams etc.) as the basic unit. This approach requires hundreds of thousands of words to match the audio against. It can surface new business issues, the queries are much faster, and the accuracy is higher than the phonetic approach.
+
+Extended speech emotion recognition and prediction is based on three main classifiers: kNN, C4.5 and SVM RBF Kernel. This set achieves better performance than each basic classifier taken separately. It is compared with two other sets of classifiers: one-against-all (OAA) multiclass SVM with Hybrid kernels and the set of classifiers which consists of the following two basic classifiers: C5.0 and Neural Network. The proposed variant achieves better performance than the other two sets of classifiers.
+
+
+## Growth
+
+Market research indicates that speech analytics is projected to become a billion dollar industry by 2020 with North America having the largest market share. The growth rate is attributed to rising requirements for compliance and risk management as well as an increase in industry competition through market intelligence. The telecommunications, IT and outsourcing segments of the industry are considered to hold the largest market share with expected growth from the travel and hospitality segments.
+

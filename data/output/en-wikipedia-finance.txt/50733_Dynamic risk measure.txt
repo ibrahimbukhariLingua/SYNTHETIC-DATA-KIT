@@ -1,0 +1,50 @@
+Dynamic risk measure
+
+
+# Dynamic risk measure
+
+
+
+In financial mathematics, a **conditional risk measure** is a random variable of the financial risk (particularly the downside risk) as if measured at some point in the future. A risk measure can be thought of as a conditional risk measure on the trivial sigma algebra.
+
+A **dynamic risk measure** is a risk measure that deals with the question of how evaluations of risk at different times are related. It can be interpreted as a sequence of conditional risk measures.
+
+A different approach to dynamic risk measurement has been suggested by Novak.
+
+
+## Conditional risk measure
+
+Consider a portfolio's returns at some terminal time {\displaystyle T} as a random variable that is uniformly bounded, i.e., {\displaystyle X\in L^{\infty }\left({\mathcal {F}}\_{T}\right)} denotes the payoff of a portfolio. A mapping {\displaystyle \rho \_{t}:L^{\infty }\left({\mathcal {F}}\_{T}\right)\rightarrow L\_{t}^{\infty }=L^{\infty }\left({\mathcal {F}}\_{t}\right)} is a conditional risk measure if it has the following properties for random portfolio returns {\displaystyle X,Y\in L^{\infty }\left({\mathcal {F}}\_{T}\right)}:
+
+If it is a conditional convex risk measure then it will also have the property:
+
+A conditional coherent risk measure is a conditional convex risk measure that additionally satisfies:
+
+
+## Acceptance set
+
+The acceptance set at time {\displaystyle t} associated with a conditional risk measure is
+
+If you are given an acceptance set at time {\displaystyle t} then the corresponding conditional risk measure is
+
+where {\displaystyle {\text{ess}}\inf } is the essential infimum.
+
+
+## Regular property
+
+A conditional risk measure {\displaystyle \rho \_{t}} is said to be *regular* if for any {\displaystyle X\in L\_{T}^{\infty }} and {\displaystyle A\in {\mathcal {F}}\_{t}} then {\displaystyle \rho \_{t}(1\_{A}X)=1\_{A}\rho \_{t}(X)} where {\displaystyle 1\_{A}} is the indicator function on {\displaystyle A}. Any normalized conditional convex risk measure is regular.
+
+The financial interpretation of this states that the conditional risk at some future node (i.e. {\displaystyle \rho \_{t}(X)[\omega ]}) only depends on the possible states from that node. In a binomial model this would be akin to calculating the risk on the subtree branching off from the point in question.
+
+
+## Time consistent property
+
+A dynamic risk measure is time consistent if and only if {\displaystyle \rho \_{t+1}(X)\leq \rho \_{t+1}(Y)\Rightarrow \rho \_{t}(X)\leq \rho \_{t}(Y)\;\forall X,Y\in L^{0}({\mathcal {F}}\_{T})}.
+
+
+## Example: dynamic superhedging price
+
+The dynamic superhedging price involves conditional risk measures of the form
+{\displaystyle \rho \_{t}(-X)=\operatorname {\*} {ess\sup }\_{Q\in EMM}\mathbb {E} ^{Q}[X|{\mathcal {F}}\_{t}]}.
+It is shown that this is a time consistent risk measure.
+

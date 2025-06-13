@@ -1,0 +1,61 @@
+McCallum rule
+
+
+# McCallum rule
+
+
+
+In monetary policy, the **McCallum rule** specifies a target for the monetary base (M0) which could be used by a central bank. The McCallum rule was proposed by Bennett T. McCallum at Carnegie Mellon University's Tepper School of Business. It is an alternative to the well known Taylor rule and according to its proponents, it performs better during crisis periods.
+
+
+## Rule
+
+The rule gives a target for the monetary base in the next quarter (about 13 weeks). The target is:
+
+where
+
+
+## Explanation
+
+Let us define the velocity of (base) money, *V*, by
+
+where: *M* is the money supply (in our case, the monetary base, M0); and *X* is the aggregate money traded for goods or services (in our case, the nominal GDP for the quarter in question).
+
+Let us define the price level, *P*, (in our case, the GDP deflator divided by 100) by
+
+where *Q* is the quantity of goods or services exchanged (in our case, the real GDP during the quarter).
+
+Together, these definitions yield the so-called equation of exchange
+
+Now, define *m*, *v*, *x*, *p*, and *q* as the natural logarithms of *M*, *V*, *X*, *P*, and *Q*. Then the equation becomes
+
+These quantities are functions of time, *t*, which we will take to be an integer which counts the quarters of years. So *m*ₜ means the (average) value of *m* during the *t* quarter. The forward difference operator, {\displaystyle \Delta \,,} is defined by
+
+If we apply the forward difference operator, we get
+
+and so
+
+The velocity of money changes due to changes in technology and regulation. McCallum assumes that these changes tend to occur at the same rate over a period of a few years. He averages over four years to get a forecast of the average growth rate of velocity over the foreseeable future. Thus one approximates
+
+The velocity term is not intended to reflect current conditions in the business cycle.
+
+We assume that when the rate of inflation is held near its desired value, {\displaystyle {\Delta p}\_{D}\,,} for an extended period, then the growth rate of real GDP will be near to its long-run average, {\displaystyle {\overline {\Delta q}}\,.} And thus that the growth rate of nominal GDP will be close to their sum
+
+However, it is not obvious what that desired value of inflation should be.
+
+McCallum takes the long-run average rate of growth of real GDP to be 3 percent per year which amounts to
+
+on a quarterly basis. He expects the Federal Reserve to choose an inflation target of 2 percent per year which amounts to
+
+on a quarterly basis (although he would personally prefer a lower inflation target).
+
+So the target for the monetary base should be given by a rule of the form
+
+where {\displaystyle \varepsilon \_{t}\,} is a correction term which can only depend on information available at time *t*. The correction term is intended to compensate for current cyclical conditions. It should be positive when recent growth of output and the price level has been slow.
+
+If one takes the correction to be
+
+then the result is McCallum's rule. A large resulting increase in M0 tends to generate or support a rapid rate of increase in broader monetary aggregates and thereby stimulate aggregate demand for goods and services.
+
+The figures used for the monetary base (M0) should be the adjusted base as calculated by the Federal Reserve Bank of St Louis. The adjustments serve to take account of changes in legal reserve requirements that alter the quantity of medium-of-exchange money (such as M1) that can be supported by a given quantity of the base.
+

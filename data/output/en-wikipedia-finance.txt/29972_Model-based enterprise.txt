@@ -1,0 +1,35 @@
+Model-based enterprise
+
+
+# Model-based enterprise
+
+
+
+**Model-based enterprise** (MBE) is a term used in manufacturing, to describe a strategy where an annotated digital three-dimensional (3D) model of a product serves as the authoritative information source for all activities in that product's lifecycle.
+
+A key advantage of MBE is that it replaces digital drawings. In MBE, a single 3D model contains all the information typically found on in an entire set of engineering drawings, including geometry, topology, dimensions, tolerances, materials, finishes, and weld call-outs.
+
+MBE was originally championed by the aerospace and defense industries, with the automotive industry following. It has been adopted by many manufacturers around the world, in a wide range of industries. Significant benefits for manufacturers include reduced time to market and savings in production costs from improved tool design and fabrication, fewer overall assembly hours, less rework, streamlined development and better collaboration on engineering changes.
+
+There are two prerequisites to implementing MBE: The first is the creation of annotated 3D models, known as a Model-based definitions (MBD). This requires the use of a CAD system capable of creating precise solid models, with product and manufacturing information (PMI), a form of 3D annotation which may include dimensions, GD&T, notes, surface finish, and material specifications. (The mechanical CAD systems used in aerospace, defense, and automotive industries generally have these capabilities.) The second prerequisite is transforming MBDs into a form where they can be used in downstream lifecycle activities. As a rule, CAD models are stored in proprietary data formats, so they must be translated to a suitable MBD-compatible standard format, such as 3D PDF, JT, STEP AP 242, or ANSI QIF
+
+The core MBE tenet is that models are used to drive all aspects of the product lifecycle and that data is created once and reused by all downstream data consumers. Data reusability requires computer interpretability, where an MBD can be processed directly by downstream applications, and associativity of PMI to specific model features within the MBD.
+
+
+## History
+
+Historically, engineering and manufacturing activities have relied on hardcopy and/or digital documents (including 2D drawings) to convey engineering data and drive manufacturing processes. These documents required interpretation by skilled practitioners, often leading to ambiguities and errors.
+
+In the 1980s, improvements in 3D solid modeling made it possible for CAD systems to precisely represent the shape of most manufactured goods—however, even enthusiastic adopters of solid modeling technology continued to rely upon 2D drawings (often CAD generated) as the authority (or master) product representation. 3D models, even if geometrically accurate, lacked a method to represent dimensions, tolerances, and other annotative information required to drive manufacturing processes.
+
+In the early-to-middle 2000s, the ASME Y14.41-2003 Digital Product Data Definition Practices and ISO 16792:2006 Technical product documentation—Digital product definition data practices standards were released, providing support for PMI annotations in 3D CAD models, and introducing the concept of MBD (or, alternatively, digital product definition)
+
+The model-based enterprise concept first appeared about 2005. Initially it was construed broadly, referring to the pervasive use of modeling and simulation technologies (of almost any type) throughout an enterprise. In the late 2000s, An active community advocating development of MBE grew, based on the collaborative efforts of the Office of the Secretary of Defense, Army Research Laboratory, Armament Research Development Engineering Center (ARDEC), Army ManTech, BAE Systems, NIST, and the NIST Manufacturing Extension Partnership (MEP). The "MBE Team" included industry participants such as General Dynamics, Pratt & Whitney Rocketdyne, Elysium, Adobe, EOS, ITI TranscenData, Vistagy, PTC, Dassault Systèmes Delmia, Boeing, and BAE Systems.
+
+Over time, based on community feedback, MBE became more narrowly construed, referring to the use of MBD data to drive product lifecycle activities. In 2011, the MBE Team published these definitions:
+
+* MBD: A 3D annotated model and its associated data elements that fully define the product definition in a manner that can be used effectively by all downstream customers in place of a traditional drawing.
+* MBE: A fully integrated and collaborative environment founded on 3D product definition detail and shared across the enterprise; to enable rapid, seamless, and affordable deployment of products from concept to disposal
+
+By 2015, with improvements to ASME Y14.41 and ISO 16792, and the development of open CAD data exchange standards capable of adequately representing PMI, MBE started to become more widely adopted by manufacturers.
+

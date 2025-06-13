@@ -1,0 +1,50 @@
+Bid–ask matrix
+
+
+# Bid–ask matrix
+
+
+
+The **bid–ask matrix** is a matrix with elements corresponding with exchange rates between the assets. These rates are in *physical units* (e.g. number of stocks) and not with respect to any *numeraire*. The {\displaystyle (i,j)} element of the matrix is the number of units of asset {\displaystyle i} which can be exchanged for 1 unit of asset {\displaystyle j}.
+
+
+## Mathematical definition
+
+A {\displaystyle d\times d} matrix {\displaystyle \Pi =\left[\pi \_{ij}\right]\_{1\leq i,j\leq d}} is a *bid-ask matrix*, if
+
+1. {\displaystyle \pi \_{ij}>0} for {\displaystyle 1\leq i,j\leq d}. Any trade has a positive exchange rate.
+2. {\displaystyle \pi \_{ii}=1} for {\displaystyle 1\leq i\leq d}. Can always trade 1 unit with itself.
+3. {\displaystyle \pi \_{ij}\leq \pi \_{ik}\pi \_{kj}} for {\displaystyle 1\leq i,j,k\leq d}. A direct exchange is always at most as expensive as a chain of exchanges.
+
+## Example
+
+Assume a market with 2 assets (A and B), such that {\displaystyle x} units of A can be exchanged for 1 unit of B, and {\displaystyle y} units of B can be exchanged for 1 unit of A. Then the *bid–ask matrix* {\displaystyle \Pi } is:
+
+It is required that {\displaystyle xy\geq 1} by rule 3.
+
+With 3 assets, let {\displaystyle a\_{ij}} be the number of units of i traded for 1 unit of j. The bid–ask matrix is:
+
+Rule 3 applies the following inequalities:
+
+* {\displaystyle a\_{12}a\_{21}\geq 1}
+* {\displaystyle a\_{13}a\_{31}\geq 1}
+* {\displaystyle a\_{23}a\_{32}\geq 1}
+
+* {\displaystyle a\_{13}a\_{32}\geq a\_{12}}
+* {\displaystyle a\_{23}a\_{31}\geq a\_{21}}
+
+* {\displaystyle a\_{12}a\_{23}\geq a\_{13}}
+* {\displaystyle a\_{32}a\_{21}\geq a\_{31}}
+
+* {\displaystyle a\_{21}a\_{13}\geq a\_{23}}
+* {\displaystyle a\_{31}a\_{12}\geq a\_{32}}
+
+For higher values of d, note that *3*-way trading satisfies Rule 3 as
+
+
+## Relation to solvency cone
+
+If given a bid–ask matrix {\displaystyle \Pi } for {\displaystyle d} assets such that {\displaystyle \Pi =\left(\pi ^{ij}\right)\_{1\leq i,j\leq d}} and {\displaystyle m\leq d} is the number of assets which with any non-negative quantity of them can be "discarded" (traditionally {\displaystyle m=d}). Then the solvency cone {\displaystyle K(\Pi )\subset \mathbb {R} ^{d}} is the convex cone spanned by the unit vectors {\displaystyle e^{i},1\leq i\leq m} and the vectors {\displaystyle \pi ^{ij}e^{i}-e^{j},1\leq i,j\leq d}.
+
+Similarly given a (constant) solvency cone it is possible to extract the bid–ask matrix from the bounding vectors.
+

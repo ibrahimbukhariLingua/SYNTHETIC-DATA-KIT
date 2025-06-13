@@ -1,0 +1,58 @@
+Cross File Transfer
+
+
+# Cross File Transfer
+
+
+
+**CFT** (**Cross File Transfer**) (product name: *Axway Transfer CFT*) is a secure computer file transfer program and protocol from Axway Inc, used extensively in Finance and banking industries in Europe, by companies like AG2R La Mondiale and Swiss Post.
+
+CFT was for mainframe computers using the French X.25-based Transpac network, but was later ported to use Internet protocols (TCP/IP) as well. Client software must be purchased from Axway, and includes a license manager that enforce machine and transfer limits.
+
+
+## Purpose
+
+CFT is used for machine to machine file transfer with remote control for resuming interrupted transfers. CFT can also trigger remote processes, rename files according to a specific protocol (PeSIT, ODETTE (OFTPv1), SFTP), apply security constraints and implement the encoding conversion (ASCII to EBCDIC for example).
+In older version CFT transfer use for protocol EBICS and ETEBAC 3.
+
+
+## Use
+
+Each site wishing to exchange a file is called a partner, regardless of the platform. Any partner wishing to send or receive data from another partner must be declared in “the partners file” or “CFT directory”.
+
+To share files, CFT must be installed on each platform. A platform that wants to send a file to a remote partner sends a request over the network by specifying the remote platform through its partner name. When the remote partner receives the request, it verifies that it is the correct destination and creates a record in its local catalogue that lists all requests (treated FIFO).
+
+When it’s the request’s turn to be processed, the partner establishes a remote connection protocol with the push partner and announces it is ready to receive. The sending partner sends the file content that the receiving partner mirrors to a local directory. The sending partner doesn’t decide where the file is written on the receiving partner. He can not force the receiving partner to receive data (when it is congested, for example). CFT indicates the status of each transfer at all times: pending, in progress, aborted or completed successfully.
+
+CFT is a licensed product. It is used with a software key that limits the use of CFT to a type of machine and a maximum number of simultaneous transfers.
+
+In the case of a UNIX Sun Solaris box, the CFT should be installed on both the sender and the receiver machines. There are two main config files for XFB (AXway File Broker) namely locpart.smp and chkusr.txt. locpart.smp stores the destination server's IP address, protocol intended, port to be used and other such information. TCP and FTP are the basic protocols used here.
+
+The file chkusr.txt contains information specific to authorization and proxy. If a user is sending files to a receiver, the latter should have an A entry in its chkusr.txt file to authorize the user to send files. It should also contain the landing directory to which the files should be written in the receiving system. The sending machine also has an agent file named `<filename>.perm`, where the file name to be sent is configured and which contains the node name.
+
+
+## Supported operating systems and platforms
+
+**CFT (Cross File Transfer)** is (or used to be) supported on wide range of operating systems and platforms:
+
+* Microsoft Windows: (x86, IA-64)
+* Unix
+ + Linux (x86, s390, IA-64)
+ + AIX
+ + Solaris (SPARC, x86)
+ + HP-UX (HPPA, IA-64)
+ + Tru64
+ + SCO
+ + UnixWare
+ + IRIX
+* IBM z/OS (IBM Z)
+* IBM i (Previously AS/400)
+* IBM VSE
+* IBM VM
+* IBM OS/2 (x86) (Obsolete)
+* OpenVMS (VAX, Alpha, IA-64)
+* BULL GCOS
+* NonStop OS (mips, i64)
+* NetWare (x86) (Obsolete)
+* Microsoft Windows 3 (x86) (Obsolete)
+* Microsoft MS-DOS (x86) (Obsolete)

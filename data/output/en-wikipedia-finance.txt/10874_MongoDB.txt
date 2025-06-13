@@ -1,0 +1,140 @@
+MongoDB
+
+
+# MongoDB
+
+
+
+**MongoDB** is a source-available, cross-platform, document-oriented database program. Classified as a NoSQL database product, MongoDB uses JSON-like documents with optional schemas. Released in February 2009 by 10gen (now MongoDB Inc.), it supports features like sharding, replication, and ACID transactions (from version 4.0). MongoDB Atlas, its managed cloud service, operates on AWS, Google Cloud Platform, and Microsoft Azure. Current versions are licensed under the Server Side Public License (SSPL). MongoDB is a member of the MACH Alliance.
+
+
+## History
+
+The American software company 10gen began developing MongoDB in 2007 as a component of a planned platform-as-a-service product. In 2009, the company shifted to an open-source development model and began offering commercial support and other services. In 2013, 10gen changed its name to MongoDB Inc.
+
+On October 20, 2017, MongoDB became a publicly traded company, listed on NASDAQ as MDB with an IPO price of $24 per share.
+
+On November 8, 2018, with the stable release 4.0.4, the software's license changed from AGPL 3.0 to SSPL.
+
+On October 30, 2019, MongoDB teamed with Alibaba Cloud to offer Alibaba Cloud customers a MongoDB-as-a-service solution. Customers can use the managed offering from Alibaba's global data centers.
+
+MongoDB release history
+| Version | Release date | Feature notes | Refs |
+| --- | --- | --- | --- |
+| 1.0 | August 2009 |
+| 1.2 | December 2009 | * more indexes per collection * faster index creation * map/reduce * stored JavaScript functions * configurable fsync time * several small features and fixes |
+| 1.4 | March 2010 |
+| 1.6 | August 2010 | * production-ready sharding * replica sets * support for IPv6 |
+| 1.8 | March 2011 |
+| 2.0 | September 2011 |
+| 2.2 | August 2012 |
+| 2.4 | March 2013 | * enhanced geospatial support * switch to V8 JavaScript engine * security enhancements * text search (beta) * hashed index |
+| 2.6 | April 8, 2014 | * aggregation enhancements * text-search integration * query-engine improvements * new write-operation protocol * security enhancements |
+| 3.0 | March 3, 2015 | * WiredTiger storage engine support * pluggable storage engine API * SCRAM-SHA-1 authentication * improved explain functionality * MongoDB Ops Manager |
+| 3.2 | December 8, 2015 | * WiredTiger storage engine by default * replication election enhancements * config servers as replica sets * readConcern * document validations * moved from V8 to SpiderMonkey |
+| 3.4 | November 29, 2016 | * linearizable read concerns * views * collation |
+| 3.6 | November 2017 |
+| 4.0 | June 2018 | * transactions * license change effective pr. 4.0.4 |
+| 4.2 | August 2019 |
+| 4.4 | July 2020 |
+| 4.4.5 | April 2021 |
+| 4.4.6 | May 2021 |
+| 5.0 | July 13, 2021 | * future-proofs versioned API * client-side field level encryption * live resharding * time series support |
+| 6.0 | July 2022 |
+| 7.0 | August 15, 2023 |
+| 8.0 | October 2, 2024 |
+
+
+## Main features
+
+
+### Ad-hoc queries
+
+MongoDB supports field, range query and regular-expression searches. Queries can return specific fields of documents and also include user-defined JavaScript functions. Queries can also be configured to return a random sample of results of a given size.
+
+
+### Indexing
+
+Fields in a MongoDB document can be indexed with primary and secondary indices.
+
+
+### Replication
+
+MongoDB provides high availability with replica sets. A replica set consists of two or more copies of the data. Each replica-set member may act in the role of primary or secondary replica at any time. All writes and reads are done on the primary replica by default. Secondary replicas maintain a copy of the data of the primary using built-in replication. When a primary replica fails, the replica set automatically conducts an election process to determine which secondary should become the primary. Secondaries can optionally serve read operations, but that data is only eventually consistent by default.
+
+If the replicated MongoDB deployment only has a single secondary member, a separate daemon called an arbiter must be added to the set. It has the single responsibility of resolving the election of the new primary. As a consequence, an ideal distributed MongoDB deployment requires at least three separate servers, even in the case of just one primary and one secondary.
+
+
+### Load balancing
+
+MongoDB scales horizontally using sharding. The user chooses a shard key, which determines how the data in a collection will be distributed. The data is split into ranges (based on the shard key) and distributed across multiple shards, which are masters with one or more replicas. Alternatively, the shard key can be hashed to map to a shard – enabling an even data distribution.
+
+MongoDB can run over multiple servers, balancing the load or duplicating data to keep the system functional in case of hardware failure.
+
+
+### File storage
+
+MongoDB can be used as a file system, called GridFS, with load-balancing and data-replication features over multiple machines for storing files.
+
+This function, called a grid file system, is included with MongoDB drivers. MongoDB exposes functions for file manipulation and content to developers. GridFS can be accessed using the mongofiles utility or plugins for Nginx and lighttpd. GridFS divides a file into parts, or chunks, and stores each of those chunks as a separate document.
+
+
+### Aggregation
+
+MongoDB provides three ways to perform aggregation: the aggregation pipeline, the map-reduce function and single-purpose aggregation methods.
+
+Map-reduce can be used for batch processing of data and aggregation operations. However, according to MongoDB's documentation, the aggregation pipeline provides better performance for most aggregation operations.
+
+The aggregation framework enables users to obtain results similar to those returned by queries that include the SQL GROUP BY clause. Aggregation operators can be strung together to form a pipeline, analogous to Unix pipes. The aggregation framework includes the $lookup operator, which can join documents from multiple collections, as well as statistical operators such as standard deviation.
+
+
+### Server-side JavaScript execution
+
+JavaScript can be used in queries, aggregation functions (such as MapReduce) and sent directly to the database to be executed.
+
+
+### Capped collections
+
+MongoDB supports fixed-size collections called capped collections. This type of collection maintains insertion order and, once the specified size has been reached, behaves like a circular queue.
+
+
+### Transactions
+
+MongoDB supports multi-document ACID transactions since the 4.0 release in June 2018.
+
+
+## Editions
+
+
+### MongoDB Community Server
+
+The MongoDB Community Edition is free and available for Windows, Linux and macOS.
+
+
+### MongoDB Enterprise Server
+
+MongoDB Enterprise Server is the commercial edition of MongoDB and is available as part of the MongoDB Enterprise Advanced subscription.
+
+
+### MongoDB Atlas
+
+MongoDB is also available as an on-demand, fully managed service. MongoDB Atlas runs on AWS, Microsoft Azure and Google Cloud Platform.
+
+On March 10, 2022, MongoDB warned its users in Russia and Belarus that their data stored on the MongoDB Atlas platform will be destroyed as a result of American sanctions related to the Russo-Ukrainian War.
+
+
+## Architecture
+
+
+### Programming language accessibility
+
+MongoDB has official drivers for major programming languages and development environments. There are also a large number of unofficial or community-supported drivers for other programming languages and frameworks.
+
+
+### Serverless access
+
+
+### Management and graphical front-ends
+
+The primary interface to the database has been the mongo shell. Since MongoDB 3.2, MongoDB Compass is introduced as the native GUI. There are products and third-party projects that offer user interfaces for administration and data viewing.
+

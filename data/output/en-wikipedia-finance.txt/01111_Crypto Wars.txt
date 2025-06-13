@@ -1,0 +1,123 @@
+Crypto Wars
+
+
+# Crypto Wars
+
+
+
+Attempts, unofficially dubbed the "**Crypto Wars**", have been made by the United States (US) and allied governments to limit the public's and foreign nations' access to cryptography strong enough to thwart decryption by national intelligence agencies, especially the National Security Agency (NSA).
+
+
+## Export of cryptography from the United States
+
+
+### Cold War era
+
+In the early days of the Cold War, the U.S. and its allies developed an elaborate series of export control regulations designed to prevent a wide range of Western technology from falling into the hands of others, particularly the Eastern bloc. All export of technology classed as 'critical' required a license. CoCom was organized to coordinate Western export controls.
+
+Two types of technology were protected: technology associated only with weapons of war ("munitions") and dual use technology, which also had commercial applications. In the U.S., dual use technology export was controlled by the Department of Commerce, while munitions were controlled by the State Department. Since in the immediate post WWII period the market for cryptography was almost entirely military, the encryption technology (techniques as well as equipment and, after computers became important, crypto software) was included as a Category XIII item into the United States Munitions List. The multinational control of the export of cryptography on the Western side of the cold war divide was done via the mechanisms of CoCom.
+
+By the 1960s, however, financial organizations were beginning to require strong commercial encryption on the rapidly growing field of wired money transfer. The U.S. Government's introduction of the Data Encryption Standard in 1975 meant that commercial uses of high quality encryption would become common, and serious problems of export control began to arise. Generally these were dealt with through case-by-case export license request proceedings brought by computer manufacturers, such as IBM, and by their large corporate customers.
+
+
+### PC era
+
+Encryption export controls became a matter of public concern with the introduction of the personal computer. Phil Zimmermann's PGP cryptosystem and its distribution on the Internet in 1991 was the first major 'individual level' challenge to controls on export of cryptography. The growth of electronic commerce in the 1990s created additional pressure for reduced restrictions. Shortly afterward, Netscape's SSL technology was widely adopted as a method for protecting credit card transactions using public key cryptography.
+
+SSL-encrypted messages used the RC4 cipher, and used 128-bit keys. U.S. government export regulations would not permit crypto systems using 128-bit keys to be exported. At this stage Western governments had, in practice, a split personality when it came to encryption; policy was made by the military cryptanalysts, who were solely concerned with preventing their 'enemies' acquiring secrets, but that policy was then communicated to commerce by officials whose job was to support industry.
+
+The longest key size allowed for export without individual license proceedings was 40 bits, so Netscape developed two versions of its web browser. The "U.S. edition" had the full 128-bit strength. The "International Edition" had its effective key length reduced to 40 bits by revealing 88 bits of the key in the SSL protocol. Acquiring the 'U.S. domestic' version turned out to be sufficient hassle that most computer users, even in the U.S., ended up with the 'International' version, whose weak 40-bit encryption could be broken in a matter of days using a single personal computer. A similar situation occurred with Lotus Notes for the same reasons.
+
+Legal challenges by Peter Junger and other civil libertarians and privacy advocates, the widespread availability of encryption software outside the U.S., and the perception by many companies that adverse publicity about weak encryption was limiting their sales and the growth of e-commerce, led to a series of relaxations in US export controls, culminating in 1996 in President Bill Clinton signing the Executive order 13026 transferring the commercial encryption from the Munition List to the Commerce Control List. Furthermore, the order stated that, "the software shall not be considered or treated as 'technology'" in the sense of Export Administration Regulations. This order permitted the United States Department of Commerce to implement rules that greatly simplified the export of proprietary and open source software containing cryptography, which they did in 2000.
+
+
+### 2000s
+
+As of 2009, non-military cryptography exports from the U.S. are controlled by the Department of Commerce's Bureau of Industry and Security. Some restrictions still exist, even for mass market products, particularly with regard to export to "rogue states" and terrorist organizations. Militarized encryption equipment, TEMPEST-approved electronics, custom cryptographic software, and even cryptographic consulting services still require an export license (pp. 6–7). Furthermore, encryption registration with the BIS is required for the export of "mass market encryption commodities, software and components with encryption exceeding 64 bits" (75 FR 36494). In addition, other items require a one-time review by or notification to BIS prior to export to most countries. For instance, the BIS must be notified before open-source cryptographic software is made publicly available on the Internet, though no review is required. Export regulations have been relaxed from pre-1996 standards, but are still complex. Other countries, notably those participating in the Wassenaar Arrangement, have similar restrictions.
+
+
+## Export of cryptography from Britain
+
+Until 1996, the government of the United Kingdom withheld export licenses from exporters unless they used weak ciphers or short keys, and generally discouraged practical public cryptography. A debate about cryptography for the NHS brought this out in the open.
+
+
+## Mobile phone signals
+
+
+### Clipper chip
+
+The Clipper chip was designed for the NSA in the 1990s for secure landline phones, which implemented encryption with an announced backdoor for the US government. The US government tried to get manufacturers to adopt the chip, but without success. Meanwhile, much stronger software encryption became available worldwide. Academics also demonstrated fatal flaws in the chip's backdoor protocol. The effort was finally abandoned by 1996.
+
+
+### A5/1 (GSM encryption)
+
+**A5/1** is a stream cipher used to provide over-the-air communication privacy in the GSM cellular telephone standard.
+
+Security researcher Ross Anderson reported in 1994 that "there was a terrific row between the NATO signal intelligence agencies in the mid-1980s over whether GSM encryption should be strong or not. The Germans said it should be, as they shared a long border with the Warsaw Pact; but the other countries didn't feel this way, and the algorithm as now fielded is a French design."
+
+According to professor Jan Arild Audestad, at the standardization process which started in 1982, A5/1 was originally proposed to have a key length of 128 bits. At that time, 128 bits was projected to be secure for at least 15 years. It is now estimated that 128 bits would in fact also still be secure as of 2014. Audestad, Peter van der Arend, and Thomas Haug say that the British insisted on weaker encryption, with Haug saying he was told by the British delegate that this was to allow the British secret service to eavesdrop more easily. The British proposed a key length of 48 bits, while the West Germans wanted stronger encryption to protect against East German spying, so the compromise became a key length of 56 bits. In general, a key of length 56 is {\displaystyle 2^{128-56}=2^{72}=4.7\times 10^{21}} times easier to break than a key of length 128.
+
+
+## DES Challenges
+
+The widely used DES encryption algorithm was originally planned by IBM to have a key size of 128 bits; the NSA lobbied for a key size of 48 bits. The end compromise were a key size of 64 bits, 8 of which were parity bits, to make an effective key security parameter of 56 bits. DES was considered insecure as early as 1977, and documents leaked in the 2013 Snowden leak shows that it was in fact easily crackable by the NSA, but was still recommended by NIST. The DES Challenges were a series of brute force attack contests created by RSA Security to highlight the lack of security provided by the Data Encryption Standard. As part of the successful cracking of the DES-encoded messages, the EFF constructed a specialized DES cracking computer nicknamed Deep Crack.
+
+The successful cracking of DES likely helped to gather both political and technical support for more advanced encryption in the hands of ordinary citizens. In 1997, NIST began a competition to select a replacement for DES, resulting in the publication in 2000 of the Advanced Encryption Standard (AES). AES is still considered secure as of 2019, and the NSA considers AES strong enough to protect information classified at the Top Secret level.
+
+
+## Snowden and NSA's Bullrun program
+
+Fearing widespread adoption of encryption, the NSA set out to stealthily influence and weaken encryption standards and obtain master keys—either by agreement, by force of law, or by computer network exploitation (hacking).
+
+According to the *New York Times*: "But by 2006, an N.S.A. document notes, the agency had broken into communications for three foreign airlines, one travel reservation system, one foreign government's nuclear department and another's Internet service by cracking the virtual private networks that protected them. By 2010, the Edgehill program, the British counterencryption effort, was unscrambling VPN traffic for 30 targets and had set a goal of an additional 300."
+
+As part of Bullrun, NSA has also been actively working to "insert vulnerabilities into commercial encryption systems, IT systems, networks, and endpoint communications devices used by targets". *The New York Times* has reported that the random number generator Dual EC DRBG contains a back door from the NSA, which would allow the NSA to break encryption relying on that random number generator. Even though Dual\_EC\_DRBG was known to be an insecure and slow random number generator soon after the standard was published, and the potential NSA backdoor was found in 2007, and alternative random number generators without these flaws were certified and widely available, RSA Security continued using Dual\_EC\_DRBG in the company's BSAFE toolkit and Data Protection Manager until September 2013. While RSA Security has denied knowingly inserting a backdoor into BSAFE, it has not yet given an explanation for the continued usage of Dual\_EC\_DRBG after its flaws became apparent in 2006 and 2007, however it was reported on December 20, 2013, that RSA had accepted a payment of $10 million from the NSA to set the random number generator as the default. Leaked NSA documents state that their effort was "a challenge in finesse" and that "Eventually, N.S.A. became the sole editor" of the standard.
+
+By 2010, the NSA had developed "groundbreaking capabilities" against encrypted Internet traffic. A GCHQ document warned however "These capabilities are among the Sigint community's most fragile, and the inadvertent disclosure of the simple 'fact of' could alert the adversary and result in immediate loss of the capability." Another internal document stated that "there will be NO 'need to know.'" Several experts, including Bruce Schneier and Christopher Soghoian, have speculated that a successful attack against RC4, a 1987 encryption algorithm still used in at least 50 per cent of all SSL/TLS traffic is a plausible avenue, given several publicly known weaknesses of RC4. Others have speculated that NSA has gained ability to crack 1024-bit RSA and Diffie–Hellman public keys. A team of researchers have pointed out that there is wide reuse of a few non-ephemeral 1024 bit primes in Diffie–Hellman implementations, and that NSA having done precomputation against those primes in order to break encryption using them in real time is very plausibly what NSA's "groundbreaking capabilities" refer to.
+
+The Bullrun program is controversial, in that it is believed that NSA deliberately inserts or keeps secret vulnerabilities which affect both law-abiding US citizens as well as NSA's targets, under its NOBUS policy. In theory, NSA has two jobs: prevent vulnerabilities that affect the US, and find vulnerabilities that can be used against US targets; but as argued by Bruce Schneier, NSA seems to prioritize finding (or even creating) and keeping vulnerabilities secret. Bruce Schneier has called for the NSA to be broken up so that the group charged with strengthening cryptography is not subservient to the groups that want to break the cryptography of its targets.
+
+
+## Encryption of smartphone storage
+
+As part of the Snowden leaks, it became widely known that intelligence agencies could bypass encryption of data stored on Android and iOS smartphones by legally ordering Google and Apple to bypass the encryption on specific phones. Around 2014, as a reaction to this, Google and Apple redesigned their encryption so that they did not have the technical ability to bypass it, and it could only be unlocked by knowing the user's password.
+
+Various law enforcements officials, including the Obama administration's Attorney General Eric Holder responded with strong condemnation, calling it unacceptable that the state could not access alleged criminals' data even with a warrant. In one of the more iconic responses, the chief of detectives for Chicago's police department stated that "Apple will become the phone of choice for the pedophile". Washington Post posted an editorial insisting that "smartphone users must accept that they cannot be above the law if there is a valid search warrant", and after agreeing that backdoors would be undesirable, suggested implementing a "golden key" backdoor which would unlock the data with a warrant.
+
+FBI Director James Comey cited a number of cases to support the need to decrypt smartphones. Interestingly, in none of the presumably carefully handpicked cases did the smartphone have anything to do with the identification or capture of the culprits, and the FBI seems to have been unable to find any strong cases supporting the need for smartphone decryption.
+
+Bruce Schneier has labelled the right to smartphone encryption debate *Crypto Wars II*, while Cory Doctorow called it *Crypto Wars redux*.
+
+Legislators in the US states of California and New York have proposed bills to outlaw the sale of smartphones with unbreakable encryption. As of February 2016, no bills have been passed.
+
+In February 2016 the FBI obtained a court order demanding that Apple create and electronically sign new software which would enable the FBI to unlock an iPhone 5c it recovered from one of the shooters in the 2015 terrorist attack in San Bernardino, California. Apple challenged the order. In the end the FBI hired a third party to crack the phone. *See* FBI–Apple encryption dispute.
+
+In April 2016, Dianne Feinstein and Richard Burr sponsored a bill, described as "overly vague" by some, that would be likely to criminalise all forms of strong encryption.
+
+In December 2019, the United States Senate Committee on the Judiciary convened a hearing on Encryption and Lawful Access, focusing on encrypted smartphone storage. District Attorney Cyrus Vance Jr., Professor Matt Tait, Erik Neuenschwander from Apple, and Jay Sullivan from Facebook testified. Chairman Lindsey Graham stated in his opening remarks "all of us want devices that protect our privacy." He also said law enforcement should be able to read encrypted data on devices, threatening to pass legislation if necessary: "You're going to find a way to do this or we're going to do this for you."
+
+
+## End-to-end-encrypted messaging services
+
+In October 2017, Deputy Attorney General Rod Rosenstein called for key escrow under the euphemism "responsible encryption" as a solution to the ongoing problem of "going dark". This refers to wiretapping court orders and police measures becoming ineffective as strong end-to-end encryption is increasingly added to widespread messenger products. Rosenstein suggested key escrow would provide their customers with a way to recover their encrypted data if they forget their password, so that it is not lost forever. From a law enforcement perspective, this would allow a judge to issue a search warrant instructing the company to decrypt the data; without escrow or other undermining of encryption it is impossible for a service provider to comply with this request. In contrast to previous proposals, the decentralized storage of keys by companies instead of government agencies is claimed to be an additional safeguard.
+
+
+## Front doors
+
+In 2015 the head of the NSA, Admiral Michael S. Rogers, suggested further decentralizing the key escrow by introducing "front doors" instead of back doors into encryption. This way, the key would be split into two halves: one kept by government authorities and the other by the company responsible for the encryption product. The government would thus still need a search warrant to obtain the company's half-key, while the company would be unable to abuse the key escrow to access users' data without the government's half-key. Experts were not impressed.
+
+
+## Lightweight encryption
+
+In 2018, the NSA promoted the use of "lightweight encryption", in particular its ciphers Simon and Speck, for Internet of Things devices. However, the attempt to have those ciphers standardized by ISO failed because of severe criticism raised by the board of cryptography experts which provoked fears that the NSA had non-public knowledge of how to break them.
+
+
+## 2015 UK call for outlawing non-backdoored cryptography
+
+Following the 2015 Charlie Hebdo shooting, a terrorism attack, former UK Prime Minister David Cameron called for outlawing non-backdoored cryptography, saying that there should be no "means of communication" which "we cannot read". US president Barack Obama sided with Cameron on this. This call for action does not seem to have resulted in any legislation or changes in the status quo of non-backdoored cryptography being legal and available.
+
+
+## 2020 EARN IT
+
+The *Eliminating Abusive and Rampant Neglect of Interactive Technologies* (EARN IT) Act of 2020 provides for a 19-member National Commission which will develop a set of "best practice" guidelines to which technology providers will have to conform in order to "earn" immunity (traditionally provided 'automatically' by Section 230 of the Communications Decency Act) to liability for child sexual abuse material on their platforms. Proponents present it as a way to tackle child sexual abuse material on internet platforms, but it has been criticized by advocates of encryption because it is likely that the "best practices" devised by the commission will include refraining from using end-to-end encryption, as such encryption would make it impossible to screen for illegal content.
+

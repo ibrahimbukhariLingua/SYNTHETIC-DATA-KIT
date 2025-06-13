@@ -1,0 +1,74 @@
+Automated trading system
+
+
+# Automated trading system
+
+
+
+An **automated trading system** (**ATS**), a subset of algorithmic trading, uses a computer program to create buy and sell orders and automatically submits the orders to a market center or exchange. The computer program will automatically generate orders based on predefined set of rules using a trading strategy which is based on technical analysis, advanced statistical and mathematical computations or input from other electronic sources.
+
+* These automated trading systems are mostly employed by investment banks or hedge funds, but are also available to private investors using simple online tools. An estimated 70% to 80% of all market transactions are carried out through automated trading software, in contrast to manual trades.
+
+Automated trading systems are often used with electronic trading in automated market centers, including electronic communication networks, "dark pools", and automated exchanges. Automated trading systems and electronic trading platforms can execute repetitive tasks at speeds orders of magnitude greater than any human equivalent. Traditional risk controls and safeguards that relied on human judgment are not appropriate for automated trading and this has caused issues such as the 2010 Flash Crash. New controls such as trading curbs or 'circuit breakers' have been put in place in some electronic markets to deal with automated trading systems.
+
+
+## Mechanism
+
+The automated trading system determines whether an order should be submitted based on, for example, the current market price of an option and theoretical buy and sell prices. The theoretical buy and sell prices are derived from, among other things, the current market price of the security underlying the option. A look-up table stores a range of theoretical buy and sell prices for a given range of current market price of the underlying security. Accordingly, as the price of the underlying security changes, a new theoretical price may be indexed in the look-up table, thereby avoiding calculations that would otherwise slow automated trading decisions. A distributed processing on-line automated trading system uses structured messages to represent each stage in the negotiation between a market maker (quoter) and a potential buyer or seller (requestor).
+
+
+## Strategies
+
+* Trend following
+
+Trend following is a trading strategy that bases buying and selling decisions on observable market trends. For years, various forms of trend following have emerged, like the Turtle Trader software program. Unlike financial forecasting, this strategy does not predict market movements. Instead, it identifies a trend early in the day and then trades automatically according to a predefined strategy, regardless of directional shifts. Trend following gained popularity among speculators, though remains reliant on manual human judgment to configure trading rules and entry/exit conditions. Finding the optimal initial strategy is essential. Trend following is limited by market volatility and the difficulty of accurately identifying trends.
+
+For example, the following formula could be used for trend following strategy:
+
+* Volume-weighted average price
+
+According to Volume-weighted average price Wikipedia page, VWAP is calculated using the following formula:
+
+":{\displaystyle P\_{\mathrm {VWAP} }={\frac {\sum \_{j}{P\_{j}\cdot Q\_{j}}}{\sum \_{j}{Q\_{j}}}}\,}
+
+where:
+
+* Mean reversion (finance)
+
+"A continuous mean-reverting time series can be represented by an Ornstein-Uhlenbeck stochastic differential equation:
+
+Where {\displaystyle \theta } is the rate of reversion to the mean, {\displaystyle \mu } is the mean value of the process, {\displaystyle \sigma } is the variance of the process and {\displaystyle W\_{t}} is a Wiener Process or Brownian Motion".
+
+
+## History
+
+The concept of automated trading system was first introduced by Richard Donchian in 1949 when he used a set of rules to buy and sell the funds. Donchian proposed a novel concept in which trades would be initiated autonomously in response to the fulfillment of predetermined market conditions. Due to the absence of advanced technology at the time, Donchian's staff was obligated to perform manual market charting and assess the suitability of executing rule-based trades. Although this laborious procedure was susceptible to human error, it established the foundation for the subsequent development of transacting financial assets.
+
+Then, in the 1980s, the concept of rule based trading (trend following) became more popular when famous traders like John Henry began to use such strategies. In the mid 1990s, some models were available for purchase. Also, improvements in technology increased the accessibility for retail investors. Later, Justin-Niall Swart employed a Donchian channel-based trend-following trading method for portfolio optimization in his South African futures market analysis.
+
+The early form of an Automated Trading System, composed of software based on algorithms, that have historically been used by financial managers and brokers. This type of software was used to automatically manage clients' portfolios. However, the first service to free market without any supervision was first launched in 2008 which was Betterment by Jon Stein. Since then, this system has been improving with the development in the IT industry.
+
+Around 2005, copy trading and mirror trading emerged as forms of automated algorithmic trading. These systems allowed traders to share their trading histories and strategies, which other traders could replicate in their accounts. One of the first companies to offer an auto-trading platform was Tradency in 2005 with its "Mirror Trader" software. This feature enabled traders to submit their strategies, allowing other users to replicate any trades produced by those strategies in their accounts. Subsequently, certain platforms allowed traders to connect their accounts directly in order to replicate trades automatically, without needing to code trading strategies. Since 2010, numerous online brokers have incorporated copy trading into their internet platforms, such as eToro, ZuluTrade, Ayondo, and Tradeo. Copy trading benefits from real-time trading decisions and order flow from credible investors, which lets less experienced traders mirror trades without performing the analysis themselves.
+
+Now, Automated Trading System is managing huge assets all around the globe. In 2014, more than 75 percent of the stock shares traded on United States exchanges (including the New York Stock Exchange and NASDAQ) originated from automated trading system orders.
+
+
+## Market disruption and manipulation
+
+Automated trading, or high-frequency trading, causes regulatory concerns as a contributor to market fragility. United States regulators have published releases discussing several types of risk controls that could be used to limit the extent of such disruptions, including financial and regulatory controls to prevent the entry of erroneous orders as a result of computer malfunction or human error, the breaching of various regulatory requirements, and exceeding a credit or capital limit.
+
+The use of high-frequency trading (HFT) strategies has grown substantially over the past several years and drives a significant portion of activity on U.S. markets. Although many HFT strategies are legitimate, some are not and may be used for manipulative trading. A strategy would be illegitimate or even illegal if it causes deliberate disruption in the market or tries to manipulate it. Such strategies include "momentum ignition strategies": spoofing and layering where a market participant places a non-bona fide order on one side of the market (typically, but not always, above the offer or below the bid) in an attempt to bait other market participants to react to the non-bona fide order and then trade with another order on the other side of the market. They are also referred to as predatory/abusive strategies. Given the scale of the potential impact that these practices may have, the surveillance of abusive algorithms remains a high priority for regulators. The Financial Industry Regulatory Authority (FINRA) has reminded firms using HFT strategies and other trading algorithms of their obligation to be vigilant when testing these strategies pre- and post-launch to ensure that the strategies do not result in abusive trading.
+
+FINRA also focuses on the entry of problematic HFT and algorithmic activity through sponsored participants who initiate their activity from outside of the United States. In this regard, FINRA reminds firms of their surveillance and control obligations under the SEC's Market Access Rule and Notice to Members 04-66, as well as potential issues related to treating such accounts as customer accounts, anti-money laundering, and margin levels as highlighted in Regulatory Notice 10-18 and the SEC's Office of Compliance Inspections and Examination's National Exam Risk Alert dated September 29, 2011.
+
+FINRA conducts surveillance to identify cross-market and cross-product manipulation of the price of underlying equity securities. Such manipulations are done typically through abusive trading algorithms or strategies that close out pre-existing option positions at favorable prices or establish new option positions at advantageous prices.
+
+In recent years, there have been a number of algorithmic trading malfunctions that caused substantial market disruptions. These raise concern about firms' ability to develop, implement, and effectively supervise their automated systems. FINRA has stated that it will assess whether firms' testing and controls related to algorithmic trading and other automated trading strategies are adequate in light of the U.S. Securities and Exchange Commission and firms' supervisory obligations. This assessment may take the form of examinations and targeted investigations. Firms will be required to address whether they conduct separate, independent, and robust pre-implementation testing of algorithms and trading systems. Also, whether the firm's legal, compliance, and operations staff are reviewing the design and development of the algorithms and trading systems for compliance with legal requirements will be investigated. FINRA will review whether a firm actively monitors and reviews algorithms and trading systems once they are placed into production systems and after they have been modified, including procedures and controls used to detect potential trading abuses such as wash sales, marking, layering, and momentum ignition strategies. Finally, firms will need to describe their approach to firm-wide disconnect or "kill" switches, as well as procedures for responding to catastrophic system malfunctions.
+
+
+### Notable examples
+
+Examples of recent substantial market disruptions include the following:
+
+* On May 6, 2010, the Dow Jones Industrial Average declined about 1,000 points (about 9 percent) and recovered those losses within minutes. It was the second-largest point swing (1,010.14 points) and the largest one-day point decline (998.5 points) on an intraday basis in the Average's history. This market disruption became known as the Flash Crash and resulted in U.S. regulators issuing new regulations to control market access achieved through automated trading.
+* On August 1, 2012, between 9:30 a.m. and 10:00 a.m. EDT, Knight Capital Group lost four times its 2011 net income. Knight's CEO Thomas Joyce stated, on the day after the market disruption, that the firm had "all hands on deck" to fix a bug in one of Knight's trading algorithms that submitted erroneous orders to exchanges for nearly 150 different stocks. Trading volumes soared in so many issues, that the SPDR S&P 500 ETF (SYMBOL: SPY), which is generally the most heavily traded U.S. security, became the 52nd-most traded stock on that day, according to Eric Hunsader, CEO of market data service Nanex. Knight shares closed down 62 percent as a result of the trading error and Knight Capital nearly collapsed. Knight ultimately reached an agreement to merge with Getco, a Chicago-based high-speed trading firm.

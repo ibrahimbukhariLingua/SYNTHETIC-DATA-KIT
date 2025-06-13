@@ -1,0 +1,134 @@
+Market data
+
+
+# Market data
+
+
+
+In finance, **market data** is price and other related data for a financial instrument reported by a trading venue such as a stock exchange. Market data allows traders and investors to know the latest price and see historical trends for instruments such as equities, fixed-income products, derivatives, and currencies.
+
+The market data for a particular instrument would include the identifier of the instrument and where it was traded such as the ticker symbol and exchange code plus the latest bid and ask price and the time of the last trade. It may also include other information such as volume traded, bid, and offer sizes and static data about the financial instrument that may have come from a variety of sources. It is used in conjunction with the related financial reference data that is typically distributed ahead of market data. There are a number of financial data vendors that specialize in collecting, cleaning, collating, and distributing market data and this has become the most common way that traders and investors get access to market data.
+
+Delivery of price data from exchanges to users, such as traders, is highly time-sensitive and involves specialized technologies designed to handle collection and throughput of massive data streams are used to distribute the information to traders and investors. The speed that market data is distributed can become critical when trading systems are based on analyzing the data before others are able to, such as in high-frequency trading.
+
+Market price data is not only used in real-time to make on-the-spot decisions about buying or selling, but historical market data can also be used to project pricing trends and to calculate market risk on portfolios of investments that may be held by an individual or an institutional investor.
+
+
+## Data structure
+
+A typical equity market data message or business object furnished from NYSE, TSX, or NASDAQ might appear something like this:
+
+| **Ticker symbol** | IBM |
+| --- | --- |
+| **Bid** | 89.02 |
+| **Ask** | 89.08 |
+| **Bid size** | 300 |
+| **Ask size** | 1000 |
+| **Last sale** | 89.06 |
+| **Last size** | 200 |
+| **Quote time** | 14:32:45.152 |
+| **Trade time** | 14.32.44.096 |
+| **exchange** | NYSE |
+| **volume** | 7808 |
+
+The above example is an aggregation of different sources of data, as quote data (bid, ask, bid size, ask size) and trade data (last sale, last size, volume) are often generated over different data feeds.
+
+
+## Delivery of data
+
+Delivery of price data from exchanges to users is highly time-sensitive. Specialized software and hardware systems called *ticker plants* are designed to handle collection and throughput of massive data streams, displaying prices for traders and feeding computerized trading systems fast enough to capture opportunities before markets change. When stored, historical market data is a type of time series data.
+
+Latency is the time lag in delivery of real-time data, i.e. the lower the latency, the faster the data transmission speed. Processing of large amounts of data with minimal delay is low latency. The delivery of data has increased in speed dramatically since 2010, with "low" latency delivery meaning delivery under 1 millisecond. The competition for low latency data has intensified with the rise of algorithmic and high frequency trading and the need for competitive trade performance.
+
+Market data generally refers to either real-time or delayed price quotations. The term also includes static or reference data, that is, any type of data related to securities that is not changing in real time.
+
+Reference data includes identifier codes such as ISIN codes, the exchange a security trades on, end-of-day pricing, name and address of the issuing company, the terms of the security (such as dividends or interest rate and maturity on a bond), and the outstanding corporate actions (such as pending stock splits or proxy votes) related to the security.
+
+While price data generally originates from the exchanges, reference data generally originates from the issuer. Before investors and traders receive price or updated reference data, financial data vendors may reformat, organize, and attempt to correct obvious outliers due to data feed or other real-time collection based errors.
+
+For consumers of market data, which are primarily the financial institutions and industry utilities serving the capital markets, the complexity of managing market data rose with the increase in the number of issued securities, number of exchanges and the globalization of capital markets. Beyond the rising volume of data, the continuing evolution of complex derivatives and indices, along with new regulations designed to contain risk and protect markets and investors, created more operational demands on market data management.
+
+Initially, individual financial data vendors provided data for software applications in financial institutions that were specifically designed for one data feed; thus, giving that financial data vendor control of that area of operations. Next, many of the larger investment banks and asset management firms started to design systems that would integrate market data into one central store. This drove investments in large-scale enterprise data management systems which collect, normalize and integrate feeds from multiple financial data vendors, with the goal of building a "single version of the truth" of data repository supporting every kind of operation throughout the institution. Beyond the operational efficiency gained, this data consistency became increasingly necessary to enable compliance with regulatory requirements, such as Sarbanes Oxley, Regulation NMS, and the Basel 2 accord.
+
+
+## Industry bodies
+
+There are various industry bodies that focus on market data:
+
+* **FISD** – Based in Washington DC, the Financial Information Services Division (FISD) of the Software and Information Industry Association operates globally and consists of three constituency groups: Consumer Firms, Vendor Firms and Exchanges.
+* **IPUG** – The Information Providers User Group (IPUG) is a UK-based organization whose membership is limited to consumer firms. Its main activities consist of lobbying vendor firms on key issues.
+* **COSSIOM** – Commission des Services et Systèmes d'Informations destinés aux Opérateurs de Marchés (COSSIOM) is the Paris-based organization for French consumer firms.
+* **BlueFedFin IXC** – Launched via Digta Channels in 2014 , The Sovereign Body is Federal and a FIN Creator from New Age. Reserves, Remote FIN Line, Wire Service & Potent Wealth Advisory to our Group Members. BlueFedFin is headed as a One Person Execution Complex. Led by Fonder CEO & Chairman & Principal Data Scientist, Karanvir Singh (India). Investor & Business Dealings are catered Online & on a Binary Scale of Operations with Cloud, AI & FIN BI.
+* **SEC** – The Securities and Exchange Commission (SEC) is an independent government agency whose role is to protect investors and oversee securities markets. The SEC helps regulate data management, transparency, and auditing of trading patterns in the market. For example, a recent regulatory action taken by the SEC is the adoption of Rule 613, also known as the Consolidated Audit Trail.
+* **CFTC** – The U.S. Commodity Futures Trading Commission oversees the markets and their participants, monitors liquidity and systematic risk, regulates compliance, and enforces the CEA. The CFTC uses data sourced from market data providers to perform its functions and publish reports on the health of the derivatives market including the Commitment of Traders report, Cotton on Call and the Weekly Swaps Report.
+* **FINRA** – FINRA (Financial Industry Regulatory Authority) is a non-government, self-regulatory organization that regulates member brokerage firms and exchange markets.
+* **CTA** operates one of the Securities Information Processors in the United States.
+* **UTP Plan** operates the Securities Information Processors for securities listed on Nasdaq and over-the-counter securities.
+* **OPRA** operates the Securities Information Processors for equity options in the United States.
+* **SIAC**, the Securities Industry Automation Corporation, which operates the CTA and OPRA SIPs.
+
+## Technology solutions
+
+The business of providing technology solutions to financial institutions for data management has grown over the past decade, as market data management has emerged from a little-known discipline for specialists to a high-priority issue for the entire capital markets industry and its regulators. Providers range from middleware and messaging vendors, vendors of cleansing and reconciliation software and services, and vendors of highly scalable solutions for managing the massive loads of incoming and stored reference data that must be maintained for daily trading, accounting, settlement, risk management and reporting to investors and regulators.
+
+The market data distribution platforms are designed to transport over the network large amounts of data from financial markets. They are intended to respond to the fast changes on the financial markets, compressing or representing data using specially designed protocols to increase throughput and/or reduce latency. Most market data servers run on Solaris or Linux as main targets. However, some have versions for Windows.
+
+
+### Feed handlers
+
+A typical usage can be a "feed handler" solution. Applications (sources) receive data from specific feed and connect to a server (authority) which accepts connections from clients (destinations) and redistributes data further. When a client (Destination) wants to subscribe for an instrument (to open an instrument), it sends a request to the server (authority) and if the server has not got the information in its cache it forwards the request to the source(s). Each time a server (authority) receives updates for an instrument, it sends them to all clients (destinations), subscribed for it.
+
+Notes:
+
+1. A client (destination) can unsubscribe itself for an individual instrument (close the instrument) and no further updates will be sent. When the connection between Authority and Destination breaks off, all requests made from the client will be dropped.
+2. A server (authority) can handle large client-connections, though usually a relatively small number of clients are connected to the same server at the same time.
+3. A client (destination) usually has a small number of open instruments, though larger numbers are also supported.
+4. The server has two levels of access permission:
+
+* Login permission – whether the client is allowed to connect to the server.
+* Information permission – whether the client is allowed to view information about the current instrument. This check is usually made by checking the contents of the instrument.
+
+## Types of market data vendors
+
+* Exchanges
+* Hosting providers
+* Ticker plant providers
+* Feed providers
+* Software providers
+
+## Market data needs
+
+Market data requirements depend on the need for customization, latency sensitivity, and market depth.
+
+**Customization:** How much operational control a firm has over its market data infrastructure.
+
+**Latency sensitivity:** The measure of how important high-speed market data is to a trading strategy.
+
+**Market depth:** the volume of quotes in a market data feed.
+
+
+## Market data fees
+
+There are 5 market data fee types charged by exchanges and financial data vendors. These fees are access fees, user fees, non-display fees, redistribution fees, and market data provider fees.
+
+
+### Management
+
+Market data is expensive (global expenditure yearly exceeds $50 billion) and complex (data variety, functionality, technology, billing). Therefore, it needs to be managed professionally. Professional market data management deals with issues such as:
+
+* Inventory management
+* Contract management
+* Cost management
+* Change management
+* Invoice reconciliation and administration
+* Permissioning
+* Reporting
+* Budgeting
+* Demand management
+* Technology management
+* Vendor management
+
+### Mobile applications
+
+Financial data vendors typically also offer mobile applications that provide market data in real time to financial institutions and consumers.
+

@@ -1,0 +1,69 @@
+Brokat
+
+
+# Brokat
+
+
+
+**Brokat Technologies AG (**formerly known as **Brokat AG**, **Brokat Infosystems AG**, and **Brokat Informationssysteme GmbH**), was established in 1994. During the period spanning from 1998 to 2001, it emerged as a prominent entity in the German stock market, particularly within the context of the New Economy and the New Market. However, its fortunes reversed with the collapse of the stock market dot-com bubble.
+
+Specialising in the development of e-business solutions, Brokat was recognised as a key international player in Internet banking solutions by the year 2000. Central to its offerings was the Twister platform, a modular e-services framework. This platform facilitated the seamless integration of existing IT infrastructures and applications within businesses, securely linking them to diverse electronic channels such as the Internet and mobile communications.
+
+
+## History
+
+Brokat was initially established as Brokat Informationssysteme GmbH on October 21, 1994. It commenced its operations with a registered share capital of 158,300 Deutsche Marks (DM). The enterprise was conceived through the collaborative efforts of five individuals: Stefan Roever (1965–2019), whose educational background encompassed law and business administration; Boris Anderer (born 1958), holding a doctorate in physics; Achim Schlumpberger (born 1965), a qualified computer scientist; Michael Schumacher (born 1961), also a certified computer scientist; and Michael Janßen (born 1966), whose expertise lay in business economics. Initially headquartered in Böblingen, Germany, near Stuttgart, the company later relocated its central offices to Stuttgart-Vaihingen on January 15, 1998.
+
+From 1996 to 2000 **Brokat Technologies** (formerly listed at the NASDAQ and the German Neuer Markt) was one of the German fast-growing companies of the New Economy age. In November 2001, it declared insolvency during the bust of dot-com bubble.
+
+Brokat's product families multi-channel infrastructure software, rules management and personalization technology, mobile payment software, and e-finance applications were used by over 3,500 enterprises worldwide including Deutsche Bank, ABN Amro, Allianz, Atlantic Data Services Inc., Bank of America, Blue Martini Software, Charter One, DaimlerChrysler, DBS Bank, Fidelity Investments, IBM Corporation, LBBW, MasterCard International, SE-Banken, Sun Microsystems, Swiss Post, T-Motion (a subsidiary of Deutsche Telekom), and Toyota. Strategic partners, among others, included Compaq, Intel, IBM, Siemens, and Sun Microsystems. With dual headquarters in San Jose, California and Stuttgart, Germany, Brokat employed over 1,400 people in 17 countries.
+
+When Brokat went public in 1998, Stefan Roever became CEO together with Boris Anderer as Co-CEO. Michael Janßen became CFO and Achim Schlumpberger became CTO. In 1999, Anderer and Schlumpberger quit their Executive positions; Anderer became Chairman of Brokat working on the US expansion and Schlumpberger became Chief Architect of Brokat core technology. Both left the company end of 2000.
+
+In 1998, Brokat went public at the German "Neuer Markt". In 1999, Brokat entered the U.S. market by acquiring the Atlanta-based Transaction Software Technologies, Inc. (TST). Furthermore, Intel invested 10M EUR in Brokat.
+
+End of 1999, Brokat achieved a market capitalization of more than $5 Billion. In 2000, Brokat expanded in the U.S. market by acquiring Gemstone Systems, Inc., Blaze Software, Inc. and Automated Financial Systems. Furthermore, Siemens invested 73M EUR in Brokat. In spring 2000, Brokat also issued a high-yield bond of €125 million led by the West LB bank.
+
+In November 2001, Brokat declared bankruptcy after it was unable to negotiate a restructuring agreement with the creditors of the high yield bond. During the liquidation, the e-payment engineering core was acquired by eOne Global (a First Data company) and maintained as a legal entity called Encorus Technology. The name Encorus was developed by WildOutWest and derives its meaning from Latin etymology "All together" with the goal to establish a standard for wireless/ mobile payments. Encorus focused on software and professional services for the "mobile payment" business (payment by the means of mobile phones). In 2005 the Encorus business was acquired by Qpass.
+
+The Professional Services department and the rest of Brokat was bought by Brokat's longtime opponent in the German market, Data Design AG in 2001. In 2003, Data Design was finally acquired by the Hungarian Interactive Net Design (IND).
+
+
+## Technology
+
+Brokat developed mostly banking-related software and provided professional services mainly to financial institutions. Brokat was known for its encryption server and applet technology named XPresso, which made strong encryption (128bit symmetric) available without US (especially NSA) interference. Brokat sold its software to many large financial institutions mainly in Europe, especially Germany.
+
+In addition to providing systems to established institutions, Brokat also created solutionsᵇᵘᶻᶻʷᵒʳᵈ for startup companies. A prominent example for the latter is Cortal Consors.
+The company tried to get in the middleware software business by developing the application server Twister. Twister was the base technology for nearly all customized solutionsᵇᵘᶻᶻʷᵒʳᵈ implemented by Brokat.
+
+
+### Twister
+
+Twister was the main product of Brokat AG. It was a proprietary middleware software that was created in the late 1990s and was always sold as the central software product in all projects. The software was mainly sold to financial institutions which often also relied on the *XPresso* encryption software of Brokat.
+
+The base of Twister was a CORBA Object Request Broker written in C++ that handled requests from so-called *Gateway*s and routed them to so-called *RDO*s. RDOs are comparable to the more modern EJB JavaBeans (server software objects). Backend systems such as legacy mainframe applications or database servers were accessed through so-called "Accessors".
+RDOs could be written in TCL, Java or C++ and interact with each other regardless of the language. Despite this cross-language functionality, most projects were implemented in a single language, most often TCL or java.
+
+Twister 4 also supported the EJB java object model.
+
+Twister was capable of handling very high loads and was thus used by electronic stock traders like *Cortal Consors* for real-time trading. During the morning hours when the stock exchange opened, the Twister System at Consors was known to handle several thousand connections/requests simultaneously.
+
+
+### Innovations
+
+Brokat was a pioneer in encryption technology by providing a java-Applet-based encryption toolkit, named Xpresso. The protocol of this toolkit was named SRT (Secure Request Technology). Technically, it was a 128bit-key implementation of the SSL protocol.
+
+In the final years, Brokat refocused on Mobile Commerce, which is defined as electronic commerce done on mobile devices such as Smartphones. This led to a technology called Mobile Digital Signature, an XML-based message format for encoding and signing business contracts.
+
+For the implementation of business logic, the company devised a very simple object model, called RDO (repository defined object). RDOs had a very simple interface structure, consisting of a flat key-value structure. RDOs could be written in many programming languages and would interoperate easily.
+
+Brokat was awarded several patents on encryption technology (e.g. random number generators) and for the RDO cross-language programming model.
+
+
+### Key Engineers
+
+Achim Schlumpberger (Twister),
+Malte Borcherding (Encryption),
+Jürgen Hagel (Twister),
+Jürgen Thumm (Xpresso)
+

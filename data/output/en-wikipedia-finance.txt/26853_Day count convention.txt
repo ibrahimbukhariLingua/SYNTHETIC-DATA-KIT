@@ -1,0 +1,308 @@
+Day count convention
+
+
+# Day count convention
+
+
+
+In finance, a **day count convention** determines how interest accrues over time for a variety of investments, including bonds, notes, loans, mortgages, medium-term notes, swaps, and forward rate agreements (FRAs). This determines the number of days between two coupon payments, thus calculating the amount transferred on payment dates and also the accrued interest for dates between payments. The day count is also used to quantify periods of time when discounting a cash-flow to its present value. When a security such as a bond is sold between interest payment dates, the seller is eligible to some fraction of the coupon amount.
+
+The day count convention is used in many other formulas in financial mathematics as well.
+
+
+## Development
+
+The need for day count conventions is a direct consequence of interest-earning investments. Different conventions were developed to address often conflicting requirements, including ease of calculation, constancy of time period (day, month, or year) and the needs of the accounting department. This development occurred long before the advent of computers.
+
+There is no central authority defining day count conventions, so there is no standard terminology, however the International Swaps and Derivatives Association (ISDA) and the International Capital Market Association (ICMA) have done work gathering and documenting conventions. Certain terms, such as "30/360", "Actual/Actual", and "money market basis" must be understood in the context of the particular market.
+
+The conventions have evolved, and this is particularly true since the mid-1990s. Part of it has simply been providing for additional cases or clarification.
+
+There has also been a move towards convergence in the marketplace, which has resulted in the number of conventions in use being reduced. Much of this has been driven by the introduction of the euro.
+
+
+## Definitions
+
+For all conventions, the Interest is calculated as:
+
+
+## 30/360 methods
+
+All conventions of this class calculate the DayCountFactor as:
+
+They calculate the CouponFactor as:
+
+This is the same as the DayCountFactor calculation, with Date2 replaced by Date3. In the case that it is a regular coupon period, this is equivalent to:
+
+The conventions are distinguished by the manner in which they adjust Date1 and/or Date2 for the end of the month. Each convention has a set of rules directing the adjustments.
+
+Treating a month as 30 days and a year as 360 days was devised for its ease of calculation by hand compared with manually calculating the actual days between two dates. Also, because 360 is highly factorable, payment frequencies of semi-annual and quarterly and monthly will be 180, 90, and 30 days of a 360-day year, meaning the payment amount will not change between payment periods.
+
+
+### 30/360 Bond Basis
+
+This convention is exactly as 30U/360 below, except for the first two rules. Note that the order of calculations is important:
+
+* {\displaystyle D\_{1}=\min(D\_{1},30)}.
+* If {\displaystyle D\_{1}>29} then {\displaystyle D\_{2}=\min(D\_{2},30)}
+
+Other names:
+
+* 30A/360.
+
+Sources:
+
+* ISDA 2006 Section 4.16(f).
+
+### 30/360 US
+
+Date adjustment rules (more than one may take effect; apply them in order, and if a date is changed in one rule the changed value is used in the following rules):
+
+* If the investment is EOM and (Date1 is the last day of February) and (Date2 is the last day of February), then change *D*₂ to 30.
+* If the investment is EOM and (Date1 is the last day of February), then change *D*₁ to 30.
+* If *D*₂ is 31 and *D*₁ is 30 or 31, then change *D*₂ to 30.
+* If *D*₁ is 31, then change *D*₁ to 30.
+
+This convention is used for US corporate bonds and many US agency issues. It is most commonly referred to as "30/360", but the term "30/360" may also refer to any of the other conventions of this class, depending on the context.
+
+Other names:
+
+* 30U/360 - 30U/360 is not strictly the same as 30/360, it is used for the Euribor (Euro denominated Libor) curve and Euro denominated swaps, with the distinction that under 30/360, each day in a 31-day month accrues 30/31 of interest, whereas in 30U/360 payment occurs on the 30th and the 31st is considered to be part of the next month. - Bloomberg
+* 30/360
+
+Sources:
+
+* ISDA 2006 Section 4.16(f), though the first two rules are not included.
+* (Mayle 1993)
+
+### 30E/360
+
+Date adjustment rules:
+
+* If *D*₁ is 31, then change *D*₁ to 30.
+* If *D*₂ is 31, then change *D*₂ to 30.
+
+Other names:
+
+* 30/360 ICMA
+* 30/360 ISMA
+* 30S/360
+* Eurobond basis (ISDA 2006)
+* Special German
+
+Sources:
+
+* ICMA Rule 251.1(ii), 251.2.
+* ISDA 2006 Section 4.16(g).
+
+### 30E/360 ISDA
+
+Date adjustment rules:
+
+* If *D*₁ is the last day of the month, then change *D*₁ to 30.
+* If *D*₂ is the last day of the month (unless Date2 is the maturity date and *M*₂ is February), then change *D*₂ to 30.
+
+Other names:
+
+* 30E/360 ISDA
+* Eurobond basis (ISDA 2000)
+* German
+
+Sources:
+
+* ISDA 2006 Section 4.16(h).
+
+## Actual methods
+
+The conventions of this class calculate the number of days between two dates (e.g., between Date1 and Date2) as the Julian day difference. This is the function Days(StartDate, EndDate).
+
+The conventions are distinguished primarily by the amount of the CouponRate they assign to each day of the accrual period.
+
+
+### Actual/Actual ICMA
+
+Formulas:
+
+For regular coupon periods where Date2 and Date3 are equal:
+
+For irregular coupon periods, the period has to be divided into one or more quasi-coupon periods (also called notional periods) that match the normal frequency of payment dates. The interest in each such period (or partial period) is then computed, and then the amounts are summed over the number of quasi-coupon periods. For details, see (Mayle 1993) or the ISDA paper.
+
+This method ensures that all coupon payments are always for the same amount.
+
+It also ensures that all days in a coupon period are valued equally. However, the coupon periods themselves may be of different lengths; in the case of semi-annual payment on a 365-day year, one period can be 182 days and the other 183 days. In that case, all the days in one period will be valued 1/182nd of the payment amount and all the days in the other period will be valued 1/183rd of the payment amount.
+
+This is the convention used for US Treasury bonds and notes, among other securities.
+
+Other names:
+
+* Actual/Actual
+* Act/Act ICMA
+* ISMA-99
+* Act/Act ISMA
+
+Sources:
+
+* ICMA Rule 251.1(iii).
+* ISDA 2006 Section 4.16(c).
+* (Mayle 1993)
+* Actual/Actual comparison, EMU and Market Conventions: Recent Developments.
+
+### Actual/Actual ISDA
+
+Formulas:
+
+This convention accounts for days in the period based on the portion in a leap year and the portion in a non-leap year.
+
+The days in the numerators are calculated on a Julian day difference basis. In this convention the first day of the period is included and the last day is excluded.
+
+The CouponFactor uses the same formula, replacing Date2 by Date3. In general, coupon payments will vary from period to period, due to the differing number of days in the periods. The formula applies to both regular and irregular coupon periods.
+
+Other names are:
+
+* Actual/Actual
+* Act/Act
+* Actual/365
+* Act/365
+
+Sources:
+
+* ISDA 2006 Section 4.16(b).
+
+### Actual/365 Fixed
+
+Formulas:
+
+Each month is treated normally and the year is assumed to be 365 days. For example, in a period from February 1, 2005, to April 1, 2005, the Factor is considered to be 59 days divided by 365.
+
+The CouponFactor uses the same formula, replacing Date2 by Date3. In general, coupon payments will vary from period to period, due to the differing number of days in the periods. The formula applies to both regular and irregular coupon periods.
+
+Other names:
+
+* Act/365 Fixed
+* A/365 Fixed
+* A/365F
+* English
+
+Sources:
+
+* ISDA 2006 Section 4.16(d).
+* (Mayle 1993)
+
+### Actual/360
+
+Formulas:
+
+This convention is used in money markets for short-term lending of currencies, including the US dollar and Euro, and is applied in ESCB monetary policy operations. It is the convention used with Repurchase agreements. For example, in a period from February 1, 2005, to April 1, 2005, the Factor is considered to be 59 days divided by 360.
+
+The CouponFactor uses the same formula, replacing Date2 by Date3. In general, coupon payments will vary from period to period, due to the differing number of days in the periods. The formula applies to both regular and irregular coupon periods.
+
+Other names:
+
+* Act/360
+* A/360
+* French
+
+Sources:
+
+* ICMA Rule 251.1(i) (not sterling).
+* ISDA 2006 Section 4.16(e).
+* (Mayle 1993)
+
+### Actual/364
+
+Formulas:
+
+Each month is treated normally and the year is assumed to be 364 days. For example, in a period from February 1, 2005, to April 1, 2005, the Factor is considered to be 59 days divided by 364.
+
+The CouponFactor uses the same formula, replacing Date2 by Date3. In general, coupon payments will vary from period to period, due to the differing number of days in the periods. The formula applies to both regular and irregular coupon periods.
+
+
+### Actual/365L
+
+Here **L** stands for Leap year.
+
+Formulas:
+
+This convention requires a set of rules in order to determine the days in the year (DiY).
+
+* If Freq = 1 (annual coupons):
+ + If February 29 is in the range from Date1 (exclusive) to Date2 (inclusive), then DiY = 366, else DiY = 365.
+* If Freq <> 1:
+ + If Date2 is in a leap year, then DiY = 366, else DiY = 365.
+
+The CouponFactor uses the same formula, replacing Date2 by Date3. In general, coupon payments will vary from period to period, due to the differing number of days in the periods. The formula applies to both regular and irregular coupon periods.
+
+Other names:
+
+* ISMA-Year
+
+Sources:
+
+* ICMA Rule 251.1(i) (Euro-sterling floating-rate notes).
+
+### Actual/Actual AFB
+
+Formulas:
+
+This convention requires a set of rules in order to determine the days in the year (DiY).
+
+The basic rule is that if February 29 is in the range from Date1 (inclusive) to Date2 (exclusive), then DiY = 366, else DiY = 365.
+
+If the period from Date1 to Date2 is more than one year, the calculation is split into two parts:
+
+* the number of complete years, counted back from the last day of the period
+* the remaining initial stub, calculated using the basic rule.
+
+As an example, a period from 1994-02-10 to 1997-06-30 is split as follows:
+
+* 1994-06-30 to 1997-06-30 = 3 (whole years calculated backwards from the end)
+* 1994-02-10 to 1994-06-30 = 140/365
+
+Resulting in a total value of 3 + 140/365.
+
+This convention was originally written in French and during translation the term "Période d'Application" was converted to "Calculation Period". As ISDA assigns a very specific meaning to "Calculation Period" (Date1 to Date3) confusion can ensue. Reading the original French, the period referred to is Date1 to Date2, not Date1 to Date3.
+
+The original French version of the convention contained no specific rules for counting back the years. A later ISDA paper added an additional rule: "When counting backwards for this purpose, if the last day of the relevant period is 28 February, the full year should be counted back to the previous 28 February unless 29 February exists, in which case, 29 February should be used". No source can be found explaining the appearance or rationale of the extra rule. The table below compares the later ISDA count back rule to a simple count back rule (which would have been implied by the original French) for one of the few cases where they differ. The simple rule illustrated here is based on subtraction of *n* years from Date2, where subtracting whole years from a date goes back to the same day-of-month, except if starting on 29 February and going back to a non-leap year then 28 February results.
+
+| Date range | ISDA count back rule | Simple count back rule |
+| --- | --- | --- |
+| From 2004-02-28 to 2008-02-27 | 3 + 365 / 366 | 3 + 365 / 366 |
+| From 2004-02-28 to 2008-02-28 | 4 + 1 / 366 | 4 |
+| From 2004-02-28 to 2008-02-29 | 4 + 1 / 366 | 4 + 1 / 366 |
+
+Sources:
+
+* "Definitions communes a plusieurs additifs techniques", by the Association Francaise des Banques in September 1994.
+* FBF Master Agreement for Financial Transactions, Supplement to the Derivatives Annex, Interest Rate Transactions, Edition 2004, section 7i.
+* Actual/Actual comparison, EMU and Market Conventions: Recent Developments.
+* ISDA Actual/Actual paper, 1999.
+
+### 1/1
+
+"1/1" means the fraction whose numerator is 1 and whose denominator is 1.
+
+Sources:
+
+* ISDA 2006 Section 4.16(a).
+* FBF Master Agreement for Financial Transactions, Supplement to the Derivatives Annex, Interest Rate Transactions, Edition 2004, section 7a.
+
+## Discussion
+
+
+### Comparison of 30/360 and Actual methods
+
+The 30/360 methods assume every month has 30 days and each year has 360 days. The 30/360 calculation is listed on standard loan constant charts and is now typically used by a calculator or computer in determining mortgage payments. This method of treating a month as 30 days and a year as 360 days was originally devised for its ease of calculation by hand compared with the actual days between two dates. Because 360 is highly factorable, payment frequencies of semi-annual and quarterly and monthly will be 180, 90, and 30 days of a 360-day year, meaning the payment amount will not change between payment periods.
+
+The Actual/360 method calls for the borrower for the actual number of days in a month. This effectively means that the borrower is paying interest for 5 or 6 additional days a year as compared to the 30/360 day count convention. Spreads and rates on Actual/360 transactions are typically lower, e.g., 9 basis points. Since monthly loan payments are the same for both methods and since the investor is being paid for an additional 5 or 6 days of interest with the Actual/360 year base, the loan's principal is reduced at a slightly lower rate. This leaves the loan balance 1-2% higher than a 30/360 10-year loan with the same payment.
+
+Another difference between 30/360 and Actual methods regards the additivity property of the Day Count Factor, i.e. given two subsequent time intervals {\displaystyle [T\_{1},T\_{2}],[T\_{2},T\_{3}]} the property
+
+{\displaystyle {\textit {DayCountFactor}}(T\_{1},T\_{2})+{\textit {DayCountFactor}}(T\_{2},T\_{3})={\textit {DayCountFactor}}(T\_{1},T\_{3})}.
+
+Whereas actual methods do respect additivity, 30/360 do not. This property is relevant, for example, when one computes an integral over a time interval using a discretization rule.
+
+
+### Business date convention
+
+Date rolling (business day) conventions adjust non-business into business days to determine payment execution dates. Another convention states whether the calculation of the amount of interest payment or accrued interest within a coupon period must use the *adjusted* (aka bumped) or the *unadjusted* (aka unbumped) dates. An example of a complete business day convention is "Following Business Day, Unadjusted".
+

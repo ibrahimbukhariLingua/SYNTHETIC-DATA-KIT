@@ -1,0 +1,28 @@
+Inada conditions
+
+
+# Inada conditions
+
+
+
+In macroeconomics, the **Inada conditions** are assumptions about the shape of a function that ensure well-behaved properties in economic models, such as diminishing marginal returns and proper boundary behavior, which are essential for the stability and convergence of several macroeconomic models. The conditions are named after Ken-Ichi Inada, who introduced them in 1963.
+
+The Inada conditions are commonly associated with ensuring the existence of a unique steady state and preventing pathological behaviors in production functions, such as infinite or zero capital accumulation.
+
+
+## Statement
+
+Given a continuously differentiable function {\displaystyle f\colon X\to Y}, where {\displaystyle X=\left\{x\colon \,x\in \mathbb {R} \_{+}^{n}\right\}} and {\displaystyle Y=\left\{y\colon \,y\in \mathbb {R} \_{+}\right\}}, the conditions are:
+
+1. the value of the function {\displaystyle f(\mathbf {x} )} at {\displaystyle \mathbf {x} =\mathbf {0} } is 0: {\displaystyle f(\mathbf {0} )=0}
+2. the function is concave on {\displaystyle X}, i.e. the Hessian matrix {\displaystyle \mathbf {H} \_{i,j}=\left({\frac {\partial ^{2}f}{\partial x\_{i}\partial x\_{j}}}\right)} needs to be negative-semidefinite. Economically this implies that the marginal returns for input {\displaystyle x\_{i}} are positive, i.e. {\displaystyle \partial f(\mathbf {x} )/\partial x\_{i}>0}, but decreasing, i.e. {\displaystyle \partial ^{2}f(\mathbf {x} )/\partial x\_{i}^{2}<0}
+3. the limit of the first derivative is positive infinity as {\displaystyle x\_{i}} approaches 0: {\displaystyle \lim \_{x\_{i}\to 0}\partial f(\mathbf {x} )/\partial x\_{i}=+\infty }, meaning that the effect of the first unit of input {\displaystyle x\_{i}} has the largest effect
+4. the limit of the first derivative is zero as {\displaystyle x\_{i}} approaches positive infinity: {\displaystyle \lim \_{x\_{i}\to +\infty }\partial f(\mathbf {x} )/\partial x\_{i}=0}, meaning that the effect of one additional unit of input {\displaystyle x\_{i}} is 0 when approaching the use of infinite units of {\displaystyle x\_{i}}
+
+## Consequences
+
+The elasticity of substitution between goods is defined for the production function {\displaystyle f(\mathbf {x} ),\mathbf {x} \in \mathbb {R} ^{n}} as {\displaystyle \sigma \_{ij}={\frac {\partial \log(x\_{i}/x\_{j})}{\partial \log MRTS\_{ji}}}}, where {\displaystyle MRTS\_{ji}({\bar {z}})={\frac {\partial f({\bar {z}})/\partial z\_{j}}{\partial f({\bar {z}})/\partial z\_{i}}}} is the marginal rate of technical substitution.
+It can be shown that the Inada conditions imply that the elasticity of substitution between components is asymptotically equal to one (although the production function is *not* necessarily asymptotically Cobb–Douglas, a commonplace production function for which this condition holds).
+
+In stochastic neoclassical growth model, if the production function does not satisfy the Inada condition at zero, any feasible path converges to zero with probability one, provided that the shocks are sufficiently volatile.
+

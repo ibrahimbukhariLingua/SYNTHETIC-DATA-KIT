@@ -1,0 +1,178 @@
+Electricity price forecasting
+
+
+# Electricity price forecasting
+
+
+
+**Electricity price forecasting (EPF)** is a branch of energy forecasting which focuses on using mathematical, statistical and machine learning models to predict electricity prices in the future. Over the last 30 years electricity price forecasts have become a fundamental input to energy companies’ decision-making mechanisms at the corporate level.
+
+Since the early 1990s, the process of deregulation and the introduction of competitive electricity markets have been reshaping the landscape of the traditionally monopolistic and government-controlled power sectors. Throughout Europe, North America, Australia and Asia, electricity is now traded under market rules using spot and derivative contracts. However, electricity is a very special commodity: it is economically non-storable and power system stability requires a constant balance between production and consumption. At the same time, electricity demand depends on weather (temperature, wind speed, precipitation, etc.) and the intensity of business and everyday activities (on-peak vs. off-peak hours, weekdays vs. weekends, holidays, etc.). These unique characteristics lead to price dynamics not observed in any other market, exhibiting daily, weekly and often annual seasonality and abrupt, short-lived and generally unanticipated price spikes.
+
+Extreme price volatility, which can be up to two orders of magnitude higher than that of any other commodity or financial asset, has forced market participants to hedge not only volume but also price risk. Price forecasts from a few hours to a few months ahead have become of particular interest to power portfolio managers. A power market company able to forecast the volatile wholesale prices with a reasonable level of accuracy can adjust its bidding strategy and its own production or consumption schedule in order to reduce the risk or maximize the profits in day-ahead trading. A ballpark estimate of savings from a 1% reduction in the mean absolute percentage error (MAPE) of short-term price forecasts is $300,000 per year for a utility with 1GW peak load. With the additional price forecasts, the savings double.
+
+
+## Forecasting methodology
+
+The simplest model for day ahead forecasting is to ask each generation source to bid on blocks of generation and choose the cheapest bids. If not enough bids are submitted, the price is increased. If too many bids are submitted the price can reach zero or become negative. The offer price includes the generation cost as well as the transmission cost, along with any profit. Power can be sold or purchased from adjoining power pools.
+
+The concept of independent system operators (ISOs) fosters competition for generation among wholesale market participants by unbundling the operation of transmission and generation. ISOs use bid-based markets to determine economic dispatch.
+
+Wind and solar power are non-dispatchable. Such power is normally sold before any other bids, at a predetermined rate for each supplier. Any excess is sold to another grid operator, or stored, using pumped-storage hydroelectricity, or in the worst case, curtailed. Curtailment could potentially significantly impact solar power's economic and environmental benefits at greater PV penetration levels. Allocation is done by bidding.
+
+The effect of the recent introduction of smart grids and integrating distributed renewable generation has been increased uncertainty of future supply, demand and prices. This uncertainty has driven much research into the topic of forecasting.
+
+
+## Driving factors
+
+Electricity cannot be stored as easily as gas, it is produced at the exact moment of demand. All of the factors of supply and demand will, therefore, have an immediate impact on the price of electricity on the spot market. In addition to production costs, electricity prices are set by supply and demand. However, some fundamental drivers are the most likely to be considered.
+
+Short-term prices are impacted the most by the weather. Demand due to heating in the winter and cooling in the summer are the main drivers for seasonal price spikes. Additional natural-gas fired capacity is driving down the price of electricity and increasing demand.
+
+A country's natural resource endowment, as well as its regulations in place greatly influence tariffs from the supply side. The supply side of the electricity supply is most influenced by fuel prices, and CO₂ allowance prices. The EU carbon prices have doubled since 2017, making it a significant driving factor of price.
+
+
+### Weather
+
+Studies show that demand for electricity is driven largely by temperature. Heating demand in the winter and cooling demand (air conditioners) in the summer are what primarily drive the seasonal peaks in most regions. Heating degree days and cooling degree days help measure energy consumption by referencing the outdoor temperature above and below 65 degrees Fahrenheit, a commonly accepted baseline.
+
+In terms of renewable sources like solar and wind, weather impacts supply. California's duck curve shows the difference between electricity demand and the amount of solar energy available throughout the day. On a sunny day, solar power floods the electricity generation market and then drops during the evening, when electricity demand peaks.
+
+Forecasting for wind and solar renewable energy is becoming more important as the amount of energy generated from these sources increases. Meteorological forecasts can improve the accuracy of electricity price forecasting models. While day-ahead forecasts can take advantage of autoregressive effects, forecasts featuring meteorological data are more accurate for 2-4 day-ahead horizons. In some cases, renewable energy generation forecasts published by Transmission System Operators (TSOs) can be improved with simple prediction models and used provide more accurate electricity price predictions.
+
+
+### Hydropower availability
+
+Snowpack, streamflows, seasonality, salmon, etc. all affect the amount of water that can flow through a dam at any given time. Forecasting these variables predicts the available potential energy for a dam for a given period. Some regions such as Pakistan, Egypt, China and the Pacific Northwest get significant generation from hydroelectric dams. In 2015, SAIDI and SAIFI more than doubled from the previous year in Zambia due to low water reserves in their hydroelectric dams caused by insufficient rainfall.
+
+
+### Power plant and transmission outages
+
+Whether planned or unplanned, outages affect the total amount of power that is available to the grid. Outages undermine electricity supply, which in turn affects the price.
+
+
+### Economic health
+
+During times of economic hardship, many factories cut back production due to a reduction of consumer demand and therefore reduce production-related electrical demand.
+
+
+### Government regulation
+
+Governments may choose to make electricity tariffs affordable for their population through subsidies to producers and consumers. Most countries characterized as having low energy access have electric power utilities that do not recover any of their capital and operating costs, due to high subsidy levels.
+
+
+## Taxonomy of modeling approaches
+
+A variety of methods and ideas have been tried for electricity price forecasting (EPF), with varying degrees of success. They can be broadly classified into six groups.
+
+
+### Multi-agent models
+
+*Multi-agent* (multi-agent simulation*, equilibrium, game theoretic*) models simulate the operation of a system of heterogeneous agents (generating units, companies) interacting with each other, and build the price process by matching the demand and supply in the market. This class includes *cost-based models* (or *production-cost models*, PCM), *equilibrium* or *game theoretic* approaches (like the Nash-Cournot framework, supply function equilibrium - SFE, strategic production-cost models - SPCM) and agent-based models.
+
+Multi-agent models generally focus on qualitative issues rather than quantitative results. They may provide insights as to whether or not prices will be above marginal costs, and how this might influence the players’ outcomes. However, they pose problems if more quantitative conclusions have to be drawn, particularly if electricity prices have to be predicted with a high level of precision.
+
+
+### Fundamental models
+
+*Fundamental* (*structural*) methods try to capture the basic physical and economic relationships which are present in the production and trading of electricity. The functional associations between fundamental drivers (loads, weather conditions, system parameters, etc.) are postulated, and the fundamental inputs are modeled and predicted independently, often via statistical, reduced-form or computational intelligence techniques. In general, two subclasses of fundamental models can be identified: *parameter rich models* and *parsimonious structural models* of supply and demand.
+
+Two major challenges arise in the practical implementation of fundamental models: data availability and incorporation of stochastic fluctuations of the fundamental drivers. In building the model, we make specific assumptions about physical and economic relationships in the marketplace, and therefore the price projections generated by the models are very sensitive to violations of these assumptions.
+
+
+### Reduced-form models
+
+*Reduced-form* (*quantitative, stochastic*) models characterize the statistical properties of electricity prices over time, with the ultimate objective of derivatives valuation and risk management. Their main intention is not to provide accurate hourly price forecasts, but rather to replicate the main characteristics of daily electricity prices, like marginal distributions at future time points, price dynamics, and correlations between commodity prices. If the price process chosen is not appropriate for capturing the main properties of electricity prices, the results from the model are likely to be unreliable. However, if the model is too complex, the computational burden will prevent its use on-line in trading departments. Depending on the type of market under consideration, reduced-form models can be classified as:
+
+* *Spot price models*, which provide a parsimonious representation of the dynamics of spot prices. Their main drawback is the problem of pricing derivatives, i.e., the identification of the risk premium linking spot and forward prices. The two most popular subclasses include jump-diffusion and Markov regime-switching models.
+* *Forward price models* allow for the pricing of derivatives in a straightforward manner (but only of those written on the forward price of electricity). However, they too have their limitations; most importantly, the lack of data that can be used for calibration and the inability to derive the properties of spot prices from the analysis of forward curves.
+
+### Statistical models
+
+*Statistical* (such as *econometric*) methods forecast the current price by using a mathematical combination of the previous prices and/or previous or current values of exogenous factors, typically consumption and production figures, or weather variables. The two most important categories are *additive* and *multiplicative* models. They differ in whether the predicted price is the sum (additive) of a number of components or the product (multiplicative) of a number of factors. The former are far more popular, but the two are closely related - a multiplicative model for prices can be transformed into an additive model for log-prices. Statistical models are attractive because some physical interpretation may be attached to their components, thus allowing engineers and system operators to understand their behavior. They are often criticized for their limited ability to model the (usually) nonlinear behavior of electricity prices and related fundamental variables. However, in practical applications, their performances are not worse than those of the non-linear computational intelligence methods (see below). For instance, in the *load forecasting track* of the Global Energy Forecasting Competition (GEFCom2012) attracting hundreds of participants worldwide, the top four winning entries used regression-type models.
+
+Statistical models constitute a very rich class which includes:
+
+* Similar-day and exponential smoothing methods.
+* Time series regression models models without (AR, ARMA, ARIMA, Fractional ARIMA - FARIMA, Seasonal ARIMA - SARIMA, Threshold AR - TAR) and with exogenous variables (ARX, ARMAX, ARIMAX, SARIMAX, TARX).
+* Heteroskedastic time series models (GARCH, AR-GARCH, SV).
+* Factor models.
+* Functional data analysis models.
+
+### Computational intelligence models
+
+*Computational intelligence* (*artificial intelligence-based, machine learning, non-parametric, non-linear statistical*) techniques combine elements of learning, evolution and fuzziness to create approaches that are capable of adapting to complex dynamic systems, and may be regarded as "intelligent" in this sense. Artificial neural networks, including deep neural networks, explainable AI models and distributional neural networks, as well as fuzzy systems and support vector machines (SVM) are unquestionably the main classes of computational intelligence techniques in EPF. Their major strength is the ability to handle complexity and non-linearity. In general, computational intelligence methods are better at modeling these features of electricity prices than the statistical techniques (see above). At the same time, this flexibility is also their major weakness. The ability to adapt to nonlinear, spiky behavior does not necessarily lead to better point or probabilistic predictions, and a lot of effort is required to find the right hyper-parameters.
+
+
+### Hybrid models
+
+Many of the modeling and price forecasting approaches considered in the literature are *hybrid* solutions, combining techniques from two or more of the groups listed above. Their classification is non-trivial, if possible at all.
+As an example of hybrid model AleaModel (AleaSoft) combines Neural Networks and Box Jenkins models.
+
+
+## Forecasting horizons
+
+It is customary to talk about short-, medium- and long-term forecasting, but there is no consensus in the literature as to what the thresholds should actually be:
+
+* *Short-term forecasting* generally involves horizons from a few minutes up to a few days ahead, and is of prime importance in day-to-day market operations.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+* *Medium-term* *forecasting*, from a few days to a few months ahead, is generally preferred for balance sheet calculations, risk management and derivatives pricing. In many cases, especially in electricity price forecasting, evaluation is based not on the actual point forecasts, but on the distributions of prices over certain future time periods. As this type of modeling has a long-standing tradition in finance, an inflow of "finance solutions" is observed.
+* *Long-term* *forecasting*, with lead times measured in months, quarters or even years, concentrates on investment profitability analysis and planning, such as determining the future sites or fuel sources of power plants.
+
+## Future of electricity price forecasting
+
+In his extensive review paper, Weron looks ahead and speculates on the directions EPF will or should take over the next decade or so:
+
+
+### Fundamental price drivers and input variables
+
+
+#### Seasonality
+
+A key point in electricity spot price modeling and forecasting is the appropriate treatment of seasonality. The electricity price exhibits seasonality at three levels: the daily and weekly, and to some extent - the annual. In *short-term forecasting*, the annual or long-term seasonality is usually ignored, but the daily and weekly patterns (including a separate treatment of holidays) are of prime importance. This, however, may not be the right approach. As Nowotarski and Weron have recently shown, decomposing a series of electricity prices into a long-term seasonal and a stochastic component, modeling them independently and combining their forecasts can bring - contrary to a common belief - an accuracy gain compared to an approach in which a given model is calibrated to the prices themselves.
+
+In *mid-term forecasting*, the daily patterns become less relevant and most EPF models work with average daily prices. However, the long-term trend-cycle component plays a crucial role. Its misspecification can introduce bias, which may lead to a bad estimate of the mean reversion level or of the price spike intensity and severity, and consequently, to underestimating the risk. Finally, in the *long term*, when the time horizon is measured in years, the daily, weekly and even annual seasonality may be ignored, and long-term trends dominate. Adequate treatment - both in-sample and out-of-sample - of seasonality has not been given enough attention in the literature so far.
+
+
+#### Variable selection
+
+Another crucial issue in electricity price forecasting is the appropriate choice of explanatory variables. Apart from historical electricity prices, the current spot price is dependent on a large set of fundamental drivers, including system loads, weather variables, fuel costs, the reserve margin (i.e., available generation minus/over predicted demand) and information about scheduled maintenance and forced outages. Although "pure price" models are sometimes used for EPF, in the most common day-ahead forecasting scenario most authors select a combination of these fundamental drivers, based on the heuristics and experience of the forecaster. Very rarely has an automated selection or shrinkage procedure been carried out in EPF, especially for a large set of initial explanatory variables. However, the machine learning literature provides viable tools that can be broadly classified into two categories:
+
+* Feature or subset selection, which involves identifying a subset of predictors that we believe to be influential, then fitting a model on the reduced set of variables.
+* Shrinkage (also known as regularization), that fits the full model with all predictors using an algorithm that shrinks the estimated coefficients towards zero, which can significantly reduce their variance. Depending on what type of shrinkage is performed, some of the coefficients may be shrunk to zero itself. As such, some shrinkage methods - like the lasso - *de facto* perform variable selection.
+
+Some of these techniques have been utilized in the context of EPF:
+
+* stepwise regression, including single step elimination,
+* Ridge regression,
+* lasso,
+* and elastic nets,
+
+but their use is not common. Further development and employment of methods for selecting the most effective input variables - from among the past electricity prices, as well as the past and predicted values of the fundamental drivers - is needed.
+
+
+#### Spike forecasting and the reserve margin
+
+When predicting spike occurrences or spot price volatility, one of the most influential fundamental variables is the reserve margin, also called surplus generation. It relates the available capacity (generation, supply), {\displaystyle C\_{t}}, to the demand (load), {\displaystyle D\_{t}}, at a given moment in time {\displaystyle t}. The traditional engineering notion of the reserve margin defines it as the difference between the two, i.e., {\displaystyle RM=C\_{t}-D\_{t}}, but many authors prefer to work with dimensionless ratios {\displaystyle \rho \_{t}=D\_{t}/C\_{t}}, {\displaystyle R\_{t}=C\_{t}/D\_{t}-1} or the so-called capacity utilization {\displaystyle CU\_{t}=1-D\_{t}/C\_{t}}. Its rare application in EPF can be justified only by the difficulty of obtaining good quality reserve margin data. Given that more and more system operators (see e.g. http://www.elexon.co.uk) are disclosing such information nowadays, reserve margin data should be playing a significant role in EPF in the near future.
+
+
+### Probabilistic forecasts
+
+The use of prediction intervals (PI) and densities, or probabilistic forecasting, has become much more common over the past three decades, as practitioners have come to understand the limitations of point forecasts. Despite the bold move by the organizers of the Global Energy Forecasting Competition 2014 to require the participants to submit forecasts of the 99 percentiles of the predictive distribution (day-ahead in the price track) and not the point forecasts as in the 2012 edition, this does not seem to be a common case in EPF as yet.
+
+If PIs are computed at all, they usually are distribution-based (and approximated by the standard deviation of the model residuals) or empirical. A new forecast combination (see below) technique has been introduced recently in the context of EPF. Quantile Regression Averaging (QRA) involves applying quantile regression to the point forecasts of a small number of individual forecasting models or experts, hence allows to leverage existing development of point forecasting.
+
+
+### Combining forecasts
+
+Consensus forecasts, also known as *combining forecasts*, *forecast averaging* or *model averaging* (in econometrics and statistics) and *committee machines*, *ensemble averaging* or *expert aggregation* (in machine learning), are predictions of the future that are created by combining several separate forecasts which have often been created using different methodologies. Despite their popularity in econometrics, averaged forecasts have not been used extensively in the context of electricity markets to date. There is some limited evidence on the adequacy of combining forecasts of electricity demand, but it was only very recently that combining was used in EPF and only for point forecasts. Combining probabilistic (i.e., interval and density) forecasts is much less popular, even in econometrics in general, mainly because of the increased complexity of the problem. Since Quantile Regression Averaging (QRA) allows to leverage existing development of point forecasting, it is particularly attractive from a practical point of view and may become a popular tool in EPF in the near future.
+
+
+### Multivariate factor models
+
+The literature on forecasting daily electricity prices has concentrated largely on models that use only information at the aggregated (i.e., daily) level. On the other hand, the very rich body of literature on forecasting intra-day prices has used disaggregated data (i.e., hourly or half-hourly), but generally has not explored the complex dependence structure of the multivariate price series. If we want to explore the structure of intra-day electricity prices, we need to use dimension reduction methods; for instance, factor models with factors estimated as principal components (PC). Empirical evidence indicates that there are forecast improvements from incorporating disaggregated (i.e., hourly or zonal) data for predicting daily system prices, especially when the forecast horizon exceeds one week. With the increase of computational power, the real-time calibration of these complex models will become feasible and we may expect to see more EPF applications of the multivariate framework in the coming years.
+
+
+### A universal test ground
+
+All major review publications conclude that there are problems with comparing the methods developed and used in the EPF literature. This is due mainly to the use of different datasets, different software implementations of the forecasting models and different error measures, but also to the lack of statistical rigor in many studies. This calls for a comprehensive, thorough study involving (i) the same datasets, (ii) the same robust error evaluation procedures, and (iii) statistical testing of the significance of one model's outperformance of another. To some extent, the Global Energy Forecasting Competition 2014 has addressed these issues. Yet more has to be done. A selection of the better-performing measures (weighted-MAE, seasonal MASE or RMSSE) should be used either exclusively or in conjunction with the more popular ones (MAPE, RMSE). The empirical results should be further tested for the significance of the differences in forecasting accuracies of the models.
+

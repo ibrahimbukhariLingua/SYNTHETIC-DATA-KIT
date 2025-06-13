@@ -1,0 +1,18 @@
+ADF-GLS test
+
+
+# ADF-GLS test
+
+
+
+In statistics and econometrics, the **ADF-GLS test** (or **DF-GLS test**) is a test for a unit root in an economic time series sample. It was developed by Elliott, Rothenberg and Stock (ERS) in 1992 as a modification of the augmented Dickey–Fuller test (ADF).
+
+A unit root test determines whether a time series variable is non-stationary using an autoregressive model. For series featuring deterministic components in the form of a constant or a linear trend then ERS developed an asymptotically point optimal test to detect a unit root. This testing procedure dominates other existing unit root tests in terms of power. It locally de-trends (de-means) data series to efficiently estimate the deterministic parameters of the series, and use the transformed data to perform a usual ADF unit root test. This procedure helps to remove the means and linear trends for series that are not far from the non-stationary region.
+
+
+## Explanation
+
+Consider a simple time series model {\displaystyle y\_{t}=d\_{t}+u\_{t}\,} with {\displaystyle u\_{t}=\rho u\_{t-1}+e\_{t}\,} where {\displaystyle d\_{t}\,} is the deterministic part and {\displaystyle u\_{t}\,} is the stochastic part of {\displaystyle y\_{t}\,}. When the true value of {\displaystyle \rho \,} is close to 1, estimation of the model, i.e. {\displaystyle d\_{t}\,} will pose efficiency problems because the {\displaystyle y\_{t}\,} will be close to nonstationary. In this setting, testing for the stationarity features of the given times series will also be subject to general statistical problems. To overcome such problems ERS suggested to locally difference the time series.
+
+Consider the case where closeness to 1 for the autoregressive parameter is modelled as {\displaystyle \rho =1-{\frac {c}{T}}\,} where {\displaystyle T\,} is the number of observations. Now consider filtering the series using {\displaystyle 1-{\frac {\bar {c}}{T}}L\,} with {\displaystyle L\,} being a standard lag operator, i.e. {\displaystyle {\bar {y}}\_{t}=y\_{t}-({\bar {c}}/T)y\_{t-1}\,}. Working with {\displaystyle {\bar {y}}\_{t}\,} would result in power gain, as ERS show, when testing the stationarity features of {\displaystyle y\_{t}\,} using the augmented Dickey-Fuller test. This is a point optimal test for which {\displaystyle {\bar {c}}\,} is set in such a way that the test would have a 50 percent power when the alternative is characterized by {\displaystyle \rho =1-c/T\,} for {\displaystyle c={\bar {c}}\,}. Depending on the specification of {\displaystyle d\_{t}\,}, {\displaystyle {\bar {c}}\,} will take different values.
+

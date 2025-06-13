@@ -1,0 +1,62 @@
+Unicom Focal Point
+
+
+# Unicom Focal Point
+
+
+
+**UNICOM Focal Point** is a portfolio management and decision analysis tool used by the product organizations of corporations and government agencies to collect information and feedback from internal and external stakeholders on the value of applications, products, systems, technologies, capabilities, ideas, and other organizational artifacts—prioritize on which ones will provide the most value to the business, and manage the roadmap of how artifacts will be fielded, improved, or removed from the market or organization. UNICOM Focal Point is also used to manage a portfolio of projects, to understand resources used on those projects, and timelines for completion. The product is also used for pure product management—where product managers use it to gather and analyze enhancement requests from customers to decide on what features to put in a product, and develop roadmaps for future product versions.
+
+
+## Overview
+
+UNICOM Focal Point is used for:
+
+* Scaled agile framework (SAFe) Methods, to govern the DevOps lifecycle, with support for Kanban boards, portfolio management, and integration to Enterprise architecture, change management, and testing tools via Open Services for Lifecycle Collaboration.
+* Application Portfolio Management—understanding what applications are deployed in an organization and their value; which to invest in and which to retire. Gartner's most recent Enterprise Architecture Magic Quadrant lists the combination of System Architect and Focal Point as Leaders amongst toolsets used for enterprise architecture and application portfolio management.
+* IT portfolio management—understanding what applications and systems are deployed in an organization and their value; which to invest in and which to retire.
+* Project Portfolio Management—gathering information on projects across the organisation, what are the benefits, costs, risks associated with the projects. The tool enables entry of all data based on roles, and workflow so it can be tailored to specific needs in terms of maturity and priority. It is done at a fairly high level. If very detailed analysis is needed the tool can be integrated to other tools for such purpose. The tool also supports resource management at a high level, as well as requirements management at a high level. Generally characterized by easy modification rather than advanced best practice.
+* Product Delivery Management—understanding the resources and schedule of what needs to happen in getting a product to market.
+* Product management—making decisions on what features to put in a product, based on customer priorities, competitor functionality, and market conditions. Furthermore, understanding the value of applications that an organization is building, marketing, and selling, and deciding on which to invest in and which to retire. An independent survey on Linked In ranked Focal Point as the best Product Management tool.
+
+UNICOM Focal Point is a pure web tool that stores information in an underlying database (user choice of PostgreSQL, Oracle Database, or IBM Db2). Users may input information into the database in multiple ways—via the web interface, through automatic import of spreadsheet files, or through direct Representational State Transfer integration with other tools. Information is then analyzed with a variety of methods to make prioritization decisions and manage roadmaps of project and product delivery, and scheduling. Focal Point's web-based portal allows end-users from across an organization, and external customers from all over the world, to input information into the database, analyze the information, or view analysis of that information. Focal Point provides a workflow engine so that suggested changes to an organization based on analysis can be signed off.
+
+UNICOM Focal Point is used in combination with other tools for corporate analysis and workflow—such as UNICOM System Architect for enterprise architecture, and Rational Team Concert for DevOps. Integrations to these and a variety of other tools are enabled by UNICOM Focal Point's REST read/write interface and its support for Open Services Lifecycle Collaboration (OSLC) with other OSLC-enabled tools.
+
+
+## History
+
+Joachim Karlsson, Ph.D founded Focal Point AB; the tool originated from a doctoral dissertation by Joachim Karlsson at Linköping University, “A Systematic Approach for Prioritizing Software Requirements”. The first version of Focal Point was released in 1997.
+
+Focal Point was acquired by Telelogic on April 13, 2005. IBM Rational acquired Telelogic in April 2008., Focal Point was acquired by UNICOM Global on 1 January 2015.
+
+
+## Features
+
+Focal Point includes support for:
+
+* Scaled agile framework (SAFe) Methods
+ + Kanban boards
+ + Capture and prioritization of Corporate Ideas
+ + Integration with EA, DevOps, Change Management, Testing and other tooling via Open Services for Lifecycle Collaboration
+* Harvesting Information
+ + Web-based portal for form-based input from internal employees and/or customers
+ + Excel import/export
+ + Microsoft Word import
+ + Email import
+* Analysis Techniques
+ + Pairwise comparison—Focal Point automatically selects the best pair of elements to compare based on internal algorithms; the end user can rank how much they prefer one choice over the other.
+ + Investment Analysis
+ + Financial Planning Using Time Grid Attribute
+* Dashboard Charts
+ + Roadmaps and Gantt charts—frequently used in project management as illustration of a project schedule that is used to plan, coordinate, and track specific tasks in a project against time. Also used for plotting other organizational resources against a timeline—applications (starting with their field date to their retirement date), technology, etc.
+ - Gantt Chart Histogram—additional insight to an issue can be formed by laying a histogram of resources, costs, etc. underneath and along a timeline of a roadmap tracking a project, application, and so forth
+ - Roadmap Dependency Lines
+ + Bubble chart (also known as XY chart)
+ - Stacked XY charts
+ + Bar chart—A bar chart displays the priorities for a selected view and criterion
+ - Stacked bar chart
+ * Ranking schemes—In stacked bar charts, the total score for each element is displayed. There are two options to calculate the total score: a) Positive - Negative, wherein the score is calculated as the sum of the priorities of the Maximize criteria minus the sum of the priorities of the Minimize criteria, and b) Positive / Negative, wherein the score is calculated as the sum of the priorities of the Maximize criteria divided by the sum of the priorities of the Minimize criteria.
+ + Pie chart
+ + Radar chart
+ + Waterfall chart

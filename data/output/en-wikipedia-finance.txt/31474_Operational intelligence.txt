@@ -1,0 +1,85 @@
+Operational intelligence
+
+
+# Operational intelligence
+
+
+
+**Operational intelligence** (**OI**) is a category of real-time dynamic, business analytics that delivers visibility and insight into data, streaming events and business operations. OI solutions run queries against streaming data feeds and event data to deliver analytic results as operational instructions. OI provides organizations the ability to make decisions and immediately act on these analytic insights, through manual or automated actions.
+
+
+## Purpose
+
+The purpose of OI is to monitor business activities and identify and detect situations relating to inefficiencies, opportunities, and threats and provide operational solutions. Some definitions define operational intelligence as an event-centric approach to delivering information that empowers people to make better decisions, based on complete and actual information.
+
+In addition, these metrics act as the starting point for further analysis (drilling down into details, performing root cause analysis — tying anomalies to specific transactions and the business activity).
+
+Sophisticated OI systems also provide the ability to associate metadata with metrics, process steps, channels, etc. With this, it becomes easy to get related information, e.g., "retrieve the contact information of the person that manages the application that executed the step in the business transaction that took 60% more time than the norm," or "view the acceptance/rejection trend for the customer who was denied approval in this transaction," or "Launch the application that this process steps interacted with."
+
+
+## Features
+
+Different operational intelligence solutions may use many different technologies and be implemented in different ways. This section lists the common features of an operational intelligence solution:
+
+* Real-time monitoring
+* Real-time situation detection
+* Real-time dashboards for different user roles
+* Correlation of events
+* Industry-specific dashboards
+* Multidimensional analysis
+ + Root cause analysis
+ + Time Series and trend analysis
+* Big data Analytics: Operational Intelligence is well suited to address the inherent challenges of Big Data. Operational Intelligence continuously monitors and analyzes the variety of high velocity, high volume Big Data sources. Often performed in memory, OI platforms and solutions then present the incremental calculations and changes, in real-time, to the end-user.
+
+## Technology components
+
+Operational intelligence solutions share many features, and therefore many also share technology components. This is a list of some of the commonly found technology components, and the features they enable:
+
+* Business activity monitoring (BAM) – Dashboard customization and personalization
+* Complex event processing (CEP) – Advanced, continuous analysis of real-time information and historical data
+* Business process management (BPM) – To perform model-driven execution of policies and processes defined as Business Process Model and Notation (BPMN) models
+* Metadata framework to model and link events to resources
+* Multi-channel publishing and notification
+* Dimensional database
+* Root cause analysis
+* Multi-protocol event collection
+
+Operational intelligence is a relatively new market segment (compared to the more mature business intelligence and business process management segments). In addition to companies
+that produce dedicated and focused products in this area, there are numerous companies in adjacent areas that provide solutions with some OI components.
+
+Operational intelligence integrates information, supporting smarter decision making in time to maximize impact. By correlating a variety of events and data from both streaming feeds and historical data silos, operational intelligence helps organizations gain real-time visibility of information, in context, through dashboards, real-time insight into business performance, health and status so that immediate action based on business policies and processes can be taken. Operational intelligence applies the benefits of real-time analytics, alerts, and actions to a broad spectrum of use cases across and beyond the enterprise.
+
+One specific technology segment is AIDC (Automatic Identification and Data Capture) represented by barcodes, RFID and voice recognition. Another specific technology is the OKAPI platform. It is an Operational Excellence software platform that uses artificial intelligence and machine learning to provide companies with SMART KPIs. The platform then uses data visualization to track the progress of hitting KPIs.
+
+
+## Comparison with other technologies or solutions
+
+
+### Business intelligence
+
+OI is often linked to or compared with business intelligence (BI) or real time business intelligence, in the sense that both help makes sense out of large amounts of information. But there are some basic differences: OI is primarily activity-centric, whereas BI is primarily data-centric. As with most technologies, each of these could be sub-optimally coerced to perform the other's task. OI is, by definition, real-time, unlike BI or “On-Demand” BI, which are traditionally after-the-fact and report-based approaches to identifying patterns. Real-time BI (i.e., On-Demand BI) relies on the database as the sole source of events.
+
+OI provides continuous, real-time analytics on data at rest and data in-flight, whereas BI typically looks only at historical data at rest. OI and BI can be complementary. OI is best used for short-term planning, such as deciding on the “next best action,” while BI is best used for longer-term planning (over the next days to weeks). BI requires a more reactive approach, often reacting to events that have already taken place.
+
+If all that is needed is a glimpse at historical performance over a very specific period of time, existing BI solutions should meet the requirement. However, historical data needs to be analyzed with events that are happening now or to reduce the time between when intelligence is received and when action is taken, then Operational Intelligence is the more appropriate approach.
+
+
+### Systems management
+
+System Management mainly refers to the availability and capability monitoring of IT infrastructure. Availability monitoring refers to monitoring the status of IT infrastructure components such as servers, routers, networks, etc. This usually entails pinging or polling the component and waiting to receive a response. Capability monitoring usually refers to synthetic transactions where user activity is mimicked by a special software program, and the responses received are checked for correctness.
+
+
+### Complex event processing
+
+There is a strong relationship between complex event processing companies and operational intelligence, especially since CEP is regarded by many OI companies as a core component of their OI solutions. CEP companies tend to focus solely on the development of a CEP framework for other companies to use within their organisations as a pure CEP engine.
+
+
+### Business activity monitoring
+
+Business activity monitoring (BAM) is software that aids in monitoring business processes, as those processes are implemented in computer systems. BAM is an enterprise solution primarily intended to provide a real-time summary of business processes to operations managers and upper management. The main difference between BAM and OI appears to be in the implementation details — real-time situation detection appears in BAM and OI and is often implemented using CEP. Furthermore, BAM focuses on high-level process models whereas OI instead relies on correlation to infer a relationship between different events.
+
+
+### Business process management
+
+A business process management suite is the runtime environment where one can perform model-driven execution of policies and processes defined as BPMN models. As part of an operational intelligence suite, a BPM suite can provide the capability to define and manage policies across the enterprise, apply the policies to events, and then take action according to the predefined policies. A BPM suite also provides the capability to define policies as if/then statements and apply them to events.
+

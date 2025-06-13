@@ -1,0 +1,53 @@
+Mutual fund separation theorem
+
+
+# Mutual fund separation theorem
+
+
+
+In portfolio theory, a **mutual fund separation theorem**, **mutual fund theorem**, or **separation theorem** is a theorem stating that, under certain conditions, any investor's optimal portfolio can be constructed by holding each of certain mutual funds in appropriate ratios, where the number of mutual funds is smaller than the number of individual assets in the portfolio. Here a mutual fund refers to any specified benchmark portfolio of the available assets. There are two advantages of having a mutual fund theorem. First, if the relevant conditions are met, it may be easier (or lower in transactions costs) for an investor to purchase a smaller number of mutual funds than to purchase a larger number of assets individually. Second, from a theoretical and empirical standpoint, if it can be assumed that the relevant conditions are indeed satisfied, then implications for the functioning of asset markets can be derived and tested.
+
+
+## Portfolio separation in mean-variance analysis
+
+Portfolios can be analyzed in a mean-variance framework, with every investor holding the portfolio with the lowest possible return variance consistent with that investor's chosen level of expected return (called a **minimum-variance portfolio**), if the returns on the assets are jointly elliptically distributed, including the special case in which they are jointly normally distributed. Under mean-variance analysis, it can be shown that every minimum-variance portfolio given a particular expected return (that is, every efficient portfolio) can be formed as a combination of any two efficient portfolios. If the investor's optimal portfolio has an expected return that is between the expected returns on two efficient benchmark portfolios, then that investor's portfolio can be characterized as consisting of positive quantities of the two benchmark portfolios.
+
+
+### No risk-free asset
+
+To see two-fund separation in a context in which no risk-free asset is available, using matrix algebra, let {\displaystyle \sigma ^{2}} be the variance of the portfolio return, let {\displaystyle \mu } be the level of expected return on the portfolio that portfolio return variance is to be minimized contingent upon, let {\displaystyle r} be the vector of expected returns on the available assets, let {\displaystyle X} be the vector of amounts to be placed in the available assets, let {\displaystyle W} be the amount of wealth that is to be allocated in the portfolio, and let {\displaystyle 1} be a vector of ones. Then the problem of minimizing the portfolio return variance subject to a given level of expected portfolio return can be stated as
+
+where the superscript {\displaystyle ^{T}} denotes the transpose of a matrix. The portfolio return variance in the objective function can be written as {\displaystyle \sigma ^{2}=X^{T}VX,} where {\displaystyle V} is the positive definite covariance matrix of the individual assets' returns. The Lagrangian for this constrained optimization problem (whose second-order conditions can be shown to be satisfied) is
+
+with Lagrange multipliers {\displaystyle \lambda } and {\displaystyle \eta }. This can be solved for the optimal vector {\displaystyle X} of asset quantities by equating to zero the derivatives with respect to {\displaystyle X}, {\displaystyle \lambda }, and {\displaystyle \eta }, provisionally solving the first-order condition for {\displaystyle X} in terms of {\displaystyle \lambda } and {\displaystyle \eta }, substituting into the other first-order conditions, solving for {\displaystyle \lambda } and {\displaystyle \eta } in terms of the model parameters, and substituting back into the provisional solution for {\displaystyle X}. The result is
+
+where
+
+For simplicity this can be written more compactly as
+
+where {\displaystyle \alpha } and {\displaystyle \beta } are parameter vectors based on the underlying model parameters. Now consider two benchmark efficient portfolios constructed at benchmark expected returns {\displaystyle \mu \_{1}} and {\displaystyle \mu \_{2}} and thus given by
+
+and
+
+The optimal portfolio at arbitrary {\displaystyle \mu \_{3}} can then be written as a weighted average of {\displaystyle X\_{1}^{\mathrm {opt} }} and {\displaystyle X\_{2}^{\mathrm {opt} }} as follows:
+
+This equation proves the two-fund separation theorem for mean-variance analysis. For a geometric interpretation, see the Markowitz bullet.
+
+
+### One risk-free asset
+
+If a risk-free asset is available, then again a two-fund separation theorem applies; but in this case one of the "funds" can be chosen to be a very simple fund containing only the risk-free asset, and the other fund can be chosen to be one which contains zero holdings of the risk-free asset. (With the risk-free asset referred to as "money", this form of the theorem is referred to as the **monetary separation theorem**.) Thus mean-variance efficient portfolios can be formed simply as a combination of holdings of the risk-free asset and holdings of a particular efficient fund that contains only risky assets. The derivation above does not apply, however, since with a risk-free asset the above covariance matrix of all asset returns, {\displaystyle V}, would have one row and one column of zeroes and thus would not be invertible. Instead, the problem can be set up as
+
+where {\displaystyle r\_{f}} is the known return on the risk-free asset, {\displaystyle X} is now the vector of quantities to be held in the *risky* assets, and {\displaystyle r} is the vector of expected returns on the risky assets. The left side of the last equation is the expected return on the portfolio, since {\displaystyle (W-X^{T}1)} is the quantity held in the risk-free asset, thus incorporating the asset adding-up constraint that in the earlier problem required the inclusion of a separate Lagrangian constraint. The objective function can be written as {\displaystyle \sigma ^{2}=X^{T}VX}, where now {\displaystyle V} is the covariance matrix of the risky assets only. This optimization problem can be shown to yield the optimal vector of risky asset holdings
+
+Of course this equals a zero vector if {\displaystyle \mu =Wr\_{f}}, the risk-free portfolio's return, in which case all wealth is held in the risk-free asset. It can be shown that the portfolio with exactly zero holdings of the risk-free asset occurs at {\displaystyle \mu ={\tfrac {Wr^{T}V^{-1}(r-1r\_{f})}{1^{T}V^{-1}(r-1r\_{f})}}} and is given by
+
+It can also be shown (analogously to the demonstration in the above two-mutual-fund case) that every portfolio's risky asset vector (that is, {\displaystyle X^{\mathrm {opt} }} for every value of {\displaystyle \mu }) can be formed as a weighted combination of the latter vector and the zero vector. For a geometric interpretation, see the efficient frontier with no risk-free asset.
+
+
+## Portfolio separation without mean-variance analysis
+
+If investors have hyperbolic absolute risk aversion (HARA) (including the power utility function, logarithmic function and the exponential utility function), separation theorems can be obtained without the use of mean-variance analysis. For example, David Cass and Joseph Stiglitz showed in 1970 that two-fund monetary separation applies if all investors have HARA utility with the same exponent as each other.ᶜʰ.⁴
+
+More recently, in the dynamic portfolio optimization model of Çanakoğlu and Özekici, the investor's level of initial wealth (the distinguishing feature of investors) does not affect the optimal composition of the risky part of the portfolio. A similar result is given by Schmedders.
+

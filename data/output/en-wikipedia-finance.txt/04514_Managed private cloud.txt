@@ -1,0 +1,59 @@
+Managed private cloud
+
+
+# Managed private cloud
+
+
+
+**Managed private cloud** (also known as "**hosted private cloud**" or "**single-tenant SaaS**") refers to a principle in software architecture where a single instance of the software runs on a server, serves a single client organization (tenant), and is managed by a third party. The third-party provider is responsible for providing the hardware for the server and also for preliminary maintenance. This is in contrast to multitenancy, where multiple client organizations share a single server, or an on-premises deployment, where the client organization hosts its software instance.
+
+Managed private clouds also fall under the larger umbrella of cloud computing.
+
+
+## Adoption
+
+The need for private clouds arose due to enterprises requiring a dedicated service and infrastructure for their cloud computing needs, such as for business-critical operations, improved security, and better control over their resources. Managed private cloud adoption is a popular choice among organizations. It has been on the rise due to enterprises requiring a dedicated cloud environment and preferring to avoid having to deal with management, maintenance, or future upgrade costs for the associated infrastructure and services. Such operational costs are unavoidable in on-premises private cloud data centers.
+
+
+## Advantages and challenges of managed private cloud
+
+A managed private cloud cuts down on upkeep costs by outsourcing infrastructure management and maintenance to the managed cloud provider. It is easier to integrate an organization's existing software, services, and applications into a dedicated cloud hosting infrastructure which can be customized to the client's needs instead of a public cloud platform, whose hardware or infrastructure/software platform cannot be individualized to each client.
+
+Customers who choose a managed private cloud deployment usually choose them because of their desire for efficient cloud deployment, but also have the need for service customization or integration only available in a single-tenant environment.
+
+This chart shows the key benefits of the different types of deployments, and shows the overlap between these cloud solutions.
+
+| Feature | Multi-tenant | On-Premises | Managed Private Cloud |
+| --- | --- | --- | --- |
+| Subscription Purchase | X | X |
+| No Infrastructure Purchase | X | X |
+| No System Admin | X | X |
+| Rapid Deployment | X | X |
+| Integration Capability | X | X |
+| Perpetual Software Licensing | X | X |
+| Upgrades on Customer Schedule | X | X |
+
+This chart shows key drawbacks.
+
+| Feature | Multi-tenant | On-Premises | Managed Private Cloud |
+| --- | --- | --- | --- |
+| Data Prone to Remote 3rd Party Access | X | X |
+| Hardware Not Auditable | X | X |
+
+Since deployments are done in a single-tenant environment, it is usually cost-prohibitive for small and medium-sized businesses. While server upkeep and maintenance are handled by the service provider, including network management and security, the client is charged for all such services. It is up to the potential client to determine if a managed private cloud solution aligns with their business objectives and budget. While the service provider maintains the upkeep of servers, network, and platform infrastructure, sensitive data is typically not stored on managed private clouds as it may leave business-critical information prone to breaches via third-party attacks on the cloud service provider.
+
+Common customizations and integrations include:
+
+* Active Directory
+* Single Sign-on
+* Learning Management Systems
+* Video Teleconferencing
+
+## Deployment strategies and service providers
+
+Software companies have taken a variety of strategies in the Managed Private Cloud realm. Some software organizations have provided managed private cloud options internally, such as Microsoft. Companies that offer an on-premises deployment option, by definition, enable third-party companies to market Managed Private Cloud solutions. A few managed private cloud service providers are:
+
+* Adobe Connect: Adobe Connect may be purchased for on-premises deployment, multi-tenant hosted deployment, managed private cloud as ACMS, or managed by third-party managed private cloud provider ConnectSolutions.
+* Rackspace
+* CenturyLink
+* Microsoft licenses for Lync, SharePoint and Exchange may be purchased for on-premises deployment, a multi-tenant hosted deployment via Office 365, or managed by third-party cloud hosting from Azaleos, ConnectSolutions and others.

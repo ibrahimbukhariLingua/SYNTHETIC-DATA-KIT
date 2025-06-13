@@ -1,0 +1,114 @@
+Tax-benefit model
+
+
+# Tax-benefit model
+
+
+
+A **tax-benefit model** is a form of microsimulation model. It is usually based on a representative or administrative data set and certain policy rules. These models are used to *cost* certain policy reforms and to determine the winners and losers of reform. One example is EUROMOD, which models taxes and benefits for 27 EU states, and its post-Brexit offshoot, UKMOD.
+
+
+## Overview
+
+Tax-benefit models are used by policy makers and researchers to examine the effects of proposed or hypothetical policy changes on income inequality, poverty and government budget. Their primary advantage over conventional cross-country comparison method is that they are very powerful at evaluating policy changes not only *ex post*, but also *ex ante*.
+
+Generally, tax-benefit models can simulate income taxes, property taxes, social contributions, social assistance, income benefits and other benefits.
+
+The underlying micro-data are obtained mainly through household surveys. These data include information about households' income, expenditure and family composition.
+
+Most of the tax-benefit models are operated by governments or research institutions. Very few models are publicly available.
+
+Depending on their purpose, tax-benefit models may or may not ignore behavioral responses of individuals.
+
+
+## General framework
+
+The basic steps in conducting research using a simple tax-benefit model are:
+
+1. Gross micro-data describing households' income, expenditure and family composition are collected and processed;
+2. These data enter a tax-benefit model;
+3. First simulation takes place;
+4. Disposable income of each household is calculated and the results of the simulation are summarized;
+5. A set of rules of the policies enters the model and the second simulation takes place;
+6. Disposable income of each household is calculated and the results of the simulation are summarized;
+7. The impact of the set of policy changes is evaluated by comparing the results from the two simulations.
+
+A dynamic tax-benefit model PoliSim's webpage provides an illustration diagram of the process. Since this model is dynamic, it also requires data on probabilistic characteristics of the underlying population. These data would be created in step 1 and enter the model in step 2.
+
+
+## Taxonomy
+
+Basically, there are two properties that make given tax-benefit models different from each other. A model can be:
+
+1. Arithmetical or behavioral;
+2. Static or dynamic.
+
+### Arithmetical vs. behavioral tax-benefit models
+
+Arithmetical tax-benefit models can be viewed as advanced calculators. They typically show only direct effects of the reform on individuals' disposable income, tax revenue, income inequality and other aspects of interest. These models do not take into account behavioral responses of people such as decreased labor supply induced by a tax hike. This is not problematic when, for example, a researcher is only interested in studying the effects of a marginal change in tax liability on overall inequality.
+
+On the other hand, behavioral tax-benefit models account for behavioral responses of people to policy changes. As opposed to arithmetical models, these models basically simulate two periods:
+
+1. In the first period, the arithmetical calculation of first-order effects of a reform on individuals' disposable income is performed;
+2. Then, behavioral reactions of people to the reform enter the model, and the second-order effects of the reform are estimated.
+
+### Static vs. dynamic tax-benefit models
+
+Static tax-benefit models provide an opportunity to study only "morning after" effects of a policy change. That is, only one period ahead is considered, so only immediate impact of a reform is estimated.
+
+On the other hand, dynamic tax-benefit models aim at simulating the selected aspects of the economy over long periods of time. They utilize data on probabilistic characteristics of the underlying population to account for individuals' aging, changes in marital status, new children, etc. These models are used, for example, to study the long-run effects of a change in tax code related to the number of children in the family.
+
+
+### Summary
+
+The four basic types of tax-benefit models with illustrative examples can be summarized by the table below:
+
+Taxonomy of tax-benefit models with examples
+| Arithmetic | Behavioral |
+| --- | --- |
+| Static | A small change in tax liability | A significant change in tax liability |
+| Dynamic | A change in property tax | A change in tax code related to the number of children in the family |
+
+Dynamic behavioral tax-benefit models are closely related to agent-based models, especially when the model also accounts for interactions between individuals.
+
+
+## Related issues
+
+
+### Data preparation
+
+Most of tax-benefit models heavily depend on the availability and accuracy of the underlying micro-data. As Holly Sutherland, the director of EUROMOD and one of the most influential researchers in this area, points out, "any model would be as good as the data available to it".
+
+Tax-benefit models assume that the data from surveys represent the population of interest. This assumption is not easy to satisfy. Not only the proportions of different families in the sample might not reflect the true proportions, but also there is a problem of coverage. That is, the census is likely to exclude such groups as armed forces, people in prisons, hospitals or nursing houses, people living abroad.
+
+Some households may (intentionally or unintentionally) report less income than actually was received. Because static tax-benefit models are usually built under hypothesis that individuals report all their incomes, the results of the simulations may be inaccurate.
+
+It is important that the underlying micro-data are up to date, so the surveys should be conducted frequently.
+
+
+### Computing power
+
+Due to their complexity, tax-benefit models (especially behavioral or dynamic ones) usually require extensive computational resources.
+
+
+## Examples
+
+There are many tax-benefit models all over the world. Below are some of the most prominent models:
+
+
+Selected tax-benefit models
+| Country | Model(s) |
+| --- | --- |
+| Australia | APPSIM, STINMOD+ |
+| Canada | DYNACAN |
+| E.U. | EUROMOD |
+| Global South (selected African, Asian and Latin American countries) | SOUTHMOD |
+| Finland | TUJA |
+| France | TAXIPP |
+| Germany | IZAΨMOD, MIKMOD-ESt |
+| Ireland | SWITCH |
+| Luxembourg | LuxTaxBen |
+| Sweden | SWEtaxben |
+| U.K. | TAXBEN, UKMOD |
+| U.S. | PoliSim, TRIM3, TAXSIM |
+

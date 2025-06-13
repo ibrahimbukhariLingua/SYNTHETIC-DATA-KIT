@@ -1,0 +1,75 @@
+XVA
+
+
+# XVA
+
+
+
+| Part of a series on |
+| --- |
+| Finance |
+| Markets | Assets | | --- | | * Asset (economics) * Bond * Asset growth * Capital asset * Commodity * Derivatives * Domains * Equity * Foreign exchange * Money * Over-the-counter * Private equity * Real estate * Spot * Stock | | Participants | | * Angel investor * Bull (stock market speculator) * Financial planner * Investor + institutional * Retail * Speculator | | Locations | | * Financial centres * Offshore financial centres * Conduit and sink OFCs | |
+| Instruments * Bond * Cash * Collateralised debt obligation * Credit default swap * Time deposit (certificate of deposit) * Credit line * Deposit * Derivative * Futures contract * Indemnity * Insurance * Letter of credit * Loan * Mortgage * Option (call * exotic * put) * Performance bonds * Repurchase agreement * Stock * Security * Syndicated loan * Synthetic CDO |
+| Corporate | General | | --- | | * Accounting * Audit * Capital budgeting * Capital structure * Corporate finance * Credit rating agency * Enterprise risk management * Enterprise value * Risk management * Financial statements | | Transactions | | * Leveraged buyout * Mergers and acquisitions * Structured finance * Venture capital | | Taxation | | * Base erosion and profit shifting (BEPS) * Corporate tax haven * Tax inversion * Tax haven * Transfer pricing | |
+| Personal * Credit / Debt * Employment contract * Financial planning * + Retirement + Student loan |
+| Public | Government spending | | --- | | * Final consumption expenditure * + Operations + Redistribution * Transfer payment | | Government revenue | | * + Taxation + Deficit spending * + Budget (balance) + Debt * Non-tax revenue * Warrant of payment | |
+| Banking * Central bank * Deposit account * Fractional-reserve * Full-reserve * Investment banking * Loan * Money supply * Lists of banks | Bank regulation | | --- | | * Banking license * Basel Accords * Bank for International Settlements * Financial Stability Board * Deposit insurance * Separation of investment and retail banking | |
+| Regulation **·** Financial law | * International Financial Reporting Standards * ISO 31000 * Professional certification * Fund governance | | --- | |
+| Economic history * Private equity and venture capital * Recession * Stock market bubble * Stock market crash * Accounting scandals |
+| * Outline * Business and Economics portal * Money portal |
+| * v * t * e |
+
+**X-Value Adjustment** (**XVA**, **xVA**) is an umbrella term referring to a number of different “valuation adjustments” that banks must make when assessing the value of derivative contracts that they have entered into. The purpose of these is twofold: primarily to hedge for possible losses due to other parties' failures to pay amounts due on the derivative contracts; but also to determine (and hedge) the amount of capital required under the bank capital adequacy rules. XVA has led to the creation of specialized desks in many banking institutions to manage XVA exposures.
+
+
+## Context
+
+Historically, (OTC) derivative pricing has relied on the Black–Scholes risk neutral pricing framework which assumes that funding is available at the risk free rate and that traders can perfectly replicate derivatives so as to fully hedge.
+
+This, in turn, assumes that derivatives can be traded without taking on credit risk. During the 2007–2008 financial crisis, many financial institutions failed, leaving their counterparts with claims on derivative contracts that were paid only in part. Therefore it became clear that counterparty credit risk must also be considered in derivatives valuation, and the risk neutral value is to be adjusted correspondingly.
+
+
+## Valuation adjustments
+
+When a derivative's exposure is collateralized, the "fair-value" is computed as before, but using the overnight index swap (OIS) curve for discounting. The OIS is chosen here as it reflects the rate for overnight secured lending between banks, and is thus considered a good indicator of the interbank credit markets.
+
+When the exposure is not collateralized then a credit valuation adjustment, or **CVA**, is subtracted from this value (the logic: an institution insists on paying less for the option, knowing that the counterparty may default on its unrealized gain). This CVA is the discounted risk-neutral expectation value of the loss expected due to the counterparty not paying in accordance with the contractual terms, and is typically calculated under a simulation framework;
+see Credit valuation adjustment § Calculation.
+
+When transactions are governed by a master agreement that includes netting-off of contract exposures, then the expected loss from a default depends on the net exposure of the whole portfolio of derivative trades outstanding under the agreement rather than being calculated on a transaction-by-transaction basis. The CVA (and xVA) applied to a new transaction should be the incremental effect of the new transaction on the portfolio CVA.
+
+While the CVA reflects the market value of counterparty credit risk, *additional* Valuation Adjustments for debit, funding cost, regulatory capital and margin may similarly be added.
+As with CVA, these results are modeled via simulation as a function of the risk-neutral expectation of (a) the values of the underlying instrument and the relevant market values, and (b) the creditworthiness of the counterparty.
+This approach relies on an extension of the economic arguments underlying standard derivatives valuation.
+
+These XVA include the following;
+and will require careful and correct aggregation to avoid double counting:
+
+* **DVA**, Debit Valuation Adjustment: analogous to CVA, the adjustment (increment) to a derivative price due to the institution's own default risk. DVA is basically CVA from the counterparty’s perspective. If one party incurs a CVA loss, the other party records a corresponding DVA gain. (Bilateral Valuation Adjustment, BVA = DVA-CVA. )
+* **FVA**, Funding Valuation Adjustment, due to the funding implications of a trade that is not under Credit Support Annex (CSA), or is under a partial CSA; essentially the funding cost or benefit due to the difference (variation margin) between the funding rate of the bank's treasury and the collateral rate paid by a clearing house.
+* **MVA**, Margin Valuation Adjustment, refers to the funding costs of the initial margin specific to centrally cleared transactions. It may be calculated according to the global rules for non-centrally cleared derivatives rules.
+* **KVA**, the Valuation Adjustment for regulatory capital that must be held by the Institution against the exposure throughout the life of the contract (lately applying SA-CCR).
+
+Other adjustments are also sometimes made including TVA, for tax, and RVA, for replacement of the derivative on downgrade. FVA may be decomposed into FCA for receivables and FBA for payables - where FCA is due to self-funded borrowing spread over Libor, and FBA due to self funded lending. Relatedly, LVA represents the specific liquidity adjustment, while CollVA is the value of the optionality embedded in a CSA to post collateral in different currencies. CRA, the collateral rate adjustment, reflects the present value of the expected excess of net interest paid on cash collateral over the net interest that would be paid if the interest rate equaled the risk-free rate.
+
+
+## Accounting impact
+
+Per the IFRS 13 accounting standard, fair value is defined as "the price that would be received to sell an asset or paid to transfer a liability in an orderly transaction between market participants at the measurement date."
+Accounting rules thus mandate
+the inclusion of CVA, and DVA, in Mark-to-market accounting.
+
+One notable impact of this standard, is that bank earnings are subject to XVA volatility,
+(largely) a function of changing counterparty credit risk.
+A major task of the XVA-desk, therefore, is to hedge this exposure; see Financial risk management § Banking.
+This is achieved by buying, for example, credit default swaps:
+this "CDS protection" applies in that its value is driven, also, by the counterparty's credit worthiness.
+Hedges can also counter the variability of the exposure component of CVA risk, offsetting PFE at a given quantile.
+
+Under Basel III banks are required to hold specific regulatory capital on the net CVA-risk.
+(To distinguish: this charge for CVA addresses the potential mark-to-market loss, while the SA-CCR framework addresses counterparty risk itself.)
+Two approaches are available for calculating the CVA required-capital: the standardised approach (SA-CVA) and the basic approach (BA-CVA). Banks must use BA-CVA unless they receive approval from their relevant supervisory authority to use SA-CVA.
+
+The XVA-desk is then responsible for managing counterparty risk as well as (minimizing) the capital requirements under Basel.
+The requirements of the XVA-desk differ from those of the Risk Control group and it is not uncommon to see institutions use different systems for risk exposure management on one hand, and XVA pricing and hedging on the other, with the desk employing its own quants.
+

@@ -1,0 +1,79 @@
+Carto (company)
+
+
+# Carto (company)
+
+
+
+**CARTO** (formerly **CartoDB**) is a software as a service (SaaS) spatial analysis platform that provides GIS, web mapping, data visualization, spatial analytics, and spatial data science features. The company is positioned as a Location Intelligence platform due to its tools for geospatial data analysis and visualization that do not require advanced GIS or development experience. As a cloud-native platform, CARTO runs natively on cloud data warehouse platforms overcoming any previous limits on data scale for spatial workloads.
+
+CARTO is a cloud-first geospatial platform explicitly developed for accelerated and contemporary Geographic Information Systems (GIS). It operates on diverse cloud data warehouse platforms including Google BigQuery, Snowflake, AWS Redshift, Databricks, among others. This enables convenient access to scalable spatial analysis and data visualization in the cloud, streamlining spatial analytics, application development, data engineering, and related workloads. CARTO is accessible as both a cloud-based SaaS offering or a self-hosted deployment for enterprises wishing to run CARTO on their own private infrastructure.
+
+CARTO was initially released in Beta at FOSS4G in Denver in September 2011, and officially debuted as a final release at Where2.0 in April 2012. Since 2014, CARTO is a company independent from Vizzuality.
+The Spanish start-up raised $7 million from a consortium of investors in September 2014. In September 2015, CARTO received a $23 million in Series B financing. In May 2019, CARTO acquired Geographical, in an effort to boost their professional services offering. In 2021, CARTO raised $61 million in series C financing, with Insight Partners leading the round.
+
+
+## Technology
+
+The CARTO platform consists of several components, ranging from browser-based applications built using React and TypeScript, to REST APIs and libraries that allow geospatial analysis and visualization on top of cloud data warehouses using SQL. Additionally, CARTO is a major contributor to deck.gl, an open-source JavaScript library for data visualization.
+
+
+### Workspace
+
+Within the Workspace interface, users can establish connections with various cloud data warehouses. They can integrate their spatial databases, geocode tables, enrich current datasets by incorporating both public and premium data from a data catalog. Additionally, users can easily access a diverse array of tools offered within the CARTO platform.
+
+
+### CARTO Builder
+
+The web application called Builder is where users run analysis to create interactive dashboards and design custom map visualizations. Builder is intended for developers and non-developers to have access to, and be able to use advanced geospatial analysis tools. CARTO integrates lightweight data formats such as Spatial Indexes (H3 and Quadbin) and dynamic tile sets for efficient processing and analysis of large-scale geographical information.
+
+
+### CARTO Workflows
+
+CARTO Workflows is a visual model builder that allows the building of complex spatial analyses and data preparation and transformation workflows without writing code. Workflows is fully cloud-native and runs directly in the data warehouse. CARTO Workflows provides a variety of analysis components for tasks ranging from data preparation to analysis functions. It also offers built-in GenAI capabilities aimed at enhancing productivity and facilitating quicker insights.
+
+
+### Analytics Toolbox
+
+The Analytics Toolbox within CARTO comprises a comprehensive collection of data processing and analytical functions to efficiently amplify the geospatial functionalities accessible across various cloud data warehouses. This toolbox encompasses over 100 sophisticated spatial functions categorized into distinct modules like tiler, data, clustering, and statistics, among others.
+
+There is a specific CARTO Analytics Toolbox with different functions and modules depending on the cloud data warehouse. These toolboxes feature two distinct module types: core modules, which are open source and freely accessible, and advanced modules exclusively accessible with a CARTO account.
+
+
+### Platform APIs and libraries
+
+CARTO has available a complete suite of APIs, frameworks, connectors, and development tools for the Developer community for building large-scale custom map and data visualization applications.
+
+
+#### CARTO + deck.gl
+
+CARTO uses deck.gl, an open-source webGL-based visualization library, to build all geospatial visualizations. CARTO is an active contributor to deck.gl and maintains a CARTO submodule inside deck.gl that allows developers to build their own applications, wrapping seamlessly most functionalities in Maps API and SQL API.
+
+
+#### APIs
+
+Maps API: acts as a dynamic tile service for both vector and raster data, which creates new tiles based on client requests. It also supports pre-generated tile sets. It is meant to be used almost exclusively by the CARTO submodule inside deck.gl.
+
+SQL API: allows pushing any kind of valid SQL statements (including parameterized queries) to the data warehouse. By using native SQL code, developers can build advanced logic, data widgets, and powerful analyses inside their geospatial applications.
+
+Other APIs: CARTO offers additional APIs to handle Location Data Services (e.g. geocoding, routing…), import geospatial files to the data warehouse, or manage authentication and other assets in CARTO.
+
+
+#### Base maps
+
+CARTO offers a high-quality base map service to all users, based on open-source data such as OpenStreetMap. CARTO basecamps can be used for free for non-commercial purposes by applying for a grant.
+
+
+### Data Observatory
+
+CARTO offers a wide range of datasets from around the globe accessible through their Data Observatory, which acts as their spatial data repository. Data scientists, developers, and GIS professionals can augment their data and broaden their analysis with more than 12.000 datasets available in the Data Observatory. The datasets are public or premium covering most global markets. The open datasets include the WorldPop Project and Census data, while Experian, SafeGraph, TomTom, and others are part of the premium data repository.
+
+
+## Communities
+
+The CARTO Community is a collaborative network connecting Geospatial, Analytics, and Data Science professionals with a focus on spatial data science and exploring new frontiers in location-based data applications.
+
+The Spatial Data Science Conference (SDSC) is an annual gathering that serves as a nexus for industry professionals from both private and public sectors to exchange ideas, present innovative methodologies, and showcase impactful use cases in spatial analytics.
+
+In addition to several independent user communities, many businesses and organizations have adopted the Location Intelligence platform for their own needs. Notable groups include Vodafone, Telefónica, Bumble, JLL, T-Mobile, and Coca-Cola.
+

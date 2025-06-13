@@ -1,0 +1,336 @@
+Corruption Perceptions Index
+
+
+# Corruption Perceptions Index
+
+
+
+| Political corruption |
+| --- |
+| Forms and concepts |
+| * Abuse of power * Bribery * Censorship * Political repression * Political violence * Cronyism * Economics of corruption * Election + Fraud + Interference + Security + Subversion * Elite capture * Influence peddling * Insider trading * Iron triangle * Judicial * Kleptocracy * In local government * Mafia state * Malfeasance * Misfeasance * Nepotism * Politically exposed person * Pyrrhic defeat theory * Revolving door * Slush fund * Simony * Suspicious activity report * State capture * State-corporate crime * Throffer |
+| Anti-corruption |
+| * International Anti-Corruption Court * Group of States Against Corruption * International Anti-Corruption Academy * International Anti-Corruption Day * United Nations Convention against Corruption |
+| Corruption by country |
+| | Africa | | --- | | * Angola * Botswana * Burkina Faso * Cameroon * Cape Verde * Central African Republic * Chad * Comoros * Côte d'Ivoire * Democratic Republic of the Congo * Egypt * Equatorial Guinea * Eritrea * Ethiopia * Ghana * Guinea-Bissau * Kenya * Lesotho * Liberia * Malawi * Mauritius * Morocco * Namibia * Niger * Nigeria * Senegal * Sierra Leone * Somalia * South Africa * South Sudan * Sudan * Tanzania * Tunisia * Uganda * Zambia * Zimbabwe | | Asia | | * Afghanistan * Armenia * Azerbaijan * Bahrain * Bangladesh * Bhutan * Brunei * Cambodia * China * Cyprus * Georgia * India * Indonesia * Iran * Iraq * Israel * Japan * Jordan * Kuwait * Kyrgyzstan * Kazakhstan * Lebanon * Malaysia * Maldives * Myanmar * Nepal * North Korea * Pakistan * Philippines * Singapore * South Korea * Sri Lanka * Syria * Taiwan * Tajikistan * Thailand * Timor-Leste * Turkey * Turkmenistan * Uzbekistan * Vietnam * Yemen | | Europe | | * Albania * Andorra * Austria * Belgium * Bosnia and Herzegovina * Bulgaria * Croatia * Czech Republic * Denmark * Finland * France * Germany * Greece * Hungary * Iceland * Ireland * Italy * Kosovo * Latvia * Liechtenstein * Lithuania * Luxembourg * Malta * Moldova * Monaco * Montenegro * Netherlands * North Macedonia * Northern Ireland * Norway * Poland * Portugal * Romania * Russia * San Marino * Serbia * Slovakia * Slovenia * Spain * Sweden * Switzerland * Ukraine * United Kingdom | | North America | | * Canada * Mexico * United States | | Central America | | * Costa Rica * Cuba * El Salvador * Haiti * Honduras * Nicaragua | | South America | | * Argentina * Bolivia * Brazil * Chile * Colombia * Ecuador * Guyana * Paraguay * Peru * Suriname * Uruguay * Venezuela | | Oceania | | * Australia * New Zealand * Papua New Guinea | |
+| * v * t * e |
+
+The **Corruption Perceptions Index** (**CPI**) is an index that scores and ranks countries by their perceived levels of public sector corruption, as assessed by experts and business executives. The CPI generally defines corruption as an "abuse of entrusted power for private gain".² The index is published annually by the non-governmental organisation Transparency International since 1995.
+
+The 2024 CPI, published in Febraury 2025, currently ranks 180 countries "on a scale from 100 (very clean) to 0 (highly corrupt)" based on the situation between 1 May 2023 and 30 April 2024. Denmark, Finland, Singapore, New Zealand, Luxembourg, Norway, Switzerland and Sweden, (all scoring above 80 over the last four years), are perceived as the least corrupt nations in the world — ranking consistently high among international financial transparency — while the most apparently corrupt is South Sudan (scoring 8), along with Somalia (9) and Venezuela (10).
+
+Although the CPI is currently the most widely used indicator of corruption globally, it is worth emphasizing that there are some limitations. First, the CPI does not distinguish between individual types of corruption (some are not even included in the index) and people's perceptions do not necessarily correspond to the actual level of corruption. To get a more comprehensive picture, the CPI should be used alongside other assessments. Furthermore, the CPI is better suited for analyzing long-term trends, as perceptions tend to change slowly.
+
+
+## Methods
+
+The following paragraph describes the methodology for calculating the index, which has been used to calculate the index since 2012, when the methodology was modified to allow comparison over time. The index is calculated in four steps: selection of source data, rescaling source data, aggregating the rescaled data and then reporting a measure for uncertainty.⁷
+
+
+### Selection of source data
+
+The goal of the data selection is to capture expert and business leader assessments of various public sector corruption practices. This includes bribery, misuse of public funds, abuse of public office for personal gain, nepotism in civil service, and state capture. Since 2012 CPI has taken into account 13 different surveys and assessments from 12 different institutions.¹ The institutions are:
+
+* African Development Bank (based in Ivory Coast)
+* Bertelsmann Foundation (based in Germany)
+* Economist Intelligence Unit (based in the UK)
+* Freedom House (based in the US)
+* Global Insight (based in the US)
+* International Institute for Management Development (based in Switzerland)
+* Political and Economic Risk Consultancy (based in Hong Kong)
+* The PRS Group, Inc. (based in the US)
+* World Bank
+* World Economic Forum
+* World Justice Project (based in the US)
+
+Countries need to be evaluated by at least three sources to appear in the CPI.⁷ The CPI measures perception of corruption due to the difficulty of measuring absolute levels of corruption.
+Transparency International commissioned the University of Passau's Johann Graf Lambsdorff to produce the CPI. Early CPIs used public opinion surveys.⁷
+
+
+### Rescaling source data
+
+In order for all data to be aggregated into the CPI index, it is first necessary to carry out standardization during which all data points are converted to a scale of 0-100. Here, 0 represents the most corruption and 100 signifies the least. Indices originally measuring corruption inversely (higher values for higher corruption) are multiplied by -1 to align with the 0-100 scale.
+
+In the next step, the mean and standard deviation for each data source based on data from the baseline year are calculated (the "impute" command of the STATA statistical software package is used to replace missing values). Subsequently, a standardized z score is calculated with an average centered around 0 and a standard deviation of 1 for each source from each country. Finally, these scores are converted back to a 0-100 scale with a mean of approximately 45 and a standard deviation of 20. Scores below 0 are set to 0, and scores exceeding 100 are capped at 100. This ensures consistent comparability across years since 2012.
+
+
+### Aggregating the rescaled data
+
+The resulting CPI index for each country is calculated as a simple average of all its rescaled scores that are available for the given country, while at least three data sources must be available in order to calculate the index. The imputed data is used only for standardization and is not used as a score to calculate the index.
+
+
+### Reporting a measure for uncertainty
+
+The CPI score is accompanied by a standard error and confidence interval. This reflects the variation present within the data sources used for a particular country or territory.
+
+
+### Validity
+
+A study published in 2002 found a "very strong significant correlation" between the Corruption Perceptions Index and two other proxies for corruption: black market activity and an overabundance of regulation.
+
+All three metrics also had a highly significant correlation with the real gross domestic product per capita (RGDP/Cap); the Corruption Perceptions Index correlation with RGDP/Cap was the strongest, explaining over three-quarters of the variance. (Note that a lower rating on this scale reflects greater corruption so that countries with higher RGDPs generally had less corruption.)
+
+Alex Cobham of the Center for Global Development reported in 2013 that "many of the staff and chapters" at Transparency International, the publisher of the Corruption Perceptions Index, "protest internally" over concerns about the index. The original creator of the index, Johann Graf Lambsdorff, withdrew from work on the index in 2009, stating "In 1995 I invented the Corruption Perceptions Index and have orchestrated it ever since, putting TI on the spotlight of international attention. In August 2009 I have informed Cobus de Swardt, managing director of TI, that I am no longer available for doing the Corruption Perceptions Index."
+
+
+## Related phenomena and indices
+
+
+### CPI and economic growth
+
+Research papers published in 2007 and 2008 examined the economic consequences of corruption perception, as defined by the CPI. The researchers found a correlation between a higher CPI and higher long-term economic growth, as well as an increase in GDP growth of 1.7% for every unit increase in a country's CPI score. Also shown was a power-law dependence linking higher CPI score to higher rates of foreign investment in a country.
+
+The research article "The Investigation of the Relationship between Corruption Perception Index and GDP in the Case of the Balkans" from 2020 confirms the positive co-integration relationship in Balkan countries between CPI and GDP and calculates the affecting rate of CPI GDP as 0.34. Moreover, the direction of causality between CPI and GDP was identified from CPI to GDP and, according to this, the hypothesis that CPI is the cause of GDP was accepted.
+
+The working paper *Corruption and Economic Growth: New Empirical Evidence* from 2019 emphasizes that many previous studies used the CPI for their analysis before 2012 (when the index was difficult to compare over time) and therefore may be biased. At the same time, it presents new empirical evidence based on data for 175 over the period 2012-2018. The results show that corruption is negatively associated with economic growth (Real per capita GDP decreased by around 17% in the long-run when the reversed CPI increased by one standard deviation).
+
+
+### CPI and justice
+
+As reported by Transparency International, there is a correlation between the absence of discrimination and a better CPI score. That indicates that in countries with high corruption, equal treatment before the law is not guaranteed and there is more space for discrimination against specific groups.
+
+It seems that the country's justice system is an important protector of the country against corruption, and conversely, a high level of corruption can undermine the effectiveness of the justice system. Furthermore, as noted by the United Nations Office on Drugs and Crime (UNODC), justice systems around the world are overburdened with large caseloads, chronically underfunded, and in need of more financial and human resources to properly fulfill their mandates. This, in combination with increasing outside interference, pressures and efforts to undermine judicial independence, results in the inability of justice systems to control corruption. The latest edition of the World Justice Project's Rule of Law Index, which shows that in the past year, justice systems in most countries exhibited signs of deterioration, including increasing delays and lower levels of accessibility and affordability, also serves as evidence of the urgency of the situation. Conversely, because corruption implies disproportionate favoring of some groups or individuals over others, it prevents people from accessing justice. For example, a person may rely on personal contacts to change a statutory process.
+
+As shown in the Corruption Perception Index 2023, there is also a positive relationship between corruption and impunity. Countries with higher levels of corruption are less likely to sanction public officials for failing to adhere to existing rules and fulfill their responsibilities. A positive relationship was also shown between corruption and access to justice.
+
+
+### Other phenomena and indices
+
+Thesis The Relationship Between Corruption And Income Inequality: A Crossnational Study, published in 2013, investigates the connection between corruption and income inequality on a global scale. The study's key finding is a robust positive association between income inequality (measured by the Gini coefficient) and corruption (measured by the CPI).
+
+A study from 2001 shows that the more affected by corruption, the worse a country's environmental performance. Measuring national environmental performance according to 67 variables, the closest match is with the 2000 TI Corruption Perceptions Index, which revealed a 0.75 correlation with the ranking of environmental performance.
+
+A 2022 study titled "Statistical Analyses on the Correlation of Corruption Perception Index and Some Other Indices in Nigeria" investigated the relationship between the Corruption Perception Index in Nigeria and other relevant indices. These other indices included the Human Development Index (HDI), Global Peace Index (GPI), and Global Hunger Index (GHI). The result from the analysis carried out on the standardized data set shows that a positive linear relationship exists among all the variable considered except for CPI and GPI holding HDI and GHI constant which indicates a negative linear relationship between them.
+
+A study investigating the relationship between public governance and the Corruption Perception Index found that aspects of public administration like voice and accountability, political stability, and rule of law significantly influence how corrupt a country is perceived to be. This suggests that strong governance practices can be effective in reducing corruption.
+
+
+## Assessments
+
+According to political scientist Dan Hough, three flaws in the Index include:
+
+* Corruption is too complex a concept to be captured by a single score. For instance, the nature of corruption in rural Kansas will be different from that in the city administration of New York, yet the Index measures them in the same way.
+* By measuring perceptions of corruption, as opposed to corruption itself, the Index may simply be reinforcing existing stereotypes and cliches.
+* The Index only measures public sector corruption, ignoring the private sector. This, for instance, means the well-publicized Libor scandal, Odebrecht case and the VW emissions scandal are not counted as corrupt actions.
+
+Media outlets frequently use the raw numbers as a yardstick for government performance, without clarifying what the numbers mean. The local Transparency International chapter in Bangladesh disowned the index results after a change in methodology caused the country's scores to increase; media reported it as an "improvement".
+
+In a 2013 article in *Foreign Policy*, Alex Cobham suggested that CPI should be dropped for the good of Transparency International. It argues that the CPI embeds a powerful and misleading elite bias in popular perceptions of corruption, potentially contributing to a vicious cycle and at the same time incentivizing inappropriate policy responses. Cobham writes, "the index corrupts perceptions to the extent that it's hard to see a justification for its continuing publication."
+
+Recent econometric analyses that have exploited the existence of natural experiments on the level of corruption and compared the CPI with other subjective indicators have found that, while not perfect, the CPI is argued to be broadly consistent with one-dimensional measures of corruption.
+
+In the United States, many lawyers advise international businesses to consult the CPI when attempting to measure the risk of Foreign Corrupt Practices Act violations in different nations. This practice has been criticized by the *Minnesota Journal of International Law*, which wrote that since the CPI may be subject to perceptual biases it therefore should not be considered by lawyers to be a measure of actual national corruption risk.
+
+Transparency International also publishes the Global Corruption Barometer, which ranks countries by corruption levels using direct surveys instead of perceived expert opinions, which has been under criticism for substantial bias from the powerful elite.
+
+Transparency International has warned that a country with a clean CPI score may still be linked to corruption internationally. For example, while Sweden had the 3rd best CPI score in 2015, one of its state-owned companies, TeliaSonera, was facing allegations of bribery in Uzbekistan.
+
+
+## Scoring
+
+As stated by Transparency International in 2024, the level of corruption stagnates at the global level. Only 28 of the 180 countries measured by the CPI index have improved their corruption levels over the last twelve years, and 34 countries have significantly worsened. No significant change was recorded for 118 countries. Moreover, according to Transparency International, over 80 percent of the population lives in countries whose CPI index is lower than the global average of 43, and thus corruption remains a problem that affects the majority of people globally.
+
+Among the states with the most significant decline in the CPI are authoritarian states such as Venezuela, as well as established democracies that have been rated high for a long time, such as Sweden (decrease of 7, the current score 82) or Great Britain (decrease 3, current score 71). Other countries experiencing sharp declines include Sri Lanka, Mongolia, Gabon, Guatemala, and Turkey. In contrast, the most significant improvements in the CPI score over the last twelve years were recorded by Uzbekistan, Tanzania, Ukraine, Ivory Coast, the Dominican Republic and Kuwait.
+
+
+### Legend
+
+| Scores | Perceived as less corrupt | | | | | Perceived as more corrupt | | | | |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| since 2012 | 99–90 | 89–80 | 79–70 | 69–60 | 59–50 | 49–40 | 39–30 | 29–20 | 19–10 | 9–0 |
+| 1995–2011 | 10–9 | 8.99–8 | 7.99–7 | 6.99–6 | 5.99–5 | 4.99–4 | 3.99–3 | 2.99–2 | 1.99–1 | 0.99–0 |
+
+Corruption Perceptions Index table 2024:
+
+
+| # | Nation or Territory | Score | Δ |
+| --- | --- | --- | --- |
+| 1 | Denmark | 90 |
+| 2 | Finland | 88 |
+| 3 | Singapore | 84 | 2 |
+| 4 | New Zealand | 83 | 1 |
+| 5 | Luxembourg | 81 | 5 |
+| 5 | Norway | 81 | 1 |
+| 5 | Switzerland | 81 | 1 |
+| 8 | Sweden | 80 | 2 |
+| 9 | Netherlands | 78 | 1 |
+| 10 | Australia | 77 | 4 |
+| 10 | Iceland | 77 | 9 |
+| 10 | Ireland | 77 | 1 |
+| 13 | Estonia | 76 |
+| 13 | Uruguay | 76 | 5 |
+| 15 | Canada | 75 | 3 |
+| 15 | Germany | 75 | 6 |
+| 17 | Hong Kong | 74 | 2 |
+| 18 | Bhutan | 72 | 8 |
+| 18 | Seychelles | 72 | 4 |
+| 20 | Japan | 71 | 3 |
+| 20 | United Kingdom | 71 | 3 |
+| 22 | Belgium | 69 | 6 |
+| 23 | Barbados | 68 | 1 |
+| 23 | United Arab Emirates | 68 | 4 |
+| 25 | Austria | 67 | 5 |
+| 25 | France | 67 | 4 |
+| 25 | Taiwan | 67 | 3 |
+| 28 | Bahamas | 65 | 2 |
+| 28 | United States | 65 | 3 |
+| 30 | Israel | 64 | 3 |
+| 30 | South Korea | 64 | 2 |
+| 32 | Chile | 63 | 3 |
+| 32 | Lithuania | 63 | 2 |
+| 32 | Saint Vincent and the Grenadines | 63 | 4 |
+| 35 | Cape Verde | 62 | 5 |
+| 36 | Dominica | 60 | 6 |
+| 36 | Slovenia | 60 | 6 |
+| 38 | Latvia | 59 | 2 |
+| 38 | Qatar | 59 | 2 |
+| 38 | Saint Lucia | 59 | 7 |
+| 38 | Saudi Arabia | 59 | 15 |
+| 42 | Costa Rica | 58 | 3 |
+| 43 | Botswana | 57 | 4 |
+| 43 | Portugal | 57 | 9 |
+| 43 | Rwanda | 57 | 6 |
+| 46 | Cyprus | 56 | 3 |
+| 46 | Czech Republic | 56 | 5 |
+| 46 | Grenada | 56 | 3 |
+| 46 | Spain | 56 | 10 |
+| 50 | Fiji | 55 | 3 |
+| 50 | Oman | 55 | 20 |
+| 52 | Italy | 54 | 10 |
+| 53 | Bahrain | 53 | 23 |
+| 53 | Georgia | 53 | 4 |
+| 53 | Poland | 53 | 6 |
+| 56 | Mauritius | 51 | 1 |
+| 57 | Malaysia | 50 |
+| 57 | Vanuatu | 50 | 4 |
+| 59 | Greece | 49 |
+| 59 | Jordan | 49 | 4 |
+| 59 | Namibia | 49 |
+| 59 | Slovakia | 49 | 12 |
+| 63 | Armenia | 47 | 1 |
+| 63 | Croatia | 47 | 6 |
+| 65 | Kuwait | 46 | 2 |
+| 65 | Malta | 46 | 10 |
+| 65 | Montenegro | 46 | 2 |
+| 65 | Romania | 46 | 2 |
+| 69 | Benin | 45 | 1 |
+| 69 | Ivory Coast | 45 | 18 |
+| 69 | São Tomé and Príncipe | 45 | 2 |
+| 69 | Senegal | 45 | 1 |
+| 73 | Jamaica | 44 | 4 |
+| 73 | Kosovo | 44 | 10 |
+| 73 | Timor-Leste | 44 | 3 |
+| 76 | Bulgaria | 43 | 9 |
+| 76 | China | 43 |
+| 76 | Moldova | 43 |
+| 76 | Solomon Islands | 43 | 6 |
+| 80 | Albania | 42 | 18 |
+| 80 | Ghana | 42 | 10 |
+| 82 | Burkina Faso | 41 | 1 |
+| 82 | Cuba | 41 | 6 |
+| 82 | Hungary | 41 | 6 |
+| 82 | South Africa | 41 | 1 |
+| 82 | Tanzania | 41 | 5 |
+| 82 | Trinidad and Tobago | 41 | 6 |
+| 88 | Kazakhstan | 40 | 5 |
+| 88 | North Macedonia | 40 | 12 |
+| 88 | Suriname | 40 | 1 |
+| 88 | Vietnam | 40 | 5 |
+| 92 | Colombia | 39 | 5 |
+| 92 | Guyana | 39 | 5 |
+| 92 | Tunisia | 39 | 5 |
+| 92 | Zambia | 39 | 2 |
+| 96 | Gambia | 38 | 2 |
+| 96 | India | 38 | 3 |
+| 96 | Maldives | 38 | 3 |
+| 99 | Argentina | 37 | 1 |
+| 99 | Ethiopia | 37 | 1 |
+| 99 | Indonesia | 37 | 16 |
+| 99 | Lesotho | 37 | 6 |
+| 99 | Morocco | 37 | 2 |
+| 104 | Dominican Republic | 36 | 4 |
+| 105 | Serbia | 35 | 1 |
+| 105 | Ukraine | 35 | 1 |
+| 107 | Algeria | 34 | 3 |
+| 107 | Brazil | 34 | 3 |
+| 107 | Malawi | 34 | 8 |
+| 107 | Nepal | 34 | 1 |
+| 107 | Niger | 34 | 17 |
+| 107 | Thailand | 34 | 1 |
+| 107 | Turkey | 34 | 8 |
+| 114 | Belarus | 33 | 16 |
+| 114 | Bosnia and Herzegovina | 33 | 6 |
+| 114 | Laos | 33 | 22 |
+| 114 | Mongolia | 33 | 7 |
+| 114 | Panama | 33 | 6 |
+| 114 | Philippines | 33 | 1 |
+| 114 | Sierra Leone | 33 | 6 |
+| 121 | Angola | 32 |
+| 121 | Ecuador | 32 | 6 |
+| 121 | Kenya | 32 | 5 |
+| 121 | Sri Lanka | 32 | 6 |
+| 121 | Togo | 32 | 5 |
+| 121 | Uzbekistan | 32 |
+| 127 | Djibouti | 31 | 3 |
+| 127 | Papua New Guinea | 31 | 6 |
+| 127 | Peru | 31 | 6 |
+| 130 | Egypt | 30 | 22 |
+| 130 | El Salvador | 30 | 4 |
+| 130 | Mauritania | 30 |
+| 133 | Bolivia | 28 |
+| 133 | Guinea | 28 | 8 |
+| 135 | Eswatini | 27 | 5 |
+| 135 | Gabon | 27 | 1 |
+| 135 | Liberia | 27 | 10 |
+| 135 | Mali | 27 | 1 |
+| 135 | Pakistan | 27 | 2 |
+| 140 | Cameroon | 26 |
+| 140 | Iraq | 26 | 14 |
+| 140 | Madagascar | 26 | 5 |
+| 140 | Mexico | 26 | 14 |
+| 140 | Nigeria | 26 | 5 |
+| 140 | Uganda | 26 | 1 |
+| 146 | Guatemala | 25 | 8 |
+| 146 | Kyrgyzstan | 25 | 5 |
+| 146 | Mozambique | 25 | 1 |
+| 149 | Central African Republic | 24 |
+| 149 | Paraguay | 24 | 13 |
+| 151 | Bangladesh | 23 | 2 |
+| 151 | Congo | 23 | 7 |
+| 151 | Iran | 23 | 2 |
+| 154 | Azerbaijan | 22 |
+| 154 | Honduras | 22 |
+| 154 | Lebanon | 22 | 4 |
+| 154 | Russia | 22 | 13 |
+| 158 | Cambodia | 21 |
+| 158 | Chad | 21 | 4 |
+| 158 | Comoros | 21 | 4 |
+| 158 | Guinea-Bissau | 21 |
+| 158 | Zimbabwe | 21 | 9 |
+| 163 | Democratic Republic of the Congo | 20 | 1 |
+| 164 | Tajikistan | 19 | 2 |
+| 165 | Afghanistan | 17 | 3 |
+| 165 | Burundi | 17 | 3 |
+| 165 | Turkmenistan | 17 | 5 |
+| 168 | Haiti | 16 | 4 |
+| 168 | Myanmar | 16 | 6 |
+| 170 | North Korea | 15 | 2 |
+| 170 | Sudan | 15 | 8 |
+| 172 | Nicaragua | 14 |
+| 173 | Equatorial Guinea | 13 | 1 |
+| 173 | Eritrea | 13 | 12 |
+| 173 | Libya | 13 | 3 |
+| 173 | Yemen | 13 | 3 |
+| 177 | Syria | 12 |
+| 178 | Venezuela | 10 | 1 |
+| 179 | Somalia | 9 | 1 |
+| 180 | South Sudan | 8 | 3 |
+| — | Brunei Darussalam | — | |
+
+
+## Transnational corruption in states with high CPI scores
+
+The advanced economies of Northern and Western Europe, North America, and Asia and the Pacific tend to top the rankings over the long term. This means that these countries are perceived as having a low level of corruption in the public sector. These nations also generally have well-functioning judicial systems, a strong rule of law, and political stability – all factors that contribute to perceptions of clean governance. However, while these top-ranked countries have strong domestic institutions, their commitment to fighting corruption appears to be weak when it comes to their own financial systems and regulations affecting the international environment. The CPI doesn't capture transnational corruption, so corrupt foreign business practices by companies from these countries don't affect their CPI scores. The example of the Netherlands highlights this issue. Despite a high CPI score, the Netherlands has a poor record of prosecuting companies that bribe foreign officials to win contracts, as seen in the Nigerian oil bribery case.
+
+The report *Exporting Corruption 2022*, which assesses foreign bribery enforcement in 43 of the 44 signatories to the OECD Anti-Bribery Convention, as well as China, ZAO Hong Kong, India and Singapore, reinforces this concern. It found a significant decline in foreign bribery enforcement, only two out of 47 countries are now in active enforcement category. Other key findings were that no country is exempt from bribery by its nationals and related money laundering. Moreover, according to the report weaknesses remain in legal frameworks and enforcement systems are not adequately disclosed by most countries information on enforcement, victim compensation is rare and international cooperation is increasing still faces significant obstacles. This calls for a more comprehensive approach to tackling corruption, addressing both domestic and international aspects.
+

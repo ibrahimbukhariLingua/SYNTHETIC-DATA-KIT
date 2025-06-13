@@ -1,0 +1,110 @@
+Contested garment rule
+
+
+# Contested garment rule
+
+
+
+The **contested garment (CG) rule**, also called **concede-and-divide**, is a division rule for solving problems of conflicting claims (also called "bankruptcy problems"). The idea is that, if one claimant's claim is less than 100% of the estate to divide, then he effectively *concedes* the unclaimed estate to the other claimant. Therefore, we first give to each claimant, the amount conceded to him/her by the other claimant. The remaining amount is then divided equally among the two claimants.
+
+The CG rule first appeared in the Mishnah, exemplified by a case of conflict over a garment, hence the name. In the Mishnah, it was described only for two-people problems. But in 1985, Robert Aumann and Michael Maschler have proved that, in every bankruptcy problem, there is a unique division that is consistent with the CG rule for each pair of claimants. They call the rule, that selects this unique division, the **CG-consistent rule** (it is also called the **Talmud rule**).
+
+
+## Problem description
+
+There is a divisible resource, denoted by *{\displaystyle E}* (=Estate or Endowment). There are *n* people who claim this resource or parts of it; they are called *claimants*. The amount claimed by each claimant *i* is denoted by *{\displaystyle c\_{i}}*. Usually, {\displaystyle \sum \_{i=1}^{n}c\_{i}>E}, that is, the estate is insufficient to satisfy all the claims. The goal is to allocate to each claimant an amount *{\displaystyle x\_{i}}* such that {\displaystyle \sum \_{i=1}^{n}x\_{i}=E}.
+
+
+## Two claimants
+
+With two claimants, the CG rule works in the following way.
+
+* Truncate each claim to the estate (since one is not allowed to claim more than the entire estate). That is, set {\displaystyle c\_{i}':=\min(c\_{i},E)} for each claimant *i*.
+* Allocate to claimant 1 an amount {\displaystyle E-c\_{2}'} that is, the amount *not* claimed by 2.
+* Allocate to claimant 2 an amount {\displaystyle E-c\_{1}'} that is, the amount *not* claimed by 1.
+* The remainder is {\displaystyle E-(E-c\_{2}')-(E-c\_{1}')=c\_{1}'+c\_{2}'-E}; divide it equally among the claimants.
+
+Summing the amounts given to each claimant, we can write the following formula:
+
+> {\displaystyle CG(c\_{1},c\_{2};E)=\left({\frac {E+c\_{1}'-c\_{2}'}{2}}~,~{\frac {E+c\_{2}'-c\_{1}'}{2}}\right)}
+
+For example:
+
+* If {\displaystyle E=1} and {\displaystyle c\_{1}=c\_{2}=1}, then both claimants get 1/2, that is, {\displaystyle CG(1,1;1)=(1/2,1/2)}.
+* If {\displaystyle E=1} and {\displaystyle c\_{1}=1} and {\displaystyle c\_{2}=1/2}. then claimant 1 gets 3/4 and claimant 2 gets 1/4, that is, {\displaystyle CG(1,1/2;1)=(3/4,1/4)}.
+
+These two examples are first mentioned in the first Mishnah of Bava Metzia:
+
+> *"Two are holding a garment. One says, "I found it," and the other says, "I found it":*
+> 
+> * *If one says "all of it is mine" and the other says "all of it is mine", then this one shall swear that he owns no less than half of it, and this one shall swear that he owns no less than half of it, and they shall divide it between them.*
+> * *If one says, "all of it is mine" and the other says "half of it is mine", then the one who says "all of it is mine" shall swear that he owns no less than three quarters of it; and the one who says "half of it is mine" shall swear that he owns no less than one quarter of it; the former takes three quarters and the latter takes one quarter."*
+
+
+## Many claimants
+
+To extend the CG rule to problems with three or more claimants, we apply the general principle of *consistency* (also called coherence), which says that every part of a fair division should be fair. In particular, we seek an allocation that respects the CG rule for each pair of claimants. That is, for every claimants *i* and *j*:
+
+> {\displaystyle (x\_{i},x\_{j})=CG(c\_{i},c\_{j};x\_{i}+x\_{j})}.
+
+Apriori, it is not clear that such an allocation always exists, or that it is unique. However, it can be proved that a unique CG-consistent allocation always exists. It can be described by the following algorithm:
+
+* If {\displaystyle \sum \_{i=1}^{n}c\_{i}>2E} (that is, the total estate is less than half the total claims), then apply the rule of constrained equal awards to half the claims, that is, return {\displaystyle CEA(c\_{1}/2,\ldots ,c\_{n}/2;E)}.
+* Otherwise, {\displaystyle \sum \_{i=1}^{n}c\_{i}\leq 2E}: give each claimant half of his/her claim, and then apply the rule of constrained equal losses to the remainder, that is, return {\displaystyle (c\_{1}/2,\ldots ,c\_{n}/2)+CEL(c\_{1}/2,\ldots ,c\_{n}/2;E-\sum \_{j}(c\_{j}/2))}.
+
+Note that, with two claimants, once the claims are truncated to be at most the estate, the condition {\displaystyle \sum \_{i=1}^{n}c\_{i}\leq 2E} always holds. For example:
+
+* {\displaystyle CG(1,1/2;1)=(1/2,1/4)+CEL(1/2,1/4;1/4)=(1/2,1/4)+(1/4,0)=(3/4,1/4)}.
+
+Here are some three-claimant examples:
+
+* {\displaystyle CG(100,200,300;100)=(33.333,33.333,33.333)}; here CEA is used.
+* {\displaystyle CG(100,200,300;200)=(50,75,75)}; here CEA is used.
+* {\displaystyle CG(100,200,300;300)=(50,100,150)}; here either CEA or CEL can be used (the result is the same); when the sum of claims is exactly half the estate, each claimant gets exactly half his/her claim.
+* {\displaystyle CG(100,200,300;400)=(50,125,225)}; here CEL is used.
+* {\displaystyle CG(100,200,300;500)=(66.667,166.667,266.667)}; here CEL is used.
+* {\displaystyle CG(100,200,300;600)=(100,200,300)}; here CEL is used.
+
+The first three examples appear in another Mishnah, in Ketubot:
+
+> *"Suppose a man, who was married to three women, died; the marriage contract of one wife was for 100 dinars, and the marriage contract of the second wife was for 200 dinars, and the marriage contract of the third wife was for 300, and all three contracts were issued on the same date so that none of the wives has precedence over any of the others.*
+> 
+> * *If the total value of the estate is only 100 dinars, the wives divide the estate equally.*
+> * *If there were 200 dinars in the estate, the first wife takes 50 dinars, while the other two wives take three dinars of gold each, which are the equivalent of 75 silver dinars.*
+> * *If there were 300 dinars in the estate, the first wife takes 50 dinars, the second takes 100 dinars, and the third takes six dinars of gold, the equivalent of 150 silver dinars."*
+
+
+### Constructive description
+
+The CG rule can be described in a constructive way. Suppose *E* increases from 0 to the half-sum of the claims: the first units are divided equally, until each claimant receives {\displaystyle \min \_{i}(c\_{i}/2)}. Then, the claimant with the smallest {\displaystyle c\_{i}} is put on hold, and the next units are divided equally among the remaining claimants until each of them up to the next-smallest {\displaystyle c\_{i}}. Then, the claimant with the second-smallest **{\displaystyle c\_{i}}** is put on hold too. This goes on until either the estate is fully divided, or each claimant gets exactly {\displaystyle c\_{i}/2}. If some estate remains, then the losses are divided in a symmetric way, starting with an estate equal to the sum of all claims, and decreasing down to half this sum.
+
+
+## Properties
+
+The CG rule is *self-dual*. This means that it treats gains and losses symmetrically: it divides gains in the same way that it divides losses. Formally: {\displaystyle CG(c,E)=c-CG(c,\sum c-E)}.
+
+
+## Game-theoretic analysis
+
+The CG rule can be derived independently, as the nucleolus of a certain cooperative game defined based on the claims.
+
+
+## Piniles' rule
+
+Zvi Menahem Piniles, a 19th-century Jewish scholar, presented a different rule to explain the cases in Ketubot. His rule is similar to the CG rule, but it is not consistent with the CG rule when there are two claimants. The rule works as follows:
+
+* If the sum of claims is larger than 2*E*, then it applies the CEA rule on half the claims, that is, it returns {\displaystyle CEA(c\_{1}/2,\ldots ,c\_{n}/2;E)} .
+* Otherwise, it gives each agent half its claim and then applies CEA on the remainder, that is, it returns {\displaystyle (c\_{1}/2,\ldots ,c\_{n}/2)+CEA(c\_{1}/2,\ldots ,c\_{n}/2;E-\sum \_{j=1}^{n}c\_{j}/2)} .
+
+Examples with two claimants:
+
+* {\displaystyle PINI(60,90;100)=(42.5,57.5)}. Initially the claimants get (30,45). The remaining claims are (30,45) and the remaining estate is 25, so it is divided equally.
+* {\displaystyle PINI(50,100;100)=(37.5,62.5)}. Initially the claimants get (25,50). The remaining claims are (25,50) and the remaining estate is 25, so it is divided equally.
+* {\displaystyle PINI(50,100;100)=(37.5,62.5)}. Initially the claimants get (25,50). The remaining claims are (25,50) and the remaining estate is 25, so it is divided equally.
+
+Examples with three claimants:
+
+* {\displaystyle PINI(100,200,300;100)=(33.333,33.333,33.333)}. Here the sum of claims is more than twice the estate, so the outcome is {\displaystyle CEA(50,100,150;100)=(33.333,33.333,33.333)}.
+* {\displaystyle PINI(100,200,300;200)=(50,75,75)}. Again the sum of claims is more than twice the estate, so the outcome is {\displaystyle CEA(50,100,150;200)=(50,75,75)}.
+* {\displaystyle PINI(100,200,300;300)=(50,100,150)}. Again the sum of claims is more than twice the estate, so the outcome is {\displaystyle CEA(50,100,150;300)=(50,100,150)}.
+

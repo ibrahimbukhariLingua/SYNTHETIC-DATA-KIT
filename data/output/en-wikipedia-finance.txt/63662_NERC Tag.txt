@@ -1,0 +1,73 @@
+NERC Tag
+
+
+# NERC Tag
+
+
+
+A **NERC Tag**, also commonly referred to as an **E-Tag**, represents a transaction on the North American bulk electricity market scheduled to flow within, between or across electric utility company territories. The NERC Tag is named for the North American Electric Reliability Corporation (NERC), which is the entity that was responsible for the implementation of the first energy tagging processes. NERC Tags were first introduced in 1997, in response to the need to track the increasingly complicated energy transactions which were produced as a result of the beginning of electric deregulation in North America.
+
+
+## Electric deregulation in North America
+
+The Federal Energy Regulatory Commission (FERC)'s Energy Policy Act of 1992 was the first major step towards electric deregulation in North America, and was followed by a much more definitive action when FERC issued Orders 888 and 889 in 1996, which laid the groundwork for formalized deregulation of the industry and led to the creation of the network of Open Access Same-Time Information System (OASIS) nodes.
+
+FERC is an independent agency of the U.S. Government and thus its authority extends only over electric utilities operating in the United States. However, NERC members include all of the FERC footprint as well as all of the electric utilities in lower Canada and a Mexican utility company. In the interest of reciprocity and commonality, all NERC members generally cooperate with FERC rules.
+
+The creation of OASIS nodes allowed for energy to be scheduled across multiple power systems, creating complex strings of single "point-to-point" transactions which could be connected end-to-end to literally travel across the continent. This frequently created situations where it was difficult or impossible for transmission system operators to ascertain all of the transactions impacting their local system or take any corrective actions to alleviate situations which could put the power grid at risk of damage or collapse. The NERC Tag was implemented as a result of this new problem introduced by deregulation.
+
+
+## NERC Tag versions
+
+
+### NERC Tag 1.x
+
+The earliest NERC Tag application was based on a Microsoft Excel spreadsheet, and was introduced in 1997. The form was usually completed by the power marketers or schedulers, by defining the date and time of the transaction, the physical path of the energy schedule from its point of generation to point of consumption, the financial path (buying/selling chain) of the energy schedule, the hourly energy amounts scheduled to flow, and also the OASIS transmission requests for each power system crossed which thereby documented that permission to cross each power system had been properly obtained.
+
+Elements of a NERC Tag included Control Areas (CA), Transmission Providers (TP), Purchasing/Selling Entities (PSE), transmission Points of Receipt (POR) and Points of Delivery (POD), as well as product codes for several transmission and generation priorities.
+
+The physical path was the most important aspect of the NERC Tag in terms of understanding the impact of a collection of individual transactions after they had been compiled into a single complete transaction. To complete the physical path it was necessary to identify the power system and power plant where the energy was to be generated, any and all power systems that would be utilized to move the energy to its eventual destination, and lastly the power system and location of the delivery point where the energy would be consumed (the "load").
+
+When a NERC Tag was created in the spreadsheet, the information was then distilled into a small CSV formatted data packet which was disseminated via e-mail to all of the participants listed on the NERC tag. In this way, all participants of a transaction were able to determine which other electric utilities and power marketers were involved in the transaction, and what the roles of the other participants were. More importantly, in the event of a contingency such as a transmission line outage or generation failure, all participants could more easily be notified of the schedule change, and could then all act in cooperation to curtail the scheduled transaction.
+
+The NERC Tag 1.0 implementation was not capable of collecting schedule flow data in any useful way, but it did serve to familiarize schedulers with the demands of tagging their transactions, a process that would eventually be mandatory. A database of transmission scheduling points maintained by NERC through the Transmission System Information Networks (TSIN) that was originally developed for the OASIS nodes was greatly expanded to include additional information required in the process of creating NERC Tags.
+
+The spreadsheet-based NERC Tag application saw minor improvements in functionality and scope with small incremental changes which advanced it to NERC Tag 1.3, although there was not much discernible difference to the participants, and until version 1.4 was implemented, any previous version could still be used.
+
+
+### E-Tag 1.4 and 1.5
+
+Not long after NERC introduced the NERC Tag spreadsheet and packet emailer, NERC concluded that it did not want involvement in any future software development or maintenance. A NERC Tag specification document, version 1.4, was drafted as the next level in energy tagging, the NERC Tag would subsequently also be known as an **E-Tag**. Data transfer would now occur directly over an Internet connection instead of via e-mail. This eliminated the cumbersome process required to receive a data packet via email and port it back into the original spreadsheet-based tagging application. This change made the NERC Tag much easier to use in a real-time application. E-Tag 1.4 went into effect in 1999, but was replaced just nine months later with E-Tag 1.5, followed three months later with E-Tag 1.501. The 1.5 and 1.501 Specs corrected the shortcomings experienced with the initial release of the first E-Tag Spec.
+
+Although NERC was responsible for the E-Tag Spec, it opened development of the application to run it to the software market. Initially there were numerous E-Tagging software providers, mainly a mix of small start-ups and new applications developed by existing energy industry software developers. The E-Tag 1.5 Spec was written in such a way that the various applications were permitted to have differing graphical user interfaces (GUIs), but functionally "under the hood" they were required to be able to interact with each other when transmitting, receiving and processing E-Tags. A new feature introduced with E-Tag 1.4/1.5, made possible by the real-time sharing of E-Tags, was the ability for reliability entities (namely the CA's and TP's) in the E-Tag to electronically approve or deny E-Tags based on various criteria.
+
+The arrival of real-time tagging also enabled NERC to begin collecting real-time and short-term future data regarding the energy transactions scheduled throughout the North American power grid. The data from approved transactions was ported to the Interchange Distribution Calculator (IDC), where the data could be applied to a virtual study model of the Eastern Interconnection. The IDC went online in 1999.
+
+
+### E-Tag 1.6
+
+Building on the lessons experienced with E-Tag applications to date, E-Tag 1.6 went into effect in 2000. There were seven variations of E-Tag 1.6, up to E-Tag 1.67 which was in effect until late 2002. Most of the changes in E-Tag 1.6 were of a functional nature and not overly apparent to the users.
+
+Under E-Tag 1.6, NERC implemented the "no tag, no flow" rule, where all energy transactions were to be documented with an E-Tag. Accurate system studies of the Eastern Interconnection in order to determine which schedules should be curtailed would only be possible if every transaction was tagged and therefore included in the IDC calculations. Reliability Coordinators in the Eastern Interconnection could access the IDC online and run flow studies based on various operating scenarios with all of the current energy schedules derived from the E-Tags. When an actual contingency occurred, the Reliability Coordinators could identify the constrained transmission line or corridor within the IDC, and the IDC would then identify which E-Tagged schedules should be curtailed in order to ease the loading on the restricted facilities.
+
+
+### E-Tag 1.7
+
+NERC's E-Tag 1.7 Specification completely reworked the E-Tag platform from scratch. Some users said that it was so significant that it might have been more appropriate to have called it "E-Tag 2.0". For the first time, Extensible Markup Language (XML) was utilized to format the data transferred between E-Tag applications, finally replacing the base CSV data transfer format based on its ancestral NERC Tag 1.0 spreadsheet/e-mail origins. The TSIN database was expanded to include generation and load points which were matched with PSEs that had rights to schedule them, and also included complex associations that enforced matched sets of PORs and PODs with TPs. E-Tag 1.7 also greatly expanded the time frame flexibility of an E-Tag by allowing extensions and modifications with comprehensive approval processes, layering of multiple OASIS requests for transmission rights, and also fully automated the tag curtailment functions from the IDC so that individual manual tag curtailments were no longer necessary.
+
+Shortly after E-Tag 1.7 went online in 2002, the Western Electricity Coordinating Council (WECC) implemented the WECC Unscheduled Flow (USF) Tool, which accomplished a similar automated curtailing capability for the Western Interconnection that the IDC had done for the Eastern Interconnection.
+
+The number of software choices for E-Tag software dwindled within the first few years to a handful of major players. The number of E-Tag users was strictly limited by the number of entities involved in E-Tagging, and the cost of complying with NERC E-Tag Specifications became prohibitive for any software company that did not already have significant market share or adequate financial backing. The added complexities of E-Tag 1.7 dealt a severe blow to most of the E-Tagging software providers, and within a year of E-Tag 1.7 going online, there was only one dominant E-Tag software provider remaining, which also provided all IDC and WECC USF services, though a few holdouts and customer-developed "in-house" E-Tag applications remain.
+
+Version 1.7.097 of E-Tag was implemented on January 3, 2007.
+
+
+### E-Tag 1.8
+
+Five years following the release of E-Tag 1.7, a major update was developed and implemented on December 4, 2007. E-Tag 1.8 cleaned up some long-standing issues not easily addressed with minor revisions to E-Tag 1.7 and brought the E-Tag applications back up to current industry policy standards.
+
+
+## Future of E-Tag
+
+OASIS primarily deals with the purchase and availability of transmission from individual transmission providers with a forward-looking time frame, while E-Tag is focused on real-time scheduling and power flow management across multiple systems. Nonetheless, the FERC-derived OASIS applications and NERC-derived E-Tag applications are somewhat duplicative. FERC's plan for the eventual introduction of **OASIS Phase 2** envisions a combined platform to post transmission offerings, allow transmission purchases, and facilitate scheduling and flow management, effectively merging the essential functions of E-Tag and OASIS. However, there has been very little activity to move towards OASIS Phase 2 since the introduction of E-Tag 1.7 in 2002, and the future remains unclear. As both systems have increased in complexity over time, the difficulties in merging the two independently evolved systems have likewise also increased.
+

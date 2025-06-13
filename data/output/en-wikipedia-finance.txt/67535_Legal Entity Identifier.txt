@@ -1,0 +1,72 @@
+Legal Entity Identifier
+
+
+# Legal Entity Identifier
+
+
+
+The **Legal Entity Identifier** (**LEI**) is a unique global identifier for legal entities participating in financial transactions. Also known as an LEI code or LEI number, its purpose is to help identify legal entities on a globally accessible database. Legal entities are organizations such as companies or government entities that participate in financial transactions. An individual person may not obtain an LEI. The identifier is used in regulatory reporting to financial regulators and all financial companies and funds are required to have an LEI.
+
+The identifier is formatted as a 20-character, alpha-numeric code based on the ISO 17442 "Financial services — Legal entity identifier (LEI)" standard developed by the International Organization for Standardization (ISO). It connects to key information that enables clear and unique identification of legal entities participating in financial transactions. Each LEI database entry contains information about an entity's ownership and thus answers the questions of 'who is who' and 'who owns whom'. Therefore the publicly available LEI data pool can be regarded as a global directory of non-individual participants in the financial market.
+
+There are a number of LEI issuers around the world that issue and maintain the identifiers and act as primary interfaces to the global directory, these are typically financial exchanges or financial data vendors. These are accredited by the Global Legal Entity Identifier Foundation (GLEIF) to issue LEIs.
+
+
+## History
+
+At the time of the financial crisis of 2007–2008, regulators realised that a single identification code unique to each financial institution was not available worldwide. It means that each country had different code systems to recognize the counterpart corporation of financial transactions. Accordingly, it was impossible to identify the transaction details of individual corporations, identify the counterpart of financial transactions, and calculate the total risk amount. This resulted in difficulties in estimating individual corporation's amount of risk exposure, analyzing risks across the market, and resolving the failing financial institutions. This is one of the factors that made it difficult for the early evolution of the financial crisis.
+
+In response, the LEI system was developed by the 2011 G20 in response to this inability of financial institutions to identify organizations uniquely, so that their financial transactions in different national jurisdictions could be fully tracked. Currently, the Legal Entity Identifier Regulatory Oversight Committee (LEI ROC), a coalition of financial regulators and central banks across the globe, is encouraging the expansion of the LEI. The U.S. and European countries require corporations to use the legal entity identifier when reporting the details of transactions with over-the-counter derivatives to financial authorities.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ Today, authorities of 45 jurisdictions mandate the use of LEI code to identify legal entities involved in different financial transactions.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+The first LEIs were issued in December 2012. As of 3 January 2018, LEIs are mandatory for all companies who wish to continue trading in securities.
+
+
+## Code structure
+
+| Structure of LEI codes | | | | | | | | | | | | | | | | | | | |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | ... | 18 | 19 | 20 |
+| LOU code | | | | Entity- Identification | | | | | | | Check- sum | |
+| G.E. Financing GmbH | | | | | | | | | | | | |
+| `5493` | | | | `0084UKLVMY22DS` | | | | | | | `16` | |
+| Jaguar Land Rover Ltd | | | | | | | | | | | | |
+| `2138` | | | | `00WSGIIZCXF1P5` | | | | | | | `72` | |
+| British Broadcasting Corporation | | | | | | | | | | | | |
+| `5493` | | | | `000IBP32UQZ0KL` | | | | | | | `24` | |
+| Bank of Nova Scotia | | | | | | | | | | | | |
+| `L3I9` | | | | `ZG2KFGXZ61BMYR` | | | | | | | `72` | |
+
+The technical specification for LEI is ISO 17442. An LEI consists of a 20-character alphanumeric string, with the first four characters identifying the Local Operating Unit (LOU) that issued the LEI. Characters 5 to 18 are the unique alphanumeric string assigned to the organization by the LOU. The final two characters are checksum digits, calculated using MOD-97-10 as per ISO/IEC 7064.
+
+Even if the LEI code of an entity follows the technical ISO specification, the LEI code by itself does not provide any valuable information—it is only used to uniquely identify each legal entity.
+
+
+## Information contained in LEI reference data (Level 1 and Level 2 data)
+
+The LEI reference data contains basic 'business card'-type information, also referred to a 'Level 1' data. It answers the question 'who is who?'.
+
+The other part of the reference data, the 'Level 2' data answers the question 'who owns whom?'. If applicable, it will allow identification of direct and ultimate parents of any legal entity.
+
+
+## Global Operating System
+
+Hierarchy of Regulatory Entities
+| Regulatory Entity | Description |
+| --- | --- |
+| G-20 | An international organization consisting twenty major countries (ninety per cent of the world's GDP) comprising seven developed countries (G7), the chair countries of the European Union, and twelve rising nations. |
+| Financial Stability Board | An organization founded to enhance the stability of the global financial system and to oversee international finance. |
+| LEI Regulatory Oversight Committee | The decision-making organization for LEI Systems under FSB. The participating countries' financial authorities, the central bank, and the IMF are represented as members by international organizations. |
+| GLEIF Board of Directors | Global LEI Foundation: Responsible for controlling the LOUs in each region as a practical operating organization within the LEI system. |
+| LOUs | Local Operating Units: As the operating organization for issuing and maintaining the LEI code in each region, 37 LOUs are currently active worldwide. |
+
+
+## Obtaining a Legal Entity Identifier
+
+The Global Legal Entity Identifier Foundation (GLEIF) does not directly issue Legal Entity Identifiers, but instead delegates this responsibility to local operating units (LOUs). These LEI issuers supply different services. Local operating units can have different prices and LEI issuing speed for the registration services they offer. The LEI can be obtained from couple of hours to days or weeks, depending on the service provider. GLEIF is responsible for monitoring LEI data quality and integrity of the LEI system.
+
+
+## Validity of LEI
+
+* The validity period for LEI is one year from the date that the Legal Entity Identifier is registered
+* Annual renewal of LEI is a must for a company or organization that wants to continue to participate in regulated financial transactions
+* Renewal can be done through any accredited LOU and the code remains unchanged even when transferring between different LOUs (local operating units)

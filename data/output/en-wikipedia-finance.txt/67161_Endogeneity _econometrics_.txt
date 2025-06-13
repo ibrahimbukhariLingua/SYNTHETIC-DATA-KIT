@@ -1,0 +1,75 @@
+Endogeneity (econometrics)
+
+
+# Endogeneity (econometrics)
+
+
+
+In econometrics, **endogeneity** broadly refers to situations in which an explanatory variable is correlated with the error term. The distinction between endogenous and exogenous variables originated in simultaneous equations models, where one separates variables whose values are determined by the model from variables which are predetermined. Ignoring simultaneity in the estimation leads to biased estimates as it violates the exogeneity assumption of the Gauss–Markov theorem. The problem of endogeneity is often ignored by researchers conducting non-experimental research and doing so precludes making policy recommendations. Instrumental variable techniques are commonly used to mitigate this problem.
+
+Besides simultaneity, correlation between explanatory variables and the error term can arise when an unobserved or omitted variable is confounding both independent and dependent variables, or when independent variables are measured with error.
+
+
+## Exogeneity versus endogeneity
+
+In a stochastic model, the notion of the *usual exogeneity*, *sequential exogeneity*, *strong/strict exogeneity* can be defined. **Exogeneity** is articulated in such a way that a variable or variables is exogenous for parameter {\displaystyle \alpha }. Even if a variable is exogenous for parameter {\displaystyle \alpha }, it might be endogenous for parameter {\displaystyle \beta }.
+
+When the explanatory variables are not stochastic, then they are strong exogenous for all the parameters.
+
+If the independent variable is correlated with the error term in a regression model then the estimate of the regression coefficient in an ordinary least squares (OLS) regression is biased; however if the correlation is not contemporaneous, then the coefficient estimate may still be consistent. There are many methods of correcting the bias, including instrumental variable regression and Heckman selection correction.
+
+
+### Static models
+
+The following are some common sources of endogeneity.
+
+
+#### Omitted variable
+
+In this case, the endogeneity comes from an uncontrolled confounding variable, a variable that is correlated with both the independent variable in the model and with the error term. (Equivalently, the omitted variable affects the independent variable and separately affects the dependent variable.)
+
+Assume that the "true" model to be estimated is
+
+but {\displaystyle z\_{i}} is omitted from the regression model (perhaps because there is no way to measure it directly).
+Then the model that is actually estimated is
+
+where {\displaystyle \varepsilon \_{i}=\gamma z\_{i}+u\_{i}} (thus, the {\displaystyle z\_{i}} term has been absorbed into the error term).
+
+If the correlation of {\displaystyle x} and {\displaystyle z} is not 0 and {\displaystyle z} separately affects {\displaystyle y} (meaning {\displaystyle \gamma \neq 0}), then {\displaystyle x} is correlated with the error term {\displaystyle \varepsilon }.
+
+Here, {\displaystyle x} is not exogenous for {\displaystyle \alpha } and {\displaystyle \beta }, since, given {\displaystyle x}, the distribution of {\displaystyle y} depends not only on {\displaystyle \alpha } and {\displaystyle \beta }, but also on {\displaystyle z} and {\displaystyle \gamma }.
+
+
+#### Measurement error
+
+Suppose that a perfect measure of an independent variable is impossible. That is, instead of observing {\displaystyle x\_{i}^{\*}}, what is actually observed is {\displaystyle x\_{i}=x\_{i}^{\*}+\nu \_{i}} where {\displaystyle \nu \_{i}} is the measurement error or "noise". In this case, a model given by
+
+can be written in terms of observables and error terms as
+
+Since both {\displaystyle x\_{i}} and {\displaystyle u\_{i}} depend on {\displaystyle \nu \_{i}}, they are correlated, so the OLS estimation of {\displaystyle \beta } will be biased downward.
+
+Measurement error in the dependent variable, {\displaystyle y\_{i}}, does not cause endogeneity, though it does increase the variance of the error term.
+
+
+#### Simultaneity
+
+Suppose that two variables are codetermined, with each affecting the other according to the following "structural" equations:
+
+Estimating either equation by itself results in endogeneity. In the case of the first structural equation, {\displaystyle E(z\_{i}u\_{i})\neq 0}. Solving for {\displaystyle z\_{i}} while assuming that {\displaystyle 1-\gamma \_{1}\gamma \_{2}\neq 0} results in
+
+Assuming that {\displaystyle x\_{i}} and {\displaystyle v\_{i}} are uncorrelated with {\displaystyle u\_{i}},
+
+Therefore, attempts at estimating either structural equation will be hampered by endogeneity.
+
+
+### Dynamic models
+
+The endogeneity problem is particularly relevant in the context of time series analysis of causal processes. It is common for some factors within a causal system to be dependent for their value in period *t* on the values of other factors in the causal system in period *t* − 1. Suppose that the level of pest infestation is independent of all other factors within a given period, but is influenced by the level of rainfall and fertilizer in the preceding period. In this instance it would be correct to say that infestation is exogenous within the period, but endogenous over time.
+
+Let the model be *y* = *f*(*x*, *z*) + *u*. If the variable *x* is sequential exogenous for parameter {\displaystyle \alpha }, and *y* does not cause *x* in the Granger sense, then the variable *x* is strongly/strictly exogenous for the parameter {\displaystyle \alpha }.
+
+
+#### Simultaneity
+
+Generally speaking, simultaneity occurs in the dynamic model just like in the example of static simultaneity above.
+

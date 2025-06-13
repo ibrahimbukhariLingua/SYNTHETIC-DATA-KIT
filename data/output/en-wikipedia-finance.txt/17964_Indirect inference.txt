@@ -1,0 +1,19 @@
+Indirect inference
+
+
+# Indirect inference
+
+
+
+**Indirect inference** is a simulation-based method for estimating the parameters of economic models. It is a computational method for determining acceptable macroeconomic model parameters in circumstances where the available data is too voluminous or unsuitable for formal modeling.
+
+Approximate Bayesian computation can be understood as a kind of Bayesian version of indirect inference.
+
+
+## Core idea
+
+Given a dataset of real observations and a generative model with parameters {\displaystyle \theta } for which no likelihood function can easily be provided.
+Then we can ask the question of which choice of parameters {\displaystyle \theta } could have generated the observations.
+Since a maximum likelihood estimation cannot be performed, indirect inference proposes to fit a (possibly misspecified) auxiliary model{\displaystyle {\hat {y}}\_{{\text{aux}},\phi }} to the observations, which will result in a set of auxiliary model parameters {\displaystyle \phi \_{\text{obs}}} after fitting. This is done repeatedly for the output of the generative model for different {\displaystyle \theta }. We then seek a fitted model with parameters {\displaystyle \phi \_{\text{gen}}(\theta ^{\*})\approx \phi \_{\text{obs}}} so that the generative process with parameters {\displaystyle \theta ^{\*}} could have generated the observations.
+By using the auxiliary model as an intermediary, indirect inference allows for the estimation of the generative model's parameters even when the likelihood function is not easily accessible. This method can be particularly useful in situations where traditional estimation techniques are not feasible or computationally prohibitive.
+

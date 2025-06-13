@@ -1,0 +1,45 @@
+Heath–Jarrow–Morton framework
+
+
+# Heath–Jarrow–Morton framework
+
+
+
+The **Heath–Jarrow–Morton** (**HJM**) **framework** is a general framework to model the evolution of interest rate curves – instantaneous forward rate curves in particular (as opposed to simple forward rates). When the volatility and drift of the instantaneous forward rate are assumed to be deterministic, this is known as the **Gaussian Heath–Jarrow–Morton (HJM) model** of forward rates.³⁹⁴ For direct modeling of simple forward rates the Brace–Gatarek–Musiela model represents an example.
+
+The HJM framework originates from the work of David Heath, Robert A. Jarrow, and Andrew Morton in the late 1980s, especially *Bond pricing and the term structure of interest rates: a new methodology* (1987) – working paper, Cornell University, and *Bond pricing and the term structure of interest rates: a new methodology* (1989) – working paper (revised ed.), Cornell University. It has its critics, however, with Paul Wilmott describing it as "...actually just a big rug for [mistakes] to be swept under".
+
+
+## Framework
+
+The key to these techniques is the recognition that the drifts of the no-arbitrage evolution of certain variables can be expressed as functions of their volatilities and the correlations among themselves. In other words, no drift estimation is needed.
+
+Models developed according to the HJM framework are different from the so-called short-rate models in the sense that HJM-type models capture the full dynamics of the entire forward rate curve, while the short-rate models only capture the dynamics of a point on the curve (the short rate).
+
+However, models developed according to the general HJM framework are often non-Markovian and can even have infinite dimensions. A number of researchers have made great contributions to tackle this problem. They show that if the volatility structure of the forward rates satisfy certain conditions, then an HJM model can be expressed entirely by a finite state Markovian system, making it computationally feasible. Examples include a one-factor, two state model (O. Cheyette, "Term Structure Dynamics and Mortgage Valuation", *Journal of Fixed Income,* 1, 1992; P. Ritchken and L. Sankarasubramanian in "Volatility Structures of Forward Rates and the Dynamics of Term Structure", *Mathematical Finance*, 5, No. 1, Jan 1995), and later multi-factor versions.
+
+
+## Mathematical formulation
+
+The class of models developed by Heath, Jarrow and Morton (1992) is based on modelling the forward rates.
+
+The model begins by introducing the instantaneous forward rate {\displaystyle \textstyle f(t,T)}, {\displaystyle \textstyle t\leq T}, which is defined as the continuous compounding rate available at time {\displaystyle \textstyle T} as seen from time {\displaystyle \textstyle t}. The relation between bond prices and the forward rate is also provided in the following way:
+
+Here {\displaystyle \textstyle P(t,T)} is the price at time {\displaystyle \textstyle t} of a zero-coupon bond paying $1 at maturity {\displaystyle \textstyle T\geq t}. The risk-free money market account is also defined as
+
+This last equation lets us define {\displaystyle \textstyle f(t,t)\triangleq r(t)}, the risk free short rate. The HJM framework assumes that the dynamics of {\displaystyle \textstyle f(t,s)} under a risk-neutral pricing measure {\displaystyle \textstyle \mathbb {Q} } are the following:
+
+Where {\displaystyle \textstyle W\_{t}} is a {\displaystyle \textstyle d}-dimensional Wiener process and {\displaystyle \textstyle \mu (u,s)}, {\displaystyle \textstyle {\boldsymbol {\sigma }}(u,s)} are {\displaystyle \textstyle {\mathcal {F}}\_{u}} adapted processes. Now based on these dynamics for {\displaystyle \textstyle f}, we'll attempt to find the dynamics for {\displaystyle \textstyle P(t,s)} and find the conditions that need to be satisfied under risk-neutral pricing rules. Let's define the following process:
+
+The dynamics of {\displaystyle \textstyle Y\_{t}} can be obtained through Leibniz's rule:
+
+If we define {\displaystyle \textstyle \mu (t,s)^{\*}=\int \_{t}^{s}\mu (t,u)du}, {\displaystyle \textstyle {\boldsymbol {\sigma }}(t,s)^{\*}=\int \_{t}^{s}{\boldsymbol {\sigma }}(t,u)du} and assume that the conditions for Fubini's Theorem are satisfied in the formula for the dynamics of {\displaystyle \textstyle Y\_{t}}, we get:
+
+By Itō's lemma, the dynamics of {\displaystyle \textstyle P(t,T)} are then:
+
+But {\displaystyle \textstyle {\frac {P(t,s)}{\beta (t)}}} must be a martingale under the pricing measure {\displaystyle \textstyle \mathbb {Q} }, so we require that {\displaystyle \textstyle \mu (t,s)^{\*}={\frac {1}{2}}{\boldsymbol {\sigma }}(t,s)^{\*}{\boldsymbol {\sigma }}(t,s)^{\*T}}. Differentiating this with respect to {\displaystyle \textstyle s} we get:
+
+Which finally tells us that the dynamics of {\displaystyle \textstyle f} must be of the following form:
+
+Which allows us to price bonds and interest rate derivatives based on our choice of {\displaystyle \textstyle {\boldsymbol {\sigma }}}.
+

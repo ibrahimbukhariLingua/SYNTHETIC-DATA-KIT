@@ -1,0 +1,33 @@
+Fractionally subadditive valuation
+
+
+# Fractionally subadditive valuation
+
+
+
+A set function is called **fractionally subadditive**, or **XOS** (not to be confused with OXS), if it is the maximum of several non-negative additive set functions.
+This valuation class was defined, and termed XOS, by Noam Nisan, in the context of combinatorial auctions. The term fractionally subadditive was given by Uriel Feige.
+
+
+## Definition
+
+There is a finite base set of items, {\displaystyle M:=\{1,\ldots ,m\}}.
+
+There is a function {\displaystyle v} which assigns a number to each subset of {\displaystyle M}.
+
+The function {\displaystyle v} is called *fractionally subadditive* (or XOS) if there exists a collection of set functions, {\displaystyle \{a\_{1},\ldots ,a\_{l}\}}, such that:
+
+* Each {\displaystyle a\_{j}} is additive, *i.e.*, it assigns to each subset {\displaystyle X\subseteq M}, the sum of the values of the items in {\displaystyle X}.
+* The function {\displaystyle v} is the pointwise maximum of the functions {\displaystyle a\_{j}}. I.e, for every subset {\displaystyle X\subseteq M}:
+
+### Equivalent Definition
+
+The name fractionally subadditive comes from the following equivalent definition when restricted to non-negative additive functions: a set function {\displaystyle v} is *fractionally subadditive* if, for any {\displaystyle S\subseteq M} and any collection {\displaystyle \{\alpha \_{i},T\_{i}\}\_{i=1}^{k}} with {\displaystyle \alpha \_{i}>0} and {\displaystyle T\_{i}\subseteq M} such that {\displaystyle \sum \_{T\_{i}\ni j}\alpha \_{i}\geq 1} for all {\displaystyle j\in S}, we have {\displaystyle v(S)\leq \sum \_{i=1}^{k}\alpha \_{i}v(T\_{i})}.
+
+
+## Relation to other utility functions
+
+Every submodular set function is XOS, and every XOS function is a subadditive set function.
+
+See also: Utility functions on indivisible goods.
+

@@ -1,0 +1,102 @@
+Natural borrowing limit
+
+
+# Natural borrowing limit
+
+
+
+A borrowing limit is the amount of money that individuals could borrow from other individuals, firms, banks or governments.
+There are many types of borrowing limits, and a **natural borrowing limit** is one specific type of borrowing limit among those.
+When individuals are said to face the natural borrowing limit, it implies they are allowed to borrow up to the sum of all their future incomes.
+A natural debt limit and a natural borrowing constraint are other ways to refer to the natural borrowing limit.
+
+Although the concept is widely discussed in the economic literatures, it is less likely to observe lenders willing to lend up to the natural borrowing limit.
+In the real economic activities, borrowing limits are usually much tighter than the natural borrowing limit due to the immature financial systems of the economy
+or the gap between the amount of information that the borrowers and lenders have(The latter is usually referred to as an asymmetric information problem).
+
+
+## Illustrative example
+
+Since the terminology is originally introduced from academia, it is worth introducing an illustrative example to provide better understanding to non-economist readers.
+
+Financing law school tuition fee in the United States fits into the illustrative purpose perfectly. Many law school students do not have earnings while they are students. Borrowing money from the bank to finance their cost of living while they are students, and paying back after becoming a lawyer is very common way of funding their costs. For simplicity, let's divide law students' lifetime into two periods : a law school student period and a lawyer period. During the law student period, their income is $0 but they need at least $200,000 to finish their degree. After becoming a lawyer, their income increases to $200,000 per year and they work for 30 years. Summing up all the yearly future incomes, their lifetime income becomes $6,000,000 (assuming interest rate is 0%). In order for law students to finish the degree, they have to borrow money from the bank and pay it back after becoming a lawyer.
+
+However banks will not lend infinite amount money unless they are philanthropists. They will only lend reasonable amount money so that they could receive back from the students without too much risk. If banks are willing to lend $6,000,000 to the student, then, it is said that students face the natural borrowing limit, because they are allowed to borrow exactly up to the amount which they earn for their lifetime. If students are only allowed to borrow less than $6,000,000, then it is said that they face a borrowing limit tighter than the natural borrowing limit.
+One caveat is that the concept natural borrowing limit does not depend on what amount of money that law students borrow. In this example, they will not borrow more than $200,000, but, as long as they are *allowed* to borrow $6,000,000, then it is enough to say students are in the natural borrowing limit world.
+
+
+## In economics
+
+
+### Consumer maximization problem
+
+The natural borrowing limit is one type of restriction imposed on the consumer utility maximization problem in the economics.
+In the standard consumer utility maximization problem of the economic agent, she maximizes utility by consuming goods. In making an optimal consumption decision, she has to conform to the budget constraint she faces. In other words, she cannot consume more than the net of the income, amount of money she borrows, and debt repayment. However, if she could borrow any amount money she needs (*i.e.* absence of the borrowing limit), obviously she will borrow infinite amount of money and consume infinitely as well. To rule out such situation and Ponzi schemes, and to make above consumers problem more interesting, there has to be a borrowing limit. Such restriction will prevent her from financing infinite amount money for the infinite consumption.
+
+Among the various types of borrowing limits, the natural borrowing limit imposes one of the weakest restriction on the consumer utility maximization problem. The natural borrowing limit says, the maximum amount of money that the agent can borrow is limited to the agents present discounted value of the entire income stream. This limit comes from the common sense requirement that it has to be feasible for the consumer to repay his debt in every possible realization of the future. The terminology was first introduced by Rao Aiyagari (1994), and any other borrowing limits which are stronger than the natural borrowing limit are defined as adhoc borrowing constraint.
+
+
+#### Borrowing limit and consumption smoothing
+
+The way that the borrowing limit is imposed on the consumer utility maximization problem is very important in the economic research, since, it affects the stream of consumption, and thus welfare of the agent.
+It is well known in the economics that, in general, the risk averse agents are better off when they can smooth the consumption across the time.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ Under the incomplete asset market assumption, the ability for the agent to smooth the consumption (consumption smoothing) across the time is, in general, limited when the borrowing limit is tighter than the natural borrowing limit. However, consumer can smooth the consumption almost surely under the natural borrowing limit, even under the incomplete market assumption. Hence, depending on the type of borrowing limits imposed on the utility maximization, consumers might end up having different levels of utility even if their current discounted value of their incomes are identical.
+
+Revisiting above example of the law students, assume law students are only allowed to borrow $100,000 while they are students. Then they have to reduce their cost of living and will suffer from lower utility than they could have when they are allowed to borrow up to the natural borrowing limit.
+
+Readers who are familiar with economics will get better understanding by reading below example of the utility maximization problem.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+
+#### Example
+
+Think of a standard infinite horizon consumer utility maximization problem of the economic agent, having stochastic income stream {\displaystyle \{y\_{t}\}}. Let's assume, the agent can only buy risk-free bond (*incomplete market assumption*), {\displaystyle b\_{t+1}} which pays a risk-free interest rate {\displaystyle r} (Negative bond holding implies borrowing). The agent's problem is to solve :
+
+Note that the second inequality constraint defines the debt limit of the maximization problem and {\displaystyle \eta } stands for the debt limit that the agent faces. For example, {\displaystyle \eta =-5} means that the agent can at most borrow up to 5 units of consumption good at any given time.
+
+
+##### In case of natural borrowing constraint
+
+To find proper {\displaystyle \eta } that imposes the natural borrowing limit on the consumer maximization problem, substitute {\displaystyle c\_{t}=0} for every {\displaystyle t}, and solve the budget constraint iteratively. It tells a natural borrowing limit {\displaystyle \eta =-{\frac {1}{r}}y\_{min}}. However, it is easy to argue that the natural borrowing limit will never bind when assuming Inada condition of the instantaneous utility function. Let's assume that the agent borrows up to the natural borrowing limit. In such case, the agent cannot consume at all for the rest of the period, since she has to use all her income to pay back her debt. The agent will end up having negative infinity lifetime utility due to the zero consumption for the rest of her life. Therefore, the agent never has an incentive to borrow up to the natural borrowing limit. This implies second inequality constraint never binds and thus, the necessary condition for the optimality becomes (further assuming {\displaystyle \beta (1+r)=1}),
+
+and, thus, agent achieves smooth consumption path in the expectational sense.
+
+
+##### In case of zero borrowing constraint
+
+Zero borrowing constraint implies that the agent is not allowed to borrow at all.
+Setting {\displaystyle \eta =0}, which is equivalent to zero borrowing constraint, it is no longer possible to conclude that the borrowing constraint never binds. the necessary condition for the optimality becomes (further assuming {\displaystyle \beta (1+r)=1}),
+
+In case of the realization of high income, it is less likely to borrow because she can finance her spending using her income. In such case, the ability to smooth consumption is not hurt (the first equation).
+However, in case of the realization of the low income, she has to finance her consumption by borrowing, but due to the zero borrowing constraint, she cannot borrow to finance her consumption that gives satisfactory utility (the second equation).
+Therefore, the ability for consumption smoothing is more restricted than the natural borrowing limit case once the agent faces tighter borrowing constraint.
+
+
+## Digressions from the natural borrowing limit and related literatures
+
+As discussed above, in the real economic activities, it is less likely for the economics agents to face natural borrowing limit due to the asymmetric information between lenders and borrowers or more broadly financial market imperfections.
+As one could easily expect, there are many economics literatures that digress from the natural borrowing limit assumption and focus more on the types of borrowing limits that mimic real world closely.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+
+### Asymmetric information problem
+
+The asymmetric information in this context means that borrowers and lenders have different amounts of the information in make borrowing and lending decisions.
+The topic was pioneered by Stiglitz and Weiss (1981).
+In their study, they showed that a competitive loan market suffers from the credit rationing problem.
+The credit rationing means that, among borrowers who *appear* to be identical, some get loans whereas others cannot not borrow although they are willing to get loans for the given interest rate.
+The information asymmetry in this economy can be described in the following way: Borrowers have different profitability and riskiness of their investments but lenders do not have enough information to sort out borrowers based on profitability and riskiness. Gale and Hellwig (1985)
+also studied the credit rationing problem and studied the optimal form of the debt contract between borrowers and lenders.
+Furthermore, Williamson (1987) showed that the credit rationing arises if lenders suffer from monitoring costs.
+
+
+### Macroeconomics context
+
+Besides from the effect of asymmetric information on borrowing limit,
+in the field of macroeconomics, there also are many interestingᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ researches conducted by imposing tighter borrowing constraints on the economics agents.
+
+One line of research is to investigate the dynamics of firms and the aggregate measures of firm activities.
+Cooley and Quadrini (2001)
+showed that the evolution and the distribution of the firm size and ages implied by their economic model mimic the real world data closely. The key ingredient they introduced is
+the financial friction that firms might confront. A specific type of friction under their concern was premium associated with increasing equity and costly defaulting on debt.
+Furthermore, Angelini and Generale (2005) elaborated Cooley and Quadrini's result by developing direct ways to measure the financial constraints that firms face.
+
+The other line of research is closely related to international finance literatures. By using an equilibrium business cycle model, Bianchi and Mendoza (2010) showed that economic agents facing collateral constraint borrow too much and the economy suffers from larger magnitude financial crises than it would have suffered under the social planner's economy.
+

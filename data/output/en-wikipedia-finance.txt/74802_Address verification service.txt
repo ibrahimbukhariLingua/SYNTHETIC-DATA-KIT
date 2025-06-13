@@ -1,0 +1,55 @@
+Address verification service
+
+
+# Address verification service
+
+
+
+An **address verification service** (**AVS**) is a service provided by major credit card processors to enable merchants to authenticate ownership of a credit or debit card used by a customer. AVS is done as part of the merchant's request for authorization in a non-face-to-face credit card transaction. The credit card company or issuing bank automatically checks the billing address provided by the customer to the merchant against the billing address in its records, and reports back to the merchant who has the ultimate responsibility to determine whether or not to go ahead with a transaction. AVS can be used in addition to other security features of a credit card, such as the CVV2 number.
+
+AVS is not available by all credit card providers, and not in all countries. It is generally not available for foreign credit cards; that is, cards issued in a country other than where it is being used. AVS is available in a number of countries, including the United States, Canada, and the United Kingdom. Though the checks can vary between card companies, AVS typically verifies only the numeric portions of a cardholder's billing address, resulting in certain anomalies like apartment numbers, which can cause false declines. However, this is reported to be a rare occurrence.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ For example, if the address is 101 Main Street, Highland, CA 92346, in the United States, AVS will check *101* and *92346*. Cardholders may receive false negatives, or partial declines for AVS from e-commerce verification systems, which may require manual overrides, voice authorization, or reprogramming of the AVS entries by the card issuing bank. Credit card AVS does not determine deliverability of an address.
+
+
+## AVS support
+
+AVS is a service to combat fraudulent activity for card-not-present transactions by cross-referencing the address provided by a cardholder to a merchant with the card issuer's records. AVS is offered by Visa, MasterCard, Discover and American Express in the United States, Canada and the United Kingdom.
+
+Cardholders with a bank that does not support AVS may receive an error from online stores due to the lack of verification.
+
+Besides the automated verification, some banks provide merchants with a manual verification system. Usually this is done for foreign credit card accounts as the AVS only works in the same country. This facility helps the merchants to prevent fraud arising from other countries. The merchant's bank calls the customer's bank (or sends a fax for banks that request them).
+
+
+## AVS response codes
+
+Following a request from a merchant for an address verification, the credit card processor sends an AVS response code back to the merchant indicating the degree of address matching. The meaning of the codes vary between credit card processors. Merchants can use the AVS code to determine whether to accept or reject a credit card transaction.
+
+| Code | Visa | Mastercard | Discover | American Express |
+| --- | --- | --- | --- | --- |
+| A | Street address matches, ZIP does not | Street address matches, ZIP does not | Street address matches, ZIP does not | Street address matches, ZIP does not |
+| B | Street address matches, but ZIP not verified. | Not applicable | Not applicable | Not applicable |
+| C | Street address and ZIP not verified | Not applicable | Not applicable | Not applicable |
+| D | Street address and ZIP match (International Only) | Not applicable | Not applicable | Not applicable |
+| E | AVS data is invalid or AVS is not allowed for this card type. | Not applicable | Not applicable | Not applicable |
+| F | Street address and postal code match (UK Only) | Not applicable | Not applicable | Street address matches, card member name does not match |
+| G | Non-U.S. issuing bank does not support AVS. | Not applicable | Not applicable | Not applicable |
+| I | Address information not verified for international transaction | Not applicable | Not applicable | Not applicable |
+| K | Not applicable | Not applicable | Not applicable | Card member name matches |
+| L | Not applicable | Not applicable | Not applicable | Card member name and ZIP match |
+| M | Street address and postal code match (International Only) | Not applicable | Not applicable | Card member name, street address, and ZIP code match |
+| N | Street address and ZIP code do not match | Street address and ZIP code do not match | Street address and ZIP code do not match | Street address and ZIP code do not match |
+| O | Not applicable | Not applicable | Not applicable | Card member name and street address match |
+| P | Zip code matches, street address unverifiable due to incompatible formats (International Only) | Not applicable | Not applicable | Not applicable |
+| R | System unavailable, retry | System unavailable, retry | System unavailable, retry | System unavailable, retry |
+| S | AVS not supported | AVS not supported | AVS not supported | AVS not supported |
+| T | Not applicable | Not applicable | 9-Digit ZIP matches, street address does not | Not applicable |
+| U | Address information unavailable. Returned if the U.S. bank does not support non-U.S. AVS or if the AVS in a U.S. bank is not functioning properly. | Address information unavailable | Address information unavailable | Address information unavailable |
+| W | 9-Digit ZIP matches, street address does not | 9-Digit ZIP matches, street address does not | 9-Digit ZIP matches, street address does not | Card member name, ZIP, and street address do NOT match |
+| X | 9-Digit ZIP and street address match | 9-Digit ZIP and street address match | 9-Digit ZIP and street address match | Not applicable |
+| Y | 5-Digit ZIP and street address match | 5-Digit ZIP and street address match | 5-Digit ZIP and street address match | 5-Digit ZIP and street address match |
+| Z | 5-Digit ZIP matches, street address does not | 5-Digit ZIP matches, street address does not | 5-Digit ZIP matches, street address does not | 5-Digit ZIP matches, street address does not |
+
+
+### Declines due to Address Verification System
+
+"Declined due to AVS mismatch", the authorization code, along with the hold on the authorized funds, will remain on the customer's card until the issuing bank has it expire (typically 7 days for all business types except hotels and car rentals that can have up to 30 days). As a result, the held funds may be subtracted from the customer's available balance, and an online statement may reflect the authorization request which might be mistaken for an actual charge. Most card issuing banks will remove authorizations within 5–7 days if they are not claimed for settlement.
+

@@ -1,0 +1,46 @@
+Forward volatility
+
+
+# Forward volatility
+
+
+
+**Forward volatility** is a measure of the implied volatility of a financial instrument over a period in the future, extracted from the term structure of volatility (which refers to how implied volatility differs for related financial instruments with different maturities).
+
+
+## Underlying principle
+
+The variance is the square of differences of measurements from the mean divided by the number of samples. The standard deviation is the square root of the variance.
+The standard deviation of the continuously compounded returns of a financial instrument is called volatility.
+
+The (yearly) volatility in a given asset price or rate over a term that starts from {\displaystyle t\_{0}=0} corresponds to the spot volatility for that underlying, for the specific term. A collection of such volatilities forms a volatility term structure, similar to the yield curve. Just as forward rates can be derived from a yield curve, forward volatilities can be derived from a given term structure of volatility.
+
+
+## Derivation
+
+Given that the underlying random variables for non overlapping time intervals are independent, the variance is additive (see variance). So for yearly time slices we have the annualized volatility as
+
+{\displaystyle {\begin{aligned}\sigma \_{0,j}^{2}&={\frac {1}{j}}(\sigma \_{0,1}^{2}+\sigma \_{1,2}^{2}+\cdots +\sigma \_{j-2,j-1}^{2}+\sigma \_{j-1,j}^{2})\\\Rightarrow \sigma \_{j-1,j}&={\sqrt {j\sigma \_{0,j}^{2}-\sum \_{k=1}^{j-1}\sigma \_{k-1,k}^{2}}},\end{aligned}}}
+
+where
+
+To ease computation and get a non-recursive representation, we can also express the forward volatility directly in terms of spot volatilities:
+
+{\displaystyle {\begin{aligned}\sigma \_{0,j}^{2}&={\frac {1}{j}}(\sigma \_{0,1}^{2}+\sigma \_{1,2}^{2}+\cdots +\sigma \_{j-1,j}^{2})\\&={\frac {j-1}{j}}\cdot {\frac {1}{j-1}}(\sigma \_{0,1}^{2}+\sigma \_{1,2}^{2}+\cdots +\sigma \_{j-2,j-1}^{2})+{\frac {1}{j}}\sigma \_{j-1,j}^{2}\\&={\frac {j-1}{j}}\,\sigma \_{0,j-1}^{2}+{\frac {1}{j}}\sigma \_{j-1,j}^{2}\\\Rightarrow {\frac {1}{j}}\sigma \_{j-1,j}^{2}&=\sigma \_{0,j}^{2}-{\frac {(j-1)}{j}}\sigma \_{0,j-1}^{2}\\\sigma \_{j-1,j}^{2}&=j\sigma \_{0,j}^{2}-(j-1)\sigma \_{0,j-1}^{2}\\\sigma \_{j-1,j}&={\sqrt {j\sigma \_{0,j}^{2}-(j-1)\sigma \_{0,j-1}^{2}}}\end{aligned}}}
+
+Following the same line of argumentation we get in the general case with {\displaystyle t\_{0}<t<T} for the forward volatility seen at time {\displaystyle t\_{0}}:
+
+{\displaystyle \sigma \_{t,T}={\sqrt {\frac {(T-t\_{0})\sigma \_{t\_{0},T}^{2}-(t-t\_{0})\sigma \_{t\_{0},t}^{2}}{T-t}}}},
+
+which simplifies in the case of {\displaystyle t\_{0}=0} to
+
+{\displaystyle \sigma \_{t,T}={\sqrt {\frac {T\sigma \_{0,T}^{2}-t\sigma \_{0,t}^{2}}{T-t}}}}.
+
+
+## Example
+
+The volatilities in the market for 90 days are 18% and for 180 days 16.6%. In our notation we have {\displaystyle \sigma \_{0,\,0.25}} = 18% and {\displaystyle \sigma \_{0,\,0.5}} = 16.6% (treating a year as 360 days).
+We want to find the forward volatility for the period starting with day 91 and ending with day 180. Using the above formula and setting {\displaystyle t\_{0}=0} we get
+
+{\displaystyle \sigma \_{0.25,\,0.5}={\sqrt {\frac {0.5\cdot 0.166^{2}-0.25\cdot 0.18^{2}}{0.25}}}=0.1507\approx 15.1\%}.
+

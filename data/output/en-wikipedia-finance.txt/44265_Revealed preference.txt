@@ -1,0 +1,72 @@
+Revealed preference
+
+
+# Revealed preference
+
+
+
+**Revealed preference theory**, pioneered by economist Paul Anthony Samuelson in 1938, is a method of analyzing choices made by individuals, mostly used for comparing the influence of policiesᶠᵘʳᵗʰᵉʳ ᵉˣᵖˡᵃⁿᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ on consumer behavior. Revealed preference models assume that the preferences of consumers can be revealed by their purchasing habits.
+
+Revealed preference theory arose because existing theories of consumer demand were based on a diminishing marginal rate of substitution (MRS). This diminishing MRS relied on the assumption that consumers make consumption decisions to maximise their utility. While utility maximisation was not a controversial assumption, the underlying utility functions could not be measured with great certainty. Revealed preference theory was a means to reconcile demand theory by defining utility functions by observing behaviour.
+
+Therefore, revealed preference is a way to infer the preferences of individuals given the observed choices. It contrasts with attempts to directly measure preferences or utility, for example through stated preferences. Taking economics to be an empirical subject, there is the issue that one cannot observe preferences.
+
+
+## Definition and theory
+
+Let there be two bundles of goods, **a** and **b**, available in a budget set {\displaystyle B}. If it is observed that **a** is chosen over **b**, then **a** is considered (directly) *revealed preferred* to **b**.
+
+
+### Two-dimensional example
+
+If the budget set {\displaystyle B} is defined for two goods; {\displaystyle X,Y}, and determined by prices {\displaystyle p,q} and income {\displaystyle m}, then let bundle **a** be {\displaystyle (x\_{1},y\_{1})\in B} and bundle **b** be {\displaystyle (x\_{2},y\_{2})\in B}. This situation would typically be represented arithmetically by the inequality {\displaystyle pX+qY\leq m} and graphically by a budget line in the positive real numbers. Assuming strongly monotonic preferences, only bundles that are graphically located on the budget line, i.e. bundles where {\displaystyle px\_{1}+qy\_{1}=m} and {\displaystyle px\_{2}+qy\_{2}=m} are satisfied, need to be considered. If, in this situation, it is observed that {\displaystyle (x\_{1},y\_{1})} is chosen over {\displaystyle (x\_{2},y\_{2})}, it is concluded that {\displaystyle (x\_{1},y\_{1})} is (directly) revealed preferred to {\displaystyle (x\_{2},y\_{2})}, which can be summarized as the binary relation {\displaystyle (x\_{1},y\_{1})\succeq (x\_{2},y\_{2})} or equivalently as {\displaystyle \mathbf {a} \succeq \mathbf {b} }.
+
+
+### The Weak Axiom of Revealed Preference (WARP)
+
+WARP is one of the criteria which needs to be satisfied in order to make sure that the consumer is consistent with their preferences. If a bundle of goods **a** is chosen over another bundle **b** when both are affordable, then the consumer reveals that they prefer **a** over **b**. WARP says that when preferences remain the same, there are no circumstances (budget set) where the consumer prefers **b** over **a**. By choosing **a** over **b** when both bundles are affordable, the consumer reveals that their preferences are such that they will never choose **b** over **a** when both are affordable, even as prices vary. Formally:
+
+where {\displaystyle \mathbf {a} } and {\displaystyle \mathbf {b} } are arbitrary bundles and {\displaystyle C(B,\succeq )\subset B} is the set of bundles chosen in budget set {\displaystyle B}, given preference relation {\displaystyle \succeq }.
+
+In other words, if **a** is chosen over **b** in budget set {\displaystyle B} where both **a** and **b** are feasible bundles, but **b** is chosen when the consumer faces some other budget set {\displaystyle B'}, then **a** is not a feasible bundle in budget set {\displaystyle B'}.
+
+
+### Completeness: The Strong Axiom of Revealed Preferences (SARP)
+
+The strong axiom of revealed preferences (SARP) is equivalent to the weak axiom of revealed preferences, except that the choices A and B are not allowed to be either directly or indirectly revealed preferable to each other at the same time. Here A is considered *indirectly* revealed preferred to B if C exists such that A is directly revealed preferred to C, and C is directly revealed preferred to B. In mathematical terminology, this says that transitivity is preserved. Transitivity is useful as it can reveal additional information by comparing two separate bundles from budget constraints.
+
+It is often desirable in economic models to prevent such "loops" from happening, for example in order to model choices with utility functions (which have real-valued outputs and are thus transitive). One way to do so is to impose completeness on the revealed preference relation with regards to the choices at large, i.e. without any price considerations or affordability constraints. This is useful because when evaluating {A,B,C} as standalone options, it is *directly* obvious which is preferred or indifferent to which other. Using the weak axiom then prevents two choices from being preferred over each other at the same time; thus it would be impossible for "loops" to form.
+
+Another way to solve this is to impose the *strong axiom of revealed preference* (SARP) which ensures transitivity. This is characterised by taking the transitive closure of direct revealed preferences and require that it is antisymmetric, i.e. if A is revealed preferred to B (directly or indirectly), then B is not revealed preferred to A (directly or indirectly).
+
+These are two different approaches to solving the issue; completeness is concerned with the input (domain) of the choice functions; while the strong axiom imposes conditions on the output.
+
+
+### Generalised Axiom of Revealed Preference (GARP)
+
+Generalised axiom of revealed preference is a generalisation of the strong axiom of revealed preference. It is the final criteria required so that constancy may be satisfied to ensure consumers preferences do not change.
+
+This axiom accounts for conditions in which two or more consumption bundles satisfy equal levels of utility, given that the price level remains constant. It covers circumstances in which utility maximisation is achieved by more than one consumption bundle.
+
+A set of data satisfies the general axiom of revealed preference if {\displaystyle x^{i}Rx^{j}} implies not {\displaystyle x^{j}P^{0}x^{i}}. This establishes that if consumption bundle {\displaystyle x^{i}} is revealed preferred to {\displaystyle x^{j}}, then the expenditure necessary to acquire bundle {\displaystyle x^{j}} given that prices remain constant, cannot be more than the expenditure necessary to acquire bundle {\displaystyle x^{i}}.
+
+To satisfy the generalised axiom of revealed preference a dataset must also not establish a preference cycle. Therefore, when considering the bundles {A,B,C}, the revealed preference bundle must be an acyclic order pair as such, If {\displaystyle A\succeq B} and {\displaystyle B\succeq C}, then {\displaystyle B\nsucceq A} and {\displaystyle A\succeq C} thus ruling out “preference cycles” while still holding transitivity.
+
+As the generalised axiom is closely related to the strong axiom of revealed preference, it is very easy to demonstrate that each condition of SARP can imply the general axiom, however, the generalised axiom does not imply the strong axiom. This is a result of the condition in which the generalised axiom is compatible with multivalued demand functions, where as SARP is only compatible with single valued demand functions. As such, the generalised axiom permits for flat sections within indifference curves, as stated by Hal R Varian (1982).
+
+If a set of preference data satisfies GARP, then there exists a strictly increasing and concave utility function that rationalizes the preferences (Afriat 1967). r
+
+
+## Applications
+
+Revealed preference theory has been used in numerous applications, including college rankings in the U.S.
+
+
+## Criticism
+
+Several economists criticised the theory of revealed preferences for different reasons.
+
+1. Stanley Wong claimed that revealed preference theory was a failed research program. In 1938 Samuelson presented revealed preference theory as an alternative to utility theory, while in 1950, Samuelson took the demonstrated equivalence of the two theories as a vindication for his position, rather than as a refutation.
+2. If there exist only an apple and an orange, and an orange is picked, then one can definitely say that an orange is revealed preferred to an apple. In the real world, when it is observed that a consumer purchased an orange, it is impossible to say what good or set of goods or behavioural options were discarded in preference of purchasing an orange. In this sense, preference is not revealed at all in the sense of ordinal utility.
+3. The revealed preference theory assumes that the preference scale remains constant over time. Were this not the case all that can be stated is that an action, at a specific point of time, reveals part of a person's preference scale at that time. There is no warrant for assuming that it remains constant from one point of time to another. The "revealed preference" theorists assume constancy in addition to consistent behaviour ("rationality"). Consistency means that a person maintains a transitive order of rank on his preference scale (if A is preferred to B and B is preferred to C, then A is preferred to C). But the revealed preference procedure does not rest on this assumption so much as on an assumption of constancy—that an individual maintains the same value scale over time. While the former might be called irrational, there is certainly nothing irrational about someone's value scales changing through time. It is claimed that no valid theory can be built on a constancy assumption.
+4. The inability to define or measure preferences independently of 'revealed-preferences' leads some authors to see the concept as a tautological fallacy. See, inter alia, Amartya Sen’s critiques in a series of articles: “Behaviour and the concept of preference” (Sen 1973), “Rational Fools: A Critique of the Behavioural Foundations of Economic Theory” (Sen 1977), “Internal Consistency of Choice” (Sen 1993), “Maximization and the Act of Choice” (Sen 1997), and his book 'Rationality and Freedom' (Sen 2002).

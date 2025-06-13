@@ -1,0 +1,42 @@
+Combinatorial auction
+
+
+# Combinatorial auction
+
+
+
+| Part of a series on |
+| --- |
+| Auctions |
+| Types |
+| * All-pay + Chinese + Bidding fee + Dollar * Amsterdam * Anglo-Dutch * Barter double * Best/not best * Brazilian * Calcutta * Candle * Click-box bidding * Combinatorial * Common value * Deferred-acceptance * Discriminatory price * Double * Dutch * English * Forward * French * Generalized first-price * Generalized second-price * Japanese * Knapsack * Multi-attribute * Multiunit * No-reserve * Rank * Reverse * Scottish * Sealed first-price * Simultaneous ascending * Single-price * Traffic light * Uniform price * Unique bid * Value of revenues * Vickrey * Vickrey–Clarke–Groves * Walrasian * Yankee |
+| Bidding |
+| * Shading * Calor licitantis * Cancellation hunt * Jump * Rigging * Sniping * Suicide * Tacit collusion |
+| Contexts |
+| * Algorithms * Autos * Art * Charity * Children * Players * Domain names * Flowers * Loans * Scam * Slaves * Spectrum * Stamps * Virginity * Wine * Wives |
+| Theory |
+| * Digital goods * Price of anarchy * Revenue equivalence * Winner's curse |
+| Online |
+| * Ebidding * Private electronic market * Software |
+| * v * t * e |
+
+A **combinatorial auction** is a type of smart market in which participants can place bids on combinations of discrete heterogeneous items, or “packages”, rather than individual items or continuous quantities. These packages can be also called lots and the whole auction a **multi-lot auction**. Combinatorial auctions are applicable when bidders have non-additive valuations on bundles of items, that is, they value combinations of items more or less than the sum of the valuations of individual elements of the combination.
+
+Simple combinatorial auctions have been used for many years in estate auctions, where a common procedure is to accept bids for packages of items. They have been used recently for truckload transportation, bus routes, industrial procurement, and in the allocation of radio spectrum for wireless communications. In recent years, procurement teams have applied reverse combinatorial auctions in the procurement of goods and services. This application is often referred to as sourcing optimization. Since construction procurement often involves negotiations over multiple components, combinatorial reverse auctions are suggested to reduce costs in this industry.
+
+Although they allow bidders to be more expressive, combinatorial auctions present both computational and game-theoretic challenges compared to traditional auctions. An example of a computational problem is how to efficiently determine the allocation once the bids have been submitted to the auctioneer. This is called the winner determination problem.
+
+The winner determination problem can be stated as follows: given a set of bids in a combinatorial auction, find an allocation of items to bidders—including the possibility that the auctioneer retains some items—that maximizes the auctioneer’s revenue. This problem is difficult for large instances. Specifically, it is NP-hard, meaning that it is conjectured that there does not exist a polynomial-time algorithm which finds the optimal allocation. The combinatorial auction problem can be modeled as a set packing problem. Therefore, many algorithms have been proposed to find approximated solutions for combinatorial auction problem. For example, Hsieh (2010) proposed a Lagrangian relaxation approach for combinatorial reverse auction problems.
+
+Many of these aspects of combinatorial auctions, including some real-world examples, are also discussed in the comprehensive book edited by Cramton, Shoham and Steinberg (2006).
+
+
+## History
+
+Combinatorial auctions were first proposed by Rassenti, Smith, and Bulfin (1982), for the allocation of airport landing slots. Their paper introduced many key ideas on combinatorial auctions, including the mathematical programming formulation of the auctioneer’s problem, the connection between the winner determination problem and the set-packing problem, the issue of computational complexity, the use of techniques from experimental economics for testing combinatorial auctions, and consideration of issues of incentive compatibility and demand revelation in combinatorial auctions.
+
+
+## Combinatorial Clock Auction
+
+A special case of a combinatorial auction is the **combinatorial clock auction** (CCA), which combines a clock auction, during which bidders may provide their confirmations in response to the rising prices, with a subsequent sealed bid auction, in which bidders submit sealed package bids. The auctioneer uses the final bids to compute the best value allocation and the Vickrey payments. CCAs have been shown to be prone to the possibility of raising rivals’ cost.
+

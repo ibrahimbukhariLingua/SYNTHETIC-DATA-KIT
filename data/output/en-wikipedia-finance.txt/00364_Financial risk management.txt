@@ -1,0 +1,234 @@
+Financial risk management
+
+
+# Financial risk management
+
+
+
+| Categories of |
+| --- |
+| Financial risk |
+| Credit risk |
+| * Settlement risk * Concentration risk * Sovereign risk * Default risk |
+| Market risk |
+| * Interest rate risk * Inflation risk * Currency risk * Equity risk * Commodity risk * Volatility risk * Systemic risk |
+| Liquidity risk |
+| * Refinancing risk * Deposit risk * Margining risk |
+| Investment risk |
+| * Model risk * Execution risk * Valuation risk |
+| Business risk |
+| * Reputational risk * Operational risk * Country risk * Political risk * Legal risk * Moral hazard |
+| Profit risk |
+| Non-financial risk |
+| * Stranded asset |
+| * v * t * e |
+
+| **Institutions** * American Risk and Insurance Association * Association of Insurance and Risk Managers in Industry and Commerce * Global Association of Risk Professionals * Global Risk Institute * Institute of Risk Management * Professional Risk Managers' International Association * Risk and Insurance Management Society **Certifications** * Certified Risk Analyst (CRA) * Certified Risk Management Professional (RIMS-CRMP) * Certified Risk Professional (MIRM designation) * Chartered Enterprise Risk Analyst (CERA; Society of Actuaries) * Chartered Enterprise Risk Actuary (CERA; Institute and Faculty of Actuaries) * Financial Risk Manager (FRM) * Professional Risk Manager (PRM) |
+| --- |
+
+**Financial risk management** is the practice of protecting economic value in a firm by managing exposure to financial risk - principally credit risk and market risk, with more specific variants as listed aside - as well as some aspects of operational risk. As for risk management more generally, financial risk management requires identifying the sources of risk, measuring these, and crafting plans to mitigate them. See Finance § Risk management for an overview.
+
+Financial risk management as a "science" can be said to have been born with modern portfolio theory, particularly as initiated by Professor Harry Markowitz in 1952 with his article, "Portfolio Selection"; see Mathematical finance § Risk and portfolio management: the P world.
+
+The discipline can be qualitative and quantitative; as a specialization of risk management, however, financial risk management focuses more on when and how to hedge, often using financial instruments to manage costly exposures to risk.
+
+* In the banking sector worldwide, the Basel Accords are generally adopted by internationally active banks for tracking, reporting and exposing operational, credit and market risks.
+* Within non-financial corporates, the scope is broadened to overlap enterprise risk management, and financial risk management then addresses risks to the firm's overall strategic objectives.
+* In investment management risk is managed through diversification and related optimization; while further specific techniques are then applied to the portfolio or to individual stocks as appropriate.
+
+In all cases, the last "line of defence" against risk is capital, "as it ensures that a firm can continue as a going concern even if substantial and unexpected losses are incurred".
+
+
+## Economic perspective
+
+Neoclassical finance theory prescribes that (1) a firm should take on a project only if it increases shareholder value. Further, the theory suggests that (2) firm managers cannot create value for shareholders or investors by taking on projects that shareholders could do for themselves at the same cost; see Theory of the firm and Fisher separation theorem.
+
+Given these, there is therefore a fundamental debate relating to "Risk Management" and shareholder value. The discussion essentially weighs the value of risk management in a market versus the cost of bankruptcy in that market: per the Modigliani and Miller framework, hedging is irrelevant since diversified shareholders are assumed to not care about firm-specific risks, whereas, on the other hand hedging is seen to create value in that it reduces the probability of financial distress.
+
+When applied to financial risk management, this implies that firm managers should not hedge risks that investors can hedge for themselves at the same cost. This notion is captured in the so-called "hedging irrelevance proposition": "In a perfect market, the firm cannot create value by hedging a risk when the price of bearing that risk within the firm is the same as the price of bearing it outside of the firm."
+
+In practice, however, financial markets are not likely to be perfect markets. This suggests that firm managers likely have many opportunities to create value for shareholders using financial risk management, wherein they are able to determine which risks are cheaper for the firm to manage than for shareholders. Here, market risks that result in unique risks for the firm are commonly the best candidates for financial risk management.
+
+
+## Application
+
+As outlined, businesses are exposed, in the main, to market, credit and operational risk. A broad distinction exists though, between financial institutions and non-financial firms - and correspondingly, the application of risk management will differ. Respectively:
+For Banks and Fund Managers, "credit and market risks are taken intentionally with the objective of earning returns, while operational risks are a byproduct to be controlled".
+For non-financial firms, the priorities are reversed, as "the focus is on the risks associated with the business" - ie the production and marketing of the services and products in which expertise is held - and their impact on revenue, costs and cash flow, "while market and credit risks are usually of secondary importance as they are a byproduct of the main business agenda".
+(See related discussion re valuing financial services firms as compared to other firms.)
+In all cases, as above, risk capital is the last "line of defence".
+
+
+### Banking
+
+| Specific banking frameworks |
+| --- |
+| Market risk |
+| * FRTB * Internal models approach (IMA) * Standardized approach (market risk) |
+| Credit risk |
+| * Internal ratings-based approach (IRB) * Foundation IRB (F-IRB) * Advanced IRB (A-IRB) * Standardized approach (credit risk) |
+| Counterparty credit risk |
+| * Current exposure method (CEM) * Standardised method (SM) * Standardized approach (counterparty credit risk) (SA-CCR) |
+| Operational risk |
+| * Advanced measurement approach (AMA) * Basic indicator approach * Standardized approach (operational risk) * Standardised measurement approach (SMA) |
+| * v * t * e |
+
+Banks and other wholesale institutions face various financial risks in conducting their business, and how well these risks are managed and understood is a key driver
+behind profitability, as well as of the quantum of capital they are required to hold.
+Financial risk management in banking has thus grown markedly in importance since the Financial crisis of 2007–2008.
+(This has given rise to dedicated degrees and professional certifications.)
+
+The major focus here is on credit and market risk, and especially through regulatory capital, includes operational risk.
+Credit risk is inherent in the business of banking, but additionally, these institutions are exposed to counterparty credit risk. Both are to some extent offset by margining and collateral; and the management is of the net-position.
+Large banks are also exposed to Macroeconomic systematic risk - risks related to the aggregate economy the bank is operating in
+(see Too big to fail).
+
+The discipline
+is, as outlined, simultaneously concerned with
+(i) managing, and as necessary hedging, the various positions held by the institution - both trading positions and long term exposures;
+and
+(ii) calculating and monitoring the resultant economic capital, as well as the regulatory capital under Basel III — which, importantly, covers also leverage and liquidity — with regulatory capital as a floor.
+
+Correspondingly, and broadly, the analytics are based as follows:
+For (i) on the "Greeks", the sensitivity of the price of a derivative to a change in its underlying factors; as well as on the various other measures of sensitivity, such as DV01 for the sensitivity of a bond or swap to interest rates, and CS01 or JTD for exposure to credit spread.
+For (ii) on value at risk, or "VaR", an estimate of how much the investment or area in question might lose with a given probability in a set time period, with the bank holding "economic"- or “risk capital” correspondingly; common parameters are 99% and 95% worst-case losses - i.e. 1% and 5% - and one day and two week (10 day) horizons.
+These calculations are mathematically sophisticated, and within the domain of quantitative finance.
+
+The regulatory capital quantum is calculated via specified formulae: risk weighting the exposures per highly standardized asset-categorizations, applying the aside frameworks, and the resultant capital — at least 12.9% of these Risk-weighted assets (RWA) — must then be held in specific "tiers" and is measured correspondingly via the various capital ratios.
+In certain cases, banks are allowed to use their own estimated risk parameters here; these "internal ratings-based models" typically result in less required capital, but at the same time are subject to strict minimum conditions and disclosure requirements.
+As mentioned, additional to the capital covering RWA, the aggregate balance sheet will require capital for leverage and liquidity; this is monitored via the LR, LCR, and NSFR ratios.
+
+The financial crisis exposed holes in the mechanisms used for hedging
+(see Fundamental Review of the Trading Book § Background, Tail risk § Role of the 2007–2008 financial crisis, Value at risk § Criticism, and Basel III § Criticism).
+As such, the methodologies employed have had to evolve, both from a modelling point of view, and in parallel, from a regulatory point of view.
+
+Regarding the modelling, changes corresponding to the above are:
+(i) For the daily direct analysis of the positions at the desk level, as a standard, measurement of the Greeks now inheres the volatility surface — through local- or stochastic volatility models — while re interest rates, discounting and analytics are under a "multi-curve framework". Derivative pricing now embeds considerations re counterparty risk and funding risk, amongst others, through the CVA and XVA "valuation adjustments"; these also carry regulatory capital.
+(ii) For Value at Risk, the traditional parametric and "Historical" approaches, are now supplemented with the more sophisticated Conditional value at risk / expected shortfall, Tail value at risk, and Extreme value theory. For the underlying mathematics, these may utilize mixture models, PCA, volatility clustering, copulas, and other techniques.
+Extensions to VaR include Margin-, Liquidity-, Earnings- and Cash flow at risk, as well as Liquidity-adjusted VaR.
+For both (i) and (ii), model risk is addressed through regular validation of the models used by the bank's various divisions; for VaR models, backtesting is especially employed.
+
+Regulatory changes, are also twofold.
+The first change, entails an increased emphasis on bank stress tests.
+These tests, essentially a simulation of the balance sheet for a given scenario, are typically linked to the macroeconomics, and provide an indicator of how sensitive the bank is to changes in economic conditions, whether it is sufficiently capitalized, and of its ability to respond to market events.
+The second set of changes, sometimes called "Basel IV", entails the modification of several regulatory capital standards (CRR III is the EU implementation). In particular FRTB addresses market risk, and SA-CCR addresses counterparty risk;
+other modifications are being phased in from 2023.
+
+To operationalize the above, Investment banks, particularly, employ dedicated "Risk Groups", i.e. Middle Office teams monitoring the firm's risk-exposure to, and the profitability and structure of, its various business units, products, asset classes, desks, and / or geographies.
+By increasing order of aggregation:
+
+1. Financial institutions will set limit values for each of the Greeks, or other sensitivities, that their traders must not exceed, and traders will then hedge, offset, or reduce periodically if not daily; see the techniques listed below. These limits are set given a range of plausible changes in prices and rates, coupled with the board-specified risk appetite re overnight-losses.
+2. Desks, or areas, will similarly be limited as to their VaR quantum (total or incremental, and under various calculation regimes), corresponding to their allocated economic capital; a loss which exceeds the VaR threshold is termed a "VaR breach". RWA - with other regulatory results - is correspondingly monitored from desk level and upward.
+3. Each area's (or desk's) concentration risk will be checked against thresholds set for various types of risk, and / or re a single counterparty, sector or geography.
+4. Leverage will be monitored, at very least re regulatory requirements via LR, the Leverage Ratio, as leveraged positions could lose large amounts for a relatively small move in the price of the underlying.
+5. Relatedly, liquidity risk is monitored: LCR, the Liquidity Coverage Ratio, measures the ability of the bank to survive a short-term stress, covering its total net cash outflows over the next 30 days with "high quality liquid assets"; NSFR, the Net Stable Funding Ratio, assesses its ability to finance assets and commitments within a year (addressing also, maturity transformation risk). Any "gaps", also, must be managed.
+6. Systemically Important Banks hold additional capital such that their total loss absorbency capacity, TLAC, is sufficient given both RWA and leverage. (See also "MREL" for EU institutions.)
+
+Periodically,
+these all are estimated under a given stress scenario — regulatory and,
+often, internal —
+and risk capital, together with these limits if indicated, is correspondingly revisited (or optimized).
+The approaches taken center either on a hypothetical or historical scenario,
+and may apply increasingly sophisticated mathematics to the analysis.
+More generally, these tests provide estimates for scenarios beyond the VaR thresholds, thus “preparing for anything that might happen, rather than worrying about precise likelihoods".
+A reverse stress test, in fact, starts from the point at which "the institution can be considered as failing or likely to fail... and then explores scenarios and circumstances that might cause this to occur".
+
+A key practice, incorporating and assimilating the above, is to assess the Risk-adjusted return on capital, RAROC, of each area (or product). Here, "economic profit" is divided by allocated-capital; and this result is then compared to the target-return for the area — usually, at least the equity holders' expected returns on the bank stock — and identified under-performance can then be addressed. (See similar below re. DuPont analysis.)
+The numerator, risk-adjusted return, is realized trading-return less a term and risk appropriate funding cost as charged by Treasury to the business-unit under the bank's funds transfer pricing (FTP) framework;
+direct costs are (sometimes) also subtracted.
+The denominator is the area's allocated capital, as above, increasing as a function of position risk; several allocation techniques exist.
+RAROC is calculated both *ex post* as discussed, used for performance evaluation (and related bonus calculations),
+and *ex ante* - i.e. expected return less expected loss - to decide whether a particular business unit should be expanded or contracted.
+
+Other teams, overlapping the above Groups, are then also involved in risk management.
+Corporate Treasury is responsible for monitoring overall funding and capital structure; it shares responsibility for monitoring liquidity risk, and for maintaining the FTP framework.
+Middle Office maintains the following functions also:
+Product Control is primarily responsible for insuring traders mark their books to fair value — a key protection against rogue traders — and for "explaining" the daily P&L; with the "unexplained" component, of particular interest to risk managers.
+Credit Risk monitors the bank's debt-clients on an ongoing basis, re both exposure and performance.
+In the Front Office - since counterparty and funding-risks span assets, products, and desks - specialized XVA-desks are tasked with centrally monitoring and managing overall CVA and XVA exposure and capital, typically with oversight from the appropriate Group.
+"Stress Testing" may similarly be centralized.
+
+Performing the above tasks — while simultaneously ensuring that computations are consistent over the various areas, products, teams, and measures — requires that banks maintain a significant investment in sophisticated infrastructure, finance / risk software, and dedicated staff. Risk software often deployed is from FIS, Kamakura, Murex, Numerix (FINCAD) and Refinitiv.
+Large institutions may prefer systems developed entirely "in house"
+- notably Goldman Sachs ("SecDB"), JP Morgan ("Athena"), Jane Street, Barclays ("BARX"), BofA ("Quartz") -
+while, more commonly, the pricing library will be developed internally, especially as this allows for currency re new products or market features.
+
+
+### Corporate finance
+
+In corporate finance, and financial management more generally,
+financial risk management, as above, is concerned with business risk - risks to the business’ value, within the context of its business strategy and capital structure.
+The scope here - ie in non-financial firms - is thus broadened
+(re banking) to overlap enterprise risk management, and financial risk management then addresses risks to the firm's overall strategic objectives, incorporating various (all) financial aspects of the exposures and opportunities arising from business decisions, and their link to the firm’s appetite for risk, as well as their impact on share price.
+In many organizations, risk executives are therefore involved in strategy formulation: "the choice of which risks to undertake through the allocation of its scarce resources is the key tool available to management."
+
+Re the standard framework, then, the discipline largely focuses on operations, i.e. business risk, as outlined.
+Here, the management is ongoing — see following description — and is coupled with the use of insurance,
+managing the net-exposure as above:
+credit risk is usually addressed via provisioning and credit insurance;
+likewise, where this treatment is deemed appropriate, specifically identified operational risks are also insured.
+Market risk, in this context, is concerned mainly with changes in commodity prices, interest rates, and foreign exchange rates, and any adverse impact due to these on cash flow and profitability, and hence share price.
+
+Correspondingly, the practice here covers two perspectives; these are shared with corporate finance more generally:
+
+1. Both risk management and corporate finance share the goal of enhancing, or at least preserving, firm value. Here, businesses devote much time and effort to (short term) liquidity-, cash flow- and performance monitoring, and Risk Management then also overlaps cash- and treasury management, especially as impacted by capital and funding as above. More specifically re business-operations, management emphasizes their break even dynamics, contribution margin and operating leverage, and the corresponding monitoring and management of revenue, of costs, and of other budget elements. The DuPont analysis entails a "decomposition" of the firm's return on equity, ROE, allowing management to identify and address specific areas of concern, preempting any underperformance vs shareholders' required return. In larger firms, specialist Risk Analysts complement this work with model-based analytics more broadly; in some cases, employing sophisticated stochastic models, in, for example, financing activity prediction problems, and for risk analysis ahead of a major investment.
+2. Firm exposure to long term market (and business) risk is a direct result of previous capital investment decisions. Where applicable here — usually in large corporates and under guidance from their investment bankers — risk analysts will manage and hedge their exposures using traded financial instruments to create commodity-, interest rate- and foreign exchange hedges (see further below). Because company specific, "over-the-counter" (OTC) contracts tend to be costly to create and monitor — i.e. using financial engineering and / or structured products — ”standard” derivatives that trade on well-established exchanges are often preferred. These comprise options, futures, forwards, and swaps; the "second generation" exotic derivatives usually trade OTC. Complementary to this hedging, periodically, Treasury may also adjust the capital structure, reducing financial leverage - i.e. repaying debt-funding - so as to accommodate increased business risk; they may also suspend dividends.
+
+Multinational corporations are faced with additional challenges, particularly as relates to foreign exchange risk, and the scope of financial risk management modifies significantly in the international realm.
+Here, dependent on time horizon and risk sub-type —
+transactions exposure (essentially that discussed above),
+accounting exposure,
+and economic exposure
+— so the corporate will manage its risk differently.
+The forex risk-management discussed here and above, is additional to the per transaction "forward cover" that importers and exporters purchase from their bank (alongside other trade finance mechanisms).
+
+Hedging-related transactions will attract their own accounting treatment, and corporates (and banks) may then require changes to systems, processes and documentation;
+see Hedge accounting, Mark-to-market accounting, Hedge relationship, Cash flow hedge, IFRS 7, IFRS 9, IFRS 13, FASB 133, IAS 39, FAS 130.
+
+It is common for large corporations to have dedicated risk management teams — typically within FP&A or corporate treasury — reporting to the CRO; often these overlap the internal audit function (see Three lines of defence).
+For small firms, it is impractical to have a formal risk management function, but these typically apply the above practices, at least the first set, informally, as part of the financial management function; see discussion under Financial analyst.
+
+The discipline relies on a range of software, correspondingly, from spreadsheets (invariably as a starting point, and frequently in total) through commercial EPM and BI tools, often BusinessObjects (SAP), OBI EE (Oracle), Cognos (IBM), and Power BI (Microsoft).
+
+
+### Investment management
+
+Fund managers, classically, define the risk of a portfolio as its variance (or standard deviation), and through diversification the portfolio is optimized so as to achieve the lowest risk for a given targeted return, or equivalently the highest return for a given level of risk;
+these risk-efficient portfolios form the "Efficient frontier" (see Markowitz model).
+The logic here is that returns from different assets are highly unlikely to be perfectly correlated, and in fact the correlation may sometimes be negative.
+In this way, market risk particularly, and other financial risks such as inflation risk (see below) can at least partially be moderated by forms of diversification.
+
+A key issue, however, is that the (assumed) relationships are (implicitly) forward looking.
+As observed in the late-2000s recession, historic relationships can break down, resulting in losses to market participants believing that diversification would provide sufficient protection (in that market, including funds that had been explicitly set up to avoid being affected in this way).
+A related issue is that diversification has costs: as correlations are not constant it may be necessary to regularly rebalance the portfolio, incurring transaction costs, negatively impacting investment performance;
+and as the fund manager diversifies, so this problem compounds (and a large fund may also exert market impact).
+See Modern portfolio theory § Criticisms.
+
+Addressing these issues, more sophisticated approaches have been developed, both to defining risk, and to the optimization itself. (Respective examples: (tail) risk parity, focuses on allocation of risk, rather than allocation of capital; the Black–Litterman model modifies the "Markowitz optimization", to incorporate the views of the portfolio manager.)
+Relatedly, modern financial risk modeling employs a variety of techniques — including value at risk, historical simulation, stress tests, and extreme value theory — to analyze the portfolio and to forecast the likely losses incurred for a variety of risks and scenarios.
+
+Here, guided by the analytics, Fund Managers (and traders) will apply specific risk hedging techniques.
+As appropriate, these may relate to the portfolio as a whole or to individual holdings:
+
+* To protect the overall portfolio, Fund Managers may sell the Stock market index future or buy puts on the Stock market index option; the respective sensitivities, portfolio beta and option delta, determine the number of hedge-contracts required. For both, the logic is that the (diversified) portfolio is likely highly correlated with the stock index it is part of: thus if the portfolio-value declines, the index will have declined likewise with the derivative holder profiting correspondingly. Fund managers may (instead) engage in "portfolio insurance", a dynamic hedging process that involves selling index futures during periods of decline and using the proceeds to offset portfolio losses.
+* Fund managers, or traders, may also wish to hedge a specific stock's price. Here, they may likewise buy a single-stock put, or sell a single-stock future. Alternative strategies may rely on assumed relationships between related stocks, employing, for example, a "Long/short" strategy.
+* Bond portfolios, when e.g. a component of an Asset-allocation fund or other diversified portfolio, are typically managed similar to equity above: the Fund Manager will hedge her bond allocation with bond index futures or options; with the number of contracts, a function of duration. In other contexts, the concern may be the net-obligation or net-cashflow. Here the fund manager employs Interest rate immunization or cashflow matching. Immunization is a strategy that ensures that a change in interest rates will not affect the value of a fixed-income portfolio (an increase in rates results in a decreased instrument value). It is often used to ensure that the value of a pension fund's assets (or an asset manager's fund) increase or decrease in an exactly opposite fashion to their liabilities, thus leaving the value of the pension fund's surplus (or firm's equity) unchanged, regardless of changes in the interest rate. Cashflow matching is similarly a process of hedging in which a company or other entity matches its cash outflows - i.e., financial obligations - with its cash inflows over a given time horizon. See also Laddering.
+* For individual bonds and other fixed income securities, specific credit and interest rate risks can be hedged using interest rate- and credit derivatives. Sensitivities re interest rates are measured using duration and convexity for bonds, and DV01 and key rate durations generally, and an offsetting derivative-position is purchased. For credit risk, sensitivities are measured via CS01, while analysts use models such as Jarrow–Turnbull and KMV to estimate the (risk neutral) probability of default, hedging where appropriate, usually via credit default swaps. Probabilities (actuarial) may also be obtained from Bond credit ratings; then, often at a portfolio level — e.g. for credit-VaR — analysts will use a transition matrix of these to estimate the probability and impact of a "credit migration", aggregating the bond-by-bond result. Interest rate- and credit risk together, may be hedged via a Total return swap. See Fixed income analysis
+* For derivative portfolios, and positions, the Greeks are a vital risk management tool: as above, these measure sensitivity to a small change in a given underlying price, rate, or parameter, and the portfolio is then rebalanced accordingly by including additional derivatives with offsetting characteristics, or by purchasing or selling specified units of the underlying security.
+
+Further, and more generally, various safety-criteria may guide overall portfolio construction.
+The Kelly criterion will suggest - i.e. limit - the size of a position that an investor should hold in her portfolio.
+Roy's safety-first criterion minimizes the probability of the portfolio's return falling below a minimum desired threshold.
+Chance-constrained portfolio selection similarly seeks to ensure that the probability of final wealth falling below a given "safety level" is acceptable.
+
+Managers may also employ factor models (generically APT) to measure exposure to macroeconomic and market risk factors using time series regression. Ahead of an anticipated movement in any of these factors, the Manager may then, as indicated, reduce holdings, hedge, or purchase offsetting exposure.
+Inflation for example, although impacting all securities, can be managed at the portfolio level by appropriately increasing exposure to inflation-sensitive stocks (e.g. consumer staples), and / or by investing in tangible assets, commodities and inflation-linked bonds; the latter may also provide a direct hedge.
+
+In parallel with all above, managers — active and passive — periodically monitor and manage tracking error, i.e. underperformance vs a "benchmark".
+Here, they will use attribution analysis preemptively so as to diagnose the source early, and to take corrective action: realigning, often factor-wise, on the basis of this "feedback".
+As relevant, they will similarly use style analysis to address style drift.
+See also Fixed-income attribution.
+
+Given the complexity of these analyses and techniques, Fund Managers typically rely on sophisticated software (as do banks, above).
+Widely used platforms are provided by BlackRock (Aladdin), Refinitiv (Eikon), Finastra, Murex, Numerix, MPI and Morningstar.
+

@@ -1,0 +1,71 @@
+Secure Electronic Transaction
+
+
+# Secure Electronic Transaction
+
+
+
+**Secure Electronic Transaction** (**SET**) is a communications protocol standard for securing credit card transactions over networks, specifically, the Internet. SET was not itself a payment system, but rather a set of security protocols and formats that enabled users to employ the existing credit card payment infrastructure on an open network in a secure fashion. However, it failed to gain attraction in the market. Visa now promotes the 3-D Secure scheme.
+
+Secure Electronic Transaction (SET) is a system for ensuring the security of financial transactions on the Internet. It was supported initially by Mastercard, Visa, Microsoft, Netscape, and others. With SET, a user is given an electronic wallet (digital certificate) and a transaction is conducted and verified using a combination of digital certificates and digital signatures among the purchaser, a merchant, and the purchaser's bank in a way that ensures privacy and confidentiality
+
+
+## History and development
+
+SET was developed by the **SET Consortium**, established in 1996 by Visa and Mastercard in cooperation with GTE, IBM, Microsoft, Netscape, SAIC, Terisa Systems, RSA, and VeriSign. The consortium’s goal was to combine the card associations' similar but incompatible protocols (STT from Visa/Microsoft and SEPP from Mastercard/IBM) into a single standard.
+
+SET allowed parties to identify themselves to each other and exchange information securely. Binding of identities was based on X.509 certificates with several extensions. SET used a cryptographic blinding algorithm that, in effect, would have let merchants substitute a certificate for a user's credit card number. If SET were used, the merchant itself would never have had to know the credit-card numbers being sent from the buyer, which would have provided verified good payment but protected customers and credit companies from fraud.
+
+SET was intended to become the de facto standard payment method on the Internet between the merchants, the buyers, and the credit-card companies.
+
+Unfortunately, the implementation by each of the primary stakeholders was either expensive or cumbersome. There were also some external factors that may have complicated how the consumer element would be integrated into the browser. There was a rumor circa 1994-1995 that suggested that Microsoft sought an income stream of 0.25% from every transaction secured by Microsoft's integrated SET compliant components they would implement in their web browser.
+
+
+## Key features
+
+To meet the business requirements, SET incorporates the following features:
+
+* Confidentiality of information
+* Integrity of data
+* Cardholder account authentication
+* Merchant authentication
+
+## Participants
+
+A SET system includes the following participants:
+
+* Cardholder
+* Merchant
+* Issuer
+* Acquirer
+* Payment gateway
+* Certification authority
+
+### How it works
+
+Both cardholders and merchants must register with the CA (certificate authority) first, before they can buy or sell on the Internet. Once registration is done, cardholder and merchant can start to do transactions, which involve nine basic steps in this protocol, which is simplified.
+
+1. Customer browses the website and decides on what to purchase
+2. Customer sends order and payment information, which includes two parts in one message:
+ a. Purchase order – this part is for merchant
+ b. Card information – this part is for merchant’s bank only.
+3. Merchant forwards card information to their bank
+4. Merchant’s bank checks with the issuer for payment authorization
+5. Issuer sends authorization to the merchant’s bank
+6. Merchant’s bank sends authorization to the merchant
+7. Merchant completes the order and sends confirmation to the customer
+8. Merchant captures the transaction from their bank
+9. Issuer prints credit card bill (invoice) to the customer
+
+
+## Dual signature
+
+As described in (Stallings 2000):
+
+> An important innovation introduced in SET is the *dual signature*. The purpose of the dual signature is to link two messages that are intended for two different recipients. In this case, the customer wants to send the order information (OI) to the merchant and the payment information (PI) to the bank. The merchant does not need to know the customer's credit-card number, and the bank does not need to know the details of the customer's order. The customer is afforded extra protection in terms of privacy by keeping these two items separate. However, the two items must be linked in a way that can be used to resolve disputes if necessary. The link is needed so that the customer can prove that this payment is intended for this order and not for some other goods or service.
+
+The message digest (MD) of the OI and the PI are independently calculated by the customer. These are concatenated and another MD is calculated from this. Finally, the dual signature is created by encrypting the MD with the customer's secret key. The dual signature is sent to both the merchant and the bank. The protocol arranges for the merchant to see the MD of the PI without seeing the PI itself, and the bank sees the MD of the OI but not the OI itself. The dual signature can be verified using the MD of the OI or PI, without requiring either the OI or PI. Privacy is preserved as the MD can't be reversed, which would reveal the contents of the OI or PI.
+
+
+## Note
+

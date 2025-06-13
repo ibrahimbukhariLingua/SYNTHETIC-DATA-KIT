@@ -1,0 +1,35 @@
+Cost-based anti-spam systems
+
+
+# Cost-based anti-spam systems
+
+
+
+Since spam occurs primarily because it is so cheap to send, a proposed set of solutions require that senders pay some cost in order to send spam, making it prohibitively expensive for spammers.
+
+
+## Stamps
+
+Some gatekeeper would sell electronic stamps and keep the proceeds. Or a micropayment, such as electronic money would be paid by the sender to the recipient or their ISP, or some other gatekeeper.
+
+
+## Proof-of-work systems
+
+Proof-of-work systems such as hashcash and Penny Black require that a sender pay a computational cost by performing a calculation that the receiver can later verify. Verification must be much faster than performing the calculation, so that the computation slows down a sender but does not significantly impact a receiver. The point is to slow down machines that send most of spam—often millions and millions of them. While every user that wants to send email to a moderate number of recipients suffers just a few seconds' delay, sending millions of emails would take an unaffordable amount of time. This approach suffers when sender maintains a computation farm of their own or from zombies.
+
+
+## Bonds or Sender-at-risk
+
+As a refinement to stamp systems is the method of requiring that a micropayment only be made (or some other form of penalty imposed) if the recipient considers the email to be abusive. This addresses the principal objection to stamp systems: popular free legitimate mailing list hosts would be unable to continue to provide their services if they had to pay postage for every message they sent.
+
+In 2004 Bill Gates announced that Microsoft was working on a solution requiring so-called “unknown senders”, i.e. senders not on the Accepted List of the recipient to post “the electronic equivalent of a” stamp whose value would be lost to the sender only if the recipient disapproves of the email. Gates said that Microsoft favors other solutions in the short-term, but would rely on the contingent payment solution to solve the spam problem over the longer run. Microsoft, AOL as well as Yahoo! have recentlyʷʰᵉⁿ? introduced systems that allow commercial senders to avoid filters if they obtain a paid or pre-paid certificate or certification, which is lost to the sender if recipients complain.
+
+This approach suffers when a user initially signs up for a legitimate mailing list, but then later decides they do not want to receive the e-mail any further. Lazy users will simply click the "This is Spam" button on their e-mail client, rather than going through the formal unsubscription process that is detailed at the bottom of each message. The end-user gets the same effect either way, but without realizing the consequences that the list host may now face. However, companies now implementing the penalty approach when certifying (and withdrawing certification from) commercial senders have learned to account for this problem by setting appropriate complaint thresholds.
+
+The intent of all such "sender-at-risk" solutions, which impose a significant cost to the sender only if the recipient rejects the message subsequent to receiving the email, is to deter spam by making it economically prohibitive to send unwanted email messages, while allowing legitimate emailers to send messages at little or no expense.
+
+
+## Suing spammers
+
+Anti-spam activist Daniel Balsam attempts to make spamming less profitable by bringing lawsuits against spammers. While this approach is financially sustainable for the activist, it is questionable whether it actually reduces spam, either for the activist or for anyone else.
+

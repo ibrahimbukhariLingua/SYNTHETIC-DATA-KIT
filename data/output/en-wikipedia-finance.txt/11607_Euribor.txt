@@ -1,0 +1,114 @@
+Euribor
+
+
+# Euribor
+
+
+
+The **Euro Interbank Offered Rate** (**Euribor**) is a daily reference rate, published by the European Money Markets Institute, based on the averaged interest rates at which Eurozone banks borrow unsecured funds from counterparties in the euro wholesale money market (before only in the interbank market). Prior to 2015, the rate was published by the European Banking Federation.
+
+
+## Scope
+
+Euribors are used as a reference rate for euro-denominated forward rate agreements, short-term interest rate futures contracts and interest rate swaps, in very much the same way as LIBORs are commonly used for Sterling and US dollar-denominated instruments. They thus provide the basis for some of the world's most liquid and active interest rate markets.
+
+Domestic reference rates, like Paris' PIBOR, Frankfurt's FIBOR, and Helsinki's Helibor merged into Euribor on EMU day on 1 January 1999.
+
+Euribor should be distinguished from the less commonly used "Euro LIBOR" rates set in London by 16 major banks.
+
+
+## Fallback
+
+The EU Benchmark Regulation (Regulation (EU) 2016/1011) requires entities that use a benchmark to have robust plans in place to manage the possibility of a benchmark undergoing substantial changes or ceasing to exist. Where feasible and appropriate, such plans should nominate one or more fallback rates.
+
+To facilitate the drafting of such plans for entities using Euribor® rates, the European Money Markets Institute has developed Efterm, a forward-looking fallback rate based on available market data related to Dealer-to-Dealer and Dealer-to-Client OIS Swaps and futures that reference the European Central Bank's Euro Short-Term Rate (€STR).
+
+
+## Technical features
+
+A representative panel of banks provide daily quotes of the rate, rounded to two decimal places, that each Panel Bank believes one prime bank is quoting to another prime bank for interbank term deposits within the Euro zone, for maturity ranging from one week to one year. Every Panel Bank is required to directly input its data no later than 11:00 a.m. (CET) on each day that the Trans-European Automated Real-Time Gross-Settlement Express Transfer system (TARGET) is open. At 11:02 a.m. (CET), GRSS (Global Rate Set Systems) will instantaneously publish the reference rate on Refinitiv (ex. Reuters), Bloomberg and a number of other information providers which will then be made available to all their subscribers.
+The published rate is a rounded, truncated mean of the quoted rates: the highest and lowest 15% of quotes are eliminated, the remainder are averaged and the result is rounded to 3 decimal places.
+Euribor rates are spot rates, i.e. for a start two working days after measurement day. Like US money-market rates, they are *Actual/360*, i.e. calculated with an exact daycount over a 360-day year.
+Euribor was first published on 30 December 1998 for value 4 January 1999.
+
+
+## Panel banks
+
+
+### Current banks
+
+| Country | Banks |
+| --- | --- |
+| Austria | Raiffeisen Bank International |
+| Belgium | Belfius |
+| Finland | OP Corporate Bank |
+| France | BNP-Paribas |
+| France | HSBC France |
+| France | Natixis |
+| France | Crédit Agricole |
+| France | Société Générale |
+| Greece | National Bank of Greece |
+| Germany | Deutsche Bank |
+| Germany | DZ Bank |
+| Italy | Intesa Sanpaolo |
+| Italy | UniCredit |
+| Luxembourg | Banque et Caisse d'Épargne de l'État |
+| Netherlands | ING Bank |
+| Portugal | Caixa Geral de Depósitos (CGD) |
+| Spain | Banco Bilbao Vizcaya Argentaria |
+| Spain | Banco Santander |
+| Spain | CECABANK [es] |
+| Spain | CaixaBank |
+| UK | Barclays |
+
+
+### Former banks
+
+| Country | Banks | Date of exit |
+| --- | --- | --- |
+| Greece | National Bank of Greece | 28 May 2019 |
+| Italy | Banco BPM | 7 January 2019 |
+| UK | JP Morgan International - London | 16 September 2016 |
+| Japan | The Bank of Tokyo Mitsubishi | 1 July 2016 |
+| Finland | Pohjola Bank | 13 May 2016 |
+| Finland | Nordea | 18 December 2015 |
+| Denmark | Danske Bank | 14 May 2015 |
+| Germany | Commerzbank | 1 October 2014 |
+| France | La Banque Postale | 11 April 2014 |
+| Belgium | KBC Bank | 1 April 2014 |
+| France | Crédit Industriel et Commercial | 31 March 2014 |
+| Italy | UBI Banca | 10 March 2014 |
+| Ireland | Bank of Ireland | 15 February 2014 |
+| Austria | Erste Group | 11 October 2013 |
+| Germany | Norddeutsche Landesbank Girozentrale | 29 June 2013 |
+| Ireland | Allied Irish Bank | 29 June 2013 |
+| Germany | Landesbank Hessen-Thüringen Girozentrale | 1 June 2013 |
+| Germany | Landesbank Baden-Württemberg | 1 June 2013 |
+| Germany | LandesBank Berlin | 1 May 2013 |
+| Germany | UBS | 28 March 2013 |
+| Sweden | Handelsbanken | 20 March 2013 |
+| Netherlands | Rabobank | 3 January 2013 |
+| Germany | BayernLB | 1 January 2013 |
+| Germany | Deka Bank | 30 November 2012 |
+| USA | Citibank | 21 September 2012 |
+
+
+## Euribor-based derivatives
+
+
+### Euribor futures
+
+EUR Euribor futures are traded on Intercontinental Exchange (ICE) and on Eurex.
+
+They were previously also traded on CurveGlobal, part of the London Stock Exchange Group, which has closed down operations in January 2022.
+
+
+### Interest rate swaps
+
+Interest rate swaps based on Euribor rates currently trade in money markets for maturities up to 50 years. A "five-year Euribor" will be in fact referring to the 5-year swap rate vs 6-month Euribor. "Euribor + *x* basis points", when talking about a bond, will mean that the bond's cash flows have to be discounted on the swaps' zero-coupon yield curve shifted by *x* basis points in order to equal the bond's actual market price.
+
+
+## €STR
+
+The other widely used reference rate in the euro-zone is €STR, published by the European Central Bank.
+

@@ -1,0 +1,158 @@
+Carrier IQ
+
+
+# Carrier IQ
+
+
+
+**Carrier IQ** was a privately owned mobile software company founded in 2005 in Sunnyvale, California. It provided diagnostic analysis of smartphones to the wireless industry via the installation of software on the user's phone, typically in a manner that cannot be removed without rooting the phone. The company says that its software is deployed in over 150 million devices worldwide.
+
+
+## History
+
+The company was founded by Konstantin Othmer and is a spin-off from his Core Mobility company. Through its MSIP its software "aggregates, analyzes, and delivers data to wireless carriers and device manufacturers. This information proves a valuable resource for these businesses to understand the quality of service their customers experience."
+
+On January 27, 2009, CEO Mark Quinlivan announced Carrier IQ had received $20 million Series C financing from Intel Capital, and Presidio Ventures, a Sumitomo Corporation Company.
+
+On February 9, 2009, Carrier IQ announced a partnership with Huawei Technologies to develop a "new range of data cards that will provide improved feedback on the mobile broadband user experience."
+
+On February 17, 2009, NEC and Carrier IQ announced a global partnership.
+
+On June 17, 2009, Carrier IQ was selected by TiE as a TiE50 award winner as "One of the Hottest Global Emerging Companies."
+
+On June 16, 2010, Bridgescale Partners announced $12 million in Series D financing for the company.
+
+On October 18, 2010, VisionMobile announced Carrier IQ had joined the "100 Million Club" with its software installed on 100 million phones.
+
+On March 22, 2011, Carrier IQ announced Mobile Intelligence for 4G technologies, including LTE and HSPA+.
+
+On August 31, 2011, Operating Partner at Mohr Davidow Ventures Larry Lenhart was named CEO. The announcement noted that in the second quarter of 2011 Carrier IQ passed the petabyte milestone in processed analytics data.
+
+On October 19, 2011, Carrier IQ and third party vendor Nielsen Company announced a partnership on analyzing data.
+
+On October 27, 2011, IDC named Carrier IQ "Innovative Business Analytics Company Under $100M"
+
+On November 12, 2011, Trevor Eckhart published a report indicating that Carrier IQ software was capable of recording various metrics, including user keystrokes.
+
+At Mobile World Congress 2012, Carrier IQ announced an extension to its IQ Care product with a "customer-facing dashboard", relaying information that they'd usually send to wireless companies—such as battery life, network coverage, app's effect on phone performance, and dropped calls coverage—directly to consumers in an effort to reduce technical support calls.
+
+On December 30, 2015, it was reported that AT&T Inc. had acquired Carrier IQ's software assets and some of its staff, effectively shutting down the company. AT&T had been a customer of Carrier IQ's for several years, using the software to troubleshoot wireless quality on their customers' mobile phones.
+
+
+## Board of directors
+
+Its board of directors in November 2011 were:
+
+* Larry Lenhart, president and CEO (previously with Mohr Davidow)
+* Bruce Leak, co-founder of WebTV Networks
+* Jon Feiber, Mohr Davidow Ventures
+* Martin Gibson, Accel Partners
+* Bruce Sachs, Charles River Ventures
+* Dominic Endicott, Nauta Capital
+
+## Products
+
+**IQ Agent** is software, typically pre-installed on mobile devices by handset manufacturers or network operators, designed to gather, store and forward diagnostic measurements on their behalf. Data available can include metrics on the device itself (e.g., firmware, battery levels, application performance, web performance) and performance data on voice and data connectivity between the device and radio towers. The mobile device manufacturers or network operators determine which of these metrics are actually collected, according to a set of criteria known as a "profile." The IQ Agent software runs in the background, and the user is not usually aware of its presence unless the implementation includes an on-off switch.
+
+IQ Agent periodically uploads data to a Carrier IQ Mobile Service Intelligence Platform (MSIP) system, which then feeds into the network operator's network performance monitoring and diagnostic tools. Whenever a mobile device uploads data, the IQ Agent can also download a new profile to change the selection of metrics gathered.
+
+IQ Agent was first shipped in 2006 on embedded feature phones and has since been implemented on numerous devices and operating systems, including smartphones (Android, RIM, iPhone), USB modems and tablets.
+
+**MSIP (Mobile Service Intelligence Platform)** refers to the backend Carrier IQ software that receives mobile device diagnostic data directly from mobile devices containing the IQ Agent software. The platform aggregates data from many devices and produces KPIs (key performance indicators) that network operators and mobile device manufacturers can use to assess the quality of services they provide and to troubleshoot mobile device and network problems.
+
+**Analytics Domains** are MSIP components that enable the system to calculate specific KPIs. Carrier IQ's first analytics domains were on CDMA signaling, later implementing UMTS (third-generation mobile cellular technology for GSM networks), LTE (a standard marketed as 4G LTE) and device-specific domains for device stability, battery and application performance.
+
+**IQ Insight** is a suite of applications that gathers, analyzes and presents KPIs generated by MSIP through a web-based GUI (graphical user interface). The application delivers data through a geospatial or tabular view of issues (such as dropped calls or no-service conditions) and allows cross-domain analysis of KPIs.
+
+**IQ Care** is a dashboard tool for network operator and mobile device customer care agents. When a mobile device user calls for support or troubleshooting, IQ Care provides the customer care agent with a dashboard showing the consumer's device configurations (e.g., mobile device serial number, firmware version), usage history (e.g., number of applications installed, battery life) and other user experience metrics (e.g., device and application crash data, radio technology analytics).
+
+
+## Rootkit discovery and media attention
+
+On November 12, 2011, researcher Trevor Eckhart stated in a post on androidsecuritytest.com that Carrier IQ was logging information such as location without notifying users or allowing them to opt out, and that the information tracked included detailed keystroke logs, potentially violating US federal law.
+On November 16, 2011, Carrier IQ sent Eckhart a cease and desist letter claiming that he was in copyright infringement by posting Carrier IQ training documents on his website and also making "false allegations." Eckhart sought and received the backing of user rights advocacy group Electronic Frontier Foundation (EFF).
+
+On November 23, 2011, Carrier IQ backed down and apologized. In the statement of apology, Carrier IQ denied allegations of keystroke logging and other forms of tracking, and offered to work with the EFF.
+
+On November 28, 2011, Eckhart published a YouTube video that demonstrates Carrier IQ software in the act of logging, as plain text, a variety of keystrokes. Included in the demonstration were clear-text captures of passwords to otherwise secure websites, and activities performed when the cellular network was disabled. The video of the demonstration showed Carrier IQ's software processing keystrokes, browser data, and text messages' contents, but there was no indication that the information processed was recorded or transmitted. Carrier IQ responded with the statement, "The metrics and tools we derive are not designed to deliver such information, nor do we have any intention of developing such tools." A datasheet for a product called Experience Manager on Carrier IQ's public website clearly states carriers can "Capture a vast array of experience data including screen transitions, button presses, service interactions and anomalies".
+
+
+### Legal actions against Carrier IQ
+
+Many have already been seeking suit against Carrier IQ, including:
+
+* Commonwealth of Massachusetts (criminal and civil)
+* United States Department of Justice (criminal)
+* Federal Trade Commission (civil)
+* Sprint Nextel (civil)
+* T-Mobile (civil)
+* JMLECS Umbrella Companies (criminal and civil)
+* Hagens Berman, California, class action (unknown)
+
+### Detection and removal
+
+Numerous apps have been released that can detect the Carrier IQ. Detecting Carrier IQ normally doesn't require the device to be rooted.
+The removal process is more advanced and requires the user to root the device, or unlock the device's boot loader (applies only on Nexus devices) in order to remove it. Rooting the device may void its warranty, since system files are modified.
+
+
+### Updates
+
+On December 12, 2011, Carrier IQ released a document to explain their software and its uses. The document is titled "Understanding Carrier IQ Technology". There are credits given to Dan Rosenberg and Trevor Eckhart. The nineteen-page document provides a technical breakdown of how the software on a mobile phone works with "profiles" provided by the carrier to give the carriers performance data of their networks and devices running on them. The document appears as if it will be updated on a regular basis as more questions are answered over time.
+
+On December 1, 2011, Carrier IQ issued a "clarification" to its November 23 statements: "While a few individuals have identified that there is a great deal of information available to the Carrier IQ software inside the handset, our software does not record, store or transmit the contents of SMS messages, email, photographs, audio or video. For example, we understand whether an SMS was sent accurately, but do not record or transmit the content of the SMS. We know which applications are draining your battery, but do not capture the screen ... As a condition of its contracts with operators, Carrier IQ operates exclusively within that framework and under the laws of the applicable jurisdiction. The data we gather is transmitted over an encrypted channel and secured within our customers' networks or in our audited and customer-approved facilities ... Carrier IQ acts as an agent for the operators. Each implementation is different and the diagnostic information actually gathered is determined by our customers – the mobile operators. Carrier IQ does not gather any other data from devices.
+
+Carrier IQ is the consumer advocate to the mobile operator, explaining what works and what does not work. Three of the main complaints we hear from mobile device users are (1) dropped calls, (2) poor customer service, and (3) having to constantly recharge the device. Our software allows operators to figure out why problems are occurring, why calls are dropped, and how to extend the life of the battery. When a user calls to complain about a problem, our software helps operators' customer service to more quickly identify the specific issue with the phone."
+
+There has been debate whether Carrier IQ software actually sends the collected data in real time or if it is stored on the phone and only gets read out later. The company clearly states on its web page that its software is able to provide real-time data: "Carrier IQ's Mobile Service Intelligence solution eliminates guesswork by automatically providing accurate, *real-time* data direct from the source – your customers' handsets.".
+
+In February 2012, TelecomTV, in association with Carrier IQ, filmed a panel discussion/debate titled, 'The Data Dilemma' and addressing the question: Do operators collect user data for the benefit of their customer or for their own commercial and financial betterment? Participants in the videotaped panel discussion were Mike Short, Vice President, Telefónica Europe; Dean Bubley, Founder, Disruptive Analysis; Charlotte Patric, Principal Analyst, Gartner; and Martyn Warwick, Moderator, TelecomTV.
+
+On May 8, 2012, Carrier IQ appointed a Chief Privacy Officer: Magnolia Mobley, formerly Verizon's Lead Privacy Counsel. This news spurred a new round of articles and discussions about privacy in mobile communications.
+
+In February 2015, HTC One users began reporting that the Carrier IQ agent software was overriding GPS device settings in order to obtain location information even when the GPS was turned off.
+
+
+#### Analytics and Carrier IQ
+
+Generally speaking, analytics companies collect, synthesize, and present aggregated user information to their customers to help them reduce maintenance costs, increase revenue, and improve the
+performance of a particular product. Mobile analytics provide to their customers telemetry. The telemetry is important because it contains solutions related to mobile web and telephone services. For instance, if a particular application on a mobile device crashes, the logs can be sent showing specific details of the issue. It is also possible that telemetry related to mobile handset user webpage views and click
+behavior is also included
+
+
+### Problems with Carrier IQ's clarification
+
+While the contents of SMS messages are kept private, as the clarification states, the simple reporting of the success or failure of an SMS transmission provides valuable information about customer habits that would not normally be available outside of the cellular network itself.
+
+Because the information is transmitted over the web on a regular basis, an internet service provider will be able see entries in the **named.log** file that resides on its name server at times when any user with an affected phone is connected to the internet by WiFi. This method of connecting is extremely common, as many users seek to keep their cellular data charges as low as possible by also utilizing their home or corporate wireless networks.
+
+A likely privacy violation is targeted marketing by the home or company's internet service provider. Examples of possible targeted marketing include offering competing phone plans, android apps that facilitate additional sales, such as television guides, and even hardware sales, like faster or integrated WiFi routers.
+
+In short, because of the way Carrier IQ works, even if the company acts with the best of intentions, the software betrays users by leaking information outside of the control of either Carrier IQ or the affected user's phone company.
+
+
+### Distribution
+
+On December 1, 2011, AT&T, Sprint, and T-Mobile confirmed it was on their phones. Sprint said, "We collect enough information to understand the customer experience with devices on our network and how to address any connection problems, but we do not and cannot look at the contents of messages, photos, videos, etc., using this tool ... The information collected is not sold and we don't provide a direct feed of this data to anyone outside of Sprint." Verizon was the only one of the four biggest U.S. firms to say it was not installed on their phones.
+
+Apple, HTC, and Samsung said the software was installed on their phones. Apple said it had quit supporting the application in iOS 5. It said, "With any diagnostic data sent to Apple, customers must actively opt-in to share this information ... We never recorded keystrokes, messages or any other personal information for diagnostic data and have no plans to ever do so." It said it would scrub the software from phones in some future release. HTC (whose Android phone was the subject of Eckhart's video) said, it was required on its devices by a "number of U.S. carriers." It added "It is important to note that HTC is not a customer or partner of Carrier IQ and does not receive data from the application, the company, or carriers that partner with Carrier IQ."
+
+Nokia and Research in Motion (now BlackBerry Ltd) have said Carrier IQ categorically was not authorized for their phones.
+
+According to the company's website the software is also installed on NEC mobile devices, and the company has a partnership with Vodafone Portugal.
+
+Although the phone manufacturers and carriers by and large say the software is strictly used to monitor its phone systems and not to be used by third parties, a press release on October 19, 2011 touted a partnership with Nielsen Company. The press release said, "Together, they will deliver critical insights into the consumer experience of mobile phone and tablet users worldwide, which adhere to Nielsen's measurement science and privacy standards. This alliance will leverage Carrier IQ's technology platform to gather actionable intelligence on the performance of mobile devices and networks."
+
+
+### Government response
+
+On December 1, 2011, Senator Al Franken, chairman of the United States Senate Judiciary Subcommittee on Privacy, Technology and the Law sent a letter to Lenhart asking for answers to 11 questions and asking whether the company was in violation of the Electronic Communications Privacy Act, including the federal wiretap statute (18 U.S.C. § 2511 et seq.), the pen register statute (18 USC § 3121 et seq.), and the Stored Communications Act (18 U.S.C. § 2701 et seq.) and the Computer Fraud and Abuse Act (18 U.S.C. § 1030).
+
+A request to the FBI under the Freedom of Information Act for "any manuals, documents or other written guidance used to access or analyze data gathered by programs developed or deployed by Carrier IQ" was denied, citing pending law enforcement proceeding. This has led to speculation that the FBI is using data obtained through Carrier IQ for investigations.
+
+
+### Security responses
+
+Fortinet has deemed Carrier IQ as a security risk/rootkit, using definition Riskware/CarrierIQ!Android.
+
+Paper shared with Senate clarifying solution in 2011.
+

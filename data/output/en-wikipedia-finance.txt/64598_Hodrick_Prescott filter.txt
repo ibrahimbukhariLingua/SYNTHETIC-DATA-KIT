@@ -1,0 +1,46 @@
+Hodrick–Prescott filter
+
+
+# Hodrick–Prescott filter
+
+
+
+The **Hodrick–Prescott filter** (also known as **Hodrick–Prescott decomposition**) is a mathematical tool used in macroeconomics, especially in real business cycle theory, to remove the cyclical component of a time series from raw data. It is used to obtain a smoothed-curve representation of a time series, one that is more sensitive to long-term than to short-term fluctuations. The adjustment of the sensitivity of the trend to short-term fluctuations is achieved by modifying a multiplier {\displaystyle \lambda }.
+
+The filter was popularized in the field of economics in the 1990s by economists Robert J. Hodrick and Nobel Memorial Prize winner Edward C. Prescott, though it was first proposed much earlier by E. T. Whittaker in 1923. The Hodrick-Prescott filter is a special case of a smoothing spline.
+
+
+## The equation
+
+The reasoning for the methodology uses ideas related to the decomposition of time series. Let {\displaystyle y\_{t}\,} for {\displaystyle t=1,2,...,T\,} denote the logarithms of a time series variable. The series {\displaystyle y\_{t}\,} is made up of a trend component {\displaystyle \tau \_{t}} and a cyclical component {\displaystyle c\_{t}} such that {\displaystyle y\_{t}\ =\tau \_{t}\ +c\_{t}\,}. Given an adequately chosen, positive value of {\displaystyle \lambda }, there is a trend component that will solve
+
+The first term of the equation is the sum of the squared deviations {\displaystyle d\_{t}=y\_{t}-\tau \_{t}}, which penalizes the cyclical component. The second term is a multiple {\displaystyle \lambda } of the sum of the squares of the trend component's second differences. This second term penalizes variations in the growth rate of the trend component. The larger the value of {\displaystyle \lambda }, the higher is the penalty. Hodrick and Prescott suggest 1600 as a value for {\displaystyle \lambda } for quarterly data. Ravn and Uhlig (2002) state that {\displaystyle \lambda } should vary by the fourth power of the frequency observation ratio; thus, {\displaystyle \lambda } should equal 6.25 (1600/4^4) for annual data and 129,600 (1600\*3^4) for monthly data;
+in practice, {\displaystyle \lambda =100} for yearly data and {\displaystyle \lambda =14,400} for monthly data are commonly used, however.
+
+The Hodrick–Prescott filter is explicitly given by
+
+where {\displaystyle L} denotes the lag operator, as can be seen from the first-order condition for the minimization problem.
+
+
+## Drawbacks to the Hodrick–Prescott filter
+
+The Hodrick–Prescott filter will only be optimal when:
+
+* Data exists in a I(2) trend.
+ + If one-time permanent shocks or split growth rates occur, the filter will generate shifts in the trend that do not actually exist.
+* Noise in data is approximately normally distributed.
+* Analysis is purely historical and static (closed domain). The filter causes misleading predictions when used dynamically since the algorithm changes (during iteration for minimization) the past state (unlike a moving average) of the time series to adjust for the current state regardless of the size of {\displaystyle \lambda } used.
+
+The standard two-sided Hodrick–Prescott filter is non-causal as it is not purely backward looking. Hence, it should not be used when estimating DSGE models based on recursive state-space representations (e.g., likelihood-based methods that make use of the Kalman filter). The reason is that the Hodrick–Prescott filter uses observations at {\displaystyle t+i,i>0} to construct the current time point {\displaystyle t}, while the recursive setting assumes that only current and past states influence the current observation. One way around this is to use the one-sided Hodrick–Prescott filter.
+
+Exact algebraic formulas are available for the two-sided Hodrick–Prescott filter in terms of its signal-to-noise ratio {\displaystyle \lambda }.
+
+A working paper by James D. Hamilton at UC San Diego titled "Why You Should Never Use the Hodrick-Prescott Filter" presents evidence against using the HP filter. Hamilton writes that:
+
+1. The HP filter produces series with spurious dynamic relations that have no basis in the underlying data-generating process.
+2. A one-sided version of the filter reduces but does not eliminate spurious predictability and moreover produces series that do not have the properties sought by most potential users of the HP filter.
+3. A statistical formalization of the problem typically produces values for the smoothing parameter vastly at odds with common practice, e.g., a value for λ far below 1600 for quarterly data.
+4. There's a better alternative. A regression of the variable at date t+h on the four most recent values as of date t offers a robust approach to detrending that achieves all the objectives sought by users of the HP filter with none of its drawbacks."
+
+A working paper by Robert J. Hodrick titled "An Exploration of Trend-Cycle Decomposition Methodologies in Simulated Data" examines whether the proposed alternative approach of James D. Hamilton is actually better than the HP filter at extracting the cyclical component of several simulated time series calibrated to approximate U.S. real GDP. Hodrick finds that for time series in which there are distinct growth and cyclical components, the HP filter comes closer to isolating the cyclical component than the Hamilton alternative.
+

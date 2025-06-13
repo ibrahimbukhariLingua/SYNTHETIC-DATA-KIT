@@ -1,0 +1,66 @@
+Trusteer
+
+
+# Trusteer
+
+
+
+**Trusteer** is a Boston-based computer security division of IBM, responsible for a suite of security software. Founded by Mickey Boodaei and Rakesh K. Loonkar, in Israel in 2006, Trusteer was acquired in September 2013 by IBM for $1 billion.
+
+Trusteer's products aim to block online threats from malware and phishing attacks and to support regulatory compliance requirements. Trusteer's malware research team aims to analyze information received from the installed base of 30,000,000 user endpoints and hundreds of organizations.
+
+Trusteer has a presence in North America, South America, Europe, Africa, Japan and China.
+
+
+## Products
+
+Trusteer's products aim to prevent incidents at the point of attack while investigating their source to mitigate future attacks. In addition, Trusteer allows organizations to receive immediate alerts and to report whenever a new threat is launched against them or their customers.
+
+
+### Trusteer Rapport
+
+Trusteer Rapport is security software advertised as an additional layer of security to anti-virus software. It is designed to protect confidential data, such as account credentials, from being stolen by malicious software (malware) and via phishing. To achieve this goal, the software includes anti-phishing measures to protect against misdirection and attempts to prevent malicious screen scraping; it attempts to protect users against the following forms of attacks: man-in-the-browser, man-in-the-middle, session hijacking and screen capturing.
+
+On installation, Rapport also tries to remove existing financial malware from end-user machines and to prevent future infections.
+
+The client is available for multiple platforms in the form of a browser extension. As of March 2020, the Windows version supports Google Chrome, Microsoft Edge, Mozilla Firefox, and Microsoft Internet Explorer on Windows 7 and later; while the macOS version supports Google Chrome, Mozilla Firefox, and Apple Safari on macOS 10.12 (Sierra) and later.
+
+Financial institutions offer the software free of charge with a view to making online banking safer for customers. Banks which offer the software, or have offered it in the past, include Bank of America, Société Générale, Tangerine, INGDirect, HSBC, CIBC, BMO, Guaranty Trust Bank (GTBank), Ecobank Davivienda and First Republic Bank.
+
+Some banks which had offered the software discontinued offering it. For instance, NatWest and RBS withdrew use in January 2019, stating that "The security and fraud prevention technologies we now use provide you a higher and far broader level of protection."
+
+
+### Trusteer Pinpoint
+
+Trusteer Pinpoint is a web-based service that allows financial institutions to detect and mitigate malware, phishing and account takeover attacks without installing any software on endpoint devices. It allows companies concerned about online fraud or data theft to scan their Web traffic to ensure that an outside laptop or desktop that is brought into a corporate network is not infected with malware before allowing the visitor access to their Web services.
+
+Trusteer Pinpoint combines device fingerprinting, proxy detection and malware infection detection. When a user infected with malware accesses an online banking site protected by Trusteer Pinpoint Malware Detection, it identifies the infection and malware type (e.g. “User Steve is infected with Prinimalka-Gozi”), alerts the bank and flags the user's credentials as compromised. Once notified, banks can immediately contact the end user to have them install Trusteer Rapport which will remove the malware. Trusteer Pinpoint Account Takeover Detection also fingerprints the device and checks for the use of proxies.
+
+
+### Trusteer Mobile Fraud Risk Prevention
+
+Mobile Risk Engine aims to protect organizations against mobile and PC-to-mobile (cross-channel) attacks. The product tries to detect and stops account takeover from mobile devices by identifying criminal access attempts. It also tries to identify devices that are vulnerable to compromise by malware and those that have been infected. Trusteer Mobile Risk Engine is a web-based service that includes the Trusteer Mobile SDK, Trusteer Mobile App, Trusteer Mobile Out-of-Band Authentication, and Mobile Risk API. The combination of Mobile Risk Engine and its client-side components provides device fingerprinting for mobile devices, account takeover prevention from mobile devices, detection of compromised mobile devices, and access to a global fraudster database.
+
+
+### Trusteer Apex
+
+Trusteer Apex is an automated solutionᵇᵘᶻᶻʷᵒʳᵈ that tries to prevent exploits and malware from compromising the endpoints and extracting information. Apex has three layers of security: exploit prevention, data exfiltration prevention and credentials protection. Apex protects employee credentials from phishing attacks by validating that employees are submitting their credentials only to authorized enterprise web-application login URLs. Apex also prevents corporate employees from re-using their corporate credentials to access non-corporate, public applications like PayPal, eBay, Facebook or Twitter. Apex requires users to provide different credentials for such applications, to lower the risk of credentials exposure.
+
+Trusteer Apex is targeted at the behaviors of a small group of applications, on the hypothesis that they are responsible for the overwhelming majority of exploits, namely Java, Adobe's Reader and Flash, and Microsoft Office. The technology behind Trusteer Apex does not rely on threat signatures, or on so-called "whitelists" of good applications. Instead, it watches applications as they run and spots suspicious or malicious behavior, based on knowledge of "normal" application behavior that it has refined from its large user base. Trusteer claims Apex can block both web-based attacks that are used to implant malware by exploiting vulnerable applications, and data loss due to malware infections by spotting attempts by untrusted applications or processes to send data outside an organization or connect with Internet-based command and control (C&C) networks.
+
+
+## Technical concerns
+
+End users have reported problems with Rapport, slow PCs due to high CPU and RAM utilization, incompatibility with various security/antivirus products and difficulty in removing the software.
+
+The consumer organisation *Which?* found that many members had problems due to running Trusteer Rapport, and advised against using it. They found that it could conflict with other security software, and slow or crash the Web browser. *Which?* emphasises that it is the bank's responsibility, not Rapport's, to protect customers' online banking, adding that online banking can be perfectly safe without Trusteer Rapport; its only benefit would be detecting a phishing site masquerading as the bank—"but plenty of other tools, including most modern browsers, can do this anyway". They clarify that the software is legitimate and respectable, but "don't feel the claims on Rapport's website add up".
+
+In a presentation given at 44con in September 2011, bypassing Trusteer Rapport's keylogger protection was shown to be relatively trivial. Shortly thereafter Trusteer confirmed that the flaw was corrected and said that even if a hacker were able to use the flaw to disable anti-keylogging functions in Rapport, other secondary security protection technologies would still be in play.
+
+Rapport software is incompatible with Windows tool Driver Verifier and may cause Blue Screen and system crash.
+
+
+## Blue Gem lawsuit
+
+In March 2011, Blue Gem, a rival company, filed a lawsuit against Trusteer in a California court.Trusteer has described the accusations as "baseless".
+

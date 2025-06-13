@@ -1,0 +1,33 @@
+Compound option
+
+
+# Compound option
+
+
+
+A **compound option** or **split-fee option** is an option on an option. The exercise payoff of a compound option involves the value of another option. A compound option then has two expiration dates and two strike prices. Usually, compounded options are used for currency or fixed income markets where insecurity exists regarding the option's risk protection. Another common business application that compound options are used for is to hedge bids for business projects that may or may not be accepted. For related discussion on multi-stage real options – and graphical representation – see Datar–Mathews method for real option valuation.
+
+
+## Variants
+
+Compound options provide their owners with the right to buy or sell another option. These options create positions with greater leverage than do traditional options. There are four basic types of compound options:
+
+* Call on Call (CoC)
+* Call on Put (CoP) or caput option
+* Put on Put (PoP)
+* Put on Call (PoC)
+
+## Compound option parity
+
+The formulas for compound option parity can be derived using the principle that two portfolios with identical payoffs should have the same price.
+
+Suppose that you purchase a CoC and sell a PoC on the same underlying call option and with the same strike price and time to maturity. The payoff of this portfolio is always the same: you will purchase the underlying call at the time of maturity of the compound options. If the underlying call's price at the time of maturity is greater than the strike price, you will exercise your CoC and purchase the underlying call at its strike price. If the underlying call's price at the time of maturity is less than the strike price, the counterparty will exercise its PoC and you will need to purchase the underlying call at its strike price. Thus, there will always be a cash outflow equal to the strike price and you will come into possession of a call option.
+
+Suppose there is a second portfolio that consists of a call option with a maturity equal to the maturity of the CoC/PoC above plus the maturity of the underlying call above. Suppose that you also borrow an amount equal to the strike price of the CoC/PoC from the above portfolio discounted at the risk free rate from the CoC/PoC maturity date to today. The payoff of this portfolio is identical to the first portfolio. You will own a call that is identical to the underlying call above and you also will have to repay the loan balance, which will be equal to the strike price above. Therefore, these two portfolios must have the same price.
+
+
+### Formulae
+
+Where P() indicates price of what's inside the parentheses and PV() indicates present value.
+Similar logic leads to the following:
+

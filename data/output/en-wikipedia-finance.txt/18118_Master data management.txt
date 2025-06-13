@@ -1,0 +1,96 @@
+Master data management
+
+
+# Master data management
+
+
+
+**Master data management** (**MDM**) is a discipline in which business and information technology collaborate to ensure the uniformity, accuracy, stewardship, semantic consistency, and accountability of the enterprise's official shared master data assets.
+
+
+## Reasons for master data management
+
+* **Data consistency and accuracy**: MDM ensures that the organization's critical data is consistent and accurate across all systems, reducing discrepancies and errors caused by multiple, siloed copies of the same data.
+* **Improved decision-making**: By providing a single version of the truth, MDM aims to have business leaders make informed, data-driven decisions, and improve overall business performance.
+* **Operational efficiency**: With consistent and accurate data, operational processes such as reporting, inventory management, and customer service become more efficient.
+* **Regulatory compliance**: MDM tries to help organizations comply with industry standards and regulations by ensuring that master data is accurately recorded, maintained, and audited.
+
+However, issues with data quality, classification, and reconciliation may require data transformation. As with other Extract, Transform, Load-based data movements, these processes are expensive and inefficient, reducing return on investment for a project.
+
+
+## Business unit and product line segmentation
+
+As a result of business unit and product line segmentation, the same entity (whether a customer, supplier, or product) will be included in different product lines. This leads to data redundancy and even confusion.
+
+For example, a customer takes out a mortgage at a bank. If the marketing and customer service departments have separate databases, advertisements might still be sent to the customer, even though they've already signed up. The two parts of the bank are unaware, and the customer is sent irrelevant communications. Record linkage can associate different records corresponding to the same entity, mitigating this issue.
+
+
+## Mergers and acquisitions
+
+One of the most common problems for master data management is company growth through mergers or acquisitions. Reconciling these separate master data systems can present difficulties, as existing applications have dependencies on the master databases. Ideally, database administrators resolve this problem through deduplication of the master data as part of the merger.
+
+Over time, as further mergers and acquisitions occur, the problem can multiply. Data reconciliation processes can become extremely complex or even unreliable. Some organizations end up with 10, 15, or even 100 separate and poorly integrated master databases. This can cause serious problems in customer satisfaction, operational efficiency, decision support, and regulatory compliance.
+
+Another problem involves determining the proper degrees of detail and normalization to include in the master data schema. For example, in a federated Human Resources environment, the enterprise software may focus on storing people's data as current status, adding a few fields to identify the date of hire, date of last promotion, etc. However, this simplification can introduce business-impacting errors into dependent systems for planning and forecasting. The stakeholders of such systems may be forced to build a parallel network of new interfaces to track the onboarding of new hires, planned retirements, and divestment, which works against one of the aims of master data management.
+
+
+## People, processes and technology
+
+Master data management is *enabled* by technology, but is more than the technologies that enable it. An organization's master data management capability will also include people and processes in its definition.
+
+
+### People
+
+Several roles should be staffed within MDM. Most prominently, the Data Owner and the Data Steward. Several people would likely be allocated to each role and each person responsible for a subset of Master Data (e.g. one data owner for employee master data, another for customer master data).
+
+The Data Owner is responsible for the requirements for data definition, data quality, data security, etc. as well as for compliance with data governance and data management procedures. The Data Owner should also be funding improvement projects in case of deviations from the requirements.
+
+The Data Steward is running the master data management on behalf of the data owner and probably also being an advisor to the Data Owner.
+
+
+### Processes
+
+Master data management can be viewed as a "discipline for specialized quality improvement" defined by the policies and procedures put in place by a data governance organization. It has the objective of providing processes for collecting, aggregating, matching, consolidating, quality-assuring, persisting and distributing master data throughout an organization to ensure a common understanding, consistency, accuracy and control, in the ongoing maintenance and application use of that data.
+
+Processes commonly seen in master data management include source identification, data collection, data transformation, normalization, rule administration, error detection and correction, data consolidation, data storage, data distribution, data classification, taxonomy services, item master creation, schema mapping, product codification, data enrichment, hierarchy management, business semantics management and data governance.
+
+
+### Technology
+
+A master data management tool can be used to support master data management by removing duplicates, standardizing data (mass maintaining), and incorporating rules to eliminate incorrect data from entering the system to create an authoritative source of master data. Master data are the products, accounts, and parties for which the business transactions are completed.
+
+Where the technology approach produces a "golden record" or relies on a "source of record" or "system of record", it is common to talk of where the data is "mastered". This is accepted terminology in the information technology industry, but care should be taken, both with specialists and with the wider stakeholder community, to avoid confusing the concept of "master data" with that of "mastering data".
+
+
+#### Implementation models
+
+There are several models for implementing a technology solution for master data management. These depend on an organization's core business, its corporate structure, and its goals. These include:
+
+1. Source of record
+2. Registry
+3. Consolidation
+4. Coexistence
+5. Transaction/centralized
+
+##### Source of record
+
+This model identifies a single application, database, or simpler source (e.g. a spreadsheet) as being the "source of record" (or "system of record" where solely application databases are relied on). The benefit of this model is its conceptual simplicity, but it may not fit with the realities of complex master data distribution in large organizations.
+
+The source of record can be federated, for example by groups of attributes (so that different attributes of a master data entity may have different sources of record) or geographically (so that different parts of an organization may have different master sources). Federation is only applicable in certain use cases, where there is a clear delineation of which subsets of records will be found in which sources.
+
+The source of record model can be applied more widely than simply to master data, for example to reference data.
+
+
+#### Transmission of master data
+
+There are several ways in which master data may be collated and distributed to other systems. This includes:
+
+1. Data consolidation – The process of capturing master data from multiple sources and integrating it into a single hub (operational data store) for replication to other destination systems.
+2. Data federation – The process of providing a single virtual view of master data from one or more sources to one or more destination systems.
+3. Data propagation – The process of copying master data from one system to another, typically through point-to-point interfaces in legacy systems.
+
+## Change management in implementation
+
+Challenges in adopting master data management within large organizations often arise when stakeholders disagree on a "single version of the truth" concept is not affirmed by stakeholders, who believe that their local definition of the master data is necessary. For example, the product hierarchy used to manage inventory may be entirely different from the product hierarchies used to support marketing efforts or pay sales representatives. It is above all necessary to identify if different master data is genuinely required. If it is required, then the solution implemented (technology and process) must be able to allow multiple versions of the truth to exist but will provide simple, transparent ways to reconcile the necessary differences. If it is not required, processes must be adjusted.
+Often, solutions can be found that retain the integrity of the master data but allow users to access it in ways that suit their needs. For example, a salesperson may want to group products by size, color, or other attributes, while a purchasing officer may want to group products by supplier or country of origin. Without this active management, users who need the alternate versions will simply "go around" the official processes, thus reducing the effectiveness of the company's overall master data management program.
+

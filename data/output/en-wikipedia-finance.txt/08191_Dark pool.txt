@@ -1,0 +1,212 @@
+Dark pool
+
+
+# Dark pool
+
+
+
+| Part of a series on |
+| --- |
+| Financial markets |
+| * Public market * Exchange **·** Securities |
+| Bond market |
+| * Bond valuation * Corporate bond * Fixed income * Government bond * High-yield debt * Municipal bond * Securitization |
+| Stock market |
+| * Common stock * Growth stock * Preferred stock * Registered share * Shareholder * Stock * Stockbroker * Stock certificate * Stock exchange * Watered stock |
+| Other markets |
+| Derivatives * (Credit derivative * Futures exchange * Hybrid security) Foreign exchange * (Currency * Exchange rate) * Commodity * ETF * Money * Mutual fund * Option * Real estate * Reinsurance * Structured product * Swap (finance) |
+| Alternative investment |
+| * Private equity * Private credit * Leveraged buyout * Venture * Growth * Secondaries * SPAC * Carried Interest * Leveraged finance |
+| Over-the-counter (off-exchange) |
+| * Forwards * Options * Spot market * Swaps |
+| Trading |
+| * Participants * Regulation * Clearing |
+| Related areas |
+| * Asset management * Banks and banking * Bulls and Bears * Diversification * ESG + Climate finance + Eco-investing + Impact investing + Sustainable finance + Greenwashing * Fintech * Investment management * Market risk * Market trend * Speculative attack |
+| * v * t * e |
+
+In finance, a **dark pool** (also **black pool**) is a private forum (alternative trading system or ATS) for trading securities, derivatives, and other financial instruments. Liquidity on these markets is called **dark pool liquidity**. The bulk of dark pool trades represent large trades by financial institutions that are offered away from public exchanges like the New York Stock Exchange and the NASDAQ, so that such trades remain confidential and outside the purview of the general investing public. The fragmentation of electronic trading platforms has allowed dark pools to be created, and they are normally accessed through crossing networks or directly among market participants via private contractual arrangements. Generally, dark pools are not available to the public, but in some cases, they may be accessed indirectly by retail investors and traders via retail brokers.
+
+One of the main advantages for institutional investors in using dark pools is for buying or selling large blocks of securities without showing their hand to others and thus avoiding market impact, as neither the size of the trade nor the identity are revealed until some time after the trade is filled. However, it also means that some market participants—retail investors—are disadvantaged, since they cannot see the orders before they are executed. Prices are agreed upon by participants in the dark pools, so the market is no longer transparent. A 2025 study found that dark trading is harmful to financial market, as it either reduced market efficiency or entailed welfare losses.
+
+Dark pools are heavily used in high-frequency trading, which has also led to a conflict of interest for those operating dark pools due to payment for order flow and priority access. High frequency traders may obtain information from placing orders in one dark pool that can be used on other exchanges or dark pools. Depending on the precise way in which a "dark" pool operates and interacts with other venues, it may be considered, and indeed referred to by some vendors, as a "grey" pool.
+
+These systems and strategies typically seek liquidity among open and closed trading venues, such as other alternative trading systems. Dark pools have grown in importance since 2007, with dozens of different pools garnering a substantial portion of U.S. equity trading. Dark pools are of various types and can execute trades in multiple ways, such as through negotiation or automatically (e.g., midpoint crosses, staggered crosses, VWAP, etc.), throughout the day or at scheduled times.
+
+
+## History
+
+The origin of dark pools date back to 1979 when financial regulation changed in the United States that allowed securities listed on a given exchange to be actively traded off the exchange in which it was listed. Known as reg 19c3 the U.S. Securities and Exchange Commission passed the regulation which would start on April 26, 1979.
+
+The new regulation allowed the emergence of dark pools through the 1980s that allowed investors to trade large block orders while retaining privacy and avoiding market impact. In 1986, Instinet started the first dark pool trading venue known as "After Hours Cross". However it was not until the next year that ITG created the first intraday dark pool "POSIT", both allowed large trades to be executed anonymously which was attractive to sellers of large blocks of shares. For the next 20 years trades executed on dark pools represented a small fraction of the market, between 3–5% of all trades. This was sometimes referred to as "upstairs trading".
+
+The next big development in dark pools came in 2007 when the SEC passed Regulation NMS (National Market System), which allowed investors to bypass public exchanges to gain price improvements. The effect of this was to attract a number of new players to the market and a large number of dark pools were created over the next 10 years. This was spurred on with the improvements of technology and increasing speed of execution as high-frequency trading took advantage of these dark pools.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+By 2012, 40% of trading volume in equities took place in dark pools (of which there were more than 50 in the US) and internalizers. Most dark pools were run by large banks like Credit Suisse and Goldman Sachs.
+
+In January 2025, according to Bloomberg data a vary slight majority of all trading in all U.S. stocks was now occurring on dark-pools with it making up 51.8% of trade volume in January 2025 and the third straight month at the time that dark-pools made up over 50% of trade volume.
+
+
+## Operation
+
+Truly dark liquidity can be collected off-market in dark pools using FIX and FAST protocol based APIs. Dark pools are generally very similar to standard markets with similar order types, pricing rules and prioritization rules. However, the liquidity is deliberately not advertised—there is no market depth feed. Such markets have no need of an iceberg-order type. In addition, they prefer not to print the trades to any public data feed, or if legally required to do so, will do so with as large a delay as legally possible—all to reduce the market impact of any trade. Dark pools are often formed from brokers' order books and other off-market liquidity. When comparing pools, careful checks should be made as to how liquidity numbers were calculated—some venues count both sides of the trade, or even count liquidity that was posted but not filled.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+Dark liquidity pools offer institutional investors many of the efficiencies associated with trading on the exchanges' public limit order books but without showing their actions to others. Dark liquidity pools avoid this risk because neither the price nor the identity of the trading company is displayed.
+
+Dark pools are recorded to the national consolidated tape. However, they are recorded as over-the-counter transactions. Therefore, detailed information about the volumes and types of transactions is left to the crossing network to report to clients only if they desire or are contractually obliged to do so.
+
+Dark pools allow funds to line up and move large blocks of equities without tipping their hands as to what they are up to. Modern electronic trading platforms and the lack of human interaction have reduced the time scale on market movements. This increased responsiveness of the price of an equity to market pressures has made it more difficult to move large blocks of stock without affecting the price. Thus dark pools may protect traders from market participants who use HFT in a predatory manner.
+
+Dark pools are run by private brokerages which operate under fewer regulatory and public disclosure requirements than public exchanges. Tabb Group estimates trading on the dark pools accounts for 32% of trades in 2012 vs 26% in 2008.
+
+
+### Iceberg orders
+
+Some markets allow dark liquidity to be posted inside the existing limit order book alongside public liquidity, usually through the use of iceberg orders. Iceberg orders generally specify an additional "display quantity"—i.e., smaller than the overall order quantity. The order is queued along with other orders but only the display quantity is printed to the market depth. When the order reaches the front of its price queue, only the display quantity is filled before the order is automatically put at the back of the queue and must wait for its next chance to get a fill. Such orders will, therefore, get filled less quickly than the fully public equivalent, and they often carry an explicit cost penalty in the form of a larger execution cost charged by the market. Iceberg orders are not truly dark either, as the trade is usually visible after the fact in the market's public trade feed.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+
+### Price discovery
+
+If an asset can be traded only publicly, the standard price discovery process has the best chance of making the public price approximately "correct" or "fair". However, very few assets are in this category, since most can be traded off market without revealing the trade publicly. As long as non-public trades are only a small fraction of trading volumes, the public price might still be considered fair. However, the greater the proportion of trading volume that happens non-publicly, the less confident we can be that the public price is "fair".ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+To lessen this adverse impact on price discovery, off-market venues can still report consolidated data on trades publicly. By this route, the trades occurring in dark pools can continue to contribute to price discovery, albeit with a little delay.
+
+
+### Market impact
+
+While it is safe to say that trading on a dark venue will reduce market impact, it is very unlikely to reduce it to zero. In particular the liquidity that crosses when there is a transaction has to come from somewhere—and at least some of it is likely to come from the public market, as automated broker systems intercept market-bound orders and instead cross them with the buyer/seller. This disappearance of the opposite side liquidity as it trades with the buyer/seller and leaves the market will cause impact. In addition, the order will slow down the market movement in the direction favorable to the buyer/seller and speed it up in the unfavourable direction. The market impact of the hidden liquidity is greatest when all of the public liquidity has a chance to cross with the user and least when the user is able to cross with ONLY other hidden liquidity that is also not represented on the market. In other words, the user has a tradeoff: reduce the speed of execution by crossing with only dark liquidity or increase it and increase their market impact.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+
+### Adverse selection
+
+One potential problem with crossing networks is the so-called winner's curse. Fulfillment of an order implies that the seller actually had more liquidity behind their order than the buyer. If the seller was making many small orders across a long period of time, this would not be relevant. However, when large volumes are being traded, it can be assumed that the other side—being even larger—has the power to cause market impact and thus push the price against the buyer. Paradoxically, the fulfillment of a large order is actually an indicator that the buyer would have benefitted from not placing the order to begin with—he or she would have been better off waiting for the seller's market impact, and then purchasing at the new price.
+
+Another type of adverse selection is caused on a very short-term basis by the economics of dark pools versus displayed markets. If a buy-side institution adds liquidity in the open market, a prop desk at a bank may want to take that liquidity because they have a short-term need. The prop desk would have to pay an Exchange/ECN access fee to take the liquidity in the displayed market. On the other hand, if the buy-side institution were floating their order in the prop desk's broker dark pool, then the economics make it very favorable to the prop desk—they pay little or no access fee to access their own dark pool, and the parent broker gets tape revenue for printing the trade on an exchange. For this reason, when entities transact in smaller sizes and do not have short-term alpha, they are recommended to not add liquidity to dark pools, but rather go to the open market where the short-term adverse selection is likely to be less severe.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+
+## Controversy
+
+The use of dark pools for trading has also attracted controversy and regulatory action in part due to their opaque nature and conflicts of interest by the operator of the dark pool and the participants, a subject that was the focus of *Flash Boys*, a non-fiction book published in 2014 by Michael Lewis about high-frequency trading (HFT) in financial markets.
+
+
+### Pipeline LLC controversy
+
+Pipeline Trading Systems LLC, a company offering its services as a dark pool, contracted an affiliate that transacted the trades. In the Pipeline case, the firm attempted to provide a trading system that would protect investors from the open, public electronic marketplace. In that system, investors' orders would be made public on the consolidated tape as soon as they were announced, which traders characterized as "playing poker with your cards face up". The service Pipeline offered was to find counterparties for various trades in a private manner. The firm was subsequently investigated and sued by the U.S. Securities and Exchange Commission (SEC) for misleading its clients. Following its 2011 settlement of the SEC's claims against it, the firm rebranded itself as Aritas Securities LLC in January 2012.
+
+
+### Regulatory statements
+
+In 2009 the U.S. Securities and Exchange Commission (SEC) announced that it was proposing measures to increase the transparency of dark pools, "so investors get a clearer view of stock prices and liquidity". These requirements would involve that information about investor interest in buying or selling stock be made available to the public, instead of to only the members of a dark pools. FINRA announced in January 2013 that it will expand its monitoring of dark pools.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+
+### Barclays lawsuit
+
+In June 2014 the U.S. state of New York filed a lawsuit against Barclays alleging the bank defrauded and deceived investors over its dark pool. A central allegation of the suit is that Barclays misrepresented the level of aggressive HFT activity in its dark pool to other clients. The state, in its complaint, said it was being assisted by former Barclays executives and it was seeking unspecified damages. The bank's shares dropped 5% on news of the lawsuit, prompting an announcement to the London Stock Exchange by the bank saying it was taking the allegations seriously, and was cooperating with the New York attorney general. In July 2014 Barclays filed a motion for the suit to be dismissed, saying there had been no fraud, no victims and no harm to anyone. The New York Attorney General's office said it was confident the motion would not succeed. In January 2016, Barclays agreed to pay a fine of $35 million to SEC and $70 million to NYAG for its dark pool wrongdoings.
+
+
+### UBS fine
+
+In January 2015 the U.S. regulators imposed a fine on UBS Group AG’s dark pool for failing to follow rules designed to ensure stock trades are executed fairly. In ordering UBS to pay $14.4 million, including a $12 million fine that exceeds all prior penalties against an alternative trading system, the Securities and Exchange Commission flagged a series of violations from 2008 to 2012. It said UBS let customers submit orders at prices denominated in increments smaller than a penny, something SEC rules prohibit because it can be used to get a better place in line when buying or selling stock. The ability to trade in sub-penny increments also wasn’t widely disclosed to UBS customers, and was instead pitched secretly to market makers including high-frequency traders, according to the SEC.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+
+### ITG fine
+
+In August 2015, ITG (and its affiliate AlterNet Securities) settled with SEC for $20.3 million due to operating a secret trading desk and misusing the confidential trading information of dark pool subscribers.
+
+
+## Impact to outside investors
+
+Hypothetically, a retail "everyday" shareholder in any company could be disadvantaged if a dark pool trade is executed by a seller within the dark pool getting rid of a large number of that company's shares, which would thereby cause the price to drop.
+
+Share trading performed on platforms available to the public usually come with functionality allowing any user to see how many "now" and "sell" orders are in the pipeline that day for any individual security on the platform (i.e. NASDAQ).
+
+In turn, if dark pool trades were publicly viewable in the same way, a retail shareholder could prevent loss by selling at the same time, before the price went any lower (assuming that shareholder is confident the price won't go back up).
+
+Because they are private and withheld from the public, in this way, they pose some risk for traders outside the dark pool.
+
+
+## List of dark pools
+
+Three major types of dark pools exist:
+
+1. Independent companies set up to offer a unique differentiated basis for trading
+2. Broker-owned dark pools where clients of the broker interact, most commonly with other clients of the broker (possibly including its own proprietary traders) in conditions of anonymity
+3. Some public exchanges set up their own dark pools to allow their clients the benefits of anonymity and non-display of orders while offering an exchange "infrastructure"
+
+### Independent dark pools
+
+* Chi-X Global
+* Instinet
+* SygnumOTC
+* Liquidnet
+* NYFIX Millennium
+* Posit/MatchNow from Investment Technology Group (ITG)
+* State Street's BlockCross
+* RiverCross Securities
+* SmartPool
+* TORA Crosspoint
+* ETF One
+* Codestreet Dealer Pool for Corporate Bonds
+
+### Broker-dealer-owned dark pools
+
+* JP Morgan – JPMX
+* Barclays Capital – LX Liquidity Cross
+* BNP Paribas – BNP Paribas Internal eXchange (BIX)
+* BNY ConvergEx Group (an affiliate of Bank of New York Mellon)
+* Cantor Fitzgerald – Aqua Securities
+* Citadel Connect – Citadel
+* Citi – Citi Match, Citi Cross
+* Credit Agricole Cheuvreux – BLINK
+* Credit Suisse – CrossFinder
+* Deutsche Bank Global Markets – DBA (Europe), SuperX ATS (U.S.)
+* Fidelity – Capital Markets
+* GETCO – GETMatched
+* Goldman Sachs – SIGMA X
+* Knight Capital Group – Knight Link, Knight Match
+* Merrill Lynch – Instinct-X
+* Morgan Stanley – MSPOOL
+* Nomura – Nomura NX
+* UBS Investment Bank – UBS ATS, UBS MTF, UBS PIN
+* Societe Generale – ALPHA Y
+* Daiwa – DRECT
+* Wells Fargo Securities LLC – WELX (has since closed)
+
+### Consortium-owned dark pools
+
+* BIDS Trading – BIDS ATS
+* LeveL ATS
+* Luminex (Buyside Only)
+
+### Exchange-owned dark pools
+
+* ASX Centre Point
+* International Securities Exchange
+* NYSE Euronext
+* BATS Trading
+* Turquoise
+* XTX Markets
+
+### Dark pool aggregators
+
+* Fidessa – Spotlight
+* Bloomberg Tradebook
+* Liquidnet – LN Dark
+* Credit Suisse – Crossfinder Plus
+* Deutsche Bank – SuperX+
+* Software AG – Apama
+* ONEPIPE – Weeden & Co. & Pragma Financial
+* Xasax Corporation
+* Crossfire – Credit Agricole Cheuvreux
+* Instinet – Nighthawk
+* Bernstein – Shadow
+* Wells Fargo – Komodo Dark
+
+## Regulation
+
+Dark pools were largely motivated by the trades of large blocks and participants who did not want to move the market and cause front running. In the United States, however, these trades were stymied by Regulation NMS in 2004. However, under section 5 of the Securities Exchange Act of 1934 and Regulation ATS of 1998, off-exchange trading was allowed for up to five percent of the national volume of a stock.
+
+The U.S. SEC adopted rules, as amendments to Regulation ATS, to require disclosures about dark pools in 2018. Known as Rule 304 of Regulation ATS, it requires the filing of Form ATS-N which includes a variety of disclosures including conflicts of interest, methods, fees, and so on. A review of these forms revealed a number of differences, including "tiering", "pegging", and "immediate-or-cancel (IOC)" orders, as well as a special features such as a speed bump by IEX to prevent high-frequency trading.
+
+FINRA reports data on ATS systems quarterly for free, which it began doing in July 2015. When FINRA released this data, it showed that trades averaged 187 shares, which suggests that the pools were not used for large trades by institutional shareholders.
+

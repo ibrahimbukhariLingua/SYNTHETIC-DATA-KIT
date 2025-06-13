@@ -1,0 +1,32 @@
+Volatility tax
+
+
+# Volatility tax
+
+
+
+The **volatility tax** is a mathematical finance term first published by Rick Ashburn, CFA in a 2003 column, and formalized by hedge fund manager Mark Spitznagel, describing the effect of large investment losses (or volatility) on compound returns. It has also been called **volatility drag, volatility decay** or **variance drain**. This is not literally a tax in the sense of a levy imposed by a government, but the mathematical difference between geometric averages compared to arithmetic averages. This difference resembles a tax due to the mathematics which impose a lower compound return when returns vary over time, compared to a simple sum of returns. This diminishment of returns is in increasing proportion to volatility, such that volatility itself appears to be the basis of a progressive tax. Conversely, fixed-return investments (which have no return volatility) appear to be "volatility tax free".
+
+
+## Overview
+
+As Spitznagel wrote:
+
+> It is well known that steep portfolio losses crush long-run compound annual growth rates (CAGRs). It just takes too long to recover from a much lower starting point: lose 50% and you need to make 100% to get back to even. I call this cost that transforms, in this case, a portfolio’s +25% average arithmetic return into a zero CAGR (and hence leaves the portfolio with zero profit) the “volatility tax”: it is a hidden, deceptive fee levied on investors by the negative compounding of the markets’ swings.
+
+Quantitatively, the volatility tax is the difference between the arithmetic and geometric average (or “ensemble average” and “time average”) returns of an asset or portfolio. It thus represents the degree of “non-ergodicity” of the geometric average.
+
+Standard quantitative finance assumes that a portfolio’s net asset value changes follow a geometric Brownian motion (and thus are log-normally distributed) with arithmetic average return (or “drift”) {\displaystyle \mu }, standard deviation (or “volatility”) {\displaystyle \sigma }, and geometric average return
+
+So the geometric average return is the difference between the arithmetic average return and a function of volatility. This function of volatility
+
+represents the volatility tax. (Though this formula is under the assumption of log-normality, the volatility tax provides an accurate approximation for most return distributions. The precise formula is a function of the central moments of the return distribution.)
+
+The mathematics behind the volatility tax is such that a very large portfolio loss has a disproportionate impact on the volatility tax that it pays and, as Spitznagel wrote, this is why the most effective risk mitigation focuses on large losses:
+
+> We can see how this works by considering that the compound (or geometric) average return is mathematically just the average of the logarithms of the arithmetic price changes. Because the logarithm is a concave function (it curves down), it increasingly penalizes negative arithmetic returns the more negative they are, and thus the more negative they are, the more they lower the compound average relative to the arithmetic average—and raise the volatility tax.
+
+According to Spitznagel, the goal of risk mitigation strategies is to solve this “vexing non-ergodicity, volatility tax problem” and thus raise a portfolio’s geometric average return, or CAGR, by lowering its volatility tax (and “narrow the gap between our ensemble and time averages”). This is “the very name of the game in successful investing. It is the key to the kingdom, and explains in a nutshell Warren Buffett’s cardinal rule, ‘Don’t lose money.’” Moreover, “the good news is the entire hedge fund industry basically exists to help with this—to help save on volatility taxes paid by portfolios. The bad news is they haven't done that, not at all.”
+
+As Nassim Nicholas Taleb wrote in his 2018 book *Skin in the Game*, “more than two decades ago, practitioners such as Mark Spitznagel and myself built our entire business careers around the effect of the difference between ensemble and time.”
+

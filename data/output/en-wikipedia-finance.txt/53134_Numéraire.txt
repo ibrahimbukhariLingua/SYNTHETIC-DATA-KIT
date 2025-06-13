@@ -1,0 +1,29 @@
+Numéraire
+
+
+# Numéraire
+
+
+
+The **numéraire** (or **numeraire**) is a basic standard by which value is computed. In mathematical economics it is a tradable economic entity in terms of whose price the relative prices of all other tradables are expressed. In a monetary economy, one of the functions of money is to act as the numéraire, i.e. to serve as a unit of account and therefore provide a common benchmark relative to which the value of various goods and services can be measured against.
+
+Using a numeraire, whether monetary or some consumable good, facilitates value comparisons when only the relative prices are relevant, as in general equilibrium theory. When economic analysis refers to a particular good as the numéraire, one says that all other prices are **normalized** by the price of that good. For example, if a unit of good *g* has twice the market value of a unit of the numeraire, then the (relative) price of *g* is 2. Since the value of one unit of the numeraire relative to one unit of itself is 1, the price of the numeraire is always 1.
+
+
+## Change of numéraire
+
+In a financial market with traded securities, one may use a numéraire to price assets. For instance, let {\displaystyle M(t)} be the price at time t of $1 that was invested in the money market at time 0. The fundamental theorem of asset pricing says that all assets {\displaystyle S(t)} priced in terms of the numéraire (in this case, M), are martingales with respect to a risk-neutral measure, say {\displaystyle Q}. That is:
+
+Now, suppose that {\displaystyle N(t)>0} is another strictly positive traded asset (and hence a martingale when priced in terms of the money market). Then we can define a new probability measure {\displaystyle Q^{N}} by the Radon–Nikodym derivative
+
+Then it can be shown that {\displaystyle S(t)} is a martingale under {\displaystyle Q^{N}} when priced in terms of the new numéraire {\displaystyle N(t)}:
+
+This technique has many important applications in LIBOR and swap market models, as well as commodity markets. Jamshidian (1989) first used it in the context of the Vasicek model for interest rates in order to calculate bond options prices. Geman, El Karoui and Rochet (1995) introduced the general formal framework for the change of numéraire technique. See for example Brigo and Mercurio (2001) for a change of numéraire toolkit.
+
+
+## Numéraire in financial pricing
+
+Determining an appropriate numéraire has foundation in several financial pricing models such as options and certain assets. Identifying a risky asset as numéraire has a correlation with the number of underlying assets to model. Underlying shifts are modelled by the following:
+
+where *1* defines the numéraire.
+

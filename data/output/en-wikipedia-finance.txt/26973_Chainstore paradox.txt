@@ -1,0 +1,82 @@
+Chainstore paradox
+
+
+# Chainstore paradox
+
+
+
+The **chain store paradox** is an apparent game theory paradox describing the decisions a chain store might make, where a "deterrence strategy" appears optimal instead of the backward induction strategy of standard game theory reasoning.
+
+The paradox was first put forth by Reinhard Selten in 1978.
+
+
+## The chain store game
+
+A monopolist (Player A) has branches in 20 towns. He faces 20 potential competitors, one in each town, who will be able to choose in or out. They do so in sequential order and one at a time. If a potential competitor chooses out, he receives a payoff of 1, while A receives a payoff of 5. If he chooses in, he will receive a payoff of either 2 or 0, depending on the response of Player A to his action. Player A, in response to a choice of in, must choose one of two pricing strategies, cooperative or aggressive. If he chooses cooperative, both player A and the competitor receive a payoff of 2, and if A chooses aggressive, each player receives a payoff of 0.
+
+These outcomes lead to two theories for the game, the induction (game theoretically optimal version) and the deterrence theory (weakly dominated theory):
+
+
+### Induction theory
+
+Consider the decision to be made by the 20th and final competitor, of whether to choose in or out. He knows that if he chooses in, Player A receives a higher payoff from choosing to cooperate than aggressive, and being the last period of the game, there are no longer any future competitors whom Player A needs to intimidate from the market. Knowing this, the 20th competitor enters the market, and Player A will cooperate (receiving a payoff of 2 instead of 0).
+
+The outcome in the final period is set in stone, so to speak. Now consider period 19, and the potential competitor's decision. He knows that A will cooperate in the next period, regardless of what happens in period 19. Thus, if player 19 enters, an aggressive strategy will not be able to deter player 20 from entering. Player 19 knows this and chooses in. Player A chooses to cooperate.
+
+Of course, this process of backward induction holds all the way back to the first competitor. Each potential competitor chooses in, and Player A always cooperates. A receives a payoff of 40 (2×20) and each competitor receives 2.
+
+
+### Deterrence theory
+
+This theory states that Player A will be able to get payoff of higher than 40. Suppose Player A finds the induction argument convincing. He will decide how many periods at the end to play such a strategy, say 3. In periods 1–17, he will decide to always be aggressive against the choice of IN. If all of the potential competitors know this, it is unlikely potential competitors 1–17 will bother the chain store, thus risking the safe payout of 1 ("A" will not retaliate if they choose "out"). If a few do test the chain store early in the game, and see that they are greeted with the aggressive strategy, the rest of the competitors are likely not to test any further. Assuming all 17 are deterred, Player A receives 91 (17×5 + 2×3). Even if as many as 10 competitors enter and test Player A's will, Player A will still receive a payoff of 41 (10×0+ 7×5 + 3×2), which is better than the induction (game theoretically correct) payoff.
+
+
+### The chain store paradox
+
+If Player A follows the game theory payoff matrix to achieve the optimal payoff, they will have a lower payoff than with the "deterrence" strategy. This creates an apparent game theory paradox: game theory states that induction strategy should be optimal, but it looks like "deterrence strategy" is optimal instead.
+
+The "deterrence strategy" is not a Subgame perfect equilibrium: It relies on the non-credible threat of responding to in with aggressive. A rational player will not carry out a non-credible threat, but the paradox is that it nevertheless seems to benefit Player A to carry out the threat.
+
+
+### Selten's response
+
+Reinhard Selten's response to this apparent paradox is to argue that the idea of "deterrence", while irrational by the standards of game theory, is in fact an acceptable idea by the rationality that individuals actually employ. Selten argues that individuals can make decisions of three levels: Routine, Imagination, and Reasoning.
+
+
+### Complete information?
+
+Game theory is based on the idea that each matrix is modeled with the assumption of complete information: that "every player knows the payoffs and strategies available to other players," where the word "payoff" is descriptive of behavior—what the player is trying to maximize. If, in the first town, the competitor enters and the monopolist is aggressive, the second competitor has observed that the monopolist is not, from the standpoint of common knowledge of payoffs and strategies, maximizing the assumed payoffs; expecting the monopolist to do so in this town seems dubious.
+
+If competitors place even a very small probability on the possibility that the monopolist is spiteful, and places intrinsic value on being (or appearing) aggressive, and the monopolist knows this, then even if the monopolist has payoffs as described above, responding to entry in an early town with aggression will be optimal if it increases the probability that later competitors place on the monopolist's being spiteful.
+
+
+## Selten's levels of decision making
+
+
+### The routine level
+
+The individuals use their past experience of the results of decisions to guide their response to choices in the present. "The underlying criteria of similarity between decision situations are crude and sometimes inadequate". (Selten)
+
+
+### The imagination level
+
+The individual tries to visualize how the selection of different alternatives may influence the probable course of future events. This level employs the routine level within the procedural decisions. This method is similar to a computer simulation.
+
+
+### The reasoning level
+
+The individual makes a conscious effort to analyze the situation in a rational way, using both past experience and logical thinking. This mode of decision uses simplified models whose assumptions are products of imagination, and is the only method of reasoning permitted and expected by game theory.
+
+
+## Decision-making process
+
+
+### The predecision
+
+One chooses which method (routine, imagination or reasoning) to use for the problem, and this decision itself is made on the routine level.
+
+
+### The final decision
+
+Depending on which level is selected, the individual begins the decision procedure. The individual then arrives at a (possibly different) decision for each level available (if we have chosen imagination, we would arrive at a routine decision and possible and imagination decision). Selten argues that individuals can always reach a routine decision, but perhaps not the higher levels. Once the individuals have all their levels of decision, they can decide which answer to use...the Final Decision. The final decision is made on the routine level and governs actual behavior.
+

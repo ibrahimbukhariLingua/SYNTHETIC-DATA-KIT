@@ -1,0 +1,61 @@
+FAST protocol
+
+
+# FAST protocol
+
+
+
+The **FAST protocol** (FIX Adapted for STreaming) is a technology standard developed by FIX Protocol Ltd., specifically aimed at optimizing data representation on the network. It is used to support high-throughput, low latency data communications between financial institutions.
+
+In particular, it is a technology standard that offers significant compression capabilities for the transport of high-volume market data feeds and ultra low latency applications.
+
+
+## History
+
+
+### Timeline
+
+* 2004 Market Data optimization Working Group (“mdowg”) was formed
+* 2005 Proof of Concept (“POC”) project
+* 2006 FAST 1.0 released
+* 2007 FAST 1.1 released
+* 2009 FAST 1.2 proposed
+
+In November 2004, Mike Cormack (then CEO Archipelago Holding) spoke at the FPL (FIX Protocol Ltd) conference in New York regarding a call for action to meet the challenges of the increased market data volumes. The increasing volumes of market data were causing delays, preventing market data from reaching traders in a timely fashion, thus disrupting their ability to trade. The classic FIX tag value format was considered to be too verbose and had a high processing overhead. A working group was formed within FPL shortly after the conference.
+
+
+## Current version of FAST
+
+The approved standard is currently at version 5.0, and is used in commercially available products. There are Open Source implementations of the Protocol available.
+
+
+## Exchanges that have adopted FAST
+
+* NYSE Archipelago
+* CME Group (CME)
+* International Securities Exchange (ISE)
+* NasdaqOMX
+* Eurex
+* Xetra
+* Bombay Stock Exchange (BSE Ltd, India)
+* BATS
+* ICAP
+* OPRA
+* B3
+* Nordic Growth Market (NGM)
+* Moscow Exchange (MOEX)
+* Shanghai Stock Exchange (SSE, China)
+
+## Open source implementations
+
+Source code for implementations of the FAST Specification are available from the following sources:
+
+| Description | Language | URL | License | Notes |
+| --- | --- | --- | --- | --- |
+| FPL Reference Implementation | C (not C++) | https://www.fixtrading.org/standards/fast/ | W3C Software License. | Not a complete implementation. Reference only. |
+| FPL Reference Implementation | C# | https://www.fixtrading.org/standards/fast/ | W3C Software License. | Not a complete implementation. Reference only. |
+| OpenFAST | Java | http://openfast.sourceforge.net/ | Mozilla Public License | Includes SCP 1.1 |
+| OpenFAST.NET | C# | www.sourceforge.net/projects/openfastdotnet/ | Mozilla Public License | Includes SCP 1.1 |
+| QuickFAST | C++ | https://github.com/objectcomputing/quickfast | New BSD License | Includes C# (.NET) wrapper |
+| goFAST | Golang | www.github.com/co11ter/goFAST | Apache License 2.0 | Not a complete implementation. |
+

@@ -1,0 +1,184 @@
+Vector autoregression
+
+
+# Vector autoregression
+
+
+
+**Vector autoregression** (**VAR**) is a statistical model used to capture the relationship between multiple quantities as they change over time. VAR is a type of stochastic process model. VAR models generalize the single-variable (univariate) autoregressive model by allowing for multivariate time series. VAR models are often used in economics and the natural sciences.
+
+Like the autoregressive model, each variable has an equation modelling its evolution over time. This equation includes the variable's lagged (past) values, the lagged values of the other variables in the model, and an error term. VAR models do not require as much knowledge about the forces influencing a variable as do structural models with simultaneous equations. The only prior knowledge required is a list of variables which can be hypothesized to affect each other over time.
+
+
+## Specification
+
+
+### Definition
+
+A VAR model describes the evolution of a set of *k* variables, called *endogenous variables*, over time. Each period of time is numbered, *t* = 1, ..., *T*. The variables are collected in a vector, *yₜ*, which is of length *k.* (Equivalently, this vector might be described as a (*k* × 1)-matrix.) The vector is modelled as a linear function of its previous value. The vector's components are referred to as *y*ᵢ,ₜ, meaning the observation at time *t* of the *i* th variable. For example, if the first variable in the model measures the price of wheat over time, then *y*₁,₁₉₉₈ would indicate the price of wheat in the year 1998.
+
+VAR models are characterized by their *order*, which refers to the number of earlier time periods the model will use. Continuing the above example, a 5th-order VAR would model each year's wheat price as a linear combination of the last five years of wheat prices. A *lag* is the value of a variable in a previous time period. So in general a *p*th-order VAR refers to a VAR model which includes lags for the last *p* time periods. A *p*th-order VAR is denoted "VAR(*p*)" and sometimes called "a VAR with *p* lags". A *p*th-order VAR model is written as
+
+The variables of the form *y*ₜ−ᵢ indicate that variable's value *i* time periods earlier and are called the "i*th* lag" of *y*ₜ. The variable *c* is a *k*-vector of constants serving as the intercept of the model. *Aᵢ* is a time-invariant (*k* × *k*)-matrix and *e*ₜ is a *k*-vector of error terms. The error terms must satisfy three conditions:
+
+1. {\displaystyle \mathrm {E} (e\_{t})=0\,}. Every error term has a mean of zero.
+2. {\displaystyle \mathrm {E} (e\_{t}e\_{t}')=\Omega \,}. The contemporaneous covariance matrix of error terms is a *k* × *k* positive-semidefinite matrix denoted Ω.
+3. {\displaystyle \mathrm {E} (e\_{t}e\_{t-k}')=0\,} for any non-zero *k*. There is no correlation across time. In particular, there is no serial correlation in individual error terms.
+
+The process of choosing the maximum lag *p* in the VAR model requires special attention because inference is dependent on correctness of the selected lag order.
+
+
+### Order of integration of the variables
+
+Note that all variables have to be of the same order of integration. The following cases are distinct:
+
+* All the variables are I(0) (stationary): this is in the standard case, i.e. a VAR in level
+* All the variables are I(*d*) (non-stationary) with *d* > 0:ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+ + The variables are cointegrated: the error correction term has to be included in the VAR. The model becomes a Vector error correction model (VECM) which can be seen as a restricted VAR.
+ + The variables are not cointegrated: first, the variables have to be differenced d times and one has a VAR in difference.
+
+### Concise matrix notation
+
+One can stack the vectors in order to write a VAR(*p*) as a stochastic matrix difference equation, with a concise matrix notation:
+
+
+### Example
+
+A VAR(1) in two variables can be written in matrix form (more compact notation) as
+
+(in which only a single *A* matrix appears because this example has a maximum lag *p* equal to 1), or, equivalently, as the following system of two equations
+
+Each variable in the model has one equation. The current (time *t*) observation of each variable depends on its own lagged values as well as on the lagged values of each other variable in the VAR.
+
+
+### Writing VAR(*p*) as VAR(1)
+
+A VAR with *p* lags can always be equivalently rewritten as a VAR with only one lag by appropriately redefining the dependent variable. The transformation amounts to stacking the lags of the VAR(*p*) variable in the new VAR(1) dependent variable and appending identities to complete the precise number of equations.
+
+For example, the VAR(2) model
+
+can be recast as the VAR(1) model
+
+where *I* is the identity matrix.
+
+The equivalent VAR(1) form is more convenient for analytical derivations and allows more compact statements.
+
+
+## Structural vs. reduced form
+
+
+### Structural VAR
+
+A ***structural VAR with p lags*** (sometimes abbreviated **SVAR**) is
+
+where *c*₀ is a *k* × 1 vector of constants, *Bᵢ* is a *k* × *k* matrix (for every *i* = 0, ..., *p*) and *ε*ₜ is a *k* × 1 vector of error terms. The main diagonal terms of the *B*₀ matrix (the coefficients on the *i*ᵗʰ variable in the *i*ᵗʰ equation) are scaled to 1.
+
+The error terms ε*ₜ* (***structural shocks***) satisfy the conditions (1) - (3) in the definition above, with the particularity that all the elements in the off diagonal of the covariance matrix {\displaystyle \mathrm {E} (\epsilon \_{t}\epsilon \_{t}')=\Sigma } are zero. That is, the structural shocks are uncorrelated.
+
+For example, a two variable structural VAR(1) is:
+
+where
+
+that is, the variances of the structural shocks are denoted {\displaystyle \mathrm {var} (\epsilon \_{i})=\sigma \_{i}^{2}} (*i* = 1, 2) and the covariance is {\displaystyle \mathrm {cov} (\epsilon \_{1},\epsilon \_{2})=0}.
+
+Writing the first equation explicitly and passing *y₂,ₜ* to the right hand side one obtains
+
+Note that *y*₂,ₜ can have a contemporaneous effect on *y₁,ₜ* if *B*₀;₁,₂ is not zero. This is different from the case when *B*₀ is the identity matrix (all off-diagonal elements are zero — the case in the initial definition), when *y*₂,ₜ can impact directly *y*₁,ₜ+₁ and subsequent future values, but not *y*₁,ₜ.
+
+Because of the parameter identification problem, ordinary least squares estimation of the structural VAR would yield inconsistent parameter estimates. This problem can be overcome by rewriting the VAR in reduced form.
+
+From an economic point of view, if the joint dynamics of a set of variables can be represented by a VAR model, then the structural form is a depiction of the underlying, "structural", economic relationships. Two features of the structural form make it the preferred candidate to represent the underlying relations:
+
+
+### Reduced-form VAR
+
+By premultiplying the structural VAR with the inverse of *B*₀
+
+and denoting
+
+one obtains the ***p*th order reduced VAR**
+
+Note that in the reduced form all right hand side variables are predetermined at time *t*. As there are no time *t* endogenous variables on the right hand side, no variable has a *direct* contemporaneous effect on other variables in the model.
+
+However, the error terms in the reduced VAR are composites of the structural shocks *e*ₜ = *B*₀−¹*ε*ₜ. Thus, the occurrence of one structural shock *εᵢ,ₜ* can potentially lead to the occurrence of shocks in all error terms *eⱼ,ₜ*, thus creating contemporaneous movement in all endogenous variables. Consequently, the covariance matrix of the reduced VAR
+
+can have non-zero off-diagonal elements, thus allowing non-zero correlation between error terms.
+
+
+## Estimation
+
+
+### Estimation of the regression parameters
+
+Starting from the concise matrix notation:
+
+* The multivariate least squares (MLS) approach for estimating B yields:
+
+This can be written alternatively as:
+
+where {\displaystyle \otimes } denotes the Kronecker product and Vec the vectorization of the indicated matrix.
+
+This estimator is consistent and asymptotically efficient. It is furthermore equal to the conditional maximum likelihood estimator.
+
+* As the explanatory variables are the same in each equation, the multivariate least squares estimator is equivalent to the ordinary least squares estimator applied to each equation separately.
+
+### Estimation of the covariance matrix of the errors
+
+As in the standard case, the maximum likelihood estimator (MLE) of the covariance matrix differs from the ordinary least squares (OLS) estimator.
+
+MLE estimator:ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ {\displaystyle {\hat {\Sigma }}={\frac {1}{T}}\sum \_{t=1}^{T}{\hat {\epsilon }}\_{t}{\hat {\epsilon }}\_{t}'}
+
+OLS estimator:ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ {\displaystyle {\hat {\Sigma }}={\frac {1}{T-kp-1}}\sum \_{t=1}^{T}{\hat {\epsilon }}\_{t}{\hat {\epsilon }}\_{t}'} for a model with a constant, *k* variables and *p* lags.
+
+In a matrix notation, this gives:
+
+
+### Estimation of the estimator's covariance matrix
+
+The covariance matrix of the parameters can be estimated asᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+
+### Degrees of freedom
+
+Vector autoregression models often involve the estimation of many parameters. For example, with seven variables and four lags, each matrix of coefficients for a given lag length is 7 by 7, and the vector of constants has 7 elements, so a total of 49×4 + 7 = 203 parameters are estimated, substantially lowering the degrees of freedom of the regression (the number of data points minus the number of parameters to be estimated). This can hurt the accuracy of the parameter estimates and hence of the forecasts given by the model.
+
+
+## Interpretation of estimated model
+
+
+### Impulse response
+
+Consider the first-order case (i.e., with only one lag), with equation of evolution
+
+for evolving (state) vector {\displaystyle y} and vector {\displaystyle e} of shocks. To find, say, the effect of the *j*-th element of the vector of shocks upon the *i*-th element of the state vector 2 periods later, which is a particular impulse response, first write the above equation of evolution one period lagged:
+
+Use this in the original equation of evolution to obtain
+
+then repeat using the twice lagged equation of evolution, to obtain
+
+From this, the effect of the *j*-th component of {\displaystyle e\_{t-2}} upon the *i*-th component of {\displaystyle y\_{t}} is the *i, j* element of the matrix {\displaystyle A^{2}.}
+
+It can be seen from this induction process that any shock will have an effect on the elements of *y* infinitely far forward in time, although the effect will become smaller and smaller over time assuming that the AR process is stable — that is, that all the eigenvalues of the matrix *A* are less than 1 in absolute value.
+
+
+## Forecasting using an estimated VAR model
+
+An estimated VAR model can be used for forecasting, and the quality of the forecasts can be judged, in ways that are completely analogous to the methods used in univariate autoregressive modelling.
+
+
+## Applications
+
+Christopher Sims has advocated VAR models, criticizing the claims and performance of earlier modeling in macroeconomic econometrics. He recommended VAR models, which had previously appeared in time series statistics and in system identification, a statistical specialty in control theory. Sims advocated VAR models as providing a theory-free method to estimate economic relationships, thus being an alternative to the "incredible identification restrictions" in structural models. VAR models are also increasingly used in health research for automatic analyses of diary data or sensor data. Sio Iong Ao and R. E. Caraka found that the artificial neural network can improve its performance with the addition of the hybrid vector autoregression component.
+
+
+## Software
+
+* R: The package *vars* includes functions for VAR models. Other R packages are listed in the CRAN Task View: Time Series Analysis.
+* Python: The *statsmodels* package's tsa (time series analysis) module supports VARs. *PyFlux* has support for VARs and Bayesian VARs.
+* SAS: VARMAX
+* Stata: "var"
+* EViews: "VAR"
+* Gretl: "var"
+* Matlab: "varm"
+* Regression analysis of time series: "SYSTEM"
+* LDT

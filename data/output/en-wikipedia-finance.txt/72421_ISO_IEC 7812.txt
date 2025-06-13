@@ -1,0 +1,71 @@
+ISO/IEC 7812
+
+
+# ISO/IEC 7812
+
+
+
+**ISO/IEC 7812** *Identification cards – Identification of issuers* is an international standard published jointly by the International Organization for Standardization (ISO) and the International Electrotechnical Commission (IEC). It specifies "a numbering system for the identification of the card issuers, the format of the issuer identification number (IIN) and the primary account number (PAN)", and procedures for registering IINs. It was first published in 1989.
+
+ISO/IEC 7812 has two parts:
+
+* *Part 1: Numbering system*
+* *Part 2: Application and registration procedures*
+
+The registration authority for Issuer Identification Numbers (IINs) is the American Bankers Association.
+
+An IIN is currently six digits in length. The leading digit is the *major industry identifier* (MII), followed by 5 digits, which together make up the IIN. This IIN is paired with an *individual account identification* number, and a single digit checksum.
+
+In 2015, ISO TC68/SC9 began work on implementing a change to ISO/IEC 7812 to increase the length of the IIN to 8 digits. The 2017 revision of the standard, since updated by the 2022 systematic review, defined the new eight-digit IIN and outlined a timeline for conversion of existing six digits IINs to eight-digit IINs.
+
+In February 2024, CUSIP Global Services, the US National Number Agency for securities identifiers, assumed administrative responsibility for 7812 on behalf of the ABA.
+
+
+## Major industry identifier
+
+The first (leading) digit of the IIN identifies the major industry of the card issuer.
+
+| MII digit value | Issuer category |
+| --- | --- |
+| 0 | ISO/TC 68 and other industry assignments |
+| 1 | Airlines |
+| 2 | Airlines, financial and other future industry assignments |
+| 3 | Travel and entertainment |
+| 4 | Banking and financial |
+| 5 | Banking and financial |
+| 6 | Merchandising and banking/financial |
+| 7 | Petroleum and other future industry assignments |
+| 8 | Healthcare, telecommunications and other future industry assignments |
+| 9 | For assignment by national standards bodies (see below) |
+
+ISO 7812-1 (section 4.2) makes note of some special ranges that do not follow the general 6/8 digit IIN scheme:
+
+| leading digits | special category |
+| --- | --- |
+| 00 | Financial institutions other than card issuers (ISO 8583-1) |
+| 80 **CCC** | Healthcare institutions (devolved to national registration authorities.) A prominent user is the European Health Insurance Card system, which appends 5 digits of insurer identification (essentially making a 10-digit IIN-alike system.) |
+| 89 **EE(E)** | Telecommunications use, administered by the ITU-T. SIM card ICCIDs are allocated from this range. **EE(E)** refers to the E.164 country code (with some exceptions.) |
+| 9 **CCC** | National standards bodies. The US National Numbering system (9840...) is managed by the American National Standards Institute. |
+
+Card numbers starting with "80" or "9" are followed by the three-digit numeric-3 country code from ISO 3166-1, shown as **CCC** above. Digits after these prefixes are managed by ISO-member national standards bodies.
+
+
+## Issuer identifier number
+
+The first six or eight digits, including the major industry identifier, compose the *issuer identifier number* (IIN) which identifies the issuing organization. The IIN is sometimes referred to as a "bank identification number" (BIN). The IIN's use is much broader than identification of a bank. IINs are used by companies other than banks.
+
+
+### IIN Register
+
+The official "ISO Register of Issuer Identification Numbers", is not available to the general public. It is only available to institutions who hold IINs published in the register, financial networks and processors. Institutions are required to sign a licensing agreement before they are given access to the register. Several IINs are well known, especially those representing credit card issuers.
+
+
+## Individual account identification
+
+In conjunction with the IIN, card issuers assign an account number to a card holder. The account number is variable in length with a maximum of 12 digits when used in conjunction with a six digit IIN. When using an eight digit IIN, the maximum total length of the primary account number (PAN) remains at 19 digits. The PAN comprises the IIN, the individual account identifier, and the check digit, so when using an eight digit IIN, the maximum length of an individual account identifier would only be 10 digits.
+
+
+## Check digit
+
+The final digit is a check digit which is calculated using the Luhn algorithm, defined in Annex B of ISO/IEC 7812-1.
+

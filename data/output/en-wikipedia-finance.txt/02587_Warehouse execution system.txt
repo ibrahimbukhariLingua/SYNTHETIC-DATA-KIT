@@ -1,0 +1,68 @@
+Warehouse execution system
+
+
+# Warehouse execution system
+
+
+
+**Warehouse execution systems** (**WES**) are computerized systems used in warehouses and distribution centers to manage and orchestrate the physical flow of products from receiving through shipping. Warehouses are storage facilities for raw materials and parts used in manufacturing operations; distribution centers (DCs) are facilities that store and distribute finished goods to retail locations, consumers, and other end customers.
+
+WES software organizes sequences and directs DC resources - both people and automation systems - necessary to move goods within a warehouse or DC, including: receiving, checking and sorting inbound products for storage (receiving); putaway of received goods into storage; replenishment of picking locations from storage; picking of customer orders; order assembly, checking and packing; loading and shipping. WES works in real time to enable the control of multiple elements of a warehouse process (e.g. inventory, personnel, machines and support services) where changing conditions in one work area or process may require changes in other areas or upstream/downstream processes (reactive).
+
+WES is an intermediate step between an enterprise resource planning (ERP) system or warehouse management system WMS and the resources necessary to perform the various warehouse processes. These resources include workers as well as the process control systems used for warehouse automation, often referred to as warehouse control systems or WCS. The WES communicates with inventory and order management systems (such as an ERP or WMS) and the personnel and machinery (including conveyor systems and sorters) that perform the physical tasks involved in the warehouse processes.
+
+
+## Background
+
+WES emerged as a hybrid system that combined specific WMS functionality for picking and other material movement processes with warehouse control system (WCS) functionality for automated warehouses. WCS is the software that controls the conveyor, sortation and other automated material handling systems that move cases, cartons, totes or pallets. In automated warehouses that deploy those types of material handling equipment, WES adds business process logic for planning, optimization and coordination of the work processes or work execution, including work sequencing and release. Many WES systems are tightly integrated with automated systems such as conveyors, sortation, pick-to-light, etc..
+
+More recently, some WES systems have incorporated advanced process modeling and Artificial Intelligence technology that enable real-time adjustments in warehouse processes. As a result, warehouses become more flexible and agile in response.
+
+
+## Purpose
+
+A WES has the ability to span across multiple areas of warehouse functionality that are traditionally managed by a variety of specialized software systems. WES can be deployed to encompass warehouse management functionality, warehouse control system functionality, material handling equipment (MHE) control, business intelligence and integration with host ERP systems. Encompassing this broad range of functionality is a distinct advantage for WES. As a result, the WES can leverage its visibility of lower level warehouse data to quickly adapt functionality needs for current conditions. This is especially true in facilities with automated systems. The WES can utilize its WCS roots to access connections to advanced picking and sortation systems thus offering an agile approach to optimizing operations in near real-time.
+
+
+## Business intelligence capabilities
+
+Another benefit of leveraging the visibility of lower level data across a broad range of warehouse functionality is the ability to provide unprecedented automated business intelligence. WES' access to and collection of data from various warehouse points can be utilized to provide not only advanced reporting and live dashboard functionality but business intelligence tools such as predictive analysis, prescriptive analysis, and issue detection. The WES can feed data into its business intelligence engine to be mined in near real-time so that DC operations can move beyond just being agile in response to changing conditions, to being proactive in making adjustments before conditions change. WES data can be analyzed to identify trends and predict operational conditions. For example, if operation peaks occur at the end of every month, warehouses can use WES feedback to ramp up staffing and equipment needs more efficiently to reduce overall costs. WES data can also be used to predict issues such as potential stock-outs or order fulfillment delays. Issue detection can also relate to preventative maintenance of warehouse equipment such as lift trucks, conveyor systems, etc. To illustrate this point, through analyzing vast amounts of data, the WES can predict when a conveyor motor may need to be replaced or when a lift truck may need servicing to reduce downtime. By collecting and analyzing data from various lower level warehouse points and taking proactive action, operation leads can use this functionality – which is unique to a WES – to make their facilities more efficient, safe and responsive to increasing customer service requirements.
+
+
+## Arguments against WES terminology
+
+There are a number of voices in the material handling industry that disagree with the creation of a separate term to define WES functionality.
+
+"The new term being used by material handling software providers, integrators, and pretty much anyone associated with the warehousing industry is Warehouse Execution System (WES). According to a March article in DC Velocity, Warehouse Execution Systems can replace both the WMS and WCS by maintaining warehouse inventory records and driving the mechanization. It certainly seems like a very tasty fry sauce! What's important to remember when exploring options for a Warehouse Execution System is that the functionality is the same functionality that has always been offered! The key to finding the best system for your facility is not a flashy new name offering a combination or best of both worlds mix of solutions, but rather a modularized solution that allows you to define the functionality required."
+
+"Why invent a new term? ... there is no such thing as a WES, WCS, or WMS. (There is) simply Warehouse Software functionality needed to suit a business requirement. If the term WES fits fine, but as soon as you draw too many boundaries you create is another layer of interface and support."
+
+This is not a view held by all parties and many analysts in supply chain are touting the benefits of a stand alone WES for legacy systems and WMS software that is costly and time consuming to repurpose. Both WMS and WCS providers claim to have WES capabilities to varying degrees. In many cases a flexible WES is a great solution and is being used by midsize to Fortune 100 companies globally.
+
+
+## Counters to the arguments
+
+Right or wrong to create a new term, the term WES is being used in the material handling and distribution industry. The creation of the term arose as a "gap" was identified in the previous divisions of functionality required to operate a distribution facility. "As the demands of omni-channel distribution continue to pressure facilities and supply chains to run more efficiently, many distributors are realizing that the current functionalities of WMS and WCS are insufficient to align, automate, and synchronize the discrete processes needed to optimally control their order-fulfillment needs."
+
+A common occurrence in a large distribution center is that there are multiple varying types of large equipment and work processes provided by multiple vendors. The control of these complex and sometimes intricate functions is provided by the equipment supplier that control software is often called warehouse control system or WCS software. This situation leads to some facilities have multiple WCS software packages running. Without a WES layer this presents a terminology problem: The operation of all the equipment and process functions need to be coordinated and synchronized to provide the required facility objectives. This will require either a "Master WCS" or the WMS or ERP system to perform the function. A WES is the master WCS.
+
+As in a manufacturing execution system (MES), the line between higher level and lower level control is blurred and not well defined, so it is with a WES. Manufacturing operations are significantly more mature than distribution when considering lean practices. This is evidenced by the total lack of a Wikipedia article on "Lean distribution". Manufacturing operations face the same challenges of distribution operations having many different work cells or processes controlled by vendor provided control systems. A special category of software was created for manufacturing to integrate the overall production and coordinate the efforts of all production resources.
+
+
+## E-commerce
+
+One of the byproducts of the rise of e-commerce, is the need for software to support the complexities of omni-channel fulfillment. "The omni-channel environment places enormous pressure on DCs to keep up with higher order volumes including rapid processing of small e-commerce orders." The market for WES solutions continue to grow as DC operators seek productivity and support a high throughput.
+
+Emerging functionality such as waveless processing is drawing attention to WES. Waveless processing requires constantly taking customer orders from a host system and releasing the work to the warehouse floor efficiently. This is in direct contrast to the typical WMS approach of batching the orders in waves. Waveless processing also allows orders to be worked as received, ensuring a faster turnaround time, and takes advantage of the WES grasp of near real-time information.
+
+
+## Related distribution operations software
+
+* Enterprise resource planning (ERP)
+* Labor management system (LMS)
+* Warehouse management system (WMS)
+* Order management system (OMS)
+* Transportation management system (TMS)
+* Yard management system (YMS)
+* Warehouse control system (WCS)
+* Low level machine control software: This software directly interfaces (through I/O) to equipment providing information to and taking directions from higher level systems. In many operations this functionality is provided by programmable logic controller often referred to as PLC logic. Other operations may use a general purpose computers coupled to industrial Input/Output systems to do the control.

@@ -1,0 +1,187 @@
+Goal-based investing
+
+
+# Goal-based investing
+
+
+
+**Goals-Based Investing** or **Goal-Driven Investing** (sometimes abbreviated GBI) is the use of financial markets to fund goals within a specified period of time. Traditional portfolio construction balances expected portfolio variance with return and uses a risk aversion metric to select the optimal mix of investments. By contrast, GBI optimizes an investment mix to minimize the probability of failing to achieve a minimum wealth level within a set period of time.
+
+Goals-based investors have numerous goals (known as the "goals-space") and capital is allocated across these goals as well as to investments within them. Following Maslow's hierarchy of needs, more important goals (e.g. survival needs: food, shelter, medical care) receive priority over less important goals (e.g. aspirational goals such as buying a vacation home or yacht). Once capital is divvied among an investor's goals, the portfolios are optimized to deliver the highest probability of achieving each specified goal. It is a similar approach to asset-liability management for insurance companies and the liability-driven investment strategy for pension funds, but GBI further integrates financial planning with investment management which insures that household goals are funded in an efficient manner.
+
+In goals-based investing, assets are the full set of resources the investor has available (including financial assets, real estate, employment income, social security, etc.) while liabilities are the financial liabilities (such as loans, mortgages, etc) in addition to the capitalized value of the household's financial goals and aspirations. GBI takes into account the progress against goals which are categorized as either essential needs, lifestyle wants or legacy aspirations depending on level of importance to an individual or family. It also helps to prevent rash investment decisions by providing a clear process for identifying goals and choosing investment strategies for those goals. These goals may include ability to put children in a good school, retiring early, and be able to afford a quality life after retirement.
+
+
+## Mathematical model
+
+Source:
+
+Goals-based investors are typically assumed to have a collection goals which compete for a limited pool of wealth. This set of goals, {\displaystyle {\mathsf {G}}}, is called the goals-space and is rank-ordered such that {\displaystyle \{A,B,C,...,N\}\in {\mathsf {G}}}, where goal {\displaystyle A} is preferred to goal {\displaystyle B}, goal {\displaystyle B} is preferred to goal {\displaystyle C} and so on, across the total number of goals, {\displaystyle N}. Mathematically, a goal is defined as a three-variable vector, {\displaystyle A=(w,W,t)}, where {\displaystyle w} is the current wealth dedicated to the goal, {\displaystyle W} is the future wealth required to fund the goal, and {\displaystyle t} is the time period in which the objective must be funded. {\displaystyle W} and {\displaystyle t} are given by the investor; {\displaystyle w} is an output of the across-goal optimization procedure. Current wealth, {\displaystyle w}, could be also thought of as the percentage of overall wealth an investor dedicates to the goal. Because of this definition, the goal vector can be equivalently stated as {\displaystyle A=(\varpi \vartheta ,W,t)} with {\displaystyle \varpi } representing the total pool of wealth available to the investor and {\displaystyle \vartheta } representing the percentage of the total wealth pool allocated to this particular goal (of course, 
+∑
+i
+
+
+ϑ
+i
+
+
+=
+1
+
+
+{\textstyle \sum \_{i}\vartheta \_{i}=1}
+
+).
+
+Because preferences across the goals-space can be declared, there exists a value function such that 
+A
+⪰
+B
+⟹
+v
+(
+A
+)
+≥
+v
+(
+B
+)
+
+
+{\textstyle A\succeq B\implies v(A)\geq v(B)}
+
+. It is therefore the objective of the investor to maximize utility by varying the allocation of wealth to each goal in the goals-space, and vary the allocation of wealth to potential investments within each goal:
+
+{\displaystyle \max \_{\vartheta ,\omega }\sum \_{i}^{N}v(i)\phi (\varpi \vartheta \_{i},W\_{i},t\_{i})}
+
+where {\displaystyle \phi (\cdot )} is the probability of achieving a goal, given the inputs. In most theoretical applications, {\displaystyle \phi (\cdot )} is assumed Gaussian (though any distribution model that fits the application may be used), and {\displaystyle \phi (\varpi \vartheta ,W,t)} usually takes the form
+
+{\displaystyle \phi (\varpi \vartheta ,W,t)=1-\Phi \left({\frac {W}{\varpi \vartheta }}^{\frac {1}{t}}-1;\mu ,\sigma \right)}
+
+where {\displaystyle \Phi (\cdot )} is the Gaussian cumulative distribution function, 
+W
+ϖ
+ϑ
+
+
+
+1
+t
+
+
+
+−
+1
+
+
+{\textstyle {\frac {W}{\varpi \vartheta }}^{\frac {1}{t}}-1}
+
+ is the return required to achieve the portfolio's objective within the given time period, and {\displaystyle \mu }, {\displaystyle \sigma } are the expected return and standard deviation of the investment portfolio. Expected returns and volatility are themselves functions of the portfolio's investment weights:
+
+{\displaystyle \mu =\sum \_{i}\omega \_{i}m\_{i}}
+
+{\displaystyle \sigma ^{2}=\sum \_{i}\omega \_{i}^{2}s\_{i}^{2}+\sum \_{i}\sum \_{i\neq j}\omega \_{i}\omega \_{j}s\_{i}s\_{j}\rho \_{i,j}}
+
+with {\displaystyle m} representing the investment's expected return, {\displaystyle s} representing the investment's expected standard deviation, and {\displaystyle \rho \_{i,j}} representing the correlation of investment {\displaystyle i} to investment {\displaystyle j}.
+
+The implementation of the model carries some complexity as it is recursive. The probability of achieving a goal is dependent on the amount of wealth allocated to the goal as well as the mix investments within each goal's portfolio. The mix of investments, however, is dependent on the amount of wealth dedicated to the goal. To overcome this recursivity the optimal mix of investments can first be found for discrete levels of wealth allocation, then a Monte Carlo engine can be used to find maximal utility.
+
+
+## Comparison to modern portfolio theory
+
+The fundamental difference between goals-based investing and modern portfolio theory (MPT) turns on the definition of "risk." MPT defines risk as portfolio volatility whereas GBI defines risk as the probability of failing to achieve a goal. Initially, it was thought that these competing definitions were mutually-exclusive, though it was later shown that the two are mathematically synonymous for most cases. In the case where investors are not limited in their ability to borrow or sell short, there is no cost to dividing wealth across various accounts, nor is there a mathematical difference between mean-variance optimization and probability maximization. However, goals-based investors are generally assumed to be limited in their ability to borrow and sell short. Under those real-world constraints, the efficient frontier has an endpoint and probability maximization produces different results than mean-variance optimization when a portfolio's required return ({\displaystyle r\_{req.}}) is greater than the maximum return offered by the mean-variance efficient frontier ({\displaystyle \mu \_{e}}). This is because when {\displaystyle r\_{req.}>\mu \_{e}} probability is maximized by *increasing* variance rather than minimizing it. MPT's quadratic utility form 
+u
+=
+r
+−
+γ
+2
+
+
+σ
+2
+
+
+,
+γ
+>
+0
+
+
+{\textstyle u=r-{\frac {\gamma }{2}}\sigma ^{2},\gamma >0}
+
+ assumes investors are *always* variance averse whereas GBI expects investors to be variance seeking when 
+r
+r
+e
+q
+.
+
+
+>
+μ
+e
+
+
+
+
+{\textstyle r\_{req.}>\mu \_{e}}
+
+, variance averse when {\displaystyle r\_{req.}<\mu \_{e}}, and variance indifferent when {\displaystyle r\_{req.}=\mu \_{e}}. Mean-variance portfolios are therefore first-order stochastically dominated by goals-based portfolios when short-sales and leverage are bounded.
+
+In its pure form, modern portfolio theory takes no account of investor goals. Rather, MPT portfolios are selected using an investor's variance aversion parameter, {\displaystyle \gamma }, and no account is taken of future wealth requirements, current wealth available, nor the time horizon within which the goals must be attained. MPT has since been adapted to include these variables, but goals-based portfolio solutions yield higher probabilities of goal achievement than adapted MPT.
+
+For most applications, mean-variance optimized portfolios and goals-based portfolios are the same. For aspirational goals, where an investor has allocated little initial wealth, goals-based portfolios will favor high-variance investments that would be eliminated from a mean-variance efficient portfolio.
+
+
+## History and development
+
+Goals-based investing grew out of observations made by behavioral finance and ongoing critiques of modern portfolio theory (MPT). Richard Thaler's observation that individuals tend to mentally subdivide their wealth, with each mental "bucket" dedicated to different objectives (a concept called mental accounting) was foundational to the later development of GBI. Indeed, some authors refer to goals-based portfolios as "mental accounts." Other authors began to critique MPT as not as effective when applied to individuals, especially in light of taxes.
+
+Behavioral portfolio theory (BPT) combined mental accounting with the redefinition of risk as the probability of failing to achieve a goal, and investors balance returns over-and-above their requirement with the risk of failing to achieve the goal. BPT also revealed a problem with adapting MPT. While most practitioners were building investment portfolios wherein the portfolio's expected return equaled the required return required to achieve the goal, BPT showed that this necessarily results in a 50% probability of achieving the goal. The probability maximization component of goals-based investing was therefore adopted from behavioral portfolio theory.
+
+Early critics of this approach suggested that divvying wealth across separate portfolios may generate inefficient mean-variance portfolios. It was eventually shown, however, that this physical manifestation of the mental accounting framework was not necessarily inefficient, so long as short-sales and leverage were allowed. As long as all portfolios reside on the mean-variance efficient frontier, then the aggregate portfolio will reside on the frontier as well.
+
+Other researchers further questioned the use of MPT when applied to individuals because the risk-aversion parameter was shown to vary through time and in response to different objectives. As Carrie H. Pan and Meir Statman put it: "foresight is different from hindsight, and the risk tolerance of investors, assessed in foresight, is likely different from their risk tolerance assessed in hindsight." MPT was synthesized with behavioral portfolio theory, and in that synthesis work the risk-aversion parameter was eliminated. Rather than assess her risk aversion parameter, the investor is asked to specify the maximum probability of failure she is willing to accept for a given goal. This probability figure is then mathematically converted into MPT's risk aversion parameter and portfolio optimization proceeds along mean-variance lines. The synthesis work, then, eliminated the risk-is-failure-probability of original behavioral portfolio theory and thus yielded infeasible solutions when the required return was greater than the portfolio's expected return.
+
+In addressing how investors should allocate wealth across goals, Jean Brunel observed that the declaration of a maximum probability of failure was mathematically synonymous to the declaration of a minimum mental account allocation. Investors, then, could allocate both within and across mental accounts, but some conversation was still required to allocate any remaining excess wealth.
+
+To solve the infeasibility problem of the synthesized MPT, as well the problem of allocating "excess wealth," the original probability maximization component of BPT was resurrected and the value-of-goals function was introduced. Investors, then, face a two-layer allocation decision: allocating wealth across goals and allocating to investments within each goal.
+
+In an effort to promote goals-based investing research, The Journal of Wealth Management was formed in 1998.
+
+
+## Goal-based Investing in Practice
+
+The key challenge for goal-based investing (GBI) is to implement dedicated investment solutions aiming to generate the highest possible probability of achieving investors’ goals, and a reasonably low expected shortfall in case adverse market conditions make it unfeasible to achieve those goals. Modern Portfolio Theory or standard portfolio optimisation techniques are not suitable to solve this problem.
+
+Deguest, Martellini, Milhau, Suri and Wang (2015), introduce a general operational framework, which formalises the goals-based risk allocation approach to wealth management proposed in Chhabra (2005), and which allows individual investors to optimally allocate to categories of risks they face across all life stages and wealth segments so as to achieve personally meaningful financial goals. One key feature in developing the risk allocation framework for goals-based wealth management includes the introduction of systematic rule-based multi-period portfolio construction methodologies, which is a required element given that risks and goals typically persist across multiple time frames. Academic research has shown that an efficient use of the three forms of risk management (diversification, hedging and insurance) is required to develop an investment solution framework dedicated to allowing investors to maximise the probabilities of reaching their meaningful goals given their dollar and risk budgets. As a result, the main focus of the framework is on the efficient management of rewarded risk exposures.
+
+GBI strategies aim to secure investors' most important goals (labelled as “essential”, i.e. affordable and secure goals), while also delivering a reasonably high chance of success for achieving other goals, including ambitious ones which cannot be fully funded together with the most essential ones (and which are referred to as “aspirational”). Holding a leverage-constrained exposure to a well-diversified performance-seeking portfolio (PSP) often leads to modest probabilities of achieving such ambitious goals, and individual investors may increase their chances of meeting these goals by holding aspirational assets which generally contain illiquid concentrated risk exposures, for example under the form of equity ownership in a private business.
+
+The goals-based wealth management framework includes two distinct elements. On the one hand, it involves the disaggregation of investor preferences into groups of goals that have similar key characteristics, with priority ranking and term structure of associated liabilities, and on the other hand it involves the mapping of these groups to optimised performance or hedging portfolios possessing corresponding risk and return characteristics, as well as an efficient allocation to such performance and hedging portfolios. More precisely, the framework involves a number of objective and subjective inputs, as well as a number of building block and asset allocation outputs, all of which are articulated within a five-step process:
+
+1. Objective Inputs - Realistic Description of Market Uncertainty
+
+2. Subjective Inputs - Detailed Description of Investor Situation
+
+3. Building Block Outputs - Goal-Hedging and Performance-Seeking Portfolios
+
+4. Asset Allocation Outputs - Dynamic Split Between Risky and Safe Building Blocks
+
+5. Reporting Outputs - Updated Probabilities of Reaching Goals
+
+
+## Goal-Based Investing for the Retirement Problem
+
+In most developed countries, pension systems are being threatened by rising demographic imbalances as well as lower growth in productivity. With the need to supplement public and private retirement benefits via voluntary contributions, individuals are becoming increasingly responsible for their own retirement savings and investment decisions.
+
+The principles of goal-based investing can be applied to the retirement problem (Giron, Martellini, Milhau, Mulvey, and Suri, 2018). In retirement investing, the goal is to generate replacement income. The first step is the identification of a safe “goal-hedging portfolio” (GHP), which effectively and reliably secures an investor’s essential goal, regardless of assumptions on parameter values such as risk premia on risky assets. In other words, the GHP should secure the purchasing power of retirement savings in terms of replacement income, an objective that is clearly different from securing the nominal value of retirement savings.
+
+A target level of replacement income that the investor would like to reach but is unable to secure given current resources is said to be an aspirational goal. On the other hand, an essential goal is an affordable level of income that the investor would like to secure with the highest confidence level. In most cases, current savings are insufficient to finance the target income level that allow the desired standard of living to be financed, so the investor needs to have access to upside potential via some performance seeking portfolio (PSP). It can be shown that the optimal payoff can be approximated with a simple dynamic GBI strategy in which the dollar allocation to the PSP is given by a multiple of the risk budget, defined as the distance between current savings and a floor equal to the present value of the essential goal.
+
+This form of strategy is reminiscent of the dynamic core-satellite investment approach of Amenc, Malaise, and Martellini (2004), with the GHP as the core and the PSP as the satellite. It allows the tracking error with respect to the replacement income portfolio to be managed in a non-symmetric way, by capturing part of the upside of the PSP while limiting funding ratio downside risk to a fixed level. From an implementation standpoint, it has the advantage over the probability-maximising strategy that it is only based on observable parameters.
+
+In order to achieve the highest success probability, the GBI strategy embeds a stop-gain mechanism, by which all assets are transferred to the GHP on the first date the aspirational goal is hit, that is if and when current wealth becomes sufficiently high to purchase the target level of replacement income cash flows. By using the proper GHP and a risk-controlled investment approach, retirement GBI strategies secure a fixed fraction of the purchasing power of each dollar invested without sacrificing upside potential.
+

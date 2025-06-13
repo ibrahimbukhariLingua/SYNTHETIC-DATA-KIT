@@ -1,0 +1,690 @@
+Business process modeling
+
+
+# Business process modeling
+
+
+
+**Business process modeling** (**BPM**) is the action of capturing and representing processes of an enterprise (i.e. modeling them), so that the current business processes may be analyzed, applied securely and consistently, improved, and automated.
+
+BPM is typically performed by business analysts, with subject matter experts collaborating with these teams to accurately model processes. It is primarily used in business process management, software development, or systems engineering.
+
+Alternatively, process models can be directly modeled from IT systems, such as event logs.
+
+
+## Overview
+
+According to the Association of Business Process Management Professionals (ABPMP), business process modeling is one discipline of business process management that comprises the following five disciplines: (Cʰᵃᵖᵗᵉʳ ¹.⁴ CBOK® ˢᵗʳᵘᶜᵗᵘʳᵉ) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ
+
+* Process modeling
+* Process analysis (understanding the as-is processes and their alignment with the company's objectives - analysis of business activities)
+* Process design (redesign - business process reengineering - or redesign of business processes - business process optimization)
+* Process performance measurement (can focus on the factors of time, cost, capacity, and quality or on the overarching view of waste)
+* Process transformation (planned, structured development, technical realization, and transfer to ongoing operations)
+
+However, a completely separate consideration of the disciplines is not possible: Business process modeling always requires a *business process analysis* for modeling the as-is processes (see section Analysis of business activities) or specifications from *process design* for modeling the to-be processes (see sections Business process reengineering and Business process optimization).
+
+The focus of business process modeling is on the representation of the flow of actions (activities), according to Hermann J. Schmelzer and Wolfgang Sesselmann consisting "of the cross-functional identification of value-adding activities that generate specific services expected by the customer and whose results have strategic significance for the company. They can extend beyond company boundaries and involve activities of customers, suppliers, or even competitors." (Cʰᵃᵖᵗᵉʳ ².¹ Dⁱᶠᶠᵉʳᵉⁿᶜᵉˢ ᵇᵉᵗʷᵉᵉⁿ ᵖʳᵒᶜᵉˢˢᵉˢ ᵃⁿᵈ ᵇᵘˢⁱⁿᵉˢˢ ᵖʳᵒᶜᵉˢˢᵉˢ) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ
+
+But also other qualities (facts) such as data and business objects (as inputs/outputs, formal organizations and roles (responsible/accountable/consulted/informed persons, see RACI), resources and IT-systems as well as guidelines/instructions (work equipment), requirements, key figures etc. can be modeled.
+
+The more of these characteristics are incorporated into the business process modeling, the better the abstraction of the business process models reflects reality - and the more complex the business process models become. "To reduce complexity and improve the comprehensibility and transparency of the models, the use of a view concept is recommended."(Cʰᵃᵖᵗᵉʳ ².⁴ Vⁱᵉʷˢ ᵒᶠ ᵖʳᵒᶜᵉˢˢ ᵐᵒᵈᵉˡⁱⁿᵍ) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ There is also a brief comparison of the view concepts of five relevant German-speaking schools of business informatics: 1) August W. Scheer, 2) Hubert Österle, 3) Otto K. Ferstl and Elmar J. Sinz, 4) Hermann Gehring and 5) Andreas Gadatsch.
+
+The term *view*s (August W. Scheer, Otto K. Ferstl and Elmar J. Sinz, Hermann Gehring and Andreas Gadatsch) is not used uniformly in all schools of business informatics - alternative terms are *design dimensions* (Hubert Österle) or *perspectives* (Zachman).
+
+M. Rosemann, A. Schwegmann, and P. Delfmann also see disadvantages in the *concept of views*: "It is conceivable to create information models for each perspective separately and thus partially redundantly. However, redundancies always mean increased maintenance effort and jeopardize the consistency of the models." (Cʰᵃᵖᵗᵉʳ ³.².¹ Rᵉˡᵉᵛᵃⁿᵗ ᵖᵉʳˢᵖᵉᶜᵗⁱᵛᵉˢ ᵒⁿ ᵖʳᵒᶜᵉˢˢ ᵐᵒᵈᵉˡˢ) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ
+
+According to Andreas Gadatsch, *business process modeling is understood as a part of business process management alongside process definition and process management*. (Cʰᵃᵖᵗᵉʳ ¹.¹ Pʳᵒᶜᵉˢˢ ᵐᵃⁿᵃᵍᵉᵐᵉⁿᵗ) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ
+
+Business process modeling is also a central aspect of holistic company mapping - which also deals with the mapping of the corporate mission statement, corporate policy/corporate governance, organizational structure, process organization, application architecture, regulations and interest groups as well as the market.
+
+According to the European Association of Business Process Management EABPM, "there are three different types of end-to-end business processes:
+
+* Leadership processes;
+* Execution processes and
+* Support processes." (Cʰᵃᵖᵗᵉʳ ².⁴ Pʳᵒᶜᵉˢˢ ᵗʸᵖᵉˢ) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ
+
+These three process types can be identified in every company and are used in practice almost without exception as the top level for structuring business process models. Instead the term *leadership processes* the term *management processes* is typically used. Instead of the term *execution processes* the term *core processes* has become widely accepted. (Cʰᵃᵖᵗᵉʳ ⁶.².¹ Oᵇʲᵉᶜᵗⁱᵛᵉˢ ᵃⁿᵈ ᶜᵒⁿᶜᵉᵖᵗ) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ, (Cʰᵃᵖᵗᵉʳ ¹.³ Tʰᵉ ᶜᵒⁿᶜᵉᵖᵗ ᵒᶠ ᵖʳᵒᶜᵉˢˢ) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ, (Cʰᵃᵖᵗᵉʳ ⁴.¹².² Dⁱᶠᶠᵉʳᵉⁿᵗⁱᵃᵗⁱᵒⁿ ᵇᵉᵗʷᵉᵉⁿ ᶜᵒʳᵉ ᵃⁿᵈ ˢᵘᵖᵖᵒʳᵗ ᵒᵇʲᵉᶜᵗⁱᵛᵉˢ) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ, (Cʰᵃᵖᵗᵉʳ ⁶.².² Iᵈᵉⁿᵗⁱᶠⁱᶜᵃᵗⁱᵒⁿ ᵃⁿᵈ ʳᵒᵘᵍʰ ᵈʳᵃᶠᵗ) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ
+
+If the *core processes* are then organized/decomposed at the next level in supply chain management (SCM), customer relationship management (CRM), and product lifecycle management (PLM), standard models of large organizations and industry associations such as the *SCOR model* can also be integrated into business process modeling.
+
+
+## History
+
+Techniques to model business processes such as the flow chart, functional flow block diagram, control flow diagram, Gantt chart, PERT diagram, and IDEF have emerged since the beginning of the 20th century. The Gantt charts were among the first to arrive around 1899, the flow charts in the 1920s, functional flow block diagram and PERT in the 1950s, and data-flow diagrams and IDEF in the 1970s. Among the modern methods are Unified Modeling Language and Business Process Model and Notation. Still, these represent just a fraction of the methodologies used over the years to document business processes. The term *business process modeling* was coined in the 1960s in the field of systems engineering by S. Williams in his 1967 article "Business Process Modelling Improves Administrative Control". His idea was that techniques for obtaining a better understanding of physical control systems could be used in a similar way for business processes. It was not until the 1990s that the term became popular.
+
+In the 1990s, the term *process* became a new productivity paradigm. Companies were encouraged to think in *processes* instead of *functions* and *procedures*. Process thinking looks at the chain of events in the company from purchase to supply, from order retrieval to sales, etc. The traditional modeling tools were developed to illustrate time and cost, while modern tools focus on cross-functional activities. These cross-functional activities have increased significantly in number and importance, due to the growth of complexity and dependence. New methodologies include business process redesign, business process innovation, business process management, integrated business planning, among others, all "aiming at improving processes across the traditional functions that comprise a company".
+
+In the field of software engineering, the term *business process modeling* opposed the common software process modeling, aiming to focus more on the state of the practice during software development. In that time (the early 1990s) all existing and new modeling techniques to illustrate business processes were consolidated as 'business process modeling languages'ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ. In the Object Oriented approach, it was considered to be an essential step in the specification of business application systems. Business process modeling became the base of new methodologies, for instance, those that supported data collection, data flow analysis, process flow diagrams, and reporting facilities. Around 1995, the first visually oriented tools for business process modeling and implementation were presented.
+
+
+## Objectives of business process modeling
+
+The objective of business process modeling is a - usually graphical - representation of end-to-end processes, whereby complex facts of reality are documented using a uniform (systematized) representation and reduced to the substantial (qualities). Regulatory requirements for the documentation of processes often also play a role here (e.g. document control, traceability, or integrity), for example from quality management, information security management or data protection.
+
+Business process modeling typically begins with determining the environmental requirements: First, the goal of the modeling (applications of business process modeling) must be determined. Business process models are now often used in a multifunctional way (see above). Second the model addressees must be determined, as the properties of the model to be created must meet their requirements. This is followed by the determination of the business processes to be modeled.
+
+The qualities of the business process that are to be represented in the model are specified in accordance with the goal of the modeling. As a rule, these are not only the functions constituting the process, including the relationships between them, but also a number of other qualities, such as formal organization, input, output, resources, information, media, transactions, events, states, conditions, operations and methods.
+
+The objectives of business process modeling may include (compare: Association of Business Process Management Professionals (ABPMP) (Cʰᵃᵖᵗᵉʳ ³.¹.² Pʳᵒᶜᵉˢˢ ᶜʰᵃʳᵃᶜᵗᵉʳⁱˢᵗⁱᶜˢ ᵃⁿᵈ ᵖʳᵒᵖᵉʳᵗⁱᵉˢ) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ):
+
+* Documentation of the company's business processes
+ + to gain knowledge of the business processes
+ + to map business unit(s) with the applicable regulations
+ + to transfer business processes to other locations
+ + to determine the requirements of new business activities
+ + to provide an external framework for the set of rules from procedures and work instructions
+ + to meet the requirements of business partners or associations (e.g. certifications)
+ + to gain advantages over competitors (e.g. in tenders)
+ + to comply with legal regulations (e.g. for operators of critical infrastructures, banks or producers of armaments)
+ + to check the fulfillment of standards and compliance requirements
+ + to create the basis for communication and discussion
+ + to train or familiarize employees
+ + to avoid loss of knowledge (e.g. due to staff leaving)
+ + to support quality and environmental management
+* Definition of process performance indicators and monitoring of process performance
+ + to increase process speed
+ + to reduce cycle time
+ + to increase quality
+ + to reduce costs, such as labor, materials, scrap, or capital costs
+* Preparation/Implementation of a *business process optimization* (which usually begins with an analysis of the current situation)
+ + to support the analysis of the current situation
+ + to develop alternative processes
+ + to introduce new organizational structures
+ + to outsource company tasks
+ + to redesign, streamline, or improve company processes (e.g. with the help of the CMM)
+* Preparation of an information technology project
+ + to support a *software evaluation*/*software selection*
+ + to support the customizing of commercial off-the-shelf software
+ + to introduce automation or IT support with a workflow management system
+* Definition of interfaces and SLAs
+* Modularization of company processes
+* Benchmarking between parts of the company, partners and competitors
+* Performing activity-based costing and simulations
+ + to understand how the process reacts to different stress rituals or expected changes
+ + to evaluate the effectiveness of measures for *business process optimization* and compare alternatives
+* Finding the best practice
+* Accompanying organizational changes
+ + such as the sale or partial sale
+ + such as the acquisition and integration of companies or parts of companies
+ + such as the introduction or change of IT systems or organizational structures
+* Participation in competitions (such as EFQM).
+
+## Applications of business process modeling
+
+Since business process modeling in itself makes no direct contribution to the financial success of a company, there is no motivation for business process modeling from the most important goal of a company, the intention to make a profit. The motivation of a company to engage in business process modeling therefore always results from the respective purpose. *Michael Rosemann, Ansgar Schwegmann und Patrick Delfmann* lists a number of purposes as motivation for business process modeling:
+
+* Organizational *documentation*, with the "objective of increasing transparency about the processes in order to increase the efficiency of communication about the processes" (Cʰᵃᵖᵗᵉʳ ³.².¹ Rᵉˡᵉᵛᵃⁿᵗ ᵖᵉʳˢᵖᵉᶜᵗⁱᵛᵉˢ ᵒⁿ ᵖʳᵒᶜᵉˢˢ ᵐᵒᵈᵉˡˢ) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ, (Cʰᵃᵖᵗᵉʳ ².⁵.⁴ Aʳᵉᵃˢ ᵒᶠ ᵃᵖᵖˡⁱᶜᵃᵗⁱᵒⁿ ᶠᵒʳ ᵖʳᵒᶜᵉˢˢ ᵐᵒᵈᵉˡⁱⁿᵍ ⁱⁿ ᵖʳᵃᶜᵗⁱᶜᵉ) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ including the ability to create process templates to relocate or replicate business functions or the objective to create a complete company model
+* Process-oriented *re-organization*, both in the sense of "(revolutionary) business process re-engineering and in the sense of continual (evolutionary) process improvement" (Cʰᵃᵖᵗᵉʳ ³.².¹ Rᵉˡᵉᵛᵃⁿᵗ ᵖᵉʳˢᵖᵉᶜᵗⁱᵛᵉˢ ᵒⁿ ᵖʳᵒᶜᵉˢˢ ᵐᵒᵈᵉˡˢ) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ with the objective of a vulnerability assessment (Cʰᵃᵖᵗᵉʳ ².⁵.⁴ Aʳᵉᵃˢ ᵒᶠ ᵃᵖᵖˡⁱᶜᵃᵗⁱᵒⁿ ᶠᵒʳ ᵖʳᵒᶜᵉˢˢ ᵐᵒᵈᵉˡⁱⁿᵍ ⁱⁿ ᵖʳᵃᶜᵗⁱᶜᵉ) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ, *process optimization* (e.g. by controlling and reducing total cycle time (TCT), through Kaizen, Six Sigma etc.) or *process standardization*
+* Continuous *process management*, as "planning, implementation and control of processes geared towards sustainability" (Cʰᵃᵖᵗᵉʳ ³.².¹ Rᵉˡᵉᵛᵃⁿᵗ ᵖᵉʳˢᵖᵉᶜᵗⁱᵛᵉˢ ᵒⁿ ᵖʳᵒᶜᵉˢˢ ᵐᵒᵈᵉˡˢ) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ
+* *Certifications* according to DIN ISO/IEC 9001 (or also according to ISO/IEC 14001, ISO/IEC 27001 etc.)
+* Benchmarking, defined as "comparison of company-specific structures and performance with selected internal or external references. In the context of process modeling, this can include the comparison of process models (structural benchmarking) or the comparison of process key figures" (Cʰᵃᵖᵗᵉʳ ³.².¹ Rᵉˡᵉᵛᵃⁿᵗ ᵖᵉʳˢᵖᵉᶜᵗⁱᵛᵉˢ ᵒⁿ ᵖʳᵒᶜᵉˢˢ ᵐᵒᵈᵉˡˢ) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ
+* Knowledge management with the "aim of increasing transparency about the company's knowledge resource in order to improve the process of identifying, acquiring, utilizing, developing and distributing knowledge" (Cʰᵃᵖᵗᵉʳ ³.².¹ Rᵉˡᵉᵛᵃⁿᵗ ᵖᵉʳˢᵖᵉᶜᵗⁱᵛᵉˢ ᵒⁿ ᵖʳᵒᶜᵉˢˢ ᵐᵒᵈᵉˡˢ) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ
+* *Selection* of ERP software, which "often documents its functionality in the form of (software-specific) reference models, so that it makes sense to also use a comparison of the company-specific process models with these software-specific models for software selection" (Cʰᵃᵖᵗᵉʳ ³.².¹ Rᵉˡᵉᵛᵃⁿᵗ ᵖᵉʳˢᵖᵉᶜᵗⁱᵛᵉˢ ᵒⁿ ᵖʳᵒᶜᵉˢˢ ᵐᵒᵈᵉˡˢ) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ, < (Cʰᵃᵖᵗᵉʳ ².⁵.⁴ Aʳᵉᵃˢ ᵒᶠ ᵃᵖᵖˡⁱᶜᵃᵗⁱᵒⁿ ᶠᵒʳ ᵖʳᵒᶜᵉˢˢ ᵐᵒᵈᵉˡⁱⁿᵍ ⁱⁿ ᵖʳᵃᶜᵗⁱᶜᵉ) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ
+* Model-based *customization*, i.e. "the configuration of commercial off-the-shelf software" often by means of "parameterization of the software through configuration of reference models" (Cʰᵃᵖᵗᵉʳ ³.².¹ Rᵉˡᵉᵛᵃⁿᵗ ᵖᵉʳˢᵖᵉᶜᵗⁱᵛᵉˢ ᵒⁿ ᵖʳᵒᶜᵉˢˢ ᵐᵒᵈᵉˡˢ) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ, (Cʰᵃᵖᵗᵉʳ ².⁵.⁴ Aʳᵉᵃˢ ᵒᶠ ᵃᵖᵖˡⁱᶜᵃᵗⁱᵒⁿ ᶠᵒʳ ᵖʳᵒᶜᵉˢˢ ᵐᵒᵈᵉˡⁱⁿᵍ ⁱⁿ ᵖʳᵃᶜᵗⁱᶜᵉ) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ
+* Software development, using the processes for "the description of the requirements for the software to be developed at a conceptual level as part of requirements engineering"(Cʰᵃᵖᵗᵉʳ ³.².¹ Rᵉˡᵉᵛᵃⁿᵗ ᵖᵉʳˢᵖᵉᶜᵗⁱᵛᵉˢ ᵒⁿ ᵖʳᵒᶜᵉˢˢ ᵐᵒᵈᵉˡˢ) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ, (Cʰᵃᵖᵗᵉʳ ³ Tʰᵉ ᵖᵃᵗʰ ᵗᵒ ᵃ ᵖʳᵒᶜᵉˢˢ-ᵒʳⁱᵉⁿᵗᵉᵈ ᵃᵖᵖˡⁱᶜᵃᵗⁱᵒⁿ ˡᵃⁿᵈˢᶜᵃᵖᵉ) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ, (Cʰᵃᵖᵗᵉʳ ².⁵.⁴ Aʳᵉᵃˢ ᵒᶠ ᵃᵖᵖˡⁱᶜᵃᵗⁱᵒⁿ ᶠᵒʳ ᵖʳᵒᶜᵉˢˢ ᵐᵒᵈᵉˡⁱⁿᵍ ⁱⁿ ᵖʳᵃᶜᵗⁱᶜᵉ) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ
+* Workflow management, for which the process models are "the basis for the creation of instantiable workflow models" (Cʰᵃᵖᵗᵉʳ ³.².¹ Rᵉˡᵉᵛᵃⁿᵗ ᵖᵉʳˢᵖᵉᶜᵗⁱᵛᵉˢ ᵒⁿ ᵖʳᵒᶜᵉˢˢ ᵐᵒᵈᵉˡˢ) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ
+* Simulation with the aim of "investigating the system behavior over time" and the "identification of weak points that would not be revealed by a pure model view" (Cʰᵃᵖᵗᵉʳ ³.².¹ Rᵉˡᵉᵛᵃⁿᵗ ᵖᵉʳˢᵖᵉᶜᵗⁱᵛᵉˢ ᵒⁿ ᵖʳᵒᶜᵉˢˢ ᵐᵒᵈᵉˡˢ) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ
+
+### Business process re-engineering (BPR)
+
+Within an extensive research program initiated in 1984 titled "Management in the 1990s" at MIT, the approach of *process re-engineering* emerged in the early 1990s. The research program was designed to explore the impact of information technology on the way organizations would be able to survive and thrive in the competitive environment of the 1990s and beyond. In the final report, N. Venkat Venkatraman summarizes the result as follows: The greatest increases in productivity can be achieved when new processes are planned in parallel with information technologies.
+
+This approach was taken up by Thomas H. Davenport (Pᵃʳᵗ I: A Fʳᵃᵐᵉʷᵒʳᵏ Fᵒʳ Pʳᵒᶜᵉˢˢ Iⁿⁿᵒᵛᵃᵗⁱᵒⁿ, Cʰᵃᵖᵗᵉʳ: Iⁿᵗʳᵒᵈᵘᶜᵗⁱᵒⁿ) as well as Michael M. Hammer and James A. Champy and developed it into business process re-engineering (BPR) as we understand it today, according to which business processes are fundamentally restructured in order to achieve an improvement in measurable performance indicators such as costs, quality, service and time.
+
+Business process re-engineering has been criticized in part for starting from a "green field" and therefore not being directly implementable for established companies. *Hermann J. Schmelzer and Wolfgang Sesselmann* assess this as follows: "The criticism of BPR has an academic character in many respects. ... Some of the points of criticism raised are justified from a practical perspective. This includes pointing out that an overly radical approach carries the risk of failure. It is particularly problematic if the organization and employees are not adequately prepared for BPR." (Cʰᵃᵖᵗᵉʳ ⁶.².¹ Oᵇʲᵉᶜᵗⁱᵛᵉˢ ᵃⁿᵈ ᶜᵒⁿᶜᵉᵖᵗ) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ
+
+The high-level approach to BPR according to Thomas H. Davenport consists of:
+
+1. Identifying Process for Innovation
+2. Identifying Change Levers
+3. Developing Process Visions
+4. Understanding Existing Processes
+5. Designing and Prototyping the New Process
+
+### Certification of the management system according to ISO
+
+With ISO/IEC 27001:2022, the standard requirements for management systems are now standardized for all major ISO standards and have a process character.
+
+
+#### General standard requirements for management systems with regard to processes
+
+In the ISO/IEC 9001, ISO/IEC 14001, ISO/IEC 27001 standards, this is anchored in Chapter 4.4 in each case:
+
+| ISO/IEC 9001:2015 Clause 4.4 Quality management system and its processes | ISO/IEC 14001:2015 Clause 4.4. Environmental management systems | ISO/IEC 27001:2022 Clause 4.4 Information security management system |
+| --- | --- | --- |
+
+Each of these standards requires the organization to establish, implement, maintain and continually improve an appropriate management system "including the processes needed and their interactions"., ,
+
+In the definition of the standard requirements for the *processes needed and their interactions*, ISO/IEC 9001 is more specific in clause 4.4.1 than any other ISO standard for management systems and defines that "the organization shall determine and apply the processes needed for" an appropriate management system throughout the organization and also lists detailed requirements with regard to processes:
+
+* Determine the inputs required and the outputs expected
+* Determine the sequence and interaction
+* Define and apply the criteria and methods (including monitoring, measurement, and related performance indicators) for effective operation and control
+* Determine the resources needed
+* Assign the responsibilities and authorities
+* Address the risks and opportunities
+* Evaluate these processes and implement any changes needed for effective operation and control
+* Improve
+
+In addition, clause 4.4.2 of the ISO/IEC 9001 lists some more
+detailed requirements with regard to processes:
+
+* Maintain documented information
+* Retain documented information for correct implementation
+
+The standard requirements for *documented information* are also relevant for business process modelling as part of an ISO management system.
+
+
+#### Specific standard requirements for management systems with regard to documented information
+
+In the standards ISO/IEC 9001, ISO/IEC 14001, ISO/IEC 27001 the requirements with regard to *documented information* are anchored in clause 7.5 (detailed in the respective standard in clauses "7.5.1. General", "7.5.2. Creating and updating" and "7.5.3. Control of documented information").
+
+The standard requirements of ISO/IEC 9001 used here as an example *include* in clause "7.5.1. General"
+
+* Documented information by the standard requirements; and
+* Documented information on the effectiveness of the management system must be included;
+
+*Demand* in clause "7.5.2. Creating and updating"
+
+* Labelling and description (e.g. with title, date, author or reference number);
+* Suitable format (e.g. language, software version, graphics) and medium (e.g. paper, electronic); and
+* Review and approval
+
+And *require* in clause "7.5.3. Control of documented information"
+
+* To ensure suitable and available at the place and time as required;
+* To ensure protection (e.g. against loss of confidentiality, improper use or loss of integrity);
+* To consider distribution, access, retrieval,and use;
+* To consider filing/storage and preservation (including preservation of readability);
+* To perform monitoring of changes (e.g. version control); and
+* To consider storage and disposition of further whereabouts.
+
+Based on the standard requirements,
+
+* To determine and continuously improve the *required processes and their interactions*
+* To determine and maintain the content of the *documented information* deemed necessary and
+* To ensure the secure handling of *documented information* (protection, access, monitoring, and maintenance)
+
+Preparing for ISO certification of a management system is a very good opportunity to establish or promote business process modelling in the organisation.
+
+
+### Business process optimization
+
+Hermann J. Schmelzer and Wolfgang Sesselmann point out that the field of improvement of the three methods mentioned by them as examples for process optimization (control and reduction of total cycle time (TCT), Kaizen and Six Sigma) are processes: In the case of total cycle time (TCT), it is the business processes (end-to-end processes) and sub-processes, with Kaizen it is the process steps and activity and with Six Sigma it is the sub-processes, process steps and activity. (Cʰᵃᵖᵗᵉʳ ⁶.³.¹ Tᵒᵗᵃˡ Cʸᶜˡᵉ Tⁱᵐᵉ (TCT), KAIZEN ᵃⁿᵈ Sⁱˣ Sⁱᵍᵐᵃ ⁱⁿ ᶜᵒᵐᵖᵃʳⁱˢᵒⁿ) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ
+
+For the **total cycle time** (TCT), Hermann J. Schmelzer and Wolfgang Sesselmann list the following key features: (Cʰᵃᵖᵗᵉʳ ⁶.³.² Tᵒᵗᵃˡ Cʸᶜˡᵉ Tⁱᵐᵉ (TCT)) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ
+
+* Identify barriers that hinder the process flow
+* Eliminate barriers and substitute processes
+* Measure the effects of barrier removal
+* Comparison of the measured variables with the targets
+
+Consequently, business process modeling for TCT must support adequate documentation of barriers, barrier handling, and measurement.
+
+When examining Kaizen tools, initially, there is no direct connection to business processes or business process modeling. However, Kaizen and business process management can mutually enhance each other. In the realm of business process management, Kaizen's objectives are directly derived from the objectives for business processes and sub-processes. This linkage ensures that Kaizen measures effectively support the overarching business objectives." (Cʰᵃᵖᵗᵉʳ ⁶.³.³ KAIZEN) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ
+
+Six Sigma is designed to prevent errors and improve the process capability so that the proportion of process outcomes that meet the requirements is 6σ - or in other words, for every million process outcomes, only 3.4 errors occur. Hermann J. Schmelzer and Wolfgang Sesselmann explain: "Companies often encounter considerable resistance at a level of 4σ, which makes it necessary to redesign business processes in the sense of business process re-engineering (design for Six Sigma)." (Cʰᵃᵖᵗᵉʳ ⁶.³.⁴ Sⁱˣ Sⁱᵍᵐᵃ) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ For a reproducible measurement of process capability, precise knowledge of the business processes is required and business process modeling is a suitable tool for design for Six Sigma. Six Sigma, therefore, uses business process modeling according to SIPOC as an essential part of the methodology, and business process modeling using SIPOC has established itself as a standard tool for Six Sigma.
+
+
+### Inter-company business process modeling
+
+The aim of inter-company business process modeling is to include the influences of external stakeholders in the analysis or to achieve inter-company comparability of business processes, e.g. to enable benchmarking.
+
+*Martin Kugler* lists the following requirements for business process modeling in this context: (Cʰᵃᵖᵗᵉʳ ¹⁴.².¹ Rᵉ𐞥ᵘⁱʳᵉᵐᵉⁿᵗˢ ᶠᵒʳ ⁱⁿᵗᵉʳ-ᶜᵒᵐᵖᵃⁿʸ ᵇᵘˢⁱⁿᵉˢˢ ᵖʳᵒᶜᵉˢˢ ᵐᵒᵈᵉˡⁱⁿᵍ) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ
+
+* Employees from different companies must comprehend business process models, highlighting the critical importance of familiarity with modeling techniques. Acceptance of business process modeling is bolstered by the simplicity of representation. Models should be clear, easy to understand, and as self-explanatory as possible. Standardization of the presentation of inter-company business process models across different companies is essential to ensure consistent comprehensibility and acceptance, particularly given the varied representations used within different organizations. It is imperative to employ an industry-neutral modeling technique to accommodate the diverse backgrounds of companies along the value chain (supplier, manufacturer, retailer, customer), which typically span different industries.
+
+## Topics
+
+
+### Analysis of business activities
+
+
+#### Define framework conditions
+
+The analysis of business activities determines and defines the framework conditions for successful business process modeling. This is where the company should start,
+
+* define the relevant *applications* of business process modeling on the basis of the business model and where it is positioned in the value chain,
+* derive the *strategy for the long-term success of business process modeling* from the business strategy and develop an approach for structuring the business process models. Both the relevant *purposes* and the *strategy* directly influence the process map.
+
+This *strategy for the long-term success of business process modeling* can be characterized by the market-oriented view and/or the resource-based view. *Jörg Becker and Volker Meise* explain: "Whereas in the market view, the industry and the behavior of competitors directly determine a company's strategy, the resource-oriented approach takes an internal view by analyzing the strengths and weaknesses of the company and deriving the direction of development of the strategy from this." (Cʰᵃᵖᵗᵉʳ ⁴.⁶ Tʰᵉ ʳᵉˢᵒᵘʳᶜᵉ-ᵇᵃˢᵉᵈ ᵛⁱᵉʷ) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ And further: "The alternative character initially formulated in the literature between the market-based and resource-based view has now given way to a differentiated perspective. The core competence approach is seen as an important contribution to the explanation of success potential, which is used alongside the existing, market-oriented approaches."(Cʰᵃᵖᵗᵉʳ ⁴.⁷ Cᵒᵐᵇⁱⁿᵃᵗⁱᵒⁿ ᵒᶠ ᵛⁱᵉʷˢ) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ Depending on the company's strategy, the *process map* will therefore be the business process models with a view to market development and to resource optimization in a balanced manner.
+
+
+#### Identify business processes
+
+Following the identification phase, a company's business processes are distinguished from one another through an analysis of their respective business activities (refer also to business process analysis). A business process constitutes a set of interconnected, organized actions (activities) geared towards delivering a specific service or product (to fulfill a specific goal) for a particular customer or customer group.
+
+According to the European Association of Business Process Management (EABPM), establishing a common understanding of the current process and its alignment with the objectives serves as an initial step in process design or reengineering." (Cʰᵃᵖᵗᵉʳ ⁴ Pʳᵒᶜᵉˢˢ ᵃⁿᵃˡʸˢⁱˢ) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ
+
+The effort involved in analysing the as-is processes is repeatedly criticised in the literature, especially by proponents of business process re-engineering (BPR), and it is suggested that the definition of the target state should begin immediately.
+
+*Hermann J. Schmelzer and Wolfgang Sesselmann*, on the other hand, discuss and evaluate the criticism levelled at the radical approach of business process re-engineering (BPR) in the literature and "recommend carrying out as-is analyses. A reorganisation must know the current weak points in order to be able to eliminate them. The results of the analyses also provide arguments as to why a process re-engineering is necessary. It is also important to know the initial situation for the transition from the current to the target state. However, the analysis effort should be kept within narrow limits. The results of the analyses should also not influence the redesign too strongly." (Cʰᵃᵖᵗᵉʳ ⁶.².² Cʳⁱᵗⁱᶜᵃˡ ᵃˢˢᵉˢˢᵐᵉⁿᵗ ᵒᶠ ᵗʰᵉ BPR) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ
+
+
+#### Structure business processes - building a process map
+
+*Timo Füermann* explains: "Once the business processes have been identified and named, they are now compiled in an overview. Such overviews are referred to as process maps." (Cʰᵃᵖᵗᵉʳ ².⁴ Cʳᵉᵃᵗⁱⁿᵍ ᵗʰᵉ ᵖʳᵒᶜᵉˢˢ ᵐᵃᵖ) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ
+
+*Jörg Becker and Volker Meise* provide the following list of activities for structuring business processes:
+
+* Enumeration of the main processes,
+* Definition of the process boundaries,
+* Determining the strategic relevance of each process,
+* Analysis of the need for improvement of a process and
+* Determining the political and cultural significance of the process (Cʰᵃᵖᵗᵉʳ ⁴.¹⁰ Dᵉᶠⁱⁿⁱⁿᵍ ᵗʰᵉ ᵖʳᵒᶜᵉˢˢ ˢᵗʳᵘᶜᵗᵘʳᵉ) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ
+
+The structuring of business processes generally begins with a distinction between management, core, and support processes.
+
+* *Management processes* govern the operation of a company. Typical management processes include corporate governance and strategic management. They define corporate objectives and monitor the achievement of objectives.
+* *Core processes* constitute the core business and create the primary value stream. Typical operational processes are purchasing, manufacturing, marketing, and sales. They generate visible, direct customer benefits.
+* *Support processes* provide and manage operational resources. They support the core and management processes by ensuring the smooth running of business operations. Examples include accounting, recruitment, and technical support.
+
+#### Structure core processes based on the strategy for the long-term success of business process modeling
+
+As the *core business processes* clearly make up the majority of a company's identified business processes, it has become common practice to subdivide the core processes once again. There are different approaches to this depending on the type of company and business activity. These approaches are significantly influenced by the defined *application* of business process modeling and the *strategy for the long-term success of business process modeling*.
+
+In the case of a primarily market-based strategy, end-to-end core business processes are often defined from the customer or supplier to the retailer or customer (e.g. "from offer to order", "from order to invoice", "from order to delivery", "from idea to product", etc.). In the case of a strategy based on resources, the core business processes are often defined on the basis of the central corporate functions ("gaining orders", "procuring and providing materials", "developing products", "providing services", etc.).
+
+In a differentiated view without a clear focus on the market view or the resource view, the core business processes are typically divided into CRM, PLM and SCM.
+
+* CRM (customer relationship management) describes the business processes for customer acquisition, quotation and order creation as well as support and maintenance
+* PLM (product lifecycle management) describes the business processes from product portfolio planning, product planning, product development and product maintenance to product discontinuation and individual developments
+* SCM (supply chain management) describes the business processes from supplier management through purchasing and all production stages to delivery to the customer, including installation and commissioning where applicable
+
+However, other approaches to structuring core business processes are also common, for example from the perspective of customers, products or sales channels.
+
+* "Customers" describes the business processes that can be assigned to specific customer groups (e.g. private customer, business customer, investor, institutional customer)
+* "Products" describes the business processes that are product-specific (e.g. current account, securities account, loan, issue)
+* "Sales channels" describe the business processes that are typical for the type of customer acquisition and support (e.g. direct sales, partner sales, online).
+
+The result of structuring a company's business processes is the *process map* (shown, for example, as a value chain diagram). *Hermann J. Schmelzer and Wolfgang Sesselmann* add: "There are connections and dependencies between the business processes. They are based on the transfer of services and information. It is important to know these interrelationships in order to understand, manage, and control the business processes." (Cʰᵃᵖᵗᵉʳ ².⁴.³ Pʳᵒᶜᵉˢˢ ᵐᵃᵖ) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ
+
+
+### Definition of business processes
+
+The definition of business processes often begins with the company's core processes because they
+
+* Fulfill their own market requirements,
+* Operate largely autonomously/independently and independently of other business areas and
+* Contribute to the business success of the company,
+
+For the company
+
+* Have a strong external impact,
+* Can be easily differentiated from other business processes and
+* Offer the greatest potential for business process optimization, both by improving process performance or productivity and by reducing costs.
+
+The scope of a business process should be selected in such a way that it contains a manageable number of sub-processes, while at the same time keeping the total number of business processes within reasonable limits. Five to eight business processes per business unit usually cover the performance range of a company.
+
+Each business process should be independent - but the processes are interlinked.
+
+The definition of a business process includes: What result should be achieved on completion? What activities are necessary to achieve this? Which objects should be processed (orders, raw materials, purchases, products, ...)?
+
+Depending on the prevailing corporate culture, which may either be more inclined towards embracing change or protective of the status quo and the effectiveness of communication, defining business processes can prove to be either straightforward or challenging. This hinges on the willingness of key stakeholders within the organization, such as department heads, to lend their support to the endeavor. Within this context, effective communication plays a pivotal role.
+
+In elucidating this point, Jörg Becker and Volker Meise elucidate that the communication strategy within an organizational design initiative should aim to garner support from members of the organization for the intended structural changes. It is worth noting that business process modeling typically precedes business process optimization, which entails a reconfiguration of process organization - a fact well understood by the involved parties. Therefore, the communication strategy must focus on persuading organizational members to endorse the planned structural adjustments." (Cʰᵃᵖᵗᵉʳ ⁴.¹⁵ Iⁿᶠˡᵘᵉⁿᶜⁱⁿᵍ ᵗʰᵉ ᵈᵉˢⁱᵍⁿ ᵒᶠ ᵗʰᵉ ʳᵉᵍᵘˡᵃᵗᵒʳʸ ᶠʳᵃᵐᵉʷᵒʳᵏ) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ In the event of considerable resistance, however, external knowledge can also be used to define the business processes.
+
+
+#### General process identification and individual process identification
+
+*Jörg Becker and Volker Meise* mention two approaches (*general process identification* and *individual process identification*) and state the following about general process identification: "In the general process definition, it is assumed that basic, generally valid processes exist that are the same in all companies." It goes on to say: "Detailed reference models can also be used for general process identification. They describe industry- or application system-specific processes of an organization that still need to be adapted to the individual case, but are already coordinated in their structure." (Cʰᵃᵖᵗᵉʳ ⁴.¹¹ Gᵉⁿᵉʳᵃˡ ᵖʳᵒᶜᵉˢˢ ⁱᵈᵉⁿᵗⁱᶠⁱᶜᵃᵗⁱᵒⁿ) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ
+
+*Jörg Becker and Volker Meise* state the following about individual process identification: "In individual or singular process identification, it is assumed that the processes in each company are different according to customer needs and the competitive situation and can be identified inductively based on the individual problem situation." (Cʰᵃᵖᵗᵉʳ ⁴.¹² Iⁿᵈⁱᵛⁱᵈᵘᵃˡ ᵖʳᵒᶜᵉˢˢ ⁱᵈᵉⁿᵗⁱᶠⁱᶜᵃᵗⁱᵒⁿ) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ
+
+The result of the definition of the business processes is usually a rough structure of the business processes as a value chain diagram.
+
+
+### Further structuring of business processes
+
+The rough structure of the business processes created so far will now be decomposed - by breaking it down into sub-processes that have their own attributes but also contribute to achieving the goal of the business process. This decomposition should be significantly influenced by the *application* and *strategy for the long-term success of business process modeling* and should be continued as long as the tailoring of the sub-processes defined this way contributes to the implementation of the *purpose* and *strategy*.
+
+A sub-process created in this way uses a model to describe the way in which procedures are carried out in order to achieve the intended operating goals of the company. The model is an abstraction of reality (or a target state) and its concrete form depends on the intended use (application).
+
+A further decomposition of the sub-processes can then take place during business process modeling if necessary. If the business process can be represented as a sequence of phases, separated by milestones, the decomposition into phases is common. Where possible, the transfer of milestones to the next level of decomposition contributes to general understanding.
+
+The result of the further structuring of business processes is usually a hierarchy of sub-processes, represented in value chain diagrams. It is common that not all business processes have the same depth of decomposition. In particular, business processes that are not safety-relevant, cost-intensive or contribute to the operating goal are broken down to a much lesser depth. Similarly, as a preliminary stage of a decomposition of a process planned for (much) later, a common understanding can first be developed using simpler / less complex means than *value chain diagrams* - e.g. with a textual description or with a turtle diagram (Cʰᵃᵖᵗᵉʳ ³.¹ Dᵉᶠⁱⁿⁱⁿᵍ ᵖʳᵒᶜᵉˢˢ ᵈᵉᵗᵃⁱˡˢ) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ (not to be confused with turtle graphic!).
+
+
+### Assigning the process responsibility
+
+Complete, self-contained processes are summarized and handed over to a responsible person or team. The *process owner* is responsible for success, creates the framework conditions, and coordinates his or her approach with that of the other process owners. Furthermore, he/she is responsible for the exchange of information between the business processes. This coordination is necessary in order to achieve the overall goal orientation.
+
+
+### Modeling business process
+
+
+#### Design of the process chains
+
+If business processes are documented using a specific IT-system and representation, e.g. graphically, this is generally referred to as modeling. The result of the documentation is the *business process model*.
+
+The question of whether the business process model should be created through *as is modeling* or *to be modeling* is significantly influenced by the defined *application* and the *strategy for the long-term success of business process modeling*. The previous procedure with analysis of business activities, defineition of business processes and further structuring of business processes is advisable in any case.
+
+Ansgar Schwegmann and Michael Laske explain: "Determining the current status is the basis for identifying weaknesses and localizing potential for improvement. For example, weak points such as organizational breaks or insufficient IT penetration can be identified." (Cʰᵃᵖᵗᵉʳ ⁵.¹ Iⁿᵗᵉⁿᵗⁱᵒⁿ ᵒᶠ ᵗʰᵉ ᵃˢ ⁱˢ ᵐᵒᵈᵉˡⁱⁿᵍ) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ
+
+The following disadvantages speak against *as is* modeling:
+
+* The creativity of those involved in the project to develop optimal target processes is stifled, as old structures and processes may be adopted without reflection in downstream target modeling and
+* The creation of detailed *as is* models represents a considerable effort, also influenced by the effort required to reach a consensus between the project participants at interfaces and responsibility transitions
+
+These arguments weigh particularly heavily if Business process re-engineering (BPR) is planned anyway.
+
+Ansgar Schwegmann and Michael Laske also list a number of advantages of *as is* modeling: (Cʰᵃᵖᵗᵉʳ ⁵.¹ Iⁿᵗᵉⁿᵗⁱᵒⁿ ᵒᶠ ᵃˢ-ⁱˢ ᵐᵒᵈᵉˡⁱⁿᵍ) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ
+
+* Modeling the current situation is the basis for identifying weaknesses and potential for improvement
+* Knowledge of the current state is a prerequisite for developing migration strategies to the target state
+* Modeling the current state provides an overview of the existing situation, which can be particularly valuable for newly involved and external project participants
+* The *as is* modeling can be a starting point for training and introducing project participants to the tools and methods
+* The *as is* model can serve as a checklist for later target modeling so that no relevant issues are overlooked
+* The *as is* models can be used as starting models for target modeling if the target state is very similar to the current situation, at least in some areas
+
+Other advantages can also be found, such as
+
+* The *as is* model is suitable for supporting certification of the management system
+* The *as is* model can serve as a basis for organizational documentation (written rules, specifications and regulations of the organization, ...)
+* The requirements for workflow management can be checked on the basis of the *as is* model (definition of processes, repetition rate, ...)
+* Key figures can be collected on the basis of the *as is* model in order to be compared with the key figures achieved after a reorganization and to measure the success of the measures.
+
+Mario Speck and Norbert Schnetgöke define the objective of *to be* modeling as follows: "The target processes are based on the strategic goals of the company. This means that all sub-processes and individual activities of a company must be analyzed with regard to their target contribution. Sub-processes or activities that cannot be identified as value-adding and do not serve at least one non-monetary corporate objective must therefore be eliminated from the business processes." (Cʰᵃᵖᵗᵉʳ ⁶.².³ Cᵃᵖᵗᵘʳⁱⁿᵍ ᵃⁿᵈ ᵈᵒᶜᵘᵐᵉⁿᵗⁱⁿᵍ ᵗᵒ ᵇᵉ ᵐᵒᵈᵉˡˢ
+)
+
+They also list five basic principles that have proven their worth in the creation of *to be* models:
+
+* Parallel processing of sub-processes and individual activities is preferable to sequential processing - it contains the greater potential for optimization.
+* The development of a sub-process should be carried out as consistently as possible by one person or group - this allows the best model quality to be achieved.
+* Self-monitoring should be made possible for individual sub-processes and individual activities during processing - this reduces quality assurance costs.
+* If not otherwise possible, at least one internal customer/user should be defined for each process - this strengthens customer awareness and improves the assessability of process performance.
+* Learning effects that arise during the introduction of the target processes should be taken into account - this strengthens the employees' awareness of value creation.
+
+The business process model created by *as is modeling* or *to be modeling* consists of:
+
+
+#### Sub-processes
+
+August W. Scheer is said to have said in his lectures: *A process is a process is a process.* This is intended to express the recursiveness of the term, because almost every process can be broken down into smaller processes (sub-processes). In this respect, terms such as *business process*, *main process*, *sub-process* or *elementary process* are only a desperate attempt to name the level of process decomposition. As there is no universally valid agreement on the granularity of a *business process*, *main process*, *sub-process* or *elementary process*, the terms are not universally defined, but can only be understood in the context of the respective business process model.
+
+In addition, some German-speaking schools of business informatics do not use the terms *process* (in the sense of representing the sequence of actions) and *function* (in the sense of a delimited *corporate function*/action (activity) area that is clearly assigned to a *corporate function owner*).
+
+For example, in August W. Scheer's ARIS it is possible to use functions from the *function view* as processes in the *control view* and vice versa. Although this has the advantage that already defined processes or functions can be reused across the board, it also means that the proper purpose of the *function view* is diluted and the ARIS user is no longer able to separate *processes* and *functions* from one another.
+
+The first image shows as a value chain diagram how the business process *Edit sales pipeline* has been broken down into *sub-processes* (in the sense of representing the sequence of actions (activities)) based on its phases.
+
+The second image shows an excerpt of typical *functions* (in the sense of delimited *corporate function*/action (activity) areas, which are assigned to a *corporate function owner*), which are structured based on the areas of competence and responsibility hierarchy. The *corporate functions* that support the business process *Edit sales pipeline* are marked in the function tree.
+
+A business process can be decomposed into sub-processes until further decomposition is no longer meaningful/possible (smallest meaningful sub-process = *elementary process*). Usually, all levels of decomposition of a business process are documented in the same methodology: Process symbols. The process symbols used when modeling one level of decomposition then usually refer to the sub-processes of the next level until the level of *elementary processes* is reached. Value chain diagrams are often used to represent *business processes*, *main processes*, *sub-processes* and *elementary processes*.
+
+A workflow is a representation of a sequence of tasks, declared as work of a person, of a simple or complex mechanism, of a group of persons, of an organization of staff, or of machines (including IT-systems). A workflow is therefore always located at the elementary process level. The workflow may be seen as any abstraction of real work, segregated into workshare, work split, or other types of ordering. For control purposes, the workflow may be a view of real work under a chosen aspect.
+
+
+#### Functions (*Tasks*)
+
+The term *functions* is often used synonymously for a delimited *corporate function*/action (activita) area, which is assigned to a *corporate function owner*, and the atomic activity (task) at the level of the *elementary processes*. In order to avoid the double meaning of the term *function*, the term *task* can be used for the atomic activities at the level of the *elementary processes* in accordance with the naming in BPMN. Modern tools also offer the automatic conversion of a *task* into a *process*, so that it is possible to create a further level of process decomposition at any time, in which a *task* must then be upgraded to an *elementary process*.
+
+The graphical elements used at the level of elementary processes then describe the (temporal-logical) sequence with the help of functions (*tasks*). The sequence of the functions (*tasks*) within the *elementary processes* is determined by their logical linking with each other (by logical operators or Gateways), provided it is not already specified by input/output relationships or Milestones. It is common to use additional graphical elements to illustrate interfaces, states (events), conditions (rules), milestones, etc. in order to better clarify the process. Depending on the modeling tool used, very different graphical representation (models) are used.
+
+Furthermore, the functions (*tasks*) can be supplemented with graphical elements to describe inputs, outputs, systems, roles, etc. with the aim of improving the accuracy of the description and/or increasing the number of details. However, these additions quickly make the *model* confusing. To resolve the contradiction between accuracy of description and clarity, there are two main solutions: Outsourcing the additional graphical elements for describing inputs, outputs, systems, roles, etc. to a Function Allocation Diagram (FAD) or selectively showing/hiding these elements depending on the question/application.
+
+The *function allocation diagram* shown in the image illustrates the addition of graphical elements for the description of inputs, outputs, systems, roles, etc. to functions (*tasks*) very well.
+
+
+#### Master data (artifacts)
+
+The term *master data* is neither defined by The Open Group (The Open Group Architecture Framework, TOGAF) or John A. Zachman (Zachman Framework) nor any of the five relevant German-speaking schools of business informatics: 1) August W. Scheer, 2) Hubert Österle, 3) Otto K. Ferstl and Elmar J. Sinz, 4) Hermann Gehring and 5) Andreas Gadatsch and is commonly used in the absence of a suitable term in the literature. It is based on the general term for data that represents basic information about operationally relevant objects and refers to basic information that is not primary information of the business process.
+
+For August W. Scheer in ARIS, this would be the basic information of the organization view, data view, function view and performance view. (Cʰᵃᵖᵗᵉʳ ¹ Tʰᵉ ᵛⁱˢⁱᵒⁿ: A ᶜᵒᵐᵐᵒⁿ ˡᵃⁿᵍᵘᵃᵍᵉ ᶠᵒʳ IT ᵃⁿᵈ ᵐᵃⁿᵃᵍᵉᵐᵉⁿᵗ) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ
+
+For Andreas Gadatsch in GPM (**G**anzheitliche **P**rozess**m**odellierung (German), means holistic process modelling), this would be the basic information of the organizational structure view, activity structure view, data structure view, and application structure view. (Cʰᵃᵖᵗᵉʳ ³.² GPM - Hᵒˡⁱˢᵗⁱᶜ ᵖʳᵒᶜᵉˢˢ ᵐᵒᵈᵉˡˡⁱⁿᵍ) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ
+
+For Otto K. Ferstl and Elmar J. Sinz in SOM (**S**emantic **O**bjekt**m**odell), this would be the basic information of the levels Business plan and Resourcen.
+
+Master data can be, for example:
+
+* The business unit in whose area of responsibility a process takes place
+* The business object whose information is required to execute the process
+* The product that is produced by the process
+* The policy to be observed when executing the process
+* The risk that occurs in a process
+* The measure that is carried out to increase the process capability
+* The control that is performed to ensure the governance of the process
+* The IT-system that supports the execution of the business process
+* The milestone that divides processes into process phases
+* etc.
+
+By adding master data to the business process modeling, the same business process model can be used for different *application* and a return on investment for the business process modeling can be achieved more quickly with the resulting synergy.
+
+Depending on how much value is given to master data in business process modeling, it is still possible to embed the master data in the process model without negatively affecting the readability of the model or the master data should be outsourced to a separate view, e.g. Function Allocation Diagrams.
+
+If master data is systematically added to the business process model, this is referred to as an *artifact-centric business process* model.
+
+The artifact-centric business process model has emerged as a holistic approach for modeling business processes, as it provides a highly flexible solution to capture operational specifications of business processes. It particularly focuses on describing the data of business processes, known as "artifacts", by characterizing business-relevant data objects, their life-cycles, and related services. The artifact-centric process modelling approach fosters the automation of the business operations and supports the flexibility of the workflow enactment and evolution.
+
+
+#### Integration of external documents and IT-systems
+
+The integration of external documents and IT-systems can significantly increase the added value of a business process model.
+
+For example, direct access to objects in a knowledge database or documents in a rule framework can significantly increase the benefits of the business process model in everyday life and thus the acceptance of business process modeling. All IT-systems involved can exploit their specific advantages and cross-fertilize each other (e.g. link to each other or standardize the filing structure):
+
+* short response times of the knowledge database; characterized by a relatively high number of auditors, very fast adaptation of content, and low requirements for the publication of content - e.g. realized with a wiki
+* Legally compliant documents of the rule framework; characterized by a very small number of specially trained auditors, validated adaptation of content, and high requirements for the release of content - e.g. implemented with a document management system
+* Integrating graphical representation of processes by a BPM system; characterized by a medium number of auditors, moderately fast adaptation of content, and modest requirements for the release of content
+
+If all relevant objects of the *knowledge database* and / or documents of the *rule framework* are connected to the processes, the end users have context-related access to this information and do not need to be familiar with the respective filing structure of the connected systems.
+
+The direct connection of external systems can also be used to integrate current measurement results or system statuses into the processes (and, for example, to display the current operating status of the processes), to display widgets and show output from external systems or to jump to external systems and initiate a transaction there with a preconfigured dialog.
+
+Further connections to external systems can be used, for example, for electronic data interchange (EDI).
+
+
+### Model consolidation
+
+This is about checking whether there are any redundancies. If so, the relevant sub-processes are combined. Or sub-processes that are used more than once are outsourced to support processes. For a successful model consolidation, it may be necessary to revise the original decomposition of the sub-processes.
+
+*Ansgar Schwegmann and Michael Laske* explain: "A consolidation of the models of different modeling complexes is necessary in order to obtain an integrated ... model." (Cʰᵃᵖᵗᵉʳ ⁵.².⁴ Mᵒᵈᵉˡ ᶜᵒⁿˢᵒˡⁱᵈᵃᵗⁱᵒⁿ) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ They also list a number of aspects for which model consolidation is important:
+
+* "Modeling teams need to drive harmonization of models during model creation to facilitate later consolidation."
+* "If an object-oriented decomposition of the problem domain is carried out, it must be analyzed at an early stage whether similar structures and processes of different objects exist."
+* "If a function-oriented decomposition of the problem domain is undertaken, the interfaces between the modelled areas in particular must be harmonized."
+* "In general, a uniform level of detail of the models" (in each decomposition level) "should be aimed for during modeling in order to facilitate the comparability of the submodels and the precise definition of interfaces."
+* "After completion of the modeling activities in the teams of the individual modeling complexes, [the] created partial models are to be integrated into an overall model."
+* "In order to facilitate the traceability of the mapped processes, it makes sense to explicitly model selected business transactions that are particularly important for the company and to map them at the top level. ... Colour coding, for example, can also be used to differentiate between associated organizational units." (Cʰᵃᵖᵗᵉʳ ⁵.².⁴ Mᵒᵈᵉˡ ᶜᵒⁿˢᵒˡⁱᵈᵃᵗⁱᵒⁿ) ← ᵃᵘᵗᵒᵐᵃᵗⁱᶜ ᵗʳᵃⁿˢˡᵃᵗⁱᵒⁿ ᶠʳᵒᵐ Gᵉʳᵐᵃⁿ
+
+### Process chaining and control flow patterns
+
+The chaining of the sub-processes with each other and the chaining of the functions (*tasks*) in the sub-processes is modeled using Control Flow Patterns.
+
+Material details of the chaining (What does the predecessor deliver to the successor?) are specified in the process interfaces if intended.
+
+
+### Process interfaces
+
+Process interfaces are defined in order to
+
+* Show the relationships between the sub-processes after the decomposition of business processes or
+* Determine **what** the business processes or their sub-processes must 'pass on' to each other.
+
+As a rule, this **what** and its structure is determined by the requirements in the subsequent process.
+
+Process interfaces represent the exit from the current business process/sub-process and the entry into the subsequent business process/sub-process.
+
+Process interfaces are therefore description elements for linking processes section by section. A process interface can
+
+* Represent a business process model/sub-process model without the business process model referenced by it already being defined.
+* Represent a business process model/sub-process model that is referenced from two/multiple superordinate or neighboring business process models.
+* Represent two/multiple variants of the same business process model/sub-process model.
+
+Process interfaces are agreed between the participants of superordinate/subordinate or neighboring business process models. They are defined and linked once and used as often as required in process models.
+
+Interfaces can be defined by:
+
+* Transfer of responsibility/accountability from one business unit to another,
+* Transfer of data from one IT-system to another,
+* Original input (information / materials at the beginning of the business process),
+* Transfer of intermediate results between sub-processes (output at the predecessor and input at the successor are usually identical) or
+* Final output (the actual result / goal of the business process).
+
+In real terms, the transferred inputs/outputs are often data or information, but any other business objects are also conceivable (material, products in their final or semi-finished state, documents such as a delivery bill). They are provided via suitable transport media (e.g. data storage in the case of data).
+
+
+### Business process management
+
+See article Business process management.
+
+In order to put improved business processes into practice, change management programs are usually required. With advances in software design, the vision of BPM models being fully executable (enabling simulations and round-trip engineering) is getting closer to reality.
+
+
+#### Adaptation of process models
+
+In business process management, process flows are regularly reviewed and optimized (adapted) if necessary. Regardless of whether this adaptation of process flows is triggered by continuous process improvement or by process reorganization (business process re-engineering), it entails an update of individual sub-processes or an entire business process.
+
+
+## Representation type and notation
+
+In practice, combinations of *informal*, *semiformal* and *formal* models are common: *informal* textual descriptions for explanation, *semiformal* graphical representation for visualization, and *formal language* representation to support simulation and transfer into executable code.
+
+
+### Modelling techniques
+
+There are various standards for notations; the most common are:
+
+* Business Process Model and Notation (BPMN), proposed in 2002 by Stephen A. White, published by the Business Process Management Initiative - merged in June 2005 with Object Management Group
+* Event-driven process chain (EPC), proposed in 1992 by a working group under the leadership of August-Wilhelm Scheer
+* *Value-added chain diagram* (VAD), for visualizing processes mainly at a high level of abstraction
+* Petri net, developed by Carl Adam Petri in 1962
+* Follow-up plans (e.g. in the specific form of a Flowchart), proposed in 1997 by Fischermanns and Liebelt
+* HIPO model, developed by IBM around 1970 as a design aid and documentation technology for software (in a non-technical, but business-oriented form)
+* Lifecycle Modeling Language (LML), originally designed by the LML steering committee and published in 2013
+* Subject-oriented business process management (S-BPM)
+* Cognition enhanced Natural language Information Analysis Method (CogNIAM)
+* SIPOC diagram, invented in the 1980s as part of the Total Quality Management movement and then adopted by Lean Management and Six Sigma practitioners
+* Unified Modelling Language (UML), proposed in 1996 by Grady Booch, Ivar Jacobson, and James Rumbaugh, continuously revised under the aegis of the OMG (provides extensions for business process)
+* ICAM DEFinition (IDEF0), developed for the US Air Force in the early 1980s
+* Formalized Administrative Notation (FAN), created by Pablo Iacub and Leonardo Mayo in the 1990s
+* Harbarian process modeling (HPM)
+* Business Process Execution Language (BPEL), an XML-based language developed in 2002 by OASIS for the description and automation of business processes
+* Turtle diagram (also turtle method, turtle model, 8W method), a simple, clear and easy-to-understand graphical representation of facts about the process
+
+Furthermore:
+
+* *Communication structure analysis*, proposed in 1989 by Prof. Hermann Krallmann at the Systems Analysis Department of the TU Berlin.
+* *Extended Business Modelling Language* (xBML) (seems to be outdated, as the founding company is no longer online)
+* Notation from *OMEGA* (object-oriented method for business process modeling and analysis, **O**bjektorientierte **Me**thode zur **G**eschäftsprozessmodellierung und -**a**nalyse in German), presented by Uta Fahrwinkel in 1995
+* *Semantic object model* (SOM), proposed in 1990 by *Otto K. Ferstl and Elmar J. Sinz*
+* PICTURE-Methode for the documentation and modeling of business processes in public administration
+* Data-flow diagram, a way of representing a flow of data through a process or a system
+* Swimlane technique, mainly known through BPMN but also SIPOC, the *Process chain diagram* (PCD) and other methods use this technique
+* ProMet, a method set for business engineering
+* State diagram, used to describe the behavior of systems
+
+In addition, representation types from software architecture can also be used:
+
+* Flowchart, standardized in DIN 66001 from September 1966 and last revised in December 1983 or standardized in ISO 5807 from 1985
+* Nassi-Shneiderman diagram or structure diagram, proposed in 1972/73 by Isaac Nassi and Ben Shneiderman, standardized in DIN 66261.
+
+#### Business Process Model and Notation (BPMN)
+
+
+#### Event-driven process chain (EPC)
+
+
+#### Petri net
+
+
+#### Flowchart
+
+
+#### Hierarchical input process output model (HIPO)
+
+
+#### Lifecycle Modeling Language (LML)
+
+
+#### Subject-oriented business process management
+
+
+#### Cognition enhanced Natural language Information Analysis Method
+
+
+#### SIPOC (suppliers, inputs, process, outputs and customers)
+
+
+#### Unified Modelling Language (UML)
+
+
+#### Integration Definition (IDEF)
+
+
+#### Formalized Administrative Notation (FAN)
+
+
+#### Harbarian process modeling (HPM)
+
+
+#### Business Process Execution Language (BPEL)
+
+
+### Tools
+
+Business process modelling tools provide business users with the ability to model their business processes, implement and execute those models, and refine the models based on as-executed data. As a result, business process modelling tools can provide transparency into business processes, as well as the centralization of corporate business process models and execution metrics. Modelling tools may also enable collaborate modelling of complex processes by users working in teams, where users can share and simulate models collaboratively. Business process modelling tools should not be confused with business process automation systems - both practices have modeling the process as the same initial step and the difference is that process automation gives you an 'executable diagram' and that is drastically different from traditional graphical business process modelling tools.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+
+### Programming language tools
+
+BPM suite software provides programming interfaces (web services, application program interfaces (APIs)) which allow enterprise applications to be built to leverage the BPM engine. This component is often referenced as the *engine* of the BPM suite.
+
+Programming languages that are being introduced for BPM include:
+
+* Business Process Execution Language (BPEL),
+* Web Services Choreography Description Language (WS-CDL).
+* XML Process Definition Language (XPDL),
+
+Some vendor-specific languages:
+
+* Architecture of Integrated Information Systems (ARIS) supports EPC,
+* Java Process Definition Language (JBPM),
+
+Other technologies related to business process modelling include model-driven architecture and service-oriented architecture.
+
+
+### Simulation
+
+The simulation functionality of such tools allows for pre-execution "what-if" modelling (which has particular requirements for this application) and simulation. Post-execution optimization is available based on the analysis of actual as-performed metrics.
+
+* Use case diagrams created by Ivar Jacobson, 1992 (integrated into UML)
+* Activity diagrams (also adopted by UML)
+
+## Related concepts
+
+
+### Business reference model
+
+A business reference model is a reference model, concentrating on the functional and organizational aspects of an enterprise, service organization, or government agency. In general, a reference model is a model of something that embodies the basic goal or idea of something and can then be looked at as a reference for various purposes. A business reference model is a means to describe the business operations of an organization, independent of the organizational structure that performs them. Other types of business reference models can also depict the relationship between the business processes, business functions, and the business area's business reference model. These reference models can be constructed in layers, and offer a foundation for the analysis of service components, technology, data, and performance.
+
+The most familiar business reference model is the Business Reference Model of the US federal government. That model is a function-driven framework for describing the business operations of the federal government independent of the agencies that perform them. The Business Reference Model provides an organized, hierarchical construct for describing the day-to-day business operations of the federal government. While many models exist for describing organizations – organizational charts, location maps, etc. – this model presents the business using a functionally driven approach.
+
+
+### Business process integration
+
+A business model, which may be considered an elaboration of a business process model, typically shows business data and business organizations as well as business processes. By showing business processes and their information flows, a business model allows business stakeholders to define, understand, and validate their business enterprise. The data model part of the business model shows how business information is stored, which is useful for developing software code. See the figure on the right for an example of the interaction between business process models and data models.
+
+Usually, a business model is created after conducting an interview, which is part of the business analysis process. The interview consists of a facilitator asking a series of questions to extract information about the subject business process. The interviewer is referred to as a facilitator to emphasize that it is the participants, not the facilitator, who provide the business process information. Although the facilitator should have some knowledge of the subject business process, but this is not as important as the mastery of a pragmatic and rigorous method interviewing business experts. The method is important because for most enterprises a team of facilitators is needed to collect information across the enterprise, and the findings of all the interviewers must be compiled and integrated once completed.
+
+Business models are developed to define either the current state of the process, resulting in the 'as is' snapshot model, or a vision of what the process should evolve into, leading to a 'to be' model. By comparing and contrasting the 'as is' and 'to be' models, business analysts can determine if existing business processes and information systems require minor modifications or if reengineering is necessary to enhance efficiency. As a result, business process modeling and subsequent analysis can fundamentally reshape the way an enterprise conducts its operations.
+
+
+### Business process re-engineering
+
+Business process reengineering (BPR) aims to improve the efficiency and effectiveness of the processes that exist within and across organizations. It examines business processes from a "clean slate" perspective to determine how best to construct them.
+
+Business process re-engineering (BPR) began as a private sector technique to help organizations fundamentally rethink how they do their work. A key stimulus for re-engineering has been the development and deployment of sophisticated information systems and networks. Leading organizations use this technology to support innovative business processes, rather than refining current ways of doing work.
+
+
+### Business process management
+
+Change management programs are typically involved to put any improved business processes into practice. With advances in software design, the vision of BPM models becoming fully executable (and capable of simulations and round-trip engineering) is coming closer to reality.
+
+
+#### Adaptation of process models
+
+In business process management, process flows are regularly reviewed and, if necessary, optimized (adapted). Regardless of whether this adaptation of process flows is triggered by continual improvement process or business process re-engineering, it entails updating individual sub-processes or an entire business process.
+

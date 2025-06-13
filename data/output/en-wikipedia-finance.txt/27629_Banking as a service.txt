@@ -1,0 +1,106 @@
+Banking as a service
+
+
+# Banking as a service
+
+
+
+**Banking as a service** (**BaaS**) is the provision of banking products (such as current accounts and credit cards) to non-bank third parties through APIs.
+
+
+## Description
+
+As a value network, BaaS aims at integrating as many service providers as needed into one comprehensive process to complete a financial service in an effective and timely manner. It is implied that a BaaS would include certain features in addition to providing a financial service. There must be means for managing, deploying and delivery of the services' environment. The services must of course be in legal compliance with the banking laws in the regions where it is made available, with (at least) one entity within the process possessing a banking license. Of utmost importance is the assurance that proper mechanisms are in place to provide security, such as strong authentication and additional measures to protect sensitive information from unauthorized access throughout the entire process. These security mechanisms must be in compliance with laws of data protection for the jurisdictions involved. With the proliferation and acceptance of BaaS, the emergence and rapid growth of fintech can be expected. Fintech is “a business that aims at providing financial services by making use of software and modern technology.”
+
+
+## API-based stack
+
+Skinner suggested a 3-layer representation of the BaaS stack. In this stack, the underlying infrastructure-as-a-service is provided by a traditional, licensed and regulated bank. Above this bank would be the centralized middleware layer that Skinner refers to as "bank as a service". Added on to the bank as a service is a group of decomposed banking services consisting of an ecosystem of fintech startups and service providers.
+
+With this technology, based on the BaaS-platform, it is possible to create fintech banks, which could improve banking processes and provide increased convenience for banking clients. In such a constellation, fintech banks are enabled to compete directly with banks by offering core-banking services without having to build all the products that would be needed. The API-based bank as a service platform serves as the back-end that hosts standalone independent fintech startups and integrates seamlessly with any existing back-office of traditional banks. This allows non-banks to easily and cost-effectively launch additional financial products and expand into additional markets.
+
+
+## Cloud-based stack
+
+Dynamic development and growth in the world of fintech have made the API-based bank-as-a-service stack obsolete in contexts where tech-companies now own licenses to operate as regulated banks, thus eliminating the reliance on classic banks. Embracing the new developments in financial technology and services, the banking-as-a-service stack can be redefined in analogy to the cloud stack.
+
+
+### Infrastructure as a service (IaaS)
+
+The infrastructure as a service (IaaS) layer provides basic infrastructure services through an IaaS provider. A majority of these services would be available on demand and do not necessarily need to be fintech services (like Amazon Web Services or OVH). This layer would include the server and communication hardware (physical layer).
+
+
+### Banking as a platform (BaaP)
+
+At the top of the IaaS model would be banking as a platform provider (BaaP). The BaaP would be a bank that is fully licensed or use an external regulated bank's licensed banking services. The decomposed banking services (fintech SaaS) are in essence, plugged into this layer. Data-security plays a crucial role in the BaaP. There is a need for monitoring functions that will enable seamless and secure operations across applications and domains through secure authentication.
+
+
+### FinTech SaaS
+
+Fintech SaaS (software as a service) refers to all atomic or composite software-based financial services that are available on-demand. When these services are provided through a BaaP, they will need to be compliant with the BaaP's API specifications. The services may either be physically deployed in the BaaP's domain or work externally. This gives the potential for the ability to plug financial services from other banks into the BaaP to create new composite application services. The result is that traditional banking services can now be virtualized and dispatched via composite application services. This does, however, present a challenge in verifying that none of the plugged-in services will violate regulations that have been imposed by banking authorities.
+
+
+### HuaaS
+
+Humans as a service represents the top layer of the proposed revision of the BaaS stack. While at the onset this layer may not seem especially important, as fintech services continue to grow as a segment in the financial service market, services performed by cloudworkers will take on increased importance. This is a behind the scenes component that end-users will be unable to discern between a complete automated service and one that includes HuaaS.
+
+
+## Potential consequence
+
+The consequence of having a decomposed stack is that there are multiple ways that the customer's front-end could be presented. One way would allow the BaaP provider to appear directly as a bank to its customers. This necessitates the provision of a front-end user interface to the end-customers including user authentication and other features. The bank would appear as any other online bank where all banking services are presented and seamlessly integrated in a single user interface. Another option is that the bank will operate as a white label bank, which will then have a software as a service provider on top of the BaaP operating as the front-end to the end-customer.
+
+White label banking can be an answer to the challenge platform providers face in attaining customers. It can be used to offer banking services in environments where a large group of users already exist, including chains of grocery stores, hypermarkets or existing online portals.
+
+
+## Integrated BaaS structure vs. single service offering
+
+A single service provider is at a greater risk of failure than a provider that offers a larger portfolio of services. Using an integrated BaaS structure efficiently provides an end-to-end value proposition that frees the service provider from having to develop all the needed peripheral services, including authentication and other security services. Those who adopt the BaaS structure are able to provide a higher level of trust than a smaller provider might do.
+
+
+## Security
+
+Cyber-crime remains a constant and serious threat to the banking industry. The introduction of additional entrance gateways by offering increased amounts of composite online services does increase the risk for cyber-crime. It is important that each service be properly firewalled to prevent malicious intrusions. As such, this presents a challenge to a satisfactory user experience if the user needs to constantly be authenticated while performing an online transaction across several domains or applications. Instead, the many domains and apps that are used need to be interwoven in such a way that once a user has been authenticated, this authentication will carry through as he conducts his transaction. This can be accomplished through the 3 degrees of freedom in digital banking, involving:
+
+* Identity federation across domains
+* Identity propagation across apps
+* Level of authentication
+
+## Regulations
+
+Banking is a highly regulated industry throughout the world and online banks utilizing BaaS are no exception.
+
+
+### Europe
+
+In Europe, BaaS for fintechs is overseen by the Payment Services Directive (PSD, 2007/64/EC) and its 2nd amendment (PSD2) that was adopted in November 2015. Banking licenses are overseen by competent national authorities in accordance to Directive 2013/36/EU and Article 14 of Regulation (EU) No 1024/2013. The eIDAS regulation provides requirements for authentication and electronic identification and trust services for electronic transactions throughout the entire end-to-end process. Additional oversight for financial and insurance transactions are provided through Directive 2004/39/EC and Directive 2016/97/EU.
+
+
+### United States
+
+In the United States, banks are highly regulated at both the state and federal levels. The Securities and Exchange Commission (SEC) is responsible for much of this regulation.
+
+
+### Asia
+
+Asia has a strong disadvantage because of its high fragmentation of jurisdiction areas compared to Europe. Fintechs can plug into the national banking-as-a-service hub to provide their specific regulated and licensed face to their customers.
+
+
+### Africa
+
+Fintechs in Africa have provided an original financing solution in a previously unserved and untapped banking market. Because it is primarily mobile-based, Africa fintech is subject to national jurisdiction in regards to regulating financial markets and mobile telecommunications.
+
+
+### Australia
+
+Australia's government is behind in regulating fintech in comparison to the European Payment Services Directive.
+
+
+### Brazil
+
+In Brazil, BaaS is regulated by the Brazilian Central Bank within the rules of a Payment Institution. The best known BaaS' fintechs providers in Brazil are Matera, Zoop, Dock, and S3 Bank.
+
+
+### Russia
+
+Russian banks are actively introducing BaaS, for example, the largest private bank Alfa Bank.
+

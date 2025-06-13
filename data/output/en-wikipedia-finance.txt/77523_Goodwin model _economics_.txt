@@ -1,0 +1,80 @@
+Goodwin model (economics)
+
+
+# Goodwin model (economics)
+
+
+
+The **Goodwin model**, sometimes called **Goodwin's class struggle model**, is a model of endogenous economic fluctuations first proposed by the American economist Richard M. Goodwin in 1967. It combines aspects of the Harrod–Domar growth model with the Phillips curve to generate endogenous cycles in economic activity (output, unemployment and wages) unlike most modern macroeconomic models in which movements in economic aggregates are driven by exogenously assumed shocks. Since Goodwin's publication in 1967, the model has been extended and applied in various ways.
+
+
+## Model
+
+The model is derived from the following assumptions:
+
+1. there is steady growth of labour productivity (e.g. by technological improvement);
+2. there is steady growth of the labour force (e.g. by births);
+3. there are only two factors of production: labour and capital;
+4. workers completely consume their wages, and capitalists completely invest their profits;
+5. the capital-output ratio is constant (i.e. a fixed amount of output can always be turned into the same amount of capital);
+6. real wages change according to a linearized Phillips curve, where wages rise when close to full employment.
+
+The model uses the variables
+
+which are all functions of time (although the time subscripts have been suppressed for convenience) and the constants
+
+A number of derived quantities are helpful to define the model.
+The amount of employed labour is given by
+
+the employment ratio is given by
+
+the workers' share in the output is given by
+
+and the share of the capitalists in the output ({\displaystyle s} for surplus) is given by
+
+The model is then defined by a set of differential equations.
+Firstly, the change in labour productivity is defined by
+
+that is, steady growth, with {\displaystyle a\_{t}=a\_{0}e^{\alpha t}}.
+(Note that {\displaystyle {\dot {x}}} is the derivative over time {\displaystyle {dx}/{dt}}.)
+The labour force changes according to
+
+again, steady growth, with {\displaystyle n\_{t}=n\_{0}e^{\beta t}}.
+Real wages change according to
+
+that is, the real wage change curve is modelled as linear.
+Note that to correctly model the assumptions, {\displaystyle \gamma } and {\displaystyle \rho }
+must be picked to ensure that real wages increase when {\displaystyle v} is near 1.
+In other words, if the labor market is 'tight' (employment is already high) there is upward pressure on wages and vice versa in a 'lax' labor market.
+
+Capital changes according to
+
+as the surplus is assumed to be completely invested by the capitalist.
+Lastly, output changes according to
+
+that is, in proportion to the surplus invested.
+
+Note that
+
+by the assumption that k and q grow at the same rate by assumption of full utilization of capital and constant returns to scale.
+
+
+### Solution
+
+The defining equations can be solved for {\displaystyle {\dot {u}}} and {\displaystyle {\dot {v}}},
+which gives the two differential equations
+
+These are the key equations of the model and in fact are the Lotka–Volterra equations, which are used in biology to model predator-prey interaction.
+These equations have two fixed points. The first is when
+
+and the second is when
+
+which determines the center of a family of cyclic trajectories.
+
+Since the model cannot be solved explicitly, it is instructive to analyze the trajectory of the economy in terms of a phase diagram.
+The two lines defining the center of the cycle divide the positive orthant into four regions. The figure below indicates with arrows the movement of the economy in each region. For example, the north-western region (high employment, low labor's share in output) the economy is moving north-east (employment is rising, worker's share is increasing). Once it crosses the u\* line it will begin moving south-west.
+
+The figure below illustrates the movement of potential output (output at full employment), actual output and wages over time.
+
+As can be seen the Goodwin model can generate endogenous fluctuations in economic activity without relying on extraneous assumptions of outside shocks, whether on the demand or supply side.
+

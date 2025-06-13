@@ -1,0 +1,41 @@
+BankID (Norway)
+
+
+# BankID (Norway)
+
+
+
+**BankID** is a personal electronic identification system in Norway, that is used for identification and signing. The service is provided by the banks in Norway.
+
+BankID is a Public Key Infrastructure (PKI) solution, and has support for both authentication and signing. The solution consists of a central infrastructure operated by *Nets* (formerly *Bankenes BetalingsSentral*) and of several client versions in different forms.
+
+
+## History
+
+The solution was developed through *BankID Samarbeidet*, which is a collaboration between the Norwegian Financial Services Association and Norwegian Savings Banks Association (these organizations were later partially merged and are now called *Finans Norge*).
+
+The BankID service, sometimes also called BankID on file, was first launched in 2003. A digital certificate and a secret crypto-key were first stored on the computer's hard drive.
+
+In 2005 BankID on card was launched. A secret private code key was stored in the Smart card's chip, which acted as a hard certificate. This was considered more secure as it generally requires physical access to the card to function. The card could be a credit card or a pure bankid card. The card can be delivered with or without a photograph, and could act as an identification document.
+
+In 2010 a mobile version was launched where the private key was stored on the phone SIM Card.
+
+In 2007, professor of IT security at the University of Bergen, Kjell Jørgen Hole, together with doctoral students, demonstrated that it was possible to steal identities in this solution. As a result the key was moved to be stored at the bank and this became the most popular version.
+
+In 2022, BankID informed that the service on mobile will gradually be phased out and replaced by the BankID app. It is still possible to use BankID on mobile in 2023, but the service will eventually be phased out completely.
+
+
+## Versions
+
+There is a "softlocal" version, a "net-centric/bank-stored" version and a mobile version.
+
+* The Softlocal version was never rolled out to customers, and was based on the certificate being available on the individual user's computer.
+* The bank-stored version is the most widespread as of 2021.
+* BankID on mobile is offered as of 2021 by all mobile operators in Norway.
+
+The solution is based on qualified certificates self-declared at the Norwegian Communications Authority, in the same way as Buypass ID and Commfides.
+
+Over 4.2 million Norwegians use BankID, mainly to access online services at Norwegian banks, but also in public services and ID-Porten. This means that BankID, together with MinID, is the most widespread electronic identity solution in Norway. BankID meets the highest security level, level 4.
+
+There is also a Swedish version of BankID, although they are not related to each other.
+

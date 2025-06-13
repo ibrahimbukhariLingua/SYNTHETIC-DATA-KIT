@@ -1,0 +1,51 @@
+Runge–Kutta method (SDE)
+
+
+# Runge–Kutta method (SDE)
+
+
+
+In mathematics of stochastic systems, the **Runge–Kutta method** is a technique for the approximate numerical solution of a stochastic differential equation. It is a generalisation of the Runge–Kutta method for ordinary differential equations to stochastic differential equations (SDEs). Importantly, the method does not involve knowing derivatives of the coefficient functions in the SDEs.
+
+
+## Most basic scheme
+
+Consider the Itō diffusion {\displaystyle X} satisfying the following Itō stochastic differential equation
+{\displaystyle dX\_{t}=a(X\_{t})\,dt+b(X\_{t})\,dW\_{t},}
+with initial condition {\displaystyle X\_{0}=x\_{0}}, where {\displaystyle W\_{t}} stands for the Wiener process, and suppose that we wish to solve this SDE on some interval of time {\displaystyle [0,T]}. Then the basic **Runge–Kutta approximation** to the true solution {\displaystyle X} is the Markov chain {\displaystyle Y} defined as follows:
+
+* partition the interval {\displaystyle [0,T]} into {\displaystyle N} subintervals of width {\displaystyle \delta =T/N>0}: {\displaystyle 0=\tau \_{0}<\tau \_{1}<\dots <\tau \_{N}=T;}
+* set {\displaystyle Y\_{0}:=x\_{0}};
+* recursively compute {\displaystyle Y\_{n}} for {\displaystyle 1\leq n\leq N} by {\displaystyle Y\_{n+1}:=Y\_{n}+a(Y\_{n})\delta +b(Y\_{n})\Delta W\_{n}+{\frac {1}{2}}\left(b({\hat {\Upsilon }}\_{n})-b(Y\_{n})\right)\left((\Delta W\_{n})^{2}-\delta \right)\delta ^{-1/2},} where {\displaystyle \Delta W\_{n}=W\_{\tau \_{n+1}}-W\_{\tau \_{n}}} and {\displaystyle {\hat {\Upsilon }}\_{n}=Y\_{n}+a(Y\_{n})\delta +b(Y\_{n})\delta ^{1/2}.}
+
+The random variables {\displaystyle \Delta W\_{n}} are independent and identically distributed normal random variables with expected value zero and variance {\displaystyle \delta }.
+
+This scheme has strong order 1, meaning that the approximation error of the actual solution at a fixed time scales with the time step {\displaystyle \delta }. It has also weak order 1, meaning that the error on the statistics of the solution scales with the time step {\displaystyle \delta }. See the references for complete and exact statements.
+
+The functions {\displaystyle a} and {\displaystyle b} can be time-varying without any complication. The method can be generalized to the case of several coupled equations; the principle is the same but the equations become longer.
+
+
+## Variation of the Improved Euler is flexible
+
+A newer Runge—Kutta scheme also of strong order 1 straightforwardly reduces to the improved Euler scheme for deterministic ODEs.
+Consider the vector stochastic process {\displaystyle {\vec {X}}(t)\in \mathbb {R} ^{n}} that satisfies the general Ito SDE
+{\displaystyle d{\vec {X}}={\vec {a}}(t,{\vec {X}})\,dt+{\vec {b}}(t,{\vec {X}})\,dW,}
+where drift {\displaystyle {\vec {a}}} and volatility {\displaystyle {\vec {b}}} are sufficiently smooth functions of their arguments.
+Given time step {\displaystyle h}, and given the value {\displaystyle {\vec {X}}(t\_{k})={\vec {X}}\_{k}}, estimate {\displaystyle {\vec {X}}(t\_{k+1})} by {\displaystyle {\vec {X}}\_{k+1}} for time {\displaystyle t\_{k+1}=t\_{k}+h} via
+{\displaystyle {\begin{array}{l}{\vec {K}}\_{1}=h{\vec {a}}(t\_{k},{\vec {X}}\_{k})+(\Delta W\_{k}-S\_{k}{\sqrt {h}}){\vec {b}}(t\_{k},{\vec {X}}\_{k}),\\{\vec {K}}\_{2}=h{\vec {a}}(t\_{k+1},{\vec {X}}\_{k}+{\vec {K}}\_{1})+(\Delta W\_{k}+S\_{k}{\sqrt {h}}){\vec {b}}(t\_{k+1},{\vec {X}}\_{k}+{\vec {K}}\_{1}),\\{\vec {X}}\_{k+1}={\vec {X}}\_{k}+{\frac {1}{2}}({\vec {K}}\_{1}+{\vec {K}}\_{2}),\end{array}}}
+
+* where {\displaystyle \Delta W\_{k}={\sqrt {h}}Z\_{k}} for normal random {\displaystyle Z\_{k}\sim N(0,1)};
+* and where {\displaystyle S\_{k}=\pm 1}, each alternative chosen with probability {\displaystyle 1/2}.
+
+The above describes only one time step.
+Repeat this time step {\displaystyle (t\_{m}-t\_{0})/h} times in order to integrate the SDE from time {\displaystyle t=t\_{0}} to {\displaystyle t=t\_{m}}.
+
+The scheme integrates Stratonovich SDEs to {\displaystyle O(h)} provided one sets {\displaystyle S\_{k}=0} throughout (instead of choosing {\displaystyle \pm 1}).
+
+
+## Higher order Runge-Kutta schemes
+
+Higher-order schemes also exist, but become increasingly complex.
+Rößler developed many schemes for Ito SDEs,
+whereas Komori developed schemes for Stratonovich SDEs. Rackauckas extended these schemes to allow for adaptive-time stepping via Rejection Sampling with Memory (RSwM), resulting in orders of magnitude efficiency increases in practical biological models, along with coefficient optimization for improved stability.
+

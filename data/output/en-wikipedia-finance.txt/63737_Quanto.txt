@@ -1,0 +1,27 @@
+Quanto
+
+
+# Quanto
+
+
+
+A **quanto** is a type of derivative in which the underlying is denominated in one currency,
+but the instrument itself is settled in another currency at some rate. Such products are attractive for speculators and investors who wish to have exposure to a foreign asset, but without the corresponding exchange rate risk.
+
+Quantos are attractive because they shield the purchaser from exchange rate fluctuations. If a US investor were to invest directly in the Japanese stocks that comprise the Nikkei, he would be exposed to both fluctuations in the Nikkei index and fluctuations in the USD/JPY exchange rate. Essentially, a quanto has an embedded currency forward with a variable notional amount. It is that variable notional amount that give quantos their name—"quanto" is short for "quantity adjusting option".
+
+Quanto options have both the strike price and underlier denominated in the foreign currency. At exercise, the value of the option is calculated as the option's intrinsic value in the foreign currency, which is then converted to the domestic currency at the fixed exchange rate.
+
+Another type of structure is called Quanto in the weather/energy markets. In these markets, a Quanto is a weather-contingent energy (or commodity) derivative. Weather contingent means that a payoff is triggered if some weather variable (typically temperature, but also precipitation or any other weather variable) crosses (from above or from below) a specified strike value. For the structure to be called Quanto, the payoff must depend on the market price of a publicly traded commodity. A typical example of a buyer of a Quanto is a retailer in a liberalized electricity market, with a customer base to which they deliver to a fixed contracted price. The retailers do buy most of their electricity forward, but have to go and purchase from the expensive spot market whenever they need to deliver more than what they've planned to. This situation typically occurs if the weather is hotter (colder) than expected and a substantial number of households turn on the airconditioning (heating). As electricity demand rises sharply in such a situation, spot prices spike while the revenue from the sales side remains constant. Buying a quanto allows the retailer to hedge against that risk.
+
+Common types of quanto include:
+
+* Quanto futures contracts, such as a futures contract on a European stock market index which is settled in US dollars.
+* Quanto options, in which the difference between the underlying and a fixed strike price is paid out in another currency.
+* Quanto swaps, in which one counterparty pays a non-local interest rate to the other, but the notional amount is in local currency. The second party may be paying a fixed or floating rate. For example, a swap in which the notional amount is denominated in Canadian dollars, but where the floating rate is set as USD LIBOR, would be considered a quanto swap.
+* Quanto credit default swap, in which default protection is purchased on a notional amount specified in one currency, but the regular protection payment is denominated in a different currency.
+
+## Pricing Quanto Derivatives
+
+Pricing quanto derivatives involves modeling financial variables (stocks, interest rates etc.) in a currency which is different from their actual currency. In order to write the dynamics of the modeled financial variables under foreign currency pricing measure one has to apply Girsanov theorem leading to a drift term which depends on its volatility, the FX rate volatility (FX rate between the pricing currency and the modeled variable currency) and correlation between both. This drift term leads to an adjustment in the pricing that is referred to as "quanto adjustment" and falls into the more general category of what is called in mathematical finance convexity adjustments.
+

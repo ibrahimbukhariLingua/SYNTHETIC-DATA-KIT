@@ -1,0 +1,43 @@
+Auction algorithm
+
+
+# Auction algorithm
+
+
+
+| Part of a series on |
+| --- |
+| Auctions |
+| Types |
+| * All-pay + Chinese + Bidding fee + Dollar * Amsterdam * Anglo-Dutch * Barter double * Best/not best * Brazilian * Calcutta * Candle * Click-box bidding * Combinatorial * Common value * Deferred-acceptance * Discriminatory price * Double * Dutch * English * Forward * French * Generalized first-price * Generalized second-price * Japanese * Knapsack * Multi-attribute * Multiunit * No-reserve * Rank * Reverse * Scottish * Sealed first-price * Simultaneous ascending * Single-price * Traffic light * Uniform price * Unique bid * Value of revenues * Vickrey * Vickrey–Clarke–Groves * Walrasian * Yankee |
+| Bidding |
+| * Shading * Calor licitantis * Cancellation hunt * Jump * Rigging * Sniping * Suicide * Tacit collusion |
+| Contexts |
+| * Algorithms * Autos * Art * Charity * Children * Players * Domain names * Flowers * Loans * Scam * Slaves * Spectrum * Stamps * Virginity * Wine * Wives |
+| Theory |
+| * Digital goods * Price of anarchy * Revenue equivalence * Winner's curse |
+| Online |
+| * Ebidding * Private electronic market * Software |
+| * v * t * e |
+
+The term "**auction algorithm**" applies to several variations of a combinatorial optimization algorithm which solves assignment problems, and network optimization problems with linear and convex/nonlinear cost. An *auction algorithm* has been used in a business setting to determine the best prices on a set of products offered to multiple buyers. It is an iterative procedure, so the name "auction algorithm" is related to a sales auction, where multiple bids are compared to determine the best offer, with the final sales going to the highest bidders.
+
+The original form of the auction algorithm is an iterative method to find the optimal prices and an assignment that maximizes the net benefit in a bipartite graph, the *maximum weight matching problem* (MWM).
+This algorithm was first proposed by Dimitri Bertsekas in 1979.
+
+The ideas of the auction algorithm and ε-scaling are also central in preflow-push algorithms for single commodity linear network flow problems. In fact the preflow-push algorithm for max-flow can be derived by applying the original 1979 auction algorithm to the max flow problem after reformulation as an assignment problem. Moreover, the preflow-push algorithm for the linear minimum cost flow problem is mathematically equivalent to the ε-relaxation method, which is obtained by applying the original auction algorithm after the problem is reformulated as an equivalent assignment problem.
+
+A later variation of the auction algorithm that solves shortest path problems was introduced by Bertsekas in 1991.
+It is a simple algorithm for finding shortest paths in a directed graph. In the single origin/single destination case, the auction algorithm maintains a single path starting at the origin, which is then extended or contracted by a single node at each iteration. Simultaneously, at most one dual variable will be adjusted at each iteration, in order to either improve or maintain the value of a dual function. In the case of multiple origins, the auction algorithm is well-suited for parallel computation. The algorithm is closely related to auction algorithms for other network flow problems. According to computational experiments, the auction algorithm is generally inferior to other state-of-the-art algorithms for the all destinations shortest path problem, but is very fast for problems with few destinations (substantially more than one and substantially less than the total number of nodes); see the article by Bertsekas, Pallottino, and Scutella, Polynomial Auction Algorithms for Shortest Paths.
+
+Auction algorithms for shortest hyperpath problems have been defined by De Leone and Pretolani in 1998. This is also a parallel auction algorithm for weighted bipartite matching, described by E. Jason Riedy in 2004.
+
+
+## Comparisons
+
+The (sequential) auction algorithms for the shortest path problem have been the subject of experiments which have been reported in technical papers. Experiments clearly show that the auction algorithm is inferior to the state-of-the-art shortest-path algorithms for finding the optimal solution of single-origin to all-destinations problems.
+
+Although with the auction algorithm the total benefit is monotonically increasing with each iteration, in the *Hungarian algorithm* (from Kuhn, 1955; Munkres, 1957) the total benefit strictly increases with each iteration.
+
+The auction algorithm of Bertsekas for finding shortest paths within a directed graph is reputed to perform very well on random graphs and on problems with few destinations.
+

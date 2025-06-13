@@ -1,0 +1,60 @@
+Option on realized volatility
+
+
+# Option on realized volatility
+
+
+
+In finance, **option on realized volatility** (or **volatility option**) is a subclass of derivatives securities that the payoff function embedded with the notion of annualized realized volatility of a specified underlying asset, which could be stock index, bond, foreign exchange rate, etc. Another product of volatility derivative that is widely traded refers to the volatility swap, which is in another word the forward contract on future realized volatility.
+
+The long position of the volatility option, like the vanilla option, has the right but not the obligation to trade the annualized realized volatility interchange with the short position at some agreed price (volatility strike) at some predetermined point in the future (expiry date). The payoff is commonly settled in cash by some notional amount. What distinguishes this financial contract from ordinary options is that the risk measure is irrespective of the asset returns but belongs purely to the price volatility. As a result, traders can use it as a tool to speculate on price volatility movements in order to hedge their portfolio positions without taking a directional risk by holding the underlying asset.
+
+
+## Definitions
+
+
+### Realized volatility
+
+In practice, the annualized realized volatility is interpreted in discrete sampling by the squared root of the annualized realized variance. Namely, if there are {\displaystyle n+1} sampling points of the underlying prices, says {\displaystyle S\_{t\_{0}},S\_{t\_{2}},\dots ,S\_{t\_{n}}} observed at time {\displaystyle t\_{i}} where {\displaystyle 0\leq t\_{i-1}<t\_{i}\leq T} for all {\displaystyle i=1,2,\ldots ,n}, then the annualized realized variance is valued by
+
+where
+
+* {\displaystyle A} is an annualised factor commonly chosen to be {\displaystyle A=252} if the price is monitored daily, or {\displaystyle A=52} or {\displaystyle A=12} in the case of weekly or monthly observation, respectively and
+* {\displaystyle T} is the options expiry date which is equal to the number {\displaystyle n/{A}.}
+
+By this setting we then have {\displaystyle {\sqrt {RV\_{d}}}} specified as an annualized realized volatility.
+
+In addition, once the observation number {\displaystyle n} increases to infinity, the discretely defined realized volatility converges in probability to the squared root of the underlying asset quadratic variation i.e.
+
+which eventually defines the continuous sampling version of the realized volatility. One might find, to some extent, it is more convenient to use this notation to price volatility derivatives. However, the solution is only the approximation form of the discrete one since the contract is normally quoted in discrete sampling.
+
+
+### Volatility option payoffs
+
+If we set
+
+* {\displaystyle K\_{\text{vol}}^{C}} to be a volatility strike and
+
+* {\displaystyle L} be a notional amount of the option in a money unit, says, USD or GBP per annualized volatility point,
+
+then payoffs at expiry for the call and put options written on {\displaystyle {\sqrt {RV\_{(\cdot )}}}} (or just volatility call and put) are
+
+and
+
+respectively, where {\displaystyle {\sqrt {RV\_{(\cdot )}}}={\sqrt {RV\_{d}}}} if the realized volatility is discretely sampled and {\displaystyle {\sqrt {RV\_{(\cdot )}}}={\sqrt {RV\_{c}}}} if it is of the continuous sampling. And to perceive their present values, it suffices only to compute one of them since the other is simultaneously obtained by the auxiliary of put-call parity.
+
+
+## Pricing and valuation
+
+Concerning the no arbitrage argument, suppose that the underlying asset price {\displaystyle S=(S\_{t})\_{0\leq t\leq T}} is modelled under a risk-neutral probability {\displaystyle \mathbb {Q} } and solves the following time-varying Black-Schloes equation:
+
+where:
+
+* {\displaystyle r(t)\in \mathbb {R} } is (time-varying) risk-free interest rate,
+* {\displaystyle \sigma (t)>0} is (time-varying) price volatility, and
+* {\displaystyle W=(W\_{t})\_{0\leq t\leq T}} is a Brownian motion under the filtered probability space {\displaystyle (\Omega ,{\mathcal {F}},\mathbb {F} ,\mathbb {Q} )} where {\displaystyle \mathbb {F} =({\mathcal {F}}\_{t})\_{0\leq t\leq T}} is the natural filtration of {\displaystyle W}.
+
+Then the fair price of variance call at time {\displaystyle t\_{0}} denoted by {\displaystyle C\_{t\_{0}}^{\text{vol}}} can be obtained by
+
+where {\displaystyle \operatorname {E} ^{\mathbb {Q} }[X\mid {\mathcal {F}}\_{t\_{0}}]} represents a conditional expectation of random variable {\displaystyle X} with respect to {\displaystyle {\mathcal {F}}\_{t\_{0}}} under the risk-neutral probability {\displaystyle \mathbb {Q} }. The solution for {\displaystyle C\_{t\_{0}}^{\operatorname {vol} }} can somehow be derived analytically if one perceive the probability density function of {\displaystyle {\sqrt {RV\_{(\cdot )}}}}, or by some approximation approaches such as Monte Carlo methods.
+

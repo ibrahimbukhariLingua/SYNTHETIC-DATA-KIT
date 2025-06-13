@@ -1,0 +1,52 @@
+KPI-driven code analysis
+
+
+# KPI-driven code analysis
+
+
+
+ **KPI driven code analysis** (KPI = Key Performance Indicator) is a method of analyzing software source code and source code related IT systems to gain insight into business critical aspects of the development of a software system such as team-performance, time-to-market, risk-management, failure-prediction and much more.
+
+The KPI driven code analysis - developed at the Hasso Plattner Institute - is a static program analysis of source code for the purpose of improving software quality. However, the KPI driven code analysis does not only analyze the source code. Other information sources, such as coding activities, are also included to create a comprehensive impression of the quality and development progress of a software system.
+
+
+## Mode of operation
+
+KPI driven code analysis is a fully automated process which thus enables team activities and modifications to the overall source code of a software system to be monitored in real time. In this way, negative trends become evident as soon as they arise. This “early warning system” thus offers a powerful instrument for reducing costs and increasing development speed.
+Through the early-warning approach of KPI driven code analysis, every newly introduced level of complexity is discovered in good time and its impact can thus be minimized. Instead of wasting valuable time trying to reduce legacy complexities, developers can use their time for new functionality, helping the team increase productivity.
+
+
+## The human factor
+
+The “human factor” is included in the KPI driven code analysis which means that it also looks at which code was registered by which developer and when. In this way, the quality of software delivered by each individual developer can be determined and any problems in employee qualification, direction and motivation can be identified early and appropriate measures introduced to resolve them.
+
+
+## Sources considered
+
+In order to determine the key performance indicators (KPIs) – figures which are crucial to the productivity and success of software development projects – numerous data sources related to the software code are read out. For this purpose, KPI driven code analysis borrows methods taken from data mining and business intelligence, otherwise used in accounting and customer analytics. The KPI driven code analysis extracts data from the following sources and consolidates them in an analysis data model. On this data model, the values of the key performance indicators are calculated. The data sources include, in particular:
+
+* Revision Control, also known as version control. In this system every step of each individual developer is tracked for the entire life cycle of the software system. The data describes: “Which developer changed what when.” This data provides a basis for answering the question, “What effort or development cost has been invested in which areas of code?” Prominent revision control systems are Subversion, Git, Perforce, Mercurial, Synergy, ClearCase, …
+* Software Test Systems. These provide a read-out as to which parts of the source code have already been tested. With this information, it becomes obvious where there are gaps in testing, possibly even where these gaps were intentionally left (due to the significant cost and effort involved in setting up tests).
+* Bug Tracking Systems (Bug Tracker). This information can be used in combination with the information provided by the revision control system to help draw conclusions on the error rate of particular areas of code.
+* Issue tracking systems. The information produced by these systems, in conjunction with the information from revision control, enables conclusions to be drawn regarding development activity related to specific technical requirements. In addition, precise data on time investment can be utilized for the analysis.
+* Performance profilers (Profiling (computer programming)). The data on the performance of the software system help to analyze which areas of code consume the most CPU resources.
+
+## Analysis results
+
+Due to the many influencing factors which feed into the analysis data model, methods of optimizing the source code can be identified as well as requirements for action in the areas of employee qualification, employee direction and development processes:
+
+* Knowledge as to where source code needs to be reworked because it is too complex or has an inferior runtime performance:
+ + Deep nesting which exponentially increases the number of control flow paths.
+ + Huge, monolithic code units in which several aspects have been mixed together so that to change one aspect, changes have to be implemented at several points.
+ + Identification of unnecessary multi-threading. Multi-threading is an extremely large error source. The run-time behavior of multi-threading code is hard to comprehend meaning the cost and effort required for extensions or maintenance to it is correspondingly high. Thus, as a general rule, unnecessary multi-threading should be avoided.
+* Identification of insufficient exception handling. If there are too few try-catch blocks in the code or if nothing is executed in the catch function, the consequences, if program errors arise, can be serious.
+* Identification of which sections of source code have been altered since the last software test, i.e. where tests must be performed and where not. This information enables software tests to be planned more intelligently: new functionality can be tested more intensively or resources saved.
+* Knowledge of how much cost and effort will be required for the development or extension of a particular software module:
+ + When extending existing software modules, a recommendation for action could be to undertake code refactoring.
+ + Any newly developed functionality can be analyzed to ascertain whether a target/performance analysis has been performed for the costs and if so why. Were the causes of the deviations from the plan identified, can measures be implemented to increase accuracy in future planning.
+* By tracing which developer (team) produced which source code and examining the software created over a sustained period, any deficiencies can be identified as either one-off slips in quality, evidence of a need for improved employee qualification or whether the software development process requires further optimization.
+
+Finally the analysis data model of the KPI driven code analysis provides IT project managers, at a very early stage, with a comprehensive overview of the status of the software produced, the skills and effort of the employees as well as the maturity of the software development process.
+
+One method of representation of the analysis data would be so-called software maps.
+

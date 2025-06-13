@@ -1,0 +1,75 @@
+Actuarial present value
+
+
+# Actuarial present value
+
+
+
+The **actuarial present value** (**APV**) is the expected value of the present value of a contingent cash flow stream (i.e. a series of payments which may or may not be made). Actuarial present values are typically calculated for the benefit-payment or series of payments associated with life insurance and life annuities. The probability of a future payment is based on assumptions about the person's future mortality which is typically estimated using a life table.
+
+
+## Life insurance
+
+Whole life insurance pays a pre-determined benefit either at or soon after the insured's death. The symbol *(x)* is used to denote "a life aged *x*" where *x* is a non-random parameter that is assumed to be greater than zero. The actuarial present value of one unit of whole life insurance issued to *(x)* is denoted by the symbol {\displaystyle \,A\_{x}} or {\displaystyle \,{\overline {A}}\_{x}} in actuarial notation. Let *G>0* (the "age at death") be the random variable that models the age at which an individual, such as *(x)*, will die. And let *T* (the future lifetime random variable) be the time elapsed between age-*x* and whatever age *(x)* is at the time the benefit is paid (even though *(x)* is most likely dead at that time). Since *T* is a function of G and x we will write *T=T(G,x)*. Finally, let *Z* be the present value random variable of a whole life insurance benefit of 1 payable at time *T*. Then:
+
+where *i* is the effective annual interest rate and δ is the equivalent force of interest.
+
+To determine the actuarial present value of the benefit we need to calculate the expected value {\displaystyle \,E(Z)} of this random variable *Z*. Suppose the death benefit is payable at the end of year of death. Then *T(G, x) := ceiling(G - x)* is the number of "whole years" (rounded upwards) lived by *(x)* beyond age *x*, so that the actuarial present value of one unit of insurance is given by:
+
+where {\displaystyle {}\_{t}p\_{x}} is the probability that *(x)* survives to age *x+t*, and {\displaystyle \,q\_{x+t}} is the probability that *(x+t)* dies within one year.
+
+If the benefit is payable at the moment of death, then *T(G,x): = G - x* and the actuarial present value of one unit of whole life insurance is calculated as
+
+where {\displaystyle f\_{T}} is the probability density function of *T*, {\displaystyle \,\_{t}p\_{x}} is the probability of a life age {\displaystyle x} surviving to age {\displaystyle x+t} and {\displaystyle \mu \_{x+t}} denotes force of mortality at time {\displaystyle x+t} for a life aged {\displaystyle x}.
+
+The actuarial present value of one unit of an *n*-year term insurance policy payable at the moment of death can be found similarly by integrating from 0 to *n*.
+
+The actuarial present value of an n year pure endowment insurance benefit of 1 payable after n years if alive, can be found as
+
+In practice the information available about the random variable *G* (and in turn *T*) may be drawn from life tables, which give figures by year. For example, a three year term life insurance of $100,000 payable at the end of year of death has actuarial present value
+
+For example, suppose that there is a 90% chance of an individual surviving any given year (i.e. *T* has a geometric distribution with parameter *p = 0.9* and the set *{1, 2, 3, ...}* for its support). Then
+
+and at interest rate 6% the actuarial present value of one unit of the three year term insurance is
+
+so the actuarial present value of the $100,000 insurance is $24,244.85.
+
+In practice the benefit may be payable at the end of a shorter period than a year, which requires an adjustment of the formula.
+
+
+## Life annuity
+
+The actuarial present value of a life annuity of 1 per year paid continuously can be found in two ways:
+
+**Aggregate payment technique** (taking the expected value of the total present value):
+
+This is similar to the method for a life insurance policy. This time the random variable *Y* is the total present value random variable of an annuity of 1 per year, issued to a life aged *x*, paid continuously as long as the person is alive, and is given by:
+
+where *T=T(x)* is the future lifetime random variable for a person age *x*. The expected value of *Y* is:
+
+**Current payment technique** (taking the total present value of the function of time representing the expected values of payments):
+
+where *F*(*t*) is the cumulative distribution function of the random variable *T*.
+
+The equivalence follows also from integration by parts.
+
+In practice life annuities are not paid continuously. If the payments are made at the end of each period the actuarial present value is given by
+
+Keeping the total payment per year equal to 1, the longer the period, the smaller the present value is due to two effects:
+
+* The payments are made on average half a period later than in the continuous case.
+* There is no proportional payment for the time in the period of death, i.e. a "loss" of payment for on average half a period.
+
+Conversely, for contracts costing an equal lumpsum and having the same internal rate of return, the longer the period between payments, the larger the total payment per year.
+
+
+## Life assurance as a function of the life annuity
+
+The APV of whole-life assurance can be derived from the APV of a whole-life annuity-due this way:
+
+This is also commonly written as:
+
+In the continuous case,
+
+In the case where the annuity and life assurance are not whole life, one should replace the assurance with an n-year endowment assurance (which can be expressed as the sum of an n-year term assurance and an n-year pure endowment), and the annuity with an n-year annuity due.
+

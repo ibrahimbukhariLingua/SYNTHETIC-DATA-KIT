@@ -1,0 +1,31 @@
+Progressively measurable process
+
+
+# Progressively measurable process
+
+
+
+In mathematics, **progressive measurability** is a property in the theory of stochastic processes. A progressively measurable process, while defined quite technically, is important because it implies the stopped process is measurable. Being progressively measurable is a strictly stronger property than the notion of being an adapted process. Progressively measurable processes are important in the theory of Itô integrals.
+
+
+## Definition
+
+Let
+
+* {\displaystyle (\Omega ,{\mathcal {F}},\mathbb {P} )} be a probability space;
+* {\displaystyle (\mathbb {X} ,{\mathcal {A}})} be a measurable space, the *state space*;
+* {\displaystyle \{{\mathcal {F}}\_{t}\mid t\geq 0\}} be a filtration of the sigma algebra {\displaystyle {\mathcal {F}}};
+* {\displaystyle X:[0,\infty )\times \Omega \to \mathbb {X} } be a stochastic process (the index set could be {\displaystyle [0,T]} or {\displaystyle \mathbb {N} \_{0}} instead of {\displaystyle [0,\infty )});
+* {\displaystyle \mathrm {Borel} ([0,t])} be the Borel sigma algebra on {\displaystyle [0,t]}.
+
+The process {\displaystyle X} is said to be **progressively measurable** (or simply **progressive**) if, for every time {\displaystyle t}, the map {\displaystyle [0,t]\times \Omega \to \mathbb {X} } defined by {\displaystyle (s,\omega )\mapsto X\_{s}(\omega )} is {\displaystyle \mathrm {Borel} ([0,t])\otimes {\mathcal {F}}\_{t}}-measurable. This implies that {\displaystyle X} is {\displaystyle {\mathcal {F}}\_{t}}-adapted.
+
+A subset {\displaystyle P\subseteq [0,\infty )\times \Omega } is said to be **progressively measurable** if the process {\displaystyle X\_{s}(\omega ):=\chi \_{P}(s,\omega )} is progressively measurable in the sense defined above, where {\displaystyle \chi \_{P}} is the indicator function of {\displaystyle P}. The set of all such subsets {\displaystyle P} form a sigma algebra on {\displaystyle [0,\infty )\times \Omega }, denoted by {\displaystyle \mathrm {Prog} }, and a process {\displaystyle X} is progressively measurable in the sense of the previous paragraph if, and only if, it is {\displaystyle \mathrm {Prog} }-measurable.
+
+
+## Properties
+
+* It can be shown that {\displaystyle L^{2}(B)}, the space of stochastic processes {\displaystyle X:[0,T]\times \Omega \to \mathbb {R} ^{n}} for which the Itô integral
+
+* Every adapted process with left- or right-continuous paths is progressively measurable. Consequently, every adapted process with càdlàg paths is progressively measurable.
+* Every measurable and adapted process has a progressively measurable modification.

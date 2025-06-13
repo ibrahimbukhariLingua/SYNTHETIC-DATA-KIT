@@ -1,0 +1,64 @@
+The Observatory of Economic Complexity
+
+
+# The Observatory of Economic Complexity
+
+
+
+**The Observatory of Economic Complexity** (**OEC**) is an online data visualization and distribution platform for international trade data designed and owned by Datawheel. Through interactive visualizations, the OEC aims to make global trade data accessible and understandable.
+
+The site consists of a series of periodically updated profiles dedicated to exploring trade data for countries and their regions, companies, products, and international organizations. It also features bilateral profiles that allow exploring the trade relationships between different countries and between countries and products. The platform has developed an arrangement of tools dedicated to exploring trade datasets and making data cuts with its Data, Company, and Trend Explorers or building custom visualizations with its Viz builder.
+
+The OEC also features economic complexity data through indicators, maps, rankings, and publications, making it a resource for researchers, trade experts, businesses, students, and others who want to understand world economy dynamics.
+
+
+## History
+
+The OEC began as a research project at MIT's Collective Learning group (former Macro Connections Group). It was the Master Thesis of Alex Simoes (2012), directed by Professor Cesar A. Hidalgo.
+
+In 2012, the OEC was spun out of MIT as an open-source project and refined throughout the years, expanding its technical and analytical capacities.
+
+**OEC 1.0 (2011-2013)**
+
+The first version of the OEC focused primarily on creating single visualizations of trade data. At that time, it was a pioneering effort in data visualization and distribution.
+
+**OEC 2.0 (2013-2015)**
+
+The second version of the OEC introduced the idea of profiles. These profiles were designed primarily for search engine optimization, but quickly grew into the most popular section of the site. The visualization builder (Explore in OEC 2.0) was still the main feature.
+
+**OEC 3.0 (2015-2020)**
+
+The 3.0 version of the OEC was designed around profiles. The visualization builder became a secondary feature, giving the tool a more narrative flavor.
+
+**OEC 4.0 (2020-2021)**
+
+The 4.0 version of the OEC is the largest and most ambitious version of the OEC ever created. It includes subnational level data for dozens of countries, sourced directly from their public customs records. This makes the OEC much more recent, relevant, and higher resolution.
+The 4.0 version of the OEC also includes several new features, such as a tunable forecast tool, the tariff explorer, and the ability to calculate economic complexity rankings dynamically.
+OEC 4.0 was built from scratch on a completely new code base created solely by Datawheel.
+
+**OEC 5.0 (2021-Today)**
+
+The 5.0 version was launched in the summer of 2021, bringing subnational data from regions and provinces from over 20 major countries. This new version also gives users the ability to pay for both pro and premium subscription. The pro subscription includes access to a rich data explorer as well as the API for programmatic data access while the premium tier gives users the ability to download any of the 20+ subnational datasets newly added to the OEC.
+
+
+## Source data
+
+The Observatory of Economic Complexity (OEC) integrates several datasets for free; notably including data from UN Comtrade, which is meticulously cleaned by the BACI team at the Centre d'Etudes Prospectives et d'Informations Internationales (CEPII). This comprehensive dataset encompasses exports and imports categorized by both country of origin and destination, with products detailed according to the Standard International Trade Classification at the four-digit level (SITC-4) and the Harmonized System at the four-digit level (HS-4). Spanning from 1962 to 2022, the OEC offers datasets covering complexity indicators (PCI and ECI), World Development Indicators (WDI), tariffs (WITS), and trade data classified under SITC2 (1962-2018) and various HS Code revisions.
+
+The platform also features up-to-date trade data at Subnational Geography, Continents, Countries, Provinces, Ports of Entry, and departments levels for numerous countries. This data, sourced from national agencies responsible for customs data collection, is available for over 25 countries, which collectively represent 85% of global trade.
+
+Additionally, the OEC includes Bill of Lading (BoL) data, which comprises millions of records for products shipped to and from the United States, compiled by the U.S. Customs and Border Protection (CBP). This dataset offers detailed information on consignees, shippers, product descriptions, and quantities traded, enabling a granular analysis of individual company behavior and procurement practices. The high-resolution BoL data reveals specific details for each shipping port, allowing for the detection of trade changes that might be overlooked in broader datasets.
+
+
+## Visualizations
+
+D3plus is the underlying engine responsible for generating all of the visualization used on the site. D3plus is an open source (MIT license) JavaScript library built on top of D3.js by Alexander Simoes and Dave Landry. It is also used on other visualization themed sites such as DataViva and Pantheon.
+
+Visual representations include
+
+* Stacked Area Charts
+* The Product Space
+* Predictive Tools
+* Maps
+* Treemaps
+* Lineplot

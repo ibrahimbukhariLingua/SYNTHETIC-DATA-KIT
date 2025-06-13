@@ -1,0 +1,79 @@
+FXO and FXS
+
+
+# FXO and FXS
+
+
+
+In modern day usage, "**foreign exchange office**" (**FXO**) and "**foreign exchange station**" (**FXS**) refer to the different ends of a telephone line in the context of voice over IP (VoIP) systems and its interconnection with analog telephony equipment. The FXO side is used for the telephone, and the FXS side is the analog telephone adapter.
+
+Historically, a **foreign exchange** (**FX**) **service** was an access service in a telecommunications network in which a telephone in a given exchange area is connected, via a private line, as opposed to a switched line, to a telephone exchange or central office in another exchange area, called the *foreign* exchange, rather than the local exchange area where the subscriber station equipment is located. To call originators, it appears that the called party having the FX service is located in the foreign exchange area. It is assigned a telephone number of the foreign exchange. The telecommunication circuit between central offices that implements foreign exchange service has complementary interface types at each end. At the foreign central office that provides the service, the interface is called the foreign exchange office (FXO) end, and at the end where the subscriber station is connected, it provides the foreign exchange station (FXS) interface.
+
+The FXO and FXS terminology is frequently used outside of the context of foreign exchange links. Examples include channel banks with T1 links.
+
+
+## Purpose
+
+Basic telephony terminology distinguishes two types of offices: local and foreign. A local office is assigned a specific area, and all telephone services provided to that area originate from that central office. Each central office has a unique identifier. The Bell System established a unified set of central offices prefixes after World War II. The central offices usually had names, derived from locally-distinct geographic or historical contexts. Under the standardized number plan, each central office was assigned a three-digit number unique within each area code that was prefixed to the local telephone number.
+
+The prefixes often still reflected the geography and had value in user's perception of the number, beyond the pure technical function of uniquely identifying the central office. Calls with a different prefix might incur additional charges, so businesses on one central office might want a number that is local call for customers of a different central office. Prefixes, since they related to geography, often carried the cachet of their neighborhoods; some central office prefixes were immortalized in popular culture for that reason.
+
+Customers who wanted a telephone number provided by a neighboring or remote telephone central office leased a "foreign exchange" line. With two-wire loop technology, this typically required an engineered circuit with increased costs. The practice, rare except in big cities, is in decline.
+
+**Foreign central office** (FCO) or **foreign zone** (FZ) services were, from a technological standpoint, deployed with the same methods as **foreign exchange** (FX). They differ only in that the remote office is in exactly the same rate centre (FCO) or merely in a different zone of the same US metropolitan city (FZ). Much like FX service rates depend on the distance between rate centers, FCO service prices depend on the distance between exchanges.
+
+
+## Function
+
+An FX line has the local calling area of the foreign exchange in which it is numbered.
+
+A subscriber located just outside the exchange boundary of a large city, or just outside the flat-rate local calling area for the city, would find that many numbers which would have been local from the city itself became long-distance. In many areas, local flat-rate service was subsidized by long-distance toll service for much of the 20th century. As an "FX line" has a number from the neighboring city, it has the city calling area for both incoming and outbound calls.
+
+For instance, a suburban business may want to market extensively to Toronto, a large city with flat-rate local calling:
+
+* If the business is in an adjacent suburb (such as Mississauga or Markham) a local number will reach the city but not the suburbs on the other side. Adding an FX line with a Toronto +1-416 number would provide full coverage.
+* If the business is located just outside the larger city's local calling area, an FX number in the next-closer suburb would provide a limited coverage of the city. An Oshawa business may lease an FX line from suburban Ajax as that community is local to both Toronto and Oshawa, even though Ajax does not have the full Toronto calling area.
+
+The "FX line" is usually treated as part of the distant city when originating calls to N11-style numbers, such as information or emergency telephone numbers.
+
+While a cost of hundreds of dollars monthly for the leased line was not uncommon, to a business handling large volumes of calls from the larger city the cost may have been justified by long-distance toll savings at a time when long-distance was pricey and alternatives were limited.
+
+Originally, the FX line was a physical copper pair of telephone wires from the foreign exchange which were connected to the local subscriber loop at the local exchange, without passing through the local switch. This dedicated circuit is often replaced with a virtual circuit, where the local switch sends the FX calls to the foreign exchange (which handles all billing) on existing trunks.
+
+In rare instances, the supposed "foreign" exchange actually resided on the same physical telephone exchange at the same location, but clients were billed based on nominal centre-to-centre distance between different rate centres.
+
+A similar "FCO" service provided no difference in local calling area (the distant exchange is in the same rate centre). Historically, it was a means to obtain features not available on the local exchange (such as DTMF tone dialling when first introduced in 1963) or keep an existing business telephone number operational after a cross-town move.
+
+Conventional "foreign exchange" leased lines and their variants have become less common due to newer alternatives:
+
+* An outbound "extender" is an automated local number at a service bureau in the larger city. A suburban subscriber (who can call the city itself locally but is long distance to suburbs on the other side) could call the extender locally, get a city dial tone and dial back out locally to the larger area.
+* Remote call forwarding served a similar function for inbound calls only. A suburban business could get a downtown big-city number; clients anywhere in the larger city's coverage area could call locally, only to be silently redirected via a second local call to the destination.
+* Interactive voice response systems have been hosted at answering service bureaux for clients such as suburban radio stations accepting calls from listeners in the larger city. As the machine is on a city number, it is reachable from the full metropolitan calling area.
+* Mobile telephone exchanges (in countries which use geographic numbers) normally are issued from the larger city and have that city's full calling area.
+* Voice over IP numbers may be obtained from most cities and used almost anywhere in the world. VoIP renders the subscriber's physical location meaningless, as long as unrestricted broadband Internet is available at the site. Local number portability allows an existing number to be moved to VoIP (or, in some countries, a mobile telephone) which can then be freely moved out of the original geographic location while keeping the directory listing and service area unchanged.
+
+## Circuit interfaces
+
+The circuit that implements the foreign exchange service has two ends, one at the central office that provides the service in the foreign exchange, where the telephone number is assigned, and one at the central office that services the subscriber station. The former is called a foreign exchange office (FXO) interface, and the latter a foreign exchange station (FXS) interface. These two interface types perform complementary functions in signaling.
+
+
+### Foreign exchange office
+
+The foreign exchange office (FXO) interface is a telephone signaling interface that terminates the foreign exchange line at the central office that provides the telephone number and the call switching for the service. It generates the off-hook and on-hook indications through loop closure and non-closure of a direct current (DC) circuit powered by the serving central office switch.
+
+
+### Foreign exchange station
+
+The foreign exchange station (FXS) interface is located at the wire center of the subscriber equipment, supplying battery power and dial tone, and generating ringing voltage toward the subscriber station of the foreign exchange service.
+
+
+## Use in voice-over-IP systems
+
+Some of the terminology of the foreign exchange service is retained in modern digital packet telephony to indicate whether VoIP equipment is designed to be connected to telephone lines from a central office or to telephone stations.
+
+FXO and FXS interfaces are available for computers and networking equipment to interface these directly with plain old telephone service (POTS) systems.
+
+An FXO device is any device that, from the point of view of a telephone exchange, appears to be a telephone. As such, it should be able to accept ringing signals, go on-hook and off-hook, and send and receive voice frequency signals. It may use loop start or ground start signaling.
+
+An FXS interface is any interface that functions like a standard telephone line jack on the wall. An FXS interface utilizes a line protocol, most commonly loop start, to detect when the terminating device (telephone) goes on-hook or off-hook, and can send and receive voice signals.
+

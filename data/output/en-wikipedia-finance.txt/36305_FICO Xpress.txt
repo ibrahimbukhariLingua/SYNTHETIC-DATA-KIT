@@ -1,0 +1,28 @@
+FICO Xpress
+
+
+# FICO Xpress
+
+
+
+The **FICO Xpress** optimizer is a commercial optimization solver for linear programming (LP), mixed integer linear programming (MILP), convex quadratic programming (QP), convex quadratically constrained quadratic programming (QCQP), second-order cone programming (SOCP) and their mixed integer counterparts. Xpress includes a general purpose nonlinear global solver, Xpress Global, and a nonlinear local solver, Xpress NonLinear, including a successive linear programming algorithm (SLP, first-order method), and Artelys Knitro (second-order methods).
+
+Xpress was originally developed by Dash Optimization, and was acquired by FICO in 2008.
+Its initial authors were Bob Daniel and Robert Ashford. The first version of Xpress could only solve LPs; support for MIPs was added in 1986.
+Being released in 1983, Xpress was the first commercial LP and MIP solver running on PCs.
+In 1992, an Xpress version for parallel computing was published, which was extended to distributed computing five years later.
+Xpress was the first MIP solver to cross the billion matrix non-zero threshold by introducing 64-bit indexing in 2010.
+Since 2014, Xpress features the first commercial implementation of a parallel dual simplex method.
+In 2022, Xpress was the first commercial MIP solver to introduce the possibility of solving nonconvex nonlinear problems to proven global optimality.
+
+
+## Technology
+
+Linear and quadratic programs can be solved via the primal simplex method, the dual simplex method, or the barrier interior point method. For linear programs, Xpress further implements a primal-dual hybrid gradient algorithm. All mixed integer programming variants as well as nonconvex continuous problems are solved by a combination of the branch and bound method and the cutting-plane method. Infeasible problems can be analyzed via the IIS (irreducible infeasible subset) method. Xpress provides a built-in tuner for automatic tuning of control settings.
+Xpress includes its modelling language Xpress Mosel and the integrated development environment Xpress Workbench.
+Mosel includes distributed computing features to solve multiple scenarios of an optimization problem in parallel. Uncertainty in the input data can be handled via robust optimization methods.
+
+Xpress has a modeling module called BCL (Builder Component Library) that interfaces to the C, C++, Java programming languages, and to the .NET Framework. Independent of BCL, there are Python and MATLAB interfaces. Next to Mosel, Xpress connects to other standard modeling languages, such as AIMMS, AMPL, and GAMS.
+
+The FICO Xpress Executor executes and deploys Mosel models, using SOAP or REST interfaces. It can be used from external applications or from the FICO Decision Management Platform.
+

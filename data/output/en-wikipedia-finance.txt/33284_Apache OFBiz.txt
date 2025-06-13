@@ -1,0 +1,73 @@
+Apache OFBiz
+
+
+# Apache OFBiz
+
+
+
+**Apache OFBiz** is an open source enterprise resource planning (ERP) system. It provides a suite of enterprise applications that integrate and automate many of the business processes of an enterprise.ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ
+
+OFBiz is an Apache Software Foundation top level project.
+
+
+## Overview
+
+Apache OFBiz is a framework that provides a common data model and a set of business processes.
+All applications are built around a common architecture using common data, logic and process components.
+Beyond the framework itself, Apache OFBiz offers functionality including:
+
+* Accounting (agreements, invoicing, vendor management, general ledger)
+* Asset maintenance
+* Catalogue and product management
+* Facility and warehouse management system (WMS)
+* Manufacturing execution / manufacturing operations management (MES/MOM)
+* Order processing
+* Order management system (OMS) Including multi-channel order processing, drop-shipping support, and enhanced inventory management.
+* Inventory management, automated stock replenishment etc.
+* Content management system (CMS)
+* Human resources (HR)
+* People and group management
+* Project management
+* Sales force automation
+* Work effort management
+* Electronic point of sale (ePOS)
+* Electronic commerce (eCommerce)
+* Scrum (development) (Scrum software development support)
+
+## Technology
+
+All Apache OFBiz functionality is built on a common framework. The functionality can be divided into the following distinct layers:
+
+
+### Presentation layer
+
+Apache OFBiz uses the concept of "screens" to represent the Apache OFBiz pages. Each page is, normally, represented as a screen. A page in Apache OFBiz consists of components. A component can be a header, footer, etc. When the page is rendered all the components are combined as specified in the screen definition. Components can be Java Server Pages ([JSP]s) <deprecated>, FTL pages built around FreeMarker template engine, forms or menus widgets. Widgets are an OFBiz specific technology.
+
+
+### Business layer
+
+The business, or application layer defines services provided to the user. The services can be of several types: Java methods, SOAP, simple services, workflow, etc. A service engine is responsible for invocation, transactions and security.
+
+Apache OFBiz uses a set of open source technologies and standards such as Java, Java EE, XML and SOAP. Although Apache OFBiz is built around the concepts used by Java EE, many of its concepts are implemented in different ways; either because Apache OFBiz was designed prior to many recent improvements in Java EE or because Apache OFBiz authors didn't agree with those implementations.
+
+
+### Data layer
+
+The data layer is responsible for database access, storage and providing a common data interface to the business layer. Data is accessed not in object oriented fashion but in a relational way. Each entity (represented as a row in the database) is provided to the business layer as a set of generic values. A generic value is not typed, so fields of an entity are accessed by the column name.
+
+
+### Key integrations
+
+Apache Solr is an enterprise search server with a REST-like API. It's highly scalable, adaptable, comprehensive, and capable of processing and handling large amounts of data. The Apache Solr / OFBiz integration not only speeds up searches, but also greatly enhances the search capabilities of OFBiz. Solr also added faceted and hierarchical search capabilities to OFBiz.
+
+REST offers several advantages that make it a preferred choice for building and consuming web services particularly utilizing micro services architecture. The greatest benefit is the support for headless architecture.
+
+Gradle, though it's a separate tool outside of OFBiz, this development is nonetheless significant because it simplifies the maintenance and upgrade of OFBiz dependencies on external libraries, which makes it easier to keep the system up to date and secure.
+
+
+## History
+
+The OFBiz project was created by David E. Jones and Andrew Zeneski on April 13, 2001. The project was initially hosted as The Apache Open For Business Project on SourceForge and Open For Business Project (Apache OFBiz) at Open HUB.
+
+Between September 2003 and May 2006, it was hosted as a java.net project, but the project has been removed from there. It has begun to be widely used around 2003. After incubating since January 31, 2006, it became a Top Level Apache project on December 20, 2006: Apache OFBiz Incubation Status.
+

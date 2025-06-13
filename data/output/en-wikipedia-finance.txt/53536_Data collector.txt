@@ -1,0 +1,28 @@
+Data collector
+
+
+# Data collector
+
+
+
+In the UK electricity system, a **data collector** (DC) is responsible for determining the amount of electricity supplied so that the customer can be correctly billed.
+
+
+## Half-hourly
+
+For half-hourly metered supplies, the half-hourly data collector (HHDC) retrieves the energy consumption data from the meter and makes any necessary estimates. The half-hourly (HH) data is a history of the customer's electricity consumption for each half-hour period.
+
+
+## Non-half-hourly
+
+For non-half-hourly metered supplies, the Non-Half-Hourly Data Collector (NHHDC) determines the consumption by calculating the advance (the difference between the last two meter reads); this is annualised to produce an Annual Advance (AA) and is the data the supplier will pay on.
+
+The NHHDC is also responsible determining the Estimated Annual Consumption (EAC), which is a forecast for a year ahead. The EAC is initially provided by the supplier, and thereafter forecast based on actual meter readings.
+
+Data from the Data Collector (EAC/ AA's) is provided to the non-half-hourly data aggregator, which aggregates the individual values provided into a single figure split in a number of ways e.g. geographically or by supplier. This aggregated data is then provided to the Central Systems, maintained by Elexon, to determine the value of energy which has been used by suppliers so that they are able to settle with the distribution network which generated the energy. The process is known as balancing and settlement and is regulated according to the Balancing and Settlement Code (BSC).
+
+
+## Payment
+
+A data collection charge is a fee paid to the data collector for determining the energy consumption of the supply. The charge may be shown separately on an electricity bill or it may be incorporated in the electricity supplier's overall charges.
+

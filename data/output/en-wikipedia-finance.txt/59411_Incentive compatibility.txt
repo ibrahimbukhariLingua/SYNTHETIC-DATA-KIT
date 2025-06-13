@@ -1,0 +1,35 @@
+Incentive compatibility
+
+
+# Incentive compatibility
+
+
+
+In game theory and economics, a mechanism is called **incentive-compatible** (**IC**)**⁴¹⁵** if every participant can achieve their own best outcome by reporting their true preferences.²²⁵ For example, there is incentive compatibility if high-risk clients are better off in identifying themselves as high-risk to insurance firms, who only sell discounted insurance to high-risk clients. Likewise, they would be worse off if they pretend to be low-risk. Low-risk clients who pretend to be high-risk would also be worse off. The concept is attributed to the Russian-born American economist Leonid Hurwicz.
+
+
+## Typology
+
+There are several different degrees of incentive-compatibility:
+
+* The stronger degree is **dominant-strategy incentive-compatibility** (**DSIC**).⁴¹⁵ It means that truth-telling is a weakly-dominant strategy, i.e. you fare best or at least not worse by being truthful, regardless of what the others do. In a DSIC mechanism, strategic considerations cannot help any agent achieve better outcomes than the truth; such mechanisms are called strategyproof,²⁴⁴,⁷⁵² truthful, or straightforward.
+* A weaker degree is **Bayesian-Nash incentive-compatibility** (**BNIC**).⁴¹⁶ It means there is a Bayesian Nash equilibrium in which all participants reveal their true preferences. In other words, *if* all other players act truthfully, *then* it is best to be truthful.²³⁴
+
+Every DSIC mechanism is also BNIC, but a BNIC mechanism may exist even if no DSIC mechanism exists.
+
+Typical examples of DSIC mechanisms are second-price auctions and a simple majority vote between two choices. Typical examples of non-DSIC mechanisms are ranked voting with three or more alternatives (by the Gibbard–Satterthwaite theorem) or first-price auctions.
+
+
+## In randomized mechanisms
+
+A randomized mechanism is a probability-distribution on deterministic mechanisms. There are two ways to define incentive-compatibility of randomized mechanisms:²³¹–²³²
+
+* The stronger definition is: a randomized mechanism is universally-incentive-compatible if every mechanism selected with positive probability is incentive-compatible (i.e. if truth-telling gives the agent an optimal value regardless of the coin-tosses of the mechanism).
+* The weaker definition is: a randomized mechanism is incentive-compatible-in-expectation if the game induced by expectation is incentive-compatible (i.e. if truth-telling gives the agent an optimal expected value).
+
+## Revelation principles
+
+The revelation principle comes in two variants corresponding to the two flavors of incentive-compatibility:
+
+* The dominant-strategy revelation-principle says that every social-choice function that can be implemented in dominant-strategies can be implemented by a DSIC mechanism.
+* The Bayesian–Nash revelation-principle says that every social-choice function that can be implemented in Bayesian–Nash equilibrium (Bayesian game, i.e. game of incomplete information) can be implemented by a BNIC mechanism.

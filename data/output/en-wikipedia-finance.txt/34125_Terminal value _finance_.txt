@@ -1,0 +1,52 @@
+Terminal value (finance)
+
+
+# Terminal value (finance)
+
+
+
+In finance, the **terminal value** (also known as “**continuing value**” or “**horizon value**” or "**TV**") of a security is the present value *at a future point in time* of all future cash flows when we expect stable growth rate forever. It is most often used in multi-stage discounted cash flow analysis, and allows for the limitation of cash flow projections to a several-year period; see Forecast period (finance).
+Forecasting results beyond such a period is impractical and exposes such projections to a variety of risks limiting their validity, primarily the great uncertainty involved in predicting industry and macroeconomic conditions beyond a few years.
+
+Thus, the terminal value allows for the inclusion of the value of future cash flows occurring beyond a several-year projection period while satisfactorily mitigating many of the problems of valuing such cash flows.
+The terminal value is calculated in accordance with a stream of projected future free cash flows in discounted cash flow analysis.
+For whole-company valuation purposes, there are two methodologies used to calculate the Terminal Value.
+
+
+## Perpetuity Growth Model
+
+The Perpetuity Growth Model accounts for the value of free cash flows that continue growing at an assumed constant rate in perpetuity.
+Here, the projected free cash flow in the first year beyond the projection horizon (N+1) is used.
+This value is then divided by the discount rate minus the assumed perpetuity growth rate:
+
+* D₀ = Cash flows at a future point in time which is immediately prior to N+1, or at the end of period N, which is the final year in the projection period.
+* k = Discount Rate.
+* g = Growth Rate.
+* T₀ is the value of future cash flows; here dividends.
+
+When the valuation is based on free cash flow to firm then the formula becomes {\displaystyle {\left[{\frac {FCFF\_{N+1}}{(WACC\_{N}-g)}}\right]}},
+where the discount rate is correspondingly the weighted average cost of capital.
+
+These formulae are essentially the result of a geometric series which returns the value of a series of growing future cash flows;
+
+To determine the present value of the terminal value, one must discount its value at T₀ by a factor equal to the number of years included in the initial projection period.
+If N is the 5th and final year in this period, then the Terminal Value is divided by (1 + k)⁵ (or WACC). The Present Value of the Terminal Value is then added to the PV of the free cash flows in the projection period to arrive at an implied enterprise value.
+
+If the growth rate in perpetuity is not constant, a multiple-stage terminal value is calculated. The terminal growth rate can be negative, if the company in question is assumed to disappear in the future.
+
+
+## Exit Multiple Approach
+
+The Exit or Terminal Multiple Approach assumes a business will be sold at the end of the projection period. Valuation analytics are determined for various operating statistics using comparable acquisitions. A frequently used terminal multiple is Enterprise Value/EBITDA or EV/EBITDA. The analysis of comparable acquisitions will indicate an appropriate range of multiples to use. The multiple is then applied to the projected EBITDA in Year N, which is the final year in the projection period. This provides a future value at the end of Year N. The terminal value is then discounted using a factor equal to the number of years in the projection period. If N is the 5th and final year in this period, then the Terminal Value is divided by (1+k)⁵. The Present Value of the Terminal Value is then added to the PV of the free cash flows in the projection period to arrive at an implied Enterprise Value. Note that if publicly traded comparable company multiples must be used, the resulting implied enterprise value will not reflect a control premium. Depending on the purposes of the valuation, this may not provide an appropriate reference range.
+
+
+## Comparison of methodologies
+
+There are several important differences between the two approaches.
+
+The Perpetuity Growth Model has several inherent characteristics that make it intellectually challenging. Because both the discount rate and growth rate are assumptions, inaccuracies in one or both inputs can provide an improper value. The difference between the two values in the denominator determines the terminal value, and even with appropriate values for both, the denominator may result in a multiplying effect that does not estimate an accurate terminal value. Also, the perpetuity growth rate assumes that free cash flow will continue to grow at a constant rate into perpetuity. Consider that a perpetuity growth rate exceeding the annualized growth of the S&P 500 and/or the U.S. GDP implies that the company's cash flow will outpace and eventually absorb these rather large values. Perhaps the greatest disadvantage to the Perpetuity Growth Model is that it lacks the market-driven analytics employed in the Exit Multiple Approach. Such analytics result in a terminal value based on operating statistics present in a proven market for similar transactions. This provides a certain level of confidence that the valuation accurately depicts how the market would value the company in reality.
+
+On the other hand, the Exit Multiple approach must be used carefully, because multiples change over time. Simply applying the current market multiple ignores the possibility that current multiples may be high or low by historical standards. In addition, it is important to note that at a given discount rate, any exit multiple implies a terminal growth rate and conversely any terminal growth rate implies an exit multiple. When using the Exit Multiple approach it is often helpful to calculate the implied terminal growth rate, because a multiple that may appear reasonable at first glance can actually imply a terminal growth rate that is unrealistic.
+
+In practice, academics tend to use the Perpetuity Growth Model, while investment bankers favor the Exit Multiple approach. Ultimately, these methods are two different ways of saying the same thing. For both terminal value approaches, it is essential to use a range of appropriate discount rates, exit multiples and perpetuity growth rates in order to establish a functional valuation range.
+

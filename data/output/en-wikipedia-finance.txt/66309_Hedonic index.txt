@@ -1,0 +1,59 @@
+Hedonic index
+
+
+# Hedonic index
+
+
+
+A **hedonic index** is any price index which uses information from hedonic regression, which describes how product price could be explained by the product's characteristics. Hedonic price indexes have proved to be very useful when applied to calculate price indices for information and communication products (e.g. personal computers) and housing, because they can successfully mitigate problems such as those that arise from there being new goods to consider and from rapid changes of quality.
+
+
+## Motivation
+
+In the last two decades considerable attention has been drawn to the methods of computing price indexes. The Boskin Commission in 1996 asserted that there were biases in the price index: traditional matched model indexes can substantially overestimate inflation, because they are not able to measure the impact of peculiarities of specific industries such as fast rotation of goods, huge quality differences among products on the market, and short product life cycle. The Commission showed that the usage of matched model indexes (traditional price indexes) leads to an overestimation of inflation by 0.6% per year in the US official CPI (CPI-U). Information and Communications Technology (ICT) products led both to an increase in capital stock and labor productivity growth. Similar results were obtained by Crawford for Canada, by Shiratsuka for Japan, and by Cunningham for the UK. By reversing hedonic methodology, and pending further disclosure from commercial sources, bias has also been enumerated annually over five decades, for the U.S.A.
+
+Quality adjustments are also important for understanding national accounts deflators (see GDP deflator). In the USA, for example, growth acceleration after 1995 was driven by the increased investment in ICT products that lead both to an increase in capital stock and labor productivity growth. This increases the complexity of international comparisons of deflators. Wyckoff and Eurostat show that there is a huge dispersion in ICT deflators in Organisation for Economic Co-operation and Development (OECD) and European countries, accordingly.
+
+These differences are so huge that it cannot be explained by any means of market conditions, regulation, etc. As both studies suggest, most of the discrepancy comes from the differences in quality adjustment procedures across countries and that, in turn, makes international comparison of investment in ICT impossible (as it is calculated through deflation). This also makes it difficult to compare the impact of ICT on economies (countries, regions, etc.) that use different methods to compute GDP numbers.
+
+
+## Hedonic regression
+
+For example, for a linear econometric model, assume that at each period *t* we have {\displaystyle n\_{t}} goods, which could be described by a vector of *k* characteristics {\displaystyle (z\_{1it},...,z\_{kit}\;)^{T}}. Thus the hedonic (cross-sectional) regression is:
+
+where {\displaystyle c\_{it}} is a set of coefficients and {\displaystyle \xi \_{it}} are independent and identically distributed, having a normal distribution {\displaystyle N(0,\sigma ^{2})}.
+
+
+## Hedonic price index
+
+There are several ways the hedonic price indexes can be constructed. Following Triplett, two methods can be distinguished—direct and indirect. The direct method uses only information obtained from the hedonic regression, while the second method combines information derived from the hedonic regression and matched models (traditional price indexes). In indirect method, data used for estimating hedonic regression and calculating matched models indexes are different.
+
+The *Direct method* could be divided into the *Time Dummy Variable* and *Characteristic methods*.
+
+
+### Time dummy variable method
+
+The Time Dummy Variable is simpler, because it assumes implicit prices (coefficients of the hedonic regression - {\displaystyle c\_{it}}) to be constant over adjacent time periods. This assumption generally does not hold since implicit prices reflect both demand and supply.
+
+
+### Characteristic method
+
+Characteristic method, relaxes this assumption, based on the usage of fitted prices from hedonic regression. This method generally should lead to a more stable estimates, because ordinary least squares (OLS) estimates guarantee that the regression always passes through its mean.
+
+The corresponding *characteristic chain* hedonic price index looks for period from *0* to *T*,
+
+and {\displaystyle {\widehat {P}}\_{t+1}(z^{\tau })} is an estimate of price obtained from hedonic regression at period *t*+1 with mean characteristics of period {\displaystyle \tau :\ z^{\tau }}.
+
+The corresponding *characteristic base* hedonic price index looks for period from *0* to *T*:
+
+A specification of {\displaystyle \ z^{\tau }} - mean characteristics for the certain period, determines the type of index. For example, if we set {\displaystyle \ z^{\tau }} equal to the mean of the characteristics for the previous period {\displaystyle t:\ z^{t}}, we would get a Laspeyres-type index. Setting {\displaystyle \ z^{\tau }} equal to {\displaystyle t+1:\ z^{t+1}} gives Paasche-type index and so on. The Fisher-type index is defined as a square root of product of Laspeyres- and Paasche-type indexes. The Edgeworth-Marshall index uses the arithmetic mean of mean characteristics of two periods *t* and *t*+1. A Walsh-type index uses the geometric average of two periods. And finally, the base quality index does not update characteristics (quality) and uses fixed base characteristics - {\displaystyle \ z^{0}}.
+
+
+## Hedonic quality indexes
+
+Hedonic quality index is similar to quantity index in traditional index theory—it measures how the price of obtaining set of characteristics had changed over time. For example, if we are willing to estimate the effect that characteristic growth (or decline) has had on the price of a computer for one period - from *t* to *t+1*, then the hedonic quality index would look like:
+
+where {\displaystyle \ \eta }, as in the case with price indexes, determines the type of the index. So, the chain quality index for the period from *0* to *T* would look like:
+
+and the base index:
+

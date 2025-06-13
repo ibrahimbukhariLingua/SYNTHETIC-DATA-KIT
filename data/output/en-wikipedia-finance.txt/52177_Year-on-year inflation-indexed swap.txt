@@ -1,0 +1,50 @@
+Year-on-year inflation-indexed swap
+
+
+# Year-on-year inflation-indexed swap
+
+
+
+| Part of a series on |
+| --- |
+| Financial markets |
+| * Public market * Exchange **·** Securities |
+| Bond market |
+| * Bond valuation * Corporate bond * Fixed income * Government bond * High-yield debt * Municipal bond * Securitization |
+| Stock market |
+| * Common stock * Growth stock * Preferred stock * Registered share * Stock * Stockbroker * Stock certificate * Stock exchange * Watered stock |
+| Other markets |
+| Derivatives * (Credit derivative * Futures exchange * Hybrid security) Foreign exchange * (Currency * Exchange rate) * Commodity * ETF * Money * Mutual fund * Option * Real estate * Reinsurance * Structured product * Swap (finance) |
+| Over-the-counter (off-exchange) |
+| * Forwards * Options * Spot market * Swaps |
+| Trading |
+| * Participants * Regulation * Clearing |
+| Related areas |
+| * Alternative investment * Angel investor * Asset (economics) * Asset pricing * Banks and banking * Bull * Climate finance * Diversification (finance) * Eco-investing * Environmental finance * ESG * Financial + analysis + analyst + asset + betting + corporate + crime + forecast + personal + public + services * Fintech * Greenwashing * Growth investing * Impact investing * Investment management * Market risk * Market trend * Speculative attack * Sustainable development goals * Sustainable finance |
+| * v * t * e |
+
+A **year-on-year inflation-indexed swap** (**YYIIS**) is a standard derivative product over inflation rate. The underlying is a single consumer price index (CPI).
+
+It is called a swap because each year there is a swap of a fixed amount against a floating amount, although in practice only a one way payment is made (fixed amount – floating amount).
+
+
+## Detailed flows
+
+* Each year, at time {\displaystyle T\_{i}}
+ + Party B pays Party A the fixed amount {\displaystyle N{\phi \_{i}}K}
+ + Party A pays Party B the floating amount {\displaystyle N{\psi \_{i}}[{\frac {I(T\_{i})}{I(T\_{i-1})}}-1]}
+
+where:
+
+* **K** is the contract fixed rate
+* **N** the contract nominal value
+* **M** the number of years corresponding to the deal maturity
+* **i** the number of years (0 < i <= M)
+* **{\displaystyle \phi \_{i}}** is the fixed-leg year fractions for the interval [Ti−1, Ti]
+* **{\displaystyle \psi \_{i}}** is the floating-leg year fractions for the interval [Ti−1, Ti]
+* **{\displaystyle T\_{0}}** is the start date
+* **{\displaystyle T\_{i}}** is the time of the flow i
+* **{\displaystyle T\_{M}}** is the maturity date (end of the swap)
+* **{\displaystyle I(T\_{0})}** is the inflation at start date (time {\displaystyle T\_{0}})
+* **{\displaystyle I(T\_{i})}** is the inflation at time of the flow i (time {\displaystyle T\_{i}})
+* **{\displaystyle I(T\_{M})}** is the inflation at maturity date (time {\displaystyle T\_{M}})

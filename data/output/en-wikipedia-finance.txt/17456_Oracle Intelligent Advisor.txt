@@ -1,0 +1,108 @@
+Oracle Intelligent Advisor
+
+
+# Oracle Intelligent Advisor
+
+
+
+| Part of a series on |
+| --- |
+| Algocracy |
+| Examples |
+| * AI in government * COMPAS * Cybersyn * DAO * Dutch childcare benefits scandal * IT-backed authoritarianism * OGAS * Ofqual exam results algorithm * OIA * PMPs * Predictive policing * Robodebt scheme * Smart city * SyRI |
+| * v * t * e |
+
+**Oracle Intelligent Advisor (OIA),** formerly known as **Oracle Policy Automation** (**OPA**), is a suite of decision automation software products used for modeling and deploying business rules within the enterprise. Oracle Corporation acquired OPA in December 2008 when it purchased an Australian software company named RuleBurst Holdings, then trading as Haley. The role of the Oracle Intelligent Advisor is to transform legislation and policy documents into executable business rules, for example, the calculation of benefit entitlements or discount amounts. Although OPA was originally developed and sold to the public sector, it is now widely used in the industry.
+
+Oracle Intelligent Advisor continues to be available as an on-premise offering (known as private cloud) and as a public cloud solution. Web Service and generic connectors provide integration interfaces for applications or platforms using JSON and XML, enabling them to be the source of input data and the target of the results of the automated decision. Full auditing, traceability, transcripts, and decision reporting, helps organizations to understand and justify the decision automation outcomes.
+
+
+## Features and Components
+
+Oracle Policy Modeling is a Windows desktop application for transforming legislation and business policy into executable business rules. Rules are written in Microsoft Word and Excel documents using phrases in languages such as English, Chinese, and French. These rule documents can be shared amongst businesses and information technology stakeholders, and commentary can be added to the documents without affecting the structure of the rules themselves. Other features of Oracle Policy Modeling include integrated test case execution and debugging capabilities, and the definition of interviews for interactive rule-based assessments. Interview screen order and branching logic can be defined using rules and attributes. The concept of relevancy is used to dynamically show only pertinent Screens.
+
+The Oracle Intelligent Advisor decision automation has five main run-time elements:
+
+* **Web Determinations**: An interview application that uses screens and stages defined in Oracle Policy Modeling to deliver Internet- and intranet-based interactive HTML assessments. Data entered is used in combination with backward chaining to determine which screens need to be shown to the user in order to reach a decision.
+* **Determinations Server**: A WS-I Basic Profile compliant SOAP-based web service that exposes decision-making endpoints for deployed policy models. By passing data to the Determinations Server, and receiving responses in return, enterprises can integrate rule-based decision-making with other applications and BPM solutions. Examples include Oracle's Siebel, or BPEL- orchestrated business processes. If insufficient data is provided to reach a decision, the Oracle Determinations Server can explain what additional data may be required. The Determinations API also provides REST-based services for the same purpose.
+* **Decision Services**, introduced in 2020, allow for the rapid creation and deployment of REST-powered services without the need for a desktop deployment of Oracle Policy Modeling. The entire design, test, and deployment cycle is performed in a Web browser.
+* The **Intelligent Advisor Hub** is a web-based application to manage the development repository, deployments, connections, and other administrative features.
+* **REST APIs** are provided to execute assessments both single and in batches, to provide management of Intelligent Advisor Hub users, permissions and administrative tasks and to provide programmatic access to deployments of Intelligent Advisor Policy Models. An Open API 2.0 description is available.
+
+Oracle Intelligent Advisor Cloud Service is available as a SaaS product. Oracle Intelligent Advisor is also available as an "on-premise" product, supported on Oracle WebLogic Server, Microsoft IIS, IBM WebSphere AS, and Apache Tomcat in version 10, standardizing on Oracle WebLogic Server in version 12.
+
+Connectors for enterprise applications such as Oracle's Siebel, Oracle CRM On Demand, and SAP are also available in version 10. The Oracle Intelligent Advisor platform in version 12 includes both XML and JSON-based connection APIs to allow standards-based integration with any application or data source using a standardized API. These are known as the Connector API (XML-based) and the Generic Integration Protocol (REST-based). Connectors for use in Oracle Intelligent Advisor HTML interviews are known as Interview Extension Connectors and use the Mozilla fetch() API to enable real-time integration of external sources into the Interview experience (REST-based).
+
+
+## Versions
+
+The product now known as Oracle Intelligent Advisor has been sold under several different names, including Oracle Policy Automation (OPA), Haley Office Rules, and RuleBurst.
+
+RuleBurst 7.0 was the successor to STATUTE Expert. Although customers of STATUTE Expert were able to upgrade to the later versions, RuleBurst 7.0 was the first version of the product that has become known as Oracle Intelligent Advisor today.
+
+Oracle has released several versions of Oracle Intelligent Advisor since it was acquired. The product is now updated on a quarterly cycle with monthly updates between releases.
+
+| Product Version | Released | Comments |
+| --- | --- | --- |
+| 10.0 | December 2009 (2009-12) | A major release with significant enhancements for both policy modeling and deployment. |
+| 10.1 | March 2010 (2010-03) | Update release with several minor enhancements, including the ability to build and continue in the rule debugger while retaining session data. |
+| 10.1.1 | April 2011 (2011-04) | Maintenance release. Included critical fixes from 10.2. Replaces 10.1 |
+| 10.2 | December 2010 (2010-12) | Major release. New features included translation support for interview content and ribbons for Word 2007 and Excel 2007 for marking up rule documents. |
+| 10.3 | September 2011 (2011-09) | Incremental release. Added ability to use Oracle BI Publisher to define documents to generate during an interview. New syntactic language parsers were also added for Italian, Japanese, Portuguese, and Russian. |
+| 10.3.1 | November 2011 (2011-11) | Maintenance release. Replaces 10.3 |
+| 10.4 | March 2012 (2012-03) | Major release. New features included what-if analysis, a new batch processor and modules. |
+| 10.4.1 | May 2012 (2012-05) | Maintenance release. Replaces 10.4 |
+| 10.4.2 | October 2012 (2012-10) | Maintenance release. Replaces 10.4.1 |
+| 10.4.3 | April 2013 (2013-04) | Maintenance release. Replaces 10.4.2 |
+| 10.4.4 | July 2013 (2013-07) | Maintenance release. Replaces 10.4.3 |
+| 10.4.5 | April 2014 (2014-04) | Maintenance release. Replaces 10.4.4 |
+| 10.4.6 | May 2015 (2015-05) | Maintenance release. Replaces 10.4.5 |
+| 10.4.7 | October 2016 (2016-10) | Maintenance release. Replaces 10.4.6 |
+| 12.0 | August 2014 (2014-08) | Major release. First release of Oracle Policy Automation for Private Cloud. |
+| 12.0.1 | December 2014 (2014-12) | First release of Oracle In-Memory Policy Analytics (built on Oracle Policy Automation 12.0). |
+| 12.1 | February 2015 (2015-02) | Minor release. |
+| 12.1.1 | May 2015 (2015-05) | Maintenance release. Works side by side with 12.1 |
+| 12.2 | August 2015 (2015-08) | Minor release. New features included inferred entity rules in Excel, custom language support, Finnish and Turkish parsers. |
+| 12.2.1 | November 2015 (2015-11) | Minor release. New features included policy usage statistics, project inclusions, reference tags, signature and photo capture on mobile devices, and an enhanced data mapping experience. |
+| 12.2.2 | February 2016 (2016-02) | Minor release. New features included interview checkpoints, touch-friendly interviews, free navigation in interviews and multi-level value lists. |
+| 12.2.3 | May 2016 (2016-05) | Minor release. New features included multi-channel interviews, interview checkpoints, signatures in forms and HR self-service example. |
+| 12.2.4 | August 2016 (2016-08) | Minor release. New features included RuleScript and enhancement of interview statistics and relationship handling. |
+| 12.2.5 | November 2016 (2016-11) | Major release. New features included next-generation interviews, dynamic interview behavior, enhanced navigation, and access control for policy models. |
+| 12.2.6 | February 2017 (2017-02) | Minor release. New features included Service Cloud connection enhancements, programmatic & identity manager-based Hub user management, an integration user account type, and exporting project data model. |
+| 12.2.7 | May 2017 (2017-05) | Minor release. New features included PDF form templates, interview extensions, embeddable interviews, and batch Assess REST API. |
+| 12.2.8 | August 2017 (2017-08) | Minor release. New features included checkpoints for Service Cloud agents, mobile assessments for Service Cloud, and deployments REST API. |
+| 12.2.9 / 17D | November 2017 (2017-11) | Minor release. New features included dynamic reference data loading, Engagement Cloud interview styling, and Identity Cloud Service integration. |
+| 12.2.10 / 18A | February 2018 (2018-02) | Minor release. Enhancements included populating lists from rules, obsolete API warnings, and managing API clients programmatically. |
+| 12.2.11 / 18B | May 2018 (2018-05) | Minor release. Enhancements included embeddable JavaScript models, an inline customer portal interview widget, session-based REST API licensing, and the Integration Cloud Service (ICS) OPA assessment adapter. |
+| 12.2.12 / 18C | August 2018 (2018-08) | Minor release. Enhancements included locale awareness enhancements, OPA Hub Connections REST API, and the Hub action audit log. |
+| 12.2.13 / 18D | November 2018 (2018-11) | Minor release. Enhancements included enhancements to file uploads, pinning the version of a Policy Modeling project and client authentication for web service connections. |
+| 12.2.14 / 19A | February 2019 (2019-02) | Minor release. Enhancements included using uploaded images in generated forms, using any interview data in interview extensions and providing conversational auditable advise via the OPA Chat API. |
+| 12.2.15 / 19B | May 2019 (2019-05) | Minor release. Enhancements included enhancements to the OPA Chat API, interview extensions API and deployments REST API. |
+| 12.2.16 / 19C | August 2019 (2019-08) | Minor release. Enhancements included Integration OPA interview adapter, generic integration protocol for interviews, importing batch assess REST requests into Policy Modeling debugger and single-click updating all project inclusions. |
+| 12.2.17 / 19D | November 2019 (2019-11) | Minor release. Enhancements included new Hub user interface, Entity level forms, and the ability to modify and resubmit interview data |
+| 12.2.18 / 20A | February 2020 | Minor release. Enhancements included new data loading capabilities in Oracle Engagement Cloud and Oracle B2C Service. |
+| 12.2.19 / 20B | May 2020 | Minor release. Enhancements included new chart types in the administration platform, better connector management for Oracle Engagement and B2C / B2B Cloud, some new entity control extension features for custom interview content using the JavaScript API, decision report support in the Batch Assess API and updated documentation. |
+| 12.2.20 / 20C | August 2020 | Major release. Launch of the Decision Service concept to create and deploy decision-making services in a web browser. This alleviates the need to install and manage a desktop development tool. Other enhancements included new performance analysis output from test cases and rule profiling report, plus branching of projects in the repository. This version introduces the concept of a component version. This is the version of the interface between Oracle Policy Modellng and Intelligent Advisor Hub. It is independent of the product version, meaning that it could change during a release without the product version changing, and that it might not change even though the product version changes. It is visible on the Welcome page of Oracle Policy Modeling. |
+| 12.2.21 / 20D | November 2020 | Minor release. Enhancements included attachment support in Oracle integration, enhanced Chat integration with Oracle Digital Assistant and introduction of the Redwood Theme as an interview theme. |
+| 12.2.22 / 21A | February 2021 | Minor release. Enhancements included native Oracle Digital Assistant integration, translation file enhancements, styling extension additions and support for viewing reference relationships in the debugger. |
+| 12.2.23 / 21B | June 2021 | Minor release. Enhancements include live inspection of results in Decision Services and some REST API enhancements, as well as the ability to reference Decision Services in Oracle Policy Modeling projects. |
+| 12.2.24 / 21C | September 2021 | Minor release. Enhancements include accessibility features in the JavaScript Extension API, further updates to the Decision Service capabilities and improvements to the Intelligent Advisor adapter in Oracle Integration / generic provider connections. |
+| 12.2.25 / 21D | December 2021 | Minor release. Enhancements include graphical comparison between any local project and any repository project version, and automatic inclusion of the built project in repository uploads. |
+| 12.2.26 / 22A | March 2022 | Minor release. Enhancements include a new read-only Role for Hub access and improved handling of checkpoints when integrating with Oracle Visual Builder applications. Monthly update 2 (released April 13, 2022, introduced French and Spanish for Decision Service Rule Authoring. In Oracle Policy Modeling, a new debug feature allows for the viewing of unsubmitted values, useful to debug single-screen projects or projects where Error or validation rules prohibit submittal. |
+| 12.2.27 / 22B | May 2022 | Minor release. Enhancements include support for the Oracle B2C Service Cloud Decimal data type in connection mappings and a new capability to attach a transcript of the interview as output to a connected application. |
+
+
+## Applications and Academic Interest
+
+The Oracle Policy Automation software has been publicly deployed on many government websites. In Australia, the Department of Immigration and Citizenship uses it for visitors to check their eligibility for visas. The UK Revenue and Customs agency uses it for their Employment Status Indicator assessment tool; the UK government's old online portal for businesses also used OPA for over 60 interactive tools, while the United States IRS uses the software for guidance on tax law. In France, the CNAF uses Oracle Intelligent Advisor for benefit calculations. In the private sector, Oracle Intelligent Advisor is widely represented amongst different industries and brands.
+
+Oracle Policy Modeling's controlled natural language approach to rule authoring has been the subject of some research. ᶜˡᵃʳⁱᶠⁱᶜᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ The product was also used to help establish the viability of the Legal Knowledge Interchange Format standard developed by the Estrella Project.
+
+Dr. Jason Sender of Rule Analytics Ltd. produced a paper entitled "The Application of Design Patterns to Oracle Policy Automation" extracts of which are presented on this Intelligent Advisor Community website.
+
+
+## Acquisition and Product Name Changes
+
+RuleBurst acquired the assets of HaleySystems in November 2007.
+At that time, RuleBurst and Haley were both marketing "natural language business rules" software and were considered competitors. Prior to being acquired, Haley Systems had licensed its HaleyAuthority rules product to Siebel Systems. Haley Authority was made available in Siebel 8.0 with the integration going under the name "Siebel Business Rules". When Oracle acquired RuleBurst, Oracle standardized naming across the entire platform, first as Oracle Policy Automation, then with Oracle Intelligent Advisor representing the overall family comprising desktop tools, server components and integration capabilities starting in December 2019.
+

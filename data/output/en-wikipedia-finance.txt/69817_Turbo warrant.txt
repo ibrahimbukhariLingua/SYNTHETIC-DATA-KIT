@@ -1,0 +1,70 @@
+Turbo warrant
+
+
+# Turbo warrant
+
+
+
+A **turbo warrant** (or callable bull/bear contract) is a kind of stock option. Specifically, it is a barrier option of the down and out type. It is similar to a vanilla contract, but with two additional features: It has a low vega, meaning that the option price is much less affected by the implied volatility of the stock market, and it is highly geared due to the possibility of knockout. This type of product is actively traded among investors in Europe and Hong Kong, and has been described as being able to cater to individual investors' behavioral biases (like lottery preferences).
+
+The strike price of the option is generally the same as the barrier: if the stock hits the barrier, the option expires and becomes worthless. Variations on turbos include: forms where the strike and barrier are not identical; forms where the barrier is only active at, for example, the close of business but the strike is continuously monitored (smart turbos); and forms with no fixed maturity (minis).
+
+For comparison, a regular call option will have a positive value at expiry whenever the spot price settles above the strike price. A turbo will have a positive value at expiry when the spot settle above the strike AND the spot has never fallen below the strike during the life of the option (if it had done so the option would have crossed the barrier (=strike) and would have become worthless).
+
+
+## Markets
+
+The first turbo warrants appeared in late 2001. In Germany, buying and selling turbo warrants constitute 50% of all speculative derivatives trading. They are mainly sold to a retail clientele looking for high leverage.
+
+
+### Nordic Growth Market
+
+At the end of February 2005, Société Générale listed the first 40 turbo warrants on the Nordic Growth Market Nordic Derivatives Exchange. During February 2005 turbo warrant trading revenue was 31 million kronor, 56% of total NGM trading revenue of 55 million kronor.
+
+
+### Hong Kong Market
+
+Turbo warrants were introduced to the Hong Kong Stock Exchange (HKEx) in 2006 in the name of Callable Bullish/Bearish Contracts (CBBC). By the end of 2011, turnover of CBBC comprises 10.84% of HKEx main board turnover.
+
+
+## Price calculation
+
+Since the price of a turbo warrant behaves like a future contract (plus the barrier), we could say that a turbo is expensive or not relative to its future contract.
+
+Example:
+
+Time 1 year
+Benchmark interest rates at 2%
+Stock ACME current price $10 dividend 5%
+Future contract (1 year)=10-(0.05\*10)+(0.02\*10)= $9.7
+Turbo CALL 1 year parity 1:1 strike at $9 and bid-ask prices:0.98-1 ->related price=9+1=$10
+
+After 1 year (d=dividend):
+
+| $8 | $10 | $12 |
+| --- | --- | --- |
+| Stock | 8+d-10=**-1.5** | 10+d-10=**+0.5** | 12+d-10=**+2.5** |
+| Future | 8–9.7=**-1.7** | 10–9.7=**+0.3** | 12–9.7=**+2.3** |
+| Turbo | 8-10=**-2** | 10-10=**+0** | 12-10=**+2** |
+
+Comments:
+
+* If you do not want to be leveraged, buy the stock
+* If you just want to be leveraged, buy the future
+* If you want to be leveraged, do not want to rollover quarterly the future(+spreads+commissions) and do not want to wait for a margin call, use the turbo warrant
+
+## When to use turbo warrants
+
+* When you want to speculate, or just be leveraged
+* When the future contract minimum is too big (i.e.: just 1 mini euro/dollar contract is $62.000)
+* When you do not have a derivatives account to buy the future contract
+* When you do not want to receive a margin call or add money to your derivatives account when the price goes in the opposite direction
+
+## Exchanges
+
+Securities exchanges that trade this product:
+
+* Euwax – Stuttgart
+* SMART Market – Frankfurt
+* Nordic Growth Market, Nordic Derivatives Exchange (NGM, NDX)
+* Hong Kong Exchanges

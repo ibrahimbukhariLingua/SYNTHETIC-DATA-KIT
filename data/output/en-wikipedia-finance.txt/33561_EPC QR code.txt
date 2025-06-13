@@ -1,0 +1,41 @@
+EPC QR code
+
+
+# EPC QR code
+
+
+
+The European Payments Council Quick Response Code guidelines define the content of a QR code that can be used to initiate SEPA credit transfer (SCT). It contains all the necessary information in clear text. These QR code guidelines are used on many invoices and payment requests in the countries that support it (Austria, Belgium, Finland, Germany, The Netherlands) enabling tens of millions to pay without requiring manual input leading to lower error rates.
+
+The EPC guidelines are available from the EPC itself. Another version has also been published by the Federation of Finnish Finance Services (FFI).
+
+
+## Sample content of QR Code
+
+| Service Tag: | BCD |
+| --- | --- |
+| Version: | 001 |
+| Character set: | 1 |
+| Identification: | SCT |
+| BIC: | BPOTBEB1 |
+| Name: | Red Cross |
+| **IBAN**: | BE72000000001616 |
+| **Amount**: | EUR1 |
+| Reason (4 chars max): | CHAR |
+| **Ref of invoice**: | Empty line or REFINVOICE |
+| **Or text**: | Urgency fund or Empty line |
+| Information: | Sample EPC QR code |
+
+So the QR string could be
+
+
+## History
+
+In 2012, the Austrian payment facilitator STUZZA (now part of PSA Payment Services Austria) defined the content of a QR code that could be used to initiate money transfers within the Single Euro Payments Area.
+
+In February 2013, the European Payments Council (EPC) published the document 'Quick Response Code: Guidelines to Enable Data Capture for the Initiation of a Credit Transfer'.
+
+These guidelines were quickly adopted by the Austrian banks. These QR code can be recognised thanks to the words "Zahlen mit Code" (Pay with Code) on the right.
+
+These guidelines were later on used in Finland in 2015, Germany in 2015 and the Netherlands in 2016.
+

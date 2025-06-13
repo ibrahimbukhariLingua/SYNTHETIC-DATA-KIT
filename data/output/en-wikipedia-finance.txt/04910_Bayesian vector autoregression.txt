@@ -1,0 +1,30 @@
+Bayesian vector autoregression
+
+
+# Bayesian vector autoregression
+
+
+
+In statistics and econometrics, **Bayesian vector autoregression (BVAR)** uses Bayesian methods to estimate a vector autoregression (VAR) model. BVAR differs with standard VAR models in that the model parameters are treated as random variables, with prior probabilities, rather than fixed values.
+
+Vector autoregressions are flexible statistical models that typically include many free parameters. Given the limited length of standard macroeconomic datasets relative to the vast number of parameters available, Bayesian methods have become an increasingly popular way of dealing with the problem of over-parameterization. As the ratio of variables to observations increases, the role of prior probabilities becomes increasingly important.
+
+The general idea is to use informative priors to shrink the unrestricted model towards a parsimonious naïve benchmark, thereby reducing parameter uncertainty and improving forecast accuracy.
+
+A typical example is the shrinkage prior, proposed by Robert Litterman (1979) and subsequently developed by other researchers at University of Minnesota, (i.e. Sims C, 1989), which is known in the BVAR literature as the "Minnesota prior". The informativeness of the prior can be set by treating it as an additional parameter based on a hierarchical interpretation of the model.
+
+In particular, the Minnesota prior assumes that each variable follows a random walk process, possibly with drift, and therefore consists of a normal prior on a set of parameters with fixed and known covariance matrix, which will be estimated with one of three techniques: Univariate AR, Diagonal VAR, or Full VAR.
+
+This type model can be estimated with Eviews, Stata, Python or R Statistical Packages.
+
+Recent research has shown that Bayesian vector autoregression is an appropriate tool for modelling large data sets.
+
+
+## Factor-Augmented VAR (FAVAR)
+
+Factor-augmented vector autoregression (FAVAR) extends the BVAR framework by incorporating latent factors that capture additional information from a large set of macroeconomic indicators. This approach, developed by Bernanke, Boivin, and Eliasz (2005), combines the advantages of factor models with VAR analysis, allowing researchers to analyze the impact of monetary policy using richer information sets while maintaining a parsimonious model structure. The Bayesian estimation of FAVAR models helps address the uncertainty in both the latent factors and model parameters, providing more robust inference.
+
+Time-varying parameter FAVAR (TVP-FAVAR) further extends this framework by allowing the model parameters to evolve over time, capturing potential structural changes in the economy. This approach is particularly useful for analyzing the time-varying nature of monetary policy transmission mechanisms and macroeconomic relationships. The combination of time-varying parameters with factor augmentation provides a flexible framework that can capture both cross-sectional and temporal variations in the data, while Bayesian methods help manage the increased parametric complexity.
+
+TVP-FAVAR models have been widely applied in empirical macroeconomics and monetary policy analysis. Korobilis (2013) used this approach to examine the evolution of monetary policy transmission mechanisms in the United States, finding significant changes in the effects of monetary policy shocks over time. Liu et al. (2017) employed TVP-FAVAR to investigate the time-varying impact of oil price shocks on macro-financial variables. More recently, Chen and Valcarcel (2021) utilized the framework to analyze monetary transmission in money markets, providing new insights into the effectiveness of monetary policy tools. Del Negro and Otrok (2008) applied the method to study international business cycles, demonstrating its utility in understanding global economic dynamics.
+

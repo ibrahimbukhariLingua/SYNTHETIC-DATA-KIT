@@ -1,0 +1,78 @@
+Least-cost routing
+
+
+# Least-cost routing
+
+
+
+In voice telecommunications, **least-cost routing** (**LCR**) is the process of selecting the path of outbound communications traffic based on cost. Within a telecoms carrier, an LCR team might periodically (monthly, weekly or even daily) choose between routes from several or even hundreds of carriers. This function might also be automated by a device or software program known as a **least-cost router**.
+
+
+## Telecoms carriers as suppliers and customers
+
+Telecoms carriers often buy and sell call termination services with other carriers. A carrier such as Telewest or France Telecom will be interconnected with other telecoms carriers and might have a number of routing options of different price, quality and capacity to a given country. In the de-regulated EU, these will be licensed alternative operators (e.g. Cable and Wireless / Colt in the UK or Jazztel in Spain) or the (PTT)'s of other countries, such as T-Systems (Germany), Telefónica (Spain), NTT (Japan) or Telstra (Australia), who establish offices or a point of presence (POP) in a major telecommunications hub city such as London, New York, Hong Kong or Amsterdam. The major US carriers, Sprint, Verizon, AT&T and Level 3 in the US International telecommunications routes also have POPs in these hub cities. There are also *niche carriers* which specialise in providing termination to a small number of destinations, sometimes through the use of grey routes.
+
+
+## Buying → costing → routing → pricing → margin management cycle
+
+The LCR team in a carrier might follow a cycle:
+
+1. The buyers negotiate with their suppliers and get a new price schedule.
+2. The prices are loaded into software to calculate and compare termination costs.
+3. A route is chosen, fixing a cost-for-pricing, and new prices are issued based on the costs-for-pricing.
+4. The new routes are implemented on the switch and finally the traffic volumes and margins are monitored through reports from the billing system.
+5. Loss-making traffic and odd routing are investigated, and either the billing system has its data corrected or routing and pricing action is taken.
+
+Carriers sign interconnect agreements with each other specifying the terms under which they will do business. Such agreements define terms of payment, methods and procedures of dispute resolution, and the means by which the carriers will notify each other of pricing changes. The industry standard is currently seven days for price increases while price decreases often take effect on the day of notification. Because the margins in the carrier-carrier market are extremely slim, re-routes or price increases must be made quickly to a destination where the current route is going to increase in price.
+
+
+## Impact of mobile-number portability in VoIP and LCR environments
+
+Mobile number portability impacts the internet telephony, VoIP (Voice over IP) and Least Cost Routing (LCR) businesses. Mobile number portability (MNP) is a service that makes it possible for subscribers to keep their existing mobile phone number when changing the service provider (or mobile operator). With number portability now in place in many countries, LCR providers can no longer rely on using only a portion of the dialed telephone number to route a call. Instead, they now need to discover the actual current network of every number before routing the call. Thus, LCR solutions also need to handle MNP when routing a voice call. In countries without a central database like UK it might be necessary to query the GSM network about the home network a mobile phone number belongs to.
+
+MNP checks are important to assure that this quality of service is met; by handling MNP lookups before routing a call and assuring that the voice call will actually work, VoIP companies give businesses the necessary reliability they look for in an internet telephony provider.
+
+In countries such as Singapore, the most recent MNP solution is expected to open the doors to new business opportunities for non-traditional telecommunication service providers like wireless broadband providers and VoIP providers.
+
+In November 2008 the United States' FCC (Federal Communications Commission) released an order extending number portability obligations to interconnected VoIP providers and carriers that support VoIP providers.
+
+
+## Number plan management and analysis
+
+Whereas markets in commodities such as pork bellies or oil have agreed definitions and arbitrating bodies for the commodities they trade, the carrier-carrier market has no agreed definitions of its destinations. Every carrier uses the International Telecommunication Union E.164 standard for country codes, but each carrier uses different codes for destinations within a country, usually because it is using different suppliers within that country.
+
+*Number plan management* monitors changes in suppliers' dial codes and adds or removes codes from the company's own code tables to improve costs. Implementing the changes across the company's switches, billing systems, calling card and other IN platforms is a significant task for the engineering and billing departments.
+
+
+## Cherry-picking
+
+One aim of LCR teams is to *cherry-pick*. This happens when Carrier A's team finds that Carrier B defines a code range as being fixed-line and so cheap, while Carrier A defines it as mobile and so more expensive. Carrier A will send that range to Carrier B, pay a low fixed-line rate and charge at a high mobile rate - making much more profit. Carrier B will sustain losses if it does not notice that its supplier, C, also defines that range as belonging to a mobile operator and charges a higher rate. Caught in the middle, B can sustain five- or even six- figure losses in a very short time.
+
+
+## Route and call quality
+
+The LCR team also has to take route and call quality into account. The quality of route to a destination can vary considerably between suppliers and even from week to week from the same supplier.
+
+Quality is usually measured by the Answer-Seizure Ratio (ASR = call attempts answered / call attempts), Post-Dial Delay (PDD) and the Average Call Duration (ACD). If the average call duration is very low, it is taken to mean that the call quality is so poor that people cannot have a conversation and hang up. This matters to calling card operators because people do not re-purchase card services that give a low ACD. In case of significant discrepancies in ACD values across available routes, the carrier shall prioritize the routes offering higher ACD. A low ASR is taken to mean that callers cannot get through to the other end and hence that the route is congested or is of low quality. The low ASR is not as bad as low ACD, because it suggests at least a proper answer supervision (i.e. correct signaling), and therefore the handover mechanism can reroute calls via other available routes. An on-line monitoring system of a quality based routing is publicly available for a demo traffic. Post-dial delay is the time from dialing the last digit to the time a caller hears ringing.
+
+Another, more sophisticated way of measuring the call quality is Perceptual Evaluation of Speech Quality (PESQ). Such measurements are rarely used in production switching systems, in particular due to the necessity of voice samples at both ends.
+
+Additionally, the team may take into account the responsiveness of their supplier's technical team: if there is a fault or low quality, does the supplier fix it or just say that it is the best they can do?
+
+
+## LCR software
+
+The key tasks LCR software must do are: load prices schedules and code tables automatically; keep control of volume commitment and available capacity; compare dial codes correctly; turn the carriers' name-based price schedule into a dial code-dependent termination cost schedule; put costs in order; incorporate quality considerations; produce costing and routing schedules in a format suitable for pricing analysts and engineering; generate automatic MML orders to the switches; and transfer data into the billing system.
+
+LCR software varies from home-grown Excel spreadsheets, through Access and Microsoft Visual Studio applications to commercial products offering integration with the switch and billing systems costing up to £500,000 for an installation. The simpler the software, the more complex the surrounding manual processes.
+
+
+### Routing platforms
+
+With VoIP becoming a common carrier messaging system, routing becomes available from standalone products and hosted services. These services are built on top of the RFC 3261 3XX series messaging, which allows for stateless redirection of call signaling. These stand alone LCR systems integrate many powerful routing features such as: jurisdictional, profit margin protected routing along with standard LCR and offload routing from switching components. Other open source platforms such as OpenSER/Kamailo exist that are capable of performing redirect based routing, they are however less specifically geared toward exploiting the market niches involved in carrier telecommunications routing.
+
+
+## Related ideas
+
+Least Cost Routing is also used to describe a type of equipment installed on customers' premises. An *LCR box* is programmed with prices from the companies supplying telecoms services to that company and the box routes each call to the appropriate supplier.
+

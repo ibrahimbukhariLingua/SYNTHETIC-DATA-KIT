@@ -1,0 +1,61 @@
+Time consistency (finance)
+
+
+# Time consistency (finance)
+
+
+
+**Time consistency** in the context of finance is the property of not having mutually contradictory evaluations of risk at different points in time. This property implies that if investment A is considered riskier than B at some future time, then A will also be considered riskier than B at every prior time.
+
+
+## Time consistency and financial risk
+
+Time consistency is a property in financial risk related to dynamic risk measures. The purpose of the time the consistent property is to categorize the risk measures which satisfy the condition that if portfolio (A) is riskier than portfolio (B) at some time in the future, then it is guaranteed to be riskier at any time prior to that point. This is an important property since if it were not to hold then there is an event (with probability of occurring greater than 0) such that B is riskier than A at time {\displaystyle t} although it is certain that A is riskier than B at time {\displaystyle t+1}. As the name suggests a **time inconsistent** risk measure can lead to inconsistent behavior in financial risk management.
+
+
+### Mathematical definition
+
+A dynamic risk measure {\displaystyle \left(\rho \_{t}\right)\_{t=0}^{T}} on {\displaystyle L^{0}({\mathcal {F}}\_{T})} is time consistent if {\displaystyle \forall X,Y\in L^{0}({\mathcal {F}}\_{T})} and {\displaystyle t\in \{0,1,...,T-1\}:\rho \_{t+1}(X)\geq \rho \_{t+1}(Y)} implies {\displaystyle \rho \_{t}(X)\geq \rho \_{t}(Y)}.
+
+
+#### Equivalent definitions
+
+
+### Construction
+
+Due to the recursive property it is simple to construct a time consistent risk measure. This is done by composing one-period measures over time. This would mean that:
+
+* {\displaystyle \rho \_{T-1}^{com}:=\rho \_{T-1}}
+* {\displaystyle \forall t<T-1:\rho \_{t}^{com}:=\rho \_{t}(-\rho \_{t+1}^{com})}
+
+### Examples
+
+
+#### Value at risk and average value at risk
+
+Both dynamic value at risk and dynamic average value at risk are not a time consistent risk measures.
+
+
+#### Time consistent alternative
+
+The time consistent alternative to the dynamic average value at risk with parameter {\displaystyle \alpha \_{t}} at time *t* is defined by
+
+such that {\displaystyle {\mathcal {Q}}=\left\{Q\in {\mathcal {M}}\_{1}:E\left[{\frac {dQ}{dP}}|{\mathcal {F}}\_{j}\right]\leq \alpha \_{j-1}E\left[{\frac {dQ}{dP}}|{\mathcal {F}}\_{j-1}\right]\forall j=1,...,T\right\}}.
+
+
+#### Dynamic superhedging price
+
+The dynamic superhedging price is a time consistent risk measure.
+
+
+#### Dynamic entropic risk
+
+The dynamic entropic risk measure is a time consistent risk measure if the risk aversion parameter is constant.
+
+
+#### Continuous time
+
+In continuous time, a time consistent coherent risk measure can be given by:
+
+for a sublinear choice of function {\displaystyle g} where {\displaystyle \mathbb {E} ^{g}} denotes a g-expectation. If the function {\displaystyle g} is convex, then the corresponding risk measure is convex.
+

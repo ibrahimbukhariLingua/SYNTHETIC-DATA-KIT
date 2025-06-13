@@ -1,0 +1,101 @@
+High frequency data
+
+
+# High frequency data
+
+
+
+**High frequency data** refers to time-series data collected at an extremely fine scale. As a result of advanced computational power in recent decades, high frequency data can be accurately collected at an efficient rate for analysis. Largely used in the financial field, high frequency data provides observations at very frequent intervals that can be used to understand market behaviors, dynamics, and micro-structures.
+
+High frequency data collections were originally formulated by massing tick-by-tick market data, by which each single 'event' (transaction, quote, price movement, etc.) is characterized by a 'tick', or one logical unit of information. Due to the large amounts of ticks in a single day, high frequency data collections generally contain a large amount of data, allowing high statistical precision. High frequency observations across one day of a liquid market can equal the amount of daily data collected in 30 years.
+
+
+## Use
+
+Due to the introduction of electronic forms of trading and Internet-based data providers, high frequency data has become much more accessible and can allow one to follow price formation in real-time. This has resulted in a large new area of research in the high frequency data field, where academics and researchers use the characteristics of high frequency data to develop adequate models for predicting future market movements and risks. Model predictions cover a wide range of market behaviors including volume, volatility, price movement, and placement optimization.
+
+There is an ongoing interest in both regulatory agencies and academia surrounding transaction data and limit order book data, of which greater implications of trade and market behaviors as well as market outcomes and dynamics can be assessed using high frequency data models. Regulatory agencies take a large interest in these models due to the fact that liquidity and price risks are not fully understood in terms of newer forms of automated trading applications.
+
+High frequency data studies contain value in their ability to trace irregular market activities over a period of time. This information allows a better understanding of price and trading activity and behavior. Due to the importance of timing in market events, high frequency data requires analysis using point processes, which depend on observations and history to characterize random occurrences of events. This understanding was first developed by 2003 Nobel Prize in Economics winner Robert Fry Engle III, who specializes in developing financial econometric analysis methods using financial data and point processes.
+
+
+## High frequency data forms
+
+High frequency data are primarily used in financial research and stock market analysis. Whenever a trade, quote, or electronic order is processed, the relating data are collected and entered in a time-series format. As such, high frequency data are often referred to as transaction data.
+
+There are five broad levels of high frequency data that are obtained and used in market research and analysis:
+
+
+### Trade data
+
+Individual trade data collected at a certain interval within a time series. There are two main variables to describe a single point of trade data: the time of the transaction, and a vector known as a 'mark', which characterizes the details of the transaction event.
+
+
+### Trade and quote data
+
+Data collected details both trades and quotes, including price changes and direction, time stamps, and volume. Such information can be found at the TAQ (Trade and Quote) database operated by the NYSE. Where trade data details the exchange of a transaction itself, quote data details the optimal trading conditions for a given exchange. This information can indicate halts in exchanges and both opening and closing quotes.
+
+
+### Fixed level order book data
+
+Using systems that have been completely computerized, the depth of the market can be assessed using limit order activities that occur in the background of a given market.
+
+
+### Messages on all limit order activities
+
+This data level displays the full information surrounding limit order activities, and can create a reproduction of the trade flow at any given time using information on time stamps, cancellations, and buyer/seller identification.
+
+
+### Data on order book snapshots
+
+Snapshots of the order book activities can be recorded on equi-distant based grids to limit the need to reproduce the order book. This however limits trade analysis ability, and is therefore more useful in understanding dynamics rather than book and trading interaction.
+
+
+## Properties in financial analysis
+
+In financial analysis, high frequency data can be organized in differing time scales from minutes to years. As high frequency data comes in a largely dis-aggregated form over a time-series compared to lower frequency methods of data collection, it contains various unique characteristics that alter the way the data are understood and analyzed. Robert Fry Engle III categorizes these distinct characteristics as irregular temporal spacing, discreteness, diurnal patterns, and temporal dependence.
+
+
+### Irregular temporal spacing
+
+High frequency data employs the collection of a large sum of data over a time series, and as such the frequency of single data collection tends to be spaced out in irregular patterns over time. This is especially clear in financial market analysis, where transactions may occur in sequence, or after a prolonged period of inactivity.
+
+
+### Discreteness
+
+High frequency data largely incorporates pricing and transactions, of which institutional rules prevent from drastically rising or falling within a short period of time. This results in data changes based on the measure of one tick. This lessened ability to fluctuate makes the data more discrete in its use, such as in stock market exchange, where popular stocks tend to stay within 5 ticks of movement. Due to the level of discreteness of high frequency data, there tends to be high level of kurtosis present in the set.
+
+
+### Diurnal patterns
+
+Analysis first made by Engle and Russel in 1998 notes that high frequency data follows a diurnal pattern, with the duration between trades being smallest at the open and the close of the market. Some foreign markets, which operate 24 hours a day, still display a diurnal pattern based on the time of the day.
+
+
+### Temporal dependence
+
+Due largely to discreteness in prices, high frequency data are temporally dependent. The spread forced by small tick differences in buying and selling prices creates a trend that pushes the price in a particular direction. Similarly, the duration and transaction rates between trades tend to cluster, denoting dependence on the temporal changes of price.
+
+
+## Ultra-High frequency data
+
+In an observation noted by Robert Fry Engle III, the availability of higher frequencies of data over time incited movement from years, to months, to very frequent intervals collections of financial data. This movement however is not infinite in moving to higher frequencies, but faces a limit when all transactions are eventually recorded. Engle coined this limiting frequency level as *ultra-high frequency data*. An outstanding quality of this maximum frequency is extreme irregularly spaced data, due to the large spread of time that a dis-aggregated collection imposes. Rather than breaking the sequence of ultra-high frequency data by time intervals, which would essentially cause a loss of data and make the set a lower frequency, methods and models such as the autoregressive conditional duration model can be used to consider varying waiting times between data collection. Effective handling of ultra-high frequency data can be used to increase accuracy of econometric analyses. This can be accomplished with two processes: data cleaning and data management.
+
+
+### Data cleaning
+
+*Data cleaning*, or data cleansing, is the process of utilizing algorithmic functions to remove unnecessary, irrelevant, and incorrect data from high frequency data sets. Ultra-high frequency data analysis requires a clean sample of records to be useful for study. As velocities in ultra-high frequency collection increase, more errors and irrelevant data are likely to be identified in the collection. Errors that occur can be attributed to human error, both intentional (e.g. 'dummy' quotes) and unintentional (e.g. typing mistake), or computer error, which occur with technical failures.
+
+
+### Data management
+
+*Data Management* refers to the process of selecting a specific time-series of interest within a set of ultra-high frequency data to be pulled and organized for the purpose of an analysis. Various transactions may be reported at the same time and at different price levels, and econometric models generally require one observation at each time stamp, necessitating some form of data aggregation for proper analysis. Data management efforts can be effective to remedy ultra-high frequency data characteristics including irregular spacing, bid-ask bounce, and market opening and closing.
+
+
+## Alternate uses outside of financial trading
+
+A study published in the *Freshwater Biology* journal focusing on episodic weather effects on lakes highlights the use of high frequency data to further understand meteorological drivers and the consequences of "events", or sudden changes to physical, chemical, and biological parameters of a lake. Due to advances in data collection technology and human networks coupled with the placement of high frequency monitoring stations at a variety of lake types, these events can be more effectively explored. The use of high frequency data in these studies is noted to be an important factor in allowing analyses of rapidly occurring weather changes at lakes, such as wind speed and rainfall, increasing understandings of lake capacities to handle events in the wake of increasing storm severity and climate change.
+
+High frequency data has been found to be useful in the forecasting of inflation. A study by Michele Mondugno in the *International Journal of Forecasting* indicates that use of daily and monthly data at a high frequency have generally improved the forecast accuracy of total CPI inflation in the United States. The study utilized a comparison of lower frequency models with one that considered all variables at a high frequency. It was ultimately found that the increased accuracy of both highly volatile transport and energy components of prices in the high frequency inflation model led to greater performance and more accurate results.
+
+The use of half-life estimation to evaluate speeds of mean reversion in economic and financial variables has faced issues in regards to sampling, as a half-life of about 13.53 years would require 147 years of annual data according to early AR process models. As a result, some scholars have utilized high frequency data to estimate half-life annual data. While use of high frequency data can face some limitations to discovering true half-life, mainly through the bias of an estimator, utilizing a high frequency ARMA model has been found to consistently and effectively estimate half-life with long annual data.
+

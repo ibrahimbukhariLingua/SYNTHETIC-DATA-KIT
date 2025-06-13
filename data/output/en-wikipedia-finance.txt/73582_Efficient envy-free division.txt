@@ -1,0 +1,133 @@
+Efficient envy-free division
+
+
+# Efficient envy-free division
+
+
+
+Efficiency and fairness are two major goals of welfare economics. Given a set of resources and a set of agents, the goal is to divide the resources among the agents in a way that is both Pareto efficient (PE) and envy-free (EF). The goal was first defined by David Schmeidler and Menahem Yaari. Later, the existence of such allocations has been proved under various conditions.
+
+
+## Existence of PEEF allocations
+
+We assume that each agent has a preference-relation on the set of all bundles of commodities. The preferences are complete, transitive, and closed. Equivalently, each preference relation can be represented by a continuous utility function.⁷⁹
+
+
+### Weakly-convex preferences
+
+***Theorem 1** (Varian):*⁶⁸ *If the preferences of all agents are convex and strongly monotone, then PEEF allocations exist.*
+
+*Proof*: The proof relies on the existence of a competitive equilibrium with equal incomes. Assume that all resources in an economy are divided equally between the agents. I.e, if the total endowment of the economy is {\displaystyle E}, then each agent {\displaystyle i\in 1,\dots ,n:} receives an initial endowment {\displaystyle E\_{i}=E/n}.
+
+Since the preferences are *convex*, the Arrow–Debreu model implies that a competitive equilibrium exists. I.e, there is a price vector {\displaystyle P} and a partition {\displaystyle X} such that:
+
+* (CE) All agents maximize their utilities given their budget. I.e, if {\displaystyle P\cdot Y\leq P\cdot X\_{i}} then {\displaystyle Y\preceq \_{i}X\_{i}}.
+* (EI) All agents have the same income in the equilibrium prices: for all {\displaystyle i,j:P\cdot X\_{i}=P\cdot X\_{j}}.
+
+Such an allocation is always EF. Proof: by the (EI) condition, for every {\displaystyle i,j:P\cdot X\_{j}\leq P\cdot X\_{i}}. Hence, by the (CE) condition, {\displaystyle X\_{j}\preceq \_{i}X\_{i}}.
+
+Since the preferences are *monotonic*, any such allocation is also PE, since monotonicity implies local nonsatiation. See fundamental theorems of welfare economics.
+
+
+#### Examples
+
+All examples involve an economy with two goods, x and y, and two agents, Alice and Bob. In all examples, the utilities are weakly-convex and continuous.
+
+A. **Many PEEF allocations:** The total endowment is (4,4). Alice and Bob have linear utilities, representing substitute goods:
+
+Note that the utilities are weakly-convex and strongly-monotone. Many PEEF allocations exist. If Alice receives at least 3 units of x, then her utility is 6 and she does not envy Bob. Similarly, if Bob receives at least 3 units of y, he does not envy Alice. So the allocation [(3,0);(1,4)] is PEEF with utilities (6,9). Similarly, the allocations [(4,0);(0,4)] and [(4,0.5);(0,3.5)] are PEEF. On the other hand, the allocation [(0,0);(4,4)] is PE but not EF (Alice envies Bob); the allocation [(2,2);(2,2)] is EF but not PE (the utilities are (6,6) but they can be improved e.g. to (8,8)).
+
+B. **Essentially-single PEEF allocation:** The total endowment is (4,2). Alice and Bob have Leontief utilities, representing complementary goods:
+
+Note that the utilities are weakly-convex and only weakly-monotone. Still A PEEF allocation exists. The equal allocation [(2,1);(2,1)] is PEEF with utility vector (1,1). EF is obvious (every equal allocation is EF). Regarding PE, note that both agents now want only y, so the only way to increase the utility of an agent is to take some y from the other agent, but this decreases the utility of the other agent. While there are other PEEF allocations, e.g. [(1.5,1);(2.5,1)], all have the same utility vector of (1,1), since it is not possible to give both agents more than 1.
+
+
+### Topological conditions on the space of efficient allocations
+
+PEEF allocations exist even when agents' preferences are not convex. There are several sufficient conditions that are related to the shape of the set of allocations corresponding to a specific efficient utility profile. Given a utility-vector u, define A(u) = the set of all allocations for which the utility-profile is u. The following successively more general theorems were proved by different authors:
+
+***Theorem 2** (Varian):⁶⁹ Suppose all agents' preferences are strongly monotone. If, for every Weakly Pareto Efficient utility-profile u, the set A(u) is a singleton (i.e, there are no two WPE allocations such that all agents are indifferent between them), then PEEF allocations exist.*
+
+The proof uses the Knaster–Kuratowski–Mazurkiewicz lemma.
+
+*Note*: The conditions in Theorem 1 and in Theorem 2 are independent - none of them implies the other. However, *strict-convexity of preferences* implies both of them. It is obvious that strict-convexity implies weak-convexity (theorem 1). To see that it implies the condition of theorem 2, suppose there are two different allocations x,y with the same utility profile u. Define z = x/2+y/2. By strict convexity, all agents strictly prefer z to x and to y. Hence, x and y cannot be weakly-PE.
+
+***Theorem 3** (Svensson): If all agents' preferences are strongly monotone, and for every PE utility-profile u, the set A(u) is convex, then PEEF allocations exist.*
+
+The proof uses the Kakutani fixed-point theorem.
+
+*Note*: if all agents' preferences are convex (as in theorem 1), then A(u) is obviously convex too. Moreover, if A(u) is singleton (as in theorem 2) then it is obviously convex too. Hence, Svensson's theorem is more general than both Varian's theorems.
+
+***Theorem 4** (Diamantaras): If all agents' preferences are strongly monotone, and for every PE utility-profile u, the set A(u) is a contractible space (can be continuously shrunk to a point within that space), then PEEF allocations exist.*
+
+The proof uses a fixed-point theorem by Eilenberg and Montgomery.
+
+*Note:* Every convex set is contractible, so Diamantaras' theorem is more general than the previous three.
+
+
+### Sigma-optimality
+
+Svensson proved another sufficient condition for the existence of PEEF allocations. Again all preferences are represented by continuous utility functions. Moreover, all utility functions are continuously differentiable in the interior of the consumption space.
+
+The main concept is *sigma-optimality*. Suppose we create, for each agent, k copies with identical preferences. Let *X* be an allocation in the original economy. Let *Xk* be an allocation in the k-replicated economy where all copies of the same agent receive the same bundle as the original agent in X. The allocation *X* is called *sigma-optimal* if for every *k*, the allocation *Xk* is Pareto-optimal.
+
+*Lemma:⁵²⁸ An allocation is sigma-optimal, if-and-only-if it is a competitive equilibrium.*
+
+***Theorem 5** (Svensson):*⁵³¹ *if all Pareto-optimal allocations are sigma-optimal, then PEEF allocations exist.*
+
+
+### Increasing marginal returns
+
+PEEF allocations might fail to exist even when all preferences are convex, if there is production and the technology has increasing-marginal-returns.
+
+**Proposition 6** (Vohra)*: T*here exist economies in which all preferences are continuous strongly-monotone and convex, the only source of non-convexity in the technology is due to fixed costs, and there exists no PEEF allocation.
+
+Thus, the presence of increasing returns introduces a fundamental conflict between efficiency and fairness.
+
+However, envy-freeness can be weakened in the following way. An allocation X is defined as *essentially envy-free (EEF)* if, for every agent *i*, there is a feasible allocation *Yi* with the same utility profile (all agents are indifferent between X and Yi) in which agent i does not envy anyone. Obviously, every EF allocation is EEF, since we can take Yi to be X for all i.
+
+***Theorem 7** (Vohra): Suppose all agents' preferences are strongly monotone, and represented by continuous utility functions. Then, Pareto-efficient EEF allocations exist.*
+
+
+## Non-existence of PEEF allocations
+
+
+### Non-convex preferences
+
+PEEF allocations might fail to exist even without production, when the preferences are non-convex.
+
+As an example, suppose the total endowment is (4,2), and Alice and Bob have identical concave utilities:
+
+The equal allocation [(2,1);(2,1)] is EF with utility vector (2,2). Moreover, *every* EF allocation must give both agents equal utility (since they have the same utility function) and this utility can be at most 2. However, no such allocation is PE, since it is Pareto-dominated by the allocation [(4,0);(0,2)] whose utility vector is (4,2).
+
+Non-existence remains even if we weaken envy-freeness to *no domination --* no agent gets more of each good than another agent.
+
+***Proposition** **8** (Maniquet): There exist 2-good 3-agent division economies with strictly monotonic, continuous and even differentiable preferences, where there is domination at every Pareto efficient allocation.*
+
+
+## Finding a PEEF allocation
+
+For two agents, the adjusted winner procedure is a simple procedure that finds a PEEF allocation with two additional properties: the allocation is also equitable, and at most a single good is shared between the two agents.
+
+For three or more agents with linear utilities, any *Nash-optimal allocation* is PEEF. A Nash-optimal allocation is an allocation that maximizes the *product* of the utilities of the agents, or equivalently, the sum of logarithms of utilities. Finding such an allocation is a convex optimization problem:
+
+{\displaystyle {\text{maximize}}\sum \_{i=1}^{n}\log(u\_{i}(X\_{i}))~~~{\text{such that}}~~~(X\_{1},\ldots ,X\_{n})~~~{\text{is a partition}}~~~}.
+
+and thus it can be found efficiently. The fact that any Nash-optimal allocation is PEEF is true even in the more general setting of fair cake-cutting.
+
+*Proof*: Consider an infinitesimal piece of cake, *Z*. For each agent *i*, the infinitesimal contribution of *Z* to {\displaystyle \log(u\_{i}(X\_{i}))} is
+
+{\displaystyle u\_{i}(Z)\cdot {d\log(u\_{i}(X\_{i})) \over d(u\_{i}(X\_{i}))}={u\_{i}(Z) \over u\_{i}(X\_{i})}}.
+
+Therefore, the Nash-optimal rule gives each such piece *Z* to an agent *j* for which this expression is largest:
+
+{\displaystyle \forall j\in [n]:Z\subseteq X\_{j}\iff \forall i\in [n]:{u\_{j}(Z) \over u\_{j}(X\_{j})}\geq {u\_{i}(Z) \over u\_{i}(X\_{i})}}
+
+Summing over all infinitesimal subsets of *Xⱼ*, we get:
+
+{\displaystyle \forall i,j\in [n]:{u\_{j}(X\_{j}) \over u\_{j}(X\_{j})}\geq {u\_{i}(X\_{j}) \over u\_{i}(X\_{i})}}
+
+This implies the definition of envy-free allocation:
+
+{\displaystyle \forall i,j\in [n]:{u\_{i}(X\_{i})}\geq {u\_{i}(X\_{j})}}
+

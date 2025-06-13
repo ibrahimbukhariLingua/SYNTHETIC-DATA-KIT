@@ -1,0 +1,59 @@
+Vasicek model
+
+
+# Vasicek model
+
+
+
+In finance, the **Vasicek model** is a mathematical model describing the evolution of interest rates. It is a type of one-factor short-rate model as it describes interest rate movements as driven by only one source of market risk. The model can be used in the valuation of interest rate derivatives, and has also been adapted for credit markets. It was introduced in 1977 by Oldřich Vašíček, and can be also seen as a stochastic investment model.
+
+
+## Details
+
+The model specifies that the instantaneous interest rate follows the stochastic differential equation:
+
+where *Wₜ* is a Wiener process under the risk neutral framework modelling the random market risk factor, in that it models the continuous inflow of randomness into the system. The standard deviation parameter, {\displaystyle \sigma }, determines the volatility of the interest rate and in a way characterizes the amplitude of the instantaneous randomness inflow. The typical parameters {\displaystyle b,a} and {\displaystyle \sigma }, together with the initial condition {\displaystyle r\_{0}}, completely characterize the dynamics, and can be quickly characterized as follows, assuming {\displaystyle a} to be non-negative:
+
+* {\displaystyle b}: "long term mean level". All future trajectories of {\displaystyle r} will evolve around a mean level b in the long run;
+* {\displaystyle a}: "speed of reversion". {\displaystyle a} characterizes the velocity at which such trajectories will regroup around {\displaystyle b} in time;
+* {\displaystyle \sigma }: "instantaneous volatility", measures instant by instant the amplitude of randomness entering the system. Higher {\displaystyle \sigma } implies more randomness
+
+The following derived quantity is also of interest,
+
+* {\displaystyle {\sigma ^{2}}/(2a)}: "long term variance". All future trajectories of {\displaystyle r} will regroup around the long term mean with such variance after a long time.
+
+{\displaystyle a} and {\displaystyle \sigma } tend to oppose each other: increasing {\displaystyle \sigma } increases the amount of randomness entering the system, but at the same time increasing {\displaystyle a} amounts to increasing the speed at which the system will stabilize statistically around the long term mean {\displaystyle b} with a corridor of variance determined also by {\displaystyle a}. This is clear when looking at the long term variance,
+
+which increases with {\displaystyle \sigma } but decreases with {\displaystyle a}.
+
+This model is an Ornstein–Uhlenbeck stochastic process.
+
+
+## Discussion
+
+Vasicek's model was the first one to capture mean reversion, an essential characteristic of the interest rate that sets it apart from other financial prices. Thus, as opposed to stock prices for instance, interest rates cannot rise indefinitely. This is because at very high levels they would hamper economic activity, prompting a decrease in interest rates. Similarly, interest rates do not usually decrease much below 0. As a result, interest rates move in a limited range, showing a tendency to revert to a long run value.
+
+The drift factor {\displaystyle a(b-r\_{t})} represents the expected instantaneous change in the interest rate at time *t*. The parameter *b* represents the long-run equilibrium value towards which the interest rate reverts. Indeed, in the absence of shocks ({\displaystyle dW\_{t}=0}), the interest rate remains constant when *rₜ = b*. The parameter *a*, governing the speed of adjustment, needs to be positive to ensure stability around the long term value. For example, when *rₜ* is below *b*, the drift term {\displaystyle a(b-r\_{t})} becomes positive for positive *a*, generating a tendency for the interest rate to move upwards (toward equilibrium).
+
+The main disadvantage is that, under Vasicek's model, it is theoretically possible for the interest rate to become negative, an undesirable feature under pre-crisis assumptions. This shortcoming was fixed in the Cox–Ingersoll–Ross model, exponential Vasicek model, Black–Derman–Toy model and Black–Karasinski model, among many others. The Vasicek model was further extended in the Hull–White model. The Vasicek model is also a canonical example of the affine term structure model, along with the Cox–Ingersoll–Ross model. In recent research both models were used for data partitioning and forecasting.
+
+
+## Asymptotic mean and variance
+
+We solve the stochastic differential equation to obtain
+
+Using similar techniques as applied to the Ornstein–Uhlenbeck stochastic process we get that state variable is distributed normally with mean
+
+and variance
+
+Consequently, we have
+
+and
+
+
+## Bond pricing
+
+Under the no-arbitrage assumption, a discount bond may be priced in the Vasicek model. The time {\displaystyle t} value of a discount bond with maturity date {\displaystyle T} is exponential affine in the interest rate:
+
+where
+

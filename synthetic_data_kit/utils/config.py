@@ -67,7 +67,8 @@ def get_vllm_config(config: Dict[str, Any]) -> Dict[str, Any]:
         'port': 8000,
         'model': 'meta-llama/Llama-3.3-70B-Instruct',
         'max_retries': 3,
-        'retry_delay': 1.0
+        'retry_delay': 1.0, 
+        'api_key':'token'
     })
 
 def get_generation_config(config: Dict[str, Any]) -> Dict[str, Any]:

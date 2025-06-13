@@ -1,0 +1,29 @@
+Kdb+
+
+
+# Kdb+
+
+
+
+**kdb+** is a column-based relational time series database (TSDB) with in-memory (IMDB) abilities, developed and marketed by KX. The database is commonly used in high-frequency trading (HFT) to store, analyze, process, and retrieve large data sets at high speed. kdb+ has the ability to handle billions of records and analyzes data within a database. The database is available in 32-bit and 64-bit versions for several operating systems. Financial institutions use kdb+ to analyze time series data such as stock or commodity exchange data. The database has also been used for other time-sensitive data applications including commodity markets such as energy trading, telecommunications, sensor data, log data, machine and computer network usage monitoring along with real time analytics in Formula One racing.
+
+
+## Overview
+
+kdb+ is a high-performance column-store database that was designed to process and store large amounts of data. Commonly accessed data is pushed into random-access memory (RAM), which is faster to access than data in disk storage. Created with financial institutions in mind, the database was developed as a central repository to store time series data that supports real-time analysis of billions of records. kdb+ has the ability to analyze data over time and responds to queries similar to Structured Query Language (SQL).
+
+Columnar databases return answers to some queries in a more efficient way than row-based database management systems. kdb+ dictionaries, tables and nanosecond time stamps are native data types and are used to store time series data.
+
+At the core of kdb+ is the built-in programming language, q, a concise, expressive query array language, and dialect of the language APL. Q can manipulate streaming, real-time, and historical data. kdb+ uses q to aggregate and analyze data, perform statistical functions, and join data sets and supports SQL queries The vector language q was built for speed and expressiveness and eliminates most need for looping structures. kdb+ includes interfaces in C, C++, Java, C#, and Python.
+
+
+## History
+
+In 1998, KX released kdb, a database built on the language K written by Arthur Whitney. In 2003, kdb+ was released as a 64-bit version of kdb. In 2004, the kdb+ tick market database framework was released along with kdb+ taq, a loader for the New York Stock Exchange (NYSE) taq data. kdb+ was created by Arthur Whitney, building on his prior work with array languages.
+
+In April 2007, KX announced that it was releasing a version of kdb+ for Mac OS X. At that time, kdb+ was also available on the operating systems Linux, Windows, and Solaris.
+
+In September 2012, version 3.0 was released. It was optimized for Intel's upgraded processors with support for WebSockets, Globally unique identifiers (GUID)s, and Universally unique identifiers (UUID). Intel's Advanced Vector Extensions (AVX) and Streaming SIMD Extensions 4 (SSE4) 4.2 on the Sandy Bridge processors of the time allowed for enhanced support of the kdb+ system. In June 2013, version 3.1 was released, with benchmarks up to 8 times faster than for older versions.
+
+In March 2020, version 4.0 was released. New features included Multithreaded primitives, Intel Optane DC persistent memory support and Data at Rest Encryption.
+

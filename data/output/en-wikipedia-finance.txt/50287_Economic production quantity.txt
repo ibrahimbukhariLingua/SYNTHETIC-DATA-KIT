@@ -1,0 +1,62 @@
+Economic production quantity
+
+
+# Economic production quantity
+
+
+
+The **economic production quantity** model (also known as the **EPQ model**) determines the quantity a company or retailer should order to minimize the total inventory costs by balancing the inventory holding cost and average fixed ordering cost. The EPQ model was developed and published by E. W. Taft, a statistical engineer working at Winchester Repeating Arms Company in New Haven, Connecticut, in 1918.
+
+This method is an extension of the economic order quantity model (also known as the EOQ model). The difference between these two methods is that the EPQ model assumes the company will produce its own quantity or the parts are going to be shipped to the company while they are being produced, therefore the orders are available or received in an incremental manner while the products are being produced. While the EOQ model assumes the order quantity arrives complete and immediately after ordering, meaning that the parts are produced by another company and are ready to be shipped when the order is placed.
+
+In some literature,ᶜⁱᵗᵃᵗⁱᵒⁿ ⁿᵉᵉᵈᵉᵈ the term "economic manufacturing quantity" model (EMQ) is used for "economic production quantity" model (EPQ). Similar to the EOQ model, EPQ is a single product lot scheduling method. A multiproduct extension to these models is called *product cycling problem*.
+
+
+## Overview
+
+EPQ only applies where the demand for a product is constant over the year and that each new order is delivered/produced incrementally when the inventory reaches zero. There is a fixed cost charged for each order placed, regardless of the number of units ordered. There is also a holding or storage cost for each unit held in storage (sometimes expressed as a percentage of the purchase cost of the item).
+
+We want to determine the optimal number of units of the product to order so that we minimize the total cost associated with the purchase, delivery and storage of the product.
+
+The required parameters to the solution are the total demand for the year, the purchase cost for each item, the fixed cost to place the order and the storage cost for each item per year. Note that the number of times an order is placed will also affect the total cost, however, this number can be determined from the other parameters
+
+
+### Assumptions
+
+1. Demand for items from inventory is continuous and at a constant rate
+2. Production runs to replenish inventory are made at regular intervals
+3. During a production run, the production of items is continuous and at a constant rate
+4. Production set-up/ordering cost is fixed (independent of quantity produced)
+5. The lead time is fixed
+6. The purchase price of the item is constant, i.e. no discount is available
+7. The replenishment is made incrementally
+
+### Variables
+
+* K = ordering/setup cost per production run
+* D = yearly demand rate
+* h = yearly holding cost per product
+* t = cycle length
+* P = yearly production rate
+* {\displaystyle x={\frac {D}{P}}}
+* Q = order quantity
+* S = success by the method.
+
+### Total cost function and derivation of EPQ formula
+
+* Holding Cost per Year = {\displaystyle {\frac {Q}{2}}h(1-x)}
+
+Where {\displaystyle {\frac {Q}{2}}} is the average inventory level, and {\displaystyle h(1-x)} is the average holding cost. Therefore, multiplying these two results in the holding cost per year.
+
+* Ordering Cost per Year = {\displaystyle {\frac {D}{Q}}K}
+
+Where {\displaystyle {\frac {D}{Q}}} are the orders placed in a year, multiplied by K results in the ordering cost per year.
+
+We can notice from the equations above that the total ordering cost decreases as the production quantity increases. Inversely, the total holding cost increases as the production quantity increases. Therefore, in order to get the optimal production quantity we need to set holding cost per year equal to ordering cost per year and solve for quantity (Q), which is the EPQ formula mentioned below. Ordering this quantity will result in the lowest total inventory cost per year.
+
+
+### Relevant formulas
+
+* Average holding cost per unit time:
+
+* Average ordering and holding cost as a function of time:

@@ -1,0 +1,19 @@
+Cliquet option
+
+
+# Cliquet option
+
+
+
+A **cliquet option** or **ratchet option** is an exotic option consisting of a series of consecutive forward start options. The first is active immediately. The second becomes active when the first expires, etc. Each option is struck at-the-money when it becomes active.
+
+A cliquet is, therefore, a series of at-the-money options but where the total premium is determined in advance. A cliquet can be thought of as a series of "pre-purchased" at-the-money options. The payout on each option can either be paid at the final maturity, or at the end of each reset period.
+
+
+## Example
+
+A three-year cliquet with reset dates each year would have three payoffs.
+
+* The first would pay off at the end of the first year and has the same payoff as a normal ATM option.
+* The second year's payoff has the same payoff as a one-year option, but with the strike price equal to the stock price at the end of the first year.
+* The third year's payoff has the same payoff as a one-year option, but with the strike price equal to the stock price at the end of the second year.

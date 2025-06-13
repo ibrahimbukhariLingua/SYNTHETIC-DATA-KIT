@@ -1,0 +1,97 @@
+Strongly proportional division
+
+
+# Strongly proportional division
+
+
+
+A **strongly proportional division** (sometimes called **super-proportional division**) is a kind of a fair division. It is a division of resources among *n* partners, in which the value received by each partner is strictly more than his/her due share of 1/*n* of the total value. Formally, in a strongly proportional division of a resource *C* among *n* partners, each partner *i*, with value measure *Vᵢ*, receives a share *Xᵢ* such that
+
+> {\displaystyle V\_{i}(X\_{i})>V\_{i}(C)/n}.
+
+Obviously, a strongly proportional division does not exist when all partners have the same value measure. The best condition that can *always* be guaranteed is {\displaystyle V\_{i}(X\_{i})\geq V\_{i}(C)/n}, which is the condition for a plain proportional division. However, one may hope that, when different agents have different valuations, it may be possible to use this fact for the benefit of all players, and give each of them strictly more than their due share.
+
+
+## Existence
+
+In 1948, Hugo Steinhaus conjectured the existence of a super-proportional division of a cake:
+
+> It may be stated incidentally that if there are two (or more) partners with *different* estimations, there exists a division giving to everybody more than his due part (Knaster); this fact disproves the common opinion that differences estimations make fair division difficult.
+
+In 1961, Dubins and Spanier proved that the necessary condition for existence is also sufficient. That is, whenever the partners' valuations are additive and non-atomic, and there are at least *two* partners whose value function is even slightly different, then there is a super-proportional division in which *all* partners receive more than 1/*n*.
+
+The proof was a corollary to the Dubins–Spanier convexity theorem. This was a purely existential proof based on convexity arguments.
+
+
+## Algorithms
+
+In 1986, Douglas R. Woodall published the first protocol for finding a super-proportional division.
+
+Let *C* be the entire cake. If the agents' valuations are different, then there must be a *witness* for that: a witness is a specific piece of cake, say *X ⊆ C*, which is valued differently by some two partners, say Alice and Bob. Let *Y* := *C \ X.* Let *aₓ=VAₗᵢcₑ(X)* and *bₓ=VBₒb(X)* and *ay=VAₗᵢcₑ(Y)* and *by=VBₒb(Y)*, and assume w.l.o.g. that:
+
+> *bₓ > aₓ*, which implies: by < ay.
+
+The idea is to partition *X* and *Y* separately: when partitioning *X*, we will give slightly more to Bob and slightly less to Alice; when partitioning *Y*, we will give slightly more to Alice and slightly less to Bob.
+
+
+### Woodall's protocol for two agents
+
+Find a rational number between *b*ₓ and *aₓ*, say *p/q* such that *bₓ > p/q > aₓ*. This implies *by < (q-p)/q < ay*. Ask Bob to divide *X* into *p* equal parts, and divide *Y* to *q-p* equal parts.
+
+By our assumptions, Bob values each piece of *X* at bₓ/p > 1/*q*, and each piece of *Y* at by/(q-p) < 1/*q*. But for Alice, at least one piece of *X* (say X₀) must have value less than 1/*q* and at least one piece of *Y* (say Y₀) must have value more than 1/*q*.
+
+So now we have two pieces, *X₀* and *Y₀*, such that:
+
+Let Alice and Bob divide the remainder *C \ X₀ \ Y₀* between them in a proportional manner (e.g. using divide and choose). Add *Y₀* to the piece of Alice and add *X₀* to the piece of Bob.
+
+Now, each partner thinks that his/her allocation is strictly better than the other allocation, so its value is strictly more than 1/2.
+
+
+### Woodall's protocol for *n* partners
+
+The extension of this protocol to *n* partners is based on Fink's "Lone Chooser" protocol.
+
+Suppose we already have a strongly proportional division to *i*-1 partners (for *i≥3*). Now partner #*i* enters the party and we should give him a small piece from each of the first *i*-1 partners, such that the new division is still strongly proportional.
+
+Consider e.g. partner #1. Let *d* be the difference between partner #1's current value and (1/(*i*-1)). Because the current division is strongly proportional, we know that *d>0*.
+
+Choose a positive integer *q* such that: {\displaystyle d>{\frac {1}{(i-1)i(q(i-1)-1)}}}
+
+Ask partner #1 to divide his share to {\displaystyle qi-1} pieces which he considers of equal value and let the new partner choose the {\displaystyle q} pieces which he considers to be the most valuable.
+
+Partner #1 remains with a value of {\displaystyle {\frac {(qi-1)-q}{qi-1}}={\frac {q(i-1)-1}{qi-1}}} of his previous value, which was {\displaystyle {\frac {1}{i-1}}+d} (by definition of *d*). The first element becomes {\displaystyle {\frac {q(i-1)-1}{(i-1)(qi-1)}}} and the *d* becomes {\displaystyle {\frac {1}{i(i-1)(qi-1)}}}; summing them up gives that the new value is more than: {\displaystyle {\frac {(qi-1)(i-1)}{(i-1)i(qi-1)}}={\frac {1}{i}}} of the entire cake.
+
+As for the new partner, after having taken *q* pieces from each of the first *i*-1 partners, his total value is at least: {\displaystyle {\frac {q}{qi-1}}>{\frac {1}{i}}} of the entire cake.
+
+This proves that the new division is strongly proportional too.
+
+
+### Barbanel's protocol
+
+Julius Barbanel extended Woodall's algorithm to agents with different entitlements, including irrational entitlements. In this setting, the entitlement of each agent *i* is represented by a weight {\displaystyle w\_{i}}, with {\displaystyle W:=\sum \_{i}w\_{i}}. A strongly proportional allocation is one in which, for each agent *i*:
+
+> {\displaystyle V\_{i}(X\_{i})>w\_{i}\cdot V\_{i}(C)/W}.
+
+
+### Janko-Joo protocol
+
+Janko and Joo presented a simpler algorithm for agents with different entitlements. In fact, they showed how to reduce a problem of strongly proportional division (with equal or different entitlements) into two problems of proportional division with different entitlements:
+
+* For the piece *X*, change the entitlement of Alice to {\displaystyle w\_{A}-1/a\_{x}} and the entitlement of Bob to {\displaystyle w\_{B}+1/b\_{x}}. Since *bₓ > aₓ*, the sum of the new entitlements is strictly less than {\displaystyle w\_{A}+w\_{B}}, so the sum of all *n* entitlements (dentoed by *WX*) is strictly less than *W.*
+* For the piece *Y*, change the entitlement of Alice to {\displaystyle w\_{A}+1/a\_{y}} and the entitlement of Bob to {\displaystyle w\_{B}-1/b\_{y}}. Here, too, since *by < ay*, the new sum of all entitlements (dentoed by *WY*) is strictly less than *W*.
+* Alice's value is at least {\displaystyle {\begin{aligned}&(w\_{A}-1/a\_{x})\cdot a\_{x}/W\_{X}+(w\_{A}+1/b\_{y})\cdot b\_{x}/W\_{Y}=\\=&(w\_{A}a\_{x}-1)/W\_{X}+(w\_{A}a\_{y}+1)/W\_{Y}\\>&(w\_{A}a\_{x}-1)/W+(w\_{A}a\_{y}+1)/W\\=&w\_{A}V\_{A}(C)/W\end{aligned}}}
+* Similarly, Bob's value is at least{\displaystyle {\begin{aligned}&(w\_{B}+1/b\_{x})\cdot b\_{x}/W\_{X}+(w\_{B}-1/b\_{y})\cdot b\_{y}/W\_{Y}=\\=&(w\_{B}b\_{x}+1)/W\_{X}+(w\_{B}b\_{y}-1)/W\_{Y}\\>&(w\_{B}b\_{x}-1)/W+(w\_{B}b\_{y}+1)/W\\=&w\_{B}V\_{B}(C)/W\end{aligned}}}
+* The value of every other agent *i* is at least{\displaystyle {\begin{aligned}&w\_{i}\cdot V\_{i}(X)/W\_{X}+w\_{i}\cdot V\_{i}(Y)/W\_{Y}\\>&w\_{i}\cdot V\_{i}(X)/W+w\_{i}\cdot V\_{i}(Y)/W\\=&w\_{i}V\_{i}(C)/W\end{aligned}}}So the division is strongly proportional.
+
+## Related concepts
+
+An allocation is called **strongly envy-free** if for every two partners *i*,*j*:
+
+> {\displaystyle V\_{i}(X\_{i})>V\_{i}(X\_{j})}.
+
+An allocation is called super envy-free if for every two partners *i*,*j*:
+
+> {\displaystyle V\_{i}(X\_{i})>1/n>V\_{i}(X\_{j})}.
+
+Super envy-freeness implies strong envy-freeness, which implies strong proportionality.
+

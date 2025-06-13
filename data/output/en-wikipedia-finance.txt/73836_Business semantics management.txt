@@ -1,0 +1,46 @@
+Business semantics management
+
+
+# Business semantics management
+
+
+
+**Business semantics management** (BSM) encompasses the technology, methodology, organization, and culture that brings business stakeholders together to collaboratively realize the reconciliation of their heterogeneous metadata; and consequently the application of the derived business semantics patterns to establish semantic alignment between the underlying data structures.
+
+BSM is established by two complementary process cycles each grouping a number of activities. The first cycle is the semantic reconciliation cycle, and the second cycle is the semantic application cycle. The two cycles are tied together by the unification process. This double process cycle is iteratively applied until an optimal balance of differences and commonalities between stakeholders are reached that meets the semantic integration requirements. This approach is based on research on community-based ontology engineering that is validated in European projects, government and industry.
+
+
+## Semantic reconciliation
+
+Semantic reconciliation is a process cycle constituted of four subsequent activities: scope, create, refine, and articulate. First, the community is scoped: user roles and affordances are appointed. Next, relevant facts are collected from documentation such as, e.g., natural language descriptions, (legacy) logical schemas, or other metadata and consequently decomposing this scope in elicitation contexts. The deliverable of scoping is an initial upper common ontology that organizes the key upper common patterns that are shared and accepted by the community. These upper common patterns define the current semantic interoperability requirements of the community. Once the community is scoped, all stakeholders syntactically refine and semantically articulate these upper common patterns.
+
+
+## Unification
+
+During unification, a new proposal for the next version of the upper common ontology is produced, aligning relevant parts from the common and divergent stakeholder perspectives. If the semantic reconciliation results in a number of reusable language-neutral and context-independent patterns for constructing business semantics that are articulated with informal meaning descriptions, then the unification is worthwhile.
+
+
+## Semantic application
+
+Semantic application is a process cycle constituted of two subsequent activities: select and commit where the scoped information systems are committed to selected consolidated business semantic patterns. This is done by first selecting relevant patterns from the pattern base. Next, the interpretation of this selection is semantically constrained. Finally, the various scoped sources and services are mapped on (read: committed to) this selection. The selection and axiomatization of this selection should approximate the intended business semantics. This can be verified by automatically verbalization into natural language, and validation of the unlocked data. Validation or deprecation of the commitments may result in another iteration of the semantic reconciliation cycle.
+
+
+## Business semantics
+
+Business semantics are the information concepts that live in the organization, understandable for both business and IT. Business semantics describe the business concepts as they are used and needed by the business instead of describing the information from a technical point of view.
+
+One important aspect of business semantics is that they are shared between many disparate data sources. Many data sources share the same semantics but have different syntax, or format to describe the same concepts.
+
+The way these business semantics are described is less important. Several approaches can be used such as Unified Modeling Language or object-role modeling. This corresponds to Robert Meersman's statement that semantics are "a (set of) mapping(s) from your representation language to agreed concepts (objects, relationships, behavior) in the real-world". In the construction of information systems, semantics have always been crucial, also a concept known as double articulation. In previous approaches, these semantics were left implicit (i.e. In the mind of reader or writer), hidden away in the implementation itself (e.g., in a database table or column code) or informally captured in textual documentation. According to Dave McComb, "The scale and scope of our systems and the amount of information we now have to deal with are straining that model."
+
+Nowadays, information systems need to interact in a more open manner, and it becomes crucial to formally represent and apply the semantics these systems are concerned with.
+
+
+## Application
+
+Business semantics management empowers all stakeholders in the organization by a consistent and aligned definition of the important information assets of the organization.
+
+The available business semantics can be leveraged in the so-called business/social layer of the organization. They can for example be coupled to a content management application to provide the business with a consistent business vocabulary or enable better navigation or classification of information, leveraged by enterprise search engines to make richer semantic web ready websites, etc..
+
+Business semantics can also be used to increase operational efficiency in the technical/operation layer of the organization. It provides an abstracted way to access and deliver data in a more efficient manner. In that respect, it is similar to Enterprise Information Integration (EII) with the added benefit that the shared models are not described in technical terms but in a way that is easily understood by the business.
+

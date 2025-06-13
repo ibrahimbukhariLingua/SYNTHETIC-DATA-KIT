@@ -1,0 +1,73 @@
+Asset swap
+
+
+# Asset swap
+
+
+
+The term **asset swap** has a number of different meanings:
+
+* In accounting, it refers to an exchange of tangible for intangible assets.
+* In finance, it refers to the exchange of the flow of payments from a given security (the asset) for a different set of cash flows.
+* In corporate transactions, it refers to two companies swapping different businesses of similar value with each other.
+
+## Accounting
+
+In financial accounting, an **asset swap** is an exchange of tangible assets for intangible assets or vice versa. Since it is a swap of assets, the procedure takes place on the active side of the balance sheet and has no impact on the latter in regard to volume. As an example, a company may sell equity and receive the value in cash, thus increasing liquidity.
+
+A company often utilizes this method when in need for money to invest (internal financing) or to pay off debts.
+
+
+## Finance
+
+In finance, the term **asset swap** has a particular meaning. When one refers to an asset swap, one has in mind the exchange of the flow of payments from a given security (the asset) for a different set of cash flows. An example of this is where an institution swaps the cash flows on a U.S. Government Bond for LIBOR minus a spread (say 20 basis points). Such swaps usually have stub periods in order to bring the chronology of the cash flows into line with that of the underlying bond.
+
+
+### Overview
+
+An asset swap enables an investor to buy a fixed rate bond and then hedge out the interest rate risk by swapping the fixed payments to floating. In doing so the investor retains the credit risk to the fixed-rate bond and earns a corresponding return. The asset swap market was born along with the swap market in the early 1990s, and continued to be most widely used by banks which use asset swaps to convert their long-term fixed rate assets to floating rate in order to match their short-term liabilities (depositor accounts). The asset swap market is over-the-counter (OTC), i.e., not traded on any exchange.
+
+An asset swap is the swap of a fixed investment, like a bond that will yield guaranteed coupon payments, for a floating investment, i.e. an index. It has a similar structure to a plain vanilla swap, but the underlying of the swap contract is different.
+
+There are several variations on the asset swap structure with the most widely traded being the par asset swap. Other types include the market asset swap and the cross-currency asset swap. The most common and standard one is par asset swap.
+
+
+#### Mechanics of a Par Asset Swap
+
+A par asset swap is really two separate trades:
+
+* The asset swap buyer purchases a bond from the asset swap seller in return for a full price of par. ("Full price" is also known as "dirty price", i.e. including the accrued interest in contrast to the term "clean price" which refers to quote net of accrued interest. )
+* The asset swap buyer enters into a swap to pay fixed coupons to the asset swap seller equal to the fixed rate coupons received from the bond. In return the asset swap buyer receives regular payments of Libor plus (or minus) an agreed fixed spread. The maturity of this swap is the same as the maturity of the asset.
+
+This transaction is shown in Figure 1. The fixed spread to Libor paid by the asset swap seller is known as the **asset swap spread** and is set at a break-even value so the net value of the sale of the bond plus the swap transaction is zero at inception.
+
+
+##### Computing the asset swap spread
+
+For the purpose of the following, we assume we have constructed a market curve of Libor discount factors where z(t) is the price today of $1 to be paid at time t.
+
+From the perspective of the asset swap seller, they sell the bond for par plus accrued interest ("dirty price"). The net up-front payment has a value 100-P where P is the full price of the bond in the market. Both parties to the swap are assumed to be AA bank credit quality and so these cash flows are priced off the Libor curve. We cancel out the principal payments of par at maturity. For simplicity we assume that all payments are annual and are made on the same dates.
+
+As is standard for swaps, the break-even asset swap spread A is computed by setting the present value of all cash flows equal to zero.
+
+1. From the perspective of the asset swap seller the present value is:
+
+2. We then solve for the asset swap spread A such that the present value is zero.
+
+On a technical note, when the asset swap is initiated between coupon dates, the asset swap buyer does not pay the accrued interest explicitly. Effectively, the full price of the bond is at par. At the next coupon period the asset swap buyer receives the full coupon on the bond and likewise pays the full coupon on the swap. However, the floating side payment, which may have a different frequency and accrual basis to fixed side, is adjusted by the corresponding accrual factor. Therefore, if we are exactly halfway between floating side coupons, the floating payment received is half of the Libor plus asset swap spread. This feature prevents the calculated asset swap spread from jumping as we move forward in time through coupon dates.
+
+
+##### Market Asset Swap
+
+In the market asset swap, the net upfront payment is zero. Instead the notional on the Libor side equals the price of the bond and there is an exchange of notionals at maturity.
+
+
+## Corporate transactions
+
+In corporate transactions, an asset swap refers to a deal where two companies swap businesses of equivalent value with each other.
+
+
+### Examples
+
+In 1995, the British house building and construction companies Tarmac and Wimpey announced an asset swap whereby Wimpey acquired all of Tarmac's housing, and in return, Tarmac received Wimpey's construction and minerals divisions.
+

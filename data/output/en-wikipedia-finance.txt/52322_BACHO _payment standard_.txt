@@ -1,0 +1,35 @@
+BACHO (payment standard)
+
+
+# BACHO (payment standard)
+
+
+
+The **BACHO** (**Bankers' Association House Clearing Organisation**) record format is the standard format used for the interchange of financial transactions in the New Zealand banking system. Until 2012 it shared this status with another standard format, QC. BACHO-format transactions are primarily used in batch processing systems running on MVS mainframe computers.
+
+
+## History
+
+The BACHO record format was established in the early 1960s. From the 1967 establishment of Databank Systems Ltd consortium the format was used by the then five main trading banks: Bank of New Zealand, ANZ, National Bank, Commercial Bank of Australia and Bank of New South Wales (the latter merged to become Westpac).
+
+
+## Format
+
+A BACHO record is a fixed-length 160-byte entity. The BACHO file consists of lines of data that contain individual records, one per line. The format of the BACHO file is as follows:
+
+1. A Header record
+2. Multiple lines of data for each transaction
+3. A summary line showing transaction totals for each bank or institution
+4. A summary line showing total transactions for the BACHO file
+
+## Issues
+
+The 160-character length restriction has led to a number of complexities in interpreting the contents of BACHO transactions, including:
+
+* Some BACHO fields are interpreted differently depending on whether they contain numeric or alphabetic data.
+* Some BACHO transactions are broken into multiple records, and then reassembled for processing.
+
+There are several formats. Most banks or trading houses use their own format. The purpose for the BACHO file can also change depending on what is being reported, for instance, payroll data will be laid out differently to EFTPOS transactional data.
+
+It has been proposed that BACHO be replaced with the ISO 20022 standard.
+

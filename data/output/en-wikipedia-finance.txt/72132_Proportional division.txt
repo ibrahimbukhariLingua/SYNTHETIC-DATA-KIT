@@ -1,0 +1,80 @@
+Proportional division
+
+
+# Proportional division
+
+
+
+A **proportional division** is a kind of fair division in which a resource is divided among *n* partners with subjective valuations, giving each partner at least 1/*n* of the resource by his/her own subjective valuation.
+
+Proportionality was the first fairness criterion studied in the literature; hence it is sometimes called "simple fair division". It was first conceived by Steinhaus.
+
+
+## Example
+
+Consider a land asset that has to be divided among 3 heirs: Alice and Bob who think that it's worth 3 million dollars, and George who thinks that it's worth $4.5M. In a proportional division, Alice receives a land-plot that she believes to be worth at least $1M, Bob receives a land-plot that *he* believes to be worth at least $1M (even though Alice may think it is worth less), and George receives a land-plot that he believes to be worth at least $1.5M.
+
+
+## Existence
+
+A proportional division does not always exist. For example, if the resource contains several indivisible items and the number of people is larger than the number of items, then some people will get no item at all and their value will be zero. Nevertheless, such a division exists with high probability for indivisible items under certain assumptions on the valuations of the agents.
+
+Moreover, a proportional division is guaranteed to exist if the following conditions hold:
+
+* The valuations of the players are *non-atomic*, i.e., there are no indivisible elements with positive value.
+* The valuations of the players are *additive*, i.e., when a piece is divided, the value of the piece is equal to the sum of its parts.
+
+Hence, proportional division is usually studied in the context of fair cake-cutting. See proportional cake-cutting for detailed information about procedures for achieving a proportional division in the context of cake-cutting.
+
+A more lenient fairness criterion is *partial proportionality*, in which each partner receives a certain fraction *f*(*n*) of the total value, where *f*(*n*) ≤ 1/*n*. Partially proportional divisions exist (under certain conditions) even for indivisible items.
+
+
+## Variants
+
+
+### Super-proportional division
+
+A *super-proportional division* is a division in which each partner receives strictly more than 1/*n* of the resource by their own subjective valuation.
+
+Of course such a division does not always exist: when all partners have exactly the same value functions, the best we can do is give each partner exactly 1/*n*. So a necessary condition for the existence of a super-proportional division is that not all partners have the same value measure.
+
+The surprising fact is that, when the valuations are additive and non-atomic, this condition is also sufficient. I.e., when there are at least *two* partners whose value function is even slightly different, then there is a super-proportional division in which *all* partners receive more than 1/*n*. See super-proportional division for details.
+
+
+## Relations to other fairness criteria
+
+
+### Implications between proportionality and envy-freeness
+
+Proportionality (PR) and envy-freeness (EF) are two independent properties, but in some cases one of them may imply the other.
+
+When all valuations are additive set functions and the entire cake is divided, the following implications hold:
+
+* With two partners, PR and EF are equivalent;
+* With three or more partners, EF implies PR but not vice versa. For example, it is possible that each of three partners receives 1/3 in his subjective opinion, but in Alice's opinion, Bob's share is worth 2/3.
+
+When the valuations are only subadditive, EF still implies PR, but PR no longer implies EF even with two partners: it is possible that Alice's share is worth 1/2 in her eyes, but Bob's share is worth even more. On the contrary, when the valuations are only superadditive, PR still implies EF with two partners, but EF no longer implies PR even with two partners: it is possible that Alice's share is worth 1/4 in her eyes, but Bob's is worth even less. Similarly, when not all cake is divided, EF no longer implies PR. The implications are summarized in the following table:
+
+| Valuations | 2 partners | 3+ partners |
+| --- | --- | --- |
+| Additive | {\displaystyle EF\implies PR} {\displaystyle PR\implies EF} | {\displaystyle EF\implies PR} |
+| Subadditive | {\displaystyle EF\implies PR} | {\displaystyle EF\implies PR} |
+| Superadditive | {\displaystyle PR\implies EF} | - |
+| General | - | - |
+
+
+### Stability to voluntary exchanges
+
+One advantage of the proportionality criterion over envy-freeness and similar criteria is that it is stable with regards to voluntary exchanges.
+
+As an example, assume that a certain land is divided among 3 partners: Alice, Bob and George, in a division that is both proportional and envy-free. Several months later, Alice and George decide to merge their land-plots and re-divide them in a way that is more profitable for them. From Bob's point of view, the division is still proportional, since he still holds a subjective value of at least 1/3 of the total, regardless of what Alice and George do with their plots. On the other hand, the new division might not be envy free. For example, it is possible that initially both Alice and George received a land-plot which Bob subjectively values as 1/3, but now after the re-division George got all the value (in Bob's eyes) so now Bob envies George.
+
+Hence, using envy-freeness as the fairness criterion implies that we must constrain the right of people to voluntary exchanges after the division. Using proportionality as the fairness criterion has no such negative implications.
+
+
+### Individual rationality
+
+An additional advantage of proportionality is that it is compatible with individual rationality in the following sense. Suppose *n* partners own a resource in common. In many practical scenarios (though not always), the partners have the option to sell the resource in the market and split the revenues such that each partner receives exactly 1/*n*. Hence, a rational partner will agree to participate in a division procedure, only if the procedure guarantees that he receives at least 1/*n* of his total value.
+
+Additionally, there should be at least a possibility (if not a guarantee) that the partner receives more than 1/*n*; this explains the importance of the existence theorems of super-proportional division.
+

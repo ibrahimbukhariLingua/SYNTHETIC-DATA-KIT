@@ -1,0 +1,37 @@
+Hedera (distributed ledger)
+
+
+# Hedera (distributed ledger)
+
+
+
+**Hedera Hashgraph**, commonly known as **Hedera**, is a distributed ledger which uses a variant of proof of stake to reach consensus. The native cryptocurrency of the Hedera Hashgraph system is **HBAR**.
+
+
+## History
+
+Hashgraph was invented in the mid-2010s by the American computer scientist Leemon Baird. Baird is the co-founder and chief technical officer of Swirlds, a company that holds patents covering the hashgraph algorithm. Hashgraph were described as a continuation or successor to the blockchain concept, which provides increased speed, fairness, low cost, and security constraints.
+
+Based on Hashgraph protocol, Hedera Hashgraph mainnet was launched in 2019. The Hedera white paper co-authored by Baird explained that "at the end of each round, each node calculates the shared state after processing all transactions that were received in that round and before," and it "digitally signs a hash of that shared state, puts it in a transaction, and gossips it out to the community."
+
+In 2020, Google Cloud joined Hedera Governing Council. A year later, EFTPOS joined the governing council.
+
+In September 2024 Hedera has transferred all source code of the Hedera Hashgraph to the Linux Foundation. The sources are now available as the open-source and vendor-neutral project Hiero.
+
+
+## Distributed ledger
+
+Hedera Hashgraph is a public distributed ledger based on the Hashgraph algorithm. Hedera Hashgraph is developed by a company of the same name, Hedera, based in Dallas, Texas. Hedera was founded by Hashgraph inventor Leemon Baird and his business partner Mance Harmon, and Andrew Masanto, adding significant contribution to the team. Previously, Hedera had an exclusive license to the Hashgraph patents held by their company, Swirlds. The Hedera Governing Council voted to purchase the patent rights to Hashgraph and make the algorithm open source under the Apache License in 2022.
+
+Hedera mainnet is maintained by governing council members which include companies such as Deutsche Telekom, IBM, FIS Global, and Tata Communications.
+
+
+## Hashgraphs
+
+Unlike blockchains, hashgraphs do not bundle data into blocks or use miners to validate transactions. Instead, hashgraphs use a "gossip about gossip" protocol where the individual nodes on the network "gossip" about transactions to create directed acyclic graphs that time-sequence transactions. Each "gossip" message contains one or more transactions plus a timestamp, a digital signature, and cryptographic hashes of two earlier events. This makes Hashgraph form an asynchronous Byzantine Fault-Tolerant (aBFT) consensus algorithm.
+
+
+## Criticism
+
+It has been claimed that hashgraphs are less technically constrained than blockchains proper. Cornell Professor Emin Gün Sirer notes that "The correctness of the entire Hashgraph protocol seems to hinge on every participant knowing and agreeing upon *N*, the total number of participants in the system," which is "a difficult number to determine in an open distributed system." Baird responded that "All of the nodes at a given time know how many nodes there are."
+

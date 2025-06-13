@@ -1,0 +1,41 @@
+Smart market
+
+
+# Smart market
+
+
+
+A **smart market** is a periodic auction which is cleared by the operations research technique of mathematical optimization, such as linear programming. The **smart market** is operated by a market manager. Trades are not bilateral, between pairs of people, but rather to or from a pool. A smart market can assist market operation when trades would otherwise have significant transaction costs or externalities.
+
+Most other types of auctions can be cleared by a simple process of sorting bids from lowest to highest. Goods may be divisible, as with milk or flour, or indivisible, as with paintings or houses. Finding a market-clearing allocation corresponds to solution of a simple knapsack problem, and does not require much computation. By contrast, a smart market allows market clearing with arbitrary constraints. During market design, constraints are selected to match the relevant physics and economics of the allocation problem. A good overview is given in McCabe et al. (1991).
+
+Combinatorial auctions are smart markets in which goods are indivisible, but some smart markets allocate divisible goods such as electricity and natural gas.
+
+Compared to traditional market structures, a smart market substantially reduces transaction costs, allows competition which would not be possible otherwise, and can eliminate externalities. Despite complex constraints, a smart market allows the benefits of a modern financial exchange system. Fulfilment of the contract is backed by the exchange; parties are generally anonymous; the market manager enforces regulation to ensure fairness and transparency; and markets are orderly, especially during stressful conditions.
+
+A smart market may be a one-sided auction in which participants buy from the market manager, a one-sided procurement (reverse auction) in which participants sell to the market manager, or two-sided, in which the market manager balances supplying participants with demanding participants. In a two-sided smart market, the market manager may be a net seller, a net buyer, or simply a revenue-neutral broker.
+
+Smart markets are achievable due to an enabling confluence of technologies: the internet to transmit users’ bids and the resulting prices and quantities, increased computation power to run the simulation and linear program, and real time monitoring.
+
+
+## Examples of smart markets
+
+The term appears to have been first used by Rassenti, Smith, and Bulfin in 1982. That article proposed a combinatorial auction for airplane take-off and landing slots. The U.S. government is now seeking to implement such an auction.
+
+The modern electricity market is an important example of a two-sided smart market., Electricity markets clear every few minutes, and require coordination to ensure that power generation matches demand, and that power flows do not exceed network line capacities. Generators offer to supply tranches of power at a range of prices. Wholesale power distributors bid to buy tranches of power at a range of prices. To clear the market, the market manager solves a linear program in which the decision variables are how much power to accept from each generator, the flow of power on each line, and how much power to provide to each distributor.
+
+After solution, the primal variables prescribe the dispatch (that is, how much power each generator should produce). The dual variables provide the market clearing prices. By clearing the market based on the dual prices, participants are charged on marginal values, rather than as bid. Thus, every seller is guaranteed to receive at least as much as was bid and possibly more. Every buyer is guaranteed to pay no more than was offered, and possibly less. Without the smart market, the line operator, all generators, and all distributors would have to be part of a monopoly in order to guarantee system coordination.
+
+Natural gas markets are sometimes cleared by smart markets, as in Australia . The system operator serves as the market manager. Operation of the gas pipeline network require coordination to ensure that gas supply matches demand, and that flows do not exceed pipe capacities. Gas suppliers offer a range of quantities at a range of prices. Distributors bid to buy a range of quantities at a range of prices. To clear the market, the market manager solves a linear program in which the decision variables are the gas to accept from each supplier, the flow of gas on each pipe segment, and how much gas to provide to each distributor. As with electricity markets, after solution, the primal variables prescribe the optimal flows, and the dual variables provide the market clearing prices. The objective minimizes the cost of supplying power.
+
+The spectrum auction is a one-sided smart market which is cleared by an integer program. Participants purchase radio spectrum from government. These combinatorial auctions are cleared as bid, rather than at prices based on dual variables. Only recently have researchers found robust means to obtain dual variables from integer programs.
+
+Companies and governments sometimes use smart markets in procurement, as for transportation services. The Chilean government, for example, uses a smart market to choose caterers for school meal programs. The University of Chicago Booth School of Business uses a smart market for course registration. The system ensures that the class seats go to those students who most want them, while ensuring that the number of students in each class stays within the room capacity.
+
+Smart markets are now being proposed for environmental services, including water. The more sophisticated of these designs rely on hydrological optimization and hydrological run-off models.
+
+
+## Formulations
+
+A smart market formulation may be written as a net pool, in which the decision variables explicitly calculate buys and sells, and the market model clears only those quantities. The net pool market can be mathematically infeasible if participants are unwilling to trade sufficient quantities to allow feasibility. Alternatively, the formulation may be a gross pool, in which the decision variables determine total quantities that each participant receives; the market manager calculates net sales after the model's solution, based on participants' initial holdings. The gross pool market will tend to be mathematically feasible, but could have an unacceptably high cost in the optimal objective value, should (buy) bids be too low compared to (sell) offers. The difference between these two formulations is only technical, as the market designs are economically equivalent by the Coase theorem.
+

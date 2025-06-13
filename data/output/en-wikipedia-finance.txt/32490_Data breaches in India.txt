@@ -1,0 +1,59 @@
+Data breaches in India
+
+
+# Data breaches in India
+
+
+
+**Data breach incidences in India** were the second highest globally in 2018, according to a report by digital security firm Gemalto. With over 690 million internet subscribers and growing, India has increasingly seen a rise in data breaches both in the private and public sector. This is a list of some of the biggest data breaches in the country.
+
+
+## 2016 debit card data breach
+
+In October 2016, it was reported that as many as 3.2 million debit cards from major Indian banks were compromised due to a malware injection in the Hitachi Payment Services system. Hitachi provides ATM and Point of sale services in India and the malware enabled hackers to extract money from user accounts. The NPCI (National Payments Corporation of India) reported losses of nearly 13 million INR ($195,000 USD in 2016) in fraudulent transactions. The worst hit banks included the State Bank of India (SBI), ICICI, HDFC, YES Bank and Axis Bank among others. The breach went undetected for 6 weeks and banks were alerted only after several international banks reported fraudulent use of cards in China and the United States while the customers were in India. SBI blocked and reissued 600,000 debit cards and was reported to be one of the biggest card replacements in Indian banking.
+
+
+## Aadhar data breach
+
+In early 2018, Indian government's identification database Aadhaar (similar to SSN) was reported to be leaking information on every registered Indian citizens including names, bank details and other private information like biometric data. Managed by Unique Identification Authority of India (UIDAI), Aadhar is a unique identification number obtained by over 1.1 billion residents or passport holders of India based on their biometric and demographic data. The data leak was first revealed after anonymous sellers over WhatsApp provided unrestricted access to the Aadhar database for nominal costs. The Tribune, an Indian newspaper reported that over 100,000 ex-employees of the Ministry of Electronics and Information Technology continued to have free access to the UIDAI system and therefore, the Aadhar database. Another data leak was found in the following months wherein a state-owned utility company Indane's (LPG) unprotected system allowed anyone to access private information on all Aadhaar holders. The company had unlimited access to the Aadhar database to verify user accounts and an unprotected API endpoint through the company's system allowed unauthorized queries to the database for potentially all Aadhar holders. Not just indirectly, Aadhar information of over 130 million citizens was breached through state government websites as over 200 government websites erroneously made the database public. The UIDAI has unequivocally denied any data breach in the Aadhar database even though many of the insecure endpoints and government websites with unauthorized data access were put offline after the reports. UIDAI also filed a case against The Tribune under Sections 419, 420, 468 and 471 of the Indian Penal Code (IPC) alleging false reporting. The WEF Global Risk Report deemed the Aadhar breach as the largest data breach in the world.
+
+
+## SBI data breach
+
+In January 2019, SBI exposed customer data, including mobile numbers, partial account numbers, balances and transaction details from an unprotected server in its Mumbai data center. The server hosted SBI's "SBI Quick" service, a text and call based system to provide inquiring customers with updates on account balances, recent transactions and credit information. The server was not password protected and allowed the retrieval of customer-specific messages through the back-end text messaging system. The outgoing messages from the system were available in real time, along with over two months of daily archives, exposing financial details of millions of customers. Though SBI resolved the issue after the initial investigation by TechCrunch, the bank dismissed the reports, saying customer data and financial records remained secure.
+
+
+## Justdial data breach
+
+In April 2019, the Mumbai-based local search engine Justdial was hit by a data breach that leaked details, including names, mobile numbers, email ids, occupations and addresses of nearly 10 crore (100 million) users. Multiple sources suggested that the leak was due to an unprotected API endpoint accessible since mid-2015 on the company's old website and app. While Justdial admitted to vulnerability of certain user details on the old version of the app, the company largely refuted the reports, suggesting that user and financial information was protected by the search platform through an OTP authentication system.
+
+
+## Kudankulam nuclear power plant data breach
+
+In September 2019, the Nuclear Power Corporation of India (NPCI) confirmed that India's largest nuclear plant, the Kudankulam nuclear power plant was attacked by a malware that collected information on the plant's IT network. The breach was detected after a data file with traces of the Dtrack malware was uploaded on a cyber security firm's website. CERT-India detected the malware in an infected PC connected to the administrative network. The NPCI claimed that the malware did not have access to the OT network responsible for internal, critical plant systems. Tailored specifically for the plant, the attackers earlier broke into the plant's IT networks and stole admin credentials and used them to gain more information about the plant's networks through the malware. Multiple reports suggested that the malware was solely deployed to collect information, including internet search history from the browser installed on the infected PC, local operating system registry information such as registered owner, registered organization and current user and the list of active processes on the PC. The information was written into temporary files extracted from a remote server by the attacker. The Dtrack malware has been traced back to the North Korea–linked Lazarus Group.
+
+
+## 2019 credit and debit card data breach
+
+In October 2019, over 13 lakh (1.3 million) credit and debit card records were being sold to the dark web card shop Joker's Stash, a site used by cybercriminals for buying and selling card details. Group-IB, a Singapore-based company revealed that over 98% of the cards in the database belonged to multiple Indian banks, with each card being sold for over $100. The data breach revealed card numbers, expiration dates along with CVVs. Fully personally identifiable information including cardholders' names, emails, phone numbers and addresses were also available in the database. The card details were possibly obtained via skimming devices, installed either on ATMs or Point of sale (PoS) systems or through Magecart attacks, wherein JavaScript code is injected into e-commerce websites to intercept payment data. Another major card dump of over 460,000 cards was put up for sale on Joker's Stash in February 2020 with similar fully personally identifiable information, selling at $9 per card. The breach is currently deemed to be the biggest card dump on the internet. Investigations on the breach are still pending.
+
+
+## BigBasket data breach
+
+In November 2020, the Bangalore-based online grocer BigBasket suffered a data breach that leaked the details of their over 2 crore (20 million) users, including email IDs, password hashes, PINs, phone numbers, addresses, dates of birth, locations and IP addresses. The data breach was noticed after the data was put on sale on the dark web for almost ₹30 lakh INR ($40000 USD in 2020). The cause of the breach was an unsecure SQL file, potentially hacked into using an SQL injection, that contained over 15 GBs of user data. Bigbasket has acknowledged the breach and filed a case with the Banglore Cyber Crime cell. The breach is currently under investigation.
+
+
+## Unacademy data breach
+
+In May 2020, the Bangalore-based online learning platform Unacademy found compromised email data of over 11 million users but no sensitive information such as financial data, location or passwords has been breached. The breach was revealed after the company's 20 million user accounts were being sold on the dark web for almost ₹1.5 lakh INR ($2,000 USD). Cyble, a cybercrime monitoring company claimed that beyond user accounts, user data including IDs, passwords, date joined, last login date, email IDs, names and user credentials had also been breached. Unacademy is yet to verify whether the entire database was vulnerable to the breach
+
+
+## Air India data breach
+
+On 21 May 2021, it was reported that Air India was subjected to a cyberattack whereas the personal details of about 4.5 million customers around the world were compromised. The breach involved personal data registered between 26 August 2011 and 3 February 2021, with details that included name, date of birth, contact information, passport information, ticket information, Star Alliance and Air India frequent flyer data as well as credit card data
+
+
+## Dominos India data breach
+
+On 22 May 2021, it was reported that Dominos India, subsidiary of Jubilant FoodWorks, had witnessed a cyberattack and the data of 18 crore orders were leaked on the dark web including order details, email addresses, phone numbers and credit card details. Jubilant Foodworks stated that they had experienced an information security incident and denied any financial information being accessed by the hackers.
+

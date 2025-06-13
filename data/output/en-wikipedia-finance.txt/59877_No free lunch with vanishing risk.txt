@@ -1,0 +1,35 @@
+No free lunch with vanishing risk
+
+
+# No free lunch with vanishing risk
+
+
+
+**No free lunch with vanishing risk** (**NFLVR**) is a concept used in mathematical finance as a strengthening of the no-arbitrage condition. In continuous time finance the existence of an equivalent martingale measure (EMM) is no more equivalent to the no-arbitrage-condition (unlike in discrete time finance), but is instead equivalent to the NFLVR-condition. This is known as the first fundamental theorem of asset pricing.
+
+Informally speaking, a market allows for a *free lunch with vanishing risk* if there are admissible strategies, which can be chosen arbitrarily close to an arbitrage strategy, i.e., these strategies start with no wealth, end up with positive wealth with probability greater zero (free lunch) and the probability of ending up with negative wealth can be chosen arbitrarily small (vanishing risk).
+
+
+## Mathematical definition
+
+For a semimartingale {\displaystyle S}, let
+
+* {\displaystyle K=\{(H\cdot S)\_{\infty }:H{\text{ admissible}},(H\cdot S)\_{\infty }=\lim \_{t\to \infty }(H\cdot S)\_{t}{\text{ exists a.s.}}\}} where a strategy is called admissible if it is self-financing and its value process {\displaystyle V\_{t}=\int \_{0}^{t}H\_{u}\cdot \mathrm {d} S\_{u}} is bounded from below.
+* {\displaystyle C=\{g\in L^{\infty }(P):\exists f\in K,~g\leq f~a.s.\}}.
+
+{\displaystyle S} is said to satisfy the *no free lunch with vanishing risk* (NFLVR) condition if {\displaystyle {\bar {C}}\cap L\_{+}^{\infty }(P)=\{0\}}, where {\displaystyle {\bar {C}}} is the closure of *C* in the norm topology of {\displaystyle L\_{+}^{\infty }(P)}.
+
+A direct consequence of that definition is the following:
+
+If a market does not satisfy NFLVR, then there exists {\displaystyle g\in {\bar {C}}\cap L\_{+}^{\infty }(P)\backslash \{0\}} and sequences {\displaystyle (g\_{n})\_{n}\subset C}, {\displaystyle (V\_{n})\_{n}\subset K} such that {\displaystyle g\_{n}\xrightarrow {L^{\infty }} g} and {\displaystyle g\_{n}\leq V\_{n}\,\forall n\in \mathbb {N} }. Moreover, it holds
+
+1. {\displaystyle \lim \_{n\to \infty }||\min(V\_{n},0)||\_{L^{\infty }}=0} (vanishing risk)
+2. {\displaystyle \lim \_{n\to \infty }P(V\_{n}>0)>0} (free lunch)
+
+In other words, this means: There exists a sequence of admissible strategies {\displaystyle (\theta \_{n})\_{n}} starting with zero wealth, such that the negative part of their final values {\displaystyle V^{\theta \_{n}}} converge uniformly to zero and the probabilities of the events{\displaystyle \{V^{\theta \_{n}}>0\}} converge to a positive number.
+
+
+## Fundamental theorem of asset pricing
+
+If {\displaystyle S=(S\_{t})\_{t=0}^{T}} is a semimartingale with values in {\displaystyle \mathbb {R} ^{d}} then *S* does not allow for a free lunch with vanishing risk if and only if there exists an equivalent martingale measure {\displaystyle \mathbb {Q} } such that *S* is a sigma-martingale under {\displaystyle \mathbb {Q} }.
+

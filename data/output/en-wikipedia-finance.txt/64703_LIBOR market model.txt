@@ -1,0 +1,24 @@
+LIBOR market model
+
+
+# LIBOR market model
+
+
+
+The **LIBOR market model**, also known as the **BGM Model** (**Brace Gatarek Musiela Model**, in reference to the names of some of the inventors) is a financial model of interest rates. It is used for pricing interest rate derivatives, especially exotic derivatives like Bermudan swaptions, ratchet caps and floors, target redemption notes, autocaps, zero coupon swaptions, constant maturity swaps and spread options, among many others. The quantities that are modeled, rather than the short rate or instantaneous forward rates (like in the Heath–Jarrow–Morton framework) are a set of forward rates (also called forward LIBORs), which have the advantage of being directly observable in the market, and whose volatilities are naturally linked to traded contracts. Each forward rate is modeled by a lognormal process under its forward measure, i.e. a Black model leading to a Black formula for interest rate caps. This formula is the market standard to quote cap prices in terms of implied volatilities, hence the term "market model". The LIBOR market model may be interpreted as a collection of forward LIBOR dynamics for different forward rates with spanning tenors and maturities, each forward rate being consistent with a Black interest rate caplet formula for its canonical maturity. One can write the different rates' dynamics under a common pricing measure, for example the forward measure for a preferred single maturity, and in this case forward rates will not be lognormal under the unique measure in general, leading to the need for numerical methods such as Monte Carlo simulation or approximations like the frozen drift assumption.
+
+
+## Model dynamic
+
+The LIBOR market models a set of {\displaystyle n} forward rates {\displaystyle L\_{j}}, {\displaystyle j=1,\ldots ,n} as lognormal processes. Under the respective {\displaystyle T\_{j}} -Forward measure {\displaystyle Q\_{T\_{j+1}}}
+{\displaystyle dL\_{j}(t)=\mu \_{j}(t)L\_{j}(t)dt+\sigma \_{j}(t)L\_{j}(t)dW^{Q\_{T\_{j+1}}}(t).}
+Here we can consider that {\displaystyle \mu \_{j}(t)=0,\forall t} (centered process).
+Here, {\displaystyle L\_{j}} is the forward rate for the period {\displaystyle [T\_{j},T\_{j+1}]}. For each single forward rate the model corresponds to the Black model.
+
+The novelty is that, in contrast to the Black model, the LIBOR market model describes the dynamic of a whole family of forward rates under a common measure. The question now is how to switch between the different {\displaystyle T}-Forward measures.
+By means of the multivariate Girsanov's theorem one can show
+that
+{\displaystyle dW^{Q\_{T\_{j}}}(t)={\begin{cases}dW^{Q\_{T\_{p}}}(t)-\sum \limits \_{k=j+1}^{p}{\frac {\delta L\_{k}(t)}{1+\delta L\_{k}(t)}}{\sigma }\_{k}(t){\rho }\_{jk}dt&j<p\\dW^{Q\_{T\_{p}}}(t)&j=p\\dW^{Q\_{T\_{p}}}(t)+\sum \limits \_{k=p+1}^{j}{\frac {\delta L\_{k}(t)}{1+\delta L\_{k}(t)}}{\sigma }\_{k}(t){\rho }\_{jk}dt&j>p\end{cases}}}
+and
+{\displaystyle dL\_{j}(t)={\begin{cases}L\_{j}(t){\sigma }\_{j}(t)dW^{Q\_{T\_{p}}}(t)-L\_{j}(t)\sum \limits \_{k=j+1}^{p}{\frac {\delta L\_{k}(t)}{1+\delta L\_{k}(t)}}{\sigma }\_{j}(t){\sigma }\_{k}(t){\rho }\_{jk}dt&j<p\\L\_{j}(t){\sigma }\_{j}(t)dW^{Q\_{T\_{p}}}(t)&j=p\\L\_{j}(t){\sigma }\_{j}(t)dW^{Q\_{T\_{p}}}(t)+L\_{j}(t)\sum \limits \_{k=p+1}^{j}{\frac {\delta L\_{k}(t)}{1+\delta L\_{k}(t)}}{\sigma }\_{j}(t){\sigma }\_{k}(t){\rho }\_{jk}dt&j>p\\\end{cases}}}
+

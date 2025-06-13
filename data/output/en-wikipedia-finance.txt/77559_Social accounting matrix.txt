@@ -1,0 +1,56 @@
+Social accounting matrix
+
+
+# Social accounting matrix
+
+
+
+A **social accounting matrix** (**SAM**) represents flows of all economic transactions that take place within an economy (regional or national). It is at the core, a matrix representation of the national accounts for a given country, but can be extended to include non-national accounting flows, and created for whole regions or area. SAMs refer to a single year providing a static picture of the economy.
+
+
+## Overview
+
+SAMs are square (having the same number of columns as rows) because all institutional agents (Firms, Households, Government and 'Rest of Economy' sector) are both buyers and sellers. Columns represent buyers (expenditures) and rows represent sellers (receipts). SAMs were created to identify all monetary flows from sources to recipients, within a disaggregated national account. The SAM is read from column to row, so each entry in the matrix comes from its column heading, going to the row heading. Finally columns and rows are added up, to ensure accounting consistency, and each column is added up to equal each corresponding row. In the illustration below for a basic open economy, the item C (consumption) comes from Households and is paid to Firms.
+
+Illustrative Open Economy SAM:
+
+| Firm | Household | Government | Rest of Economy | Net Investment | Total (Received) |
+| --- | --- | --- | --- | --- | --- |
+| Firm | C | GF | (X-M)K | I | C+GF+(X-M)K+I |
+| Household | W | GH | (X-M)C | W+GH+(X-M)C |
+| Government | TF | TH | TF+TH |
+| Rest of Economy | (X-M)K | (X-M)C | (X-M)K+(X-M)C |
+| Net Investment | SH | SG | SH+SG |
+| Total (Expended) | W+TF+(X-M)K | C+TH+(X-M)C+SH | GF+GH+SG | (X-M)C+(X-M)K | I |
+
+Aᵇᵇʳᵉᵛⁱᵃᵗⁱᵒⁿˢ: Cᵃᵖⁱᵗᵃˡ ˡᵉᵗᵗᵉʳˢ: Tᵃˣᵉˢ, Wᵃᵍᵉˢ, ⁱMᵖᵒʳᵗˢ, ᵉXᵖᵒʳᵗˢ, Sᵃᵛⁱⁿᵍˢ, Iⁿᵛᵉˢᵗᵐᵉⁿᵗ, Cᵒⁿˢᵘᵐᵖᵗⁱᵒⁿ, Gᵒᵛᵉʳⁿᵐᵉⁿᵗ Tʳᵃⁿˢᶠᵉʳ
+Sᵘᵇˢᶜʳⁱᵖᵗˢ: Fⁱʳᵐˢ, Hᵒᵘˢᵉʰᵒˡᵈˢ, Gᵒᵛᵉʳⁿᵐᵉⁿᵗ, Cᵒⁿˢᵘᵐᵖᵗⁱᵒⁿ Gᵒᵒᵈˢ, K: Cᵃᵖⁱᵗᵃˡ Gᵒᵒᵈˢ
+
+
+## History
+
+SAM's were originally developed at the "Cambridge Growth Project" in Cambridge, UK, which developed the first SAM in 1962 (Stone and Brown 1962). They were built as a matrix representation of the National Account, and came to the World Bank with Graham Pyatt in the 1960s (Pyatt had worked for Richard Stone at the Cambridge Growth Project). Pyatt left Cambridge and "developed SAMs, mainly at the World Bank", becoming together with Erik Thorbecke, the leading proponents and developers of SAMs.
+
+> "By the early 1980s, CGE models were heavily ensconced as the approach of the World Bank for development analysis. Social Accounting Matrices (SAMs) were similarly a mainstay of Bank analysis, which had been adopted as a presentational device by the CGE modelers" (Mitra-Kahn 2008: 23)
+
+
+## Applications
+
+SAMs can be easily extended to include other flows in the economy, simply by adding more columns and rows, once the standard national account (SNA) flows have been set up. Often rows for 'capital' and 'labor' are included, and the economy can be disaggregated into any number of sectors. Each extra disaggregated source of funds must have an equal and opposite recipient. So the SAM simplifies the design of the economy being modeled. SAMs are currently in widespread use, and many statistical bureaus, particularly in OECD countries, create both a national account and this matrix counterpart.
+
+SAMs form the backbone of computable general equilibrium (CGE) Models and various types of empirical multiplier models.
+
+Appropriately formatted SAMs depict the spending patterns of an economy, as with IMPLAN and RIMS II data, and can be used in economic impact analysis.
+
+
+## Benchmarking
+
+Using a SAM includes the institutional structure assumed in the national accounts into any model. This means that variables and agents are not treated with monetary source-recipient
+flows in mind, but are rather grouped together in different categories according to the United Nations Standardised National Accounting (SNA) Guidelines. For example, the national accounts usually imputes the value of household investment or home-owner 'rental' income and treats some public sector institutional investment as direct income flows - whereas the SAM is trying to show just the explicit flows of money. Thus the data has to be untangled from its inherent SNA definitions to become money flow variables, and they then have to equal across each row and column, which is a process referred to as 'Benchmarking'.
+
+A theoretical SAM always balances, but empirically estimated SAM's never do in the first collation. This is due to the problem of converting national accounting data into money flows and the introduction of non-SNA data, compounded by issues of inconsistent national accounting data (which is prevalent for many developing nations, while developed nations tend to include a SAM version of the national account, generally precise to within 1% of GDP). This was noted as early as 1984 by Mansur and Whalley, and numerous techniques have been devised to 'adjust' SAMs, as "inconsistent data estimated with error, [is] a common experience in many countries".
+
+The traditional method of benchmarking a SAM was simply known as the "Row-and-Columns" (RoW) method where one finds an arithmetic average of the total differences between the row and column in question, and adjust each individual cell until the row and column equal.
+
+Robinson et al. (2001) suggests an improved method for 'adjusting' an unbalanced SAM in order to get all the rows and columns to equal, and gives the example of a SAM created for Mozambique's economy in 1995, where the process of gathering the data, creating the SAM and 'adjusting' it, is thoroughly covered by Arndt et al. (1997). On inspecting the changes made to the Mozambique's 1995 SAM to achieve balance is an adjustment of US$295 million which meant that $227 m US was added to the SAM net, just to balance the rows and columns. For 1995 this adjustment is equivalent to 11.65% of GDP. More disconcerting is perhaps the fact that agricultural producers (which according to FAO (1995) employed 85% of the labor force in 1994) were given a US$58 million pay raise in the SAM, meaning that 10% of agricultural income (equivalent to 5% of GDP) in the SAM was created, out of thin air. In other words, for a country where 38% of the population lived for less than $1 in the period 1994–2004 (UNICEF 2008), this SAM 'adjustment' added $4.40 to each person's income in the agricultural sector – more than any of the later trade and tax models using this SAM could arguably hope to achieve.
+

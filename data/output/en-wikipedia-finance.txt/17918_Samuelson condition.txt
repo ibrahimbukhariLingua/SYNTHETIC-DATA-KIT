@@ -1,0 +1,91 @@
+Samuelson condition
+
+
+# Samuelson condition
+
+
+
+The **Samuelson condition**, due to Paul Samuelson, in the theory of public economics, is a condition for optimal provision of public goods.
+
+For an economy with *n* consumers, the conditions is:
+
+MRSᵢ is individual *i*'s marginal rate of substitution and MRT is the economy's marginal rate of transformation between the public good and an arbitrarily chosen private good. Note that while the marginal rates of substitution are indexed by individuals, the marginal rate of transformation is not; it is an economy wide rate.
+
+If the private good is a numeraire good then the Samuelson condition can be re-written as:
+
+where {\displaystyle {\text{MB}}\_{i}} is the marginal benefit to each person of consuming one more unit of the public good, and {\displaystyle {\text{MC}}} is the marginal cost of providing that good. In other words, the public good should be provided as long as the overall benefits to consumers from that good are at least as great as the cost of providing it (public goods are non-rival, so can be enjoyed by many consumers simultaneously).
+
+When written this way, the Samuelson condition has a simple graphical interpretation. Each individual consumer's marginal benefit, {\displaystyle {\text{MB}}\_{i}}, represents his or her demand for the public good, or willingness to pay. The sum of the marginal benefits represent the aggregate willingness to pay or aggregate demand. The marginal cost is, under competitive market conditions, the supply for public goods. Hence the Samuelson condition can be thought of as a generalization of supply and demand concepts from private to public goods.
+
+
+## Derivation
+
+Let 
+x
+
+
+{\textstyle x}
+
+ denote private goods, 
+y
+
+
+{\textstyle y}
+
+ the public good, 
+w
+
+
+{\textstyle w}
+
+ aggregate wealth, and 
+z
+
+
+{\textstyle z}
+
+ how much is dedicated towards the production of public goods (sacrifices of private consumption made for the public good).
+
+We maximize the weighted (by 
+α
+i
+
+
+
+
+{\textstyle \alpha ^{i}}
+
+) utility function for each consumer {\displaystyle i}:{\displaystyle \max \_{x^{i},y}\left\{\sum \_{i}\alpha ^{i}u^{i}(x^{i},y^{i})\right\}~{\text{subject to:}}}
+
+{\displaystyle g(z)=y~}(spending on {\displaystyle y});
+
+{\displaystyle w-z\geqslant \sum \_{i=1}^{I}x^{i}} (all resources devoted to private goods must be greater than or equal to the sum of private goods across everyone).
+
+We can solve using the Lagrangian method:
+
+{\displaystyle L=\sum \_{i}\alpha ^{i}u^{i}(x^{i},y)+\lambda \left(w-z-\sum \_{i=1}^{I}x^{i}\right)+\mu (g(z)-y)}
+
+The first order conditions are given by:
+
+{\displaystyle (1)\quad x^{i}:\quad \alpha ^{i}{\frac {\partial u^{i}}{\partial x^{i}}}=\lambda \ \forall \ i;}
+
+{\displaystyle (2)\quad y:\quad \sum \_{i}\alpha ^{i}{\frac {\partial u^{i}}{\partial y}}=\mu ;}
+
+{\displaystyle (3)\quad z:\quad \mu g'=\lambda .}
+
+From (2) and (3):
+
+{\displaystyle g'\sum \_{i}\alpha ^{i}{\frac {\partial u^{i}}{\partial y}}=\lambda =\alpha ^{i}{\frac {\partial u^{i}}{\partial x^{i}}}}
+
+Divide by {\displaystyle \lambda } and then by {\displaystyle g'}:
+
+{\displaystyle \sum {\frac {\alpha ^{i}{\frac {\partial u^{i}}{\partial y}}}{\lambda }}={\frac {1}{g'}}}
+
+But {\displaystyle \lambda =\alpha ^{i}{\frac {\partial u^{i}}{\partial x^{i}}}} for all {\displaystyle i}, so:
+
+{\displaystyle \sum {\frac {\frac {\partial u^{i}}{\partial y}}{\frac {\partial u^{i}}{\partial x^{i}}}}={\frac {1}{g'}}}.
+
+LHS is defined as the marginal rate of substitution of public for private good (for an individual {\displaystyle i}), and RHS is defined as the marginal rate of transformation (for the society as a whole). Therefore, finally, we arrive at:
+
+{\displaystyle \sum \_{i}MRS^{i}=MRT.}
+

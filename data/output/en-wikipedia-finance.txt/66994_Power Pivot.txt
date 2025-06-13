@@ -1,0 +1,33 @@
+Power Pivot
+
+
+# Power Pivot
+
+
+
+**Power Pivot**, formerly known as **PowerPivot** (without spacing), is a self-service business intelligence feature of Microsoft Excel which facilitates the creation of a tabular model to import, relate, and analyze data from a variety of sources.
+
+Power Pivot extends a local instance of Microsoft Analysis Services tabular that is embedded directly into an Excel workbook, facilitating the creation of a ROLAP model inside the workbook. Power Pivot supports the use of expression languages to query the model and calculate advanced measures. Pivot tables or pivot charts may be used to explore the model once built.
+
+It is available as an add-in in Excel 2010, as a separate download for Excel 2013, and is included by default since Excel 2016. The data modelling engine inside Power Pivot is shared across Microsoft Power BI and SQL Server Analysis Server (SSAS), and may be referred to as *xVelocity*, *VertiPaq*, *SSAS Tabular*, and *Power Pivot*.
+
+
+## Product history and naming
+
+Prior to the release of Power Pivot, the engine for Microsoft's Business Intelligence suite was exclusively contained within SQL Server Analysis Services. In 2006, an initiative was launched by Amir Netz of the SQL Server Reporting Services team at Microsoft, codenamed Project Gemini, with the goal of making the analytical features of SSAS available within Excel.
+
+Power Pivot first appeared around May 2010 as part of the SQL Server 2008 R2 product line. It included "Power Pivot for Excel" and "Power Pivot for SharePoint" While the product was associated with SQL Server, the add-in for Excel could be used independent of any server, and could connect to various types of data sources. This version was superseded with an update for SQL Server 2012. Along with this the Power Pivot add-in was made available as a free download for Microsoft Excel 2010.
+
+Power Pivot 2013, released along with Excel 2013, was initially released only with the Professional Plus version of Office 2013, only available to volume or subscription licensing. This was revised to eventually include Power Pivot with Excel 2013 standalone. Unlike with Excel 2010, there was no version of Power Pivot that could be independently downloaded and added to Excel 2013. As part of the July 2013 announcement of the new Microsoft Power BI suite of self-service tools, Microsoft renamed PowerPivot as "Power Pivot" (note the spacing in the name) in order to match the naming convention of other tools in the suite.
+
+Power Pivot 2016 was released with Excel 2016 and was additionally included in the Pro version of Office, in addition to the standalone and Professional Plus versions available in 2013. In April 2018 an update was released to add Power Pivot to all Excel 2016 SKUs. Beginning in 2016, "Excel Data Model" began appearing as a new name for the Power Pivot model, though many references to the Power Pivot name remain.
+
+
+## Features
+
+Power Pivot expands on the standard pivot table functionality in Excel. In the Power Pivot editor, relationships can be established between multiple tables to effectively create foreign key joins. Power Pivot can scale to process very large datasets in memory, which allows users to analyze datasets that would otherwise surpass Excel's limit of one million rows. Power Pivot allows for importing data from multiple sources, such as databases (SQL Server, Microsoft Access, etc.), OData data feeds, Excel files, and other sources, facilitating comprehensive data analysis within a single environment. The VertiPaq compression engine is used to hold the data model in memory on the client computer. Practically, this means that Power Pivot is acting as an Analysis Services Server instance on the local workstation. As a result, larger data models may not be compatible with the 32-bit version of Excel.
+
+Data Analysis Expressions (DAX) is the primary expression language, although the model can also be queried via Multi Dimensional Expressions (MDX). DAX expressions allow a user to create calculated columns and measures to summarize and aggregate large quantities of data. Queries in the model are reduced to xmSQL, a pseudo-SQL language in the storage engines that drive the data model.
+
+A companion feature to Power Pivot named Power Query may be used to perform ETL processes prior to analysis.
+

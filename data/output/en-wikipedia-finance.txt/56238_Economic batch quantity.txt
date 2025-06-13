@@ -1,0 +1,74 @@
+Economic batch quantity
+
+
+# Economic batch quantity
+
+
+
+In inventory management, **Economic Batch Quantity (EBQ)**, also known as Optimum Batch Quantity (OBQ) is a measure used to determine the quantity of units that can be produced at the minimum average costs in a given batch or product run. EBQ is basically a refinement of the economic order quantity (EOQ) model to take into account circumstances in which the goods are produced in batches. The goal of calculating EBQ is that the product is produced in the required quantity and required quality at the lowest cost.
+
+The EOQ model was developed by Ford W. Harris in 1913, but R. H. Wilson, a consultant who applied it extensively, and K. Andler are given credit for their in-depth analysis. Aggterleky described the optimal planning planes and the meaning of under and over planning, and the influence of the reduction of total cost. Wiendahl used Harris and Andler's equation for the determination of the optimal quantity. Härdler took into account the costs of storage and delivery in determining the optimal batch quantity (EBQ). Muller and Piasecki asserted that inventory management is explained only with the basics of an optimal quantity calculation.
+
+
+## Background
+
+There are basically two options of planning the batch quantity: planning a large batch of a product in long intervals, and planning a small batch of a product in short intervals.
+
+The advantages of planning a large batch of product are that the price of ordering a large batch, administrative costs, costs of tests and shipping are lower, and there is a lower risk of interruption of production because of the large stock. The disadvantages of planning a large batch are that there is higher tied-up capital, and storage costs of product inventory are also higher.
+
+The advantages of planning a small batch of product are that there is less tied-up capital, storage costs of product inventory are low, and there is a higher flexibility if quantities change at suppliers and buyers. The disadvantages of planning a small batch are that there will be costs of frequent ordering, and a high risk of interruption of production because of a small product inventory.
+
+Somewhere between the large and small batch quantity is the optimal batch quantity, i.e. the quantity in which the cost per product unit is the lowest.
+
+
+## Variables and assumptions
+
+In the EOQ model, it is assumed that the orders are received all at once. However, in the EBQ model, this assumption is relaxed.
+
+There are two types of costs: those which increase with the batch size such as working capital investment in materials and labor, cost of handling and storing materials, insurance and tax charges, interest on capital investment, etc., and those which decrease with the batch size such as cost (per unit) of setting up machines, cost of preparing paper work that enters and controls the production of the order, etc. These costs, i.e., (a) and (b) are plotted and added graphically (figure).
+
+The figure graphs the holding cost and ordering cost per year equations. The third line is the addition of these two equations, which generates the total inventory cost per year. The lowest (minimum) part of the total cost curve will give the economic batch quantity as illustrated in the next section. This graph should give a better understanding of the derivation of the optimal ordering quantity equation, i.e., the EBQ equation.
+
+Thus, variables *Q, R, S, C, I* can be defined, which stand for economic batch quantity, annual requirements, preparation and set-up cost each time a new batch is started, constant cost per piece (material, direct labor and overheads), inventory carrying charge rate per year, respectively.
+
+Some assumptions have been made for calculating economic batch quantity. They are:
+
+* Demand is known and constant within a certain period of time
+* Unit cost of the inventory item is constant
+* Production time is known and constant
+* Setup cost is constant and does not change
+
+## Calculations
+
+If {\displaystyle C\_{O}} is the cost of setting up a batch, {\displaystyle D} is the annual demand, {\displaystyle d} is the daily rate at which inventory is demanded, {\displaystyle C\_{C}} is the inventory holding cost per unit per annum, and {\displaystyle p} is the rate of production per annum, the total cost function {\displaystyle (TC)} is calculated as follows:
+
+{\displaystyle {\text{Maximum Inventory Level}}=Q-{\frac {Qd}{p}}=Q(1-{\frac {d}{p}})}
+
+{\displaystyle {\text{Average Inventory}}={\frac {1}{2}}{\bigg [}Q(1-{\frac {d}{p}}){\bigg ]}={\frac {Q}{2}}{\bigg (}1-{\frac {d}{p}}{\bigg )}}
+
+{\displaystyle {\text{Total carrying cost}}={\frac {C\_{C}Q}{2}}{\bigg (}1-{\frac {d}{p}}{\bigg )}}
+
+In this case the ordering cost, {\displaystyle C\_{O}} is often the setup cost for production.
+
+{\displaystyle \therefore {\text{Total cost TC}}={\bigg (}{\frac {C\_{O}D}{Q}}{\bigg )}+{\bigg [}{\frac {C\_{C}Q}{2}}(1-{\frac {d}{p}}){\bigg ]}}
+
+The EBQ is calculated as the point where the total cost is minimum as follows:
+
+{\displaystyle {\text{For TC to be minimum,}}{dT \over dQ}=0.}
+
+{\displaystyle \therefore Q={\sqrt {\frac {2\cdot C\_{O}\cdot D}{C\_{C}{\bigg (}1-{\frac {d}{p}}{\bigg )}}}}}
+
+Where {\displaystyle C\_{O}} is the cost of setting up a batch, {\displaystyle D} is the annual demand, {\displaystyle d} is the daily rate at which inventory is demanded, {\displaystyle C\_{C}} is the inventory holding cost per unit per annum, and {\displaystyle p} is the rate of production per annum. Compared to the EOQ equation, there is a factor d/p introduced. This is due to the fact that when we produce a component while it is used in downstream production at the same time, inventory levels will not reach the same peak as when we order the components from a supplier and receive the batch at a single point in time. For instance, if we produce two different components (with the same processing time) intermittently then d/p is 0.5.
+
+It is evident from this equation that the economic batch quantity increases as the annual requirements or the preparation and setup costs increase that is, they are (not directly) proportional to each other. Similarly, it is also clear that the economic batch quantity decreases as the cost per piece and inventory carrying rate increase.
+
+
+### Example
+
+Set-up cost = $20 per set-up, Annual requirements = 1000, Inventory carrying cost = 10% of value/year, Cost per part = $2
+In this example, the factor d/p is ignored.
+
+{\displaystyle EBQ={\sqrt {\frac {2\times 1000\times 20}{2\times 0.1}}}=447{\text{ parts}}}
+
+Therefore, the number of batches to be made for manufacturing the parts are 1000/447 = 2.24. Nearest, 2 batches can be made and therefore the modified EBQ = 1000/2 = 500 parts. This rounding off only makes sense if we produce the item during exactly one year, and we do not carry over stock from one year to the next.
+

@@ -1,0 +1,76 @@
+Rule of 78s
+
+
+# Rule of 78s
+
+
+
+Also known as the "Sum of the Digits" method, the **Rule of 78s** is a term used in lending that refers to a method of yearly interest calculation. The name comes from the total number of months' interest that is being calculated in a year (the first month is 1 month's interest, whereas the second month contains 2 months' interest, etc.). This is an accurate interest model only based on the assumption that the borrower pays only the amount due each month. The outcome is that more of the interest is apportioned to the first part or early repayments than the later repayments. As such, the borrower pays a larger part of the total interest earlier in the term.
+
+If the borrower pays off the loan early, this method maximizes the interest paid by applying funds to the interest before principal. The Rule of 78 is designed so that borrowers pay the same interest charges over the life of a loan as they would with a loan that uses the simple interest method. But because of some mathematical quirks, they end up paying a greater share of the interest upfront. That means if they pay off the loan early, they would end up paying more overall for a Rule of 78s loan compared with a simple-interest loan.
+
+
+## Calculations
+
+A simple fraction (as with 12/78) consists of a numerator (the top number, 12 in the example) and a denominator (the bottom number, 78 in the example). The denominator of a Rule of 78s loan is the sum of the integers between 1 and n, inclusive, where n is the number of payments. For a twelve-month loan, the sum of numbers from 1 to 12 is 78 (1 + 2 + 3 + . . . +12 = 78). For a 24-month loan, the denominator is 300. The sum of the numbers from 1 to n is given by the equation n \* (n+1) / 2. If n were 24, the sum of the numbers from 1 to 24 is 24 \* (24+1) / 2 = (24 \* 25) / 2 = 300, which is the loan's denominator, D.
+
+For a 12-month loan, 12/78s of the finance charge is assessed as the first month's portion of the finance charge, 11/78s of the finance charge is assessed as the second month's portion of the finance charge and so on until the 12th month at which time 1/78s of the finance charge is assessed as that month's portion of the finance charge. Following the same pattern, 24/300 of the finance charge is assessed as the first month's portion of a 24-month pre-computed loan.
+
+Formula for calculating the earned interest at payment n:
+
+{\displaystyle EarnedInterest(n)=f\times {\frac {2(k-n+1)}{k(k+1)}}}
+
+where {\displaystyle f} is the total agreed finance charges, {\displaystyle k} is the length of the loan {\displaystyle n} is current payment number.
+
+Formula for calculating the cumulative earned interest at payment n:
+
+{\displaystyle CumulativeEarnedInterest(n)=f\times {\frac {n(2k-n+1)}{k(k+1)}}}
+
+where {\displaystyle f} is the total agreed finance charges, {\displaystyle k} is the length of the loan {\displaystyle n} is current payment number.
+
+If a borrower plans on repaying the loan early, the formula below can be used to calculate the unearned interest.
+
+{\displaystyle UnearnedInterest(u)={\frac {f\times k(k+1)}{n(n+1)}}}
+
+where {\displaystyle u} is the unearned interest for the lender, {\displaystyle k} is the number of repayments remaining (not including current payment) and {\displaystyle n} is the original number of repayments.
+
+Figure 1 is an amortized table for gradual repayment of a loan with $500 in interest fees.
+
+{\displaystyle Figure1}
+| Month | Numerator | Denominator | Percentage of total interest | Monthly interest |
+| --- | --- | --- | --- | --- |
+| 1 | 12 | 78 | 15.4% | $77.00 |
+| 2 | 11 | 78 | 14.1% | $70.50 |
+| 3 | 10 | 78 | 12.8% | $64.00 |
+| 4 | 9 | 78 | 11.5% | $57.50 |
+| 5 | 8 | 78 | 10.3% | $51.50 |
+| 6 | 7 | 78 | 9.0% | $45.00 |
+| 7 | 6 | 78 | 7.7% | $38.50 |
+| 8 | 5 | 78 | 6.4% | $32.00 |
+| 9 | 4 | 78 | 5.1% | $25.50 |
+| 10 | 3 | 78 | 3.8% | $19.00 |
+| 11 | 2 | 78 | 2.6% | $13.00 |
+| 12 | 1 | 78 | 1.3% | $6.50 |
+
+
+## History
+
+Prior to 1935, a borrower might have entered a contract with the lender to repay off a principal plus the pre-calculated total interest divided equally into the monthly repayments. If a borrower repaid their principal early, they were still required to pay the total interest agreed to in the contract. Many consumers felt this was wrong, contending that if the principal had been repaid for in one-third of the loan term, then the interest paid should also be one-third.
+
+In 1935, Indiana legislators passed laws governing the interest paid on prepaid loans. The formula contained in this law, which determined the amount due to lenders, was called the "rule of 78" method. The reasoning behind this rule was as follows:
+
+A loan of $3000 can be broken into three $1000 payments, and a total interest of $60 into six. During the first month of the loan, the borrower has use of all three $1000 (3/3) amounts. Hence the borrower should pay three of the $10 interest fees. At the end of the month, the borrower pays back one $1000 and the $30 interest. During the second month the borrower has use of two $1000 (2/3) amounts and so the payment should be $1000 plus two $10 interest fees. By the third month the borrower has use of one $1000 (1/3) and will pay back this amount plus one $10 interest fees.
+
+This method above would be called 'rule of 6' (achieved by adding the integers 1-3), but because most loans around 1935 were for a 12 month period, the Rule of 78s was used.
+
+In the United States, the use of the Rule of 78s is prohibited in connection with mortgage refinance and other consumer loans having a term exceeding 61 months. On March 15, 2001, in the U.S. 107th Congress, U.S. Rep. John LaFalce (D-NY 29) introduced H.R. 1054, a bill to eliminate the use of the Rule of 78s in credit transactions. The bill was referred to the House Committee on Financial Services on the same day. On April 10, 2001, the bill was referred to the Subcommittee on Financial Institutions and Consumer Credit, where it died with no further action taken.
+
+In the UK, as part of the Consumer Credit Act of 2006, the Consumer Credit (Early Settlement) Regulations 2004 (SI 2004/1483) which does away with the Rule of 78 in consumer credit lending was issued and brought into effect on 31 May 2005.
+
+
+## Precomputed Loan
+
+The Rule of 78s deals with precomputed loans, which are loans whose finance charge is calculated before the loan is made. Finance charge, carrying charges, interest costs, or whatever the cost of the loan may be called, can be calculated with simple interest equations, add-on interest, an agreed upon fee, or any disclosed method. Once the finance charge has been identified, the Rule of 78s is used to calculate the amount of the finance charge to be rebated (forgiven) in the event that the loan is repaid early, prior to the agreed upon number of payments. It should be understood that with precomputed loans, a borrower not only owes the lender the principal amount borrowed, but the borrower owes the finance charge as well. If $10,000 is lent and the precomputed finance charge is $3,000, the borrower owes the lender $13,000 at the time the loan is made, whereas a simple interest borrower owes the lender only the $10,000 principal and monthly interest on the unpaid principal.
+
+A simple explanation would be as follows: suppose that the total finance charge for a 12-month loan was $78.00. This figure is representative of the sum of digits by adding the numbers together, i.e., 12,11,10,9,8,7,6,5,4,3,2,1 = 78. If a person repaid a consumer loan after 3 months, the financial institution would not charge interest the sum of the "remaining" digits... i.e., 9,8,7,6,5,4,3,2,1 = $45.00, and would only retain the first three numbers... 12,11,10 or $33.00. Thus the consumer's benefit is less than if it were divided equally by 12 months ($6.50 per month), but is equal to the amount of interest that would be saved under the simple interest method.
+

@@ -1,0 +1,57 @@
+Model risk
+
+
+# Model risk
+
+
+
+| Categories of |
+| --- |
+| Financial risk |
+| Credit risk |
+| * Settlement risk * Concentration risk * Sovereign risk * Default risk |
+| Market risk |
+| * Interest rate risk * Inflation risk * Currency risk * Equity risk * Commodity risk * Volatility risk * Systemic risk |
+| Liquidity risk |
+| * Refinancing risk * Deposit risk * Margining risk |
+| Investment risk |
+| * Model risk * Execution risk * Valuation risk |
+| Business risk |
+| * Reputational risk * Operational risk * Country risk * Political risk * Legal risk * Moral hazard |
+| Profit risk |
+| Non-financial risk |
+| * Stranded asset |
+| * v * t * e |
+
+| **Case studies:** * Merrill Lynch (1970s; $70m loss) - for stripped bonds, used a single par yield instead of separate annuity yield-curves and zero-coupon curves for the resultant IO and PO securities. * NatWest (1997; £90m loss) - incorrect model specification, "a naive volatility input in their systems", for interest rate options and swaptions. * Bank of Tokyo-Mitsubishi (1997; $83m loss) - a "systematic pricing bias" for out-of-the-money and Bermuda swaptions which had been calibrated to at-the-money vanilla swaptions. * Barclays de Zoete Wedd (1997; £15m loss) - mispriced currency options. * LTCM (1998; required $3.65 billion in recapitalization) - risk models had drastically under-estimated the risks of a profound economic crisis, due to an insufficient data-window and a lack of stress testing. * National Australia Bank (2001; $2.2 Billion AUD loss) - its Homeside interest rate model made inconsistent use of rates. * 2007–2008 financial crisis – Over-reliance on David X. Li's Gaussian copula model misprices the risk of collateralized debt obligations. |
+| --- |
+
+In finance, **model risk** is the risk of loss resulting from using insufficiently accurate models to make decisions, originally and frequently in the context of valuing financial securities.
+
+Here, Rebonato (2002) defines model risk as "the risk of occurrence of a significant difference between the mark-to-model value of a complex and/or illiquid instrument, and the price at which the same instrument is revealed to have traded in the market".
+
+However, model risk is increasingly relevant in contexts other than financial securities valuation, including assigning consumer credit scores, real-time prediction of fraudulent credit card transactions, and computing the probability of an air flight passenger being a terrorist.
+In fact, Burke regards failure to use a model (instead over-relying on expert judgment) as a type of model risk.
+
+
+## Types
+
+Derman describes various types of model risk that arise from using a model:
+
+
+### Wrong model
+
+* Inapplicability of model.
+* Incorrect model specification.
+
+### Model implementation
+
+* Programming errors.
+* Technical errors.
+* Use of inaccurate numerical approximations.
+
+### Model usage
+
+* Implementation risk.
+* Data issues.
+* Calibration errors.

@@ -1,0 +1,50 @@
+Quote stuffing
+
+
+# Quote stuffing
+
+
+
+| Part of a series on |
+| --- |
+| Financial markets |
+| * Public market * Exchange **·** Securities |
+| Bond market |
+| * Bond valuation * Corporate bond * Fixed income * Government bond * High-yield debt * Municipal bond * Securitization |
+| Stock market |
+| * Common stock * Growth stock * Preferred stock * Registered share * Shareholder * Stock * Stockbroker * Stock certificate * Stock exchange * Watered stock |
+| Other markets |
+| Derivatives * (Credit derivative * Futures exchange * Hybrid security) Foreign exchange * (Currency * Exchange rate) * Commodity * ETF * Money * Mutual fund * Option * Real estate * Reinsurance * Structured product * Swap (finance) |
+| Alternative investment |
+| * Private equity * Private credit * Leveraged buyout * Venture * Growth * Secondaries * SPAC * Carried Interest * Leveraged finance |
+| Over-the-counter (off-exchange) |
+| * Forwards * Options * Spot market * Swaps |
+| Trading |
+| * Participants * Regulation * Clearing |
+| Related areas |
+| * Asset management * Banks and banking * Bulls and Bears * Diversification * ESG + Climate finance + Eco-investing + Impact investing + Sustainable finance + Greenwashing * Fintech * Investment management * Market risk * Market trend * Speculative attack |
+| * v * t * e |
+
+In finance, **quote stuffing** refers to a form of market manipulation employed by high-frequency traders (HFT) that involves quickly entering and withdrawing a large number of orders in an attempt to flood the market. This can create confusion in the market and trading opportunities for high-speed algorithmic traders. The term is relatively new to the financial market lexicon and was coined by Nanex in studies on HFT behavior during the 2010 Flash Crash.
+
+By quote stuffing, trading systems delay price quotes while the stuffing is occurring, simply by placing and canceling orders at a rate that substantially surpasses the bandwidth of market data feed lines. The orders pile up in buffers, and the delay (increased latency) lasts until the buffer drains. Trading systems slow down a direct exchange feed whenever they want, and the phantom orders do not need to be in a particular stock; they can be in any of the securities that cohabit the particular price (market data) feed. For example, phantom orders at the rate of over about 10,000 messages/second, even for fractions of a second, delay the NYSE's CQS feeds.
+Exchanges profit by selling higher-capacity feeds to HFT traders, which disincentivizes self-regulation that could prevent the quote stuffing.
+
+Quote stuffing happens frequently – when 6,000 replacement orders for one stock are crammed into a second, each order is valid for less time than it takes for the news of the order (traveling at close to the speed of light) to reach anyone not at the exchange; no normal person can execute a trade against the phantom order.
+
+
+## Regulatory changes and enforcement
+
+In 2010, the Securities and Exchange Commission (SEC) began looking at the practice of quote stuffing in relation to the Flash Crash. The agency started assessing whether the practice violated "existing rules against fraudulent or other improper behavior" or caused a disadvantage through distorted stock prices. SEC chairman Mary Schapiro said the agency would assess whether traders must hold orders open for minimum periods of time and other changes to financial trading. No such regulations have been enacted (except in Italy).
+
+
+## Reception
+
+Due to its potential effect on the 2010 Flash Crash, quote stuffing has been debated by financial researchers, industry advocates and media outlets, including in *Fox Business*, *Wall Street Journal*, *CBS Money Watch*, *RISK*, and *The New York Times*. Some have noted that the release of the Michael Lewis book *Flash Boys: A Wall Street Revolt* has helped to initiate the debate on high-frequency trading, including the tactics of spoofing, layering and quote stuffing. The book details the rise of high-frequency trading in the US market, which has caused financial regulators to clamp down on issues related to quote stuffing.
+
+In September 2010, *Business Insider* reported that Trillium Capital had received a $1 million fine by the Financial Industry Regulatory Authority for trading strategies that were considered quote stuffing and market manipulation. The Financial Industry Regulatory Authority later clarified that the fine was for layering and market manipulation.
+
+Quote stuffing is often described as a deliberate tactic to gain an unfair advantage over slower participants by flooding the market with large quantities of non-bona fide orders. HFT industry people argue that the phenomenon could be a software error. HFT insiders refer to quote stuffing as “flickering”, which is caused by feedback loops. It is suggested that investors who engage in quote stuffing "put their own capital at risk" and increases "liquidity" for buy side investors.
+
+Diaz and Theodoulidis presented analysis contrary to the claim that HFT firms use the tactic to provide liquidity. It was rather shown that the potentially abusive and manipulative behavior known as quote stuffing is able to increase the gap of best bid and ask prices, thereby increasing costs for ordinary investors. The researchers concluded that “it is possible for a [high-speed] trader to profit by artificially creating latencies in trading data feeds that would make arbitrage possible by taking advantage of the HFT induced price differences between markets.” Researchers also found that more than 74% of U.S. listed equity securities received at least one quote stuffing event during the 2010 Flash Crash.
+

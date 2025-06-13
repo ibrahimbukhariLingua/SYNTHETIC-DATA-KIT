@@ -1,0 +1,79 @@
+SABR volatility model
+
+
+# SABR volatility model
+
+
+
+In mathematical finance, the **SABR model** is a stochastic volatility model, which attempts to capture the volatility smile in derivatives markets. The name stands for "stochastic alpha, beta, rho", referring to the parameters of the model. The SABR model is widely used by practitioners in the financial industry, especially in the interest rate derivative markets. It was developed by Patrick S. Hagan, Deep Kumar, Andrew Lesniewski, and Diana Woodward.
+
+
+## Dynamics
+
+The SABR model describes a single forward {\displaystyle F}, such as a LIBOR forward rate, a forward swap rate, or a forward stock price. This is one of the standards in market used by market participants to quote volatilities. The volatility of the forward {\displaystyle F} is described by a parameter {\displaystyle \sigma }. SABR is a dynamic model in which both {\displaystyle F} and {\displaystyle \sigma } are represented by stochastic state variables whose time evolution is given by the following system of stochastic differential equations:
+
+with the prescribed time zero (currently observed) values {\displaystyle F\_{0}} and {\displaystyle \sigma \_{0}}. Here, {\displaystyle W\_{t}} and {\displaystyle Z\_{t}} are two correlated Wiener processes with correlation coefficient {\displaystyle -1<\rho <1}:
+
+The constant parameters {\displaystyle \beta ,\;\alpha } satisfy the conditions {\displaystyle 0\leq \beta \leq 1,\;\alpha \geq 0}.
+{\displaystyle \alpha } is a volatility-like parameter for the volatility. {\displaystyle \rho } is the instantaneous correlation between the underlying and its volatility. The initial volatility {\displaystyle \sigma \_{0}} controls the height of the ATM implied volatility level. Both the correlation {\displaystyle \rho } and {\displaystyle \beta } controls the slope of the implied skew. The volatility of volatility {\displaystyle \alpha } controls its curvature.
+
+The above dynamics is a stochastic version of the CEV model with the *skewness* parameter {\displaystyle \beta }: in fact, it reduces to the CEV model if {\displaystyle \alpha =0} The parameter {\displaystyle \alpha } is often referred to as the *volvol*, and its meaning is that of the lognormal volatility of the volatility parameter {\displaystyle \sigma }.
+
+
+## Asymptotic solution
+
+We consider a European option (say, a call) on the forward {\displaystyle F} struck at {\displaystyle K}, which expires {\displaystyle T} years from now. The value of this option is equal to the suitably discounted expected value of the payoff {\displaystyle \max(F\_{T}-K,\;0)} under the probability distribution of the process {\displaystyle F\_{t}}.
+
+Except for the special cases of {\displaystyle \beta =0} and {\displaystyle \beta =1}, no closed form expression for this probability distribution is known. The general case can be solved approximately by means of an asymptotic expansion in the parameter {\displaystyle \varepsilon =T\alpha ^{2}}. Under typical market conditions, this parameter is small and the approximate solution is actually quite accurate. Also significantly, this solution has a rather simple functional form, is very easy to implement in computer code, and lends itself well to risk management of large portfolios of options in real time.
+
+It is convenient to express the solution in terms of the implied volatility {\displaystyle \sigma \_{\textrm {impl}}} of the option. Namely, we force the SABR model price of the option into the form of the Black model valuation formula. Then the implied volatility, which is the value of the lognormal volatility parameter in Black's model that forces it to match the SABR price, is approximately given by:
+
+where, for clarity, we have set {\displaystyle C\left(F\right)=F^{\beta }}. The formula is undefined when {\displaystyle K=F\_{0}}, so we replace it by its limit as {\displaystyle K\to F\_{0}}, which is given by replacing the factor {\displaystyle {\frac {\log(F\_{0}/K)}{D(\zeta )}}} by 1.
+The value {\displaystyle F\_{\text{mid}}} denotes a conveniently chosen midpoint between {\displaystyle F\_{0}} and {\displaystyle K} (such as the geometric average {\displaystyle {\sqrt {F\_{0}K}}} or the arithmetic average {\displaystyle \left(F\_{0}+K\right)/2}). We have also set
+
+and
+
+The function {\displaystyle D\left(\zeta \right)} entering the formula above is given by
+
+Alternatively, one can express the SABR price in terms of the Bachelier's model. Then the implied normal volatility can be asymptotically computed by means of the following expression:
+
+It is worth noting that the normal SABR implied volatility is generally somewhat more accurate than the lognormal implied volatility.
+
+The approximation accuracy and the degree of arbitrage can be further improved if the equivalent volatility under the CEV model with the same {\displaystyle \beta } is used for pricing options.
+
+
+## SABR for the negative rates
+
+A SABR model extension for negative interest rates that has gained popularity in recent years is the shifted SABR model, where the shifted forward rate is assumed to follow a SABR process
+
+for some positive shift {\displaystyle s}.
+Since shifts are included in a market quotes, and there is an intuitive soft boundary for how negative rates can become, shifted SABR has become market best practice to accommodate negative rates.
+
+The SABR model can also be modified to cover negative interest rates by:
+
+for
+{\displaystyle 0\leq \beta \leq 1/2} and a *free* boundary condition for {\displaystyle F=0}. Its exact solution for the zero correlation as well as an
+efficient approximation for a general case are available. An obvious drawback of this approach is the a priori assumption of potential highly negative interest rates via the free boundary.
+
+
+## Arbitrage problem in the implied volatility formula
+
+Although the asymptotic solution is very easy to implement, the density implied by the approximation is not always arbitrage-free, especially not for very low strikes (it becomes negative or the density does not integrate to one).
+
+One possibility to "fix" the formula is use the stochastic collocation method and to project the corresponding implied, ill-posed, model on a polynomial of an arbitrage-free variables, e.g. normal. This will guarantee equality in probability at the collocation points while the generated density is arbitrage-free. Using the projection method analytic European option prices are available and the implied volatilities stay very close to those initially obtained by the asymptotic formula.
+
+Another possibility is to rely on a fast and robust PDE solver on an equivalent expansion of the forward PDE, that preserves numerically the zero-th and first moment, thus guaranteeing the absence of arbitrage.
+
+
+## Extensions
+
+The SABR model can be extended by assuming its parameters to be time-dependent. This however complicates the calibration procedure. An advanced calibration method of the time-dependent SABR model is based on so-called "effective parameters".
+
+Alternatively, Guerrero and Orlando show that a time-dependent local stochastic volatility (SLV) model can be reduced to a system of autonomous PDEs that can be solved using the heat kernel, by means of the Wei-Norman factorization method and Lie algebraic techniques. Explicit solutions obtained by said techniques are comparable to traditional Monte Carlo simulations allowing for shorter time in numerical computations.
+
+
+## Simulation
+
+As the stochastic volatility process follows a geometric Brownian motion, its exact simulation is straightforward. However, the simulation of the forward asset process is not a trivial task. Taylor-based simulation schemes are typically considered, like Euler–Maruyama or Milstein. Recently, novel methods have been proposed for the *almost exact* Monte Carlo simulation of the SABR model. Extensive studies for SABR model have recently been considered.
+For the normal SABR model ({\displaystyle \beta =0} with no boundary condition at {\displaystyle F=0}), a closed-form simulation method is known.
+

@@ -1,0 +1,39 @@
+Collgar Wind Farm
+
+
+# Collgar Wind Farm
+
+
+
+**Collgar Wind Farm** is a wind farm located approximately 25 kilometres south-east of Merredin, Western Australia. It is operated by Collgar Renewables. With 111 Vestas V90-2.0MW wind turbines, and a total installed capacity of 222 MW registered with AEMO, it is Western Australia's largest wind farm. It became fully operational in October 2011 and is expected to generate 750 GWh per year on average over the 30-year life of the project.
+
+
+## History
+
+Feasibility studies were carried out between 2006 and 2008, and planning approval was granted in September 2008. In March 2010, Collgar Wind Farm Pty Ltd was sold to UBS International Infrastructure Fund and Retail Employees Superannuation Trust and in June 2019, Retail Employees Superannuation Trust became the sole shareholder.
+
+Construction began in June 2010, the wind farm was connected to the grid in April 2011, and the first 50 turbines started operation in May 2011. The wind farm became fully operational in October 2011.
+
+While Collgar's wind turbines were initially de-rated to 1.856 MW, limiting output to 206 MW, they were returned to their design capacity of 2.0 MW during March and April 2020, increasing output to the current 222 MW.
+
+
+## Operations
+
+AEMO records begin in June 2011 for the wind farm. The generation table uses AEMO Facility SCADA to obtain generation values for each month. Collgar's code is INVESTEC\_COLLGAR\_WF1, so that is used as part of a SUMIF operation (shown below) on the table to get the total. Note that each month's values start 8 hours into the respective month and extend 8 hours into the next month.
+
+Collgar Wind Farm Generation (MWh)
+| Year | Total | Jan | Feb | Mar | Apr | May | Jun | Jul | Aug | Sep | Oct | Nov | Dec |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 2011 | 287,225 | N/A | N/A | N/A | N/A | N/A | 14,614\* | 26,360\* | 31,306\* | 46,699\* | 53,002\* | 58,121 | 57,123 |
+| 2012 | 640,200 | 66,373 | 56,733 | 67,198 | 50,610 | 47,758 | 53,930 | 13,487\* | 44,554 | 61,583 | 68,524 | 56,789 | 52,661 |
+| 2013 | 647,963 | 67,685 | 57,569 | 52,933 | 33,712 | 45,245 | 37,273 | 47,667 | 56,082 | 61,154 | 53,857 | 72,971 | 61,815 |
+| 2014 | 679,954 | 71,733 | 65,506 | 62,400 | 40,677 | 38,987 | 51,386 | 54,859 | 53,317 | 57,979 | 55,815 | 58,518 | 68,777 |
+| 2015 | 681,676 | 76,184 | 48,963 | 49,333 | 62,347 | 53,540 | 55,564 | 47,088 | 52,165 | 55,576 | 56,859 | 55,722 | 68,335 |
+| 2016 | 671,039 | 62,672 | 65,039 | 68,050 | 50,132 | 33,708 | 41,450 | 58,669 | 54,861 | 49,771 | 65,709 | 53,228 | 67,750 |
+| 2017 | 659,380 | 60,082 | 63,272 | 61,459 | 44,549 | 41,218 | 43,654 | 59,908 | 57,077 | 43,134 | 62,263 | 62,389 | 60,375 |
+| 2018 | 679,894 | 76,105 | 56,132 | 66,050 | 42,218 | 63,290 | 37,984 | 66,252 | 58,378 | 46,871 | 56,306 | 53,382 | 56,926 |
+| 2019 | 660,021 | 63,699 | 56,889 | 58,262 | 58,831 | 44,249 | 62,698 | 44,437 | 55,378 | 48,264 | 54,667 | 58,579 | 54,068 |
+| 2020 | 672,377 | 61,484 | 69,644 | 55,677 | 42,007 | 54,245 | 55,691 | 55,141 | 56,439 | 46,360 | 58,293 | 51,588 | 65,808 |
+
+Note: Asterisk indicates power output was limited during the month.
+

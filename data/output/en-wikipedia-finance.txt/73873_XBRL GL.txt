@@ -1,0 +1,95 @@
+XBRL GL
+
+
+# XBRL GL
+
+
+
+The XBRL Global Ledger Taxonomy Framework (XBRL GL) is a holistic and generic XML and XBRL-based representation of the detailed data that can be found in accounting and operational systems, and is meant to be the bridge from transactional standards to reporting standards, integrating the Business Reporting Supply Chain.
+
+XBRL GL is developed by the XBRL GL Working Group of XBRL International.
+
+XBRL GL can be used by Computer programs for information interchange of accounting General ledger balances (summarized information) as well as complete accounting ledgers (payables, receivables, inventory, payroll, order entry, purchasing, banking) supporting object oriented accounting, quantity accounting and transparency support. The instance documents (XML files) can also be viewed in Web browsers using XSL or programmatically; it can also be carried in Inline XBRL. XBRL is designed to standardize the data, processes and rules of Business Reporting as a whole, although most implementations focus on financial reporting. XBRL GL can support the detail and integrate to all manners of reporting, financial, tax, sustainability, statistics and otherwise, and carry both quantitative and qualitative information.
+
+
+## Relation to UN/CEFACT accounting and SIE
+
+There are a number of other efforts that seek to standardize parts or all of the data in an ERP system, although most focus on the general ledger. Amongst the competing/complementary efforts in the space are UN/CEFACT, OECD Standard Audit File and SIE (file format) accounting interchange file formats.
+
+XBRL GL is an XML focused format. UN/CEFACT is UML (Unified Modeling Language)-based, with standard naming and design rules to convert it to an XML file format. In Sweden the elder (1992) domestically SIE (file format) is a tagged text file format. The XML technology is much better suited to work with modern HTML and WEB-based technology and tools. The XML files are in the range 20-50 times larger than SIE files on the hard disk.
+
+Due to the needs of the tax community in many countries, the Standard Audit File is generic, but an example of a proprietary XML format is provided.
+
+The XML format abilities (such as validation capabilities) and the huge activities around XBRL and UN/CEFACT have created a huge potential and expectations of modern accounting technologies. XBRL GL is certainly formed from its origins, the audit and financial reporting societies in the USA and globally. UN/CEFACT is working on trade administration theme and accounting is the terminal point of trade administration and its file format is designed from a trade administration point of view. The Standard SIE is designed from a local Swedish vendor society’s own market interests.
+
+All three file formats are however transparent and independent of any charts of accounts and tax regulations.
+
+
+## Accounting information interchange issues - The accounting file standard stand-off
+
+
+### Is a common international accounting file format possible?
+
+There has been quite some file format debate. However, differences in Chart of accounts between countries, represents a much bigger compatibility problem of information interchange between accounting and financial reports between accounting cultures. Tax regulations also make huge differences in the actual content of accounting and financial report information between countries.
+
+The basic issue is if it is possible to transfer accounting data over governmental boundaries and the data would be understood by the receiver? Will it be possible for someone to read a balance sheet with a foreign chart of accounts and understand it? Will it make any difference to transfer it by computer files in standardized file formats?
+
+The EU commission has spent large efforts into the field of tax administrative harmonisation and for instance is the main intention latest version of the EU VAT directive to achieve this and to support electronic trade documents like electronic invoices better in cross border trade especially within the European Union Value Added Tax Area. But there is still a huge way to real compatible charts of accounts and international accounting information interchange.
+
+One question is if international trade agreements have much value without a global harmonisation in VAT tax administrative legislation between the agreeing parts. The EU-agreements with countries like Norway do not include VAT union membership. And so goods are stuck in customs (to large costs) for VAT declaration and administratively it requires a lot of work. Work and halting not happening within the EU VAT union. With global VAT legislation administrative harmonisation a lot is suddenly possible.
+
+
+### Procurement - Being a standard organisation or not?
+
+Another problem is the EU government procurement regulations in demands of standards organisations specifications, of recognition of the private market efforts from many initiatives being made so far. It actually stops governmental administration to take part, contribute and use the work being done so far. UN/CEFACT is an official UN standards organisation, but UN/CEFACT have big problems finalizing its project and few if any, understand the general idea on how to apply UN/CEFACT accounting, UN/CEFACT(EDIFICAS) being asked can't/don't tell. This is one of the main problems for tax authorities to make demands/providing service for the companies on electronic interchange of data. (A question is how long the world can afford modern procurement?) However XBRL looks for recognition as standards organisation.
+
+
+### The benefit of the data producer?
+
+XBRL has a general problem being designed for the receiving users of information like audits and analysers and it doesn’t look to be enough really convincing arguments for the information producers (companies doing the actual accounting) to pay for the XBRL GL file producing features in commercial software. And without support of the information producers there will be no data for the analysers and audits in XBRL GL format, and so no market for commercial software for them either.
+
+
+### What defines accounting boundaries and accounting file contents?
+
+Accounting is originally manual work and parts of it has been computerised using accounting commercial software. But a commercial aspect of accounting is its boundaries and what should be included in accounting commercial software feature packages.
+
+The accounting work is making accounting vouchers with entries and then check the entries are right. The major checking tools are the bank account statements to and cash (register) lists, to prove that every monetary transaction is accounted for in the accounting. Still this checking is to a large extent manual very labour-intensive work computers do much better. Secondly proving that there are evidences for what the transactions consist of by the voucher documentation. Vouchers that are incoming and outgoing invoices (and receipts), in practice a physical voucher folder. (Still the EU VAT directive and many countries VAT legislation demands keeping physical paper folders of vouchers making scanned vouchers not that smooth to work with. This despite the EU commission has a vision of electronic vouchers. Same legislation makes problems with electronic invoices and integration with accounting. So there are still much to solve.)
+
+Another way of looking it are the legal demands and 95% of all legal demands of accounting comes from VAT legislation where the EU VAT directive (European Union value added tax) is the most fully covering documentation. In that perspective it's obvious that invoices and receipts are first and foremost accounting documents (required by the VAT legislation), secondly civil law documents and thirdly they are general trade documents. The accounting documentation required by the VAT legislation is the main regulating law of the entire accounting requirements.
+
+To make benefits for the producer of the data it is most likely in this field integration and atomisation features that are worth paying for by the paying customer of commercial software producing accounting information files (like XBRL GL SIE and UN/CEFACT). To do that invoices (with Accounts payables and Accounts receivables) and bank account statements could be considered as accounting documents, and included in a standard file format solution. None of the present file formats do that but would open up the market for third party automation software using AI.
+
+The lack of accounting integration is also the most likely reason for electronic invoice formats still having very low market penetration and progress is slow. Mainly because the electronic invoice formats are not in first place designed for accounting and VAT legislation demands, but in unregulated trade document perspectives.
+
+Interesting is that there are no standard file formats for bank account statements and it is not (according to the UN/CEFACT banking group TBG5) in the interest of the banks, but for accounting to have, making automatic matching possible with accounting. However, an international standard file format for bank account statements would make huge benefits in developing internet banking pages with new features benefitting the bank customers. Especially if integration with a standard invoice (receipt) format would be included.
+
+
+### Applied use instruction set to be understood - making a commercial software market possible
+
+XBRL GL is also without an additional use instruction set, not tight/clear enough in of its file format, still making it very uncertain, in how to use XBRL GL. That a reading party would actually understand what data in an external XBRL GL file, really stands for.
+
+The situation is like agreeing on using a common writing alphabet without agreeing on what language to use it for. If someone sends a letter in Portuguese in Latin letters to a Dutchman often the Dutchman do not understand Portuguese, even though he can read Latin letters. We have the same problem here. And with no general solution, agreements between every writing and reading user must be made, and that is not a smooth solution getting volumes and a market for commercial software.
+
+An issue SIE as a vendor organisation is able to solve but a standards organisation ethics do not allow UN/CEFACT or XBRL to handle. SIE could be a key player here, supplying an applied instruction layer to XBRL GL (and UN/CEFACT accounting). But at the SIE year meeting 2013 after studying XBRL GL for a year, and a representative of XBRL GL international present at the meeting, the main members argued “who is the paying customer?” and the project of making a SIE XBRL GL implementation ran into the sand.
+
+There are a number of articles in the branch would press about very expensive XBRL projects with very sparse results of volume use. The contradiction between standards organisation ethics and applied technology (a common implementation instruction set) issues, is a hard thing to solve to make such projects more successful.
+
+In 1992, SIE solved the issue for the SIE (file format) as a non-standards organisation vendor society. All members but one large vendor, agreed to a common implementation, including an implementation instruction set, and made it available for all vendors in the market. All other (national, future and international) vendors in the domestic Swedish accounting related commercial software market had to, by customer demand, follow the standard to sell any volumes. Actually the existence of the common format showed the market very good arguments for the data producing users real strong benefits. especially the daily interaction between the company, accounting consultant and audit, being very rational and benefitted in possible daily information feedback. Benefits and features are almost impossible to convince paying customers before the features are actually available, and this is a huge commercial problem for XBRL GL and UN/CEFACT to solve, not being a vendor interest group society. It is interesting to note that the starting vision of SIE was about the same as XBRL, export accounting data to tax declaration commercial software. But it is possible to find special benefit points data for producers, and by it make them pay to get the features of the accounting standard file format, but it is a hard commercial design issue.
+
+There is a general stand-off situation in this market field. And how XBRL will solve it, is the major future question.
+
+
+## XBRL International's Global Ledger Taxonomy Framework
+
+**XBRL GL**, the familiar name for XBRL International's Global Ledger Taxonomy Framework, is a series of modular taxonomies developed by XBRL International and a framework for its extension for representing the information found in a typical Enterprise resource planning (ERP) system using XML and the XBRL Specification.
+
+
+## Formal models and XBRL GL
+
+XBRL GL is the modeling of the semantics of information found in ERP systems using the XBRL Specification. Additional efforts to reuse the semantic of the Global Ledger using other syntaxes are also being explored.
+
+
+## Tax organization interest in XBRL GL
+
+XBRL GL was designed to be generic and holistic, and serve as a bridge between transaction space and reporting. As such it has gained interest from many sectors, including tax administrators in OASIS (organization) and the Organisation for Economic Co-operation and Development (OECD). XBRL GL has been adopted by the Turkish government for the standard for electronic bookkeeping for tax purposes. XBRL GL uniquely can track and reconcile the book-tax differences found in direct taxation regimes, including permanent and timing differences.
+

@@ -1,0 +1,250 @@
+Phorm
+
+
+# Phorm
+
+
+
+**Phorm**, formerly known as **121Media**, was a digital technology company known for its contextual advertising software. Phorm was incorporated in Delaware, United States, but relocated to Singapore as Phorm Corporation (Singapore) Ltd in 2012. Founded in 2002, the company originally distributed programs that were considered spyware, from which they made millions of dollars in revenue. It stopped distributing those programs after complaints from groups in the United States and Canada, and announced it was talking with several United Kingdom Internet service providers (ISPs) to deliver targeted advertising based on the websites that users visited. Phorm partnered with ISPs Oi, Telefonica in Brazil, Romtelecom in Romania, and TTNet in Turkey. In June 2012, Phorm made an unsuccessful attempt to raise £20 million for a 20% stake in its Chinese subsidiary.
+
+The company's proposed advertising system, called Webwise, was a behavioral targeting service (similar to NebuAd) that used deep packet inspection to examine traffic. Phorm said that the data collected would be anonymous and would not be used to identify users, and that their service would include protection against phishing (fraudulent collection of users' personal information). Nonetheless, World Wide Web creator Tim Berners-Lee and others spoke out against Phorm for tracking users' browsing habits, and the ISP BT Group was criticised for running secret trials of the service.
+
+The UK Information Commissioner's Office voiced legal concerns over Webwise, and has said it would only be legal as an "opt-in" service, not an opt-out system. The European Commission called on the UK to protect Web users' privacy, and opened an infringement proceeding against the country in regard to ISPs' use of Phorm. Some groups, including Amazon.com and the Wikimedia Foundation (the non-profit organization that operates collaborative wiki projects), requested an opt-out of their websites from scans by the system. Phorm changed to an opt-in policy. According to Phorm's website, the company would not collect any data from users who had not explicitly opted in to its services. Users had to provide separate consent for each web browsing device they used.
+
+Due to increasing issues, Phorm ceased trading on 14 April 2016.
+
+
+## Company history
+
+In its previous incarnation as 121Media, the company made products that were described as spyware by The Register. 121Media distributed a program called *PeopleOnPage*, which was classified as spyware by F-Secure. PeopleOnPage was an application built around their advertising engine, called ContextPlus. ContextPlus was also distributed as a rootkit called Apropos, which used tricks to prevent the user from removing the application and sent information back to central servers regarding a user's browsing habits.
+
+The Center for Democracy and Technology, a U.S.-based advocacy group, filed a complaint with the U.S. Federal Trade Commission in November 2005 over distribution of what it considered spyware, including ContextPlus. They stated that they had investigated and uncovered deceptive and unfair behaviour. This complaint was filed in concert with the Canadian Internet Policy and Public Internet Center, a group that was filing a similar complaint against Integrated Search Technologies with Canadian authorities.
+
+ContextPlus shut down its operations in May 2006 and stated they were "no longer able to ensure the highest standards of quality and customer care". The shutdown came after several major lawsuits against adware vendors had been launched. By September 2007, 121Media had become known as Phorm, and admitted a company history in adware and stated it had closed down the multimillion-dollar revenue stream from its PeopleOnPage toolbar, citing consumers’ identification of adware with spyware as the primary cause for the decision.
+
+In early 2008 Phorm admitted to editing its article on Wikipedia—removing a quotation from *The Guardian*'s commercial executives describing the opposition they have towards its tracking system, and deleting a passage explaining how BT admitted misleading customers over covert Phorm trials in 2007. The changes were quickly noticed and reversed by the online encyclopedia's editors.
+
+Phorm currentlyʷʰᵉⁿ? resides in Mortimer Street, London, UK with staffing levels of around 35.
+
+Trading in Phorm's shares was suspended on London's AIM market on 24 February 2016, pending "clarification of the company's financial position". According to Phorm, it had been "unable to secure the requisite equity funding..." and was in "advanced discussions with certain of its shareholders and other parties regarding possible alternative financing..." and that there was "no guarantee" that such discussions would "result in any funds being raised. Pending conclusion of those discussions the Company has requested suspension of its shares from trading on AIM."
+
+
+### Financial losses
+
+The company made a loss of $32.1 million in 2007, a loss of $49.8 million in 2008 and a loss of $29.7 million in 2009. 2010 was by no means better, with a net loss of $27.9 million By the end of 2010 the company had lost more than $107 million, with no perceivable revenue stream. In 2011, Phorm reported losses of $30.5 million and conducted an equity placing of £33.6 million, which paid off the company's debt.
+
+
+### Cessation of trading
+
+On 14 April 2016, Phorm's Board of Directors announced to the London Stock Exchange that the company was ceasing to trade and that shareholders were unlikely to recover any of their investments.
+
+According to RNS Number: 2561Y FTSE 13 May 2016.
+
+Changes in FTSE UK Index Series
+FTSE AIM All-Share Index Effective From Start of Trading 18 May 2016
+
+Phorm (UK): Constituent Deletion.
+
+
+## Proposed advertisement service
+
+Phorm had worked with major U.S. and British ISPs—including BT Group (formerly British Telecom), Virgin Media, and TalkTalk (at the time owned by The Carphone Warehouse)—on a behavioral targeting advertisement service to monitor browsing habits and serve relevant advertisements to the end user. Phorm say these deals would have given them access to the surfing habits of 70% of British households with broadband. The service, which uses deep packet inspection to check the content of requested web pages, has been compared to those of NebuAd and Front Porch.
+
+The service, which would have been marketed to end-users as "Webwise", (in 2009 the BBC took legal advice over the trade mark Webwise), would work by categorising user interests and matching them with advertisers who wish to target that type of user. "As you browse we're able to categorise all of your Internet actions", said Phorm COO Virasb Vahidi. "We actually can see the entire Internet".
+
+The company said that data collected would be completely anonymous and that Phorm would never be aware of the identity of the user or what they have browsed, and adds that Phorm's advertising categories exclude sensitive terms and have been widely drawn so as not to reveal the identity of the user. By monitoring users' browsing, Phorm even says they are able to offer some protection against online fraud and phishing.
+
+Phorm formerly maintained an opt-out policy for its services. However, according to a spokesmanʷʰᵒ? for Phorm, the way the opt-out works means the contents of the websites visited will still be mirrored to its system. All computers, all users, and all http applications used by each user of each computer will need to be configured (or supplemented with add ons) to opt out. It has since been declared by the Information Commissioner's Office that Phorm would only be legal under UK law if it were an opt-in service.
+
+
+### Implementation
+
+Richard Clayton, a Cambridge University security researcher, attended an on-the-record meeting with Phorm, and published his account of how their advertising system is implemented.
+
+Phorm's system, like many websites, uses HTTP cookies (small pieces of text) to store user settings. The company said that an initial web request is redirected three times (using HTTP 307 responses) within their system, so that they can inspect cookies to determine if the user has opted out. The system then sets a unique Phorm tracking identifier (UID) for the user (or collects it if it already exists), and adds a cookie that is forged to appear to come from the requested website.
+
+In an analysis titled "Stealing Phorm Cookies", Clayton wrote that Phorm's system stores a tracking cookie for each website visited on the user's PC, and that each contains an identical copy of the user's UID. Where possible, Phorm's system strips its tracking cookies from http requests before they are forwarded across the Internet to a website's server, but it cannot prevent the UID from being sent to websites using https. This would allow websites to associate the UID to any details the website collects about the visitor.
+
+Phorm Senior Vice President of Technology Marc Burgess has said that the collected information also includes a timestamp. Burgess said, "This is enough information to accurately target an ad in [the] future, but cannot be used to find out a) who you are, or b) where you have browsed".
+
+
+### Incentives
+
+In 2008, Phorm considered offering an incentive, in addition to the phishing protection it originally planned, as a means to convince end-users to opt into its Webwise system. The alternate incentives, suggested in a Toluna.com market research survey carried out on behalf of Phorm, included further phishing protection, a donation to charity, a free technical support line, or one pound off opted-in users' monthly broadband subscriptions.
+
+Following the decision by Wikimedia Foundation and Amazon to opt their websites out of being profiled by Phorm's Webwise system, and as an incentive for websites to remain opted into the Phorm profiling system, Phorm launched Webwise Discover. The Korean launch of this web publisher incentive was announced in a press conference in Covent Garden in London on 3 June 2009. A survey by polling firm Populus revealed that after watching a demonstration video, 66% of the 2,075 individuals polled claimed to either like the idea or like it a lot.
+
+Website publishers are invited to upload a web widget which will provide a small frame to display recommended web links, based on the tracked interests of any Phorm-tracked website visitors (those whose ISP uses Phorm Deep Packet Inspection to intercept and profile web traffic). There would be no charge to the website, and Phorm do not stand to make any money from Webwise Discover; however, there are plans to display targeted adverts in the future.ᵖᵉʳᵐᵃⁿᵉⁿᵗ ᵈᵉᵃᵈ ˡⁱⁿᵏ The widget would only deliver link recommendations if the user was signed up for targeted advertising with a Phorm-affiliated ISP, the widget would be invisible to everyone else.. At the press launch Phorm spokespersons admitted that at present not a single UK ISP or website has yet signed up to Webwise Discover system, although they emphasised it was part of the current Korea Telecom Webwise trials. Legal advice has been offered to websites considering signing up to the OIX system by Susan Singleton.
+
+
+### Legality
+
+The Open Rights Group (ORG) raised questions about Phorm's legality and asked for clarification of how the service would work. FIPR has argued that Phorm's online advert system is illegal in the UK. Nicholas Bohm, general counsel at FIPR, said: "The need for both parties to consent to interception in order for it to be lawful is an extremely basic principle within the legislation, and it cannot be lightly ignored or treated as a technicality." His open letter to the Information Commissioner has been published on the FIPR web site.
+
+The Conservative peer Lord Northesk has questioned whether the UK government is taking any action on the targeted advertising service offered by Phorm in the light of the questions about its legality under the Data Protection and Regulation of Investigatory Powers Acts.
+
+On 9 April 2008, the Information Commissioner's Office ruled that Phorm would only be legal under UK law if it were an opt-in service. The Office stated it will closely monitor the testing and implementation of Phorm, in order to ensure data protection laws are observed.
+
+The UK Home Office has indicated that Phorm's proposed service is only legal if users give explicit consent. The Office itself became a subject of controversy when emails between it and Phorm were released. The emails showed that the company edited a draft legal interpretation by the Office, and that an official responded "If we agree this, and this becomes our position do you think your clients and their prospective partners will be comforted". Liberal Democrat spokeswoman on Home Affairs, Baroness Sue Miller, considered it an act of collusion: "The fact the Home Office asks the very company they are worried is actually falling outside the laws whether the draft interpretation of the law is correct is completely bizarre."
+
+*The Register* reported in May 2008 that Phorm's logo strongly resembled that of an unrelated UK company called Phorm Design. They quoted the smaller company's owner, Simon Griffiths: "I've had solicitors look at it and they say we'd have to go to court. [Phorm are] obviously a big player with a lot of clout. I'm a small design agency in Sheffield that employs three people."
+
+Until 21 September 2010, Phorm's Webwise service also shared the same name as BBC WebWise.
+
+Monitoring of the Phorm website using a Website change detection service alerted interested parties to changes on 21 September 2010. Phorm's website had been edited to remove references to the word 'Webwise'. Phorm's Webwise product had become 'PhormDiscover'.
+
+The Office for Harmonization in the Internal Market (OHIM) Trade Marks and Designs Registration Office of the European Union website CTM-Online database lists Phorm's application for use of the 'Webwise' trade mark name. The British Broadcasting Corporation is listed as an opponent on grounds of 'Likelihood of confusion'. The City of London-based legal firm Bristows wrote to the OHIM on 22 September 2010, withdrawing the BBC's opposition saying, "The British Broadcasting Corporation have instructed us to request the withdrawal of the above Opposition No. B11538985".
+
+On 28 October 2010, BT removed the Webwise pages from their company website although it was not until 12 November 2010 that all pages had finally been confirmed as removed by forum contributors at the campaign group called "NoDPI.org".
+
+As of 22 June 2012ᵘᵖᵈᵃᵗᵉ, Virgin Media had not removed their Phorm and Webwise FAQs from their customer-news section.
+
+
+#### European Commission case against UK over Phorm
+
+European Union communications commissioner Viviane Reding has said that the commission was concerned Phorm was breaching consumer privacy directives, and called on the UK Government to take action to protect consumers' privacy. The European Commission wrote to the UK government on 30 June 2008 to set out the context of the EU's interest in the controversy, and asked detailed questions ahead of possible Commission intervention. It required the UK to respond to the letter one month after it was sent. A spokeswoman for the Department for Business, Enterprise and Regulatory Reform (BERR) admitted on 16 August that the UK had not met the deadline.
+
+On 16 September, BERR refused *The Register*'s request to release the full text of their reply to the European Commission, but released a statement to the effect that the UK authorities consider Phorm's products are capable of being operated in a lawful, appropriate and transparent fashion. Unsatisfied by the response, the European Commission wrote to the UK again on 6 October. Martin Selmayr, spokesman for Reding's Information Society and Media directorate-general said, "For us the matter is not finished. Quite the contrary."
+
+The UK government responded again in November, but the Commission sent another letter to the government in January 2009. This third letter was sent because the commission was not satisfied with explanations about implementation of European law in the context of the Phorm case. Selmayr was quoted in *The Register* as saying, "The European Commission's investigation with regard to the Phorm case is still ongoing", and he went on to say that the Commission may have to proceed to formal action if the UK authorities do not provide a satisfactory response to the commission's concerns.
+
+On 14 April, the European Commission said they had "opened an infringement proceeding against the United Kingdom" regarding ISPs' use of Phorm:
+
+> If the Commission receives no reply, or if the observations presented by the UK are not satisfactory, the Commission may decide to issue a reasoned opinion (the second stage in an infringement proceeding). If the UK still fails to fulfil its obligations under EU law after that, the Commission will refer the case to the European Court of Justice.
+
+That day, in response to a news item by *The Register* regarding the European Commission's preparations to sue the UK government, Phorm said their technology "is fully compliant with UK legislation and relevant EU directives. This has been confirmed by BERR and by the UK regulatory authorities and we note that there is no suggestion to the contrary in the Commission's statement today." However, BERR denied such confirmation when they responded to a Freedom of Information (FOI) request also made that day:
+
+> An examination of our paper and electronic records has not revealed any such material. To add further clarification for your information, BERR has never provided such a statement to Phorm and has never confirmed to the company “*that their technology is fully compliant*”.
+
+In January 2012, the EU dropped its case against the UK government.
+
+
+### Reaction
+
+Initial reaction to the proposed service highlighted deep concerns with regards to individual privacy and property rights in data. Phorm has defended its technology in the face of what it called "misinformation" from bloggers claiming it threatens users' privacy.
+
+Most security firms classify Phorm's targeting cookies as adware. Kaspersky Lab, whose anti-virus engine is licensed to many other security vendors, said it would detect the cookie as adware. Trend Micro said there was a "very high chance" that it would add detection for the tracking cookies as adware. PC Tools echoed Trend's concerns about privacy and security, urging Phorm to apply an opt-in approach. Specialist anti-spyware firm Sunbelt Software also expressed concerns, saying Phorm's tracking cookies were candidates for detection by its anti-spyware software.
+
+Ross Anderson, professor of security engineering at Cambridge University, said: "The message has to be this: if you care about your privacy, do not use BT, Virgin or Talk-Talk as your internet provider." He added that, historically, anonymising technology had never worked. Even if it did, he stressed, it still posed huge privacy issues.
+
+Phorm has engaged a number of public relations advisers including Freuds, Citigate Dewe Rogerson and ex-House of Commons media adviser John Stonborough in an attempt to save its reputation, and has engaged with audiences via moderated online webchats.
+
+The creator of the World Wide Web, Sir Tim Berners-Lee, has criticised the idea of tracking his browsing history saying that "It's mine - you can't have it. If you want to use it for something, then you have to negotiate with me. I have to agree, I have to understand what I'm getting in return." He also said that he would change his ISP if they introduced the Phorm system. As Director of the World Wide Web Consortium, Berners-Lee also published a set of personal design notes titled "No Snooping", in which he explains his views on commercial use of packet inspection and references Phorm.
+
+Simon Davies, a privacy advocate and founding member of Privacy International, said "Behavioural advertising is a rather spooky concept for many people." In a separate role at 80/20 Thinking, a consultancy start-up, he was engaged by Phorm to look at the system. He said: "We were impressed with the effort that had been put into minimising the collection of personal information". He was subsequently quoted as saying "[Privacy International] DOES NOT endorse Phorm, though we do applaud a number of developments in its process". "The system does appear to mitigate a number of core privacy problems in profiling, retention and tracking ... [but] we won't as PI support any system that works on an opt-out basis." Kent Ertugrul later said he made a mistake when he suggested Privacy International had endorsed Phorm: "This was my confusion I apologise. The endorsement was in fact from Simon Davies, the MD of 80 / 20 who is also a director of privacy international."
+
+
+#### Stopphoulplay.com
+
+Ertugrul has set up a website called "Stopphoulplay.com", in reaction to Phorm critics Alexander Hanff and Marcus Williamson. Ertugrul called Hanff a "serial agitator" who has run campaigns against both Phorm and other companies such as Procter & Gamble, and says Williamson is trying to disgrace Ertugrul and Phorm through "serial letter writing". Hanff believes the Stopphoulplay website's statements are "completely irrelevant" to his campaign and that they will backfire on Ertugrul, while Williamson laments that Phorm "has now stooped to personal smears".
+
+When it launched on 28 April 2009, Stopphoulplay.com discussed a petition to the UK Prime Minister on the Downing Street website. When originally launched the web page claimed, "The website managers at 10 Downing Street recognised their mistake in allowing a misleading petition to appear on their site, and have since provided assurances to Phorm that they will not permit this to happen again". That same day, the Freedom of Information (FOI) Act was used to request confirmation of the claim by Phorm and on 29 April Phorm removed the quoted text from the website and replaced it with nothing. The Prime Minister's Office replied to the FOI request on 28 May, stating they held no information in relation to the request concerning Phorm's claim.
+
+A day after the site's launch, BBC correspondent Darren Waters wrote, "This is a battle with no sign of a ceasefire, with both sides [Phorm and anti-Phorm campaigners] settling down to a war of attrition, and with governments, both in the UK and the EU, drawn into the crossfire."
+
+The site was closed down in September 2009 and is now an online casino. However, the pages http://stopphoulplay.com/this-is-how-they-work/ and http://stopphoulplay.com/this-is-who-they-are/ still contain the comments against Hanff and NoDPI.
+
+
+#### BT trials
+
+After initial denials, BT Group confirmed they ran a small scale trial, at one exchange, of a "prototype advertising platform" in 2007. The trial involved tens of thousands of end users. BT customers will be able to opt out of the trial—BT said they are developing an improved, non-cookie based opt-out of Phorm—but no decision has been made as to their post-trial approach.
+
+*The Register* reported that BT ran an earlier secret trial in 2006, in which it intercepted and profiled the web browsing of 18,000 of its broadband customers. The technical report states that customers who participated in the trial were not made aware of the profiling, as one of the aims of the validation was not to affect their experience.
+
+On 4 June 2008, a copy of a 52-page report allegedly from inside BT, titled "PageSense External Technical Validation", was uploaded to WikiLeaks. The report angered many members of the public; there are questions regarding the involvement of charity ads for Oxfam, Make Trade Fair and SOS Children's Villages, and whether or not they were made aware that their ads were being used in what many feel were highly illegal technical trials.
+
+FIPR's Nicholas Bohm has said that trials of an online ad system carried out by BT involving more than 30,000 of its customers were potentially illegal.
+
+BT's third trial of Phorm's Webwise system repeatedly slipped. The trial was to last for approximately two weeks on 10,000 subscribers, and was originally due to start in March 2008, then pushed to April and again to the end of May; it has yet to occur. The company is facing legal action over trials of Phorm that were carried out without user consent.
+
+On 2 September 2008, while investigating a complaint made by anti-Phorm protestors, the City of London Police met with BT representatives to informally question them about the secret Phorm trials. On 25 September the Police announced that there will be no formal investigation of BT over its secret trials of Phorm in 2006 and 2007. According to Alex Hanff, the police said there was no criminal intent on behalf of BT and there was implied consent because the service was going to benefit customers. Bohm said of that police response:
+
+> Saying that BT customers gave implied consent is absurd. There was never any behaviour by BT customers that could be interpreted as implied consent because they were deliberately kept in the dark.
+> As for the issue of whether there was criminal intent, well, they intended to intercept communications. That was the purpose of what they were doing. To say that there was no criminal intent is to misunderstand the legal requirements for criminal intent.
+
+On 29 September 2008, it was announced in BT's support forum that their trial of Phorm's Webwise system would commence the following day. BT press officer Adam Liversage stated that BT is still working on a network-level opt-out, but that it will not be offered during the trial. Opted-out traffic will pass through the Webwise system but will not be mirrored or profiled. The final full roll-out of Webwise across BT's national network will not necessarily depend the completion of the work either.
+
+The Open Rights Group urged BT's customers not to participate in the BT Webwise trials, saying their "anti-fraud" feature is unlikely to have advantages over features already built into web browsers.
+
+Subscribers to BT forums had used the Beta forums to criticise and raise concerns about BT's implementation of Phorm, but BT responded with a statement:
+
+> Our broadband support forums are designed to be a place where customers can discuss technical support issues and offer solutions. To ensure that the forums remain constructive we're tightening up our moderation policies and will be deleting threads that don't provide constructive support. For example, we have removed a number of forum discussions about BT Webwise.
+> If you do want to find out more about BT Webwise, we provide lots of information and the facility to contact us at www.bt.com/webwise. We hope you'll continue to enjoy being part of the support community.
+
+According to Kent Ertugrul, BT would have completed the rollout of its software by the end of 2009. The *Wall Street Journal*, however, reported in July 2009 that BT had no plans to do so by then, and was concentrating on "other opportunities". Phorm's share price fell 40% on the news.
+
+On 6 July 2009 BT's former chief press officer, Adam Liversage, described his thoughts using Twitter: "A year of the most intensive, personal-reputation-destroying PR trench warfare all comes to nothing". He ended his comment with "Phantastic".
+
+In October 2009, Sergeant Mike Reed of the City of London Police answered a Freedom of Information (FOI) request. He confirmed the crime reference number as 5253/08. In his response, he stated that after originally passing case papers to the Crown Prosecution Service (CPS) in December 2008, the police were '"asked to provide further evidence, by the CPS in October 2009". Asked to "Disclose the date when that investigation was reopened", he said that it was "on instruction of the CPS in October 2009". In Sergeant Reed's response he named the officer in charge as "D/S Murray".
+
+On 25 February 2010, it was reported that the CPS continued to work on a potential criminal case against BT over its secret trials of Phorm's system. Prosecutors considered whether or not to press criminal charges against unnamed individuals under Part I of the Regulation of Investigatory Powers Act.
+
+It was not until April 2011 the CPS decided not to prosecute as it would not be in the public interest, stating that neither Phorm nor BT had acted in bad faith and any penalty imposed would be nominal.
+
+In April 2012, reports said that an officer of the City of London Police had been taken to lunch by Phorm. A police spokesperson was quoted as saying they were aware of the allegation, and that while no formal complaint had been received, "The force is reviewing the information available to it before deciding the best course of action." The spokesperson also highlighted that, "City of London Police were not involved in an investigation into BT Phorm and that the decision not to investigate was prompted by CPS advice".
+
+
+#### Advertisers and websites
+
+Advertisers which had initially expressed an interest about Phorm include: *Financial Times*, *The Guardian*, Universal McCann, MySpace, iVillage, MGM OMD, Virgin Media and Unanimis. The Guardian has withdrawn from its targeted advertising deal with Phorm; in an email to a reader, advertising manager Simon Kilby stated "It is true that we have had conversations with them [Phorm] regarding their services but we have concluded at this time that we do not want to be part of the network. Our decision was in no small part down to the conversations we had internally about how this product sits with the values of our company." In response to an article published in *The Register* on 26 March 2008, Phorm has stated that MySpace has not joined OIX as a Publisher. The Financial Times has decided not to participate in Phorm's impending trial.
+
+The ORG's Jim Killock said that many businesses "will think [commercial] data and relationships should simply be private until they and their customers decide," and might even believe "having their data spied upon is a form of industrial espionage". David Evans of the British Computer Society has questioned whether the act of publishing a website on the net is the same as giving consent for advertisers to make use of the site's content or to monitor the site's interactions with its customers.
+
+Pete John created an add on, called Dephormation, for servers and web users to opt out and remain opted-out of the system; however, John ultimately recommends that users switch from Phorm-equipped Internet providers: "Dephormation is not a solution. It is a fig leaf for your privacy. Do not rely on Dephormation to protect your privacy and security. You need to find a new ISP."
+
+In April 2009, Amazon.com announced that it would not allow Phorm to scan any of its domains. The Wikimedia Foundation has also requested an opt-out from scans, and took the necessary steps to block all Wikimedia and Wikipedia domains from being processed by the Phorm system on the 16th of that month.
+
+In July 2009 the Nationwide Building Society confirmed that it would prevent Phorm from scanning its website, in order to protect the privacy of its customers.
+
+
+#### Internet service providers
+
+MetroFi, an American municipal wireless network provider linked to Phorm, ceased operations in 2008.
+Three other ISPs linked to Phorm all changed or clarified their plans since first signing on with the company. In response to customer concerns, TalkTalk said that its implementation would have been "opt-in" only (as opposed to BT's "opt-out") and those that don't "opt in" will have their traffic split to avoid contact with a WebWise (Phorm) server. In July 2009, the company confirmed it would not implement Phorm; Charles Dunstone, boss of its parent company, told the *Times* "We were only going to do it [Phorm] if BT did it and if the whole industry was doing it. We were not interested enough to do it on our own."
+
+Business news magazine *New Media Age* reported on 23 April that Virgin Media moved away from Phorm and was expected to sign a deal with another company named Audience Science, while BT would meet with other advertising companies to gain what the ISP calls "general market intelligence" about Phorm.
+*NMA* had called the moves "a shift in strategy by the two media companies". A day later, the magazine said both companies' relationships with Phorm actually remain unchanged.
+
+Although Virgin Media were reported to have "moved away from Phorm", in November 2010 they were the only UK-based ISP to still carry information about Phorm's Webwise system on their website. In addition, Phorm partners with international ISPs Oi, Telefónica in Brazil, TTNET-Türk Telekom in Turkey, and Romtelecom in Romania.
+
+
+## Countries Post United Kingdom
+
+
+### South Korea
+
+Phorm announced the beginning of a market trial in South Korea via the London Stock Exchange's Regulatory News Service (RNS) on 30 March 2009. Subsequently, they announced via RNS on 21 May 2009 that they had commenced the trial. On 8 July 2009 Phorm indicated that the trials were proceeding as expected. In their Notice of 2009 Interim Report & Accounts, published on 14 September 2009, Phorm stated they were "Nearing completion of a substantial market trial, launched in May, with KT, the largest ISP in South Korea". The existence of the trial in South Korea was publicised by OhmyNews on 2 September 2009. On 9 September 2009 OhMyNews announced that the trial had been shut down.
+
+
+### Brazil
+
+On 26 March 2010, Phorm announced that its plans for commercial deployment in Brazil.
+
+In May 2012, the Brazilian Internet Steering Committee issued a resolution recommending against the use of Phorm products by any internet service providers in the country, citing privacy risks and concerns that Phorm's products would degrade the quality of internet services.
+
+In respect of the proposed partnership with Telemar (now known as Oi) the claim is that iG, a web portal, only has 5% penetration in the market and Phorm did not clear R$400 million "last year".
+
+
+### Turkey
+
+Since launching with TTNET, a subsidiary of Türk Telecom Group, in Turkey in 2012, Phorm has launched its platform with five additional ISPs. Accordingly, on a global basis, there are now over 20 million daily users on Phorm's platform.
+
+According to RNS Number : 3504C, as of 16 January 2015, Phorm moved to a remote cookie option whilst scaling back its operations in Turkey.
+
+
+### China
+
+Phorm announced on 3 October 2013 that it had launched operationally in China and had commenced a nationwide opt-in process. The company announced that it has commenced commercial operations in China and is serving advertisements on a paid basis.
+
+Privacy concerns in China and Hong Kong are growing, and there have been significant developments in privacy regulation, which could impact on Phorm operations in both the mainland and Hong Kong.
+
+In May 2012 mainland China passed new regulations which implement measures protecting consumer privacy from commercial exploitation.
+
+Further privacy legislation arrived in April 2013, with the publication of two draft rules from the Ministry of Industry and Information Technology: "Provisions on the Protection of the Personal Information of Telecommunications (Provisions for Telecommunications and Internet Users)", and "Internet Users and the Provisions on Registration of the True Identity Information of Phone Users" (Provisions on Phone Users), along with draft amendments to the 1993 Law of Consumer Rights.
+
+The laws are emerging as e-commerce in China becomes an increasingly significant part of the Chinese economy.
+
+These new regulations, which include provisions regulating data collection by smart devices, are discussed in an article published by the International Association of Privacy Professionals' "Privacy Tracker" blog called "Making Sense of China's New Privacy Laws".
+
+In Hong Kong, The Office of the Privacy Commissioner for Personal Data ("PCPD") has taken a robust approach to the protection of consumer privacy, as they seek to enforce the provisions of the Personal Data (Privacy) (Amendment) Ordinance 2012 ("Amendment Ordinance") which came into force in April 2013.
+

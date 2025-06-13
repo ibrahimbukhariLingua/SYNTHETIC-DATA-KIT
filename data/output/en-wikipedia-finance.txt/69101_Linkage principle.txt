@@ -1,0 +1,86 @@
+Linkage principle
+
+
+# Linkage principle
+
+
+
+| Part of a series on |
+| --- |
+| Auctions |
+| Types |
+| * All-pay + Chinese + Bidding fee + Dollar * Amsterdam * Anglo-Dutch * Barter double * Best/not best * Brazilian * Calcutta * Candle * Click-box bidding * Combinatorial * Common value * Deferred-acceptance * Discriminatory price * Double * Dutch * English * Forward * French * Generalized first-price * Generalized second-price * Japanese * Knapsack * Multi-attribute * Multiunit * No-reserve * Rank * Reverse * Scottish * Sealed first-price * Simultaneous ascending * Single-price * Traffic light * Uniform price * Unique bid * Value of revenues * Vickrey * Vickrey–Clarke–Groves * Walrasian * Yankee |
+| Bidding |
+| * Shading * Calor licitantis * Cancellation hunt * Jump * Rigging * Sniping * Suicide * Tacit collusion |
+| Contexts |
+| * Algorithms * Autos * Art * Charity * Children * Players * Domain names * Flowers * Loans * Scam * Slaves * Spectrum * Stamps * Virginity * Wine * Wives |
+| Theory |
+| * Digital goods * Price of anarchy * Revenue equivalence * Winner's curse |
+| Online |
+| * Ebidding * Private electronic market * Software |
+| * v * t * e |
+
+The **linkage principle** is a finding of auction theory. It states that auction houses have an incentive to pre-commit to revealing all available information about each lot, positive or negative. The linkage principle is seen in the art market with the tradition of auctioneers hiring art experts to examine each lot and pre-commit to provide a truthful estimate of its value.
+
+The discovery of the linkage principle was most useful in determining optimal strategy for countries in the process of auctioning off drilling rights (as well as other natural resources, such as logging rights in Canada). An independent assessment of the land in question is now a standard feature of most auctions, even if the seller country may believe that the assessment is likely to lower the value of the land rather than confirm or raise a pre-existing valuation.
+
+Failure to reveal information leads to the winning bidder incurring the discovery costs himself and lowering his maximum bid due to the expenses incurred in acquiring information. If he is not able to get an independent assessment, then his bids will take into account the possibility of downside risk. Both scenarios can be shown to lower the expected revenue of the seller. The expected sale price is raised by lowering these discovery costs of the winning bidder, and instead providing information to all bidders for free.
+
+
+## Use in FCC auction
+
+Speaking of FCC spectrum auctions, Evan Kwerel said, "In the end, the FCC chose an ascending bid mechanism, largely because we believed that providing bidders with more information would likely increase efficiency and, as shown by Paul Milgrom and Robert J. Weber, mitigate the winner's curse. (Kwerel, 2004, p.xvii)
+
+The result alluded to by Kwerel is known as the linkage principle and was developed by Milgrom and Weber (1982). Milgrom (2004) recasts the linkage principle as the 'publicity effect.' It provided a theoretical foundation for the intuition driving the major design choice by the FCC between an ascending bid and sealed bid auction.
+
+
+## Formal derivation
+
+According to Perry and Reny:
+
+> The linkage principle has come to be considered one of the fundamental lessons provided by auction theory. The significance and general acceptance of the linkage principle as a guide to auction design, even in contexts beyond single-unit auctions, is highlighted by the recent design of the spectrum auction held by the FCC, which contains an open-auction component. Although the experts agreed that collusion among the bidders (which ultimately did occur; The Economist, May 17, 1997, p. 86) is more easily sustained within an open auction, in the end the faith placed in the linkage principle outweighed this concern and an open auction format was employed. Indeed, according to McMillan (1994), the experts "judged [the negative collusion effect] to be outweighed by the bidders' ability to learn from others' bids in the open auction."
+
+The linkage principle implies that open auctions generally lead to higher expected prices than sealed-bid auctions. As stated by Milgrom and Weber (1982, p.1095),
+
+> "One explanation of this inequality is that when bidders are uncertain about their valuations, they can acquire useful information by scrutinizing the bidding behavior of their competitors during the course of an [ascending-bid] auction. That extra information weakens the winner's curse and leads to more aggressive bidding in the [ascending-bid] auction, which accounts for the higher expected price."
+
+The linkage principle also implies that the auctioneer maximizes the expected price by always fully revealing all information it has regarding the object being sold completely. In the words of Milgrom and Weber (1982, p. 1096), "Honesty is the best policy."
+
+In order to provide a statement of the linkage principle, we follow the presentation of Krishna, which notes that the linkage principle "was first set forth and used by Milgrom and Weber (1982)." (Krishna, 2002, p. 111) We begin by defining the necessary concepts and notation required to state the linkage principle. Define a standard auction format to be one in which the high bidder wins. Suppose that each bidder, *i* ∈ {1, ..., *N*}, receives a signal Xᵢ regarding the value of the object. We assume the valuation to each bidder depends on its own observed signal and symmetrically upon the unobserved signals of the other bidders (so that the signals of the other bidders can be interchanged without affecting a given bidder's value). More specifically, assume all signals Xᵢ are drawn from the interval [0, *ω*] and that for all i we can write the value of bidder i as {\displaystyle v\_{i}(\mathbf {X} )=u(X\_{i},\mathbf {X} \_{-i}),} where the function u is symmetric in the last *N* − 1 components.
+
+We now define other random variables and mappings with respect to bidder 1, but because of the assumed symmetry, they are the same for all bidders. Define random variables {\displaystyle Y\_{1},\cdots ,Y\_{N-1}} to be the largest, second largest, etc., from among {\displaystyle X\_{2},\cdots ,X\_{N}}. Let {\displaystyle G(\cdot \mid x)} denote the distribution of {\displaystyle Y\_{1}} conditional on {\displaystyle X\_{1}=x}, i.e., {\displaystyle G(z\mid x)\equiv \Pr \left(Y\_{1}<z\mid X\_{1}=x\right)}, and let {\displaystyle g(\cdot \mid x)} be the associated density. We let
+
+be the expectation of the value to a bidder when the signal he receives is x and the highest signal among the other bidders, *Y*₁ is y. We assume that v is nondecreasing in y and strictly increasing in x and that *v*(0, 0) = 0.
+
+For each standard auction format A, suppose that the auction has a symmetric and increasing equilibrium βA, which is a mapping from a bidder's observed signal to its bid. Let {\displaystyle W^{A}(z,x)} denote the expected payment by a bidder if he is the winning bidder when he receives a signal x but bids as if their signal were z, i.e., he bids *βA*(*z*). Let {\displaystyle W\_{1}^{A}(x,z)} denote the derivative of WA with respect to its first argument and {\displaystyle W\_{2}^{A}(x,z)} the derivative with respect to its second argument, evaluated at (*x*, *z*).
+
+For specific examples, in a first-price sealed-bid auction, labeled I, where the high bidder wins and pays the amount of their bid, we have {\displaystyle W^{I}(z,x)=\beta ^{I}(z),} and in a second-price auction, labeled II, where the high bidder wins and pays the amount of the second-highest bid, we have
+
+Now we may state:
+
+Proof: The expected payoff of a bidder with signal x who bids *βA*(*z*) is
+
+In equilibrium, it is optimal to choose *z* = *x* and the resulting first-order conditions imply that
+
+which we can rewrite as
+
+Letting
+
+we conclude that
+
+By hypothesis (i), the second term is positive, and by hypothesis (ii), which implies Δ(0) = 0, it follows that Δ(*x*) and Δ′(*x*) cannot be of different signs, implying that for all x, Δ(*x*) ≥ 0. Q.E.D.
+
+To use this proposition to rank, for example, the second-price and first-price auctions, we need to assume that the bidders signals are *affiliated* (see Milgrom and Weber, 1982, Appendix on Affiliation, pp. 1118–1121), which implies that {\displaystyle G(z\mid \cdot )} is decreasing and that {\displaystyle W\_{2}^{II}(x,x)\geq 0}. Note that {\displaystyle W\_{2}^{I}(x,x)=0}. Thus, under the assumption of affiliation, {\displaystyle W\_{2}^{II}(x,x)\geq W\_{2}^{I}(x,x)}. In addition, *WII*(0,0) = 0 = *WI*(0,0), so the Linkage Principle implies that expected revenue from a second-price auction is at least as great as that from a first-price auction.
+
+To use this proposition to show that expected revenue is greater when public information is made available, consider the first-price auction. Let S be a random variable denoting the information available to the seller and suppose a symmetric equilibrium strategy {\displaystyle {\widehat {\beta }}(S,X\_{1})} that is increasing in both variables. Then let
+
+be the expected payment of a winning bidder when he receives signal x but bids as if it were *z*. Assuming S and *X*₁ are affiliated, so that
+
+then
+
+and the linkage principle implies that expected revenue is at least as great when information is revealed as when it is not.
+
+To see that an ascending-bid auction has greater expected revenue than a second-price auction, note that in an ascending-bid auction, the observed points at which other bidders cease to be active provide additional signals that are also affiliated with *X*₁ and so the logic for information revelation increases expected revenue applies.
+
+Although it has been shown that the linkage principle need not hold in more complex auction environments (see Perry and Reny (1999) on the failure of the linkage principle in multi-unit auctions), as argued by Loertscher, Marx, and Wilkening (2013), the intuition provided by the linkage principle for the potential benefits of open over closed auction formats, and the benefits of information revelation generally, will likely continue to influence practical auction design far into the future.
+
